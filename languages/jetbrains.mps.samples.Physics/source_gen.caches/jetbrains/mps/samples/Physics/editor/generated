@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="6dvnkyq8fy7zyghwexmdrxbj8pmespb" />
+<product version="3" modelHash="-905z4ehnkfu8wcf01zbern1uun2g622">
+  <files names="AbsolutePosition_Editor.java:AbsolutePosition_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:ObjectDefinition_Editor.java:ObjectDefinition_EditorBuilder_a.java:ObjectReference_Editor.java:ObjectReference_EditorBuilder_a.java:ObjectReference_SubstituteMenu.java:PhysicsStyles_StyleSheet.java:RelativeCartesianPosition_Editor.java:RelativeCartesianPosition_EditorBuilder_a.java:RelativePolarPosition_Editor.java:RelativePolarPosition_EditorBuilder_a.java:RelativePositionFrom.java:RelativePositionFrom_ComponentBuilder_a.java:WorldDefinition_Editor.java:WorldDefinition_EditorBuilder_a.java" />
+</product>
 

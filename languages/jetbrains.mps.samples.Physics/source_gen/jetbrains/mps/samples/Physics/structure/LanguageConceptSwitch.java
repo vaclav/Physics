@@ -9,9 +9,27 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
+  public static final int AbsolutePosition = 0;
+  public static final int ObjectDefinition = 1;
+  public static final int ObjectReference = 2;
+  public static final int Position = 3;
+  public static final int RelativeCartesianPosition = 4;
+  public static final int RelativePolarPosition = 5;
+  public static final int RelativePosition = 6;
+  public static final int Simulation = 7;
+  public static final int WorldDefinition = 8;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xbe81eb124eda4d0eL, 0x89be7493500ab874L);
+    builder.put(0x6b7f605cb3282deaL, AbsolutePosition);
+    builder.put(0x6b7f605cb3278f43L, ObjectDefinition);
+    builder.put(0x6b7f605cb32fba5bL, ObjectReference);
+    builder.put(0x6b7f605cb3282de7L, Position);
+    builder.put(0x6b7f605cb3282e01L, RelativeCartesianPosition);
+    builder.put(0x6b7f605cb3282dfeL, RelativePolarPosition);
+    builder.put(0x6b7f605cb3282df4L, RelativePosition);
+    builder.put(0x6b7f605cb32fba58L, Simulation);
+    builder.put(0x6b7f605cb3278f40L, WorldDefinition);
     myIndex = builder.seal();
   }
 
