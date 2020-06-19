@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/sandbox/jetbrains.mps.samples.Physics.sandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
