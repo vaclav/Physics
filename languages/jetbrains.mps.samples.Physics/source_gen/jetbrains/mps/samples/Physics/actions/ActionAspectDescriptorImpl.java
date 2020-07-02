@@ -16,14 +16,6 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
   public Collection<NodeFactory> getFactories(SAbstractConcept concept) {
     if (LANGUAGE_FQ_NAME.equals(concept.getLanguage().getQualifiedName())) {
       switch (concept.getName()) {
-        case "AbsolutePosition":
-          return Collections.<NodeFactory>singletonList(new Factories.NodeFactory_7746015835360008992());
-        case "RelativeCartesianPosition":
-          return Collections.<NodeFactory>singletonList(new Factories.NodeFactory_7746015835360021003());
-        case "RelativePolarPosition":
-          return Collections.<NodeFactory>singletonList(new Factories.NodeFactory_7746015835360026452());
-        case "RelativePosition":
-          return Collections.<NodeFactory>singletonList(new Factories.NodeFactory_7746015835359887684());
         default:
       }
     }

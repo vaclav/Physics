@@ -9,28 +9,142 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
-  private ConceptPresentation props_AbsolutePosition;
+  private ConceptPresentation props_AbsoluteVector;
+  private ConceptPresentation props_AbsoluteVectorBase;
+  private ConceptPresentation props_AbstractObjectDefinition;
+  private ConceptPresentation props_AbstractObjectReference;
+  private ConceptPresentation props_BoxVisual;
+  private ConceptPresentation props_BuiltInColor;
+  private ConceptPresentation props_CartesianCoordinates;
+  private ConceptPresentation props_Coordinates;
+  private ConceptPresentation props_CustomColor;
+  private ConceptPresentation props_CustomForceReference;
+  private ConceptPresentation props_DynamicForce;
+  private ConceptPresentation props_Force;
+  private ConceptPresentation props_FromOrientationVectorBase;
+  private ConceptPresentation props_InwardTarget;
   private ConceptPresentation props_ObjectDefinition;
   private ConceptPresentation props_ObjectReference;
-  private ConceptPresentation props_Position;
-  private ConceptPresentation props_RelativeCartesianPosition;
-  private ConceptPresentation props_RelativePolarPosition;
-  private ConceptPresentation props_RelativePosition;
+  private ConceptPresentation props_Orientation;
+  private ConceptPresentation props_OutwardTarget;
+  private ConceptPresentation props_Picture;
+  private ConceptPresentation props_RelativeVector;
+  private ConceptPresentation props_SameAsTarget;
   private ConceptPresentation props_Simulation;
+  private ConceptPresentation props_SphereVisual;
+  private ConceptPresentation props_SphericalCoordinates;
+  private ConceptPresentation props_StatefulForce;
+  private ConceptPresentation props_StaticForce;
+  private ConceptPresentation props_Texture;
+  private ConceptPresentation props_Vector;
+  private ConceptPresentation props_VectorBase;
+  private ConceptPresentation props_Visual;
   private ConceptPresentation props_WorldDefinition;
+  private ConceptPresentation props_WorldReference;
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
-      case LanguageConceptSwitch.AbsolutePosition:
-        if (props_AbsolutePosition == null) {
+      case LanguageConceptSwitch.AbsoluteVector:
+        if (props_AbsoluteVector == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("absolute position");
-          props_AbsolutePosition = cpb.create();
+          cpb.rawPresentation("absolute vector");
+          props_AbsoluteVector = cpb.create();
         }
-        return props_AbsolutePosition;
+        return props_AbsoluteVector;
+      case LanguageConceptSwitch.AbsoluteVectorBase:
+        if (props_AbsoluteVectorBase == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("absolute");
+          props_AbsoluteVectorBase = cpb.create();
+        }
+        return props_AbsoluteVectorBase;
+      case LanguageConceptSwitch.AbstractObjectDefinition:
+        if (props_AbstractObjectDefinition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_AbstractObjectDefinition = cpb.create();
+        }
+        return props_AbstractObjectDefinition;
+      case LanguageConceptSwitch.AbstractObjectReference:
+        if (props_AbstractObjectReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, 0x1441545e2a5b1e45L, "target", "", "");
+          props_AbstractObjectReference = cpb.create();
+        }
+        return props_AbstractObjectReference;
+      case LanguageConceptSwitch.BoxVisual:
+        if (props_BoxVisual == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("box");
+          props_BoxVisual = cpb.create();
+        }
+        return props_BoxVisual;
+      case LanguageConceptSwitch.BuiltInColor:
+        if (props_BuiltInColor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_BuiltInColor = cpb.create();
+        }
+        return props_BuiltInColor;
+      case LanguageConceptSwitch.CartesianCoordinates:
+        if (props_CartesianCoordinates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("cartesian coordinates");
+          props_CartesianCoordinates = cpb.create();
+        }
+        return props_CartesianCoordinates;
+      case LanguageConceptSwitch.Coordinates:
+        if (props_Coordinates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Coordinates = cpb.create();
+        }
+        return props_Coordinates;
+      case LanguageConceptSwitch.CustomColor:
+        if (props_CustomColor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("CustomColor");
+          props_CustomColor = cpb.create();
+        }
+        return props_CustomColor;
+      case LanguageConceptSwitch.CustomForceReference:
+        if (props_CustomForceReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_CustomForceReference = cpb.create();
+        }
+        return props_CustomForceReference;
+      case LanguageConceptSwitch.DynamicForce:
+        if (props_DynamicForce == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("same as static force but provides variables to use in the expression");
+          cpb.rawPresentation("dynamic force");
+          props_DynamicForce = cpb.create();
+        }
+        return props_DynamicForce;
+      case LanguageConceptSwitch.Force:
+        if (props_Force == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("may the force be with you");
+          props_Force = cpb.create();
+        }
+        return props_Force;
+      case LanguageConceptSwitch.FromOrientationVectorBase:
+        if (props_FromOrientationVectorBase == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("from orientation");
+          props_FromOrientationVectorBase = cpb.create();
+        }
+        return props_FromOrientationVectorBase;
+      case LanguageConceptSwitch.InwardTarget:
+        if (props_InwardTarget == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("inward target");
+          props_InwardTarget = cpb.create();
+        }
+        return props_InwardTarget;
       case LanguageConceptSwitch.ObjectDefinition:
         if (props_ObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -45,32 +159,41 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObjectReference = cpb.create();
         }
         return props_ObjectReference;
-      case LanguageConceptSwitch.Position:
-        if (props_Position == null) {
+      case LanguageConceptSwitch.Orientation:
+        if (props_Orientation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_Position = cpb.create();
+          cpb.rawPresentation("Orientation");
+          props_Orientation = cpb.create();
         }
-        return props_Position;
-      case LanguageConceptSwitch.RelativeCartesianPosition:
-        if (props_RelativeCartesianPosition == null) {
+        return props_Orientation;
+      case LanguageConceptSwitch.OutwardTarget:
+        if (props_OutwardTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("cartesian position");
-          props_RelativeCartesianPosition = cpb.create();
+          cpb.rawPresentation("outward target");
+          props_OutwardTarget = cpb.create();
         }
-        return props_RelativeCartesianPosition;
-      case LanguageConceptSwitch.RelativePolarPosition:
-        if (props_RelativePolarPosition == null) {
+        return props_OutwardTarget;
+      case LanguageConceptSwitch.Picture:
+        if (props_Picture == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("polar position");
-          props_RelativePolarPosition = cpb.create();
+          cpb.presentationByName();
+          props_Picture = cpb.create();
         }
-        return props_RelativePolarPosition;
-      case LanguageConceptSwitch.RelativePosition:
-        if (props_RelativePosition == null) {
+        return props_Picture;
+      case LanguageConceptSwitch.RelativeVector:
+        if (props_RelativeVector == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_RelativePosition = cpb.create();
+          cpb.rawPresentation("relative vector");
+          props_RelativeVector = cpb.create();
         }
-        return props_RelativePosition;
+        return props_RelativeVector;
+      case LanguageConceptSwitch.SameAsTarget:
+        if (props_SameAsTarget == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("same as target");
+          props_SameAsTarget = cpb.create();
+        }
+        return props_SameAsTarget;
       case LanguageConceptSwitch.Simulation:
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -78,6 +201,60 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Simulation = cpb.create();
         }
         return props_Simulation;
+      case LanguageConceptSwitch.SphereVisual:
+        if (props_SphereVisual == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("sphere");
+          props_SphereVisual = cpb.create();
+        }
+        return props_SphereVisual;
+      case LanguageConceptSwitch.SphericalCoordinates:
+        if (props_SphericalCoordinates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("spherical coordinates");
+          props_SphericalCoordinates = cpb.create();
+        }
+        return props_SphericalCoordinates;
+      case LanguageConceptSwitch.StatefulForce:
+        if (props_StatefulForce == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("a force defined by some state");
+          cpb.rawPresentation("StatefulForce");
+          props_StatefulForce = cpb.create();
+        }
+        return props_StatefulForce;
+      case LanguageConceptSwitch.StaticForce:
+        if (props_StaticForce == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("static force");
+          props_StaticForce = cpb.create();
+        }
+        return props_StaticForce;
+      case LanguageConceptSwitch.Texture:
+        if (props_Texture == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Texture = cpb.create();
+        }
+        return props_Texture;
+      case LanguageConceptSwitch.Vector:
+        if (props_Vector == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Vector = cpb.create();
+        }
+        return props_Vector;
+      case LanguageConceptSwitch.VectorBase:
+        if (props_VectorBase == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_VectorBase = cpb.create();
+        }
+        return props_VectorBase;
+      case LanguageConceptSwitch.Visual:
+        if (props_Visual == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("visual aspect of an object");
+          props_Visual = cpb.create();
+        }
+        return props_Visual;
       case LanguageConceptSwitch.WorldDefinition:
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -85,6 +262,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;
+      case LanguageConceptSwitch.WorldReference:
+        if (props_WorldReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "world", "", "");
+          props_WorldReference = cpb.create();
+        }
+        return props_WorldReference;
     }
     return null;
   }
