@@ -11,6 +11,8 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_AbsoluteVector;
   private ConceptPresentation props_AbsoluteVectorBase;
+  private ConceptPresentation props_AbstractForce;
+  private ConceptPresentation props_AbstractForceReference;
   private ConceptPresentation props_AbstractObjectDefinition;
   private ConceptPresentation props_AbstractObjectReference;
   private ConceptPresentation props_BoxVisual;
@@ -18,7 +20,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CartesianCoordinates;
   private ConceptPresentation props_Coordinates;
   private ConceptPresentation props_CustomColor;
-  private ConceptPresentation props_CustomForceReference;
   private ConceptPresentation props_DynamicForce;
   private ConceptPresentation props_Force;
   private ConceptPresentation props_FromOrientationVectorBase;
@@ -38,6 +39,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Texture;
   private ConceptPresentation props_Vector;
   private ConceptPresentation props_VectorBase;
+  private ConceptPresentation props_VectorType;
   private ConceptPresentation props_Visual;
   private ConceptPresentation props_WorldDefinition;
   private ConceptPresentation props_WorldReference;
@@ -61,6 +63,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AbsoluteVectorBase = cpb.create();
         }
         return props_AbsoluteVectorBase;
+      case LanguageConceptSwitch.AbstractForce:
+        if (props_AbstractForce == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_AbstractForce = cpb.create();
+        }
+        return props_AbstractForce;
+      case LanguageConceptSwitch.AbstractForceReference:
+        if (props_AbstractForceReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("defined force");
+          props_AbstractForceReference = cpb.create();
+        }
+        return props_AbstractForceReference;
       case LanguageConceptSwitch.AbstractObjectDefinition:
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -109,13 +125,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CustomColor = cpb.create();
         }
         return props_CustomColor;
-      case LanguageConceptSwitch.CustomForceReference:
-        if (props_CustomForceReference == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_CustomForceReference = cpb.create();
-        }
-        return props_CustomForceReference;
       case LanguageConceptSwitch.DynamicForce:
         if (props_DynamicForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -248,6 +257,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VectorBase = cpb.create();
         }
         return props_VectorBase;
+      case LanguageConceptSwitch.VectorType:
+        if (props_VectorType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("VectorType");
+          props_VectorType = cpb.create();
+        }
+        return props_VectorType;
       case LanguageConceptSwitch.Visual:
         if (props_Visual == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

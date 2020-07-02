@@ -3,12 +3,10 @@
   <persistence version="9" />
   <languages>
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
-    <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
-    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -124,7 +122,7 @@
     <property role="TrG5h" value="RelativeVector" />
     <property role="34LRSv" value="relative vector" />
     <property role="3GE5qa" value="physical.vector" />
-    <ref role="1TJDcQ" node="5xbVod7lCqe" resolve="AbsoluteVector" />
+    <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="Vector" />
     <node concept="1TJgyj" id="5xbVod7kJDG" role="1TKVEi">
       <property role="IQ2ns" value="6362440046684076652" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -199,15 +197,15 @@
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oJ">
     <property role="EcuMT" value="1459540517658822191" />
-    <property role="3GE5qa" value="physical.force" />
+    <property role="3GE5qa" value="physical.force.implemented" />
     <property role="TrG5h" value="Force" />
     <property role="R5$K7" value="true" />
     <property role="R4oN_" value="may the force be with you" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oM">
     <property role="EcuMT" value="1459540517658822194" />
-    <property role="3GE5qa" value="physical.force" />
+    <property role="3GE5qa" value="physical.force.implemented" />
     <property role="TrG5h" value="StaticForce" />
     <property role="34LRSv" value="static force" />
     <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
@@ -221,7 +219,7 @@
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oP">
     <property role="EcuMT" value="1459540517658822197" />
-    <property role="3GE5qa" value="physical.force" />
+    <property role="3GE5qa" value="physical.force.implemented" />
     <property role="TrG5h" value="DynamicForce" />
     <property role="34LRSv" value="dynamic force" />
     <property role="R4oN_" value="same as static force but provides variables to use in the expression" />
@@ -236,7 +234,7 @@
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oQ">
     <property role="EcuMT" value="1459540517658822198" />
-    <property role="3GE5qa" value="physical.force" />
+    <property role="3GE5qa" value="physical.force.implemented" />
     <property role="TrG5h" value="StatefulForce" />
     <property role="R4oN_" value="a force defined by some state" />
     <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
@@ -367,7 +365,7 @@
     <property role="TrG5h" value="Vector" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="1jQexh3x$g0" role="1TKVEi">
+    <node concept="1TJgyj" id="6B47O8QfQWH" role="1TKVEi">
       <property role="IQ2ns" value="1510458583736009728" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="coordinates" />
@@ -434,11 +432,21 @@
   </node>
   <node concept="1TIwiD" id="1jQexh3yYqw">
     <property role="EcuMT" value="1510458583736379040" />
-    <property role="3GE5qa" value="physical.force" />
-    <property role="TrG5h" value="CustomForceReference" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="AbstractForceReference" />
+    <property role="34LRSv" value="defined force" />
     <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
-    <node concept="PrWs8" id="1jQexh3yYqx" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <node concept="1TJgyj" id="34ALWs$sYIm" role="1TKVEi">
+      <property role="IQ2ns" value="3541737815097469846" />
+      <property role="20kJfa" value="force" />
+      <ref role="20lvS9" node="34ALWs$saY6" resolve="AbstractForce" />
+    </node>
+    <node concept="1TJgyj" id="34ALWs$sYIo" role="1TKVEi">
+      <property role="IQ2ns" value="3541737815097469848" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="parameterValues" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="1jQexh3yYuK">
@@ -461,6 +469,37 @@
     <property role="TrG5h" value="AbsoluteVectorBase" />
     <property role="34LRSv" value="absolute" />
     <ref role="1TJDcQ" node="1jQexh3yYuK" resolve="VectorBase" />
+  </node>
+  <node concept="1TIwiD" id="34ALWs$saY6">
+    <property role="EcuMT" value="3541737815097257862" />
+    <property role="3GE5qa" value="physical.force" />
+    <property role="TrG5h" value="AbstractForce" />
+    <property role="34LRSv" value="force" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="34ALWs$saY7" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="34ALWs$scX9" role="1TKVEi">
+      <property role="IQ2ns" value="3541737815097265993" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="force" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="Force" />
+    </node>
+    <node concept="1TJgyj" id="2EjHd62yaA4" role="1TKVEi">
+      <property role="IQ2ns" value="3067994583100598660" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="attributes" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="tpee:fz7vLUk" resolve="ParameterDeclaration" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="34ALWs$y__g">
+    <property role="EcuMT" value="3541737815098939728" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="VectorType" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1H" resolve="Type" />
   </node>
 </model>
 
