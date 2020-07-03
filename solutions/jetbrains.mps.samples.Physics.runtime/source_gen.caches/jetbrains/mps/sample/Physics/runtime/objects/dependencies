@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.Force" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.rendering.Fixture" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode dependClassName="org.ode4j.ode.DBody" />
+    <classNode dependClassName="org.ode4j.ode.OdeHelper" />
+    <classNode dependClassName="processing.core.PApplet" />
+  </dependency>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.objects.World">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="org.ode4j.ode.DSpace" />
+    <classNode dependClassName="org.ode4j.ode.DWorld" />
+    <classNode dependClassName="org.ode4j.ode.OdeHelper" />
+    <classNode dependClassName="processing.core.PApplet" />
+  </dependency>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.objects.WorldBuilder">
+    <classNode dependClassName="java.lang.IllegalStateException" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.Force" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.rendering.BoxFixture" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.rendering.SphereFixture" />
+  </dependency>
+</dependenciesRoot>
+

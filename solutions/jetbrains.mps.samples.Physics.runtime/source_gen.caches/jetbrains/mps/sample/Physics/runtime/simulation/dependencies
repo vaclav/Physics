@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.simulation.SimulationExample">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.Renderer" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.WorldBuilder" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.Friction" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.Gravitation" />
+    <classNode extendsClassName="jetbrains.mps.sample.Physics.runtime.Simulation" />
+  </dependency>
+</dependenciesRoot>
+

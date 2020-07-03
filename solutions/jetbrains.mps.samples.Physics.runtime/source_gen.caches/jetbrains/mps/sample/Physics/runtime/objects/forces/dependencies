@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.objects.forces.Force">
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+  </dependency>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.objects.forces.Friction">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode extendsClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.Force" />
+  </dependency>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.objects.forces.Gravitation">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
+    <classNode dependClassName="org.ode4j.math.DVector3" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode extendsClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.Force" />
+  </dependency>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.objects.forces.StaticForce">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode extendsClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.Force" />
+  </dependency>
+</dependenciesRoot>
+

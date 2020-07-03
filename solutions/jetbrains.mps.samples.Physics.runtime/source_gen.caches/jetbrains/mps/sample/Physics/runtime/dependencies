@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.Renderer">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
+    <classNode extendsClassName="processing.core.PApplet" />
+  </dependency>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.Simulation">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.WorldBuilder" />
+    <classNode extendsClassName="jetbrains.mps.sample.Physics.runtime.Renderer" />
+  </dependency>
+</dependenciesRoot>
+

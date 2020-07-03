@@ -62,20 +62,12 @@
         <child id="1459540517659024969" name="forces" index="Y6$Cn" />
         <child id="1459540517659024967" name="parent" index="Y6$Cp" />
       </concept>
+      <concept id="1459540517659024997" name="jetbrains.mps.samples.Physics.structure.BuiltInColor" flags="ng" index="Y6$CV" />
       <concept id="1510458583736011129" name="jetbrains.mps.samples.Physics.structure.Vector" flags="ng" index="1ns7dH">
         <child id="1510458583736009728" name="coordinates" index="1ns7Sk" />
       </concept>
-      <concept id="1510458583736379040" name="jetbrains.mps.samples.Physics.structure.AbstractForceReference" flags="ng" index="1nvtMO">
-        <reference id="3541737815097469846" name="force" index="lliLh" />
-        <child id="3541737815097469848" name="parameterValues" index="lliLv" />
-      </concept>
       <concept id="1510458583736379316" name="jetbrains.mps.samples.Physics.structure.AbsoluteVectorBase" flags="ng" index="1nvtQw" />
       <concept id="1510458583736379315" name="jetbrains.mps.samples.Physics.structure.FromOrientationVectorBase" flags="ng" index="1nvtQB" />
-      <concept id="1510458583736148961" name="jetbrains.mps.samples.Physics.structure.CustomColor" flags="ng" index="1nv_BP">
-        <property id="1510458583736148964" name="red" index="1nv_BK" />
-        <property id="1510458583736148966" name="blue" index="1nv_BM" />
-        <property id="1510458583736148969" name="green" index="1nv_BX" />
-      </concept>
       <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReference" flags="ng" index="3okdC7">
         <reference id="7746015835360049756" name="target" index="3okdC0" />
       </concept>
@@ -124,6 +116,9 @@
           </node>
         </node>
       </node>
+      <node concept="Y6$Cq" id="2s53i66x6cq" role="Y6$Cp">
+        <ref role="Y6$Cr" node="1jQexh3xMWo" resolve="Planet" />
+      </node>
     </node>
     <node concept="3omeWv" id="1jQexh3xMRa" role="3omeWq">
       <property role="TrG5h" value="Mercury" />
@@ -137,7 +132,7 @@
             <property role="3cmrfH" value="7" />
           </node>
           <node concept="3cmrfG" id="1jQexh3xMRY" role="Y6l9D">
-            <property role="3cmrfH" value="5" />
+            <property role="3cmrfH" value="55511" />
           </node>
           <node concept="3cmrfG" id="1jQexh3xMT3" role="Y6leK">
             <property role="3cmrfH" value="6" />
@@ -238,53 +233,18 @@
   </node>
   <node concept="Y6$Ct" id="1jQexh3xMWo">
     <property role="TrG5h" value="Planet" />
-    <node concept="Y6$C9" id="1jQexh3xZNL" role="Y6$Cf">
-      <property role="Y6$CW" value="50" />
-      <node concept="1nv_BP" id="1jQexh3zkvy" role="Y6$CS">
-        <property role="1nv_BK" value="50" />
-        <property role="1nv_BM" value="60" />
-        <property role="1nv_BX" value="30" />
+    <node concept="Y6l9F" id="2s53i66x5Xf" role="Y6$Cn">
+      <node concept="1nvtQw" id="2s53i66x5Xt" role="1nvtQx" />
+      <node concept="v6hsc" id="2s53i66x5Xl" role="Y6l9H">
+        <property role="v6hsj" value="4" />
+        <property role="v6hsi" value="4" />
+        <property role="v6hsg" value="4" />
       </node>
     </node>
-    <node concept="Y6l9F" id="34ALWs$zCnf" role="Y6$Cn">
-      <node concept="1nvtQB" id="2EjHd62yO6C" role="1nvtQx" />
-      <node concept="v6hsc" id="34ALWs$zCnt" role="Y6l9H">
-        <property role="v6hsj" value="5" />
-        <property role="v6hsi" value="5" />
-        <property role="v6hsg" value="5" />
-      </node>
-    </node>
-    <node concept="Y6l9F" id="2EjHd62w6AU" role="Y6$Cn">
-      <node concept="1nvtQB" id="2EjHd62w6AX" role="1nvtQx" />
-      <node concept="v6hs8" id="2EjHd62xj74" role="Y6l9H">
-        <node concept="3cmrfG" id="2EjHd62xj7g" role="Y6l9D">
-          <property role="3cmrfH" value="4" />
-        </node>
-        <node concept="3cmrfG" id="2EjHd62xj7F" role="Y6leK">
-          <property role="3cmrfH" value="4" />
-        </node>
-        <node concept="3cmrfG" id="2EjHd62xj7H" role="Y6leJ">
-          <property role="3cmrfH" value="4" />
-        </node>
-      </node>
-    </node>
-    <node concept="Y6l9G" id="2EjHd62xwOj" role="Y6$Cn">
-      <node concept="v6hs8" id="2EjHd62xJrO" role="Y6l9H">
-        <node concept="3cmrfG" id="2EjHd62xJs0" role="Y6l9D">
-          <property role="3cmrfH" value="1" />
-        </node>
-        <node concept="3cmrfG" id="2EjHd62xJs5" role="Y6leK">
-          <property role="3cmrfH" value="1" />
-        </node>
-        <node concept="3cmrfG" id="2EjHd62xJsa" role="Y6leJ">
-          <property role="3cmrfH" value="1" />
-        </node>
-      </node>
-    </node>
-    <node concept="1nvtMO" id="2EjHd62xJsK" role="Y6$Cn">
-      <ref role="lliLh" node="2EjHd62wQTG" resolve="Gravity" />
-      <node concept="3cmrfG" id="2EjHd62ya_Z" role="lliLv">
-        <property role="3cmrfH" value="4" />
+    <node concept="Y6$C9" id="2s53i66x5Xz" role="Y6$Cf">
+      <property role="Y6$CW" value="400" />
+      <node concept="Y6$CV" id="2s53i66x5XB" role="Y6$CS">
+        <property role="TrG5h" value="RED" />
       </node>
     </node>
   </node>

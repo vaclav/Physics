@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root nodeRef="r:257c014b-2c6b-4401-8d4b-ea32a2cb74e4(jetbrains.mps.sample.Physics.runtime.simulation)/4271426636304009116">
+    <file name="SimulationExample.java">
+      <node id="4271426636304009124" at="16,45,17,137" concept="0" />
+      <node id="4271426636304009142" at="17,137,18,144" concept="0" />
+      <node id="4271426636304009170" at="20,42,21,48" concept="0" />
+      <node id="4271426636304009173" at="21,48,22,24" concept="0" />
+      <node id="4271426636304009165" at="20,0,24,0" concept="2" trace="main#([Ljava/lang/String;)V" />
+      <node id="4271426636304009119" at="15,0,20,0" concept="1" trace="init#(Ljetbrains/mps/sample/Physics/runtime/objects/WorldBuilder;)V" />
+      <scope id="4271426636304009123" at="16,45,18,144" />
+      <scope id="4271426636304009169" at="20,42,22,24" />
+      <scope id="4271426636304009165" at="20,0,24,0">
+        <var name="args" id="4271426636304009166" />
+      </scope>
+      <scope id="4271426636304009119" at="15,0,20,0">
+        <var name="builder" id="4271426636304009121" />
+      </scope>
+      <unit id="4271426636304009116" at="14,0,25,0" name="jetbrains.mps.sample.Physics.runtime.simulation.SimulationExample" />
+    </file>
+  </root>
+</debug-info>
+

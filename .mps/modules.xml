@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/sandbox/jetbrains.mps.samples.Physics.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.runtime/jetbrains.mps.samples.Physics.runtime.msd" folder="" />
     </projectModules>
   </component>
 </project>
