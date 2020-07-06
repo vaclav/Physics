@@ -10,7 +10,6 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_AbsoluteVector;
-  private ConceptPresentation props_AbsoluteVectorBase;
   private ConceptPresentation props_AbstractForce;
   private ConceptPresentation props_AbstractForceReference;
   private ConceptPresentation props_AbstractObjectDefinition;
@@ -20,9 +19,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CartesianCoordinates;
   private ConceptPresentation props_Coordinates;
   private ConceptPresentation props_CustomColor;
+  private ConceptPresentation props_DefaultDirection;
+  private ConceptPresentation props_DirectionalCoordinates;
   private ConceptPresentation props_DynamicForce;
   private ConceptPresentation props_Force;
-  private ConceptPresentation props_FromOrientationVectorBase;
+  private ConceptPresentation props_IDirection;
+  private ConceptPresentation props_ILocalized;
+  private ConceptPresentation props_IObjectImplemented;
   private ConceptPresentation props_InwardTarget;
   private ConceptPresentation props_ObjectDefinition;
   private ConceptPresentation props_ObjectReference;
@@ -38,10 +41,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StaticForce;
   private ConceptPresentation props_Texture;
   private ConceptPresentation props_Vector;
-  private ConceptPresentation props_VectorBase;
   private ConceptPresentation props_VectorType;
   private ConceptPresentation props_Visual;
   private ConceptPresentation props_WorldDefinition;
+  private ConceptPresentation props_WorldInclusion;
   private ConceptPresentation props_WorldReference;
 
   @Override
@@ -56,13 +59,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AbsoluteVector = cpb.create();
         }
         return props_AbsoluteVector;
-      case LanguageConceptSwitch.AbsoluteVectorBase:
-        if (props_AbsoluteVectorBase == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("absolute");
-          props_AbsoluteVectorBase = cpb.create();
-        }
-        return props_AbsoluteVectorBase;
       case LanguageConceptSwitch.AbstractForce:
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -125,6 +121,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CustomColor = cpb.create();
         }
         return props_CustomColor;
+      case LanguageConceptSwitch.DefaultDirection:
+        if (props_DefaultDirection == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("DefaultDirection");
+          props_DefaultDirection = cpb.create();
+        }
+        return props_DefaultDirection;
+      case LanguageConceptSwitch.DirectionalCoordinates:
+        if (props_DirectionalCoordinates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("directional coordinates");
+          props_DirectionalCoordinates = cpb.create();
+        }
+        return props_DirectionalCoordinates;
       case LanguageConceptSwitch.DynamicForce:
         if (props_DynamicForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -140,13 +150,24 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Force = cpb.create();
         }
         return props_Force;
-      case LanguageConceptSwitch.FromOrientationVectorBase:
-        if (props_FromOrientationVectorBase == null) {
+      case LanguageConceptSwitch.IDirection:
+        if (props_IDirection == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("from orientation");
-          props_FromOrientationVectorBase = cpb.create();
+          props_IDirection = cpb.create();
         }
-        return props_FromOrientationVectorBase;
+        return props_IDirection;
+      case LanguageConceptSwitch.ILocalized:
+        if (props_ILocalized == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ILocalized = cpb.create();
+        }
+        return props_ILocalized;
+      case LanguageConceptSwitch.IObjectImplemented:
+        if (props_IObjectImplemented == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IObjectImplemented = cpb.create();
+        }
+        return props_IObjectImplemented;
       case LanguageConceptSwitch.InwardTarget:
         if (props_InwardTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -251,12 +272,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Vector = cpb.create();
         }
         return props_Vector;
-      case LanguageConceptSwitch.VectorBase:
-        if (props_VectorBase == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_VectorBase = cpb.create();
-        }
-        return props_VectorBase;
       case LanguageConceptSwitch.VectorType:
         if (props_VectorType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -278,6 +293,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;
+      case LanguageConceptSwitch.WorldInclusion:
+        if (props_WorldInclusion == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("WorldInclusion");
+          props_WorldInclusion = cpb.create();
+        }
+        return props_WorldInclusion;
       case LanguageConceptSwitch.WorldReference:
         if (props_WorldReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

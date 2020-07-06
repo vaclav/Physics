@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class FromOrientationVectorBase_Editor extends DefaultNodeEditor {
+public class SphereVisual_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new FromOrientationVectorBase_EditorBuilder_a(editorContext, node).createCell();
+    return new SphereVisual_EditorBuilder_a(editorContext, node).createCell();
   }
 }

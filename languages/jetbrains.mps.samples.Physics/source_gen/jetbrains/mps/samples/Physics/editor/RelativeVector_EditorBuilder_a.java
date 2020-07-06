@@ -57,7 +57,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "relative");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
     editorCell.setCellId("Constant_crwxfi_a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.EDITABLE, true);
@@ -123,7 +123,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "to");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "relative to");
     editorCell.setCellId("Constant_crwxfi_c0");
     editorCell.setDefaultText("");
     return editorCell;

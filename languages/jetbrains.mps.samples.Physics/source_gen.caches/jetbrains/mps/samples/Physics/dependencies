@@ -8,7 +8,6 @@
     <classNode dependClassName="jetbrains.mps.openapi.actions.descriptor.ActionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.StructureAspectDescriptor" />
@@ -16,7 +15,6 @@
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.language.LanguageExtensions" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspect" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />

@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class AbsoluteVectorBase_Editor extends DefaultNodeEditor {
+public class DefaultDirection_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new AbsoluteVectorBase_EditorBuilder_a(editorContext, node).createCell();
+    return new DefaultDirection_EditorBuilder_a(editorContext, node).createCell();
   }
 }

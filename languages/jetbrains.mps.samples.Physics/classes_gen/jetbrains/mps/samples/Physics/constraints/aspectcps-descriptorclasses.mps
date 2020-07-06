@@ -6,11 +6,8 @@
   <languages />
   <imports>
     <import index="h09r" ref="r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)" />
-    <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" />
     <import index="ze1i" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.runtime(MPS.Core/)" />
-    <import index="2k9e" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.adapter.structure(MPS.Core/)" />
     <import index="79pl" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.runtime.base(MPS.Core/)" />
-    <import index="9tcj" ref="r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
   </imports>
   <registry>
@@ -25,13 +22,6 @@
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
-      <concept id="1070475587102" name="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" flags="nn" index="XkiVB" />
-      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
-        <property id="1070475926801" name="value" index="Xl_RC" />
-      </concept>
-      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
-        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
-      </concept>
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
         <child id="1165602531693" name="superclass" index="1zkMxy" />
       </concept>
@@ -42,9 +32,6 @@
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
-      <concept id="4269842503726207156" name="jetbrains.mps.baseLanguage.structure.LongLiteral" flags="nn" index="1adDum">
-        <property id="4269842503726207157" name="value" index="1adDun" />
-      </concept>
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
         <property id="1181808852946" name="isFinal" index="DiZV1" />
         <child id="1068580123133" name="returnType" index="3clF45" />
@@ -53,9 +40,6 @@
       </concept>
       <concept id="1068580123165" name="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" flags="ig" index="3clFb_">
         <property id="1178608670077" name="isAbstract" index="1EzhhJ" />
-      </concept>
-      <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
-        <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
@@ -82,9 +66,6 @@
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
     </language>
     <language id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator">
-      <concept id="7980339663309897032" name="jetbrains.mps.lang.generator.structure.OriginTrace" flags="ng" index="cd27G">
-        <child id="7980339663309897037" name="origin" index="cd27D" />
-      </concept>
       <concept id="3864140621129707969" name="jetbrains.mps.lang.generator.structure.GeneratorDebug_Mappings" flags="nn" index="39dXUE">
         <child id="3864140621129713349" name="labels" index="39e2AI" />
       </concept>
@@ -99,40 +80,17 @@
       <concept id="3864140621129713362" name="jetbrains.mps.lang.generator.structure.GeneratorDebug_NodeRef" flags="nn" index="39e2AT">
         <reference id="3864140621129713363" name="node" index="39e2AS" />
       </concept>
-      <concept id="3637169702552512264" name="jetbrains.mps.lang.generator.structure.ElementaryNodeId" flags="ng" index="3u3nmq">
-        <property id="3637169702552512269" name="nodeId" index="3u3nmv" />
-      </concept>
-    </language>
-    <language id="df345b11-b8c7-4213-ac66-48d2a9b75d88" name="jetbrains.mps.baseLanguageInternal">
-      <concept id="1173996401517" name="jetbrains.mps.baseLanguageInternal.structure.InternalNewExpression" flags="nn" index="1nCR9W">
-        <property id="1173996588177" name="fqClassName" index="1nD$Q0" />
-        <child id="1179332974947" name="type" index="2lIhxL" />
-      </concept>
-      <concept id="4927083583736784422" name="jetbrains.mps.baseLanguageInternal.structure.ExtractToSingleConstantExpression" flags="ng" index="1BaE9c">
-        <property id="3566113306135792467" name="baseContainerName" index="1ouuDV" />
-        <property id="4927083583736815155" name="uniqueFieldName" index="1BaxDp" />
-        <child id="4927083583736819744" name="expression" index="1Bazha" />
-      </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="6677504323281689838" name="jetbrains.mps.lang.smodel.structure.SConceptType" flags="in" index="3bZ5Sz" />
-      <concept id="1154546950173" name="jetbrains.mps.lang.smodel.structure.ConceptReference" flags="ng" index="3gn64h">
-        <reference id="1154546997487" name="concept" index="3gnhBz" />
-      </concept>
-      <concept id="6039268229364358244" name="jetbrains.mps.lang.smodel.structure.ExactConceptCase" flags="ng" index="1pnPoh">
-        <child id="6039268229364358388" name="body" index="1pnPq1" />
-        <child id="6039268229364358387" name="concept" index="1pnPq6" />
-      </concept>
       <concept id="5944356402132808749" name="jetbrains.mps.lang.smodel.structure.ConceptSwitchStatement" flags="nn" index="1_3QMa">
         <child id="6039268229365417680" name="defaultBlock" index="1prKM_" />
-        <child id="5944356402132808753" name="case" index="1_3QMm" />
         <child id="5944356402132808752" name="expression" index="1_3QMn" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
-        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -172,28 +130,13 @@
           <node concept="37vLTw" id="h" role="1_3QMn">
             <ref role="3cqZAo" node="c" resolve="concept" />
           </node>
-          <node concept="1pnPoh" id="i" role="1_3QMm">
-            <node concept="3clFbS" id="k" role="1pnPq1">
-              <node concept="3cpWs6" id="m" role="3cqZAp">
-                <node concept="1nCR9W" id="n" role="3cqZAk">
-                  <property role="1nD$Q0" value="jetbrains.mps.samples.Physics.constraints.VectorBase_Constraints" />
-                  <node concept="3uibUv" id="o" role="2lIhxL">
-                    <ref role="3uigEE" to="ze1i:~ConstraintsDescriptor" resolve="ConstraintsDescriptor" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3gn64h" id="l" role="1pnPq6">
-              <ref role="3gnhBz" to="9tcj:1jQexh3yYuK" resolve="VectorBase" />
-            </node>
-          </node>
-          <node concept="3clFbS" id="j" role="1prKM_" />
+          <node concept="3clFbS" id="i" role="1prKM_" />
         </node>
         <node concept="3cpWs6" id="g" role="3cqZAp">
-          <node concept="2ShNRf" id="p" role="3cqZAk">
-            <node concept="1pGfFk" id="q" role="2ShVmc">
+          <node concept="2ShNRf" id="j" role="3cqZAk">
+            <node concept="1pGfFk" id="k" role="2ShVmc">
               <ref role="37wK5l" to="79pl:~BaseConstraintsDescriptor.&lt;init&gt;(org.jetbrains.mps.openapi.language.SAbstractConcept)" resolve="BaseConstraintsDescriptor" />
-              <node concept="37vLTw" id="r" role="37wK5m">
+              <node concept="37vLTw" id="l" role="37wK5m">
                 <ref role="3cqZAo" node="c" resolve="concept" />
               </node>
             </node>
@@ -202,228 +145,14 @@
       </node>
     </node>
   </node>
-  <node concept="39dXUE" id="s">
-    <node concept="39e2AJ" id="t" role="39e2AI">
+  <node concept="39dXUE" id="m">
+    <node concept="39e2AJ" id="n" role="39e2AI">
       <property role="39e3Y2" value="aspectDescriptorClass" />
-      <node concept="39e2AG" id="u" role="39e3Y0">
+      <node concept="39e2AG" id="o" role="39e3Y0">
         <property role="2mV_xN" value="true" />
-        <node concept="39e2AT" id="v" role="39e2AY">
+        <node concept="39e2AT" id="p" role="39e2AY">
           <ref role="39e2AS" node="0" resolve="ConstraintsAspectDescriptor" />
         </node>
-      </node>
-    </node>
-  </node>
-  <node concept="312cEu" id="w">
-    <property role="3GE5qa" value="physical.vector.base" />
-    <property role="TrG5h" value="VectorBase_Constraints" />
-    <node concept="3Tm1VV" id="x" role="1B3o_S">
-      <node concept="cd27G" id="B" role="lGtFl">
-        <node concept="3u3nmq" id="C" role="cd27D">
-          <property role="3u3nmv" value="1510458583736379379" />
-        </node>
-      </node>
-    </node>
-    <node concept="3uibUv" id="y" role="1zkMxy">
-      <ref role="3uigEE" to="79pl:~BaseConstraintsDescriptor" resolve="BaseConstraintsDescriptor" />
-      <node concept="cd27G" id="D" role="lGtFl">
-        <node concept="3u3nmq" id="E" role="cd27D">
-          <property role="3u3nmv" value="1510458583736379379" />
-        </node>
-      </node>
-    </node>
-    <node concept="3clFbW" id="z" role="jymVt">
-      <node concept="3cqZAl" id="F" role="3clF45">
-        <node concept="cd27G" id="J" role="lGtFl">
-          <node concept="3u3nmq" id="K" role="cd27D">
-            <property role="3u3nmv" value="1510458583736379379" />
-          </node>
-        </node>
-      </node>
-      <node concept="3clFbS" id="G" role="3clF47">
-        <node concept="XkiVB" id="L" role="3cqZAp">
-          <ref role="37wK5l" to="79pl:~BaseConstraintsDescriptor.&lt;init&gt;(org.jetbrains.mps.openapi.language.SAbstractConcept)" resolve="BaseConstraintsDescriptor" />
-          <node concept="1BaE9c" id="N" role="37wK5m">
-            <property role="1ouuDV" value="CONCEPTS" />
-            <property role="1BaxDp" value="VectorBase$4$" />
-            <node concept="2YIFZM" id="P" role="1Bazha">
-              <ref role="1Pybhc" to="2k9e:~MetaAdapterFactory" resolve="MetaAdapterFactory" />
-              <ref role="37wK5l" to="2k9e:~MetaAdapterFactory.getConcept(long,long,long,java.lang.String)" resolve="getConcept" />
-              <node concept="1adDum" id="R" role="37wK5m">
-                <property role="1adDun" value="0xbe81eb124eda4d0eL" />
-                <node concept="cd27G" id="W" role="lGtFl">
-                  <node concept="3u3nmq" id="X" role="cd27D">
-                    <property role="3u3nmv" value="1510458583736379379" />
-                  </node>
-                </node>
-              </node>
-              <node concept="1adDum" id="S" role="37wK5m">
-                <property role="1adDun" value="0x89be7493500ab874L" />
-                <node concept="cd27G" id="Y" role="lGtFl">
-                  <node concept="3u3nmq" id="Z" role="cd27D">
-                    <property role="3u3nmv" value="1510458583736379379" />
-                  </node>
-                </node>
-              </node>
-              <node concept="1adDum" id="T" role="37wK5m">
-                <property role="1adDun" value="0x14f63a14438be7b0L" />
-                <node concept="cd27G" id="10" role="lGtFl">
-                  <node concept="3u3nmq" id="11" role="cd27D">
-                    <property role="3u3nmv" value="1510458583736379379" />
-                  </node>
-                </node>
-              </node>
-              <node concept="Xl_RD" id="U" role="37wK5m">
-                <property role="Xl_RC" value="jetbrains.mps.samples.Physics.structure.VectorBase" />
-                <node concept="cd27G" id="12" role="lGtFl">
-                  <node concept="3u3nmq" id="13" role="cd27D">
-                    <property role="3u3nmv" value="1510458583736379379" />
-                  </node>
-                </node>
-              </node>
-              <node concept="cd27G" id="V" role="lGtFl">
-                <node concept="3u3nmq" id="14" role="cd27D">
-                  <property role="3u3nmv" value="1510458583736379379" />
-                </node>
-              </node>
-            </node>
-            <node concept="cd27G" id="Q" role="lGtFl">
-              <node concept="3u3nmq" id="15" role="cd27D">
-                <property role="3u3nmv" value="1510458583736379379" />
-              </node>
-            </node>
-          </node>
-          <node concept="cd27G" id="O" role="lGtFl">
-            <node concept="3u3nmq" id="16" role="cd27D">
-              <property role="3u3nmv" value="1510458583736379379" />
-            </node>
-          </node>
-        </node>
-        <node concept="cd27G" id="M" role="lGtFl">
-          <node concept="3u3nmq" id="17" role="cd27D">
-            <property role="3u3nmv" value="1510458583736379379" />
-          </node>
-        </node>
-      </node>
-      <node concept="3Tm1VV" id="H" role="1B3o_S">
-        <node concept="cd27G" id="18" role="lGtFl">
-          <node concept="3u3nmq" id="19" role="cd27D">
-            <property role="3u3nmv" value="1510458583736379379" />
-          </node>
-        </node>
-      </node>
-      <node concept="cd27G" id="I" role="lGtFl">
-        <node concept="3u3nmq" id="1a" role="cd27D">
-          <property role="3u3nmv" value="1510458583736379379" />
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="$" role="jymVt">
-      <node concept="cd27G" id="1b" role="lGtFl">
-        <node concept="3u3nmq" id="1c" role="cd27D">
-          <property role="3u3nmv" value="1510458583736379379" />
-        </node>
-      </node>
-    </node>
-    <node concept="3clFb_" id="_" role="jymVt">
-      <property role="1EzhhJ" value="false" />
-      <property role="TrG5h" value="getDefaultConcreteConcept" />
-      <property role="DiZV1" value="false" />
-      <node concept="2AHcQZ" id="1d" role="2AJF6D">
-        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
-        <node concept="cd27G" id="1i" role="lGtFl">
-          <node concept="3u3nmq" id="1j" role="cd27D">
-            <property role="3u3nmv" value="1510458583736379379" />
-          </node>
-        </node>
-      </node>
-      <node concept="3uibUv" id="1e" role="3clF45">
-        <ref role="3uigEE" to="c17a:~SConcept" resolve="SConcept" />
-        <node concept="cd27G" id="1k" role="lGtFl">
-          <node concept="3u3nmq" id="1l" role="cd27D">
-            <property role="3u3nmv" value="1510458583736379379" />
-          </node>
-        </node>
-      </node>
-      <node concept="3Tm1VV" id="1f" role="1B3o_S">
-        <node concept="cd27G" id="1m" role="lGtFl">
-          <node concept="3u3nmq" id="1n" role="cd27D">
-            <property role="3u3nmv" value="1510458583736379379" />
-          </node>
-        </node>
-      </node>
-      <node concept="3clFbS" id="1g" role="3clF47">
-        <node concept="3clFbF" id="1o" role="3cqZAp">
-          <node concept="1BaE9c" id="1q" role="3clFbG">
-            <property role="1ouuDV" value="CONCEPTS" />
-            <property role="1BaxDp" value="FromOrientationVectorBase$61" />
-            <node concept="2YIFZM" id="1s" role="1Bazha">
-              <ref role="1Pybhc" to="2k9e:~MetaAdapterFactory" resolve="MetaAdapterFactory" />
-              <ref role="37wK5l" to="2k9e:~MetaAdapterFactory.getConcept(long,long,long,java.lang.String)" resolve="getConcept" />
-              <node concept="1adDum" id="1u" role="37wK5m">
-                <property role="1adDun" value="0xbe81eb124eda4d0eL" />
-                <node concept="cd27G" id="1z" role="lGtFl">
-                  <node concept="3u3nmq" id="1$" role="cd27D">
-                    <property role="3u3nmv" value="1510458583736379379" />
-                  </node>
-                </node>
-              </node>
-              <node concept="1adDum" id="1v" role="37wK5m">
-                <property role="1adDun" value="0x89be7493500ab874L" />
-                <node concept="cd27G" id="1_" role="lGtFl">
-                  <node concept="3u3nmq" id="1A" role="cd27D">
-                    <property role="3u3nmv" value="1510458583736379379" />
-                  </node>
-                </node>
-              </node>
-              <node concept="1adDum" id="1w" role="37wK5m">
-                <property role="1adDun" value="0x14f63a14438be7b3L" />
-                <node concept="cd27G" id="1B" role="lGtFl">
-                  <node concept="3u3nmq" id="1C" role="cd27D">
-                    <property role="3u3nmv" value="1510458583736379379" />
-                  </node>
-                </node>
-              </node>
-              <node concept="Xl_RD" id="1x" role="37wK5m">
-                <property role="Xl_RC" value="jetbrains.mps.samples.Physics.structure.FromOrientationVectorBase" />
-                <node concept="cd27G" id="1D" role="lGtFl">
-                  <node concept="3u3nmq" id="1E" role="cd27D">
-                    <property role="3u3nmv" value="1510458583736379379" />
-                  </node>
-                </node>
-              </node>
-              <node concept="cd27G" id="1y" role="lGtFl">
-                <node concept="3u3nmq" id="1F" role="cd27D">
-                  <property role="3u3nmv" value="1510458583736379379" />
-                </node>
-              </node>
-            </node>
-            <node concept="cd27G" id="1t" role="lGtFl">
-              <node concept="3u3nmq" id="1G" role="cd27D">
-                <property role="3u3nmv" value="1510458583736379379" />
-              </node>
-            </node>
-          </node>
-          <node concept="cd27G" id="1r" role="lGtFl">
-            <node concept="3u3nmq" id="1H" role="cd27D">
-              <property role="3u3nmv" value="1510458583736379379" />
-            </node>
-          </node>
-        </node>
-        <node concept="cd27G" id="1p" role="lGtFl">
-          <node concept="3u3nmq" id="1I" role="cd27D">
-            <property role="3u3nmv" value="1510458583736379379" />
-          </node>
-        </node>
-      </node>
-      <node concept="cd27G" id="1h" role="lGtFl">
-        <node concept="3u3nmq" id="1J" role="cd27D">
-          <property role="3u3nmv" value="1510458583736379379" />
-        </node>
-      </node>
-    </node>
-    <node concept="cd27G" id="A" role="lGtFl">
-      <node concept="3u3nmq" id="1K" role="cd27D">
-        <property role="3u3nmv" value="1510458583736379379" />
       </node>
     </node>
   </node>

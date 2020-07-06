@@ -10,8 +10,19 @@
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
+        <property id="1421157252384165432" name="memberId" index="3tVfz5" />
+        <property id="672037151186491528" name="presentation" index="1L1pqM" />
+      </concept>
+      <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
+        <reference id="1075010451642646892" name="defaultMember" index="1H5jkz" />
+        <child id="3348158742936976577" name="members" index="25R1y" />
+      </concept>
       <concept id="7862711839422615209" name="jetbrains.mps.lang.structure.structure.DocumentedNodeAnnotation" flags="ng" index="t5JxF">
         <property id="7862711839422615217" name="text" index="t5JxN" />
+      </concept>
+      <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
+        <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
       </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
@@ -123,6 +134,9 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3Nk1IDHVTY$" resolve="IObjectImplemented" />
     </node>
+    <node concept="PrWs8" id="6POFxU8e$he" role="PzmwI">
+      <ref role="PrY4T" node="6POFxU8e$hb" resolve="IDirection" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDF">
     <property role="EcuMT" value="6362440046684076651" />
@@ -231,13 +245,6 @@
     <property role="34LRSv" value="dynamic force" />
     <property role="R4oN_" value="same as static force but provides variables to use in the expression" />
     <ref role="1TJDcQ" node="1h1l5SEm0oM" resolve="StaticForce" />
-    <node concept="1TJgyj" id="1jQexh3yYuP" role="1TKVEi">
-      <property role="IQ2ns" value="1510458583736379317" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="base" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1jQexh3yYuK" resolve="VectorBase" />
-    </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oQ">
     <property role="EcuMT" value="1459540517658822198" />
@@ -379,6 +386,9 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5xbVod7kJDH" resolve="Coordinates" />
     </node>
+    <node concept="PrWs8" id="6POFxU8hZ1R" role="PzmwI">
+      <ref role="PrY4T" node="6POFxU8e$hb" resolve="IDirection" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1jQexh3xTnw">
     <property role="EcuMT" value="1510458583736096224" />
@@ -456,27 +466,6 @@
       <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
     </node>
   </node>
-  <node concept="1TIwiD" id="1jQexh3yYuK">
-    <property role="EcuMT" value="1510458583736379312" />
-    <property role="3GE5qa" value="physical.vector.base" />
-    <property role="TrG5h" value="VectorBase" />
-    <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-  </node>
-  <node concept="1TIwiD" id="1jQexh3yYuN">
-    <property role="EcuMT" value="1510458583736379315" />
-    <property role="3GE5qa" value="physical.vector.base" />
-    <property role="TrG5h" value="FromOrientationVectorBase" />
-    <property role="34LRSv" value="from orientation" />
-    <ref role="1TJDcQ" node="1jQexh3yYuK" resolve="VectorBase" />
-  </node>
-  <node concept="1TIwiD" id="1jQexh3yYuO">
-    <property role="EcuMT" value="1510458583736379316" />
-    <property role="3GE5qa" value="physical.vector.base" />
-    <property role="TrG5h" value="AbsoluteVectorBase" />
-    <property role="34LRSv" value="absolute" />
-    <ref role="1TJDcQ" node="1jQexh3yYuK" resolve="VectorBase" />
-  </node>
   <node concept="1TIwiD" id="34ALWs$saY6">
     <property role="EcuMT" value="3541737815097257862" />
     <property role="3GE5qa" value="physical.force" />
@@ -550,14 +539,73 @@
       <property role="IQ2ns" value="4383135941275155975" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="velocity" />
-      <ref role="20lvS9" node="1jQexh3x$_T" resolve="Vector" />
+      <ref role="20lvS9" node="5xbVod7kJDH" resolve="Coordinates" />
     </node>
-    <node concept="1TJgyj" id="3Nk1IDHWZS8" role="1TKVEi">
-      <property role="IQ2ns" value="4383135941275155976" />
+  </node>
+  <node concept="25R3W" id="6POFxU8e$gz">
+    <property role="3F6X1D" value="7887120293590352931" />
+    <property role="3GE5qa" value="physical.vector.direction" />
+    <property role="TrG5h" value="BuiltInDirection" />
+    <ref role="1H5jkz" node="6POFxU8e$gC" resolve="self_direction" />
+    <node concept="25R33" id="6POFxU8e$g$" role="25R1y">
+      <property role="3tVfz5" value="7887120293590352932" />
+      <property role="TrG5h" value="default" />
+      <property role="1L1pqM" value="world direction" />
+    </node>
+    <node concept="25R33" id="6POFxU8e$g_" role="25R1y">
+      <property role="3tVfz5" value="7887120293590352933" />
+      <property role="TrG5h" value="world_origin" />
+      <property role="1L1pqM" value="world origin" />
+    </node>
+    <node concept="25R33" id="6POFxU8ikYt" role="25R1y">
+      <property role="3tVfz5" value="7887120293591338909" />
+      <property role="TrG5h" value="velocity" />
+      <property role="1L1pqM" value="object velocity" />
+    </node>
+    <node concept="25R33" id="6POFxU8e$gC" role="25R1y">
+      <property role="3tVfz5" value="7887120293590352936" />
+      <property role="TrG5h" value="self_direction" />
+      <property role="1L1pqM" value="object direction" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6POFxU8e$gO">
+    <property role="EcuMT" value="7887120293590352948" />
+    <property role="3GE5qa" value="physical.vector.direction" />
+    <property role="TrG5h" value="DefaultDirection" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="6POFxU8e$gR" role="1TKVEl">
+      <property role="IQ2nx" value="7887120293590352951" />
+      <property role="TrG5h" value="direction" />
+      <ref role="AX2Wp" node="6POFxU8e$gz" resolve="BuiltInDirection" />
+    </node>
+    <node concept="PrWs8" id="6POFxU8e$hc" role="PzmwI">
+      <ref role="PrY4T" node="6POFxU8e$hb" resolve="IDirection" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="6POFxU8e$hb">
+    <property role="EcuMT" value="7887120293590352971" />
+    <property role="3GE5qa" value="physical.vector.direction" />
+    <property role="TrG5h" value="IDirection" />
+  </node>
+  <node concept="1TIwiD" id="6POFxU8e$hL">
+    <property role="EcuMT" value="7887120293590353009" />
+    <property role="3GE5qa" value="physical.vector.coordinates" />
+    <property role="TrG5h" value="DirectionalCoordinates" />
+    <property role="34LRSv" value="directional coordinates" />
+    <ref role="1TJDcQ" node="5xbVod7kJDH" resolve="Coordinates" />
+    <node concept="1TJgyj" id="6POFxU8e$hO" role="1TKVEi">
+      <property role="IQ2ns" value="7887120293590353012" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="velocityBase" />
+      <property role="20kJfa" value="length" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1jQexh3yYuK" resolve="VectorBase" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="6POFxU8e$hM" role="1TKVEi">
+      <property role="IQ2ns" value="7887120293590353010" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="direction" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6POFxU8e$hb" resolve="IDirection" />
     </node>
   </node>
 </model>
