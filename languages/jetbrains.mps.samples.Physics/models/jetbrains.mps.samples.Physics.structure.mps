@@ -89,6 +89,9 @@
     <node concept="PrWs8" id="3Nk1IDHVTYC" role="PzmwI">
       <ref role="PrY4T" node="3Nk1IDHVTY$" resolve="IObjectImplemented" />
     </node>
+    <node concept="PrWs8" id="6POFxU8k_zK" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MN9SX3">
     <property role="EcuMT" value="7746015835359514435" />
@@ -368,7 +371,7 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="nlMVtogWxx" role="1TKVEi">
       <property role="IQ2ns" value="420466128549300321" />
-      <property role="20kJfa" value="world" />
+      <property role="20kJfa" value="target" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="6HZo5MN9SX0" resolve="WorldDefinition" />
     </node>

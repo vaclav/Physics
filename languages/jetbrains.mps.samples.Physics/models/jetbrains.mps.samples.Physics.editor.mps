@@ -782,7 +782,7 @@
     <property role="3GE5qa" value="physical" />
     <ref role="1XX52x" to="9tcj:nlMVtogWxw" resolve="WorldReference" />
     <node concept="1iCGBv" id="3Nk1IDHXcY0" role="2wV5jI">
-      <ref role="1NtTu8" to="9tcj:nlMVtogWxx" resolve="world" />
+      <ref role="1NtTu8" to="9tcj:nlMVtogWxx" resolve="target" />
       <node concept="1sVBvm" id="3Nk1IDHXcY2" role="1sWHZn">
         <node concept="3F0A7n" id="3Nk1IDHXcY9" role="2wV5jI">
           <property role="1Intyy" value="true" />

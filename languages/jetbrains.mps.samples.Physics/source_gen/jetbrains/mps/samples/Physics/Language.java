@@ -10,6 +10,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.smodel.runtime.ILanguageAspect;
 import jetbrains.mps.openapi.actions.descriptor.ActionAspectDescriptor;
 import jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl;
+import jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor;
+import jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor;
 import jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor;
 import jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl;
 import jetbrains.mps.smodel.runtime.StructureAspectDescriptor;
@@ -51,6 +53,12 @@ public class Language extends LanguageRuntime {
     // AP: legacy part, must be migrated from switch: please use lang.descriptor mapping label 
     if (aspectClass == ActionAspectDescriptor.class) {
       return aspectClass.cast(new ActionAspectDescriptorImpl());
+    }
+    if (aspectClass == BehaviorAspectDescriptor.class) {
+      return aspectClass.cast(new jetbrains.mps.samples.Physics.behavior.BehaviorAspectDescriptor());
+    }
+    if (aspectClass == ConstraintsAspectDescriptor.class) {
+      return aspectClass.cast(new jetbrains.mps.samples.Physics.constraints.ConstraintsAspectDescriptor());
     }
     if (aspectClass == EditorAspectDescriptor.class) {
       return aspectClass.cast(new EditorAspectDescriptorImpl());
