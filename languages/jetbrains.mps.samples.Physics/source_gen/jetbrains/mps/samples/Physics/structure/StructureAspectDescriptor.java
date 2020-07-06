@@ -14,8 +14,6 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
-import jetbrains.mps.smodel.runtime.ConceptKind;
-import jetbrains.mps.smodel.runtime.StaticScope;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAbsoluteVector = createDescriptorForAbsoluteVector();
@@ -32,6 +30,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDirectionalCoordinates = createDescriptorForDirectionalCoordinates();
   /*package*/ final ConceptDescriptor myConceptDynamicForce = createDescriptorForDynamicForce();
   /*package*/ final ConceptDescriptor myConceptForce = createDescriptorForForce();
+  /*package*/ final ConceptDescriptor myConceptForceType = createDescriptorForForceType();
   /*package*/ final ConceptDescriptor myConceptIDirection = createDescriptorForIDirection();
   /*package*/ final ConceptDescriptor myConceptILocalized = createDescriptorForILocalized();
   /*package*/ final ConceptDescriptor myConceptIObjectImplemented = createDescriptorForIObjectImplemented();
@@ -50,7 +49,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptStaticForce = createDescriptorForStaticForce();
   /*package*/ final ConceptDescriptor myConceptTexture = createDescriptorForTexture();
   /*package*/ final ConceptDescriptor myConceptVector = createDescriptorForVector();
-  /*package*/ final ConceptDescriptor myConceptVectorType = createDescriptorForVectorType();
   /*package*/ final ConceptDescriptor myConceptVisual = createDescriptorForVisual();
   /*package*/ final ConceptDescriptor myConceptWorldDefinition = createDescriptorForWorldDefinition();
   /*package*/ final ConceptDescriptor myConceptWorldInclusion = createDescriptorForWorldInclusion();
@@ -66,13 +64,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
-    deps.extendedLanguage(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, "jetbrains.mps.baseLanguage");
-    deps.aggregatedLanguage(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, "jetbrains.mps.baseLanguage");
+    deps.extendedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
+    deps.aggregatedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbsoluteVector, myConceptAbstractForce, myConceptAbstractForceReference, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptBoxVisual, myConceptBuiltInColor, myConceptCartesianCoordinates, myConceptCoordinates, myConceptCustomColor, myConceptDefaultDirection, myConceptDirectionalCoordinates, myConceptDynamicForce, myConceptForce, myConceptIDirection, myConceptILocalized, myConceptIObjectImplemented, myConceptInwardTarget, myConceptObjectDefinition, myConceptObjectReference, myConceptOrientation, myConceptOutwardTarget, myConceptPicture, myConceptRelativeVector, myConceptSameAsTarget, myConceptSimulation, myConceptSphereVisual, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptTexture, myConceptVector, myConceptVectorType, myConceptVisual, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldReference);
+    return Arrays.asList(myConceptAbsoluteVector, myConceptAbstractForce, myConceptAbstractForceReference, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptBoxVisual, myConceptBuiltInColor, myConceptCartesianCoordinates, myConceptCoordinates, myConceptCustomColor, myConceptDefaultDirection, myConceptDirectionalCoordinates, myConceptDynamicForce, myConceptForce, myConceptForceType, myConceptIDirection, myConceptILocalized, myConceptIObjectImplemented, myConceptInwardTarget, myConceptObjectDefinition, myConceptObjectReference, myConceptOrientation, myConceptOutwardTarget, myConceptPicture, myConceptRelativeVector, myConceptSameAsTarget, myConceptSimulation, myConceptSphereVisual, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptTexture, myConceptVector, myConceptVisual, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldReference);
   }
 
   @Override
@@ -107,6 +105,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDynamicForce;
       case LanguageConceptSwitch.Force:
         return myConceptForce;
+      case LanguageConceptSwitch.ForceType:
+        return myConceptForceType;
       case LanguageConceptSwitch.IDirection:
         return myConceptIDirection;
       case LanguageConceptSwitch.ILocalized:
@@ -143,8 +143,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptTexture;
       case LanguageConceptSwitch.Vector:
         return myConceptVector;
-      case LanguageConceptSwitch.VectorType:
-        return myConceptVectorType;
       case LanguageConceptSwitch.Visual:
         return myConceptVisual;
       case LanguageConceptSwitch.WorldDefinition:
@@ -179,11 +177,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForAbstractForce() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "AbstractForce", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L);
     b.class_(false, false, true);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x427ce523083b8a2fL);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/3541737815097257862");
     b.version(2);
-    b.aggregate("force", 0x3126c7c72470cf49L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL).optional(false).ordered(true).multiple(false).origin("3541737815097265993").done();
-    b.aggregate("attributes", 0x2a93b4d18288a984L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c77f1e94L).optional(true).ordered(true).multiple(true).origin("3067994583100598660").done();
     b.alias("force");
     return b.create();
   }
@@ -194,7 +190,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1510458583736379040");
     b.version(2);
     b.associate("force", 0x3126c7c72473eb96L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L).optional(true).origin("3541737815097469846").done();
-    b.aggregate("parameterValues", 0x3126c7c72473eb98L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(true).ordered(true).multiple(true).origin("3541737815097469848").done();
+    b.aggregate("parameterValues", 0x3126c7c72473eb98L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(true).origin("3541737815097469848").done();
     b.alias("defined force");
     return b.create();
   }
@@ -246,9 +242,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("jetbrains.mps.samples.Physics.structure.Coordinates", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/6362440046684076683");
     b.version(2);
-    b.aggregate("dx", 0x1441545e2a580637L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(false).ordered(true).multiple(false).origin("1459540517658822199").done();
-    b.aggregate("dy", 0x1441545e2a5807eeL).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(false).ordered(true).multiple(false).origin("1459540517658822638").done();
-    b.aggregate("dz", 0x1441545e2a5807f1L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(false).ordered(true).multiple(false).origin("1459540517658822641").done();
+    b.aggregate("dx", 0x1441545e2a580637L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("1459540517658822199").done();
+    b.aggregate("dy", 0x1441545e2a5807eeL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("1459540517658822638").done();
+    b.aggregate("dz", 0x1441545e2a5807f1L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("1459540517658822641").done();
     b.alias("cartesian coordinates");
     return b.create();
   }
@@ -285,7 +281,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("jetbrains.mps.samples.Physics.structure.Coordinates", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7887120293590353009");
     b.version(2);
-    b.aggregate("length", 0x6d74ae1e883a4474L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(false).ordered(true).multiple(false).origin("7887120293590353012").done();
+    b.aggregate("length", 0x6d74ae1e883a4474L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("7887120293590353012").done();
     b.aggregate("direction", 0x6d74ae1e883a4472L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a444bL).optional(false).ordered(true).multiple(false).origin("7887120293590353010").done();
     b.alias("directional coordinates");
     return b.create();
@@ -302,9 +298,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForForce() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "Force", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL);
     b.class_(false, true, false);
-    b.super_("jetbrains.mps.baseLanguage.structure.Expression", 0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL);
+    b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1459540517658822191");
     b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForForceType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "ForceType", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1be152c15029f679L);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.Type", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
+    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2008977899011044985");
+    b.version(2);
+    b.alias("force");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIDirection() {
@@ -348,7 +353,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7746015835359514435");
     b.version(2);
-    b.property("mass", 0x6b7f605cb3282de5L).type(PrimitiveTypeId.INTEGER).origin("7746015835359555045").done();
+    b.property("mass_", 0x6b7f605cb3282de5L).type(PrimitiveTypeId.INTEGER).origin("7746015835359555045").done();
+    b.aggregate("mass", 0x1be152c1502448ffL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("2008977899010672895").done();
     b.alias("object");
     return b.create();
   }
@@ -468,15 +474,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1510458583736011129");
     b.version(2);
     b.aggregate("coordinates", 0x14f63a1443864400L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL).optional(false).ordered(true).multiple(false).origin("7621250838656151341").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForVectorType() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "VectorType", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c7248a5950L);
-    b.class_(false, false, false);
-    b.super_("jetbrains.mps.baseLanguage.structure.Type", 0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506dL);
-    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/3541737815098939728");
-    b.version(2);
-    b.kind(ConceptKind.INTERFACE, StaticScope.GLOBAL);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForVisual() {

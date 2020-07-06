@@ -9,6 +9,7 @@
     <import index="exr9" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.nodeEditor(MPS.Editor/)" />
     <import index="9tcj" ref="r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -172,9 +173,9 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0A7n" id="6HZo5MNa3fq" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:6HZo5MNa2R_" resolve="mass" />
-        <node concept="ljvvj" id="6HZo5MNaIMM" role="3F10Kt">
+      <node concept="3F1sOY" id="1JxkG5g94Jc" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:1JxkG5g94zZ" resolve="mass" />
+        <node concept="ljvvj" id="1JxkG5g94Jt" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -702,7 +703,7 @@
       </node>
       <node concept="3F2HdR" id="2EjHd62yaAx" role="3EZMnx">
         <property role="2czwfO" value="," />
-        <ref role="1NtTu8" to="9tcj:2EjHd62yaA4" resolve="attributes" />
+        <ref role="1NtTu8" to="zzzn:49WTic8eSCZ" resolve="args" />
         <node concept="l2Vlx" id="2EjHd62yaAz" role="2czzBx" />
         <node concept="ljvvj" id="2EjHd62yaAH" role="3F10Kt">
           <property role="VOm3f" value="true" />

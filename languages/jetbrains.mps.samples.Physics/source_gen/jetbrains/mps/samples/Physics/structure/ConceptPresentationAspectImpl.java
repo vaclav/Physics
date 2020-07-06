@@ -23,6 +23,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DirectionalCoordinates;
   private ConceptPresentation props_DynamicForce;
   private ConceptPresentation props_Force;
+  private ConceptPresentation props_ForceType;
   private ConceptPresentation props_IDirection;
   private ConceptPresentation props_ILocalized;
   private ConceptPresentation props_IObjectImplemented;
@@ -41,7 +42,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StaticForce;
   private ConceptPresentation props_Texture;
   private ConceptPresentation props_Vector;
-  private ConceptPresentation props_VectorType;
   private ConceptPresentation props_Visual;
   private ConceptPresentation props_WorldDefinition;
   private ConceptPresentation props_WorldInclusion;
@@ -138,7 +138,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.DynamicForce:
         if (props_DynamicForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("same as static force but provides variables to use in the expression");
+          cpb.shortDesc("same as static force but provides dynamic variables to use in the expression");
           cpb.rawPresentation("dynamic force");
           props_DynamicForce = cpb.create();
         }
@@ -150,6 +150,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Force = cpb.create();
         }
         return props_Force;
+      case LanguageConceptSwitch.ForceType:
+        if (props_ForceType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("force");
+          props_ForceType = cpb.create();
+        }
+        return props_ForceType;
       case LanguageConceptSwitch.IDirection:
         if (props_IDirection == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -272,13 +279,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Vector = cpb.create();
         }
         return props_Vector;
-      case LanguageConceptSwitch.VectorType:
-        if (props_VectorType == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("VectorType");
-          props_VectorType = cpb.create();
-        }
-        return props_VectorType;
       case LanguageConceptSwitch.Visual:
         if (props_Visual == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

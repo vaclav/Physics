@@ -5,6 +5,7 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.actions.descriptor.ActionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
@@ -13,6 +14,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.StructureAspectDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.TypesystemDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.language.LanguageExtensions" />
