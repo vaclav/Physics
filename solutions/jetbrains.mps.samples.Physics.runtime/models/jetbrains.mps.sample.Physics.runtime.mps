@@ -171,13 +171,13 @@
       <node concept="3clFbS" id="3H79Ykd2Gyo" role="3clF47">
         <node concept="3cpWs8" id="3H79Ykd2Gyq" role="3cqZAp">
           <node concept="3cpWsn" id="3H79Ykd2Gyp" role="3cpWs9">
-            <property role="TrG5h" value="builder" />
-            <node concept="3uibUv" id="3H79Ykd2Gyr" role="1tU5fm">
-              <ref role="3uigEE" to="jyp0:3H79Ykd2Gv$" resolve="WorldBuilder" />
+            <property role="TrG5h" value="world" />
+            <node concept="3uibUv" id="cTQf2Fv6Vo" role="1tU5fm">
+              <ref role="3uigEE" to="jyp0:3H79Ykd2Grr" resolve="World" />
             </node>
             <node concept="2ShNRf" id="3H79Ykd2LFd" role="33vP2m">
               <node concept="1pGfFk" id="3H79Ykd2LFf" role="2ShVmc">
-                <ref role="37wK5l" to="jyp0:3H79Ykd2GvI" resolve="WorldBuilder" />
+                <ref role="37wK5l" to="jyp0:3H79Ykd2GrF" resolve="World" />
               </node>
             </node>
           </node>
@@ -186,7 +186,7 @@
           <node concept="1rXfSq" id="3H79Ykd2Gyu" role="3clFbG">
             <ref role="37wK5l" node="3H79Ykd2Gy_" resolve="init" />
             <node concept="37vLTw" id="3H79Ykd2Gyv" role="37wK5m">
-              <ref role="3cqZAo" node="3H79Ykd2Gyp" resolve="builder" />
+              <ref role="3cqZAo" node="3H79Ykd2Gyp" resolve="world" />
             </node>
           </node>
         </node>
@@ -197,13 +197,8 @@
             </node>
             <node concept="liA8E" id="3H79Ykd2LFk" role="2OqNvi">
               <ref role="37wK5l" node="3H79Ykd2GqI" resolve="setRenderedWorld" />
-              <node concept="2OqwBi" id="3H79Ykd2LFN" role="37wK5m">
-                <node concept="37vLTw" id="3H79Ykd2LFM" role="2Oq$k0">
-                  <ref role="3cqZAo" node="3H79Ykd2Gyp" resolve="builder" />
-                </node>
-                <node concept="liA8E" id="3H79Ykd2LFO" role="2OqNvi">
-                  <ref role="37wK5l" to="jyp0:3H79Ykd2GxB" resolve="build" />
-                </node>
+              <node concept="37vLTw" id="3H79Ykd2LFM" role="37wK5m">
+                <ref role="3cqZAo" node="3H79Ykd2Gyp" resolve="world" />
               </node>
             </node>
           </node>
@@ -216,9 +211,9 @@
       <property role="TrG5h" value="init" />
       <property role="1EzhhJ" value="true" />
       <node concept="37vLTG" id="3H79Ykd2GyA" role="3clF46">
-        <property role="TrG5h" value="builder" />
-        <node concept="3uibUv" id="3H79Ykd2GyB" role="1tU5fm">
-          <ref role="3uigEE" to="jyp0:3H79Ykd2Gv$" resolve="WorldBuilder" />
+        <property role="TrG5h" value="world" />
+        <node concept="3uibUv" id="cTQf2Fv71o" role="1tU5fm">
+          <ref role="3uigEE" to="jyp0:3H79Ykd2Grr" resolve="World" />
         </node>
       </node>
       <node concept="3clFbS" id="3H79Ykd2GyC" role="3clF47" />

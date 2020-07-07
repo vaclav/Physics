@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:0fdd7739-3237-411b-9292-02c173ea9378(jetbrains.mps.samples.Physics.descriptors)">
+<model ref="r:9ce48490-7b6f-464e-a76a-03b37e20a819(jetbrains.mps.samples.Physics.genjava.editor)">
   <persistence version="9" />
   <languages>
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="14" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
-    <devkit ref="c4e521ab-b605-4ef9-a7c3-68075da058f0(org.iets3.core.expr.core.devkit)" />
   </languages>
   <imports />
   <registry />

@@ -309,6 +309,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="QNYPlnYUru" role="3cqZAp">
+          <node concept="2OqwBi" id="QNYPlnYUyD" role="3clFbG">
+            <node concept="37vLTw" id="QNYPlnYUrs" role="2Oq$k0">
+              <ref role="3cqZAo" node="3H79Ykd2Gnz" resolve="mass" />
+            </node>
+            <node concept="liA8E" id="QNYPlnYUCz" role="2OqNvi">
+              <ref role="37wK5l" to="9dpa:~DMass.setMass(double)" resolve="setMass" />
+              <node concept="37vLTw" id="QNYPlnYUD_" role="37wK5m">
+                <ref role="3cqZAo" node="QNYPlnYUaI" resolve="massValue" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="3H79Ykd2GnB" role="3cqZAp">
           <node concept="2OqwBi" id="3H79Ykd2LG2" role="3clFbG">
             <node concept="37vLTw" id="3H79Ykd2LG1" role="2Oq$k0">
@@ -363,6 +376,10 @@
       </node>
       <node concept="3Tm1VV" id="3H79Ykd2GnH" role="1B3o_S" />
       <node concept="3cqZAl" id="3H79Ykd2GnI" role="3clF45" />
+      <node concept="37vLTG" id="QNYPlnYUaI" role="3clF46">
+        <property role="TrG5h" value="massValue" />
+        <node concept="10P55v" id="QNYPlnYU7n" role="1tU5fm" />
+      </node>
     </node>
     <node concept="3clFb_" id="3H79Ykd2GnJ" role="jymVt">
       <property role="TrG5h" value="getGeometry" />
