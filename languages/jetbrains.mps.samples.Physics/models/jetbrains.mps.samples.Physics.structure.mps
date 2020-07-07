@@ -138,15 +138,12 @@
     <property role="EcuMT" value="7746015835360049755" />
     <property role="3GE5qa" value="physical" />
     <property role="TrG5h" value="ObjectReference" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyj" id="6HZo5MNbVDs" role="1TKVEi">
       <property role="IQ2ns" value="7746015835360049756" />
       <property role="20kJfa" value="target" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3Nk1IDHVTY$" resolve="IObjectImplemented" />
-    </node>
-    <node concept="PrWs8" id="6POFxU8e$he" role="PzmwI">
-      <ref role="PrY4T" node="6POFxU8e$hb" resolve="IDirection" />
     </node>
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDF">
@@ -227,20 +224,13 @@
     <property role="34LRSv" value="absolute vector" />
     <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="Vector" />
   </node>
-  <node concept="1TIwiD" id="1h1l5SEm0oJ">
-    <property role="EcuMT" value="1459540517658822191" />
-    <property role="3GE5qa" value="physical.force.implemented" />
-    <property role="TrG5h" value="Force" />
-    <property role="R5$K7" value="true" />
-    <property role="R4oN_" value="may the force be with you" />
-    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
-  </node>
   <node concept="1TIwiD" id="1h1l5SEm0oM">
     <property role="EcuMT" value="1459540517658822194" />
     <property role="3GE5qa" value="physical.force.implemented" />
     <property role="TrG5h" value="StaticForce" />
     <property role="34LRSv" value="static force" />
-    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
+    <property role="R4oN_" value="force computed once and applied constantly" />
+    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="ForceExpression" />
     <node concept="1TJgyj" id="1h1l5SEm0oN" role="1TKVEi">
       <property role="IQ2ns" value="1459540517658822195" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -262,7 +252,7 @@
     <property role="3GE5qa" value="physical.force.implemented" />
     <property role="TrG5h" value="StatefulForce" />
     <property role="R4oN_" value="a force defined by some state" />
-    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
+    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="ForceExpression" />
   </node>
   <node concept="1TIwiD" id="1h1l5SEmLT3">
     <property role="EcuMT" value="1459540517659024963" />
@@ -276,7 +266,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="forces" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="Force" />
+      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="ForceExpression" />
     </node>
     <node concept="1TJgyj" id="1h1l5SEmLTh" role="1TKVEi">
       <property role="IQ2ns" value="1459540517659024977" />
@@ -365,11 +355,13 @@
   <node concept="1TIwiD" id="1h1l5SEmLT_">
     <property role="EcuMT" value="1459540517659024997" />
     <property role="3GE5qa" value="physical.visual.texture" />
-    <property role="TrG5h" value="BuiltInColor" />
+    <property role="TrG5h" value="BuiltInColorTexture" />
     <property role="34LRSv" value="built-in color" />
     <ref role="1TJDcQ" node="1h1l5SEmLT$" resolve="Texture" />
-    <node concept="PrWs8" id="1jQexh3y6fy" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <node concept="1TJgyi" id="cTQf2FiJYb" role="1TKVEl">
+      <property role="IQ2nx" value="232455383963860875" />
+      <property role="TrG5h" value="color" />
+      <ref role="AX2Wp" node="cTQf2FiJWL" resolve="BuiltInColors" />
     </node>
   </node>
   <node concept="1TIwiD" id="nlMVtogWxw">
@@ -389,7 +381,7 @@
     <property role="3GE5qa" value="physical.vector" />
     <property role="TrG5h" value="Vector" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyj" id="6B47O8QfQWH" role="1TKVEi">
       <property role="IQ2ns" value="1510458583736009728" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -397,41 +389,11 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5xbVod7kJDH" resolve="Coordinates" />
     </node>
-    <node concept="PrWs8" id="6POFxU8hZ1R" role="PzmwI">
-      <ref role="PrY4T" node="6POFxU8e$hb" resolve="IDirection" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="1jQexh3xTnw">
-    <property role="EcuMT" value="1510458583736096224" />
-    <property role="3GE5qa" value="physical.angles" />
-    <property role="TrG5h" value="Orientation" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-  </node>
-  <node concept="1TIwiD" id="1jQexh3xTnx">
-    <property role="EcuMT" value="1510458583736096225" />
-    <property role="3GE5qa" value="physical.angles" />
-    <property role="TrG5h" value="InwardTarget" />
-    <property role="34LRSv" value="inward target" />
-    <ref role="1TJDcQ" node="1jQexh3xTnw" resolve="Orientation" />
-  </node>
-  <node concept="1TIwiD" id="1jQexh3xTny">
-    <property role="EcuMT" value="1510458583736096226" />
-    <property role="3GE5qa" value="physical.angles" />
-    <property role="TrG5h" value="OutwardTarget" />
-    <property role="34LRSv" value="outward target" />
-    <ref role="1TJDcQ" node="1jQexh3xTnw" resolve="Orientation" />
-  </node>
-  <node concept="1TIwiD" id="1jQexh3xTnz">
-    <property role="EcuMT" value="1510458583736096227" />
-    <property role="3GE5qa" value="physical.angles" />
-    <property role="TrG5h" value="SameAsTarget" />
-    <property role="34LRSv" value="same as target" />
-    <ref role="1TJDcQ" node="1jQexh3xTnw" resolve="Orientation" />
   </node>
   <node concept="1TIwiD" id="1jQexh3y6fx">
     <property role="EcuMT" value="1510458583736148961" />
     <property role="3GE5qa" value="physical.visual.texture" />
-    <property role="TrG5h" value="CustomColor" />
+    <property role="TrG5h" value="CustomColorTexture" />
     <ref role="1TJDcQ" node="1h1l5SEmLT$" resolve="Texture" />
     <node concept="1TJgyi" id="1jQexh3y6f$" role="1TKVEl">
       <property role="IQ2nx" value="1510458583736148964" />
@@ -452,34 +414,15 @@
   <node concept="1TIwiD" id="1jQexh3y6lu">
     <property role="EcuMT" value="1510458583736149342" />
     <property role="3GE5qa" value="physical.visual.texture" />
-    <property role="TrG5h" value="Picture" />
+    <property role="TrG5h" value="PictureTexture" />
     <ref role="1TJDcQ" node="1h1l5SEmLT$" resolve="Texture" />
     <node concept="PrWs8" id="1jQexh3y6lv" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
-  <node concept="1TIwiD" id="1jQexh3yYqw">
-    <property role="EcuMT" value="1510458583736379040" />
-    <property role="3GE5qa" value="physical.force.implemented" />
-    <property role="TrG5h" value="AbstractForceReference" />
-    <property role="34LRSv" value="defined force" />
-    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
-    <node concept="1TJgyj" id="34ALWs$sYIm" role="1TKVEi">
-      <property role="IQ2ns" value="3541737815097469846" />
-      <property role="20kJfa" value="force" />
-      <ref role="20lvS9" node="34ALWs$saY6" resolve="AbstractForce" />
-    </node>
-    <node concept="1TJgyj" id="34ALWs$sYIo" role="1TKVEi">
-      <property role="IQ2ns" value="3541737815097469848" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="parameterValues" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="34ALWs$saY6">
     <property role="EcuMT" value="3541737815097257862" />
-    <property role="3GE5qa" value="physical.force" />
+    <property role="3GE5qa" value="physical.force.abstract" />
     <property role="TrG5h" value="AbstractForce" />
     <property role="34LRSv" value="force" />
     <property role="19KtqR" value="true" />
@@ -492,8 +435,16 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="force" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="Force" />
       <ref role="20ksaX" to="zzzn:49WTic8eSDm" resolve="body" />
+      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="ForceExpression" />
+    </node>
+    <node concept="1TJgyj" id="6kwOTMkWOHS" role="1TKVEi">
+      <property role="IQ2ns" value="7287056866552793976" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="args" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="6kwOTMkWOH$" resolve="ForceArgument" />
+      <ref role="20ksaX" to="zzzn:49WTic8eSCZ" resolve="args" />
     </node>
   </node>
   <node concept="PlHQZ" id="3Nk1IDHVTY$">
@@ -543,8 +494,8 @@
   </node>
   <node concept="25R3W" id="6POFxU8e$gz">
     <property role="3F6X1D" value="7887120293590352931" />
-    <property role="3GE5qa" value="physical.vector.direction" />
-    <property role="TrG5h" value="BuiltInDirection" />
+    <property role="3GE5qa" value="physical.expr.direction" />
+    <property role="TrG5h" value="BuiltInVectors" />
     <ref role="1H5jkz" node="6POFxU8e$gC" resolve="self_direction" />
     <node concept="25R33" id="6POFxU8e$g$" role="25R1y">
       <property role="3tVfz5" value="7887120293590352932" />
@@ -569,22 +520,14 @@
   </node>
   <node concept="1TIwiD" id="6POFxU8e$gO">
     <property role="EcuMT" value="7887120293590352948" />
-    <property role="3GE5qa" value="physical.vector.direction" />
-    <property role="TrG5h" value="DefaultDirection" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <property role="3GE5qa" value="physical.expr.direction" />
+    <property role="TrG5h" value="BuiltInVectorsExpression" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyi" id="6POFxU8e$gR" role="1TKVEl">
       <property role="IQ2nx" value="7887120293590352951" />
       <property role="TrG5h" value="direction" />
-      <ref role="AX2Wp" node="6POFxU8e$gz" resolve="BuiltInDirection" />
+      <ref role="AX2Wp" node="6POFxU8e$gz" resolve="BuiltInVectors" />
     </node>
-    <node concept="PrWs8" id="6POFxU8e$hc" role="PzmwI">
-      <ref role="PrY4T" node="6POFxU8e$hb" resolve="IDirection" />
-    </node>
-  </node>
-  <node concept="PlHQZ" id="6POFxU8e$hb">
-    <property role="EcuMT" value="7887120293590352971" />
-    <property role="3GE5qa" value="physical.vector.direction" />
-    <property role="TrG5h" value="IDirection" />
   </node>
   <node concept="1TIwiD" id="6POFxU8e$hL">
     <property role="EcuMT" value="7887120293590353009" />
@@ -604,15 +547,249 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="direction" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6POFxU8e$hb" resolve="IDirection" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="1JxkG5gavpT">
     <property role="EcuMT" value="2008977899011044985" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.types" />
     <property role="TrG5h" value="ForceType" />
     <property role="34LRSv" value="force" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
+  </node>
+  <node concept="1TIwiD" id="6kwOTMkWOH$">
+    <property role="EcuMT" value="7287056866552793956" />
+    <property role="3GE5qa" value="physical.force.abstract" />
+    <property role="TrG5h" value="ForceArgument" />
+    <ref role="1TJDcQ" to="zzzn:49WTic8eSD1" resolve="FunctionArgument" />
+  </node>
+  <node concept="1TIwiD" id="1jQexh3yYqw">
+    <property role="EcuMT" value="1510458583736379040" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="AbstractForceCall" />
+    <property role="34LRSv" value="defined force" />
+    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="ForceExpression" />
+    <node concept="1TJgyj" id="34ALWs$sYIm" role="1TKVEi">
+      <property role="IQ2ns" value="3541737815097469846" />
+      <property role="20kJfa" value="force" />
+      <ref role="20lvS9" node="34ALWs$saY6" resolve="AbstractForce" />
+    </node>
+    <node concept="1TJgyj" id="34ALWs$sYIo" role="1TKVEi">
+      <property role="IQ2ns" value="3541737815097469848" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="parameterValues" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="PrWs8" id="6kwOTMkY3RP" role="PzmwI">
+      <ref role="PrY4T" to="zzzn:49WTic8gvys" resolve="IFunctionCall" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1h1l5SEm0oJ">
+    <property role="EcuMT" value="1459540517658822191" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="ForceExpression" />
+    <property role="R5$K7" value="true" />
+    <property role="R4oN_" value="may the force be with you" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl0tT6">
+    <property role="EcuMT" value="7287056866553749062" />
+    <property role="3GE5qa" value="physical.types" />
+    <property role="TrG5h" value="ObjectType" />
+    <property role="R4oN_" value="type of a physical object" />
+    <property role="34LRSv" value="object" />
+    <ref role="1TJDcQ" node="6kwOTMl2xh8" resolve="DirectionType" />
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl0tT7">
+    <property role="EcuMT" value="7287056866553749063" />
+    <property role="3GE5qa" value="physical.types" />
+    <property role="TrG5h" value="WorldType" />
+    <property role="R4oN_" value="type of a world" />
+    <property role="34LRSv" value="world" />
+    <ref role="1TJDcQ" node="6kwOTMl0tT6" resolve="ObjectType" />
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl17Za">
+    <property role="EcuMT" value="7287056866553921482" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="ObjectMassTarget" />
+    <property role="34LRSv" value="mass" />
+    <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl17vk">
+    <property role="EcuMT" value="7287056866553919444" />
+    <property role="3GE5qa" value="physical.expr" />
+    <property role="TrG5h" value="AbstractObjectTarget" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="6kwOTMl17vl" role="PzmwI">
+      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl19X7">
+    <property role="EcuMT" value="7287056866553929543" />
+    <property role="3GE5qa" value="physical.expr" />
+    <property role="TrG5h" value="AbstractWorldTarget" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="6kwOTMl1atx" role="PzmwI">
+      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl1asr">
+    <property role="EcuMT" value="7287056866553931547" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="ObjectPositionTarget" />
+    <property role="34LRSv" value="position" />
+    <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl1atg">
+    <property role="EcuMT" value="7287056866553931600" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="WorldMassCenterTarget" />
+    <property role="34LRSv" value="mass center" />
+    <ref role="1TJDcQ" node="6kwOTMl19X7" resolve="AbstractWorldTarget" />
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl1aFZ">
+    <property role="EcuMT" value="7287056866553932543" />
+    <property role="3GE5qa" value="physical.types" />
+    <property role="TrG5h" value="VectorType" />
+    <property role="34LRSv" value="vector" />
+    <ref role="1TJDcQ" node="6kwOTMl2xh8" resolve="DirectionType" />
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl1bfn">
+    <property role="EcuMT" value="7287056866553934807" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="VectorComponentTarget" />
+    <property role="34LRSv" value="vector component" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="6kwOTMl1bfV" role="1TKVEl">
+      <property role="IQ2nx" value="7287056866553934843" />
+      <property role="TrG5h" value="component" />
+      <ref role="AX2Wp" node="6kwOTMl1bfo" resolve="VectorComponent" />
+    </node>
+    <node concept="PrWs8" id="6kwOTMl1drX" role="PzmwI">
+      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
+  </node>
+  <node concept="25R3W" id="6kwOTMl1bfo">
+    <property role="3F6X1D" value="7287056866553934808" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="VectorComponent" />
+    <node concept="25R33" id="6kwOTMl1bfp" role="25R1y">
+      <property role="3tVfz5" value="7287056866553934809" />
+      <property role="TrG5h" value="x" />
+    </node>
+    <node concept="25R33" id="6kwOTMl1bfq" role="25R1y">
+      <property role="3tVfz5" value="7287056866553934810" />
+      <property role="TrG5h" value="y" />
+    </node>
+    <node concept="25R33" id="6kwOTMl1bft" role="25R1y">
+      <property role="3tVfz5" value="7287056866553934813" />
+      <property role="TrG5h" value="z" />
+    </node>
+    <node concept="25R33" id="6kwOTMl1bfD" role="25R1y">
+      <property role="3tVfz5" value="7287056866553934825" />
+      <property role="TrG5h" value="theta" />
+    </node>
+    <node concept="25R33" id="6kwOTMl1bfI" role="25R1y">
+      <property role="3tVfz5" value="7287056866553934830" />
+      <property role="TrG5h" value="phi" />
+    </node>
+    <node concept="25R33" id="6kwOTMl1bfO" role="25R1y">
+      <property role="3tVfz5" value="7287056866553934836" />
+      <property role="TrG5h" value="length" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl2xh8">
+    <property role="EcuMT" value="7287056866554287176" />
+    <property role="3GE5qa" value="physical.types" />
+    <property role="TrG5h" value="DirectionType" />
+    <property role="R4oN_" value="type of object giving a direction for a vector" />
+    <property role="34LRSv" value="direction" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
+  </node>
+  <node concept="25R3W" id="cTQf2FiJWL">
+    <property role="3F6X1D" value="232455383963860785" />
+    <property role="3GE5qa" value="physical.visual.texture" />
+    <property role="TrG5h" value="BuiltInColors" />
+    <node concept="25R33" id="cTQf2FiJWM" role="25R1y">
+      <property role="3tVfz5" value="232455383963860786" />
+      <property role="TrG5h" value="red" />
+    </node>
+    <node concept="25R33" id="cTQf2FiJWN" role="25R1y">
+      <property role="3tVfz5" value="232455383963860787" />
+      <property role="TrG5h" value="green" />
+    </node>
+    <node concept="25R33" id="cTQf2FiJWQ" role="25R1y">
+      <property role="3tVfz5" value="232455383963860790" />
+      <property role="TrG5h" value="blue" />
+    </node>
+    <node concept="25R33" id="cTQf2FiJWU" role="25R1y">
+      <property role="3tVfz5" value="232455383963860794" />
+      <property role="TrG5h" value="purple" />
+    </node>
+    <node concept="25R33" id="cTQf2FiJWZ" role="25R1y">
+      <property role="3tVfz5" value="232455383963860799" />
+      <property role="TrG5h" value="orange" />
+    </node>
+    <node concept="25R33" id="cTQf2FiJX5" role="25R1y">
+      <property role="3tVfz5" value="232455383963860805" />
+      <property role="TrG5h" value="grey" />
+    </node>
+    <node concept="25R33" id="cTQf2FiJXc" role="25R1y">
+      <property role="3tVfz5" value="232455383963860812" />
+      <property role="TrG5h" value="black" />
+    </node>
+    <node concept="25R33" id="cTQf2FiJXk" role="25R1y">
+      <property role="3tVfz5" value="232455383963860820" />
+      <property role="TrG5h" value="white" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="cTQf2FjlqU">
+    <property role="EcuMT" value="232455383964014266" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="InteractionForce" />
+    <property role="R4oN_" value="force that results of the interaction of two elements" />
+    <property role="34LRSv" value="interaction force" />
+    <ref role="1TJDcQ" node="1h1l5SEm0oP" resolve="DynamicForce" />
+  </node>
+  <node concept="1TIwiD" id="cTQf2Fjp4$">
+    <property role="EcuMT" value="232455383964029220" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="InteractedObjectExpression" />
+    <property role="34LRSv" value="other object" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="cTQf2Fl7sm">
+    <property role="EcuMT" value="232455383964481302" />
+    <property role="3GE5qa" value="physical.expr" />
+    <property role="TrG5h" value="CurrentObjectExpression" />
+    <property role="34LRSv" value="current object" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="cTQf2FlwO3">
+    <property role="EcuMT" value="232455383964585219" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="DistanceWithCallTarget" />
+    <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
+    <node concept="1TJgyj" id="cTQf2FlwO4" role="1TKVEi">
+      <property role="IQ2ns" value="232455383964585220" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="cTQf2FqwJc">
+    <property role="EcuMT" value="232455383965895628" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="VectorOppositeDotTarget" />
+    <property role="34LRSv" value="opposite" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="cTQf2FqwJd" role="PzmwI">
+      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
   </node>
 </model>
 

@@ -16,6 +16,7 @@
     <import index="5s8v" ref="r:06389a24-a77a-450d-bc88-bccec0aae7d8(org.iets3.core.expr.lambda.behavior)" />
     <import index="oq0c" ref="r:6c6155f0-4bbe-4af5-8c26-244d570e21e4(org.iets3.core.expr.base.plugin)" />
     <import index="pbu6" ref="r:83e946de-2a7f-4a4c-b3c9-4f671aa7f2db(org.iets3.core.expr.base.behavior)" />
+    <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -34,6 +35,7 @@
       <concept id="1225194691553" name="jetbrains.mps.lang.behavior.structure.ThisNodeExpression" flags="nn" index="13iPFW" />
     </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -250,7 +252,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="1JxkG5g9SNP">
-    <property role="3GE5qa" value="physical.force" />
+    <property role="3GE5qa" value="physical.force.abstract" />
     <ref role="13h7C2" to="9tcj:34ALWs$saY6" resolve="AbstractForce" />
     <node concept="13hLZK" id="1JxkG5g9SNQ" role="13h7CW">
       <node concept="3clFbS" id="1JxkG5g9SNR" role="2VODD2" />
@@ -275,6 +277,134 @@
         </node>
       </node>
       <node concept="17QB3L" id="1JxkG5gbdPu" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="6kwOTMl19xC">
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <ref role="13h7C2" to="9tcj:6kwOTMl17Za" resolve="ObjectMassTarget" />
+    <node concept="13hLZK" id="6kwOTMl19xD" role="13h7CW">
+      <node concept="3clFbS" id="6kwOTMl19xE" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="6kwOTMl19xN" role="13h7CS">
+      <property role="TrG5h" value="renderReadable" />
+      <ref role="13i0hy" to="pbu6:6kR0qIbI2yi" resolve="renderReadable" />
+      <node concept="3Tm1VV" id="6kwOTMl19xO" role="1B3o_S" />
+      <node concept="3clFbS" id="6kwOTMl19xR" role="3clF47">
+        <node concept="3clFbF" id="6kwOTMl19y6" role="3cqZAp">
+          <node concept="Xl_RD" id="6kwOTMl19WF" role="3clFbG">
+            <property role="Xl_RC" value="mass" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="6kwOTMl19xS" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="6kwOTMl1asx">
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <ref role="13h7C2" to="9tcj:6kwOTMl1asr" resolve="ObjectPositionTarget" />
+    <node concept="13hLZK" id="6kwOTMl1asy" role="13h7CW">
+      <node concept="3clFbS" id="6kwOTMl1asz" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="6kwOTMl1asG" role="13h7CS">
+      <property role="TrG5h" value="renderReadable" />
+      <ref role="13i0hy" to="pbu6:6kR0qIbI2yi" resolve="renderReadable" />
+      <node concept="3Tm1VV" id="6kwOTMl1asH" role="1B3o_S" />
+      <node concept="3clFbS" id="6kwOTMl1asK" role="3clF47">
+        <node concept="3clFbF" id="6kwOTMl1asZ" role="3cqZAp">
+          <node concept="Xl_RD" id="6kwOTMl1asY" role="3clFbG">
+            <property role="Xl_RC" value="position" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="6kwOTMl1asL" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="6kwOTMl1atm">
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <ref role="13h7C2" to="9tcj:6kwOTMl1atg" resolve="WorldMassCenterTarget" />
+    <node concept="13hLZK" id="6kwOTMl1atn" role="13h7CW">
+      <node concept="3clFbS" id="6kwOTMl1ato" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="6kwOTMl1atF" role="13h7CS">
+      <property role="TrG5h" value="renderReadable" />
+      <ref role="13i0hy" to="pbu6:6kR0qIbI2yi" resolve="renderReadable" />
+      <node concept="3Tm1VV" id="6kwOTMl1atG" role="1B3o_S" />
+      <node concept="3clFbS" id="6kwOTMl1atJ" role="3clF47">
+        <node concept="3clFbF" id="6kwOTMl1atY" role="3cqZAp">
+          <node concept="Xl_RD" id="6kwOTMl1atX" role="3clFbG">
+            <property role="Xl_RC" value="mass center" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="6kwOTMl1atK" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="6kwOTMl1fwe">
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <ref role="13h7C2" to="9tcj:6kwOTMl1bfn" resolve="VectorComponentTarget" />
+    <node concept="13hLZK" id="6kwOTMl1fwf" role="13h7CW">
+      <node concept="3clFbS" id="6kwOTMl1fwg" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="6kwOTMl1fwp" role="13h7CS">
+      <property role="TrG5h" value="renderReadable" />
+      <ref role="13i0hy" to="pbu6:6kR0qIbI2yi" resolve="renderReadable" />
+      <node concept="3Tm1VV" id="6kwOTMl1fwq" role="1B3o_S" />
+      <node concept="3clFbS" id="6kwOTMl1fwt" role="3clF47">
+        <node concept="3clFbF" id="6kwOTMl1fwG" role="3cqZAp">
+          <node concept="2OqwBi" id="6kwOTMl1g2U" role="3clFbG">
+            <node concept="2OqwBi" id="6kwOTMl1fDE" role="2Oq$k0">
+              <node concept="13iPFW" id="6kwOTMl1fwF" role="2Oq$k0" />
+              <node concept="3TrcHB" id="6kwOTMl1fOE" role="2OqNvi">
+                <ref role="3TsBF5" to="9tcj:6kwOTMl1bfV" resolve="component" />
+              </node>
+            </node>
+            <node concept="liA8E" id="6kwOTMl1gky" role="2OqNvi">
+              <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getPresentation()" resolve="getPresentation" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="6kwOTMl1fwu" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="cTQf2FlTRF">
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <ref role="13h7C2" to="9tcj:cTQf2FlwO3" resolve="DistanceWithCallTarget" />
+    <node concept="13hLZK" id="cTQf2FlTRG" role="13h7CW">
+      <node concept="3clFbS" id="cTQf2FlTRH" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="cTQf2FlTRQ" role="13h7CS">
+      <property role="TrG5h" value="renderReadable" />
+      <ref role="13i0hy" to="pbu6:6kR0qIbI2yi" resolve="renderReadable" />
+      <node concept="3Tm1VV" id="cTQf2FlTRR" role="1B3o_S" />
+      <node concept="3clFbS" id="cTQf2FlTRU" role="3clF47">
+        <node concept="3clFbF" id="cTQf2FlTS9" role="3cqZAp">
+          <node concept="Xl_RD" id="cTQf2FlTS8" role="3clFbG">
+            <property role="Xl_RC" value="distance with" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="cTQf2FlTRV" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="cTQf2FqARA">
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <ref role="13h7C2" to="9tcj:cTQf2FqwJc" resolve="VectorOppositeDotTarget" />
+    <node concept="13hLZK" id="cTQf2FqARB" role="13h7CW">
+      <node concept="3clFbS" id="cTQf2FqARC" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="cTQf2FqARL" role="13h7CS">
+      <property role="TrG5h" value="renderReadable" />
+      <ref role="13i0hy" to="pbu6:6kR0qIbI2yi" resolve="renderReadable" />
+      <node concept="3Tm1VV" id="cTQf2FqARM" role="1B3o_S" />
+      <node concept="3clFbS" id="cTQf2FqARP" role="3clF47">
+        <node concept="3clFbF" id="cTQf2FqAS4" role="3cqZAp">
+          <node concept="Xl_RD" id="cTQf2FqAS3" role="3clFbG">
+            <property role="Xl_RC" value="opposite" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="cTQf2FqARQ" role="3clF45" />
     </node>
   </node>
 </model>

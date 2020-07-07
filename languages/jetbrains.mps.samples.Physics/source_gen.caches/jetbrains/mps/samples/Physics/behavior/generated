@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-j9ugpzuo0g7mpwb48xz4o536l08cmd">
-  <files names="AbstractForce__BehaviorDescriptor.java:BehaviorAspectDescriptor.java:WorldDefinition__BehaviorDescriptor.java" />
+<product version="3" modelHash="93zemywkuc5ocgb4u03ee5wnv2d90x4">
+  <files names="AbstractForce__BehaviorDescriptor.java:BehaviorAspectDescriptor.java:DistanceWithCallTarget__BehaviorDescriptor.java:ObjectMassTarget__BehaviorDescriptor.java:ObjectPositionTarget__BehaviorDescriptor.java:VectorComponentTarget__BehaviorDescriptor.java:VectorOppositeDotTarget__BehaviorDescriptor.java:WorldDefinition__BehaviorDescriptor.java:WorldMassCenterTarget__BehaviorDescriptor.java" />
 </product>
 
