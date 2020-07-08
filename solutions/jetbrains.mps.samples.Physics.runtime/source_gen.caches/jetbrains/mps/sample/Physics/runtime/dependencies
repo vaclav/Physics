@@ -9,7 +9,7 @@
   </dependency>
   <dependency className="jetbrains.mps.sample.Physics.runtime.Simulation">
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.WorldBuilder" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
     <classNode extendsClassName="jetbrains.mps.sample.Physics.runtime.Renderer" />
   </dependency>
 </dependenciesRoot>

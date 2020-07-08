@@ -101,11 +101,6 @@
     <property role="34LRSv" value="object" />
     <property role="3GE5qa" value="physical" />
     <ref role="1TJDcQ" node="1h1l5SEmLT3" resolve="AbstractObjectDefinition" />
-    <node concept="1TJgyi" id="6HZo5MNa2R_" role="1TKVEl">
-      <property role="IQ2nx" value="7746015835359555045" />
-      <property role="TrG5h" value="mass_" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
     <node concept="PrWs8" id="3Nk1IDHVTYG" role="PzmwI">
       <ref role="PrY4T" node="3Nk1IDHVTY$" resolve="IObjectImplemented" />
     </node>

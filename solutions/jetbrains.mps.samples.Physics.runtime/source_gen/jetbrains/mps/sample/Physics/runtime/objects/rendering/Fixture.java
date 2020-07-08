@@ -23,12 +23,13 @@ public abstract class Fixture {
    * @return mass with appropriate representation
    */
   protected abstract DMass buildMass();
-  public void bindToBody(DBody body) {
+  public void bindToBody(DBody body, double massValue) {
     if (geometry.getBody() != null) {
       geometry.getBody().setMass(null);
     }
     // Build and apply mass 
     DMass mass = buildMass();
+    mass.setMass(massValue);
     body.setMass(mass);
     // Set the body of this fixture geometry 
     geometry.setBody(body);

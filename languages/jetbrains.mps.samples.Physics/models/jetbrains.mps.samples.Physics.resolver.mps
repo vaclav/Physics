@@ -7,6 +7,7 @@
     <devkit ref="c4e521ab-b605-4ef9-a7c3-68075da058f0(org.iets3.core.expr.core.devkit)" />
   </languages>
   <imports>
+    <import index="pbu6" ref="r:83e946de-2a7f-4a4c-b3c9-4f671aa7f2db(org.iets3.core.expr.base.behavior)" />
     <import index="9tcj" ref="r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)" implicit="true" />
   </imports>
   <registry>
@@ -36,6 +37,9 @@
       </concept>
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
       <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
+      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
+        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
@@ -682,7 +686,13 @@
       <node concept="10P_77" id="6ULhPR9$YHq" role="1tU5fm" />
       <node concept="3clFbT" id="6ULhPR9$Zvg" role="33vP2m" />
     </node>
-    <node concept="2tJIrI" id="6ULhPR9$Zvi" role="jymVt" />
+    <node concept="312cEg" id="1$oDF1jQUis" role="jymVt">
+      <property role="TrG5h" value="result" />
+      <node concept="3Tm6S6" id="1$oDF1jQU1x" role="1B3o_S" />
+      <node concept="3Tqbb2" id="1$oDF1jQUib" role="1tU5fm">
+        <ref role="ehGHo" to="9tcj:5xbVod7kJEb" resolve="CartesianCoordinates" />
+      </node>
+    </node>
     <node concept="3clFbW" id="6ULhPR9z_2S" role="jymVt">
       <node concept="3cqZAl" id="6ULhPR9z_2U" role="3clF45" />
       <node concept="3Tm1VV" id="6ULhPR9z_2V" role="1B3o_S" />
@@ -722,7 +732,14 @@
     <node concept="2tJIrI" id="6ULhPR9zKtF" role="jymVt" />
     <node concept="3clFb_" id="6ULhPR9BQgu" role="jymVt">
       <property role="TrG5h" value="resolve" />
-      <node concept="3clFbS" id="6ULhPR9BQgv" role="3clF47" />
+      <node concept="3clFbS" id="6ULhPR9BQgv" role="3clF47">
+        <node concept="3clFbF" id="1$oDF1jQTZ7" role="3cqZAp">
+          <node concept="2YIFZM" id="1$oDF1jQU0I" role="3clFbG">
+            <ref role="37wK5l" to="pbu6:50LzNoSyDOv" resolve="getInterpreter" />
+            <ref role="1Pybhc" to="pbu6:3xDNhgd53E_" resolve="IETS3ExprEvalHelper" />
+          </node>
+        </node>
+      </node>
       <node concept="3cqZAl" id="6ULhPR9BORG" role="3clF45" />
       <node concept="3Tm1VV" id="6ULhPR9BQgt" role="1B3o_S" />
     </node>

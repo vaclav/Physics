@@ -25,8 +25,6 @@
     <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.Force" />
-    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.rendering.BoxFixture" />
-    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.rendering.SphereFixture" />
   </dependency>
 </dependenciesRoot>
 

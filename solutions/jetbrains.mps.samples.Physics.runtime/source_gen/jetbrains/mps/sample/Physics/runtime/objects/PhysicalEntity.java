@@ -7,8 +7,8 @@ import jetbrains.mps.sample.Physics.runtime.objects.rendering.Fixture;
 import java.util.ArrayList;
 import jetbrains.mps.sample.Physics.runtime.objects.forces.Force;
 import org.ode4j.ode.OdeHelper;
-import org.ode4j.math.DVector3C;
 import processing.core.PApplet;
+import org.ode4j.math.DVector3C;
 import java.util.List;
 
 public class PhysicalEntity {
@@ -24,12 +24,6 @@ public class PhysicalEntity {
     // Creating body 
     body = OdeHelper.createBody(world.getWorld());
   }
-  public PhysicalEntity(World world, DVector3C initialPosition, Fixture fixture) {
-    this(world);
-    body.setPosition(initialPosition);
-    // Calling fixture setter to apply fixture to body 
-    this.setFixture(fixture);
-  }
   public void applyForces() {
     for (Force force : forces) {
       body.addForce(force.getForce(world, this));
@@ -42,10 +36,10 @@ public class PhysicalEntity {
     fixture.render(ctx);
     ctx.popMatrix();
   }
-  public void setFixture(Fixture fixture) {
+  public void setFixture(Fixture fixture, double massValue) {
     this.fixture = fixture;
     // Creating mass representation 
-    fixture.bindToBody(body);
+    fixture.bindToBody(body, massValue);
   }
   public DBody getBody() {
     return body;

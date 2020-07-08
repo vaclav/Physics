@@ -4,11 +4,13 @@
   <languages>
     <use id="be81eb12-4eda-4d0e-89be-7493500ab874" name="jetbrains.mps.samples.Physics" version="0" />
     <use id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math" version="0" />
-    <devkit ref="c4e521ab-b605-4ef9-a7c3-68075da058f0(org.iets3.core.expr.core.devkit)" />
+    <devkit ref="dc532898-e561-4cd2-87df-c64e0f83bf04(jetbrains.mps.samples.Physics.devkit.java)" />
   </languages>
   <imports />
   <registry>
     <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
+      <concept id="7425695345928349204" name="org.iets3.core.expr.base.structure.Type" flags="ng" index="2vmvy6" />
+      <concept id="7425695345928347719" name="org.iets3.core.expr.base.structure.Expression" flags="ng" index="2vmvVl" />
       <concept id="5115872837157187871" name="org.iets3.core.expr.base.structure.ParensExpression" flags="ng" index="30bsCy">
         <child id="5115872837157187954" name="expr" index="30bsDf" />
       </concept>
@@ -108,7 +110,6 @@
         <child id="7746015835359514438" name="objects" index="3omeWq" />
       </concept>
       <concept id="7746015835359514435" name="jetbrains.mps.samples.Physics.structure.ObjectDefinition" flags="ng" index="3omeWv">
-        <property id="7746015835359555045" name="mass_" index="3olOQT" />
         <child id="2008977899010672895" name="mass" index="1bLhCY" />
       </concept>
       <concept id="420466128549300320" name="jetbrains.mps.samples.Physics.structure.WorldReference" flags="ng" index="1t_wfn">
@@ -132,9 +133,25 @@
         <child id="4944417823362178786" name="expr" index="a0GsM" />
         <child id="5098456557379673903" name="exponent" index="2zCggm" />
       </concept>
+      <concept id="4944417823362156001" name="org.iets3.core.expr.math.structure.SumExpression" flags="ng" index="a0DKL" />
       <concept id="4944417823362108742" name="org.iets3.core.expr.math.structure.FractionExpression" flags="ng" index="a1tim">
         <child id="4944417823362108743" name="numerator" index="a1tin" />
         <child id="4944417823362108746" name="denominator" index="a1tiq" />
+      </concept>
+      <concept id="4944417823362115312" name="org.iets3.core.expr.math.structure.MathLoopExpr" flags="ng" index="a1vWw">
+        <child id="971707942815410149" name="lower" index="39z1js" />
+        <child id="971707942815429390" name="varType" index="39z40R" />
+        <child id="971707942815320383" name="upper" index="39$JC6" />
+        <child id="971707942815320390" name="body" index="39$JDZ" />
+      </concept>
+    </language>
+    <language id="18001c94-33a7-4f68-a7c1-ffddc4b39be1" name="org.iets3.core.expr.repl">
+      <concept id="1240669143552786953" name="org.iets3.core.expr.repl.structure.DefaultEntry" flags="ng" index="1gtNKa">
+        <child id="1240669143552786973" name="expression" index="1gtNKu" />
+      </concept>
+      <concept id="1240669143552786952" name="org.iets3.core.expr.repl.structure.REPL" flags="ng" index="1gtNKb">
+        <property id="5043470053403335320" name="updateDownstream" index="2d$LJi" />
+        <child id="3123720608934258677" name="entries" index="3ij$yy" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -164,9 +181,9 @@
   </registry>
   <node concept="3omeWs" id="6HZo5MNa2Rg">
     <property role="TrG5h" value="SolarSystem" />
+    <property role="3GE5qa" value="worlds" />
     <node concept="3omeWv" id="1jQexh3xMPv" role="3omeWq">
       <property role="TrG5h" value="Sun" />
-      <property role="3olOQT" value="10" />
       <node concept="Y6$Cq" id="2s53i66x6cq" role="Y6$Cp">
         <ref role="Y6$Cr" node="1jQexh3xMWo" resolve="Planet" />
       </node>
@@ -221,10 +238,6 @@
     </node>
     <node concept="3omeWv" id="1jQexh3xMRa" role="3omeWq">
       <property role="TrG5h" value="Mercury" />
-      <property role="3olOQT" value="2" />
-      <node concept="Y6$Cq" id="1jQexh3zQQI" role="Y6$Cp">
-        <ref role="Y6$Cr" node="1jQexh3xMRa" resolve="Mercury" />
-      </node>
       <node concept="v6hvC" id="3Nk1IDHXPI3" role="1h9ZzG">
         <node concept="3okdC7" id="3Nk1IDHXPI4" role="v6hvJ">
           <ref role="3okdC0" node="1jQexh3xMPv" resolve="Sun" />
@@ -241,10 +254,12 @@
           </node>
         </node>
       </node>
+      <node concept="Y6$Cq" id="1$oDF1jOlYF" role="Y6$Cp">
+        <ref role="Y6$Cr" node="1jQexh3xMWo" resolve="Planet" />
+      </node>
     </node>
     <node concept="3omeWv" id="1jQexh3xMTg" role="3omeWq">
       <property role="TrG5h" value="Venus" />
-      <property role="3olOQT" value="3" />
       <node concept="Y6$Cq" id="1jQexh3zQQK" role="Y6$Cp">
         <ref role="Y6$Cr" node="1jQexh3xMWo" resolve="Planet" />
       </node>
@@ -272,7 +287,6 @@
     </node>
     <node concept="3omeWv" id="6HZo5MNa2Rq" role="3omeWq">
       <property role="TrG5h" value="Earth" />
-      <property role="3olOQT" value="4" />
       <node concept="v6hvC" id="6POFxU8ikqa" role="1h9ZzG">
         <node concept="v6hsc" id="6POFxU8ikqd" role="1ns7Sk">
           <property role="v6hsj" value="5" />
@@ -294,10 +308,12 @@
           <property role="30bXRw" value="5" />
         </node>
       </node>
+      <node concept="Y6$Cq" id="1$oDF1jOlYK" role="Y6$Cp">
+        <ref role="Y6$Cr" node="1jQexh3xMWo" resolve="Planet" />
+      </node>
     </node>
     <node concept="3omeWv" id="6HZo5MNa3e5" role="3omeWq">
       <property role="TrG5h" value="Moon" />
-      <property role="3olOQT" value="1" />
       <node concept="v6hvC" id="3Nk1IDHXPIs" role="1h9ZzG">
         <node concept="3okdC7" id="3Nk1IDHXPIt" role="v6hvJ">
           <ref role="3okdC0" node="6HZo5MNa2Rq" resolve="Earth" />
@@ -336,10 +352,15 @@
           <property role="1nv_BX" value="45" />
         </node>
       </node>
+      <node concept="Y6$Cq" id="1$oDF1jOlYT" role="Y6$Cp">
+        <ref role="Y6$Cr" node="1jQexh3xMWo" resolve="Planet" />
+      </node>
+      <node concept="30bXRB" id="1$oDF1jPXaZ" role="1bLhCY">
+        <property role="30bXRw" value="50" />
+      </node>
     </node>
     <node concept="3omeWv" id="6HZo5MNa2Rv" role="3omeWq">
       <property role="TrG5h" value="Mars" />
-      <property role="3olOQT" value="3" />
       <node concept="v7mGd" id="3Nk1IDHXPIw" role="1h9ZzG">
         <node concept="v6hsc" id="3Nk1IDHXPIx" role="1ns7Sk">
           <property role="v6hsj" value="54" />
@@ -347,10 +368,17 @@
           <property role="v6hsg" value="56" />
         </node>
       </node>
+      <node concept="Y6$Cq" id="1$oDF1jOlYY" role="Y6$Cp">
+        <ref role="Y6$Cr" node="1jQexh3xMWo" resolve="Planet" />
+      </node>
+      <node concept="30bXRB" id="1$oDF1jPXbQ" role="1bLhCY">
+        <property role="30bXRw" value="30" />
+      </node>
     </node>
   </node>
   <node concept="Y6$Ct" id="1jQexh3xMWo">
     <property role="TrG5h" value="Planet" />
+    <property role="3GE5qa" value="types" />
     <node concept="Y6l9F" id="1JxkG5g9SJc" role="Y6$Cn">
       <node concept="v6hs8" id="1JxkG5g9SJi" role="Y6l9H">
         <node concept="30dDZf" id="1JxkG5g9SJX" role="Y6l9D">
@@ -376,6 +404,19 @@
           <node concept="30bXRB" id="1JxkG5gbJEz" role="30dEsF">
             <property role="30bXRw" value="4" />
           </node>
+        </node>
+      </node>
+    </node>
+    <node concept="Y6l9G" id="1$oDF1jOkTV" role="Y6$Cn">
+      <node concept="v6hs8" id="1$oDF1jOkUf" role="Y6l9H">
+        <node concept="30bXRB" id="1$oDF1jOkU_" role="Y6l9D">
+          <property role="30bXRw" value="1" />
+        </node>
+        <node concept="30bXRB" id="1$oDF1jOkUT" role="Y6leK">
+          <property role="30bXRw" value="1" />
+        </node>
+        <node concept="30bXRB" id="1$oDF1jOkVd" role="Y6leJ">
+          <property role="30bXRw" value="1" />
         </node>
       </node>
     </node>
@@ -429,6 +470,7 @@
   </node>
   <node concept="3omeWs" id="3Nk1IDHWOdO">
     <property role="TrG5h" value="MilkyWay" />
+    <property role="3GE5qa" value="worlds" />
     <node concept="1h9Ola" id="3Nk1IDHXomK" role="1h9Omn">
       <node concept="1t_wfn" id="3Nk1IDHXomU" role="1h9Olb">
         <ref role="1t_wfm" node="6HZo5MNa2Rg" resolve="SolarSystem" />
@@ -449,7 +491,6 @@
     </node>
     <node concept="3omeWv" id="3Nk1IDHWOdP" role="3omeWq">
       <property role="TrG5h" value="Floating dog" />
-      <property role="3olOQT" value="45" />
       <node concept="1nvtMO" id="6kwOTMkYlMh" role="Y6$Cn">
         <ref role="1afhQb" node="6kwOTMkY3JG" resolve="Friction" />
         <node concept="30bXRB" id="6kwOTMkYlNE" role="1afhQ5">
@@ -483,7 +524,6 @@
     </node>
     <node concept="3omeWv" id="6POFxU8fz71" role="3omeWq">
       <property role="TrG5h" value="Something" />
-      <property role="3olOQT" value="45" />
       <node concept="v7mGd" id="6POFxU8fz7h" role="1h9ZzG">
         <node concept="3_jIDJ" id="6POFxU8fz7n" role="1ns7Sk">
           <node concept="30bXRB" id="1JxkG5g9E0j" role="3_jIDE">
@@ -505,8 +545,9 @@
   </node>
   <node concept="3okdC4" id="6POFxU8kbPm">
     <property role="TrG5h" value="TestSimulation" />
-    <node concept="1t_wfn" id="cTQf2FuM4p" role="1heTBC">
-      <ref role="1t_wfm" node="6HZo5MNa2Rg" resolve="SolarSystem" />
+    <property role="3GE5qa" value="test" />
+    <node concept="1t_wfn" id="1$oDF1jPZmf" role="1heTBC">
+      <ref role="1t_wfm" node="1$oDF1jPYSj" resolve="Test World" />
     </node>
   </node>
   <node concept="llAx1" id="6kwOTMkY3JG">
@@ -542,6 +583,93 @@
             <property role="3_jICD" value="6POFxU8ikYt/velocity" />
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="3omeWs" id="1$oDF1jPYSj">
+    <property role="3GE5qa" value="test" />
+    <property role="TrG5h" value="Test World" />
+    <node concept="3omeWv" id="1$oDF1jPYSJ" role="3omeWq">
+      <property role="TrG5h" value="Something" />
+      <node concept="Y6l9G" id="1$oDF1jPYVF" role="Y6$Cn">
+        <node concept="v6hs8" id="1$oDF1jPYVR" role="Y6l9H">
+          <node concept="30bXRB" id="1$oDF1jPYWd" role="Y6l9D">
+            <property role="30bXRw" value="2" />
+          </node>
+          <node concept="30bXRB" id="1$oDF1jPYWx" role="Y6leK">
+            <property role="30bXRw" value="2" />
+          </node>
+          <node concept="30bXRB" id="1$oDF1jPYWP" role="Y6leJ">
+            <property role="30bXRw" value="2" />
+          </node>
+        </node>
+      </node>
+      <node concept="v7mGd" id="1$oDF1jPYT4" role="1h9ZzG">
+        <node concept="v6hs8" id="1$oDF1jPYTg" role="1ns7Sk">
+          <node concept="30bXRB" id="1$oDF1jPYTB" role="Y6l9D">
+            <property role="30bXRw" value="30" />
+          </node>
+          <node concept="30bXRB" id="1$oDF1jPYTV" role="Y6leK">
+            <property role="30bXRw" value="50" />
+          </node>
+          <node concept="30bXRB" id="1$oDF1jPYUf" role="Y6leJ">
+            <property role="30bXRw" value="30" />
+          </node>
+        </node>
+      </node>
+      <node concept="v6hs8" id="1$oDF1jPYUs" role="1h9ZzH">
+        <node concept="30bXRB" id="1$oDF1jPYUI" role="Y6l9D">
+          <property role="30bXRw" value="20" />
+        </node>
+        <node concept="30bXRB" id="1$oDF1jPYV2" role="Y6leK">
+          <property role="30bXRw" value="20" />
+        </node>
+        <node concept="30bXRB" id="1$oDF1jPYVm" role="Y6leJ">
+          <property role="30bXRw" value="20" />
+        </node>
+      </node>
+      <node concept="Y6$C6" id="1$oDF1jPYX2" role="Y6$Cf">
+        <property role="Y6$C7" value="2" />
+        <property role="Y6$C5" value="2" />
+        <property role="Y6$C0" value="2" />
+        <node concept="Y6$CV" id="1$oDF1jPYX9" role="Y6$CS">
+          <property role="2CsMtV" value="cTQf2FiJWQ/blue" />
+        </node>
+      </node>
+      <node concept="30bXRB" id="1$oDF1jPYXi" role="1bLhCY">
+        <property role="30bXRw" value="20" />
+      </node>
+      <node concept="Y6$Cq" id="1$oDF1jPZm7" role="Y6$Cp">
+        <ref role="Y6$Cr" node="1$oDF1jPZkH" resolve="Object supertype" />
+      </node>
+    </node>
+  </node>
+  <node concept="Y6$Ct" id="1$oDF1jPZkH">
+    <property role="3GE5qa" value="test" />
+    <property role="TrG5h" value="Object supertype" />
+    <node concept="Y6l9G" id="1$oDF1jPZkN" role="Y6$Cn">
+      <node concept="v6hs8" id="1$oDF1jPZkW" role="Y6l9H">
+        <node concept="30bXRB" id="1$oDF1jPZli" role="Y6l9D">
+          <property role="30bXRw" value="0" />
+        </node>
+        <node concept="30bXRB" id="1$oDF1jPZlA" role="Y6leK">
+          <property role="30bXRw" value="1" />
+        </node>
+        <node concept="30bXRB" id="1$oDF1jPZlU" role="Y6leJ">
+          <property role="30bXRw" value="0" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1gtNKb" id="1$oDF1jQawr">
+    <property role="TrG5h" value="Any" />
+    <property role="2d$LJi" value="true" />
+    <node concept="1gtNKa" id="1$oDF1jQaws" role="3ij$yy">
+      <node concept="a0DKL" id="1$oDF1jReJM" role="1gtNKu">
+        <node concept="2vmvVl" id="1$oDF1jReJO" role="39z1js" />
+        <node concept="2vmvVl" id="1$oDF1jReJQ" role="39$JC6" />
+        <node concept="2vmvVl" id="1$oDF1jReJS" role="39$JDZ" />
+        <node concept="2vmvy6" id="1$oDF1jReJU" role="39z40R" />
       </node>
     </node>
   </node>
