@@ -12,6 +12,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root nodeRef="r:0fdd7739-3237-411b-9292-02c173ea9378(jetbrains.mps.samples.Physics.resolver)/7976234883188882715">
     <file name="PositioningResolver.java">
@@ -24,52 +25,63 @@
       <node id="7976234883189817386" at="49,0,50,75" concept="8" />
       <node id="7976234883189600007" at="51,13,52,95" concept="6" />
       <node id="7976234883189982576" at="55,62,56,212" concept="7" />
-      <node id="7976234883189864164" at="69,50,70,34" concept="7" />
-      <node id="7976234883189477881" at="75,50,76,67" concept="7" />
-      <node id="7976234883189835490" at="79,46,80,21" concept="2" />
-      <node id="7976234883189852012" at="80,21,81,0" concept="9" />
-      <node id="7976234883188882715" at="90,0,91,0" concept="10" trace="ILocalized$9a" />
-      <node id="7976234883188882715" at="91,0,92,0" concept="10" trace="ObjectReference$qq" />
-      <node id="7976234883188882715" at="92,0,93,0" concept="10" trace="WorldDefinition$Xn" />
-      <node id="7976234883188882715" at="93,0,94,0" concept="10" trace="WorldInclusion$vO" />
-      <node id="7976234883188882715" at="97,0,98,0" concept="10" trace="location$DoV0" />
-      <node id="7976234883188882715" at="98,0,99,0" concept="10" trace="target$EWj0" />
-      <node id="7976234883188882715" at="99,0,100,0" concept="10" trace="world$ZN60" />
-      <node id="7976234883188882715" at="100,0,101,0" concept="10" trace="target$12L0" />
-      <node id="7976234883189621309" at="86,0,88,0" concept="11" trace="resolve#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1808378526641382729" at="67,52,68,67" concept="6" />
+      <node id="1808378526641445421" at="70,50,71,66" concept="7" />
+      <node id="1808378526641468920" at="73,7,74,0" concept="9" />
+      <node id="7976234883189864164" at="76,50,77,34" concept="7" />
+      <node id="7976234883189477881" at="81,52,82,69" concept="7" />
+      <node id="7976234883189835490" at="85,48,86,23" concept="2" />
+      <node id="1808378526641404321" at="89,5,90,0" concept="9" />
+      <node id="1808378526641411743" at="91,29,92,79" concept="12" />
+      <node id="1808378526641375224" at="96,43,97,66" concept="6" />
+      <node id="1808378526641374601" at="97,66,98,35" concept="2" />
+      <node id="1808378526641377799" at="98,35,99,25" concept="2" />
+      <node id="1808378526641414511" at="102,47,103,143" concept="6" />
+      <node id="1808378526641414517" at="103,143,104,35" concept="2" />
+      <node id="1808378526641414521" at="104,35,105,27" concept="2" />
+      <node id="7976234883188882715" at="109,0,110,0" concept="10" trace="ILocalized$9a" />
+      <node id="7976234883188882715" at="110,0,111,0" concept="10" trace="ObjectReference$qq" />
+      <node id="7976234883188882715" at="111,0,112,0" concept="10" trace="WorldDefinition$Xn" />
+      <node id="7976234883188882715" at="112,0,113,0" concept="10" trace="WorldInclusion$vO" />
+      <node id="7976234883188882715" at="116,0,117,0" concept="10" trace="location$DoV0" />
+      <node id="7976234883188882715" at="117,0,118,0" concept="10" trace="target$EWj0" />
+      <node id="7976234883188882715" at="118,0,119,0" concept="10" trace="world$ZN60" />
+      <node id="7976234883188882715" at="119,0,120,0" concept="10" trace="target$12L0" />
       <node id="7976234883188926793" at="27,0,30,0" concept="5" trace="select#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;" />
       <node id="7976234883189970187" at="43,0,46,0" concept="5" trace="accept#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)Z" />
       <node id="7976234883189982574" at="55,0,58,0" concept="5" trace="accept#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)Z" />
-      <node id="7976234883189863374" at="69,0,72,0" concept="5" trace="accept#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)Z" />
-      <node id="7976234883189477069" at="75,0,78,0" concept="5" trace="accept#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)Z" />
-      <node id="7976234883189497006" at="79,0,83,0" concept="5" trace="visit#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)V" />
+      <node id="1808378526641444686" at="70,0,73,0" concept="5" trace="accept#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)Z" />
+      <node id="7976234883189863374" at="76,0,79,0" concept="5" trace="accept#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)Z" />
+      <node id="7976234883189477069" at="81,0,84,0" concept="5" trace="accept#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)Z" />
+      <node id="7976234883189497006" at="85,0,88,0" concept="5" trace="visit#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)V" />
+      <node id="1808378526641406108" at="90,0,93,5" concept="4" />
       <node id="7976234883189058681" at="25,43,30,24" concept="2" />
       <node id="7976234883189550942" at="41,84,46,20" concept="2" />
       <node id="7976234883189679078" at="53,90,58,20" concept="2" />
-      <node id="7976234883189858669" at="67,23,73,5" concept="12" />
+      <node id="1808378526641437118" at="68,67,73,7" concept="6" />
+      <node id="7976234883189621309" at="96,0,101,0" concept="11" trace="resolve#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1808378526641371976" at="102,0,107,0" concept="11" trace="resolveOne#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="7976234883189052533" at="25,0,32,0" concept="1" trace="PositioningResolver#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="7976234883189537974" at="40,94,47,15" concept="4" />
       <node id="7976234883189600007" at="52,95,59,15" concept="4" />
+      <node id="7976234883189083671" at="79,63,88,9" concept="2" />
       <node id="7976234883189537974" at="38,88,48,13" concept="0" />
       <node id="7976234883189600007" at="50,75,60,13" concept="0" />
-      <node id="7976234883189083671" at="73,5,83,7" concept="2" />
-      <node id="7976234883189069302" at="67,0,85,0" concept="5" trace="solve#()V" />
+      <node id="7976234883189858669" at="74,0,89,5" concept="13" />
       <node id="7976234883189212671" at="37,0,62,0" concept="5" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="7976234883189139627" at="35,56,62,11" concept="2" />
+      <node id="7976234883189069302" at="67,0,95,0" concept="5" trace="solve#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="7976234883189127416" at="35,0,64,0" concept="5" trace="visit#(Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)V" />
       <node id="7976234883189098683" at="33,37,64,7" concept="2" />
       <node id="7976234883189092313" at="33,0,66,0" concept="5" trace="computeDependencies#()V" />
-      <scope id="7976234883189858671" at="72,9,72,9" />
-      <scope id="7976234883189621312" at="86,43,86,43" />
       <scope id="7976234883188926794" at="27,48,28,40" />
       <scope id="7976234883189970188" at="43,62,44,70" />
       <scope id="7976234883189982575" at="55,62,56,212" />
-      <scope id="7976234883189863375" at="69,50,70,34" />
-      <scope id="7976234883189477070" at="75,50,76,67" />
-      <scope id="7976234883189497007" at="79,46,81,0" />
-      <scope id="7976234883189621309" at="86,0,88,0">
-        <var name="world" id="7976234883189627566" />
-      </scope>
+      <scope id="1808378526641444687" at="70,50,71,66" />
+      <scope id="7976234883189863375" at="76,50,77,34" />
+      <scope id="7976234883189477070" at="81,52,82,69" />
+      <scope id="7976234883189497007" at="85,48,86,23" />
+      <scope id="1808378526641406110" at="91,29,92,79" />
       <scope id="7976234883188926793" at="27,0,30,0">
         <var name="it" id="7976234883188926793" />
       </scope>
@@ -79,18 +91,33 @@
       <scope id="7976234883189982574" at="55,0,58,0">
         <var name="it" id="7976234883189982574" />
       </scope>
-      <scope id="7976234883189863374" at="69,0,72,0">
+      <scope id="1808378526641444686" at="70,0,73,0">
+        <var name="it" id="1808378526641444686" />
+      </scope>
+      <scope id="7976234883189863374" at="76,0,79,0">
         <var name="it" id="7976234883189863374" />
       </scope>
-      <scope id="7976234883189477069" at="75,0,78,0">
+      <scope id="7976234883189477069" at="81,0,84,0">
         <var name="it" id="7976234883189477069" />
       </scope>
-      <scope id="7976234883189497006" at="79,0,83,0">
+      <scope id="7976234883189497006" at="85,0,88,0">
         <var name="it" id="7976234883189497006" />
+      </scope>
+      <scope id="7976234883189621312" at="96,43,99,25">
+        <var name="resolver" id="1808378526641375225" />
+      </scope>
+      <scope id="1808378526641371979" at="102,47,105,27">
+        <var name="resolver" id="1808378526641414512" />
       </scope>
       <scope id="7976234883189052537" at="25,43,30,24" />
       <scope id="7976234883189537978" at="41,84,46,20" />
       <scope id="7976234883189600011" at="53,90,58,20" />
+      <scope id="7976234883189621309" at="96,0,101,0">
+        <var name="world" id="7976234883189627566" />
+      </scope>
+      <scope id="1808378526641371976" at="102,0,107,0">
+        <var name="object" id="1808378526641374443" />
+      </scope>
       <scope id="7976234883189052533" at="25,0,32,0">
         <var name="world" id="7976234883188915719" />
       </scope>
@@ -100,13 +127,19 @@
       <scope id="7976234883189600007" at="51,13,59,15">
         <var name="definition" id="7976234883189600007" />
       </scope>
-      <scope id="7976234883189069305" at="67,23,83,7" />
-      <scope id="7976234883189069302" at="67,0,85,0" />
+      <scope id="7976234883189858671" at="79,63,88,9" />
       <scope id="7976234883189212672" at="37,46,60,13" />
       <scope id="7976234883189212671" at="37,0,62,0">
         <var name="reference" id="7976234883189212671" />
       </scope>
+      <scope id="7976234883189069305" at="67,52,93,5">
+        <var name="maxIterations" id="1808378526641382732" />
+        <var name="target" id="1808378526641437119" />
+      </scope>
       <scope id="7976234883189127417" at="35,56,62,11" />
+      <scope id="7976234883189069302" at="67,0,95,0">
+        <var name="untilTargetSolved" id="1808378526641417941" />
+      </scope>
       <scope id="7976234883189127416" at="35,0,64,0">
         <var name="object" id="7976234883189127416" />
       </scope>
@@ -115,56 +148,59 @@
       <unit id="7976234883188926793" at="26,139,30,5" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$1" />
       <unit id="7976234883189970187" at="42,120,46,17" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$2$1$1" />
       <unit id="7976234883189982574" at="54,120,58,17" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$2$1$2" />
-      <unit id="7976234883189863374" at="68,50,72,5" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$3" />
-      <unit id="7976234883189477069" at="74,45,78,5" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$4" />
-      <unit id="7976234883189497006" at="78,20,83,5" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$5" />
-      <unit id="7976234883188882715" at="89,0,95,0" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$CONCEPTS" />
-      <unit id="7976234883188882715" at="96,0,102,0" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$LINKS" />
+      <unit id="1808378526641444686" at="69,81,73,5" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$3" />
+      <unit id="7976234883189863374" at="75,50,79,5" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$6" />
+      <unit id="7976234883189477069" at="80,47,84,7" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$4" />
+      <unit id="7976234883189497006" at="84,22,88,7" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$5" />
+      <unit id="7976234883188882715" at="108,0,114,0" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$CONCEPTS" />
+      <unit id="7976234883188882715" at="115,0,121,0" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$LINKS" />
       <unit id="7976234883189212671" at="36,210,62,9" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$2$1" />
       <unit id="7976234883189127416" at="34,48,64,5" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver$2" />
-      <unit id="7976234883188882715" at="22,0,103,0" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver" />
+      <unit id="7976234883188882715" at="22,0,122,0" name="jetbrains.mps.samples.Physics.resolver.PositioningResolver" />
     </file>
   </root>
   <root nodeRef="r:0fdd7739-3237-411b-9292-02c173ea9378(jetbrains.mps.samples.Physics.resolver)/7976234883188887941">
     <file name="ObjectToPosition.java">
-      <node id="7976234883188942846" at="12,0,13,0" concept="3" trace="content" />
-      <node id="7976234883188993765" at="13,0,14,0" concept="3" trace="dependencies" />
-      <node id="7976234883189305635" at="14,0,15,0" concept="3" trace="resolved" />
-      <node id="7976234883188942850" at="16,41,17,21" concept="2" />
-      <node id="7976234883188995770" at="17,21,18,77" concept="2" />
-      <node id="7976234883189406366" at="26,62,27,41" concept="7" />
-      <node id="7976234883188984539" at="32,29,33,24" concept="7" />
-      <node id="7976234883189253137" at="35,51,36,29" concept="7" />
-      <node id="7976234883189311107" at="38,31,39,25" concept="7" />
-      <node id="7976234883190055966" at="21,0,23,0" concept="5" trace="resolve#()V" />
-      <node id="7976234883189399560" at="26,0,29,0" concept="5" trace="combine#(Ljava/lang/Integer;Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)Ljava/lang/Integer;" />
-      <node id="7976234883188984535" at="32,0,35,0" concept="5" trace="getContent#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="7976234883189253132" at="35,0,38,0" concept="5" trace="getDependencies#()Ljava/util/List;" />
-      <node id="7976234883189311103" at="38,0,41,0" concept="5" trace="isResolved#()Z" />
-      <node id="7976234883188936888" at="16,0,20,0" concept="1" trace="ObjectToPosition#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="7976234883189375961" at="24,36,29,7" concept="7" />
-      <node id="7976234883189374137" at="24,0,31,0" concept="5" trace="missingDependencies#()I" />
-      <scope id="7976234883190055967" at="21,25,21,25" />
-      <scope id="7976234883189399561" at="26,62,27,41" />
-      <scope id="7976234883188984538" at="32,29,33,24" />
-      <scope id="7976234883189253136" at="35,51,36,29" />
-      <scope id="7976234883189311106" at="38,31,39,25" />
-      <scope id="7976234883188936892" at="16,41,18,77" />
-      <scope id="7976234883190055966" at="21,0,23,0" />
-      <scope id="7976234883189399560" at="26,0,29,0">
+      <node id="7976234883188942846" at="13,0,14,0" concept="3" trace="content" />
+      <node id="7976234883188993765" at="14,0,15,0" concept="3" trace="dependencies" />
+      <node id="7976234883189305635" at="15,0,16,0" concept="3" trace="resolved" />
+      <node id="1808378526640612508" at="16,0,17,0" concept="3" trace="result" />
+      <node id="7976234883188942850" at="18,41,19,21" concept="2" />
+      <node id="7976234883188995770" at="19,21,20,77" concept="2" />
+      <node id="1808378526640611271" at="23,25,24,41" concept="2" />
+      <node id="7976234883189406366" at="29,62,30,41" concept="7" />
+      <node id="7976234883188984539" at="35,29,36,24" concept="7" />
+      <node id="7976234883189253137" at="38,51,39,29" concept="7" />
+      <node id="7976234883189311107" at="41,31,42,25" concept="7" />
+      <node id="7976234883190055966" at="23,0,26,0" concept="5" trace="resolve#()V" />
+      <node id="7976234883189399560" at="29,0,32,0" concept="5" trace="combine#(Ljava/lang/Integer;Ljetbrains/mps/samples/Physics/resolver/ObjectToPosition;)Ljava/lang/Integer;" />
+      <node id="7976234883188984535" at="35,0,38,0" concept="5" trace="getContent#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="7976234883189253132" at="38,0,41,0" concept="5" trace="getDependencies#()Ljava/util/List;" />
+      <node id="7976234883189311103" at="41,0,44,0" concept="5" trace="isResolved#()Z" />
+      <node id="7976234883188936888" at="18,0,22,0" concept="1" trace="ObjectToPosition#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="7976234883189375961" at="27,36,32,7" concept="7" />
+      <node id="7976234883189374137" at="27,0,34,0" concept="5" trace="missingDependencies#()I" />
+      <scope id="7976234883190055967" at="23,25,24,41" />
+      <scope id="7976234883189399561" at="29,62,30,41" />
+      <scope id="7976234883188984538" at="35,29,36,24" />
+      <scope id="7976234883189253136" at="38,51,39,29" />
+      <scope id="7976234883189311106" at="41,31,42,25" />
+      <scope id="7976234883188936892" at="18,41,20,77" />
+      <scope id="7976234883190055966" at="23,0,26,0" />
+      <scope id="7976234883189399560" at="29,0,32,0">
         <var name="it" id="7976234883189399560" />
         <var name="s" id="7976234883189399560" />
       </scope>
-      <scope id="7976234883188984535" at="32,0,35,0" />
-      <scope id="7976234883189253132" at="35,0,38,0" />
-      <scope id="7976234883189311103" at="38,0,41,0" />
-      <scope id="7976234883188936888" at="16,0,20,0">
+      <scope id="7976234883188984535" at="35,0,38,0" />
+      <scope id="7976234883189253132" at="38,0,41,0" />
+      <scope id="7976234883189311103" at="41,0,44,0" />
+      <scope id="7976234883188936888" at="18,0,22,0">
         <var name="object" id="7976234883188938755" />
       </scope>
-      <scope id="7976234883189374140" at="24,36,29,7" />
-      <scope id="7976234883189374137" at="24,0,31,0" />
-      <unit id="7976234883189399560" at="25,63,29,5" name="jetbrains.mps.samples.Physics.resolver.ObjectToPosition$1" />
-      <unit id="7976234883188887941" at="11,0,42,0" name="jetbrains.mps.samples.Physics.resolver.ObjectToPosition" />
+      <scope id="7976234883189374140" at="27,36,32,7" />
+      <scope id="7976234883189374137" at="27,0,34,0" />
+      <unit id="7976234883189399560" at="28,63,32,5" name="jetbrains.mps.samples.Physics.resolver.ObjectToPosition$1" />
+      <unit id="7976234883188887941" at="12,0,45,0" name="jetbrains.mps.samples.Physics.resolver.ObjectToPosition" />
     </file>
   </root>
 </debug-info>

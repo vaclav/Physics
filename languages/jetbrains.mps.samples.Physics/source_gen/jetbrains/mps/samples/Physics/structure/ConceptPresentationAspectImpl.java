@@ -9,7 +9,7 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
-  private ConceptPresentation props_AbsoluteVector;
+  private ConceptPresentation props_AbsoluteCoordinates;
   private ConceptPresentation props_AbstractForce;
   private ConceptPresentation props_AbstractForceCall;
   private ConceptPresentation props_AbstractObjectDefinition;
@@ -40,14 +40,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObjectReference;
   private ConceptPresentation props_ObjectType;
   private ConceptPresentation props_PictureTexture;
-  private ConceptPresentation props_RelativeVector;
+  private ConceptPresentation props_RelativeCoordinates;
   private ConceptPresentation props_Simulation;
   private ConceptPresentation props_SphereVisual;
   private ConceptPresentation props_SphericalCoordinates;
   private ConceptPresentation props_StatefulForce;
   private ConceptPresentation props_StaticForce;
   private ConceptPresentation props_Texture;
-  private ConceptPresentation props_Vector;
   private ConceptPresentation props_VectorComponentTarget;
   private ConceptPresentation props_VectorOppositeDotTarget;
   private ConceptPresentation props_VectorType;
@@ -63,13 +62,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
-      case LanguageConceptSwitch.AbsoluteVector:
-        if (props_AbsoluteVector == null) {
+      case LanguageConceptSwitch.AbsoluteCoordinates:
+        if (props_AbsoluteCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("absolute vector");
-          props_AbsoluteVector = cpb.create();
+          props_AbsoluteCoordinates = cpb.create();
         }
-        return props_AbsoluteVector;
+        return props_AbsoluteCoordinates;
       case LanguageConceptSwitch.AbstractForce:
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -279,13 +277,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PictureTexture = cpb.create();
         }
         return props_PictureTexture;
-      case LanguageConceptSwitch.RelativeVector:
-        if (props_RelativeVector == null) {
+      case LanguageConceptSwitch.RelativeCoordinates:
+        if (props_RelativeCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("relative vector");
-          props_RelativeVector = cpb.create();
+          cpb.rawPresentation("relative coordinates");
+          props_RelativeCoordinates = cpb.create();
         }
-        return props_RelativeVector;
+        return props_RelativeCoordinates;
       case LanguageConceptSwitch.Simulation:
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -329,12 +327,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Texture = cpb.create();
         }
         return props_Texture;
-      case LanguageConceptSwitch.Vector:
-        if (props_Vector == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_Vector = cpb.create();
-        }
-        return props_Vector;
       case LanguageConceptSwitch.VectorComponentTarget:
         if (props_VectorComponentTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

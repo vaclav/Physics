@@ -395,18 +395,10 @@
   </node>
   <node concept="24kQdi" id="5xbVod7kK08">
     <property role="3GE5qa" value="physical.vector" />
-    <ref role="1XX52x" to="9tcj:5xbVod7kJDF" resolve="RelativeVector" />
+    <ref role="1XX52x" to="9tcj:5xbVod7kJDF" resolve="RelativeCoordinates" />
     <node concept="3EZMnI" id="5xbVod7kK0a" role="2wV5jI">
-      <node concept="3F0ifn" id="5xbVod7kK0g" role="3EZMnx">
-        <node concept="VPxyj" id="5xbVod7mfDF" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="A1WHr" id="5xbVod7mfDH" role="3vIgyS">
-          <ref role="2ZyFGn" to="9tcj:1jQexh3x$_T" resolve="Vector" />
-        </node>
-      </node>
       <node concept="3F1sOY" id="5xbVod7kK0m" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:6B47O8QfQWH" resolve="coordinates" />
+        <ref role="1NtTu8" to="9tcj:1$oDF1jRtdq" resolve="coordinates" />
       </node>
       <node concept="3F0ifn" id="5xbVod7kK0u" role="3EZMnx">
         <property role="3F0ifm" value="relative to" />
@@ -418,7 +410,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5xbVod7kK0I">
-    <property role="3GE5qa" value="physical.vector.coordinates" />
+    <property role="3GE5qa" value="physical.vector.absolute" />
     <ref role="1XX52x" to="9tcj:5xbVod7kJEf" resolve="SphericalCoordinates" />
     <node concept="3EZMnI" id="5xbVod7kK0K" role="2wV5jI">
       <node concept="3F0ifn" id="5xbVod7kK0Q" role="3EZMnx">
@@ -433,8 +425,8 @@
       <node concept="3F0ifn" id="6POFxU8hdXv" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
-      <node concept="3F0A7n" id="5xbVod7kK1a" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:5xbVod7kJEg" resolve="theta" />
+      <node concept="3F1sOY" id="6asu_4xGfVI" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:6asu_4xFMlS" resolve="theta" />
       </node>
       <node concept="3F0ifn" id="6POFxU8hdYd" role="3EZMnx">
         <property role="3F0ifm" value="," />
@@ -445,8 +437,8 @@
       <node concept="3F0ifn" id="6POFxU8hdYB" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
-      <node concept="3F0A7n" id="5xbVod7kK1w" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:5xbVod7kJEh" resolve="phi" />
+      <node concept="3F1sOY" id="6asu_4xGfWE" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:6asu_4xFMlQ" resolve="phi" />
       </node>
       <node concept="3F0ifn" id="6POFxU8hdZ3" role="3EZMnx">
         <property role="3F0ifm" value="," />
@@ -457,8 +449,8 @@
       <node concept="3F0ifn" id="6POFxU8hdZx" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
-      <node concept="3F0A7n" id="5xbVod7kK1Y" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:5xbVod7kJEj" resolve="distance" />
+      <node concept="3F1sOY" id="6asu_4xGfXm" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:6asu_4xFMlW" resolve="distance" />
       </node>
       <node concept="3F0ifn" id="5xbVod7kK2g" role="3EZMnx">
         <property role="3F0ifm" value=")" />
@@ -467,13 +459,13 @@
     </node>
   </node>
   <node concept="24kQdi" id="5xbVod7kK2N">
-    <property role="3GE5qa" value="physical.vector.coordinates" />
+    <property role="3GE5qa" value="physical.vector.absolute" />
     <ref role="1XX52x" to="9tcj:5xbVod7kJEb" resolve="CartesianCoordinates" />
     <node concept="3EZMnI" id="5xbVod7kK2P" role="2wV5jI">
       <node concept="3F0ifn" id="5xbVod7kK2V" role="3EZMnx">
         <property role="3F0ifm" value="cartesian coordinates" />
         <node concept="A1WHr" id="5xbVod7kKmd" role="3vIgyS">
-          <ref role="2ZyFGn" to="9tcj:5xbVod7kJDH" resolve="Coordinates" />
+          <ref role="2ZyFGn" to="9tcj:5xbVod7kJDH" resolve="AbsoluteCoordinates" />
         </node>
         <node concept="VPxyj" id="5xbVod7kKmf" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -540,24 +532,6 @@
         </node>
       </node>
       <node concept="l2Vlx" id="5xbVod7kK2R" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="5xbVod7lQaI">
-    <property role="3GE5qa" value="physical.vector" />
-    <ref role="1XX52x" to="9tcj:5xbVod7lCqe" resolve="AbsoluteVector" />
-    <node concept="3EZMnI" id="5xbVod7lQaK" role="2wV5jI">
-      <node concept="3F0ifn" id="5xbVod7lQaQ" role="3EZMnx">
-        <node concept="VPxyj" id="5xbVod7mfDD" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="A1WHr" id="5xbVod7mfDJ" role="3vIgyS">
-          <ref role="2ZyFGn" to="9tcj:1jQexh3x$_T" resolve="Vector" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="5xbVod7lQaW" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:6B47O8QfQWH" resolve="coordinates" />
-      </node>
-      <node concept="l2Vlx" id="5xbVod7lQaM" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="1jQexh3y6fO">
@@ -975,7 +949,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="6POFxU8e$hR">
-    <property role="3GE5qa" value="physical.vector.coordinates" />
+    <property role="3GE5qa" value="physical.vector.absolute" />
     <ref role="1XX52x" to="9tcj:6POFxU8e$hL" resolve="DirectionalCoordinates" />
     <node concept="3EZMnI" id="6POFxU8e$hT" role="2wV5jI">
       <node concept="3F0ifn" id="6POFxU8e$hU" role="3EZMnx">

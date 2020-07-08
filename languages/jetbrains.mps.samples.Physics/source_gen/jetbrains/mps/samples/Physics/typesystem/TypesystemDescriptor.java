@@ -9,11 +9,19 @@ import jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime;
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
     {
-      InferenceRule_Runtime inferenceRule = new typeof_CurrentObjectExpression_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_BuiltInVectorsExpression_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InferenceRule_Runtime inferenceRule = new typeof_DefaultDirection_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_CartesianCoordinates_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_Coordinates_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_CurrentObjectExpression_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -49,7 +57,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InferenceRule_Runtime inferenceRule = new typeof_Vector_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_SphericalCoordinates_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -61,11 +69,11 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InferenceRule_Runtime inferenceRule = new typeof_WorldCenterTarget_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_WorldDefinition_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InferenceRule_Runtime inferenceRule = new typeof_WorldDefinition_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_WorldMassCenterTarget_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {

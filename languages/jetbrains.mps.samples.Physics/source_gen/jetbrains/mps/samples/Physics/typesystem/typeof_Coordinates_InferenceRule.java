@@ -13,8 +13,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-public class typeof_Vector_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
-  public typeof_Vector_InferenceRule() {
+public class typeof_Coordinates_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
+  public typeof_Coordinates_InferenceRule() {
   }
   public void applyRule(final SNode vector, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
@@ -24,7 +24,7 @@ public class typeof_Vector_InferenceRule extends AbstractInferenceRule_Runtime i
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.Vector$HV;
+    return CONCEPTS.Coordinates$HV;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -34,6 +34,6 @@ public class typeof_Vector_InferenceRule extends AbstractInferenceRule_Runtime i
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Vector$HV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.Vector");
+    /*package*/ static final SConcept Coordinates$HV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.Coordinates");
   }
 }

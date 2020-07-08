@@ -7,16 +7,16 @@ import jetbrains.mps.lang.typesystem.runtime.ISubtypingRule_Runtime;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class ObjectIsDirection_SubtypingRule extends SubtypingRule_Runtime implements ISubtypingRule_Runtime {
   public ObjectIsDirection_SubtypingRule() {
   }
   public SNode getSubOrSuperType(SNode objectType, TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.structure.DirectionType"));
+    return createDirectionType_1qus2t_a0a1();
   }
   public SAbstractConcept getApplicableConcept() {
     return CONCEPTS.ObjectType$sZ;
@@ -27,8 +27,16 @@ public class ObjectIsDirection_SubtypingRule extends SubtypingRule_Runtime imple
   public boolean isWeak() {
     return false;
   }
+  public boolean surelyKeepsConcept() {
+    return true;
+  }
+  private static SNode createDirectionType_1qus2t_a0a1() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
+    return n0.getResult();
+  }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.structure.ObjectType");
+    /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.structure.DirectionType");
   }
 }

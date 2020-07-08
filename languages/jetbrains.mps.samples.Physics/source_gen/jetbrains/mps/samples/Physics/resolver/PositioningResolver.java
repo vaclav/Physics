@@ -64,26 +64,45 @@ public class PositioningResolver {
     });
   }
 
-  public void solve() {
+  public void solve(final SNode untilTargetSolved) {
+    int maxIterations = ListSequence.fromList(objects).count() + 1;
+    final ObjectToPosition target = ListSequence.fromList(objects).findFirst(new IWhereFilter<ObjectToPosition>() {
+      public boolean accept(ObjectToPosition it) {
+        return Objects.equals(it.getContent(), untilTargetSolved);
+      }
+    });
+
     while (ListSequence.fromList(objects).any(new IWhereFilter<ObjectToPosition>() {
       public boolean accept(ObjectToPosition it) {
         return !(it.isResolved());
       }
-    })) {
+    }) && maxIterations-- > 0 && target.isResolved() != true) {
+      ListSequence.fromList(objects).where(new IWhereFilter<ObjectToPosition>() {
+        public boolean accept(ObjectToPosition it) {
+          return it.missingDependencies() == 0 && !(it.isResolved());
+        }
+      }).visitAll(new IVisitor<ObjectToPosition>() {
+        public void visit(ObjectToPosition it) {
+          it.resolve();
+        }
+      });
     }
-    ListSequence.fromList(objects).where(new IWhereFilter<ObjectToPosition>() {
-      public boolean accept(ObjectToPosition it) {
-        return it.missingDependencies() == 0 && !(it.isResolved());
-      }
-    }).visitAll(new IVisitor<ObjectToPosition>() {
-      public void visit(ObjectToPosition it) {
-        it.resolve();
 
-      }
-    });
+    if (maxIterations <= 0) {
+      throw new ClassCircularityError("circular dependencies for positioning");
+    }
   }
 
   public static void resolve(SNode world) {
+    PositioningResolver resolver = new PositioningResolver(world);
+    resolver.computeDependencies();
+    resolver.solve(null);
+  }
+
+  public static void resolveOne(SNode object) {
+    PositioningResolver resolver = new PositioningResolver(SNodeOperations.getNodeAncestor(object, CONCEPTS.WorldDefinition$Xn, false, false));
+    resolver.computeDependencies();
+    resolver.solve(object);
   }
 
   private static final class CONCEPTS {

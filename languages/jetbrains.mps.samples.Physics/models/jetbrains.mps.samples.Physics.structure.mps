@@ -143,10 +143,17 @@
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDF">
     <property role="EcuMT" value="6362440046684076651" />
-    <property role="TrG5h" value="RelativeVector" />
-    <property role="34LRSv" value="relative vector" />
+    <property role="TrG5h" value="RelativeCoordinates" />
+    <property role="34LRSv" value="relative coordinates" />
     <property role="3GE5qa" value="physical.vector" />
-    <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="Vector" />
+    <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="Coordinates" />
+    <node concept="1TJgyj" id="1$oDF1jRtdq" role="1TKVEi">
+      <property role="IQ2ns" value="1808378526640755546" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="coordinates" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
+    </node>
     <node concept="1TJgyj" id="5xbVod7kJDG" role="1TKVEi">
       <property role="IQ2ns" value="6362440046684076652" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -157,17 +164,17 @@
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDH">
     <property role="EcuMT" value="6362440046684076653" />
-    <property role="3GE5qa" value="physical.vector.coordinates" />
-    <property role="TrG5h" value="Coordinates" />
+    <property role="3GE5qa" value="physical.vector.absolute" />
+    <property role="TrG5h" value="AbsoluteCoordinates" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="Coordinates" />
   </node>
   <node concept="1TIwiD" id="5xbVod7kJEb">
     <property role="EcuMT" value="6362440046684076683" />
     <property role="TrG5h" value="CartesianCoordinates" />
-    <property role="3GE5qa" value="physical.vector.coordinates" />
+    <property role="3GE5qa" value="physical.vector.absolute" />
     <property role="34LRSv" value="cartesian coordinates" />
-    <ref role="1TJDcQ" node="5xbVod7kJDH" resolve="Coordinates" />
+    <ref role="1TJDcQ" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
     <node concept="1TJgyj" id="1h1l5SEm0oR" role="1TKVEi">
       <property role="IQ2ns" value="1459540517658822199" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -193,31 +200,30 @@
   <node concept="1TIwiD" id="5xbVod7kJEf">
     <property role="EcuMT" value="6362440046684076687" />
     <property role="TrG5h" value="SphericalCoordinates" />
-    <property role="3GE5qa" value="physical.vector.coordinates" />
+    <property role="3GE5qa" value="physical.vector.absolute" />
     <property role="34LRSv" value="spherical coordinates" />
-    <ref role="1TJDcQ" node="5xbVod7kJDH" resolve="Coordinates" />
-    <node concept="1TJgyi" id="5xbVod7kJEg" role="1TKVEl">
-      <property role="IQ2nx" value="6362440046684076688" />
-      <property role="TrG5h" value="theta" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <ref role="1TJDcQ" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
+    <node concept="1TJgyj" id="6asu_4xFMlS" role="1TKVEi">
+      <property role="IQ2ns" value="7105688800959866232" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="theta" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
-    <node concept="1TJgyi" id="5xbVod7kJEh" role="1TKVEl">
-      <property role="IQ2nx" value="6362440046684076689" />
-      <property role="TrG5h" value="phi" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="6asu_4xFMlQ" role="1TKVEi">
+      <property role="IQ2ns" value="7105688800959866230" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="phi" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
-    <node concept="1TJgyi" id="5xbVod7kJEj" role="1TKVEl">
-      <property role="IQ2nx" value="6362440046684076691" />
-      <property role="TrG5h" value="distance" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="6asu_4xFMlW" role="1TKVEi">
+      <property role="IQ2ns" value="7105688800959866236" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="distance" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="5xbVod7lCqe">
-    <property role="EcuMT" value="6362440046684309134" />
-    <property role="3GE5qa" value="physical.vector" />
-    <property role="TrG5h" value="AbsoluteVector" />
-    <property role="34LRSv" value="absolute vector" />
-    <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="Vector" />
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oM">
     <property role="EcuMT" value="1459540517658822194" />
@@ -231,7 +237,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="components" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5xbVod7kJDH" resolve="Coordinates" />
+      <ref role="20lvS9" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
     </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oP">
@@ -374,16 +380,9 @@
   <node concept="1TIwiD" id="1jQexh3x$_T">
     <property role="EcuMT" value="1510458583736011129" />
     <property role="3GE5qa" value="physical.vector" />
-    <property role="TrG5h" value="Vector" />
+    <property role="TrG5h" value="Coordinates" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    <node concept="1TJgyj" id="6B47O8QfQWH" role="1TKVEi">
-      <property role="IQ2ns" value="1510458583736009728" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="coordinates" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5xbVod7kJDH" resolve="Coordinates" />
-    </node>
   </node>
   <node concept="1TIwiD" id="1jQexh3y6fx">
     <property role="EcuMT" value="1510458583736148961" />
@@ -478,13 +477,13 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="location" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1jQexh3x$_T" resolve="Vector" />
+      <ref role="20lvS9" node="1jQexh3x$_T" resolve="Coordinates" />
     </node>
     <node concept="1TJgyj" id="3Nk1IDHWZS7" role="1TKVEi">
       <property role="IQ2ns" value="4383135941275155975" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="velocity" />
-      <ref role="20lvS9" node="5xbVod7kJDH" resolve="Coordinates" />
+      <ref role="20lvS9" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
     </node>
   </node>
   <node concept="25R3W" id="6POFxU8e$gz">
@@ -526,10 +525,10 @@
   </node>
   <node concept="1TIwiD" id="6POFxU8e$hL">
     <property role="EcuMT" value="7887120293590353009" />
-    <property role="3GE5qa" value="physical.vector.coordinates" />
+    <property role="3GE5qa" value="physical.vector.absolute" />
     <property role="TrG5h" value="DirectionalCoordinates" />
     <property role="34LRSv" value="directional coordinates" />
-    <ref role="1TJDcQ" node="5xbVod7kJDH" resolve="Coordinates" />
+    <ref role="1TJDcQ" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
     <node concept="1TJgyj" id="6POFxU8e$hO" role="1TKVEi">
       <property role="IQ2ns" value="7887120293590353012" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />

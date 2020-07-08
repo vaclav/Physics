@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="IntentionsDescriptor.java">
+      <unit at="18,0,56,0" name="jetbrains.mps.samples.Physics.intentions.IntentionsDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:d39af7f4-ee25-4f0f-8cf6-c31288d9a059(jetbrains.mps.samples.Physics.intentions)/1808378526641952102">
+    <file name="IntentionsDescriptor.java">
+      <node id="1808378526641952102" at="37,47,38,55" concept="1" />
+      <node id="1808378526641952102" at="50,52,51,41" concept="1" />
+    </file>
+    <file name="MakeAbsolute_Intention.java">
+      <node id="1808378526641952102" at="29,0,30,0" concept="2" trace="myCachedExecutable" />
+      <node id="1808378526641952102" at="30,35,31,154" concept="11" />
+      <node id="1808378526641952102" at="34,35,35,26" concept="6" />
+      <node id="1808378526641952102" at="39,127,40,19" concept="6" />
+      <node id="1808378526641952102" at="41,5,42,16" concept="6" />
+      <node id="1808378526641965302" at="44,112,45,76" concept="6" />
+      <node id="1808378526641952102" at="48,35,49,17" concept="6" />
+      <node id="1808378526641952102" at="52,37,53,105" concept="1" />
+      <node id="1808378526641952102" at="54,5,55,30" concept="6" />
+      <node id="1808378526641952419" at="61,87,62,185" concept="6" />
+      <node id="1808378526642698437" at="65,78,66,38" concept="7" />
+      <node id="1808378526642009905" at="66,38,67,82" concept="5" />
+      <node id="1808378526642014815" at="67,82,68,98" concept="5" />
+      <node id="1808378526642037555" at="68,98,69,0" concept="8" />
+      <node id="1808378526642032251" at="69,0,70,92" concept="1" />
+      <node id="1808378526642032258" at="70,92,71,172" concept="1" />
+      <node id="1808378526642037195" at="71,172,72,0" concept="8" />
+      <node id="1808378526642012374" at="72,0,73,92" concept="1" />
+      <node id="1808378526642020558" at="73,92,74,172" concept="1" />
+      <node id="1808378526642036781" at="74,172,75,0" concept="8" />
+      <node id="1808378526642033374" at="75,0,76,92" concept="1" />
+      <node id="1808378526642033381" at="76,92,77,172" concept="1" />
+      <node id="1808378526641952102" at="80,48,81,41" concept="6" />
+      <node id="1808378526642032256" at="84,59,85,73" concept="5" />
+      <node id="1808378526642032256" at="85,73,86,26" concept="6" />
+      <node id="1808378526642019901" at="88,59,89,73" concept="5" />
+      <node id="1808378526642019901" at="89,73,90,26" concept="6" />
+      <node id="1808378526642033379" at="92,59,93,73" concept="5" />
+      <node id="1808378526642033379" at="93,73,94,26" concept="6" />
+      <node id="1808378526641952102" at="98,0,99,0" concept="9" trace="Coordinates$HV" />
+      <node id="1808378526641952102" at="99,0,100,0" concept="9" trace="CartesianCoordinates$U8" />
+      <node id="1808378526641952102" at="100,0,101,0" concept="9" trace="NumberLiteral$yW" />
+      <node id="1808378526641952102" at="104,0,105,0" concept="9" trace="coordinates$l1nt" />
+      <node id="1808378526641952102" at="105,0,106,0" concept="9" trace="dx$VpuT" />
+      <node id="1808378526641952102" at="106,0,107,0" concept="9" trace="dy$VWrJ" />
+      <node id="1808378526641952102" at="107,0,108,0" concept="9" trace="dz$VWBn" />
+      <node id="1808378526641952102" at="111,0,112,0" concept="9" trace="value$nZyY" />
+      <node id="1808378526641952102" at="58,0,60,0" concept="0" trace="IntentionImplementation#()V" />
+      <node id="1808378526641952102" at="30,0,33,0" concept="0" trace="MakeAbsolute_Intention#()V" />
+      <node id="1808378526641952102" at="38,84,41,5" concept="3" />
+      <node id="1808378526641952102" at="44,0,47,0" concept="4" trace="isVisibleInChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Z" />
+      <node id="1808378526641952102" at="51,99,54,5" concept="3" />
+      <node id="1808378526641952102" at="33,0,37,0" concept="4" trace="getPresentation#()Ljava/lang/String;" />
+      <node id="1808378526641952102" at="47,0,51,0" concept="4" trace="isSurroundWith#()Z" />
+      <node id="1808378526641952102" at="60,0,64,0" concept="4" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/lang/String;" />
+      <node id="1808378526641952102" at="79,0,83,0" concept="4" trace="getDescriptor#()Ljetbrains/mps/openapi/intentions/IntentionDescriptor;" />
+      <node id="1808378526642032256" at="84,0,88,0" concept="10" trace="createNumberLiteral_ql4edu_a0e0a#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1808378526642019901" at="88,0,92,0" concept="10" trace="createNumberLiteral_ql4edu_a0h0a#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1808378526642033379" at="92,0,96,0" concept="10" trace="createNumberLiteral_ql4edu_a0k0a#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1808378526641952102" at="51,0,57,0" concept="4" trace="instances#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/util/Collection;" />
+      <node id="1808378526641952102" at="37,0,44,0" concept="4" trace="isApplicable#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Z" />
+      <node id="1808378526641952102" at="64,0,79,0" concept="4" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
+      <scope id="1808378526641952102" at="58,38,58,38" />
+      <scope id="1808378526641952102" at="30,35,31,154" />
+      <scope id="1808378526641952102" at="34,35,35,26" />
+      <scope id="1808378526641952102" at="39,127,40,19" />
+      <scope id="1808378526641964978" at="44,112,45,76" />
+      <scope id="1808378526641952102" at="48,35,49,17" />
+      <scope id="1808378526641952102" at="52,37,53,105" />
+      <scope id="1808378526641952104" at="61,87,62,185" />
+      <scope id="1808378526641952102" at="80,48,81,41" />
+      <scope id="1808378526641952102" at="58,0,60,0" />
+      <scope id="1808378526642032256" at="84,59,86,26">
+        <var name="n0" id="1808378526642032256" />
+      </scope>
+      <scope id="1808378526642019901" at="88,59,90,26">
+        <var name="n0" id="1808378526642019901" />
+      </scope>
+      <scope id="1808378526642033379" at="92,59,94,26">
+        <var name="n0" id="1808378526642033379" />
+      </scope>
+      <scope id="1808378526641952102" at="30,0,33,0" />
+      <scope id="1808378526641952102" at="44,0,47,0">
+        <var name="childNode" id="1808378526641952102" />
+        <var name="editorContext" id="1808378526641952102" />
+        <var name="node" id="1808378526641952102" />
+      </scope>
+      <scope id="1808378526641952102" at="33,0,37,0" />
+      <scope id="1808378526641952102" at="38,84,42,16" />
+      <scope id="1808378526641952102" at="47,0,51,0" />
+      <scope id="1808378526641952102" at="51,99,55,30" />
+      <scope id="1808378526641952102" at="60,0,64,0">
+        <var name="editorContext" id="1808378526641952102" />
+        <var name="node" id="1808378526641952102" />
+      </scope>
+      <scope id="1808378526641952102" at="79,0,83,0" />
+      <scope id="1808378526642032256" at="84,0,88,0" />
+      <scope id="1808378526642019901" at="88,0,92,0" />
+      <scope id="1808378526642033379" at="92,0,96,0" />
+      <scope id="1808378526641952102" at="51,0,57,0">
+        <var name="context" id="1808378526641952102" />
+        <var name="node" id="1808378526641952102" />
+      </scope>
+      <scope id="1808378526641952102" at="37,0,44,0">
+        <var name="editorContext" id="1808378526641952102" />
+        <var name="node" id="1808378526641952102" />
+      </scope>
+      <scope id="1808378526641952106" at="65,78,77,172">
+        <var name="newNode" id="1808378526642014816" />
+        <var name="result" id="1808378526642009906" />
+      </scope>
+      <scope id="1808378526641952102" at="64,0,79,0">
+        <var name="editorContext" id="1808378526641952102" />
+        <var name="node" id="1808378526641952102" />
+      </scope>
+      <unit id="1808378526641952102" at="110,0,113,0" name="jetbrains.mps.samples.Physics.intentions.MakeAbsolute_Intention$PROPS" />
+      <unit id="1808378526641952102" at="97,0,102,0" name="jetbrains.mps.samples.Physics.intentions.MakeAbsolute_Intention$CONCEPTS" />
+      <unit id="1808378526641952102" at="103,0,109,0" name="jetbrains.mps.samples.Physics.intentions.MakeAbsolute_Intention$LINKS" />
+      <unit id="1808378526641952102" at="57,0,84,0" name="jetbrains.mps.samples.Physics.intentions.MakeAbsolute_Intention$IntentionImplementation" />
+      <unit id="1808378526641952102" at="28,0,114,0" name="jetbrains.mps.samples.Physics.intentions.MakeAbsolute_Intention" />
+    </file>
+  </root>
+</debug-info>
+

@@ -6,12 +6,14 @@ import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.LinkedList;
+import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
 import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
 
 public class ObjectToPosition {
   private SNode content;
   private List<ObjectToPosition> dependencies;
   private boolean resolved = false;
+  private SNode result;
 
   public ObjectToPosition(SNode object) {
     content = object;
@@ -19,6 +21,7 @@ public class ObjectToPosition {
   }
 
   public void resolve() {
+    IETS3ExprEvalHelper.getInterpreter();
   }
 
   public int missingDependencies() {

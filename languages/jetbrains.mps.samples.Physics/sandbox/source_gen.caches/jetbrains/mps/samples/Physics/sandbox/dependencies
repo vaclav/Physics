@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependenciesRoot />
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.sandbox.TestSimulation">
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.Force" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.forces.StaticForce" />
+    <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.rendering.BoxFixture" />
+    <classNode dependClassName="org.ode4j.math.DVector3" />
+    <classNode extendsClassName="jetbrains.mps.sample.Physics.runtime.Simulation" />
+  </dependency>
+</dependenciesRoot>
 

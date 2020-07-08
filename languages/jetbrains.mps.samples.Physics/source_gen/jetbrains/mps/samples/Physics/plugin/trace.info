@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:c7d5b9dd-a05f-4be2-bc73-f2e16994cc67/3751132065236767060:jetbrains.mps.baseLanguage.lightweightdsl.structure.MethodInstance" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1163670490218:jetbrains.mps.baseLanguage.structure.SwitchStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root>
+    <file name="ExtensionDescriptor.java">
+      <unit at="9,0,18,0" name="jetbrains.mps.samples.Physics.plugin.ExtensionDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1808378526640697902">
+    <file name="InterpreterVectorInterpreter.java">
+      <node id="1808378526640697902" at="36,41,37,11" concept="2" />
+      <node id="1808378526640841301" at="43,13,44,42" concept="2" />
+      <node id="1808378526640841301" at="44,42,45,48" concept="2" />
+      <node id="1808378526640841301" at="45,48,46,68" concept="2" />
+      <node id="1808378526640841301" at="46,68,47,519" concept="6" />
+      <node id="1808378526640841301" at="48,47,49,30" concept="6" />
+      <node id="1808378526640841301" at="50,49,51,19" concept="12" />
+      <node id="1808378526640841301" at="52,39,53,120" concept="12" />
+      <node id="1808378526640841301" at="56,38,57,57" concept="6" />
+      <node id="1808378526640841301" at="61,32,62,38" concept="6" />
+      <node id="1808378526640841301" at="66,42,67,21" concept="6" />
+      <node id="1808378526641750554" at="72,13,73,42" concept="2" />
+      <node id="1808378526641750554" at="73,42,74,48" concept="2" />
+      <node id="1808378526641750554" at="74,48,75,68" concept="2" />
+      <node id="1808378526641776134" at="75,68,76,178" concept="5" />
+      <node id="1808378526641776783" at="78,19,79,37" concept="6" />
+      <node id="1808378526641777726" at="80,19,81,30" concept="6" />
+      <node id="1808378526641778129" at="82,19,83,30" concept="6" />
+      <node id="1808378526641779067" at="84,19,85,30" concept="6" />
+      <node id="1808378526641780027" at="86,19,87,47" concept="6" />
+      <node id="1808378526641783812" at="88,19,89,44" concept="6" />
+      <node id="1808378526641758202" at="90,20,91,26" concept="6" />
+      <node id="1808378526641750554" at="93,47,94,30" concept="6" />
+      <node id="1808378526641750554" at="95,49,96,19" concept="12" />
+      <node id="1808378526641750554" at="97,39,98,87" concept="12" />
+      <node id="1808378526641750554" at="101,38,102,58" concept="6" />
+      <node id="1808378526641750554" at="106,32,107,39" concept="6" />
+      <node id="1808378526641750554" at="111,42,112,20" concept="6" />
+      <node id="7105688800959818525" at="117,13,118,42" concept="2" />
+      <node id="7105688800959818525" at="118,42,119,48" concept="2" />
+      <node id="7105688800959818525" at="119,48,120,68" concept="2" />
+      <node id="7105688800959818525" at="120,68,121,539" concept="6" />
+      <node id="7105688800959818525" at="122,47,123,30" concept="6" />
+      <node id="7105688800959818525" at="124,49,125,19" concept="12" />
+      <node id="7105688800959818525" at="126,39,127,130" concept="12" />
+      <node id="7105688800959818525" at="130,38,131,57" concept="6" />
+      <node id="7105688800959818525" at="135,32,136,38" concept="6" />
+      <node id="7105688800959818525" at="140,42,141,21" concept="6" />
+      <node id="1808378526641206894" at="152,85,153,274" concept="2" />
+      <node id="1808378526640697902" at="155,0,156,0" concept="8" trace="enumSwitchIndex_fbbe2m_a0e0a0a0a0a0b0c" />
+      <node id="1808378526640697902" at="158,0,159,0" concept="8" trace="dx$VpuT" />
+      <node id="1808378526640697902" at="159,0,160,0" concept="8" trace="dy$VWrJ" />
+      <node id="1808378526640697902" at="160,0,161,0" concept="8" trace="dz$VWBn" />
+      <node id="1808378526640697902" at="161,0,162,0" concept="8" trace="distance$xDc5" />
+      <node id="1808378526640697902" at="162,0,163,0" concept="8" trace="theta$xDa9" />
+      <node id="1808378526640697902" at="163,0,164,0" concept="8" trace="phi$xD9b" />
+      <node id="1808378526640697902" at="167,0,168,0" concept="8" trace="CartesianCoordinates$U8" />
+      <node id="1808378526640697902" at="168,0,169,0" concept="8" trace="RealType$5o" />
+      <node id="1808378526640697902" at="169,0,170,0" concept="8" trace="VectorComponentTarget$ME" />
+      <node id="1808378526640697902" at="170,0,171,0" concept="8" trace="SphericalCoordinates$W4" />
+      <node id="1808378526640697902" at="174,0,175,0" concept="8" trace="component$_d4D" />
+      <node id="1808378526640697902" at="147,0,149,0" concept="4" trace="populateTypeMappers#(Ljava/util/List;)V" />
+      <node id="1808378526640697902" at="36,0,39,0" concept="1" trace="InterpreterVectorInterpreter#()V" />
+      <node id="1808378526640841301" at="56,0,59,0" concept="4" trace="getInfo#()Lcom/mbeddr/mpsutil/interpreter/rt/EvaluatorInfo;" />
+      <node id="1808378526641750554" at="101,0,104,0" concept="4" trace="getInfo#()Lcom/mbeddr/mpsutil/interpreter/rt/EvaluatorInfo;" />
+      <node id="7105688800959818525" at="130,0,133,0" concept="4" trace="getInfo#()Lcom/mbeddr/mpsutil/interpreter/rt/EvaluatorInfo;" />
+      <node id="1808378526640697902" at="152,0,155,0" concept="4" trace="populateRelationships#(Ljava/util/List;)V" />
+      <node id="1808378526640841301" at="60,0,64,0" concept="4" trace="toString#()Ljava/lang/String;" />
+      <node id="1808378526640841301" at="65,0,69,0" concept="4" trace="canLookupBeCached#()Z" />
+      <node id="1808378526641750554" at="105,0,109,0" concept="4" trace="toString#()Ljava/lang/String;" />
+      <node id="1808378526641750554" at="110,0,114,0" concept="4" trace="canLookupBeCached#()Z" />
+      <node id="7105688800959818525" at="134,0,138,0" concept="4" trace="toString#()Ljava/lang/String;" />
+      <node id="7105688800959818525" at="139,0,143,0" concept="4" trace="canLookupBeCached#()Z" />
+      <node id="1808378526640841301" at="42,121,54,9" concept="13" />
+      <node id="7105688800959818525" at="116,121,128,9" concept="13" />
+      <node id="1808378526640841301" at="42,0,56,0" concept="4" trace="evaluateEvaluator#(Lorg/jetbrains/mps/openapi/model/SNode;Lcom/mbeddr/mpsutil/interpreter/rt/IContext;Lcom/mbeddr/mpsutil/interpreter/rt/ICoverageAnalyzer;Lcom/mbeddr/mpsutil/interpreter/rt/ComputationTrace;)Ljava/lang/Object;" />
+      <node id="7105688800959818525" at="116,0,130,0" concept="4" trace="evaluateEvaluator#(Lorg/jetbrains/mps/openapi/model/SNode;Lcom/mbeddr/mpsutil/interpreter/rt/IContext;Lcom/mbeddr/mpsutil/interpreter/rt/ICoverageAnalyzer;Lcom/mbeddr/mpsutil/interpreter/rt/ComputationTrace;)Ljava/lang/Object;" />
+      <node id="1808378526641758202" at="76,178,92,11" concept="11" />
+      <node id="1808378526641750554" at="71,121,99,9" concept="13" />
+      <node id="1808378526640841301" at="40,76,69,7" concept="2" />
+      <node id="7105688800959818525" at="114,7,143,7" concept="2" />
+      <node id="1808378526641750554" at="71,0,101,0" concept="4" trace="evaluateEvaluator#(Lorg/jetbrains/mps/openapi/model/SNode;Lcom/mbeddr/mpsutil/interpreter/rt/IContext;Lcom/mbeddr/mpsutil/interpreter/rt/ICoverageAnalyzer;Lcom/mbeddr/mpsutil/interpreter/rt/ComputationTrace;)Ljava/lang/Object;" />
+      <node id="1808378526641750554" at="69,7,114,7" concept="2" />
+      <node id="1808378526640697902" at="40,0,145,0" concept="4" trace="populateEvaluators#(Ljava/util/List;)V" />
+      <scope id="1808378526640697902" at="147,79,147,79" />
+      <scope id="1808378526640697902" at="36,41,37,11" />
+      <scope id="1808378526640841301" at="48,47,49,30" />
+      <scope id="1808378526640841301" at="50,49,51,19" />
+      <scope id="1808378526640841301" at="52,39,53,120" />
+      <scope id="1808378526640841301" at="56,38,57,57" />
+      <scope id="1808378526640841301" at="61,32,62,38" />
+      <scope id="1808378526640841301" at="66,42,67,21" />
+      <scope id="1808378526641776783" at="78,19,79,37" />
+      <scope id="1808378526641777726" at="80,19,81,30" />
+      <scope id="1808378526641778129" at="82,19,83,30" />
+      <scope id="1808378526641779067" at="84,19,85,30" />
+      <scope id="1808378526641780027" at="86,19,87,47" />
+      <scope id="1808378526641783812" at="88,19,89,44" />
+      <scope id="1808378526641758202" at="90,20,91,26" />
+      <scope id="1808378526641750554" at="93,47,94,30" />
+      <scope id="1808378526641750554" at="95,49,96,19" />
+      <scope id="1808378526641750554" at="97,39,98,87" />
+      <scope id="1808378526641750554" at="101,38,102,58" />
+      <scope id="1808378526641750554" at="106,32,107,39" />
+      <scope id="1808378526641750554" at="111,42,112,20" />
+      <scope id="7105688800959818525" at="122,47,123,30" />
+      <scope id="7105688800959818525" at="124,49,125,19" />
+      <scope id="7105688800959818525" at="126,39,127,130" />
+      <scope id="7105688800959818525" at="130,38,131,57" />
+      <scope id="7105688800959818525" at="135,32,136,38" />
+      <scope id="7105688800959818525" at="140,42,141,21" />
+      <scope id="1808378526640697902" at="152,85,153,274" />
+      <scope id="1808378526640841301" at="48,9,50,9">
+        <var name="stop" id="1808378526640841301" />
+      </scope>
+      <scope id="1808378526640841301" at="50,9,52,9">
+        <var name="ex" id="1808378526640841301" />
+      </scope>
+      <scope id="1808378526640841301" at="52,9,54,9">
+        <var name="ex" id="1808378526640841301" />
+      </scope>
+      <scope id="1808378526641750554" at="93,9,95,9">
+        <var name="stop" id="1808378526641750554" />
+      </scope>
+      <scope id="1808378526641750554" at="95,9,97,9">
+        <var name="ex" id="1808378526641750554" />
+      </scope>
+      <scope id="1808378526641750554" at="97,9,99,9">
+        <var name="ex" id="1808378526641750554" />
+      </scope>
+      <scope id="7105688800959818525" at="122,9,124,9">
+        <var name="stop" id="7105688800959818525" />
+      </scope>
+      <scope id="7105688800959818525" at="124,9,126,9">
+        <var name="ex" id="7105688800959818525" />
+      </scope>
+      <scope id="7105688800959818525" at="126,9,128,9">
+        <var name="ex" id="7105688800959818525" />
+      </scope>
+      <scope id="1808378526640697902" at="147,0,149,0">
+        <var name="typeMappers" id="1808378526640697902" />
+      </scope>
+      <scope id="1808378526640697902" at="36,0,39,0" />
+      <scope id="1808378526640841301" at="56,0,59,0" />
+      <scope id="1808378526641750554" at="101,0,104,0" />
+      <scope id="7105688800959818525" at="130,0,133,0" />
+      <scope id="1808378526640697902" at="152,0,155,0">
+        <var name="relationships" id="1808378526640697902" />
+      </scope>
+      <scope id="1808378526640841301" at="43,13,47,519" />
+      <scope id="1808378526640841301" at="60,0,64,0" />
+      <scope id="1808378526640841301" at="65,0,69,0" />
+      <scope id="1808378526641750554" at="105,0,109,0" />
+      <scope id="1808378526641750554" at="110,0,114,0" />
+      <scope id="7105688800959818525" at="117,13,121,539" />
+      <scope id="7105688800959818525" at="134,0,138,0" />
+      <scope id="7105688800959818525" at="139,0,143,0" />
+      <scope id="1808378526640841301" at="42,121,54,9" />
+      <scope id="7105688800959818525" at="116,121,128,9" />
+      <scope id="1808378526640841301" at="42,0,56,0">
+        <var name="context" id="1808378526640841301" />
+        <var name="coverage" id="1808378526640841301" />
+        <var name="node" id="1808378526640841301" />
+        <var name="trace" id="1808378526640841301" />
+      </scope>
+      <scope id="7105688800959818525" at="116,0,130,0">
+        <var name="context" id="7105688800959818525" />
+        <var name="coverage" id="7105688800959818525" />
+        <var name="node" id="7105688800959818525" />
+        <var name="trace" id="7105688800959818525" />
+      </scope>
+      <scope id="1808378526641750554" at="72,13,92,11">
+        <var name="vector" id="1808378526641776135" />
+      </scope>
+      <scope id="1808378526641750554" at="71,121,99,9" />
+      <scope id="1808378526641750554" at="71,0,101,0">
+        <var name="context" id="1808378526641750554" />
+        <var name="coverage" id="1808378526641750554" />
+        <var name="node" id="1808378526641750554" />
+        <var name="trace" id="1808378526641750554" />
+      </scope>
+      <scope id="1808378526640697902" at="40,76,143,7" />
+      <scope id="1808378526640697902" at="40,0,145,0">
+        <var name="evaluators" id="1808378526640697902" />
+      </scope>
+      <unit id="1808378526640697902" at="173,0,176,0" name="jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter$PROPS" />
+      <unit id="1808378526640697902" at="166,0,172,0" name="jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter$CONCEPTS" />
+      <unit id="1808378526640697902" at="157,0,165,0" name="jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter$LINKS" />
+      <unit id="1808378526640841301" at="41,74,69,5" name="jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter$1" />
+      <unit id="7105688800959818525" at="115,74,143,5" name="jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter$3" />
+      <unit id="1808378526641750554" at="70,74,114,5" name="jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter$2" />
+      <unit id="1808378526640697902" at="35,0,177,0" name="jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter" />
+    </file>
+    <file name="VectorInterpreter_extension.java">
+      <node id="1808378526640697902" at="10,40,11,70" concept="10" />
+      <node id="1808378526640697902" at="14,26,15,55" concept="2" />
+      <node id="1808378526640697902" at="17,28,18,55" concept="2" />
+      <node id="1808378526640697902" at="21,29,22,46" concept="6" />
+      <node id="1808378526640697902" at="10,0,13,0" concept="1" trace="VectorInterpreter_extension#()V" />
+      <node id="1808378526640697902" at="14,0,17,0" concept="0" trace="activate#()V" />
+      <node id="1808378526640697902" at="17,0,20,0" concept="0" trace="deactivate#()V" />
+      <node id="1808378526640697902" at="21,0,24,0" concept="0" trace="get#()Lcom/mbeddr/mpsutil/interpreter/rt/IInterpreter;" />
+      <scope id="1808378526640697902" at="10,40,11,70" />
+      <scope id="1808378526640697902" at="14,26,15,55" />
+      <scope id="1808378526640697902" at="17,28,18,55" />
+      <scope id="1808378526640697902" at="21,29,22,46" />
+      <scope id="1808378526640697902" at="10,0,13,0" />
+      <scope id="1808378526640697902" at="14,0,17,0" />
+      <scope id="1808378526640697902" at="17,0,20,0" />
+      <scope id="1808378526640697902" at="21,0,24,0" />
+      <unit id="1808378526640697902" at="9,0,25,0" name="jetbrains.mps.samples.Physics.plugin.VectorInterpreter_extension" />
+    </file>
+  </root>
+  <root nodeRef="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/7105688800959643459">
+    <file name="InternalVector.java">
+      <node id="7105688800959689118" at="9,0,10,0" concept="8" trace="ctx" />
+      <node id="7105688800959652712" at="10,0,11,0" concept="3" trace="x" />
+      <node id="7105688800959650726" at="11,0,12,0" concept="3" trace="y" />
+      <node id="7105688800959652740" at="12,0,13,0" concept="3" trace="z" />
+      <node id="7105688800959652822" at="14,67,15,15" concept="2" />
+      <node id="7105688800959652834" at="15,15,16,15" concept="2" />
+      <node id="7105688800959652846" at="16,15,17,15" concept="2" />
+      <node id="7105688800959655132" at="20,37,21,48" concept="6" />
+      <node id="7105688800959680502" at="24,30,25,37" concept="6" />
+      <node id="7105688800959753854" at="33,37,34,62" concept="5" />
+      <node id="7105688800959735032" at="34,62,35,36" concept="6" />
+      <node id="7105688800959766995" at="43,40,44,55" concept="5" />
+      <node id="7105688800959767005" at="44,55,45,36" concept="6" />
+      <node id="7105688800959836355" at="52,99,53,45" concept="5" />
+      <node id="7105688800959837682" at="53,45,54,41" concept="5" />
+      <node id="7105688800959841467" at="54,41,55,68" concept="5" />
+      <node id="7105688800959861851" at="55,68,56,0" concept="7" />
+      <node id="7105688800959826547" at="56,0,57,244" concept="6" />
+      <node id="7105688800959654619" at="20,0,23,0" concept="4" trace="lengthSquared#()Ljava/math/BigDecimal;" />
+      <node id="7105688800959680018" at="24,0,27,0" concept="4" trace="length#()Ljava/math/BigDecimal;" />
+      <node id="7105688800959734303" at="33,0,37,0" concept="4" trace="getPolarAngle#()Ljava/math/BigDecimal;" />
+      <node id="7105688800959766993" at="43,0,47,0" concept="4" trace="getAzimutalAngle#()Ljava/math/BigDecimal;" />
+      <node id="7105688800959652814" at="14,0,19,0" concept="1" trace="InternalVector#(Ljava/math/BigDecimal;Ljava/math/BigDecimal;Ljava/math/BigDecimal;)V" />
+      <node id="7105688800959822141" at="52,0,59,0" concept="9" trace="fromSpherical#(Ljava/math/BigDecimal;Ljava/math/BigDecimal;Ljava/math/BigDecimal;)Ljetbrains/mps/samples/Physics/plugin/InternalVector;" />
+      <scope id="7105688800959654622" at="20,37,21,48" />
+      <scope id="7105688800959680021" at="24,30,25,37" />
+      <scope id="7105688800959734306" at="33,37,35,36">
+        <var name="acos" id="7105688800959753855" />
+      </scope>
+      <scope id="7105688800959766994" at="43,40,45,36">
+        <var name="atan" id="7105688800959766996" />
+      </scope>
+      <scope id="7105688800959652818" at="14,67,17,15" />
+      <scope id="7105688800959654619" at="20,0,23,0" />
+      <scope id="7105688800959680018" at="24,0,27,0" />
+      <scope id="7105688800959734303" at="33,0,37,0" />
+      <scope id="7105688800959766993" at="43,0,47,0" />
+      <scope id="7105688800959652814" at="14,0,19,0">
+        <var name="x" id="7105688800959652821" />
+        <var name="y" id="7105688800959652833" />
+        <var name="z" id="7105688800959652845" />
+      </scope>
+      <scope id="7105688800959822144" at="52,99,57,244">
+        <var name="phiDouble" id="7105688800959837685" />
+        <var name="sinTheta" id="7105688800959841470" />
+        <var name="thetaDouble" id="7105688800959836356" />
+      </scope>
+      <scope id="7105688800959822141" at="52,0,59,0">
+        <var name="length" id="7105688800959824007" />
+        <var name="phi" id="7105688800959825746" />
+        <var name="theta" id="7105688800959825123" />
+      </scope>
+      <unit id="7105688800959643459" at="8,0,61,0" name="jetbrains.mps.samples.Physics.plugin.InternalVector" />
+    </file>
+  </root>
+</debug-info>
+
