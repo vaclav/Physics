@@ -35,21 +35,25 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class WorldDefinition__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
 
-  public static final SMethod<Iterable<SNode>> getSubElements_id31HEEbbzg2E = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getSubElements").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("31HEEbbzg2E").build();
+  public static final SMethod<Iterable<SNode>> getNestedDefinitions_id31HEEbbzg2E = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getNestedDefinitions").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("31HEEbbzg2E").build();
+  public static final SMethod<Iterable<SNode>> getLocalizedObjects_id31HEEbbX5J7 = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getLocalizedObjects").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("31HEEbbX5J7").build();
   public static final SMethod<Scope> getScope_id52_Geb4QDV$ = new SMethodBuilder<Scope>(new SJavaCompoundTypeImpl(Scope.class)).name("getScope").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("52_Geb4QDV$").build(SMethodBuilder.createJavaParameter((Class<SAbstractConcept>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   public static final SMethod<SNode> findLocalizedImplementation_id1igjyYxxAPt = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("findLocalizedImplementation").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1igjyYxxAPt").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getSubElements_id31HEEbbzg2E, getScope_id52_Geb4QDV$, findLocalizedImplementation_id1igjyYxxAPt);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getNestedDefinitions_id31HEEbbzg2E, getLocalizedObjects_id31HEEbbX5J7, getScope_id52_Geb4QDV$, findLocalizedImplementation_id1igjyYxxAPt);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static Iterable<SNode> getSubElements_id31HEEbbzg2E(@NotNull SNode __thisNode__) {
+  /*package*/ static Iterable<SNode> getNestedDefinitions_id31HEEbbzg2E(@NotNull SNode __thisNode__) {
     return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.objects$ZjAV)).concat(Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.collect(SLinkOperations.getChildren(__thisNode__, LINKS.includes$hLn0), LINKS.world$ZN60), LINKS.target$12L0)));
   }
+  /*package*/ static Iterable<SNode> getLocalizedObjects_id31HEEbbX5J7(@NotNull SNode __thisNode__) {
+    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.objects$ZjAV)).concat(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.includes$hLn0)));
+  }
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
-    if (SConceptOperations.isExactly(SNodeOperations.asSConcept(kind), CONCEPTS.IObjectImplemented$Ei)) {
-      return ListScope.forNamedElements(WorldDefinition__BehaviorDescriptor.getSubElements_id31HEEbbzg2E.invoke(__thisNode__));
+    if (SConceptOperations.isExactly(SNodeOperations.asSConcept(kind), CONCEPTS.IObjectDefinition$Ei)) {
+      return ListScope.forNamedElements(WorldDefinition__BehaviorDescriptor.getNestedDefinitions_id31HEEbbzg2E.invoke(__thisNode__));
     }
     return ((Scope) ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke0(__thisNode__, CONCEPTS.ScopeProvider$M8, kind, child));
   }
@@ -77,10 +81,12 @@ public final class WorldDefinition__BehaviorDescriptor extends BaseBHDescriptor 
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((Iterable<SNode>) getSubElements_id31HEEbbzg2E(node));
+        return (T) ((Iterable<SNode>) getNestedDefinitions_id31HEEbbzg2E(node));
       case 1:
-        return (T) ((Scope) getScope_id52_Geb4QDV$(node, (SAbstractConcept) parameters[0], (SNode) parameters[1]));
+        return (T) ((Iterable<SNode>) getLocalizedObjects_id31HEEbbX5J7(node));
       case 2:
+        return (T) ((Scope) getScope_id52_Geb4QDV$(node, (SAbstractConcept) parameters[0], (SNode) parameters[1]));
+      case 3:
         return (T) ((SNode) findLocalizedImplementation_id1igjyYxxAPt(node, (SNode) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
@@ -119,7 +125,7 @@ public final class WorldDefinition__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IObjectImplemented$Ei = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6def9fa4L, "jetbrains.mps.samples.Physics.structure.IObjectImplemented");
+    /*package*/ static final SInterfaceConcept IObjectDefinition$Ei = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6def9fa4L, "jetbrains.mps.samples.Physics.structure.IObjectDefinition");
     /*package*/ static final SInterfaceConcept ScopeProvider$M8 = MetaAdapterFactory.getInterfaceConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L, "jetbrains.mps.lang.core.structure.ScopeProvider");
     /*package*/ static final SConcept WorldDefinition$Xn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
     /*package*/ static final SConcept WorldInclusion$vO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, "jetbrains.mps.samples.Physics.structure.WorldInclusion");

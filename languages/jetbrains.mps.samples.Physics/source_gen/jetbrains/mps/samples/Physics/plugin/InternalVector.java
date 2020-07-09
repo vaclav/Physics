@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class InternalVector {
-  private static final MathContext ctx = new MathContext(10);
+  private static final MathContext ctx = MathContext.DECIMAL128;
   public BigDecimal x;
   public BigDecimal y;
   public BigDecimal z;
@@ -20,24 +20,24 @@ public class InternalVector {
 
   public InternalVector toUnit() {
     BigDecimal length = length();
-    return new InternalVector(x.divide(length), y.divide(length), z.divide(length));
+    return new InternalVector(x.divide(length, ctx), y.divide(length, ctx), z.divide(length, ctx));
   }
   public InternalVector add(InternalVector v) {
-    return new InternalVector(x.add(v.x), y.add(v.y), z.add(v.z));
+    return new InternalVector(x.add(v.x, ctx), y.add(v.y, ctx), z.add(v.z, ctx));
   }
   public InternalVector minus(InternalVector v) {
-    return new InternalVector(x.subtract(v.x), y.subtract(v.y), z.subtract(v.z));
+    return new InternalVector(x.subtract(v.x, ctx), y.subtract(v.y, ctx), z.subtract(v.z, ctx));
   }
   public InternalVector mul(BigDecimal factor) {
-    return new InternalVector(x.multiply(factor), y.multiply(factor), z.multiply(factor));
+    return new InternalVector(x.multiply(factor, ctx), y.multiply(factor, ctx), z.multiply(factor, ctx));
   }
   public InternalVector resize(BigDecimal newLength) {
-    InternalVector unit = this.mul(BigDecimal.ONE.divide(length()));
+    InternalVector unit = this.mul(BigDecimal.ONE.divide(length(), ctx));
     return (BigDecimal.ONE.equals(newLength) ? unit : unit.mul(newLength));
   }
 
   public BigDecimal lengthSquared() {
-    return x.pow(2).add(y.pow(2)).add(z.pow(2));
+    return x.pow(2, ctx).add(y.pow(2, ctx), ctx).add(z.pow(2, ctx), ctx);
   }
 
   public BigDecimal length() {
@@ -50,7 +50,7 @@ public class InternalVector {
    * @return polar angle
    */
   public BigDecimal getPolarAngle() {
-    double acos = Math.acos(z.divide(length()).doubleValue());
+    double acos = Math.acos(z.divide(length(), ctx).doubleValue());
     return BigDecimal.valueOf(acos);
   }
 
@@ -60,7 +60,7 @@ public class InternalVector {
    * @return azimutal angle
    */
   public BigDecimal getAzimutalAngle() {
-    double atan = Math.atan(y.divide(x).doubleValue());
+    double atan = Math.atan(y.divide(x, ctx).doubleValue());
     return BigDecimal.valueOf(atan);
   }
 
@@ -73,7 +73,7 @@ public class InternalVector {
     double phiDouble = phi.doubleValue();
     BigDecimal sinTheta = BigDecimal.valueOf(Math.sin(thetaDouble));
 
-    return new InternalVector(length.multiply(sinTheta).multiply(BigDecimal.valueOf(Math.cos(phiDouble))), length.multiply(sinTheta).multiply(BigDecimal.valueOf(Math.sin(phiDouble))), length.multiply(BigDecimal.valueOf(Math.cos(thetaDouble))));
+    return new InternalVector(length.multiply(sinTheta, ctx).multiply(BigDecimal.valueOf(Math.cos(phiDouble)), ctx), length.multiply(sinTheta, ctx).multiply(BigDecimal.valueOf(Math.sin(phiDouble)), ctx), length.multiply(BigDecimal.valueOf(Math.cos(thetaDouble)), ctx));
   }
 
   public static InternalVector zero() {

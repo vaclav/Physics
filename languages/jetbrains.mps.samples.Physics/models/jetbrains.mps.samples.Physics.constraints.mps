@@ -99,7 +99,7 @@
     <node concept="1N5Pfh" id="6POFxU8kKRZ" role="1Mr941">
       <ref role="1N5Vy1" to="9tcj:6HZo5MNbVDs" resolve="target" />
       <node concept="1dDu$B" id="6POFxU8kKSM" role="1N6uqs">
-        <ref role="1dDu$A" to="9tcj:3Nk1IDHVTY$" resolve="IObjectImplemented" />
+        <ref role="1dDu$A" to="9tcj:3Nk1IDHVTY$" resolve="IObjectDefinition" />
       </node>
     </node>
   </node>
@@ -122,33 +122,6 @@
                 <ref role="35c_gD" to="9tcj:6kwOTMl0tT6" resolve="ObjectType" />
               </node>
               <node concept="3clFbT" id="6b_jefnKz2Z" role="37wK5m">
-                <property role="3clFbU" value="true" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="1M2fIO" id="6kwOTMl1ds1">
-    <property role="3GE5qa" value="physical.expr.dot" />
-    <ref role="1M2myG" to="9tcj:6kwOTMl1bfn" resolve="VectorComponentTarget" />
-    <node concept="9S07l" id="6kwOTMl1ds2" role="9Vyp8">
-      <node concept="3clFbS" id="6kwOTMl1ds3" role="2VODD2">
-        <node concept="3clFbF" id="6kwOTMl1dvX" role="3cqZAp">
-          <node concept="2OqwBi" id="6kwOTMl1evk" role="3clFbG">
-            <node concept="1PxgMI" id="6kwOTMl1e7F" role="2Oq$k0">
-              <node concept="chp4Y" id="6kwOTMl1ec1" role="3oSUPX">
-                <ref role="cht4Q" to="hm2y:7NJy08a3O99" resolve="DotExpression" />
-              </node>
-              <node concept="nLn13" id="6kwOTMl1dvW" role="1m5AlR" />
-            </node>
-            <node concept="2qgKlT" id="6kwOTMl1eRP" role="2OqNvi">
-              <ref role="37wK5l" to="pbu6:5WNmJ7DokMG" resolve="expectType" />
-              <node concept="35c_gC" id="6kwOTMl1f6y" role="37wK5m">
-                <ref role="35c_gD" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
-              </node>
-              <node concept="3clFbT" id="6kwOTMl1fee" role="37wK5m">
                 <property role="3clFbU" value="true" />
               </node>
             </node>
@@ -218,25 +191,25 @@
       </node>
     </node>
   </node>
-  <node concept="1M2fIO" id="cTQf2FqznI">
-    <property role="3GE5qa" value="physical.expr.dot" />
-    <ref role="1M2myG" to="9tcj:cTQf2FqwJc" resolve="VectorOppositeDotTarget" />
-    <node concept="9S07l" id="cTQf2FqznJ" role="9Vyp8">
-      <node concept="3clFbS" id="cTQf2FqznK" role="2VODD2">
-        <node concept="3clFbF" id="cTQf2FqzKq" role="3cqZAp">
-          <node concept="2OqwBi" id="cTQf2FqzKs" role="3clFbG">
-            <node concept="1PxgMI" id="cTQf2FqzKt" role="2Oq$k0">
-              <node concept="chp4Y" id="cTQf2FqzKu" role="3oSUPX">
+  <node concept="1M2fIO" id="31HEEbbS_kJ">
+    <property role="3GE5qa" value="physical.expr" />
+    <ref role="1M2myG" to="9tcj:31HEEbbS_kE" resolve="AbstractVectorTarget" />
+    <node concept="9S07l" id="31HEEbbS_yP" role="9Vyp8">
+      <node concept="3clFbS" id="31HEEbbS_yQ" role="2VODD2">
+        <node concept="3clFbF" id="31HEEbbS_zc" role="3cqZAp">
+          <node concept="2OqwBi" id="31HEEbbS_ze" role="3clFbG">
+            <node concept="1PxgMI" id="31HEEbbS_zf" role="2Oq$k0">
+              <node concept="chp4Y" id="31HEEbbS_zg" role="3oSUPX">
                 <ref role="cht4Q" to="hm2y:7NJy08a3O99" resolve="DotExpression" />
               </node>
-              <node concept="nLn13" id="cTQf2FqzKv" role="1m5AlR" />
+              <node concept="nLn13" id="31HEEbbS_zh" role="1m5AlR" />
             </node>
-            <node concept="2qgKlT" id="cTQf2FqzKw" role="2OqNvi">
+            <node concept="2qgKlT" id="31HEEbbS_zi" role="2OqNvi">
               <ref role="37wK5l" to="pbu6:5WNmJ7DokMG" resolve="expectType" />
-              <node concept="35c_gC" id="cTQf2FqzKx" role="37wK5m">
+              <node concept="35c_gC" id="31HEEbbS_zj" role="37wK5m">
                 <ref role="35c_gD" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
               </node>
-              <node concept="3clFbT" id="cTQf2FqzKy" role="37wK5m">
+              <node concept="3clFbT" id="31HEEbbS_zk" role="37wK5m">
                 <property role="3clFbU" value="true" />
               </node>
             </node>

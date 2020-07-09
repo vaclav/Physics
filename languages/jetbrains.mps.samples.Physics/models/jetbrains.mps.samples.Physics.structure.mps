@@ -89,7 +89,7 @@
       <ref role="20lvS9" node="6HZo5MN9SX3" resolve="ObjectDefinition" />
     </node>
     <node concept="PrWs8" id="3Nk1IDHVTYC" role="PzmwI">
-      <ref role="PrY4T" node="3Nk1IDHVTY$" resolve="IObjectImplemented" />
+      <ref role="PrY4T" node="3Nk1IDHVTY$" resolve="IObjectDefinition" />
     </node>
     <node concept="PrWs8" id="6POFxU8k_zK" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
@@ -102,7 +102,7 @@
     <property role="3GE5qa" value="physical" />
     <ref role="1TJDcQ" node="1h1l5SEmLT3" resolve="AbstractObjectDefinition" />
     <node concept="PrWs8" id="3Nk1IDHVTYG" role="PzmwI">
-      <ref role="PrY4T" node="3Nk1IDHVTY$" resolve="IObjectImplemented" />
+      <ref role="PrY4T" node="3Nk1IDHVTY$" resolve="IObjectDefinition" />
     </node>
     <node concept="PrWs8" id="3Nk1IDHWZSf" role="PzmwI">
       <ref role="PrY4T" node="3Nk1IDHWZS5" resolve="ILocalized" />
@@ -138,7 +138,7 @@
       <property role="IQ2ns" value="7746015835360049756" />
       <property role="20kJfa" value="target" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3Nk1IDHVTY$" resolve="IObjectImplemented" />
+      <ref role="20lvS9" node="3Nk1IDHVTY$" resolve="IObjectDefinition" />
     </node>
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDF">
@@ -444,7 +444,7 @@
   <node concept="PlHQZ" id="3Nk1IDHVTY$">
     <property role="EcuMT" value="4383135941274869668" />
     <property role="3GE5qa" value="physical" />
-    <property role="TrG5h" value="IObjectImplemented" />
+    <property role="TrG5h" value="IObjectDefinition" />
     <node concept="PrWs8" id="3Nk1IDHVZCX" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -656,14 +656,11 @@
     <property role="3GE5qa" value="physical.expr.dot" />
     <property role="TrG5h" value="VectorComponentTarget" />
     <property role="34LRSv" value="vector component" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="31HEEbbS_kE" resolve="AbstractVectorTarget" />
     <node concept="1TJgyi" id="6kwOTMl1bfV" role="1TKVEl">
       <property role="IQ2nx" value="7287056866553934843" />
       <property role="TrG5h" value="component" />
       <ref role="AX2Wp" node="6kwOTMl1bfo" resolve="VectorComponent" />
-    </node>
-    <node concept="PrWs8" id="6kwOTMl1drX" role="PzmwI">
-      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
     </node>
   </node>
   <node concept="25R3W" id="6kwOTMl1bfo">
@@ -780,8 +777,29 @@
     <property role="3GE5qa" value="physical.expr.dot" />
     <property role="TrG5h" value="VectorOppositeDotTarget" />
     <property role="34LRSv" value="opposite" />
+    <ref role="1TJDcQ" node="31HEEbbS_kE" resolve="AbstractVectorTarget" />
+  </node>
+  <node concept="1TIwiD" id="31HEEbbS$Yk">
+    <property role="EcuMT" value="3489632902464032660" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="VectorResizeDotTarget" />
+    <property role="34LRSv" value="resize to" />
+    <ref role="1TJDcQ" node="31HEEbbS_kE" resolve="AbstractVectorTarget" />
+    <node concept="1TJgyj" id="31HEEbbS$Ym" role="1TKVEi">
+      <property role="IQ2ns" value="3489632902464032662" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="newLength" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="31HEEbbS_kE">
+    <property role="EcuMT" value="3489632902464034090" />
+    <property role="3GE5qa" value="physical.expr" />
+    <property role="TrG5h" value="AbstractVectorTarget" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="cTQf2FqwJd" role="PzmwI">
+    <node concept="PrWs8" id="31HEEbbS_kF" role="PzmwI">
       <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
     </node>
   </node>

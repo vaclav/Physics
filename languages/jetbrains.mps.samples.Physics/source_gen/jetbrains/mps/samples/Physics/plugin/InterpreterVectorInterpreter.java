@@ -23,7 +23,7 @@ import com.mbeddr.mpsutil.interpreter.rt.TypedChildConstraintImpl;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import java.math.BigDecimal;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.samples.Physics.behavior.IObjectImplemented__BehaviorDescriptor;
+import jetbrains.mps.samples.Physics.behavior.IObjectDefinition__BehaviorDescriptor;
 import com.mbeddr.mpsutil.interpreter.rt.ITypeMapper;
 import com.mbeddr.mpsutil.interpreter.rt.IRelationship;
 import com.mbeddr.mpsutil.interpreter.rt.InterpretBeforeRelationshipImpl;
@@ -48,7 +48,8 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           InternalVector vector = (InternalVector) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
-          switch (enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c.indexNullable(SPropertyOperations.getEnum(node, PROPS.component$_d4D))) {
+          System.out.println("TAGTAGTAG");
+          switch (enumSwitchIndex_fbbe2m_a0f0a0a0a0a0a0c.indexNullable(SPropertyOperations.getEnum(node, PROPS.component$_d4D))) {
             case 0:
               return vector.length();
             case 1:
@@ -215,7 +216,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          SNode localized = IObjectImplemented__BehaviorDescriptor.findLocalizedImplementation_id1igjyYxxAPt.invoke(SLinkOperations.getTarget(node, LINKS.target$EWj0), node);
+          SNode localized = IObjectDefinition__BehaviorDescriptor.findLocalizedImplementation_id1igjyYxxAPt.invoke(SLinkOperations.getTarget(node, LINKS.target$EWj0), node);
 
           return InternalEntity.from((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.location$DoV0), context, coverage, trace, false), localized);
         } catch (StopAndReturnException stop) {
@@ -300,6 +301,35 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
       @Override
       public boolean canLookupBeCached() {
         return true;
+      }
+    });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorResizeDotTarget$Am, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902464277648", true, new TypedChildConstraintImpl(LINKS.newLength$Gnlv, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          return ((InternalVector) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node))).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.newLength$Gnlv), context, coverage, trace, false), BigDecimal.class)));
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("resize to(newLength[real])", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("VectorResizeDotTarget");
+      }
+
+      @Override
+      public String toString() {
+        return "VectorResizeDotTarget";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return false;
       }
     });
     ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectPositionTarget$we, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458203654", true) {
@@ -547,7 +577,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
   protected void populateRelationships(List<? extends IRelationship> relationships) {
     ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretBeforeRelationshipImpl("jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter", "org.iets3.core.expr.simpleTypes.interpreter.plugin.InterpreterExprSimpleTypesInterpreter"));
   }
-  private static final EnumerationLiteralsIndex enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, 0x6520d39c9504b3f4L, 0x6520d39c9504b3d9L, 0x6520d39c9504b3daL, 0x6520d39c9504b3ddL, 0x6520d39c9504b3eeL, 0x6520d39c9504b3e9L);
+  private static final EnumerationLiteralsIndex enumSwitchIndex_fbbe2m_a0f0a0a0a0a0a0c = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, 0x6520d39c9504b3f4L, 0x6520d39c9504b3d9L, 0x6520d39c9504b3daL, 0x6520d39c9504b3ddL, 0x6520d39c9504b3eeL, 0x6520d39c9504b3e9L);
 
   private static final class PROPS {
     /*package*/ static final SProperty component$_d4D = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
@@ -567,6 +597,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
     /*package*/ static final SConcept DistanceWithCallTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.DistanceWithCallTarget");
     /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.structure.ObjectType");
     /*package*/ static final SConcept ObjectMassTarget$_T = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
+    /*package*/ static final SConcept VectorResizeDotTarget$Am = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, "jetbrains.mps.samples.Physics.structure.VectorResizeDotTarget");
     /*package*/ static final SConcept ObjectPositionTarget$we = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a71bL, "jetbrains.mps.samples.Physics.structure.ObjectPositionTarget");
     /*package*/ static final SConcept VectorOppositeDotTarget$Ac = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL, "jetbrains.mps.samples.Physics.structure.VectorOppositeDotTarget");
     /*package*/ static final SConcept WorldMassCenterTarget$Mg = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a750L, "jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget");
@@ -590,6 +621,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
     /*package*/ static final SContainmentLink length$2h69 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4474L, "length");
     /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
     /*package*/ static final SContainmentLink target$oizF = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, 0x339d8f0ab560d04L, "target");
+    /*package*/ static final SContainmentLink newLength$Gnlv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, 0x306daaa2cbe24f96L, "newLength");
     /*package*/ static final SContainmentLink left$gQj0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c16L, "left");
     /*package*/ static final SContainmentLink right$gQu9 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c18L, "right");
   }

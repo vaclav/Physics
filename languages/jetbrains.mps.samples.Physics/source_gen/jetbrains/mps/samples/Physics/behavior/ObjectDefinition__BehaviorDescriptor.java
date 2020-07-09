@@ -22,13 +22,17 @@ public final class ObjectDefinition__BehaviorDescriptor extends BaseBHDescriptor
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
 
   public static final SMethod<SNode> findLocalizedImplementation_id1igjyYxxAPt = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("findLocalizedImplementation").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1igjyYxxAPt").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> getDefinition_id31HEEbbXs3G = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDefinition").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("31HEEbbXs3G").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(findLocalizedImplementation_id1igjyYxxAPt);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(findLocalizedImplementation_id1igjyYxxAPt, getDefinition_id31HEEbbXs3G);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
   /*package*/ static SNode findLocalizedImplementation_id1igjyYxxAPt(@NotNull SNode __thisNode__, SNode relativeFrom) {
+    return __thisNode__;
+  }
+  /*package*/ static SNode getDefinition_id31HEEbbXs3G(@NotNull SNode __thisNode__) {
     return __thisNode__;
   }
 
@@ -49,6 +53,8 @@ public final class ObjectDefinition__BehaviorDescriptor extends BaseBHDescriptor
     switch (methodIndex) {
       case 0:
         return (T) ((SNode) findLocalizedImplementation_id1igjyYxxAPt(node, (SNode) parameters[0]));
+      case 1:
+        return (T) ((SNode) getDefinition_id31HEEbbXs3G(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

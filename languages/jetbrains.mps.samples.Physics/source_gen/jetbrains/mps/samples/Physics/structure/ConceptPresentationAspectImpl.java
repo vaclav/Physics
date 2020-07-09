@@ -15,6 +15,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AbstractObjectDefinition;
   private ConceptPresentation props_AbstractObjectReference;
   private ConceptPresentation props_AbstractObjectTarget;
+  private ConceptPresentation props_AbstractVectorTarget;
   private ConceptPresentation props_AbstractWorldTarget;
   private ConceptPresentation props_BoxVisual;
   private ConceptPresentation props_BuiltInColorTexture;
@@ -31,7 +32,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ForceExpression;
   private ConceptPresentation props_ForceType;
   private ConceptPresentation props_ILocalized;
-  private ConceptPresentation props_IObjectImplemented;
+  private ConceptPresentation props_IObjectDefinition;
   private ConceptPresentation props_InteractedObjectExpression;
   private ConceptPresentation props_InteractionForce;
   private ConceptPresentation props_ObjectDefinition;
@@ -49,6 +50,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Texture;
   private ConceptPresentation props_VectorComponentTarget;
   private ConceptPresentation props_VectorOppositeDotTarget;
+  private ConceptPresentation props_VectorResizeDotTarget;
   private ConceptPresentation props_VectorType;
   private ConceptPresentation props_Visual;
   private ConceptPresentation props_WorldDefinition;
@@ -102,6 +104,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AbstractObjectTarget = cpb.create();
         }
         return props_AbstractObjectTarget;
+      case LanguageConceptSwitch.AbstractVectorTarget:
+        if (props_AbstractVectorTarget == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_AbstractVectorTarget = cpb.create();
+        }
+        return props_AbstractVectorTarget;
       case LanguageConceptSwitch.AbstractWorldTarget:
         if (props_AbstractWorldTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -213,12 +221,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ILocalized = cpb.create();
         }
         return props_ILocalized;
-      case LanguageConceptSwitch.IObjectImplemented:
-        if (props_IObjectImplemented == null) {
+      case LanguageConceptSwitch.IObjectDefinition:
+        if (props_IObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_IObjectImplemented = cpb.create();
+          props_IObjectDefinition = cpb.create();
         }
-        return props_IObjectImplemented;
+        return props_IObjectDefinition;
       case LanguageConceptSwitch.InteractedObjectExpression:
         if (props_InteractedObjectExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -341,6 +349,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VectorOppositeDotTarget = cpb.create();
         }
         return props_VectorOppositeDotTarget;
+      case LanguageConceptSwitch.VectorResizeDotTarget:
+        if (props_VectorResizeDotTarget == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("resize to");
+          props_VectorResizeDotTarget = cpb.create();
+        }
+        return props_VectorResizeDotTarget;
       case LanguageConceptSwitch.VectorType:
         if (props_VectorType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

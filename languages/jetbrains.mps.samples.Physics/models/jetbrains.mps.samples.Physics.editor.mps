@@ -1546,5 +1546,24 @@
       <node concept="l2Vlx" id="cTQf2Funz8" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="31HEEbbSEYJ">
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <ref role="1XX52x" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeDotTarget" />
+    <node concept="3EZMnI" id="31HEEbbSEYL" role="2wV5jI">
+      <node concept="3F0ifn" id="31HEEbbSEYR" role="3EZMnx">
+        <property role="3F0ifm" value="resize to" />
+      </node>
+      <node concept="3F0ifn" id="31HEEbbSEYX" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+      </node>
+      <node concept="3F1sOY" id="31HEEbbSEZn" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:31HEEbbS$Ym" resolve="newLength" />
+      </node>
+      <node concept="3F0ifn" id="31HEEbbSEZ5" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+      </node>
+      <node concept="l2Vlx" id="31HEEbbSEYN" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

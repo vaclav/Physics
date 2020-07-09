@@ -1341,5 +1341,53 @@
       </node>
     </node>
   </node>
+  <node concept="1YbPZF" id="31HEEbbSHz9">
+    <property role="TrG5h" value="typeof_VectorResizeDotTarget" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <node concept="3clFbS" id="31HEEbbSHza" role="18ibNy">
+      <node concept="1Z5TYs" id="31HEEbbSIcI" role="3cqZAp">
+        <node concept="mw_s8" id="31HEEbbSIdy" role="1ZfhKB">
+          <node concept="2pJPEk" id="31HEEbbSIdu" role="mwGJk">
+            <node concept="2pJPED" id="31HEEbbSIdH" role="2pJPEn">
+              <ref role="2pJxaS" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="31HEEbbSIcL" role="1ZfhK$">
+          <node concept="1Z2H0r" id="31HEEbbSI1L" role="mwGJk">
+            <node concept="1YBJjd" id="31HEEbbSI2c" role="1Z2MuG">
+              <ref role="1YBMHb" node="31HEEbbSHzc" resolve="vectorResizeDotTarget" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1ZobV4" id="31HEEbbSHzg" role="3cqZAp">
+        <property role="3wDh2S" value="true" />
+        <node concept="mw_s8" id="31HEEbbSHzq" role="1ZfhK$">
+          <node concept="1Z2H0r" id="31HEEbbSHzm" role="mwGJk">
+            <node concept="2OqwBi" id="31HEEbbSHIp" role="1Z2MuG">
+              <node concept="1YBJjd" id="31HEEbbSHzF" role="2Oq$k0">
+                <ref role="1YBMHb" node="31HEEbbSHzc" resolve="vectorResizeDotTarget" />
+              </node>
+              <node concept="3TrEf2" id="31HEEbbSHWM" role="2OqNvi">
+                <ref role="3Tt5mk" to="9tcj:31HEEbbS$Ym" resolve="newLength" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="31HEEbbSI0Z" role="1ZfhKB">
+          <node concept="2pJPEk" id="31HEEbbSI0V" role="mwGJk">
+            <node concept="2pJPED" id="31HEEbbSI1a" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="31HEEbbSHzc" role="1YuTPh">
+      <property role="TrG5h" value="vectorResizeDotTarget" />
+      <ref role="1YaFvo" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeDotTarget" />
+    </node>
+  </node>
 </model>
 
