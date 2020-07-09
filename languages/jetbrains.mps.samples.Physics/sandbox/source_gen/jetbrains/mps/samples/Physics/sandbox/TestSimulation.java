@@ -20,6 +20,6 @@ public class TestSimulation extends Simulation {
     Something.getBody().setPosition(null);
     Something.getBody().setLinearVel(new DVector3(((Number) new BigInteger("20")), ((Number) new BigInteger("20")), ((Number) new BigInteger("20"))));
     Something.setFixture(new BoxFixture(world, 2, 2, 2), ((Number) new BigInteger("20")));
-    Something.getForces().addAll(Arrays.asList(new Force[]{new StaticForce(new DVector3(((Number) new BigInteger("2")), ((Number) new BigInteger("2")), ((Number) new BigInteger("2")))), new StaticForce(new DVector3(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))))}));
+    Something.getForces().addAll(Arrays.asList(new Force[]{new StaticForce(new DVector3(((Number) new BigInteger("2")), ((Number) new BigInteger("2")), ((Number) new BigInteger("2")))), new StaticForce(new DVector3(((Number) new BigInteger("400")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0")))), new StaticForce(new DVector3(((Number) new BigInteger("44")), ((Number) new BigInteger("00")), ((Number) new BigInteger("4"))))}));
   }
 }

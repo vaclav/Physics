@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.plugin;
 
 import java.math.MathContext;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class InternalVector {
   private static final MathContext ctx = new MathContext(10);
@@ -15,6 +16,24 @@ public class InternalVector {
     this.x = x;
     this.y = y;
     this.z = z;
+  }
+
+  public InternalVector toUnit() {
+    BigDecimal length = length();
+    return new InternalVector(x.divide(length), y.divide(length), z.divide(length));
+  }
+  public InternalVector add(InternalVector v) {
+    return new InternalVector(x.add(v.x), y.add(v.y), z.add(v.z));
+  }
+  public InternalVector minus(InternalVector v) {
+    return new InternalVector(x.subtract(v.x), y.subtract(v.y), z.subtract(v.z));
+  }
+  public InternalVector mul(BigDecimal factor) {
+    return new InternalVector(x.multiply(factor), y.multiply(factor), z.multiply(factor));
+  }
+  public InternalVector resize(BigDecimal newLength) {
+    InternalVector unit = this.mul(BigDecimal.ONE.divide(length()));
+    return (BigDecimal.ONE.equals(newLength) ? unit : unit.mul(newLength));
   }
 
   public BigDecimal lengthSquared() {
@@ -57,4 +76,13 @@ public class InternalVector {
     return new InternalVector(length.multiply(sinTheta).multiply(BigDecimal.valueOf(Math.cos(phiDouble))), length.multiply(sinTheta).multiply(BigDecimal.valueOf(Math.sin(phiDouble))), length.multiply(BigDecimal.valueOf(Math.cos(thetaDouble))));
   }
 
+  public static InternalVector zero() {
+    return new InternalVector(BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO);
+  }
+
+
+  @Override
+  public String toString() {
+    return "[" + "x=" + x.setScale(2, RoundingMode.HALF_UP) + ", y=" + y.setScale(2, RoundingMode.HALF_UP) + ", z=" + z.setScale(2, RoundingMode.HALF_UP) + "]";
+  }
 }

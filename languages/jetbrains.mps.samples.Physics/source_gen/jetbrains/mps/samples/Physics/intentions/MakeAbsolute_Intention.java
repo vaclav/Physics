@@ -63,7 +63,7 @@ public final class MakeAbsolute_Intention extends AbstractIntentionDescriptor im
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
-      // Somehow not working silently 
+      // Not working yet (evaluator issue or simply because some expressions are not defined) 
       InternalVector result = (InternalVector) IETS3ExprEvalHelper.evaluate(node);
       SNode newNode = SNodeOperations.replaceWithNewChild(node, CONCEPTS.CartesianCoordinates$U8);
 
