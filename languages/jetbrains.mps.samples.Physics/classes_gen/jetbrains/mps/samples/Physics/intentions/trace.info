@@ -98,7 +98,7 @@
   </root>
   <root nodeRef="r:d39af7f4-ee25-4f0f-8cf6-c31288d9a059(jetbrains.mps.samples.Physics.intentions)/3489632902464958620">
     <file name="CoordinateExpressionConverters.java">
-      <node id="3489632902465136223" at="22,64,23,122" concept="8" />
+      <node id="3489632902465136223" at="22,64,23,137" concept="8" />
       <node id="3489632902465147817" at="33,64,34,160" concept="8" />
       <node id="3489632902465131962" at="45,53,46,647" concept="8" />
       <node id="3489632902465117277" at="57,53,58,618" concept="8" />
@@ -200,8 +200,8 @@
       <node id="3489632902464958620" at="239,0,240,0" concept="11" trace="DivExpression$Li" />
       <node id="3489632902464958620" at="240,0,241,0" concept="11" trace="FractionExpression$6U" />
       <node id="3489632902464958620" at="244,0,245,0" concept="11" trace="value$nZyY" />
-      <node id="3489632902465135901" at="22,0,25,0" concept="12" trace="rawToCartesian#(Ljetbrains/mps/samples/Physics/plugin/InternalVector;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="3489632902465147450" at="33,0,36,0" concept="12" trace="rawToSpherical#(Ljetbrains/mps/samples/Physics/plugin/InternalVector;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3489632902465135901" at="22,0,25,0" concept="12" trace="rawToCartesian#(Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3489632902465147450" at="33,0,36,0" concept="12" trace="rawToSpherical#(Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="3489632902464976001" at="45,0,48,0" concept="12" trace="sphericalToCartesian#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="3489632902465044621" at="57,0,60,0" concept="12" trace="cartesianToSpherical#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="3489632902465136296" at="62,80,66,5" concept="0" />
@@ -243,7 +243,7 @@
       <node id="3489632902465117423" at="136,80,169,5" concept="0" />
       <node id="3489632902465132139" at="93,0,135,0" concept="12" trace="createCartesianCoordinates_xupmzl_a0a5#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="3489632902465117423" at="135,0,209,0" concept="12" trace="createSphericalCoordinates_xupmzl_a0a7#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <scope id="3489632902465135904" at="22,64,23,122" />
+      <scope id="3489632902465135904" at="22,64,23,137" />
       <scope id="3489632902465147453" at="33,64,34,160" />
       <scope id="3489632902464976004" at="45,53,46,647" />
       <scope id="3489632902465044622" at="57,53,58,618" />

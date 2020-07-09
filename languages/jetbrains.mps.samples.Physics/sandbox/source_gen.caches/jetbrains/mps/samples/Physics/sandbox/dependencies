@@ -3,7 +3,9 @@
   <dependency className="jetbrains.mps.samples.Physics.sandbox.TestSimulation">
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.RoundingMode" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />

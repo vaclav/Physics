@@ -12,6 +12,7 @@ import com.mbeddr.mpsutil.interpreter.rt.IContext;
 import com.mbeddr.mpsutil.interpreter.rt.ICoverageAnalyzer;
 import com.mbeddr.mpsutil.interpreter.rt.ComputationTrace;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import jetbrains.mps.internal.collections.runtime.MapSequence;
 import org.iets3.core.expr.base.behavior.IDotTarget__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
@@ -24,6 +25,8 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import java.math.BigDecimal;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.samples.Physics.behavior.IObjectDefinition__BehaviorDescriptor;
+import jetbrains.mps.samples.Physics.runtime.vectors.InternalEntity;
+import jetbrains.mps.samples.Physics.runtime.vectors.InternalWorld;
 import com.mbeddr.mpsutil.interpreter.rt.ITypeMapper;
 import com.mbeddr.mpsutil.interpreter.rt.IRelationship;
 import com.mbeddr.mpsutil.interpreter.rt.InterpretBeforeRelationshipImpl;
@@ -53,11 +56,11 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
             case 0:
               return vector.length();
             case 1:
-              return vector.x;
+              return vector.getX();
             case 2:
-              return vector.y;
+              return vector.getY();
             case 3:
-              return vector.z;
+              return vector.getZ();
             case 4:
               return vector.getAzimutalAngle();
             case 5:

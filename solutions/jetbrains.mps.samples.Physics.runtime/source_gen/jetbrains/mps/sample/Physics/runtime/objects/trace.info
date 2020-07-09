@@ -9,6 +9,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
   <root nodeRef="r:c76e7683-d7ce-4cb6-a6ee-fcd11243f980(jetbrains.mps.sample.Physics.runtime.objects)/4271426636304008923">
     <file name="World.java">
@@ -80,7 +81,7 @@
       <node id="4271426636304009327" at="36,32,37,37" concept="1" />
       <node id="4271426636304009330" at="37,37,38,27" concept="1" />
       <node id="4271426636304009334" at="39,5,40,17" concept="7" />
-      <node id="4271426636304009348" at="43,32,44,90" concept="9" />
+      <node id="4271426636304009348" at="43,32,44,90" concept="10" />
       <node id="4271426636304009349" at="45,5,46,25" concept="7" />
       <node id="4271426636304009198" at="13,0,16,0" concept="0" trace="WorldBuilder#()V" />
       <node id="4271426636304009208" at="16,38,19,5" concept="4" />
@@ -124,57 +125,82 @@
   </root>
   <root nodeRef="r:c76e7683-d7ce-4cb6-a6ee-fcd11243f980(jetbrains.mps.sample.Physics.runtime.objects)/4271426636304009395">
     <file name="PhysicalEntity.java">
-      <node id="4271426636304009397" at="15,0,16,0" concept="2" trace="body" />
-      <node id="4271426636304009401" at="16,0,17,0" concept="2" trace="world" />
-      <node id="4271426636304009405" at="17,0,18,0" concept="2" trace="fixture" />
-      <node id="4271426636304009409" at="21,0,22,0" concept="2" trace="forces" />
-      <node id="4271426636304009421" at="22,38,23,23" concept="1" />
-      <node id="4271426636304009527" at="23,23,24,21" concept="8" />
-      <node id="4271426636304009427" at="24,21,25,50" concept="1" />
-      <node id="4271426636304267691" at="28,32,29,49" concept="1" />
-      <node id="4271426636304009464" at="32,35,33,44" concept="6" />
-      <node id="4271426636304009467" at="33,44,34,21" concept="1" />
-      <node id="4271426636304009469" at="34,21,35,93" concept="1" />
-      <node id="4271426636304009480" at="35,93,36,24" concept="1" />
-      <node id="4271426636304009483" at="36,24,37,20" concept="1" />
-      <node id="4271426636304009491" at="39,61,40,27" concept="1" />
-      <node id="4271426636304009543" at="40,27,41,36" concept="8" />
-      <node id="4271426636304009497" at="41,36,42,40" concept="1" />
-      <node id="4271426636304009504" at="44,26,45,16" concept="7" />
-      <node id="4271426636304009510" at="47,34,48,18" concept="7" />
-      <node id="4271426636304258642" at="27,29,30,5" concept="3" />
-      <node id="4271426636304009502" at="44,0,47,0" concept="5" trace="getBody#()Lorg/ode4j/ode/DBody;" />
-      <node id="4271426636304009508" at="47,0,50,0" concept="5" trace="getForces#()Ljava/util/List;" />
-      <node id="4271426636304009416" at="22,0,27,0" concept="0" trace="PhysicalEntity#(Ljetbrains/mps/sample/Physics/runtime/objects/World;)V" />
-      <node id="4271426636304009453" at="27,0,32,0" concept="5" trace="applyForces#()V" />
-      <node id="4271426636304009487" at="39,0,44,0" concept="5" trace="setFixture#(Ljetbrains/mps/sample/Physics/runtime/objects/rendering/Fixture;D)V" />
-      <node id="4271426636304009459" at="32,0,39,0" concept="5" trace="render#(Lprocessing/core/PApplet;)V" />
-      <scope id="4271426636304258644" at="28,32,29,49" />
-      <scope id="4271426636304009503" at="44,26,45,16" />
-      <scope id="4271426636304009509" at="47,34,48,18" />
-      <scope id="4271426636304009420" at="22,38,25,50" />
-      <scope id="4271426636304009454" at="27,29,30,5" />
-      <scope id="4271426636304258642" at="27,29,30,5">
+      <node id="4271426636304009397" at="17,0,18,0" concept="2" trace="body" />
+      <node id="4271426636304009401" at="18,0,19,0" concept="2" trace="world" />
+      <node id="4271426636304009405" at="19,0,20,0" concept="2" trace="fixture" />
+      <node id="3489632902472506119" at="21,0,22,0" concept="2" trace="massCached" />
+      <node id="4271426636304009409" at="26,0,27,0" concept="2" trace="forces" />
+      <node id="3489632902471154056" at="27,38,28,28" concept="9" />
+      <node id="4271426636304009421" at="28,28,29,23" concept="1" />
+      <node id="4271426636304009527" at="29,23,30,21" concept="8" />
+      <node id="4271426636304009427" at="30,21,31,50" concept="1" />
+      <node id="4271426636304267691" at="34,32,35,49" concept="1" />
+      <node id="4271426636304009464" at="38,35,39,44" concept="6" />
+      <node id="4271426636304009467" at="39,44,40,21" concept="1" />
+      <node id="4271426636304009469" at="40,21,41,93" concept="1" />
+      <node id="4271426636304009480" at="41,93,42,24" concept="1" />
+      <node id="4271426636304009483" at="42,24,43,20" concept="1" />
+      <node id="4271426636304009491" at="45,61,46,27" concept="1" />
+      <node id="4271426636304009543" at="46,27,47,36" concept="8" />
+      <node id="4271426636304009497" at="47,36,48,40" concept="1" />
+      <node id="4271426636304009504" at="50,26,51,16" concept="7" />
+      <node id="4271426636304009510" at="53,34,54,18" concept="7" />
+      <node id="3489632902471337150" at="59,28,60,67" concept="7" />
+      <node id="3489632902471412427" at="63,28,64,67" concept="7" />
+      <node id="3489632902471420138" at="67,28,68,67" concept="7" />
+      <node id="3489632902472522633" at="72,29,73,64" concept="1" />
+      <node id="3489632902472530136" at="74,5,75,22" concept="7" />
+      <node id="3489632902472576910" at="78,53,79,65" concept="7" />
+      <node id="4271426636304258642" at="33,29,36,5" concept="3" />
+      <node id="4271426636304009502" at="50,0,53,0" concept="5" trace="getBody#()Lorg/ode4j/ode/DBody;" />
+      <node id="4271426636304009508" at="53,0,56,0" concept="5" trace="getForces#()Ljava/util/List;" />
+      <node id="3489632902472520566" at="71,41,74,5" concept="4" />
+      <node id="3489632902472569204" at="78,0,81,0" concept="5" trace="getPositionInternalVector#()Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
+      <node id="3489632902471322859" at="58,0,62,0" concept="5" trace="getX#()Ljava/math/BigDecimal;" />
+      <node id="3489632902471322871" at="62,0,66,0" concept="5" trace="getY#()Ljava/math/BigDecimal;" />
+      <node id="3489632902471322883" at="66,0,70,0" concept="5" trace="getZ#()Ljava/math/BigDecimal;" />
+      <node id="4271426636304009453" at="33,0,38,0" concept="5" trace="applyForces#()V" />
+      <node id="4271426636304009487" at="45,0,50,0" concept="5" trace="setFixture#(Ljetbrains/mps/sample/Physics/runtime/objects/rendering/Fixture;D)V" />
+      <node id="4271426636304009416" at="27,0,33,0" concept="0" trace="PhysicalEntity#(Ljetbrains/mps/sample/Physics/runtime/objects/World;)V" />
+      <node id="3489632902472482551" at="71,0,77,0" concept="5" trace="getMassBigDecimal#()Ljava/math/BigDecimal;" />
+      <node id="4271426636304009459" at="38,0,45,0" concept="5" trace="render#(Lprocessing/core/PApplet;)V" />
+      <scope id="4271426636304258644" at="34,32,35,49" />
+      <scope id="4271426636304009503" at="50,26,51,16" />
+      <scope id="4271426636304009509" at="53,34,54,18" />
+      <scope id="3489632902471322867" at="59,28,60,67" />
+      <scope id="3489632902471322879" at="63,28,64,67" />
+      <scope id="3489632902471322891" at="67,28,68,67" />
+      <scope id="3489632902472520568" at="72,29,73,64" />
+      <scope id="3489632902472569207" at="78,53,79,65" />
+      <scope id="4271426636304009454" at="33,29,36,5" />
+      <scope id="4271426636304258642" at="33,29,36,5">
         <var name="force" id="4271426636304258645" />
       </scope>
-      <scope id="4271426636304009490" at="39,61,42,40" />
-      <scope id="4271426636304009502" at="44,0,47,0" />
-      <scope id="4271426636304009508" at="47,0,50,0" />
-      <scope id="4271426636304009416" at="22,0,27,0">
-        <var name="world" id="4271426636304009418" />
-      </scope>
-      <scope id="4271426636304009453" at="27,0,32,0" />
-      <scope id="4271426636304009462" at="32,35,37,20">
+      <scope id="4271426636304009490" at="45,61,48,40" />
+      <scope id="4271426636304009502" at="50,0,53,0" />
+      <scope id="4271426636304009508" at="53,0,56,0" />
+      <scope id="3489632902472569204" at="78,0,81,0" />
+      <scope id="4271426636304009420" at="27,38,31,50" />
+      <scope id="3489632902471322859" at="58,0,62,0" />
+      <scope id="3489632902471322871" at="62,0,66,0" />
+      <scope id="3489632902471322883" at="66,0,70,0" />
+      <scope id="3489632902472482554" at="71,41,75,22" />
+      <scope id="4271426636304009453" at="33,0,38,0" />
+      <scope id="4271426636304009462" at="38,35,43,20">
         <var name="position" id="4271426636304009463" />
       </scope>
-      <scope id="4271426636304009487" at="39,0,44,0">
+      <scope id="4271426636304009487" at="45,0,50,0">
         <var name="fixture" id="4271426636304009488" />
         <var name="massValue" id="987409087291158039" />
       </scope>
-      <scope id="4271426636304009459" at="32,0,39,0">
+      <scope id="4271426636304009416" at="27,0,33,0">
+        <var name="world" id="4271426636304009418" />
+      </scope>
+      <scope id="3489632902472482551" at="71,0,77,0" />
+      <scope id="4271426636304009459" at="38,0,45,0">
         <var name="ctx" id="4271426636304009460" />
       </scope>
-      <unit id="4271426636304009395" at="14,0,51,0" name="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
+      <unit id="4271426636304009395" at="16,0,82,0" name="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity" />
     </file>
   </root>
 </debug-info>

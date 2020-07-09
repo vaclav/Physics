@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="jetbrains.mps.sample.Physics.runtime.objects.PhysicalEntity">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
@@ -10,6 +12,7 @@
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
     <classNode dependClassName="processing.core.PApplet" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
   </dependency>
   <dependency className="jetbrains.mps.sample.Physics.runtime.objects.World">
     <classNode dependClassName="java.util.ArrayList" />

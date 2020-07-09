@@ -12,5 +12,10 @@
     <classNode dependClassName="jetbrains.mps.sample.Physics.runtime.objects.World" />
     <classNode extendsClassName="jetbrains.mps.sample.Physics.runtime.Renderer" />
   </dependency>
+  <dependency className="jetbrains.mps.sample.Physics.runtime.VectorHelper">
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="org.ode4j.math.DVector3" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+  </dependency>
 </dependenciesRoot>
 

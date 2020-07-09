@@ -5,23 +5,51 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/1808378526640369171">
     <file name="TestSimulation.java">
-      <node id="1808378526640369199" at="18,36,19,57" concept="2" />
+      <node id="1808378526640369199" at="20,36,21,57" concept="2" />
+      <node id="3489632902464568441" at="21,57,22,51" concept="2" />
+      <node id="3489632902464568871" at="22,51,23,50" concept="2" />
+    </file>
+  </root>
+  <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/3489632902470379103">
+    <file name="TestSimulation.java">
+      <node id="3489632902470379113" at="23,50,24,51" concept="2" />
+      <node id="3489632902470379113" at="24,51,25,51" concept="2" />
     </file>
   </root>
   <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/7887120293591825750">
     <file name="TestSimulation.java">
-      <node id="7887120293591825750" at="19,57,20,42" concept="0" />
-      <node id="7887120293591825750" at="20,42,21,150" concept="0" />
-      <node id="7887120293591825750" at="21,150,22,90" concept="0" />
-      <node id="7887120293591825750" at="22,90,23,446" concept="0" />
-      <node id="7887120293591825750" at="17,0,25,0" concept="1" trace="init#(Ljetbrains/mps/sample/Physics/runtime/objects/World;)V" />
-      <scope id="7887120293591825750" at="18,36,23,446">
+      <node id="7887120293591825750" at="25,51,26,345" concept="0" />
+      <node id="7887120293591825750" at="26,345,27,150" concept="0" />
+      <node id="7887120293591825750" at="27,150,28,90" concept="0" />
+      <node id="7887120293591825750" at="28,90,29,340" concept="0" />
+      <node id="7887120293591825750" at="29,340,30,339" concept="0" />
+      <node id="7887120293591825750" at="30,339,31,141" concept="0" />
+      <node id="7887120293591825750" at="31,141,32,21" concept="0" />
+      <node id="7887120293591825750" at="32,21,33,57" concept="0" />
+      <node id="7887120293591825750" at="33,57,34,321" concept="0" />
+      <node id="7887120293591825750" at="34,321,35,140" concept="0" />
+      <node id="7887120293591825750" at="35,140,36,20" concept="0" />
+      <node id="7887120293591825750" at="36,20,37,56" concept="0" />
+      <node id="7887120293591825750" at="37,56,38,140" concept="0" />
+      <node id="7887120293591825750" at="38,140,39,340" concept="0" />
+      <node id="7887120293591825750" at="39,340,40,21" concept="0" />
+      <node id="7887120293591825750" at="40,21,41,57" concept="0" />
+      <node id="7887120293591825750" at="41,57,42,143" concept="0" />
+      <node id="7887120293591825750" at="42,143,43,342" concept="0" />
+      <node id="7887120293591825750" at="43,342,44,21" concept="0" />
+      <node id="7887120293591825750" at="44,21,45,57" concept="0" />
+      <node id="7887120293591825750" at="19,0,47,0" concept="1" trace="init#(Ljetbrains/mps/sample/Physics/runtime/objects/World;)V" />
+      <scope id="7887120293591825750" at="20,36,45,57">
+        <var name="Hey" id="3489632902464568441" />
+        <var name="Ho" id="3489632902464568871" />
+        <var name="Ho1" id="3489632902470379113" />
+        <var name="Ho2" id="3489632902470379113" />
         <var name="Something" id="1808378526640369199" />
       </scope>
-      <scope id="7887120293591825750" at="17,0,25,0">
+      <scope id="7887120293591825750" at="19,0,47,0">
         <var name="world" id="7887120293591825750" />
       </scope>
-      <unit id="7887120293591825750" at="15,0,26,0" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation" />
+      <unit id="7887120293591825750" at="17,0,48,0" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation" />
     </file>
   </root>
 </debug-info>

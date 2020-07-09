@@ -13,6 +13,8 @@
     <import index="9dpa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.ode(jetbrains.mps.samples.Physics.runtime/)" />
     <import index="r7oa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:processing.core(jetbrains.mps.samples.Physics.runtime/)" />
     <import index="xwt6" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.math(jetbrains.mps.samples.Physics.runtime/)" />
+    <import index="eaav" ref="r:b3b78d7c-b258-46c7-b846-e8d10925f2cd(jetbrains.mps.samples.Physics.runtime.vectors)" />
+    <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -21,6 +23,13 @@
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
+      <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
+      <concept id="1188207840427" name="jetbrains.mps.baseLanguage.structure.AnnotationInstance" flags="nn" index="2AHcQZ">
+        <reference id="1188208074048" name="annotation" index="2AI5Lk" />
+      </concept>
+      <concept id="1188208481402" name="jetbrains.mps.baseLanguage.structure.HasAnnotation" flags="ng" index="2AJDlI">
+        <child id="1188208488637" name="annotation" index="2AJF6D" />
+      </concept>
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
         <child id="1154032183016" name="body" index="2LFqv$" />
       </concept>
@@ -35,6 +44,7 @@
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
+      <concept id="1070475587102" name="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" flags="nn" index="XkiVB" />
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
@@ -52,7 +62,9 @@
         <child id="1070534934092" name="expression" index="10QFUP" />
       </concept>
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
-      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
+      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
+        <child id="1165602531693" name="superclass" index="1zkMxy" />
+      </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
@@ -750,6 +762,15 @@
       </node>
       <node concept="3Tm6S6" id="3H79Ykd2Gz0" role="1B3o_S" />
     </node>
+    <node concept="2tJIrI" id="31HEEbcoPYu" role="jymVt" />
+    <node concept="312cEg" id="31HEEbcoTG7" role="jymVt">
+      <property role="TrG5h" value="massCached" />
+      <node concept="3Tm6S6" id="31HEEbcoRK1" role="1B3o_S" />
+      <node concept="3uibUv" id="31HEEbcoTyL" role="1tU5fm">
+        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="31HEEbcoVqC" role="jymVt" />
     <node concept="312cEg" id="3H79Ykd2Gz1" role="jymVt">
       <property role="TrG5h" value="forces" />
       <node concept="3uibUv" id="3H79Ykd2Gz3" role="1tU5fm">
@@ -781,6 +802,12 @@
         </node>
       </node>
       <node concept="3clFbS" id="3H79Ykd2Gzc" role="3clF47">
+        <node concept="XkiVB" id="31HEEbcjJA8" role="3cqZAp">
+          <ref role="37wK5l" to="eaav:6asu_4xEYfe" resolve="InternalVector" />
+          <node concept="10Nm6u" id="31HEEbcjJBZ" role="37wK5m" />
+          <node concept="10Nm6u" id="31HEEbcjJEu" role="37wK5m" />
+          <node concept="10Nm6u" id="31HEEbcjJGv" role="37wK5m" />
+        </node>
         <node concept="3clFbF" id="3H79Ykd2Gzd" role="3cqZAp">
           <node concept="37vLTI" id="3H79Ykd2Gze" role="3clFbG">
             <node concept="2OqwBi" id="3H79Ykd2Gzf" role="37vLTJ">
@@ -1061,6 +1088,186 @@
         <node concept="3uibUv" id="3H79Ykd2G$E" role="11_B2D">
           <ref role="3uigEE" to="4bo7:3H79Ykd2G_d" resolve="Force" />
         </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="31HEEbcjJH_" role="jymVt" />
+    <node concept="2tJIrI" id="31HEEbcjJJS" role="jymVt" />
+    <node concept="3uibUv" id="31HEEbcjHVs" role="1zkMxy">
+      <ref role="3uigEE" to="eaav:6asu_4xEVX3" resolve="InternalVector" />
+    </node>
+    <node concept="3clFb_" id="31HEEbckoNF" role="jymVt">
+      <property role="TrG5h" value="getX" />
+      <node concept="3uibUv" id="31HEEbckqzo" role="3clF45">
+        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      </node>
+      <node concept="3Tm1VV" id="31HEEbckoNH" role="1B3o_S" />
+      <node concept="3clFbS" id="31HEEbckoNN" role="3clF47">
+        <node concept="3cpWs6" id="31HEEbcksiY" role="3cqZAp">
+          <node concept="2YIFZM" id="31HEEbckF_w" role="3cqZAk">
+            <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+            <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+            <node concept="2OqwBi" id="31HEEbck$Cs" role="37wK5m">
+              <node concept="2OqwBi" id="31HEEbckxo$" role="2Oq$k0">
+                <node concept="2OqwBi" id="31HEEbcktZh" role="2Oq$k0">
+                  <node concept="Xjq3P" id="31HEEbcksjx" role="2Oq$k0" />
+                  <node concept="liA8E" id="31HEEbckvHX" role="2OqNvi">
+                    <ref role="37wK5l" node="3H79Ykd2G$u" resolve="getBody" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="31HEEbckyXx" role="2OqNvi">
+                  <ref role="37wK5l" to="9dpa:~DBody.getPosition()" resolve="getPosition" />
+                </node>
+              </node>
+              <node concept="liA8E" id="31HEEbck_Zd" role="2OqNvi">
+                <ref role="37wK5l" to="xwt6:~DVector3C.get0()" resolve="get0" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="31HEEbckoNO" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="31HEEbckoNR" role="jymVt">
+      <property role="TrG5h" value="getY" />
+      <node concept="3uibUv" id="31HEEbckoNS" role="3clF45">
+        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      </node>
+      <node concept="3Tm1VV" id="31HEEbckoNT" role="1B3o_S" />
+      <node concept="3clFbS" id="31HEEbckoNZ" role="3clF47">
+        <node concept="3cpWs6" id="31HEEbckIFb" role="3cqZAp">
+          <node concept="2YIFZM" id="31HEEbckIFw" role="3cqZAk">
+            <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+            <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+            <node concept="2OqwBi" id="31HEEbckIFx" role="37wK5m">
+              <node concept="2OqwBi" id="31HEEbckIFy" role="2Oq$k0">
+                <node concept="2OqwBi" id="31HEEbckIFz" role="2Oq$k0">
+                  <node concept="Xjq3P" id="31HEEbckIF$" role="2Oq$k0" />
+                  <node concept="liA8E" id="31HEEbckIF_" role="2OqNvi">
+                    <ref role="37wK5l" node="3H79Ykd2G$u" resolve="getBody" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="31HEEbckIFA" role="2OqNvi">
+                  <ref role="37wK5l" to="9dpa:~DBody.getPosition()" resolve="getPosition" />
+                </node>
+              </node>
+              <node concept="liA8E" id="31HEEbckITe" role="2OqNvi">
+                <ref role="37wK5l" to="xwt6:~DVector3C.get1()" resolve="get1" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="31HEEbckoO0" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="31HEEbckoO3" role="jymVt">
+      <property role="TrG5h" value="getZ" />
+      <node concept="3uibUv" id="31HEEbckoO4" role="3clF45">
+        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      </node>
+      <node concept="3Tm1VV" id="31HEEbckoO5" role="1B3o_S" />
+      <node concept="3clFbS" id="31HEEbckoOb" role="3clF47">
+        <node concept="3clFbF" id="31HEEbckKzE" role="3cqZAp">
+          <node concept="2YIFZM" id="31HEEbckKzG" role="3clFbG">
+            <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+            <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+            <node concept="2OqwBi" id="31HEEbckKzH" role="37wK5m">
+              <node concept="2OqwBi" id="31HEEbckKzI" role="2Oq$k0">
+                <node concept="2OqwBi" id="31HEEbckKzJ" role="2Oq$k0">
+                  <node concept="Xjq3P" id="31HEEbckKzK" role="2Oq$k0" />
+                  <node concept="liA8E" id="31HEEbckKzL" role="2OqNvi">
+                    <ref role="37wK5l" node="3H79Ykd2G$u" resolve="getBody" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="31HEEbckKzM" role="2OqNvi">
+                  <ref role="37wK5l" to="9dpa:~DBody.getPosition()" resolve="getPosition" />
+                </node>
+              </node>
+              <node concept="liA8E" id="31HEEbckKM6" role="2OqNvi">
+                <ref role="37wK5l" to="xwt6:~DVector3C.get2()" resolve="get2" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="31HEEbckoOc" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="31HEEbcoITB" role="jymVt" />
+    <node concept="3clFb_" id="31HEEbcoNVR" role="jymVt">
+      <property role="TrG5h" value="getMassBigDecimal" />
+      <node concept="3clFbS" id="31HEEbcoNVU" role="3clF47">
+        <node concept="3clFbJ" id="31HEEbcoXdQ" role="3cqZAp">
+          <node concept="3clFbS" id="31HEEbcoXdS" role="3clFbx">
+            <node concept="3clFbF" id="31HEEbcoXI9" role="3cqZAp">
+              <node concept="37vLTI" id="31HEEbcoXXa" role="3clFbG">
+                <node concept="2YIFZM" id="31HEEbcoYl5" role="37vLTx">
+                  <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+                  <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                  <node concept="2OqwBi" id="31HEEbcoZdw" role="37wK5m">
+                    <node concept="2OqwBi" id="31HEEbcoYPh" role="2Oq$k0">
+                      <node concept="37vLTw" id="31HEEbcoYHx" role="2Oq$k0">
+                        <ref role="3cqZAo" node="3H79Ykd2GyP" resolve="body" />
+                      </node>
+                      <node concept="liA8E" id="31HEEbcoZ5i" role="2OqNvi">
+                        <ref role="37wK5l" to="9dpa:~DBody.getMass()" resolve="getMass" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="31HEEbcoZrS" role="2OqNvi">
+                      <ref role="37wK5l" to="9dpa:~DMassC.getMass()" resolve="getMass" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="37vLTw" id="31HEEbcoXI7" role="37vLTJ">
+                  <ref role="3cqZAo" node="31HEEbcoTG7" resolve="massCached" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbC" id="31HEEbcoXAg" role="3clFbw">
+            <node concept="10Nm6u" id="31HEEbcoXHa" role="3uHU7w" />
+            <node concept="37vLTw" id="31HEEbcoXeO" role="3uHU7B">
+              <ref role="3cqZAo" node="31HEEbcoTG7" resolve="massCached" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="31HEEbcoZzo" role="3cqZAp">
+          <node concept="37vLTw" id="31HEEbcoZHN" role="3cqZAk">
+            <ref role="3cqZAo" node="31HEEbcoTG7" resolve="massCached" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="31HEEbcoM6d" role="1B3o_S" />
+      <node concept="3uibUv" id="31HEEbcoN$Z" role="3clF45">
+        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="31HEEbcp449" role="jymVt" />
+    <node concept="3clFb_" id="31HEEbcp95O" role="jymVt">
+      <property role="TrG5h" value="getPositionInternalVector" />
+      <node concept="3clFbS" id="31HEEbcp95R" role="3clF47">
+        <node concept="3cpWs6" id="31HEEbcpaYe" role="3cqZAp">
+          <node concept="2YIFZM" id="31HEEbcpPxx" role="3cqZAk">
+            <ref role="37wK5l" to="eaav:31HEEbcpzIA" resolve="fromDVector3C" />
+            <ref role="1Pybhc" to="eaav:6asu_4xEVX3" resolve="InternalVector" />
+            <node concept="2OqwBi" id="31HEEbcpmVY" role="37wK5m">
+              <node concept="1rXfSq" id="31HEEbcpmVZ" role="2Oq$k0">
+                <ref role="37wK5l" node="3H79Ykd2G$u" resolve="getBody" />
+              </node>
+              <node concept="liA8E" id="31HEEbcpmW0" role="2OqNvi">
+                <ref role="37wK5l" to="9dpa:~DBody.getPosition()" resolve="getPosition" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="31HEEbcp78D" role="1B3o_S" />
+      <node concept="3uibUv" id="31HEEbcpUPY" role="3clF45">
+        <ref role="3uigEE" to="eaav:6asu_4xEVX3" resolve="InternalVector" />
       </node>
     </node>
   </node>
