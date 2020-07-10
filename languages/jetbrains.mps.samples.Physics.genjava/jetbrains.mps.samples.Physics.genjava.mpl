@@ -29,8 +29,12 @@
         <dependency reexport="false">be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)</dependency>
         <dependency reexport="false">4517af98-2eaa-4f19-a962-92df60010094(org.iets3.core.expr.genjava.base#8286534136181746510)</dependency>
         <dependency reexport="false">3a6ebc02-087e-4791-9854-65244ce22d8d(org.iets3.core.expr.genjava.base.rt)</dependency>
+        <dependency reexport="false">6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)</dependency>
+        <dependency reexport="false">272bf1ac-d70c-4dac-96a3-976884f641b8(org.iets3.core.expr.genjava.simpleTypes.rt)</dependency>
+        <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
       </dependencies>
       <languageVersions>
+        <language slang="l:47f075a6-558e-4640-a606-7ce0236c8023:com.mbeddr.mpsutil.interpreter" version="1" />
         <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="11" />
         <language slang="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" version="0" />
         <language slang="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" version="1" />
@@ -90,7 +94,9 @@
         <module reference="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" version="1" />
         <module reference="4517af98-2eaa-4f19-a962-92df60010094(org.iets3.core.expr.genjava.base#8286534136181746510)" version="0" />
         <module reference="3a6ebc02-087e-4791-9854-65244ce22d8d(org.iets3.core.expr.genjava.base.rt)" version="0" />
+        <module reference="272bf1ac-d70c-4dac-96a3-976884f641b8(org.iets3.core.expr.genjava.simpleTypes.rt)" version="0" />
         <module reference="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" version="0" />
+        <module reference="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" version="0" />
         <module reference="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" version="1" />
       </dependencyVersions>
       <mapping-priorities />

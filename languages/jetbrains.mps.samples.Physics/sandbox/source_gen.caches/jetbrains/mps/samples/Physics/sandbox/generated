@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="563ag4y77x3fvno7f6f1n9qy8qnjm4x">
-  <files names="TestSimulation.java" />
+<product version="3" modelHash="-4baytqyjxl57absq7jcevess75jbdn6">
+  <files names="FrictionForce.java:GravityForce.java:TestSimulation.java" />
 </product>
 

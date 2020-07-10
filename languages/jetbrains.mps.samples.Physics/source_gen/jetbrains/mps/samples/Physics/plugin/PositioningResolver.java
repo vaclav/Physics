@@ -7,6 +7,9 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
+import java.util.Map;
+import jetbrains.mps.internal.collections.runtime.MapSequence;
+import java.util.HashMap;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.samples.Physics.behavior.WorldDefinition__BehaviorDescriptor;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
@@ -14,6 +17,8 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.samples.Physics.intentions.CoordinateExpressionConverters;
+import jetbrains.mps.internal.collections.runtime.IMapping;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
@@ -36,6 +41,7 @@ public class PositioningResolver {
 
   private static List<SNode> resolveAll(SNode world, final InternalVector posOffset, final InternalVector velocityOffset) {
     final List<SNode> results = ListSequence.fromList(new ArrayList<SNode>());
+    final Map<SNode, SNode> sourceTargetMapper = MapSequence.fromMap(new HashMap<SNode, SNode>());
 
     Sequence.fromIterable(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(world)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
@@ -68,8 +74,22 @@ public class PositioningResolver {
           final SNode definition = result;
           if (SNodeOperations.isInstanceOf(definition, CONCEPTS.ObjectDefinition$YO)) {
             ListSequence.fromList(results).addElement(definition);
+
+            // Store reference to fix broken references 
+            MapSequence.fromMap(sourceTargetMapper).put(SNodeOperations.cast(it, CONCEPTS.ObjectDefinition$YO), definition);
           }
         }
+      }
+    });
+
+    // Fix broken references in results (does not handle world definitions) 
+    MapSequence.fromMap(sourceTargetMapper).visitAll(new IVisitor<IMapping<SNode, SNode>>() {
+      public void visit(IMapping<SNode, SNode> it) {
+        ListSequence.fromList(SNodeOperations.getNodeDescendants(it.value(), CONCEPTS.ObjectReference$qq, false, new SAbstractConcept[]{})).visitAll(new IVisitor<SNode>() {
+          public void visit(SNode it) {
+            SLinkOperations.setTarget(it, LINKS.target$EWj0, MapSequence.fromMap(sourceTargetMapper).get(SNodeOperations.cast(SLinkOperations.getTarget(it, LINKS.target$EWj0), CONCEPTS.ObjectDefinition$YO)));
+          }
+        });
       }
     });
 
@@ -81,10 +101,12 @@ public class PositioningResolver {
     /*package*/ static final SContainmentLink velocity$DoVv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
     /*package*/ static final SContainmentLink world$ZN60 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
     /*package*/ static final SReferenceLink target$12L0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
+    /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept WorldInclusion$vO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, "jetbrains.mps.samples.Physics.structure.WorldInclusion");
     /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
+    /*package*/ static final SConcept ObjectReference$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReference");
   }
 }

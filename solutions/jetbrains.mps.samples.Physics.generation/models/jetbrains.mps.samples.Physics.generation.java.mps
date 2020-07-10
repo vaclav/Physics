@@ -36,10 +36,6 @@
   <node concept="2VgMpV" id="QNYPlnZohd">
     <property role="TrG5h" value="JavaPhysicsGenplan" />
     <node concept="2VgMA2" id="1$oDF1j$MM3" role="2VgMA7">
-      <node concept="2V$Bhx" id="31HEEbczayC" role="1t_9vn">
-        <property role="2V$B1T" value="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" />
-        <property role="2V$B1Q" value="org.iets3.core.expr.math" />
-      </node>
       <node concept="2V$Bhx" id="31HEEbc6XWt" role="1t_9vn">
         <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
         <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
