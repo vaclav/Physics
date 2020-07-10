@@ -21,7 +21,7 @@
       <unit at="26,0,98,0" name="jetbrains.mps.samples.Physics.editor.AbstractObjectReference_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="17,0,144,0" name="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
+      <unit at="17,0,146,0" name="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="ObjectReference_SubstituteMenu.java">
       <unit at="90,0,93,0" name="jetbrains.mps.samples.Physics.editor.ObjectReference_SubstituteMenu$CONCEPTS" />
@@ -3224,6 +3224,49 @@
       <unit id="4383135941275209598" at="71,42,90,5" name="jetbrains.mps.samples.Physics.editor.WorldReference_EditorBuilder_a$1" />
       <unit id="4383135941275209602" at="112,0,162,0" name="jetbrains.mps.samples.Physics.editor.WorldReference_EditorBuilder_a$Inline_Builder0" />
       <unit id="4383135941275209598" at="42,0,176,0" name="jetbrains.mps.samples.Physics.editor.WorldReference_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)/5352272594417168262">
+    <file name="ObjectVelocityTarget_Editor.java">
+      <node id="5352272594417168262" at="11,79,12,86" concept="6" />
+      <node id="5352272594417168262" at="11,0,14,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="5352272594417168262" at="11,79,12,86" />
+      <scope id="5352272594417168262" at="11,0,14,0">
+        <var name="editorContext" id="5352272594417168262" />
+        <var name="node" id="5352272594417168262" />
+      </scope>
+      <unit id="5352272594417168262" at="10,0,15,0" name="jetbrains.mps.samples.Physics.editor.ObjectVelocityTarget_Editor" />
+    </file>
+    <file name="ObjectVelocityTarget_EditorBuilder_a.java">
+      <node id="5352272594417168262" at="16,100,17,19" concept="10" />
+      <node id="5352272594417168262" at="17,19,18,18" concept="1" />
+      <node id="5352272594417168262" at="23,26,24,18" concept="6" />
+      <node id="5352272594417168262" at="27,39,28,30" concept="6" />
+      <node id="5352272594417168267" at="31,41,32,101" concept="5" />
+      <node id="5352272594417168267" at="32,101,33,46" concept="1" />
+      <node id="5352272594417168267" at="33,46,34,28" concept="1" />
+      <node id="5352272594417168267" at="34,28,35,31" concept="1" />
+      <node id="5352272594417168267" at="35,31,36,34" concept="1" />
+      <node id="5352272594417168267" at="36,34,37,22" concept="6" />
+      <node id="5352272594417168262" at="13,0,15,0" concept="2" trace="myNode" />
+      <node id="5352272594417168262" at="27,0,30,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="5352272594417168262" at="16,0,20,0" concept="0" trace="ObjectVelocityTarget_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="5352272594417168262" at="21,0,26,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="5352272594417168267" at="31,0,39,0" concept="4" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="5352272594417168262" at="23,26,24,18" />
+      <scope id="5352272594417168262" at="27,39,28,30" />
+      <scope id="5352272594417168262" at="16,100,18,18" />
+      <scope id="5352272594417168262" at="27,0,30,0" />
+      <scope id="5352272594417168262" at="16,0,20,0">
+        <var name="context" id="5352272594417168262" />
+        <var name="node" id="5352272594417168262" />
+      </scope>
+      <scope id="5352272594417168262" at="21,0,26,0" />
+      <scope id="5352272594417168267" at="31,41,37,22">
+        <var name="editorCell" id="5352272594417168267" />
+      </scope>
+      <scope id="5352272594417168267" at="31,0,39,0" />
+      <unit id="5352272594417168262" at="12,0,40,0" name="jetbrains.mps.samples.Physics.editor.ObjectVelocityTarget_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)/6362440046684078088">

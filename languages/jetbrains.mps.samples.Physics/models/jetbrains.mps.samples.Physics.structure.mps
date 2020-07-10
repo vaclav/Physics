@@ -7,6 +7,7 @@
   <imports>
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" />
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -121,6 +122,9 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6HZo5MNbVDp" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="4D75T4FmykD" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
     </node>
     <node concept="1TJgyj" id="3Nk1IDHVTW2" role="1TKVEi">
       <property role="IQ2ns" value="4383135941274869506" />
@@ -501,11 +505,6 @@
       <property role="TrG5h" value="world_origin" />
       <property role="1L1pqM" value="world origin" />
     </node>
-    <node concept="25R33" id="6POFxU8ikYt" role="25R1y">
-      <property role="3tVfz5" value="7887120293591338909" />
-      <property role="TrG5h" value="velocity" />
-      <property role="1L1pqM" value="object velocity" />
-    </node>
     <node concept="25R33" id="6POFxU8e$gC" role="25R1y">
       <property role="3tVfz5" value="7887120293590352936" />
       <property role="TrG5h" value="self_direction" />
@@ -802,6 +801,13 @@
     <node concept="PrWs8" id="31HEEbbS_kF" role="PzmwI">
       <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="4D75T4FiMXY">
+    <property role="EcuMT" value="5352272594417168254" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="ObjectVelocityTarget" />
+    <property role="34LRSv" value="velocity" />
+    <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
   </node>
 </model>
 

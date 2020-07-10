@@ -40,6 +40,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObjectPositionTarget;
   private ConceptPresentation props_ObjectReference;
   private ConceptPresentation props_ObjectType;
+  private ConceptPresentation props_ObjectVelocityTarget;
   private ConceptPresentation props_PictureTexture;
   private ConceptPresentation props_RelativeCoordinates;
   private ConceptPresentation props_Simulation;
@@ -278,6 +279,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObjectType = cpb.create();
         }
         return props_ObjectType;
+      case LanguageConceptSwitch.ObjectVelocityTarget:
+        if (props_ObjectVelocityTarget == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("velocity");
+          props_ObjectVelocityTarget = cpb.create();
+        }
+        return props_ObjectVelocityTarget;
       case LanguageConceptSwitch.PictureTexture:
         if (props_PictureTexture == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

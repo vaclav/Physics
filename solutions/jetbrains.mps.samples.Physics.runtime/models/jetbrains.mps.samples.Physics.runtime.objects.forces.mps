@@ -156,7 +156,7 @@
       <node concept="37vLTG" id="3H79Ykd2Gmo" role="3clF46">
         <property role="TrG5h" value="world" />
         <node concept="3uibUv" id="3H79Ykd2Gmp" role="1tU5fm">
-          <ref role="3uigEE" to="jyp0:3H79Ykd2Grr" resolve="World" />
+          <ref role="3uigEE" to="jyp0:4D75T4FueWD" resolve="World" />
         </node>
       </node>
       <node concept="37vLTG" id="3H79Ykd2Gmq" role="3clF46">
@@ -272,7 +272,7 @@
       <node concept="37vLTG" id="3H79Ykd2Gm2" role="3clF46">
         <property role="TrG5h" value="world" />
         <node concept="3uibUv" id="3H79Ykd2Gm3" role="1tU5fm">
-          <ref role="3uigEE" to="jyp0:3H79Ykd2Grr" resolve="World" />
+          <ref role="3uigEE" to="jyp0:4D75T4FueWD" resolve="World" />
         </node>
       </node>
       <node concept="37vLTG" id="3H79Ykd2Gm4" role="3clF46">
@@ -311,7 +311,7 @@
       <node concept="37vLTG" id="3H79Ykd2G_h" role="3clF46">
         <property role="TrG5h" value="world" />
         <node concept="3uibUv" id="3H79Ykd2G_i" role="1tU5fm">
-          <ref role="3uigEE" to="jyp0:3H79Ykd2Grr" resolve="World" />
+          <ref role="3uigEE" to="jyp0:4D75T4FueWD" resolve="World" />
         </node>
       </node>
       <node concept="37vLTG" id="3H79Ykd2G_j" role="3clF46">
@@ -350,7 +350,7 @@
       <node concept="37vLTG" id="3H79Ykd2G_C" role="3clF46">
         <property role="TrG5h" value="world" />
         <node concept="3uibUv" id="3H79Ykd2G_D" role="1tU5fm">
-          <ref role="3uigEE" to="jyp0:3H79Ykd2Grr" resolve="World" />
+          <ref role="3uigEE" to="jyp0:4D75T4FueWD" resolve="World" />
         </node>
       </node>
       <node concept="37vLTG" id="3H79Ykd2G_E" role="3clF46">
@@ -552,7 +552,7 @@
               <ref role="3cqZAo" node="3H79Ykd2G_C" resolve="world" />
             </node>
             <node concept="liA8E" id="3H79Ykd3Qlm" role="2OqNvi">
-              <ref role="37wK5l" to="jyp0:3H79Ykd2Gsz" resolve="getEntities" />
+              <ref role="37wK5l" to="jyp0:4D75T4FueZi" resolve="getEntities" />
             </node>
           </node>
         </node>

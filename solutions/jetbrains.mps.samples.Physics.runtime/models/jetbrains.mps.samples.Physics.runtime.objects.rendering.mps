@@ -412,7 +412,7 @@
       <node concept="37vLTG" id="3H79Ykd2Gos" role="3clF46">
         <property role="TrG5h" value="world" />
         <node concept="3uibUv" id="3H79Ykd2Got" role="1tU5fm">
-          <ref role="3uigEE" to="jyp0:3H79Ykd2Grr" resolve="World" />
+          <ref role="3uigEE" to="jyp0:4D75T4FueWD" resolve="World" />
         </node>
       </node>
       <node concept="37vLTG" id="3H79Ykd2Gou" role="3clF46">
@@ -430,7 +430,7 @@
                 <ref role="3cqZAo" node="3H79Ykd2Gos" resolve="world" />
               </node>
               <node concept="liA8E" id="3H79Ykd3MHn" role="2OqNvi">
-                <ref role="37wK5l" to="jyp0:3H79Ykd2Gsn" resolve="getSpace" />
+                <ref role="37wK5l" to="jyp0:4D75T4FueZ6" resolve="getSpace" />
               </node>
             </node>
             <node concept="37vLTw" id="3H79Ykd3Mw8" role="37wK5m">
@@ -557,7 +557,7 @@
       <node concept="37vLTG" id="3H79Ykd2Gtf" role="3clF46">
         <property role="TrG5h" value="space" />
         <node concept="3uibUv" id="3H79Ykd2Gtg" role="1tU5fm">
-          <ref role="3uigEE" to="jyp0:3H79Ykd2Grr" resolve="World" />
+          <ref role="3uigEE" to="jyp0:4D75T4FueWD" resolve="World" />
         </node>
       </node>
       <node concept="37vLTG" id="3H79Ykd2Gth" role="3clF46">
@@ -583,7 +583,7 @@
                 <ref role="3cqZAo" node="3H79Ykd2Gtf" resolve="space" />
               </node>
               <node concept="liA8E" id="3H79Ykd3Lxm" role="2OqNvi">
-                <ref role="37wK5l" to="jyp0:3H79Ykd2Gsn" resolve="getSpace" />
+                <ref role="37wK5l" to="jyp0:4D75T4FueZ6" resolve="getSpace" />
               </node>
             </node>
             <node concept="37vLTw" id="3H79Ykd3Lxz" role="37wK5m">

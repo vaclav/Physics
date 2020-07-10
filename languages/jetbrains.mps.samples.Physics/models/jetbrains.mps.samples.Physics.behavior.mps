@@ -815,5 +815,25 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="4D75T4FiMYe">
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <ref role="13h7C2" to="9tcj:4D75T4FiMXY" resolve="ObjectVelocityTarget" />
+    <node concept="13hLZK" id="4D75T4FiMYf" role="13h7CW">
+      <node concept="3clFbS" id="4D75T4FiMYg" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="4D75T4FiMYp" role="13h7CS">
+      <property role="TrG5h" value="renderReadable" />
+      <ref role="13i0hy" to="pbu6:6kR0qIbI2yi" resolve="renderReadable" />
+      <node concept="3Tm1VV" id="4D75T4FiMYq" role="1B3o_S" />
+      <node concept="3clFbS" id="4D75T4FiMYt" role="3clF47">
+        <node concept="3cpWs6" id="4D75T4FiMYF" role="3cqZAp">
+          <node concept="Xl_RD" id="4D75T4FiMZ8" role="3cqZAk">
+            <property role="Xl_RC" value="velocity" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="4D75T4FiMYu" role="3clF45" />
+    </node>
+  </node>
 </model>
 

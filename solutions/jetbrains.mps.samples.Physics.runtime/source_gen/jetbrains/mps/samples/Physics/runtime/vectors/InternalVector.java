@@ -19,6 +19,10 @@ public class InternalVector {
     this.y = y;
     this.z = z;
   }
+  public InternalVector(Number x, Number y, Number z) {
+    this(BigDecimal.valueOf(x.doubleValue()), BigDecimal.valueOf(y.doubleValue()), BigDecimal.valueOf(z.doubleValue()));
+  }
+
 
   public InternalVector toUnit() {
     BigDecimal length = length();
@@ -28,7 +32,7 @@ public class InternalVector {
     return new InternalVector(getX().add(v.getX(), ctx), getY().add(v.getY(), ctx), getZ().add(v.getZ(), ctx));
   }
   public InternalVector minus(InternalVector v) {
-    return new InternalVector(getX().subtract(v.getX(), ctx), getY().subtract(v.y, ctx), getZ().subtract(v.z, ctx));
+    return new InternalVector(getX().subtract(v.getX(), ctx), getY().subtract(v.getY(), ctx), getZ().subtract(v.getZ(), ctx));
   }
   public InternalVector mul(BigDecimal factor) {
     return new InternalVector(getX().multiply(factor, ctx), getY().multiply(factor, ctx), getZ().multiply(factor, ctx));
@@ -66,8 +70,9 @@ public class InternalVector {
     return BigDecimal.valueOf(atan);
   }
 
-
-
+  public static InternalVector fromSpherical(Number length, Number theta, Number phi) {
+    return fromSpherical(BigDecimal.valueOf(length.doubleValue()), BigDecimal.valueOf(theta.doubleValue()), BigDecimal.valueOf(phi.doubleValue()));
+  }
 
   /**
    * Get an internal vector from spherical coordinates

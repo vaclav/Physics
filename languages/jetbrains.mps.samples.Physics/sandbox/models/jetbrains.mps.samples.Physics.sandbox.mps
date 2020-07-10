@@ -111,9 +111,7 @@
       <concept id="420466128549300320" name="jetbrains.mps.samples.Physics.structure.WorldReference" flags="ng" index="1t_wfn">
         <reference id="420466128549300321" name="target" index="1t_wfm" />
       </concept>
-      <concept id="7887120293590352948" name="jetbrains.mps.samples.Physics.structure.BuiltInVectorsExpression" flags="ng" index="3_jICE">
-        <property id="7887120293590352951" name="direction" index="3_jICD" />
-      </concept>
+      <concept id="5352272594417168254" name="jetbrains.mps.samples.Physics.structure.ObjectVelocityTarget" flags="ng" index="1x33zJ" />
       <concept id="7887120293590353009" name="jetbrains.mps.samples.Physics.structure.DirectionalCoordinates" flags="ng" index="3_jIDJ">
         <child id="7887120293590353012" name="length" index="3_jIDE" />
         <child id="7887120293590353010" name="direction" index="3_jIDG" />
@@ -554,8 +552,9 @@
               <node concept="3K961b" id="cTQf2FqwCI" role="1QScD9">
                 <property role="3K961B" value="6kwOTMl1bfO/length" />
               </node>
-              <node concept="3_jICE" id="cTQf2FqwBP" role="30czhm">
-                <property role="3_jICD" value="6POFxU8ikYt/velocity" />
+              <node concept="1QScDb" id="4D75T4Fk9bq" role="30czhm">
+                <node concept="1x33zJ" id="4D75T4Fk9cR" role="1QScD9" />
+                <node concept="2CrqZA" id="4D75T4Fk99S" role="30czhm" />
               </node>
             </node>
             <node concept="30bXRB" id="cTQf2FqwD4" role="2zCggm">
@@ -568,8 +567,9 @@
         </node>
         <node concept="1QScDb" id="cTQf2Fr0Xn" role="3_jIDG">
           <node concept="2CkXcW" id="cTQf2Fr0YH" role="1QScD9" />
-          <node concept="3_jICE" id="cTQf2Fr0We" role="30czhm">
-            <property role="3_jICD" value="6POFxU8ikYt/velocity" />
+          <node concept="1QScDb" id="4D75T4Fk9fM" role="30czhm">
+            <node concept="1x33zJ" id="4D75T4Fk9hR" role="1QScD9" />
+            <node concept="2CrqZA" id="4D75T4Fk9ek" role="30czhm" />
           </node>
         </node>
       </node>

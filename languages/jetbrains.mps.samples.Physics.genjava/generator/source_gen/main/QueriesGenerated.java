@@ -51,22 +51,31 @@ public class QueriesGenerated extends QueryProviderBase {
     return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.ObjectMassTarget$_T);
   }
   public static boolean rule_Condition_8_2(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getEnum(_context.getNode(), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3d9L, "x");
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.ObjectVelocityTarget$a7);
   }
   public static boolean rule_Condition_8_3(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getEnum(_context.getNode(), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3daL, "y");
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.VectorOppositeDotTarget$Ac);
   }
   public static boolean rule_Condition_8_4(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getEnum(_context.getNode(), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3ddL, "z");
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.VectorComponentTarget$ME);
   }
   public static boolean rule_Condition_8_5(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getEnum(_context.getNode(), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3f4L, "length");
+    return SPropertyOperations.getEnum(SNodeOperations.cast(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.VectorComponentTarget$ME), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3d9L, "x");
   }
   public static boolean rule_Condition_8_6(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getEnum(_context.getNode(), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3eeL, "phi");
+    return SPropertyOperations.getEnum(SNodeOperations.cast(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.VectorComponentTarget$ME), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3daL, "y");
   }
   public static boolean rule_Condition_8_7(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getEnum(_context.getNode(), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3e9L, "theta");
+    return SPropertyOperations.getEnum(SNodeOperations.cast(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.VectorComponentTarget$ME), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3ddL, "z");
+  }
+  public static boolean rule_Condition_8_8(final BaseMappingRuleContext _context) {
+    return SPropertyOperations.getEnum(SNodeOperations.cast(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.VectorComponentTarget$ME), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3f4L, "length");
+  }
+  public static boolean rule_Condition_8_9(final BaseMappingRuleContext _context) {
+    return SPropertyOperations.getEnum(SNodeOperations.cast(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.VectorComponentTarget$ME), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3eeL, "phi");
+  }
+  public static boolean rule_Condition_8_10(final BaseMappingRuleContext _context) {
+    return SPropertyOperations.getEnum(SNodeOperations.cast(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.VectorComponentTarget$ME), PROPS.component$_d4D) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, "jetbrains.mps.samples.Physics.structure.VectorComponent"), 0x6520d39c9504b3e9L, "theta");
   }
   public static Object propertyMacro_GetValue_1_0(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$tAp1);
@@ -202,7 +211,31 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa);
   }
   public static SNode sourceNodeQuery_8_3(final SourceSubstituteMacroNodeContext _context) {
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa);
+  }
+  public static SNode sourceNodeQuery_8_4(final SourceSubstituteMacroNodeContext _context) {
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa);
+  }
+  public static SNode sourceNodeQuery_8_5(final SourceSubstituteMacroNodeContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.newLength$Gnlv);
+  }
+  public static SNode sourceNodeQuery_8_6(final SourceSubstituteMacroNodeContext _context) {
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa);
+  }
+  public static SNode sourceNodeQuery_8_7(final SourceSubstituteMacroNodeContext _context) {
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa);
+  }
+  public static SNode sourceNodeQuery_8_8(final SourceSubstituteMacroNodeContext _context) {
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa);
+  }
+  public static SNode sourceNodeQuery_8_9(final SourceSubstituteMacroNodeContext _context) {
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa);
+  }
+  public static SNode sourceNodeQuery_8_10(final SourceSubstituteMacroNodeContext _context) {
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa);
+  }
+  public static SNode sourceNodeQuery_8_11(final SourceSubstituteMacroNodeContext _context) {
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa);
   }
   public static SNode sourceNodeQuery_9_0(final SourceSubstituteMacroNodeContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.numerator$mY30);
@@ -256,7 +289,10 @@ public class QueriesGenerated extends QueryProviderBase {
   {
     int i = 0;
     rrcMethods.put("3489632902472800103", new RRC(i++));
+    rrcMethods.put("5352272594417564590", new RRC(i++));
     rrcMethods.put("8821912306507260828", new RRC(i++));
+    rrcMethods.put("5352272594417658619", new RRC(i++));
+    rrcMethods.put("5352272594417821973", new RRC(i++));
   }
   @Override
   @NotNull
@@ -279,6 +315,12 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.rule_Condition_8_0(ctx);
         case 1:
           return QueriesGenerated.rule_Condition_8_1(ctx);
+        case 2:
+          return QueriesGenerated.rule_Condition_8_2(ctx);
+        case 3:
+          return QueriesGenerated.rule_Condition_8_3(ctx);
+        case 4:
+          return QueriesGenerated.rule_Condition_8_4(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for rule %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -307,11 +349,19 @@ public class QueriesGenerated extends QueryProviderBase {
     snqMethods.put("3489632902474803802", new SNQ(i++));
     snqMethods.put("3489632902472866578", new SNQ(i++));
     snqMethods.put("3489632902472867053", new SNQ(i++));
+    snqMethods.put("5352272594417564606", new SNQ(i++));
     snqMethods.put("8821912306507283719", new SNQ(i++));
+    snqMethods.put("5352272594417658635", new SNQ(i++));
     snqMethods.put("8821912306507432803", new SNQ(i++));
+    snqMethods.put("5352272594417857814", new SNQ(i++));
+    snqMethods.put("5352272594417858392", new SNQ(i++));
+    snqMethods.put("5352272594417860847", new SNQ(i++));
+    snqMethods.put("5352272594417861725", new SNQ(i++));
+    snqMethods.put("5352272594417863447", new SNQ(i++));
+    snqMethods.put("5352272594417863955", new SNQ(i++));
     snqMethods.put("8821912306504562030", new SNQ(i++));
     snqMethods.put("8821912306504565339", new SNQ(i++));
-    snqMethods.put("8821912306504568058", new SNQ(i++));
+    snqMethods.put("5352272594417748925", new SNQ(i++));
     snqMethods.put("8821912306504575817", new SNQ(i++));
     snqMethods.put("8821912306504608054", new SNQ(i++));
     snqMethods.put("8821912306504609403", new SNQ(i++));
@@ -382,24 +432,40 @@ public class QueriesGenerated extends QueryProviderBase {
         case 21:
           return QueriesGenerated.sourceNodeQuery_8_3(ctx);
         case 22:
-          return QueriesGenerated.sourceNodeQuery_9_0(ctx);
+          return QueriesGenerated.sourceNodeQuery_8_4(ctx);
         case 23:
-          return QueriesGenerated.sourceNodeQuery_9_1(ctx);
+          return QueriesGenerated.sourceNodeQuery_8_5(ctx);
         case 24:
-          return QueriesGenerated.sourceNodeQuery_9_2(ctx);
+          return QueriesGenerated.sourceNodeQuery_8_6(ctx);
         case 25:
-          return QueriesGenerated.sourceNodeQuery_9_3(ctx);
+          return QueriesGenerated.sourceNodeQuery_8_7(ctx);
         case 26:
-          return QueriesGenerated.sourceNodeQuery_9_4(ctx);
+          return QueriesGenerated.sourceNodeQuery_8_8(ctx);
         case 27:
-          return QueriesGenerated.sourceNodeQuery_9_5(ctx);
+          return QueriesGenerated.sourceNodeQuery_8_9(ctx);
         case 28:
-          return QueriesGenerated.sourceNodeQuery_9_6(ctx);
+          return QueriesGenerated.sourceNodeQuery_8_10(ctx);
         case 29:
-          return QueriesGenerated.sourceNodeQuery_10_0(ctx);
+          return QueriesGenerated.sourceNodeQuery_8_11(ctx);
         case 30:
-          return QueriesGenerated.sourceNodeQuery_10_1(ctx);
+          return QueriesGenerated.sourceNodeQuery_9_0(ctx);
         case 31:
+          return QueriesGenerated.sourceNodeQuery_9_1(ctx);
+        case 32:
+          return QueriesGenerated.sourceNodeQuery_9_2(ctx);
+        case 33:
+          return QueriesGenerated.sourceNodeQuery_9_3(ctx);
+        case 34:
+          return QueriesGenerated.sourceNodeQuery_9_4(ctx);
+        case 35:
+          return QueriesGenerated.sourceNodeQuery_9_5(ctx);
+        case 36:
+          return QueriesGenerated.sourceNodeQuery_9_6(ctx);
+        case 37:
+          return QueriesGenerated.sourceNodeQuery_10_0(ctx);
+        case 38:
+          return QueriesGenerated.sourceNodeQuery_10_1(ctx);
+        case 39:
           return QueriesGenerated.sourceNodeQuery_10_2(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -561,17 +627,17 @@ public class QueriesGenerated extends QueryProviderBase {
     public boolean check(@NotNull InlineSwitchCaseContext ctx) throws GenerationFailureException {
       switch (methodKey) {
         case 0:
-          return QueriesGenerated.rule_Condition_8_2(ctx);
-        case 1:
-          return QueriesGenerated.rule_Condition_8_3(ctx);
-        case 2:
-          return QueriesGenerated.rule_Condition_8_4(ctx);
-        case 3:
           return QueriesGenerated.rule_Condition_8_5(ctx);
-        case 4:
+        case 1:
           return QueriesGenerated.rule_Condition_8_6(ctx);
-        case 5:
+        case 2:
           return QueriesGenerated.rule_Condition_8_7(ctx);
+        case 3:
+          return QueriesGenerated.rule_Condition_8_8(ctx);
+        case 4:
+          return QueriesGenerated.rule_Condition_8_9(ctx);
+        case 5:
+          return QueriesGenerated.rule_Condition_8_10(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for inline switch's case %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -674,6 +740,9 @@ public class QueriesGenerated extends QueryProviderBase {
   private static final class CONCEPTS {
     /*package*/ static final SConcept DistanceWithCallTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.DistanceWithCallTarget");
     /*package*/ static final SConcept ObjectMassTarget$_T = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
+    /*package*/ static final SConcept ObjectVelocityTarget$a7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4a4717912b4b2f7eL, "jetbrains.mps.samples.Physics.structure.ObjectVelocityTarget");
+    /*package*/ static final SConcept VectorOppositeDotTarget$Ac = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL, "jetbrains.mps.samples.Physics.structure.VectorOppositeDotTarget");
+    /*package*/ static final SConcept VectorComponentTarget$ME = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, "jetbrains.mps.samples.Physics.structure.VectorComponentTarget");
     /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
     /*package*/ static final SConcept AbstractForce$Pj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, "jetbrains.mps.samples.Physics.structure.AbstractForce");
   }

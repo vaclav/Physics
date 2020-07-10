@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="jetbrains.mps.samples.Physics.runtime" uuid="59283cba-afa8-49c4-b10d-6ff0ede2c408" moduleVersion="0" compileInMPS="true">
+<solution name="jetbrains.mps.samples.Physics.runtime" uuid="59283cba-afa8-49c4-b10d-6ff0ede2c408" moduleVersion="0" pluginKind="PLUGIN_OTHER" compileInMPS="true">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="C:/Users/clebo/.m2/repository/org/processing/core/3.3.6/core-3.3.6.jar!/" type="java_classes">
-      <sourceRoot location="." />
-    </modelRoot>
-    <modelRoot contentPath="C:/Users/clebo/.m2/repository/org/ode4j/core/0.4.0/core-0.4.0.jar!/" type="java_classes">
+    <modelRoot contentPath="C:/Users/clebo/MPSProjects/Physics/dependencies/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
   </models>
@@ -17,8 +14,7 @@
     </facet>
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="C:/Users/clebo/.m2/repository/org/processing/core/3.3.6/core-3.3.6.jar" />
-    <stubModelEntry path="C:/Users/clebo/.m2/repository/org/ode4j/core/0.4.0/core-0.4.0.jar" />
+    <stubModelEntry path="C:/Users/clebo/MPSProjects/Physics/dependencies/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

@@ -653,6 +653,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ObjectPositionTarget_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ObjectReference_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ObjectReference_SubstituteMenu" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ObjectVelocityTarget_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.PictureTexture_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.RelativeCoordinates_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.Simulation_Editor" />
@@ -993,6 +994,22 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SReferenceLink" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.ObjectVelocityTarget_Editor">
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ObjectVelocityTarget_EditorBuilder_a" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.ObjectVelocityTarget_EditorBuilder_a">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet">
     <classNode dependClassName="java.lang.Deprecated" />

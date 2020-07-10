@@ -1389,5 +1389,31 @@
       <ref role="1YaFvo" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeDotTarget" />
     </node>
   </node>
+  <node concept="1YbPZF" id="4D75T4FiN07">
+    <property role="TrG5h" value="typeof_ObjectVelocityTarget" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <node concept="3clFbS" id="4D75T4FiN08" role="18ibNy">
+      <node concept="1Z5TYs" id="4D75T4FiNbN" role="3cqZAp">
+        <node concept="mw_s8" id="4D75T4FiNc7" role="1ZfhKB">
+          <node concept="2pJPEk" id="4D75T4FiNc3" role="mwGJk">
+            <node concept="2pJPED" id="4D75T4FiNci" role="2pJPEn">
+              <ref role="2pJxaS" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="4D75T4FiNbQ" role="1ZfhK$">
+          <node concept="1Z2H0r" id="4D75T4FiN0e" role="mwGJk">
+            <node concept="1YBJjd" id="4D75T4FiN26" role="1Z2MuG">
+              <ref role="1YBMHb" node="4D75T4FiN0a" resolve="objectVelocityTarget" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="4D75T4FiN0a" role="1YuTPh">
+      <property role="TrG5h" value="objectVelocityTarget" />
+      <ref role="1YaFvo" to="9tcj:4D75T4FiMXY" resolve="ObjectVelocityTarget" />
+    </node>
+  </node>
 </model>
 

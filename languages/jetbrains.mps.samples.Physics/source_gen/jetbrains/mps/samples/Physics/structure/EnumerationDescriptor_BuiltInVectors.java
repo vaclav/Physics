@@ -17,11 +17,10 @@ public class EnumerationDescriptor_BuiltInVectors extends EnumerationDescriptorB
 
   private final EnumerationDescriptor.MemberDescriptor myMember_default_0 = new EnumerationDescriptor.MemberDescriptor("default", "world direction", 0x6d74ae1e883a4424L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7887120293590352932");
   private final EnumerationDescriptor.MemberDescriptor myMember_world_origin_0 = new EnumerationDescriptor.MemberDescriptor("world_origin", "world origin", 0x6d74ae1e883a4425L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7887120293590352933");
-  private final EnumerationDescriptor.MemberDescriptor myMember_velocity_0 = new EnumerationDescriptor.MemberDescriptor("velocity", "object velocity", 0x6d74ae1e88494f9dL, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7887120293591338909");
   private final EnumerationDescriptor.MemberDescriptor myMember_self_direction_0 = new EnumerationDescriptor.MemberDescriptor("self_direction", "object direction", 0x6d74ae1e883a4428L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7887120293590352936");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4423L, 0x6d74ae1e883a4424L, 0x6d74ae1e883a4425L, 0x6d74ae1e88494f9dL, 0x6d74ae1e883a4428L);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_default_0, myMember_world_origin_0, myMember_velocity_0, myMember_self_direction_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4423L, 0x6d74ae1e883a4424L, 0x6d74ae1e883a4425L, 0x6d74ae1e883a4428L);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_default_0, myMember_world_origin_0, myMember_self_direction_0);
 
   @Nullable
   @Override
@@ -46,8 +45,6 @@ public class EnumerationDescriptor_BuiltInVectors extends EnumerationDescriptorB
         return myMember_default_0;
       case "world_origin":
         return myMember_world_origin_0;
-      case "velocity":
-        return myMember_velocity_0;
       case "self_direction":
         return myMember_self_direction_0;
     }

@@ -1565,5 +1565,12 @@
       <node concept="l2Vlx" id="31HEEbbSEYN" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="4D75T4FiMY6">
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <ref role="1XX52x" to="9tcj:4D75T4FiMXY" resolve="ObjectVelocityTarget" />
+    <node concept="3F0ifn" id="4D75T4FiMYb" role="2wV5jI">
+      <property role="3F0ifm" value="velocity" />
+    </node>
+  </node>
 </model>
 

@@ -906,6 +906,50 @@
         </node>
       </node>
     </node>
+    <node concept="qq9P1" id="4D75T4FiYCl" role="qq9xR">
+      <property role="2TnfIJ" value="true" />
+      <ref role="qq9wM" to="9tcj:4D75T4FiMXY" resolve="ObjectVelocityTarget" />
+      <node concept="3dA_Gj" id="4D75T4Fj0oq" role="3vQZUl">
+        <node concept="9aQIb" id="4D75T4Fj0or" role="3vcmbn">
+          <node concept="3clFbS" id="4D75T4Fj0os" role="9aQI4">
+            <node concept="3cpWs8" id="4D75T4Fj0ot" role="3cqZAp">
+              <node concept="3cpWsn" id="4D75T4Fj0ou" role="3cpWs9">
+                <property role="TrG5h" value="source" />
+                <node concept="3uibUv" id="4D75T4Fj0ov" role="1tU5fm">
+                  <ref role="3uigEE" to="eaav:31HEEbbynJS" resolve="InternalEntity" />
+                </node>
+                <node concept="10QFUN" id="4D75T4Fj0ow" role="33vP2m">
+                  <node concept="3uibUv" id="4D75T4Fj0ox" role="10QFUM">
+                    <ref role="3uigEE" to="eaav:31HEEbbynJS" resolve="InternalEntity" />
+                  </node>
+                  <node concept="3EllGN" id="4D75T4Fj0oy" role="10QFUP">
+                    <node concept="2OqwBi" id="4D75T4Fj0oz" role="3ElVtu">
+                      <node concept="oxGPV" id="4D75T4Fj0o$" role="2Oq$k0" />
+                      <node concept="2qgKlT" id="4D75T4Fj0o_" role="2OqNvi">
+                        <ref role="37wK5l" to="pbu6:6zmBjqUivyF" resolve="contextExpression" />
+                      </node>
+                    </node>
+                    <node concept="TvHiN" id="4D75T4Fj0oA" role="3ElQJh" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWs6" id="4D75T4Fj0oB" role="3cqZAp">
+              <node concept="qpA2v" id="4D75T4Fj0oC" role="3cqZAk">
+                <node concept="2OqwBi" id="4D75T4Fj0oD" role="3SLO0q">
+                  <node concept="37vLTw" id="4D75T4Fj0oE" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4D75T4Fj0ou" resolve="source" />
+                  </node>
+                  <node concept="liA8E" id="4D75T4Fj1z3" role="2OqNvi">
+                    <ref role="37wK5l" to="eaav:31HEEbbzPEB" resolve="getVelocity" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="qq9P1" id="31HEEbbTwMg" role="qq9xR">
       <property role="2TnfIJ" value="true" />
       <ref role="qq9wM" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeDotTarget" />
