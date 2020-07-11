@@ -24,7 +24,6 @@ import com.mbeddr.mpsutil.interpreter.rt.TypedChildConstraintImpl;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import java.math.BigDecimal;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.samples.Physics.behavior.IObjectDefinition__BehaviorDescriptor;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalEntity;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalWorld;
 import com.mbeddr.mpsutil.interpreter.rt.ITypeMapper;
@@ -219,7 +218,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          SNode localized = IObjectDefinition__BehaviorDescriptor.findLocalizedImplementation_id1igjyYxxAPt.invoke(SLinkOperations.getTarget(node, LINKS.target$EWj0), node);
+          SNode localized = SLinkOperations.getTarget(node, LINKS.target$EWj0);
 
           return InternalEntity.from((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.location$DoV0), context, coverage, trace, false), localized);
         } catch (StopAndReturnException stop) {

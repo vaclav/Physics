@@ -15,8 +15,6 @@ import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
-import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -27,9 +25,8 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, "jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition");
 
   public static final SMethod<SNode> getVisual_id1$oDF1jBWB8 = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getVisual").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1$oDF1jBWB8").build();
-  public static final SMethod<Iterable<SNode>> getForces_id1$oDF1jNHeA = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getForces").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1$oDF1jNHeA").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getVisual_id1$oDF1jBWB8, getForces_id1$oDF1jNHeA);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getVisual_id1$oDF1jBWB8);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -39,9 +36,6 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
       return SLinkOperations.getTarget(__thisNode__, LINKS.visual$OiQu);
     }
     return (SNode) AbstractObjectDefinition__BehaviorDescriptor.getVisual_id1$oDF1jBWB8.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.parent$OiBt), LINKS.target$OiAw));
-  }
-  /*package*/ static Iterable<SNode> getForces_id1$oDF1jNHeA(@NotNull SNode __thisNode__) {
-    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.forces$OiCr)).concat(Sequence.fromIterable(AbstractObjectDefinition__BehaviorDescriptor.getForces_id1$oDF1jNHeA.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.parent$OiBt), LINKS.target$OiAw))));
   }
 
   /*package*/ AbstractObjectDefinition__BehaviorDescriptor() {
@@ -61,8 +55,6 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
     switch (methodIndex) {
       case 0:
         return (T) ((SNode) getVisual_id1$oDF1jBWB8(node));
-      case 1:
-        return (T) ((Iterable<SNode>) getForces_id1$oDF1jNHeA(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -96,6 +88,5 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
     /*package*/ static final SContainmentLink visual$OiQu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e51L, "visual");
     /*package*/ static final SContainmentLink parent$OiBt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e47L, "parent");
     /*package*/ static final SReferenceLink target$OiAw = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, 0x1441545e2a5b1e45L, "target");
-    /*package*/ static final SContainmentLink forces$OiCr = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e49L, "forces");
   }
 }

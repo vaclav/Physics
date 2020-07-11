@@ -18,6 +18,10 @@
     <import index="u78q" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.typesystem.inference(MPS.Core/)" />
     <import index="oq0c" ref="r:6c6155f0-4bbe-4af5-8c26-244d570e21e4(org.iets3.core.expr.base.plugin)" />
     <import index="b1h1" ref="r:ac5f749f-6179-4d4f-ad24-ad9edbd8077b(org.iets3.core.expr.simpleTypes.behavior)" />
+    <import index="9zoj" ref="r:1b0f275e-bd62-4f6e-8c4b-51b05d651a63(com.mbeddr.core.base.typesystem)" />
+    <import index="hwgx" ref="r:fd2980c8-676c-4b19-b524-18c70e02f8b7(com.mbeddr.core.base.behavior)" />
+    <import index="vs0r" ref="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" />
+    <import index="rf09" ref="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -178,7 +182,7 @@
     </node>
     <node concept="1YaCAy" id="1JxkG5gax_c" role="1YuTPh">
       <property role="TrG5h" value="force" />
-      <ref role="1YaFvo" to="9tcj:1h1l5SEm0oJ" resolve="ForceExpression" />
+      <ref role="1YaFvo" to="9tcj:1h1l5SEm0oJ" resolve="Force" />
     </node>
   </node>
   <node concept="1YbPZF" id="6kwOTMl0tTe">
@@ -246,12 +250,17 @@
           <node concept="1Z5TYs" id="6kwOTMl0wjs" role="3cqZAp">
             <node concept="mw_s8" id="6kwOTMl0wjK" role="1ZfhKB">
               <node concept="1Z2H0r" id="6kwOTMl0wjG" role="mwGJk">
-                <node concept="2OqwBi" id="6kwOTMl0wz0" role="1Z2MuG">
-                  <node concept="1YBJjd" id="6kwOTMl0wk1" role="2Oq$k0">
-                    <ref role="1YBMHb" node="6kwOTMl0usF" resolve="objectReference" />
+                <node concept="2OqwBi" id="1rTmHeeNgRh" role="1Z2MuG">
+                  <node concept="2OqwBi" id="6kwOTMl0wz0" role="2Oq$k0">
+                    <node concept="1YBJjd" id="6kwOTMl0wk1" role="2Oq$k0">
+                      <ref role="1YBMHb" node="6kwOTMl0usF" resolve="objectReference" />
+                    </node>
+                    <node concept="3TrEf2" id="6kwOTMl0x0a" role="2OqNvi">
+                      <ref role="3Tt5mk" to="9tcj:6HZo5MNbVDs" resolve="target" />
+                    </node>
                   </node>
-                  <node concept="3TrEf2" id="6kwOTMl0x0a" role="2OqNvi">
-                    <ref role="3Tt5mk" to="9tcj:6HZo5MNbVDs" resolve="target" />
+                  <node concept="2qgKlT" id="1rTmHeeNh6y" role="2OqNvi">
+                    <ref role="37wK5l" to="rf09:31HEEbbXs3G" resolve="getDefinition" />
                   </node>
                 </node>
               </node>
@@ -1413,6 +1422,32 @@
     <node concept="1YaCAy" id="4D75T4FiN0a" role="1YuTPh">
       <property role="TrG5h" value="objectVelocityTarget" />
       <ref role="1YaFvo" to="9tcj:4D75T4FiMXY" resolve="ObjectVelocityTarget" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="Q4PrYMC3J8">
+    <property role="TrG5h" value="typeof_AbstractForceCall" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <node concept="3clFbS" id="Q4PrYMC3J9" role="18ibNy">
+      <node concept="1Z5TYs" id="Q4PrYMC3FL" role="3cqZAp">
+        <node concept="mw_s8" id="Q4PrYMC3G5" role="1ZfhKB">
+          <node concept="2pJPEk" id="Q4PrYMC3G1" role="mwGJk">
+            <node concept="2pJPED" id="Q4PrYMC3Gg" role="2pJPEn">
+              <ref role="2pJxaS" to="9tcj:1JxkG5gavpT" resolve="ForceType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="Q4PrYMC3FO" role="1ZfhK$">
+          <node concept="1Z2H0r" id="Q4PrYMC3yH" role="mwGJk">
+            <node concept="1YBJjd" id="Q4PrYMC3JI" role="1Z2MuG">
+              <ref role="1YBMHb" node="Q4PrYMC3Jb" resolve="abstractForceCall" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="Q4PrYMC3Jb" role="1YuTPh">
+      <property role="TrG5h" value="abstractForceCall" />
+      <ref role="1YaFvo" to="9tcj:1jQexh3yYqw" resolve="AbstractForceCall" />
     </node>
   </node>
 </model>

@@ -54,6 +54,10 @@ public class PhysicalEntity extends InternalVector {
     return forces;
   }
 
+  public void setMass(double value) {
+    this.setFixture(fixture, value);
+  }
+
 
   @Override
   public BigDecimal getX() {

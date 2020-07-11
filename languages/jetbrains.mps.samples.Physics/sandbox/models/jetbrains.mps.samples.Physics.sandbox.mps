@@ -82,6 +82,10 @@
       <concept id="1459540517659024997" name="jetbrains.mps.samples.Physics.structure.BuiltInColorTexture" flags="ng" index="Y6$CV">
         <property id="232455383963860875" name="color" index="2CsMtV" />
       </concept>
+      <concept id="974138438729123585" name="jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter" flags="ng" index="2Z11aY">
+        <reference id="974138438729127754" name="argument" index="2Z10bP" />
+        <child id="974138438729280780" name="value" index="2Z1ZyN" />
+      </concept>
       <concept id="4383135941275108256" name="jetbrains.mps.samples.Physics.structure.WorldInclusion" flags="ng" index="1h9Ola">
         <child id="4383135941275108257" name="world" index="1h9Olb" />
       </concept>
@@ -495,7 +499,7 @@
       </node>
       <node concept="v6hvC" id="3Nk1IDHXoo5" role="1h9ZzG">
         <node concept="3okdC7" id="3Nk1IDHXooE" role="v6hvJ">
-          <ref role="3okdC0" node="6HZo5MNa2Rg" resolve="SolarSystem" />
+          <ref role="3okdC0" node="3Nk1IDHXomK" resolve="SolarSystem" />
         </node>
         <node concept="v6hs8" id="1$oDF1jRyAL" role="1aLnnE">
           <node concept="30bXRB" id="1$oDF1jRyAM" role="Y6l9D">
@@ -505,7 +509,7 @@
             <node concept="1QScDb" id="1$oDF1jRyAO" role="30dEs_">
               <node concept="3K9aLm" id="1$oDF1jRyAP" role="1QScD9" />
               <node concept="3okdC7" id="1$oDF1jRyAQ" role="30czhm">
-                <ref role="3okdC0" node="6HZo5MNa2Rg" resolve="SolarSystem" />
+                <ref role="3okdC0" node="3Nk1IDHXomK" resolve="SolarSystem" />
               </node>
             </node>
             <node concept="30bXRB" id="1$oDF1jRyAR" role="30dEsF">
@@ -533,7 +537,7 @@
   <node concept="3okdC4" id="6POFxU8kbPm">
     <property role="TrG5h" value="TestSimulation" />
     <property role="3GE5qa" value="test" />
-    <node concept="1t_wfn" id="7DHIC2l4GuZ" role="1heTBC">
+    <node concept="1t_wfn" id="1rTmHef1Url" role="1heTBC">
       <ref role="1t_wfm" node="31HEEbcgMpv" resolve="World2" />
     </node>
   </node>
@@ -606,7 +610,7 @@
       <node concept="v6hvC" id="1$oDF1jWZik" role="1h9ZzG">
         <node concept="v6hsc" id="31HEEbc3YzM" role="1aLnnE">
           <node concept="30bXRB" id="31HEEbc3YzN" role="13cPWH">
-            <property role="30bXRw" value="8.000000000050731409408508816707667" />
+            <property role="30bXRw" value="70" />
           </node>
           <node concept="30bXRB" id="31HEEbc3YzO" role="13cPWB">
             <property role="30bXRw" value="0.7853981633974483" />
@@ -726,30 +730,6 @@
         </node>
       </node>
     </node>
-    <node concept="1h9Ola" id="31HEEbcgOBV" role="1h9Omn">
-      <node concept="1t_wfn" id="31HEEbcgOCg" role="1h9Olb">
-        <ref role="1t_wfm" node="31HEEbcgMpv" resolve="World2" />
-      </node>
-      <node concept="v6hs8" id="31HEEbcgOCj" role="1h9ZzG">
-        <node concept="30bXRB" id="31HEEbcgOCM" role="Y6l9D">
-          <property role="30bXRw" value="40" />
-        </node>
-        <node concept="30bXRB" id="31HEEbcgODs" role="Y6leK">
-          <property role="30bXRw" value="20" />
-        </node>
-        <node concept="30bXRB" id="31HEEbcgOEn" role="Y6leJ">
-          <property role="30bXRw" value="10" />
-        </node>
-      </node>
-      <node concept="3_jIDJ" id="31HEEbcgOFs" role="1h9ZzH">
-        <node concept="30bXRB" id="31HEEbcgOFM" role="3_jIDE">
-          <property role="30bXRw" value="20" />
-        </node>
-        <node concept="3okdC7" id="31HEEbcgOIu" role="3_jIDG">
-          <ref role="3okdC0" node="31HEEbbUBSB" resolve="Ho" />
-        </node>
-      </node>
-    </node>
   </node>
   <node concept="Y6$Ct" id="1$oDF1jPZkH">
     <property role="3GE5qa" value="test" />
@@ -778,6 +758,14 @@
         <node concept="30bXRB" id="31HEEbbHo2Q" role="Y6leJ">
           <property role="30bXRw" value="4" />
         </node>
+      </node>
+    </node>
+    <node concept="Y6$C6" id="1rTmHef1kA_" role="Y6$Cf">
+      <property role="Y6$C7" value="4" />
+      <property role="Y6$C5" value="4" />
+      <property role="Y6$C0" value="4" />
+      <node concept="Y6$CV" id="1rTmHef1kAD" role="Y6$CS">
+        <property role="2CsMtV" value="cTQf2FiJXc/black" />
       </node>
     </node>
   </node>
@@ -852,6 +840,19 @@
         <property role="Y6$CW" value="100" />
         <node concept="Y6$CV" id="7DHIC2l4HH2" role="Y6$CS">
           <property role="2CsMtV" value="cTQf2FiJXc/black" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="llAx1" id="Q4PrYMK$9p">
+    <property role="3GE5qa" value="forces" />
+    <property role="TrG5h" value="RealGravity" />
+    <node concept="1nvtMO" id="Q4PrYMK$9_" role="1ahQXP">
+      <ref role="1afhQb" node="2EjHd62wQTG" resolve="Gravity" />
+      <node concept="2Z11aY" id="Q4PrYMK$cn" role="1afhQ5">
+        <ref role="2Z10bP" node="cTQf2Fl7qP" resolve="G" />
+        <node concept="30bXRB" id="Q4PrYMK$cM" role="2Z1ZyN">
+          <property role="30bXRw" value="0.001" />
         </node>
       </node>
     </node>

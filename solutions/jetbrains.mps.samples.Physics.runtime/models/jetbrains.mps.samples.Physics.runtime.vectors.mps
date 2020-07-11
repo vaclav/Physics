@@ -2253,13 +2253,8 @@
                   <node concept="2pIpSj" id="31HEEbbYD6T" role="2pJxcM">
                     <ref role="2pIpSl" to="9tcj:6HZo5MNbVDs" resolve="target" />
                     <node concept="36biLy" id="31HEEbbYDmB" role="28nt2d">
-                      <node concept="2OqwBi" id="31HEEbbYDy2" role="36biLW">
-                        <node concept="37vLTw" id="31HEEbbYDoc" role="2Oq$k0">
-                          <ref role="3cqZAo" node="31HEEbbzyuU" resolve="object" />
-                        </node>
-                        <node concept="2qgKlT" id="31HEEbbYDEj" role="2OqNvi">
-                          <ref role="37wK5l" to="rf09:31HEEbbXs3G" resolve="getDefinition" />
-                        </node>
+                      <node concept="37vLTw" id="31HEEbbYDoc" role="36biLW">
+                        <ref role="3cqZAo" node="31HEEbbzyuU" resolve="object" />
                       </node>
                     </node>
                   </node>

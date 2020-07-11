@@ -8,6 +8,7 @@
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/sandbox/jetbrains.mps.samples.Physics.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.generation/jetbrains.mps.samples.Physics.generation.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.runtime/jetbrains.mps.samples.Physics.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.test/jetbrains.mps.samples.Physics.test.msd" folder="" />
     </projectModules>
   </component>
 </project>

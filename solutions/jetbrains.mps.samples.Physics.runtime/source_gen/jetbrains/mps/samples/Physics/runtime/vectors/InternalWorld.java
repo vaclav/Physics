@@ -8,7 +8,6 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.samples.Physics.behavior.ILocalized__BehaviorDescriptor;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -56,7 +55,7 @@ public class InternalWorld extends InternalEntity<SNode> {
 
 
   protected SNode massExpressionOf(SNode object) {
-    return createDotExpression_lndn4q_a0a7(ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(object));
+    return createDotExpression_lndn4q_a0a7(object);
   }
   private static SNode createNumberLiteral_lndn4q_a0a2a2() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);

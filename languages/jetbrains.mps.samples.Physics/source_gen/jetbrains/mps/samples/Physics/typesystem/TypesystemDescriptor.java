@@ -22,6 +22,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
     {
+      InferenceRule_Runtime inferenceRule = new typeof_AbstractForceCall_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_BuiltInVectorsExpression_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }

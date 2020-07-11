@@ -15,11 +15,11 @@ import jetbrains.mps.openapi.intentions.IntentionExecutable;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
+import jetbrains.mps.samples.Physics.behavior.ILocalized__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.samples.Physics.behavior.WorldDefinition__BehaviorDescriptor;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
-import jetbrains.mps.samples.Physics.behavior.ILocalized__BehaviorDescriptor;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.openapi.intentions.ParameterizedIntentionExecutable;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
@@ -68,7 +68,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
   }
   private List<SNode> parameter(final SNode node, final EditorContext editorContext) {
     final SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false);
-    final SNode relativeTarget = SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.cast(node, CONCEPTS.RelativeCoordinates$c7), LINKS.relativeFrom$gwcw), LINKS.target$EWj0);
+    final SNode relativeTarget = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.cast(node, CONCEPTS.RelativeCoordinates$c7), LINKS.relativeFrom$gwcw), LINKS.target$EWj0));
 
     // Get all available objects in scope except the current one and the one already used as relative (if any) 
     return Sequence.fromIterable(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(SNodeOperations.getNodeAncestor(node, CONCEPTS.WorldDefinition$Xn, false, false))).where(new IWhereFilter<SNode>() {
@@ -90,7 +90,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     public void execute(final SNode node, final EditorContext editorContext) {
       InternalVector current = (InternalVector) IETS3ExprEvalHelper.evaluate(node);
       InternalVector relativeTarget = (InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(myParameter, LINKS.location$DoV0));
-      SNodeOperations.replaceWithAnother(node, createRelativeCoordinates_d9qn55_a0a2a0(CoordinateExpressionConverters.rawToCartesian(current.minus(relativeTarget)), ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(myParameter)));
+      SNodeOperations.replaceWithAnother(node, createRelativeCoordinates_d9qn55_a0a2a0(CoordinateExpressionConverters.rawToCartesian(current.minus(relativeTarget)), myParameter));
     }
     @Override
     public IntentionDescriptor getDescriptor() {

@@ -160,6 +160,7 @@
         <child id="1144231399730" name="condition" index="1Dwp0S" />
         <child id="1144231408325" name="iteration" index="1Dwrff" />
       </concept>
+      <concept id="1107796713796" name="jetbrains.mps.baseLanguage.structure.Interface" flags="ig" index="3HP615" />
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="8356039341262087992" name="line" index="1aUNEU" />
       </concept>
@@ -862,6 +863,32 @@
         <node concept="3uibUv" id="3H79Ykd2G$E" role="11_B2D">
           <ref role="3uigEE" to="4bo7:3H79Ykd2G_d" resolve="Force" />
         </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="Q4PrYMH2pF" role="jymVt" />
+    <node concept="3clFb_" id="Q4PrYMH7R6" role="jymVt">
+      <property role="TrG5h" value="setMass" />
+      <node concept="3clFbS" id="Q4PrYMH7R9" role="3clF47">
+        <node concept="3clFbF" id="Q4PrYMHhB2" role="3cqZAp">
+          <node concept="2OqwBi" id="Q4PrYMHhFq" role="3clFbG">
+            <node concept="Xjq3P" id="Q4PrYMHhB1" role="2Oq$k0" />
+            <node concept="liA8E" id="Q4PrYMHhJP" role="2OqNvi">
+              <ref role="37wK5l" node="3H79Ykd2G$f" resolve="setFixture" />
+              <node concept="37vLTw" id="Q4PrYMHhPD" role="37wK5m">
+                <ref role="3cqZAo" node="3H79Ykd2GyX" resolve="fixture" />
+              </node>
+              <node concept="37vLTw" id="Q4PrYMHhX0" role="37wK5m">
+                <ref role="3cqZAo" node="Q4PrYMH9OK" resolve="value" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="Q4PrYMH5Qe" role="1B3o_S" />
+      <node concept="3cqZAl" id="Q4PrYMH7Nj" role="3clF45" />
+      <node concept="37vLTG" id="Q4PrYMH9OK" role="3clF46">
+        <property role="TrG5h" value="value" />
+        <node concept="10P55v" id="Q4PrYMH9OJ" role="1tU5fm" />
       </node>
     </node>
     <node concept="2tJIrI" id="31HEEbcjJH_" role="jymVt" />
@@ -1699,6 +1726,87 @@
     <node concept="2tJIrI" id="4D75T4Fuv1E" role="jymVt" />
     <node concept="3uibUv" id="4D75T4FutmA" role="EKbjA">
       <ref role="3uigEE" to="9dpa:~DGeom$DNearCallback" resolve="DGeom.DNearCallback" />
+    </node>
+  </node>
+  <node concept="3HP615" id="Q4PrYMGPM3">
+    <property role="TrG5h" value="ParentPhysicalEntity" />
+    <node concept="2tJIrI" id="Q4PrYMGPPR" role="jymVt" />
+    <node concept="3clFb_" id="Q4PrYMGPOI" role="jymVt">
+      <property role="TrG5h" value="applyOn" />
+      <node concept="3clFbS" id="Q4PrYMGPOL" role="3clF47" />
+      <node concept="3Tm1VV" id="Q4PrYMGPOM" role="1B3o_S" />
+      <node concept="3cqZAl" id="Q4PrYMGPOx" role="3clF45" />
+      <node concept="37vLTG" id="Q4PrYMH0KC" role="3clF46">
+        <property role="TrG5h" value="world" />
+        <node concept="3uibUv" id="Q4PrYMH0Li" role="1tU5fm">
+          <ref role="3uigEE" node="4D75T4FueWD" resolve="World" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="Q4PrYMGPPf" role="3clF46">
+        <property role="TrG5h" value="target" />
+        <node concept="3uibUv" id="Q4PrYMGPPe" role="1tU5fm">
+          <ref role="3uigEE" node="3H79Ykd2GyN" resolve="PhysicalEntity" />
+        </node>
+      </node>
+      <node concept="P$JXv" id="Q4PrYMGPQd" role="lGtFl">
+        <node concept="TZ5HA" id="Q4PrYMGPQe" role="TZ5H$">
+          <node concept="1dT_AC" id="Q4PrYMGPQf" role="1dT_Ay">
+            <property role="1dT_AB" value="Apply properties on the target physical entity" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="Q4PrYMGPM4" role="1B3o_S" />
+  </node>
+  <node concept="312cEu" id="Q4PrYMHx9I">
+    <property role="TrG5h" value="EmptyParentEntity" />
+    <node concept="3Tm1VV" id="Q4PrYMHx9J" role="1B3o_S" />
+    <node concept="3uibUv" id="Q4PrYMHxgQ" role="EKbjA">
+      <ref role="3uigEE" node="Q4PrYMGPM3" resolve="ParentPhysicalEntity" />
+    </node>
+    <node concept="3clFb_" id="Q4PrYMHxi9" role="jymVt">
+      <property role="TrG5h" value="applyOn" />
+      <node concept="3Tm1VV" id="Q4PrYMHxib" role="1B3o_S" />
+      <node concept="3cqZAl" id="Q4PrYMHxic" role="3clF45" />
+      <node concept="37vLTG" id="Q4PrYMHxid" role="3clF46">
+        <property role="TrG5h" value="world" />
+        <node concept="3uibUv" id="Q4PrYMHxie" role="1tU5fm">
+          <ref role="3uigEE" node="4D75T4FueWD" resolve="World" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="Q4PrYMHxif" role="3clF46">
+        <property role="TrG5h" value="target" />
+        <node concept="3uibUv" id="Q4PrYMHxig" role="1tU5fm">
+          <ref role="3uigEE" node="3H79Ykd2GyN" resolve="PhysicalEntity" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="Q4PrYMHxik" role="3clF47">
+        <node concept="3SKdUt" id="Q4PrYMHxlV" role="3cqZAp">
+          <node concept="1PaTwC" id="Q4PrYMHxlW" role="1aUNEU">
+            <node concept="3oM_SD" id="Q4PrYMHxlX" role="1PaTwD">
+              <property role="3oM_SC" value="quite" />
+            </node>
+            <node concept="3oM_SD" id="Q4PrYMHxm_" role="1PaTwD">
+              <property role="3oM_SC" value="unlucky" />
+            </node>
+            <node concept="3oM_SD" id="Q4PrYMHxqu" role="1PaTwD">
+              <property role="3oM_SC" value="for" />
+            </node>
+            <node concept="3oM_SD" id="Q4PrYMHxqy" role="1PaTwD">
+              <property role="3oM_SC" value="this" />
+            </node>
+            <node concept="3oM_SD" id="Q4PrYMHxrt" role="1PaTwD">
+              <property role="3oM_SC" value="physical" />
+            </node>
+            <node concept="3oM_SD" id="Q4PrYMHxtn" role="1PaTwD">
+              <property role="3oM_SC" value="entity" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="Q4PrYMHxil" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
     </node>
   </node>
 </model>

@@ -9,6 +9,8 @@
     <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" />
     <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="vs0r" ref="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" implicit="true" />
+    <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -95,6 +97,9 @@
     <node concept="PrWs8" id="6POFxU8k_zK" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
+    <node concept="PrWs8" id="1rTmHefbmaK" role="PzmwI">
+      <ref role="PrY4T" to="vs0r:59HbAIOYkEn" resolve="IDetectCycle" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MN9SX3">
     <property role="EcuMT" value="7746015835359514435" />
@@ -142,7 +147,7 @@
       <property role="IQ2ns" value="7746015835360049756" />
       <property role="20kJfa" value="target" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3Nk1IDHVTY$" resolve="IObjectDefinition" />
+      <ref role="20lvS9" node="3Nk1IDHWZS5" resolve="ILocalized" />
     </node>
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDF">
@@ -235,7 +240,7 @@
     <property role="TrG5h" value="StaticForce" />
     <property role="34LRSv" value="static force" />
     <property role="R4oN_" value="force computed once and applied constantly" />
-    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="ForceExpression" />
+    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
     <node concept="1TJgyj" id="1h1l5SEm0oN" role="1TKVEi">
       <property role="IQ2ns" value="1459540517658822195" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -257,7 +262,7 @@
     <property role="3GE5qa" value="physical.force.implemented" />
     <property role="TrG5h" value="StatefulForce" />
     <property role="R4oN_" value="a force defined by some state" />
-    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="ForceExpression" />
+    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
   </node>
   <node concept="1TIwiD" id="1h1l5SEmLT3">
     <property role="EcuMT" value="1459540517659024963" />
@@ -271,7 +276,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="forces" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="ForceExpression" />
+      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="Force" />
     </node>
     <node concept="1TJgyj" id="1h1l5SEmLTh" role="1TKVEi">
       <property role="IQ2ns" value="1459540517659024977" />
@@ -425,16 +430,13 @@
     <property role="34LRSv" value="force" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="1JxkG5gbdOr" role="PzmwI">
-      <ref role="PrY4T" to="zzzn:49WTic8eSCJ" resolve="IFunctionLike" />
-    </node>
     <node concept="1TJgyj" id="34ALWs$scX9" role="1TKVEi">
       <property role="IQ2ns" value="3541737815097265993" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="force" />
       <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="Force" />
       <ref role="20ksaX" to="zzzn:49WTic8eSDm" resolve="body" />
-      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="ForceExpression" />
     </node>
     <node concept="1TJgyj" id="6kwOTMkWOHS" role="1TKVEi">
       <property role="IQ2ns" value="7287056866552793976" />
@@ -443,6 +445,12 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="6kwOTMkWOH$" resolve="ForceArgument" />
       <ref role="20ksaX" to="zzzn:49WTic8eSCZ" resolve="args" />
+    </node>
+    <node concept="PrWs8" id="Q4PrYM_8hh" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="Q4PrYMC00m" role="PzmwI">
+      <ref role="PrY4T" to="zzzn:49WTic8eSCJ" resolve="IFunctionLike" />
     </node>
   </node>
   <node concept="PlHQZ" id="3Nk1IDHVTY$">
@@ -471,6 +479,9 @@
     <node concept="PrWs8" id="3Nk1IDHWZSj" role="PzmwI">
       <ref role="PrY4T" node="3Nk1IDHWZS5" resolve="ILocalized" />
     </node>
+    <node concept="PrWs8" id="1rTmHeeRzM2" role="PzmwI">
+      <ref role="PrY4T" to="4kwy:cJpacq4087" resolve="IOptionallyNamed" />
+    </node>
   </node>
   <node concept="PlHQZ" id="3Nk1IDHWZS5">
     <property role="EcuMT" value="4383135941275155973" />
@@ -488,6 +499,12 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="velocity" />
       <ref role="20lvS9" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
+    </node>
+    <node concept="PrWs8" id="1rTmHeeK1$b" role="PrDN$">
+      <ref role="PrY4T" to="vs0r:59HbAIOYkEn" resolve="IDetectCycle" />
+    </node>
+    <node concept="PrWs8" id="1rTmHeeK7HT" role="PrDN$">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="25R3W" id="6POFxU8e$gz">
@@ -561,27 +578,29 @@
     <property role="3GE5qa" value="physical.force.implemented" />
     <property role="TrG5h" value="AbstractForceCall" />
     <property role="34LRSv" value="defined force" />
-    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="ForceExpression" />
+    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
     <node concept="1TJgyj" id="34ALWs$sYIm" role="1TKVEi">
       <property role="IQ2ns" value="3541737815097469846" />
       <property role="20kJfa" value="force" />
       <ref role="20lvS9" node="34ALWs$saY6" resolve="AbstractForce" />
+      <ref role="20ksaX" to="zzzn:49WTic8gvyC" resolve="function" />
     </node>
     <node concept="1TJgyj" id="34ALWs$sYIo" role="1TKVEi">
       <property role="IQ2ns" value="3541737815097469848" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="parameterValues" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      <ref role="20lvS9" node="Q4PrYMwcs1" resolve="AbstractForceCallParameter" />
+      <ref role="20ksaX" to="zzzn:49WTic8gvyA" resolve="args" />
     </node>
-    <node concept="PrWs8" id="6kwOTMkY3RP" role="PzmwI">
+    <node concept="PrWs8" id="Q4PrYMC00g" role="PzmwI">
       <ref role="PrY4T" to="zzzn:49WTic8gvys" resolve="IFunctionCall" />
     </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oJ">
     <property role="EcuMT" value="1459540517658822191" />
     <property role="3GE5qa" value="physical.force.implemented" />
-    <property role="TrG5h" value="ForceExpression" />
+    <property role="TrG5h" value="Force" />
     <property role="R5$K7" value="true" />
     <property role="R4oN_" value="may the force be with you" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
@@ -808,6 +827,25 @@
     <property role="TrG5h" value="ObjectVelocityTarget" />
     <property role="34LRSv" value="velocity" />
     <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
+  </node>
+  <node concept="1TIwiD" id="Q4PrYMwcs1">
+    <property role="EcuMT" value="974138438729123585" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="AbstractForceCallParameter" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyj" id="Q4PrYMwdta" role="1TKVEi">
+      <property role="IQ2ns" value="974138438729127754" />
+      <property role="20kJfa" value="argument" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6kwOTMkWOH$" resolve="ForceArgument" />
+    </node>
+    <node concept="1TJgyj" id="Q4PrYMwMOc" role="1TKVEi">
+      <property role="IQ2ns" value="974138438729280780" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
   </node>
 </model>
 

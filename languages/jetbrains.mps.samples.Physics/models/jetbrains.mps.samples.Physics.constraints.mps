@@ -38,6 +38,9 @@
       <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
         <property id="1068580123138" name="value" index="3clFbU" />
       </concept>
+      <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
+        <child id="1081516765348" name="expression" index="3fr31v" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -99,7 +102,7 @@
     <node concept="1N5Pfh" id="6POFxU8kKRZ" role="1Mr941">
       <ref role="1N5Vy1" to="9tcj:6HZo5MNbVDs" resolve="target" />
       <node concept="1dDu$B" id="6POFxU8kKSM" role="1N6uqs">
-        <ref role="1dDu$A" to="9tcj:3Nk1IDHVTY$" resolve="IObjectDefinition" />
+        <ref role="1dDu$A" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
       </node>
     </node>
   </node>
@@ -211,6 +214,48 @@
               </node>
               <node concept="3clFbT" id="31HEEbbS_zk" role="37wK5m">
                 <property role="3clFbU" value="true" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="Q4PrYMwcs4">
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <ref role="1M2myG" to="9tcj:Q4PrYMwcs1" resolve="AbstractForceCallParameter" />
+    <node concept="9S07l" id="Q4PrYMwcOR" role="9Vyp8">
+      <node concept="3clFbS" id="Q4PrYMwcOS" role="2VODD2">
+        <node concept="3clFbF" id="Q4PrYMwcSM" role="3cqZAp">
+          <node concept="2OqwBi" id="Q4PrYMwd1M" role="3clFbG">
+            <node concept="nLn13" id="Q4PrYMwcSL" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="Q4PrYMwd92" role="2OqNvi">
+              <node concept="chp4Y" id="Q4PrYMwdiy" role="cj9EA">
+                <ref role="cht4Q" to="9tcj:1jQexh3yYqw" resolve="AbstractForceCall" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="Q4PrYMBY2j">
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <ref role="1M2myG" to="9tcj:1jQexh3yYqw" resolve="AbstractForceCall" />
+  </node>
+  <node concept="1M2fIO" id="Q4PrYMC0eE">
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <ref role="1M2myG" to="9tcj:1h1l5SEm0oJ" resolve="Force" />
+    <node concept="9S07l" id="Q4PrYMC0eF" role="9Vyp8">
+      <node concept="3clFbS" id="Q4PrYMC0eG" role="2VODD2">
+        <node concept="3clFbF" id="Q4PrYMC0iA" role="3cqZAp">
+          <node concept="3fqX7Q" id="Q4PrYMC0Ms" role="3clFbG">
+            <node concept="2OqwBi" id="Q4PrYMC0Mu" role="3fr31v">
+              <node concept="nLn13" id="Q4PrYMC0Mv" role="2Oq$k0" />
+              <node concept="1mIQ4w" id="Q4PrYMC0Mw" role="2OqNvi">
+                <node concept="chp4Y" id="Q4PrYMC0Mx" role="cj9EA">
+                  <ref role="cht4Q" to="hm2y:6sdnDbSla17" resolve="Expression" />
+                </node>
               </node>
             </node>
           </node>
