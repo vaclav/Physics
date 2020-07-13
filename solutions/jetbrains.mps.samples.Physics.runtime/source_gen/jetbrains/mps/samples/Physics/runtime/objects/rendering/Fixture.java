@@ -25,7 +25,6 @@ public abstract class Fixture {
   protected abstract DMass buildMass();
   public void bindToBody(DBody body, double massValue) {
     if (geometry.getBody() != null) {
-      geometry.getBody().setMass(null);
     }
     // Build and apply mass 
     DMass mass = buildMass();

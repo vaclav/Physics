@@ -28,7 +28,7 @@ public class typeof_DistanceWithCallTarget_InferenceRule extends AbstractInferen
       {
         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(distanceWithCallTarget, LINKS.target$oizF);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "232455383964585288", 0, null);
-        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "232455383964585294", true), (SNode) createObjectType_3ko4l3_a1a0c0a0b0b(), true, true, _info_12389875345);
+        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "232455383964585294", true), (SNode) createDirectionType_3ko4l3_a1a0c0a0b0b(), true, true, _info_12389875345);
       }
     }
   }
@@ -45,8 +45,8 @@ public class typeof_DistanceWithCallTarget_InferenceRule extends AbstractInferen
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
     return n0.getResult();
   }
-  private static SNode createObjectType_3ko4l3_a1a0c0a0b0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ObjectType$sZ);
+  private static SNode createDirectionType_3ko4l3_a1a0c0a0b0b() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
     return n0.getResult();
   }
 
@@ -57,6 +57,6 @@ public class typeof_DistanceWithCallTarget_InferenceRule extends AbstractInferen
   private static final class CONCEPTS {
     /*package*/ static final SConcept DistanceWithCallTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.DistanceWithCallTarget");
     /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
-    /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.structure.ObjectType");
+    /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.structure.DirectionType");
   }
 }

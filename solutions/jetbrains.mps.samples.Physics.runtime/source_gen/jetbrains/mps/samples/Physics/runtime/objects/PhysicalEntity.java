@@ -5,20 +5,20 @@ package jetbrains.mps.samples.Physics.runtime.objects;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import org.ode4j.ode.DBody;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.Fixture;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.Force;
 import org.ode4j.ode.OdeHelper;
 import processing.core.PApplet;
 import org.ode4j.math.DVector3C;
 import java.util.List;
+import java.math.BigDecimal;
 
 public class PhysicalEntity extends InternalVector {
   private DBody body;
   private World world;
   private Fixture fixture;
 
-  private BigDecimal massCached;
+  private Number massCached;
 
   /**
    * Forces applied on the entity
@@ -42,10 +42,8 @@ public class PhysicalEntity extends InternalVector {
     fixture.render(ctx);
     ctx.popMatrix();
   }
-  public void setFixture(Fixture fixture, Number massValue) {
+  public void setFixture(Fixture fixture) {
     this.fixture = fixture;
-    // Creating mass representation 
-    fixture.bindToBody(body, massValue.doubleValue());
   }
   public DBody getBody() {
     return body;
@@ -55,9 +53,16 @@ public class PhysicalEntity extends InternalVector {
   }
 
   public void setMass(Number value) {
-    this.setFixture(fixture, value);
+    massCached = value;
   }
 
+  /**
+   * Create mass representation internally
+   */
+  public void bindFixture() {
+    // Creating mass representation 
+    fixture.bindToBody(body, massCached.doubleValue());
+  }
 
   @Override
   public BigDecimal getX() {
@@ -72,7 +77,7 @@ public class PhysicalEntity extends InternalVector {
     return BigDecimal.valueOf(this.getBody().getPosition().get2());
   }
 
-  public BigDecimal getMassBigDecimal() {
+  public Number getMass() {
     if (massCached == null) {
       massCached = BigDecimal.valueOf(body.getMass().getMass());
     }

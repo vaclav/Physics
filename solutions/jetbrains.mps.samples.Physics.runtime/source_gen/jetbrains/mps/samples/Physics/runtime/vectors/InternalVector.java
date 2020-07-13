@@ -13,6 +13,8 @@ import java.math.RoundingMode;
  */
 public class InternalVector {
   private static final MathContext ctx = MathContext.DECIMAL128;
+  private static final BigDecimal almostZero = new BigDecimal("0.00000001");
+
   private final BigDecimal x;
   private final BigDecimal y;
   private final BigDecimal z;
@@ -58,7 +60,12 @@ public class InternalVector {
    * Change the size of the vector and return the newly created vector
    */
   public InternalVector resize(Number newLength) {
-    InternalVector unit = this.mul(BigDecimal.ONE.divide(length(), ctx));
+    BigDecimal length = length();
+    if (length.abs().compareTo(almostZero) == -1) {
+      return this;
+    }
+
+    InternalVector unit = this.mul(BigDecimal.ONE.divide(length, ctx));
     return (BigDecimal.ONE.equals(newLength) ? unit : unit.mul(newLength));
   }
 

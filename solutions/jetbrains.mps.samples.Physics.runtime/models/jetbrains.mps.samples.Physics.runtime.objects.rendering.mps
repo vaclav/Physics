@@ -140,6 +140,13 @@
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
+      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
+        <property id="709746936026609031" name="linkId" index="3V$3ak" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
+      </concept>
+      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
+        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
+      </concept>
     </language>
     <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
       <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
@@ -264,19 +271,22 @@
             <node concept="10Nm6u" id="3H79Ykd2Gnr" role="3uHU7w" />
           </node>
           <node concept="3clFbS" id="3H79Ykd2Gnt" role="3clFbx">
-            <node concept="3clFbF" id="3H79Ykd2Gnu" role="3cqZAp">
-              <node concept="2OqwBi" id="3H79Ykd2Gnv" role="3clFbG">
-                <node concept="2OqwBi" id="3H79Ykd2LFX" role="2Oq$k0">
-                  <node concept="37vLTw" id="3H79Ykd2LFW" role="2Oq$k0">
-                    <ref role="3cqZAo" node="3H79Ykd2GmS" resolve="geometry" />
+            <node concept="1X3_iC" id="M__cqo52fS" role="lGtFl">
+              <property role="3V$3am" value="statement" />
+              <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
+              <node concept="3clFbF" id="3H79Ykd2Gnu" role="8Wnug">
+                <node concept="2OqwBi" id="3H79Ykd2Gnv" role="3clFbG">
+                  <node concept="2OqwBi" id="3H79Ykd2LFX" role="2Oq$k0">
+                    <node concept="37vLTw" id="3H79Ykd2LFW" role="2Oq$k0">
+                      <ref role="3cqZAo" node="3H79Ykd2GmS" resolve="geometry" />
+                    </node>
+                    <node concept="liA8E" id="3H79Ykd2LFY" role="2OqNvi">
+                      <ref role="37wK5l" to="9dpa:~DGeom.getBody()" resolve="getBody" />
+                    </node>
                   </node>
-                  <node concept="liA8E" id="3H79Ykd2LFY" role="2OqNvi">
-                    <ref role="37wK5l" to="9dpa:~DGeom.getBody()" resolve="getBody" />
+                  <node concept="liA8E" id="M__cqo26rb" role="2OqNvi">
+                    <ref role="37wK5l" to="9dpa:~DBody.disable()" resolve="disable" />
                   </node>
-                </node>
-                <node concept="liA8E" id="3H79Ykd2Gnx" role="2OqNvi">
-                  <ref role="37wK5l" to="9dpa:~DBody.setMass(org.ode4j.ode.DMassC)" resolve="setMass" />
-                  <node concept="10Nm6u" id="3H79Ykd2Gny" role="37wK5m" />
                 </node>
               </node>
             </node>

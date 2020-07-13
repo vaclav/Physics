@@ -540,8 +540,8 @@
     <node concept="312cEg" id="31HEEbcoTG7" role="jymVt">
       <property role="TrG5h" value="massCached" />
       <node concept="3Tm6S6" id="31HEEbcoRK1" role="1B3o_S" />
-      <node concept="3uibUv" id="31HEEbcoTyL" role="1tU5fm">
-        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      <node concept="3uibUv" id="M__cqo5FGW" role="1tU5fm">
+        <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
       </node>
     </node>
     <node concept="2tJIrI" id="31HEEbcoVqC" role="jymVt" />
@@ -782,12 +782,6 @@
           <ref role="3uigEE" to="d2el:3H79Ykd2GmM" resolve="Fixture" />
         </node>
       </node>
-      <node concept="37vLTG" id="QNYPlnYQSn" role="3clF46">
-        <property role="TrG5h" value="massValue" />
-        <node concept="3uibUv" id="GdoRjGMVn_" role="1tU5fm">
-          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
-        </node>
-      </node>
       <node concept="3clFbS" id="3H79Ykd2G$i" role="3clF47">
         <node concept="3clFbF" id="3H79Ykd2G$j" role="3cqZAp">
           <node concept="37vLTI" id="3H79Ykd2G$k" role="3clFbG">
@@ -799,40 +793,6 @@
             </node>
             <node concept="37vLTw" id="3H79Ykd2G$o" role="37vLTx">
               <ref role="3cqZAo" node="3H79Ykd2G$g" resolve="fixture" />
-            </node>
-          </node>
-        </node>
-        <node concept="3SKdUt" id="3H79Ykd2G_7" role="3cqZAp">
-          <node concept="1PaTwC" id="3H79Ykd2G_8" role="1aUNEU">
-            <node concept="3oM_SD" id="3H79Ykd2G_a" role="1PaTwD">
-              <property role="3oM_SC" value="Creating" />
-            </node>
-            <node concept="3oM_SD" id="3H79Ykd2G_b" role="1PaTwD">
-              <property role="3oM_SC" value="mass" />
-            </node>
-            <node concept="3oM_SD" id="3H79Ykd2G_c" role="1PaTwD">
-              <property role="3oM_SC" value="representation" />
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="3H79Ykd2G$p" role="3cqZAp">
-          <node concept="2OqwBi" id="3H79Ykd2LPi" role="3clFbG">
-            <node concept="37vLTw" id="3H79Ykd2LPh" role="2Oq$k0">
-              <ref role="3cqZAo" node="3H79Ykd2G$g" resolve="fixture" />
-            </node>
-            <node concept="liA8E" id="3H79Ykd2LPj" role="2OqNvi">
-              <ref role="37wK5l" to="d2el:3H79Ykd2Gnk" resolve="bindToBody" />
-              <node concept="37vLTw" id="3H79Ykd2LPk" role="37wK5m">
-                <ref role="3cqZAo" node="3H79Ykd2GyP" resolve="body" />
-              </node>
-              <node concept="2OqwBi" id="GdoRjGMVCS" role="37wK5m">
-                <node concept="37vLTw" id="QNYPlnYU6j" role="2Oq$k0">
-                  <ref role="3cqZAo" node="QNYPlnYQSn" resolve="massValue" />
-                </node>
-                <node concept="liA8E" id="GdoRjGMVID" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
-                </node>
-              </node>
             </node>
           </node>
         </node>
@@ -875,17 +835,13 @@
     <node concept="3clFb_" id="Q4PrYMH7R6" role="jymVt">
       <property role="TrG5h" value="setMass" />
       <node concept="3clFbS" id="Q4PrYMH7R9" role="3clF47">
-        <node concept="3clFbF" id="Q4PrYMHhB2" role="3cqZAp">
-          <node concept="2OqwBi" id="Q4PrYMHhFq" role="3clFbG">
-            <node concept="Xjq3P" id="Q4PrYMHhB1" role="2Oq$k0" />
-            <node concept="liA8E" id="Q4PrYMHhJP" role="2OqNvi">
-              <ref role="37wK5l" node="3H79Ykd2G$f" resolve="setFixture" />
-              <node concept="37vLTw" id="Q4PrYMHhPD" role="37wK5m">
-                <ref role="3cqZAo" node="3H79Ykd2GyX" resolve="fixture" />
-              </node>
-              <node concept="37vLTw" id="Q4PrYMHhX0" role="37wK5m">
-                <ref role="3cqZAo" node="Q4PrYMH9OK" resolve="value" />
-              </node>
+        <node concept="3clFbF" id="M__cqo5FfJ" role="3cqZAp">
+          <node concept="37vLTI" id="M__cqo5Fv$" role="3clFbG">
+            <node concept="37vLTw" id="M__cqo5FBJ" role="37vLTx">
+              <ref role="3cqZAo" node="Q4PrYMH9OK" resolve="value" />
+            </node>
+            <node concept="37vLTw" id="M__cqo5FfH" role="37vLTJ">
+              <ref role="3cqZAo" node="31HEEbcoTG7" resolve="massCached" />
             </node>
           </node>
         </node>
@@ -899,7 +855,55 @@
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="31HEEbcjJH_" role="jymVt" />
+    <node concept="2tJIrI" id="M__cqo6YIR" role="jymVt" />
+    <node concept="3clFb_" id="M__cqo6NHL" role="jymVt">
+      <property role="TrG5h" value="bindFixture" />
+      <node concept="3clFbS" id="M__cqo6NHO" role="3clF47">
+        <node concept="3SKdUt" id="3H79Ykd2G_7" role="3cqZAp">
+          <node concept="1PaTwC" id="3H79Ykd2G_8" role="1aUNEU">
+            <node concept="3oM_SD" id="3H79Ykd2G_a" role="1PaTwD">
+              <property role="3oM_SC" value="Creating" />
+            </node>
+            <node concept="3oM_SD" id="3H79Ykd2G_b" role="1PaTwD">
+              <property role="3oM_SC" value="mass" />
+            </node>
+            <node concept="3oM_SD" id="3H79Ykd2G_c" role="1PaTwD">
+              <property role="3oM_SC" value="representation" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="3H79Ykd2G$p" role="3cqZAp">
+          <node concept="2OqwBi" id="3H79Ykd2LPi" role="3clFbG">
+            <node concept="37vLTw" id="3H79Ykd2LPh" role="2Oq$k0">
+              <ref role="3cqZAo" node="3H79Ykd2GyX" resolve="fixture" />
+            </node>
+            <node concept="liA8E" id="3H79Ykd2LPj" role="2OqNvi">
+              <ref role="37wK5l" to="d2el:3H79Ykd2Gnk" resolve="bindToBody" />
+              <node concept="37vLTw" id="3H79Ykd2LPk" role="37wK5m">
+                <ref role="3cqZAo" node="3H79Ykd2GyP" resolve="body" />
+              </node>
+              <node concept="2OqwBi" id="GdoRjGMVCS" role="37wK5m">
+                <node concept="37vLTw" id="M__cqo5QxY" role="2Oq$k0">
+                  <ref role="3cqZAo" node="31HEEbcoTG7" resolve="massCached" />
+                </node>
+                <node concept="liA8E" id="GdoRjGMVID" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="M__cqo6M9A" role="1B3o_S" />
+      <node concept="3cqZAl" id="M__cqo6NDY" role="3clF45" />
+      <node concept="P$JXv" id="M__cqo70yY" role="lGtFl">
+        <node concept="TZ5HA" id="M__cqo70yZ" role="TZ5H$">
+          <node concept="1dT_AC" id="M__cqo70z0" role="1dT_Ay">
+            <property role="1dT_AB" value="Create mass representation internally" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="2tJIrI" id="31HEEbcjJJS" role="jymVt" />
     <node concept="3uibUv" id="31HEEbcjHVs" role="1zkMxy">
       <ref role="3uigEE" to="eaav:6asu_4xEVX3" resolve="InternalVector" />
@@ -1008,7 +1012,7 @@
     </node>
     <node concept="2tJIrI" id="31HEEbcoITB" role="jymVt" />
     <node concept="3clFb_" id="31HEEbcoNVR" role="jymVt">
-      <property role="TrG5h" value="getMassBigDecimal" />
+      <property role="TrG5h" value="getMass" />
       <node concept="3clFbS" id="31HEEbcoNVU" role="3clF47">
         <node concept="3clFbJ" id="31HEEbcoXdQ" role="3cqZAp">
           <node concept="3clFbS" id="31HEEbcoXdS" role="3clFbx">
@@ -1051,8 +1055,8 @@
         </node>
       </node>
       <node concept="3Tm1VV" id="31HEEbcoM6d" role="1B3o_S" />
-      <node concept="3uibUv" id="31HEEbcoN$Z" role="3clF45">
-        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      <node concept="3uibUv" id="M__cqo5Hzi" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
       </node>
     </node>
     <node concept="2tJIrI" id="31HEEbcp449" role="jymVt" />

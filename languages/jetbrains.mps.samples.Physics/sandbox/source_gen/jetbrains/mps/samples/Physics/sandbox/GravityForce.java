@@ -8,6 +8,7 @@ import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class GravityForce implements Force {
@@ -19,10 +20,11 @@ public class GravityForce implements Force {
 
   @Override
   public DVector3C getForce(World world, PhysicalEntity targetEntity) {
+
     InternalVector sum = InternalVector.zero();
     for (PhysicalEntity otherEntity : world.getEntities()) {
       if (otherEntity != targetEntity) {
-        sum = sum.add(otherEntity.minus(targetEntity).resize(AH.div(AH.mul(AH.mul(G, otherEntity.getMassBigDecimal()), targetEntity.getMassBigDecimal()), Math.pow(targetEntity.minus(otherEntity).length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))));
+        sum = sum.add(otherEntity.minus(targetEntity).resize(AH.div(AH.mul(AH.mul(G, otherEntity.getMass()), targetEntity.getMass()), BigDecimal.valueOf(Math.pow(targetEntity.minus(otherEntity).length().doubleValue(), ((Number) new BigInteger("2")).doubleValue())))));
       }
     }
     return sum.toDVector3C();

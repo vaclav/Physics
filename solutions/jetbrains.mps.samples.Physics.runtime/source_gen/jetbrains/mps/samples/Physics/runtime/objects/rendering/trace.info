@@ -17,37 +17,36 @@
       <node id="4271426636304008641" at="13,34,14,29" concept="1" />
       <node id="4271426636304008648" at="20,0,21,0" concept="4" trace="render#(Lprocessing/core/PApplet;)V" />
       <node id="4271426636304008655" at="25,0,26,0" concept="4" trace="buildMass#()Lorg/ode4j/ode/DMass;" />
-      <node id="4271426636304008670" at="27,37,28,39" concept="1" />
-      <node id="4271426636304008707" at="29,5,30,28" concept="7" />
-      <node id="4271426636304008676" at="30,28,31,29" concept="5" />
-      <node id="987409087291172574" at="31,29,32,28" concept="1" />
-      <node id="4271426636304008679" at="32,28,33,23" concept="1" />
-      <node id="4271426636304008714" at="33,23,34,45" concept="7" />
-      <node id="4271426636304008682" at="34,45,35,27" concept="1" />
-      <node id="4271426636304008689" at="37,30,38,20" concept="6" />
+      <node id="4271426636304008707" at="28,5,29,28" concept="7" />
+      <node id="4271426636304008676" at="29,28,30,29" concept="5" />
+      <node id="987409087291172574" at="30,29,31,28" concept="1" />
+      <node id="4271426636304008679" at="31,28,32,23" concept="1" />
+      <node id="4271426636304008714" at="32,23,33,45" concept="7" />
+      <node id="4271426636304008682" at="33,45,34,27" concept="1" />
+      <node id="4271426636304008689" at="36,30,37,20" concept="6" />
+      <node id="4271426636304008664" at="26,56,28,5" concept="3" />
       <node id="4271426636304008636" at="13,0,16,0" concept="0" trace="Fixture#(Lorg/ode4j/ode/DGeom;)V" />
-      <node id="4271426636304008664" at="26,56,29,5" concept="3" />
-      <node id="4271426636304008687" at="37,0,40,0" concept="4" trace="getGeometry#()Lorg/ode4j/ode/DGeom;" />
-      <node id="4271426636304008660" at="26,0,37,0" concept="4" trace="bindToBody#(Lorg/ode4j/ode/DBody;D)V" />
+      <node id="4271426636304008687" at="36,0,39,0" concept="4" trace="getGeometry#()Lorg/ode4j/ode/DGeom;" />
+      <node id="4271426636304008660" at="26,0,36,0" concept="4" trace="bindToBody#(Lorg/ode4j/ode/DBody;D)V" />
+      <scope id="4271426636304008669" at="27,37,27,37" />
       <scope id="4271426636304008640" at="13,34,14,29" />
       <scope id="4271426636304008648" at="20,0,21,0">
         <var name="ctx" id="4271426636304008649" />
       </scope>
       <scope id="4271426636304008655" at="25,0,26,0" />
-      <scope id="4271426636304008669" at="27,37,28,39" />
-      <scope id="4271426636304008688" at="37,30,38,20" />
+      <scope id="4271426636304008688" at="36,30,37,20" />
       <scope id="4271426636304008636" at="13,0,16,0">
         <var name="geometry" id="4271426636304008638" />
       </scope>
-      <scope id="4271426636304008687" at="37,0,40,0" />
-      <scope id="4271426636304008663" at="26,56,35,27">
+      <scope id="4271426636304008687" at="36,0,39,0" />
+      <scope id="4271426636304008663" at="26,56,34,27">
         <var name="mass" id="4271426636304008675" />
       </scope>
-      <scope id="4271426636304008660" at="26,0,37,0">
+      <scope id="4271426636304008660" at="26,0,36,0">
         <var name="body" id="4271426636304008661" />
         <var name="massValue" id="987409087291171502" />
       </scope>
-      <unit id="4271426636304008626" at="10,0,41,0" name="jetbrains.mps.samples.Physics.runtime.objects.rendering.Fixture" />
+      <unit id="4271426636304008626" at="10,0,40,0" name="jetbrains.mps.samples.Physics.runtime.objects.rendering.Fixture" />
     </file>
   </root>
   <root nodeRef="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.runtime.objects.rendering)/4271426636304008724">

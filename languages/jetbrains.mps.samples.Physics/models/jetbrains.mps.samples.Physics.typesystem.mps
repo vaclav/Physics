@@ -622,8 +622,8 @@
         </node>
         <node concept="mw_s8" id="6asu_4xHbfx" role="1ZfhKB">
           <node concept="2pJPEk" id="6asu_4xHbft" role="mwGJk">
-            <node concept="2pJPED" id="6asu_4xHbfG" role="2pJPEn">
-              <ref role="2pJxaS" to="9tcj:6kwOTMl0tT6" resolve="ObjectType" />
+            <node concept="2pJPED" id="M__cqoeSmg" role="2pJPEn">
+              <ref role="2pJxaS" to="9tcj:6kwOTMl2xh8" resolve="DirectionType" />
             </node>
           </node>
         </node>

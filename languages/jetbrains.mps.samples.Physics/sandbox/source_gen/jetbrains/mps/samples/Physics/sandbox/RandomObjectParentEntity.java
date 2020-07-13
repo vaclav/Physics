@@ -15,7 +15,7 @@ public class RandomObjectParentEntity extends ParentPhysicalEntity {
     //  Apply parent 
 
     // Apply visual (mass of one, should be defined later) 
-    target.setFixture(new BoxFixture(world, ((Number) new BigInteger("40")).doubleValue(), ((Number) new BigInteger("40")).doubleValue(), ((Number) new BigInteger("40")).doubleValue()), 1);
+    target.setFixture(new BoxFixture(world, ((Number) new BigInteger("40")).doubleValue(), ((Number) new BigInteger("40")).doubleValue(), ((Number) new BigInteger("40")).doubleValue()));
 
     // Forces 
     target.getForces().addAll(Arrays.asList());

@@ -19,7 +19,7 @@ public class ObjectSupertypeParentEntity extends ParentPhysicalEntity {
     //  Apply parent 
 
     // Apply visual (mass of one, should be defined later) 
-    target.setFixture(new BoxFixture(world, ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue()), 1);
+    target.setFixture(new BoxFixture(world, ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue()));
 
     // Forces 
     target.getForces().addAll(Arrays.asList(new StaticForce(InternalVector.fromSpherical(((Number) new BigDecimal("1.5707963267948966").setScale(16, RoundingMode.DOWN)), ((Number) new BigDecimal("0.001111110653864079").setScale(18, RoundingMode.DOWN)), ((Number) new BigDecimal("900.0005555553840878973394160353825").setScale(31, RoundingMode.DOWN))).toDVector3C()), new StaticForce(new InternalVector(((Number) new BigInteger("44")), ((Number) new BigInteger("00")), ((Number) new BigInteger("4"))).toDVector3C())));
