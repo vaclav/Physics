@@ -27,8 +27,7 @@ import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
-import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 public final class ILocalized__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
@@ -43,17 +42,19 @@ public final class ILocalized__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static Iterable<SNode> getDependenciesRelevantForCycleDetection_id59HbAIOYveX(@NotNull SNode __thisNode__) {
-    return ListSequence.fromList(SNodeOperations.getNodeDescendants(SLinkOperations.getTarget(__thisNode__, LINKS.location$DoV0), CONCEPTS.ObjectReference$qq, true, new SAbstractConcept[]{})).select(new ISelector<SNode, SNode>() {
+
+    return ListSequence.fromList(SNodeOperations.getNodeDescendants(SLinkOperations.getTarget(__thisNode__, LINKS.location$DoV0), CONCEPTS.ITargetObject$lA, true, new SAbstractConcept[]{})).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
-        return SLinkOperations.getTarget(it, LINKS.target$EWj0);
+        return (SNode) ITargetObject__BehaviorDescriptor.getTargetLocalizedObject_idGdoRjGrk0_.invoke(it);
       }
     });
   }
   /*package*/ static Set<SNode> traceBackElementInCycle_id17fjvcLF7UR(@NotNull SNode __thisNode__, final SNode dependency) {
+
     Set<SNode> set = SetSequence.fromSet(new HashSet<SNode>());
-    SetSequence.fromSet(set).addSequence(ListSequence.fromList(SNodeOperations.getNodeDescendants(SLinkOperations.getTarget(__thisNode__, LINKS.location$DoV0), CONCEPTS.ObjectReference$qq, true, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
+    SetSequence.fromSet(set).addSequence(ListSequence.fromList(SNodeOperations.getNodeDescendants(SLinkOperations.getTarget(__thisNode__, LINKS.location$DoV0), CONCEPTS.ITargetObject$lA, true, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return Objects.equals(SLinkOperations.getTarget(it, LINKS.target$EWj0), dependency);
+        return Objects.equals(ITargetObject__BehaviorDescriptor.getTargetLocalizedObject_idGdoRjGrk0_.invoke(it), dependency);
       }
     }));
     return set;
@@ -109,10 +110,9 @@ public final class ILocalized__BehaviorDescriptor extends BaseBHDescriptor {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink location$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "location");
-    /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectReference$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReference");
+    /*package*/ static final SInterfaceConcept ITargetObject$lA = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
   }
 }

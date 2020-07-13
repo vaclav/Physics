@@ -24,7 +24,7 @@
       <unit at="26,0,98,0" name="jetbrains.mps.samples.Physics.editor.AbstractObjectReference_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="19,0,250,0" name="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
+      <unit at="19,0,252,0" name="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="GrammarActionsDescriptor.java">
       <unit at="62,51,66,5" name="jetbrains.mps.samples.Physics.editor.GrammarActionsDescriptor$1" />
@@ -165,6 +165,11 @@
       <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_IObjectDefinition$CONCEPTS" />
       <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_IObjectDefinition$GrammarCellsSubstituteMenuPart_7jhg8f_a" />
       <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_IObjectDefinition" />
+    </file>
+    <file name="GrammarCellsSubstituteMenu_ITargetObject.java">
+      <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetObject$CONCEPTS" />
+      <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetObject$GrammarCellsSubstituteMenuPart_dhgvri_a" />
+      <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetObject" />
     </file>
     <file name="GrammarCellsSubstituteMenu_InteractedObjectExpression.java">
       <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_InteractedObjectExpression$CONCEPTS" />

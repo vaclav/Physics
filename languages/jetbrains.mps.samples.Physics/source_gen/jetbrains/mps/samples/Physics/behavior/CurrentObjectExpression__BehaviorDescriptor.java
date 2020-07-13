@@ -14,14 +14,14 @@ import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
-public final class ObjectReference__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReference");
+public final class CurrentObjectExpression__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L, "jetbrains.mps.samples.Physics.structure.CurrentObjectExpression");
 
   public static final SMethod<SNode> getTargetLocalizedObject_idGdoRjGrk0_ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGrk0_").build();
 
@@ -31,10 +31,10 @@ public final class ObjectReference__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   /*package*/ static SNode getTargetLocalizedObject_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.target$EWj0);
+    return SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$9a, false, false);
   }
 
-  /*package*/ ObjectReference__BehaviorDescriptor() {
+  /*package*/ CurrentObjectExpression__BehaviorDescriptor() {
   }
 
   @Override
@@ -80,7 +80,7 @@ public final class ObjectReference__BehaviorDescriptor extends BaseBHDescriptor 
     return CONCEPT;
   }
 
-  private static final class LINKS {
-    /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
+  private static final class CONCEPTS {
+    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
   }
 }

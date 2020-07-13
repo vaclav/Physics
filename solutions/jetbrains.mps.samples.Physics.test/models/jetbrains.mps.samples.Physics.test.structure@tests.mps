@@ -14,10 +14,16 @@
   </imports>
   <registry>
     <language id="8585453e-6bfb-4d80-98de-b16074f1d86c" name="jetbrains.mps.lang.test">
-      <concept id="1215507671101" name="jetbrains.mps.lang.test.structure.NodeErrorCheckOperation" flags="ng" index="1TM$A" />
+      <concept id="1215507671101" name="jetbrains.mps.lang.test.structure.NodeErrorCheckOperation" flags="ng" index="1TM$A">
+        <child id="8489045168660938517" name="errorRef" index="3lydEf" />
+      </concept>
       <concept id="1215603922101" name="jetbrains.mps.lang.test.structure.NodeOperationsContainer" flags="ng" index="7CXmI">
         <child id="1215604436604" name="nodeOperations" index="7EUXB" />
       </concept>
+      <concept id="7691029917083872157" name="jetbrains.mps.lang.test.structure.IRuleReference" flags="ng" index="2u4UPC">
+        <reference id="8333855927540250453" name="declaration" index="39XzEq" />
+      </concept>
+      <concept id="4531408400484511853" name="jetbrains.mps.lang.test.structure.ReportErrorStatementReference" flags="ng" index="2PYRI3" />
       <concept id="5097124989038916362" name="jetbrains.mps.lang.test.structure.TestInfo" flags="ng" index="2XOHcx">
         <property id="5097124989038916363" name="projectPath" index="2XOHcw" />
       </concept>
@@ -99,7 +105,11 @@
                 <node concept="3okdC7" id="1rTmHef71Qe" role="30czhm">
                   <ref role="3okdC0" node="1rTmHeeJHQg" resolve="First" />
                   <node concept="7CXmI" id="1rTmHef9Ih9" role="lGtFl">
-                    <node concept="1TM$A" id="1rTmHef9IqD" role="7EUXB" />
+                    <node concept="1TM$A" id="GdoRjGqTdQ" role="7EUXB">
+                      <node concept="2PYRI3" id="GdoRjGqTdR" role="3lydEf">
+                        <ref role="39XzEq" to="9zoj:17fjvcLFfFc" />
+                      </node>
+                    </node>
                   </node>
                 </node>
               </node>
@@ -107,7 +117,11 @@
             <node concept="3okdC7" id="1rTmHeeJHXR" role="v6hvJ">
               <ref role="3okdC0" node="1rTmHeeJHXw" resolve="Second" />
               <node concept="7CXmI" id="1rTmHef9I8i" role="lGtFl">
-                <node concept="1TM$A" id="1rTmHef9IgU" role="7EUXB" />
+                <node concept="1TM$A" id="GdoRjGqTOD" role="7EUXB">
+                  <node concept="2PYRI3" id="GdoRjGqTOE" role="3lydEf">
+                    <ref role="39XzEq" to="9zoj:17fjvcLFfFc" />
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -129,11 +143,12 @@
             <node concept="3okdC7" id="1rTmHeeJI25" role="v6hvJ">
               <ref role="3okdC0" node="1rTmHeeJHQg" resolve="First" />
               <node concept="7CXmI" id="1rTmHef9IrS" role="lGtFl">
-                <node concept="1TM$A" id="1rTmHef9I_c" role="7EUXB" />
+                <node concept="1TM$A" id="GdoRjGqTEX" role="7EUXB">
+                  <node concept="2PYRI3" id="GdoRjGqTEY" role="3lydEf">
+                    <ref role="39XzEq" to="9zoj:17fjvcLFfFc" />
+                  </node>
+                </node>
               </node>
-            </node>
-            <node concept="7CXmI" id="1rTmHeeJI2g" role="lGtFl">
-              <node concept="1TM$A" id="1rTmHeeJI2h" role="7EUXB" />
             </node>
           </node>
         </node>
@@ -153,7 +168,11 @@
             </node>
           </node>
           <node concept="7CXmI" id="1rTmHefd9_B" role="lGtFl">
-            <node concept="1TM$A" id="1rTmHefd9Ia" role="7EUXB" />
+            <node concept="1TM$A" id="GdoRjGqTxr" role="7EUXB">
+              <node concept="2PYRI3" id="GdoRjGqTxs" role="3lydEf">
+                <ref role="39XzEq" to="9zoj:17fjvcLFfFc" />
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -177,14 +196,18 @@
             </node>
           </node>
           <node concept="7CXmI" id="1rTmHefd9Ih" role="lGtFl">
-            <node concept="1TM$A" id="1rTmHefd9QO" role="7EUXB" />
+            <node concept="1TM$A" id="GdoRjGr2CK" role="7EUXB">
+              <node concept="2PYRI3" id="GdoRjGr2CL" role="3lydEf">
+                <ref role="39XzEq" to="9zoj:17fjvcLFfFc" />
+              </node>
+            </node>
           </node>
         </node>
       </node>
     </node>
   </node>
   <node concept="2XOHcx" id="1rTmHeeJJRK">
-    <property role="2XOHcw" value="/Users/clebo/MPSProjects/Physics/languages/jetbrains.mps.samples.Physics" />
+    <property role="2XOHcw" value="/Users/clebo/MPSProjects/Physics/" />
   </node>
 </model>
 

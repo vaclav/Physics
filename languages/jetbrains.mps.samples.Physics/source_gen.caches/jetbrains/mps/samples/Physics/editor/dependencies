@@ -745,6 +745,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ForceType" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ILocalized" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_IObjectDefinition" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetObject" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_InteractedObjectExpression" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_InteractionForce" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ObjectDefinition" />
@@ -1330,6 +1331,24 @@
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_IObjectDefinition">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SInterfaceConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetObject">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
