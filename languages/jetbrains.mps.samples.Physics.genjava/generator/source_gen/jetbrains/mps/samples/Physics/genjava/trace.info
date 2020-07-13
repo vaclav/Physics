@@ -2,7 +2,7 @@
 <debug-info version="2">
   <root>
     <file name="Generator.java">
-      <unit at="18,0,49,0" name="jetbrains.mps.samples.Physics.genjava.Generator" />
+      <unit at="18,0,50,0" name="jetbrains.mps.samples.Physics.genjava.Generator" />
     </file>
   </root>
 </debug-info>

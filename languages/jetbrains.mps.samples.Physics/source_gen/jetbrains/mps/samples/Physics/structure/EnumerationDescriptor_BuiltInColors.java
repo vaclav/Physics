@@ -23,9 +23,10 @@ public class EnumerationDescriptor_BuiltInColors extends EnumerationDescriptorBa
   private final EnumerationDescriptor.MemberDescriptor myMember_grey_0 = new EnumerationDescriptor.MemberDescriptor("grey", "grey", 0x339d8f0ab4aff45L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/232455383963860805");
   private final EnumerationDescriptor.MemberDescriptor myMember_black_0 = new EnumerationDescriptor.MemberDescriptor("black", "black", 0x339d8f0ab4aff4cL, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/232455383963860812");
   private final EnumerationDescriptor.MemberDescriptor myMember_white_0 = new EnumerationDescriptor.MemberDescriptor("white", "white", 0x339d8f0ab4aff54L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/232455383963860820");
+  private final EnumerationDescriptor.MemberDescriptor myMember_yellow_0 = new EnumerationDescriptor.MemberDescriptor("yellow", "yellow", 0xca594c697a17955L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/911298080280770901");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4aff31L, 0x339d8f0ab4aff32L, 0x339d8f0ab4aff33L, 0x339d8f0ab4aff36L, 0x339d8f0ab4aff3aL, 0x339d8f0ab4aff3fL, 0x339d8f0ab4aff45L, 0x339d8f0ab4aff4cL, 0x339d8f0ab4aff54L);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_red_0, myMember_green_0, myMember_blue_0, myMember_purple_0, myMember_orange_0, myMember_grey_0, myMember_black_0, myMember_white_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4aff31L, 0x339d8f0ab4aff32L, 0x339d8f0ab4aff33L, 0x339d8f0ab4aff36L, 0x339d8f0ab4aff3aL, 0x339d8f0ab4aff3fL, 0x339d8f0ab4aff45L, 0x339d8f0ab4aff4cL, 0x339d8f0ab4aff54L, 0xca594c697a17955L);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_red_0, myMember_green_0, myMember_blue_0, myMember_purple_0, myMember_orange_0, myMember_grey_0, myMember_black_0, myMember_white_0, myMember_yellow_0);
 
   @Nullable
   @Override
@@ -62,6 +63,8 @@ public class EnumerationDescriptor_BuiltInColors extends EnumerationDescriptorBa
         return myMember_black_0;
       case "white":
         return myMember_white_0;
+      case "yellow":
+        return myMember_yellow_0;
     }
     return null;
   }

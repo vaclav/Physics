@@ -760,10 +760,10 @@
     </node>
     <node concept="qq9P1" id="GdoRjGP1oO" role="qq9xR">
       <property role="2TnfIJ" value="true" />
-      <ref role="qq9wM" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+      <ref role="qq9wM" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
       <node concept="3vetai" id="GdoRjGP28k" role="3vQZUl">
         <node concept="rqRoa" id="GdoRjGP5gE" role="3vdyny">
-          <ref role="rqRob" to="9tcj:GdoRjGvRej" resolve="coordinates" />
+          <ref role="rqRob" to="9tcj:GdoRjGvRej" resolve="expression" />
         </node>
       </node>
     </node>
@@ -1464,7 +1464,7 @@
                                   </node>
                                 </node>
                                 <node concept="3TrEf2" id="GdoRjGNHF1" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="9tcj:GdoRjGvRej" resolve="coordinates" />
+                                  <ref role="3Tt5mk" to="9tcj:GdoRjGvRej" resolve="expression" />
                                 </node>
                               </node>
                             </node>
@@ -1491,7 +1491,7 @@
                           </node>
                         </node>
                         <node concept="3TrEf2" id="GdoRjGxesd" role="2OqNvi">
-                          <ref role="3Tt5mk" to="9tcj:GdoRjGvRej" resolve="coordinates" />
+                          <ref role="3Tt5mk" to="9tcj:GdoRjGvRej" resolve="expression" />
                         </node>
                       </node>
                       <node concept="1P9Npp" id="31HEEbc5M9K" role="2OqNvi">

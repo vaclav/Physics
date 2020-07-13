@@ -678,6 +678,47 @@
       </node>
       <node concept="17QB3L" id="6kwOTMl19xS" role="3clF45" />
     </node>
+    <node concept="13i0hz" id="M__cqnvmut" role="13h7CS">
+      <property role="TrG5h" value="getTargetCoordinates" />
+      <ref role="13i0hy" node="GdoRjGvovH" resolve="getTargetCoordinates" />
+      <node concept="3Tm1VV" id="M__cqnvmuu" role="1B3o_S" />
+      <node concept="3clFbS" id="M__cqnvmuz" role="3clF47">
+        <node concept="Jncv_" id="M__cqnvmRh" role="3cqZAp">
+          <ref role="JncvD" to="9tcj:6HZo5MN9SX3" resolve="ObjectDefinition" />
+          <node concept="37vLTw" id="M__cqnvmRY" role="JncvB">
+            <ref role="3cqZAo" node="M__cqnvmu$" resolve="object" />
+          </node>
+          <node concept="3clFbS" id="M__cqnvmRl" role="Jncv$">
+            <node concept="3cpWs6" id="M__cqnvmTx" role="3cqZAp">
+              <node concept="2OqwBi" id="M__cqnvn8e" role="3cqZAk">
+                <node concept="Jnkvi" id="M__cqnvmU9" role="2Oq$k0">
+                  <ref role="1M0zk5" node="M__cqnvmRn" resolve="definition" />
+                </node>
+                <node concept="3TrEf2" id="M__cqnvnpZ" role="2OqNvi">
+                  <ref role="3Tt5mk" to="9tcj:1JxkG5g94zZ" resolve="mass" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="JncvC" id="M__cqnvmRn" role="JncvA">
+            <property role="TrG5h" value="definition" />
+            <node concept="2jxLKc" id="M__cqnvmRo" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3cpWs6" id="M__cqnvny5" role="3cqZAp">
+          <node concept="10Nm6u" id="M__cqnvnzm" role="3cqZAk" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="M__cqnvmu$" role="3clF46">
+        <property role="TrG5h" value="object" />
+        <node concept="3Tqbb2" id="M__cqnvmu_" role="1tU5fm">
+          <ref role="ehGHo" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="M__cqnvmuA" role="3clF45">
+        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
+      </node>
+    </node>
   </node>
   <node concept="13h7C7" id="6kwOTMl1asx">
     <property role="3GE5qa" value="physical.expr.dot" />
@@ -721,7 +762,7 @@
         </node>
       </node>
       <node concept="3Tqbb2" id="GdoRjGwdQN" role="3clF45">
-        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
       </node>
     </node>
   </node>
@@ -835,7 +876,7 @@
         </node>
       </node>
       <node concept="3Tqbb2" id="GdoRjGyGb0" role="3clF45">
-        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
       </node>
     </node>
   </node>
@@ -1204,7 +1245,7 @@
         </node>
       </node>
       <node concept="3Tqbb2" id="GdoRjGweln" role="3clF45">
-        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
       </node>
     </node>
   </node>
@@ -1444,14 +1485,14 @@
   </node>
   <node concept="13h7C7" id="GdoRjGvovy">
     <property role="3GE5qa" value="physical.vector.targets" />
-    <ref role="13h7C2" to="9tcj:GdoRjGvovx" resolve="ITargetCoordinates" />
+    <ref role="13h7C2" to="9tcj:GdoRjGvovx" resolve="ITargetExpression" />
     <node concept="13i0hz" id="GdoRjGvovH" role="13h7CS">
       <property role="13i0iv" value="true" />
       <property role="13i0it" value="true" />
       <property role="TrG5h" value="getTargetCoordinates" />
       <node concept="3Tm1VV" id="GdoRjGvovI" role="1B3o_S" />
       <node concept="3Tqbb2" id="GdoRjGvowh" role="3clF45">
-        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
       </node>
       <node concept="3clFbS" id="GdoRjGvovK" role="3clF47" />
       <node concept="37vLTG" id="GdoRjGvUAl" role="3clF46">
@@ -1467,7 +1508,7 @@
   </node>
   <node concept="13h7C7" id="GdoRjGvS8Q">
     <property role="3GE5qa" value="physical.vector.targets" />
-    <ref role="13h7C2" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+    <ref role="13h7C2" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
     <node concept="13i0hz" id="GdoRjGvoxJ" role="13h7CS">
       <property role="TrG5h" value="getDependenciesRelevantForCycleDetection" />
       <ref role="13i0hy" to="hwgx:59HbAIOYveX" resolve="getDependenciesRelevantForCycleDetection" />
@@ -1513,7 +1554,7 @@
             <property role="TrG5h" value="dotTargets" />
             <node concept="A3Dl8" id="GdoRjGw73F" role="1tU5fm">
               <node concept="3Tqbb2" id="GdoRjGw73I" role="A3Ik2">
-                <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+                <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
               </node>
             </node>
             <node concept="2OqwBi" id="GdoRjGw7tP" role="33vP2m">
@@ -1588,7 +1629,7 @@
                             </node>
                           </node>
                           <node concept="Jncv_" id="GdoRjGw7ul" role="3cqZAp">
-                            <ref role="JncvD" to="9tcj:GdoRjGvovx" resolve="ITargetCoordinates" />
+                            <ref role="JncvD" to="9tcj:GdoRjGvovx" resolve="ITargetExpression" />
                             <node concept="2OqwBi" id="GdoRjGw7um" role="JncvB">
                               <node concept="37vLTw" id="GdoRjGw7un" role="2Oq$k0">
                                 <ref role="3cqZAo" node="GdoRjGw7uX" resolve="it" />
@@ -1749,7 +1790,7 @@
             <property role="TrG5h" value="nonDotTargets" />
             <node concept="A3Dl8" id="GdoRjGw6Na" role="1tU5fm">
               <node concept="3Tqbb2" id="GdoRjGw6Nd" role="A3Ik2">
-                <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+                <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
               </node>
             </node>
             <node concept="2OqwBi" id="GdoRjGw6U5" role="33vP2m">
@@ -1905,91 +1946,6 @@
       </node>
       <node concept="2hMVRd" id="GdoRjGwgE3" role="3clF45">
         <node concept="3Tqbb2" id="GdoRjGwgE4" role="2hN53Y" />
-      </node>
-    </node>
-  </node>
-  <node concept="13h7C7" id="GdoRjGyFka">
-    <property role="3GE5qa" value="physical.vector.targets" />
-    <ref role="13h7C2" to="9tcj:GdoRjGyFk7" resolve="ITargetStaticProperty" />
-    <node concept="13hLZK" id="GdoRjGyFkb" role="13h7CW">
-      <node concept="3clFbS" id="GdoRjGyFkc" role="2VODD2" />
-    </node>
-    <node concept="13i0hz" id="GdoRjGyFkl" role="13h7CS">
-      <property role="TrG5h" value="getTargetCoordinates" />
-      <ref role="13i0hy" node="GdoRjGvovH" resolve="getTargetCoordinates" />
-      <node concept="3Tm1VV" id="GdoRjGyFkm" role="1B3o_S" />
-      <node concept="3clFbS" id="GdoRjGyFkr" role="3clF47">
-        <node concept="3SKdUt" id="GdoRjGyFlh" role="3cqZAp">
-          <node concept="1PaTwC" id="GdoRjGyFli" role="1aUNEU">
-            <node concept="3oM_SD" id="GdoRjGyFlC" role="1PaTwD">
-              <property role="3oM_SC" value="As" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFlE" role="1PaTwD">
-              <property role="3oM_SC" value="the" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFlP" role="1PaTwD">
-              <property role="3oM_SC" value="current" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFlT" role="1PaTwD">
-              <property role="3oM_SC" value="node" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFm6" role="1PaTwD">
-              <property role="3oM_SC" value="targets" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFmk" role="1PaTwD">
-              <property role="3oM_SC" value="a" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFmV" role="1PaTwD">
-              <property role="3oM_SC" value="static" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFnb" role="1PaTwD">
-              <property role="3oM_SC" value="property" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFns" role="1PaTwD">
-              <property role="3oM_SC" value="(that" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFnI" role="1PaTwD">
-              <property role="3oM_SC" value="cannot" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFo9" role="1PaTwD">
-              <property role="3oM_SC" value="reference" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFo_" role="1PaTwD">
-              <property role="3oM_SC" value="other" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFpR" role="1PaTwD">
-              <property role="3oM_SC" value="coordinates)" />
-            </node>
-          </node>
-        </node>
-        <node concept="3SKdUt" id="GdoRjGyFqF" role="3cqZAp">
-          <node concept="1PaTwC" id="GdoRjGyFqG" role="1aUNEU">
-            <node concept="3oM_SD" id="GdoRjGyFr7" role="1PaTwD">
-              <property role="3oM_SC" value="we" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFr9" role="1PaTwD">
-              <property role="3oM_SC" value="can" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFrm" role="1PaTwD">
-              <property role="3oM_SC" value="return" />
-            </node>
-            <node concept="3oM_SD" id="GdoRjGyFry" role="1PaTwD">
-              <property role="3oM_SC" value="null" />
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="GdoRjGyFkK" role="3cqZAp">
-          <node concept="10Nm6u" id="GdoRjGyFkJ" role="3clFbG" />
-        </node>
-      </node>
-      <node concept="37vLTG" id="GdoRjGyFks" role="3clF46">
-        <property role="TrG5h" value="object" />
-        <node concept="3Tqbb2" id="GdoRjGyFkt" role="1tU5fm">
-          <ref role="ehGHo" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
-        </node>
-      </node>
-      <node concept="3Tqbb2" id="GdoRjGyFku" role="3clF45">
-        <ref role="ehGHo" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
       </node>
     </node>
   </node>

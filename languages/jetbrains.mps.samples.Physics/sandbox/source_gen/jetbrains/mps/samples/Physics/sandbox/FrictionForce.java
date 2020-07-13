@@ -7,7 +7,6 @@ import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class FrictionForce implements Force {
@@ -19,6 +18,6 @@ public class FrictionForce implements Force {
 
   @Override
   public DVector3C getForce(World world, PhysicalEntity targetEntity) {
-    return targetEntity.getVelocityInternalVector().mul(-1).minus(targetEntity).resize(AH.mul(BigDecimal.valueOf(Math.pow(targetEntity.getVelocityInternalVector().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue())), ratio)).toDVector3C();
+    return targetEntity.getVelocityInternalVector().mul(-1).minus(targetEntity).resize(AH.mul(Math.pow(targetEntity.getVelocityInternalVector().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()), ratio)).toDVector3C();
   }
 }

@@ -74,6 +74,7 @@
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -530,9 +531,7 @@
       <node concept="37vLTG" id="3H79Ykd2GqV" role="3clF46">
         <property role="TrG5h" value="args" />
         <node concept="10Q1$e" id="3H79Ykd2GqX" role="1tU5fm">
-          <node concept="3uibUv" id="3H79Ykd2GqW" role="10Q1$1">
-            <ref role="3uigEE" to="wyt6:~String" resolve="String" />
-          </node>
+          <node concept="17QB3L" id="M__cqnTQNk" role="10Q1$1" />
         </node>
       </node>
       <node concept="3clFbS" id="3H79Ykd2GqY" role="3clF47">

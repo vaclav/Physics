@@ -255,26 +255,16 @@
       <unit id="5352272594420166441" at="18,0,99,0" name="jetbrains.mps.samples.Physics.runtime.objects.World" />
     </file>
   </root>
-  <root nodeRef="r:c76e7683-d7ce-4cb6-a6ee-fcd11243f980(jetbrains.mps.samples.Physics.runtime.objects)/974138438732438659">
-    <file name="ParentPhysicalEntity.java">
-      <node id="974138438732438830" at="11,0,12,0" concept="6" trace="applyOn#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)V" />
-      <scope id="974138438732438830" at="11,0,12,0">
-        <var name="target" id="974138438732438863" />
-        <var name="world" id="974138438732483624" />
-      </scope>
-      <unit id="974138438732438659" at="6,0,13,0" name="jetbrains.mps.samples.Physics.runtime.objects.ParentPhysicalEntity" />
-    </file>
-  </root>
   <root nodeRef="r:c76e7683-d7ce-4cb6-a6ee-fcd11243f980(jetbrains.mps.samples.Physics.runtime.objects)/974138438732616302">
-    <file name="EmptyParentEntity.java">
-      <node id="974138438732617083" at="8,59,9,46" concept="9" />
-      <node id="974138438732616841" at="7,0,11,0" concept="6" trace="applyOn#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)V" />
-      <scope id="974138438732616852" at="8,59,9,46" />
-      <scope id="974138438732616841" at="7,0,11,0">
+    <file name="ParentPhysicalEntity.java">
+      <node id="974138438732617083" at="11,59,12,46" concept="9" />
+      <node id="974138438732616841" at="11,0,14,0" concept="6" trace="applyOn#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)V" />
+      <scope id="974138438732616852" at="11,59,12,46" />
+      <scope id="974138438732616841" at="11,0,14,0">
         <var name="target" id="974138438732616847" />
         <var name="world" id="974138438732616845" />
       </scope>
-      <unit id="974138438732616302" at="6,0,12,0" name="jetbrains.mps.samples.Physics.runtime.objects.EmptyParentEntity" />
+      <unit id="974138438732616302" at="6,0,15,0" name="jetbrains.mps.samples.Physics.runtime.objects.ParentPhysicalEntity" />
     </file>
   </root>
 </debug-info>

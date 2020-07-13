@@ -85,5 +85,6 @@ public class Language extends LanguageRuntime {
 
   @Override
   protected void contribute(@NotNull LanguageExtensions extensions) {
+    extensions.recordContribution("org.iets3.core.expr.base", "cfaa4966-b7d5-4b69-b66a-309a6e1a7290", EditorAspectDescriptor.class);
   }
 }

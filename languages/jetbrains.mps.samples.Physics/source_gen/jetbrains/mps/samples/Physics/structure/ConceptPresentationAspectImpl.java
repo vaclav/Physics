@@ -35,9 +35,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ForceType;
   private ConceptPresentation props_ILocalized;
   private ConceptPresentation props_IObjectDefinition;
-  private ConceptPresentation props_ITargetCoordinates;
+  private ConceptPresentation props_ITargetExpression;
   private ConceptPresentation props_ITargetObject;
-  private ConceptPresentation props_ITargetStaticProperty;
   private ConceptPresentation props_InteractedObjectExpression;
   private ConceptPresentation props_InteractionForce;
   private ConceptPresentation props_ObjectDefinition;
@@ -54,8 +53,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_SphericalCoordinates;
   private ConceptPresentation props_StatefulForce;
   private ConceptPresentation props_StaticForce;
-  private ConceptPresentation props_TargetableCoordinates;
+  private ConceptPresentation props_TargetableExpression;
   private ConceptPresentation props_Texture;
+  private ConceptPresentation props_TimeExpression;
   private ConceptPresentation props_VectorComponentTarget;
   private ConceptPresentation props_VectorOppositeDotTarget;
   private ConceptPresentation props_VectorResizeDotTarget;
@@ -250,24 +250,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IObjectDefinition = cpb.create();
         }
         return props_IObjectDefinition;
-      case LanguageConceptSwitch.ITargetCoordinates:
-        if (props_ITargetCoordinates == null) {
+      case LanguageConceptSwitch.ITargetExpression:
+        if (props_ITargetExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_ITargetCoordinates = cpb.create();
+          props_ITargetExpression = cpb.create();
         }
-        return props_ITargetCoordinates;
+        return props_ITargetExpression;
       case LanguageConceptSwitch.ITargetObject:
         if (props_ITargetObject == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           props_ITargetObject = cpb.create();
         }
         return props_ITargetObject;
-      case LanguageConceptSwitch.ITargetStaticProperty:
-        if (props_ITargetStaticProperty == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_ITargetStaticProperty = cpb.create();
-        }
-        return props_ITargetStaticProperty;
       case LanguageConceptSwitch.InteractedObjectExpression:
         if (props_InteractedObjectExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -385,18 +379,26 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StaticForce = cpb.create();
         }
         return props_StaticForce;
-      case LanguageConceptSwitch.TargetableCoordinates:
-        if (props_TargetableCoordinates == null) {
+      case LanguageConceptSwitch.TargetableExpression:
+        if (props_TargetableExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_TargetableCoordinates = cpb.create();
+          cpb.presentationByName();
+          props_TargetableExpression = cpb.create();
         }
-        return props_TargetableCoordinates;
+        return props_TargetableExpression;
       case LanguageConceptSwitch.Texture:
         if (props_Texture == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           props_Texture = cpb.create();
         }
         return props_Texture;
+      case LanguageConceptSwitch.TimeExpression:
+        if (props_TimeExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("time");
+          props_TimeExpression = cpb.create();
+        }
+        return props_TimeExpression;
       case LanguageConceptSwitch.VectorComponentTarget:
         if (props_VectorComponentTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

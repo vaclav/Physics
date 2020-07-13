@@ -117,7 +117,8 @@
       <property role="IQ2ns" value="2008977899010672895" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="mass" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MNbVDo">
@@ -330,10 +331,12 @@
     <property role="TrG5h" value="SphereVisual" />
     <property role="34LRSv" value="sphere" />
     <ref role="1TJDcQ" node="1h1l5SEmLTg" resolve="Visual" />
-    <node concept="1TJgyi" id="1h1l5SEmLTy" role="1TKVEl">
-      <property role="IQ2nx" value="1459540517659024994" />
-      <property role="TrG5h" value="radius" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="M__cqnJ7Ps" role="1TKVEi">
+      <property role="IQ2ns" value="911298080282541404" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="radius" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEmLTo">
@@ -342,20 +345,26 @@
     <property role="TrG5h" value="BoxVisual" />
     <property role="34LRSv" value="box" />
     <ref role="1TJDcQ" node="1h1l5SEmLTg" resolve="Visual" />
-    <node concept="1TJgyi" id="1h1l5SEmLTp" role="1TKVEl">
-      <property role="IQ2nx" value="1459540517659024985" />
-      <property role="TrG5h" value="width" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="M__cqnGk9S" role="1TKVEi">
+      <property role="IQ2ns" value="911298080281805432" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="width" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
-    <node concept="1TJgyi" id="1h1l5SEmLTr" role="1TKVEl">
-      <property role="IQ2nx" value="1459540517659024987" />
-      <property role="TrG5h" value="height" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="M__cqnGk9U" role="1TKVEi">
+      <property role="IQ2ns" value="911298080281805434" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="height" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
-    <node concept="1TJgyi" id="1h1l5SEmLTu" role="1TKVEl">
-      <property role="IQ2nx" value="1459540517659024990" />
-      <property role="TrG5h" value="depth" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="M__cqnGk9X" role="1TKVEi">
+      <property role="IQ2ns" value="911298080281805437" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="depth" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEmLT$">
@@ -495,7 +504,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="location" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="GdoRjGvovs" resolve="PositionCoordinates" />
+      <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableExpression" />
     </node>
     <node concept="1TJgyj" id="3Nk1IDHWZS7" role="1TKVEi">
       <property role="IQ2ns" value="4383135941275155975" />
@@ -627,8 +636,8 @@
     <property role="TrG5h" value="ObjectMassTarget" />
     <property role="34LRSv" value="mass" />
     <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
-    <node concept="PrWs8" id="GdoRjGyGau" role="PzmwI">
-      <ref role="PrY4T" node="GdoRjGyFk7" resolve="ITargetStaticProperty" />
+    <node concept="PrWs8" id="M__cqnvmu4" role="PzmwI">
+      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl17vk">
@@ -658,7 +667,7 @@
     <property role="34LRSv" value="position" />
     <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
     <node concept="PrWs8" id="GdoRjGwdQj" role="PzmwI">
-      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetCoordinates" />
+      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl1atg">
@@ -668,7 +677,7 @@
     <property role="34LRSv" value="mass center" />
     <ref role="1TJDcQ" node="6kwOTMl19X7" resolve="AbstractWorldTarget" />
     <node concept="PrWs8" id="GdoRjGyGaw" role="PzmwI">
-      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetCoordinates" />
+      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl1aFZ">
@@ -763,6 +772,10 @@
       <property role="3tVfz5" value="232455383963860820" />
       <property role="TrG5h" value="white" />
     </node>
+    <node concept="25R33" id="M__cqnCn_l" role="25R1y">
+      <property role="3tVfz5" value="911298080280770901" />
+      <property role="TrG5h" value="yellow" />
+    </node>
   </node>
   <node concept="1TIwiD" id="cTQf2FjlqU">
     <property role="EcuMT" value="232455383964014266" />
@@ -840,7 +853,7 @@
     <property role="34LRSv" value="velocity" />
     <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
     <node concept="PrWs8" id="GdoRjGwekN" role="PzmwI">
-      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetCoordinates" />
+      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="Q4PrYMwcs1">
@@ -867,37 +880,30 @@
     <property role="3GE5qa" value="physical" />
     <property role="TrG5h" value="ITargetObject" />
   </node>
-  <node concept="1TIwiD" id="GdoRjGvovs">
-    <property role="EcuMT" value="796402062949451740" />
-    <property role="3GE5qa" value="physical.vector.targets" />
-    <property role="TrG5h" value="PositionCoordinates" />
-    <property role="R4oN_" value="contains coordinates and serve as coordinates target" />
-    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableCoordinates" />
-  </node>
   <node concept="PlHQZ" id="GdoRjGvovx">
     <property role="EcuMT" value="796402062949451745" />
     <property role="3GE5qa" value="physical.vector.targets" />
-    <property role="TrG5h" value="ITargetCoordinates" />
+    <property role="TrG5h" value="ITargetExpression" />
   </node>
   <node concept="1TIwiD" id="GdoRjGvReb">
     <property role="EcuMT" value="796402062949577611" />
     <property role="3GE5qa" value="physical.vector.targets" />
     <property role="TrG5h" value="VelocityCoordinates" />
-    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableCoordinates" />
+    <property role="34LRSv" value="initial velocity" />
+    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableExpression" />
     <node concept="1TJgyj" id="GdoRjGvS51" role="1TKVEi">
       <property role="IQ2ns" value="796402062949581121" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="coordinates" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
-      <ref role="20ksaX" node="GdoRjGvRej" resolve="coordinates" />
+      <ref role="20ksaX" node="GdoRjGvRej" resolve="expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="GdoRjGvRee">
     <property role="EcuMT" value="796402062949577614" />
     <property role="3GE5qa" value="physical.vector.targets" />
-    <property role="R5$K7" value="true" />
-    <property role="TrG5h" value="TargetableCoordinates" />
+    <property role="TrG5h" value="TargetableExpression" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="GdoRjGvReh" role="PzmwI">
       <ref role="PrY4T" to="vs0r:59HbAIOYkEn" resolve="IDetectCycle" />
@@ -905,17 +911,9 @@
     <node concept="1TJgyj" id="GdoRjGvRej" role="1TKVEi">
       <property role="IQ2ns" value="796402062949577619" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="coordinates" />
+      <property role="20kJfa" value="expression" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1jQexh3x$_T" resolve="Coordinates" />
-    </node>
-  </node>
-  <node concept="PlHQZ" id="GdoRjGyFk7">
-    <property role="EcuMT" value="796402062950315271" />
-    <property role="3GE5qa" value="physical.vector.targets" />
-    <property role="TrG5h" value="ITargetStaticProperty" />
-    <node concept="PrWs8" id="GdoRjGyFk8" role="PrDN$">
-      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetCoordinates" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="GdoRjGAm_h">
@@ -944,6 +942,20 @@
       <property role="20kJfa" value="height" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="GdoRjGvovs">
+    <property role="EcuMT" value="796402062949451740" />
+    <property role="3GE5qa" value="physical.vector.targets" />
+    <property role="TrG5h" value="PositionCoordinates" />
+    <property role="R4oN_" value="contains coordinates and serve as coordinates target" />
+    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableExpression" />
+  </node>
+  <node concept="1TIwiD" id="M__cqnDKOa">
+    <property role="EcuMT" value="911298080281136394" />
+    <property role="3GE5qa" value="physical.expr" />
+    <property role="TrG5h" value="TimeExpression" />
+    <property role="34LRSv" value="time" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
   </node>
 </model>
 

@@ -160,7 +160,6 @@
         <child id="1144231399730" name="condition" index="1Dwp0S" />
         <child id="1144231408325" name="iteration" index="1Dwrff" />
       </concept>
-      <concept id="1107796713796" name="jetbrains.mps.baseLanguage.structure.Interface" flags="ig" index="3HP615" />
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="8356039341262087992" name="line" index="1aUNEU" />
       </concept>
@@ -1737,42 +1736,10 @@
       <ref role="3uigEE" to="9dpa:~DGeom$DNearCallback" resolve="DGeom.DNearCallback" />
     </node>
   </node>
-  <node concept="3HP615" id="Q4PrYMGPM3">
-    <property role="TrG5h" value="ParentPhysicalEntity" />
-    <node concept="2tJIrI" id="Q4PrYMGPPR" role="jymVt" />
-    <node concept="3clFb_" id="Q4PrYMGPOI" role="jymVt">
-      <property role="TrG5h" value="applyOn" />
-      <node concept="3clFbS" id="Q4PrYMGPOL" role="3clF47" />
-      <node concept="3Tm1VV" id="Q4PrYMGPOM" role="1B3o_S" />
-      <node concept="3cqZAl" id="Q4PrYMGPOx" role="3clF45" />
-      <node concept="37vLTG" id="Q4PrYMH0KC" role="3clF46">
-        <property role="TrG5h" value="world" />
-        <node concept="3uibUv" id="Q4PrYMH0Li" role="1tU5fm">
-          <ref role="3uigEE" node="4D75T4FueWD" resolve="World" />
-        </node>
-      </node>
-      <node concept="37vLTG" id="Q4PrYMGPPf" role="3clF46">
-        <property role="TrG5h" value="target" />
-        <node concept="3uibUv" id="Q4PrYMGPPe" role="1tU5fm">
-          <ref role="3uigEE" node="3H79Ykd2GyN" resolve="PhysicalEntity" />
-        </node>
-      </node>
-      <node concept="P$JXv" id="Q4PrYMGPQd" role="lGtFl">
-        <node concept="TZ5HA" id="Q4PrYMGPQe" role="TZ5H$">
-          <node concept="1dT_AC" id="Q4PrYMGPQf" role="1dT_Ay">
-            <property role="1dT_AB" value="Apply properties on the target physical entity" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="3Tm1VV" id="Q4PrYMGPM4" role="1B3o_S" />
-  </node>
   <node concept="312cEu" id="Q4PrYMHx9I">
-    <property role="TrG5h" value="EmptyParentEntity" />
+    <property role="TrG5h" value="ParentPhysicalEntity" />
     <node concept="3Tm1VV" id="Q4PrYMHx9J" role="1B3o_S" />
-    <node concept="3uibUv" id="Q4PrYMHxgQ" role="EKbjA">
-      <ref role="3uigEE" node="Q4PrYMGPM3" resolve="ParentPhysicalEntity" />
-    </node>
+    <node concept="2tJIrI" id="M__cqnSwgm" role="jymVt" />
     <node concept="3clFb_" id="Q4PrYMHxi9" role="jymVt">
       <property role="TrG5h" value="applyOn" />
       <node concept="3Tm1VV" id="Q4PrYMHxib" role="1B3o_S" />
@@ -1813,8 +1780,12 @@
           </node>
         </node>
       </node>
-      <node concept="2AHcQZ" id="Q4PrYMHxil" role="2AJF6D">
-        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      <node concept="P$JXv" id="M__cqnSzJ4" role="lGtFl">
+        <node concept="TZ5HA" id="M__cqnSzJ5" role="TZ5H$">
+          <node concept="1dT_AC" id="M__cqnSzJ6" role="1dT_Ay">
+            <property role="1dT_AB" value="Apply properties on the target physical entity" />
+          </node>
+        </node>
       </node>
     </node>
   </node>

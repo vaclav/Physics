@@ -26,7 +26,7 @@ public abstract class InternalEntity<T extends SNode> extends InternalVector {
   }
 
   public SNode getVelocity() {
-    return SLinkOperations.getTarget(SLinkOperations.getTarget(node, LINKS.velocity$DoVv), LINKS.coordinates$87ts);
+    return SLinkOperations.getTarget(SLinkOperations.getTarget(node, LINKS.velocity$DoVv), LINKS.expression$87ts);
   }
 
   public abstract SNode getMass();
@@ -50,7 +50,7 @@ public abstract class InternalEntity<T extends SNode> extends InternalVector {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink velocity$DoVv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
-    /*package*/ static final SContainmentLink coordinates$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "coordinates");
+    /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
   }
 
   private static final class CONCEPTS {

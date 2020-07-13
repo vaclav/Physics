@@ -19,6 +19,7 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" implicit="true" />
     <import index="rf09" ref="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)" implicit="true" />
+    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -1129,8 +1130,8 @@
       <node concept="3F0ifn" id="6POFxU8jYfn" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
-      <node concept="3F0A7n" id="6POFxU8jYeD" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:1h1l5SEmLTy" resolve="radius" />
+      <node concept="3F1sOY" id="M__cqnJ8pw" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:M__cqnJ7Ps" resolve="radius" />
       </node>
       <node concept="3F0ifn" id="6POFxU8jYeN" role="3EZMnx">
         <property role="3F0ifm" value=")" />
@@ -1166,8 +1167,8 @@
       <node concept="3F0ifn" id="6POFxU8jYgT" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
-      <node concept="3F0A7n" id="6POFxU8jYh5" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:1h1l5SEmLTp" resolve="width" />
+      <node concept="3F1sOY" id="M__cqnGka_" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:M__cqnGk9S" resolve="width" />
       </node>
       <node concept="3F0ifn" id="6POFxU8jYhj" role="3EZMnx">
         <property role="3F0ifm" value="," />
@@ -1178,8 +1179,8 @@
       <node concept="3F0ifn" id="6POFxU8jYhP" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
-      <node concept="3F0A7n" id="6POFxU8jYi9" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:1h1l5SEmLTr" resolve="height" />
+      <node concept="3F1sOY" id="M__cqnGkc5" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:M__cqnGk9U" resolve="height" />
       </node>
       <node concept="3F0ifn" id="6POFxU8jYiv" role="3EZMnx">
         <property role="3F0ifm" value="," />
@@ -1190,8 +1191,8 @@
       <node concept="3F0ifn" id="6POFxU8jYjh" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
-      <node concept="3F0A7n" id="6POFxU8jYjH" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:1h1l5SEmLTu" resolve="depth" />
+      <node concept="3F1sOY" id="M__cqnGkdh" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:M__cqnGk9X" resolve="depth" />
       </node>
       <node concept="3F0ifn" id="6POFxU8jYkb" role="3EZMnx">
         <property role="3F0ifm" value=")" />
@@ -1739,10 +1740,10 @@
   </node>
   <node concept="24kQdi" id="GdoRjGvS8F">
     <property role="3GE5qa" value="physical.vector.targets" />
-    <ref role="1XX52x" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+    <ref role="1XX52x" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
     <node concept="3EZMnI" id="GdoRjGvS8H" role="2wV5jI">
       <node concept="3F1sOY" id="GdoRjGvS8N" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:GdoRjGvRej" resolve="coordinates" />
+        <ref role="1NtTu8" to="9tcj:GdoRjGvRej" resolve="expression" />
       </node>
       <node concept="l2Vlx" id="GdoRjGvS8J" role="2iSdaV" />
     </node>
@@ -1794,6 +1795,16 @@
         <property role="3F0ifm" value=")" />
       </node>
       <node concept="l2Vlx" id="GdoRjGAm_N" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="M__cqnDL0d">
+    <property role="3GE5qa" value="physical.expr" />
+    <ref role="1XX52x" to="9tcj:M__cqnDKOa" resolve="TimeExpression" />
+    <node concept="3F0ifn" id="M__cqnDL0f" role="2wV5jI">
+      <property role="3F0ifm" value="time" />
+      <node concept="A1WHr" id="M__cqnDL0k" role="3vIgyS">
+        <ref role="2ZyFGn" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      </node>
     </node>
   </node>
 </model>

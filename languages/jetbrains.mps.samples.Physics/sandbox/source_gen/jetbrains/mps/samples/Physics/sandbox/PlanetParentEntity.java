@@ -6,21 +6,21 @@ import jetbrains.mps.samples.Physics.runtime.objects.ParentPhysicalEntity;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import java.math.BigInteger;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.StaticForce;
 
-public class PlanetParentEntity implements ParentPhysicalEntity {
+public class PlanetParentEntity extends ParentPhysicalEntity {
   @Override
   public void applyOn(World world, PhysicalEntity target) {
     //  Apply parent 
 
     // Apply visual (mass of one, should be defined later) 
-    target.setFixture(new SphereFixture(world, 400), 1);
+    target.setFixture(new SphereFixture(world, Math.sqrt(AH.mul(AH.mul(AH.div(((Number) new BigInteger("3")), ((Number) new BigInteger("4"))), Math.PI), target.getMassBigDecimal()).doubleValue()).doubleValue()), 1);
 
     // Forces 
     target.getForces().addAll(Arrays.asList(new Force() {
