@@ -918,5 +918,32 @@
       <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetCoordinates" />
     </node>
   </node>
+  <node concept="1TIwiD" id="GdoRjGAm_h">
+    <property role="EcuMT" value="796402062951278929" />
+    <property role="3GE5qa" value="physical.vector.absolute" />
+    <property role="TrG5h" value="CylindricalCoordinates" />
+    <property role="34LRSv" value="cylindrical coordinates" />
+    <ref role="1TJDcQ" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
+    <node concept="1TJgyj" id="GdoRjGAm_i" role="1TKVEi">
+      <property role="IQ2ns" value="796402062951278930" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="axialDistance" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="GdoRjGAm_k" role="1TKVEi">
+      <property role="IQ2ns" value="796402062951278932" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="phi" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="GdoRjGAm_n" role="1TKVEi">
+      <property role="IQ2ns" value="796402062951278935" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="height" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
 </model>
 

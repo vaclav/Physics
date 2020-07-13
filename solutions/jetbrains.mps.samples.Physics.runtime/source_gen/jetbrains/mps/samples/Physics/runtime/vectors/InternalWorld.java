@@ -6,8 +6,8 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.samples.Physics.behavior.WorldDefinition__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
-import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -27,12 +27,12 @@ public class InternalWorld extends InternalEntity<SNode> {
       return createNumberLiteral_lndn4q_a0a2a2();
     }
 
-    SNode firstMass = createMulExpression_lndn4q_a0e0c(massExpressionOf(Sequence.fromIterable(scope).first()), SLinkOperations.getTarget(Sequence.fromIterable(scope).first(), LINKS.location$DoV0));
+    SNode firstMass = createMulExpression_lndn4q_a0e0c(massExpressionOf(Sequence.fromIterable(scope).first()), SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(Sequence.fromIterable(scope).first(), LINKS.location$DoV0), LINKS.coordinates$87ts)));
 
     // Sum all mass multiplied by the position of sub elements 
     SNode sum = Sequence.fromIterable(scope).skip(1).foldLeft(firstMass, new ILeftCombinator<SNode, SNode>() {
       public SNode combine(SNode s, SNode it) {
-        return createPlusExpression_lndn4q_a0a0a0a7a2(s, massExpressionOf(it), SNodeOperations.copyNode(SLinkOperations.getTarget(it, LINKS.location$DoV0)));
+        return createPlusExpression_lndn4q_a0a0a0a7a2(s, massExpressionOf(it), SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.location$DoV0), LINKS.coordinates$87ts)));
       }
     });
 
@@ -104,6 +104,7 @@ public class InternalWorld extends InternalEntity<SNode> {
     /*package*/ static final SContainmentLink world$ZN60 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
     /*package*/ static final SReferenceLink target$12L0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
     /*package*/ static final SContainmentLink location$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "location");
+    /*package*/ static final SContainmentLink coordinates$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "coordinates");
     /*package*/ static final SContainmentLink left$gQj0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c16L, "left");
     /*package*/ static final SContainmentLink right$gQu9 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c18L, "right");
     /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");

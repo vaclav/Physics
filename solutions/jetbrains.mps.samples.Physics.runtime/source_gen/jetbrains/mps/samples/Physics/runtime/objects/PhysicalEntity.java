@@ -42,10 +42,10 @@ public class PhysicalEntity extends InternalVector {
     fixture.render(ctx);
     ctx.popMatrix();
   }
-  public void setFixture(Fixture fixture, double massValue) {
+  public void setFixture(Fixture fixture, Number massValue) {
     this.fixture = fixture;
     // Creating mass representation 
-    fixture.bindToBody(body, massValue);
+    fixture.bindToBody(body, massValue.doubleValue());
   }
   public DBody getBody() {
     return body;
@@ -54,7 +54,7 @@ public class PhysicalEntity extends InternalVector {
     return forces;
   }
 
-  public void setMass(double value) {
+  public void setMass(Number value) {
     this.setFixture(fixture, value);
   }
 

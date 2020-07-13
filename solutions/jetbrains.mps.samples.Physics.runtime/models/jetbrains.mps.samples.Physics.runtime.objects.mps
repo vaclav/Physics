@@ -785,7 +785,9 @@
       </node>
       <node concept="37vLTG" id="QNYPlnYQSn" role="3clF46">
         <property role="TrG5h" value="massValue" />
-        <node concept="10P55v" id="QNYPlnYQSw" role="1tU5fm" />
+        <node concept="3uibUv" id="GdoRjGMVn_" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
+        </node>
       </node>
       <node concept="3clFbS" id="3H79Ykd2G$i" role="3clF47">
         <node concept="3clFbF" id="3H79Ykd2G$j" role="3cqZAp">
@@ -824,8 +826,13 @@
               <node concept="37vLTw" id="3H79Ykd2LPk" role="37wK5m">
                 <ref role="3cqZAo" node="3H79Ykd2GyP" resolve="body" />
               </node>
-              <node concept="37vLTw" id="QNYPlnYU6j" role="37wK5m">
-                <ref role="3cqZAo" node="QNYPlnYQSn" resolve="massValue" />
+              <node concept="2OqwBi" id="GdoRjGMVCS" role="37wK5m">
+                <node concept="37vLTw" id="QNYPlnYU6j" role="2Oq$k0">
+                  <ref role="3cqZAo" node="QNYPlnYQSn" resolve="massValue" />
+                </node>
+                <node concept="liA8E" id="GdoRjGMVID" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
+                </node>
               </node>
             </node>
           </node>
@@ -888,7 +895,9 @@
       <node concept="3cqZAl" id="Q4PrYMH7Nj" role="3clF45" />
       <node concept="37vLTG" id="Q4PrYMH9OK" role="3clF46">
         <property role="TrG5h" value="value" />
-        <node concept="10P55v" id="Q4PrYMH9OJ" role="1tU5fm" />
+        <node concept="3uibUv" id="GdoRjGMVQs" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
+        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="31HEEbcjJH_" role="jymVt" />

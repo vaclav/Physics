@@ -58,11 +58,19 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
+      <concept id="1081256982272" name="jetbrains.mps.baseLanguage.structure.InstanceOfExpression" flags="nn" index="2ZW3vV">
+        <child id="1081256993305" name="classType" index="2ZW6by" />
+        <child id="1081256993304" name="leftExpression" index="2ZW6bz" />
+      </concept>
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534513062" name="jetbrains.mps.baseLanguage.structure.DoubleType" flags="in" index="10P55v" />
+      <concept id="1070534934090" name="jetbrains.mps.baseLanguage.structure.CastExpression" flags="nn" index="10QFUN">
+        <child id="1070534934091" name="type" index="10QFUM" />
+        <child id="1070534934092" name="expression" index="10QFUP" />
+      </concept>
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
         <property id="1075300953594" name="abstractClass" index="1sVAO0" />
@@ -81,6 +89,7 @@
       <concept id="1109283449304" name="jetbrains.mps.baseLanguage.structure.TypeVariableReference" flags="in" index="16syzq">
         <reference id="1109283546497" name="typeVariableDeclaration" index="16sUi3" />
       </concept>
+      <concept id="1092119917967" name="jetbrains.mps.baseLanguage.structure.MulExpression" flags="nn" index="17qRlL" />
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
@@ -360,12 +369,17 @@
       <property role="TrG5h" value="getVelocity" />
       <node concept="3clFbS" id="31HEEbbzPEE" role="3clF47">
         <node concept="3cpWs6" id="31HEEbbzPUx" role="3cqZAp">
-          <node concept="2OqwBi" id="31HEEbbzQg_" role="3cqZAk">
-            <node concept="37vLTw" id="31HEEbbzPVi" role="2Oq$k0">
-              <ref role="3cqZAo" node="31HEEbbyvwz" resolve="node" />
+          <node concept="2OqwBi" id="GdoRjGFwUa" role="3cqZAk">
+            <node concept="2OqwBi" id="31HEEbbzQg_" role="2Oq$k0">
+              <node concept="37vLTw" id="31HEEbbzPVi" role="2Oq$k0">
+                <ref role="3cqZAo" node="31HEEbbyvwz" resolve="node" />
+              </node>
+              <node concept="3TrEf2" id="31HEEbbzQEx" role="2OqNvi">
+                <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS7" resolve="velocity" />
+              </node>
             </node>
-            <node concept="3TrEf2" id="31HEEbbzQEx" role="2OqNvi">
-              <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS7" resolve="velocity" />
+            <node concept="3TrEf2" id="GdoRjGFxm0" role="2OqNvi">
+              <ref role="3Tt5mk" to="9tcj:GdoRjGvS51" resolve="coordinates" />
             </node>
           </node>
         </node>
@@ -548,6 +562,7 @@
     </node>
     <node concept="312cEg" id="6asu_4xEYdC" role="jymVt">
       <property role="TrG5h" value="x" />
+      <property role="3TUv4t" value="true" />
       <node concept="3Tm6S6" id="31HEEbcjx0d" role="1B3o_S" />
       <node concept="3uibUv" id="6asu_4xEYdE" role="1tU5fm">
         <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
@@ -555,6 +570,7 @@
     </node>
     <node concept="312cEg" id="6asu_4xEXIA" role="jymVt">
       <property role="TrG5h" value="y" />
+      <property role="3TUv4t" value="true" />
       <node concept="3Tm6S6" id="31HEEbcjz9$" role="1B3o_S" />
       <node concept="3uibUv" id="6asu_4xEYcZ" role="1tU5fm">
         <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
@@ -562,6 +578,7 @@
     </node>
     <node concept="312cEg" id="6asu_4xEYe4" role="jymVt">
       <property role="TrG5h" value="z" />
+      <property role="3TUv4t" value="true" />
       <node concept="3Tm6S6" id="31HEEbcjzN1" role="1B3o_S" />
       <node concept="3uibUv" id="6asu_4xEYe6" role="1tU5fm">
         <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
@@ -636,42 +653,24 @@
       <node concept="3cqZAl" id="7DHIC2l2MWU" role="3clF45" />
       <node concept="3Tm1VV" id="7DHIC2l2MWV" role="1B3o_S" />
       <node concept="3clFbS" id="7DHIC2l2MWW" role="3clF47">
-        <node concept="1VxSAg" id="7DHIC2l2PDB" role="3cqZAp">
+        <node concept="1VxSAg" id="GdoRjGJ5X0" role="3cqZAp">
           <ref role="37wK5l" node="6asu_4xEYfe" resolve="InternalVector" />
-          <node concept="2YIFZM" id="4D75T4FnP_v" role="37wK5m">
-            <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-            <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-            <node concept="2OqwBi" id="4D75T4FnP_w" role="37wK5m">
-              <node concept="37vLTw" id="4D75T4FnP_x" role="2Oq$k0">
-                <ref role="3cqZAo" node="7DHIC2l2MXf" resolve="x" />
-              </node>
-              <node concept="liA8E" id="4D75T4FnP_y" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
-              </node>
+          <node concept="1rXfSq" id="GdoRjGJ6ms" role="37wK5m">
+            <ref role="37wK5l" node="GdoRjGLdCc" resolve="bigDecimalOf" />
+            <node concept="37vLTw" id="GdoRjGJ6Bt" role="37wK5m">
+              <ref role="3cqZAo" node="7DHIC2l2MXf" resolve="x" />
             </node>
           </node>
-          <node concept="2YIFZM" id="4D75T4FnNnv" role="37wK5m">
-            <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-            <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-            <node concept="2OqwBi" id="4D75T4FnOeO" role="37wK5m">
-              <node concept="37vLTw" id="4D75T4FnTga" role="2Oq$k0">
-                <ref role="3cqZAo" node="7DHIC2l2MXh" resolve="y" />
-              </node>
-              <node concept="liA8E" id="4D75T4FnOzn" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
-              </node>
+          <node concept="1rXfSq" id="GdoRjGJ7_S" role="37wK5m">
+            <ref role="37wK5l" node="GdoRjGLdCc" resolve="bigDecimalOf" />
+            <node concept="37vLTw" id="GdoRjGJ9nM" role="37wK5m">
+              <ref role="3cqZAo" node="7DHIC2l2MXh" resolve="y" />
             </node>
           </node>
-          <node concept="2YIFZM" id="4D75T4FnSQe" role="37wK5m">
-            <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-            <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-            <node concept="2OqwBi" id="4D75T4FnSQf" role="37wK5m">
-              <node concept="liA8E" id="4D75T4FnSQh" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
-              </node>
-              <node concept="37vLTw" id="4D75T4FnTJL" role="2Oq$k0">
-                <ref role="3cqZAo" node="7DHIC2l2MXj" resolve="z" />
-              </node>
+          <node concept="1rXfSq" id="GdoRjGJ8pk" role="37wK5m">
+            <ref role="37wK5l" node="GdoRjGLdCc" resolve="bigDecimalOf" />
+            <node concept="37vLTw" id="GdoRjGJ99F" role="37wK5m">
+              <ref role="3cqZAo" node="7DHIC2l2MXj" resolve="z" />
             </node>
           </node>
         </node>
@@ -765,7 +764,15 @@
         <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
       </node>
       <node concept="3Tm1VV" id="1igjyYxyeGj" role="1B3o_S" />
+      <node concept="P$JXv" id="GdoRjGJa5v" role="lGtFl">
+        <node concept="TZ5HA" id="GdoRjGJa5w" role="TZ5H$">
+          <node concept="1dT_AC" id="GdoRjGJa5x" role="1dT_Ay">
+            <property role="1dT_AB" value="Set length of the vector to 1" />
+          </node>
+        </node>
+      </node>
     </node>
+    <node concept="2tJIrI" id="GdoRjGJb31" role="jymVt" />
     <node concept="3clFb_" id="1igjyYxxOqD" role="jymVt">
       <property role="TrG5h" value="add" />
       <node concept="3clFbS" id="1igjyYxxOqG" role="3clF47">
@@ -842,6 +849,13 @@
         <property role="TrG5h" value="v" />
         <node concept="3uibUv" id="1igjyYxxOQu" role="1tU5fm">
           <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
+        </node>
+      </node>
+      <node concept="P$JXv" id="GdoRjGJcae" role="lGtFl">
+        <node concept="TZ5HA" id="GdoRjGJcaf" role="TZ5H$">
+          <node concept="1dT_AC" id="GdoRjGJcag" role="1dT_Ay">
+            <property role="1dT_AB" value="Add vector to current one, return new vector" />
+          </node>
         </node>
       </node>
     </node>
@@ -923,10 +937,31 @@
         <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
       </node>
       <node concept="3Tm1VV" id="1igjyYxyGJ0" role="1B3o_S" />
+      <node concept="P$JXv" id="GdoRjGJiWD" role="lGtFl">
+        <node concept="TZ5HA" id="GdoRjGJiWE" role="TZ5H$">
+          <node concept="1dT_AC" id="GdoRjGJiWF" role="1dT_Ay">
+            <property role="1dT_AB" value="Subtract a vector to this one and return the newly created vector" />
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="3clFb_" id="31HEEbbzTE6" role="jymVt">
       <property role="TrG5h" value="mul" />
       <node concept="3clFbS" id="31HEEbbzTE9" role="3clF47">
+        <node concept="3cpWs8" id="GdoRjGJ1_q" role="3cqZAp">
+          <node concept="3cpWsn" id="GdoRjGJ1_r" role="3cpWs9">
+            <property role="TrG5h" value="factorD" />
+            <node concept="3uibUv" id="GdoRjGJ1_s" role="1tU5fm">
+              <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+            </node>
+            <node concept="1rXfSq" id="GdoRjGJ2$p" role="33vP2m">
+              <ref role="37wK5l" node="GdoRjGLdCc" resolve="bigDecimalOf" />
+              <node concept="37vLTw" id="GdoRjGJ2VS" role="37wK5m">
+                <ref role="3cqZAo" node="31HEEbbzUea" resolve="factor" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs6" id="31HEEbbzUGo" role="3cqZAp">
           <node concept="2ShNRf" id="31HEEbbzV6u" role="3cqZAk">
             <node concept="1pGfFk" id="31HEEbbzVDK" role="2ShVmc">
@@ -934,8 +969,8 @@
               <node concept="2OqwBi" id="31HEEbbzWCt" role="37wK5m">
                 <node concept="liA8E" id="31HEEbbzXon" role="2OqNvi">
                   <ref role="37wK5l" to="xlxw:~BigDecimal.multiply(java.math.BigDecimal,java.math.MathContext)" resolve="multiply" />
-                  <node concept="37vLTw" id="31HEEbbzXGj" role="37wK5m">
-                    <ref role="3cqZAo" node="31HEEbbzUea" resolve="factor" />
+                  <node concept="37vLTw" id="GdoRjGJ31y" role="37wK5m">
+                    <ref role="3cqZAo" node="GdoRjGJ1_r" resolve="factorD" />
                   </node>
                   <node concept="37vLTw" id="31HEEbbRnCw" role="37wK5m">
                     <ref role="3cqZAo" node="6asu_4xF76u" resolve="ctx" />
@@ -948,8 +983,8 @@
               <node concept="2OqwBi" id="31HEEbbzYxw" role="37wK5m">
                 <node concept="liA8E" id="31HEEbbzYxy" role="2OqNvi">
                   <ref role="37wK5l" to="xlxw:~BigDecimal.multiply(java.math.BigDecimal,java.math.MathContext)" resolve="multiply" />
-                  <node concept="37vLTw" id="31HEEbbzYxz" role="37wK5m">
-                    <ref role="3cqZAo" node="31HEEbbzUea" resolve="factor" />
+                  <node concept="37vLTw" id="GdoRjGJ3Zk" role="37wK5m">
+                    <ref role="3cqZAo" node="GdoRjGJ1_r" resolve="factorD" />
                   </node>
                   <node concept="37vLTw" id="31HEEbbRoYh" role="37wK5m">
                     <ref role="3cqZAo" node="6asu_4xF76u" resolve="ctx" />
@@ -962,8 +997,8 @@
               <node concept="2OqwBi" id="31HEEbbzYOe" role="37wK5m">
                 <node concept="liA8E" id="31HEEbbzYOg" role="2OqNvi">
                   <ref role="37wK5l" to="xlxw:~BigDecimal.multiply(java.math.BigDecimal,java.math.MathContext)" resolve="multiply" />
-                  <node concept="37vLTw" id="31HEEbbzYOh" role="37wK5m">
-                    <ref role="3cqZAo" node="31HEEbbzUea" resolve="factor" />
+                  <node concept="37vLTw" id="GdoRjGJ4Ft" role="37wK5m">
+                    <ref role="3cqZAo" node="GdoRjGJ1_r" resolve="factorD" />
                   </node>
                   <node concept="37vLTw" id="31HEEbbRqtc" role="37wK5m">
                     <ref role="3cqZAo" node="6asu_4xF76u" resolve="ctx" />
@@ -983,8 +1018,15 @@
       </node>
       <node concept="37vLTG" id="31HEEbbzUea" role="3clF46">
         <property role="TrG5h" value="factor" />
-        <node concept="3uibUv" id="31HEEbbzUe9" role="1tU5fm">
-          <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+        <node concept="3uibUv" id="GdoRjGIxOB" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
+        </node>
+      </node>
+      <node concept="P$JXv" id="GdoRjGJgQL" role="lGtFl">
+        <node concept="TZ5HA" id="GdoRjGJgQM" role="TZ5H$">
+          <node concept="1dT_AC" id="GdoRjGJgQN" role="1dT_Ay">
+            <property role="1dT_AB" value="Multiply the size of the vector by a factor and return the newly created vector" />
+          </node>
         </node>
       </node>
     </node>
@@ -1057,12 +1099,20 @@
       </node>
       <node concept="37vLTG" id="31HEEbbM9DA" role="3clF46">
         <property role="TrG5h" value="newLength" />
-        <node concept="3uibUv" id="31HEEbbM9D_" role="1tU5fm">
-          <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+        <node concept="3uibUv" id="GdoRjGIwk_" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
+        </node>
+      </node>
+      <node concept="P$JXv" id="GdoRjGJf8N" role="lGtFl">
+        <node concept="TZ5HA" id="GdoRjGJf8O" role="TZ5H$">
+          <node concept="1dT_AC" id="GdoRjGJf8P" role="1dT_Ay">
+            <property role="1dT_AB" value="Change the size of the vector and return the newly created vector" />
+          </node>
         </node>
       </node>
     </node>
     <node concept="2tJIrI" id="6asu_4xEYt1" role="jymVt" />
+    <node concept="2tJIrI" id="GdoRjGJpq7" role="jymVt" />
     <node concept="3clFb_" id="6asu_4xEYFr" role="jymVt">
       <property role="TrG5h" value="lengthSquared" />
       <node concept="3clFbS" id="6asu_4xEYFu" role="3clF47">
@@ -1269,283 +1319,119 @@
       </node>
     </node>
     <node concept="2tJIrI" id="6asu_4xFplv" role="jymVt" />
-    <node concept="2YIFZL" id="7DHIC2l2HCB" role="jymVt">
-      <property role="TrG5h" value="fromSpherical" />
-      <node concept="3clFbS" id="7DHIC2l2HCE" role="3clF47">
-        <node concept="3cpWs6" id="7DHIC2l2Ja$" role="3cqZAp">
-          <node concept="1rXfSq" id="7DHIC2l2Jff" role="3cqZAk">
-            <ref role="37wK5l" node="6asu_4xFB$X" resolve="fromSpherical" />
-            <node concept="2YIFZM" id="4D75T4FnTXf" role="37wK5m">
-              <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-              <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-              <node concept="2OqwBi" id="4D75T4FnTXg" role="37wK5m">
-                <node concept="liA8E" id="4D75T4FnTXh" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
-                </node>
-                <node concept="37vLTw" id="4D75T4FnUO9" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7DHIC2l2Ir8" resolve="length" />
-                </node>
-              </node>
-            </node>
-            <node concept="2YIFZM" id="4D75T4FnV5C" role="37wK5m">
-              <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-              <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-              <node concept="2OqwBi" id="4D75T4FnV5D" role="37wK5m">
-                <node concept="liA8E" id="4D75T4FnV5E" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
-                </node>
-                <node concept="37vLTw" id="4D75T4FnVXF" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7DHIC2l2IJo" resolve="theta" />
-                </node>
-              </node>
-            </node>
-            <node concept="2YIFZM" id="4D75T4FnWfI" role="37wK5m">
-              <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-              <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-              <node concept="2OqwBi" id="4D75T4FnWfJ" role="37wK5m">
-                <node concept="liA8E" id="4D75T4FnWfK" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
-                </node>
-                <node concept="37vLTw" id="4D75T4FnX3Y" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7DHIC2l2IJw" resolve="phi" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3Tm1VV" id="7DHIC2l2GFh" role="1B3o_S" />
-      <node concept="3uibUv" id="7DHIC2l2Huy" role="3clF45">
-        <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
-      </node>
-      <node concept="37vLTG" id="7DHIC2l2Ir8" role="3clF46">
-        <property role="TrG5h" value="length" />
-        <node concept="3uibUv" id="7DHIC2l2Ir7" role="1tU5fm">
-          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
-        </node>
-      </node>
-      <node concept="37vLTG" id="7DHIC2l2IJo" role="3clF46">
-        <property role="TrG5h" value="theta" />
-        <node concept="3uibUv" id="7DHIC2l2IJp" role="1tU5fm">
-          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
-        </node>
-      </node>
-      <node concept="37vLTG" id="7DHIC2l2IJw" role="3clF46">
-        <property role="TrG5h" value="phi" />
-        <node concept="3uibUv" id="7DHIC2l2IJx" role="1tU5fm">
-          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="6asu_4xFLn8" role="jymVt" />
-    <node concept="2YIFZL" id="6asu_4xFB$X" role="jymVt">
-      <property role="TrG5h" value="fromSpherical" />
-      <node concept="3clFbS" id="6asu_4xFB_0" role="3clF47">
-        <node concept="3cpWs8" id="6asu_4xFF33" role="3cqZAp">
-          <node concept="3cpWsn" id="6asu_4xFF34" role="3cpWs9">
-            <property role="TrG5h" value="thetaDouble" />
-            <node concept="10P55v" id="6asu_4xFEXa" role="1tU5fm" />
-            <node concept="2OqwBi" id="6asu_4xFF35" role="33vP2m">
-              <node concept="37vLTw" id="6asu_4xFF36" role="2Oq$k0">
-                <ref role="3cqZAo" node="6asu_4xFCjz" resolve="theta" />
-              </node>
-              <node concept="liA8E" id="6asu_4xFF37" role="2OqNvi">
-                <ref role="37wK5l" to="xlxw:~BigDecimal.doubleValue()" resolve="doubleValue" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3cpWs8" id="6asu_4xFFnM" role="3cqZAp">
-          <node concept="3cpWsn" id="6asu_4xFFnP" role="3cpWs9">
+    <node concept="2tJIrI" id="GdoRjGIuVQ" role="jymVt" />
+    <node concept="2YIFZL" id="GdoRjGDNl_" role="jymVt">
+      <property role="TrG5h" value="fromCylindrical" />
+      <node concept="3clFbS" id="GdoRjGDNlC" role="3clF47">
+        <node concept="3cpWs8" id="GdoRjGE0Xn" role="3cqZAp">
+          <node concept="3cpWsn" id="GdoRjGE0Xo" role="3cpWs9">
             <property role="TrG5h" value="phiDouble" />
-            <node concept="10P55v" id="6asu_4xFFnK" role="1tU5fm" />
-            <node concept="2OqwBi" id="6asu_4xFFKL" role="33vP2m">
-              <node concept="37vLTw" id="6asu_4xFFuG" role="2Oq$k0">
-                <ref role="3cqZAo" node="6asu_4xFCti" resolve="phi" />
+            <node concept="10P55v" id="GdoRjGE0Gy" role="1tU5fm" />
+            <node concept="2OqwBi" id="GdoRjGE0Xp" role="33vP2m">
+              <node concept="37vLTw" id="GdoRjGE0Xq" role="2Oq$k0">
+                <ref role="3cqZAo" node="GdoRjGDP49" resolve="phi" />
               </node>
-              <node concept="liA8E" id="6asu_4xFG7G" role="2OqNvi">
-                <ref role="37wK5l" to="xlxw:~BigDecimal.doubleValue()" resolve="doubleValue" />
+              <node concept="liA8E" id="GdoRjGE0Xr" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="3cpWs8" id="6asu_4xFGiV" role="3cqZAp">
-          <node concept="3cpWsn" id="6asu_4xFGiY" role="3cpWs9">
-            <property role="TrG5h" value="sinTheta" />
-            <node concept="2YIFZM" id="6asu_4xFGsN" role="33vP2m">
-              <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-              <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-              <node concept="2YIFZM" id="6asu_4xFGmN" role="37wK5m">
+        <node concept="3cpWs8" id="GdoRjGDTCz" role="3cqZAp">
+          <node concept="3cpWsn" id="GdoRjGDTCA" role="3cpWs9">
+            <property role="TrG5h" value="x" />
+            <node concept="10P55v" id="GdoRjGDTCx" role="1tU5fm" />
+            <node concept="17qRlL" id="GdoRjGDUYF" role="33vP2m">
+              <node concept="2YIFZM" id="GdoRjGDVe_" role="3uHU7w">
+                <ref role="37wK5l" to="wyt6:~Math.cos(double)" resolve="cos" />
                 <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
+                <node concept="37vLTw" id="GdoRjGE0Xs" role="37wK5m">
+                  <ref role="3cqZAo" node="GdoRjGE0Xo" resolve="phiDouble" />
+                </node>
+              </node>
+              <node concept="2OqwBi" id="GdoRjGDUgU" role="3uHU7B">
+                <node concept="37vLTw" id="GdoRjGDU3m" role="2Oq$k0">
+                  <ref role="3cqZAo" node="GdoRjGDOv2" resolve="radialLength" />
+                </node>
+                <node concept="liA8E" id="GdoRjGDUtI" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="GdoRjGDWzq" role="3cqZAp">
+          <node concept="3cpWsn" id="GdoRjGDWzt" role="3cpWs9">
+            <property role="TrG5h" value="y" />
+            <node concept="10P55v" id="GdoRjGDWzo" role="1tU5fm" />
+            <node concept="17qRlL" id="GdoRjGDYz$" role="33vP2m">
+              <node concept="2YIFZM" id="GdoRjGDYSw" role="3uHU7w">
                 <ref role="37wK5l" to="wyt6:~Math.sin(double)" resolve="sin" />
-                <node concept="37vLTw" id="6asu_4xFGoz" role="37wK5m">
-                  <ref role="3cqZAo" node="6asu_4xFF34" resolve="thetaDouble" />
+                <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
+                <node concept="37vLTw" id="GdoRjGE0Xt" role="37wK5m">
+                  <ref role="3cqZAo" node="GdoRjGE0Xo" resolve="phiDouble" />
                 </node>
               </node>
-            </node>
-            <node concept="3uibUv" id="6asu_4xFGI5" role="1tU5fm">
-              <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+              <node concept="2OqwBi" id="GdoRjGDX3B" role="3uHU7B">
+                <node concept="37vLTw" id="GdoRjGDWQ1" role="2Oq$k0">
+                  <ref role="3cqZAo" node="GdoRjGDOv2" resolve="radialLength" />
+                </node>
+                <node concept="liA8E" id="GdoRjGDXhY" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
+                </node>
+              </node>
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="6asu_4xFLhr" role="3cqZAp" />
-        <node concept="3cpWs6" id="6asu_4xFCDN" role="3cqZAp">
-          <node concept="2ShNRf" id="6asu_4xFCEI" role="3cqZAk">
-            <node concept="1pGfFk" id="6asu_4xFCPb" role="2ShVmc">
-              <ref role="37wK5l" node="6asu_4xEYfe" resolve="InternalVector" />
-              <node concept="2OqwBi" id="6asu_4xFHp2" role="37wK5m">
-                <node concept="2OqwBi" id="6asu_4xFCZq" role="2Oq$k0">
-                  <node concept="37vLTw" id="6asu_4xFCQ8" role="2Oq$k0">
-                    <ref role="3cqZAo" node="6asu_4xFC27" resolve="length" />
-                  </node>
-                  <node concept="liA8E" id="6asu_4xFE4I" role="2OqNvi">
-                    <ref role="37wK5l" to="xlxw:~BigDecimal.multiply(java.math.BigDecimal,java.math.MathContext)" resolve="multiply" />
-                    <node concept="37vLTw" id="6asu_4xFGWe" role="37wK5m">
-                      <ref role="3cqZAo" node="6asu_4xFGiY" resolve="sinTheta" />
-                    </node>
-                    <node concept="37vLTw" id="31HEEbci_LA" role="37wK5m">
-                      <ref role="3cqZAo" node="6asu_4xF76u" resolve="ctx" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="liA8E" id="6asu_4xFImN" role="2OqNvi">
-                  <ref role="37wK5l" to="xlxw:~BigDecimal.multiply(java.math.BigDecimal,java.math.MathContext)" resolve="multiply" />
-                  <node concept="2YIFZM" id="6asu_4xFIIY" role="37wK5m">
-                    <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                    <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-                    <node concept="2YIFZM" id="6asu_4xFIOe" role="37wK5m">
-                      <ref role="37wK5l" to="wyt6:~Math.cos(double)" resolve="cos" />
-                      <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
-                      <node concept="37vLTw" id="6asu_4xFIVH" role="37wK5m">
-                        <ref role="3cqZAo" node="6asu_4xFFnP" resolve="phiDouble" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="37vLTw" id="31HEEbci_LE" role="37wK5m">
-                    <ref role="3cqZAo" node="6asu_4xF76u" resolve="ctx" />
-                  </node>
-                </node>
+        <node concept="3cpWs6" id="GdoRjGDQH3" role="3cqZAp">
+          <node concept="2ShNRf" id="GdoRjGDQYr" role="3cqZAk">
+            <node concept="1pGfFk" id="GdoRjGDRm8" role="2ShVmc">
+              <ref role="37wK5l" node="7DHIC2l2MWT" resolve="InternalVector" />
+              <node concept="37vLTw" id="GdoRjGDZZS" role="37wK5m">
+                <ref role="3cqZAo" node="GdoRjGDTCA" resolve="x" />
               </node>
-              <node concept="2OqwBi" id="6asu_4xFJ25" role="37wK5m">
-                <node concept="2OqwBi" id="6asu_4xFJ26" role="2Oq$k0">
-                  <node concept="37vLTw" id="6asu_4xFJ27" role="2Oq$k0">
-                    <ref role="3cqZAo" node="6asu_4xFC27" resolve="length" />
-                  </node>
-                  <node concept="liA8E" id="6asu_4xFJ28" role="2OqNvi">
-                    <ref role="37wK5l" to="xlxw:~BigDecimal.multiply(java.math.BigDecimal,java.math.MathContext)" resolve="multiply" />
-                    <node concept="37vLTw" id="6asu_4xFJ29" role="37wK5m">
-                      <ref role="3cqZAo" node="6asu_4xFGiY" resolve="sinTheta" />
-                    </node>
-                    <node concept="37vLTw" id="31HEEbci_LI" role="37wK5m">
-                      <ref role="3cqZAo" node="6asu_4xF76u" resolve="ctx" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="liA8E" id="6asu_4xFJ2a" role="2OqNvi">
-                  <ref role="37wK5l" to="xlxw:~BigDecimal.multiply(java.math.BigDecimal,java.math.MathContext)" resolve="multiply" />
-                  <node concept="2YIFZM" id="6asu_4xFJ2b" role="37wK5m">
-                    <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                    <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-                    <node concept="2YIFZM" id="6asu_4xFJcD" role="37wK5m">
-                      <ref role="37wK5l" to="wyt6:~Math.sin(double)" resolve="sin" />
-                      <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
-                      <node concept="37vLTw" id="6asu_4xFJcE" role="37wK5m">
-                        <ref role="3cqZAo" node="6asu_4xFFnP" resolve="phiDouble" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="37vLTw" id="31HEEbci_LM" role="37wK5m">
-                    <ref role="3cqZAo" node="6asu_4xF76u" resolve="ctx" />
-                  </node>
-                </node>
+              <node concept="37vLTw" id="GdoRjGE0EY" role="37wK5m">
+                <ref role="3cqZAo" node="GdoRjGDWzt" resolve="y" />
               </node>
-              <node concept="2OqwBi" id="6asu_4xFJHn" role="37wK5m">
-                <node concept="37vLTw" id="6asu_4xFJj6" role="2Oq$k0">
-                  <ref role="3cqZAo" node="6asu_4xFC27" resolve="length" />
-                </node>
-                <node concept="liA8E" id="6asu_4xFKlU" role="2OqNvi">
-                  <ref role="37wK5l" to="xlxw:~BigDecimal.multiply(java.math.BigDecimal,java.math.MathContext)" resolve="multiply" />
-                  <node concept="2YIFZM" id="6asu_4xFK$y" role="37wK5m">
-                    <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-                    <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                    <node concept="2YIFZM" id="6asu_4xFKMy" role="37wK5m">
-                      <ref role="37wK5l" to="wyt6:~Math.cos(double)" resolve="cos" />
-                      <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
-                      <node concept="37vLTw" id="6asu_4xFKWI" role="37wK5m">
-                        <ref role="3cqZAo" node="6asu_4xFF34" resolve="thetaDouble" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="37vLTw" id="31HEEbci_LQ" role="37wK5m">
-                    <ref role="3cqZAo" node="6asu_4xF76u" resolve="ctx" />
-                  </node>
-                </node>
+              <node concept="37vLTw" id="GdoRjGDSNf" role="37wK5m">
+                <ref role="3cqZAo" node="GdoRjGDPV3" resolve="z" />
               </node>
             </node>
           </node>
         </node>
       </node>
-      <node concept="3Tm1VV" id="6asu_4xFBiz" role="1B3o_S" />
-      <node concept="3uibUv" id="6asu_4xFBVc" role="3clF45">
+      <node concept="3Tm1VV" id="GdoRjGDMci" role="1B3o_S" />
+      <node concept="3uibUv" id="GdoRjGDMQ8" role="3clF45">
         <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
       </node>
-      <node concept="37vLTG" id="6asu_4xFC27" role="3clF46">
-        <property role="TrG5h" value="length" />
-        <node concept="3uibUv" id="6asu_4xFDhq" role="1tU5fm">
-          <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      <node concept="37vLTG" id="GdoRjGDOv2" role="3clF46">
+        <property role="TrG5h" value="radialLength" />
+        <node concept="3uibUv" id="GdoRjGDOv1" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
         </node>
       </node>
-      <node concept="37vLTG" id="6asu_4xFCjz" role="3clF46">
-        <property role="TrG5h" value="theta" />
-        <node concept="3uibUv" id="6asu_4xFDti" role="1tU5fm">
-          <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-        </node>
-      </node>
-      <node concept="37vLTG" id="6asu_4xFCti" role="3clF46">
+      <node concept="37vLTG" id="GdoRjGDP49" role="3clF46">
         <property role="TrG5h" value="phi" />
-        <node concept="3uibUv" id="6asu_4xFDCM" role="1tU5fm">
-          <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+        <node concept="3uibUv" id="GdoRjGDPgP" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
         </node>
       </node>
-      <node concept="P$JXv" id="6asu_4xFLJG" role="lGtFl">
-        <node concept="TZ5HA" id="6asu_4xFLJH" role="TZ5H$">
-          <node concept="1dT_AC" id="6asu_4xFLJI" role="1dT_Ay">
-            <property role="1dT_AB" value="Get an internal vector from spherical coordinates" />
+      <node concept="37vLTG" id="GdoRjGDPV3" role="3clF46">
+        <property role="TrG5h" value="z" />
+        <node concept="3uibUv" id="GdoRjGDQbP" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
+        </node>
+      </node>
+      <node concept="P$JXv" id="GdoRjGIvZA" role="lGtFl">
+        <node concept="TZ5HA" id="GdoRjGIvZB" role="TZ5H$">
+          <node concept="1dT_AC" id="GdoRjGIvZC" role="1dT_Ay">
+            <property role="1dT_AB" value="Get an internal vector from cylindrical coordinates" />
           </node>
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="1igjyYxy9JG" role="jymVt" />
-    <node concept="2YIFZL" id="1igjyYxyaLl" role="jymVt">
-      <property role="TrG5h" value="zero" />
-      <node concept="3clFbS" id="1igjyYxyaLo" role="3clF47">
-        <node concept="3cpWs6" id="1igjyYxybcR" role="3cqZAp">
-          <node concept="2ShNRf" id="1igjyYxybdf" role="3cqZAk">
-            <node concept="1pGfFk" id="1igjyYxybnO" role="2ShVmc">
-              <ref role="37wK5l" node="6asu_4xEYfe" resolve="InternalVector" />
-              <node concept="10M0yZ" id="1igjyYxybww" role="37wK5m">
-                <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                <ref role="3cqZAo" to="xlxw:~BigDecimal.ZERO" resolve="ZERO" />
-              </node>
-              <node concept="10M0yZ" id="1igjyYxybZo" role="37wK5m">
-                <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                <ref role="3cqZAo" to="xlxw:~BigDecimal.ZERO" resolve="ZERO" />
-              </node>
-              <node concept="10M0yZ" id="1igjyYxybS4" role="37wK5m">
-                <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                <ref role="3cqZAo" to="xlxw:~BigDecimal.ZERO" resolve="ZERO" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3Tm1VV" id="1igjyYxyaeb" role="1B3o_S" />
-      <node concept="3uibUv" id="1igjyYxyaJS" role="3clF45">
-        <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
-      </node>
-    </node>
-    <node concept="2tJIrI" id="6asu_4xH8ph" role="jymVt" />
-    <node concept="2tJIrI" id="31HEEbbBUj5" role="jymVt" />
+    <node concept="2tJIrI" id="GdoRjGDL35" role="jymVt" />
+    <node concept="2tJIrI" id="GdoRjGIM4x" role="jymVt" />
     <node concept="3clFb_" id="31HEEbcj26s" role="jymVt">
       <property role="TrG5h" value="toDVector3C" />
       <node concept="3clFbS" id="31HEEbcj26v" role="3clF47">
@@ -1584,65 +1470,6 @@
       <node concept="3Tm1VV" id="31HEEbcj1q0" role="1B3o_S" />
       <node concept="3uibUv" id="31HEEbcj244" role="3clF45">
         <ref role="3uigEE" to="xwt6:~DVector3C" resolve="DVector3C" />
-      </node>
-    </node>
-    <node concept="2tJIrI" id="31HEEbcpxPz" role="jymVt" />
-    <node concept="2YIFZL" id="31HEEbcpzIA" role="jymVt">
-      <property role="TrG5h" value="fromDVector3C" />
-      <node concept="3clFbS" id="31HEEbcpzID" role="3clF47">
-        <node concept="3cpWs6" id="31HEEbcp$xj" role="3cqZAp">
-          <node concept="2ShNRf" id="31HEEbcp$xF" role="3cqZAk">
-            <node concept="1pGfFk" id="31HEEbcp$Hc" role="2ShVmc">
-              <ref role="37wK5l" node="6asu_4xEYfe" resolve="InternalVector" />
-              <node concept="2YIFZM" id="31HEEbcpBsg" role="37wK5m">
-                <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-                <node concept="2OqwBi" id="31HEEbcpBsh" role="37wK5m">
-                  <node concept="37vLTw" id="31HEEbcpBsi" role="2Oq$k0">
-                    <ref role="3cqZAo" node="31HEEbcpA6H" resolve="vec" />
-                  </node>
-                  <node concept="liA8E" id="31HEEbcpBsj" role="2OqNvi">
-                    <ref role="37wK5l" to="xwt6:~DVector3C.get0()" resolve="get0" />
-                  </node>
-                </node>
-              </node>
-              <node concept="2YIFZM" id="31HEEbcpAvn" role="37wK5m">
-                <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-                <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                <node concept="2OqwBi" id="31HEEbcpB3v" role="37wK5m">
-                  <node concept="37vLTw" id="31HEEbcpAFg" role="2Oq$k0">
-                    <ref role="3cqZAo" node="31HEEbcpA6H" resolve="vec" />
-                  </node>
-                  <node concept="liA8E" id="31HEEbcpDDs" role="2OqNvi">
-                    <ref role="37wK5l" to="xwt6:~DVector3C.get1()" resolve="get1" />
-                  </node>
-                </node>
-              </node>
-              <node concept="2YIFZM" id="31HEEbcpDce" role="37wK5m">
-                <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-                <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                <node concept="2OqwBi" id="31HEEbcpDcf" role="37wK5m">
-                  <node concept="37vLTw" id="31HEEbcpDcg" role="2Oq$k0">
-                    <ref role="3cqZAo" node="31HEEbcpA6H" resolve="vec" />
-                  </node>
-                  <node concept="liA8E" id="31HEEbcpDOC" role="2OqNvi">
-                    <ref role="37wK5l" to="xwt6:~DVector3C.get2()" resolve="get2" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3Tm1VV" id="31HEEbcpyIv" role="1B3o_S" />
-      <node concept="3uibUv" id="31HEEbcpz$R" role="3clF45">
-        <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
-      </node>
-      <node concept="37vLTG" id="31HEEbcpA6H" role="3clF46">
-        <property role="TrG5h" value="vec" />
-        <node concept="3uibUv" id="31HEEbcpSwO" role="1tU5fm">
-          <ref role="3uigEE" to="xwt6:~DVector3C" resolve="DVector3C" />
-        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="31HEEbcj0JZ" role="jymVt" />
@@ -1732,8 +1559,7 @@
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
     </node>
-    <node concept="2tJIrI" id="31HEEbckmeu" role="jymVt" />
-    <node concept="2tJIrI" id="31HEEbckml2" role="jymVt" />
+    <node concept="2tJIrI" id="GdoRjGJw19" role="jymVt" />
     <node concept="3clFb_" id="31HEEbcjwgi" role="jymVt">
       <property role="TrG5h" value="getX" />
       <node concept="3uibUv" id="31HEEbcjwgj" role="3clF45">
@@ -1782,6 +1608,302 @@
               <ref role="2Oxat5" node="6asu_4xEYe4" resolve="z" />
             </node>
           </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="GdoRjGIsg4" role="jymVt" />
+    <node concept="2YIFZL" id="GdoRjGLdCc" role="jymVt">
+      <property role="TrG5h" value="bigDecimalOf" />
+      <node concept="3clFbS" id="GdoRjGLdCe" role="3clF47">
+        <node concept="3clFbJ" id="GdoRjGLdCf" role="3cqZAp">
+          <node concept="2ZW3vV" id="GdoRjGLdCg" role="3clFbw">
+            <node concept="3uibUv" id="GdoRjGLdCh" role="2ZW6by">
+              <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+            </node>
+            <node concept="37vLTw" id="GdoRjGLdCi" role="2ZW6bz">
+              <ref role="3cqZAo" node="GdoRjGLdCv" resolve="n" />
+            </node>
+          </node>
+          <node concept="3clFbS" id="GdoRjGLdCj" role="3clFbx">
+            <node concept="3cpWs6" id="GdoRjGLdCk" role="3cqZAp">
+              <node concept="10QFUN" id="GdoRjGLdCl" role="3cqZAk">
+                <node concept="3uibUv" id="GdoRjGLdCm" role="10QFUM">
+                  <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                </node>
+                <node concept="37vLTw" id="GdoRjGLdCn" role="10QFUP">
+                  <ref role="3cqZAo" node="GdoRjGLdCv" resolve="n" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="GdoRjGLdCo" role="3cqZAp">
+          <node concept="2YIFZM" id="GdoRjGLdCp" role="3cqZAk">
+            <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+            <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+            <node concept="2OqwBi" id="GdoRjGLdCq" role="37wK5m">
+              <node concept="37vLTw" id="GdoRjGLdCr" role="2Oq$k0">
+                <ref role="3cqZAo" node="GdoRjGLdCv" resolve="n" />
+              </node>
+              <node concept="liA8E" id="GdoRjGLdCs" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3uibUv" id="GdoRjGLdCu" role="3clF45">
+        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      </node>
+      <node concept="37vLTG" id="GdoRjGLdCv" role="3clF46">
+        <property role="TrG5h" value="n" />
+        <node concept="3uibUv" id="GdoRjGLdCw" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="GdoRjGLdCt" role="1B3o_S" />
+    </node>
+    <node concept="2tJIrI" id="GdoRjGLhwj" role="jymVt" />
+    <node concept="2YIFZL" id="7DHIC2l2HCB" role="jymVt">
+      <property role="TrG5h" value="fromSpherical" />
+      <node concept="3clFbS" id="7DHIC2l2HCE" role="3clF47">
+        <node concept="3cpWs8" id="GdoRjGI1px" role="3cqZAp">
+          <node concept="3cpWsn" id="GdoRjGI1py" role="3cpWs9">
+            <property role="TrG5h" value="lengthDouble" />
+            <node concept="10P55v" id="GdoRjGI0Q6" role="1tU5fm" />
+            <node concept="2OqwBi" id="GdoRjGI1pz" role="33vP2m">
+              <node concept="37vLTw" id="GdoRjGI1p$" role="2Oq$k0">
+                <ref role="3cqZAo" node="7DHIC2l2Ir8" resolve="length" />
+              </node>
+              <node concept="liA8E" id="GdoRjGI1p_" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="GdoRjGHYcW" role="3cqZAp">
+          <node concept="3cpWsn" id="GdoRjGHYcX" role="3cpWs9">
+            <property role="TrG5h" value="thetaDouble" />
+            <node concept="10P55v" id="GdoRjGHYcY" role="1tU5fm" />
+            <node concept="2OqwBi" id="GdoRjGHYcZ" role="33vP2m">
+              <node concept="37vLTw" id="GdoRjGHYd0" role="2Oq$k0">
+                <ref role="3cqZAo" node="7DHIC2l2IJo" resolve="theta" />
+              </node>
+              <node concept="liA8E" id="GdoRjGHYd1" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="GdoRjGHYd2" role="3cqZAp">
+          <node concept="3cpWsn" id="GdoRjGHYd3" role="3cpWs9">
+            <property role="TrG5h" value="phiDouble" />
+            <node concept="10P55v" id="GdoRjGHYd4" role="1tU5fm" />
+            <node concept="2OqwBi" id="GdoRjGHYd5" role="33vP2m">
+              <node concept="37vLTw" id="GdoRjGHYd6" role="2Oq$k0">
+                <ref role="3cqZAo" node="7DHIC2l2IJw" resolve="phi" />
+              </node>
+              <node concept="liA8E" id="GdoRjGHYd7" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~Number.doubleValue()" resolve="doubleValue" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="GdoRjGHYd8" role="3cqZAp">
+          <node concept="3cpWsn" id="GdoRjGHYd9" role="3cpWs9">
+            <property role="TrG5h" value="sinTheta" />
+            <node concept="10P55v" id="GdoRjGI99x" role="1tU5fm" />
+            <node concept="2YIFZM" id="GdoRjGHYdb" role="33vP2m">
+              <ref role="37wK5l" to="wyt6:~Math.sin(double)" resolve="sin" />
+              <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
+              <node concept="37vLTw" id="GdoRjGHYdc" role="37wK5m">
+                <ref role="3cqZAo" node="GdoRjGHYcX" resolve="thetaDouble" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="GdoRjGHYde" role="3cqZAp" />
+        <node concept="3cpWs6" id="GdoRjGHYdf" role="3cqZAp">
+          <node concept="2ShNRf" id="GdoRjGHYdg" role="3cqZAk">
+            <node concept="1pGfFk" id="GdoRjGHYdh" role="2ShVmc">
+              <ref role="37wK5l" node="7DHIC2l2MWT" resolve="InternalVector" />
+              <node concept="17qRlL" id="GdoRjGI6qM" role="37wK5m">
+                <node concept="2YIFZM" id="GdoRjGI7nl" role="3uHU7w">
+                  <ref role="37wK5l" to="wyt6:~Math.cos(double)" resolve="cos" />
+                  <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
+                  <node concept="37vLTw" id="GdoRjGI7HC" role="37wK5m">
+                    <ref role="3cqZAo" node="GdoRjGHYd3" resolve="phiDouble" />
+                  </node>
+                </node>
+                <node concept="17qRlL" id="GdoRjGI5hA" role="3uHU7B">
+                  <node concept="37vLTw" id="GdoRjGI4F0" role="3uHU7B">
+                    <ref role="3cqZAo" node="GdoRjGI1py" resolve="lengthDouble" />
+                  </node>
+                  <node concept="37vLTw" id="GdoRjGI5Jg" role="3uHU7w">
+                    <ref role="3cqZAo" node="GdoRjGHYd9" resolve="sinTheta" />
+                  </node>
+                </node>
+              </node>
+              <node concept="17qRlL" id="GdoRjGIcjz" role="37wK5m">
+                <node concept="2YIFZM" id="GdoRjGId8b" role="3uHU7w">
+                  <ref role="37wK5l" to="wyt6:~Math.sin(double)" resolve="sin" />
+                  <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
+                  <node concept="37vLTw" id="GdoRjGIdtc" role="37wK5m">
+                    <ref role="3cqZAo" node="GdoRjGHYd3" resolve="phiDouble" />
+                  </node>
+                </node>
+                <node concept="17qRlL" id="GdoRjGIbec" role="3uHU7B">
+                  <node concept="37vLTw" id="GdoRjGIdXt" role="3uHU7B">
+                    <ref role="3cqZAo" node="GdoRjGI1py" resolve="lengthDouble" />
+                  </node>
+                  <node concept="37vLTw" id="GdoRjGIbyD" role="3uHU7w">
+                    <ref role="3cqZAo" node="GdoRjGHYd9" resolve="sinTheta" />
+                  </node>
+                </node>
+              </node>
+              <node concept="17qRlL" id="GdoRjGIfbm" role="37wK5m">
+                <node concept="2YIFZM" id="GdoRjGIg0$" role="3uHU7w">
+                  <ref role="37wK5l" to="wyt6:~Math.cos(double)" resolve="cos" />
+                  <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
+                  <node concept="37vLTw" id="GdoRjGIgxS" role="37wK5m">
+                    <ref role="3cqZAo" node="GdoRjGHYcX" resolve="thetaDouble" />
+                  </node>
+                </node>
+                <node concept="37vLTw" id="GdoRjGIhM$" role="3uHU7B">
+                  <ref role="3cqZAo" node="GdoRjGI1py" resolve="lengthDouble" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="GdoRjGHXTU" role="3cqZAp" />
+      </node>
+      <node concept="3Tm1VV" id="7DHIC2l2GFh" role="1B3o_S" />
+      <node concept="3uibUv" id="7DHIC2l2Huy" role="3clF45">
+        <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
+      </node>
+      <node concept="37vLTG" id="7DHIC2l2Ir8" role="3clF46">
+        <property role="TrG5h" value="length" />
+        <node concept="3uibUv" id="7DHIC2l2Ir7" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="7DHIC2l2IJo" role="3clF46">
+        <property role="TrG5h" value="theta" />
+        <node concept="3uibUv" id="7DHIC2l2IJp" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="7DHIC2l2IJw" role="3clF46">
+        <property role="TrG5h" value="phi" />
+        <node concept="3uibUv" id="7DHIC2l2IJx" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Number" resolve="Number" />
+        </node>
+      </node>
+      <node concept="P$JXv" id="GdoRjGItw8" role="lGtFl">
+        <node concept="TZ5HA" id="GdoRjGItw9" role="TZ5H$">
+          <node concept="1dT_AC" id="GdoRjGItwa" role="1dT_Ay">
+            <property role="1dT_AB" value="Get an internal vector from spherical coordinates" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="6asu_4xFLn8" role="jymVt" />
+    <node concept="2tJIrI" id="1igjyYxy9JG" role="jymVt" />
+    <node concept="2YIFZL" id="1igjyYxyaLl" role="jymVt">
+      <property role="TrG5h" value="zero" />
+      <node concept="3clFbS" id="1igjyYxyaLo" role="3clF47">
+        <node concept="3cpWs6" id="1igjyYxybcR" role="3cqZAp">
+          <node concept="2ShNRf" id="1igjyYxybdf" role="3cqZAk">
+            <node concept="1pGfFk" id="1igjyYxybnO" role="2ShVmc">
+              <ref role="37wK5l" node="6asu_4xEYfe" resolve="InternalVector" />
+              <node concept="10M0yZ" id="1igjyYxybww" role="37wK5m">
+                <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                <ref role="3cqZAo" to="xlxw:~BigDecimal.ZERO" resolve="ZERO" />
+              </node>
+              <node concept="10M0yZ" id="1igjyYxybZo" role="37wK5m">
+                <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                <ref role="3cqZAo" to="xlxw:~BigDecimal.ZERO" resolve="ZERO" />
+              </node>
+              <node concept="10M0yZ" id="1igjyYxybS4" role="37wK5m">
+                <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                <ref role="3cqZAo" to="xlxw:~BigDecimal.ZERO" resolve="ZERO" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="1igjyYxyaeb" role="1B3o_S" />
+      <node concept="3uibUv" id="1igjyYxyaJS" role="3clF45">
+        <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="6asu_4xH8ph" role="jymVt" />
+    <node concept="2tJIrI" id="31HEEbcpxPz" role="jymVt" />
+    <node concept="2YIFZL" id="31HEEbcpzIA" role="jymVt">
+      <property role="TrG5h" value="fromDVector3C" />
+      <node concept="3clFbS" id="31HEEbcpzID" role="3clF47">
+        <node concept="3cpWs6" id="31HEEbcp$xj" role="3cqZAp">
+          <node concept="2ShNRf" id="31HEEbcp$xF" role="3cqZAk">
+            <node concept="1pGfFk" id="31HEEbcp$Hc" role="2ShVmc">
+              <ref role="37wK5l" node="6asu_4xEYfe" resolve="InternalVector" />
+              <node concept="2YIFZM" id="31HEEbcpBsg" role="37wK5m">
+                <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+                <node concept="2OqwBi" id="31HEEbcpBsh" role="37wK5m">
+                  <node concept="37vLTw" id="31HEEbcpBsi" role="2Oq$k0">
+                    <ref role="3cqZAo" node="31HEEbcpA6H" resolve="vec" />
+                  </node>
+                  <node concept="liA8E" id="31HEEbcpBsj" role="2OqNvi">
+                    <ref role="37wK5l" to="xwt6:~DVector3C.get0()" resolve="get0" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2YIFZM" id="31HEEbcpAvn" role="37wK5m">
+                <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+                <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                <node concept="2OqwBi" id="31HEEbcpB3v" role="37wK5m">
+                  <node concept="37vLTw" id="31HEEbcpAFg" role="2Oq$k0">
+                    <ref role="3cqZAo" node="31HEEbcpA6H" resolve="vec" />
+                  </node>
+                  <node concept="liA8E" id="31HEEbcpDDs" role="2OqNvi">
+                    <ref role="37wK5l" to="xwt6:~DVector3C.get1()" resolve="get1" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2YIFZM" id="31HEEbcpDce" role="37wK5m">
+                <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+                <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                <node concept="2OqwBi" id="31HEEbcpDcf" role="37wK5m">
+                  <node concept="37vLTw" id="31HEEbcpDcg" role="2Oq$k0">
+                    <ref role="3cqZAo" node="31HEEbcpA6H" resolve="vec" />
+                  </node>
+                  <node concept="liA8E" id="31HEEbcpDOC" role="2OqNvi">
+                    <ref role="37wK5l" to="xwt6:~DVector3C.get2()" resolve="get2" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="31HEEbcpyIv" role="1B3o_S" />
+      <node concept="3uibUv" id="31HEEbcpz$R" role="3clF45">
+        <ref role="3uigEE" node="6asu_4xEVX3" resolve="InternalVector" />
+      </node>
+      <node concept="37vLTG" id="31HEEbcpA6H" role="3clF46">
+        <property role="TrG5h" value="vec" />
+        <node concept="3uibUv" id="31HEEbcpSwO" role="1tU5fm">
+          <ref role="3uigEE" to="xwt6:~DVector3C" resolve="DVector3C" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="GdoRjGIE9O" role="jymVt" />
+    <node concept="2tJIrI" id="31HEEbckml2" role="jymVt" />
+    <node concept="3UR2Jj" id="GdoRjGJx83" role="lGtFl">
+      <node concept="TZ5HA" id="GdoRjGJx84" role="TZ5H$">
+        <node concept="1dT_AC" id="GdoRjGJx85" role="1dT_Ay">
+          <property role="1dT_AB" value="General purpose 3D vector as used in the Physics interpreter" />
         </node>
       </node>
     </node>
@@ -1912,16 +2034,24 @@
                 <node concept="2pIpSj" id="31HEEbbYwNd" role="2pJxcM">
                   <ref role="2pIpSl" to="hm2y:4rZeNQ6MpKo" resolve="right" />
                   <node concept="36biLy" id="31HEEbbYxQX" role="28nt2d">
-                    <node concept="2OqwBi" id="31HEEbb$y6i" role="36biLW">
-                      <node concept="2OqwBi" id="31HEEbb$sRR" role="2Oq$k0">
-                        <node concept="37vLTw" id="31HEEbb$saJ" role="2Oq$k0">
-                          <ref role="3cqZAo" node="31HEEbb$8Pm" resolve="scope" />
+                    <node concept="2OqwBi" id="GdoRjGFQ13" role="36biLW">
+                      <node concept="2OqwBi" id="GdoRjGFPqn" role="2Oq$k0">
+                        <node concept="2OqwBi" id="31HEEbb$y6i" role="2Oq$k0">
+                          <node concept="2OqwBi" id="31HEEbb$sRR" role="2Oq$k0">
+                            <node concept="37vLTw" id="31HEEbb$saJ" role="2Oq$k0">
+                              <ref role="3cqZAo" node="31HEEbb$8Pm" resolve="scope" />
+                            </node>
+                            <node concept="1uHKPH" id="31HEEbb$uw4" role="2OqNvi" />
+                          </node>
+                          <node concept="3TrEf2" id="31HEEbb$yVd" role="2OqNvi">
+                            <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                          </node>
                         </node>
-                        <node concept="1uHKPH" id="31HEEbb$uw4" role="2OqNvi" />
+                        <node concept="3TrEf2" id="GdoRjGFPLP" role="2OqNvi">
+                          <ref role="3Tt5mk" to="9tcj:GdoRjGvRej" resolve="coordinates" />
+                        </node>
                       </node>
-                      <node concept="3TrEf2" id="31HEEbb$yVd" role="2OqNvi">
-                        <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
-                      </node>
+                      <node concept="1$rogu" id="GdoRjGFQiD" role="2OqNvi" />
                     </node>
                   </node>
                 </node>
@@ -2015,12 +2145,17 @@
                                 <ref role="2pIpSl" to="hm2y:4rZeNQ6MpKo" resolve="right" />
                                 <node concept="36biLy" id="31HEEbbZ0Sb" role="28nt2d">
                                   <node concept="2OqwBi" id="31HEEbbZ3E$" role="36biLW">
-                                    <node concept="2OqwBi" id="31HEEbbZ28G" role="2Oq$k0">
-                                      <node concept="37vLTw" id="31HEEbbZ1Jh" role="2Oq$k0">
-                                        <ref role="3cqZAo" node="31HEEbb_9zQ" resolve="it" />
+                                    <node concept="2OqwBi" id="GdoRjGFQKA" role="2Oq$k0">
+                                      <node concept="2OqwBi" id="31HEEbbZ28G" role="2Oq$k0">
+                                        <node concept="37vLTw" id="31HEEbbZ1Jh" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="31HEEbb_9zQ" resolve="it" />
+                                        </node>
+                                        <node concept="3TrEf2" id="31HEEbbZ327" role="2OqNvi">
+                                          <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                                        </node>
                                       </node>
-                                      <node concept="3TrEf2" id="31HEEbbZ327" role="2OqNvi">
-                                        <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                                      <node concept="3TrEf2" id="GdoRjGFRb0" role="2OqNvi">
+                                        <ref role="3Tt5mk" to="9tcj:GdoRjGvRej" resolve="coordinates" />
                                       </node>
                                     </node>
                                     <node concept="1$rogu" id="31HEEbbZ4FW" role="2OqNvi" />

@@ -8,11 +8,14 @@ import org.ode4j.math.DVector3C;
 import org.ode4j.math.DVector3;
 import java.math.RoundingMode;
 
+/**
+ * General purpose 3D vector as used in the Physics interpreter
+ */
 public class InternalVector {
   private static final MathContext ctx = MathContext.DECIMAL128;
-  private BigDecimal x;
-  private BigDecimal y;
-  private BigDecimal z;
+  private final BigDecimal x;
+  private final BigDecimal y;
+  private final BigDecimal z;
 
   public InternalVector(BigDecimal x, BigDecimal y, BigDecimal z) {
     this.x = x;
@@ -20,27 +23,45 @@ public class InternalVector {
     this.z = z;
   }
   public InternalVector(Number x, Number y, Number z) {
-    this(BigDecimal.valueOf(x.doubleValue()), BigDecimal.valueOf(y.doubleValue()), BigDecimal.valueOf(z.doubleValue()));
+    this(bigDecimalOf(x), bigDecimalOf(y), bigDecimalOf(z));
   }
 
 
+  /**
+   * Set length of the vector to 1
+   */
   public InternalVector toUnit() {
     BigDecimal length = length();
     return new InternalVector(getX().divide(length, ctx), getY().divide(length, ctx), getZ().divide(length, ctx));
   }
+
+  /**
+   * Add vector to current one, return new vector
+   */
   public InternalVector add(InternalVector v) {
     return new InternalVector(getX().add(v.getX(), ctx), getY().add(v.getY(), ctx), getZ().add(v.getZ(), ctx));
   }
+  /**
+   * Subtract a vector to this one and return the newly created vector
+   */
   public InternalVector minus(InternalVector v) {
     return new InternalVector(getX().subtract(v.getX(), ctx), getY().subtract(v.getY(), ctx), getZ().subtract(v.getZ(), ctx));
   }
-  public InternalVector mul(BigDecimal factor) {
-    return new InternalVector(getX().multiply(factor, ctx), getY().multiply(factor, ctx), getZ().multiply(factor, ctx));
+  /**
+   * Multiply the size of the vector by a factor and return the newly created vector
+   */
+  public InternalVector mul(Number factor) {
+    BigDecimal factorD = bigDecimalOf(factor);
+    return new InternalVector(getX().multiply(factorD, ctx), getY().multiply(factorD, ctx), getZ().multiply(factorD, ctx));
   }
-  public InternalVector resize(BigDecimal newLength) {
+  /**
+   * Change the size of the vector and return the newly created vector
+   */
+  public InternalVector resize(Number newLength) {
     InternalVector unit = this.mul(BigDecimal.ONE.divide(length(), ctx));
     return (BigDecimal.ONE.equals(newLength) ? unit : unit.mul(newLength));
   }
+
 
   public BigDecimal lengthSquared() {
     return getX().pow(2, ctx).add(getY().pow(2, ctx), ctx).add(getZ().pow(2, ctx), ctx);
@@ -70,23 +91,15 @@ public class InternalVector {
     return BigDecimal.valueOf(atan);
   }
 
-  public static InternalVector fromSpherical(Number length, Number theta, Number phi) {
-    return fromSpherical(BigDecimal.valueOf(length.doubleValue()), BigDecimal.valueOf(theta.doubleValue()), BigDecimal.valueOf(phi.doubleValue()));
-  }
 
   /**
-   * Get an internal vector from spherical coordinates
+   * Get an internal vector from cylindrical coordinates
    */
-  public static InternalVector fromSpherical(BigDecimal length, BigDecimal theta, BigDecimal phi) {
-    double thetaDouble = theta.doubleValue();
+  public static InternalVector fromCylindrical(Number radialLength, Number phi, Number z) {
     double phiDouble = phi.doubleValue();
-    BigDecimal sinTheta = BigDecimal.valueOf(Math.sin(thetaDouble));
-
-    return new InternalVector(length.multiply(sinTheta, ctx).multiply(BigDecimal.valueOf(Math.cos(phiDouble)), ctx), length.multiply(sinTheta, ctx).multiply(BigDecimal.valueOf(Math.sin(phiDouble)), ctx), length.multiply(BigDecimal.valueOf(Math.cos(thetaDouble)), ctx));
-  }
-
-  public static InternalVector zero() {
-    return new InternalVector(BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO);
+    double x = radialLength.doubleValue() * Math.cos(phiDouble);
+    double y = radialLength.doubleValue() * Math.sin(phiDouble);
+    return new InternalVector(x, y, z);
   }
 
 
@@ -94,15 +107,10 @@ public class InternalVector {
     return new DVector3(getX().doubleValue(), getY().doubleValue(), getZ().doubleValue());
   }
 
-  public static InternalVector fromDVector3C(DVector3C vec) {
-    return new InternalVector(BigDecimal.valueOf(vec.get0()), BigDecimal.valueOf(vec.get1()), BigDecimal.valueOf(vec.get2()));
-  }
-
   @Override
   public String toString() {
     return "[" + "x=" + getX().setScale(2, RoundingMode.HALF_UP) + ", y=" + getY().setScale(2, RoundingMode.HALF_UP) + ", z=" + getZ().setScale(2, RoundingMode.HALF_UP) + "]";
   }
-
 
   public BigDecimal getX() {
     return this.x;
@@ -113,4 +121,36 @@ public class InternalVector {
   public BigDecimal getZ() {
     return this.z;
   }
+
+  private static BigDecimal bigDecimalOf(Number n) {
+    if (n instanceof BigDecimal) {
+      return (BigDecimal) n;
+    }
+    return BigDecimal.valueOf(n.doubleValue());
+  }
+
+  /**
+   * Get an internal vector from spherical coordinates
+   */
+  public static InternalVector fromSpherical(Number length, Number theta, Number phi) {
+    double lengthDouble = length.doubleValue();
+    double thetaDouble = theta.doubleValue();
+    double phiDouble = phi.doubleValue();
+    double sinTheta = Math.sin(thetaDouble);
+
+    return new InternalVector(lengthDouble * sinTheta * Math.cos(phiDouble), lengthDouble * sinTheta * Math.sin(phiDouble), lengthDouble * Math.cos(thetaDouble));
+
+  }
+
+
+  public static InternalVector zero() {
+    return new InternalVector(BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO);
+  }
+
+
+  public static InternalVector fromDVector3C(DVector3C vec) {
+    return new InternalVector(BigDecimal.valueOf(vec.get0()), BigDecimal.valueOf(vec.get1()), BigDecimal.valueOf(vec.get2()));
+  }
+
+
 }

@@ -41,11 +41,12 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
       case 1:
         if (true) {
           // concept 
-          intentions = new IntentionFactory[4];
+          intentions = new IntentionFactory[5];
           intentions[0] = new ResolveToCartesian_Intention();
           intentions[1] = new ResolveToRelative_Intention();
           intentions[2] = new ResolveToSpherical_Intention();
           intentions[3] = new ResolveNumericExpression_Intention();
+          intentions[4] = new ResolveToCylindrical_Intention();
         }
         break;
       case 2:
@@ -64,13 +65,14 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
   @NotNull
   @Override
   public Collection<IntentionFactory> getAllIntentions() {
-    IntentionFactory[] rv = new IntentionFactory[6];
+    IntentionFactory[] rv = new IntentionFactory[7];
     rv[0] = new ResolveToCartesian_Intention();
     rv[1] = new ResolveToRelative_Intention();
     rv[2] = new ResolveToSpherical_Intention();
     rv[3] = new AdaptToCartesian_Intention();
     rv[4] = new AdaptToSpherical_Intention();
     rv[5] = new ResolveNumericExpression_Intention();
+    rv[6] = new ResolveToCylindrical_Intention();
     return Arrays.asList(rv);
   }
   private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL), MetaIdFactory.conceptId(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL)).seal();

@@ -1747,5 +1747,54 @@
       <node concept="l2Vlx" id="GdoRjGvS8J" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="GdoRjGAm_y">
+    <property role="3GE5qa" value="physical.vector.absolute" />
+    <ref role="1XX52x" to="9tcj:GdoRjGAm_h" resolve="CylindricalCoordinates" />
+    <node concept="3EZMnI" id="GdoRjGAm_$" role="2wV5jI">
+      <node concept="3F0ifn" id="GdoRjGAm__" role="3EZMnx">
+        <property role="3F0ifm" value="cylindrical coordinates" />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_A" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_B" role="3EZMnx">
+        <property role="3F0ifm" value="ρ" />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_C" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F1sOY" id="GdoRjGAm_D" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:GdoRjGAm_i" resolve="axialDistance" />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_E" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_F" role="3EZMnx">
+        <property role="3F0ifm" value="φ" />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_G" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F1sOY" id="GdoRjGAm_H" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:GdoRjGAm_k" resolve="phi" />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_I" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_J" role="3EZMnx">
+        <property role="3F0ifm" value="z" />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_K" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F1sOY" id="GdoRjGAm_L" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:GdoRjGAm_n" resolve="height" />
+      </node>
+      <node concept="3F0ifn" id="GdoRjGAm_M" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+      </node>
+      <node concept="l2Vlx" id="GdoRjGAm_N" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

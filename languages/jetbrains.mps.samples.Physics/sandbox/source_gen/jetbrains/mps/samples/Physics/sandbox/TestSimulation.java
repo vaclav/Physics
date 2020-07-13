@@ -22,22 +22,20 @@ public class TestSimulation extends Simulation {
     PhysicalEntity Ho = new PhysicalEntity(world);
     PhysicalEntity Ha = new PhysicalEntity(world);
     Ho.getBody().setPosition(new InternalVector(((Number) new BigInteger("-396")), ((Number) new BigInteger("4")), ((Number) new BigInteger("4"))).toDVector3C());
-    Ho.getBody().setLinearVel(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).toDVector3C());
-    Ho.setFixture(new SphereFixture(world, 200), ((Number) new BigInteger("456")).doubleValue());
+    Ho.setFixture(new SphereFixture(world, 200), ((Number) new BigInteger("456")));
     Ho.getForces().addAll(Arrays.asList(new Force() {
       @Override
       public DVector3C getForce(World world, PhysicalEntity targetEntity) {
-        return Ha.minus(Ho).resize(BigDecimal.valueOf(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)).doubleValue())).toDVector3C();
+        return Ha.minus(Ho).resize(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN))).toDVector3C();
       }
     }));
     world.addEntity(Ho);
     Ha.getBody().setPosition(new InternalVector(((Number) new BigInteger("100")), ((Number) new BigInteger("100")), ((Number) new BigInteger("100"))).toDVector3C());
-    Ha.getBody().setLinearVel(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).toDVector3C());
-    Ha.setFixture(new SphereFixture(world, 100), ((Number) new BigInteger("100")).doubleValue());
+    Ha.setFixture(new SphereFixture(world, 100), ((Number) new BigInteger("100")));
     Ha.getForces().addAll(Arrays.asList(new Force() {
       @Override
       public DVector3C getForce(World world, PhysicalEntity targetEntity) {
-        return Ho.minus(Ha).resize(BigDecimal.valueOf(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)).doubleValue())).toDVector3C();
+        return Ho.minus(Ha).resize(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN))).toDVector3C();
       }
     }));
     world.addEntity(Ha);

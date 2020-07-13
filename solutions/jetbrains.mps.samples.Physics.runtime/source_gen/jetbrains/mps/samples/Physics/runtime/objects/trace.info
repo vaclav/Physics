@@ -91,7 +91,7 @@
       <node id="4271426636304009483" at="42,24,43,20" concept="1" />
       <node id="4271426636304009491" at="45,61,46,27" concept="1" />
       <node id="4271426636304009543" at="46,27,47,36" concept="9" />
-      <node id="4271426636304009497" at="47,36,48,40" concept="1" />
+      <node id="4271426636304009497" at="47,36,48,54" concept="1" />
       <node id="4271426636304009504" at="50,26,51,16" concept="8" />
       <node id="4271426636304009510" at="53,34,54,18" concept="8" />
       <node id="974138438732552642" at="57,37,58,36" concept="1" />
@@ -105,7 +105,7 @@
       <node id="4271426636304258642" at="33,29,36,5" concept="4" />
       <node id="4271426636304009502" at="50,0,53,0" concept="6" trace="getBody#()Lorg/ode4j/ode/DBody;" />
       <node id="4271426636304009508" at="53,0,56,0" concept="6" trace="getForces#()Ljava/util/List;" />
-      <node id="974138438732512710" at="57,0,60,0" concept="6" trace="setMass#(D)V" />
+      <node id="974138438732512710" at="57,0,60,0" concept="6" trace="setMass#(Ljava/lang/Number;)V" />
       <node id="3489632902472520566" at="75,41,78,5" concept="5" />
       <node id="3489632902472569204" at="82,0,85,0" concept="6" trace="getPositionInternalVector#()Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
       <node id="5352272594417266647" at="86,0,89,0" concept="6" trace="getVelocityInternalVector#()Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
@@ -113,7 +113,7 @@
       <node id="3489632902471322871" at="66,0,70,0" concept="6" trace="getY#()Ljava/math/BigDecimal;" />
       <node id="3489632902471322883" at="70,0,74,0" concept="6" trace="getZ#()Ljava/math/BigDecimal;" />
       <node id="4271426636304009453" at="33,0,38,0" concept="6" trace="applyForces#()V" />
-      <node id="4271426636304009487" at="45,0,50,0" concept="6" trace="setFixture#(Ljetbrains/mps/samples/Physics/runtime/objects/rendering/Fixture;D)V" />
+      <node id="4271426636304009487" at="45,0,50,0" concept="6" trace="setFixture#(Ljetbrains/mps/samples/Physics/runtime/objects/rendering/Fixture;Ljava/lang/Number;)V" />
       <node id="4271426636304009416" at="27,0,33,0" concept="0" trace="PhysicalEntity#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
       <node id="3489632902472482551" at="75,0,81,0" concept="6" trace="getMassBigDecimal#()Ljava/math/BigDecimal;" />
       <node id="4271426636304009459" at="38,0,45,0" concept="6" trace="render#(Lprocessing/core/PApplet;)V" />
@@ -131,7 +131,7 @@
       <scope id="4271426636304258642" at="33,29,36,5">
         <var name="force" id="4271426636304258645" />
       </scope>
-      <scope id="4271426636304009490" at="45,61,48,40" />
+      <scope id="4271426636304009490" at="45,61,48,54" />
       <scope id="4271426636304009502" at="50,0,53,0" />
       <scope id="4271426636304009508" at="53,0,56,0" />
       <scope id="974138438732512710" at="57,0,60,0">

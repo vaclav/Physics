@@ -49,13 +49,13 @@ public class PositioningResolver {
         SNode result = SNodeOperations.copyNode(it);
 
         //  Compute position 
-        InternalVector locationComputed = ((InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(it, LINKS.location$DoV0))).add(posOffset);
+        InternalVector locationComputed = ((InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.location$DoV0), LINKS.coordinates$87ts))).add(posOffset);
         SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(result, LINKS.location$DoV0), LINKS.coordinates$87ts), CoordinateExpressionConverters.rawToCartesian(locationComputed));
 
         //  Compute speed 
         InternalVector velocityComputed;
         if ((SLinkOperations.getTarget(it, LINKS.velocity$DoVv) != null)) {
-          velocityComputed = ((InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(it, LINKS.velocity$DoVv))).add(velocityOffset);
+          velocityComputed = ((InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.coordinates$87ts))).add(velocityOffset);
           SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(result, LINKS.velocity$DoVv), LINKS.coordinates$87ts), CoordinateExpressionConverters.rawToCartesian(velocityComputed));
 
         } else {

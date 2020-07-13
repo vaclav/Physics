@@ -25,6 +25,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Coordinates;
   private ConceptPresentation props_CurrentObjectExpression;
   private ConceptPresentation props_CustomColorTexture;
+  private ConceptPresentation props_CylindricalCoordinates;
   private ConceptPresentation props_DirectionType;
   private ConceptPresentation props_DirectionalCoordinates;
   private ConceptPresentation props_DistanceWithCallTarget;
@@ -179,6 +180,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CustomColorTexture = cpb.create();
         }
         return props_CustomColorTexture;
+      case LanguageConceptSwitch.CylindricalCoordinates:
+        if (props_CylindricalCoordinates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("cylindrical coordinates");
+          props_CylindricalCoordinates = cpb.create();
+        }
+        return props_CylindricalCoordinates;
       case LanguageConceptSwitch.DirectionType:
         if (props_DirectionType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

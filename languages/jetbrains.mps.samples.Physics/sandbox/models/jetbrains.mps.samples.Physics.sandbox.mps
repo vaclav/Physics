@@ -501,15 +501,15 @@
         <ref role="1t_wfm" node="6HZo5MNa2Rg" resolve="SolarSystem" />
       </node>
       <node concept="3BseiC" id="GdoRjGy$LF" role="1h9ZzG">
-        <node concept="v6hs8" id="GdoRjGy$LG" role="3Bsx3B">
-          <node concept="30bXRB" id="GdoRjGy$LH" role="Y6l9D">
-            <property role="30bXRw" value="4" />
+        <node concept="v6hs8" id="GdoRjGHImm" role="3Bsx3B">
+          <node concept="30bXRB" id="GdoRjGHImn" role="Y6l9D">
+            <property role="30bXRw" value="4.999999999999999" />
           </node>
-          <node concept="30bXRB" id="GdoRjGy$LI" role="Y6leK">
-            <property role="30bXRw" value="4" />
+          <node concept="30bXRB" id="GdoRjGHImo" role="Y6leK">
+            <property role="30bXRw" value="4.0" />
           </node>
-          <node concept="30bXRB" id="GdoRjGy$LJ" role="Y6leJ">
-            <property role="30bXRw" value="4" />
+          <node concept="30bXRB" id="GdoRjGHImp" role="Y6leJ">
+            <property role="30bXRw" value="4.0" />
           </node>
         </node>
       </node>
@@ -576,14 +576,8 @@
             <node concept="30bXRB" id="GdoRjG_nwE" role="Y6leJ">
               <property role="30bXRw" value="0" />
             </node>
-            <node concept="1QScDb" id="GdoRjG_nyE" role="Y6l9D">
-              <node concept="3K961b" id="GdoRjG_n$u" role="1QScD9">
-                <property role="3K961B" value="6kwOTMl1bfp/x" />
-              </node>
-              <node concept="1QScDb" id="GdoRjGyFfd" role="30czhm">
-                <node concept="1x33zJ" id="GdoRjG_7pV" role="1QScD9" />
-                <node concept="2CrqZA" id="GdoRjGyFjj" role="30czhm" />
-              </node>
+            <node concept="30bXRB" id="GdoRjGRxrM" role="Y6l9D">
+              <property role="30bXRw" value="0" />
             </node>
           </node>
         </node>

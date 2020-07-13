@@ -60,14 +60,14 @@
       <node id="232455383964481205" at="15,0,16,0" concept="2" trace="G" />
       <node id="232455383964481205" at="17,34,18,16" concept="1" />
       <node id="3067994583100255852" at="22,71,23,47" concept="6" />
-      <node id="3067994583100255852" at="25,40,26,322" concept="1" />
+      <node id="3067994583100255852" at="25,40,26,288" concept="1" />
       <node id="3067994583100255852" at="28,5,29,29" concept="7" />
       <node id="3067994583100255852" at="17,0,20,0" concept="0" trace="GravityForce#(Ljava/lang/Number;)V" />
       <node id="3067994583100255852" at="24,60,27,7" concept="4" />
       <node id="3067994583100255852" at="23,47,28,5" concept="3" />
       <node id="3067994583100255852" at="21,0,31,0" concept="5" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)Lorg/ode4j/math/DVector3C;" />
       <scope id="3067994583100255852" at="17,34,18,16" />
-      <scope id="3067994583100255852" at="25,40,26,322" />
+      <scope id="3067994583100255852" at="25,40,26,288" />
       <scope id="3067994583100255852" at="17,0,20,0">
         <var name="G1" id="232455383964481205" />
       </scope>
@@ -89,31 +89,31 @@
     <file name="TestSimulation.java">
       <node id="3489632902470379113" at="21,36,22,50" concept="6" />
       <node id="8821912306508288076" at="22,50,23,50" concept="6" />
-      <node id="8821912306508360644" at="29,75,30,148" concept="7" />
-      <node id="8821912306508360828" at="39,75,40,148" concept="7" />
-      <node id="8821912306508360644" at="28,0,32,0" concept="5" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)Lorg/ode4j/math/DVector3C;" />
-      <node id="8821912306508360828" at="38,0,42,0" concept="5" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)Lorg/ode4j/math/DVector3C;" />
-      <scope id="8821912306508360644" at="28,0,32,0">
+      <node id="8821912306508360644" at="28,75,29,114" concept="7" />
+      <node id="8821912306508360828" at="37,75,38,114" concept="7" />
+      <node id="8821912306508360644" at="27,0,31,0" concept="5" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)Lorg/ode4j/math/DVector3C;" />
+      <node id="8821912306508360828" at="36,0,40,0" concept="5" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)Lorg/ode4j/math/DVector3C;" />
+      <scope id="8821912306508360644" at="27,0,31,0">
         <var name="targetEntity" id="8821912306508360644" />
         <var name="world" id="8821912306508360644" />
       </scope>
-      <scope id="8821912306508360828" at="38,0,42,0">
+      <scope id="8821912306508360828" at="36,0,40,0">
         <var name="targetEntity" id="8821912306508360828" />
         <var name="world" id="8821912306508360828" />
       </scope>
-      <unit id="8821912306508360644" at="27,44,32,5" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation$1" />
-      <unit id="8821912306508360828" at="37,44,42,5" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation$2" />
+      <unit id="8821912306508360644" at="26,44,31,5" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation$1" />
+      <unit id="8821912306508360828" at="35,44,40,5" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation$2" />
     </file>
   </root>
   <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/7287056866553117676">
     <file name="FrictionForce.java">
       <node id="7287056866553117732" at="14,0,15,0" concept="2" trace="ratio" />
       <node id="7287056866553117732" at="16,39,17,24" concept="1" />
-      <node id="7287056866553117676" at="21,71,22,311" concept="7" />
+      <node id="7287056866553117676" at="21,71,22,257" concept="7" />
       <node id="7287056866553117676" at="16,0,19,0" concept="0" trace="FrictionForce#(Ljava/lang/Number;)V" />
       <node id="7287056866553117676" at="20,0,24,0" concept="5" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)Lorg/ode4j/math/DVector3C;" />
       <scope id="7287056866553117676" at="16,39,17,24" />
-      <scope id="7287056866553117676" at="21,71,22,311" />
+      <scope id="7287056866553117676" at="21,71,22,257" />
       <scope id="7287056866553117676" at="16,0,19,0">
         <var name="ratio1" id="7287056866553117732" />
       </scope>
@@ -127,31 +127,29 @@
   <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/7887120293591825750">
     <file name="TestSimulation.java">
       <node id="7887120293591825750" at="23,50,24,162" concept="1" />
-      <node id="7887120293591825750" at="24,162,25,160" concept="1" />
-      <node id="7887120293591825750" at="25,160,26,97" concept="1" />
-      <node id="7887120293591825750" at="32,8,33,24" concept="1" />
-      <node id="7887120293591825750" at="33,24,34,165" concept="1" />
-      <node id="7887120293591825750" at="34,165,35,160" concept="1" />
-      <node id="7887120293591825750" at="35,160,36,97" concept="1" />
-      <node id="7887120293591825750" at="42,8,43,24" concept="1" />
-      <node id="7887120293591825750" at="46,42,47,45" concept="1" />
-      <node id="7887120293591825750" at="47,45,48,24" concept="1" />
-      <node id="7887120293591825750" at="46,0,50,0" concept="10" trace="main#([Ljava/lang/String;)V" />
-      <node id="7887120293591825750" at="26,97,32,8" concept="1" />
-      <node id="7887120293591825750" at="36,97,42,8" concept="1" />
-      <node id="7887120293591825750" at="20,0,45,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
-      <scope id="7887120293591825750" at="46,42,48,24" />
-      <scope id="7887120293591825750" at="46,0,50,0">
+      <node id="7887120293591825750" at="24,162,25,83" concept="1" />
+      <node id="7887120293591825750" at="31,8,32,24" concept="1" />
+      <node id="7887120293591825750" at="32,24,33,165" concept="1" />
+      <node id="7887120293591825750" at="33,165,34,83" concept="1" />
+      <node id="7887120293591825750" at="40,8,41,24" concept="1" />
+      <node id="7887120293591825750" at="44,42,45,45" concept="1" />
+      <node id="7887120293591825750" at="45,45,46,24" concept="1" />
+      <node id="7887120293591825750" at="44,0,48,0" concept="10" trace="main#([Ljava/lang/String;)V" />
+      <node id="7887120293591825750" at="25,83,31,8" concept="1" />
+      <node id="7887120293591825750" at="34,83,40,8" concept="1" />
+      <node id="7887120293591825750" at="20,0,43,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <scope id="7887120293591825750" at="44,42,46,24" />
+      <scope id="7887120293591825750" at="44,0,48,0">
         <var name="args" id="7887120293591825750" />
       </scope>
-      <scope id="7887120293591825750" at="21,36,43,24">
+      <scope id="7887120293591825750" at="21,36,41,24">
         <var name="Ha" id="8821912306508288076" />
         <var name="Ho" id="3489632902470379113" />
       </scope>
-      <scope id="7887120293591825750" at="20,0,45,0">
+      <scope id="7887120293591825750" at="20,0,43,0">
         <var name="world" id="7887120293591825750" />
       </scope>
-      <unit id="7887120293591825750" at="18,0,51,0" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation" />
+      <unit id="7887120293591825750" at="18,0,49,0" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation" />
     </file>
   </root>
   <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/974138438733415001">
