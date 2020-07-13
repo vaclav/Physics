@@ -50,17 +50,17 @@ public class PositioningResolver {
 
         //  Compute position 
         InternalVector locationComputed = ((InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(it, LINKS.location$DoV0))).add(posOffset);
-        SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(result, LINKS.location$DoV0), CoordinateExpressionConverters.rawToCartesian(locationComputed));
+        SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(result, LINKS.location$DoV0), LINKS.coordinates$87ts), CoordinateExpressionConverters.rawToCartesian(locationComputed));
 
         //  Compute speed 
         InternalVector velocityComputed;
         if ((SLinkOperations.getTarget(it, LINKS.velocity$DoVv) != null)) {
           velocityComputed = ((InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(it, LINKS.velocity$DoVv))).add(velocityOffset);
-          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(result, LINKS.velocity$DoVv), CoordinateExpressionConverters.rawToCartesian(velocityComputed));
+          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(result, LINKS.velocity$DoVv), LINKS.coordinates$87ts), CoordinateExpressionConverters.rawToCartesian(velocityComputed));
 
         } else {
           velocityComputed = velocityOffset;
-          SLinkOperations.setTarget(result, LINKS.velocity$DoVv, CoordinateExpressionConverters.rawToCartesian(velocityComputed));
+          SLinkOperations.setTarget(SLinkOperations.getTarget(result, LINKS.velocity$DoVv), LINKS.coordinates$87ts, CoordinateExpressionConverters.rawToCartesian(velocityComputed));
         }
 
         // Add nested worlds 
@@ -98,6 +98,7 @@ public class PositioningResolver {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink location$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "location");
+    /*package*/ static final SContainmentLink coordinates$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "coordinates");
     /*package*/ static final SContainmentLink velocity$DoVv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
     /*package*/ static final SContainmentLink world$ZN60 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
     /*package*/ static final SReferenceLink target$12L0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");

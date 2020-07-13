@@ -11,54 +11,23 @@ import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
-import java.util.Set;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.ISelector;
-import jetbrains.mps.internal.collections.runtime.SetSequence;
-import java.util.HashSet;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
-import java.util.Objects;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
-import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 public final class ILocalized__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
 
   public static final SMethod<SNode> getDefinition_id31HEEbbXs3G = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDefinition").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("31HEEbbXs3G").build();
-  public static final SMethod<Iterable<SNode>> getDependenciesRelevantForCycleDetection_id59HbAIOYveX = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getDependenciesRelevantForCycleDetection").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("59HbAIOYveX").build();
-  public static final SMethod<Set<SNode>> traceBackElementInCycle_id17fjvcLF7UR = new SMethodBuilder<Set<SNode>>(new SJavaCompoundTypeImpl((Class<Set<SNode>>) ((Class) Object.class))).name("traceBackElementInCycle").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("17fjvcLF7UR").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDefinition_id31HEEbbXs3G, getDependenciesRelevantForCycleDetection_id59HbAIOYveX, traceBackElementInCycle_id17fjvcLF7UR);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDefinition_id31HEEbbXs3G);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static Iterable<SNode> getDependenciesRelevantForCycleDetection_id59HbAIOYveX(@NotNull SNode __thisNode__) {
-
-    return ListSequence.fromList(SNodeOperations.getNodeDescendants(SLinkOperations.getTarget(__thisNode__, LINKS.location$DoV0), CONCEPTS.ITargetObject$lA, true, new SAbstractConcept[]{})).select(new ISelector<SNode, SNode>() {
-      public SNode select(SNode it) {
-        return (SNode) ITargetObject__BehaviorDescriptor.getTargetLocalizedObject_idGdoRjGrk0_.invoke(it);
-      }
-    });
-  }
-  /*package*/ static Set<SNode> traceBackElementInCycle_id17fjvcLF7UR(@NotNull SNode __thisNode__, final SNode dependency) {
-
-    Set<SNode> set = SetSequence.fromSet(new HashSet<SNode>());
-    SetSequence.fromSet(set).addSequence(ListSequence.fromList(SNodeOperations.getNodeDescendants(SLinkOperations.getTarget(__thisNode__, LINKS.location$DoV0), CONCEPTS.ITargetObject$lA, true, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return Objects.equals(ITargetObject__BehaviorDescriptor.getTargetLocalizedObject_idGdoRjGrk0_.invoke(it), dependency);
-      }
-    }));
-    return set;
-  }
 
   /*package*/ ILocalized__BehaviorDescriptor() {
   }
@@ -75,10 +44,6 @@ public final class ILocalized__BehaviorDescriptor extends BaseBHDescriptor {
       throw new BHMethodNotFoundException(this, method);
     }
     switch (methodIndex) {
-      case 1:
-        return (T) ((Iterable<SNode>) getDependenciesRelevantForCycleDetection_id59HbAIOYveX(node));
-      case 2:
-        return (T) ((Set<SNode>) traceBackElementInCycle_id17fjvcLF7UR(node, (SNode) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -106,13 +71,5 @@ public final class ILocalized__BehaviorDescriptor extends BaseBHDescriptor {
   @Override
   public SAbstractConcept getConcept() {
     return CONCEPT;
-  }
-
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink location$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "location");
-  }
-
-  private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ITargetObject$lA = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
   }
 }

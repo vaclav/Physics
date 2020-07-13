@@ -34,7 +34,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ForceType;
   private ConceptPresentation props_ILocalized;
   private ConceptPresentation props_IObjectDefinition;
+  private ConceptPresentation props_ITargetCoordinates;
   private ConceptPresentation props_ITargetObject;
+  private ConceptPresentation props_ITargetStaticProperty;
   private ConceptPresentation props_InteractedObjectExpression;
   private ConceptPresentation props_InteractionForce;
   private ConceptPresentation props_ObjectDefinition;
@@ -44,17 +46,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObjectType;
   private ConceptPresentation props_ObjectVelocityTarget;
   private ConceptPresentation props_PictureTexture;
+  private ConceptPresentation props_PositionCoordinates;
   private ConceptPresentation props_RelativeCoordinates;
   private ConceptPresentation props_Simulation;
   private ConceptPresentation props_SphereVisual;
   private ConceptPresentation props_SphericalCoordinates;
   private ConceptPresentation props_StatefulForce;
   private ConceptPresentation props_StaticForce;
+  private ConceptPresentation props_TargetableCoordinates;
   private ConceptPresentation props_Texture;
   private ConceptPresentation props_VectorComponentTarget;
   private ConceptPresentation props_VectorOppositeDotTarget;
   private ConceptPresentation props_VectorResizeDotTarget;
   private ConceptPresentation props_VectorType;
+  private ConceptPresentation props_VelocityCoordinates;
   private ConceptPresentation props_Visual;
   private ConceptPresentation props_WorldDefinition;
   private ConceptPresentation props_WorldInclusion;
@@ -150,7 +155,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.CartesianCoordinates:
         if (props_CartesianCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
+          cpb.rawPresentation("cartesian coordinates");
           props_CartesianCoordinates = cpb.create();
         }
         return props_CartesianCoordinates;
@@ -185,7 +190,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.DirectionalCoordinates:
         if (props_DirectionalCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
+          cpb.rawPresentation("directional coordinates");
           props_DirectionalCoordinates = cpb.create();
         }
         return props_DirectionalCoordinates;
@@ -237,12 +242,24 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IObjectDefinition = cpb.create();
         }
         return props_IObjectDefinition;
+      case LanguageConceptSwitch.ITargetCoordinates:
+        if (props_ITargetCoordinates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ITargetCoordinates = cpb.create();
+        }
+        return props_ITargetCoordinates;
       case LanguageConceptSwitch.ITargetObject:
         if (props_ITargetObject == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           props_ITargetObject = cpb.create();
         }
         return props_ITargetObject;
+      case LanguageConceptSwitch.ITargetStaticProperty:
+        if (props_ITargetStaticProperty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ITargetStaticProperty = cpb.create();
+        }
+        return props_ITargetStaticProperty;
       case LanguageConceptSwitch.InteractedObjectExpression:
         if (props_InteractedObjectExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -308,10 +325,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PictureTexture = cpb.create();
         }
         return props_PictureTexture;
+      case LanguageConceptSwitch.PositionCoordinates:
+        if (props_PositionCoordinates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("contains coordinates and serve as coordinates target");
+          cpb.presentationByName();
+          props_PositionCoordinates = cpb.create();
+        }
+        return props_PositionCoordinates;
       case LanguageConceptSwitch.RelativeCoordinates:
         if (props_RelativeCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
+          cpb.rawPresentation("relative coordinates");
           props_RelativeCoordinates = cpb.create();
         }
         return props_RelativeCoordinates;
@@ -332,7 +357,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.SphericalCoordinates:
         if (props_SphericalCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
+          cpb.rawPresentation("spherical coordinates");
           props_SphericalCoordinates = cpb.create();
         }
         return props_SphericalCoordinates;
@@ -352,6 +377,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StaticForce = cpb.create();
         }
         return props_StaticForce;
+      case LanguageConceptSwitch.TargetableCoordinates:
+        if (props_TargetableCoordinates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_TargetableCoordinates = cpb.create();
+        }
+        return props_TargetableCoordinates;
       case LanguageConceptSwitch.Texture:
         if (props_Texture == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -386,6 +417,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VectorType = cpb.create();
         }
         return props_VectorType;
+      case LanguageConceptSwitch.VelocityCoordinates:
+        if (props_VelocityCoordinates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_VelocityCoordinates = cpb.create();
+        }
+        return props_VelocityCoordinates;
       case LanguageConceptSwitch.Visual:
         if (props_Visual == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

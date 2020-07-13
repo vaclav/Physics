@@ -1737,5 +1737,15 @@
     </node>
     <node concept="22hDWj" id="Q4PrYMwMOV" role="22hAXT" />
   </node>
+  <node concept="24kQdi" id="GdoRjGvS8F">
+    <property role="3GE5qa" value="physical.vector.targets" />
+    <ref role="1XX52x" to="9tcj:GdoRjGvRee" resolve="TargetableCoordinates" />
+    <node concept="3EZMnI" id="GdoRjGvS8H" role="2wV5jI">
+      <node concept="3F1sOY" id="GdoRjGvS8N" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:GdoRjGvRej" resolve="coordinates" />
+      </node>
+      <node concept="l2Vlx" id="GdoRjGvS8J" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

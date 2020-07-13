@@ -5,34 +5,24 @@ package jetbrains.mps.samples.Physics.behavior;
 import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import jetbrains.mps.core.aspects.behaviour.api.SMethod;
-import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
-import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
-import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
+import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 public final class Coordinates__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.Coordinates");
 
-  public static final SMethod<Iterable<SNode>> getDependenciesRelevantForCycleDetection_id59HbAIOYveX = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getDependenciesRelevantForCycleDetection").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("59HbAIOYveX").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDependenciesRelevantForCycleDetection_id59HbAIOYveX);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList();
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static Iterable<SNode> getDependenciesRelevantForCycleDetection_id59HbAIOYveX(@NotNull SNode __thisNode__) {
-    return SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.IDetectCycle$So, false, new SAbstractConcept[]{CONCEPTS.IDetectCycle$So});
-  }
 
   /*package*/ Coordinates__BehaviorDescriptor() {
   }
@@ -49,8 +39,6 @@ public final class Coordinates__BehaviorDescriptor extends BaseBHDescriptor {
       throw new BHMethodNotFoundException(this, method);
     }
     switch (methodIndex) {
-      case 0:
-        return (T) ((Iterable<SNode>) getDependenciesRelevantForCycleDetection_id59HbAIOYveX(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -78,9 +66,5 @@ public final class Coordinates__BehaviorDescriptor extends BaseBHDescriptor {
   @Override
   public SAbstractConcept getConcept() {
     return CONCEPT;
-  }
-
-  private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IDetectCycle$So = MetaAdapterFactory.getInterfaceConcept(0xd4280a54f6df4383L, 0xaa41d1b2bffa7eb1L, 0x526d2e6bb4f94a97L, "com.mbeddr.core.base.structure.IDetectCycle");
   }
 }

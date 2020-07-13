@@ -24,7 +24,7 @@
       <unit at="26,0,98,0" name="jetbrains.mps.samples.Physics.editor.AbstractObjectReference_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="19,0,252,0" name="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
+      <unit at="19,0,264,0" name="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="GrammarActionsDescriptor.java">
       <unit at="62,51,66,5" name="jetbrains.mps.samples.Physics.editor.GrammarActionsDescriptor$1" />
@@ -166,10 +166,20 @@
       <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_IObjectDefinition$GrammarCellsSubstituteMenuPart_7jhg8f_a" />
       <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_IObjectDefinition" />
     </file>
+    <file name="GrammarCellsSubstituteMenu_ITargetCoordinates.java">
+      <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetCoordinates$CONCEPTS" />
+      <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetCoordinates$GrammarCellsSubstituteMenuPart_gpgf8u_a" />
+      <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetCoordinates" />
+    </file>
     <file name="GrammarCellsSubstituteMenu_ITargetObject.java">
       <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetObject$CONCEPTS" />
       <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetObject$GrammarCellsSubstituteMenuPart_dhgvri_a" />
       <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetObject" />
+    </file>
+    <file name="GrammarCellsSubstituteMenu_ITargetStaticProperty.java">
+      <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetStaticProperty$CONCEPTS" />
+      <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetStaticProperty$GrammarCellsSubstituteMenuPart_chvqsg_a" />
+      <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetStaticProperty" />
     </file>
     <file name="GrammarCellsSubstituteMenu_InteractedObjectExpression.java">
       <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_InteractedObjectExpression$CONCEPTS" />
@@ -216,6 +226,11 @@
       <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_PictureTexture$GrammarCellsSubstituteMenuPart_l363os_a" />
       <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_PictureTexture" />
     </file>
+    <file name="GrammarCellsSubstituteMenu_PositionCoordinates.java">
+      <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_PositionCoordinates$CONCEPTS" />
+      <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_PositionCoordinates$GrammarCellsSubstituteMenuPart_oo85rv_a" />
+      <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_PositionCoordinates" />
+    </file>
     <file name="GrammarCellsSubstituteMenu_RelativeCoordinates.java">
       <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_RelativeCoordinates$CONCEPTS" />
       <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_RelativeCoordinates$GrammarCellsSubstituteMenuPart_m062yh_a" />
@@ -246,6 +261,11 @@
       <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_StaticForce$GrammarCellsSubstituteMenuPart_162pfk_a" />
       <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_StaticForce" />
     </file>
+    <file name="GrammarCellsSubstituteMenu_TargetableCoordinates.java">
+      <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_TargetableCoordinates$CONCEPTS" />
+      <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_TargetableCoordinates$GrammarCellsSubstituteMenuPart_pr5nju_a" />
+      <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_TargetableCoordinates" />
+    </file>
     <file name="GrammarCellsSubstituteMenu_Texture.java">
       <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_Texture$CONCEPTS" />
       <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_Texture$GrammarCellsSubstituteMenuPart_imowu7_a" />
@@ -270,6 +290,11 @@
       <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorType$CONCEPTS" />
       <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorType$GrammarCellsSubstituteMenuPart_slnusc_a" />
       <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorType" />
+    </file>
+    <file name="GrammarCellsSubstituteMenu_VelocityCoordinates.java">
+      <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VelocityCoordinates$CONCEPTS" />
+      <unit at="46,0,56,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VelocityCoordinates$GrammarCellsSubstituteMenuPart_xdbpy9_a" />
+      <unit at="21,0,61,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VelocityCoordinates" />
     </file>
     <file name="GrammarCellsSubstituteMenu_Visual.java">
       <unit at="57,0,60,0" name="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_Visual$CONCEPTS" />
@@ -2971,7 +2996,7 @@
       <node id="4383135941275158718" at="170,37,171,51" concept="8" />
       <node id="4383135941275158718" at="172,13,173,0" concept="10" />
       <node id="4383135941275158718" at="173,0,174,86" concept="9" />
-      <node id="4383135941275158718" at="175,334,176,106" concept="7" />
+      <node id="4383135941275158718" at="175,342,176,106" concept="7" />
       <node id="4383135941275158718" at="176,106,177,35" concept="8" />
       <node id="4383135941275158718" at="178,13,179,0" concept="10" />
       <node id="4383135941275158718" at="179,0,180,24" concept="8" />
@@ -3020,7 +3045,7 @@
       <scope id="4383135941275158716" at="158,74,160,24">
         <var name="sourceNode" id="4383135941275158716" />
       </scope>
-      <scope id="4383135941275158718" at="175,334,177,35">
+      <scope id="4383135941275158718" at="175,342,177,35">
         <var name="parentContext" id="4383135941275158718" />
       </scope>
       <scope id="4383135941275158718" at="183,74,185,24">
@@ -7960,6 +7985,118 @@
       <unit id="7887120293591770137" at="292,0,297,0" name="jetbrains.mps.samples.Physics.editor.BoxVisual_EditorBuilder_a$PROPS" />
       <unit id="7887120293591770137" at="240,0,291,0" name="jetbrains.mps.samples.Physics.editor.BoxVisual_EditorBuilder_a$textureSingleRoleHandler_wp4hc0_p0" />
       <unit id="7887120293591770137" at="41,0,306,0" name="jetbrains.mps.samples.Physics.editor.BoxVisual_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)/796402062949581355">
+    <file name="TargetableCoordinates_Editor.java">
+      <node id="796402062949581355" at="11,79,12,87" concept="8" />
+      <node id="796402062949581355" at="11,0,14,0" concept="6" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="796402062949581355" at="11,79,12,87" />
+      <scope id="796402062949581355" at="11,0,14,0">
+        <var name="editorContext" id="796402062949581355" />
+        <var name="node" id="796402062949581355" />
+      </scope>
+      <unit id="796402062949581355" at="10,0,15,0" name="jetbrains.mps.samples.Physics.editor.TargetableCoordinates_Editor" />
+    </file>
+    <file name="TargetableCoordinates_EditorBuilder_a.java">
+      <node id="796402062949581355" at="26,101,27,19" concept="13" />
+      <node id="796402062949581355" at="27,19,28,18" concept="2" />
+      <node id="796402062949581355" at="33,26,34,18" concept="8" />
+      <node id="796402062949581355" at="37,39,38,32" concept="8" />
+      <node id="796402062949581355" at="41,43,42,118" concept="7" />
+      <node id="796402062949581355" at="42,118,43,48" concept="2" />
+      <node id="796402062949581355" at="43,48,44,28" concept="2" />
+      <node id="796402062949581355" at="44,28,45,31" concept="2" />
+      <node id="796402062949581363" at="45,31,46,48" concept="2" />
+      <node id="796402062949581355" at="46,48,47,22" concept="8" />
+      <node id="796402062949581355" at="49,40,50,133" concept="7" />
+      <node id="796402062949581355" at="50,133,51,33" concept="8" />
+      <node id="796402062949581355" at="57,125,58,38" concept="13" />
+      <node id="796402062949581355" at="58,38,59,25" concept="2" />
+      <node id="796402062949581355" at="64,28,65,20" concept="8" />
+      <node id="796402062949581355" at="68,55,69,76" concept="7" />
+      <node id="796402062949581355" at="69,76,70,120" concept="2" />
+      <node id="796402062949581355" at="70,120,71,123" concept="2" />
+      <node id="796402062949581355" at="71,123,72,48" concept="2" />
+      <node id="796402062949581355" at="72,48,73,24" concept="8" />
+      <node id="796402062949581355" at="79,118,80,137" concept="2" />
+      <node id="796402062949581355" at="82,42,83,52" concept="2" />
+      <node id="796402062949581355" at="87,44,88,41" concept="2" />
+      <node id="796402062949581355" at="88,41,89,111" concept="2" />
+      <node id="796402062949581355" at="90,11,91,56" concept="7" />
+      <node id="796402062949581355" at="91,56,92,50" concept="2" />
+      <node id="796402062949581355" at="92,50,93,48" concept="2" />
+      <node id="796402062949581355" at="93,48,94,35" concept="2" />
+      <node id="796402062949581355" at="94,35,95,26" concept="8" />
+      <node id="796402062949581355" at="96,17,97,42" concept="2" />
+      <node id="796402062949581355" at="100,40,101,32" concept="8" />
+      <node id="796402062949581355" at="106,0,107,0" concept="11" trace="coordinates$87ts" />
+      <node id="796402062949581355" at="23,0,25,0" concept="3" trace="myNode" />
+      <node id="796402062949581355" at="54,0,56,0" concept="3" trace="myNode" />
+      <node id="796402062949581355" at="37,0,40,0" concept="6" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="796402062949581355" at="78,87,81,7" concept="5" />
+      <node id="796402062949581355" at="81,7,84,7" concept="5" />
+      <node id="796402062949581355" at="100,0,103,0" concept="6" trace="getNoTargetText#()Ljava/lang/String;" />
+      <node id="796402062949581355" at="26,0,30,0" concept="1" trace="TargetableCoordinates_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="796402062949581355" at="49,0,53,0" concept="6" trace="createRefNode_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="796402062949581355" at="57,0,61,0" concept="1" trace="coordinatesSingleRoleHandler_f8bj1a_a0#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SContainmentLink;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
+      <node id="796402062949581355" at="31,0,36,0" concept="6" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="796402062949581355" at="62,0,67,0" concept="6" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="796402062949581355" at="68,0,75,0" concept="6" trace="createChildCell#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="796402062949581355" at="41,0,49,0" concept="6" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="796402062949581355" at="78,0,86,0" concept="6" trace="installCellInfo#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/cells/EditorCell;Z)V" />
+      <node id="796402062949581355" at="89,111,98,7" concept="14" />
+      <node id="796402062949581355" at="86,0,100,0" concept="6" trace="createEmptyCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="796402062949581355" at="33,26,34,18" />
+      <scope id="796402062949581355" at="37,39,38,32" />
+      <scope id="796402062949581355" at="64,28,65,20" />
+      <scope id="796402062949581355" at="79,118,80,137" />
+      <scope id="796402062949581355" at="82,42,83,52" />
+      <scope id="796402062949581355" at="96,17,97,42" />
+      <scope id="796402062949581355" at="100,40,101,32" />
+      <scope id="796402062949581355" at="26,101,28,18" />
+      <scope id="796402062949581355" at="49,40,51,33">
+        <var name="provider" id="796402062949581355" />
+      </scope>
+      <scope id="796402062949581355" at="57,125,59,25" />
+      <scope id="796402062949581355" at="37,0,40,0" />
+      <scope id="796402062949581355" at="100,0,103,0" />
+      <scope id="796402062949581355" at="26,0,30,0">
+        <var name="context" id="796402062949581355" />
+        <var name="node" id="796402062949581355" />
+      </scope>
+      <scope id="796402062949581355" at="49,0,53,0" />
+      <scope id="796402062949581355" at="57,0,61,0">
+        <var name="containmentLink" id="796402062949581355" />
+        <var name="context" id="796402062949581355" />
+        <var name="ownerNode" id="796402062949581355" />
+      </scope>
+      <scope id="796402062949581355" at="31,0,36,0" />
+      <scope id="796402062949581355" at="62,0,67,0" />
+      <scope id="796402062949581355" at="68,55,73,24">
+        <var name="editorCell" id="796402062949581355" />
+      </scope>
+      <scope id="796402062949581355" at="90,11,95,26">
+        <var name="editorCell" id="796402062949581355" />
+      </scope>
+      <scope id="796402062949581355" at="41,43,47,22">
+        <var name="editorCell" id="796402062949581355" />
+      </scope>
+      <scope id="796402062949581355" at="78,87,84,7" />
+      <scope id="796402062949581355" at="68,0,75,0">
+        <var name="child" id="796402062949581355" />
+      </scope>
+      <scope id="796402062949581355" at="41,0,49,0" />
+      <scope id="796402062949581355" at="78,0,86,0">
+        <var name="child" id="796402062949581355" />
+        <var name="editorCell" id="796402062949581355" />
+        <var name="isEmpty" id="796402062949581355" />
+      </scope>
+      <scope id="796402062949581355" at="87,44,98,7" />
+      <scope id="796402062949581355" at="86,0,100,0" />
+      <unit id="796402062949581355" at="105,0,108,0" name="jetbrains.mps.samples.Physics.editor.TargetableCoordinates_EditorBuilder_a$LINKS" />
+      <unit id="796402062949581355" at="53,0,104,0" name="jetbrains.mps.samples.Physics.editor.TargetableCoordinates_EditorBuilder_a$coordinatesSingleRoleHandler_f8bj1a_a0" />
+      <unit id="796402062949581355" at="22,0,109,0" name="jetbrains.mps.samples.Physics.editor.TargetableCoordinates_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)/8383083003966848064">

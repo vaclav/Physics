@@ -172,7 +172,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             }
 
             // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Coordinates$HV) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.WorldInclusion$vO) && Objects.equals(sourceNode.getContainmentLink(), LINKS.location$DoV0) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.PositionCoordinates$za) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.WorldInclusion$vO) && Objects.equals(sourceNode.getContainmentLink(), LINKS.location$DoV0) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
               TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
               return parentContext;
             }
@@ -209,7 +209,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             }
 
             // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.AbsoluteCoordinates$d5) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.WorldInclusion$vO) && Objects.equals(sourceNode.getContainmentLink(), LINKS.velocity$DoVv) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.VelocityCoordinates$bc) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.WorldInclusion$vO) && Objects.equals(sourceNode.getContainmentLink(), LINKS.velocity$DoVv) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
               TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
               return parentContext;
             }
@@ -344,8 +344,8 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
     /*package*/ static final SConcept WorldInclusion$vO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, "jetbrains.mps.samples.Physics.structure.WorldInclusion");
     /*package*/ static final SConcept WorldReference$Fu = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, "jetbrains.mps.samples.Physics.structure.WorldReference");
     /*package*/ static final SConcept OptionalNameSpecifier$Fc = MetaAdapterFactory.getConcept(0x7b68d745a7b848b9L, 0xbd9c05c0f8725a35L, 0x32f64a31a10020aL, "org.iets3.core.base.structure.OptionalNameSpecifier");
-    /*package*/ static final SConcept Coordinates$HV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.Coordinates");
-    /*package*/ static final SConcept AbsoluteCoordinates$d5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL, "jetbrains.mps.samples.Physics.structure.AbsoluteCoordinates");
+    /*package*/ static final SConcept PositionCoordinates$za = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7d87dcL, "jetbrains.mps.samples.Physics.structure.PositionCoordinates");
+    /*package*/ static final SConcept VelocityCoordinates$bc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738bL, "jetbrains.mps.samples.Physics.structure.VelocityCoordinates");
   }
 
   private static final class LINKS {

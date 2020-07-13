@@ -945,15 +945,15 @@
       <node id="3489632902467606615" at="49,52,50,0" concept="9" />
       <node id="3489632902467582227" at="50,0,51,29" concept="8" />
       <node id="3489632902467505323" at="51,29,52,157" concept="6" />
-      <node id="3489632902467484947" at="52,157,53,164" concept="3" />
-      <node id="3489632902467484341" at="53,164,54,0" concept="9" />
+      <node id="3489632902467484947" at="52,157,53,215" concept="3" />
+      <node id="3489632902467484341" at="53,215,54,0" concept="9" />
       <node id="3489632902467586239" at="54,0,55,26" concept="8" />
       <node id="3489632902467511851" at="55,26,56,40" concept="6" />
       <node id="3489632902468350719" at="57,75,58,149" concept="3" />
-      <node id="3489632902468753059" at="58,149,59,166" concept="3" />
-      <node id="3489632902468750687" at="59,166,60,0" concept="9" />
+      <node id="3489632902468753059" at="58,149,59,217" concept="3" />
+      <node id="3489632902468750687" at="59,217,60,0" concept="9" />
       <node id="3489632902468369746" at="61,16,62,44" concept="3" />
-      <node id="3489632902470397748" at="62,44,63,130" concept="3" />
+      <node id="3489632902470397748" at="62,44,63,181" concept="3" />
       <node id="3489632902467518077" at="64,9,65,0" concept="9" />
       <node id="3489632902467587944" at="65,0,66,29" concept="8" />
       <node id="3489632902467520205" at="67,9,68,35" concept="6" />
@@ -969,13 +969,14 @@
       <node id="3489632902467643162" at="94,7,95,0" concept="9" />
       <node id="3489632902467644100" at="95,0,96,19" concept="7" />
       <node id="7976234883188882715" at="100,0,101,0" concept="10" trace="location$DoV0" />
-      <node id="7976234883188882715" at="101,0,102,0" concept="10" trace="velocity$DoVv" />
-      <node id="7976234883188882715" at="102,0,103,0" concept="10" trace="world$ZN60" />
-      <node id="7976234883188882715" at="103,0,104,0" concept="10" trace="target$12L0" />
-      <node id="7976234883188882715" at="104,0,105,0" concept="10" trace="target$EWj0" />
-      <node id="7976234883188882715" at="108,0,109,0" concept="10" trace="WorldInclusion$vO" />
-      <node id="7976234883188882715" at="109,0,110,0" concept="10" trace="ObjectDefinition$YO" />
-      <node id="7976234883188882715" at="110,0,111,0" concept="10" trace="ObjectReference$qq" />
+      <node id="7976234883188882715" at="101,0,102,0" concept="10" trace="coordinates$87ts" />
+      <node id="7976234883188882715" at="102,0,103,0" concept="10" trace="velocity$DoVv" />
+      <node id="7976234883188882715" at="103,0,104,0" concept="10" trace="world$ZN60" />
+      <node id="7976234883188882715" at="104,0,105,0" concept="10" trace="target$12L0" />
+      <node id="7976234883188882715" at="105,0,106,0" concept="10" trace="target$EWj0" />
+      <node id="7976234883188882715" at="109,0,110,0" concept="10" trace="WorldInclusion$vO" />
+      <node id="7976234883188882715" at="110,0,111,0" concept="10" trace="ObjectDefinition$YO" />
+      <node id="7976234883188882715" at="111,0,112,0" concept="10" trace="ObjectReference$qq" />
       <node id="3489632902467481743" at="38,0,41,0" concept="11" trace="resolveAll#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
       <node id="3489632902468362186" at="61,14,64,9" concept="1" />
       <node id="3489632902467520205" at="68,35,71,11" concept="4" />
@@ -993,7 +994,7 @@
       <scope id="3489632902467481746" at="38,53,39,75" />
       <scope id="3489632902467520209" at="69,82,70,226" />
       <scope id="8821912306505656442" at="89,39,90,208" />
-      <scope id="3489632902468362187" at="61,16,63,130" />
+      <scope id="3489632902468362187" at="61,16,63,181" />
       <scope id="3489632902467481743" at="38,0,41,0">
         <var name="world" id="3489632902467482499" />
       </scope>
@@ -1030,11 +1031,11 @@
         <var name="world" id="7976234883189627566" />
       </scope>
       <unit id="8821912306505656441" at="88,153,92,9" name="jetbrains.mps.samples.Physics.plugin.PositioningResolver$2$1" />
-      <unit id="7976234883188882715" at="107,0,112,0" name="jetbrains.mps.samples.Physics.plugin.PositioningResolver$CONCEPTS" />
-      <unit id="7976234883188882715" at="99,0,106,0" name="jetbrains.mps.samples.Physics.plugin.PositioningResolver$LINKS" />
+      <unit id="7976234883188882715" at="108,0,113,0" name="jetbrains.mps.samples.Physics.plugin.PositioningResolver$CONCEPTS" />
       <unit id="8821912306505630814" at="86,57,94,5" name="jetbrains.mps.samples.Physics.plugin.PositioningResolver$2" />
+      <unit id="7976234883188882715" at="99,0,107,0" name="jetbrains.mps.samples.Physics.plugin.PositioningResolver$LINKS" />
       <unit id="3489632902467483895" at="46,124,83,5" name="jetbrains.mps.samples.Physics.plugin.PositioningResolver$1" />
-      <unit id="7976234883188882715" at="27,0,113,0" name="jetbrains.mps.samples.Physics.plugin.PositioningResolver" />
+      <unit id="7976234883188882715" at="27,0,114,0" name="jetbrains.mps.samples.Physics.plugin.PositioningResolver" />
     </file>
   </root>
 </debug-info>
