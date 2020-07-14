@@ -12,6 +12,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.BoxFixture;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.StaticForce;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.Force;
@@ -57,7 +58,7 @@ public class TestWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Visual (if any) and forces 
-      this.setFixture(new BoxFixture(world, ((Number) new BigInteger("2")).doubleValue(), ((Number) new BigInteger("2")).doubleValue(), ((Number) new BigInteger("2")).doubleValue()));
+      this.setFixture(new BoxFixture(world, ((Number) new BigInteger("2")).doubleValue(), ((Number) new BigInteger("2")).doubleValue(), ((Number) new BigInteger("2")).doubleValue(), new Color(255, 255, 255)));
       this.getForces().addAll(Arrays.asList(new StaticForce(new InternalVector(((Number) new BigInteger("2")), ((Number) new BigInteger("2")), ((Number) new BigInteger("2"))).toDVector3C()), new Force() {
         @Override
         public DVector3C getForce(World world, PhysicalEntity currentEntity) {
@@ -89,7 +90,7 @@ public class TestWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Visual (if any) and forces 
-      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("50")).doubleValue()));
+      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("50")).doubleValue(), new Color(255, 255, 255)));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 
@@ -116,7 +117,7 @@ public class TestWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Visual (if any) and forces 
-      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("300")).doubleValue()));
+      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("300")).doubleValue(), new Color(255, 255, 255)));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 

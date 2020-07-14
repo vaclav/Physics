@@ -17,6 +17,7 @@
     <import index="eaav" ref="r:b3b78d7c-b258-46c7-b846-e8d10925f2cd(jetbrains.mps.samples.Physics.runtime.vectors)" />
     <import index="s6tv" ref="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="bf5" ref="r:ed131d93-9e12-43c3-b840-cc4cd82da9cd(jetbrains.mps.samples.Physics.colors)" implicit="true" />
   </imports>
   <registry>
     <language id="8585453e-6bfb-4d80-98de-b16074f1d86c" name="jetbrains.mps.lang.test">
@@ -138,8 +139,8 @@
       <concept id="1459540517659024963" name="jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition" flags="ng" index="Y6$Ct">
         <child id="1459540517659024977" name="visual" index="Y6$Cf" />
       </concept>
-      <concept id="1459540517659024997" name="jetbrains.mps.samples.Physics.structure.BuiltInColorTexture" flags="ng" index="Y6$CV">
-        <property id="232455383963860875" name="color" index="2CsMtV" />
+      <concept id="1459540517659024997" name="jetbrains.mps.samples.Physics.structure.DefinedColorReference" flags="ng" index="Y6$CV">
+        <reference id="794591792991785009" name="color" index="2hGqkR" />
       </concept>
       <concept id="4383135941275155973" name="jetbrains.mps.samples.Physics.structure.ILocalized" flags="ng" index="1h9ZzJ">
         <child id="4383135941275155974" name="location" index="1h9ZzG" />
@@ -709,7 +710,7 @@
               <property role="30bXRw" value="3" />
             </node>
             <node concept="Y6$CV" id="Zge_mbd_4b" role="Y6$CS">
-              <property role="2CsMtV" value="cTQf2FiJWQ/blue" />
+              <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
             </node>
           </node>
         </node>

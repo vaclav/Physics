@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="akx1f4ebqqf5mt9tvfd9665hdzv9uuj">
-  <files names="BoxFixture.java:Fixture.java:SphereFixture.java" />
+<product version="3" modelHash="c2mfqcyy7grr4wdiwdcywveirycvp49">
+  <files names="BoxFixture.java:Color.java:Fixture.java:SphereFixture.java" />
 </product>
 

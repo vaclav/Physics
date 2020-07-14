@@ -10,6 +10,8 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.BoxFixture;
 
@@ -59,6 +61,7 @@ public class SolarSystemSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Visual (if any) and forces 
+      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("200")).doubleValue(), new Color(255, 0, 165)));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 
@@ -165,7 +168,7 @@ public class SolarSystemSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Visual (if any) and forces 
-      this.setFixture(new BoxFixture(world, ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue()));
+      this.setFixture(new BoxFixture(world, ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), new Color(45, 45, 45)));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 

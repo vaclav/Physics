@@ -10,6 +10,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
@@ -50,7 +51,7 @@ public class World21SystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Visual (if any) and forces 
-      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("200")).doubleValue()));
+      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("200")).doubleValue(), new Color(255, 255, 255)));
       this.getForces().addAll(Arrays.asList(new Force() {
         @Override
         public DVector3C getForce(World world, PhysicalEntity currentEntity) {
@@ -82,7 +83,7 @@ public class World21SystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Visual (if any) and forces 
-      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("100")).doubleValue()));
+      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("100")).doubleValue(), new Color(255, 255, 255)));
       this.getForces().addAll(Arrays.asList(new Force() {
         @Override
         public DVector3C getForce(World world, PhysicalEntity currentEntity) {

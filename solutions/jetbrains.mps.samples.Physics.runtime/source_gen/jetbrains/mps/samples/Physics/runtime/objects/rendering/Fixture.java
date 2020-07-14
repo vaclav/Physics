@@ -10,14 +10,25 @@ import org.ode4j.ode.DBody;
 public abstract class Fixture {
   public static final double DENSITY = 1;
   private DGeom geometry;
-  public Fixture(DGeom geometry) {
+  protected Color texture;
+
+  public Fixture(DGeom geometry, Color texture) {
     this.geometry = geometry;
+    this.texture = texture;
   }
   /**
    * Render the object onto the applet at 0,0,0
    * @param ctx applet context
    */
-  public abstract void render(PApplet ctx);
+  public void render(PApplet ctx) {
+    if (texture != null) {
+      ctx.noStroke();
+      ctx.fill(texture.red, texture.blue, texture.green);
+    } else {
+      ctx.stroke(255);
+      ctx.noFill();
+    }
+  }
   /**
    * Construct mass adequate to fixture implementation
    * @return mass with appropriate representation

@@ -11,14 +11,15 @@ public class BoxFixture extends Fixture {
   /*package*/ float width;
   /*package*/ float height;
   /*package*/ float depth;
-  public BoxFixture(World space, double width, double height, double depth) {
-    super(OdeHelper.createBox(space.getSpace(), width, height, depth));
+  public BoxFixture(World space, double width, double height, double depth, Color texture) {
+    super(OdeHelper.createBox(space.getSpace(), width, height, depth), texture);
     this.width = (float) width;
     this.height = (float) height;
     this.depth = (float) depth;
   }
   @Override
   public void render(PApplet ctx) {
+    super.render(ctx);
     ctx.box(width, height, depth);
   }
   @Override

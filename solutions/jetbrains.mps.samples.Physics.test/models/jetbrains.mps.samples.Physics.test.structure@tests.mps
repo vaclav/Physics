@@ -10,6 +10,7 @@
     <import index="y3qk" ref="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
     <import index="9zoj" ref="r:1b0f275e-bd62-4f6e-8c4b-51b05d651a63(com.mbeddr.core.base.typesystem)" />
     <import index="wxye" ref="r:cec599e3-51d2-48a7-af31-989e3cbd593c(jetbrains.mps.lang.core.typesystem)" />
+    <import index="bf5" ref="r:ed131d93-9e12-43c3-b840-cc4cd82da9cd(jetbrains.mps.samples.Physics.colors)" implicit="true" />
   </imports>
   <registry>
     <language id="8585453e-6bfb-4d80-98de-b16074f1d86c" name="jetbrains.mps.lang.test">
@@ -75,8 +76,8 @@
         <child id="1459540517659024977" name="visual" index="Y6$Cf" />
         <child id="1459540517659024967" name="parent" index="Y6$Cp" />
       </concept>
-      <concept id="1459540517659024997" name="jetbrains.mps.samples.Physics.structure.BuiltInColorTexture" flags="ng" index="Y6$CV">
-        <property id="232455383963860875" name="color" index="2CsMtV" />
+      <concept id="1459540517659024997" name="jetbrains.mps.samples.Physics.structure.DefinedColorReference" flags="ng" index="Y6$CV">
+        <reference id="794591792991785009" name="color" index="2hGqkR" />
       </concept>
       <concept id="4383135941275108256" name="jetbrains.mps.samples.Physics.structure.WorldInclusion" flags="ng" index="1h9Ola">
         <child id="4383135941275108257" name="world" index="1h9Olb" />
@@ -197,7 +198,7 @@
               <property role="30bXRw" value="0" />
             </node>
             <node concept="Y6$CV" id="M__cqnUDnK" role="Y6$CS">
-              <property role="2CsMtV" value="cTQf2FiJWQ/blue" />
+              <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
             </node>
           </node>
           <node concept="3Bsx3U" id="M__cqnUDtK" role="1bLhCY">
@@ -282,7 +283,7 @@
           </node>
           <node concept="Y6$C9" id="M__cqnUDTS" role="Y6$Cf">
             <node concept="Y6$CV" id="M__cqnUE0t" role="Y6$CS">
-              <property role="2CsMtV" value="cTQf2FiJWM/red" />
+              <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
             </node>
             <node concept="30bXRB" id="M__cqnUE1u" role="2r6uAq">
               <property role="30bXRw" value="30" />
@@ -439,7 +440,7 @@
         <property role="TrG5h" value="NiceVisual" />
         <node concept="Y6$C6" id="M__cqnvbq0" role="Y6$Cf">
           <node concept="Y6$CV" id="M__cqnvbq4" role="Y6$CS">
-            <property role="2CsMtV" value="cTQf2FiJXc/black" />
+            <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
           </node>
           <node concept="30bXRB" id="M__cqnGyEd" role="2r5dqY">
             <property role="30bXRw" value="3" />

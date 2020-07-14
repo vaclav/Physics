@@ -11,16 +11,6 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspectBase" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_BuiltInColors">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.EnumerationLiteralsIndex" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptor" />
-    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
-    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
-  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_BuiltInVectors">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -51,7 +41,6 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="java.util.Collection" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_BuiltInColors" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_BuiltInVectors" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_VectorComponent" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.LanguageConceptSwitch" />

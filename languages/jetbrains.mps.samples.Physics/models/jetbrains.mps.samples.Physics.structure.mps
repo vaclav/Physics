@@ -377,13 +377,13 @@
   <node concept="1TIwiD" id="1h1l5SEmLT_">
     <property role="EcuMT" value="1459540517659024997" />
     <property role="3GE5qa" value="physical.visual.texture" />
-    <property role="TrG5h" value="BuiltInColorTexture" />
-    <property role="34LRSv" value="built-in color" />
+    <property role="TrG5h" value="DefinedColorReference" />
     <ref role="1TJDcQ" node="1h1l5SEmLT$" resolve="Texture" />
-    <node concept="1TJgyi" id="cTQf2FiJYb" role="1TKVEl">
-      <property role="IQ2nx" value="232455383963860875" />
-      <property role="TrG5h" value="color" />
-      <ref role="AX2Wp" node="cTQf2FiJWL" resolve="BuiltInColors" />
+    <node concept="1TJgyj" id="G6XgqqHP0L" role="1TKVEi">
+      <property role="IQ2ns" value="794591792991785009" />
+      <property role="20kJfa" value="color" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="G6XgqqHP0I" resolve="ColorDefinition" />
     </node>
   </node>
   <node concept="1TIwiD" id="nlMVtogWxw">
@@ -736,47 +736,6 @@
     <property role="34LRSv" value="direction" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
   </node>
-  <node concept="25R3W" id="cTQf2FiJWL">
-    <property role="3F6X1D" value="232455383963860785" />
-    <property role="3GE5qa" value="physical.visual.texture" />
-    <property role="TrG5h" value="BuiltInColors" />
-    <node concept="25R33" id="cTQf2FiJWM" role="25R1y">
-      <property role="3tVfz5" value="232455383963860786" />
-      <property role="TrG5h" value="red" />
-    </node>
-    <node concept="25R33" id="cTQf2FiJWN" role="25R1y">
-      <property role="3tVfz5" value="232455383963860787" />
-      <property role="TrG5h" value="green" />
-    </node>
-    <node concept="25R33" id="cTQf2FiJWQ" role="25R1y">
-      <property role="3tVfz5" value="232455383963860790" />
-      <property role="TrG5h" value="blue" />
-    </node>
-    <node concept="25R33" id="cTQf2FiJWU" role="25R1y">
-      <property role="3tVfz5" value="232455383963860794" />
-      <property role="TrG5h" value="purple" />
-    </node>
-    <node concept="25R33" id="cTQf2FiJWZ" role="25R1y">
-      <property role="3tVfz5" value="232455383963860799" />
-      <property role="TrG5h" value="orange" />
-    </node>
-    <node concept="25R33" id="cTQf2FiJX5" role="25R1y">
-      <property role="3tVfz5" value="232455383963860805" />
-      <property role="TrG5h" value="grey" />
-    </node>
-    <node concept="25R33" id="cTQf2FiJXc" role="25R1y">
-      <property role="3tVfz5" value="232455383963860812" />
-      <property role="TrG5h" value="black" />
-    </node>
-    <node concept="25R33" id="cTQf2FiJXk" role="25R1y">
-      <property role="3tVfz5" value="232455383963860820" />
-      <property role="TrG5h" value="white" />
-    </node>
-    <node concept="25R33" id="M__cqnCn_l" role="25R1y">
-      <property role="3tVfz5" value="911298080280770901" />
-      <property role="TrG5h" value="yellow" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="cTQf2FjlqU">
     <property role="EcuMT" value="232455383964014266" />
     <property role="3GE5qa" value="physical.force.implemented.interaction" />
@@ -956,6 +915,24 @@
     <property role="TrG5h" value="TimeExpression" />
     <property role="34LRSv" value="time" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="G6XgqqHP0I">
+    <property role="EcuMT" value="794591792991785006" />
+    <property role="3GE5qa" value="physical.visual.texture" />
+    <property role="TrG5h" value="ColorDefinition" />
+    <property role="19KtqR" value="true" />
+    <property role="R4oN_" value="definition of a new named color that can be reused" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="G6XgqqHP0J" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="G6XgqqJb39" role="1TKVEi">
+      <property role="IQ2ns" value="794591792992137417" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="definition" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1jQexh3y6fx" resolve="CustomColorTexture" />
+    </node>
   </node>
 </model>
 

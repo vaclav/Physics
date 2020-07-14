@@ -20,13 +20,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AbstractVectorTarget;
   private ConceptPresentation props_AbstractWorldTarget;
   private ConceptPresentation props_BoxVisual;
-  private ConceptPresentation props_BuiltInColorTexture;
   private ConceptPresentation props_BuiltInVectorsExpression;
   private ConceptPresentation props_CartesianCoordinates;
+  private ConceptPresentation props_ColorDefinition;
   private ConceptPresentation props_Coordinates;
   private ConceptPresentation props_CurrentObjectExpression;
   private ConceptPresentation props_CustomColorTexture;
   private ConceptPresentation props_CylindricalCoordinates;
+  private ConceptPresentation props_DefinedColorReference;
   private ConceptPresentation props_DirectionType;
   private ConceptPresentation props_DirectionalCoordinates;
   private ConceptPresentation props_DistanceWithCallTarget;
@@ -146,13 +147,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BoxVisual = cpb.create();
         }
         return props_BoxVisual;
-      case LanguageConceptSwitch.BuiltInColorTexture:
-        if (props_BuiltInColorTexture == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("built-in color");
-          props_BuiltInColorTexture = cpb.create();
-        }
-        return props_BuiltInColorTexture;
       case LanguageConceptSwitch.BuiltInVectorsExpression:
         if (props_BuiltInVectorsExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -167,6 +161,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CartesianCoordinates = cpb.create();
         }
         return props_CartesianCoordinates;
+      case LanguageConceptSwitch.ColorDefinition:
+        if (props_ColorDefinition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("definition of a new named color that can be reused");
+          cpb.presentationByName();
+          props_ColorDefinition = cpb.create();
+        }
+        return props_ColorDefinition;
       case LanguageConceptSwitch.Coordinates:
         if (props_Coordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -194,6 +196,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CylindricalCoordinates = cpb.create();
         }
         return props_CylindricalCoordinates;
+      case LanguageConceptSwitch.DefinedColorReference:
+        if (props_DefinedColorReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, 0xb06f5069ab75031L, "color", "", "");
+          props_DefinedColorReference = cpb.create();
+        }
+        return props_DefinedColorReference;
       case LanguageConceptSwitch.DirectionType:
         if (props_DirectionType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

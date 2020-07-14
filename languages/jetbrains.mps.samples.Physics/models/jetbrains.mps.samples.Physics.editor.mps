@@ -645,9 +645,15 @@
   </node>
   <node concept="24kQdi" id="1jQexh3y6l0">
     <property role="3GE5qa" value="physical.visual.texture" />
-    <ref role="1XX52x" to="9tcj:1h1l5SEmLT_" resolve="BuiltInColorTexture" />
-    <node concept="3F0A7n" id="cTQf2FiJYf" role="2wV5jI">
-      <ref role="1NtTu8" to="9tcj:cTQf2FiJYb" resolve="color" />
+    <ref role="1XX52x" to="9tcj:1h1l5SEmLT_" resolve="DefinedColorReference" />
+    <node concept="1iCGBv" id="G6XgqqHP0P" role="2wV5jI">
+      <ref role="1NtTu8" to="9tcj:G6XgqqHP0L" resolve="color" />
+      <node concept="1sVBvm" id="G6XgqqHP0R" role="1sWHZn">
+        <node concept="3F0A7n" id="G6XgqqHP11" role="2wV5jI">
+          <property role="1Intyy" value="true" />
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="1jQexh3y6lC">
@@ -1458,67 +1464,6 @@
         </node>
       </node>
     </node>
-  </node>
-  <node concept="22mcaB" id="cTQf2FiJYG">
-    <property role="3GE5qa" value="physical.visual.texture" />
-    <ref role="aqKnT" to="9tcj:1h1l5SEmLT_" resolve="BuiltInColorTexture" />
-    <node concept="2F$Pav" id="cTQf2FiJYH" role="3ft7WO">
-      <node concept="3eGOop" id="cTQf2FiKVz" role="2$S_pN">
-        <node concept="ucgPf" id="cTQf2FiKV_" role="3aKz83">
-          <node concept="3clFbS" id="cTQf2FiKVB" role="2VODD2">
-            <node concept="3cpWs8" id="cTQf2FjaXa" role="3cqZAp">
-              <node concept="3cpWsn" id="cTQf2FjaXb" role="3cpWs9">
-                <property role="TrG5h" value="node" />
-                <node concept="3Tqbb2" id="cTQf2FjaUW" role="1tU5fm">
-                  <ref role="ehGHo" to="9tcj:1h1l5SEmLT_" resolve="BuiltInColorTexture" />
-                </node>
-                <node concept="2ShNRf" id="cTQf2FjaXc" role="33vP2m">
-                  <node concept="3zrR0B" id="cTQf2FjaXd" role="2ShVmc">
-                    <node concept="3Tqbb2" id="cTQf2FjaXe" role="3zrR0E">
-                      <ref role="ehGHo" to="9tcj:1h1l5SEmLT_" resolve="BuiltInColorTexture" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="cTQf2FiKZ8" role="3cqZAp">
-              <node concept="37vLTI" id="cTQf2Fjbyy" role="3clFbG">
-                <node concept="2OqwBi" id="cTQf2Fjb60" role="37vLTJ">
-                  <node concept="37vLTw" id="cTQf2FjaXf" role="2Oq$k0">
-                    <ref role="3cqZAo" node="cTQf2FjaXb" resolve="node" />
-                  </node>
-                  <node concept="3TrcHB" id="cTQf2Fjbn2" role="2OqNvi">
-                    <ref role="3TsBF5" to="9tcj:cTQf2FiJYb" resolve="color" />
-                  </node>
-                </node>
-                <node concept="2ZBlsa" id="cTQf2Fjdkp" role="37vLTx" />
-              </node>
-            </node>
-            <node concept="3clFbF" id="cTQf2FjdnB" role="3cqZAp">
-              <node concept="37vLTw" id="cTQf2Fjdn_" role="3clFbG">
-                <ref role="3cqZAo" node="cTQf2FjaXb" resolve="node" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="2ZThk1" id="cTQf2FiJYR" role="2ZBHrp">
-        <ref role="2ZWj4r" to="9tcj:cTQf2FiJWL" resolve="BuiltInColors" />
-      </node>
-      <node concept="2$S_p_" id="cTQf2FiJYU" role="2$S_pT">
-        <node concept="3clFbS" id="cTQf2FiJYV" role="2VODD2">
-          <node concept="3clFbF" id="cTQf2FiK1E" role="3cqZAp">
-            <node concept="2OqwBi" id="cTQf2FiKzD" role="3clFbG">
-              <node concept="1XH99k" id="cTQf2FiK1D" role="2Oq$k0">
-                <ref role="1XH99l" to="9tcj:cTQf2FiJWL" resolve="BuiltInColors" />
-              </node>
-              <node concept="2ViDtN" id="cTQf2FiKTB" role="2OqNvi" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="22hDWj" id="cTQf2FjduB" role="22hAXT" />
   </node>
   <node concept="24kQdi" id="cTQf2Fjp4G">
     <property role="3GE5qa" value="physical.force.implemented.interaction" />

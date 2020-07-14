@@ -9,12 +9,13 @@ import org.ode4j.ode.DMass;
 
 public class SphereFixture extends Fixture {
   /*package*/ float radius;
-  public SphereFixture(World world, double radius) {
-    super(OdeHelper.createSphere(world.getSpace(), radius));
+  public SphereFixture(World world, double radius, Color texture) {
+    super(OdeHelper.createSphere(world.getSpace(), radius), texture);
     this.radius = (float) radius;
   }
   @Override
   public void render(PApplet ctx) {
+    super.render(ctx);
     ctx.sphere(radius);
   }
   @Override

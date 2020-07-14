@@ -10,6 +10,7 @@ import jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem;
 import jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext;
 import java.util.ArrayList;
 import jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase;
+import jetbrains.mps.smodel.SNodePointer;
 import com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart;
 import org.jetbrains.mps.openapi.module.SModule;
 import org.jetbrains.mps.openapi.module.SRepository;
@@ -18,15 +19,15 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class GrammarCellsSubstituteMenu_BuiltInColorTexture extends SubstituteMenuBase {
-  public GrammarCellsSubstituteMenu_BuiltInColorTexture() {
+public class GrammarCellsSubstituteMenu_DefinedColorReference extends SubstituteMenuBase {
+  public GrammarCellsSubstituteMenu_DefinedColorReference() {
     super(true);
   }
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new GrammarCellsSubstituteMenuPart_hb405b_a());
+    result.add(new GrammarCellsSubstituteMenuPart_jhl5a2_a());
     return result;
   }
 
@@ -34,7 +35,7 @@ public class GrammarCellsSubstituteMenu_BuiltInColorTexture extends SubstituteMe
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "BuiltInColorTexture", null));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for DefinedColorReference. Generated from implicit smart reference attribute.", new SNodePointer("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)", "1459540517659024997")));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -43,18 +44,18 @@ public class GrammarCellsSubstituteMenu_BuiltInColorTexture extends SubstituteMe
   }
 
 
-  private class GrammarCellsSubstituteMenuPart_hb405b_a extends GrammarCellsSubstituteMenuPart {
+  private class GrammarCellsSubstituteMenuPart_jhl5a2_a extends GrammarCellsSubstituteMenuPart {
     @Override
     public SModule getModule(SRepository repository) {
       return PersistenceFacade.getInstance().createModuleReference("be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)").resolve(repository);
     }
     @Override
     public SAbstractConcept getExpectedOutputConcept() {
-      return CONCEPTS.BuiltInColorTexture$JN;
+      return CONCEPTS.DefinedColorReference$JN;
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept BuiltInColorTexture$JN = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, "jetbrains.mps.samples.Physics.structure.BuiltInColorTexture");
+    /*package*/ static final SConcept DefinedColorReference$JN = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, "jetbrains.mps.samples.Physics.structure.DefinedColorReference");
   }
 }

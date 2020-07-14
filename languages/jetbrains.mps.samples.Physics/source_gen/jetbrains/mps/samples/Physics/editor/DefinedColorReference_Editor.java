@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class BuiltInColorTexture_Editor extends DefaultNodeEditor {
+public class DefinedColorReference_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new BuiltInColorTexture_EditorBuilder_a(editorContext, node).createCell();
+    return new DefinedColorReference_EditorBuilder_a(editorContext, node).createCell();
   }
 }
