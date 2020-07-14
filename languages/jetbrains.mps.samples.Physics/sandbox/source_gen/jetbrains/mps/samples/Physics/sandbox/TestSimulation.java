@@ -4,88 +4,14 @@ package jetbrains.mps.samples.Physics.sandbox;
 
 import jetbrains.mps.samples.Physics.runtime.Simulation;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
-import jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity;
-import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.Arrays;
-import jetbrains.mps.samples.Physics.runtime.objects.rendering.BoxFixture;
 import jetbrains.mps.samples.Physics.runtime.Renderer;
 
 public class TestSimulation extends Simulation {
 
   @Override
   protected void init(World world) {
-    PhysicalEntity Sun = new PhysicalEntity(world);
-    PhysicalEntity Mercury = new PhysicalEntity(world);
-    PhysicalEntity Venus = new PhysicalEntity(world);
-    PhysicalEntity Earth = new PhysicalEntity(world);
-    PhysicalEntity Moon = new PhysicalEntity(world);
-    PhysicalEntity Mars = new PhysicalEntity(world);
-    // Set static properties of Sun 
-    Sun.setMass(((Number) new BigInteger("500")));
-    Sun.getBody().setPosition(new InternalVector(((Number) new BigDecimal("0.001").setScale(3, RoundingMode.DOWN)), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).toDVector3C());
-    //  Forces and visual of the parent objects of Sun 
-    new PlanetParentEntity().applyOn(world, Sun);
-    //  Visual (if any) and forces 
-    Sun.getForces().addAll(Arrays.asList());
-    // Bind fixture and mass together 
-    Sun.bindFixture();
-    world.addEntity(Sun);
-    // Set static properties of Mercury 
-    Mercury.setMass(((Number) new BigInteger("10")));
-    Mercury.getBody().setPosition(new InternalVector(((Number) new BigDecimal("500.001").setScale(3, RoundingMode.DOWN)), ((Number) new BigInteger("6")), ((Number) new BigInteger("7"))).toDVector3C());
-    //  Forces and visual of the parent objects of Mercury 
-    new PlanetParentEntity().applyOn(world, Mercury);
-    //  Visual (if any) and forces 
-    Mercury.getForces().addAll(Arrays.asList());
-    // Bind fixture and mass together 
-    Mercury.bindFixture();
-    world.addEntity(Mercury);
-    // Set static properties of Venus 
-    Venus.setMass(((Number) new BigInteger("200")));
-    Venus.getBody().setPosition(new InternalVector(((Number) new BigDecimal("-270.05828892065526").setScale(14, RoundingMode.DOWN)), ((Number) new BigDecimal("38.496018060737015").setScale(15, RoundingMode.DOWN)), ((Number) new BigDecimal("-124.84405096414272").setScale(14, RoundingMode.DOWN))).toDVector3C());
-    Venus.getBody().setLinearVel(new InternalVector(((Number) new BigInteger("3")), ((Number) new BigInteger("3")), ((Number) new BigInteger("3"))).toDVector3C());
-    //  Forces and visual of the parent objects of Venus 
-    new PlanetParentEntity().applyOn(world, Venus);
-    //  Visual (if any) and forces 
-    Venus.getForces().addAll(Arrays.asList());
-    // Bind fixture and mass together 
-    Venus.bindFixture();
-    world.addEntity(Venus);
-    // Set static properties of Earth 
-    Earth.setMass(((Number) new BigInteger("300")));
-    Earth.getBody().setPosition(new InternalVector(((Number) new BigDecimal("0.00099999999975507064017052935").setScale(29, RoundingMode.DOWN)), ((Number) new BigDecimal("2.9995195653237156E-29").setScale(20, RoundingMode.DOWN)), ((Number) new BigDecimal("-400.0").setScale(1, RoundingMode.DOWN))).toDVector3C());
-    Earth.getBody().setLinearVel(new InternalVector(((Number) new BigInteger("5")), ((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).toDVector3C());
-    //  Forces and visual of the parent objects of Earth 
-    new PlanetParentEntity().applyOn(world, Earth);
-    //  Visual (if any) and forces 
-    Earth.getForces().addAll(Arrays.asList());
-    // Bind fixture and mass together 
-    Earth.bindFixture();
-    world.addEntity(Earth);
-    // Set static properties of Moon 
-    Moon.setMass(((Number) new BigInteger("50")));
-    Moon.getBody().setPosition(new InternalVector(((Number) new BigDecimal("-54.40111108893722492935982947065").setScale(29, RoundingMode.DOWN)), ((Number) new BigDecimal("183.9071529076452400000000000000300").setScale(31, RoundingMode.DOWN)), ((Number) new BigDecimal("-343.26756290735475").setScale(14, RoundingMode.DOWN))).toDVector3C());
-    //  Forces and visual of the parent objects of Moon 
-    new PlanetParentEntity().applyOn(world, Moon);
-    //  Visual (if any) and forces 
-    Moon.setFixture(new BoxFixture(world, ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue()));
-    Moon.getForces().addAll(Arrays.asList());
-    // Bind fixture and mass together 
-    Moon.bindFixture();
-    world.addEntity(Moon);
-    // Set static properties of Mars 
-    Mars.setMass(((Number) new BigInteger("30")));
-    Mars.getBody().setPosition(new InternalVector(((Number) new BigDecimal("-58.70883489445973").setScale(14, RoundingMode.DOWN)), ((Number) new BigDecimal("-95.09511422778161").setScale(14, RoundingMode.DOWN)), ((Number) new BigDecimal("-165.86196657263002").setScale(14, RoundingMode.DOWN))).toDVector3C());
-    //  Forces and visual of the parent objects of Mars 
-    new PlanetParentEntity().applyOn(world, Mars);
-    //  Visual (if any) and forces 
-    Mars.getForces().addAll(Arrays.asList());
-    // Bind fixture and mass together 
-    Mars.bindFixture();
-    world.addEntity(Mars);
+    new SolarSystemSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
   }
 
   public static void main(String[] args) {

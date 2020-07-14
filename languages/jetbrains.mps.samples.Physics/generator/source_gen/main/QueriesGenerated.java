@@ -5,27 +5,20 @@ package main;
 import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.impl.query.QueryProviderBase;
 import jetbrains.mps.generator.template.MappingScriptContext;
-import java.util.List;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
-import java.util.ArrayList;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.samples.Physics.plugin.PositioningResolver;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.Map;
 import jetbrains.mps.generator.impl.query.ScriptCodeBlock;
 import java.util.HashMap;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.generator.impl.query.QueryKey;
 import jetbrains.mps.generator.impl.GenerationFailureException;
-import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 
@@ -35,27 +28,9 @@ public class QueriesGenerated extends QueryProviderBase {
     super(1);
   }
   public static void mappingScript_CodeBlock_1(final MappingScriptContext _context) {
-    final List<SNode> definitions = ListSequence.fromList(new ArrayList<SNode>());
-
     ListSequence.fromList(SModelOperations.roots(_context.getModel(), CONCEPTS.Simulation$oX)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
-        // Create a new world with every resolved objects 
-        SNode newWorld = SModelOperations.addRootNode(_context.getModel(), createWorldDefinition_x583g4_a0a0b0a0a2a1(SPropertyOperations.getString(it, PROPS.name$tAp1) + "SimulatedWorld", PositioningResolver.resolveAll(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.world$qRPN), LINKS.target$12L0))));
-
-        // Attach it to the simulation 
-        SLinkOperations.setTarget(SLinkOperations.getTarget(it, LINKS.world$qRPN), LINKS.target$12L0, newWorld);
-        ListSequence.fromList(definitions).addElement(newWorld);
-      }
-    });
-
-    // Remove worlds from further generation 
-    ListSequence.fromList(SModelOperations.roots(_context.getModel(), CONCEPTS.WorldDefinition$Xn)).where(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return !(ListSequence.fromList(definitions).contains(it));
-      }
-    }).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        SNodeOperations.deleteNode(it);
+        PositioningResolver.resolveAll(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.world$qRPN), LINKS.target$12L0));
       }
     });
   }
@@ -89,26 +64,13 @@ public class QueriesGenerated extends QueryProviderBase {
       }
     }
   }
-  private static SNode createWorldDefinition_x583g4_a0a0b0a0a2a1(String p0, Iterable<? extends SNode> p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.WorldDefinition$Xn);
-    n0.setProperty(PROPS.name$tAp1, p0);
-    n0.forChild(LINKS.objects$ZjAV).initNodeList(p1, CONCEPTS.ObjectDefinition$YO);
-    return n0.getResult();
-  }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Simulation$oX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, "jetbrains.mps.samples.Physics.structure.Simulation");
-    /*package*/ static final SConcept WorldDefinition$Xn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
-    /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
-  }
-
-  private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink world$qRPN = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x3cd406ea6def9f02L, "world");
     /*package*/ static final SReferenceLink target$12L0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
-    /*package*/ static final SContainmentLink objects$ZjAV = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, 0x6b7f605cb3278f46L, "objects");
   }
 }

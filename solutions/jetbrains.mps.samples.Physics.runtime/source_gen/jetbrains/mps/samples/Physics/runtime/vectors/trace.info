@@ -258,178 +258,193 @@
   </root>
   <root nodeRef="r:b3b78d7c-b258-46c7-b846-e8d10925f2cd(jetbrains.mps.samples.Physics.runtime.vectors)/7105688800959643459">
     <file name="InternalVector.java">
-      <node id="7105688800959689118" at="15,0,16,0" concept="10" trace="ctx" />
-      <node id="911298080287972861" at="16,0,17,0" concept="10" trace="almostZero" />
-      <node id="7105688800959652712" at="18,0,19,0" concept="3" trace="x" />
-      <node id="7105688800959650726" at="19,0,20,0" concept="3" trace="y" />
-      <node id="7105688800959652740" at="20,0,21,0" concept="3" trace="z" />
-      <node id="7105688800959652822" at="22,67,23,15" concept="2" />
-      <node id="7105688800959652834" at="23,15,24,15" concept="2" />
-      <node id="7105688800959652846" at="24,15,25,15" concept="2" />
-      <node id="796402062953570112" at="27,55,28,60" concept="13" />
-      <node id="1481770243885449721" at="35,34,36,33" concept="6" />
-      <node id="1481770243885429782" at="36,33,37,114" concept="7" />
-      <node id="1481770243885322810" at="43,47,44,111" concept="7" />
-      <node id="1481770243885554767" at="49,49,50,126" concept="7" />
-      <node id="796402062953552218" at="55,44,56,46" concept="6" />
-      <node id="3489632902458616600" at="56,46,57,123" concept="7" />
-      <node id="911298080288084976" at="62,50,63,33" concept="6" />
-      <node id="911298080287946501" at="64,51,65,18" concept="7" />
-      <node id="911298080288005210" at="66,5,67,0" concept="9" />
-      <node id="3489632902462386887" at="67,0,68,71" concept="6" />
-      <node id="3489632902462639798" at="68,71,69,75" concept="7" />
-      <node id="7105688800959655132" at="73,37,74,88" concept="7" />
-      <node id="7105688800959680502" at="77,30,78,37" concept="7" />
-      <node id="7105688800959753854" at="86,37,87,72" concept="6" />
-      <node id="7105688800959735032" at="87,72,88,36" concept="7" />
-      <node id="4809107873073965724" at="96,40,97,85" concept="8" />
-      <node id="4809107873073886193" at="97,85,98,86" concept="7" />
-      <node id="796402062952238935" at="105,91,106,41" concept="6" />
-      <node id="796402062952208931" at="106,41,107,64" concept="6" />
-      <node id="796402062952220890" at="107,64,108,64" concept="6" />
-      <node id="796402062952196931" at="108,64,109,39" concept="7" />
-      <node id="3489632902470970424" at="113,34,114,90" concept="7" />
-      <node id="3489632902459665434" at="118,28,119,175" concept="7" />
-      <node id="3489632902471091222" at="122,28,123,18" concept="7" />
-      <node id="3489632902471091230" at="125,28,126,18" concept="7" />
-      <node id="3489632902471091238" at="128,28,129,18" concept="7" />
-      <node id="796402062954125844" at="133,34,134,28" concept="7" />
-      <node id="796402062954125848" at="135,5,136,47" concept="7" />
-      <node id="796402062953289313" at="142,87,143,47" concept="6" />
-      <node id="796402062953276220" at="143,47,144,45" concept="6" />
-      <node id="796402062953276226" at="144,45,145,41" concept="6" />
-      <node id="796402062953276232" at="145,41,146,44" concept="6" />
-      <node id="796402062953276238" at="146,44,147,0" concept="9" />
-      <node id="796402062953276239" at="147,0,148,162" concept="7" />
-      <node id="796402062953275002" at="148,162,149,0" concept="9" />
-      <node id="1481770243885413175" at="153,39,154,81" concept="7" />
-      <node id="3489632902472681555" at="158,61,159,126" concept="7" />
-      <node id="1139474844806686087" at="165,40,166,48" concept="6" />
-      <node id="1139474844806691680" at="166,48,167,202" concept="7" />
-      <node id="1139474844806541058" at="168,5,169,29" concept="7" />
-      <node id="8821912306507788089" at="27,0,30,0" concept="1" trace="InternalVector#(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)V" />
-      <node id="1481770243885319849" at="43,0,46,0" concept="5" trace="add#(Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
-      <node id="1481770243885550529" at="49,0,52,0" concept="5" trace="minus#(Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
-      <node id="911298080287908266" at="63,33,66,5" concept="4" />
-      <node id="7105688800959654619" at="73,0,76,0" concept="5" trace="lengthSquared#()Ljava/math/BigDecimal;" />
-      <node id="7105688800959680018" at="77,0,80,0" concept="5" trace="length#()Ljava/math/BigDecimal;" />
-      <node id="3489632902470967708" at="113,0,116,0" concept="5" trace="toDVector3C#()Lorg/ode4j/math/DVector3C;" />
-      <node id="3489632902471091218" at="122,0,125,0" concept="5" trace="getX#()Ljava/math/BigDecimal;" />
-      <node id="3489632902471091226" at="125,0,128,0" concept="5" trace="getY#()Ljava/math/BigDecimal;" />
-      <node id="3489632902471091234" at="128,0,131,0" concept="5" trace="getZ#()Ljava/math/BigDecimal;" />
-      <node id="796402062954125839" at="132,52,135,5" concept="4" />
-      <node id="1481770243885411413" at="153,0,156,0" concept="11" trace="zero#()Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
-      <node id="3489632902472678310" at="158,0,161,0" concept="11" trace="fromDVector3C#(Lorg/ode4j/math/DVector3C;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
-      <node id="1481770243885427476" at="35,0,39,0" concept="5" trace="toUnit#()Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
-      <node id="3489632902458612358" at="55,0,59,0" concept="5" trace="mul#(Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
-      <node id="7105688800959734303" at="86,0,90,0" concept="5" trace="getPolarAngle#()Ljava/math/BigDecimal;" />
-      <node id="7105688800959766993" at="96,0,100,0" concept="5" trace="getAzimutalAngle#()Ljava/math/BigDecimal;" />
-      <node id="3489632902459665430" at="117,0,121,0" concept="5" trace="toString#()Ljava/lang/String;" />
-      <node id="1139474844806666222" at="164,37,168,5" concept="4" />
-      <node id="7105688800959652814" at="22,0,27,0" concept="1" trace="InternalVector#(Ljava/math/BigDecimal;Ljava/math/BigDecimal;Ljava/math/BigDecimal;)V" />
-      <node id="796402062952183141" at="105,0,111,0" concept="11" trace="fromCylindrical#(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
-      <node id="796402062954125836" at="132,0,138,0" concept="11" trace="bigDecimalOf#(Ljava/lang/Number;)Ljava/math/BigDecimal;" />
-      <node id="1139474844806541048" at="163,0,171,0" concept="5" trace="equals#(Ljava/lang/Object;)Z" />
-      <node id="3489632902462345102" at="62,0,71,0" concept="5" trace="resize#(Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
-      <node id="8821912306507766311" at="142,0,151,0" concept="11" trace="fromSpherical#(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
-      <scope id="8821912306507788092" at="27,55,28,60" />
-      <scope id="1481770243885319852" at="43,47,44,111" />
-      <scope id="1481770243885550530" at="49,49,50,126" />
-      <scope id="911298080287908268" at="64,51,65,18" />
-      <scope id="7105688800959654622" at="73,37,74,88" />
-      <scope id="7105688800959680021" at="77,30,78,37" />
-      <scope id="3489632902470967711" at="113,34,114,90" />
-      <scope id="3489632902459665433" at="118,28,119,175" />
-      <scope id="3489632902471091221" at="122,28,123,18" />
-      <scope id="3489632902471091229" at="125,28,126,18" />
-      <scope id="3489632902471091237" at="128,28,129,18" />
-      <scope id="796402062954125843" at="133,34,134,28" />
-      <scope id="1481770243885411416" at="153,39,154,81" />
-      <scope id="3489632902472678313" at="158,61,159,126" />
-      <scope id="1481770243885427477" at="35,34,37,114">
-        <var name="length" id="1481770243885449722" />
-      </scope>
-      <scope id="3489632902458612361" at="55,44,57,123">
-        <var name="factorD" id="796402062953552219" />
-      </scope>
-      <scope id="7105688800959734306" at="86,37,88,36">
-        <var name="acos" id="7105688800959753855" />
-      </scope>
-      <scope id="7105688800959766994" at="96,40,98,86" />
-      <scope id="1139474844806666224" at="165,40,167,202">
-        <var name="cmp" id="1139474844806686088" />
-      </scope>
-      <scope id="7105688800959652818" at="22,67,25,15" />
-      <scope id="8821912306507788089" at="27,0,30,0">
+      <node id="7105688800959689118" at="13,0,14,0" concept="10" trace="ctx" />
+      <node id="911298080287972861" at="14,0,15,0" concept="10" trace="almostZero" />
+      <node id="794591792984378694" at="15,0,16,0" concept="10" trace="ZERO" />
+      <node id="7105688800959652712" at="17,0,18,0" concept="3" trace="x" />
+      <node id="7105688800959650726" at="18,0,19,0" concept="3" trace="y" />
+      <node id="7105688800959652740" at="19,0,20,0" concept="3" trace="z" />
+      <node id="7105688800959652822" at="21,67,22,15" concept="2" />
+      <node id="7105688800959652834" at="22,15,23,15" concept="2" />
+      <node id="7105688800959652846" at="23,15,24,15" concept="2" />
+      <node id="796402062953570112" at="26,55,27,81" concept="13" />
+      <node id="3489632902471091222" at="30,28,31,18" concept="7" />
+      <node id="3489632902471091230" at="33,28,34,18" concept="7" />
+      <node id="3489632902471091238" at="36,28,37,18" concept="7" />
+      <node id="796402062952238935" at="43,91,44,41" concept="6" />
+      <node id="796402062952208931" at="44,41,45,64" concept="6" />
+      <node id="796402062952220890" at="45,64,46,64" concept="6" />
+      <node id="796402062952196931" at="46,64,47,39" concept="7" />
+      <node id="796402062953289313" at="53,87,54,47" concept="6" />
+      <node id="796402062953276220" at="54,47,55,45" concept="6" />
+      <node id="796402062953276226" at="55,45,56,41" concept="6" />
+      <node id="796402062953276232" at="56,41,57,44" concept="6" />
+      <node id="796402062953276238" at="57,44,58,0" concept="9" />
+      <node id="796402062953276239" at="58,0,59,162" concept="7" />
+      <node id="796402062953275002" at="59,162,60,0" concept="9" />
+      <node id="3489632902472681555" at="63,61,64,126" concept="7" />
+      <node id="8821912306507788089" at="26,0,29,0" concept="1" trace="InternalVector#(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)V" />
+      <node id="3489632902471091218" at="30,0,33,0" concept="5" trace="getX#()Ljava/math/BigDecimal;" />
+      <node id="3489632902471091226" at="33,0,36,0" concept="5" trace="getY#()Ljava/math/BigDecimal;" />
+      <node id="3489632902471091234" at="36,0,39,0" concept="5" trace="getZ#()Ljava/math/BigDecimal;" />
+      <node id="3489632902472678310" at="63,0,66,0" concept="11" trace="fromDVector3C#(Lorg/ode4j/math/DVector3C;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
+      <node id="7105688800959652814" at="21,0,26,0" concept="1" trace="InternalVector#(Ljava/math/BigDecimal;Ljava/math/BigDecimal;Ljava/math/BigDecimal;)V" />
+      <node id="796402062952183141" at="43,0,49,0" concept="11" trace="fromCylindrical#(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
+      <node id="8821912306507766311" at="53,0,62,0" concept="11" trace="fromSpherical#(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
+      <scope id="8821912306507788092" at="26,55,27,81" />
+      <scope id="3489632902471091221" at="30,28,31,18" />
+      <scope id="3489632902471091229" at="33,28,34,18" />
+      <scope id="3489632902471091237" at="36,28,37,18" />
+      <scope id="3489632902472678313" at="63,61,64,126" />
+      <scope id="7105688800959652818" at="21,67,24,15" />
+      <scope id="8821912306507788089" at="26,0,29,0">
         <var name="x" id="8821912306507788111" />
         <var name="y" id="8821912306507788113" />
         <var name="z" id="8821912306507788115" />
       </scope>
-      <scope id="1481770243885319849" at="43,0,46,0">
-        <var name="v" id="1481770243885321631" />
-      </scope>
-      <scope id="1481770243885550529" at="49,0,52,0">
-        <var name="v" id="1481770243885555467" />
-      </scope>
-      <scope id="7105688800959654619" at="73,0,76,0" />
-      <scope id="7105688800959680018" at="77,0,80,0" />
-      <scope id="3489632902470967708" at="113,0,116,0" />
-      <scope id="3489632902471091218" at="122,0,125,0" />
-      <scope id="3489632902471091226" at="125,0,128,0" />
-      <scope id="3489632902471091234" at="128,0,131,0" />
-      <scope id="1481770243885411413" at="153,0,156,0" />
-      <scope id="3489632902472678310" at="158,0,161,0">
+      <scope id="3489632902471091218" at="30,0,33,0" />
+      <scope id="3489632902471091226" at="33,0,36,0" />
+      <scope id="3489632902471091234" at="36,0,39,0" />
+      <scope id="3489632902472678310" at="63,0,66,0">
         <var name="vec" id="3489632902472688045" />
       </scope>
-      <scope id="1481770243885427476" at="35,0,39,0" />
-      <scope id="3489632902458612358" at="55,0,59,0">
-        <var name="factor" id="3489632902458614666" />
-      </scope>
-      <scope id="7105688800959734303" at="86,0,90,0" />
-      <scope id="7105688800959766993" at="96,0,100,0" />
-      <scope id="796402062952183144" at="105,91,109,39">
+      <scope id="796402062952183144" at="43,91,47,39">
         <var name="phiDouble" id="796402062952238936" />
         <var name="x" id="796402062952208934" />
         <var name="y" id="796402062952220893" />
       </scope>
-      <scope id="3489632902459665430" at="117,0,121,0" />
-      <scope id="796402062954125838" at="132,52,136,47" />
-      <scope id="7105688800959652814" at="22,0,27,0">
+      <scope id="7105688800959652814" at="21,0,26,0">
         <var name="x" id="7105688800959652821" />
         <var name="y" id="7105688800959652833" />
         <var name="z" id="7105688800959652845" />
       </scope>
-      <scope id="1139474844806541054" at="164,37,169,29" />
-      <scope id="796402062952183141" at="105,0,111,0">
+      <scope id="796402062952183141" at="43,0,49,0">
         <var name="phi" id="796402062952190217" />
         <var name="radialLength" id="796402062952187842" />
         <var name="z" id="796402062952193731" />
       </scope>
-      <scope id="796402062954125836" at="132,0,138,0">
-        <var name="n" id="796402062954125855" />
-      </scope>
-      <scope id="3489632902462345105" at="62,50,69,75">
-        <var name="length" id="911298080288084977" />
-        <var name="unit" id="3489632902462386888" />
-      </scope>
-      <scope id="8821912306507766314" at="142,87,149,0">
+      <scope id="8821912306507766314" at="53,87,60,0">
         <var name="lengthDouble" id="796402062953289314" />
         <var name="phiDouble" id="796402062953276227" />
         <var name="sinTheta" id="796402062953276233" />
         <var name="thetaDouble" id="796402062953276221" />
       </scope>
-      <scope id="1139474844806541048" at="163,0,171,0">
-        <var name="obj" id="1139474844806541052" />
-      </scope>
-      <scope id="3489632902462345102" at="62,0,71,0">
-        <var name="newLength" id="3489632902462347878" />
-      </scope>
-      <scope id="8821912306507766311" at="142,0,151,0">
+      <scope id="8821912306507766311" at="53,0,62,0">
         <var name="length" id="8821912306507769544" />
         <var name="phi" id="8821912306507770848" />
         <var name="theta" id="8821912306507770840" />
       </scope>
-      <unit id="7105688800959643459" at="14,0,172,0" name="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
+      <unit id="7105688800959643459" at="12,0,68,0" name="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
+    </file>
+  </root>
+  <root nodeRef="r:b3b78d7c-b258-46c7-b846-e8d10925f2cd(jetbrains.mps.samples.Physics.runtime.vectors)/794591792984033700">
+    <file name="VectorLike.java">
+      <node id="794591792984047769" at="12,0,13,0" concept="10" trace="ctx" />
+      <node id="794591792984047775" at="13,0,14,0" concept="10" trace="ZERO_OFFSET" />
+      <node id="794591792984047847" at="18,30,19,33" concept="6" />
+      <node id="794591792984047851" at="19,33,20,114" concept="7" />
+      <node id="794591792984047877" at="26,39,27,111" concept="7" />
+      <node id="794591792984047912" at="32,41,33,126" concept="7" />
+      <node id="794591792984047943" at="38,40,39,53" concept="6" />
+      <node id="794591792984047948" at="39,53,40,123" concept="7" />
+      <node id="794591792984047975" at="45,46,46,33" concept="6" />
+      <node id="794591792984047981" at="47,52,48,18" concept="7" />
+      <node id="794591792984047991" at="49,5,50,0" concept="9" />
+      <node id="794591792984047992" at="50,0,51,67" concept="6" />
+      <node id="794591792984048003" at="51,67,52,75" concept="7" />
+      <node id="794591792984048025" at="56,37,57,88" concept="7" />
+      <node id="794591792984048052" at="60,30,61,37" concept="7" />
+      <node id="794591792984048062" at="69,37,70,72" concept="6" />
+      <node id="794591792984048073" at="70,72,71,36" concept="7" />
+      <node id="794591792984048085" at="79,40,80,85" concept="8" />
+      <node id="794591792984048101" at="80,85,81,86" concept="7" />
+      <node id="794591792984048165" at="84,34,85,90" concept="7" />
+      <node id="794591792984048184" at="89,28,90,175" concept="7" />
+      <node id="794591792984048214" at="93,0,94,0" concept="5" trace="getX#()Ljava/math/BigDecimal;" />
+      <node id="794591792984048222" at="94,0,95,0" concept="5" trace="getY#()Ljava/math/BigDecimal;" />
+      <node id="794591792984048230" at="95,0,96,0" concept="5" trace="getZ#()Ljava/math/BigDecimal;" />
+      <node id="794591792984048368" at="100,36,101,40" concept="6" />
+      <node id="794591792984048374" at="101,40,102,205" concept="7" />
+      <node id="794591792984048416" at="103,5,104,29" concept="7" />
+      <node id="794591792984047875" at="26,0,29,0" concept="5" trace="add#(Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;)Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;" />
+      <node id="794591792984047908" at="32,0,35,0" concept="5" trace="minus#(Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;)Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;" />
+      <node id="794591792984047979" at="46,33,49,5" concept="4" />
+      <node id="794591792984048023" at="56,0,59,0" concept="5" trace="lengthSquared#()Ljava/math/BigDecimal;" />
+      <node id="794591792984048050" at="60,0,63,0" concept="5" trace="length#()Ljava/math/BigDecimal;" />
+      <node id="794591792984048163" at="84,0,87,0" concept="5" trace="toDVector3C#()Lorg/ode4j/math/DVector3C;" />
+      <node id="794591792984047845" at="18,0,22,0" concept="5" trace="toUnit#()Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;" />
+      <node id="794591792984047941" at="38,0,42,0" concept="5" trace="mul#(Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;" />
+      <node id="794591792984048060" at="69,0,73,0" concept="5" trace="getPolarAngle#()Ljava/math/BigDecimal;" />
+      <node id="794591792984048083" at="79,0,83,0" concept="5" trace="getAzimutalAngle#()Ljava/math/BigDecimal;" />
+      <node id="794591792984048180" at="88,0,92,0" concept="5" trace="toString#()Ljava/lang/String;" />
+      <node id="794591792984048366" at="99,37,103,5" concept="4" />
+      <node id="794591792984048360" at="98,0,106,0" concept="5" trace="equals#(Ljava/lang/Object;)Z" />
+      <node id="794591792984047973" at="45,0,54,0" concept="5" trace="resize#(Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;" />
+      <scope id="794591792984047876" at="26,39,27,111" />
+      <scope id="794591792984047911" at="32,41,33,126" />
+      <scope id="794591792984047980" at="47,52,48,18" />
+      <scope id="794591792984048024" at="56,37,57,88" />
+      <scope id="794591792984048051" at="60,30,61,37" />
+      <scope id="794591792984048164" at="84,34,85,90" />
+      <scope id="794591792984048183" at="89,28,90,175" />
+      <scope id="794591792984048214" at="93,0,94,0" />
+      <scope id="794591792984048222" at="94,0,95,0" />
+      <scope id="794591792984048230" at="95,0,96,0" />
+      <scope id="794591792984047846" at="18,30,20,114">
+        <var name="length" id="794591792984047848" />
+      </scope>
+      <scope id="794591792984047942" at="38,40,40,123">
+        <var name="factorD" id="794591792984047944" />
+      </scope>
+      <scope id="794591792984048061" at="69,37,71,36">
+        <var name="acos" id="794591792984048063" />
+      </scope>
+      <scope id="794591792984048084" at="79,40,81,86" />
+      <scope id="794591792984048367" at="100,36,102,205">
+        <var name="cmp" id="794591792984048369" />
+      </scope>
+      <scope id="794591792984047875" at="26,0,29,0">
+        <var name="v" id="794591792984047903" />
+      </scope>
+      <scope id="794591792984047908" at="32,0,35,0">
+        <var name="v" id="794591792984047909" />
+      </scope>
+      <scope id="794591792984048023" at="56,0,59,0" />
+      <scope id="794591792984048050" at="60,0,63,0" />
+      <scope id="794591792984048163" at="84,0,87,0" />
+      <scope id="794591792984047845" at="18,0,22,0" />
+      <scope id="794591792984047941" at="38,0,42,0">
+        <var name="factor" id="794591792984047968" />
+      </scope>
+      <scope id="794591792984048060" at="69,0,73,0" />
+      <scope id="794591792984048083" at="79,0,83,0" />
+      <scope id="794591792984048180" at="88,0,92,0" />
+      <scope id="794591792984048365" at="99,37,104,29" />
+      <scope id="794591792984047974" at="45,46,52,75">
+        <var name="length" id="794591792984047976" />
+        <var name="unit" id="794591792984047993" />
+      </scope>
+      <scope id="794591792984048360" at="98,0,106,0">
+        <var name="obj" id="794591792984048363" />
+      </scope>
+      <scope id="794591792984047973" at="45,0,54,0">
+        <var name="newLength" id="794591792984048016" />
+      </scope>
+      <unit id="794591792984033700" at="11,0,108,0" name="jetbrains.mps.samples.Physics.runtime.vectors.VectorLike" />
+    </file>
+  </root>
+  <root nodeRef="r:b3b78d7c-b258-46c7-b846-e8d10925f2cd(jetbrains.mps.samples.Physics.runtime.vectors)/794591792984526085">
+    <file name="BigDecimalHelper.java">
+      <node id="794591792984048246" at="9,34,10,28" concept="7" />
+      <node id="794591792984048250" at="11,5,12,47" concept="7" />
+      <node id="794591792984048241" at="8,41,11,5" concept="4" />
+      <node id="794591792984048239" at="8,0,14,0" concept="11" trace="of#(Ljava/lang/Number;)Ljava/math/BigDecimal;" />
+      <scope id="794591792984048245" at="9,34,10,28" />
+      <scope id="794591792984048240" at="8,41,12,47" />
+      <scope id="794591792984048239" at="8,0,14,0">
+        <var name="n" id="794591792984048256" />
+      </scope>
+      <unit id="794591792984526085" at="7,0,15,0" name="jetbrains.mps.samples.Physics.runtime.vectors.BigDecimalHelper" />
     </file>
   </root>
 </debug-info>

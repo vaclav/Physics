@@ -20,7 +20,7 @@ public class XYZForceForce implements Force {
   }
 
   @Override
-  public DVector3C getForce(World world, PhysicalEntity targetEntity) {
+  public DVector3C getForce(World world, PhysicalEntity currentEntity) {
 
     return new InternalVector(x, y, z).toDVector3C();
   }

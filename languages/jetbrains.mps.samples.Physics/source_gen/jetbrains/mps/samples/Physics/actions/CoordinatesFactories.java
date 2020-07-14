@@ -6,7 +6,7 @@ import jetbrains.mps.openapi.actions.descriptor.NodeFactory;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.model.SModel;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
+import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.language.SConcept;
@@ -20,7 +20,7 @@ public class CoordinatesFactories {
       {
         final SNode coords = sampleNode;
         if (SNodeOperations.isInstanceOf(coords, CONCEPTS.Coordinates$HV)) {
-          InternalVector vector = CoordinateExpressionConverters.anyToRaw(coords);
+          VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
           CoordinateExpressionConverters.rawToCylindrical(vector, newNode);
         }
       }
@@ -39,7 +39,7 @@ public class CoordinatesFactories {
       {
         final SNode coords = sampleNode;
         if (SNodeOperations.isInstanceOf(coords, CONCEPTS.Coordinates$HV)) {
-          InternalVector vector = CoordinateExpressionConverters.anyToRaw(coords);
+          VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
           CoordinateExpressionConverters.rawToCartesian(vector, newNode);
         }
       }
@@ -59,7 +59,7 @@ public class CoordinatesFactories {
       {
         final SNode coords = sampleNode;
         if (SNodeOperations.isInstanceOf(coords, CONCEPTS.Coordinates$HV)) {
-          InternalVector vector = CoordinateExpressionConverters.anyToRaw(coords);
+          VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
           CoordinateExpressionConverters.rawToSpherical(vector, newNode);
         }
       }

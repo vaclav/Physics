@@ -12,7 +12,7 @@ import com.mbeddr.mpsutil.interpreter.rt.IContext;
 import com.mbeddr.mpsutil.interpreter.rt.ICoverageAnalyzer;
 import com.mbeddr.mpsutil.interpreter.rt.ComputationTrace;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
+import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
 import jetbrains.mps.internal.collections.runtime.MapSequence;
 import org.iets3.core.expr.base.behavior.IDotTarget__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
@@ -22,6 +22,7 @@ import com.mbeddr.mpsutil.interpreter.rt.InterpreterRuntimeException;
 import com.mbeddr.mpsutil.interpreter.rt.EvaluatorInfo;
 import com.mbeddr.mpsutil.interpreter.rt.TypedChildConstraintImpl;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import java.math.BigDecimal;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalEntity;
@@ -49,7 +50,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          InternalVector vector = (InternalVector) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
+          VectorLike vector = (VectorLike) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
           switch (enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c.indexNullable(SPropertyOperations.getEnum(node, PROPS.component$_d4D))) {
             case 0:
               return vector.length();
@@ -181,8 +182,8 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          InternalVector relativeSource = ((InternalVector) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.relativeFrom$gwcw), context, coverage, trace, false), InternalVector.class));
-          InternalVector offset = ((InternalVector) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.coordinates$l1nt), context, coverage, trace, false), InternalVector.class));
+          VectorLike relativeSource = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.relativeFrom$gwcw), context, coverage, trace, false), VectorLike.class));
+          VectorLike offset = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.coordinates$l1nt), context, coverage, trace, false), VectorLike.class));
           return relativeSource.add(offset);
         } catch (StopAndReturnException stop) {
           return stop.value();
@@ -212,18 +213,18 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          InternalVector directionPoint = ((InternalVector) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.direction$2h5b), context, coverage, trace, false), InternalVector.class));
+          VectorLike directionPoint = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.direction$2h5b), context, coverage, trace, false), VectorLike.class));
           SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false);
 
-          InternalVector sourcePoint;
+          VectorLike sourcePoint;
 
           // No localized ancestor or we try to define position in the current expression 
           if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(node, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.location$DoV0))) {
             // -> world origin 
-            sourcePoint = InternalVector.zero();
+            sourcePoint = InternalVector.ZERO;
           } else {
             // -> ancestor position 
-            sourcePoint = ((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.location$DoV0), context, coverage, trace, false));
+            sourcePoint = ((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.location$DoV0), context, coverage, trace, false));
           }
           return directionPoint.minus(sourcePoint).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.length$2h69), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
@@ -406,7 +407,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((InternalVector) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node))).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.newLength$Gnlv), context, coverage, trace, false), BigDecimal.class)));
+          return ((VectorLike) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node))).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.newLength$Gnlv), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -435,7 +436,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return (InternalVector) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
+          return (VectorLike) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -464,7 +465,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((InternalVector) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node))).mul(-1);
+          return ((VectorLike) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node))).mul(-1);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -553,7 +554,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((InternalVector) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), InternalVector.class)).add(((InternalVector) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), InternalVector.class)));
+          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), VectorLike.class)).add(((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), VectorLike.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -582,7 +583,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((InternalVector) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), InternalVector.class)).mul(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), BigDecimal.class)));
+          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), VectorLike.class)).mul(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -611,7 +612,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((InternalVector) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), InternalVector.class)).mul(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), BigDecimal.class)));
+          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), VectorLike.class)).mul(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -640,7 +641,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((InternalVector) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), InternalVector.class)).mul(BigDecimal.ONE.divide(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), BigDecimal.class))));
+          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), VectorLike.class)).mul(BigDecimal.ONE.divide(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), BigDecimal.class))));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {

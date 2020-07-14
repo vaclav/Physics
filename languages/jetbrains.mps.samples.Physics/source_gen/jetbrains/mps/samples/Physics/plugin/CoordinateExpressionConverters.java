@@ -4,8 +4,9 @@ package jetbrains.mps.samples.Physics.plugin;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
-import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
+import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterBaseException;
 import jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime;
@@ -22,14 +23,14 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public class CoordinateExpressionConverters {
   private static final Logger LOG = LogManager.getLogger(CoordinateExpressionConverters.class);
 
-  public static InternalVector anyToRaw(SNode coordinates) {
+  public static VectorLike anyToRaw(SNode coordinates) {
     try {
       return (InternalVector) IETS3ExprEvalHelper.evaluate(coordinates);
     } catch (InterpreterBaseException issue) {
       LoggingRuntime.logMsgView(Level.WARN, "unable to evaluate node of type " + SNodeOperations.getConcept(coordinates).getName(), CoordinateExpressionConverters.class, issue, null);
     }
 
-    return InternalVector.zero();
+    return InternalVector.ZERO;
   }
 
   /**
@@ -39,7 +40,7 @@ public class CoordinateExpressionConverters {
    * @param instance instance of the object to populate (if any)
    * @return cartesian coordinates
    */
-  public static SNode rawToCartesian(InternalVector rawSource, SNode instance) {
+  public static SNode rawToCartesian(VectorLike rawSource, SNode instance) {
     SNode result = ((instance != null) ? instance : SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates")));
     SLinkOperations.setTarget(result, LINKS.dx$VpuT, createNumberLiteral_xupmzl_a0b0d(rawSource.getX().toString()));
     SLinkOperations.setTarget(result, LINKS.dy$VWrJ, createNumberLiteral_xupmzl_a0c0d(rawSource.getY().toString()));
@@ -55,7 +56,7 @@ public class CoordinateExpressionConverters {
    * @param instance existing object to populate if any
    * @return spherical coordinates node
    */
-  public static SNode rawToSpherical(InternalVector rawSource, SNode instance) {
+  public static SNode rawToSpherical(VectorLike rawSource, SNode instance) {
     SNode result = ((instance != null) ? instance : SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, "jetbrains.mps.samples.Physics.structure.SphericalCoordinates")));
     SLinkOperations.setTarget(result, LINKS.distance$xDc5, createNumberLiteral_xupmzl_a0b0g(rawSource.length().toString()));
     SLinkOperations.setTarget(result, LINKS.phi$xD9b, piRelativeOf(rawSource.getAzimutalAngle()));
@@ -70,7 +71,7 @@ public class CoordinateExpressionConverters {
    * @param instance instance of the object to populate, if any
    * @return spherical coordinates node
    */
-  public static SNode rawToCylindrical(InternalVector rawSource, SNode instance) {
+  public static SNode rawToCylindrical(VectorLike rawSource, SNode instance) {
     SNode result = ((instance != null) ? instance : SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, "jetbrains.mps.samples.Physics.structure.CylindricalCoordinates")));
 
     double axialDistanceSq = rawSource.getX().pow(2).add(rawSource.getY().pow(2)).doubleValue();

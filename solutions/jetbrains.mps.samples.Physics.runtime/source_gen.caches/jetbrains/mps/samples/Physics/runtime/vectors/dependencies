@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.runtime.vectors.BigDecimalHelper">
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.math.BigDecimal" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.runtime.vectors.InternalEntity">
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
@@ -23,14 +27,11 @@
   <dependency className="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector">
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
-    <classNode dependClassName="java.lang.Object" />
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.math.MathContext" />
-    <classNode dependClassName="java.math.RoundingMode" />
-    <classNode dependClassName="org.ode4j.math.DVector3" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.BigDecimalHelper" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.vectors.VectorLike" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.runtime.vectors.InternalWorld">
     <classNode dependClassName="java.lang.Iterable" />
@@ -49,6 +50,20 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SReferenceLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalEntity" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.runtime.vectors.VectorLike">
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.MathContext" />
+    <classNode dependClassName="java.math.RoundingMode" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.BigDecimalHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
+    <classNode dependClassName="org.ode4j.math.DVector3" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
   </dependency>
 </dependenciesRoot>
 

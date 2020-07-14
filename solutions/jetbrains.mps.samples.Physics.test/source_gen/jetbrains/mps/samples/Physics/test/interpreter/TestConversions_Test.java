@@ -15,6 +15,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
 import junit.framework.Assert;
 
@@ -94,7 +95,7 @@ public class TestConversions_Test extends BaseTransformationTest {
 
 
     public void assertEquals(SNode expr, InternalVector expected) {
-      InternalVector actual = CoordinateExpressionConverters.anyToRaw(expr);
+      VectorLike actual = CoordinateExpressionConverters.anyToRaw(expr);
 
       // Check computation result 
       Assert.assertNotNull(actual);
