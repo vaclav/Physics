@@ -233,6 +233,7 @@
       <concept id="1240170042401" name="jetbrains.mps.lang.smodel.structure.SEnumerationMemberType" flags="in" index="2ZThk1">
         <reference id="1240170836027" name="enum" index="2ZWj4r" />
       </concept>
+      <concept id="1172008320231" name="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" flags="nn" index="3x8VRR" />
       <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
         <child id="1180636770616" name="createdType" index="3zrR0E" />
       </concept>
@@ -448,6 +449,12 @@
     <node concept="3EZMnI" id="5xbVod7kK0K" role="2wV5jI">
       <node concept="3F0ifn" id="5xbVod7kK0Q" role="3EZMnx">
         <property role="3F0ifm" value="spherical coordinates" />
+        <node concept="VPxyj" id="4aXoy5X19Mu" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="A1WHr" id="4aXoy5X19Mw" role="3vIgyS">
+          <ref role="2ZyFGn" to="9tcj:1jQexh3x$_T" resolve="Coordinates" />
+        </node>
       </node>
       <node concept="3F0ifn" id="6POFxU8hdX9" role="3EZMnx">
         <property role="3F0ifm" value="(" />
@@ -459,6 +466,7 @@
         <property role="3F0ifm" value=":" />
       </node>
       <node concept="3F1sOY" id="6asu_4xGfVI" role="3EZMnx">
+        <property role="1cu_pB" value="gtguBGO/firstEditableCell" />
         <ref role="1NtTu8" to="9tcj:6asu_4xFMlS" resolve="theta" />
       </node>
       <node concept="3F0ifn" id="6POFxU8hdYd" role="3EZMnx">
@@ -498,7 +506,7 @@
       <node concept="3F0ifn" id="5xbVod7kK2V" role="3EZMnx">
         <property role="3F0ifm" value="cartesian coordinates" />
         <node concept="A1WHr" id="5xbVod7kKmd" role="3vIgyS">
-          <ref role="2ZyFGn" to="9tcj:5xbVod7kJDH" resolve="AbsoluteCoordinates" />
+          <ref role="2ZyFGn" to="9tcj:1jQexh3x$_T" resolve="Coordinates" />
         </node>
         <node concept="VPxyj" id="5xbVod7kKmf" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -521,6 +529,7 @@
         <property role="3F0ifm" value=":" />
       </node>
       <node concept="3F1sOY" id="6B47O8Qd$g1" role="3EZMnx">
+        <property role="1cu_pB" value="gtguBGO/firstEditableCell" />
         <ref role="1NtTu8" to="9tcj:1h1l5SEm0oR" resolve="dx" />
       </node>
       <node concept="3F0ifn" id="5xbVod7kK39" role="3EZMnx">
@@ -1007,6 +1016,12 @@
     <node concept="3EZMnI" id="6POFxU8e$hT" role="2wV5jI">
       <node concept="3F0ifn" id="6POFxU8e$hU" role="3EZMnx">
         <property role="3F0ifm" value="directional coordinates" />
+        <node concept="VPxyj" id="4aXoy5X19Mq" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="A1WHr" id="4aXoy5X19Ms" role="3vIgyS">
+          <ref role="2ZyFGn" to="9tcj:1jQexh3x$_T" resolve="Coordinates" />
+        </node>
       </node>
       <node concept="3F0ifn" id="6POFxU8e$hV" role="3EZMnx">
         <property role="3F0ifm" value="(" />
@@ -1018,6 +1033,7 @@
         <property role="3F0ifm" value=":" />
       </node>
       <node concept="3F1sOY" id="6POFxU8e$jd" role="3EZMnx">
+        <property role="1cu_pB" value="gtguBGO/firstEditableCell" />
         <ref role="1NtTu8" to="9tcj:6POFxU8e$hO" resolve="length" />
       </node>
       <node concept="3F0ifn" id="6POFxU8e$hX" role="3EZMnx">
@@ -1275,7 +1291,7 @@
   </node>
   <node concept="24kQdi" id="6kwOTMkWMIu">
     <property role="3GE5qa" value="physical.force.abstract" />
-    <ref role="1XX52x" to="9tcj:6kwOTMkWOH$" resolve="ForceArgument" />
+    <ref role="1XX52x" to="9tcj:6kwOTMkWOH$" resolve="AbstractForceArgument" />
     <node concept="3EZMnI" id="6kwOTMkWOHu" role="2wV5jI">
       <node concept="3F0A7n" id="6kwOTMkWOH_" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
@@ -1505,14 +1521,14 @@
     <node concept="22hDWj" id="cTQf2FjduB" role="22hAXT" />
   </node>
   <node concept="24kQdi" id="cTQf2Fjp4G">
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.interaction" />
     <ref role="1XX52x" to="9tcj:cTQf2Fjp4$" resolve="InteractedObjectExpression" />
     <node concept="3F0ifn" id="cTQf2Fjp4I" role="2wV5jI">
       <property role="3F0ifm" value="other object" />
     </node>
   </node>
   <node concept="24kQdi" id="cTQf2FkkTs">
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.interaction" />
     <ref role="1XX52x" to="9tcj:cTQf2FjlqU" resolve="InteractionForce" />
     <node concept="3EZMnI" id="cTQf2FkkTu" role="2wV5jI">
       <node concept="3F0ifn" id="cTQf2FkkTv" role="3EZMnx">
@@ -1649,9 +1665,45 @@
             </node>
           </node>
         </node>
+        <node concept="VPxyj" id="4aXoy5WR6$R" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="A1WHr" id="4aXoy5WR6J3" role="3vIgyS">
+          <ref role="2ZyFGn" to="9tcj:Q4PrYMwcs1" resolve="AbstractForceCallParameter" />
+        </node>
+        <node concept="pkWqt" id="4aXoy5XdTig" role="pqm2j">
+          <node concept="3clFbS" id="4aXoy5XdTih" role="2VODD2">
+            <node concept="3clFbF" id="4aXoy5XdTio" role="3cqZAp">
+              <node concept="2OqwBi" id="4aXoy5XdUTY" role="3clFbG">
+                <node concept="2OqwBi" id="4aXoy5XdTBb" role="2Oq$k0">
+                  <node concept="pncrf" id="4aXoy5XdTin" role="2Oq$k0" />
+                  <node concept="3TrEf2" id="4aXoy5XdU9Q" role="2OqNvi">
+                    <ref role="3Tt5mk" to="9tcj:Q4PrYMwdta" resolve="argument" />
+                  </node>
+                </node>
+                <node concept="3x8VRR" id="4aXoy5XdVqj" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="3F0ifn" id="Q4PrYMwKOV" role="3EZMnx">
         <property role="3F0ifm" value="=" />
+        <node concept="pkWqt" id="4aXoy5XdS95" role="pqm2j">
+          <node concept="3clFbS" id="4aXoy5XdS96" role="2VODD2">
+            <node concept="3clFbF" id="4aXoy5XdSd2" role="3cqZAp">
+              <node concept="2OqwBi" id="4aXoy5XdW49" role="3clFbG">
+                <node concept="2OqwBi" id="4aXoy5XdStk" role="2Oq$k0">
+                  <node concept="pncrf" id="4aXoy5XdSd1" role="2Oq$k0" />
+                  <node concept="3TrEf2" id="4aXoy5XdSIK" role="2OqNvi">
+                    <ref role="3Tt5mk" to="9tcj:Q4PrYMwdta" resolve="argument" />
+                  </node>
+                </node>
+                <node concept="3x8VRR" id="4aXoy5XdW$x" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="3F1sOY" id="Q4PrYMwMOp" role="3EZMnx">
         <ref role="1NtTu8" to="9tcj:Q4PrYMwMOc" resolve="value" />
@@ -1716,7 +1768,7 @@
         </node>
       </node>
       <node concept="3Tqbb2" id="Q4PrYMwMUh" role="2ZBHrp">
-        <ref role="ehGHo" to="9tcj:6kwOTMkWOH$" resolve="ForceArgument" />
+        <ref role="ehGHo" to="9tcj:6kwOTMkWOH$" resolve="AbstractForceArgument" />
       </node>
       <node concept="2$S_p_" id="Q4PrYMwMUk" role="2$S_pT">
         <node concept="3clFbS" id="Q4PrYMwMUl" role="2VODD2">
@@ -1754,6 +1806,12 @@
     <node concept="3EZMnI" id="GdoRjGAm_$" role="2wV5jI">
       <node concept="3F0ifn" id="GdoRjGAm__" role="3EZMnx">
         <property role="3F0ifm" value="cylindrical coordinates" />
+        <node concept="VPxyj" id="4aXoy5X19My" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="A1WHr" id="4aXoy5X19M$" role="3vIgyS">
+          <ref role="2ZyFGn" to="9tcj:1jQexh3x$_T" resolve="Coordinates" />
+        </node>
       </node>
       <node concept="3F0ifn" id="GdoRjGAm_A" role="3EZMnx">
         <property role="3F0ifm" value="(" />
@@ -1765,6 +1823,7 @@
         <property role="3F0ifm" value=":" />
       </node>
       <node concept="3F1sOY" id="GdoRjGAm_D" role="3EZMnx">
+        <property role="1cu_pB" value="gtguBGO/firstEditableCell" />
         <ref role="1NtTu8" to="9tcj:GdoRjGAm_i" resolve="axialDistance" />
       </node>
       <node concept="3F0ifn" id="GdoRjGAm_E" role="3EZMnx">

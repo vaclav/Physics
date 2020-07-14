@@ -164,17 +164,17 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return LINKS.args$gQ4W;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.ForceArgument$M7;
+      return CONCEPTS.AbstractForceArgument$M7;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
-      EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode, new SNodeLocation.FromNode(elementNode, CONCEPTS.ForceArgument$M7));
+      EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode, new SNodeLocation.FromNode(elementNode, CONCEPTS.AbstractForceArgument$M7));
       installElementCellActions(elementNode, elementCell, false);
       return elementCell;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(argsListHandler_713wbl_b2a.this.getNode(), LINKS.args$gQ4W, CONCEPTS.ForceArgument$M7));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(argsListHandler_713wbl_b2a.this.getNode(), LINKS.args$gQ4W, CONCEPTS.AbstractForceArgument$M7));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -282,7 +282,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$jT = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SConcept ForceArgument$M7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c94f34b64L, "jetbrains.mps.samples.Physics.structure.ForceArgument");
+    /*package*/ static final SConcept AbstractForceArgument$M7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c94f34b64L, "jetbrains.mps.samples.Physics.structure.AbstractForceArgument");
     /*package*/ static final SConcept Force$pC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
   }
 

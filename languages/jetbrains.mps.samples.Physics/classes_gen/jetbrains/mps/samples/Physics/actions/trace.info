@@ -1,13 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <root>
     <file name="ActionAspectDescriptorImpl.java">
-      <unit at="12,0,26,0" name="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
+      <unit at="12,0,36,0" name="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
+    </file>
+  </root>
+  <root nodeRef="r:440f32ad-f2cc-41e6-bc89-c1c2af2bc770(jetbrains.mps.samples.Physics.actions)/4809107873070310008">
+    <file name="ForceFactories.java">
+      <node id="4809107873068934915" at="19,91,20,239" concept="1" />
+      <node id="4809107873070190904" at="20,239,21,0" concept="6" />
+      <node id="4809107873070189239" at="22,7,23,43" concept="4" />
+      <node id="4809107873070190992" at="24,94,25,145" concept="1" />
+      <node id="4809107873070311836" at="32,7,33,39" concept="4" />
+      <node id="4809107873070311944" at="34,75,35,151" concept="1" />
+      <node id="4809107873070310008" at="42,0,43,0" concept="7" trace="argument$kXZ1" />
+      <node id="4809107873070310008" at="43,0,44,0" concept="7" trace="value$59jW" />
+      <node id="4809107873070310008" at="44,0,45,0" concept="7" trace="components$Kpdw" />
+      <node id="4809107873070310008" at="48,0,49,0" concept="7" trace="AbstractForceCall$Wc" />
+      <node id="4809107873070310008" at="49,0,50,0" concept="7" trace="AbstractForceCallParameter$Xs" />
+      <node id="4809107873070310008" at="50,0,51,0" concept="7" trace="StaticForce$r5" />
+      <node id="4809107873070189239" at="23,43,26,9" concept="2" />
+      <node id="4809107873070311836" at="33,39,36,9" concept="2" />
+      <node id="4809107873070189239" at="21,0,27,7" concept="0" />
+      <node id="4809107873070311836" at="31,91,37,7" concept="0" />
+      <node id="4809107873070311133" at="31,0,39,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <node id="4809107873068929002" at="19,0,29,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="4809107873070189243" at="24,94,25,145" />
+      <scope id="4809107873070311838" at="34,75,35,151" />
+      <scope id="4809107873070189239" at="22,7,26,9">
+        <var name="parameter" id="4809107873070189239" />
+      </scope>
+      <scope id="4809107873070311836" at="32,7,36,9">
+        <var name="force" id="4809107873070311836" />
+      </scope>
+      <scope id="4809107873070311133" at="31,91,37,7" />
+      <scope id="4809107873068929002" at="19,91,27,7" />
+      <scope id="4809107873070311133" at="31,0,39,0">
+        <var name="enclosingNode" id="4809107873070311133" />
+        <var name="model" id="4809107873070311133" />
+        <var name="newNode" id="4809107873070311133" />
+        <var name="sampleNode" id="4809107873070311133" />
+      </scope>
+      <scope id="4809107873068929002" at="19,0,29,0">
+        <var name="enclosingNode" id="4809107873068929002" />
+        <var name="model" id="4809107873068929002" />
+        <var name="newNode" id="4809107873068929002" />
+        <var name="sampleNode" id="4809107873068929002" />
+      </scope>
+      <unit id="4809107873070310008" at="41,0,46,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$LINKS" />
+      <unit id="4809107873070310008" at="47,0,52,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$CONCEPTS" />
+      <unit id="4809107873070311133" at="30,0,40,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$NodeFactory_4809107873070311133" />
+      <unit id="4809107873068929002" at="18,0,30,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$NodeFactory_4809107873068929002" />
+      <unit id="4809107873070310008" at="17,0,53,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories" />
     </file>
   </root>
   <root nodeRef="r:440f32ad-f2cc-41e6-bc89-c1c2af2bc770(jetbrains.mps.samples.Physics.actions)/7746015835359887683">
-    <file name="Factories.java">
-      <unit id="7746015835359887683" at="6,0,8,0" name="jetbrains.mps.samples.Physics.actions.Factories" />
+    <file name="CoordinatesFactories.java">
+      <node id="4809107873070303714" at="18,91,19,30" concept="5" />
+      <node id="4809107873071735011" at="20,7,21,40" concept="4" />
+      <node id="4809107873070296001" at="22,76,23,82" concept="4" />
+      <node id="4809107873070296225" at="23,82,24,75" concept="1" />
+      <node id="4809107873070297316" at="26,7,27,0" concept="6" />
+      <node id="4809107873070304414" at="27,0,28,57" concept="5" />
+      <node id="4809107873070297412" at="29,7,30,39" concept="4" />
+      <node id="4809107873070297661" at="31,84,32,139" concept="1" />
+      <node id="4809107873071737090" at="39,7,40,40" concept="4" />
+      <node id="4809107873071737093" at="41,76,42,82" concept="4" />
+      <node id="4809107873071737100" at="42,82,43,73" concept="1" />
+      <node id="4809107873070305154" at="45,7,46,0" concept="6" />
+      <node id="4809107873070305250" at="46,0,47,57" concept="5" />
+      <node id="4809107873070305261" at="48,7,49,37" concept="4" />
+      <node id="4809107873070305264" at="50,84,51,137" concept="1" />
+      <node id="4809107873070305228" at="53,7,54,0" concept="6" />
+      <node id="4809107873071738451" at="59,7,60,40" concept="4" />
+      <node id="4809107873071738454" at="61,76,62,82" concept="4" />
+      <node id="4809107873071738461" at="62,82,63,73" concept="1" />
+      <node id="4809107873070306625" at="65,7,66,0" concept="6" />
+      <node id="4809107873070306626" at="66,0,67,59" concept="5" />
+      <node id="4809107873070306637" at="68,7,69,37" concept="4" />
+      <node id="4809107873070306640" at="70,84,71,135" concept="1" />
+      <node id="7746015835359887683" at="78,0,79,0" concept="7" trace="Coordinates$HV" />
+      <node id="7746015835359887683" at="79,0,80,0" concept="7" trace="CartesianCoordinates$U8" />
+      <node id="7746015835359887683" at="80,0,81,0" concept="7" trace="CylindricalCoordinates$9D" />
+      <node id="7746015835359887683" at="84,0,85,0" concept="7" trace="height$ip86" />
+      <node id="7746015835359887683" at="85,0,86,0" concept="7" trace="dz$VWBn" />
+      <node id="7746015835359887683" at="86,0,87,0" concept="7" trace="phi$xD9b" />
+      <node id="7746015835359887683" at="87,0,88,0" concept="7" trace="phi$ip6D" />
+      <node id="4809107873070297412" at="30,39,33,9" concept="2" />
+      <node id="4809107873070305261" at="49,37,52,9" concept="2" />
+      <node id="4809107873070306637" at="69,37,72,9" concept="2" />
+      <node id="4809107873071735011" at="21,40,25,9" concept="2" />
+      <node id="4809107873071737090" at="40,40,44,9" concept="2" />
+      <node id="4809107873071738451" at="60,40,64,9" concept="2" />
+      <node id="4809107873070297412" at="28,57,34,7" concept="0" />
+      <node id="4809107873070305261" at="47,57,53,7" concept="0" />
+      <node id="4809107873070306637" at="67,59,73,7" concept="0" />
+      <node id="4809107873071735011" at="19,30,26,7" concept="0" />
+      <node id="4809107873071737090" at="38,91,45,7" concept="0" />
+      <node id="4809107873071738451" at="58,91,65,7" concept="0" />
+      <node id="4809107873070306457" at="58,0,75,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <node id="4809107873070200372" at="18,0,36,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <node id="4809107873070296905" at="38,0,56,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="4809107873070297416" at="31,84,32,139" />
+      <scope id="4809107873070305263" at="50,84,51,137" />
+      <scope id="4809107873070306639" at="70,84,71,135" />
+      <scope id="4809107873071735015" at="22,76,24,75">
+        <var name="vector" id="4809107873070296002" />
+      </scope>
+      <scope id="4809107873071737092" at="41,76,43,73">
+        <var name="vector" id="4809107873071737094" />
+      </scope>
+      <scope id="4809107873071738453" at="61,76,63,73">
+        <var name="vector" id="4809107873071738455" />
+      </scope>
+      <scope id="4809107873070297412" at="29,7,33,9">
+        <var name="carts" id="4809107873070297412" />
+      </scope>
+      <scope id="4809107873070305261" at="48,7,52,9">
+        <var name="cyl" id="4809107873070305261" />
+      </scope>
+      <scope id="4809107873070306637" at="68,7,72,9">
+        <var name="cyl" id="4809107873070306637" />
+      </scope>
+      <scope id="4809107873071735011" at="20,7,25,9">
+        <var name="coords" id="4809107873071735011" />
+      </scope>
+      <scope id="4809107873071737090" at="39,7,44,9">
+        <var name="coords" id="4809107873071737090" />
+      </scope>
+      <scope id="4809107873071738451" at="59,7,64,9">
+        <var name="coords" id="4809107873071738451" />
+      </scope>
+      <scope id="4809107873070306457" at="58,91,73,7" />
+      <scope id="4809107873070200372" at="18,91,34,7" />
+      <scope id="4809107873070296905" at="38,91,54,0" />
+      <scope id="4809107873070306457" at="58,0,75,0">
+        <var name="enclosingNode" id="4809107873070306457" />
+        <var name="model" id="4809107873070306457" />
+        <var name="newNode" id="4809107873070306457" />
+        <var name="sampleNode" id="4809107873070306457" />
+      </scope>
+      <scope id="4809107873070200372" at="18,0,36,0">
+        <var name="enclosingNode" id="4809107873070200372" />
+        <var name="model" id="4809107873070200372" />
+        <var name="newNode" id="4809107873070200372" />
+        <var name="sampleNode" id="4809107873070200372" />
+      </scope>
+      <scope id="4809107873070296905" at="38,0,56,0">
+        <var name="enclosingNode" id="4809107873070296905" />
+        <var name="model" id="4809107873070296905" />
+        <var name="newNode" id="4809107873070296905" />
+        <var name="sampleNode" id="4809107873070296905" />
+      </scope>
+      <unit id="7746015835359887683" at="77,0,82,0" name="jetbrains.mps.samples.Physics.actions.CoordinatesFactories$CONCEPTS" />
+      <unit id="7746015835359887683" at="83,0,89,0" name="jetbrains.mps.samples.Physics.actions.CoordinatesFactories$LINKS" />
+      <unit id="4809107873070306457" at="57,0,76,0" name="jetbrains.mps.samples.Physics.actions.CoordinatesFactories$NodeFactory_4809107873070306457" />
+      <unit id="4809107873070200372" at="17,0,37,0" name="jetbrains.mps.samples.Physics.actions.CoordinatesFactories$NodeFactory_4809107873070200372" />
+      <unit id="4809107873070296905" at="37,0,57,0" name="jetbrains.mps.samples.Physics.actions.CoordinatesFactories$NodeFactory_4809107873070296905" />
+      <unit id="7746015835359887683" at="16,0,90,0" name="jetbrains.mps.samples.Physics.actions.CoordinatesFactories" />
     </file>
   </root>
 </debug-info>

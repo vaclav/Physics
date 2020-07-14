@@ -536,7 +536,7 @@
   </node>
   <node concept="1YbPZF" id="cTQf2FkHOe">
     <property role="TrG5h" value="typeof_InteractedObjectExpression" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.interaction" />
     <node concept="3clFbS" id="cTQf2FkHOf" role="18ibNy">
       <node concept="1Z5TYs" id="cTQf2FkHZb" role="3cqZAp">
         <node concept="mw_s8" id="cTQf2FkHZe" role="1ZfhK$">

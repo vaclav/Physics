@@ -11,7 +11,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionExecutable" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.Kind" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.CoordinateExpressionConverters" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters" />
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.intentions.AbstractIntentionDescriptor" />
@@ -28,24 +28,11 @@
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionExecutable" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.Kind" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.CoordinateExpressionConverters" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters" />
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.intentions.AbstractIntentionDescriptor" />
     <classNode extendsClassName="jetbrains.mps.openapi.intentions.IntentionFactory" />
-  </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.intentions.CoordinateExpressionConverters">
-    <classNode dependClassName="java.lang.Math" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
-    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
-    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.intentions.IntentionsDescriptor">
     <classNode dependClassName="java.lang.Override" />
@@ -103,7 +90,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionExecutable" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.Kind" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.CoordinateExpressionConverters" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
@@ -125,7 +112,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionExecutable" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.Kind" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.CoordinateExpressionConverters" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
@@ -157,7 +144,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.intentions.ParameterizedIntentionExecutable" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ILocalized__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.WorldDefinition__BehaviorDescriptor" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.CoordinateExpressionConverters" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
@@ -184,7 +171,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionExecutable" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.Kind" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.CoordinateExpressionConverters" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />

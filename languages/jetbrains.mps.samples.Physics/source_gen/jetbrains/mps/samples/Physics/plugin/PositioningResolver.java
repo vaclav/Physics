@@ -16,7 +16,6 @@ import jetbrains.mps.internal.collections.runtime.IVisitor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.samples.Physics.intentions.CoordinateExpressionConverters;
 import jetbrains.mps.internal.collections.runtime.IMapping;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -50,17 +49,17 @@ public class PositioningResolver {
 
         //  Compute position 
         InternalVector locationComputed = ((InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.location$DoV0), LINKS.expression$87ts))).add(posOffset);
-        SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(result, LINKS.location$DoV0), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(locationComputed));
+        SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(result, LINKS.location$DoV0), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(locationComputed, null));
 
         //  Compute speed 
         InternalVector velocityComputed;
         if ((SLinkOperations.getTarget(it, LINKS.velocity$DoVv) != null)) {
           velocityComputed = ((InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.expression$87ts))).add(velocityOffset);
-          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(result, LINKS.velocity$DoVv), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(velocityComputed));
+          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(result, LINKS.velocity$DoVv), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(velocityComputed, null));
 
         } else {
           velocityComputed = velocityOffset;
-          SLinkOperations.setTarget(SLinkOperations.getTarget(result, LINKS.velocity$DoVv), LINKS.expression$87ts, CoordinateExpressionConverters.rawToCartesian(velocityComputed));
+          SLinkOperations.setTarget(SLinkOperations.getTarget(result, LINKS.velocity$DoVv), LINKS.expression$87ts, CoordinateExpressionConverters.rawToCartesian(velocityComputed, null));
         }
 
         // Add nested worlds 

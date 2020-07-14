@@ -18,15 +18,15 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class GrammarCellsSubstituteMenu_ForceArgument extends SubstituteMenuBase {
-  public GrammarCellsSubstituteMenu_ForceArgument() {
+public class GrammarCellsSubstituteMenu_AbstractForceArgument extends SubstituteMenuBase {
+  public GrammarCellsSubstituteMenu_AbstractForceArgument() {
     super(true);
   }
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new GrammarCellsSubstituteMenuPart_xw3gra_a());
+    result.add(new GrammarCellsSubstituteMenuPart_ef5nh1_a());
     return result;
   }
 
@@ -34,7 +34,7 @@ public class GrammarCellsSubstituteMenu_ForceArgument extends SubstituteMenuBase
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "ForceArgument", null));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "AbstractForceArgument", null));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -43,18 +43,18 @@ public class GrammarCellsSubstituteMenu_ForceArgument extends SubstituteMenuBase
   }
 
 
-  private class GrammarCellsSubstituteMenuPart_xw3gra_a extends GrammarCellsSubstituteMenuPart {
+  private class GrammarCellsSubstituteMenuPart_ef5nh1_a extends GrammarCellsSubstituteMenuPart {
     @Override
     public SModule getModule(SRepository repository) {
       return PersistenceFacade.getInstance().createModuleReference("be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)").resolve(repository);
     }
     @Override
     public SAbstractConcept getExpectedOutputConcept() {
-      return CONCEPTS.ForceArgument$M7;
+      return CONCEPTS.AbstractForceArgument$M7;
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ForceArgument$M7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c94f34b64L, "jetbrains.mps.samples.Physics.structure.ForceArgument");
+    /*package*/ static final SConcept AbstractForceArgument$M7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c94f34b64L, "jetbrains.mps.samples.Physics.structure.AbstractForceArgument");
   }
 }

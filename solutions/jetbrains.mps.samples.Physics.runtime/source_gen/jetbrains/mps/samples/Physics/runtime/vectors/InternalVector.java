@@ -13,7 +13,7 @@ import java.math.RoundingMode;
  */
 public class InternalVector {
   private static final MathContext ctx = MathContext.DECIMAL128;
-  private static final BigDecimal almostZero = new BigDecimal("0.00000001");
+  public static final BigDecimal almostZero = new BigDecimal("0.00000001");
 
   private final BigDecimal x;
   private final BigDecimal y;
@@ -94,8 +94,8 @@ public class InternalVector {
    * @return azimutal angle
    */
   public BigDecimal getAzimutalAngle() {
-    double atan = Math.atan(getY().divide(getX()).doubleValue());
-    return BigDecimal.valueOf(atan);
+    //  Using atan2 instead of atan to ensure having all the possibilities of angles 
+    return BigDecimal.valueOf(Math.atan2(getY().doubleValue(), getX().doubleValue()));
   }
 
 
@@ -160,4 +160,12 @@ public class InternalVector {
   }
 
 
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof InternalVector) {
+      InternalVector cmp = (InternalVector) obj;
+      return cmp.getX().subtract(getX(), ctx).compareTo(almostZero) == -1 && cmp.getY().subtract(getY(), ctx).compareTo(almostZero) == -1 && cmp.getZ().subtract(getZ(), ctx).compareTo(almostZero) == -1;
+    }
+    return super.equals(obj);
+  }
 }

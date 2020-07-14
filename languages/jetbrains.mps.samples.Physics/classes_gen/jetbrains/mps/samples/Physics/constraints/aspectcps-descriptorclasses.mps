@@ -6705,7 +6705,7 @@
     </node>
   </node>
   <node concept="312cEu" id="Bn">
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.interaction" />
     <property role="TrG5h" value="InteractedObjectExpression_Constraints" />
     <node concept="3Tm1VV" id="Bo" role="1B3o_S">
       <node concept="cd27G" id="Bv" role="lGtFl">

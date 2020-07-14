@@ -18,6 +18,7 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAbsoluteCoordinates = createDescriptorForAbsoluteCoordinates();
   /*package*/ final ConceptDescriptor myConceptAbstractForce = createDescriptorForAbstractForce();
+  /*package*/ final ConceptDescriptor myConceptAbstractForceArgument = createDescriptorForAbstractForceArgument();
   /*package*/ final ConceptDescriptor myConceptAbstractForceCall = createDescriptorForAbstractForceCall();
   /*package*/ final ConceptDescriptor myConceptAbstractForceCallParameter = createDescriptorForAbstractForceCallParameter();
   /*package*/ final ConceptDescriptor myConceptAbstractObjectDefinition = createDescriptorForAbstractObjectDefinition();
@@ -38,7 +39,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDistanceWithCallTarget = createDescriptorForDistanceWithCallTarget();
   /*package*/ final ConceptDescriptor myConceptDynamicForce = createDescriptorForDynamicForce();
   /*package*/ final ConceptDescriptor myConceptForce = createDescriptorForForce();
-  /*package*/ final ConceptDescriptor myConceptForceArgument = createDescriptorForForceArgument();
   /*package*/ final ConceptDescriptor myConceptForceType = createDescriptorForForceType();
   /*package*/ final ConceptDescriptor myConceptILocalized = createDescriptorForILocalized();
   /*package*/ final ConceptDescriptor myConceptIObjectDefinition = createDescriptorForIObjectDefinition();
@@ -87,14 +87,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
-    deps.extendedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
     deps.extendedLanguage(0x9464fa065ab9409bL, 0x927464ab29588457L, "org.iets3.core.expr.lambda");
+    deps.extendedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
     deps.aggregatedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractObjectTarget, myConceptAbstractVectorTarget, myConceptAbstractWorldTarget, myConceptBoxVisual, myConceptBuiltInColorTexture, myConceptBuiltInVectorsExpression, myConceptCartesianCoordinates, myConceptCoordinates, myConceptCurrentObjectExpression, myConceptCustomColorTexture, myConceptCylindricalCoordinates, myConceptDirectionType, myConceptDirectionalCoordinates, myConceptDistanceWithCallTarget, myConceptDynamicForce, myConceptForce, myConceptForceArgument, myConceptForceType, myConceptILocalized, myConceptIObjectDefinition, myConceptITargetExpression, myConceptITargetObject, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptObjectDefinition, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReference, myConceptObjectType, myConceptObjectVelocityTarget, myConceptPictureTexture, myConceptPositionCoordinates, myConceptRelativeCoordinates, myConceptSimulation, myConceptSphereVisual, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptTargetableExpression, myConceptTexture, myConceptTimeExpression, myConceptVectorComponentTarget, myConceptVectorOppositeDotTarget, myConceptVectorResizeDotTarget, myConceptVectorType, myConceptVelocityCoordinates, myConceptVisual, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldReference, myConceptWorldType);
+    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceArgument, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractObjectTarget, myConceptAbstractVectorTarget, myConceptAbstractWorldTarget, myConceptBoxVisual, myConceptBuiltInColorTexture, myConceptBuiltInVectorsExpression, myConceptCartesianCoordinates, myConceptCoordinates, myConceptCurrentObjectExpression, myConceptCustomColorTexture, myConceptCylindricalCoordinates, myConceptDirectionType, myConceptDirectionalCoordinates, myConceptDistanceWithCallTarget, myConceptDynamicForce, myConceptForce, myConceptForceType, myConceptILocalized, myConceptIObjectDefinition, myConceptITargetExpression, myConceptITargetObject, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptObjectDefinition, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReference, myConceptObjectType, myConceptObjectVelocityTarget, myConceptPictureTexture, myConceptPositionCoordinates, myConceptRelativeCoordinates, myConceptSimulation, myConceptSphereVisual, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptTargetableExpression, myConceptTexture, myConceptTimeExpression, myConceptVectorComponentTarget, myConceptVectorOppositeDotTarget, myConceptVectorResizeDotTarget, myConceptVectorType, myConceptVelocityCoordinates, myConceptVisual, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldReference, myConceptWorldType);
   }
 
   @Override
@@ -105,6 +105,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAbsoluteCoordinates;
       case LanguageConceptSwitch.AbstractForce:
         return myConceptAbstractForce;
+      case LanguageConceptSwitch.AbstractForceArgument:
+        return myConceptAbstractForceArgument;
       case LanguageConceptSwitch.AbstractForceCall:
         return myConceptAbstractForceCall;
       case LanguageConceptSwitch.AbstractForceCallParameter:
@@ -145,8 +147,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDynamicForce;
       case LanguageConceptSwitch.Force:
         return myConceptForce;
-      case LanguageConceptSwitch.ForceArgument:
-        return myConceptForceArgument;
       case LanguageConceptSwitch.ForceType:
         return myConceptForceType;
       case LanguageConceptSwitch.ILocalized:
@@ -247,6 +247,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/3541737815097257862");
     b.version(2);
     b.alias("force");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAbstractForceArgument() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "AbstractForceArgument", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c94f34b64L);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.lambda.structure.FunctionArgument", 0x9464fa065ab9409bL, 0x927464ab29588457L, 0x427ce523083b8a41L);
+    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7287056866552793956");
+    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForAbstractForceCall() {
@@ -440,14 +448,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, true, false);
     b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1459540517658822191");
-    b.version(2);
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForForceArgument() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "ForceArgument", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c94f34b64L);
-    b.class_(false, false, false);
-    b.super_("org.iets3.core.expr.lambda.structure.FunctionArgument", 0x9464fa065ab9409bL, 0x927464ab29588457L, 0x427ce523083b8a41L);
-    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7287056866552793956");
     b.version(2);
     return b.create();
   }

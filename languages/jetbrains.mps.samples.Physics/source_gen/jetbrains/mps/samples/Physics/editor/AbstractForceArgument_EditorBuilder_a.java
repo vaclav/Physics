@@ -35,11 +35,11 @@ import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class ForceArgument_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class AbstractForceArgument_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public ForceArgument_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public AbstractForceArgument_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -56,7 +56,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_rnsbr6_a");
+    editorCell.setCellId("Collection_ndm8f7_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createProperty_0());
@@ -91,19 +91,19 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ":");
-    editorCell.setCellId("Constant_rnsbr6_b0");
+    editorCell.setCellId("Constant_ndm8f7_b0");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new typeSingleRoleHandler_rnsbr6_c0(myNode, LINKS.type$G1QY, getEditorContext());
+    SingleRoleCellProvider provider = new typeSingleRoleHandler_ndm8f7_c0(myNode, LINKS.type$G1QY, getEditorContext());
     return provider.createCell();
   }
-  private static class typeSingleRoleHandler_rnsbr6_c0 extends SingleRoleCellProvider {
+  private static class typeSingleRoleHandler_ndm8f7_c0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public typeSingleRoleHandler_rnsbr6_c0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public typeSingleRoleHandler_ndm8f7_c0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }

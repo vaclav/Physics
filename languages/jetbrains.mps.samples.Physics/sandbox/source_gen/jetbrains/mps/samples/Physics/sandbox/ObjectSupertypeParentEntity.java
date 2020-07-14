@@ -12,6 +12,7 @@ import jetbrains.mps.samples.Physics.runtime.objects.forces.StaticForce;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 
 public class ObjectSupertypeParentEntity extends ParentPhysicalEntity {
   @Override
@@ -22,6 +23,6 @@ public class ObjectSupertypeParentEntity extends ParentPhysicalEntity {
     target.setFixture(new BoxFixture(world, ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue()));
 
     // Forces 
-    target.getForces().addAll(Arrays.asList(new StaticForce(InternalVector.fromSpherical(((Number) new BigDecimal("1.5707963267948966").setScale(16, RoundingMode.DOWN)), ((Number) new BigDecimal("0.001111110653864079").setScale(18, RoundingMode.DOWN)), ((Number) new BigDecimal("900.0005555553840878973394160353825").setScale(31, RoundingMode.DOWN))).toDVector3C()), new StaticForce(new InternalVector(((Number) new BigInteger("44")), ((Number) new BigInteger("00")), ((Number) new BigInteger("4"))).toDVector3C())));
+    target.getForces().addAll(Arrays.asList(new StaticForce(new InternalVector(((Number) new BigDecimal("899.9999999999999").setScale(13, RoundingMode.DOWN)), ((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), ((Number) new BigDecimal("5.510913997958703E-14").setScale(19, RoundingMode.DOWN))).toDVector3C()), new StaticForce(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.47114206162369554").setScale(17, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), AH.mul(((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), ((Number) new BigDecimal("44.1814440687490434227723411264442").setScale(31, RoundingMode.DOWN))).toDVector3C())));
   }
 }

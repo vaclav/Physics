@@ -4,7 +4,7 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="C:/Users/clebo/MPSProjects/Physics/dependencies/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar!/" type="java_classes">
+    <modelRoot contentPath="${project_home}/dependencies/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
   </models>
@@ -14,7 +14,7 @@
     </facet>
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="C:/Users/clebo/MPSProjects/Physics/dependencies/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+    <stubModelEntry path="${project_home}/dependencies/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
@@ -70,7 +70,7 @@
     <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
     <module reference="9e98f4e2-decf-4e97-bf80-9109e8b759aa(jetbrains.mps.lang.feedback.context)" version="0" />
     <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
-    <module reference="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" version="0" />
+    <module reference="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" version="1" />
     <module reference="59283cba-afa8-49c4-b10d-6ff0ede2c408(jetbrains.mps.samples.Physics.runtime)" version="0" />
     <module reference="db8bd035-3f51-41d8-8fed-954c202d18be(org.iets3.analysis.base)" version="0" />
     <module reference="7b68d745-a7b8-48b9-bd9c-05c0f8725a35(org.iets3.core.base)" version="0" />

@@ -15224,7 +15224,7 @@
     </node>
   </node>
   <node concept="312cEu" id="1rF">
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.interaction" />
     <property role="TrG5h" value="typeof_InteractedObjectExpression_InferenceRule" />
     <node concept="3clFbW" id="1rG" role="jymVt">
       <node concept="3clFbS" id="1rP" role="3clF47">

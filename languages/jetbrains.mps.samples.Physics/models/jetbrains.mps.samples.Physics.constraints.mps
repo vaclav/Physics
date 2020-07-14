@@ -174,7 +174,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="cTQf2Fjp4N">
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.interaction" />
     <ref role="1M2myG" to="9tcj:cTQf2Fjp4$" resolve="InteractedObjectExpression" />
     <node concept="9S07l" id="cTQf2Fjp4O" role="9Vyp8">
       <node concept="3clFbS" id="cTQf2Fjp4P" role="2VODD2">

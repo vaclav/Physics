@@ -16,6 +16,16 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
   public Collection<NodeFactory> getFactories(SAbstractConcept concept) {
     if (LANGUAGE_FQ_NAME.equals(concept.getLanguage().getQualifiedName())) {
       switch (concept.getName()) {
+        case "AbstractForceCallParameter":
+          return Collections.<NodeFactory>singletonList(new ForceFactories.NodeFactory_4809107873068929002());
+        case "CartesianCoordinates":
+          return Collections.<NodeFactory>singletonList(new CoordinatesFactories.NodeFactory_4809107873070296905());
+        case "CylindricalCoordinates":
+          return Collections.<NodeFactory>singletonList(new CoordinatesFactories.NodeFactory_4809107873070200372());
+        case "SphericalCoordinates":
+          return Collections.<NodeFactory>singletonList(new CoordinatesFactories.NodeFactory_4809107873070306457());
+        case "StaticForce":
+          return Collections.<NodeFactory>singletonList(new ForceFactories.NodeFactory_4809107873070311133());
         default:
       }
     }

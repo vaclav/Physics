@@ -282,8 +282,8 @@
       <node id="7105688800959680502" at="77,30,78,37" concept="7" />
       <node id="7105688800959753854" at="86,37,87,72" concept="6" />
       <node id="7105688800959735032" at="87,72,88,36" concept="7" />
-      <node id="7105688800959766995" at="96,40,97,65" concept="6" />
-      <node id="7105688800959767005" at="97,65,98,36" concept="7" />
+      <node id="4809107873073965724" at="96,40,97,85" concept="8" />
+      <node id="4809107873073886193" at="97,85,98,86" concept="7" />
       <node id="796402062952238935" at="105,91,106,41" concept="6" />
       <node id="796402062952208931" at="106,41,107,64" concept="6" />
       <node id="796402062952220890" at="107,64,108,64" concept="6" />
@@ -304,6 +304,9 @@
       <node id="796402062953275002" at="148,162,149,0" concept="9" />
       <node id="1481770243885413175" at="153,39,154,81" concept="7" />
       <node id="3489632902472681555" at="158,61,159,126" concept="7" />
+      <node id="1139474844806686087" at="165,40,166,48" concept="6" />
+      <node id="1139474844806691680" at="166,48,167,202" concept="7" />
+      <node id="1139474844806541058" at="168,5,169,29" concept="7" />
       <node id="8821912306507788089" at="27,0,30,0" concept="1" trace="InternalVector#(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)V" />
       <node id="1481770243885319849" at="43,0,46,0" concept="5" trace="add#(Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
       <node id="1481770243885550529" at="49,0,52,0" concept="5" trace="minus#(Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
@@ -322,9 +325,11 @@
       <node id="7105688800959734303" at="86,0,90,0" concept="5" trace="getPolarAngle#()Ljava/math/BigDecimal;" />
       <node id="7105688800959766993" at="96,0,100,0" concept="5" trace="getAzimutalAngle#()Ljava/math/BigDecimal;" />
       <node id="3489632902459665430" at="117,0,121,0" concept="5" trace="toString#()Ljava/lang/String;" />
+      <node id="1139474844806666222" at="164,37,168,5" concept="4" />
       <node id="7105688800959652814" at="22,0,27,0" concept="1" trace="InternalVector#(Ljava/math/BigDecimal;Ljava/math/BigDecimal;Ljava/math/BigDecimal;)V" />
       <node id="796402062952183141" at="105,0,111,0" concept="11" trace="fromCylindrical#(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
       <node id="796402062954125836" at="132,0,138,0" concept="11" trace="bigDecimalOf#(Ljava/lang/Number;)Ljava/math/BigDecimal;" />
+      <node id="1139474844806541048" at="163,0,171,0" concept="5" trace="equals#(Ljava/lang/Object;)Z" />
       <node id="3489632902462345102" at="62,0,71,0" concept="5" trace="resize#(Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
       <node id="8821912306507766311" at="142,0,151,0" concept="11" trace="fromSpherical#(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;" />
       <scope id="8821912306507788092" at="27,55,28,60" />
@@ -350,8 +355,9 @@
       <scope id="7105688800959734306" at="86,37,88,36">
         <var name="acos" id="7105688800959753855" />
       </scope>
-      <scope id="7105688800959766994" at="96,40,98,36">
-        <var name="atan" id="7105688800959766996" />
+      <scope id="7105688800959766994" at="96,40,98,86" />
+      <scope id="1139474844806666224" at="165,40,167,202">
+        <var name="cmp" id="1139474844806686088" />
       </scope>
       <scope id="7105688800959652818" at="22,67,25,15" />
       <scope id="8821912306507788089" at="27,0,30,0">
@@ -393,6 +399,7 @@
         <var name="y" id="7105688800959652833" />
         <var name="z" id="7105688800959652845" />
       </scope>
+      <scope id="1139474844806541054" at="164,37,169,29" />
       <scope id="796402062952183141" at="105,0,111,0">
         <var name="phi" id="796402062952190217" />
         <var name="radialLength" id="796402062952187842" />
@@ -411,6 +418,9 @@
         <var name="sinTheta" id="796402062953276233" />
         <var name="thetaDouble" id="796402062953276221" />
       </scope>
+      <scope id="1139474844806541048" at="163,0,171,0">
+        <var name="obj" id="1139474844806541052" />
+      </scope>
       <scope id="3489632902462345102" at="62,0,71,0">
         <var name="newLength" id="3489632902462347878" />
       </scope>
@@ -419,7 +429,7 @@
         <var name="phi" id="8821912306507770848" />
         <var name="theta" id="8821912306507770840" />
       </scope>
-      <unit id="7105688800959643459" at="14,0,164,0" name="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
+      <unit id="7105688800959643459" at="14,0,172,0" name="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
     </file>
   </root>
 </debug-info>

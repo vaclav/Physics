@@ -215,8 +215,16 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           InternalVector directionPoint = ((InternalVector) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.direction$2h5b), context, coverage, trace, false), InternalVector.class));
           SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false);
 
-          InternalVector sourcePoint = ((ancestor != null) ? (InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.location$DoV0), context, coverage, trace, false) : InternalVector.zero());
+          InternalVector sourcePoint;
 
+          // No localized ancestor or we try to define position in the current expression 
+          if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(node, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.location$DoV0))) {
+            // -> world origin 
+            sourcePoint = InternalVector.zero();
+          } else {
+            // -> ancestor position 
+            sourcePoint = ((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.location$DoV0), context, coverage, trace, false));
+          }
           return directionPoint.minus(sourcePoint).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.length$2h69), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();

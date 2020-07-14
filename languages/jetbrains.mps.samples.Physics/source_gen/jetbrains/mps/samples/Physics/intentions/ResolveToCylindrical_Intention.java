@@ -16,6 +16,7 @@ import java.util.Collections;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
+import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -59,7 +60,7 @@ public final class ResolveToCylindrical_Intention extends AbstractIntentionDescr
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       InternalVector result = (InternalVector) IETS3ExprEvalHelper.evaluate(node);
-      SNodeOperations.replaceWithAnother(node, CoordinateExpressionConverters.rawToCylindrical(result));
+      SNodeOperations.replaceWithAnother(node, CoordinateExpressionConverters.rawToCylindrical(result, null));
     }
     @Override
     public IntentionDescriptor getDescriptor() {

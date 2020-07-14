@@ -13,6 +13,7 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import java.util.Collections;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 
 public final class AdaptToSpherical_Intention extends AbstractIntentionDescriptor implements IntentionFactory {

@@ -11,6 +11,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_AbsoluteCoordinates;
   private ConceptPresentation props_AbstractForce;
+  private ConceptPresentation props_AbstractForceArgument;
   private ConceptPresentation props_AbstractForceCall;
   private ConceptPresentation props_AbstractForceCallParameter;
   private ConceptPresentation props_AbstractObjectDefinition;
@@ -31,7 +32,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DistanceWithCallTarget;
   private ConceptPresentation props_DynamicForce;
   private ConceptPresentation props_Force;
-  private ConceptPresentation props_ForceArgument;
   private ConceptPresentation props_ForceType;
   private ConceptPresentation props_ILocalized;
   private ConceptPresentation props_IObjectDefinition;
@@ -86,6 +86,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
+      case LanguageConceptSwitch.AbstractForceArgument:
+        if (props_AbstractForceArgument == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_AbstractForceArgument = cpb.create();
+        }
+        return props_AbstractForceArgument;
       case LanguageConceptSwitch.AbstractForceCall:
         if (props_AbstractForceCall == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -224,13 +231,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Force = cpb.create();
         }
         return props_Force;
-      case LanguageConceptSwitch.ForceArgument:
-        if (props_ForceArgument == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_ForceArgument = cpb.create();
-        }
-        return props_ForceArgument;
       case LanguageConceptSwitch.ForceType:
         if (props_ForceType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

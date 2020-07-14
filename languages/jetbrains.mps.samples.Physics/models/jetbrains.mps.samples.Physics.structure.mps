@@ -455,7 +455,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="args" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="6kwOTMkWOH$" resolve="ForceArgument" />
+      <ref role="20lvS9" node="6kwOTMkWOH$" resolve="AbstractForceArgument" />
       <ref role="20ksaX" to="zzzn:49WTic8eSCZ" resolve="args" />
     </node>
     <node concept="PrWs8" id="Q4PrYM_8hh" role="PzmwI">
@@ -579,7 +579,7 @@
   <node concept="1TIwiD" id="6kwOTMkWOH$">
     <property role="EcuMT" value="7287056866552793956" />
     <property role="3GE5qa" value="physical.force.abstract" />
-    <property role="TrG5h" value="ForceArgument" />
+    <property role="TrG5h" value="AbstractForceArgument" />
     <ref role="1TJDcQ" to="zzzn:49WTic8eSD1" resolve="FunctionArgument" />
   </node>
   <node concept="1TIwiD" id="1jQexh3yYqw">
@@ -779,7 +779,7 @@
   </node>
   <node concept="1TIwiD" id="cTQf2FjlqU">
     <property role="EcuMT" value="232455383964014266" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.interaction" />
     <property role="TrG5h" value="InteractionForce" />
     <property role="R4oN_" value="force that results of the interaction of two elements" />
     <property role="34LRSv" value="interaction force" />
@@ -787,7 +787,7 @@
   </node>
   <node concept="1TIwiD" id="cTQf2Fjp4$">
     <property role="EcuMT" value="232455383964029220" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.interaction" />
     <property role="TrG5h" value="InteractedObjectExpression" />
     <property role="34LRSv" value="other object" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
@@ -865,7 +865,7 @@
       <property role="IQ2ns" value="974138438729127754" />
       <property role="20kJfa" value="argument" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6kwOTMkWOH$" resolve="ForceArgument" />
+      <ref role="20lvS9" node="6kwOTMkWOH$" resolve="AbstractForceArgument" />
     </node>
     <node concept="1TJgyj" id="Q4PrYMwMOc" role="1TKVEi">
       <property role="IQ2ns" value="974138438729280780" />

@@ -25,6 +25,7 @@ import jetbrains.mps.openapi.intentions.ParameterizedIntentionExecutable;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
+import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SConcept;
@@ -36,7 +37,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class ResolveToRelative_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
   public ResolveToRelative_Intention() {
-    super(Kind.NORMAL, false, new SNodePointer("r:d39af7f4-ee25-4f0f-8cf6-c31288d9a059(jetbrains.mps.samples.Physics.intentions)", "3489632902465168269"));
+    super(Kind.NORMAL, true, new SNodePointer("r:d39af7f4-ee25-4f0f-8cf6-c31288d9a059(jetbrains.mps.samples.Physics.intentions)", "3489632902465168269"));
   }
   @Override
   public String getPresentation() {
@@ -50,7 +51,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     return true;
   }
   private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-    return !(SNodeOperations.isInstanceOf(node, CONCEPTS.SphericalCoordinates$W4)) && SNodeOperations.isInstanceOf(TypecheckingFacade.getFromContext().getTypeOf(node), CONCEPTS.VectorType$Wj);
+    return SNodeOperations.isInstanceOf(TypecheckingFacade.getFromContext().getTypeOf(node), CONCEPTS.VectorType$Wj) && !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), CONCEPTS.Expression$Wr));
   }
   @Override
   public boolean isSurroundWith() {
@@ -68,7 +69,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
   }
   private List<SNode> parameter(final SNode node, final EditorContext editorContext) {
     final SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false);
-    final SNode relativeTarget = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.cast(node, CONCEPTS.RelativeCoordinates$c7), LINKS.relativeFrom$gwcw), LINKS.target$EWj0));
+    final SNode relativeTarget = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.as(node, CONCEPTS.RelativeCoordinates$c7), LINKS.relativeFrom$gwcw), LINKS.target$EWj0));
 
     // Get all available objects in scope except the current one and the one already used as relative (if any) 
     return Sequence.fromIterable(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(SNodeOperations.getNodeAncestor(node, CONCEPTS.WorldDefinition$Xn, false, false))).where(new IWhereFilter<SNode>() {
@@ -90,7 +91,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     public void execute(final SNode node, final EditorContext editorContext) {
       InternalVector current = (InternalVector) IETS3ExprEvalHelper.evaluate(node);
       InternalVector relativeTarget = (InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(myParameter, LINKS.location$DoV0));
-      SNodeOperations.replaceWithAnother(node, createRelativeCoordinates_d9qn55_a0a2a0(CoordinateExpressionConverters.rawToCartesian(current.minus(relativeTarget)), myParameter));
+      SNodeOperations.replaceWithAnother(node, createRelativeCoordinates_d9qn55_a0a2a0(CoordinateExpressionConverters.rawToCartesian(current.minus(relativeTarget), null), myParameter));
     }
     @Override
     public IntentionDescriptor getDescriptor() {
@@ -111,7 +112,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept SphericalCoordinates$W4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, "jetbrains.mps.samples.Physics.structure.SphericalCoordinates");
+    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
     /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.structure.VectorType");
     /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
     /*package*/ static final SConcept RelativeCoordinates$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeCoordinates");
