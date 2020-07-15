@@ -24,7 +24,7 @@ public class typeof_VectorOppositeDotTarget_InferenceRule extends AbstractInfere
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.VectorOppositeDotTarget$Ac;
+    return CONCEPTS.VectorOppositeTarget$Ac;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -38,7 +38,7 @@ public class typeof_VectorOppositeDotTarget_InferenceRule extends AbstractInfere
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept VectorOppositeDotTarget$Ac = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL, "jetbrains.mps.samples.Physics.structure.VectorOppositeDotTarget");
+    /*package*/ static final SConcept VectorOppositeTarget$Ac = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL, "jetbrains.mps.samples.Physics.structure.VectorOppositeTarget");
     /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.structure.VectorType");
   }
 }

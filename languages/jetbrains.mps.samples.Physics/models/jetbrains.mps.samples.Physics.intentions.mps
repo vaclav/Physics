@@ -359,7 +359,7 @@
                 <node concept="2OqwBi" id="31HEEbbXoUI" role="37wK5m">
                   <node concept="38Zlrr" id="31HEEbbXoFX" role="2Oq$k0" />
                   <node concept="3TrEf2" id="31HEEbbXpdX" role="2OqNvi">
-                    <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                    <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
                   </node>
                 </node>
               </node>

@@ -54,7 +54,7 @@ public class World21SystemScope extends SystemScope {
       this.setFixture(new SphereFixture(world, ((Number) new BigInteger("200")).doubleValue(), new Color(255, 255, 255)));
       this.getForces().addAll(Arrays.asList(new Force() {
         @Override
-        public DVector3C getForce(World world, PhysicalEntity currentEntity) {
+        public DVector3C getForce(World world, PhysicalEntity targetEntity, long time) {
           return scope.Ha.minus(currentEntity).resize(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN))).toDVector3C();
         }
       }));
@@ -86,7 +86,7 @@ public class World21SystemScope extends SystemScope {
       this.setFixture(new SphereFixture(world, ((Number) new BigInteger("100")).doubleValue(), new Color(255, 255, 255)));
       this.getForces().addAll(Arrays.asList(new Force() {
         @Override
-        public DVector3C getForce(World world, PhysicalEntity currentEntity) {
+        public DVector3C getForce(World world, PhysicalEntity targetEntity, long time) {
           return scope.Ho2.minus(currentEntity).resize(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN))).toDVector3C();
         }
       }));

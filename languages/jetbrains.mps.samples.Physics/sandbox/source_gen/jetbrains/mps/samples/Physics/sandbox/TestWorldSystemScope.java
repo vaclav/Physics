@@ -61,7 +61,7 @@ public class TestWorldSystemScope extends SystemScope {
       this.setFixture(new BoxFixture(world, ((Number) new BigInteger("2")).doubleValue(), ((Number) new BigInteger("2")).doubleValue(), ((Number) new BigInteger("2")).doubleValue(), new Color(255, 255, 255)));
       this.getForces().addAll(Arrays.asList(new StaticForce(new InternalVector(((Number) new BigInteger("2")), ((Number) new BigInteger("2")), ((Number) new BigInteger("2"))).toDVector3C()), new Force() {
         @Override
-        public DVector3C getForce(World world, PhysicalEntity currentEntity) {
+        public DVector3C getForce(World world, PhysicalEntity targetEntity, long time) {
           return scope.Hey.minus(currentEntity).resize(((Number) new BigInteger("3"))).toDVector3C();
         }
       }, new GravityForce(((Number) new BigInteger("4"))), new XYZForceForce(((Number) new BigInteger("4")), ((Number) new BigInteger("4")), ((Number) new BigInteger("4")))));

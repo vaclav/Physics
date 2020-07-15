@@ -20,7 +20,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AbstractVectorTarget;
   private ConceptPresentation props_AbstractWorldTarget;
   private ConceptPresentation props_BoxVisual;
-  private ConceptPresentation props_BuiltInVectorsExpression;
   private ConceptPresentation props_CartesianCoordinates;
   private ConceptPresentation props_ColorDefinition;
   private ConceptPresentation props_Coordinates;
@@ -30,7 +29,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DefinedColorReference;
   private ConceptPresentation props_DirectionType;
   private ConceptPresentation props_DirectionalCoordinates;
-  private ConceptPresentation props_DistanceWithCallTarget;
   private ConceptPresentation props_DynamicForce;
   private ConceptPresentation props_Force;
   private ConceptPresentation props_ForceType;
@@ -41,6 +39,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_InteractedObjectExpression;
   private ConceptPresentation props_InteractionForce;
   private ConceptPresentation props_ObjectDefinition;
+  private ConceptPresentation props_ObjectDistanceWithTarget;
   private ConceptPresentation props_ObjectMassTarget;
   private ConceptPresentation props_ObjectPositionTarget;
   private ConceptPresentation props_ObjectReference;
@@ -58,8 +57,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Texture;
   private ConceptPresentation props_TimeExpression;
   private ConceptPresentation props_VectorComponentTarget;
-  private ConceptPresentation props_VectorOppositeDotTarget;
-  private ConceptPresentation props_VectorResizeDotTarget;
+  private ConceptPresentation props_VectorOppositeTarget;
+  private ConceptPresentation props_VectorResizeTarget;
   private ConceptPresentation props_VectorType;
   private ConceptPresentation props_VelocityCoordinates;
   private ConceptPresentation props_Visual;
@@ -147,13 +146,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BoxVisual = cpb.create();
         }
         return props_BoxVisual;
-      case LanguageConceptSwitch.BuiltInVectorsExpression:
-        if (props_BuiltInVectorsExpression == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("BuiltInVectorsExpression");
-          props_BuiltInVectorsExpression = cpb.create();
-        }
-        return props_BuiltInVectorsExpression;
       case LanguageConceptSwitch.CartesianCoordinates:
         if (props_CartesianCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -218,13 +210,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DirectionalCoordinates = cpb.create();
         }
         return props_DirectionalCoordinates;
-      case LanguageConceptSwitch.DistanceWithCallTarget:
-        if (props_DistanceWithCallTarget == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("DistanceWithCallTarget");
-          props_DistanceWithCallTarget = cpb.create();
-        }
-        return props_DistanceWithCallTarget;
       case LanguageConceptSwitch.DynamicForce:
         if (props_DynamicForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -293,6 +278,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObjectDefinition = cpb.create();
         }
         return props_ObjectDefinition;
+      case LanguageConceptSwitch.ObjectDistanceWithTarget:
+        if (props_ObjectDistanceWithTarget == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("compute distance between two position");
+          cpb.rawPresentation("distance with");
+          props_ObjectDistanceWithTarget = cpb.create();
+        }
+        return props_ObjectDistanceWithTarget;
       case LanguageConceptSwitch.ObjectMassTarget:
         if (props_ObjectMassTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -415,20 +408,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VectorComponentTarget = cpb.create();
         }
         return props_VectorComponentTarget;
-      case LanguageConceptSwitch.VectorOppositeDotTarget:
-        if (props_VectorOppositeDotTarget == null) {
+      case LanguageConceptSwitch.VectorOppositeTarget:
+        if (props_VectorOppositeTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.rawPresentation("opposite");
-          props_VectorOppositeDotTarget = cpb.create();
+          props_VectorOppositeTarget = cpb.create();
         }
-        return props_VectorOppositeDotTarget;
-      case LanguageConceptSwitch.VectorResizeDotTarget:
-        if (props_VectorResizeDotTarget == null) {
+        return props_VectorOppositeTarget;
+      case LanguageConceptSwitch.VectorResizeTarget:
+        if (props_VectorResizeTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.rawPresentation("resize to");
-          props_VectorResizeDotTarget = cpb.create();
+          props_VectorResizeTarget = cpb.create();
         }
-        return props_VectorResizeDotTarget;
+        return props_VectorResizeTarget;
       case LanguageConceptSwitch.VectorType:
         if (props_VectorType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

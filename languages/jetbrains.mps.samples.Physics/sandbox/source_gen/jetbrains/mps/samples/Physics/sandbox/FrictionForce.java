@@ -18,7 +18,7 @@ public class FrictionForce implements Force {
   }
 
   @Override
-  public DVector3C getForce(World world, PhysicalEntity currentEntity) {
+  public DVector3C getForce(World world, PhysicalEntity currentEntity, long time) {
 
     return currentEntity.getVelocity().mul(-1).minus(currentEntity).resize(AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getVelocity().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue())), ratio)).toDVector3C();
   }

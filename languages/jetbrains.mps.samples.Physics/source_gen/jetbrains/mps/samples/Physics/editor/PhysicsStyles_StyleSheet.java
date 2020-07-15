@@ -8,10 +8,12 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.editor.runtime.style.AbstractStyleClass;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
-import jetbrains.mps.nodeEditor.MPSFonts;
 import jetbrains.mps.openapi.editor.style.StyleRegistry;
 import jetbrains.mps.nodeEditor.MPSColors;
+import jetbrains.mps.nodeEditor.MPSFonts;
 import jetbrains.mps.nodeEditor.EditorSettings;
+import jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet.LeftParenAfterNameStyleClass;
+import jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet.RightParenStyleClass;
 
 public class PhysicsStyles_StyleSheet {
   /**
@@ -29,10 +31,30 @@ public class PhysicsStyles_StyleSheet {
    * @deprecated Since MPS 3.5 use generated StyleClass
    */
   @Deprecated
+  public static void apply_KeyWordAlt(Style style, EditorCell editorCell) {
+    SNode node = (editorCell == null ? null : editorCell.getSNode());
+    EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
+    new KeyWordAltStyleClass(editorContext, node).apply(style, editorCell);
+  }
+  /**
+   * 
+   * @deprecated Since MPS 3.5 use generated StyleClass
+   */
+  @Deprecated
   public static void apply_AttributeLabel(Style style, EditorCell editorCell) {
     SNode node = (editorCell == null ? null : editorCell.getSNode());
     EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
     new AttributeLabelStyleClass(editorContext, node).apply(style, editorCell);
+  }
+  /**
+   * 
+   * @deprecated Since MPS 3.5 use generated StyleClass
+   */
+  @Deprecated
+  public static void apply_ParenthesisAttributeLabel(Style style, EditorCell editorCell) {
+    SNode node = (editorCell == null ? null : editorCell.getSNode());
+    EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
+    new ParenthesisAttributeLabelStyleClass(editorContext, node).apply(style, editorCell);
   }
   /**
    * 
@@ -44,9 +66,51 @@ public class PhysicsStyles_StyleSheet {
     EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
     new ObjectNameStyleClass(editorContext, node).apply(style, editorCell);
   }
+  /**
+   * 
+   * @deprecated Since MPS 3.5 use generated StyleClass
+   */
+  @Deprecated
+  public static void apply_ObjectNameReference(Style style, EditorCell editorCell) {
+    SNode node = (editorCell == null ? null : editorCell.getSNode());
+    EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
+    new ObjectNameReferenceStyleClass(editorContext, node).apply(style, editorCell);
+  }
+  /**
+   * 
+   * @deprecated Since MPS 3.5 use generated StyleClass
+   */
+  @Deprecated
+  public static void apply_LeftParenthesisAfterName(Style style, EditorCell editorCell) {
+    SNode node = (editorCell == null ? null : editorCell.getSNode());
+    EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
+    new LeftParenthesisAfterNameStyleClass(editorContext, node).apply(style, editorCell);
+  }
+  /**
+   * 
+   * @deprecated Since MPS 3.5 use generated StyleClass
+   */
+  @Deprecated
+  public static void apply_RightParenthesis(Style style, EditorCell editorCell) {
+    SNode node = (editorCell == null ? null : editorCell.getSNode());
+    EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
+    new RightParenthesisStyleClass(editorContext, node).apply(style, editorCell);
+  }
 
   public static class KeyWordStyleClass extends AbstractStyleClass {
     public KeyWordStyleClass(EditorContext editorContext, SNode node) {
+      super(editorContext, node);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.DARK_GREEN));
+      style.set(StyleAttributes.SELECTABLE, false);
+    }
+
+  }
+  public static class KeyWordAltStyleClass extends AbstractStyleClass {
+    public KeyWordAltStyleClass(EditorContext editorContext, SNode node) {
       super(editorContext, node);
     }
 
@@ -66,6 +130,20 @@ public class PhysicsStyles_StyleSheet {
     public void apply(Style style, EditorCell editorCell) {
       style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
       style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.black));
+      style.set(StyleAttributes.SELECTABLE, false);
+    }
+
+  }
+  public static class ParenthesisAttributeLabelStyleClass extends AbstractStyleClass {
+    public ParenthesisAttributeLabelStyleClass(EditorContext editorContext, SNode node) {
+      super(editorContext, node);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD_ITALIC);
+      style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.darkGray));
+      style.set(StyleAttributes.SELECTABLE, false);
     }
 
   }
@@ -76,13 +154,49 @@ public class PhysicsStyles_StyleSheet {
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.DARK_BLUE));
-      style.set(StyleAttributes.FONT_SIZE, _StyleParameter_QueryFunction_3lx7g4_a1c());
+      new ObjectNameReferenceStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+      style.set(StyleAttributes.FONT_SIZE, _StyleParameter_QueryFunction_3lx7g4_a1e());
       style.set(StyleAttributes.FONT_STYLE, MPSFonts.ITALIC);
     }
 
-    private int _StyleParameter_QueryFunction_3lx7g4_a1c() {
+    private int _StyleParameter_QueryFunction_3lx7g4_a1e() {
       return EditorSettings.getInstance().getFontSize() * 2;
     }
+  }
+  public static class ObjectNameReferenceStyleClass extends AbstractStyleClass {
+    public ObjectNameReferenceStyleClass(EditorContext editorContext, SNode node) {
+      super(editorContext, node);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.DARK_BLUE));
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
+    }
+
+  }
+  public static class LeftParenthesisAfterNameStyleClass extends AbstractStyleClass {
+    public LeftParenthesisAfterNameStyleClass(EditorContext editorContext, SNode node) {
+      super(editorContext, node);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      new LeftParenAfterNameStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
+    }
+
+  }
+  public static class RightParenthesisStyleClass extends AbstractStyleClass {
+    public RightParenthesisStyleClass(EditorContext editorContext, SNode node) {
+      super(editorContext, node);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      new RightParenStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
+    }
+
   }
 }

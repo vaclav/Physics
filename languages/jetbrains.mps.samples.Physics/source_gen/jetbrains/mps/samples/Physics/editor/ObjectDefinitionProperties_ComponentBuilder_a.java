@@ -14,6 +14,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.AttributeLabelStyleClass;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
@@ -28,6 +29,13 @@ import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
 import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Property;
+import jetbrains.mps.nodeEditor.cells.ModelAccessor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.samples.Physics.behavior.AbstractObjectDefinition__BehaviorDescriptor;
+import jetbrains.mps.editor.runtime.cells.EmptyCellAction;
+import jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet.FoldedCellStyleClass;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
@@ -53,6 +61,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
     editorCell.setCellId("Collection_3yz69e_a");
+    editorCell.setFoldable(true);
+    editorCell.setFoldedCell(createReadOnlyModelAccessor_0());
     editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createRefNodeList_0());
@@ -62,14 +72,21 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createConstant_4());
     editorCell.addEditorCell(createConstant_5());
     editorCell.addEditorCell(createRefNode_0());
+    editorCell.setInitiallyCollapsed(nodeCondition_3yz69e_a0());
     return editorCell;
   }
   private boolean nodeCondition_3yz69e_a3a() {
     return ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.forces$OiCr)).isNotEmpty();
   }
+  private boolean nodeCondition_3yz69e_a0() {
+    return ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.forces$OiCr)).isEmpty() && (SLinkOperations.getTarget(myNode, LINKS.visual$OiQu) == null);
+  }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Forces");
     editorCell.setCellId("Constant_3yz69e_a0");
+    Style style = new StyleImpl();
+    new AttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -165,7 +182,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     private EditorCell createConstant_2() {
       EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
       editorCell.setCellId("Constant_3yz69e_a2a");
-      editorCell.setDefaultText("inherited");
+      editorCell.setDefaultText("inherited forces");
       return editorCell;
     }
   }
@@ -181,6 +198,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createConstant_4() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Visual aspect");
     editorCell.setCellId("Constant_3yz69e_e0");
+    Style style = new StyleImpl();
+    new AttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -242,8 +262,30 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
     protected String getNoTargetText() {
-      return "inherited";
+      return "inherited visual";
     }
+  }
+  private EditorCell createReadOnlyModelAccessor_0() {
+    EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new ModelAccessor.ReadOnly() {
+      public String getText() {
+        String visual = "no";
+        if ((SLinkOperations.getTarget(myNode, LINKS.visual$OiQu) != null)) {
+          visual = SConceptOperations.conceptAlias(SNodeOperations.getConcept(SLinkOperations.getTarget(myNode, LINKS.visual$OiQu)));
+        } else if ((AbstractObjectDefinition__BehaviorDescriptor.getVisual_id1$oDF1jBWB8.invoke(myNode) != null)) {
+          visual = "inherited " + SConceptOperations.conceptAlias(SNodeOperations.getConcept(AbstractObjectDefinition__BehaviorDescriptor.getVisual_id1$oDF1jBWB8.invoke(myNode)));
+        }
+
+        return ((ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.forces$OiCr)).isEmpty() ? "no" : ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.forces$OiCr)).count())) + " forces and " + visual + " visual";
+      }
+    }, myNode);
+    editorCell.setAction(CellActionType.DELETE, EmptyCellAction.getInstance());
+    editorCell.setAction(CellActionType.BACKSPACE, EmptyCellAction.getInstance());
+    editorCell.setCellId("ReadOnlyModelAccessor_3yz69e_a0");
+    Style style = new StyleImpl();
+    new FoldedCellStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.EDITABLE, false);
+    editorCell.getStyle().putAll(style);
+    return editorCell;
   }
 
   private static final class LINKS {

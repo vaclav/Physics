@@ -822,7 +822,7 @@
                         <ref role="3cqZAo" node="31HEEbbLaLg" resolve="ancestor" />
                       </node>
                       <node concept="3TrEf2" id="Zge_mbdXVX" role="2OqNvi">
-                        <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                        <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
                       </node>
                     </node>
                   </node>
@@ -859,7 +859,7 @@
                                 <ref role="3cqZAo" node="31HEEbbLaLg" resolve="ancestor" />
                               </node>
                               <node concept="3TrEf2" id="1igjyYxyFYU" role="2OqNvi">
-                                <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                                <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
                               </node>
                             </node>
                           </node>
@@ -951,7 +951,7 @@
                         <ref role="3cqZAo" node="31HEEbbyNQq" resolve="localized" />
                       </node>
                       <node concept="3TrEf2" id="1igjyYxyNc3" role="2OqNvi">
-                        <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                        <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
                       </node>
                     </node>
                   </node>
@@ -967,7 +967,7 @@
     </node>
     <node concept="qq9P1" id="31HEEbbyklR" role="qq9xR">
       <property role="2TnfIJ" value="true" />
-      <ref role="qq9wM" to="9tcj:cTQf2FlwO3" resolve="DistanceWithCallTarget" />
+      <ref role="qq9wM" to="9tcj:cTQf2FlwO3" resolve="ObjectDistanceWithTarget" />
       <node concept="3dA_Gj" id="31HEEbbykI5" role="3vQZUl">
         <node concept="9aQIb" id="31HEEbbykI7" role="3vcmbn">
           <node concept="3clFbS" id="31HEEbbykI9" role="9aQI4">
@@ -1123,7 +1123,7 @@
     </node>
     <node concept="qq9P1" id="31HEEbbTwMg" role="qq9xR">
       <property role="2TnfIJ" value="true" />
-      <ref role="qq9wM" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeDotTarget" />
+      <ref role="qq9wM" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeTarget" />
       <node concept="3vetai" id="31HEEbbTyWg" role="3vQZUl">
         <node concept="2OqwBi" id="31HEEbbTAwq" role="3vdyny">
           <node concept="1eOMI4" id="31HEEbbTAgX" role="2Oq$k0">
@@ -1179,7 +1179,7 @@
     </node>
     <node concept="qq9P1" id="31HEEbbymje" role="qq9xR">
       <property role="2TnfIJ" value="true" />
-      <ref role="qq9wM" to="9tcj:cTQf2FqwJc" resolve="VectorOppositeDotTarget" />
+      <ref role="qq9wM" to="9tcj:cTQf2FqwJc" resolve="VectorOppositeTarget" />
       <node concept="3vetai" id="31HEEbb$2Gj" role="3vQZUl">
         <node concept="2OqwBi" id="31HEEbb$3hL" role="3vdyny">
           <node concept="1eOMI4" id="31HEEbb$344" role="2Oq$k0">
@@ -1280,7 +1280,7 @@
                         <ref role="3cqZAo" node="31HEEbb_N0g" resolve="sourcePoint" />
                       </node>
                       <node concept="3TrEf2" id="31HEEbb_OaI" role="2OqNvi">
-                        <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                        <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
                       </node>
                     </node>
                   </node>
@@ -1472,7 +1472,7 @@
                                   <ref role="3cqZAo" node="31HEEbc5JzT" resolve="it" />
                                 </node>
                                 <node concept="3TrEf2" id="31HEEbc5OMK" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                                  <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
                                 </node>
                               </node>
                               <node concept="3TrEf2" id="GdoRjGNHF1" role="2OqNvi">
@@ -1492,7 +1492,7 @@
                             <ref role="3cqZAo" node="31HEEbc5JzT" resolve="it" />
                           </node>
                           <node concept="3TrEf2" id="31HEEbc5Lr3" role="2OqNvi">
-                            <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                            <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
                           </node>
                         </node>
                         <node concept="3TrEf2" id="GdoRjGxesd" role="2OqNvi">

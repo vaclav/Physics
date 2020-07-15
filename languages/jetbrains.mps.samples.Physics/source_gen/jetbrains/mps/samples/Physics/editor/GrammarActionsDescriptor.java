@@ -162,17 +162,17 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
         }));
         ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from(new Object() {
           public TransformationMenuContext redirect() {
-            // redirect to location 
+            // redirect to position 
             final SNode sourceNode = _context.getNode();
 
             // Use the grammar rules for a deep search 
-            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.WorldInclusion$vO, LINKS.location$DoV0);
+            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.WorldInclusion$vO, LINKS.position$DoV0);
             if (parentNode != null) {
               return _context.withNode(parentNode);
             }
 
             // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.TargetableExpression$cD) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.WorldInclusion$vO) && Objects.equals(sourceNode.getContainmentLink(), LINKS.location$DoV0) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.TargetableExpression$cD) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.WorldInclusion$vO) && Objects.equals(sourceNode.getContainmentLink(), LINKS.position$DoV0) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
               TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
               return parentContext;
             }
@@ -180,12 +180,6 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             return null;
           }
         }.redirect(), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.WorldInclusion$vO) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
           public Boolean invoke(TransformationMenuContext parentContext) {
             final SNode sourceNode = parentContext.getNode();
             return true;
@@ -351,7 +345,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
   private static final class LINKS {
     /*package*/ static final SContainmentLink world$ZN60 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
     /*package*/ static final SContainmentLink optionalName$QESm = MetaAdapterFactory.getContainmentLink(0x7b68d745a7b848b9L, 0xbd9c05c0f8725a35L, 0x32f64a31a100207L, 0x32f64a31a1004e8L, "optionalName");
-    /*package*/ static final SContainmentLink location$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "location");
+    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
     /*package*/ static final SContainmentLink velocity$DoVv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
   }
 }

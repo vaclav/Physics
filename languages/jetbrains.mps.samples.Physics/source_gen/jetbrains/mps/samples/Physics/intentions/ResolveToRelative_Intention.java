@@ -90,7 +90,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       InternalVector current = (InternalVector) IETS3ExprEvalHelper.evaluate(node);
-      InternalVector relativeTarget = (InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(myParameter, LINKS.location$DoV0));
+      InternalVector relativeTarget = (InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(myParameter, LINKS.position$DoV0));
       SNodeOperations.replaceWithAnother(node, createRelativeCoordinates_d9qn55_a0a2a0(CoordinateExpressionConverters.rawToCartesian(current.minus(relativeTarget), null), myParameter));
     }
     @Override
@@ -124,7 +124,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
   private static final class LINKS {
     /*package*/ static final SContainmentLink relativeFrom$gwcw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
     /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
-    /*package*/ static final SContainmentLink location$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "location");
+    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
     /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
   }
 

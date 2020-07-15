@@ -7,7 +7,7 @@ import jetbrains.mps.samples.Physics.runtime.objects.World;
 public abstract class Simulation implements Renderer.RendererCallback {
   @Override
   public void initialized(Renderer renderer) {
-    World world = new World();
+    World world = new World(6);
     init(world);
     renderer.setRenderedWorld(world);
   }

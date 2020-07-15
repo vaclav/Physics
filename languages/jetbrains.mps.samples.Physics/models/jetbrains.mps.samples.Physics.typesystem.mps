@@ -428,32 +428,6 @@
       <ref role="1YaFvo" to="9tcj:6kwOTMl1asr" resolve="ObjectPositionTarget" />
     </node>
   </node>
-  <node concept="1YbPZF" id="6kwOTMl2xky">
-    <property role="TrG5h" value="typeof_BuiltInVectorsExpression" />
-    <property role="3GE5qa" value="physical.expr.direction" />
-    <node concept="3clFbS" id="6kwOTMl2xkz" role="18ibNy">
-      <node concept="1Z5TYs" id="6kwOTMl2xuF" role="3cqZAp">
-        <node concept="mw_s8" id="6kwOTMl2xuI" role="1ZfhK$">
-          <node concept="1Z2H0r" id="6kwOTMl2xkD" role="mwGJk">
-            <node concept="1YBJjd" id="6kwOTMl2xkT" role="1Z2MuG">
-              <ref role="1YBMHb" node="6kwOTMl2xk_" resolve="defaultDirection" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="6asu_4xHbFE" role="1ZfhKB">
-          <node concept="2pJPEk" id="6asu_4xHbFF" role="mwGJk">
-            <node concept="2pJPED" id="6asu_4xHbFG" role="2pJPEn">
-              <ref role="2pJxaS" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="6kwOTMl2xk_" role="1YuTPh">
-      <property role="TrG5h" value="defaultDirection" />
-      <ref role="1YaFvo" to="9tcj:6POFxU8e$gO" resolve="BuiltInVectorsExpression" />
-    </node>
-  </node>
   <node concept="1YbPZF" id="6kwOTMl2yr9">
     <property role="TrG5h" value="typeof_DirectionalCoordinates" />
     <property role="3GE5qa" value="physical.vector.absolute" />
@@ -631,7 +605,7 @@
     </node>
     <node concept="1YaCAy" id="cTQf2FlwP4" role="1YuTPh">
       <property role="TrG5h" value="distanceWithCallTarget" />
-      <ref role="1YaFvo" to="9tcj:cTQf2FlwO3" resolve="DistanceWithCallTarget" />
+      <ref role="1YaFvo" to="9tcj:cTQf2FlwO3" resolve="ObjectDistanceWithTarget" />
     </node>
   </node>
   <node concept="2sgARr" id="cTQf2FonXH">
@@ -691,7 +665,7 @@
     </node>
     <node concept="1YaCAy" id="cTQf2FqwJt" role="1YuTPh">
       <property role="TrG5h" value="vectorOppositeDotTarget" />
-      <ref role="1YaFvo" to="9tcj:cTQf2FqwJc" resolve="VectorOppositeDotTarget" />
+      <ref role="1YaFvo" to="9tcj:cTQf2FqwJc" resolve="VectorOppositeTarget" />
     </node>
   </node>
   <node concept="2sgARr" id="cTQf2Frr8A">
@@ -1427,7 +1401,7 @@
     </node>
     <node concept="1YaCAy" id="31HEEbbSHzc" role="1YuTPh">
       <property role="TrG5h" value="vectorResizeDotTarget" />
-      <ref role="1YaFvo" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeDotTarget" />
+      <ref role="1YaFvo" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeTarget" />
     </node>
   </node>
   <node concept="1YbPZF" id="4D75T4FiN07">
@@ -1602,7 +1576,7 @@
                 <ref role="1YBMHb" node="M__cqnvmim" resolve="iLocalized" />
               </node>
               <node concept="3TrEf2" id="M__cqnyhsF" role="2OqNvi">
-                <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
               </node>
             </node>
           </node>

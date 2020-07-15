@@ -31,9 +31,9 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     // Creating body 
     body = OdeHelper.createBody(world.getWorld());
   }
-  public void applyForces() {
+  public void applyForces(long time) {
     for (Force force : forces) {
-      body.addForce(force.getForce(world, this));
+      body.addForce(force.getForce(world, this, time));
     }
   }
   public void render(PApplet ctx) {

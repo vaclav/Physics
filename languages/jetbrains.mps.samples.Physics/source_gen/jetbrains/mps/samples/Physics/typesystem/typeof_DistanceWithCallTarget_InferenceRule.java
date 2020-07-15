@@ -33,7 +33,7 @@ public class typeof_DistanceWithCallTarget_InferenceRule extends AbstractInferen
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.DistanceWithCallTarget$OH;
+    return CONCEPTS.ObjectDistanceWithTarget$OH;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -55,7 +55,7 @@ public class typeof_DistanceWithCallTarget_InferenceRule extends AbstractInferen
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DistanceWithCallTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.DistanceWithCallTarget");
+    /*package*/ static final SConcept ObjectDistanceWithTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget");
     /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
     /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.structure.DirectionType");
   }

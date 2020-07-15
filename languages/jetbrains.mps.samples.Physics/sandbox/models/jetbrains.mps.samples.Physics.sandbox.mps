@@ -10,6 +10,14 @@
     <import index="bf5" ref="r:ed131d93-9e12-43c3-b840-cc4cd82da9cd(jetbrains.mps.samples.Physics.colors)" implicit="true" />
   </imports>
   <registry>
+    <language id="7b68d745-a7b8-48b9-bd9c-05c0f8725a35" name="org.iets3.core.base">
+      <concept id="229512757698888199" name="org.iets3.core.base.structure.IOptionallyNamed" flags="ng" index="pfQq$">
+        <child id="229512757698888936" name="optionalName" index="pfQ1b" />
+      </concept>
+      <concept id="229512757698888202" name="org.iets3.core.base.structure.OptionalNameSpecifier" flags="ng" index="pfQqD">
+        <property id="229512757698888203" name="optionalName" index="pfQqC" />
+      </concept>
+    </language>
     <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
       <concept id="5115872837156802409" name="org.iets3.core.expr.base.structure.UnaryExpression" flags="ng" index="30czhk">
         <child id="5115872837156802411" name="expr" index="30czhm" />
@@ -48,9 +56,9 @@
         <child id="6362440046684076652" name="relativeFrom" index="v6hvJ" />
         <child id="1808378526640755546" name="coordinates" index="1aLnnE" />
       </concept>
-      <concept id="232455383965895628" name="jetbrains.mps.samples.Physics.structure.VectorOppositeDotTarget" flags="ng" index="2CkXcW" />
+      <concept id="232455383965895628" name="jetbrains.mps.samples.Physics.structure.VectorOppositeTarget" flags="ng" index="2CkXcW" />
       <concept id="232455383964481302" name="jetbrains.mps.samples.Physics.structure.CurrentObjectExpression" flags="ng" index="2CrqZA" />
-      <concept id="232455383964585219" name="jetbrains.mps.samples.Physics.structure.DistanceWithCallTarget" flags="ng" index="2CrXnN">
+      <concept id="232455383964585219" name="jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget" flags="ng" index="2CrXnN">
         <child id="232455383964585220" name="target" index="2CrXnO" />
       </concept>
       <concept id="232455383964029220" name="jetbrains.mps.samples.Physics.structure.InteractedObjectExpression" flags="ng" index="2Ct4Bk" />
@@ -89,7 +97,7 @@
         <child id="4383135941275108257" name="world" index="1h9Olb" />
       </concept>
       <concept id="4383135941275155973" name="jetbrains.mps.samples.Physics.structure.ILocalized" flags="ng" index="1h9ZzJ">
-        <child id="4383135941275155974" name="location" index="1h9ZzG" />
+        <child id="4383135941275155974" name="position" index="1h9ZzG" />
         <child id="4383135941275155975" name="velocity" index="1h9ZzH" />
       </concept>
       <concept id="1510458583736379040" name="jetbrains.mps.samples.Physics.structure.AbstractForceCall" flags="ng" index="1nvtMO" />
@@ -740,7 +748,7 @@
             </node>
           </node>
           <node concept="3okdC7" id="4aXoy5XdRNU" role="v6hvJ">
-            <ref role="3okdC0" node="31HEEbcgcPb" resolve="World2" />
+            <ref role="3okdC0" node="31HEEbcgcPb" resolve="TheOtherWorld" />
           </node>
         </node>
       </node>
@@ -819,6 +827,9 @@
             <property role="30bXRw" value="1" />
           </node>
         </node>
+      </node>
+      <node concept="pfQqD" id="5SjYD04rabb" role="pfQ1b">
+        <property role="pfQqC" value="TheOtherWorld" />
       </node>
     </node>
   </node>

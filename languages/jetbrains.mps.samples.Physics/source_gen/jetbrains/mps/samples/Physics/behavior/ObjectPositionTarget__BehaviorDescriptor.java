@@ -35,7 +35,7 @@ public final class ObjectPositionTarget__BehaviorDescriptor extends BaseBHDescri
     return "position";
   }
   /*package*/ static SNode getTargetCoordinates_idGdoRjGvovH(@NotNull SNode __thisNode__, SNode object) {
-    return SLinkOperations.getTarget(object, LINKS.location$DoV0);
+    return SLinkOperations.getTarget(object, LINKS.position$DoV0);
   }
 
   /*package*/ ObjectPositionTarget__BehaviorDescriptor() {
@@ -87,6 +87,6 @@ public final class ObjectPositionTarget__BehaviorDescriptor extends BaseBHDescri
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink location$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "location");
+    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
   }
 }

@@ -11,7 +11,7 @@ public class WorldBuilder {
   private World world;
   private PhysicalEntity currentEntity;
   public WorldBuilder() {
-    world = new World();
+    world = new World(6);
   }
   public WorldBuilder createEntity() {
     if (currentEntity != null) {

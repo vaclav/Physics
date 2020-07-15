@@ -185,6 +185,9 @@
             <node concept="2ShNRf" id="3H79Ykd2LFd" role="33vP2m">
               <node concept="1pGfFk" id="4D75T4FvV63" role="2ShVmc">
                 <ref role="37wK5l" to="jyp0:4D75T4FueWX" resolve="World" />
+                <node concept="3cmrfG" id="5SjYD04fJAe" role="37wK5m">
+                  <property role="3cmrfH" value="6" />
+                </node>
               </node>
             </node>
           </node>

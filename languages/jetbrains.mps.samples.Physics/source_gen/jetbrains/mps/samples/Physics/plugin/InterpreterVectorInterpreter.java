@@ -219,12 +219,12 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           VectorLike sourcePoint;
 
           // No localized ancestor or we try to define position in the current expression 
-          if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(node, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.location$DoV0))) {
+          if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(node, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0))) {
             // -> world origin 
             sourcePoint = InternalVector.ZERO;
           } else {
             // -> ancestor position 
-            sourcePoint = ((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.location$DoV0), context, coverage, trace, false));
+            sourcePoint = ((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0), context, coverage, trace, false));
           }
           return directionPoint.minus(sourcePoint).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.length$2h69), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
@@ -286,7 +286,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           SNode localized = SLinkOperations.getTarget(node, LINKS.target$EWj0);
 
-          return InternalEntity.from((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.location$DoV0), context, coverage, trace, false), localized);
+          return InternalEntity.from((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.position$DoV0), context, coverage, trace, false), localized);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -309,7 +309,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.DistanceWithCallTarget$OH, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458197367", true, new TypedChildConstraintImpl(LINKS.target$oizF, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.ObjectType$sZ)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectDistanceWithTarget$OH, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458197367", true, new TypedChildConstraintImpl(LINKS.target$oizF, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.ObjectType$sZ)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -324,16 +324,16 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         } catch (InterpreterEscapeException ex) {
           throw ex;
         } catch (RuntimeException ex) {
-          throw new InterpreterRuntimeException("DistanceWithCallTarget(target[object])", node, ex, trace);
+          throw new InterpreterRuntimeException("distance with(target[object])", node, ex, trace);
         }
       }
       public EvaluatorInfo getInfo() {
-        return new EvaluatorInfo("DistanceWithCallTarget");
+        return new EvaluatorInfo("ObjectDistanceWithTarget");
       }
 
       @Override
       public String toString() {
-        return "DistanceWithCallTarget";
+        return "ObjectDistanceWithTarget";
       }
 
       @Override
@@ -401,7 +401,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorResizeDotTarget$Am, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902464277648", true, new TypedChildConstraintImpl(LINKS.newLength$Gnlv, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorResizeTarget$Am, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902464277648", true, new TypedChildConstraintImpl(LINKS.newLength$Gnlv, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -417,12 +417,12 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         }
       }
       public EvaluatorInfo getInfo() {
-        return new EvaluatorInfo("VectorResizeDotTarget");
+        return new EvaluatorInfo("VectorResizeTarget");
       }
 
       @Override
       public String toString() {
-        return "VectorResizeDotTarget";
+        return "VectorResizeTarget";
       }
 
       @Override
@@ -459,7 +459,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorOppositeDotTarget$Ac, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458205390", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorOppositeTarget$Ac, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458205390", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -475,12 +475,12 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         }
       }
       public EvaluatorInfo getInfo() {
-        return new EvaluatorInfo("VectorOppositeDotTarget");
+        return new EvaluatorInfo("VectorOppositeTarget");
       }
 
       @Override
       public String toString() {
-        return "VectorOppositeDotTarget";
+        return "VectorOppositeTarget";
       }
 
       @Override
@@ -525,7 +525,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           SNode sourcePoint = (SNode) context.getRootInterpreter().evaluate(SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false), context, coverage, trace, false);
 
-          return InternalEntity.from((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(sourcePoint, LINKS.location$DoV0), context, coverage, trace, false), sourcePoint);
+          return InternalEntity.from((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(sourcePoint, LINKS.position$DoV0), context, coverage, trace, false), sourcePoint);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -694,13 +694,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
     /*package*/ static final SConcept DirectionalCoordinates$pa = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, "jetbrains.mps.samples.Physics.structure.DirectionalCoordinates");
     /*package*/ static final SConcept TargetableExpression$cD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableExpression");
     /*package*/ static final SConcept ObjectReference$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReference");
-    /*package*/ static final SConcept DistanceWithCallTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.DistanceWithCallTarget");
+    /*package*/ static final SConcept ObjectDistanceWithTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget");
     /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.structure.ObjectType");
     /*package*/ static final SConcept ObjectMassTarget$_T = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
     /*package*/ static final SConcept ObjectVelocityTarget$a7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4a4717912b4b2f7eL, "jetbrains.mps.samples.Physics.structure.ObjectVelocityTarget");
-    /*package*/ static final SConcept VectorResizeDotTarget$Am = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, "jetbrains.mps.samples.Physics.structure.VectorResizeDotTarget");
+    /*package*/ static final SConcept VectorResizeTarget$Am = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, "jetbrains.mps.samples.Physics.structure.VectorResizeTarget");
     /*package*/ static final SConcept ObjectPositionTarget$we = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a71bL, "jetbrains.mps.samples.Physics.structure.ObjectPositionTarget");
-    /*package*/ static final SConcept VectorOppositeDotTarget$Ac = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL, "jetbrains.mps.samples.Physics.structure.VectorOppositeDotTarget");
+    /*package*/ static final SConcept VectorOppositeTarget$Ac = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL, "jetbrains.mps.samples.Physics.structure.VectorOppositeTarget");
     /*package*/ static final SConcept WorldMassCenterTarget$Mg = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a750L, "jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget");
     /*package*/ static final SConcept CurrentObjectExpression$eH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L, "jetbrains.mps.samples.Physics.structure.CurrentObjectExpression");
     /*package*/ static final SConcept PlusExpression$Dn = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
@@ -721,7 +721,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
     /*package*/ static final SContainmentLink relativeFrom$gwcw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
     /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
     /*package*/ static final SContainmentLink direction$2h5b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4472L, "direction");
-    /*package*/ static final SContainmentLink location$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "location");
+    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
     /*package*/ static final SContainmentLink length$2h69 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4474L, "length");
     /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
     /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");

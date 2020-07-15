@@ -61,7 +61,7 @@ public final class TargetableExpression__BehaviorDescriptor extends BaseBHDescri
             }
 
             // Otherwise the object probably refer to it's positions 
-            return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getTargetLocalizedObject_idGdoRjGrk0_.invoke(object), LINKS.location$DoV0);
+            return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getTargetLocalizedObject_idGdoRjGrk0_.invoke(object), LINKS.position$DoV0);
           }
         }
 
@@ -76,7 +76,7 @@ public final class TargetableExpression__BehaviorDescriptor extends BaseBHDescri
     // Detect dependencies outside dot expressions (standalone object targets) 
     Iterable<SNode> nonDotTargets = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.ITargetObject$lA, false, new SAbstractConcept[]{CONCEPTS.DotExpression$Af})).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
-        return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getTargetLocalizedObject_idGdoRjGrk0_.invoke(it), LINKS.location$DoV0);
+        return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getTargetLocalizedObject_idGdoRjGrk0_.invoke(it), LINKS.position$DoV0);
       }
     });
 
@@ -150,6 +150,6 @@ public final class TargetableExpression__BehaviorDescriptor extends BaseBHDescri
   private static final class LINKS {
     /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
     /*package*/ static final SContainmentLink target$NL8Z = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
-    /*package*/ static final SContainmentLink location$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "location");
+    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
   }
 }

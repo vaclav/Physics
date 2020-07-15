@@ -20,7 +20,7 @@ public class GravityForce implements Force {
   }
 
   @Override
-  public DVector3C getForce(World world, PhysicalEntity currentEntity) {
+  public DVector3C getForce(World world, PhysicalEntity currentEntity, long time) {
 
     VectorLike sum = InternalVector.ZERO;
     for (PhysicalEntity otherEntity : world.getEntities()) {

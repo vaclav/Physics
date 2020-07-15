@@ -15,7 +15,7 @@ public class StaticForce implements Force {
     this.value = value;
   }
   @Override
-  public DVector3C getForce(World world, PhysicalEntity targetEntity) {
+  public DVector3C getForce(World world, PhysicalEntity targetEntity, long time) {
     return value;
   }
 }

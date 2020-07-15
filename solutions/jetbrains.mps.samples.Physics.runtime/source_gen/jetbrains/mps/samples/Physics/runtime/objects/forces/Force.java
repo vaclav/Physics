@@ -10,5 +10,5 @@ import jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity;
  * Object able to compute force from given world and target physical entity
  */
 public interface Force {
-  DVector3C getForce(World world, PhysicalEntity targetEntity);
+  DVector3C getForce(World world, PhysicalEntity targetEntity, long time);
 }

@@ -20,7 +20,12 @@ public class World implements DGeom.DNearCallback {
   private final DSpace space;
   private final DJointGroup jointGroup;
   private final ArrayList<PhysicalEntity> entities = new ArrayList();
-  public World() {
+
+  private long time;
+  private final long timeStep;
+  public World(long timeStep) {
+    this.timeStep = timeStep;
+    this.time = 0;
     this.world = OdeHelper.createWorld();
     this.space = OdeHelper.createHashSpace();
     this.jointGroup = OdeHelper.createJointGroup();
@@ -34,12 +39,13 @@ public class World implements DGeom.DNearCallback {
    */
   public void step() {
     space.collide(null, this);
+    time += timeStep;
 
     for (PhysicalEntity entity : entities) {
-      entity.applyForces();
+      entity.applyForces(time);
     }
 
-    world.quickStep(6);
+    world.quickStep(timeStep);
     jointGroup.empty();
   }
 

@@ -16,10 +16,8 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
         <property id="1421157252384165432" name="memberId" index="3tVfz5" />
-        <property id="672037151186491528" name="presentation" index="1L1pqM" />
       </concept>
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
-        <reference id="1075010451642646892" name="defaultMember" index="1H5jkz" />
         <child id="3348158742936976577" name="members" index="25R1y" />
       </concept>
       <concept id="7862711839422615209" name="jetbrains.mps.lang.structure.structure.DocumentedNodeAnnotation" flags="ng" index="t5JxF">
@@ -502,7 +500,7 @@
     <node concept="1TJgyj" id="3Nk1IDHWZS6" role="1TKVEi">
       <property role="IQ2ns" value="4383135941275155974" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="location" />
+      <property role="20kJfa" value="position" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableExpression" />
     </node>
@@ -514,38 +512,6 @@
     </node>
     <node concept="PrWs8" id="1rTmHeeK7HT" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-  </node>
-  <node concept="25R3W" id="6POFxU8e$gz">
-    <property role="3F6X1D" value="7887120293590352931" />
-    <property role="3GE5qa" value="physical.expr.direction" />
-    <property role="TrG5h" value="BuiltInVectors" />
-    <ref role="1H5jkz" node="6POFxU8e$gC" resolve="self_direction" />
-    <node concept="25R33" id="6POFxU8e$g$" role="25R1y">
-      <property role="3tVfz5" value="7887120293590352932" />
-      <property role="TrG5h" value="default" />
-      <property role="1L1pqM" value="world direction" />
-    </node>
-    <node concept="25R33" id="6POFxU8e$g_" role="25R1y">
-      <property role="3tVfz5" value="7887120293590352933" />
-      <property role="TrG5h" value="world_origin" />
-      <property role="1L1pqM" value="world origin" />
-    </node>
-    <node concept="25R33" id="6POFxU8e$gC" role="25R1y">
-      <property role="3tVfz5" value="7887120293590352936" />
-      <property role="TrG5h" value="self_direction" />
-      <property role="1L1pqM" value="object direction" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="6POFxU8e$gO">
-    <property role="EcuMT" value="7887120293590352948" />
-    <property role="3GE5qa" value="physical.expr.direction" />
-    <property role="TrG5h" value="BuiltInVectorsExpression" />
-    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    <node concept="1TJgyi" id="6POFxU8e$gR" role="1TKVEl">
-      <property role="IQ2nx" value="7887120293590352951" />
-      <property role="TrG5h" value="direction" />
-      <ref role="AX2Wp" node="6POFxU8e$gz" resolve="BuiltInVectors" />
     </node>
   </node>
   <node concept="1TIwiD" id="6POFxU8e$hL">
@@ -764,7 +730,9 @@
   <node concept="1TIwiD" id="cTQf2FlwO3">
     <property role="EcuMT" value="232455383964585219" />
     <property role="3GE5qa" value="physical.expr.dot" />
-    <property role="TrG5h" value="DistanceWithCallTarget" />
+    <property role="TrG5h" value="ObjectDistanceWithTarget" />
+    <property role="R4oN_" value="compute distance between two position" />
+    <property role="34LRSv" value="distance with" />
     <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
     <node concept="1TJgyj" id="cTQf2FlwO4" role="1TKVEi">
       <property role="IQ2ns" value="232455383964585220" />
@@ -777,14 +745,14 @@
   <node concept="1TIwiD" id="cTQf2FqwJc">
     <property role="EcuMT" value="232455383965895628" />
     <property role="3GE5qa" value="physical.expr.dot" />
-    <property role="TrG5h" value="VectorOppositeDotTarget" />
+    <property role="TrG5h" value="VectorOppositeTarget" />
     <property role="34LRSv" value="opposite" />
     <ref role="1TJDcQ" node="31HEEbbS_kE" resolve="AbstractVectorTarget" />
   </node>
   <node concept="1TIwiD" id="31HEEbbS$Yk">
     <property role="EcuMT" value="3489632902464032660" />
     <property role="3GE5qa" value="physical.expr.dot" />
-    <property role="TrG5h" value="VectorResizeDotTarget" />
+    <property role="TrG5h" value="VectorResizeTarget" />
     <property role="34LRSv" value="resize to" />
     <ref role="1TJDcQ" node="31HEEbbS_kE" resolve="AbstractVectorTarget" />
     <node concept="1TJgyj" id="31HEEbbS$Ym" role="1TKVEi">

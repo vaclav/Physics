@@ -728,7 +728,7 @@
               <ref role="3cqZAo" node="GdoRjGwdQL" resolve="object" />
             </node>
             <node concept="3TrEf2" id="GdoRjGwehP" role="2OqNvi">
-              <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+              <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
             </node>
           </node>
         </node>
@@ -842,7 +842,7 @@
               <ref role="3cqZAo" node="GdoRjGyGaY" resolve="object" />
             </node>
             <node concept="3TrEf2" id="GdoRjGyGyN" role="2OqNvi">
-              <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+              <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
             </node>
           </node>
         </node>
@@ -888,7 +888,7 @@
   </node>
   <node concept="13h7C7" id="cTQf2FlTRF">
     <property role="3GE5qa" value="physical.expr.dot" />
-    <ref role="13h7C2" to="9tcj:cTQf2FlwO3" resolve="DistanceWithCallTarget" />
+    <ref role="13h7C2" to="9tcj:cTQf2FlwO3" resolve="ObjectDistanceWithTarget" />
     <node concept="13hLZK" id="cTQf2FlTRG" role="13h7CW">
       <node concept="3clFbS" id="cTQf2FlTRH" role="2VODD2" />
     </node>
@@ -908,7 +908,7 @@
   </node>
   <node concept="13h7C7" id="cTQf2FqARA">
     <property role="3GE5qa" value="physical.expr.dot" />
-    <ref role="13h7C2" to="9tcj:cTQf2FqwJc" resolve="VectorOppositeDotTarget" />
+    <ref role="13h7C2" to="9tcj:cTQf2FqwJc" resolve="VectorOppositeTarget" />
     <node concept="13hLZK" id="cTQf2FqARB" role="13h7CW">
       <node concept="3clFbS" id="cTQf2FqARC" role="2VODD2" />
     </node>
@@ -1072,7 +1072,7 @@
   </node>
   <node concept="13h7C7" id="31HEEbbSBTy">
     <property role="3GE5qa" value="physical.expr.dot" />
-    <ref role="13h7C2" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeDotTarget" />
+    <ref role="13h7C2" to="9tcj:31HEEbbS$Yk" resolve="VectorResizeTarget" />
     <node concept="13hLZK" id="31HEEbbSBTz" role="13h7CW">
       <node concept="3clFbS" id="31HEEbbSBT$" role="2VODD2" />
     </node>
@@ -1613,7 +1613,7 @@
                                 </node>
                               </node>
                               <node concept="3TrEf2" id="GdoRjGw7uR" role="2OqNvi">
-                                <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                                <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
                               </node>
                             </node>
                           </node>
@@ -1723,7 +1723,7 @@
                           </node>
                         </node>
                         <node concept="3TrEf2" id="GdoRjGw9d4" role="2OqNvi">
-                          <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="location" />
+                          <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
                         </node>
                       </node>
                     </node>

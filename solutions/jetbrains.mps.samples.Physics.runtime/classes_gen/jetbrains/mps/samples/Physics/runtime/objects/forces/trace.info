@@ -9,16 +9,17 @@
     <file name="StaticForce.java">
       <node id="4271426636304008560" at="13,0,14,0" concept="2" trace="value" />
       <node id="4271426636304008569" at="14,39,15,23" concept="1" />
-      <node id="4271426636304008583" at="18,71,19,17" concept="4" />
+      <node id="4271426636304008583" at="18,82,19,17" concept="4" />
       <node id="4271426636304008564" at="14,0,17,0" concept="0" trace="StaticForce#(Lorg/ode4j/math/DVector3C;)V" />
-      <node id="4271426636304008576" at="17,0,21,0" concept="3" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)Lorg/ode4j/math/DVector3C;" />
+      <node id="4271426636304008576" at="17,0,21,0" concept="3" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;J)Lorg/ode4j/math/DVector3C;" />
       <scope id="4271426636304008568" at="14,39,15,23" />
-      <scope id="4271426636304008582" at="18,71,19,17" />
+      <scope id="4271426636304008582" at="18,82,19,17" />
       <scope id="4271426636304008564" at="14,0,17,0">
         <var name="value" id="4271426636304008566" />
       </scope>
       <scope id="4271426636304008576" at="17,0,21,0">
         <var name="targetEntity" id="4271426636304008580" />
+        <var name="time" id="6779037360575911400" />
         <var name="world" id="4271426636304008578" />
       </scope>
       <unit id="4271426636304008557" at="12,0,22,0" name="jetbrains.mps.samples.Physics.runtime.objects.forces.StaticForce" />
@@ -26,9 +27,10 @@
   </root>
   <root nodeRef="r:04f45ddc-ac9c-4d8e-83e4-6d920f8101d7(jetbrains.mps.samples.Physics.runtime.objects.forces)/4271426636304009549">
     <file name="Force.java">
-      <node id="4271426636304009551" at="13,0,14,0" concept="3" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;)Lorg/ode4j/math/DVector3C;" />
+      <node id="4271426636304009551" at="13,0,14,0" concept="3" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;J)Lorg/ode4j/math/DVector3C;" />
       <scope id="4271426636304009551" at="13,0,14,0">
         <var name="targetEntity" id="4271426636304009555" />
+        <var name="time" id="6779037360575911416" />
         <var name="world" id="4271426636304009553" />
       </scope>
       <unit id="4271426636304009549" at="12,0,15,0" name="jetbrains.mps.samples.Physics.runtime.objects.forces.Force" />

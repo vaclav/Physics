@@ -102,8 +102,8 @@
   </root>
   <root nodeRef="r:7a9b0b84-8d52-4661-8dd6-1e603f6ac398(jetbrains.mps.samples.Physics.runtime)/4271426636304009361">
     <file name="Simulation.java">
-      <node id="4271426636304009370" at="9,46,10,30" concept="5" />
-      <node id="4271426636304009373" at="10,30,11,16" concept="1" />
+      <node id="4271426636304009370" at="9,46,10,31" concept="5" />
+      <node id="4271426636304009373" at="10,31,11,16" concept="1" />
       <node id="4271426636304009376" at="11,16,12,37" concept="1" />
       <node id="4271426636304009381" at="14,0,15,0" concept="4" trace="init#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
       <node id="4271426636304009364" at="8,0,14,0" concept="4" trace="initialized#(Ljetbrains/mps/samples/Physics/runtime/Renderer;)V" />
