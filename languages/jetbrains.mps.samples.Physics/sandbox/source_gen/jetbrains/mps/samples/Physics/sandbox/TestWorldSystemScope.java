@@ -20,7 +20,7 @@ import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture;
 
 public class TestWorldSystemScope extends SystemScope {
-  public final SystemScope World2;
+  public final SystemScope TheOtherWorld;
   public final PhysicalEntity Something2;
   public final PhysicalEntity Hey;
   public final PhysicalEntity Ho;
@@ -31,7 +31,7 @@ public class TestWorldSystemScope extends SystemScope {
     Something2 = withEntity(new Something3PhysicalEntity(world));
     Hey = withEntity(new Hey1PhysicalEntity(world));
     Ho = withEntity(new Ho1PhysicalEntity(world));
-    World2 = withEntity(new World21SystemScope(world, position.add(new InternalVector(((Number) new BigInteger("1")), ((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), velocity.add(InternalVector.ZERO)));
+    TheOtherWorld = withEntity(new World2SystemScope(world, position.add(new InternalVector(((Number) new BigInteger("1")), ((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
     Something2.init(this, world);
@@ -52,7 +52,7 @@ public class TestWorldSystemScope extends SystemScope {
 
       // Set static properties of Something 
       this.setMass(((Number) new BigInteger("20")));
-      this.getBody().setPosition(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), ((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN))).add(scope.World2).add(scope.getInitialPosition()).toDVector3C());
+      this.getBody().setPosition(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), ((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN))).add(scope.TheOtherWorld).add(scope.getInitialPosition()).toDVector3C());
 
       //  Forces and visual of the parent objects of Something 
       super.init(scope, world);

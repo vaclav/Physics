@@ -6,6 +6,7 @@
   <languages />
   <imports>
     <import index="h09r" ref="r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)" />
+    <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" />
     <import index="79pl" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.runtime.base(MPS.Core/)" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="mhfm" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/java:org.jetbrains.annotations(Annotations/)" />
@@ -1714,7 +1715,7 @@
             <node concept="2qgKlT" id="8Z" role="2OqNvi">
               <ref role="37wK5l" to="pbu6:5WNmJ7DokMG" resolve="expectType" />
               <node concept="35c_gC" id="99" role="37wK5m">
-                <ref role="35c_gD" to="9tcj:6kwOTMl0tT6" resolve="ObjectType" />
+                <ref role="35c_gD" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
                 <node concept="cd27G" id="9c" role="lGtFl">
                   <node concept="3u3nmq" id="9d" role="cd27D">
                     <property role="3u3nmv" value="7126186526844793022" />
@@ -2463,7 +2464,7 @@
             <node concept="2qgKlT" id="dy" role="2OqNvi">
               <ref role="37wK5l" to="pbu6:5WNmJ7DokMG" resolve="expectType" />
               <node concept="35c_gC" id="dG" role="37wK5m">
-                <ref role="35c_gD" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
+                <ref role="35c_gD" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
                 <node concept="cd27G" id="dJ" role="lGtFl">
                   <node concept="3u3nmq" id="dK" role="cd27D">
                     <property role="3u3nmv" value="3489632902464035027" />
@@ -3212,7 +3213,7 @@
             <node concept="2qgKlT" id="i5" role="2OqNvi">
               <ref role="37wK5l" to="pbu6:5WNmJ7DokMG" resolve="expectType" />
               <node concept="35c_gC" id="if" role="37wK5m">
-                <ref role="35c_gD" to="9tcj:6kwOTMl0tT7" resolve="WorldType" />
+                <ref role="35c_gD" to="z99z:6kwOTMl0tT7" resolve="WorldType" />
                 <node concept="cd27G" id="ii" role="lGtFl">
                   <node concept="3u3nmq" id="ij" role="cd27D">
                     <property role="3u3nmv" value="7287056866554033014" />

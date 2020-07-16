@@ -401,6 +401,7 @@
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
     <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.transformation.DefaultTransformationMenuLookup" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo" />
@@ -418,7 +419,9 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.ParenthesisAttributeLabelStyleClass" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.RightParenthesisStyleClass" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.language.LanguageRegistry" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
@@ -756,11 +759,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_CustomColorTexture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_CylindricalCoordinates" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_DefinedColorReference" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_DirectionType" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_DirectionType_old" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_DirectionalCoordinates" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_DynamicForce" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_Force" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ForceType" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ForceType_old" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ILocalized" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_IObjectDefinition" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ITargetExpression" />
@@ -772,7 +775,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ObjectMassTarget" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ObjectPositionTarget" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ObjectReference" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ObjectType" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ObjectType_old" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ObjectVelocityTarget" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_PictureTexture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_PositionCoordinates" />
@@ -785,17 +788,19 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_TargetableExpression" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_Texture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_TimeExpression" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_UnitProviderChunk" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorComponentTarget" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorOppositeTarget" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorResizeTarget" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorType" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorType_old" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VelocityCoordinates" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_Visual" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_WorldDefinition" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_WorldInclusion" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_WorldMassCenterTarget" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_WorldReference" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_WorldType" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_WorldType_old" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.IType_SpecifyTags_Contribution" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.InteractedObjectExpression_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.InteractionForce_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.Localisation" />
@@ -1206,7 +1211,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_DirectionType">
+  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_DirectionType_old">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -1278,7 +1283,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ForceType">
+  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ForceType_old">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -1495,7 +1500,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ObjectType">
+  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_ObjectType_old">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -1729,6 +1734,24 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_UnitProviderChunk">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorComponentTarget">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
@@ -1783,7 +1806,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorType">
+  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_VectorType_old">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -1910,7 +1933,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_WorldType">
+  <dependency className="jetbrains.mps.samples.Physics.editor.GrammarCellsSubstituteMenu_WorldType_old">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -1927,6 +1950,45 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.IType_SpecifyTags_Contribution">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionItemInformation" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionMenuItemCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCompositeCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemModifyingCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.CollectionSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.SingleItemMenuPart" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.transformation.MenuLocations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SideTransformCompletionActionItem" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.EditorMenuTraceInfo" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizer" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemStyle" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.transformation.ActionItemBase" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.transformation.TransformationMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.transformation.TransformationMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
+    <classNode dependClassName="org.apache.log4j.Logger" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.transformation.TransformationMenuBase" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.editor.InteractedObjectExpression_Editor">
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
@@ -2449,6 +2511,7 @@
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
     <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.transformation.DefaultTransformationMenuLookup" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo" />
@@ -2466,7 +2529,9 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.ParenthesisAttributeLabelStyleClass" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.RightParenthesisStyleClass" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.language.LanguageRegistry" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />

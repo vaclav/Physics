@@ -39,6 +39,6 @@ public class typeof_AbstractForceCall_InferenceRule extends AbstractInferenceRul
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept AbstractForceCall$Wc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
-    /*package*/ static final SConcept ForceType$fg = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1be152c15029f679L, "jetbrains.mps.samples.Physics.structure.ForceType");
+    /*package*/ static final SConcept ForceType$fg = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1be152c15029f679L, "jetbrains.mps.samples.Physics.types.structure.ForceType");
   }
 }

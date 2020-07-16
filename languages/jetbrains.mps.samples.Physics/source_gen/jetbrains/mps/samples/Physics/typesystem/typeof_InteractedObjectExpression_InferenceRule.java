@@ -39,6 +39,6 @@ public class typeof_InteractedObjectExpression_InferenceRule extends AbstractInf
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept InteractedObjectExpression$7s = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d9124L, "jetbrains.mps.samples.Physics.structure.InteractedObjectExpression");
-    /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.structure.ObjectType");
+    /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
   }
 }

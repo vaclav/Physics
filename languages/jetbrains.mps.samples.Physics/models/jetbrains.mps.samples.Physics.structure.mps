@@ -8,6 +8,7 @@
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" />
     <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
+    <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="vs0r" ref="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" implicit="true" />
     <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" implicit="true" />
@@ -19,6 +20,9 @@
       </concept>
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
         <child id="3348158742936976577" name="members" index="25R1y" />
+      </concept>
+      <concept id="1224240836180" name="jetbrains.mps.lang.structure.structure.DeprecatedNodeAnnotation" flags="ig" index="asaX9">
+        <property id="1225118933224" name="comment" index="YLQ7P" />
       </concept>
       <concept id="7862711839422615209" name="jetbrains.mps.lang.structure.structure.DocumentedNodeAnnotation" flags="ng" index="t5JxF">
         <property id="7862711839422615217" name="text" index="t5JxN" />
@@ -74,7 +78,7 @@
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="world" />
     <property role="3GE5qa" value="physical" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="7psy0D5jPVV" resolve="UnitProviderChunk" />
     <node concept="1TJgyj" id="3Nk1IDHWOdX" role="1TKVEi">
       <property role="IQ2ns" value="4383135941275108221" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -272,7 +276,7 @@
     <property role="TrG5h" value="AbstractObjectDefinition" />
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="abstract object" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="7psy0D5jPVV" resolve="UnitProviderChunk" />
     <node concept="1TJgyj" id="1h1l5SEmLT9" role="1TKVEi">
       <property role="IQ2ns" value="1459540517659024969" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -407,6 +411,7 @@
     <property role="EcuMT" value="1510458583736148961" />
     <property role="3GE5qa" value="physical.visual.texture" />
     <property role="TrG5h" value="CustomColorTexture" />
+    <property role="34LRSv" value="custom color" />
     <ref role="1TJDcQ" node="1h1l5SEmLT$" resolve="Texture" />
     <node concept="1TJgyi" id="1jQexh3y6f$" role="1TKVEl">
       <property role="IQ2nx" value="1510458583736148964" />
@@ -439,7 +444,7 @@
     <property role="TrG5h" value="AbstractForce" />
     <property role="34LRSv" value="force" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="7psy0D5jPVV" resolve="UnitProviderChunk" />
     <node concept="1TJgyj" id="34ALWs$scX9" role="1TKVEi">
       <property role="IQ2ns" value="3541737815097265993" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -538,9 +543,12 @@
   <node concept="1TIwiD" id="1JxkG5gavpT">
     <property role="EcuMT" value="2008977899011044985" />
     <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="ForceType" />
+    <property role="TrG5h" value="ForceType_old" />
     <property role="34LRSv" value="force" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
+    <node concept="asaX9" id="3KiIDZ00qTq" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMkWOH$">
     <property role="EcuMT" value="7287056866552793956" />
@@ -583,18 +591,24 @@
   <node concept="1TIwiD" id="6kwOTMl0tT6">
     <property role="EcuMT" value="7287056866553749062" />
     <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="ObjectType" />
+    <property role="TrG5h" value="ObjectType_old" />
     <property role="R4oN_" value="type of a physical object" />
     <property role="34LRSv" value="object" />
-    <ref role="1TJDcQ" node="6kwOTMl2xh8" resolve="DirectionType" />
+    <ref role="1TJDcQ" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
+    <node concept="asaX9" id="3KiIDZ00qTA" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl0tT7">
     <property role="EcuMT" value="7287056866553749063" />
     <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="WorldType" />
+    <property role="TrG5h" value="WorldType_old" />
     <property role="R4oN_" value="type of a world" />
     <property role="34LRSv" value="world" />
-    <ref role="1TJDcQ" node="6kwOTMl0tT6" resolve="ObjectType" />
+    <ref role="1TJDcQ" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
+    <node concept="asaX9" id="3KiIDZ00qTY" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl17Za">
     <property role="EcuMT" value="7287056866553921482" />
@@ -649,9 +663,12 @@
   <node concept="1TIwiD" id="6kwOTMl1aFZ">
     <property role="EcuMT" value="7287056866553932543" />
     <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="VectorType" />
+    <property role="TrG5h" value="VectorType_old" />
     <property role="34LRSv" value="vector" />
-    <ref role="1TJDcQ" node="6kwOTMl2xh8" resolve="DirectionType" />
+    <ref role="1TJDcQ" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
+    <node concept="asaX9" id="3KiIDZ00qTM" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl1bfn">
     <property role="EcuMT" value="7287056866553934807" />
@@ -697,10 +714,13 @@
   <node concept="1TIwiD" id="6kwOTMl2xh8">
     <property role="EcuMT" value="7287056866554287176" />
     <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="DirectionType" />
+    <property role="TrG5h" value="DirectionType_old" />
     <property role="R4oN_" value="type of object giving a direction for a vector" />
     <property role="34LRSv" value="direction" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
+    <node concept="asaX9" id="3KiIDZ00qTe" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
+    </node>
   </node>
   <node concept="1TIwiD" id="cTQf2FjlqU">
     <property role="EcuMT" value="232455383964014266" />
@@ -901,6 +921,13 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="1jQexh3y6fx" resolve="CustomColorTexture" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="7psy0D5jPVV">
+    <property role="EcuMT" value="8528841372026756859" />
+    <property role="TrG5h" value="UnitProviderChunk" />
+    <property role="R5$K7" value="true" />
+    <property role="R4oN_" value="chunk that provides internally defined units" />
+    <ref role="1TJDcQ" to="vs0r:6clJcrJYOUA" resolve="Chunk" />
   </node>
 </model>
 

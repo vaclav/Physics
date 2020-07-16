@@ -18,6 +18,7 @@
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
     <import index="9tcj" ref="r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)" />
+    <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -135,7 +136,7 @@
             <node concept="2qgKlT" id="6b_jefnKz2X" role="2OqNvi">
               <ref role="37wK5l" to="pbu6:5WNmJ7DokMG" resolve="expectType" />
               <node concept="35c_gC" id="6b_jefnKz2Y" role="37wK5m">
-                <ref role="35c_gD" to="9tcj:6kwOTMl0tT6" resolve="ObjectType" />
+                <ref role="35c_gD" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
               </node>
               <node concept="3clFbT" id="6b_jefnKz2Z" role="37wK5m">
                 <property role="3clFbU" value="true" />
@@ -162,7 +163,7 @@
             <node concept="2qgKlT" id="6kwOTMl1zdP" role="2OqNvi">
               <ref role="37wK5l" to="pbu6:5WNmJ7DokMG" resolve="expectType" />
               <node concept="35c_gC" id="6kwOTMl1zdQ" role="37wK5m">
-                <ref role="35c_gD" to="9tcj:6kwOTMl0tT7" resolve="WorldType" />
+                <ref role="35c_gD" to="z99z:6kwOTMl0tT7" resolve="WorldType" />
               </node>
               <node concept="3clFbT" id="6kwOTMl1zdR" role="37wK5m">
                 <property role="3clFbU" value="true" />
@@ -223,7 +224,7 @@
             <node concept="2qgKlT" id="31HEEbbS_zi" role="2OqNvi">
               <ref role="37wK5l" to="pbu6:5WNmJ7DokMG" resolve="expectType" />
               <node concept="35c_gC" id="31HEEbbS_zj" role="37wK5m">
-                <ref role="35c_gD" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
+                <ref role="35c_gD" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
               </node>
               <node concept="3clFbT" id="31HEEbbS_zk" role="37wK5m">
                 <property role="3clFbU" value="true" />

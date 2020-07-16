@@ -168,7 +168,7 @@ public class SolarSystemSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Visual (if any) and forces 
-      this.setFixture(new BoxFixture(world, ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), new Color(45, 45, 45)));
+      this.setFixture(new BoxFixture(world, ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), new Color(25, 150, 25)));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 

@@ -28,8 +28,9 @@ public final class WorldInclusion__BehaviorDescriptor extends BaseBHDescriptor {
 
   public static final SMethod<SNode> getDefinition_id31HEEbbXs3G = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDefinition").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("31HEEbbXs3G").build();
   public static final SMethod<String> getAutomaticName_idcJpacq408C = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getAutomaticName").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("cJpacq408C").build();
+  public static final SMethod<Boolean> allowNonIdentifierNames_id4SwD0JT7m0l = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("allowNonIdentifierNames").modifiers(SModifiersImpl.create(9, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4SwD0JT7m0l").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDefinition_id31HEEbbXs3G, getAutomaticName_idcJpacq408C);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDefinition_id31HEEbbXs3G, getAutomaticName_idcJpacq408C, allowNonIdentifierNames_id4SwD0JT7m0l);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -39,6 +40,9 @@ public final class WorldInclusion__BehaviorDescriptor extends BaseBHDescriptor {
   }
   /*package*/ static String getAutomaticName_idcJpacq408C(@NotNull SNode __thisNode__) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.world$ZN60), LINKS.target$12L0), PROPS.name$tAp1);
+  }
+  /*package*/ static boolean allowNonIdentifierNames_id4SwD0JT7m0l(@NotNull SAbstractConcept __thisConcept__) {
+    return true;
   }
 
   /*package*/ WorldInclusion__BehaviorDescriptor() {
@@ -72,6 +76,8 @@ public final class WorldInclusion__BehaviorDescriptor extends BaseBHDescriptor {
       throw new BHMethodNotFoundException(this, method);
     }
     switch (methodIndex) {
+      case 2:
+        return (T) ((Boolean) allowNonIdentifierNames_id4SwD0JT7m0l(concept));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

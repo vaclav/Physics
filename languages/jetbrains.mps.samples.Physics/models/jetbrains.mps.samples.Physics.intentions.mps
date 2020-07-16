@@ -17,6 +17,7 @@
     <import index="s6tv" ref="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
     <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
     <import index="eaav" ref="r:b3b78d7c-b258-46c7-b846-e8d10925f2cd(jetbrains.mps.samples.Physics.runtime.vectors)" />
+    <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
     <import index="rf09" ref="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
@@ -288,7 +289,7 @@
               </node>
               <node concept="1mIQ4w" id="31HEEbc4dkP" role="2OqNvi">
                 <node concept="chp4Y" id="31HEEbc4dkQ" role="cj9EA">
-                  <ref role="cht4Q" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
+                  <ref role="cht4Q" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
                 </node>
               </node>
             </node>
@@ -611,7 +612,7 @@
               </node>
               <node concept="1mIQ4w" id="31HEEbc4ajh" role="2OqNvi">
                 <node concept="chp4Y" id="31HEEbc4avH" role="cj9EA">
-                  <ref role="cht4Q" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
+                  <ref role="cht4Q" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
                 </node>
               </node>
             </node>
@@ -706,7 +707,7 @@
               </node>
               <node concept="1mIQ4w" id="31HEEbc4bhq" role="2OqNvi">
                 <node concept="chp4Y" id="31HEEbc4bhr" role="cj9EA">
-                  <ref role="cht4Q" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
+                  <ref role="cht4Q" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
                 </node>
               </node>
             </node>
@@ -936,7 +937,7 @@
               </node>
               <node concept="1mIQ4w" id="GdoRjGAXtD" role="2OqNvi">
                 <node concept="chp4Y" id="GdoRjGAXtE" role="cj9EA">
-                  <ref role="cht4Q" to="9tcj:6kwOTMl1aFZ" resolve="VectorType" />
+                  <ref role="cht4Q" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
                 </node>
               </node>
             </node>

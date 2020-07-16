@@ -5,7 +5,6 @@ package jetbrains.mps.samples.Physics.typesystem;
 import jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime;
-import jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.OverloadedOperationsTypesProvider;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.model.SNode;
@@ -126,18 +125,6 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       NonTypesystemRule_Runtime nonTypesystemRule = new check_ObjectDefinitionVisual_NonTypesystemRule();
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
-    {
-      SubtypingRule_Runtime subtypingRule = new ObjectIsDirection_SubtypingRule();
-      this.mySubtypingRules.add(subtypingRule);
-    }
-    {
-      SubtypingRule_Runtime subtypingRule = new VectorIsDirection_SubtypingRule();
-      this.mySubtypingRules.add(subtypingRule);
-    }
-    {
-      SubtypingRule_Runtime subtypingRule = new WorldIsObject_SubtypingRule();
-      this.mySubtypingRules.add(subtypingRule);
-    }
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_d(CONCEPTS.MulExpression$_u));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.MinusExpression$pp));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_c(CONCEPTS.MulExpression$_u));
@@ -159,7 +146,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     }
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
       if (SNodeOperations.isInstanceOf(leftOperandType, CONCEPTS.RealType$5o) && SNodeOperations.isInstanceOf(rightOperandType, CONCEPTS.VectorType$Wj)) {
-        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.structure.VectorType"));
+        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType"));
       }
       return PTF.computeSupertype(leftOperandType, rightOperandType, true, TypeChecker.getInstance().getSubtypingManager());
     }
@@ -190,7 +177,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     }
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
       if (SNodeOperations.isInstanceOf(leftOperandType, CONCEPTS.VectorType$Wj) && SNodeOperations.isInstanceOf(rightOperandType, CONCEPTS.VectorType$Wj)) {
-        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.structure.VectorType"));
+        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType"));
       }
 
       return PTF.computeSupertype(leftOperandType, rightOperandType, true, TypeChecker.getInstance().getSubtypingManager());
@@ -226,7 +213,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     }
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
       if (SNodeOperations.isInstanceOf(leftOperandType, CONCEPTS.VectorType$Wj) && SNodeOperations.isInstanceOf(rightOperandType, CONCEPTS.RealType$5o)) {
-        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.structure.VectorType"));
+        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType"));
       }
       return PTF.computeSupertype(leftOperandType, rightOperandType, true, TypeChecker.getInstance().getSubtypingManager());
 
@@ -261,7 +248,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     }
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
       if (SNodeOperations.isInstanceOf(leftOperandType, CONCEPTS.VectorType$Wj) && SNodeOperations.isInstanceOf(rightOperandType, CONCEPTS.RealType$5o)) {
-        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.structure.VectorType"));
+        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType"));
       }
       return PTF.computeSupertype(leftOperandType, rightOperandType, true, TypeChecker.getInstance().getSubtypingManager());
 
@@ -296,7 +283,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     }
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
       if (SNodeOperations.isInstanceOf(leftOperandType, CONCEPTS.VectorType$Wj) && SNodeOperations.isInstanceOf(rightOperandType, CONCEPTS.VectorType$Wj)) {
-        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.structure.VectorType"));
+        return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType"));
       }
       return PTF.computeSupertype(leftOperandType, rightOperandType, true, TypeChecker.getInstance().getSubtypingManager());
     }
@@ -358,7 +345,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
     /*package*/ static final SConcept PlusExpression$Dn = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
     /*package*/ static final SConcept BinaryEqualityExpression$Mj = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cc6d99L, "org.iets3.core.expr.base.structure.BinaryEqualityExpression");
-    /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.structure.VectorType");
+    /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
     /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
     /*package*/ static final SConcept BooleanType$h3 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x670d5e92f854a617L, "org.iets3.core.expr.simpleTypes.structure.BooleanType");

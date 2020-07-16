@@ -27,11 +27,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CustomColorTexture;
   private ConceptPresentation props_CylindricalCoordinates;
   private ConceptPresentation props_DefinedColorReference;
-  private ConceptPresentation props_DirectionType;
+  private ConceptPresentation props_DirectionType_old;
   private ConceptPresentation props_DirectionalCoordinates;
   private ConceptPresentation props_DynamicForce;
   private ConceptPresentation props_Force;
-  private ConceptPresentation props_ForceType;
+  private ConceptPresentation props_ForceType_old;
   private ConceptPresentation props_ILocalized;
   private ConceptPresentation props_IObjectDefinition;
   private ConceptPresentation props_ITargetExpression;
@@ -43,7 +43,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObjectMassTarget;
   private ConceptPresentation props_ObjectPositionTarget;
   private ConceptPresentation props_ObjectReference;
-  private ConceptPresentation props_ObjectType;
+  private ConceptPresentation props_ObjectType_old;
   private ConceptPresentation props_ObjectVelocityTarget;
   private ConceptPresentation props_PictureTexture;
   private ConceptPresentation props_PositionCoordinates;
@@ -56,17 +56,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_TargetableExpression;
   private ConceptPresentation props_Texture;
   private ConceptPresentation props_TimeExpression;
+  private ConceptPresentation props_UnitProviderChunk;
   private ConceptPresentation props_VectorComponentTarget;
   private ConceptPresentation props_VectorOppositeTarget;
   private ConceptPresentation props_VectorResizeTarget;
-  private ConceptPresentation props_VectorType;
+  private ConceptPresentation props_VectorType_old;
   private ConceptPresentation props_VelocityCoordinates;
   private ConceptPresentation props_Visual;
   private ConceptPresentation props_WorldDefinition;
   private ConceptPresentation props_WorldInclusion;
   private ConceptPresentation props_WorldMassCenterTarget;
   private ConceptPresentation props_WorldReference;
-  private ConceptPresentation props_WorldType;
+  private ConceptPresentation props_WorldType_old;
 
   @Override
   @Nullable
@@ -177,7 +178,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.CustomColorTexture:
         if (props_CustomColorTexture == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("CustomColorTexture");
+          cpb.rawPresentation("custom color");
           props_CustomColorTexture = cpb.create();
         }
         return props_CustomColorTexture;
@@ -195,14 +196,15 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DefinedColorReference = cpb.create();
         }
         return props_DefinedColorReference;
-      case LanguageConceptSwitch.DirectionType:
-        if (props_DirectionType == null) {
+      case LanguageConceptSwitch.DirectionType_old:
+        if (props_DirectionType_old == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.deprecated(true);
           cpb.shortDesc("type of object giving a direction for a vector");
           cpb.rawPresentation("direction");
-          props_DirectionType = cpb.create();
+          props_DirectionType_old = cpb.create();
         }
-        return props_DirectionType;
+        return props_DirectionType_old;
       case LanguageConceptSwitch.DirectionalCoordinates:
         if (props_DirectionalCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -225,13 +227,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Force = cpb.create();
         }
         return props_Force;
-      case LanguageConceptSwitch.ForceType:
-        if (props_ForceType == null) {
+      case LanguageConceptSwitch.ForceType_old:
+        if (props_ForceType_old == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.deprecated(true);
           cpb.rawPresentation("force");
-          props_ForceType = cpb.create();
+          props_ForceType_old = cpb.create();
         }
-        return props_ForceType;
+        return props_ForceType_old;
       case LanguageConceptSwitch.ILocalized:
         if (props_ILocalized == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -307,14 +310,15 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObjectReference = cpb.create();
         }
         return props_ObjectReference;
-      case LanguageConceptSwitch.ObjectType:
-        if (props_ObjectType == null) {
+      case LanguageConceptSwitch.ObjectType_old:
+        if (props_ObjectType_old == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.deprecated(true);
           cpb.shortDesc("type of a physical object");
           cpb.rawPresentation("object");
-          props_ObjectType = cpb.create();
+          props_ObjectType_old = cpb.create();
         }
-        return props_ObjectType;
+        return props_ObjectType_old;
       case LanguageConceptSwitch.ObjectVelocityTarget:
         if (props_ObjectVelocityTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -401,6 +405,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TimeExpression = cpb.create();
         }
         return props_TimeExpression;
+      case LanguageConceptSwitch.UnitProviderChunk:
+        if (props_UnitProviderChunk == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("chunk that provides internally defined units");
+          props_UnitProviderChunk = cpb.create();
+        }
+        return props_UnitProviderChunk;
       case LanguageConceptSwitch.VectorComponentTarget:
         if (props_VectorComponentTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -422,13 +433,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VectorResizeTarget = cpb.create();
         }
         return props_VectorResizeTarget;
-      case LanguageConceptSwitch.VectorType:
-        if (props_VectorType == null) {
+      case LanguageConceptSwitch.VectorType_old:
+        if (props_VectorType_old == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.deprecated(true);
           cpb.rawPresentation("vector");
-          props_VectorType = cpb.create();
+          props_VectorType_old = cpb.create();
         }
-        return props_VectorType;
+        return props_VectorType_old;
       case LanguageConceptSwitch.VelocityCoordinates:
         if (props_VelocityCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -471,14 +483,15 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_WorldReference = cpb.create();
         }
         return props_WorldReference;
-      case LanguageConceptSwitch.WorldType:
-        if (props_WorldType == null) {
+      case LanguageConceptSwitch.WorldType_old:
+        if (props_WorldType_old == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.deprecated(true);
           cpb.shortDesc("type of a world");
           cpb.rawPresentation("world");
-          props_WorldType = cpb.create();
+          props_WorldType_old = cpb.create();
         }
-        return props_WorldType;
+        return props_WorldType_old;
     }
     return null;
   }
