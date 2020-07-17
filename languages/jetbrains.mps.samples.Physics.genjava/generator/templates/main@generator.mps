@@ -4283,7 +4283,49 @@
               </node>
             </node>
           </node>
-          <node concept="3clFbH" id="G6XgqpZ49t" role="3cqZAp" />
+          <node concept="3clFbF" id="10n4tqnn3CL" role="3cqZAp">
+            <node concept="2OqwBi" id="10n4tqnn71X" role="3clFbG">
+              <node concept="2OqwBi" id="10n4tqnn4U$" role="2Oq$k0">
+                <node concept="Xjq3P" id="10n4tqnn3CJ" role="2Oq$k0" />
+                <node concept="liA8E" id="10n4tqnn6Ns" role="2OqNvi">
+                  <ref role="37wK5l" to="jyp0:3H79Ykd2G$u" resolve="getBody" />
+                </node>
+              </node>
+              <node concept="liA8E" id="10n4tqnn7VB" role="2OqNvi">
+                <ref role="37wK5l" to="9dpa:~DBody.setLinearVel(org.ode4j.math.DVector3C)" resolve="setLinearVel" />
+                <node concept="2OqwBi" id="10n4tqnn9Ji" role="37wK5m">
+                  <node concept="2OqwBi" id="10n4tqnn9fb" role="2Oq$k0">
+                    <node concept="37vLTw" id="10n4tqnn8St" role="2Oq$k0">
+                      <ref role="3cqZAo" node="G6XgqpZ48k" resolve="scope" />
+                    </node>
+                    <node concept="liA8E" id="10n4tqnn9Bp" role="2OqNvi">
+                      <ref role="37wK5l" to="jyp0:G6Xgqq2RaB" resolve="getInitialVelocity" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="10n4tqnna0Y" role="2OqNvi">
+                    <ref role="37wK5l" to="eaav:G6Xgqqgk8z" resolve="toDVector3C" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="1W57fq" id="10n4tqnnbyF" role="lGtFl">
+              <node concept="3IZrLx" id="10n4tqnnbyG" role="3IZSJc">
+                <node concept="3clFbS" id="10n4tqnnbyH" role="2VODD2">
+                  <node concept="3clFbF" id="10n4tqnnc5h" role="3cqZAp">
+                    <node concept="2OqwBi" id="10n4tqnndEf" role="3clFbG">
+                      <node concept="2OqwBi" id="10n4tqnncx$" role="2Oq$k0">
+                        <node concept="30H73N" id="10n4tqnnc5g" role="2Oq$k0" />
+                        <node concept="3TrEf2" id="10n4tqnndg$" role="2OqNvi">
+                          <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS7" resolve="velocity" />
+                        </node>
+                      </node>
+                      <node concept="3w_OXm" id="10n4tqnndVD" role="2OqNvi" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
           <node concept="3SKdUt" id="G6XgqpZ49u" role="3cqZAp">
             <node concept="1PaTwC" id="G6XgqpZ49v" role="1aUNEU">
               <node concept="3oM_SD" id="G6XgqpZ49w" role="1PaTwD">

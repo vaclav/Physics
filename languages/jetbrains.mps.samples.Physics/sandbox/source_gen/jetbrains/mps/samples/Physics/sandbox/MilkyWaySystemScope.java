@@ -47,7 +47,7 @@ public class MilkyWaySystemScope extends SystemScope {
       // Set static properties of Floating dog 
       this.setMass(((Number) new BigInteger("30")));
       this.getBody().setPosition(new InternalVector(((Number) new BigInteger("4")), AH.add(((Number) new BigInteger("50000")), scope.SolarSystem1.getMass()), ((Number) new BigInteger("6"))).add(scope.SolarSystem1).add(scope.getInitialPosition()).toDVector3C());
-
+      this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
       //  Forces and visual of the parent objects of Floating dog 
       super.init(scope, world);
 
@@ -73,7 +73,7 @@ public class MilkyWaySystemScope extends SystemScope {
       // Set static properties of Something 
       this.setMass(((Number) new BigInteger("30")));
       this.getBody().setPosition(scope.FloatingDog.minus(currentEntity).resize(((Number) new BigInteger("45"))).add(scope.getInitialPosition()).toDVector3C());
-
+      this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
       //  Forces and visual of the parent objects of Something 
       super.init(scope, world);
 
@@ -100,7 +100,6 @@ public class MilkyWaySystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("30")));
       this.getBody().setPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).minus(currentEntity).resize(((Number) new BigInteger("40"))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(currentEntity.minus(currentEntity).resize(((Number) new BigInteger("40"))).add(scope.getInitialVelocity()).toDVector3C());
-
       //  Forces and visual of the parent objects of A 
       super.init(scope, world);
 

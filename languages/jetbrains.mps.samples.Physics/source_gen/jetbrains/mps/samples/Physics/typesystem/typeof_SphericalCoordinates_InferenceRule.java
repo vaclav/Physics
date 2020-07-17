@@ -19,18 +19,12 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
   public typeof_SphericalCoordinates_InferenceRule() {
   }
   public void applyRule(final SNode sphericalCoordinates, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+
     if (!(typeCheckingContext.isSingleTypeComputation())) {
       {
         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(sphericalCoordinates, LINKS.phi$xD9b);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959987834", 0, null);
-        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959987839", true), (SNode) createRealType_fzfda9_a1a0c0a0a0b(), true, true, _info_12389875345);
-      }
-    }
-    if (!(typeCheckingContext.isSingleTypeComputation())) {
-      {
-        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(sphericalCoordinates, LINKS.distance$xDc5);
-        EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959987843", 0, null);
-        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959987848", true), (SNode) createRealType_fzfda9_a1a0c0a0b0b(), true, true, _info_12389875345);
+        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959987839", true), (SNode) createRealType_fzfda9_a1a0c0a0b0b(), true, true, _info_12389875345);
       }
     }
     if (!(typeCheckingContext.isSingleTypeComputation())) {
@@ -38,6 +32,13 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(sphericalCoordinates, LINKS.theta$xDa9);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959987852", 0, null);
         typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959987857", true), (SNode) createRealType_fzfda9_a1a0c0a0c0b(), true, true, _info_12389875345);
+      }
+    }
+    if (!(typeCheckingContext.isSingleTypeComputation())) {
+      {
+        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(sphericalCoordinates, LINKS.distance$xDc5);
+        EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959987843", 0, null);
+        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959987848", true), (SNode) createRealType_fzfda9_a1a0c0a0d0b(), true, true, _info_12389875345);
       }
     }
   }
@@ -50,10 +51,6 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
   public boolean overrides() {
     return false;
   }
-  private static SNode createRealType_fzfda9_a1a0c0a0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
-    return n0.getResult();
-  }
   private static SNode createRealType_fzfda9_a1a0c0a0b0b() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
     return n0.getResult();
@@ -62,11 +59,15 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
     return n0.getResult();
   }
+  private static SNode createRealType_fzfda9_a1a0c0a0d0b() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    return n0.getResult();
+  }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink phi$xD9b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2576L, "phi");
-    /*package*/ static final SContainmentLink distance$xDc5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
     /*package*/ static final SContainmentLink theta$xDa9 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2578L, "theta");
+    /*package*/ static final SContainmentLink distance$xDc5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
   }
 
   private static final class CONCEPTS {

@@ -19,25 +19,27 @@ public class typeof_CartesianCoordinates_InferenceRule extends AbstractInference
   public typeof_CartesianCoordinates_InferenceRule() {
   }
   public void applyRule(final SNode cartesianCoordinates, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+
+
     if (!(typeCheckingContext.isSingleTypeComputation())) {
       {
         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(cartesianCoordinates, LINKS.dx$VpuT);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959476818", 0, null);
-        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959476823", true), (SNode) createRealType_1e9abf_a1a0c0a0a0b(), true, true, _info_12389875345);
+        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959476823", true), (SNode) createRealType_1e9abf_a1a0c0a0c0b(), true, true, _info_12389875345);
       }
     }
     if (!(typeCheckingContext.isSingleTypeComputation())) {
       {
         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(cartesianCoordinates, LINKS.dy$VWrJ);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959206134", 0, null);
-        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959204898", true), (SNode) createRealType_1e9abf_a1a0c0a0b0b(), true, true, _info_12389875345);
+        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959204898", true), (SNode) createRealType_1e9abf_a1a0c0a0d0b(), true, true, _info_12389875345);
       }
     }
     if (!(typeCheckingContext.isSingleTypeComputation())) {
       {
         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(cartesianCoordinates, LINKS.dz$VWBn);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959477152", 0, null);
-        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959477157", true), (SNode) createRealType_1e9abf_a1a0c0a0c0b(), true, true, _info_12389875345);
+        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7105688800959477157", true), (SNode) createRealType_1e9abf_a1a0c0a0e0b(), true, true, _info_12389875345);
       }
     }
   }
@@ -50,15 +52,15 @@ public class typeof_CartesianCoordinates_InferenceRule extends AbstractInference
   public boolean overrides() {
     return false;
   }
-  private static SNode createRealType_1e9abf_a1a0c0a0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
-    return n0.getResult();
-  }
-  private static SNode createRealType_1e9abf_a1a0c0a0b0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
-    return n0.getResult();
-  }
   private static SNode createRealType_1e9abf_a1a0c0a0c0b() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    return n0.getResult();
+  }
+  private static SNode createRealType_1e9abf_a1a0c0a0d0b() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    return n0.getResult();
+  }
+  private static SNode createRealType_1e9abf_a1a0c0a0e0b() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
     return n0.getResult();
   }

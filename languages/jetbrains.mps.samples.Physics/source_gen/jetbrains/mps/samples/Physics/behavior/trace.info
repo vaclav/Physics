@@ -15,7 +15,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
   <root>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="14,0,101,0" name="jetbrains.mps.samples.Physics.behavior.BehaviorAspectDescriptor" />
+      <unit at="14,0,104,0" name="jetbrains.mps.samples.Physics.behavior.BehaviorAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)/1481770243885264210">
@@ -913,6 +913,69 @@
       </scope>
       <unit id="5352272594417168270" at="89,0,92,0" name="jetbrains.mps.samples.Physics.behavior.ObjectVelocityTarget__BehaviorDescriptor$LINKS" />
       <unit id="5352272594417168270" at="23,0,93,0" name="jetbrains.mps.samples.Physics.behavior.ObjectVelocityTarget__BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)/6942148436830674666">
+    <file name="CartesianCoordinates__BehaviorDescriptor.java">
+      <node id="6942148436830674666" at="18,0,19,0" concept="9" trace="CONCEPT" />
+      <node id="6942148436830674666" at="21,0,22,0" concept="9" trace="BH_METHODS" />
+      <node id="6942148436830674666" at="31,114,32,21" concept="2" />
+      <node id="6942148436830674666" at="36,114,37,49" concept="5" />
+      <node id="6942148436830674666" at="38,26,39,56" concept="12" />
+      <node id="6942148436830674666" at="42,14,43,58" concept="12" />
+      <node id="6942148436830674666" at="48,128,49,49" concept="5" />
+      <node id="6942148436830674666" at="50,26,51,56" concept="12" />
+      <node id="6942148436830674666" at="54,14,55,58" concept="12" />
+      <node id="6942148436830674666" at="61,48,62,22" concept="6" />
+      <node id="6942148436830674666" at="67,40,68,19" concept="6" />
+      <node id="6942148436830674666" at="23,0,25,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="6942148436830674666" at="27,0,29,0" concept="1" trace="CartesianCoordinates__BehaviorDescriptor#()V" />
+      <node id="6942148436830674666" at="37,49,40,5" concept="3" />
+      <node id="6942148436830674666" at="49,49,52,5" concept="3" />
+      <node id="6942148436830674666" at="30,0,34,0" concept="4" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="6942148436830674666" at="40,5,44,5" concept="11" />
+      <node id="6942148436830674666" at="52,5,56,5" concept="11" />
+      <node id="6942148436830674666" at="59,0,64,0" concept="4" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="6942148436830674666" at="65,0,70,0" concept="4" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="6942148436830674666" at="35,0,46,0" concept="4" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="6942148436830674666" at="47,0,58,0" concept="4" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="6942148436830674666" at="23,63,23,63" />
+      <scope id="6942148436830674666" at="27,58,27,58" />
+      <scope id="6942148436830674666" at="31,114,32,21" />
+      <scope id="6942148436830674666" at="38,26,39,56" />
+      <scope id="6942148436830674666" at="42,14,43,58" />
+      <scope id="6942148436830674666" at="50,26,51,56" />
+      <scope id="6942148436830674666" at="54,14,55,58" />
+      <scope id="6942148436830674666" at="61,48,62,22" />
+      <scope id="6942148436830674666" at="67,40,68,19" />
+      <scope id="6942148436830674666" at="23,0,25,0">
+        <var name="__thisNode__" id="6942148436830674666" />
+      </scope>
+      <scope id="6942148436830674666" at="27,0,29,0" />
+      <scope id="6942148436830674666" at="30,0,34,0">
+        <var name="constructor" id="6942148436830674666" />
+        <var name="node" id="6942148436830674666" />
+        <var name="parameters" id="6942148436830674666" />
+      </scope>
+      <scope id="6942148436830674666" at="59,0,64,0" />
+      <scope id="6942148436830674666" at="65,0,70,0" />
+      <scope id="6942148436830674666" at="36,114,44,5">
+        <var name="methodIndex" id="6942148436830674666" />
+      </scope>
+      <scope id="6942148436830674666" at="48,128,56,5">
+        <var name="methodIndex" id="6942148436830674666" />
+      </scope>
+      <scope id="6942148436830674666" at="35,0,46,0">
+        <var name="method" id="6942148436830674666" />
+        <var name="node" id="6942148436830674666" />
+        <var name="parameters" id="6942148436830674666" />
+      </scope>
+      <scope id="6942148436830674666" at="47,0,58,0">
+        <var name="concept" id="6942148436830674666" />
+        <var name="method" id="6942148436830674666" />
+        <var name="parameters" id="6942148436830674666" />
+      </scope>
+      <unit id="6942148436830674666" at="17,0,71,0" name="jetbrains.mps.samples.Physics.behavior.CartesianCoordinates__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)/7287056866553927784">

@@ -22,13 +22,13 @@ public class Renderer extends PApplet {
   }
   @Override
   public void setup() {
-    lights();
+    surface.setResizable(true);
+    surface.setTitle("Physical simulation");
   }
   @Override
   public void draw() {
     background(0);
-    fill(150);
-    stroke(255);
+    pointLight(255, 255, 255, 0, 0, 0);
     translate(width / 2, height / 2, -1000);
     renderedWorld.step();
     renderedWorld.render(this);

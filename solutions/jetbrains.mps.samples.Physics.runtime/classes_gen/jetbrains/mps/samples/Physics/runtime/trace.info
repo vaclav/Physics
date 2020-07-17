@@ -48,11 +48,11 @@
       <node id="4271426636304008908" at="13,12,14,70" concept="7" />
       <node id="4271426636304008811" at="15,27,16,33" concept="1" />
       <node id="4271426636304008819" at="20,26,21,24" concept="1" />
-      <node id="4271426636304008829" at="24,23,25,13" concept="1" />
-      <node id="4271426636304008836" at="28,22,29,18" concept="1" />
-      <node id="4271426636304008839" at="29,18,30,14" concept="1" />
-      <node id="4271426636304008842" at="30,14,31,16" concept="1" />
-      <node id="4271426636304008845" at="31,16,32,44" concept="1" />
+      <node id="1159415042431703887" at="24,23,25,31" concept="1" />
+      <node id="1159415042431705937" at="25,31,26,44" concept="1" />
+      <node id="4271426636304008836" at="29,22,30,18" concept="1" />
+      <node id="1159415042432596827" at="30,18,31,39" concept="1" />
+      <node id="4271426636304008845" at="31,39,32,44" concept="1" />
       <node id="4271426636304008855" at="32,44,33,25" concept="1" />
       <node id="4271426636304008857" at="33,25,34,31" concept="1" />
       <node id="4271426636304008866" at="36,53,37,18" concept="1" />
@@ -66,19 +66,19 @@
       <node id="4271426636304008872" at="39,0,42,0" concept="4" trace="getRenderedWorld#()Ljetbrains/mps/samples/Physics/runtime/objects/World;" />
       <node id="4271426636304008878" at="42,0,45,0" concept="4" trace="setRenderedWorld#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
       <node id="4271426636304008816" at="19,0,23,0" concept="4" trace="settings#()V" />
-      <node id="4271426636304008826" at="23,0,27,0" concept="4" trace="setup#()V" />
       <node id="4271426636304008890" at="48,0,52,0" concept="9" trace="main#([Ljava/lang/String;)V" />
+      <node id="4271426636304008826" at="23,0,28,0" concept="4" trace="setup#()V" />
       <node id="4271426636304008802" at="12,0,19,0" concept="0" trace="Renderer#()V" />
-      <node id="4271426636304008833" at="27,0,36,0" concept="4" trace="draw#()V" />
+      <node id="4271426636304008833" at="28,0,36,0" concept="4" trace="draw#()V" />
       <scope id="4271426636304008810" at="15,27,16,33" />
       <scope id="4271426636304008818" at="20,26,21,24" />
-      <scope id="4271426636304008828" at="24,23,25,13" />
       <scope id="4271426636304008865" at="36,53,37,18" />
       <scope id="4271426636304008873" at="39,35,40,25" />
       <scope id="4271426636304008881" at="42,53,43,39" />
       <scope id="4271426636304008785" at="46,0,47,0">
         <var name="renderer" id="4271426636304008787" />
       </scope>
+      <scope id="4271426636304008828" at="24,23,26,44" />
       <scope id="4271426636304008894" at="48,42,50,33" />
       <scope id="4271426636304008862" at="36,0,39,0">
         <var name="cb" id="4271426636304008863" />
@@ -88,14 +88,14 @@
         <var name="renderedWorld" id="4271426636304008879" />
       </scope>
       <scope id="4271426636304008816" at="19,0,23,0" />
-      <scope id="4271426636304008826" at="23,0,27,0" />
       <scope id="4271426636304008890" at="48,0,52,0">
         <var name="args" id="4271426636304008891" />
       </scope>
       <scope id="4271426636304008804" at="12,21,17,5" />
-      <scope id="4271426636304008835" at="28,22,34,31" />
+      <scope id="4271426636304008826" at="23,0,28,0" />
+      <scope id="4271426636304008835" at="29,22,34,31" />
       <scope id="4271426636304008802" at="12,0,19,0" />
-      <scope id="4271426636304008833" at="27,0,36,0" />
+      <scope id="4271426636304008833" at="28,0,36,0" />
       <unit id="4271426636304008783" at="45,0,48,0" name="jetbrains.mps.samples.Physics.runtime.Renderer$RendererCallback" />
       <unit id="4271426636304008781" at="8,0,53,0" name="jetbrains.mps.samples.Physics.runtime.Renderer" />
     </file>

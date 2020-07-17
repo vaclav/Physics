@@ -46,7 +46,7 @@ public class World2SystemScope extends SystemScope {
       // Set static properties of Ho 
       this.setMass(AH.add(((Number) new BigInteger("456")), ((Number) new BigInteger("45"))));
       this.getBody().setPosition(new InternalVector(((Number) new BigInteger("4")), ((Number) new BigInteger("4")), ((Number) new BigInteger("4"))).add(scope.getInitialPosition()).toDVector3C());
-
+      this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
       //  Forces and visual of the parent objects of Ho 
       super.init(scope, world);
 
@@ -78,7 +78,7 @@ public class World2SystemScope extends SystemScope {
       // Set static properties of Ha 
       this.setMass(((Number) new BigInteger("100")));
       this.getBody().setPosition(new InternalVector(((Number) new BigInteger("100")), ((Number) new BigInteger("100")), ((Number) new BigInteger("100"))).add(scope.getInitialPosition()).toDVector3C());
-
+      this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
       //  Forces and visual of the parent objects of Ha 
       super.init(scope, world);
 

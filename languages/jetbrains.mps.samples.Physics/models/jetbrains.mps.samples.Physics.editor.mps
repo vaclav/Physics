@@ -711,22 +711,22 @@
       <node concept="3F0ifn" id="1jQexh3y6gI" role="3EZMnx">
         <property role="3F0ifm" value="," />
       </node>
-      <node concept="3F0ifn" id="1jQexh3y6gY" role="3EZMnx">
-        <property role="3F0ifm" value="blue:" />
-        <ref role="1k5W1q" node="60D2cmu5xP2" resolve="ParenthesisAttributeLabel" />
-      </node>
-      <node concept="3F0A7n" id="1jQexh3y6h$" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:1jQexh3y6fA" resolve="blue" />
-      </node>
-      <node concept="3F0ifn" id="1jQexh3y6hU" role="3EZMnx">
-        <property role="3F0ifm" value="," />
-      </node>
       <node concept="3F0ifn" id="1jQexh3y6ii" role="3EZMnx">
         <property role="3F0ifm" value="green:" />
         <ref role="1k5W1q" node="60D2cmu5xP2" resolve="ParenthesisAttributeLabel" />
       </node>
       <node concept="3F0A7n" id="1jQexh3y6jn" role="3EZMnx">
         <ref role="1NtTu8" to="9tcj:1jQexh3y6fD" resolve="green" />
+      </node>
+      <node concept="3F0ifn" id="10n4tqnjiUz" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1jQexh3y6gY" role="3EZMnx">
+        <property role="3F0ifm" value="blue:" />
+        <ref role="1k5W1q" node="60D2cmu5xP2" resolve="ParenthesisAttributeLabel" />
+      </node>
+      <node concept="3F0A7n" id="1jQexh3y6h$" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:1jQexh3y6fA" resolve="blue" />
       </node>
       <node concept="3F0ifn" id="1jQexh3y6jP" role="3EZMnx">
         <property role="3F0ifm" value=")" />

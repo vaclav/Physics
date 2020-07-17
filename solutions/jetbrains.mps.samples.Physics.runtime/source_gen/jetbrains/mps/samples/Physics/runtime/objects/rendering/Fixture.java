@@ -23,7 +23,7 @@ public abstract class Fixture {
   public void render(PApplet ctx) {
     if (texture != null) {
       ctx.noStroke();
-      ctx.fill(texture.red, texture.blue, texture.green);
+      ctx.fill(texture.red, texture.green, texture.blue);
     } else {
       ctx.stroke(255);
       ctx.noFill();

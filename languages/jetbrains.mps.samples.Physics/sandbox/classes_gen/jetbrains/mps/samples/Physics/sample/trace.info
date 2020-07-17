@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root nodeRef="r:54d5af61-dd10-4ea1-9829-808f29f3773e(jetbrains.mps.samples.Physics.sample)/1159415042430248890">
+    <file name="Sample.java">
+      <node id="1159415042430248890" at="13,36,14,80" concept="1" />
+      <node id="1159415042430248890" at="17,42,18,37" concept="1" />
+      <node id="1159415042430248890" at="18,37,19,24" concept="1" />
+      <node id="1159415042430248890" at="12,0,16,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <node id="1159415042430248890" at="17,0,21,0" concept="10" trace="main#([Ljava/lang/String;)V" />
+      <scope id="1159415042430248890" at="13,36,14,80" />
+      <scope id="1159415042430248890" at="17,42,19,24" />
+      <scope id="1159415042430248890" at="12,0,16,0">
+        <var name="world" id="1159415042430248890" />
+      </scope>
+      <scope id="1159415042430248890" at="17,0,21,0">
+        <var name="args" id="1159415042430248890" />
+      </scope>
+      <unit id="1159415042430248890" at="10,0,22,0" name="jetbrains.mps.samples.Physics.sample.Sample" />
+    </file>
+  </root>
+  <root nodeRef="r:54d5af61-dd10-4ea1-9829-808f29f3773e(jetbrains.mps.samples.Physics.sample)/1159415042431154157">
+    <file name="SolarSystemSystemScope.java">
+      <node id="1159415042431154170" at="18,0,19,0" concept="2" trace="Earth2" />
+      <node id="1159415042431154201" at="19,0,20,0" concept="2" trace="Sun" />
+      <node id="1159415042431154157" at="21,88,22,30" concept="11" />
+      <node id="1159415042431154157" at="22,30,23,28" concept="8" />
+      <node id="1159415042431154201" at="23,28,24,52" concept="1" />
+      <node id="1159415042431154170" at="24,52,25,623" concept="1" />
+      <node id="1159415042431154157" at="25,623,26,0" concept="9" />
+      <node id="1159415042431154157" at="26,0,27,23" concept="8" />
+      <node id="1159415042431154201" at="27,23,28,26" concept="1" />
+      <node id="1159415042431154201" at="33,44,34,19" concept="11" />
+      <node id="1159415042431154201" at="38,77,39,39" concept="8" />
+      <node id="1159415042431154201" at="39,39,40,46" concept="6" />
+      <node id="1159415042431154201" at="40,46,41,0" concept="9" />
+      <node id="1159415042431154201" at="41,0,42,38" concept="8" />
+      <node id="1159415042431154201" at="42,38,43,54" concept="1" />
+      <node id="1159415042431154201" at="43,54,44,198" concept="1" />
+      <node id="1159415042431154201" at="44,198,45,76" concept="1" />
+      <node id="1159415042431154201" at="45,76,46,57" concept="8" />
+      <node id="1159415042431154201" at="46,57,47,31" concept="1" />
+      <node id="1159415042431154201" at="47,31,48,0" concept="9" />
+      <node id="1159415042431154201" at="48,0,49,37" concept="8" />
+      <node id="1159415042431154201" at="49,37,50,118" concept="1" />
+      <node id="1159415042431154201" at="50,118,51,47" concept="1" />
+      <node id="1159415042431154201" at="51,47,52,0" concept="9" />
+      <node id="1159415042431154201" at="52,0,53,40" concept="8" />
+      <node id="1159415042431154201" at="53,40,54,25" concept="1" />
+      <node id="1159415042431154201" at="54,25,55,28" concept="1" />
+      <node id="1159415042431154201" at="33,0,36,0" concept="0" trace="Sun1PhysicalEntity#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <node id="1159415042431154157" at="21,0,30,0" concept="0" trace="SolarSystemSystemScope#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;)V" />
+      <node id="1159415042431154201" at="37,0,57,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/sample/SolarSystemSystemScope;Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <scope id="1159415042431154201" at="33,44,34,19" />
+      <scope id="1159415042431154201" at="33,0,36,0">
+        <var name="world" id="1159415042431154201" />
+      </scope>
+      <scope id="1159415042431154157" at="21,88,28,26" />
+      <scope id="1159415042431154157" at="21,0,30,0">
+        <var name="position" id="1159415042431154157" />
+        <var name="velocity" id="1159415042431154157" />
+        <var name="world" id="1159415042431154157" />
+      </scope>
+      <scope id="1159415042431154201" at="38,77,55,28">
+        <var name="currentEntity" id="1159415042431154201" />
+      </scope>
+      <scope id="1159415042431154201" at="37,0,57,0">
+        <var name="scope" id="1159415042431154201" />
+        <var name="world" id="1159415042431154201" />
+      </scope>
+      <unit id="1159415042431154201" at="31,0,58,0" name="jetbrains.mps.samples.Physics.sample.SolarSystemSystemScope$Sun1PhysicalEntity" />
+      <unit id="1159415042431154157" at="17,0,60,0" name="jetbrains.mps.samples.Physics.sample.SolarSystemSystemScope" />
+    </file>
+  </root>
+  <root nodeRef="r:54d5af61-dd10-4ea1-9829-808f29f3773e(jetbrains.mps.samples.Physics.sample)/3067994583100255852">
+    <file name="GravityForce.java">
+      <node id="232455383964481205" at="16,0,17,0" concept="2" trace="G" />
+      <node id="232455383964481205" at="18,34,19,16" concept="1" />
+      <node id="3067994583100255852" at="23,83,24,0" concept="9" />
+      <node id="3067994583100255852" at="24,0,25,41" concept="6" />
+      <node id="3067994583100255852" at="27,41,28,271" concept="1" />
+      <node id="3067994583100255852" at="30,5,31,29" concept="7" />
+      <node id="3067994583100255852" at="18,0,21,0" concept="0" trace="GravityForce#(Ljava/lang/Number;)V" />
+      <node id="3067994583100255852" at="26,60,29,7" concept="4" />
+      <node id="3067994583100255852" at="25,41,30,5" concept="3" />
+      <node id="3067994583100255852" at="22,0,33,0" concept="5" trace="getForce#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/objects/PhysicalEntity;J)Lorg/ode4j/math/DVector3C;" />
+      <scope id="3067994583100255852" at="18,34,19,16" />
+      <scope id="3067994583100255852" at="27,41,28,271" />
+      <scope id="3067994583100255852" at="18,0,21,0">
+        <var name="G1" id="232455383964481205" />
+      </scope>
+      <scope id="3067994583100255852" at="26,60,29,7" />
+      <scope id="3067994583100255852" at="25,41,30,5">
+        <var name="otherEntity" id="3067994583100255852" />
+      </scope>
+      <scope id="3067994583100255852" at="23,83,31,29">
+        <var name="sum" id="3067994583100255852" />
+      </scope>
+      <scope id="3067994583100255852" at="22,0,33,0">
+        <var name="currentEntity" id="3067994583100255852" />
+        <var name="time" id="3067994583100255852" />
+        <var name="world" id="3067994583100255852" />
+      </scope>
+      <unit id="3067994583100255852" at="15,0,34,0" name="jetbrains.mps.samples.Physics.sample.GravityForce" />
+    </file>
+  </root>
+  <root nodeRef="r:54d5af61-dd10-4ea1-9829-808f29f3773e(jetbrains.mps.samples.Physics.sample)/8122475127067978204">
+    <file name="EarthSystemSystemScope.java">
+      <node id="8122475127067978223" at="18,0,19,0" concept="2" trace="Earth" />
+      <node id="1159415042430233529" at="19,0,20,0" concept="2" trace="Moon" />
+      <node id="8122475127067978204" at="21,88,22,30" concept="11" />
+      <node id="8122475127067978204" at="22,30,23,28" concept="8" />
+      <node id="8122475127067978223" at="23,28,24,56" concept="1" />
+      <node id="1159415042430233529" at="24,56,25,54" concept="1" />
+      <node id="8122475127067978204" at="25,54,26,0" concept="9" />
+      <node id="8122475127067978204" at="26,0,27,23" concept="8" />
+      <node id="8122475127067978223" at="27,23,28,28" concept="1" />
+      <node id="1159415042430233529" at="28,28,29,27" concept="1" />
+      <node id="8122475127067978223" at="34,46,35,19" concept="11" />
+      <node id="8122475127067978223" at="39,77,40,39" concept="8" />
+      <node id="8122475127067978223" at="40,39,41,48" concept="6" />
+      <node id="8122475127067978223" at="41,48,42,0" concept="9" />
+      <node id="8122475127067978223" at="42,0,43,40" concept="8" />
+      <node id="8122475127067978223" at="43,40,44,53" concept="1" />
+      <node id="8122475127067978223" at="44,53,45,195" concept="1" />
+      <node id="8122475127067978223" at="45,195,46,76" concept="1" />
+      <node id="8122475127067978223" at="46,76,47,59" concept="8" />
+      <node id="8122475127067978223" at="47,59,48,31" concept="1" />
+      <node id="8122475127067978223" at="48,31,49,0" concept="9" />
+      <node id="8122475127067978223" at="49,0,50,37" concept="8" />
+      <node id="8122475127067978223" at="50,37,51,117" concept="1" />
+      <node id="8122475127067978223" at="51,117,52,47" concept="1" />
+      <node id="8122475127067978223" at="52,47,53,0" concept="9" />
+      <node id="8122475127067978223" at="53,0,54,40" concept="8" />
+      <node id="8122475127067978223" at="54,40,55,25" concept="1" />
+      <node id="8122475127067978223" at="55,25,56,28" concept="1" />
+      <node id="1159415042430233529" at="61,45,62,19" concept="11" />
+      <node id="1159415042430233529" at="66,77,67,39" concept="8" />
+      <node id="1159415042430233529" at="67,39,68,47" concept="6" />
+      <node id="1159415042430233529" at="68,47,69,0" concept="9" />
+      <node id="1159415042430233529" at="69,0,70,39" concept="8" />
+      <node id="1159415042430233529" at="70,39,71,84" concept="1" />
+      <node id="1159415042430233529" at="71,84,72,263" concept="1" />
+      <node id="1159415042430233529" at="72,263,73,196" concept="1" />
+      <node id="1159415042430233529" at="73,196,74,58" concept="8" />
+      <node id="1159415042430233529" at="74,58,75,31" concept="1" />
+      <node id="1159415042430233529" at="75,31,76,0" concept="9" />
+      <node id="1159415042430233529" at="76,0,77,37" concept="8" />
+      <node id="1159415042430233529" at="77,37,78,121" concept="1" />
+      <node id="1159415042430233529" at="78,121,79,47" concept="1" />
+      <node id="1159415042430233529" at="79,47,80,0" concept="9" />
+      <node id="1159415042430233529" at="80,0,81,40" concept="8" />
+      <node id="1159415042430233529" at="81,40,82,25" concept="1" />
+      <node id="1159415042430233529" at="82,25,83,28" concept="1" />
+      <node id="8122475127067978223" at="34,0,37,0" concept="0" trace="Earth1PhysicalEntity#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <node id="1159415042430233529" at="61,0,64,0" concept="0" trace="Moon1PhysicalEntity#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <node id="8122475127067978204" at="21,0,31,0" concept="0" trace="EarthSystemSystemScope#(Ljetbrains/mps/samples/Physics/runtime/objects/World;Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;Ljetbrains/mps/samples/Physics/runtime/vectors/VectorLike;)V" />
+      <node id="8122475127067978223" at="38,0,58,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/sample/EarthSystemSystemScope;Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <node id="1159415042430233529" at="65,0,85,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/sample/EarthSystemSystemScope;Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <scope id="8122475127067978223" at="34,46,35,19" />
+      <scope id="1159415042430233529" at="61,45,62,19" />
+      <scope id="8122475127067978223" at="34,0,37,0">
+        <var name="world" id="8122475127067978223" />
+      </scope>
+      <scope id="1159415042430233529" at="61,0,64,0">
+        <var name="world" id="1159415042430233529" />
+      </scope>
+      <scope id="8122475127067978204" at="21,88,29,27" />
+      <scope id="8122475127067978204" at="21,0,31,0">
+        <var name="position" id="8122475127067978204" />
+        <var name="velocity" id="8122475127067978204" />
+        <var name="world" id="8122475127067978204" />
+      </scope>
+      <scope id="8122475127067978223" at="39,77,56,28">
+        <var name="currentEntity" id="8122475127067978223" />
+      </scope>
+      <scope id="1159415042430233529" at="66,77,83,28">
+        <var name="currentEntity" id="1159415042430233529" />
+      </scope>
+      <scope id="8122475127067978223" at="38,0,58,0">
+        <var name="scope" id="8122475127067978223" />
+        <var name="world" id="8122475127067978223" />
+      </scope>
+      <scope id="1159415042430233529" at="65,0,85,0">
+        <var name="scope" id="1159415042430233529" />
+        <var name="world" id="1159415042430233529" />
+      </scope>
+      <unit id="8122475127067978223" at="32,0,59,0" name="jetbrains.mps.samples.Physics.sample.EarthSystemSystemScope$Earth1PhysicalEntity" />
+      <unit id="1159415042430233529" at="59,0,86,0" name="jetbrains.mps.samples.Physics.sample.EarthSystemSystemScope$Moon1PhysicalEntity" />
+      <unit id="8122475127067978204" at="17,0,88,0" name="jetbrains.mps.samples.Physics.sample.EarthSystemSystemScope" />
+    </file>
+  </root>
+  <root nodeRef="r:54d5af61-dd10-4ea1-9829-808f29f3773e(jetbrains.mps.samples.Physics.sample)/8122475127067978266">
+    <file name="PlanetAbstractEntity.java">
+      <node id="8122475127067978266" at="13,44,14,17" concept="11" />
+      <node id="8122475127067978266" at="19,42,20,29" concept="1" />
+      <node id="8122475127067978266" at="20,29,21,0" concept="9" />
+      <node id="8122475127067978266" at="21,0,22,37" concept="8" />
+      <node id="8122475127067978266" at="22,37,23,46" concept="6" />
+      <node id="8122475127067978266" at="23,46,24,0" concept="9" />
+      <node id="8122475127067978266" at="24,0,25,59" concept="8" />
+      <node id="8122475127067978266" at="25,59,26,0" concept="9" />
+      <node id="8122475127067978266" at="26,0,27,14" concept="8" />
+      <node id="8122475127067978266" at="27,14,28,94" concept="1" />
+      <node id="8122475127067978266" at="13,0,16,0" concept="0" trace="PlanetAbstractEntity#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <node id="8122475127067978266" at="18,0,30,0" concept="5" trace="init#(nullLjetbrains/mps/samples/Physics/runtime/objects/World;)V" />
+      <scope id="8122475127067978266" at="13,44,14,17" />
+      <scope id="8122475127067978266" at="13,0,16,0">
+        <var name="world" id="8122475127067978266" />
+      </scope>
+      <scope id="8122475127067978266" at="19,42,28,94">
+        <var name="currentEntity" id="8122475127067978266" />
+      </scope>
+      <scope id="8122475127067978266" at="18,0,30,0">
+        <var name="scope" id="8122475127067978266" />
+        <var name="world" id="8122475127067978266" />
+      </scope>
+      <unit id="8122475127067978266" at="11,0,31,0" name="jetbrains.mps.samples.Physics.sample.PlanetAbstractEntity" />
+    </file>
+  </root>
+</debug-info>
+

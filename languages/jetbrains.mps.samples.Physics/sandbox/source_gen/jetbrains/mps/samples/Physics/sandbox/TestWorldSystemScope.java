@@ -53,7 +53,7 @@ public class TestWorldSystemScope extends SystemScope {
       // Set static properties of Something 
       this.setMass(((Number) new BigInteger("20")));
       this.getBody().setPosition(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), ((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN))).add(scope.TheOtherWorld).add(scope.getInitialPosition()).toDVector3C());
-
+      this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
       //  Forces and visual of the parent objects of Something 
       super.init(scope, world);
 
@@ -85,7 +85,7 @@ public class TestWorldSystemScope extends SystemScope {
       // Set static properties of Hey 
       this.setMass(((Number) new BigInteger("212")));
       this.getBody().setPosition(new InternalVector(((Number) new BigDecimal("27.46035823174609274397702460056475").setScale(32, RoundingMode.DOWN)), ((Number) new BigDecimal("-90.282140454466024179938468351046636").setScale(33, RoundingMode.DOWN)), ((Number) new BigDecimal("5.627543496627525070275583761154096").setScale(33, RoundingMode.DOWN))).add(scope.getInitialPosition()).toDVector3C());
-
+      this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
       //  Forces and visual of the parent objects of Hey 
       super.init(scope, world);
 
@@ -112,7 +112,7 @@ public class TestWorldSystemScope extends SystemScope {
       // Set static properties of Ho 
       this.setMass(((Number) new BigInteger("120")));
       this.getBody().setPosition(InternalVector.fromSpherical(((Number) new BigInteger("30")), ((Number) new BigInteger("6")), ((Number) new BigInteger("80"))).add(scope.getInitialPosition()).toDVector3C());
-
+      this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
       //  Forces and visual of the parent objects of Ho 
       super.init(scope, world);
 

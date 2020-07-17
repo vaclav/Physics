@@ -24,6 +24,8 @@
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" />
     <import index="ku0a" ref="r:1881124b-7ac4-4b0f-a7dd-12953ac3263b(org.iets3.core.expr.typetags.units.si.units)" />
+    <import index="dntf" ref="r:5d67260e-ef2e-4f51-9a4f-b005e241d989(org.iets3.core.expr.typetags.units.behavior)" />
+    <import index="b0gq" ref="r:1eb914ff-b91c-4cbc-93c6-3ecde7821894(org.iets3.core.expr.typetags.units.structure)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
   <registry>
@@ -2041,6 +2043,13 @@
         </node>
       </node>
       <node concept="10P_77" id="7psy0D5mSb$" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="61ntNzzkPVE">
+    <property role="3GE5qa" value="physical.vector.absolute" />
+    <ref role="13h7C2" to="9tcj:5xbVod7kJEb" resolve="CartesianCoordinates" />
+    <node concept="13hLZK" id="61ntNzzkPVF" role="13h7CW">
+      <node concept="3clFbS" id="61ntNzzkPVG" role="2VODD2" />
     </node>
   </node>
 </model>

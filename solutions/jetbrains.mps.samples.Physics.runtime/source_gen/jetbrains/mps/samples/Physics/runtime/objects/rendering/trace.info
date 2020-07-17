@@ -143,7 +143,7 @@
         <var name="green" id="794591792991350593" />
         <var name="red" id="794591792991350605" />
       </scope>
-      <unit id="794591792991348632" at="6,0,17,0" name="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color" />
+      <unit id="794591792991348632" at="6,0,18,0" name="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color" />
     </file>
   </root>
 </debug-info>

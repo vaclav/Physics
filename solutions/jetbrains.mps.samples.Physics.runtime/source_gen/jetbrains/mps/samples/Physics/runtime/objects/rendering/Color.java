@@ -13,4 +13,5 @@ public class Color {
     this.green = green;
     this.red = red;
   }
+
 }

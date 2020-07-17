@@ -185,6 +185,9 @@ public class QueriesGenerated extends QueryProviderBase {
     return (SLinkOperations.getTarget(_context.getNode(), LINKS.velocity$DoVv) != null);
   }
   public static boolean ifMacro_Condition_11_3(final IfMacroContext _context) {
+    return (SLinkOperations.getTarget(_context.getNode(), LINKS.velocity$DoVv) == null);
+  }
+  public static boolean ifMacro_Condition_11_4(final IfMacroContext _context) {
     return (SLinkOperations.getTarget(_context.getNode(), LINKS.visual$OiQu) != null);
   }
   public static boolean ifMacro_Condition_12_0(final IfMacroContext _context) {
@@ -885,6 +888,7 @@ public class QueriesGenerated extends QueryProviderBase {
     imcMethods.put("794591792987996137", new IfMC(i++));
     imcMethods.put("794591792979526129", new IfMC(i++));
     imcMethods.put("794591792979526228", new IfMC(i++));
+    imcMethods.put("1159415042431301803", new IfMC(i++));
     imcMethods.put("794591792979526285", new IfMC(i++));
     imcMethods.put("1139474844808951316", new IfMC(i++));
     imcMethods.put("1139474844808691457", new IfMC(i++));
@@ -917,8 +921,10 @@ public class QueriesGenerated extends QueryProviderBase {
         case 4:
           return QueriesGenerated.ifMacro_Condition_11_3(ctx);
         case 5:
-          return QueriesGenerated.ifMacro_Condition_12_0(ctx);
+          return QueriesGenerated.ifMacro_Condition_11_4(ctx);
         case 6:
+          return QueriesGenerated.ifMacro_Condition_12_0(ctx);
+        case 7:
           return QueriesGenerated.ifMacro_Condition_12_1(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for if macro %s (key: #%d)", ctx.getTemplateReference(), methodKey));
