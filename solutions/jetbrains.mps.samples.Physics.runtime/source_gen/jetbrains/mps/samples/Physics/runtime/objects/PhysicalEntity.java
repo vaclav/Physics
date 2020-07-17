@@ -14,6 +14,7 @@ import org.ode4j.math.DVector3C;
 import java.util.List;
 import jetbrains.mps.samples.Physics.runtime.vectors.BigDecimalHelper;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder;
 
 public class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike {
   private DBody body;
@@ -93,6 +94,6 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     return InternalVector.fromDVector3C(getBody().getLinearVel());
   }
 
-  public void init(T scope, World world) {
+  public void init(T scope, World world, FixtureBuilder fixtureProperties) {
   }
 }

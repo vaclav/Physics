@@ -14,6 +14,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.forces.Force" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.Fixture" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.BigDecimalHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />

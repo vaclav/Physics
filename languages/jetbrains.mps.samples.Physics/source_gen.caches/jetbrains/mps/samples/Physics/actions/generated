@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="cwq8j7w30nev1p8k0ljxhsp8724w2rm">
-  <files names="ActionAspectDescriptorImpl.java:CoordinatesFactories.java:ForceFactories.java" />
+<product version="3" modelHash="9vjslob3bfdzqft4x4m2bdh576k0fh6">
+  <files names="ActionAspectDescriptorImpl.java:CoordinatesFactories.java:ForceFactories.java:MiscellaneousFactories.java" />
 </product>
 

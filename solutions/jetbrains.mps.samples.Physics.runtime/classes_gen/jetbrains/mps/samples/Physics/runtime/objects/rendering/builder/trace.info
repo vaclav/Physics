@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <root nodeRef="r:b74ebe0a-2212-4cfd-84dd-acf24f78f1e9(jetbrains.mps.samples.Physics.runtime.objects.rendering.builder)/1159415042435850374">
+    <file name="FixtureBuilder.java">
+      <node id="1159415042435850458" at="12,0,13,0" concept="2" trace="properties" />
+      <node id="1159415042435856555" at="14,44,15,32" concept="1" />
+      <node id="1159415042435918372" at="18,30,19,37" concept="5" />
+      <node id="1159415042435896153" at="23,49,24,105" concept="5" />
+      <node id="1159415042435971504" at="25,12,26,82" concept="5" />
+      <node id="1159415042435969387" at="25,10,27,5" concept="0" />
+      <node id="1159415042435856367" at="14,0,17,0" concept="4" trace="set#(Ljetbrains/mps/samples/Physics/runtime/objects/rendering/builder/Prop;Ljava/lang/Object;)V" />
+      <node id="1159415042435914235" at="18,0,21,0" concept="4" trace="get#(Ljetbrains/mps/samples/Physics/runtime/objects/rendering/builder/Prop;)null" />
+      <node id="1159415042435865993" at="22,37,27,5" concept="3" />
+      <node id="1159415042435865572" at="22,0,29,0" concept="4" trace="build#(Ljetbrains/mps/samples/Physics/runtime/objects/World;)Ljetbrains/mps/samples/Physics/runtime/objects/rendering/Fixture;" />
+      <scope id="1159415042435856370" at="14,44,15,32" />
+      <scope id="1159415042435914238" at="18,30,19,37" />
+      <scope id="1159415042435865995" at="23,49,24,105" />
+      <scope id="1159415042435969388" at="25,12,26,82" />
+      <scope id="1159415042435856367" at="14,0,17,0">
+        <var name="name" id="1159415042435856409" />
+        <var name="value" id="1159415042435856442" />
+      </scope>
+      <scope id="1159415042435914235" at="18,0,21,0">
+        <var name="key" id="1159415042435927326" />
+      </scope>
+      <scope id="1159415042435865575" at="22,37,27,5" />
+      <scope id="1159415042435865572" at="22,0,29,0">
+        <var name="world" id="1159415042435905810" />
+      </scope>
+      <unit id="1159415042435850374" at="11,0,30,0" name="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder" />
+    </file>
+  </root>
+  <root nodeRef="r:b74ebe0a-2212-4cfd-84dd-acf24f78f1e9(jetbrains.mps.samples.Physics.runtime.objects.rendering.builder)/1159415042435851075">
+    <file name="Prop.java">
+      <unit id="1159415042435851075" at="6,0,14,0" name="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop" />
+    </file>
+  </root>
+</debug-info>
+

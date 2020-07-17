@@ -16,6 +16,7 @@
     <import index="eaav" ref="r:b3b78d7c-b258-46c7-b846-e8d10925f2cd(jetbrains.mps.samples.Physics.runtime.vectors)" />
     <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
     <import index="bz7x" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.ode.internal(jetbrains.mps.samples.Physics.runtime/)" />
+    <import index="ok4s" ref="r:b74ebe0a-2212-4cfd-84dd-acf24f78f1e9(jetbrains.mps.samples.Physics.runtime.objects.rendering.builder)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -1136,14 +1137,20 @@
       <node concept="3cqZAl" id="Zge_mbkPls" role="3clF45" />
       <node concept="37vLTG" id="Zge_mbkRkQ" role="3clF46">
         <property role="TrG5h" value="scope" />
-        <node concept="16syzq" id="G6Xgqq5gst" role="1tU5fm">
+        <node concept="16syzq" id="10n4tqnDi42" role="1tU5fm">
           <ref role="16sUi3" node="G6Xgqq59Kg" resolve="T" />
         </node>
       </node>
       <node concept="37vLTG" id="Zge_mbkTdo" role="3clF46">
         <property role="TrG5h" value="world" />
-        <node concept="3uibUv" id="Zge_mbkUEt" role="1tU5fm">
+        <node concept="3uibUv" id="10n4tqnDi43" role="1tU5fm">
           <ref role="3uigEE" node="4D75T4FueWD" resolve="World" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="10n4tqnDi44" role="3clF46">
+        <property role="TrG5h" value="fixtureProperties" />
+        <node concept="3uibUv" id="10n4tqnDi45" role="1tU5fm">
+          <ref role="3uigEE" to="ok4s:10n4tqnCy26" resolve="FixtureBuilder" />
         </node>
       </node>
     </node>

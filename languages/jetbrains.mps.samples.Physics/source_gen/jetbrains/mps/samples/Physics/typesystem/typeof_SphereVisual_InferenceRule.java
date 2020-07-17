@@ -28,7 +28,7 @@ public class typeof_SphereVisual_InferenceRule extends AbstractInferenceRule_Run
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.SphereVisual$uQ;
+    return CONCEPTS.SphereShape$uQ;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -46,7 +46,7 @@ public class typeof_SphereVisual_InferenceRule extends AbstractInferenceRule_Run
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept SphereVisual$uQ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e57L, "jetbrains.mps.samples.Physics.structure.SphereVisual");
+    /*package*/ static final SConcept SphereShape$uQ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e57L, "jetbrains.mps.samples.Physics.structure.SphereShape");
     /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
   }
 }

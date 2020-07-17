@@ -42,7 +42,7 @@ public class typeof_BoxVisual_InferenceRule extends AbstractInferenceRule_Runtim
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.BoxVisual$vl;
+    return CONCEPTS.BoxShape$vl;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -70,7 +70,7 @@ public class typeof_BoxVisual_InferenceRule extends AbstractInferenceRule_Runtim
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept BoxVisual$vl = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e58L, "jetbrains.mps.samples.Physics.structure.BoxVisual");
+    /*package*/ static final SConcept BoxShape$vl = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e58L, "jetbrains.mps.samples.Physics.structure.BoxShape");
     /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
   }
 }

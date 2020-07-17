@@ -19,7 +19,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AbstractObjectTarget;
   private ConceptPresentation props_AbstractVectorTarget;
   private ConceptPresentation props_AbstractWorldTarget;
-  private ConceptPresentation props_BoxVisual;
+  private ConceptPresentation props_BoxDepthStyle;
+  private ConceptPresentation props_BoxHeightStyle;
+  private ConceptPresentation props_BoxShape;
+  private ConceptPresentation props_BoxWidthStyle;
   private ConceptPresentation props_CartesianCoordinates;
   private ConceptPresentation props_ColorDefinition;
   private ConceptPresentation props_Coordinates;
@@ -38,6 +41,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ITargetObject;
   private ConceptPresentation props_InteractedObjectExpression;
   private ConceptPresentation props_InteractionForce;
+  private ConceptPresentation props_NumericStyle;
   private ConceptPresentation props_ObjectDefinition;
   private ConceptPresentation props_ObjectDistanceWithTarget;
   private ConceptPresentation props_ObjectMassTarget;
@@ -48,13 +52,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PictureTexture;
   private ConceptPresentation props_PositionCoordinates;
   private ConceptPresentation props_RelativeCoordinates;
+  private ConceptPresentation props_Shape;
+  private ConceptPresentation props_ShapeStyle;
   private ConceptPresentation props_Simulation;
-  private ConceptPresentation props_SphereVisual;
+  private ConceptPresentation props_SphereRadiusStyle;
+  private ConceptPresentation props_SphereShape;
   private ConceptPresentation props_SphericalCoordinates;
   private ConceptPresentation props_StatefulForce;
   private ConceptPresentation props_StaticForce;
+  private ConceptPresentation props_Style;
   private ConceptPresentation props_TargetableExpression;
   private ConceptPresentation props_Texture;
+  private ConceptPresentation props_TextureStyle;
   private ConceptPresentation props_TimeExpression;
   private ConceptPresentation props_UnitProviderChunk;
   private ConceptPresentation props_VectorComponentTarget;
@@ -62,7 +71,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_VectorResizeTarget;
   private ConceptPresentation props_VectorType_old;
   private ConceptPresentation props_VelocityCoordinates;
-  private ConceptPresentation props_Visual;
   private ConceptPresentation props_WorldDefinition;
   private ConceptPresentation props_WorldInclusion;
   private ConceptPresentation props_WorldMassCenterTarget;
@@ -140,13 +148,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AbstractWorldTarget = cpb.create();
         }
         return props_AbstractWorldTarget;
-      case LanguageConceptSwitch.BoxVisual:
-        if (props_BoxVisual == null) {
+      case LanguageConceptSwitch.BoxDepthStyle:
+        if (props_BoxDepthStyle == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("box-size-z");
+          props_BoxDepthStyle = cpb.create();
+        }
+        return props_BoxDepthStyle;
+      case LanguageConceptSwitch.BoxHeightStyle:
+        if (props_BoxHeightStyle == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("box-size-y");
+          props_BoxHeightStyle = cpb.create();
+        }
+        return props_BoxHeightStyle;
+      case LanguageConceptSwitch.BoxShape:
+        if (props_BoxShape == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.rawPresentation("box");
-          props_BoxVisual = cpb.create();
+          props_BoxShape = cpb.create();
         }
-        return props_BoxVisual;
+        return props_BoxShape;
+      case LanguageConceptSwitch.BoxWidthStyle:
+        if (props_BoxWidthStyle == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("box-size-x");
+          props_BoxWidthStyle = cpb.create();
+        }
+        return props_BoxWidthStyle;
       case LanguageConceptSwitch.CartesianCoordinates:
         if (props_CartesianCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -274,6 +303,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InteractionForce = cpb.create();
         }
         return props_InteractionForce;
+      case LanguageConceptSwitch.NumericStyle:
+        if (props_NumericStyle == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("style with a numeric value");
+          props_NumericStyle = cpb.create();
+        }
+        return props_NumericStyle;
       case LanguageConceptSwitch.ObjectDefinition:
         if (props_ObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -348,6 +384,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RelativeCoordinates = cpb.create();
         }
         return props_RelativeCoordinates;
+      case LanguageConceptSwitch.Shape:
+        if (props_Shape == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("visual aspect of an object");
+          props_Shape = cpb.create();
+        }
+        return props_Shape;
+      case LanguageConceptSwitch.ShapeStyle:
+        if (props_ShapeStyle == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("shape");
+          props_ShapeStyle = cpb.create();
+        }
+        return props_ShapeStyle;
       case LanguageConceptSwitch.Simulation:
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -355,13 +405,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Simulation = cpb.create();
         }
         return props_Simulation;
-      case LanguageConceptSwitch.SphereVisual:
-        if (props_SphereVisual == null) {
+      case LanguageConceptSwitch.SphereRadiusStyle:
+        if (props_SphereRadiusStyle == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("sphere-radius");
+          props_SphereRadiusStyle = cpb.create();
+        }
+        return props_SphereRadiusStyle;
+      case LanguageConceptSwitch.SphereShape:
+        if (props_SphereShape == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.rawPresentation("sphere");
-          props_SphereVisual = cpb.create();
+          props_SphereShape = cpb.create();
         }
-        return props_SphereVisual;
+        return props_SphereShape;
       case LanguageConceptSwitch.SphericalCoordinates:
         if (props_SphericalCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -385,6 +442,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StaticForce = cpb.create();
         }
         return props_StaticForce;
+      case LanguageConceptSwitch.Style:
+        if (props_Style == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("style associated with an object");
+          props_Style = cpb.create();
+        }
+        return props_Style;
       case LanguageConceptSwitch.TargetableExpression:
         if (props_TargetableExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -398,6 +462,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Texture = cpb.create();
         }
         return props_Texture;
+      case LanguageConceptSwitch.TextureStyle:
+        if (props_TextureStyle == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("texture");
+          props_TextureStyle = cpb.create();
+        }
+        return props_TextureStyle;
       case LanguageConceptSwitch.TimeExpression:
         if (props_TimeExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -448,13 +519,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VelocityCoordinates = cpb.create();
         }
         return props_VelocityCoordinates;
-      case LanguageConceptSwitch.Visual:
-        if (props_Visual == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("visual aspect of an object");
-          props_Visual = cpb.create();
-        }
-        return props_Visual;
       case LanguageConceptSwitch.WorldDefinition:
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

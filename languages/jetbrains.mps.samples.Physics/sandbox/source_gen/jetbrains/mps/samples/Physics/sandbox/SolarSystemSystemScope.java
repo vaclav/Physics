@@ -6,14 +6,12 @@ import jetbrains.mps.samples.Physics.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture;
-import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
 import java.util.Arrays;
-import jetbrains.mps.samples.Physics.runtime.objects.rendering.BoxFixture;
 
 public class SolarSystemSystemScope extends SystemScope {
   public final PhysicalEntity Sun;
@@ -34,12 +32,12 @@ public class SolarSystemSystemScope extends SystemScope {
     Mars = withEntity(new Mars1PhysicalEntity(world));
 
     // Initialize them 
-    Sun.init(this, world);
-    Mercury.init(this, world);
-    Venus.init(this, world);
-    Earth.init(this, world);
-    Moon.init(this, world);
-    Mars.init(this, world);
+    Sun.init(this, world, new FixtureBuilder());
+    Mercury.init(this, world, new FixtureBuilder());
+    Venus.init(this, world, new FixtureBuilder());
+    Earth.init(this, world, new FixtureBuilder());
+    Moon.init(this, world, new FixtureBuilder());
+    Mars.init(this, world, new FixtureBuilder());
   }
 
   public static class Sun1PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
@@ -49,7 +47,7 @@ public class SolarSystemSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final SolarSystemSystemScope scope, final World world) {
+    public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Sun1PhysicalEntity currentEntity = this;
 
@@ -57,11 +55,12 @@ public class SolarSystemSystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("500")));
       this.getBody().setPosition(new InternalVector(((Number) new BigDecimal("0.001").setScale(3, RoundingMode.DOWN)), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
-      //  Forces and visual of the parent objects of Sun 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
-      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("200")).doubleValue(), new Color(255, 0, 165)));
+      //  Forces and visual of the parent objects of Sun 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 
@@ -76,7 +75,7 @@ public class SolarSystemSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final SolarSystemSystemScope scope, final World world) {
+    public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Mercury1PhysicalEntity currentEntity = this;
 
@@ -84,10 +83,12 @@ public class SolarSystemSystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("10")));
       this.getBody().setPosition(new InternalVector(((Number) new BigDecimal("500.001").setScale(3, RoundingMode.DOWN)), ((Number) new BigInteger("6")), ((Number) new BigInteger("7"))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
-      //  Forces and visual of the parent objects of Mercury 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
+      //  Forces and visual of the parent objects of Mercury 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 
@@ -102,7 +103,7 @@ public class SolarSystemSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final SolarSystemSystemScope scope, final World world) {
+    public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Venus1PhysicalEntity currentEntity = this;
 
@@ -110,10 +111,12 @@ public class SolarSystemSystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("200")));
       this.getBody().setPosition(new InternalVector(((Number) new BigDecimal("-270.05828892065526").setScale(14, RoundingMode.DOWN)), ((Number) new BigDecimal("38.496018060737015").setScale(15, RoundingMode.DOWN)), ((Number) new BigDecimal("-124.84405096414272").setScale(14, RoundingMode.DOWN))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(new InternalVector(((Number) new BigInteger("3")), ((Number) new BigInteger("3")), ((Number) new BigInteger("3"))).add(scope.getInitialVelocity()).toDVector3C());
-      //  Forces and visual of the parent objects of Venus 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
+      //  Forces and visual of the parent objects of Venus 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 
@@ -128,7 +131,7 @@ public class SolarSystemSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final SolarSystemSystemScope scope, final World world) {
+    public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Earth1PhysicalEntity currentEntity = this;
 
@@ -136,10 +139,12 @@ public class SolarSystemSystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("300")));
       this.getBody().setPosition(new InternalVector(((Number) new BigDecimal("0.00099999999975507064017052935").setScale(29, RoundingMode.DOWN)), ((Number) new BigDecimal("2.9995195653237156E-29").setScale(20, RoundingMode.DOWN)), ((Number) new BigDecimal("-400.0").setScale(1, RoundingMode.DOWN))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(new InternalVector(((Number) new BigInteger("5")), ((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).add(scope.getInitialVelocity()).toDVector3C());
-      //  Forces and visual of the parent objects of Earth 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
+      //  Forces and visual of the parent objects of Earth 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 
@@ -154,7 +159,7 @@ public class SolarSystemSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final SolarSystemSystemScope scope, final World world) {
+    public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Moon1PhysicalEntity currentEntity = this;
 
@@ -162,11 +167,12 @@ public class SolarSystemSystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("50")));
       this.getBody().setPosition(new InternalVector(((Number) new BigDecimal("-54.40111108893722492935982947065").setScale(29, RoundingMode.DOWN)), ((Number) new BigDecimal("183.9071529076452400000000000000300").setScale(31, RoundingMode.DOWN)), ((Number) new BigDecimal("-343.26756290735475").setScale(14, RoundingMode.DOWN))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
-      //  Forces and visual of the parent objects of Moon 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
-      this.setFixture(new BoxFixture(world, ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), ((Number) new BigInteger("4")).doubleValue(), new Color(25, 150, 25)));
+      //  Forces and visual of the parent objects of Moon 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 
@@ -181,7 +187,7 @@ public class SolarSystemSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final SolarSystemSystemScope scope, final World world) {
+    public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Mars1PhysicalEntity currentEntity = this;
 
@@ -189,10 +195,12 @@ public class SolarSystemSystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("30")));
       this.getBody().setPosition(new InternalVector(((Number) new BigDecimal("-58.70883489445973").setScale(14, RoundingMode.DOWN)), ((Number) new BigDecimal("-95.09511422778161").setScale(14, RoundingMode.DOWN)), ((Number) new BigDecimal("-165.86196657263002").setScale(14, RoundingMode.DOWN))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
-      //  Forces and visual of the parent objects of Mars 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
+      //  Forces and visual of the parent objects of Mars 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 

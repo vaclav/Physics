@@ -8,16 +8,14 @@ import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import java.math.BigInteger;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import jetbrains.mps.samples.Physics.runtime.objects.rendering.BoxFixture;
-import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.StaticForce;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
-import jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture;
 
 public class TestWorldSystemScope extends SystemScope {
   public final SystemScope TheOtherWorld;
@@ -34,9 +32,9 @@ public class TestWorldSystemScope extends SystemScope {
     TheOtherWorld = withEntity(new World2SystemScope(world, position.add(new InternalVector(((Number) new BigInteger("1")), ((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
-    Something2.init(this, world);
-    Hey.init(this, world);
-    Ho.init(this, world);
+    Something2.init(this, world, new FixtureBuilder());
+    Hey.init(this, world, new FixtureBuilder());
+    Ho.init(this, world, new FixtureBuilder());
   }
 
   public static class Something3PhysicalEntity extends ObjectSupertypeAbstractEntity<TestWorldSystemScope> {
@@ -46,7 +44,7 @@ public class TestWorldSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final TestWorldSystemScope scope, final World world) {
+    public void init(final TestWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Something3PhysicalEntity currentEntity = this;
 
@@ -54,11 +52,12 @@ public class TestWorldSystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("20")));
       this.getBody().setPosition(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), ((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN))).add(scope.TheOtherWorld).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
-      //  Forces and visual of the parent objects of Something 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
-      this.setFixture(new BoxFixture(world, ((Number) new BigInteger("2")).doubleValue(), ((Number) new BigInteger("2")).doubleValue(), ((Number) new BigInteger("2")).doubleValue(), new Color(255, 255, 255)));
+      //  Forces and visual of the parent objects of Something 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList(new StaticForce(new InternalVector(((Number) new BigInteger("2")), ((Number) new BigInteger("2")), ((Number) new BigInteger("2"))).toDVector3C()), new Force() {
         @Override
         public DVector3C getForce(World world, PhysicalEntity targetEntity, long time) {
@@ -71,14 +70,14 @@ public class TestWorldSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Hey1PhysicalEntity extends PhysicalEntity<TestWorldSystemScope> {
+  public static class Hey1PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
 
     public Hey1PhysicalEntity(World world) {
       super(world);
     }
 
     @Override
-    public void init(final TestWorldSystemScope scope, final World world) {
+    public void init(final TestWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Hey1PhysicalEntity currentEntity = this;
 
@@ -86,11 +85,12 @@ public class TestWorldSystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("212")));
       this.getBody().setPosition(new InternalVector(((Number) new BigDecimal("27.46035823174609274397702460056475").setScale(32, RoundingMode.DOWN)), ((Number) new BigDecimal("-90.282140454466024179938468351046636").setScale(33, RoundingMode.DOWN)), ((Number) new BigDecimal("5.627543496627525070275583761154096").setScale(33, RoundingMode.DOWN))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
-      //  Forces and visual of the parent objects of Hey 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
-      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("50")).doubleValue(), new Color(255, 255, 255)));
+      //  Forces and visual of the parent objects of Hey 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 
@@ -98,14 +98,14 @@ public class TestWorldSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Ho1PhysicalEntity extends PhysicalEntity<TestWorldSystemScope> {
+  public static class Ho1PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
 
     public Ho1PhysicalEntity(World world) {
       super(world);
     }
 
     @Override
-    public void init(final TestWorldSystemScope scope, final World world) {
+    public void init(final TestWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Ho1PhysicalEntity currentEntity = this;
 
@@ -113,11 +113,12 @@ public class TestWorldSystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("120")));
       this.getBody().setPosition(InternalVector.fromSpherical(((Number) new BigInteger("30")), ((Number) new BigInteger("6")), ((Number) new BigInteger("80"))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
-      //  Forces and visual of the parent objects of Ho 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
-      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("300")).doubleValue(), new Color(255, 255, 255)));
+      //  Forces and visual of the parent objects of Ho 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
       // Bind fixture and mass together 

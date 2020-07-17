@@ -4,7 +4,6 @@ package jetbrains.mps.samples.Physics.typesystem;
 
 import jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime;
-import jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.OverloadedOperationsTypesProvider;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.model.SNode;
@@ -66,6 +65,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_NumericStyle_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_ObjectDefinition_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
@@ -120,10 +123,6 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     {
       InferenceRule_Runtime inferenceRule = new typeof_WorldMassCenterTarget_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
-    }
-    {
-      NonTypesystemRule_Runtime nonTypesystemRule = new check_ObjectDefinitionVisual_NonTypesystemRule();
-      this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_d(CONCEPTS.MulExpression$_u));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.MinusExpression$pp));

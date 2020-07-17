@@ -6,11 +6,10 @@ import jetbrains.mps.samples.Physics.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
-import jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture;
-import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
@@ -28,18 +27,18 @@ public class World2SystemScope extends SystemScope {
     Ha = withEntity(new Ha1PhysicalEntity(world));
 
     // Initialize them 
-    Ho2.init(this, world);
-    Ha.init(this, world);
+    Ho2.init(this, world, new FixtureBuilder());
+    Ha.init(this, world, new FixtureBuilder());
   }
 
-  public static class Ho3PhysicalEntity extends PhysicalEntity<World2SystemScope> {
+  public static class Ho3PhysicalEntity extends BaseObjectAbstractEntity<World2SystemScope> {
 
     public Ho3PhysicalEntity(World world) {
       super(world);
     }
 
     @Override
-    public void init(final World2SystemScope scope, final World world) {
+    public void init(final World2SystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Ho3PhysicalEntity currentEntity = this;
 
@@ -47,11 +46,12 @@ public class World2SystemScope extends SystemScope {
       this.setMass(AH.add(((Number) new BigInteger("456")), ((Number) new BigInteger("45"))));
       this.getBody().setPosition(new InternalVector(((Number) new BigInteger("4")), ((Number) new BigInteger("4")), ((Number) new BigInteger("4"))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
-      //  Forces and visual of the parent objects of Ho 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
-      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("200")).doubleValue(), new Color(255, 255, 255)));
+      //  Forces and visual of the parent objects of Ho 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList(new Force() {
         @Override
         public DVector3C getForce(World world, PhysicalEntity targetEntity, long time) {
@@ -64,14 +64,14 @@ public class World2SystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Ha1PhysicalEntity extends PhysicalEntity<World2SystemScope> {
+  public static class Ha1PhysicalEntity extends BaseObjectAbstractEntity<World2SystemScope> {
 
     public Ha1PhysicalEntity(World world) {
       super(world);
     }
 
     @Override
-    public void init(final World2SystemScope scope, final World world) {
+    public void init(final World2SystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
       Ha1PhysicalEntity currentEntity = this;
 
@@ -79,11 +79,12 @@ public class World2SystemScope extends SystemScope {
       this.setMass(((Number) new BigInteger("100")));
       this.getBody().setPosition(new InternalVector(((Number) new BigInteger("100")), ((Number) new BigInteger("100")), ((Number) new BigInteger("100"))).add(scope.getInitialPosition()).toDVector3C());
       this.getBody().setLinearVel(scope.getInitialVelocity().toDVector3C());
-      //  Forces and visual of the parent objects of Ha 
-      super.init(scope, world);
 
-      //  Visual (if any) and forces 
-      this.setFixture(new SphereFixture(world, ((Number) new BigInteger("100")).doubleValue(), new Color(255, 255, 255)));
+      //  Forces and visual of the parent objects of Ha 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList(new Force() {
         @Override
         public DVector3C getForce(World world, PhysicalEntity targetEntity, long time) {

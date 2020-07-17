@@ -40,10 +40,6 @@ public class UndefinedPropertiesTest_Test extends BaseTransformationTest {
   public void test_NodeAbstractConceptInstanceCheck911298080279481354() throws Throwable {
     new TestBody(this).test_NodeAbstractConceptInstanceCheck911298080279481354();
   }
-  @Test
-  public void test_NodeObjectsShouldDefineVisualCheck911298080281459624() throws Throwable {
-    new TestBody(this).test_NodeObjectsShouldDefineVisualCheck911298080281459624();
-  }
 
   /*package*/ static class TestBody extends BaseTestBody {
 
@@ -66,11 +62,6 @@ public class UndefinedPropertiesTest_Test extends BaseTransformationTest {
       SNode nodeToCheck = getRealNodeById("911298080279481131");
       SNode operation = getRealNodeById("911298080279481354");
       new CheckExpectedMessageRunnable.CheckExpectedRuleMessageRunnable(nodeToCheck, MessageStatus.ERROR, new SNodePointer("r:cec599e3-51d2-48a7-af31-989e3cbd593c(jetbrains.mps.lang.core.typesystem)", "7283836008113027554"), "", myProject.getRepository(), ((ProjectBase) myProject).getPlatform()).run();
-    }
-    public void test_NodeObjectsShouldDefineVisualCheck911298080281459624() throws Exception {
-      SNode nodeToCheck = getRealNodeById("911298080278361691");
-      SNode operation = getRealNodeById("911298080281459624");
-      new CheckExpectedMessageRunnable.CheckExpectedRuleMessageRunnable(nodeToCheck, MessageStatus.ERROR, new SNodePointer("r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "911298080279488152"), "", myProject.getRepository(), ((ProjectBase) myProject).getPlatform()).run();
     }
 
   }

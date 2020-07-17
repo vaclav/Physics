@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.sample.BaseObjectAbstractEntity">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sample.EarthSystemSystemScope">
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
@@ -10,11 +20,21 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sample.PlanetAbstractEntity" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.objects.SystemScope" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.sample.ExampleSimulation">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.Renderer" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sample.SolarSystemSystemScope" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sample.GravityForce">
     <classNode dependClassName="java.lang.Math" />
@@ -37,17 +57,10 @@
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.SystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sample.GravityForce" />
-    <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity" />
-  </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.sample.Sample">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.Renderer" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.sample.SolarSystemSystemScope" />
-    <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.Simulation" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.sample.BaseObjectAbstractEntity" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sample.SolarSystemSystemScope">
     <classNode dependClassName="java.lang.Number" />
@@ -59,9 +72,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.VectorLike" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sample.BaseObjectAbstractEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sample.EarthSystemSystemScope" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.objects.SystemScope" />
   </dependency>

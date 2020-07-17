@@ -10,7 +10,33 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <root>
     <file name="ActionAspectDescriptorImpl.java">
-      <unit at="12,0,36,0" name="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
+      <unit at="12,0,38,0" name="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
+    </file>
+  </root>
+  <root nodeRef="r:440f32ad-f2cc-41e6-bc89-c1c2af2bc770(jetbrains.mps.samples.Physics.actions)/1159415042434515255">
+    <file name="MiscellaneousFactories.java">
+      <node id="1159415042434515498" at="17,7,18,41" concept="4" />
+      <node id="1159415042434515606" at="19,78,20,143" concept="1" />
+      <node id="1159415042434515255" at="27,0,28,0" concept="7" trace="NumericStyle$W9" />
+      <node id="1159415042434515255" at="31,0,32,0" concept="7" trace="value$aRGu" />
+      <node id="1159415042434515498" at="18,41,21,9" concept="2" />
+      <node id="1159415042434515498" at="16,91,22,7" concept="0" />
+      <node id="1159415042434515310" at="16,0,24,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="1159415042434515500" at="19,78,20,143" />
+      <scope id="1159415042434515498" at="17,7,21,9">
+        <var name="numeric" id="1159415042434515498" />
+      </scope>
+      <scope id="1159415042434515310" at="16,91,22,7" />
+      <scope id="1159415042434515310" at="16,0,24,0">
+        <var name="enclosingNode" id="1159415042434515310" />
+        <var name="model" id="1159415042434515310" />
+        <var name="newNode" id="1159415042434515310" />
+        <var name="sampleNode" id="1159415042434515310" />
+      </scope>
+      <unit id="1159415042434515255" at="26,0,29,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$CONCEPTS" />
+      <unit id="1159415042434515255" at="30,0,33,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$LINKS" />
+      <unit id="1159415042434515310" at="15,0,25,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$NodeFactory_1159415042434515310" />
+      <unit id="1159415042434515255" at="14,0,34,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories" />
     </file>
   </root>
   <root nodeRef="r:440f32ad-f2cc-41e6-bc89-c1c2af2bc770(jetbrains.mps.samples.Physics.actions)/4809107873070310008">

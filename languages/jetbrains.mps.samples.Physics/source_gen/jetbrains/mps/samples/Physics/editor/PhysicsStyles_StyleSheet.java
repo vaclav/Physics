@@ -41,6 +41,16 @@ public class PhysicsStyles_StyleSheet {
    * @deprecated Since MPS 3.5 use generated StyleClass
    */
   @Deprecated
+  public static void apply_StyleName(Style style, EditorCell editorCell) {
+    SNode node = (editorCell == null ? null : editorCell.getSNode());
+    EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
+    new StyleNameStyleClass(editorContext, node).apply(style, editorCell);
+  }
+  /**
+   * 
+   * @deprecated Since MPS 3.5 use generated StyleClass
+   */
+  @Deprecated
   public static void apply_AttributeLabel(Style style, EditorCell editorCell) {
     SNode node = (editorCell == null ? null : editorCell.getSNode());
     EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
@@ -121,6 +131,18 @@ public class PhysicsStyles_StyleSheet {
     }
 
   }
+  public static class StyleNameStyleClass extends AbstractStyleClass {
+    public StyleNameStyleClass(EditorContext editorContext, SNode node) {
+      super(editorContext, node);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+      style.set(StyleAttributes.EDITABLE, true);
+    }
+
+  }
   public static class AttributeLabelStyleClass extends AbstractStyleClass {
     public AttributeLabelStyleClass(EditorContext editorContext, SNode node) {
       super(editorContext, node);
@@ -155,11 +177,11 @@ public class PhysicsStyles_StyleSheet {
     @Override
     public void apply(Style style, EditorCell editorCell) {
       new ObjectNameReferenceStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-      style.set(StyleAttributes.FONT_SIZE, _StyleParameter_QueryFunction_3lx7g4_a1e());
+      style.set(StyleAttributes.FONT_SIZE, _StyleParameter_QueryFunction_3lx7g4_a1f());
       style.set(StyleAttributes.FONT_STYLE, MPSFonts.ITALIC);
     }
 
-    private int _StyleParameter_QueryFunction_3lx7g4_a1e() {
+    private int _StyleParameter_QueryFunction_3lx7g4_a1f() {
       return EditorSettings.getInstance().getFontSize() * 2;
     }
   }

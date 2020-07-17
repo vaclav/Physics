@@ -18,24 +18,25 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
+import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
+import jetbrains.mps.smodel.builder.SNodeBuilder;
+import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, "jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition");
 
-  public static final SMethod<SNode> getVisual_id1$oDF1jBWB8 = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getVisual").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1$oDF1jBWB8").build();
+  public static final SMethod<SNode> getParent_id5EZY1tN$xQa = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getParent").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5EZY1tN$xQa").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getVisual_id1$oDF1jBWB8);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getParent_id5EZY1tN$xQa);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static SNode getVisual_id1$oDF1jBWB8(@NotNull SNode __thisNode__) {
-    if ((SLinkOperations.getTarget(__thisNode__, LINKS.visual$OiQu) != null)) {
-      return SLinkOperations.getTarget(__thisNode__, LINKS.visual$OiQu);
-    }
-    return (SNode) AbstractObjectDefinition__BehaviorDescriptor.getVisual_id1$oDF1jBWB8.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.parent$OiBt), LINKS.target$OiAw));
+  /*package*/ static SNode getParent_id5EZY1tN$xQa(@NotNull SNode __thisNode__) {
+    return ((SLinkOperations.getTarget(__thisNode__, LINKS.parent$OiBt) != null) ? SLinkOperations.getTarget(__thisNode__, LINKS.parent$OiBt) : createAbstractObjectReference_jt2hvi_a0a0a());
   }
 
   /*package*/ AbstractObjectDefinition__BehaviorDescriptor() {
@@ -54,7 +55,7 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((SNode) getVisual_id1$oDF1jBWB8(node));
+        return (T) ((SNode) getParent_id5EZY1tN$xQa(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -83,10 +84,19 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
+  private static SNode createAbstractObjectReference_jt2hvi_a0a0a() {
+    PersistenceFacade facade = PersistenceFacade.getInstance();
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractObjectReference$1j);
+    n0.setReference(LINKS.target$OiAw, new SNodePointer(facade.createModelReference("r:aa986633-cc42-458c-810b-5cb4eea90bce(jetbrains.mps.samples.Physics.baseobject)"), facade.createNodeId("1159415042435848499")));
+    return n0.getResult();
+  }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink visual$OiQu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e51L, "visual");
     /*package*/ static final SContainmentLink parent$OiBt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e47L, "parent");
     /*package*/ static final SReferenceLink target$OiAw = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, 0x1441545e2a5b1e45L, "target");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept AbstractObjectReference$1j = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, "jetbrains.mps.samples.Physics.structure.AbstractObjectReference");
   }
 }

@@ -3512,7 +3512,7 @@
     </node>
   </node>
   <node concept="312cEu" id="jW">
-    <property role="3GE5qa" value="physical.visual.texture" />
+    <property role="3GE5qa" value="styles.texture" />
     <property role="TrG5h" value="CustomColorTexture_Constraints" />
     <node concept="3Tm1VV" id="jX" role="1B3o_S">
       <node concept="cd27G" id="k6" role="lGtFl">

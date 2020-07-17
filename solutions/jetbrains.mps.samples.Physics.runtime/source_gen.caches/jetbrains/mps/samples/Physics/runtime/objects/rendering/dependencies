@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="jetbrains.mps.samples.Physics.runtime.objects.rendering.BoxFixture">
+    <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color" />
@@ -9,7 +10,9 @@
     <classNode dependClassName="processing.core.PApplet" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.Fixture" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color" />
+  <dependency className="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color">
+    <classNode dependClassName="processing.core.PApplet" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.runtime.objects.rendering.Fixture">
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
@@ -18,6 +21,7 @@
     <classNode dependClassName="processing.core.PApplet" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.runtime.objects.rendering.SphereFixture">
+    <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.rendering.Color" />

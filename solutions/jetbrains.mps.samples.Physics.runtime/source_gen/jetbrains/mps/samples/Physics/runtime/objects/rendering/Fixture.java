@@ -22,8 +22,7 @@ public abstract class Fixture {
    */
   public void render(PApplet ctx) {
     if (texture != null) {
-      ctx.noStroke();
-      ctx.fill(texture.red, texture.green, texture.blue);
+      texture.apply(ctx);
     } else {
       ctx.stroke(255);
       ctx.noFill();
@@ -35,8 +34,6 @@ public abstract class Fixture {
    */
   protected abstract DMass buildMass();
   public void bindToBody(DBody body, double massValue) {
-    if (geometry.getBody() != null) {
-    }
     // Build and apply mass 
     DMass mass = buildMass();
     mass.setMass(massValue);

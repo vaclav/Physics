@@ -9,9 +9,9 @@ import org.ode4j.ode.DMass;
 
 public class SphereFixture extends Fixture {
   /*package*/ float radius;
-  public SphereFixture(World world, double radius, Color texture) {
-    super(OdeHelper.createSphere(world.getSpace(), radius), texture);
-    this.radius = (float) radius;
+  public SphereFixture(World world, Number radius, Color texture) {
+    super(OdeHelper.createSphere(world.getSpace(), radius.doubleValue()), texture);
+    this.radius = radius.floatValue();
   }
   @Override
   public void render(PApplet ctx) {
