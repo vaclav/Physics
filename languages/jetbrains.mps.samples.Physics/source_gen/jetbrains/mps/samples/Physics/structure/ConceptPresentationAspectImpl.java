@@ -21,7 +21,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AbstractWorldTarget;
   private ConceptPresentation props_BoxDepthStyle;
   private ConceptPresentation props_BoxHeightStyle;
-  private ConceptPresentation props_BoxShape;
   private ConceptPresentation props_BoxWidthStyle;
   private ConceptPresentation props_CartesianCoordinates;
   private ConceptPresentation props_ColorDefinition;
@@ -41,6 +40,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ITargetObject;
   private ConceptPresentation props_InteractedObjectExpression;
   private ConceptPresentation props_InteractionForce;
+  private ConceptPresentation props_NRootExpression;
   private ConceptPresentation props_NumericStyle;
   private ConceptPresentation props_ObjectDefinition;
   private ConceptPresentation props_ObjectDistanceWithTarget;
@@ -52,11 +52,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PictureTexture;
   private ConceptPresentation props_PositionCoordinates;
   private ConceptPresentation props_RelativeCoordinates;
-  private ConceptPresentation props_Shape;
   private ConceptPresentation props_ShapeStyle;
   private ConceptPresentation props_Simulation;
   private ConceptPresentation props_SphereRadiusStyle;
-  private ConceptPresentation props_SphereShape;
   private ConceptPresentation props_SphericalCoordinates;
   private ConceptPresentation props_StatefulForce;
   private ConceptPresentation props_StaticForce;
@@ -162,13 +160,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BoxHeightStyle = cpb.create();
         }
         return props_BoxHeightStyle;
-      case LanguageConceptSwitch.BoxShape:
-        if (props_BoxShape == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("box");
-          props_BoxShape = cpb.create();
-        }
-        return props_BoxShape;
       case LanguageConceptSwitch.BoxWidthStyle:
         if (props_BoxWidthStyle == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -303,6 +294,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InteractionForce = cpb.create();
         }
         return props_InteractionForce;
+      case LanguageConceptSwitch.NRootExpression:
+        if (props_NRootExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("n-root");
+          props_NRootExpression = cpb.create();
+        }
+        return props_NRootExpression;
       case LanguageConceptSwitch.NumericStyle:
         if (props_NumericStyle == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -384,13 +382,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RelativeCoordinates = cpb.create();
         }
         return props_RelativeCoordinates;
-      case LanguageConceptSwitch.Shape:
-        if (props_Shape == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("visual aspect of an object");
-          props_Shape = cpb.create();
-        }
-        return props_Shape;
       case LanguageConceptSwitch.ShapeStyle:
         if (props_ShapeStyle == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -412,13 +403,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SphereRadiusStyle = cpb.create();
         }
         return props_SphereRadiusStyle;
-      case LanguageConceptSwitch.SphereShape:
-        if (props_SphereShape == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("sphere");
-          props_SphereShape = cpb.create();
-        }
-        return props_SphereShape;
       case LanguageConceptSwitch.SphericalCoordinates:
         if (props_SphericalCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

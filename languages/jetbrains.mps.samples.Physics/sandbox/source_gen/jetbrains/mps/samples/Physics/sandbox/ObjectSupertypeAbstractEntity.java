@@ -5,6 +5,9 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
+import java.math.BigInteger;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.runtime.objects.forces.StaticForce;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
@@ -27,6 +30,11 @@ public abstract class ObjectSupertypeAbstractEntity<T extends SystemScope> exten
     ObjectSupertypeAbstractEntity currentEntity = this;
 
     // Apply styles 
+    fixtureProperties.set(Prop.SHAPE, "shape");
+    fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
+    fixtureProperties.set(Prop.BOX_X, ((Number) new BigInteger("4")));
+    fixtureProperties.set(Prop.BOX_Y, ((Number) new BigInteger("4")));
+    fixtureProperties.set(Prop.BOX_Z, ((Number) new BigInteger("4")));
 
     // Forces 
     this.getForces().addAll(Arrays.asList(new StaticForce(new InternalVector(((Number) new BigDecimal("899.9999999999999").setScale(13, RoundingMode.DOWN)), ((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), ((Number) new BigDecimal("5.510913997958703E-14").setScale(19, RoundingMode.DOWN))).toDVector3C()), new StaticForce(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.47114206162369554").setScale(17, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), AH.mul(((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), ((Number) new BigDecimal("44.1814440687490434227723411264442").setScale(31, RoundingMode.DOWN))).toDVector3C())));

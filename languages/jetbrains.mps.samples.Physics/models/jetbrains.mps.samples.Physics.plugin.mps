@@ -3010,6 +3010,48 @@
         </node>
       </node>
     </node>
+    <node concept="qq9P1" id="5EZY1tO4m5I" role="qq9xR">
+      <property role="2TnfIJ" value="true" />
+      <ref role="qq9wM" to="9tcj:5EZY1tO49Bj" resolve="NRootExpression" />
+      <node concept="3vetai" id="5EZY1tO4nXY" role="3vQZUl">
+        <node concept="2YIFZM" id="5EZY1tO4vJL" role="3vdyny">
+          <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+          <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+          <node concept="2YIFZM" id="5EZY1tO4qaX" role="37wK5m">
+            <ref role="37wK5l" to="wyt6:~Math.pow(double,double)" resolve="pow" />
+            <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
+            <node concept="2OqwBi" id="5EZY1tO4tpB" role="37wK5m">
+              <node concept="rqRoa" id="5EZY1tO4qe3" role="2Oq$k0">
+                <ref role="rqRob" to="9tcj:5EZY1tO4hKU" resolve="expression" />
+              </node>
+              <node concept="liA8E" id="5EZY1tO4ukg" role="2OqNvi">
+                <ref role="37wK5l" to="xlxw:~BigDecimal.doubleValue()" resolve="doubleValue" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="5EZY1tO4rHJ" role="37wK5m">
+              <node concept="rqRoa" id="5EZY1tO4qr2" role="2Oq$k0">
+                <ref role="rqRob" to="9tcj:5EZY1tO4fX5" resolve="exponent" />
+              </node>
+              <node concept="liA8E" id="5EZY1tO4sGj" role="2OqNvi">
+                <ref role="37wK5l" to="xlxw:~BigDecimal.doubleValue()" resolve="doubleValue" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="qpFDx" id="5EZY1tO4o3r" role="3vbI0w">
+        <ref role="qpFD$" to="9tcj:5EZY1tO4fX5" resolve="exponent" />
+        <node concept="rxStX" id="5EZY1tO4o8K" role="rajlz">
+          <ref role="rxSuV" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
+        </node>
+      </node>
+      <node concept="qpFDx" id="5EZY1tO4oL7" role="3vbI0w">
+        <ref role="qpFD$" to="9tcj:5EZY1tO4hKU" resolve="expression" />
+        <node concept="rxStX" id="5EZY1tO4pBr" role="rajlz">
+          <ref role="rxSuV" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
+        </node>
+      </node>
+    </node>
     <node concept="lHU7p" id="31HEEbb_xis" role="qq9xR" />
   </node>
 </model>

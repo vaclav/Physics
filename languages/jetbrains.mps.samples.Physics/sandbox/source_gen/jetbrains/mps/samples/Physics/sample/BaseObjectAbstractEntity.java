@@ -7,6 +7,9 @@ import jetbrains.mps.samples.Physics.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
 import java.util.Arrays;
 
@@ -26,10 +29,10 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
 
     // Apply styles 
     fixtureProperties.set(Prop.SHAPE, "shape");
-    fixtureProperties.set(Prop.BOX_X, currentEntity.getMass());
-    fixtureProperties.set(Prop.BOX_Y, currentEntity.getMass());
-    fixtureProperties.set(Prop.BOX_Z, currentEntity.getMass());
-    fixtureProperties.set(Prop.SPHERE_RADIUS, currentEntity.getMass());
+    fixtureProperties.set(Prop.BOX_X, BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
+    fixtureProperties.set(Prop.BOX_Y, BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
+    fixtureProperties.set(Prop.BOX_Z, BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
+    fixtureProperties.set(Prop.SPHERE_RADIUS, BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimal.valueOf(Math.PI))), currentEntity.getMass()).doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
 
     // Forces 

@@ -5,8 +5,12 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder;
-import java.util.Arrays;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Arrays;
 import java.math.RoundingMode;
 
 public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
@@ -24,6 +28,9 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
     PlanetAbstractEntity currentEntity = this;
 
     // Apply styles 
+    fixtureProperties.set(Prop.SHAPE, "shape");
+    fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
+    fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(BigDecimal.valueOf(Math.sqrt(BigDecimal.valueOf(Math.sqrt(AH.mul(AH.mul(AH.div(((Number) new BigInteger("3")), ((Number) new BigInteger("4"))), BigDecimal.valueOf(Math.PI)), currentEntity.getMass()).doubleValue())).doubleValue())), ((Number) new BigInteger("10"))));
 
     // Forces 
     this.getForces().addAll(Arrays.asList(new GravityForce(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)))));

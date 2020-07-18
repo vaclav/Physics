@@ -5,6 +5,9 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.FixtureBuilder;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
+import java.math.BigInteger;
 import java.util.Arrays;
 
 public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
@@ -22,6 +25,11 @@ public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends 
     RandomObjectAbstractEntity currentEntity = this;
 
     // Apply styles 
+    fixtureProperties.set(Prop.SHAPE, "shape");
+    fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
+    fixtureProperties.set(Prop.BOX_X, ((Number) new BigInteger("40")));
+    fixtureProperties.set(Prop.BOX_Y, ((Number) new BigInteger("40")));
+    fixtureProperties.set(Prop.BOX_Z, ((Number) new BigInteger("40")));
 
     // Forces 
     this.getForces().addAll(Arrays.asList());

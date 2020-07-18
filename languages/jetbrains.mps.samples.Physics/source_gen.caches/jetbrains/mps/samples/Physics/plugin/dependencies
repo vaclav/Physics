@@ -44,6 +44,7 @@
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.InterpreterRuntimeException" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.StopAndReturnException" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.TypedChildConstraintImpl" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.RuntimeException" />

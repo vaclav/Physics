@@ -11,6 +11,8 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
 import java.util.Arrays;
 
 public class SolarSystemSystemScope extends SystemScope {
@@ -60,6 +62,9 @@ public class SolarSystemSystemScope extends SystemScope {
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
+      fixtureProperties.set(Prop.SHAPE, "shape");
+      fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 165));
+      fixtureProperties.set(Prop.SPHERE_RADIUS, ((Number) new BigInteger("200")));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
@@ -172,6 +177,11 @@ public class SolarSystemSystemScope extends SystemScope {
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
+      fixtureProperties.set(Prop.SHAPE, "shape");
+      fixtureProperties.set(Prop.TEXTURE, new Color(25, 150, 25));
+      fixtureProperties.set(Prop.BOX_X, ((Number) new BigInteger("4")));
+      fixtureProperties.set(Prop.BOX_Y, ((Number) new BigInteger("4")));
+      fixtureProperties.set(Prop.BOX_Z, ((Number) new BigInteger("4")));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
