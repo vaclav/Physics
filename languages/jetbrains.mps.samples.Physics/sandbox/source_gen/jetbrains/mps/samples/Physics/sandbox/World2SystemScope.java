@@ -24,6 +24,9 @@ public class World2SystemScope extends SystemScope {
 
   public World2SystemScope(World world, VectorLike position, VectorLike velocity) {
     super(position, velocity);
+    // Save this as scope (to simplify generated mapping) 
+    final World2SystemScope scope = this;
+
     //  Instanciate objects 
     Ho2 = withEntity(new Ho3PhysicalEntity(world));
     Ha = withEntity(new Ha1PhysicalEntity(world));

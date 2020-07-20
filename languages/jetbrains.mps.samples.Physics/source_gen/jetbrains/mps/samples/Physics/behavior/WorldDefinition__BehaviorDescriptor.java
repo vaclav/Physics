@@ -45,8 +45,9 @@ public final class WorldDefinition__BehaviorDescriptor extends BaseBHDescriptor 
   public static final SMethod<SNode> findLocalizedImplementation_id1igjyYxxAPt = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("findLocalizedImplementation").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1igjyYxxAPt").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   public static final SMethod<Iterable<SNode>> getDependenciesRelevantForCycleDetection_id59HbAIOYveX = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getDependenciesRelevantForCycleDetection").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("59HbAIOYveX").build();
   public static final SMethod<Set<SNode>> traceBackElementInCycle_id17fjvcLF7UR = new SMethodBuilder<Set<SNode>>(new SJavaCompoundTypeImpl((Class<Set<SNode>>) ((Class) Object.class))).name("traceBackElementInCycle").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("17fjvcLF7UR").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> getCurrentWorldDefinition_id2bZvtzzMfxi = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDefinition").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2bZvtzzMfxi").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getNestedDefinitions_id31HEEbbzg2E, getLocalizedObjects_id31HEEbbX5J7, getScope_id52_Geb4QDV$, findLocalizedImplementation_id1igjyYxxAPt, getDependenciesRelevantForCycleDetection_id59HbAIOYveX, traceBackElementInCycle_id17fjvcLF7UR);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getNestedDefinitions_id31HEEbbzg2E, getLocalizedObjects_id31HEEbbX5J7, getScope_id52_Geb4QDV$, findLocalizedImplementation_id1igjyYxxAPt, getDependenciesRelevantForCycleDetection_id59HbAIOYveX, traceBackElementInCycle_id17fjvcLF7UR, getCurrentWorldDefinition_id2bZvtzzMfxi);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -88,6 +89,9 @@ public final class WorldDefinition__BehaviorDescriptor extends BaseBHDescriptor 
     SetSequence.fromSet(resultSet).addSequence(Sequence.fromIterable(cyclicIncludes));
     return resultSet;
   }
+  /*package*/ static SNode getCurrentWorldDefinition_id2bZvtzzMfxi(@NotNull SNode __thisNode__) {
+    return __thisNode__;
+  }
 
   /*package*/ WorldDefinition__BehaviorDescriptor() {
   }
@@ -116,6 +120,8 @@ public final class WorldDefinition__BehaviorDescriptor extends BaseBHDescriptor 
         return (T) ((Iterable<SNode>) getDependenciesRelevantForCycleDetection_id59HbAIOYveX(node));
       case 5:
         return (T) ((Set<SNode>) traceBackElementInCycle_id17fjvcLF7UR(node, (SNode) parameters[0]));
+      case 6:
+        return (T) ((SNode) getCurrentWorldDefinition_id2bZvtzzMfxi(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

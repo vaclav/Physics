@@ -25,6 +25,9 @@ public class SolarSystemSystemScope extends SystemScope {
 
   public SolarSystemSystemScope(World world, VectorLike position, VectorLike velocity) {
     super(position, velocity);
+    // Save this as scope (to simplify generated mapping) 
+    final SolarSystemSystemScope scope = this;
+
     //  Instanciate objects 
     Sun = withEntity(new Sun1PhysicalEntity(world));
     Mercury = withEntity(new Mercury1PhysicalEntity(world));

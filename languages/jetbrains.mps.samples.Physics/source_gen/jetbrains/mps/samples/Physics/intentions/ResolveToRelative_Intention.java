@@ -105,7 +105,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RelativeCoordinates$c7);
     n0.forChild(LINKS.coordinates$l1nt).initNode(p0, CONCEPTS.AbsoluteCoordinates$d5, true);
     {
-      SNodeBuilder n1 = n0.forChild(LINKS.relativeFrom$gwcw).init(CONCEPTS.ObjectReference$qq);
+      SNodeBuilder n1 = n0.forChild(LINKS.relativeFrom$gwcw).init(CONCEPTS.ObjectReferenceExpression$qq);
       n1.setReferenceTarget(LINKS.target$EWj0, p1);
     }
     return n0.getResult();
@@ -118,7 +118,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     /*package*/ static final SConcept RelativeCoordinates$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeCoordinates");
     /*package*/ static final SConcept WorldDefinition$Xn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
     /*package*/ static final SConcept AbsoluteCoordinates$d5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL, "jetbrains.mps.samples.Physics.structure.AbsoluteCoordinates");
-    /*package*/ static final SConcept ObjectReference$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReference");
+    /*package*/ static final SConcept ObjectReferenceExpression$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
   }
 
   private static final class LINKS {

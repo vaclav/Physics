@@ -37,6 +37,12 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
       body.addForce(force.getForce(world, this, time));
     }
   }
+  public void applyLights(PApplet ctx) {
+    if (fixture.doEmitLight()) {
+      DVector3C position = body.getPosition();
+      ctx.pointLight(255, 255, 255, (float) position.get0(), (float) position.get1(), (float) position.get2());
+    }
+  }
   public void render(PApplet ctx) {
     DVector3C position = body.getPosition();
     ctx.pushMatrix();

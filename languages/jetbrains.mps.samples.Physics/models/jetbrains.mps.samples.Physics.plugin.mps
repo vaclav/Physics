@@ -2509,7 +2509,7 @@
     </node>
     <node concept="qq9P1" id="1igjyYxyMYk" role="qq9xR">
       <property role="2TnfIJ" value="true" />
-      <ref role="qq9wM" to="9tcj:6HZo5MNbVDr" resolve="ObjectReference" />
+      <ref role="qq9wM" to="9tcj:6HZo5MNbVDr" resolve="ObjectReferenceExpression" />
       <node concept="3dA_Gj" id="31HEEbbyNCa" role="3vQZUl">
         <node concept="9aQIb" id="31HEEbbyNCc" role="3vcmbn">
           <node concept="3clFbS" id="31HEEbbyNCe" role="9aQI4">
@@ -2549,6 +2549,55 @@
                 </node>
                 <node concept="37vLTw" id="31HEEbbyNQy" role="37wK5m">
                   <ref role="3cqZAo" node="31HEEbbyNQq" resolve="localized" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="qq9P1" id="6yY6C98Yjw6" role="qq9xR">
+      <property role="2TnfIJ" value="true" />
+      <ref role="qq9wM" to="9tcj:2bZvtzzxSMs" resolve="WorldNestedObjectTarget" />
+      <node concept="3dA_Gj" id="6yY6C98YjC5" role="3vQZUl">
+        <node concept="9aQIb" id="6yY6C98ZvGw" role="3vcmbn">
+          <node concept="3clFbS" id="6yY6C98ZvGx" role="9aQI4">
+            <node concept="3cpWs8" id="6yY6C98ZvGy" role="3cqZAp">
+              <node concept="3cpWsn" id="6yY6C98ZvGz" role="3cpWs9">
+                <property role="TrG5h" value="localized" />
+                <node concept="3Tqbb2" id="6yY6C98ZvG$" role="1tU5fm">
+                  <ref role="ehGHo" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
+                </node>
+                <node concept="2OqwBi" id="6yY6C98ZvG_" role="33vP2m">
+                  <node concept="oxGPV" id="6yY6C98ZvGA" role="2Oq$k0" />
+                  <node concept="3TrEf2" id="6yY6C98Zw2O" role="2OqNvi">
+                    <ref role="3Tt5mk" to="9tcj:2bZvtzzxTfb" resolve="target" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbH" id="6yY6C98ZvGC" role="3cqZAp" />
+            <node concept="3cpWs6" id="6yY6C98ZvGD" role="3cqZAp">
+              <node concept="2YIFZM" id="6yY6C98ZvGE" role="3cqZAk">
+                <ref role="37wK5l" to="eaav:31HEEbbySLI" resolve="from" />
+                <ref role="1Pybhc" to="eaav:31HEEbbynJS" resolve="InternalEntity" />
+                <node concept="10QFUN" id="6yY6C98ZvGF" role="37wK5m">
+                  <node concept="3uibUv" id="6yY6C98ZvGG" role="10QFUM">
+                    <ref role="3uigEE" to="eaav:6asu_4xEVX3" resolve="InternalVector" />
+                  </node>
+                  <node concept="qpA2v" id="6yY6C98ZvGH" role="10QFUP">
+                    <node concept="2OqwBi" id="6yY6C98ZvGI" role="3SLO0q">
+                      <node concept="37vLTw" id="6yY6C98ZvGJ" role="2Oq$k0">
+                        <ref role="3cqZAo" node="6yY6C98ZvGz" resolve="localized" />
+                      </node>
+                      <node concept="3TrEf2" id="6yY6C98ZvGK" role="2OqNvi">
+                        <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="37vLTw" id="6yY6C98ZvGL" role="37wK5m">
+                  <ref role="3cqZAo" node="6yY6C98ZvGz" resolve="localized" />
                 </node>
               </node>
             </node>
@@ -2879,6 +2928,23 @@
                 <node concept="37vLTw" id="31HEEbb_NnV" role="37wK5m">
                   <ref role="3cqZAo" node="31HEEbb_N0g" resolve="sourcePoint" />
                 </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="qq9P1" id="2bZvtzzOp4i" role="qq9xR">
+      <property role="2TnfIJ" value="true" />
+      <ref role="qq9wM" to="9tcj:2bZvtzzIAQP" resolve="CurrentWorldExpression" />
+      <node concept="3vetai" id="2bZvtzzOqFe" role="3vQZUl">
+        <node concept="2ShNRf" id="2bZvtzzOte3" role="3vdyny">
+          <node concept="1pGfFk" id="2bZvtzzOGjw" role="2ShVmc">
+            <ref role="37wK5l" to="eaav:2bZvtzzOAOK" resolve="InternalCurrentWorld" />
+            <node concept="2OqwBi" id="2bZvtzzOV0y" role="37wK5m">
+              <node concept="oxGPV" id="2bZvtzzOULB" role="2Oq$k0" />
+              <node concept="2qgKlT" id="2bZvtzzOVf6" role="2OqNvi">
+                <ref role="37wK5l" to="rf09:2bZvtzzMbSH" resolve="getWorldTarget" />
               </node>
             </node>
           </node>

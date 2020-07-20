@@ -84,6 +84,9 @@ public class World implements DGeom.DNearCallback {
    */
   public void render(PApplet ctx) {
     for (PhysicalEntity entity : entities) {
+      entity.applyLights(ctx);
+    }
+    for (PhysicalEntity entity : entities) {
       entity.render(ctx);
     }
   }

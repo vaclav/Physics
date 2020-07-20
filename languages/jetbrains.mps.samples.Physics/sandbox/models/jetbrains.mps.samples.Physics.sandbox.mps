@@ -108,9 +108,10 @@
         <property id="1510458583736148969" name="green" index="1nv_BX" />
       </concept>
       <concept id="7746015835360049752" name="jetbrains.mps.samples.Physics.structure.Simulation" flags="ng" index="3okdC4">
+        <property id="7547499172392825249" name="speed" index="xImGz" />
         <child id="4383135941274869506" name="world" index="1heTBC" />
       </concept>
-      <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReference" flags="ng" index="3okdC7">
+      <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression" flags="ng" index="3okdC7">
         <reference id="7746015835360049756" name="target" index="3okdC0" />
       </concept>
       <concept id="7746015835359514432" name="jetbrains.mps.samples.Physics.structure.WorldDefinition" flags="ng" index="3omeWs">
@@ -142,9 +143,6 @@
       <concept id="4944417823362146628" name="org.iets3.core.expr.math.structure.PowerExpression" flags="ng" index="a0Byk">
         <child id="4944417823362178786" name="expr" index="a0GsM" />
         <child id="5098456557379673903" name="exponent" index="2zCggm" />
-      </concept>
-      <concept id="4944417823362158056" name="org.iets3.core.expr.math.structure.SqrtExpression" flags="ng" index="a0DgS">
-        <child id="4944417823362162236" name="expr" index="a0CvG" />
       </concept>
       <concept id="4944417823362108742" name="org.iets3.core.expr.math.structure.FractionExpression" flags="ng" index="a1tim">
         <child id="4944417823362108743" name="numerator" index="a1tin" />
@@ -430,34 +428,6 @@
         <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
       </node>
     </node>
-    <node concept="27rm9f" id="5EZY1tNZybY" role="27xc_Z">
-      <node concept="30dDTi" id="5EZY1tNZybL" role="27rm5b">
-        <node concept="30bXRB" id="5EZY1tNZybM" role="30dEs_">
-          <property role="30bXRw" value="10" />
-        </node>
-        <node concept="a0DgS" id="5EZY1tNZybN" role="30dEsF">
-          <node concept="a0DgS" id="5EZY1tNZybO" role="a0CvG">
-            <node concept="30dDTi" id="5EZY1tNZybP" role="a0CvG">
-              <node concept="30dDTi" id="5EZY1tNZybQ" role="30dEsF">
-                <node concept="a1tim" id="5EZY1tNZybR" role="30dEsF">
-                  <node concept="30bXRB" id="5EZY1tNZybS" role="a1tin">
-                    <property role="30bXRw" value="3" />
-                  </node>
-                  <node concept="30bXRB" id="5EZY1tNZybT" role="a1tiq">
-                    <property role="30bXRw" value="4" />
-                  </node>
-                </node>
-                <node concept="39ZMf5" id="5EZY1tNZybU" role="30dEs_" />
-              </node>
-              <node concept="1QScDb" id="5EZY1tNZybV" role="30dEs_">
-                <node concept="3K9aLm" id="5EZY1tNZybW" role="1QScD9" />
-                <node concept="2CrqZA" id="5EZY1tNZybX" role="30czhm" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
   </node>
   <node concept="llAx1" id="2EjHd62wQTG">
     <property role="TrG5h" value="Gravity" />
@@ -538,16 +508,8 @@
             <node concept="30bXRB" id="M__cqnx1mY" role="Y6l9D">
               <property role="30bXRw" value="4" />
             </node>
-            <node concept="30dDZf" id="M__cqnx1mZ" role="Y6leK">
-              <node concept="1QScDb" id="M__cqnx1n0" role="30dEs_">
-                <node concept="3K9aLm" id="M__cqnx1n1" role="1QScD9" />
-                <node concept="3okdC7" id="M__cqnx1n2" role="30czhm">
-                  <ref role="3okdC0" node="3Nk1IDHXomK" resolve="Solar System" />
-                </node>
-              </node>
-              <node concept="30bXRB" id="M__cqnx1n3" role="30dEsF">
-                <property role="30bXRw" value="50000" />
-              </node>
+            <node concept="30bXRB" id="M__cqnx1n3" role="Y6leK">
+              <property role="30bXRw" value="50000" />
             </node>
             <node concept="30bXRB" id="M__cqnx1n4" role="Y6leJ">
               <property role="30bXRw" value="6" />
@@ -605,14 +567,6 @@
           </node>
         </node>
       </node>
-      <node concept="3Bsx3Z" id="GdoRjGyF4v" role="1h9ZzH">
-        <node concept="3_jIDJ" id="GdoRjGyF5g" role="3Bsx3B">
-          <node concept="30bXRB" id="GdoRjGyF5D" role="3_jIDE">
-            <property role="30bXRw" value="40" />
-          </node>
-          <node concept="2CrqZA" id="GdoRjGyF6s" role="3_jIDG" />
-        </node>
-      </node>
       <node concept="3Bsx3U" id="M__cqnzsg_" role="1bLhCY">
         <node concept="30bXRB" id="M__cqnzsim" role="3Bsx3B">
           <property role="30bXRw" value="30" />
@@ -626,8 +580,9 @@
   <node concept="3okdC4" id="6POFxU8kbPm">
     <property role="TrG5h" value="TestSimulation" />
     <property role="3GE5qa" value="test" />
-    <node concept="1t_wfn" id="M__cqnLPc5" role="1heTBC">
-      <ref role="1t_wfm" node="6HZo5MNa2Rg" resolve="Solar System" />
+    <property role="xImGz" value="6" />
+    <node concept="1t_wfn" id="6yY6C98IG1$" role="1heTBC">
+      <ref role="1t_wfm" node="3Nk1IDHWOdO" resolve="MilkyWay" />
     </node>
   </node>
   <node concept="llAx1" id="6kwOTMkY3JG">

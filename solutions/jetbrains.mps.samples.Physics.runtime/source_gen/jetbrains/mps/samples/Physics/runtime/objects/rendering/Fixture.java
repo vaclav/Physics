@@ -11,6 +11,7 @@ public abstract class Fixture {
   public static final double DENSITY = 1;
   private DGeom geometry;
   protected Color texture;
+  private boolean emitLight;
 
   public Fixture(DGeom geometry, Color texture) {
     this.geometry = geometry;
@@ -22,7 +23,7 @@ public abstract class Fixture {
    */
   public void render(PApplet ctx) {
     if (texture != null) {
-      texture.apply(ctx);
+      texture.apply(ctx, emitLight);
     } else {
       ctx.stroke(255);
       ctx.noFill();
@@ -43,5 +44,13 @@ public abstract class Fixture {
   }
   public DGeom getGeometry() {
     return geometry;
+  }
+
+
+  public boolean doEmitLight() {
+    return this.emitLight;
+  }
+  public void setEmitLight(boolean emitLight) {
+    this.emitLight = emitLight;
   }
 }

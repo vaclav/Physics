@@ -21,9 +21,6 @@
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
         <child id="3348158742936976577" name="members" index="25R1y" />
       </concept>
-      <concept id="1224240836180" name="jetbrains.mps.lang.structure.structure.DeprecatedNodeAnnotation" flags="ig" index="asaX9">
-        <property id="1225118933224" name="comment" index="YLQ7P" />
-      </concept>
       <concept id="7862711839422615209" name="jetbrains.mps.lang.structure.structure.DocumentedNodeAnnotation" flags="ng" index="t5JxF">
         <property id="7862711839422615217" name="text" index="t5JxN" />
       </concept>
@@ -102,6 +99,9 @@
     <node concept="PrWs8" id="1rTmHefbmaK" role="PzmwI">
       <ref role="PrY4T" to="vs0r:59HbAIOYkEn" resolve="IDetectCycle" />
     </node>
+    <node concept="PrWs8" id="2bZvtzzMjnc" role="PzmwI">
+      <ref role="PrY4T" node="2bZvtzzMfx6" resolve="IProvideCurrentWorld" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MN9SX3">
     <property role="EcuMT" value="7746015835359514435" />
@@ -128,11 +128,14 @@
     <property role="TrG5h" value="Simulation" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="6HZo5MNbVDp" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
     <node concept="PrWs8" id="4D75T4FmykD" role="PzmwI">
       <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
+    </node>
+    <node concept="PrWs8" id="2bZvtzzIaaf" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="2bZvtzzMr7G" role="PzmwI">
+      <ref role="PrY4T" node="2bZvtzzMfx6" resolve="IProvideCurrentWorld" />
     </node>
     <node concept="1TJgyj" id="3Nk1IDHVTW2" role="1TKVEi">
       <property role="IQ2ns" value="4383135941274869506" />
@@ -140,11 +143,28 @@
       <property role="20kJfa" value="world" />
       <ref role="20lvS9" node="nlMVtogWxw" resolve="WorldReference" />
     </node>
+    <node concept="1TJgyj" id="5nieUTVoEaB" role="1TKVEi">
+      <property role="IQ2ns" value="6184070858913522343" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="cameraPosition" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="5nieUTVoEbw" role="1TKVEi">
+      <property role="IQ2ns" value="6184070858913522400" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="focus" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyi" id="6yY6C991R6x" role="1TKVEl">
+      <property role="IQ2nx" value="7547499172392825249" />
+      <property role="TrG5h" value="speed" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MNbVDr">
     <property role="EcuMT" value="7746015835360049755" />
     <property role="3GE5qa" value="physical" />
-    <property role="TrG5h" value="ObjectReference" />
+    <property role="TrG5h" value="ObjectReferenceExpression" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyj" id="6HZo5MNbVDs" role="1TKVEi">
       <property role="IQ2ns" value="7746015835360049756" />
@@ -154,6 +174,9 @@
     </node>
     <node concept="PrWs8" id="GdoRjGrk1A" role="PzmwI">
       <ref role="PrY4T" node="GdoRjGrjZN" resolve="ITargetObject" />
+    </node>
+    <node concept="PrWs8" id="2bZvtzzMgxP" role="PzmwI">
+      <ref role="PrY4T" node="2bZvtzzMbPQ" resolve="IMayTargetWorld" />
     </node>
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDF">
@@ -174,7 +197,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="relativeFrom" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6HZo5MNbVDr" resolve="ObjectReference" />
+      <ref role="20lvS9" node="6HZo5MNbVDr" resolve="ObjectReferenceExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDH">
@@ -484,16 +507,6 @@
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
-  <node concept="1TIwiD" id="1JxkG5gavpT">
-    <property role="EcuMT" value="2008977899011044985" />
-    <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="ForceType_old" />
-    <property role="34LRSv" value="force" />
-    <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
-    <node concept="asaX9" id="3KiIDZ00qTq" role="lGtFl">
-      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="6kwOTMkWOH$">
     <property role="EcuMT" value="7287056866552793956" />
     <property role="3GE5qa" value="physical.force.abstract" />
@@ -531,28 +544,6 @@
     <property role="R5$K7" value="true" />
     <property role="R4oN_" value="may the force be with you" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
-  </node>
-  <node concept="1TIwiD" id="6kwOTMl0tT6">
-    <property role="EcuMT" value="7287056866553749062" />
-    <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="ObjectType_old" />
-    <property role="R4oN_" value="type of a physical object" />
-    <property role="34LRSv" value="object" />
-    <ref role="1TJDcQ" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
-    <node concept="asaX9" id="3KiIDZ00qTA" role="lGtFl">
-      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="6kwOTMl0tT7">
-    <property role="EcuMT" value="7287056866553749063" />
-    <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="WorldType_old" />
-    <property role="R4oN_" value="type of a world" />
-    <property role="34LRSv" value="world" />
-    <ref role="1TJDcQ" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
-    <node concept="asaX9" id="3KiIDZ00qTY" role="lGtFl">
-      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
-    </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl17Za">
     <property role="EcuMT" value="7287056866553921482" />
@@ -604,16 +595,6 @@
       <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
     </node>
   </node>
-  <node concept="1TIwiD" id="6kwOTMl1aFZ">
-    <property role="EcuMT" value="7287056866553932543" />
-    <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="VectorType_old" />
-    <property role="34LRSv" value="vector" />
-    <ref role="1TJDcQ" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
-    <node concept="asaX9" id="3KiIDZ00qTM" role="lGtFl">
-      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="6kwOTMl1bfn">
     <property role="EcuMT" value="7287056866553934807" />
     <property role="3GE5qa" value="physical.expr.dot" />
@@ -655,17 +636,6 @@
       <property role="TrG5h" value="length" />
     </node>
   </node>
-  <node concept="1TIwiD" id="6kwOTMl2xh8">
-    <property role="EcuMT" value="7287056866554287176" />
-    <property role="3GE5qa" value="physical.types" />
-    <property role="TrG5h" value="DirectionType_old" />
-    <property role="R4oN_" value="type of object giving a direction for a vector" />
-    <property role="34LRSv" value="direction" />
-    <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
-    <node concept="asaX9" id="3KiIDZ00qTe" role="lGtFl">
-      <property role="YLQ7P" value="The concept was moved to language &quot;jetbrains.mps.samples.Physics.types&quot;" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="cTQf2FjlqU">
     <property role="EcuMT" value="232455383964014266" />
     <property role="3GE5qa" value="physical.force.implemented.interaction" />
@@ -683,7 +653,7 @@
   </node>
   <node concept="1TIwiD" id="cTQf2Fl7sm">
     <property role="EcuMT" value="232455383964481302" />
-    <property role="3GE5qa" value="physical.expr" />
+    <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="CurrentObjectExpression" />
     <property role="34LRSv" value="current object" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
@@ -768,7 +738,7 @@
   </node>
   <node concept="PlHQZ" id="GdoRjGrjZN">
     <property role="EcuMT" value="796402062948384755" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="ITargetObject" />
   </node>
   <node concept="PlHQZ" id="GdoRjGvovx">
@@ -983,6 +953,70 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="k9gc968hhc">
+    <property role="EcuMT" value="362892448124441676" />
+    <property role="3GE5qa" value="styles" />
+    <property role="TrG5h" value="EmitLightStyle" />
+    <property role="34LRSv" value="emit-light" />
+    <ref role="1TJDcQ" node="k9gc968h$Y" resolve="BooleanStyle" />
+  </node>
+  <node concept="1TIwiD" id="k9gc968h$Y">
+    <property role="EcuMT" value="362892448124442942" />
+    <property role="3GE5qa" value="styles" />
+    <property role="TrG5h" value="BooleanStyle" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="10n4tqntag_" resolve="Style" />
+    <node concept="1TJgyi" id="k9gc968h$Z" role="1TKVEl">
+      <property role="IQ2nx" value="362892448124442943" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2bZvtzzxSMs">
+    <property role="EcuMT" value="2521872686834486428" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="TrG5h" value="WorldNestedObjectTarget" />
+    <property role="R4oN_" value="allow to access an object inside a world definition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="2bZvtzzxTfb" role="1TKVEi">
+      <property role="IQ2ns" value="2521872686834488267" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3Nk1IDHWZS5" resolve="ILocalized" />
+    </node>
+    <node concept="PrWs8" id="6yY6C98qEZd" role="PzmwI">
+      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
+    <node concept="PrWs8" id="6yY6C98z265" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="PrWs8" id="6yY6C98_q$Y" role="PzmwI">
+      <ref role="PrY4T" node="2bZvtzzMbPQ" resolve="IMayTargetWorld" />
+    </node>
+    <node concept="PrWs8" id="6yY6C98YkVy" role="PzmwI">
+      <ref role="PrY4T" node="GdoRjGrjZN" resolve="ITargetObject" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2bZvtzzIAQP">
+    <property role="EcuMT" value="2521872686837820853" />
+    <property role="3GE5qa" value="physical.expr.context" />
+    <property role="TrG5h" value="CurrentWorldExpression" />
+    <property role="34LRSv" value="current world" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="PrWs8" id="2bZvtzzMbTC" role="PzmwI">
+      <ref role="PrY4T" node="2bZvtzzMbPQ" resolve="IMayTargetWorld" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="2bZvtzzMbPQ">
+    <property role="EcuMT" value="2521872686838758774" />
+    <property role="3GE5qa" value="physical.expr.context" />
+    <property role="TrG5h" value="IMayTargetWorld" />
+  </node>
+  <node concept="PlHQZ" id="2bZvtzzMfx6">
+    <property role="EcuMT" value="2521872686838773830" />
+    <property role="3GE5qa" value="physical.expr.context" />
+    <property role="TrG5h" value="IProvideCurrentWorld" />
   </node>
 </model>
 

@@ -152,7 +152,6 @@ public class PhysicsStyles_StyleSheet {
     public void apply(Style style, EditorCell editorCell) {
       style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
       style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.black));
-      style.set(StyleAttributes.SELECTABLE, false);
     }
 
   }

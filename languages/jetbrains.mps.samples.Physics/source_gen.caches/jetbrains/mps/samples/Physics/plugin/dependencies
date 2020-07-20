@@ -58,6 +58,8 @@
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.IMayTargetWorld__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalCurrentWorld" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalWorld" />

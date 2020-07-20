@@ -6,16 +6,35 @@ import jetbrains.mps.samples.Physics.runtime.Simulation;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.runtime.Renderer;
+import processing.core.PApplet;
+import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
 
 public class ExampleSimulation extends Simulation {
+  protected SolarSystemSystemScope scope;
+
+  public ExampleSimulation() {
+    super(1);
+  }
 
   @Override
   protected void init(World world) {
-    new SolarSystemSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+    this.scope = new SolarSystemSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
   }
 
   public static void main(String[] args) {
     Renderer.afterInit(new ExampleSimulation());
     Renderer.main(args);
+  }
+
+
+  @Override
+  public void render(PApplet context) {
+    // Setting camera properly 
+    VectorLike position = scope.EarthNested.Earth;
+    VectorLike focus = scope.Sun;
+
+    context.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, 1, 0);
+
+    super.render(context);
   }
 }

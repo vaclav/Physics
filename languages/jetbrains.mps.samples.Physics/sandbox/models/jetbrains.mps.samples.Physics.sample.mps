@@ -90,6 +90,14 @@
         <reference id="974138438729127754" name="argument" index="2Z10bP" />
         <child id="974138438729280780" name="value" index="2Z1ZyN" />
       </concept>
+      <concept id="2521872686837820853" name="jetbrains.mps.samples.Physics.structure.CurrentWorldExpression" flags="ng" index="31hh1H" />
+      <concept id="2521872686834486428" name="jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget" flags="ng" index="31uf54">
+        <reference id="2521872686834488267" name="target" index="31ueSj" />
+      </concept>
+      <concept id="362892448124441676" name="jetbrains.mps.samples.Physics.structure.EmitLightStyle" flags="ng" index="13a5ie" />
+      <concept id="362892448124442942" name="jetbrains.mps.samples.Physics.structure.BooleanStyle" flags="ng" index="13a5BW">
+        <property id="362892448124442943" name="value" index="13a5BX" />
+      </concept>
       <concept id="4383135941275108256" name="jetbrains.mps.samples.Physics.structure.WorldInclusion" flags="ng" index="1h9Ola">
         <child id="4383135941275108257" name="world" index="1h9Olb" />
       </concept>
@@ -99,9 +107,12 @@
       </concept>
       <concept id="1510458583736379040" name="jetbrains.mps.samples.Physics.structure.AbstractForceCall" flags="ng" index="1nvtMO" />
       <concept id="7746015835360049752" name="jetbrains.mps.samples.Physics.structure.Simulation" flags="ng" index="3okdC4">
+        <property id="7547499172392825249" name="speed" index="xImGz" />
+        <child id="6184070858913522343" name="cameraPosition" index="IG9$9" />
+        <child id="6184070858913522400" name="focus" index="IG9_e" />
         <child id="4383135941274869506" name="world" index="1heTBC" />
       </concept>
-      <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReference" flags="ng" index="3okdC7">
+      <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression" flags="ng" index="3okdC7">
         <reference id="7746015835360049756" name="target" index="3okdC0" />
       </concept>
       <concept id="7746015835359514432" name="jetbrains.mps.samples.Physics.structure.WorldDefinition" flags="ng" index="3omeWs">
@@ -306,8 +317,26 @@
   </node>
   <node concept="3okdC4" id="10n4tqnjauU">
     <property role="TrG5h" value="ExampleSimulation" />
+    <property role="xImGz" value="1" />
     <node concept="1t_wfn" id="10n4tqnmBN5" role="1heTBC">
       <ref role="1t_wfm" node="10n4tqnmBvH" resolve="SolarSystem" />
+    </node>
+    <node concept="1QScDb" id="6yY6C98PNtg" role="IG9_e">
+      <node concept="31uf54" id="6yY6C98PNwg" role="1QScD9">
+        <ref role="31ueSj" node="10n4tqnmBwp" resolve="Sun" />
+      </node>
+      <node concept="31hh1H" id="6yY6C98sqrY" role="30czhm" />
+    </node>
+    <node concept="1QScDb" id="6yY6C98VGj6" role="IG9$9">
+      <node concept="31uf54" id="6yY6C993ydS" role="1QScD9">
+        <ref role="31ueSj" node="72SP1v_PiBJ" resolve="Earth" />
+      </node>
+      <node concept="1QScDb" id="6yY6C98VGbN" role="30czhm">
+        <node concept="31uf54" id="6yY6C98VGeX" role="1QScD9">
+          <ref role="31ueSj" node="10n4tqnmBvU" resolve="EarthNested" />
+        </node>
+        <node concept="31hh1H" id="6yY6C98VG94" role="30czhm" />
+      </node>
     </node>
   </node>
   <node concept="3omeWs" id="10n4tqnmBvH">
@@ -341,6 +370,9 @@
         <node concept="Y6$CV" id="5EZY1tNZybx" role="27oU9R">
           <ref role="2hGqkR" to="bf5:G6XgqqLuKM" resolve="red" />
         </node>
+      </node>
+      <node concept="13a5ie" id="k9gc96gv9P" role="27xc_Z">
+        <property role="13a5BX" value="true" />
       </node>
       <node concept="27rm9f" id="5EZY1tNZyb$" role="27xc_Z">
         <node concept="30bXRB" id="5EZY1tNZybz" role="27rm5b">
@@ -377,7 +409,7 @@
         </node>
       </node>
       <node concept="pfQqD" id="10n4tqnmBwi" role="pfQ1b">
-        <property role="pfQqC" value="Earth" />
+        <property role="pfQqC" value="EarthNested" />
       </node>
       <node concept="3Bsx3Z" id="10n4tqnmIKO" role="1h9ZzH">
         <node concept="v6hsc" id="10n4tqnnJE5" role="3Bsx3B">

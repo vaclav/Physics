@@ -20,10 +20,14 @@ public class FixtureBuilder {
   }
 
   public Fixture build(World world) {
+    Fixture result;
     if ("box".equals((String) get(Prop.SHAPE))) {
-      return new BoxFixture(world, get(Prop.BOX_X), get(Prop.BOX_Y), get(Prop.BOX_Z), get(Prop.TEXTURE));
+      result = new BoxFixture(world, get(Prop.BOX_X), get(Prop.BOX_Y), get(Prop.BOX_Z), get(Prop.TEXTURE));
     } else {
-      return new SphereFixture(world, get(Prop.SPHERE_RADIUS), get(Prop.TEXTURE));
+      result = new SphereFixture(world, get(Prop.SPHERE_RADIUS), get(Prop.TEXTURE));
     }
+
+    result.setEmitLight(get(Prop.EMIT_LIGHT));
+    return result;
   }
 }

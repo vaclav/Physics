@@ -55,6 +55,7 @@
       <concept id="1459540517659024997" name="jetbrains.mps.samples.Physics.structure.DefinedColorReference" flags="ng" index="Y6$CV">
         <reference id="794591792991785009" name="color" index="2hGqkR" />
       </concept>
+      <concept id="362892448124441676" name="jetbrains.mps.samples.Physics.structure.EmitLightStyle" flags="ng" index="13a5ie" />
       <concept id="7287056866553921482" name="jetbrains.mps.samples.Physics.structure.ObjectMassTarget" flags="ng" index="3K9aLm" />
     </language>
     <language id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math">
@@ -137,6 +138,7 @@
         <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
       </node>
     </node>
+    <node concept="13a5ie" id="k9gc96d20D" role="27xc_Z" />
   </node>
 </model>
 

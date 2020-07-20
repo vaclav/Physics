@@ -393,7 +393,7 @@
                   <node concept="2pIpSj" id="31HEEbbXqZ5" role="2pJxcM">
                     <ref role="2pIpSl" to="9tcj:5xbVod7kJDG" resolve="relativeFrom" />
                     <node concept="2pJPED" id="31HEEbbXraC" role="28nt2d">
-                      <ref role="2pJxaS" to="9tcj:6HZo5MNbVDr" resolve="ObjectReference" />
+                      <ref role="2pJxaS" to="9tcj:6HZo5MNbVDr" resolve="ObjectReferenceExpression" />
                       <node concept="2pIpSj" id="31HEEbbXrfr" role="2pJxcM">
                         <ref role="2pIpSl" to="9tcj:6HZo5MNbVDs" resolve="target" />
                         <node concept="36biLy" id="31HEEbbXrki" role="28nt2d">

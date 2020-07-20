@@ -20,13 +20,16 @@ import jetbrains.mps.samples.Physics.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
 
 public class TestWorldSystemScope extends SystemScope {
-  public final SystemScope TheOtherWorld;
+  public final World2SystemScope TheOtherWorld;
   public final PhysicalEntity Something2;
   public final PhysicalEntity Hey;
   public final PhysicalEntity Ho;
 
   public TestWorldSystemScope(World world, VectorLike position, VectorLike velocity) {
     super(position, velocity);
+    // Save this as scope (to simplify generated mapping) 
+    final TestWorldSystemScope scope = this;
+
     //  Instanciate objects 
     Something2 = withEntity(new Something3PhysicalEntity(world));
     Hey = withEntity(new Hey1PhysicalEntity(world));

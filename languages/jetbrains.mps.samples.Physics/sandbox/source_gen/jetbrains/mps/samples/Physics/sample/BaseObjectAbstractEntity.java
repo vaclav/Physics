@@ -34,6 +34,7 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
     fixtureProperties.set(Prop.BOX_Z, BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
     fixtureProperties.set(Prop.SPHERE_RADIUS, BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimal.valueOf(Math.PI))), currentEntity.getMass()).doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
+    fixtureProperties.set(Prop.EMIT_LIGHT, false);
 
     // Forces 
     this.getForces().addAll(Arrays.asList());

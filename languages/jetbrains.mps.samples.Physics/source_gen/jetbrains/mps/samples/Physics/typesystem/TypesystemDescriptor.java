@@ -38,6 +38,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_CurrentWorldExpression_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_CylindricalCoordinates_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
@@ -90,6 +94,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_Simulation_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_SphericalCoordinates_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
@@ -121,6 +129,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       InferenceRule_Runtime inferenceRule = new typeof_WorldMassCenterTarget_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_WorldNestedObjectTarget_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_d(CONCEPTS.MulExpression$_u));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.MinusExpression$pp));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_c(CONCEPTS.MulExpression$_u));
@@ -130,7 +142,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createRealType_3ist9o_a0a0a0a0a0a0a13a0();
+          this.myOperandType = createRealType_3ist9o_a0a0a0a0a0a0a43a0();
           this.myOperationConcept = CONCEPTS.NRootExpression$sH;
           this.myTypeIsExact = false;
           this.myIsStrong = false;
@@ -138,7 +150,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
           this.myRuleNodeId = "6318410611460042110";
         }
         public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
-          return createRealType_3ist9o_a0a1a0a0a0a0fb0a();
+          return createRealType_3ist9o_a0a1a0a0a0a0ib0a();
         }
         public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
           return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA));
@@ -357,11 +369,11 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return n0.getResult();
     }
   }
-  private static SNode createRealType_3ist9o_a0a0a0a0a0a0a13a0() {
+  private static SNode createRealType_3ist9o_a0a0a0a0a0a0a43a0() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
     return n0.getResult();
   }
-  private static SNode createRealType_3ist9o_a0a1a0a0a0a0fb0a() {
+  private static SNode createRealType_3ist9o_a0a1a0a0a0a0ib0a() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
     return n0.getResult();
   }

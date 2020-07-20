@@ -21,6 +21,9 @@ public class EarthSystemSystemScope extends SystemScope {
 
   public EarthSystemSystemScope(World world, VectorLike position, VectorLike velocity) {
     super(position, velocity);
+    // Save this as scope (to simplify generated mapping) 
+    final EarthSystemSystemScope scope = this;
+
     //  Instanciate objects 
     Earth = withEntity(new Earth1PhysicalEntity(world));
     Moon = withEntity(new Moon1PhysicalEntity(world));

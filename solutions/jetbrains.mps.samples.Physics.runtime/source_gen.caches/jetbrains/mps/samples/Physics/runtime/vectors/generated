@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-9mww4ungly6kvs3dru5dem5u6sbtz4v">
-  <files names="BigDecimalHelper.java:InternalEntity.java:InternalObject.java:InternalVector.java:InternalWorld.java:VectorLike.java" />
+<product version="3" modelHash="-7wxcnqtoob90tkv4zgyyydgl5u6h3vz">
+  <files names="BigDecimalHelper.java:InternalCurrentWorld.java:InternalEntity.java:InternalObject.java:InternalVector.java:InternalWorld.java:VectorLike.java" />
 </product>
 

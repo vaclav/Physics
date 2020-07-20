@@ -9,5 +9,6 @@ public enum Prop {
   BOX_X(),
   BOX_Y(),
   BOX_Z(),
-  TEXTURE()
+  TEXTURE(),
+  EMIT_LIGHT()
 }

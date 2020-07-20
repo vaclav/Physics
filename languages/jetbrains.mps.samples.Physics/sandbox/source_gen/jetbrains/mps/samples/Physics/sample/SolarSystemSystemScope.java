@@ -16,14 +16,17 @@ import jetbrains.mps.samples.Physics.runtime.objects.rendering.Color;
 import java.util.Arrays;
 
 public class SolarSystemSystemScope extends SystemScope {
-  public final SystemScope Earth2;
+  public final EarthSystemSystemScope EarthNested;
   public final PhysicalEntity Sun;
 
   public SolarSystemSystemScope(World world, VectorLike position, VectorLike velocity) {
     super(position, velocity);
+    // Save this as scope (to simplify generated mapping) 
+    final SolarSystemSystemScope scope = this;
+
     //  Instanciate objects 
     Sun = withEntity(new Sun1PhysicalEntity(world));
-    Earth2 = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(((Number) new BigDecimal("4.184195255181698E-14").setScale(19, RoundingMode.DOWN)), ((Number) new BigDecimal("683.3309421287669").setScale(13, RoundingMode.DOWN)), ((Number) new BigDecimal("-448.14867952694067").setScale(14, RoundingMode.DOWN)))), velocity.add(new InternalVector(((Number) new BigDecimal("-3.5355339059327378").setScale(16, RoundingMode.DOWN)), ((Number) new BigDecimal("-4.3297802811774667E-16").setScale(20, RoundingMode.DOWN)), ((Number) new BigDecimal("-3.5355339059327373").setScale(16, RoundingMode.DOWN))))));
+    EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(((Number) new BigDecimal("4.184195255181698E-14").setScale(19, RoundingMode.DOWN)), ((Number) new BigDecimal("683.3309421287669").setScale(13, RoundingMode.DOWN)), ((Number) new BigDecimal("-448.14867952694067").setScale(14, RoundingMode.DOWN)))), velocity.add(new InternalVector(((Number) new BigDecimal("-3.5355339059327378").setScale(16, RoundingMode.DOWN)), ((Number) new BigDecimal("-4.3297802811774667E-16").setScale(20, RoundingMode.DOWN)), ((Number) new BigDecimal("-3.5355339059327373").setScale(16, RoundingMode.DOWN))))));
 
     // Initialize them 
     Sun.init(this, world, new FixtureBuilder());
@@ -51,6 +54,7 @@ public class SolarSystemSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SHAPE, "shape");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
+      fixtureProperties.set(Prop.EMIT_LIGHT, true);
       fixtureProperties.set(Prop.SPHERE_RADIUS, ((Number) new BigInteger("250")));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());

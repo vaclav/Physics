@@ -15,8 +15,13 @@ public class Color {
     this.red = red;
   }
 
-  public void apply(PApplet ctx) {
+  public void apply(PApplet ctx, boolean emissive) {
     ctx.noStroke();
+    if (emissive) {
+      ctx.emissive(red, green, blue);
+    } else {
+      ctx.emissive(0);
+    }
     ctx.fill(red, green, blue);
   }
 }

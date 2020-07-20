@@ -38,7 +38,9 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.runtime.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sample.SolarSystemSystemScope" />
+    <classNode dependClassName="processing.core.PApplet" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sample.GravityForce">

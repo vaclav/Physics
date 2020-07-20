@@ -353,7 +353,7 @@
     </node>
     <node concept="1YaCAy" id="6kwOTMl0usF" role="1YuTPh">
       <property role="TrG5h" value="objectReference" />
-      <ref role="1YaFvo" to="9tcj:6HZo5MNbVDr" resolve="ObjectReference" />
+      <ref role="1YaFvo" to="9tcj:6HZo5MNbVDr" resolve="ObjectReferenceExpression" />
     </node>
   </node>
   <node concept="1YbPZF" id="6kwOTMl1aul">
@@ -568,7 +568,7 @@
   </node>
   <node concept="1YbPZF" id="cTQf2Fl7sM">
     <property role="TrG5h" value="typeof_CurrentObjectExpression" />
-    <property role="3GE5qa" value="physical.expr" />
+    <property role="3GE5qa" value="physical.expr.context" />
     <node concept="3clFbS" id="cTQf2Fl7sN" role="18ibNy">
       <node concept="1Z5TYs" id="cTQf2Fl7yB" role="3cqZAp">
         <node concept="mw_s8" id="cTQf2Fl7yE" role="1ZfhK$">
@@ -1979,6 +1979,99 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="1YbPZF" id="k9gc965lwp">
+    <property role="TrG5h" value="typeof_Simulation" />
+    <node concept="3clFbS" id="k9gc965lwq" role="18ibNy">
+      <node concept="1ZobV4" id="k9gc965m6$" role="3cqZAp">
+        <property role="3wDh2S" value="true" />
+        <node concept="mw_s8" id="k9gc965m6W" role="1ZfhKB">
+          <node concept="2pJPEk" id="k9gc965m6S" role="mwGJk">
+            <node concept="2pJPED" id="k9gc965m7z" role="2pJPEn">
+              <ref role="2pJxaS" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="k9gc965m6B" role="1ZfhK$">
+          <node concept="1Z2H0r" id="k9gc965lww" role="mwGJk">
+            <node concept="2OqwBi" id="k9gc965lI5" role="1Z2MuG">
+              <node concept="1YBJjd" id="k9gc965lyo" role="2Oq$k0">
+                <ref role="1YBMHb" node="k9gc965lws" resolve="simulation" />
+              </node>
+              <node concept="3TrEf2" id="5nieUTVoERu" role="2OqNvi">
+                <ref role="3Tt5mk" to="9tcj:5nieUTVoEbw" resolve="focus" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="k9gc965lws" role="1YuTPh">
+      <property role="TrG5h" value="simulation" />
+      <ref role="1YaFvo" to="9tcj:6HZo5MNbVDo" resolve="Simulation" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="2bZvtzzIAQW">
+    <property role="TrG5h" value="typeof_CurrentWorldExpression" />
+    <property role="3GE5qa" value="physical.expr.context" />
+    <node concept="3clFbS" id="2bZvtzzIAQX" role="18ibNy">
+      <node concept="1Z5TYs" id="2bZvtzzIBcr" role="3cqZAp">
+        <node concept="mw_s8" id="2bZvtzzIBcJ" role="1ZfhKB">
+          <node concept="2pJPEk" id="2bZvtzzIBcF" role="mwGJk">
+            <node concept="2pJPED" id="2bZvtzzIBcU" role="2pJPEn">
+              <ref role="2pJxaS" to="z99z:6kwOTMl0tT7" resolve="WorldType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="2bZvtzzIBcu" role="1ZfhK$">
+          <node concept="1Z2H0r" id="2bZvtzzIAR3" role="mwGJk">
+            <node concept="1YBJjd" id="2bZvtzzIASV" role="1Z2MuG">
+              <ref role="1YBMHb" node="2bZvtzzIAQZ" resolve="currentWorldExpression" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="2bZvtzzIAQZ" role="1YuTPh">
+      <property role="TrG5h" value="currentWorldExpression" />
+      <ref role="1YaFvo" to="9tcj:2bZvtzzIAQP" resolve="CurrentWorldExpression" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="6yY6C98u6YV">
+    <property role="TrG5h" value="typeof_WorldNestedObjectTarget" />
+    <property role="3GE5qa" value="physical.expr.dot" />
+    <node concept="3clFbS" id="6yY6C98u6YW" role="18ibNy">
+      <node concept="1Z5TYs" id="6yY6C98u7zR" role="3cqZAp">
+        <node concept="mw_s8" id="6yY6C98u7$b" role="1ZfhKB">
+          <node concept="1Z2H0r" id="6yY6C98u7$7" role="mwGJk">
+            <node concept="2OqwBi" id="6yY6C98vgPL" role="1Z2MuG">
+              <node concept="2OqwBi" id="6yY6C98u7Hn" role="2Oq$k0">
+                <node concept="1YBJjd" id="6yY6C98u7$s" role="2Oq$k0">
+                  <ref role="1YBMHb" node="6yY6C98u6YY" resolve="worldNestedObjectTarget" />
+                </node>
+                <node concept="3TrEf2" id="6yY6C98u7Vu" role="2OqNvi">
+                  <ref role="3Tt5mk" to="9tcj:2bZvtzzxTfb" resolve="target" />
+                </node>
+              </node>
+              <node concept="2qgKlT" id="6yY6C98vh45" role="2OqNvi">
+                <ref role="37wK5l" to="rf09:31HEEbbXs3G" resolve="getDefinition" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="6yY6C98u7zU" role="1ZfhK$">
+          <node concept="1Z2H0r" id="6yY6C98u6Z2" role="mwGJk">
+            <node concept="1YBJjd" id="6yY6C98u70U" role="1Z2MuG">
+              <ref role="1YBMHb" node="6yY6C98u6YY" resolve="worldNestedObjectTarget" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="6yY6C98u6YY" role="1YuTPh">
+      <property role="TrG5h" value="worldNestedObjectTarget" />
+      <ref role="1YaFvo" to="9tcj:2bZvtzzxSMs" resolve="WorldNestedObjectTarget" />
     </node>
   </node>
 </model>

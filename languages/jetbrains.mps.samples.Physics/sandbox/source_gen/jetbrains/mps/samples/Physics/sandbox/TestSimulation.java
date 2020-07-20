@@ -6,16 +6,35 @@ import jetbrains.mps.samples.Physics.runtime.Simulation;
 import jetbrains.mps.samples.Physics.runtime.objects.World;
 import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.runtime.Renderer;
+import processing.core.PApplet;
+import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
 
 public class TestSimulation extends Simulation {
+  protected MilkyWaySystemScope scope;
+
+  public TestSimulation() {
+    super(6);
+  }
 
   @Override
   protected void init(World world) {
-    new SolarSystemSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+    this.scope = new MilkyWaySystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
   }
 
   public static void main(String[] args) {
     Renderer.afterInit(new TestSimulation());
     Renderer.main(args);
+  }
+
+
+  @Override
+  public void render(PApplet context) {
+    // Setting camera properly 
+    VectorLike position = new InternalVector(context.width / 2, context.height / 2, (context.height / 2) / PApplet.tan(PApplet.PI * 30 / 180));
+    VectorLike focus = new InternalVector(context.width / 2, context.height / 2, 0);
+
+    context.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, 1, 0);
+
+    super.render(context);
   }
 }
