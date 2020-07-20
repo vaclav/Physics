@@ -465,7 +465,6 @@
       <node concept="VechU" id="6HZo5MNae3y" role="3F10Kt">
         <property role="Vb096" value="6cZGtrcKCoS/black" />
       </node>
-      <node concept="VPM3Z" id="5SjYD04owS4" role="3F10Kt" />
     </node>
     <node concept="14StLt" id="60D2cmu5xP2" role="V601i">
       <property role="TrG5h" value="ParenthesisAttributeLabel" />
