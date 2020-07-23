@@ -11,8 +11,8 @@
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
   </languages>
   <imports>
-    <import index="eaav" ref="r:b3b78d7c-b258-46c7-b846-e8d10925f2cd(jetbrains.mps.samples.Physics.runtime.vectors)" />
     <import index="s6tv" ref="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+    <import index="mizj" ref="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.java.common.common)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="bf5" ref="r:ed131d93-9e12-43c3-b840-cc4cd82da9cd(jetbrains.mps.samples.Physics.colors)" implicit="true" />
   </imports>
@@ -150,7 +150,7 @@
         <property id="1510458583736148966" name="blue" index="1nv_BM" />
         <property id="1510458583736148969" name="green" index="1nv_BX" />
       </concept>
-      <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReference" flags="ng" index="3okdC7">
+      <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression" flags="ng" index="3okdC7">
         <reference id="7746015835360049756" name="target" index="3okdC0" />
       </concept>
       <concept id="7746015835359514432" name="jetbrains.mps.samples.Physics.structure.WorldDefinition" flags="ng" index="3omeWs">
@@ -233,7 +233,7 @@
           <node concept="3cpWsn" id="Zge_mbaWKt" role="3cpWs9">
             <property role="TrG5h" value="actual" />
             <node concept="3uibUv" id="G6XgqqmWGf" role="1tU5fm">
-              <ref role="3uigEE" to="eaav:G6XgqqggA$" resolve="VectorLike" />
+              <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
             </node>
             <node concept="2YIFZM" id="Zge_mbaWKu" role="33vP2m">
               <ref role="37wK5l" to="s6tv:4aXoy5WSQxW" resolve="anyToRaw" />
@@ -308,7 +308,7 @@
       <node concept="37vLTG" id="Zge_mbaWIJ" role="3clF46">
         <property role="TrG5h" value="expected" />
         <node concept="3uibUv" id="Zge_mbaWJk" role="1tU5fm">
-          <ref role="3uigEE" to="eaav:6asu_4xEVX3" resolve="InternalVector" />
+          <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
         </node>
       </node>
       <node concept="3Tm1VV" id="Zge_mbb6ti" role="1B3o_S" />
@@ -327,7 +327,7 @@
               </node>
               <node concept="2ShNRf" id="Zge_mbb7kS" role="2XxRq1">
                 <node concept="1pGfFk" id="Zge_mbb7t2" role="2ShVmc">
-                  <ref role="37wK5l" to="eaav:7DHIC2l2MWT" resolve="InternalVector" />
+                  <ref role="37wK5l" to="mizj:7DHIC2l2MWT" resolve="InternalVector" />
                   <node concept="3cmrfG" id="Zge_mbb7tz" role="37wK5m">
                     <property role="3cmrfH" value="5" />
                   </node>
@@ -381,7 +381,7 @@
               </node>
               <node concept="2ShNRf" id="Zge_mbbP7d" role="2XxRq1">
                 <node concept="1pGfFk" id="Zge_mbbP7e" role="2ShVmc">
-                  <ref role="37wK5l" to="eaav:7DHIC2l2MWT" resolve="InternalVector" />
+                  <ref role="37wK5l" to="mizj:7DHIC2l2MWT" resolve="InternalVector" />
                   <node concept="3cmrfG" id="Zge_mbbP7f" role="37wK5m">
                     <property role="3cmrfH" value="5" />
                   </node>
@@ -435,7 +435,7 @@
               </node>
               <node concept="2ShNRf" id="Zge_mbbPnk" role="2XxRq1">
                 <node concept="1pGfFk" id="Zge_mbbPnl" role="2ShVmc">
-                  <ref role="37wK5l" to="eaav:7DHIC2l2MWT" resolve="InternalVector" />
+                  <ref role="37wK5l" to="mizj:7DHIC2l2MWT" resolve="InternalVector" />
                   <node concept="3cmrfG" id="Zge_mbbPnm" role="37wK5m">
                     <property role="3cmrfH" value="5" />
                   </node>
@@ -489,7 +489,7 @@
               </node>
               <node concept="2ShNRf" id="Zge_mbd_tl" role="2XxRq1">
                 <node concept="1pGfFk" id="Zge_mbd_tm" role="2ShVmc">
-                  <ref role="37wK5l" to="eaav:7DHIC2l2MWT" resolve="InternalVector" />
+                  <ref role="37wK5l" to="mizj:7DHIC2l2MWT" resolve="InternalVector" />
                   <node concept="3cmrfG" id="Zge_mbd_tn" role="37wK5m">
                     <property role="3cmrfH" value="5" />
                   </node>
@@ -543,7 +543,7 @@
               </node>
               <node concept="2ShNRf" id="Zge_mbg41B" role="2XxRq1">
                 <node concept="1pGfFk" id="Zge_mbg48P" role="2ShVmc">
-                  <ref role="37wK5l" to="eaav:7DHIC2l2MWT" resolve="InternalVector" />
+                  <ref role="37wK5l" to="mizj:7DHIC2l2MWT" resolve="InternalVector" />
                   <node concept="3cmrfG" id="Zge_mbg4Gg" role="37wK5m">
                     <property role="3cmrfH" value="-3" />
                   </node>

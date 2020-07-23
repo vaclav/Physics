@@ -6,7 +6,7 @@ import jetbrains.mps.openapi.actions.descriptor.NodeFactory;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.model.SModel;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.language.SConcept;

@@ -24,6 +24,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BoxHeightStyle;
   private ConceptPresentation props_BoxWidthStyle;
   private ConceptPresentation props_CartesianCoordinates;
+  private ConceptPresentation props_CollisionStyle;
   private ConceptPresentation props_ColorDefinition;
   private ConceptPresentation props_Coordinates;
   private ConceptPresentation props_CurrentObjectExpression;
@@ -181,6 +182,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CartesianCoordinates = cpb.create();
         }
         return props_CartesianCoordinates;
+      case LanguageConceptSwitch.CollisionStyle:
+        if (props_CollisionStyle == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("collision-reaction");
+          props_CollisionStyle = cpb.create();
+        }
+        return props_CollisionStyle;
       case LanguageConceptSwitch.ColorDefinition:
         if (props_ColorDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

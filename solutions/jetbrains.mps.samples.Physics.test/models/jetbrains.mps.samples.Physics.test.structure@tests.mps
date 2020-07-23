@@ -88,7 +88,7 @@
         <child id="4383135941275155975" name="velocity" index="1h9ZzH" />
       </concept>
       <concept id="1510458583736011129" name="jetbrains.mps.samples.Physics.structure.Coordinates" flags="ng" index="1ns7dH" />
-      <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReference" flags="ng" index="3okdC7">
+      <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression" flags="ng" index="3okdC7">
         <reference id="7746015835360049756" name="target" index="3okdC0" />
       </concept>
       <concept id="7746015835359514432" name="jetbrains.mps.samples.Physics.structure.WorldDefinition" flags="ng" index="3omeWs">

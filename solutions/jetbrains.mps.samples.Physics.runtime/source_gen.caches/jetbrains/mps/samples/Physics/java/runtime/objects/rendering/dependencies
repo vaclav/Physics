@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.BoxFixture">
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="org.ode4j.ode.DGeom" />
+    <classNode dependClassName="org.ode4j.ode.DMass" />
+    <classNode dependClassName="org.ode4j.ode.OdeHelper" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color">
+    <classNode dependClassName="processing.core.PApplet" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture">
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="org.ode4j.ode.DBody" />
+    <classNode dependClassName="org.ode4j.ode.DGeom" />
+    <classNode dependClassName="org.ode4j.ode.DMass" />
+    <classNode dependClassName="processing.core.PApplet" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture">
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="org.ode4j.ode.DGeom" />
+    <classNode dependClassName="org.ode4j.ode.DMass" />
+    <classNode dependClassName="org.ode4j.ode.OdeHelper" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
+  </dependency>
+</dependenciesRoot>
+

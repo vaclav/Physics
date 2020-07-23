@@ -6,7 +6,7 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.samples.Physics.behavior.WorldDefinition__BehaviorDescriptor;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
-import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
+import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;

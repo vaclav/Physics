@@ -108,7 +108,6 @@
       <concept id="1510458583736379040" name="jetbrains.mps.samples.Physics.structure.AbstractForceCall" flags="ng" index="1nvtMO" />
       <concept id="7746015835360049752" name="jetbrains.mps.samples.Physics.structure.Simulation" flags="ng" index="3okdC4">
         <property id="7547499172392825249" name="speed" index="xImGz" />
-        <child id="6184070858913522343" name="cameraPosition" index="IG9$9" />
         <child id="6184070858913522400" name="focus" index="IG9_e" />
         <child id="4383135941274869506" name="world" index="1heTBC" />
       </concept>
@@ -321,21 +320,15 @@
     <node concept="1t_wfn" id="10n4tqnmBN5" role="1heTBC">
       <ref role="1t_wfm" node="10n4tqnmBvH" resolve="SolarSystem" />
     </node>
-    <node concept="1QScDb" id="6yY6C98PNtg" role="IG9_e">
-      <node concept="31uf54" id="6yY6C98PNwg" role="1QScD9">
-        <ref role="31ueSj" node="10n4tqnmBwp" resolve="Sun" />
-      </node>
-      <node concept="31hh1H" id="6yY6C98sqrY" role="30czhm" />
-    </node>
-    <node concept="1QScDb" id="6yY6C98VGj6" role="IG9$9">
-      <node concept="31uf54" id="6yY6C993ydS" role="1QScD9">
+    <node concept="1QScDb" id="5kbw6V4bMUl" role="IG9_e">
+      <node concept="31uf54" id="5kbw6V4bQSI" role="1QScD9">
         <ref role="31ueSj" node="72SP1v_PiBJ" resolve="Earth" />
       </node>
-      <node concept="1QScDb" id="6yY6C98VGbN" role="30czhm">
-        <node concept="31uf54" id="6yY6C98VGeX" role="1QScD9">
+      <node concept="1QScDb" id="6yY6C98PNtg" role="30czhm">
+        <node concept="31uf54" id="5kbw6V4bMQv" role="1QScD9">
           <ref role="31ueSj" node="10n4tqnmBvU" resolve="EarthNested" />
         </node>
-        <node concept="31hh1H" id="6yY6C98VG94" role="30czhm" />
+        <node concept="31hh1H" id="6yY6C98sqrY" role="30czhm" />
       </node>
     </node>
   </node>

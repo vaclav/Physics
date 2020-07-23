@@ -13,9 +13,9 @@ import jetbrains.mps.lang.test.runtime.BaseTestBody;
 import jetbrains.mps.lang.test.runtime.TransformationTest;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
+import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
 import junit.framework.Assert;
 

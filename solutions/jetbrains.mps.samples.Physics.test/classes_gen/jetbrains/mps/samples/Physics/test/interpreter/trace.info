@@ -64,7 +64,7 @@
       <node id="1139474844806342448" at="74,0,81,0" concept="3" trace="test_ResolveSpherical#()V" />
       <node id="1139474844806960973" at="81,0,88,0" concept="3" trace="test_ResolveDirectionalFromPosition#()V" />
       <node id="1139474844807600714" at="88,0,95,0" concept="3" trace="test_ResolveDirectionalOutsidePosition#()V" />
-      <node id="1139474844806268632" at="97,0,106,0" concept="3" trace="assertEquals#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/samples/Physics/runtime/vectors/InternalVector;)V" />
+      <node id="1139474844806268632" at="97,0,106,0" concept="3" trace="assertEquals#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/samples/Physics/java/common/vectors/InternalVector;)V" />
       <scope id="4809107873077312125" at="29,33,30,25" />
       <scope id="1139474844806211347" at="34,50,35,41" />
       <scope id="1139474844806317991" at="38,58,39,49" />

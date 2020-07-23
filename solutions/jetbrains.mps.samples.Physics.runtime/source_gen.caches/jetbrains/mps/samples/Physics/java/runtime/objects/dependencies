@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.EntityLike">
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.Function">
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity">
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder" />
+    <classNode dependClassName="org.ode4j.math.DVector3" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode dependClassName="org.ode4j.ode.DBody" />
+    <classNode dependClassName="org.ode4j.ode.OdeHelper" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.EntityLike" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.StaticFunction">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.Function" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.EntityLike" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.World">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="org.ode4j.ode.DBody" />
+    <classNode dependClassName="org.ode4j.ode.DContact" />
+    <classNode dependClassName="org.ode4j.ode.DContactBuffer" />
+    <classNode dependClassName="org.ode4j.ode.DJointGroup" />
+    <classNode dependClassName="org.ode4j.ode.DSpace" />
+    <classNode dependClassName="org.ode4j.ode.DWorld" />
+    <classNode dependClassName="org.ode4j.ode.OdeConstants" />
+    <classNode dependClassName="org.ode4j.ode.OdeHelper" />
+    <classNode dependClassName="org.ode4j.ode.internal.DxGeom" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode extendsClassName="org.ode4j.ode.DGeom" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.WorldBuilder">
+    <classNode dependClassName="java.lang.IllegalStateException" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+  </dependency>
+</dependenciesRoot>
+

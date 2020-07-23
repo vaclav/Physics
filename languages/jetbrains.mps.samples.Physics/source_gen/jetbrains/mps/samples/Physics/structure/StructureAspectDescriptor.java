@@ -31,6 +31,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptBoxHeightStyle = createDescriptorForBoxHeightStyle();
   /*package*/ final ConceptDescriptor myConceptBoxWidthStyle = createDescriptorForBoxWidthStyle();
   /*package*/ final ConceptDescriptor myConceptCartesianCoordinates = createDescriptorForCartesianCoordinates();
+  /*package*/ final ConceptDescriptor myConceptCollisionStyle = createDescriptorForCollisionStyle();
   /*package*/ final ConceptDescriptor myConceptColorDefinition = createDescriptorForColorDefinition();
   /*package*/ final ConceptDescriptor myConceptCoordinates = createDescriptorForCoordinates();
   /*package*/ final ConceptDescriptor myConceptCurrentObjectExpression = createDescriptorForCurrentObjectExpression();
@@ -82,6 +83,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptWorldMassCenterTarget = createDescriptorForWorldMassCenterTarget();
   /*package*/ final ConceptDescriptor myConceptWorldNestedObjectTarget = createDescriptorForWorldNestedObjectTarget();
   /*package*/ final ConceptDescriptor myConceptWorldReference = createDescriptorForWorldReference();
+  /*package*/ final EnumerationDescriptor myEnumerationCollisionReaction = new EnumerationDescriptor_CollisionReaction();
   /*package*/ final EnumerationDescriptor myEnumerationShapes = new EnumerationDescriptor_Shapes();
   /*package*/ final EnumerationDescriptor myEnumerationVectorComponent = new EnumerationDescriptor_VectorComponent();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -102,7 +104,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceArgument, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractObjectTarget, myConceptAbstractVectorTarget, myConceptAbstractWorldTarget, myConceptBooleanStyle, myConceptBoxDepthStyle, myConceptBoxHeightStyle, myConceptBoxWidthStyle, myConceptCartesianCoordinates, myConceptColorDefinition, myConceptCoordinates, myConceptCurrentObjectExpression, myConceptCurrentWorldExpression, myConceptCustomColorTexture, myConceptCylindricalCoordinates, myConceptDefinedColorReference, myConceptDirectionalCoordinates, myConceptDynamicForce, myConceptEmitLightStyle, myConceptForce, myConceptILocalized, myConceptIMayTargetWorld, myConceptIObjectDefinition, myConceptIProvideCurrentWorld, myConceptITargetExpression, myConceptITargetObject, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptNRootExpression, myConceptNumericStyle, myConceptObjectDefinition, myConceptObjectDistanceWithTarget, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReferenceExpression, myConceptObjectVelocityTarget, myConceptPictureTexture, myConceptPositionCoordinates, myConceptRelativeCoordinates, myConceptShapeStyle, myConceptSimulation, myConceptSphereRadiusStyle, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptStyle, myConceptTargetableExpression, myConceptTexture, myConceptTextureStyle, myConceptTimeExpression, myConceptUnitProviderChunk, myConceptVectorComponentTarget, myConceptVectorOppositeTarget, myConceptVectorResizeTarget, myConceptVelocityCoordinates, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldNestedObjectTarget, myConceptWorldReference);
+    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceArgument, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractObjectTarget, myConceptAbstractVectorTarget, myConceptAbstractWorldTarget, myConceptBooleanStyle, myConceptBoxDepthStyle, myConceptBoxHeightStyle, myConceptBoxWidthStyle, myConceptCartesianCoordinates, myConceptCollisionStyle, myConceptColorDefinition, myConceptCoordinates, myConceptCurrentObjectExpression, myConceptCurrentWorldExpression, myConceptCustomColorTexture, myConceptCylindricalCoordinates, myConceptDefinedColorReference, myConceptDirectionalCoordinates, myConceptDynamicForce, myConceptEmitLightStyle, myConceptForce, myConceptILocalized, myConceptIMayTargetWorld, myConceptIObjectDefinition, myConceptIProvideCurrentWorld, myConceptITargetExpression, myConceptITargetObject, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptNRootExpression, myConceptNumericStyle, myConceptObjectDefinition, myConceptObjectDistanceWithTarget, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReferenceExpression, myConceptObjectVelocityTarget, myConceptPictureTexture, myConceptPositionCoordinates, myConceptRelativeCoordinates, myConceptShapeStyle, myConceptSimulation, myConceptSphereRadiusStyle, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptStyle, myConceptTargetableExpression, myConceptTexture, myConceptTextureStyle, myConceptTimeExpression, myConceptUnitProviderChunk, myConceptVectorComponentTarget, myConceptVectorOppositeTarget, myConceptVectorResizeTarget, myConceptVelocityCoordinates, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldNestedObjectTarget, myConceptWorldReference);
   }
 
   @Override
@@ -139,6 +141,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptBoxWidthStyle;
       case LanguageConceptSwitch.CartesianCoordinates:
         return myConceptCartesianCoordinates;
+      case LanguageConceptSwitch.CollisionStyle:
+        return myConceptCollisionStyle;
       case LanguageConceptSwitch.ColorDefinition:
         return myConceptColorDefinition;
       case LanguageConceptSwitch.Coordinates:
@@ -248,7 +252,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationShapes, myEnumerationVectorComponent);
+    return Arrays.asList(myEnumerationCollisionReaction, myEnumerationShapes, myEnumerationVectorComponent);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -393,6 +397,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("dy", 0x1441545e2a5807eeL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("1459540517658822638").done();
     b.aggregate("dz", 0x1441545e2a5807f1L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("1459540517658822641").done();
     b.alias("cartesian coordinates");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForCollisionStyle() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "CollisionStyle", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL);
+    b.class_(false, false, false);
+    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639261");
+    b.version(2);
+    b.property("reaction", 0x298a87ff7e3fd776L).type(MetaIdFactory.dataTypeId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL)).origin("2993354433745639286").done();
+    b.alias("collision-reaction");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForColorDefinition() {

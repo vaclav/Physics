@@ -17,6 +17,7 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
         <property id="1421157252384165432" name="memberId" index="3tVfz5" />
+        <property id="672037151186491528" name="presentation" index="1L1pqM" />
       </concept>
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
         <child id="3348158742936976577" name="members" index="25R1y" />
@@ -1017,6 +1018,40 @@
     <property role="EcuMT" value="2521872686838773830" />
     <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="IProvideCurrentWorld" />
+  </node>
+  <node concept="1TIwiD" id="2AaxZXYfXtt">
+    <property role="EcuMT" value="2993354433745639261" />
+    <property role="3GE5qa" value="styles.collision" />
+    <property role="TrG5h" value="CollisionStyle" />
+    <property role="34LRSv" value="collision-reaction" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="2AaxZXYfXtQ" role="1TKVEl">
+      <property role="IQ2nx" value="2993354433745639286" />
+      <property role="TrG5h" value="reaction" />
+      <ref role="AX2Wp" node="2AaxZXYfXtu" resolve="CollisionReaction" />
+    </node>
+  </node>
+  <node concept="25R3W" id="2AaxZXYfXtu">
+    <property role="3F6X1D" value="2993354433745639262" />
+    <property role="3GE5qa" value="styles.collision" />
+    <property role="TrG5h" value="CollisionReaction" />
+    <node concept="25R33" id="2AaxZXYfXtv" role="25R1y">
+      <property role="3tVfz5" value="2993354433745639263" />
+      <property role="TrG5h" value="bounce" />
+    </node>
+    <node concept="25R33" id="2AaxZXYfXtw" role="25R1y">
+      <property role="3tVfz5" value="2993354433745639264" />
+      <property role="TrG5h" value="pause_simulation" />
+      <property role="1L1pqM" value="pause simulation" />
+    </node>
+    <node concept="25R33" id="2AaxZXYfXtz" role="25R1y">
+      <property role="3tVfz5" value="2993354433745639267" />
+      <property role="TrG5h" value="disappear" />
+    </node>
+    <node concept="25R33" id="2AaxZXYfXtB" role="25R1y">
+      <property role="3tVfz5" value="2993354433745639271" />
+      <property role="TrG5h" value="merge" />
+    </node>
   </node>
 </model>
 

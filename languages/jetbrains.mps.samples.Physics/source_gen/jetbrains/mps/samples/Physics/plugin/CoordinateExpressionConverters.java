@@ -4,9 +4,9 @@ package jetbrains.mps.samples.Physics.plugin;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
-import jetbrains.mps.samples.Physics.runtime.vectors.VectorLike;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.samples.Physics.runtime.vectors.InternalVector;
+import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterBaseException;
 import jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime;

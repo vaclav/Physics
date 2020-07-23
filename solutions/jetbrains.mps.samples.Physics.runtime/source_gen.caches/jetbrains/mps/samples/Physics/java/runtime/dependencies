@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.Renderer">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="processing.core.PApplet" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.Simulation">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.VectorHelper">
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode dependClassName="org.ode4j.math.DVector3" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+  </dependency>
+</dependenciesRoot>
+

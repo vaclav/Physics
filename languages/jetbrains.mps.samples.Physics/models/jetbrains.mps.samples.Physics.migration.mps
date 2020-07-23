@@ -3,6 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="90746344-04fd-4286-97d5-b46ae6a81709" name="jetbrains.mps.lang.migration" version="2" />
+    <use id="9882f4ad-1955-46fe-8269-94189e5dbbf2" name="jetbrains.mps.lang.migration.util" version="0" />
     <devkit ref="2787ae0c-1f54-4fbf-b0b7-caf2b5beecbc(jetbrains.mps.devkit.aspect.migration)" />
   </languages>
   <imports />
@@ -7037,6 +7038,8887 @@
             <property role="2V$B1Q" value="jetbrains.mps.samples.Physics.types" />
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="W$Crc" id="23A_79h$pzZ">
+    <property role="3GE5qa" value="refactoring" />
+    <property role="W$Cri" value="2" />
+    <property role="TrG5h" value="Update References: VectorLike-&gt;VectorLike" />
+    <node concept="1w76tK" id="23A_79h$p$0" role="1w76sc">
+      <node concept="1w76tN" id="23A_79h$p$1" role="1w76tQ">
+        <property role="1w76tO" value="moveNode.options.updateModelImports" />
+        <property role="1w7ld4" value="Update model imports" />
+      </node>
+      <node concept="1w76tN" id="23A_79h$p$2" role="1w76tQ">
+        <property role="1w76tO" value="moveNode.options.updateReferencesParticipant" />
+        <property role="1w7ld4" value="Update references" />
+      </node>
+      <node concept="1w76tN" id="23A_79h$p$3" role="1w76tQ">
+        <property role="1w76tO" value="moveNode.options.writeRefactoringLog" />
+        <property role="1w7ld4" value="Write refactoring log" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pei" role="hSBgu">
+        <property role="2pBcoG" value="794591792984033700" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VectorLike" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984033700" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VectorLike" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticField" />
+      <node concept="34ulmB" id="23A_79h$pel" role="hSBgu">
+        <node concept="2pBcaW" id="23A_79h$pej" role="34ulmC">
+          <property role="2pBcoG" value="794591792984047769" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="ctx" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pek" role="34ulmE">
+          <property role="2pBcoG" value="794591792984033700" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="VectorLike" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="23A_79h$p$8" role="hSBgs">
+        <node concept="2pBcaW" id="23A_79h$p$6" role="34ulmC">
+          <property role="2pBcoG" value="794591792984047769" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="ctx" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$p$7" role="34ulmE">
+          <property role="2pBcoG" value="794591792984033700" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="VectorLike" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$b" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pem" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047769" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ctx" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$a" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047769" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ctx" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$d" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pen" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047770" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PrivateVisibility@83683" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$c" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047770" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PrivateVisibility@83683" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$f" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peo" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047771" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83684" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$e" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047771" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83684" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$h" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pep" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047772" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticFieldReference@83681" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$g" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047772" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticFieldReference@83681" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$l" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticField" />
+      <node concept="34ulmB" id="23A_79h$pes" role="hSBgu">
+        <node concept="2pBcaW" id="23A_79h$peq" role="34ulmC">
+          <property role="2pBcoG" value="794591792984047775" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="ZERO_OFFSET" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$per" role="34ulmE">
+          <property role="2pBcoG" value="794591792984033700" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="VectorLike" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="23A_79h$p$k" role="hSBgs">
+        <node concept="2pBcaW" id="23A_79h$p$i" role="34ulmC">
+          <property role="2pBcoG" value="794591792984047775" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="ZERO_OFFSET" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$p$j" role="34ulmE">
+          <property role="2pBcoG" value="794591792984033700" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="VectorLike" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$n" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pet" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047775" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ZERO_OFFSET" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$m" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047775" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ZERO_OFFSET" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$p" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peu" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047776" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83693" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$o" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047776" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83693" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$r" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pev" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047777" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83694" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$q" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047777" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83694" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$t" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pew" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047778" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@83691" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$s" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047778" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@83691" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$v" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pex" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047779" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@83692" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$u" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047779" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@83692" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$x" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pey" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047780" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="0.00000001" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$w" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047780" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="0.00000001" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$z" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pez" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047781" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@83690" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$y" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047781" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@83690" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pe$" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047845" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="toUnit" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047845" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="toUnit" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$B" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pe_" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047846" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83751" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$A" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047846" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83751" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$D" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peA" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047847" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83752" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$C" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047847" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83752" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$F" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peB" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047848" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="length" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$E" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047848" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="length" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$H" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peC" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047849" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83766" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$G" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047849" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83766" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$J" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peD" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047850" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83763" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$I" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047850" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83763" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$L" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peE" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047851" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83764" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$K" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047851" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83764" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$N" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peF" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047852" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@83761" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$M" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047852" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@83761" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$P" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peG" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047853" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@83762" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$O" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047853" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@83762" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$R" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peH" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047854" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83759" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$Q" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047854" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83759" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$T" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peI" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047855" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83760" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$S" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047855" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83760" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$V" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peJ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047856" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83773" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$U" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047856" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83773" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$X" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peK" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047857" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83774" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$W" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047857" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83774" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p$Z" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peL" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047858" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83771" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p$Y" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047858" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83771" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peM" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047859" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83772" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047859" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83772" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peN" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047860" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83769" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047860" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83769" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peO" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047861" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83770" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047861" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83770" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peP" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047862" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83767" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047862" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83767" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peQ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047863" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83768" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047863" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83768" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_b" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peR" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047864" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83781" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_a" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047864" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83781" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_d" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peS" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047865" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83782" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_c" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047865" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83782" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_f" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peT" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047866" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83779" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_e" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047866" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83779" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_h" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peU" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047867" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83780" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_g" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047867" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83780" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_j" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peV" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047868" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83777" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_i" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047868" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83777" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_l" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peW" role="hSBgu">
+        <property role="2pBcoG" value="794591792984436874" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@87757" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_k" role="hSBgs">
+        <property role="2pBcoG" value="794591792984436874" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@87757" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_n" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peX" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047870" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83775" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_m" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047870" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83775" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_p" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peY" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047871" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MethodDocComment@83776" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_o" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047871" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MethodDocComment@83776" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_r" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$peZ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047872" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@83277" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_q" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047872" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@83277" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_t" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf0" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047873" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Set length of the vector to 1" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_s" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047873" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Set length of the vector to 1" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_v" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf1" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047874" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@83275" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_u" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047874" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@83275" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_x" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf2" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047875" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="add" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_w" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047875" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="add" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_z" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf3" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047876" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83273" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_y" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047876" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83273" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p__" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf4" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047877" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83274" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047877" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83274" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_B" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf5" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047878" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@83271" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_A" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047878" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@83271" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_D" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf6" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047879" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@83272" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_C" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047879" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@83272" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_F" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf7" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047880" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83285" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_E" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047880" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83285" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_H" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf8" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047881" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83286" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_G" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047881" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83286" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_J" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf9" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047882" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83283" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_I" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047882" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83283" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_L" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfa" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047883" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83284" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_K" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047883" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83284" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_N" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfb" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047884" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83281" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_M" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047884" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83281" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_P" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfc" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047885" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83282" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_O" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047885" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83282" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_R" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfd" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047886" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83279" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_Q" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047886" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83279" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_T" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfe" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047887" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83280" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_S" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047887" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83280" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_V" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pff" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047888" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83293" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_U" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047888" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83293" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_X" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfg" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047889" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83294" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_W" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047889" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83294" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$p_Z" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfh" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047890" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83291" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$p_Y" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047890" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83291" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pA1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfi" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047891" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83292" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pA0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047891" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83292" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pA3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfj" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047892" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83289" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pA2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047892" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83289" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pA5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfk" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047893" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83290" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pA4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047893" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83290" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pA7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfl" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047894" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83287" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pA6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047894" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83287" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pA9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfm" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047895" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83288" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pA8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047895" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83288" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfn" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047896" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83301" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047896" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83301" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfo" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047897" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83302" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047897" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83302" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfp" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047898" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83299" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047898" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83299" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfq" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047899" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83300" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047899" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83300" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfr" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047900" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83297" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047900" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83297" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfs" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047901" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83298" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047901" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83298" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pft" role="hSBgu">
+        <property role="2pBcoG" value="794591792984442666" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@82797" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984442666" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@82797" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfu" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047903" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="v" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047903" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="v" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfv" role="hSBgu">
+        <property role="2pBcoG" value="794591792985215468" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@95807" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAq" role="hSBgs">
+        <property role="2pBcoG" value="794591792985215468" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@95807" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfw" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047905" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MethodDocComment@83310" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047905" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MethodDocComment@83310" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfx" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047906" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@83307" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047906" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@83307" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfy" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047907" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Add vector to current one, return new vector" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047907" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Add vector to current one, return new vector" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfz" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047908" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="minus" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047908" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="minus" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pA_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf$" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047909" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="v" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pA$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047909" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="v" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pf_" role="hSBgu">
+        <property role="2pBcoG" value="794591792985194033" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@56459" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAA" role="hSBgs">
+        <property role="2pBcoG" value="794591792985194033" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@56459" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfA" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047911" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83304" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047911" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83304" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfB" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047912" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83317" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047912" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83317" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfC" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047913" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@83318" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047913" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@83318" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfD" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047914" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@83315" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047914" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@83315" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfE" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047915" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83316" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047915" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83316" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfF" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047916" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83313" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047916" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83313" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfG" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047917" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83314" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047917" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83314" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfH" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047918" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83311" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047918" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83311" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfI" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047919" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83312" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047919" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83312" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfJ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047920" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83325" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047920" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83325" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfK" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047921" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83326" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047921" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83326" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pAZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfL" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047922" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83323" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pAY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047922" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83323" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pB1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfM" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047923" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83324" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pB0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047923" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83324" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pB3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfN" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047924" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83321" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pB2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047924" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83321" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pB5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfO" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047925" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83322" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pB4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047925" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83322" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pB7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfP" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047926" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83319" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pB6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047926" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83319" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pB9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfQ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047927" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83320" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pB8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047927" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83320" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfR" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047928" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83333" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047928" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83333" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfS" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047929" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83334" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047929" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83334" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfT" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047930" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83331" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047930" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83331" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfU" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047931" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83332" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047931" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83332" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfV" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047932" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83329" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047932" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83329" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfW" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047933" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83330" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047933" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83330" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfX" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047934" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83327" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047934" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83327" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfY" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047935" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83328" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047935" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83328" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pfZ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984448488" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@80431" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984448488" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@80431" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg0" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047937" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83342" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047937" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83342" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg1" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047938" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MethodDocComment@83339" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047938" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MethodDocComment@83339" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg2" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047939" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@83340" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047939" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@83340" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg3" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047940" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Subtract a vector to this one and return the newly created vector" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047940" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Subtract a vector to this one and return the newly created vector" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pB_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg4" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047941" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="mul" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pB$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047941" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="mul" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg5" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047942" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83335" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047942" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83335" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg6" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047943" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83336" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047943" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83336" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg7" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047944" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="factorD" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047944" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="factorD" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg8" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047945" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83350" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047945" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83350" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg9" role="hSBgu">
+        <property role="2pBcoG" value="2370745472572806917" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@79086" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBI" role="hSBgs">
+        <property role="2pBcoG" value="2370745472572806917" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@79086" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pga" role="hSBgu">
+        <property role="2pBcoG" value="794591792985201350" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@49428" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBK" role="hSBgs">
+        <property role="2pBcoG" value="794591792985201350" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@49428" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgb" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047948" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83345" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047948" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83345" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgc" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047949" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@83346" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047949" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@83346" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgd" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047950" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@83343" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047950" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@83343" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pge" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047951" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83344" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047951" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83344" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgf" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047952" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83357" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047952" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83357" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgg" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047953" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83358" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047953" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83358" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pBZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgh" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047954" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83355" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pBY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047954" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83355" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pC1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgi" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047955" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83356" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pC0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047955" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83356" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pC3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgj" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047956" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83353" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pC2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047956" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83353" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pC5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgk" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047957" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83354" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pC4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047957" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83354" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pC7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgl" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047958" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83351" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pC6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047958" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83351" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pC9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgm" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047959" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83352" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pC8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047959" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83352" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgn" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047960" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83365" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047960" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83365" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgo" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047961" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83366" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047961" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83366" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgp" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047962" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83363" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047962" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83363" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgq" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047963" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83364" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047963" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83364" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgr" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047964" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83361" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047964" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83361" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgs" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047965" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83362" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047965" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83362" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgt" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047966" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83359" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047966" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83359" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgu" role="hSBgu">
+        <property role="2pBcoG" value="794591792984452093" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@77884" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984452093" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@77884" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgv" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047968" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="factor" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047968" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="factor" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgw" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047969" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83374" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047969" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83374" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgx" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047970" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MethodDocComment@83371" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047970" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MethodDocComment@83371" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgy" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047971" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@83372" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047971" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@83372" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgz" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047972" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Multiply the size of the vector by a factor and return the newly created vector" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047972" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Multiply the size of the vector by a factor and return the newly created vector" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pC_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg$" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047973" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="resize" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pC$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047973" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="resize" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pg_" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047974" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83367" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047974" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83367" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgA" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047975" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83368" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047975" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83368" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgB" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047976" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="length" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047976" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="length" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgC" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047977" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83382" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047977" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83382" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgD" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047978" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83379" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047978" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83379" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgE" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047979" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IfStatement@83380" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047979" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IfStatement@83380" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgF" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047980" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83377" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047980" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83377" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgG" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047981" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83378" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047981" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83378" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgH" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047982" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ThisExpression@83375" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047982" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ThisExpression@83375" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgI" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047983" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="EqualsExpression@83376" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047983" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="EqualsExpression@83376" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgJ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047984" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@83389" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047984" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@83389" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgK" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047985" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83390" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047985" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83390" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pCZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgL" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047986" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83387" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pCY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047986" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83387" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pD1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgM" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047987" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83388" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pD0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047987" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83388" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pD3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgN" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047988" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83385" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pD2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047988" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83385" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pD5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgO" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047989" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83386" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pD4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047989" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83386" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pD7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgP" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047990" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83383" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pD6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047990" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83383" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pD9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgQ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047991" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Statement@83384" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pD8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047991" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Statement@83384" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgR" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047992" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83397" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047992" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83397" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgS" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047993" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="unit" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047993" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="unit" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgT" role="hSBgu">
+        <property role="2pBcoG" value="794591792984457895" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@67810" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984457895" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@67810" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgU" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047995" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83396" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047995" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83396" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgV" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047996" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ThisExpression@83393" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047996" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ThisExpression@83393" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgW" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047997" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83394" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047997" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83394" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgX" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047998" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83391" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047998" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83391" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgY" role="hSBgu">
+        <property role="2pBcoG" value="794591792984047999" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticFieldReference@83392" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984047999" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticFieldReference@83392" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pgZ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048000" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83405" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048000" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83405" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph0" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048001" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83406" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048001" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83406" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph1" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048002" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83403" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048002" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83403" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph2" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048003" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83404" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048003" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83404" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph3" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048004" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="TernaryOperatorExpression@83401" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048004" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="TernaryOperatorExpression@83401" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pD_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph4" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048005" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83402" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pD$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048005" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83402" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph5" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048006" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83399" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048006" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83399" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph6" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048007" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83400" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048007" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83400" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph7" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048008" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83413" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048008" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83413" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph8" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048009" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83414" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048009" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83414" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph9" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048010" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83411" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048010" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83411" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pha" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048011" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticFieldReference@83412" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048011" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticFieldReference@83412" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phb" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048012" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83409" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048012" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83409" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phc" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048013" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83410" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048013" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83410" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phd" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048014" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83407" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048014" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83407" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phe" role="hSBgu">
+        <property role="2pBcoG" value="794591792984085482" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@47155" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984085482" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@47155" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phf" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048016" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="newLength" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048016" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="newLength" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phg" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048017" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83422" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048017" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83422" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pDZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phh" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048018" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MethodDocComment@83419" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pDY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048018" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MethodDocComment@83419" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pE1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phi" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048019" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@83420" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pE0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048019" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@83420" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pE3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phj" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048020" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Change the size of the vector and return the newly created vector" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pE2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048020" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Change the size of the vector and return the newly created vector" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pE5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phk" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048021" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@83418" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pE4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048021" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@83418" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pE7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phl" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048022" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@83415" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pE6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048022" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@83415" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pE9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phm" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048023" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="lengthSquared" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pE8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048023" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="lengthSquared" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phn" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048024" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83429" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048024" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83429" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pho" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048025" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83430" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048025" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83430" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$php" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048026" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83427" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048026" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83427" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phq" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048027" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83428" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048027" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83428" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phr" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048028" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83425" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048028" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83425" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phs" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048029" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83426" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048029" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83426" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pht" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048030" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@83423" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048030" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@83423" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phu" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048031" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83424" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048031" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83424" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phv" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048032" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83437" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048032" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83437" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phw" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048033" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83438" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048033" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83438" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phx" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048034" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83435" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048034" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83435" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phy" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048035" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83436" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048035" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83436" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phz" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048036" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@83433" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048036" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@83433" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pE_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph$" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048037" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83434" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pE$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048037" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83434" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ph_" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048038" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83431" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048038" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83431" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pED" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phA" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048039" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83432" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048039" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83432" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phB" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048040" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83445" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048040" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83445" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phC" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048041" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83446" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048041" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83446" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phD" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048042" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83443" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048042" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83443" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phE" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048043" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@83444" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048043" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@83444" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phF" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048044" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83441" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048044" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83441" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phG" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048045" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83442" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048045" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83442" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pER" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phH" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048046" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83439" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048046" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83439" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pET" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phI" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048047" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83440" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pES" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048047" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83440" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phJ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048048" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83453" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048048" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83453" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phK" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048049" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@83454" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048049" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@83454" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pEZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phL" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048050" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="length" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pEY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048050" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="length" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pF1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phM" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048051" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83452" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pF0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048051" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83452" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pF3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phN" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048052" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83449" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pF2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048052" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83449" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pF5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phO" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048053" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83450" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pF4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048053" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83450" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pF7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phP" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048054" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83447" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pF6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048054" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83447" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pF9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phQ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048055" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83448" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pF8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048055" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83448" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phR" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048056" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83461" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048056" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83461" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phS" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048057" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83462" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048057" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83462" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phT" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048058" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83459" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048058" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83459" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phU" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048059" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@83460" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048059" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@83460" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phV" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048060" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="getPolarAngle" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048060" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="getPolarAngle" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phW" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048061" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83458" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048061" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83458" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phX" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048062" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83455" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048062" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@83455" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phY" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048063" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="acos" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048063" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="acos" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$phZ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048064" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DoubleType@83469" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048064" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DoubleType@83469" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi0" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048065" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@83470" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048065" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@83470" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi1" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048066" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83467" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048066" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83467" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi2" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048067" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83468" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048067" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83468" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi3" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048068" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83465" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048068" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83465" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pF_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi4" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048069" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83466" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pF$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048069" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83466" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi5" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048070" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83463" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048070" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83463" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi6" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048071" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83464" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048071" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83464" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi7" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048072" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83477" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048072" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83477" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi8" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048073" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83478" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048073" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83478" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi9" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048074" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@83475" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048074" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@83475" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pia" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048075" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83476" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048075" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83476" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pib" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048076" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83473" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048076" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83473" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pic" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048077" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83474" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048077" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83474" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pid" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048078" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MethodDocComment@83471" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048078" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MethodDocComment@83471" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pie" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048079" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@83472" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048079" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@83472" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pif" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048080" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Compute and returns the polar angle (theta / θ)" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048080" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Compute and returns the polar angle (theta / θ)" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pig" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048081" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="polar angle" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048081" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="polar angle" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pFZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pih" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048082" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@83483" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pFY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048082" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@83483" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pG1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pii" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048083" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="getAzimutalAngle" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pG0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048083" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="getAzimutalAngle" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pG3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pij" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048084" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@83481" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pG2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048084" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@83481" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pG5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pik" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048085" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="SingleLineComment@83482" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pG4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048085" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="SingleLineComment@83482" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pG7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pil" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048086" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Line@83479" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pG6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048086" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Line@83479" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pG9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pim" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048087" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83480" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pG8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048087" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83480" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pin" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048088" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83493" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048088" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83493" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pio" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048089" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83494" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048089" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83494" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pip" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048090" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83491" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048090" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83491" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piq" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048091" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83492" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048091" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83492" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pir" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048092" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83489" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048092" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83489" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pis" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048093" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83490" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048093" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83490" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pit" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048094" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83487" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048094" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83487" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piu" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048095" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83488" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048095" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83488" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piv" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048096" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83501" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048096" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83501" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piw" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048097" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83502" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048097" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83502" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pix" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048098" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83499" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048098" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83499" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piy" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048099" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83500" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048099" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83500" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piz" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048100" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Word@83497" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048100" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Word@83497" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pG_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi$" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048101" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@83498" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pG$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048101" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@83498" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pi_" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048102" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@83495" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048102" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@83495" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piA" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048103" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@83496" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048103" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@83496" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piB" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048104" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83509" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048104" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83509" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piC" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048105" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83510" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048105" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83510" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piD" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048106" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83507" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048106" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83507" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piE" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048107" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83508" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048107" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83508" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piF" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048108" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83505" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048108" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83505" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piG" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048109" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83506" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048109" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83506" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piH" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048110" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@83503" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048110" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@83503" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piI" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048111" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@83504" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048111" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@83504" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piJ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048112" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MethodDocComment@83517" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048112" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MethodDocComment@83517" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piK" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048113" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@83518" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048113" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@83518" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pGZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piL" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048114" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Compute and returns the azimuthal angle (phi / φ)" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pGY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048114" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Compute and returns the azimuthal angle (phi / φ)" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pH1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piM" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048115" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="azimutal angle" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pH0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048115" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="azimutal angle" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pH3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piN" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048116" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@83513" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pH2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048116" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@83513" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pH5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piO" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048163" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="toDVector3C" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pH4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048163" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="toDVector3C" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pH7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piP" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048164" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@84073" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pH6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048164" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@84073" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pH9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piQ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048165" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@84074" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pH8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048165" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@84074" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piR" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048166" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@84071" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048166" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@84071" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piS" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048167" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@84072" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048167" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@84072" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piT" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048168" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84085" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048168" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84085" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piU" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048169" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84086" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048169" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84086" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piV" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048170" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@84083" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048170" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@84083" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piW" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048171" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84084" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048171" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84084" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piX" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048172" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84081" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048172" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84081" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piY" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048173" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@84082" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048173" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@84082" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$piZ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048174" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84079" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048174" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84079" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj0" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048175" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84080" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048175" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84080" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj1" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048176" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@84093" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048176" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@84093" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj2" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048177" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@84094" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048177" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@84094" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj3" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048178" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84091" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048178" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84091" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pH_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj4" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048179" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@84092" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pH$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048179" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@84092" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj5" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048180" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="toString" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048180" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="toString" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj6" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048181" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StringType@84090" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048181" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StringType@84090" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj7" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048182" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@84087" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048182" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@84087" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj8" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048183" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@84088" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048183" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@84088" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj9" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048184" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ExpressionStatement@84101" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048184" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ExpressionStatement@84101" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pja" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048185" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlusExpression@84102" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048185" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlusExpression@84102" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjb" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048186" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="]" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048186" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="]" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjc" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048187" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlusExpression@84100" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048187" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlusExpression@84100" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjd" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048188" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84097" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048188" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84097" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pje" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048189" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84098" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048189" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84098" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjf" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048190" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@84095" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048190" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@84095" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjg" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048191" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="EnumConstantReference@84096" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048191" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="EnumConstantReference@84096" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pHZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjh" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048192" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@84109" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pHY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048192" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@84109" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pI1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pji" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048193" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlusExpression@84110" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pI0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048193" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlusExpression@84110" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pI3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjj" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048194" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value=", z=" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pI2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048194" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value=", z=" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pI5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjk" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048195" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlusExpression@84108" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pI4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048195" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlusExpression@84108" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pI7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjl" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048196" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84105" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pI6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048196" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84105" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pI9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjm" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048197" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84106" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pI8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048197" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84106" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjn" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048198" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@84103" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048198" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@84103" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pId" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjo" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048199" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="EnumConstantReference@84104" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048199" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="EnumConstantReference@84104" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjp" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048200" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@84117" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048200" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@84117" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjq" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048201" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlusExpression@84118" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048201" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlusExpression@84118" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjr" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048202" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value=", y=" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048202" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value=", y=" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjs" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048203" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlusExpression@84116" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048203" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlusExpression@84116" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjt" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048204" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84113" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048204" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84113" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pju" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048205" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@84114" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048205" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@84114" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjv" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048206" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84111" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048206" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84111" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjw" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048207" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@84112" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048207" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@84112" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjx" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048208" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="EnumConstantReference@84125" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048208" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="EnumConstantReference@84125" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjy" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048209" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlusExpression@84126" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048209" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlusExpression@84126" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjz" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048210" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="[" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048210" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="[" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pI_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj$" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048211" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="x=" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pI$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048211" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="x=" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pj_" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048212" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="AnnotationInstance@84121" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048212" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="AnnotationInstance@84121" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pID" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjA" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048213" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@84122" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048213" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@84122" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjB" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048214" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="getX" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048214" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="getX" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjC" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048215" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84120" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048215" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84120" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjD" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048216" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@84133" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pII" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048216" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@84133" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjE" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048217" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@84134" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048217" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@84134" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjF" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048222" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="getY" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048222" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="getY" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjG" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048223" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84128" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048223" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84128" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjH" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048224" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@84141" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048224" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@84141" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjI" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048225" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@84142" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048225" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@84142" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjJ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048230" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="getZ" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048230" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="getZ" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjK" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048231" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84136" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048231" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84136" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pIZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjL" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048232" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@84149" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pIY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048232" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@84149" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJ1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjM" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048233" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@84150" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJ0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048233" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@84150" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJ3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjN" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048238" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@84143" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJ2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048238" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@84143" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJ5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjO" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048359" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@84264" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJ4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048359" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@84264" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJ7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjP" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048360" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="equals" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJ6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048360" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="equals" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJ9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjQ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048361" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@84278" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJ8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048361" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@84278" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjR" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048362" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="BooleanType@84275" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048362" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="BooleanType@84275" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjS" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048363" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="obj" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048363" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="obj" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjT" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048364" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84273" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048364" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84273" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjU" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048365" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@84274" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048365" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@84274" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjV" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048366" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IfStatement@84271" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048366" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IfStatement@84271" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjW" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048367" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@84272" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048367" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@84272" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjX" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048368" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@84285" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048368" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@84285" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjY" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048369" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="cmp" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048369" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="cmp" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pjZ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984428193" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@101608" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984428193" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@101608" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk0" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048371" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CastExpression@84284" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048371" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CastExpression@84284" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk1" role="hSBgu">
+        <property role="2pBcoG" value="794591792984422420" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@40530" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984422420" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@40530" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk2" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048373" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@84282" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048373" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@84282" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk3" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048374" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@84279" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048374" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@84279" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJ_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk4" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048375" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="AndExpression@84280" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJ$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048375" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="AndExpression@84280" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk5" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048376" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="AndExpression@84293" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048376" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="AndExpression@84293" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk6" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048377" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="EqualsExpression@84294" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048377" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="EqualsExpression@84294" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk7" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048378" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84291" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048378" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84291" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk8" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048379" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84292" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048379" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84292" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk9" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048380" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84289" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048380" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84289" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pka" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048381" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@84290" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048381" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@84290" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkb" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048382" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84287" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048382" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84287" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkc" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048383" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84288" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048383" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84288" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkd" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048384" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83789" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048384" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83789" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pke" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048385" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83790" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048385" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83790" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkf" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048386" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83787" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048386" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83787" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkg" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048387" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83788" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048387" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83788" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pJZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkh" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048388" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@83785" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pJY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048388" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@83785" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pK1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pki" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048389" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="EqualsExpression@83786" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pK0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048389" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="EqualsExpression@83786" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pK3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkj" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048390" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83783" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pK2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048390" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83783" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pK5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkk" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048391" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83784" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pK4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048391" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83784" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pK7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkl" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048392" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83797" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pK6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048392" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83797" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pK9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkm" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048393" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83798" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pK8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048393" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83798" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkn" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048394" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83795" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048394" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83795" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pko" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048395" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83796" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048395" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83796" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkp" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048396" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83793" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048396" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83793" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkq" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048397" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83794" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048397" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83794" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkr" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048398" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83791" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048398" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83791" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pks" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048399" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83792" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048399" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83792" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkt" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048400" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@83805" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKm" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048400" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@83805" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pku" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048401" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="EqualsExpression@83806" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048401" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="EqualsExpression@83806" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkv" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048402" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@83803" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKq" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048402" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@83803" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkw" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048403" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83804" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKs" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048403" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83804" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkx" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048404" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83801" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKu" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048404" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83801" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pky" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048405" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@83802" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKw" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048405" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@83802" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkz" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048406" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83799" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKy" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048406" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83799" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pK_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk$" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048407" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83800" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pK$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048407" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83800" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pk_" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048408" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83813" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048408" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83813" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkA" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048409" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalMethodCall@83814" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048409" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalMethodCall@83814" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkB" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048410" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83811" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048410" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83811" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkC" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048411" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83812" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048411" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@83812" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkD" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048412" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83809" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048412" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83809" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkE" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048413" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceOfExpression@83810" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048413" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceOfExpression@83810" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkF" role="hSBgu">
+        <property role="2pBcoG" value="794591792984420672" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@38278" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984420672" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@38278" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkG" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048415" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83808" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048415" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83808" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkH" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048416" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ExpressionStatement@83821" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048416" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ExpressionStatement@83821" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkI" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048417" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="SuperMethodCall@83822" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048417" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="SuperMethodCall@83822" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkJ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048418" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@83819" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048418" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@83819" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkK" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048419" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="AnnotationInstance@83820" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048419" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="AnnotationInstance@83820" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pKZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkL" role="hSBgu">
+        <property role="2pBcoG" value="794591792984033744" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@101917" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pKY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984033744" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@101917" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pL1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkM" role="hSBgu">
+        <property role="2pBcoG" value="794591792984033701" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@101866" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pL0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984033701" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@101866" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pL3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkN" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959643459" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InternalVector" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pL2" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959643459" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InternalVector" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pL7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticField" />
+      <node concept="34ulmB" id="23A_79h$pkQ" role="hSBgu">
+        <node concept="2pBcaW" id="23A_79h$pkO" role="34ulmC">
+          <property role="2pBcoG" value="7105688800959689118" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="ctx" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pkP" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="23A_79h$pL6" role="hSBgs">
+        <node concept="2pBcaW" id="23A_79h$pL4" role="34ulmC">
+          <property role="2pBcoG" value="7105688800959689118" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="ctx" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pL5" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pL9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkR" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959689118" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ctx" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pL8" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959689118" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ctx" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkS" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959687976" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PrivateVisibility@23209" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLa" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959687976" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PrivateVisibility@23209" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkT" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959689093" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@20228" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLc" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959689093" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@20228" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkU" role="hSBgu">
+        <property role="2pBcoG" value="3489632902464030270" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticFieldReference@124971" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLe" role="hSBgs">
+        <property role="2pBcoG" value="3489632902464030270" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticFieldReference@124971" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticField" />
+      <node concept="34ulmB" id="23A_79h$pkX" role="hSBgu">
+        <node concept="2pBcaW" id="23A_79h$pkV" role="34ulmC">
+          <property role="2pBcoG" value="911298080287972861" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="almostZero" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pkW" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="23A_79h$pLi" role="hSBgs">
+        <node concept="2pBcaW" id="23A_79h$pLg" role="34ulmC">
+          <property role="2pBcoG" value="911298080287972861" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="almostZero" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pLh" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkY" role="hSBgu">
+        <property role="2pBcoG" value="911298080287972861" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="almostZero" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLk" role="hSBgs">
+        <property role="2pBcoG" value="911298080287972861" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="almostZero" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pkZ" role="hSBgu">
+        <property role="2pBcoG" value="1139474844806304690" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@61155" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLm" role="hSBgs">
+        <property role="2pBcoG" value="1139474844806304690" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@61155" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pl0" role="hSBgu">
+        <property role="2pBcoG" value="911298080287970829" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@87925" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLo" role="hSBgs">
+        <property role="2pBcoG" value="911298080287970829" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@87925" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pl1" role="hSBgu">
+        <property role="2pBcoG" value="911298080287978658" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@95502" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLq" role="hSBgs">
+        <property role="2pBcoG" value="911298080287978658" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@95502" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pl2" role="hSBgu">
+        <property role="2pBcoG" value="911298080287980073" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@99225" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLs" role="hSBgs">
+        <property role="2pBcoG" value="911298080287980073" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@99225" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pl3" role="hSBgu">
+        <property role="2pBcoG" value="911298080287981424" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="0.00000001" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLu" role="hSBgs">
+        <property role="2pBcoG" value="911298080287981424" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="0.00000001" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticField" />
+      <node concept="34ulmB" id="23A_79h$pl6" role="hSBgu">
+        <node concept="2pBcaW" id="23A_79h$pl4" role="34ulmC">
+          <property role="2pBcoG" value="794591792984378694" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="ZERO" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pl5" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="23A_79h$pLy" role="hSBgs">
+        <node concept="2pBcaW" id="23A_79h$pLw" role="34ulmC">
+          <property role="2pBcoG" value="794591792984378694" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="ZERO" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pLx" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pL_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pl7" role="hSBgu">
+        <property role="2pBcoG" value="794591792984378694" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ZERO" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pL$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984378694" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ZERO" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pl8" role="hSBgu">
+        <property role="2pBcoG" value="794591792984372533" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@86387" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984372533" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@86387" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pl9" role="hSBgu">
+        <property role="2pBcoG" value="794591792984377963" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@86189" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLC" role="hSBgs">
+        <property role="2pBcoG" value="794591792984377963" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@86189" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pla" role="hSBgu">
+        <property role="2pBcoG" value="794591792984383330" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@80804" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLE" role="hSBgs">
+        <property role="2pBcoG" value="794591792984383330" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@80804" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plb" role="hSBgu">
+        <property role="2pBcoG" value="794591792984384388" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@75714" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984384388" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@75714" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plc" role="hSBgu">
+        <property role="2pBcoG" value="794591792984385253" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@75043" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984385253" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@75043" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pld" role="hSBgu">
+        <property role="2pBcoG" value="794591792984388161" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@71815" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984388161" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@71815" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ple" role="hSBgu">
+        <property role="2pBcoG" value="794591792984389660" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IntegerConstant@73306" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984389660" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IntegerConstant@73306" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plf" role="hSBgu">
+        <property role="2pBcoG" value="794591792984363881" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@96175" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984363881" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@96175" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plg" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652712" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="x" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLQ" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652712" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="x" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plh" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471094285" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PrivateVisibility@112338" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLS" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471094285" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PrivateVisibility@112338" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pli" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652714" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@56434" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLU" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652714" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@56434" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plj" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959650726" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="y" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLW" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959650726" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="y" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pLZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plk" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471103076" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PrivateVisibility@103657" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pLY" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471103076" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PrivateVisibility@103657" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pM1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pll" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652671" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@56485" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pM0" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652671" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@56485" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pM3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plm" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652740" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="z" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pM2" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652740" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="z" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pM5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pln" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471105729" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PrivateVisibility@103046" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pM4" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471105729" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PrivateVisibility@103046" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pM7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plo" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652742" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@56590" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pM6" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652742" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@56590" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pM9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plp" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652697" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@56383" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pM8" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652697" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@56383" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plq" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959643460" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@67660" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMa" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959643460" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@67660" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plr" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652814" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InternalVector" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMc" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652814" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InternalVector" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pls" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652815" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VoidType@56533" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMe" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652815" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VoidType@56533" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plt" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652816" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@56504" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMg" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652816" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@56504" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plu" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652818" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@56506" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMi" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652818" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@56506" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plv" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652822" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ExpressionStatement@56510" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMk" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652822" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ExpressionStatement@56510" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plw" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652824" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="AssignmentExpression@56512" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMm" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652824" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="AssignmentExpression@56512" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plx" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652828" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@56516" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMo" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652828" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@56516" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$ply" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652829" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ThisExpression@56515" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMq" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652829" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ThisExpression@56515" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plz" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652830" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@56518" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMs" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652830" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@56518" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pl$" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652831" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@56517" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMu" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652831" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@56517" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pl_" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652834" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ExpressionStatement@56554" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMw" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652834" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ExpressionStatement@56554" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plA" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652836" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="AssignmentExpression@56556" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMy" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652836" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="AssignmentExpression@56556" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pM_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plB" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652840" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@56560" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pM$" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652840" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@56560" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plC" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652841" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ThisExpression@56559" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMA" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652841" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ThisExpression@56559" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plD" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652842" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@56562" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMC" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652842" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@56562" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plE" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652843" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@56561" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pME" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652843" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@56561" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plF" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652846" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ExpressionStatement@56566" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMG" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652846" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ExpressionStatement@56566" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plG" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652848" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="AssignmentExpression@56536" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMI" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652848" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="AssignmentExpression@56536" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pML" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plH" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652852" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@56540" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMK" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652852" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@56540" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plI" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652853" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ThisExpression@56539" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMM" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652853" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ThisExpression@56539" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plJ" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652854" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@56542" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMO" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652854" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@56542" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plK" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652855" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@56541" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMQ" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652855" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@56541" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plL" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652821" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="x" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMS" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652821" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="x" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plM" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652820" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@56508" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMU" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652820" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@56508" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plN" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652833" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="y" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMW" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652833" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="y" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pMZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plO" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652832" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@56552" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pMY" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652832" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@56552" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pN1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plP" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652845" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="z" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pN0" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652845" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="z" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pN3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plQ" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959652844" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@56564" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pN2" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959652844" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@56564" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pN5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plR" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507788089" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InternalVector" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pN4" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507788089" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InternalVector" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pN7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plS" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507788090" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VoidType@99616" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pN6" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507788090" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VoidType@99616" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pN9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plT" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507788091" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@99617" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pN8" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507788091" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@99617" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plU" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507788092" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@99618" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNa" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507788092" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@99618" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plV" role="hSBgu">
+        <property role="2pBcoG" value="796402062953570112" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ThisConstructorInvocation@74725" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNc" role="hSBgs">
+        <property role="2pBcoG" value="796402062953570112" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ThisConstructorInvocation@74725" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plW" role="hSBgu">
+        <property role="2pBcoG" value="2370745472572806914" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@79079" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNe" role="hSBgs">
+        <property role="2pBcoG" value="2370745472572806914" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@79079" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plX" role="hSBgu">
+        <property role="2pBcoG" value="794591792984336666" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@60767" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984336666" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@60767" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plY" role="hSBgu">
+        <property role="2pBcoG" value="2370745472572806915" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@79080" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNi" role="hSBgs">
+        <property role="2pBcoG" value="2370745472572806915" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@79080" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$plZ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984336650" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@60751" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984336650" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@60751" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm0" role="hSBgu">
+        <property role="2pBcoG" value="2370745472572806916" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@79085" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNm" role="hSBgs">
+        <property role="2pBcoG" value="2370745472572806916" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@79085" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm1" role="hSBgu">
+        <property role="2pBcoG" value="794591792984336658" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@60759" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984336658" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@60759" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm2" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507788111" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="x" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNq" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507788111" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="x" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm3" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507792144" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@95478" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNs" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507792144" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@95478" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm4" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507788113" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="y" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNu" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507788113" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="y" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm5" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507793898" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@126672" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNw" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507793898" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@126672" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm6" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507788115" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="z" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNy" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507788115" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="z" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pN_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm7" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507795383" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@123037" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pN$" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507795383" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@123037" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm8" role="hSBgu">
+        <property role="2pBcoG" value="796402062952173765" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@88923" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNA" role="hSBgs">
+        <property role="2pBcoG" value="796402062952173765" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@88923" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pND" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm9" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091218" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="getX" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNC" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091218" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="getX" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pma" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091219" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@109268" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNE" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091219" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@109268" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmb" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091220" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@109273" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNG" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091220" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@109273" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmc" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091221" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@109274" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNI" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091221" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@109274" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmd" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091222" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ExpressionStatement@109271" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNK" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091222" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ExpressionStatement@109271" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pme" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091215" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@109264" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNM" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091215" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@109264" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmf" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091216" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ThisExpression@109269" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNO" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091216" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ThisExpression@109269" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmg" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091217" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@109270" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNQ" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091217" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@109270" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmh" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091226" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="getY" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNS" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091226" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="getY" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmi" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091227" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@109276" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNU" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091227" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@109276" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmj" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091228" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@109281" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNW" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091228" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@109281" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pNZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmk" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091229" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@109282" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pNY" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091229" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@109282" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pO1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pml" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091230" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ExpressionStatement@109279" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pO0" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091230" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ExpressionStatement@109279" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pO3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmm" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091223" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@109272" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pO2" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091223" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@109272" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pO5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmn" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091224" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ThisExpression@109277" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pO4" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091224" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ThisExpression@109277" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pO7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmo" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091225" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@109278" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pO6" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091225" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@109278" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pO9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmp" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091234" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="getZ" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pO8" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091234" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="getZ" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmq" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091235" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@109220" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOa" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091235" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@109220" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmr" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091236" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@109225" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOc" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091236" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@109225" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pms" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091237" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@109226" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOe" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091237" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@109226" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmt" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091238" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ExpressionStatement@109223" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOg" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091238" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ExpressionStatement@109223" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmu" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091231" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@109280" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOi" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091231" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@109280" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmv" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091232" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ThisExpression@109221" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOk" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091232" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ThisExpression@109221" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmw" role="hSBgu">
+        <property role="2pBcoG" value="3489632902471091233" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@109222" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOm" role="hSBgs">
+        <property role="2pBcoG" value="3489632902471091233" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="FieldReferenceOperation@109222" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmx" role="hSBgu">
+        <property role="2pBcoG" value="794591792984352337" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@42138" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOo" role="hSBgs">
+        <property role="2pBcoG" value="794591792984352337" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@42138" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticMethod" />
+      <node concept="34ulmB" id="23A_79h$pm$" role="hSBgu">
+        <node concept="2pBcaW" id="23A_79h$pmy" role="34ulmC">
+          <property role="2pBcoG" value="796402062952183141" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="fromCylindrical" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pmz" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="23A_79h$pOs" role="hSBgs">
+        <node concept="2pBcaW" id="23A_79h$pOq" role="34ulmC">
+          <property role="2pBcoG" value="796402062952183141" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="fromCylindrical" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pOr" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pm_" role="hSBgu">
+        <property role="2pBcoG" value="796402062952183141" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="fromCylindrical" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOu" role="hSBgs">
+        <property role="2pBcoG" value="796402062952183141" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="fromCylindrical" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmA" role="hSBgu">
+        <property role="2pBcoG" value="796402062952183144" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@81350" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOw" role="hSBgs">
+        <property role="2pBcoG" value="796402062952183144" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@81350" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmB" role="hSBgu">
+        <property role="2pBcoG" value="796402062952238935" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@86984" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOy" role="hSBgs">
+        <property role="2pBcoG" value="796402062952238935" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@86984" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pO_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmC" role="hSBgu">
+        <property role="2pBcoG" value="796402062952238936" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="phiDouble" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pO$" role="hSBgs">
+        <property role="2pBcoG" value="796402062952238936" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="phiDouble" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmD" role="hSBgu">
+        <property role="2pBcoG" value="796402062952237858" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DoubleType@86011" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOA" role="hSBgs">
+        <property role="2pBcoG" value="796402062952237858" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DoubleType@86011" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmE" role="hSBgu">
+        <property role="2pBcoG" value="796402062952238937" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@86994" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOC" role="hSBgs">
+        <property role="2pBcoG" value="796402062952238937" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@86994" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmF" role="hSBgu">
+        <property role="2pBcoG" value="796402062952238938" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@86995" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOE" role="hSBgs">
+        <property role="2pBcoG" value="796402062952238938" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@86995" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmG" role="hSBgu">
+        <property role="2pBcoG" value="796402062952238939" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@86996" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOG" role="hSBgs">
+        <property role="2pBcoG" value="796402062952238939" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@86996" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmH" role="hSBgu">
+        <property role="2pBcoG" value="796402062952208931" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@123137" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOI" role="hSBgs">
+        <property role="2pBcoG" value="796402062952208931" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@123137" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmI" role="hSBgu">
+        <property role="2pBcoG" value="796402062952208934" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="x" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOK" role="hSBgs">
+        <property role="2pBcoG" value="796402062952208934" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="x" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pON" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmJ" role="hSBgu">
+        <property role="2pBcoG" value="796402062952208929" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DoubleType@123135" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOM" role="hSBgs">
+        <property role="2pBcoG" value="796402062952208929" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DoubleType@123135" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmK" role="hSBgu">
+        <property role="2pBcoG" value="796402062952214443" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MulExpression@111753" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOO" role="hSBgs">
+        <property role="2pBcoG" value="796402062952214443" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MulExpression@111753" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmL" role="hSBgu">
+        <property role="2pBcoG" value="796402062952215461" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@112763" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOQ" role="hSBgs">
+        <property role="2pBcoG" value="796402062952215461" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@112763" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmM" role="hSBgu">
+        <property role="2pBcoG" value="796402062952238940" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@86989" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOS" role="hSBgs">
+        <property role="2pBcoG" value="796402062952238940" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@86989" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmN" role="hSBgu">
+        <property role="2pBcoG" value="796402062952211514" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@110328" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOU" role="hSBgs">
+        <property role="2pBcoG" value="796402062952211514" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@110328" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmO" role="hSBgu">
+        <property role="2pBcoG" value="796402062952210646" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@109388" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOW" role="hSBgs">
+        <property role="2pBcoG" value="796402062952210646" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@109388" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pOZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmP" role="hSBgu">
+        <property role="2pBcoG" value="796402062952212334" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@109508" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pOY" role="hSBgs">
+        <property role="2pBcoG" value="796402062952212334" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@109508" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pP1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmQ" role="hSBgu">
+        <property role="2pBcoG" value="796402062952220890" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@103256" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pP0" role="hSBgs">
+        <property role="2pBcoG" value="796402062952220890" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@103256" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pP3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmR" role="hSBgu">
+        <property role="2pBcoG" value="796402062952220893" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="y" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pP2" role="hSBgs">
+        <property role="2pBcoG" value="796402062952220893" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="y" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pP5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmS" role="hSBgu">
+        <property role="2pBcoG" value="796402062952220888" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DoubleType@103254" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pP4" role="hSBgs">
+        <property role="2pBcoG" value="796402062952220888" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DoubleType@103254" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pP7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmT" role="hSBgu">
+        <property role="2pBcoG" value="796402062952229092" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MulExpression@95034" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pP6" role="hSBgs">
+        <property role="2pBcoG" value="796402062952229092" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MulExpression@95034" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pP9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmU" role="hSBgu">
+        <property role="2pBcoG" value="796402062952230432" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@95486" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pP8" role="hSBgs">
+        <property role="2pBcoG" value="796402062952230432" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@95486" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmV" role="hSBgu">
+        <property role="2pBcoG" value="796402062952238941" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@86990" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPa" role="hSBgs">
+        <property role="2pBcoG" value="796402062952238941" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@86990" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmW" role="hSBgu">
+        <property role="2pBcoG" value="796402062952222951" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@105277" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPc" role="hSBgs">
+        <property role="2pBcoG" value="796402062952222951" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@105277" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmX" role="hSBgu">
+        <property role="2pBcoG" value="796402062952222081" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@104095" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPe" role="hSBgs">
+        <property role="2pBcoG" value="796402062952222081" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@104095" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmY" role="hSBgu">
+        <property role="2pBcoG" value="796402062952223870" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@106164" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPg" role="hSBgs">
+        <property role="2pBcoG" value="796402062952223870" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@106164" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pmZ" role="hSBgu">
+        <property role="2pBcoG" value="796402062952196931" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@61409" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPi" role="hSBgs">
+        <property role="2pBcoG" value="796402062952196931" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@61409" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn0" role="hSBgu">
+        <property role="2pBcoG" value="796402062952198043" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@62617" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPk" role="hSBgs">
+        <property role="2pBcoG" value="796402062952198043" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@62617" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn1" role="hSBgu">
+        <property role="2pBcoG" value="796402062952199560" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@65190" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPm" role="hSBgs">
+        <property role="2pBcoG" value="796402062952199560" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@65190" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn2" role="hSBgu">
+        <property role="2pBcoG" value="796402062952235000" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@99382" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPo" role="hSBgs">
+        <property role="2pBcoG" value="796402062952235000" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@99382" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn3" role="hSBgu">
+        <property role="2pBcoG" value="796402062952237758" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@86383" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPq" role="hSBgs">
+        <property role="2pBcoG" value="796402062952237758" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@86383" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn4" role="hSBgu">
+        <property role="2pBcoG" value="796402062952205519" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@120677" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPs" role="hSBgs">
+        <property role="2pBcoG" value="796402062952205519" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@120677" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn5" role="hSBgu">
+        <property role="2pBcoG" value="796402062952178450" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@75792" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPu" role="hSBgs">
+        <property role="2pBcoG" value="796402062952178450" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@75792" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn6" role="hSBgu">
+        <property role="2pBcoG" value="796402062952181128" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@79526" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPw" role="hSBgs">
+        <property role="2pBcoG" value="796402062952181128" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@79526" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn7" role="hSBgu">
+        <property role="2pBcoG" value="796402062952187842" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="radialLength" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPy" role="hSBgs">
+        <property role="2pBcoG" value="796402062952187842" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="radialLength" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pP_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn8" role="hSBgu">
+        <property role="2pBcoG" value="796402062952187841" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@68703" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pP$" role="hSBgs">
+        <property role="2pBcoG" value="796402062952187841" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@68703" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn9" role="hSBgu">
+        <property role="2pBcoG" value="796402062952190217" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="phi" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPA" role="hSBgs">
+        <property role="2pBcoG" value="796402062952190217" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="phi" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pna" role="hSBgu">
+        <property role="2pBcoG" value="796402062952191029" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@73451" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPC" role="hSBgs">
+        <property role="2pBcoG" value="796402062952191029" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@73451" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnb" role="hSBgu">
+        <property role="2pBcoG" value="796402062952193731" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="z" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPE" role="hSBgs">
+        <property role="2pBcoG" value="796402062952193731" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="z" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnc" role="hSBgu">
+        <property role="2pBcoG" value="796402062952194805" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@59691" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPG" role="hSBgs">
+        <property role="2pBcoG" value="796402062952194805" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@59691" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnd" role="hSBgu">
+        <property role="2pBcoG" value="796402062953414630" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MethodDocComment@99398" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPI" role="hSBgs">
+        <property role="2pBcoG" value="796402062953414630" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MethodDocComment@99398" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pne" role="hSBgu">
+        <property role="2pBcoG" value="796402062953414631" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@99399" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPK" role="hSBgs">
+        <property role="2pBcoG" value="796402062953414631" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@99399" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnf" role="hSBgu">
+        <property role="2pBcoG" value="796402062953414632" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Get an internal vector from cylindrical coordinates" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPM" role="hSBgs">
+        <property role="2pBcoG" value="796402062953414632" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Get an internal vector from cylindrical coordinates" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$png" role="hSBgu">
+        <property role="2pBcoG" value="796402062953399300" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@102180" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPO" role="hSBgs">
+        <property role="2pBcoG" value="796402062953399300" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@102180" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticMethod" />
+      <node concept="34ulmB" id="23A_79h$pnj" role="hSBgu">
+        <node concept="2pBcaW" id="23A_79h$pnh" role="34ulmC">
+          <property role="2pBcoG" value="8821912306507766311" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="fromSpherical" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pni" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="23A_79h$pPS" role="hSBgs">
+        <node concept="2pBcaW" id="23A_79h$pPQ" role="34ulmC">
+          <property role="2pBcoG" value="8821912306507766311" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="fromSpherical" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pPR" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnk" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507766311" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="fromSpherical" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPU" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507766311" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="fromSpherical" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnl" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507766314" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@86033" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPW" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507766314" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@86033" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pPZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnm" role="hSBgu">
+        <property role="2pBcoG" value="796402062953289313" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@89290" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pPY" role="hSBgs">
+        <property role="2pBcoG" value="796402062953289313" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@89290" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQ1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnn" role="hSBgu">
+        <property role="2pBcoG" value="796402062953289314" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="lengthDouble" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQ0" role="hSBgs">
+        <property role="2pBcoG" value="796402062953289314" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="lengthDouble" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQ3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pno" role="hSBgu">
+        <property role="2pBcoG" value="796402062953287046" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DoubleType@87719" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQ2" role="hSBgs">
+        <property role="2pBcoG" value="796402062953287046" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DoubleType@87719" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQ5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnp" role="hSBgu">
+        <property role="2pBcoG" value="796402062953289315" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@89292" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQ4" role="hSBgs">
+        <property role="2pBcoG" value="796402062953289315" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@89292" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQ7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnq" role="hSBgu">
+        <property role="2pBcoG" value="796402062953289316" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@89285" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQ6" role="hSBgs">
+        <property role="2pBcoG" value="796402062953289316" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@89285" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQ9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnr" role="hSBgu">
+        <property role="2pBcoG" value="796402062953289317" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@89286" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQ8" role="hSBgs">
+        <property role="2pBcoG" value="796402062953289317" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@89286" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pns" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276220" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@92162" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQa" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276220" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@92162" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnt" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276221" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="thetaDouble" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQc" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276221" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="thetaDouble" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnu" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276222" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DoubleType@92164" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQe" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276222" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DoubleType@92164" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnv" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276223" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@92165" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQg" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276223" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@92165" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnw" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276224" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@92142" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQi" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276224" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@92142" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnx" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276225" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@92143" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQk" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276225" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@92143" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pny" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276226" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@92144" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQm" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276226" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@92144" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnz" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276227" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="phiDouble" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQo" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276227" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="phiDouble" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn$" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276228" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DoubleType@92138" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQq" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276228" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DoubleType@92138" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pn_" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276229" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@92139" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQs" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276229" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@92139" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnA" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276230" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@92140" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQu" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276230" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@92140" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnB" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276231" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@92141" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQw" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276231" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@92141" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnC" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276232" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@92150" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQy" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276232" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="LocalVariableDeclarationStatement@92150" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQ_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnD" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276233" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="sinTheta" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQ$" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276233" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="sinTheta" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnE" role="hSBgu">
+        <property role="2pBcoG" value="796402062953321057" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DoubleType@121034" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQA" role="hSBgs">
+        <property role="2pBcoG" value="796402062953321057" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DoubleType@121034" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnF" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276235" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@92153" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQC" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276235" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@92153" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnG" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276236" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@92146" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQE" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276236" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@92146" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnH" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276238" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Statement@92148" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQG" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276238" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Statement@92148" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnI" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276239" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@92149" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQI" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276239" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@92149" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnJ" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276240" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@92126" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQK" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276240" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@92126" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnK" role="hSBgu">
+        <property role="2pBcoG" value="796402062953276241" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@92127" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQM" role="hSBgs">
+        <property role="2pBcoG" value="796402062953276241" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@92127" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnL" role="hSBgu">
+        <property role="2pBcoG" value="796402062953309874" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MulExpression@60795" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQO" role="hSBgs">
+        <property role="2pBcoG" value="796402062953309874" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MulExpression@60795" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnM" role="hSBgu">
+        <property role="2pBcoG" value="796402062953313749" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@65110" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQQ" role="hSBgs">
+        <property role="2pBcoG" value="796402062953313749" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@65110" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnN" role="hSBgu">
+        <property role="2pBcoG" value="796402062953315176" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@65489" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQS" role="hSBgs">
+        <property role="2pBcoG" value="796402062953315176" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@65489" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnO" role="hSBgu">
+        <property role="2pBcoG" value="796402062953305190" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MulExpression@73415" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQU" role="hSBgs">
+        <property role="2pBcoG" value="796402062953305190" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MulExpression@73415" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnP" role="hSBgu">
+        <property role="2pBcoG" value="796402062953302720" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@69993" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQW" role="hSBgs">
+        <property role="2pBcoG" value="796402062953302720" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@69993" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pQZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnQ" role="hSBgu">
+        <property role="2pBcoG" value="796402062953307088" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@73817" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pQY" role="hSBgs">
+        <property role="2pBcoG" value="796402062953307088" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@73817" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pR1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnR" role="hSBgu">
+        <property role="2pBcoG" value="796402062953333987" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MulExpression@102220" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pR0" role="hSBgs">
+        <property role="2pBcoG" value="796402062953333987" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MulExpression@102220" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pR3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnS" role="hSBgu">
+        <property role="2pBcoG" value="796402062953337355" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@104756" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pR2" role="hSBgs">
+        <property role="2pBcoG" value="796402062953337355" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@104756" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pR5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnT" role="hSBgu">
+        <property role="2pBcoG" value="796402062953338700" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@105453" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pR4" role="hSBgs">
+        <property role="2pBcoG" value="796402062953338700" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@105453" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pR7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnU" role="hSBgu">
+        <property role="2pBcoG" value="796402062953329548" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MulExpression@112813" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pR6" role="hSBgs">
+        <property role="2pBcoG" value="796402062953329548" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MulExpression@112813" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pR9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnV" role="hSBgu">
+        <property role="2pBcoG" value="796402062953340765" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@107486" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pR8" role="hSBgs">
+        <property role="2pBcoG" value="796402062953340765" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@107486" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnW" role="hSBgu">
+        <property role="2pBcoG" value="796402062953330857" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@115602" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRa" role="hSBgs">
+        <property role="2pBcoG" value="796402062953330857" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@115602" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnX" role="hSBgu">
+        <property role="2pBcoG" value="796402062953345750" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MulExpression@96599" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRc" role="hSBgs">
+        <property role="2pBcoG" value="796402062953345750" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MulExpression@96599" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnY" role="hSBgu">
+        <property role="2pBcoG" value="796402062953349156" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@84740" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRe" role="hSBgs">
+        <property role="2pBcoG" value="796402062953349156" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@84740" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pnZ" role="hSBgu">
+        <property role="2pBcoG" value="796402062953351288" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@86720" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRg" role="hSBgs">
+        <property role="2pBcoG" value="796402062953351288" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@86720" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po0" role="hSBgu">
+        <property role="2pBcoG" value="796402062953356452" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@92036" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRi" role="hSBgs">
+        <property role="2pBcoG" value="796402062953356452" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@92036" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po1" role="hSBgu">
+        <property role="2pBcoG" value="796402062953275002" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Statement@107720" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRk" role="hSBgs">
+        <property role="2pBcoG" value="796402062953275002" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Statement@107720" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po2" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507762385" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@90040" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRm" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507762385" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@90040" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po3" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507765666" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@89225" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRo" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507765666" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@89225" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po4" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507769544" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="length" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRq" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507769544" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="length" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po5" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507769543" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84910" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRs" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507769543" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84910" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po6" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507770840" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="theta" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRu" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507770840" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="theta" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po7" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507770841" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@82112" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRw" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507770841" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@82112" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po8" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507770848" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="phi" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRy" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507770848" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="phi" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pR_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po9" role="hSBgu">
+        <property role="2pBcoG" value="8821912306507770849" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@82120" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pR$" role="hSBgs">
+        <property role="2pBcoG" value="8821912306507770849" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@82120" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poa" role="hSBgu">
+        <property role="2pBcoG" value="796402062953404424" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="MethodDocComment@107312" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRA" role="hSBgs">
+        <property role="2pBcoG" value="796402062953404424" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="MethodDocComment@107312" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pob" role="hSBgu">
+        <property role="2pBcoG" value="796402062953404425" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@107313" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRC" role="hSBgs">
+        <property role="2pBcoG" value="796402062953404425" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@107313" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poc" role="hSBgu">
+        <property role="2pBcoG" value="796402062953404426" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="Get an internal vector from spherical coordinates" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRE" role="hSBgs">
+        <property role="2pBcoG" value="796402062953404426" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="Get an internal vector from spherical coordinates" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pod" role="hSBgu">
+        <property role="2pBcoG" value="7105688800959862216" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@45772" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRG" role="hSBgs">
+        <property role="2pBcoG" value="7105688800959862216" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@45772" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticMethod" />
+      <node concept="34ulmB" id="23A_79h$pog" role="hSBgu">
+        <node concept="2pBcaW" id="23A_79h$poe" role="34ulmC">
+          <property role="2pBcoG" value="3489632902472678310" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="fromDVector3C" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pof" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="23A_79h$pRK" role="hSBgs">
+        <node concept="2pBcaW" id="23A_79h$pRI" role="34ulmC">
+          <property role="2pBcoG" value="3489632902472678310" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="fromDVector3C" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pRJ" role="34ulmE">
+          <property role="2pBcoG" value="7105688800959643459" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="InternalVector" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poh" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472678310" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="fromDVector3C" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRM" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472678310" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="fromDVector3C" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poi" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472678313" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@101654" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRO" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472678313" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@101654" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poj" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472681555" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@122620" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRQ" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472681555" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@122620" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pok" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472681579" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="GenericNewExpression@122580" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRS" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472681579" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="GenericNewExpression@122580" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pol" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472682316" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassCreator@122361" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRU" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472682316" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassCreator@122361" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pom" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472693520" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@121277" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRW" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472693520" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@121277" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pRZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pon" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472693521" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@121278" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pRY" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472693521" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@121278" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pS1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poo" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472693522" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@121275" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pS0" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472693522" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@121275" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pS3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pop" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472693523" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@121276" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pS2" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472693523" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@121276" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pS5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poq" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472689623" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@117120" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pS4" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472689623" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@117120" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pS7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$por" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472691935" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@120456" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pS6" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472691935" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@120456" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pS9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pos" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472690384" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@113789" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pS8" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472690384" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@113789" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pot" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472702556" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@77065" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSa" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472702556" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@77065" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pou" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472700686" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@79287" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSc" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472700686" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@79287" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pov" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472700687" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@79288" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSe" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472700687" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@79288" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pow" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472700688" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@79293" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSg" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472700688" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@79293" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pox" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472703272" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@78741" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSi" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472703272" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@78741" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poy" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472674207" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@97608" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSk" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472674207" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@97608" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poz" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472677687" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@102304" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSm" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472677687" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@102304" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSp" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po$" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472688045" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="vec" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSo" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472688045" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="vec" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$po_" role="hSBgu">
+        <property role="2pBcoG" value="3489632902472763444" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@73376" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSq" role="hSBgs">
+        <property role="2pBcoG" value="3489632902472763444" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@73376" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poA" role="hSBgu">
+        <property role="2pBcoG" value="796402062953456244" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PlaceholderMember@108727" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSs" role="hSBgs">
+        <property role="2pBcoG" value="796402062953456244" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PlaceholderMember@108727" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poB" role="hSBgu">
+        <property role="2pBcoG" value="796402062953681411" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierDocComment@88362" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSu" role="hSBgs">
+        <property role="2pBcoG" value="796402062953681411" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierDocComment@88362" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poC" role="hSBgu">
+        <property role="2pBcoG" value="796402062953681412" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CommentLine@88355" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSw" role="hSBgs">
+        <property role="2pBcoG" value="796402062953681412" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CommentLine@88355" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poD" role="hSBgu">
+        <property role="2pBcoG" value="796402062953681413" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="General purpose 3D vector as used in the Physics interpreter" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSy" role="hSBgs">
+        <property role="2pBcoG" value="796402062953681413" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="General purpose 3D vector as used in the Physics interpreter" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pS_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poE" role="hSBgu">
+        <property role="2pBcoG" value="794591792984152386" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@48520" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pS$" role="hSBgs">
+        <property role="2pBcoG" value="794591792984152386" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@48520" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poF" role="hSBgu">
+        <property role="2pBcoG" value="794591792984526085" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="BigDecimalHelper" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSA" role="hSBgs">
+        <property role="2pBcoG" value="794591792984526085" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="BigDecimalHelper" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticMethod" />
+      <node concept="34ulmB" id="23A_79h$poI" role="hSBgu">
+        <node concept="2pBcaW" id="23A_79h$poG" role="34ulmC">
+          <property role="2pBcoG" value="794591792984048239" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="of" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$poH" role="34ulmE">
+          <property role="2pBcoG" value="794591792984526085" />
+          <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+          <property role="2pBc3U" value="BigDecimalHelper" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="23A_79h$pSE" role="hSBgs">
+        <node concept="2pBcaW" id="23A_79h$pSC" role="34ulmC">
+          <property role="2pBcoG" value="794591792984048239" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="of" />
+        </node>
+        <node concept="2pBcaW" id="23A_79h$pSD" role="34ulmE">
+          <property role="2pBcoG" value="794591792984526085" />
+          <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+          <property role="2pBc3U" value="BigDecimalHelper" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poJ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048239" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="of" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSG" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048239" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="of" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poK" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048240" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@84157" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSI" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048240" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@84157" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poL" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048241" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="IfStatement@84158" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSK" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048241" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="IfStatement@84158" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poM" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048242" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceOfExpression@84155" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSM" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048242" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceOfExpression@84155" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poN" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048243" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84156" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSO" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048243" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84156" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poO" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048244" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@84153" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSQ" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048244" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@84153" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pST" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poP" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048245" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StatementList@84154" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSS" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048245" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StatementList@84154" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poQ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048246" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@84151" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSU" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048246" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@84151" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poR" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048247" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="CastExpression@84152" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSW" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048247" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="CastExpression@84152" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pSZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poS" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048248" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84165" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pSY" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048248" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84165" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pT1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poT" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048249" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@84166" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pT0" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048249" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@84166" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pT3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poU" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048250" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ReturnStatement@84163" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pT2" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048250" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ReturnStatement@84163" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pT5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poV" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048251" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="StaticMethodCall@84164" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pT4" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048251" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="StaticMethodCall@84164" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pT7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poW" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048252" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="DotExpression@84161" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pT6" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048252" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="DotExpression@84161" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pT9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poX" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048253" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="VariableReference@84162" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pT8" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048253" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="VariableReference@84162" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pTb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poY" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048254" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84159" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pTa" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048254" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="InstanceMethodCallOperation@84159" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pTd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$poZ" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048255" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84160" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pTc" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048255" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84160" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pTf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pp0" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048256" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="n" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pTe" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048256" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="n" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pTh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pp1" role="hSBgu">
+        <property role="2pBcoG" value="794591792984048257" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="ClassifierType@84174" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pTg" role="hSBgs">
+        <property role="2pBcoG" value="794591792984048257" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="ClassifierType@84174" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pTj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pp2" role="hSBgu">
+        <property role="2pBcoG" value="794591792984564203" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@91708" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pTi" role="hSBgs">
+        <property role="2pBcoG" value="794591792984564203" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@91708" />
+      </node>
+    </node>
+    <node concept="7amoh" id="23A_79h$pTl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="23A_79h$pp3" role="hSBgu">
+        <property role="2pBcoG" value="794591792984526086" />
+        <property role="2pBcow" value="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+        <property role="2pBc3U" value="PublicVisibility@67918" />
+      </node>
+      <node concept="2pBcaW" id="23A_79h$pTk" role="hSBgs">
+        <property role="2pBcoG" value="794591792984526086" />
+        <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
+        <property role="2pBc3U" value="PublicVisibility@67918" />
       </node>
     </node>
   </node>
