@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 import java.util.Arrays;
 
 public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends PhysicalEntity<T> {
@@ -35,6 +36,7 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
     fixtureProperties.set(Prop.SPHERE_RADIUS, BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimal.valueOf(Math.PI))), currentEntity.getMass()).doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
     fixtureProperties.set(Prop.EMIT_LIGHT, false);
+    fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.BOUNCE);
 
     // Forces 
     this.getForces().addAll(Arrays.asList());

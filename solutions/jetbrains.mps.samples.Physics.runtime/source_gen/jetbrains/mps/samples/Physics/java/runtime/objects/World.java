@@ -11,9 +11,6 @@ import java.util.HashMap;
 import org.ode4j.ode.DBody;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.ode.internal.DxGeom;
-import org.ode4j.ode.DContactBuffer;
-import org.ode4j.ode.DContact;
-import org.ode4j.ode.OdeConstants;
 import processing.core.PApplet;
 import java.util.List;
 
@@ -71,20 +68,20 @@ public class World implements DGeom.DNearCallback {
       OdeHelper.spaceCollide2(g1, g2, data, this);
       return;
     }
+    PhysicalEntity e1 = reverseEntities.get(g1.getBody());
+    PhysicalEntity e2 = reverseEntities.get(g2.getBody());
 
+    PhysicalEntity first = (e1.hasReactionPriority(e2) ? e1 : e2);
+    PhysicalEntity second = (first == e1 ? e2 : e1);
+    DGeom firstGeom = (first == e1 ? g1 : g2);
+    DGeom secondGeom = (firstGeom == g1 ? g2 : g1);
 
-    final DContactBuffer contacts = new DContactBuffer(32);
-    int n = OdeHelper.collide(g1, g2, 32, contacts.getGeomBuffer());
-    if (n > 0) {
-      for (int i = 0; i < n; i++) {
-        // Init contact 
-        final DContact contact = contacts.get(i);
-        contact.surface.mode |= OdeConstants.dContactBounce;
-        contact.surface.bounce = 0.9;
+    // React with the reaction with highest priority first 
+    first.getCollisionReaction().method.react(this, first, firstGeom, second, secondGeom);
 
-        // Attach to bodies 
-        OdeHelper.createContactJoint(world, jointGroup, contact).attach(contact.geom.g1.getBody(), contact.geom.g2.getBody());
-      }
+    // If the first reaction allow the second one to be performed aswell 
+    if (!(first.getCollisionReaction().preventOtherReaction) && first.getCollisionReaction() != second.getCollisionReaction()) {
+      second.getCollisionReaction().method.react(this, second, secondGeom, first, firstGeom);
     }
   }
 

@@ -9,6 +9,7 @@
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop" />
@@ -27,11 +28,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.GravityForce" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.FrictionForce">

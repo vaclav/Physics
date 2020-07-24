@@ -5,6 +5,7 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.BoxFixture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture" />

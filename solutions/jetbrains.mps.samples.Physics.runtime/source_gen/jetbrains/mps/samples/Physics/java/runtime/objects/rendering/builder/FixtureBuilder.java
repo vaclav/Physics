@@ -7,6 +7,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.BoxFixture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 
 public class FixtureBuilder {
   private HashMap<Prop, Object> properties = new HashMap();
@@ -28,6 +29,7 @@ public class FixtureBuilder {
     }
 
     result.setEmitLight(get(Prop.EMIT_LIGHT));
+    result.setCollisionReaction((CollisionReaction) get(Prop.COLLISION_REACT));
     return result;
   }
 }

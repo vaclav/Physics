@@ -38,7 +38,7 @@ public class BoxFixture extends Fixture {
   }
   @Override
   protected void setVolume(double volume) {
-    double factor = Math.pow(volume / getVolume(), 1 / 3);
+    double factor = Math.pow(volume / getVolume(), 0.33333);
     width = (float) (width * factor);
     height = (float) (height * factor);
     depth = (float) (depth * factor);

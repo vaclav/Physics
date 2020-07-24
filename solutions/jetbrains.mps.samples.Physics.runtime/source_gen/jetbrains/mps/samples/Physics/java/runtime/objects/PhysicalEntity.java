@@ -5,7 +5,6 @@ package jetbrains.mps.samples.Physics.java.runtime.objects;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.ode4j.ode.DBody;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
@@ -16,14 +15,13 @@ import org.ode4j.math.DVector3C;
 import java.util.List;
 import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 
 public class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike {
   private DBody body;
   private World world;
   private Fixture fixture;
-
-  private CollisionReaction collisionReaction = CollisionReaction.BOUNCE;
 
   private BigDecimal massCached;
   private boolean disabled = false;
@@ -53,17 +51,29 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   }
 
   public void applyForces(long time) {
+    if (disabled) {
+      return;
+    }
+
     for (Force force : forces) {
       body.addForce((DVector3) force.compute(world, null, this, time));
     }
   }
   public void applyLights(PApplet ctx) {
+    if (disabled) {
+      return;
+    }
+
     if (fixture.doEmitLight()) {
       DVector3C position = body.getPosition();
       ctx.pointLight(255, 255, 255, (float) position.get0(), (float) position.get1(), (float) position.get2());
     }
   }
   public void render(PApplet ctx) {
+    if (disabled) {
+      return;
+    }
+
     DVector3C position = body.getPosition();
     ctx.pushMatrix();
     ctx.translate((float) position.get0(), (float) position.get1(), (float) position.get2());
@@ -122,17 +132,16 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
 
 
   public CollisionReaction getCollisionReaction() {
-    return this.collisionReaction;
-  }
-  public void setCollisionReaction(CollisionReaction collisionReaction) {
-    this.collisionReaction = collisionReaction;
+    return this.fixture.getCollisionReaction();
   }
   public boolean hasReactionPriority(PhysicalEntity cmp) {
     //  Either highest priority or equal priority but greater mass 
-    return this.collisionReaction.priority > cmp.getCollisionReaction().priority || (this.collisionReaction.priority == cmp.getCollisionReaction().priority && getMass().compareTo(cmp.getMass()) >= 0);
+    return this.getCollisionReaction().priority > cmp.getCollisionReaction().priority || (this.getCollisionReaction().priority == cmp.getCollisionReaction().priority && getMass().compareTo(cmp.getMass()) >= 0);
   }
+
   public void init(T scope, World world, FixtureBuilder fixtureProperties) {
   }
+
   public Fixture getFixture() {
     return this.fixture;
   }

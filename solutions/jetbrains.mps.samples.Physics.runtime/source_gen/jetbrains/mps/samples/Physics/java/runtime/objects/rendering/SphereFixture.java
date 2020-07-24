@@ -30,7 +30,7 @@ public class SphereFixture extends Fixture {
 
   @Override
   protected void setVolume(double volume) {
-    radius = (float) Math.pow(volume * 3 / (Math.PI * 4), 1 / 3);
+    radius = (float) Math.pow(volume * 3 / (Math.PI * 4), 0.3333);
   }
   @Override
   public DGeom buildGeometry() {

@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.rendering;
 
 import org.ode4j.ode.DGeom;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 import processing.core.PApplet;
 import org.ode4j.ode.DMass;
 import org.ode4j.ode.DBody;
@@ -15,10 +16,11 @@ public abstract class Fixture {
   private boolean emitLight;
   protected World world;
 
+  private CollisionReaction collisionReaction = CollisionReaction.BOUNCE;
+
   public Fixture(World world, Color texture) {
     this.world = world;
     this.texture = texture;
-    this.geometry = buildGeometry();
   }
   /**
    * Render the object onto the applet at 0,0,0
@@ -43,6 +45,7 @@ public abstract class Fixture {
     mass.setMass(massValue);
     body.setMass(mass);
     // Set the body of this fixture geometry 
+    geometry = buildGeometry();
     geometry.setBody(body);
   }
   public DGeom getGeometry() {
@@ -65,7 +68,6 @@ public abstract class Fixture {
     this.setVolume(getVolume() + fixture.getVolume());
 
     // Rebuild geometry and apply to body 
-    geometry = this.buildGeometry();
     this.bindToBody(body, body.getMass().getMass() + fixture.getGeometry().getBody().getMass().getMass());
   }
 
@@ -74,5 +76,13 @@ public abstract class Fixture {
   }
   public void setEmitLight(boolean emitLight) {
     this.emitLight = emitLight;
+  }
+
+
+  public CollisionReaction getCollisionReaction() {
+    return this.collisionReaction;
+  }
+  public void setCollisionReaction(CollisionReaction collisionReaction) {
+    this.collisionReaction = collisionReaction;
   }
 }

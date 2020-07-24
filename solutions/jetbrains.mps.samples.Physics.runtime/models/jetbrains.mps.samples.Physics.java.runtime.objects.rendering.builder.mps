@@ -9,6 +9,7 @@
     <import index="jyp0" ref="r:c76e7683-d7ce-4cb6-a6ee-fcd11243f980(jetbrains.mps.samples.Physics.java.runtime.objects)" />
     <import index="d2el" ref="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.runtime.objects.rendering)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
+    <import index="4bo7" ref="r:04f45ddc-ac9c-4d8e-83e4-6d920f8101d7(jetbrains.mps.samples.Physics.java.runtime.objects.forces)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -341,6 +342,28 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="6qMY4Z38t7Y" role="3cqZAp">
+          <node concept="2OqwBi" id="6qMY4Z38tzI" role="3clFbG">
+            <node concept="37vLTw" id="6qMY4Z38t7W" role="2Oq$k0">
+              <ref role="3cqZAo" node="k9gc9693Ax" resolve="result" />
+            </node>
+            <node concept="liA8E" id="6qMY4Z38tDM" role="2OqNvi">
+              <ref role="37wK5l" to="d2el:6qMY4Z38c$U" resolve="setCollisionReaction" />
+              <node concept="10QFUN" id="6qMY4Z38ur4" role="37wK5m">
+                <node concept="3uibUv" id="6qMY4Z38uYi" role="10QFUM">
+                  <ref role="3uigEE" to="4bo7:2AaxZXYibwz" resolve="CollisionReaction" />
+                </node>
+                <node concept="1rXfSq" id="6qMY4Z38tEZ" role="10QFUP">
+                  <ref role="37wK5l" node="10n4tqnCLBV" resolve="get" />
+                  <node concept="Rm8GO" id="6qMY4Z38tQm" role="37wK5m">
+                    <ref role="Rm8GQ" node="6qMY4Z380VA" resolve="COLLISION_REACT" />
+                    <ref role="1Px2BO" node="10n4tqnCyd3" resolve="Prop" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs6" id="k9gc9696L5" role="3cqZAp">
           <node concept="37vLTw" id="k9gc96971n" role="3cqZAk">
             <ref role="3cqZAo" node="k9gc9693Ax" resolve="result" />
@@ -388,6 +411,10 @@
     </node>
     <node concept="QsSxf" id="k9gc968lAh" role="Qtgdg">
       <property role="TrG5h" value="EMIT_LIGHT" />
+      <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+    </node>
+    <node concept="QsSxf" id="6qMY4Z380VA" role="Qtgdg">
+      <property role="TrG5h" value="COLLISION_REACT" />
       <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
     </node>
     <node concept="3Tm1VV" id="10n4tqnCyd4" role="1B3o_S" />

@@ -19,9 +19,10 @@ public class EnumerationDescriptor_CollisionReaction extends EnumerationDescript
   private final EnumerationDescriptor.MemberDescriptor myMember_pause_simulation_0 = new EnumerationDescriptor.MemberDescriptor("pause_simulation", "pause simulation", 0x298a87ff7e3fd760L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639264");
   private final EnumerationDescriptor.MemberDescriptor myMember_disappear_0 = new EnumerationDescriptor.MemberDescriptor("disappear", "disappear", 0x298a87ff7e3fd763L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639267");
   private final EnumerationDescriptor.MemberDescriptor myMember_merge_0 = new EnumerationDescriptor.MemberDescriptor("merge", "merge", 0x298a87ff7e3fd767L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639271");
+  private final EnumerationDescriptor.MemberDescriptor myMember_ignore_0 = new EnumerationDescriptor.MemberDescriptor("ignore", "ignore", 0x66b2f84fc32c32b8L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7400250159183704760");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL, 0x298a87ff7e3fd75fL, 0x298a87ff7e3fd760L, 0x298a87ff7e3fd763L, 0x298a87ff7e3fd767L);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_bounce_0, myMember_pause_simulation_0, myMember_disappear_0, myMember_merge_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL, 0x298a87ff7e3fd75fL, 0x298a87ff7e3fd760L, 0x298a87ff7e3fd763L, 0x298a87ff7e3fd767L, 0x66b2f84fc32c32b8L);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_bounce_0, myMember_pause_simulation_0, myMember_disappear_0, myMember_merge_0, myMember_ignore_0);
 
   @Nullable
   @Override
@@ -50,6 +51,8 @@ public class EnumerationDescriptor_CollisionReaction extends EnumerationDescript
         return myMember_disappear_0;
       case "merge":
         return myMember_merge_0;
+      case "ignore":
+        return myMember_ignore_0;
     }
     return null;
   }

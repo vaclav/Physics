@@ -204,7 +204,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   private EditorCell createReadOnlyModelAccessor_0() {
     EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new ModelAccessor.ReadOnly() {
       public String getText() {
-        return ((SLinkOperations.getTarget(myNode, LINKS.optionalName$QESm) == null) ? "no alias" : "as " + SLinkOperations.getTarget(myNode, LINKS.optionalName$QESm));
+        return ((SLinkOperations.getTarget(myNode, LINKS.optionalName$QESm) == null) ? "with no alias" : "as " + SLinkOperations.getTarget(myNode, LINKS.optionalName$QESm));
       }
     }, myNode);
     editorCell.setAction(CellActionType.DELETE, EmptyCellAction.getInstance());

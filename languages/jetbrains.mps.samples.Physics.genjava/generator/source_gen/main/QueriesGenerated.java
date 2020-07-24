@@ -100,6 +100,21 @@ public class QueriesGenerated extends QueryProviderBase {
   public static boolean rule_Condition_5_14(final BaseMappingRuleContext _context) {
     return SEnumOperations.isMember(SPropertyOperations.getEnum(SNodeOperations.cast(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.VectorComponentTarget$ME), PROPS.component$_d4D), 0x6520d39c9504b3e9L);
   }
+  public static boolean rule_Condition_12_0(final BaseMappingRuleContext _context) {
+    return SEnumOperations.isMember(SPropertyOperations.getEnum(_context.getNode(), PROPS.reaction$qyMu), 0x298a87ff7e3fd75fL);
+  }
+  public static boolean rule_Condition_12_1(final BaseMappingRuleContext _context) {
+    return SEnumOperations.isMember(SPropertyOperations.getEnum(_context.getNode(), PROPS.reaction$qyMu), 0x298a87ff7e3fd763L);
+  }
+  public static boolean rule_Condition_12_2(final BaseMappingRuleContext _context) {
+    return SEnumOperations.isMember(SPropertyOperations.getEnum(_context.getNode(), PROPS.reaction$qyMu), 0x298a87ff7e3fd767L);
+  }
+  public static boolean rule_Condition_12_3(final BaseMappingRuleContext _context) {
+    return SEnumOperations.isMember(SPropertyOperations.getEnum(_context.getNode(), PROPS.reaction$qyMu), 0x298a87ff7e3fd760L);
+  }
+  public static boolean rule_Condition_12_4(final BaseMappingRuleContext _context) {
+    return SEnumOperations.isMember(SPropertyOperations.getEnum(_context.getNode(), PROPS.reaction$qyMu), 0x66b2f84fc32c32b8L);
+  }
   public static Object propertyMacro_GetValue_1_0(final PropertyMacroContext _context) {
     return SPropertyOperations.getInteger(_context.getNode(), PROPS.speed$eOsQ);
   }
@@ -980,6 +995,11 @@ public class QueriesGenerated extends QueryProviderBase {
     isccMethods.put("3489632902472428162", new ISCC(i++));
     isccMethods.put("3489632902472429241", new ISCC(i++));
     isccMethods.put("3489632902472429980", new ISCC(i++));
+    isccMethods.put("7400250159182917548", new ISCC(i++));
+    isccMethods.put("7400250159182914193", new ISCC(i++));
+    isccMethods.put("7400250159182918182", new ISCC(i++));
+    isccMethods.put("7400250159182918794", new ISCC(i++));
+    isccMethods.put("7400250159183730633", new ISCC(i++));
   }
   @NotNull
   @Override
@@ -1010,6 +1030,16 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.rule_Condition_5_13(ctx);
         case 5:
           return QueriesGenerated.rule_Condition_5_14(ctx);
+        case 6:
+          return QueriesGenerated.rule_Condition_12_0(ctx);
+        case 7:
+          return QueriesGenerated.rule_Condition_12_1(ctx);
+        case 8:
+          return QueriesGenerated.rule_Condition_12_2(ctx);
+        case 9:
+          return QueriesGenerated.rule_Condition_12_3(ctx);
+        case 10:
+          return QueriesGenerated.rule_Condition_12_4(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for inline switch's case %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -1157,6 +1187,7 @@ public class QueriesGenerated extends QueryProviderBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty component$_d4D = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
+    /*package*/ static final SProperty reaction$qyMu = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL, 0x298a87ff7e3fd776L, "reaction");
     /*package*/ static final SProperty speed$eOsQ = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x68be1a82490771a1L, "speed");
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
     /*package*/ static final SProperty red$EIY = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, 0x14f63a14438863e4L, "red");

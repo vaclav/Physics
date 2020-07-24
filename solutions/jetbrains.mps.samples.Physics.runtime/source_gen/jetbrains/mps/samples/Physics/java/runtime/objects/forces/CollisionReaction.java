@@ -10,15 +10,11 @@ import org.ode4j.ode.OdeHelper;
 import org.ode4j.ode.DContact;
 import org.ode4j.ode.OdeConstants;
 import org.ode4j.ode.DContactJoint;
-import org.ode4j.ode.DJoint;
-import org.ode4j.math.DVector3;
 
 public enum CollisionReaction {
   BOUNCE(4, false, new CollisionReactionFunction() {
     @Override
     public void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom) {
-      System.out.println("bounce");
-      world.setPaused(true);
       final DContactBuffer contacts = new DContactBuffer(32);
       int n = OdeHelper.collide(targetGeom, otherGeom, 32, contacts.getGeomBuffer());
 
@@ -33,21 +29,8 @@ public enum CollisionReaction {
           DContactJoint joint = OdeHelper.createContactJoint(world.getWorld(), world.getJointGroup(), contact);
           joint.attach(contact.geom.g1.getBody(), contact.geom.g2.getBody());
 
+          // TODO prevent reaction (below code give null for feedback) 
           // If the object object do not bounce 
-          if (otherObject.getCollisionReaction() != CollisionReaction.BOUNCE) {
-            DJoint.DJointFeedback feedback = joint.getFeedback();
-
-            // Cancel associated feedback 
-            if (contact.geom.g1 == otherGeom) {
-              feedback.f1 = new DVector3();
-              feedback.t1 = new DVector3();
-            } else {
-              feedback.f2 = new DVector3();
-              feedback.t2 = new DVector3();
-            }
-
-            joint.setFeedback(feedback);
-          }
         }
       }
     }
@@ -74,7 +57,8 @@ public enum CollisionReaction {
     public void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom) {
       world.setPaused(true);
     }
-  });
+  }),
+  IGNORE(100, false);
 
   /**
    * Priority of the reaction, low value mean high priority
@@ -100,5 +84,10 @@ public enum CollisionReaction {
   CollisionReaction(double priority, boolean preventOther) {
     this.priority = priority;
     this.preventOtherReaction = preventOther;
+    this.method = new CollisionReactionFunction() {
+      @Override
+      public void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom) {
+      }
+    };
   }
 }

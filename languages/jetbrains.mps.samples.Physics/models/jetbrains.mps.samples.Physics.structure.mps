@@ -1024,7 +1024,7 @@
     <property role="3GE5qa" value="styles.collision" />
     <property role="TrG5h" value="CollisionStyle" />
     <property role="34LRSv" value="collision-reaction" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="10n4tqntag_" resolve="Style" />
     <node concept="1TJgyi" id="2AaxZXYfXtQ" role="1TKVEl">
       <property role="IQ2nx" value="2993354433745639286" />
       <property role="TrG5h" value="reaction" />
@@ -1051,6 +1051,10 @@
     <node concept="25R33" id="2AaxZXYfXtB" role="25R1y">
       <property role="3tVfz5" value="2993354433745639271" />
       <property role="TrG5h" value="merge" />
+    </node>
+    <node concept="25R33" id="6qMY4Z3b3aS" role="25R1y">
+      <property role="3tVfz5" value="7400250159183704760" />
+      <property role="TrG5h" value="ignore" />
     </node>
   </node>
 </model>

@@ -2,16 +2,13 @@
 <dependenciesRoot>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction">
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReactionFunction" />
-    <classNode dependClassName="org.ode4j.math.DVector3" />
     <classNode dependClassName="org.ode4j.ode.DContact" />
     <classNode dependClassName="org.ode4j.ode.DContactBuffer" />
     <classNode dependClassName="org.ode4j.ode.DContactJoint" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
-    <classNode dependClassName="org.ode4j.ode.DJoint" />
     <classNode dependClassName="org.ode4j.ode.OdeConstants" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
   </dependency>

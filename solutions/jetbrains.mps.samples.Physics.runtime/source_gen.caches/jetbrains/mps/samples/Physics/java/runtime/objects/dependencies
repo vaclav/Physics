@@ -54,12 +54,9 @@
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
-    <classNode dependClassName="org.ode4j.ode.DContact" />
-    <classNode dependClassName="org.ode4j.ode.DContactBuffer" />
     <classNode dependClassName="org.ode4j.ode.DJointGroup" />
     <classNode dependClassName="org.ode4j.ode.DSpace" />
     <classNode dependClassName="org.ode4j.ode.DWorld" />
-    <classNode dependClassName="org.ode4j.ode.OdeConstants" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
     <classNode dependClassName="org.ode4j.ode.internal.DxGeom" />
     <classNode dependClassName="processing.core.PApplet" />

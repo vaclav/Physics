@@ -402,6 +402,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForCollisionStyle() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "CollisionStyle", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL);
     b.class_(false, false, false);
+    b.super_("jetbrains.mps.samples.Physics.structure.Style", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639261");
     b.version(2);
     b.property("reaction", 0x298a87ff7e3fd776L).type(MetaIdFactory.dataTypeId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL)).origin("2993354433745639286").done();
