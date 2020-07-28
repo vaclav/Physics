@@ -3737,7 +3737,7 @@
                   </node>
                 </node>
                 <node concept="Rm8GO" id="l_" role="37wK5m">
-                  <ref role="Rm8GQ" to="4bo7:2AaxZXYibM7" resolve="MERGE" />
+                  <ref role="Rm8GQ" to="4bo7:2AaxZXYibzL" resolve="BOUNCE" />
                   <ref role="1Px2BO" to="4bo7:2AaxZXYibwz" resolve="CollisionReaction" />
                   <node concept="cd27G" id="lC" role="lGtFl">
                     <node concept="3u3nmq" id="lD" role="cd27D">
@@ -5910,7 +5910,7 @@
         <node concept="385nmt" id="yM" role="385vvn">
           <property role="385vuF" value="BaseObject" />
           <node concept="2$VJBW" id="yO" role="385v07">
-            <property role="2$VJBR" value="7400250159185296414" />
+            <property role="2$VJBR" value="4252203113249768912" />
             <node concept="2x4n5u" id="yP" role="3iCydw">
               <property role="2x4mPI" value="AbstractObjectDefinition" />
               <property role="2x4n5l" value="b377xleir29v" />

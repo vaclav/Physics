@@ -320,15 +320,10 @@
     <node concept="1t_wfn" id="10n4tqnmBN5" role="1heTBC">
       <ref role="1t_wfm" node="10n4tqnmBvH" resolve="SolarSystem" />
     </node>
-    <node concept="1QScDb" id="5kbw6V4bMUl" role="IG9_e">
-      <node concept="31uf54" id="5kbw6V4bQSI" role="1QScD9">
-        <ref role="31ueSj" node="72SP1v_PiBJ" resolve="Earth" />
-      </node>
-      <node concept="1QScDb" id="6yY6C98PNtg" role="30czhm">
-        <node concept="31uf54" id="5kbw6V4bMQv" role="1QScD9">
-          <ref role="31ueSj" node="10n4tqnmBvU" resolve="EarthNested" />
-        </node>
-        <node concept="31hh1H" id="6yY6C98sqrY" role="30czhm" />
+    <node concept="1QScDb" id="6yY6C98PNtg" role="IG9_e">
+      <node concept="31hh1H" id="6yY6C98sqrY" role="30czhm" />
+      <node concept="31uf54" id="ifXGYQCj0P" role="1QScD9">
+        <ref role="31ueSj" node="10n4tqnmBwp" resolve="Sun" />
       </node>
     </node>
   </node>
@@ -381,7 +376,7 @@
         <node concept="v6hvC" id="10n4tqnnOdq" role="3Bsx3B">
           <node concept="v6hsc" id="10n4tqnoi3K" role="1aLnnE">
             <node concept="30bXRB" id="10n4tqnoi3L" role="13cPWH">
-              <property role="30bXRw" value="700" />
+              <property role="30bXRw" value="900" />
             </node>
             <node concept="30dDTi" id="10n4tqnoi3M" role="13cPWB">
               <node concept="30bXRB" id="10n4tqnoi3N" role="30dEsF">

@@ -1874,12 +1874,12 @@
   <root nodeRef="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/7976234883188882715">
     <file name="PositioningResolver.java">
       <node id="3489632902467582227" at="31,35,32,29" concept="9" />
-      <node id="3489632902467505323" at="32,29,33,192" concept="7" />
-      <node id="3489632902467484947" at="33,192,34,216" concept="3" />
+      <node id="3489632902467505323" at="32,29,33,184" concept="7" />
+      <node id="3489632902467484947" at="33,184,34,216" concept="3" />
       <node id="3489632902467484341" at="34,216,35,0" concept="10" />
       <node id="3489632902467586239" at="35,0,36,26" concept="9" />
-      <node id="794591792979870426" at="37,75,38,192" concept="7" />
-      <node id="794591792979869920" at="38,192,39,0" concept="10" />
+      <node id="794591792979870426" at="37,75,38,184" concept="7" />
+      <node id="794591792979869920" at="38,184,39,0" concept="10" />
       <node id="3489632902468753059" at="39,0,40,218" concept="3" />
       <node id="794591792979778211" at="41,9,42,0" concept="10" />
       <node id="3489632902467587944" at="42,0,43,33" concept="9" />

@@ -31,7 +31,7 @@ public class ExampleSimulation extends Simulation {
   public void render(PApplet context) {
     // Setting camera properly 
     VectorLike position = new InternalVector(context.width / 2, context.height / 2, (context.height / 2) / PApplet.tan(PApplet.PI * 30 / 180));
-    VectorLike focus = scope.EarthNested.Earth;
+    VectorLike focus = scope.Sun;
 
     context.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, 1, 0);
 

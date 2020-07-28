@@ -90,7 +90,7 @@ public class CollisionWorldSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SPHERE_RADIUS, ((Number) new BigInteger("40")));
       fixtureProperties.set(Prop.TEXTURE, new Color(0, 0, 255));
-      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.MERGE);
+      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.BOUNCE);
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 

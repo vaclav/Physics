@@ -428,13 +428,13 @@
                   <node concept="3cpWs8" id="31HEEbc5OMF" role="3cqZAp">
                     <node concept="3cpWsn" id="31HEEbc5OMG" role="3cpWs9">
                       <property role="TrG5h" value="locationComputed" />
-                      <node concept="3uibUv" id="31HEEbc5PuE" role="1tU5fm">
-                        <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+                      <node concept="3uibUv" id="ifXGYQ_K$R" role="1tU5fm">
+                        <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
                       </node>
                       <node concept="1eOMI4" id="31HEEbc5WHp" role="33vP2m">
                         <node concept="10QFUN" id="31HEEbc5PXP" role="1eOMHV">
-                          <node concept="3uibUv" id="31HEEbc5Q9F" role="10QFUM">
-                            <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+                          <node concept="3uibUv" id="ifXGYQ_Kfv" role="10QFUM">
+                            <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
                           </node>
                           <node concept="2YIFZM" id="31HEEbc5OMH" role="10QFUP">
                             <ref role="37wK5l" to="pbu6:3xDNhgd54rl" resolve="evaluate" />
@@ -503,12 +503,12 @@
                       <node concept="3cpWs8" id="G6Xgqq0obq" role="3cqZAp">
                         <node concept="3cpWsn" id="31HEEbc5QoG" role="3cpWs9">
                           <property role="TrG5h" value="velocityComputed" />
-                          <node concept="3uibUv" id="31HEEbc5QoH" role="1tU5fm">
-                            <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+                          <node concept="3uibUv" id="ifXGYQ_KFb" role="1tU5fm">
+                            <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
                           </node>
                           <node concept="10QFUN" id="31HEEbc5QoI" role="33vP2m">
-                            <node concept="3uibUv" id="31HEEbc5QoJ" role="10QFUM">
-                              <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+                            <node concept="3uibUv" id="ifXGYQ_LgC" role="10QFUM">
+                              <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
                             </node>
                             <node concept="2YIFZM" id="31HEEbc5QoK" role="10QFUP">
                               <ref role="37wK5l" to="pbu6:3xDNhgd54rl" resolve="evaluate" />

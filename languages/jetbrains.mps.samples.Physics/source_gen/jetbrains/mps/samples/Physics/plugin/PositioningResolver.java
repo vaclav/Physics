@@ -6,7 +6,7 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.samples.Physics.behavior.WorldDefinition__BehaviorDescriptor;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
-import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
@@ -30,12 +30,12 @@ public class PositioningResolver {
     Sequence.fromIterable(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(world)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         //  Compute position 
-        InternalVector locationComputed = ((InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$DoV0), LINKS.expression$87ts)));
+        VectorLike locationComputed = ((VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$DoV0), LINKS.expression$87ts)));
         SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$DoV0), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(locationComputed, null));
 
         //  Compute speed 
         if ((SLinkOperations.getTarget(it, LINKS.velocity$DoVv) != null)) {
-          InternalVector velocityComputed = (InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.expression$87ts));
+          VectorLike velocityComputed = (VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.expression$87ts));
 
           SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(velocityComputed, null));
         }

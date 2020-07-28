@@ -123,7 +123,6 @@
     <dependency reexport="false">cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</dependency>
     <dependency reexport="false">dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)</dependency>
     <dependency reexport="false">6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)</dependency>
-    <dependency reexport="false">59283cba-afa8-49c4-b10d-6ff0ede2c408(jetbrains.mps.samples.Physics.java.runtime)</dependency>
     <dependency reexport="false">197e2a32-ff26-4358-af5c-731ae2b35f83(org.iets3.core.expr.simpleTypes.interpreter)</dependency>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
     <dependency reexport="false">6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)</dependency>
@@ -131,6 +130,7 @@
     <dependency reexport="true">1c761cfd-81b1-4794-9999-148fa76881b8(org.iets3.core.expr.typetags.units.si)</dependency>
     <dependency reexport="false">f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)</dependency>
     <dependency reexport="false">cb91a38e-738a-4811-a96d-448d08f526fa(org.iets3.core.expr.typetags.units)</dependency>
+    <dependency reexport="false">22562cc6-29e7-43d0-b046-5e85dce22227(jetbrains.mps.samples.Physics.java.common)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:d4280a54-f6df-4383-aa41-d1b2bffa7eb1:com.mbeddr.core.base" version="5" />
@@ -234,7 +234,6 @@
     <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
     <module reference="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" version="2" />
     <module reference="22562cc6-29e7-43d0-b046-5e85dce22227(jetbrains.mps.samples.Physics.java.common)" version="0" />
-    <module reference="59283cba-afa8-49c4-b10d-6ff0ede2c408(jetbrains.mps.samples.Physics.java.runtime)" version="0" />
     <module reference="b350740a-2805-4655-bc71-743d6ba419e6(jetbrains.mps.samples.Physics.kernelf_requirements)" version="0" />
     <module reference="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)" version="0" />
     <module reference="db8bd035-3f51-41d8-8fed-954c202d18be(org.iets3.analysis.base)" version="0" />

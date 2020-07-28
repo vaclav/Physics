@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="18rwkirqbt294372kl7kloh63j43imt">
+  <files names="TypesystemDescriptor.java:subtype_UnitType_AbstractUnitType_InequationReplacementRule.java:subtype_UnitType_UnitType_InequationReplacementRule.java:supertypeof_UnitType_SubtypingRule.java:typeof_UnitExpression_InferenceRule.java" />
+</product>
+
