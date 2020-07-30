@@ -45,10 +45,10 @@ public class UnitTypeHelper {
         Map<SNode, BigDecimal> rightUnits = reduceUnits(SLinkOperations.getChildren(SNodeOperations.as(right, CONCEPTS.DimensionType$yz), LINKS.units$o6Ow));
 
         // Combine them (can throw unit computation exception) 
-        Map<SNode, BigDecimal> combination = UnitMapsConversionUtil.combine(leftUnits, rightUnits, operator);
+        Map<SNode, BigDecimal> combination = DimensionMapsHelper.combine(leftUnits, rightUnits, operator);
 
         // Set the result 
-        ListSequence.fromList(SLinkOperations.getChildren(result, LINKS.units$o6Ow)).addSequence(Sequence.fromIterable(UnitMapsConversionUtil.mapToReferences(combination)));
+        ListSequence.fromList(SLinkOperations.getChildren(result, LINKS.units$o6Ow)).addSequence(Sequence.fromIterable(DimensionMapsHelper.mapToReferences(combination)));
       } catch (UnitComputationException | InterpreterBaseException e) {
         return createRuntimeErrorType_5nzokm_a0a0d0a5a1(e.getMessage());
       }
@@ -79,14 +79,14 @@ public class UnitTypeHelper {
     final Map<SNode, BigDecimal> result = MapSequence.fromMap(new HashMap<SNode, BigDecimal>());
     Sequence.fromIterable(units).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
-        UnitMapsConversionUtil.multiplyAndMergeInto(Dimension__BehaviorDescriptor.getRawTypes_id3yBD53WvLzq.invoke(SLinkOperations.getTarget(it, LINKS.unit$2BcY)), IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it), result);
+        DimensionMapsHelper.multiplyAndMergeInto(Dimension__BehaviorDescriptor.getRawTypes_id3yBD53WvLzq.invoke(SLinkOperations.getTarget(it, LINKS.unit$2BcY)), IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it), result);
       }
     });
     return result;
   }
 
   public static Iterable<SNode> reduceUnitsToReferences(Iterable<SNode> units) {
-    return UnitMapsConversionUtil.mapToReferences(reduceUnits(units));
+    return DimensionMapsHelper.mapToReferences(reduceUnits(units));
   }
   private static SNode createRuntimeErrorType_5nzokm_a0a5a1() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RuntimeErrorType$Lm);

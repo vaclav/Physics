@@ -887,5 +887,32 @@
     </node>
     <node concept="22hDWj" id="1fq3tlLwTP8" role="22hAXT" />
   </node>
+  <node concept="24kQdi" id="4NfpV2p56vV">
+    <ref role="1XX52x" to="onwr:4NfpV2p55N6" resolve="UseUnitExpressionAs" />
+    <node concept="3EZMnI" id="4NfpV2p56vX" role="2wV5jI">
+      <node concept="3F0ifn" id="4NfpV2p56w3" role="3EZMnx">
+        <property role="3F0ifm" value="use as" />
+      </node>
+      <node concept="3F0ifn" id="4NfpV2p56wI" role="3EZMnx">
+        <property role="3F0ifm" value="[" />
+        <node concept="11L4FC" id="4NfpV2p56wP" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="4NfpV2p56wU" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="PMmxH" id="4NfpV2p5BzS" role="3EZMnx">
+        <ref role="PMmxG" node="7tUW$K4pxle" resolve="UnitReferenceArrayEditor" />
+      </node>
+      <node concept="3F0ifn" id="4NfpV2p56wy" role="3EZMnx">
+        <property role="3F0ifm" value="]" />
+        <node concept="11L4FC" id="4NfpV2p56wY" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="4NfpV2p56vZ" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

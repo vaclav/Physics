@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.dimensions.typesystem;
 
 import jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime;
+import jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.InequationReplacementRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.OverloadedOpsProvider_OneTypeSpecified;
@@ -27,26 +28,34 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_UseUnitExpressionAs_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      NonTypesystemRule_Runtime nonTypesystemRule = new check_UseUnitExpressionAs_NonTypesystemRule();
+      this.myNonTypesystemRules.add(nonTypesystemRule);
+    }
+    {
       SubtypingRule_Runtime subtypingRule = new subtype_Dimension_Real_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
     }
     {
-      SubtypingRule_Runtime subtypingRule = new supertypeof_UnitType_SubtypingRule();
+      SubtypingRule_Runtime subtypingRule = new supertypeof_DimensionType_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
     }
     {
-      InequationReplacementRule_Runtime eliminationRule = new subtype_UnitType_AbstractUnitType_InequationReplacementRule();
+      InequationReplacementRule_Runtime eliminationRule = new subtype_DimensionType_DimensionType_InequationReplacementRule();
       this.myInequationReplacementRules.add(eliminationRule);
     }
     {
-      InequationReplacementRule_Runtime eliminationRule = new subtype_UnitType_UnitType_InequationReplacementRule();
+      InequationReplacementRule_Runtime eliminationRule = new subtype_UnitType_AbstractUnitType_InequationReplacementRule();
       this.myInequationReplacementRules.add(eliminationRule);
     }
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.BinaryExpression$Aq));
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a6a0();
+          this.myOperandType = createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a8a0();
           this.myOperationConcept = CONCEPTS.BinaryExpression$Aq;
           this.myTypeIsExact = false;
           this.myIsStrong = true;
@@ -102,7 +111,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return n0.getResult();
     }
   }
-  private static SNode createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a6a0() {
+  private static SNode createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a8a0() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractDimensionType$C7);
     return n0.getResult();
   }

@@ -25,6 +25,7 @@ public final class LanguageConceptSwitch {
   public static final int Unit = 13;
   public static final int UnitExpression = 14;
   public static final int UnitReference = 15;
+  public static final int UseUnitExpressionAs = 16;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL);
@@ -44,6 +45,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x73b48a125b0d373fL, Unit);
     builder.put(0x777af24c045ea226L, UnitExpression);
     builder.put(0x73b48a125b0d4dc5L, UnitReference);
+    builder.put(0x4ccf67b099145cc6L, UseUnitExpressionAs);
     myIndex = builder.seal();
   }
 

@@ -25,6 +25,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Unit;
   private ConceptPresentation props_UnitExpression;
   private ConceptPresentation props_UnitReference;
+  private ConceptPresentation props_UseUnitExpressionAs;
 
   @Override
   @Nullable
@@ -140,6 +141,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_UnitReference = cpb.create();
         }
         return props_UnitReference;
+      case LanguageConceptSwitch.UseUnitExpressionAs:
+        if (props_UseUnitExpressionAs == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("allow one to strip the unit from the type and give an evaluated value in the given units");
+          cpb.rawPresentation("useAs");
+          props_UseUnitExpressionAs = cpb.create();
+        }
+        return props_UseUnitExpressionAs;
     }
     return null;
   }

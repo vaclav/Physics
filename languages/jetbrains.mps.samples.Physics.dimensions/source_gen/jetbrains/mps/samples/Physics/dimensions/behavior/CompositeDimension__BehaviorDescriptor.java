@@ -52,7 +52,7 @@ public final class CompositeDimension__BehaviorDescriptor extends BaseBHDescript
         Number parentPower = IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(parentUnit);
 
         // Add parent units multiplied by the exponent 
-        UnitMapsConversionUtil.multiplyAndMergeInto(Dimension__BehaviorDescriptor.getRawTypes_id3yBD53WvLzq.invoke(SLinkOperations.getTarget(parentUnit, LINKS.unit$2BcY)), parentPower, exponents);
+        DimensionMapsHelper.multiplyAndMergeInto(Dimension__BehaviorDescriptor.getRawTypes_id3yBD53WvLzq.invoke(SLinkOperations.getTarget(parentUnit, LINKS.unit$2BcY)), parentPower, exponents);
       }
     });
 

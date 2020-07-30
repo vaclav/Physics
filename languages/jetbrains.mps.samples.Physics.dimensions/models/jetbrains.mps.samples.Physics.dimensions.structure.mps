@@ -320,5 +320,26 @@
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
   </node>
+  <node concept="1TIwiD" id="4NfpV2p55N6">
+    <property role="EcuMT" value="5534756475241782470" />
+    <property role="TrG5h" value="UseUnitExpressionAs" />
+    <property role="34LRSv" value="useAs" />
+    <property role="R4oN_" value="allow one to strip the unit from the type and give an evaluated value in the given units" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="4NfpV2p55N7" role="PzmwI">
+      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
+    <node concept="PrWs8" id="4NfpV2p56vP" role="PzmwI">
+      <ref role="PrY4T" node="7tUW$K4pxl4" resolve="IUnitReferenceLikeArray" />
+    </node>
+    <node concept="1TJgyj" id="4NfpV2p56vK" role="1TKVEi">
+      <property role="IQ2ns" value="5534756475241785328" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetUnits" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" node="7eOyx9r3kR5" resolve="UnitReference" />
+      <ref role="20ksaX" node="7tUW$K4pxl5" resolve="units" />
+    </node>
+  </node>
 </model>
 
