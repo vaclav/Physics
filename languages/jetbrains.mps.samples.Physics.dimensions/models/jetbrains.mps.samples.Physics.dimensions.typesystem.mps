@@ -14,6 +14,7 @@
     <import index="pbu6" ref="r:83e946de-2a7f-4a4c-b3c9-4f671aa7f2db(org.iets3.core.expr.base.behavior)" />
     <import index="5fi3" ref="r:a08ce4c7-a3d7-4ce1-b6a4-794edd2a85d3(units.groups.standalone.behavior)" />
     <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
+    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -940,6 +941,23 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="2sgARr" id="3_YdNBWGaGw">
+    <property role="3GE5qa" value="definition.dimension" />
+    <property role="TrG5h" value="subtype_Dimension_Real" />
+    <node concept="3clFbS" id="3_YdNBWGaGx" role="2sgrp5">
+      <node concept="3clFbF" id="3_YdNBWGaHx" role="3cqZAp">
+        <node concept="2pJPEk" id="3_YdNBWGaHv" role="3clFbG">
+          <node concept="2pJPED" id="3_YdNBWGaJC" role="2pJPEn">
+            <ref role="2pJxaS" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3_YdNBWGaGz" role="1YuTPh">
+      <property role="TrG5h" value="dimensionType" />
+      <ref role="1YaFvo" to="onwr:7tUW$K4o9Ja" resolve="DimensionType" />
     </node>
   </node>
 </model>

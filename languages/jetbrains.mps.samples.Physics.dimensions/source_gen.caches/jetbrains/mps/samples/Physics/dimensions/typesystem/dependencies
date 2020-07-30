@@ -11,6 +11,7 @@
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitHandlingCapablity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitTypeHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_Dimension_Real_SubtypingRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_UnitType_AbstractUnitType_InequationReplacementRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_UnitType_UnitType_InequationReplacementRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.supertypeof_UnitType_SubtypingRule" />
@@ -23,6 +24,17 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_Dimension_Real_SubtypingRule">
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.ISubtypingRule_Runtime" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_UnitType_AbstractUnitType_InequationReplacementRule">
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />

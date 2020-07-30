@@ -27,6 +27,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      SubtypingRule_Runtime subtypingRule = new subtype_Dimension_Real_SubtypingRule();
+      this.mySubtypingRules.add(subtypingRule);
+    }
+    {
       SubtypingRule_Runtime subtypingRule = new supertypeof_UnitType_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
     }
@@ -42,7 +46,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a5a0();
+          this.myOperandType = createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a6a0();
           this.myOperationConcept = CONCEPTS.BinaryExpression$Aq;
           this.myTypeIsExact = false;
           this.myIsStrong = true;
@@ -98,7 +102,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return n0.getResult();
     }
   }
-  private static SNode createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a5a0() {
+  private static SNode createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a6a0() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractDimensionType$C7);
     return n0.getResult();
   }

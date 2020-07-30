@@ -4,6 +4,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
@@ -16,10 +17,10 @@
   </root>
   <root nodeRef="r:98f6e9b8-ca23-471b-9b0d-43dafe92c68d(jetbrains.mps.samples.Physics.dimensions.plugin)/1808378526640697902">
     <file name="DimensionsInterpreter_extension.java">
-      <node id="1808378526640697902" at="10,44,11,70" concept="6" />
+      <node id="1808378526640697902" at="10,44,11,70" concept="7" />
       <node id="1808378526640697902" at="14,26,15,55" concept="2" />
       <node id="1808378526640697902" at="17,28,18,55" concept="2" />
-      <node id="1808378526640697902" at="21,29,22,50" concept="4" />
+      <node id="1808378526640697902" at="21,29,22,50" concept="5" />
       <node id="1808378526640697902" at="10,0,13,0" concept="1" trace="DimensionsInterpreter_extension#()V" />
       <node id="1808378526640697902" at="14,0,17,0" concept="0" trace="activate#()V" />
       <node id="1808378526640697902" at="17,0,20,0" concept="0" trace="deactivate#()V" />
@@ -35,76 +36,81 @@
       <unit id="1808378526640697902" at="9,0,25,0" name="jetbrains.mps.samples.Physics.dimensions.plugin.DimensionsInterpreter_extension" />
     </file>
     <file name="InterpreterDimensionsInterpreter.java">
-      <node id="1808378526640697902" at="31,45,32,11" concept="2" />
-      <node id="4252203113248191803" at="38,13,39,42" concept="2" />
-      <node id="4252203113248191803" at="39,42,40,48" concept="2" />
-      <node id="4252203113248191803" at="40,48,41,68" concept="2" />
-      <node id="4252203113248242425" at="41,68,42,240" concept="4" />
-      <node id="4252203113248191803" at="43,47,44,30" concept="4" />
-      <node id="4252203113248191803" at="45,49,46,19" concept="7" />
-      <node id="4252203113248191803" at="47,39,48,98" concept="7" />
-      <node id="4252203113248191803" at="51,38,52,51" concept="4" />
-      <node id="4252203113248191803" at="56,32,57,32" concept="4" />
-      <node id="4252203113248191803" at="61,42,62,21" concept="4" />
-      <node id="1808378526641206894" at="73,85,74,289" concept="2" />
-      <node id="1808378526640697902" at="78,0,79,0" concept="5" trace="content$Gf5w" />
-      <node id="1808378526640697902" at="79,0,80,0" concept="5" trace="units$o6Ow" />
-      <node id="1808378526640697902" at="83,0,84,0" concept="5" trace="UnitExpression$Bl" />
-      <node id="1808378526640697902" at="84,0,85,0" concept="5" trace="RealType$5o" />
-      <node id="1808378526640697902" at="68,0,70,0" concept="3" trace="populateTypeMappers#(Ljava/util/List;)V" />
-      <node id="1808378526640697902" at="31,0,34,0" concept="1" trace="InterpreterDimensionsInterpreter#()V" />
-      <node id="4252203113248191803" at="51,0,54,0" concept="3" trace="getInfo#()Lcom/mbeddr/mpsutil/interpreter/rt/EvaluatorInfo;" />
-      <node id="1808378526640697902" at="73,0,76,0" concept="3" trace="populateRelationships#(Ljava/util/List;)V" />
-      <node id="4252203113248191803" at="55,0,59,0" concept="3" trace="toString#()Ljava/lang/String;" />
-      <node id="4252203113248191803" at="60,0,64,0" concept="3" trace="canLookupBeCached#()Z" />
-      <node id="4252203113248191803" at="37,121,49,9" concept="8" />
-      <node id="4252203113248191803" at="37,0,51,0" concept="3" trace="evaluateEvaluator#(Lorg/jetbrains/mps/openapi/model/SNode;Lcom/mbeddr/mpsutil/interpreter/rt/IContext;Lcom/mbeddr/mpsutil/interpreter/rt/ICoverageAnalyzer;Lcom/mbeddr/mpsutil/interpreter/rt/ComputationTrace;)Ljava/lang/Object;" />
-      <node id="4252203113248191803" at="35,76,64,7" concept="2" />
-      <node id="1808378526640697902" at="35,0,66,0" concept="3" trace="populateEvaluators#(Ljava/util/List;)V" />
-      <scope id="1808378526640697902" at="68,79,68,79" />
-      <scope id="1808378526640697902" at="31,45,32,11" />
-      <scope id="4252203113248191803" at="43,47,44,30" />
-      <scope id="4252203113248191803" at="45,49,46,19" />
-      <scope id="4252203113248191803" at="47,39,48,98" />
-      <scope id="4252203113248191803" at="51,38,52,51" />
-      <scope id="4252203113248191803" at="56,32,57,32" />
-      <scope id="4252203113248191803" at="61,42,62,21" />
-      <scope id="1808378526640697902" at="73,85,74,289" />
-      <scope id="4252203113248191803" at="43,9,45,9">
+      <node id="1808378526640697902" at="36,0,37,0" concept="6" trace="LOG" />
+      <node id="1808378526640697902" at="37,45,38,11" concept="2" />
+      <node id="4252203113248191803" at="44,13,45,42" concept="2" />
+      <node id="4252203113248191803" at="45,42,46,48" concept="2" />
+      <node id="4252203113248191803" at="46,48,47,68" concept="2" />
+      <node id="1210497451904242393" at="47,68,48,195" concept="4" />
+      <node id="1210497451904243140" at="48,195,49,195" concept="2" />
+      <node id="4252203113248242425" at="49,195,50,115" concept="5" />
+      <node id="4252203113248191803" at="51,47,52,30" concept="5" />
+      <node id="4252203113248191803" at="53,49,54,19" concept="8" />
+      <node id="4252203113248191803" at="55,39,56,98" concept="8" />
+      <node id="4252203113248191803" at="59,38,60,51" concept="5" />
+      <node id="4252203113248191803" at="64,32,65,32" concept="5" />
+      <node id="4252203113248191803" at="69,42,70,21" concept="5" />
+      <node id="1808378526641206894" at="81,85,82,289" concept="2" />
+      <node id="1808378526640697902" at="86,0,87,0" concept="6" trace="content$Gf5w" />
+      <node id="1808378526640697902" at="87,0,88,0" concept="6" trace="units$o6Ow" />
+      <node id="1808378526640697902" at="91,0,92,0" concept="6" trace="UnitExpression$Bl" />
+      <node id="1808378526640697902" at="92,0,93,0" concept="6" trace="RealType$5o" />
+      <node id="1808378526640697902" at="76,0,78,0" concept="3" trace="populateTypeMappers#(Ljava/util/List;)V" />
+      <node id="1808378526640697902" at="37,0,40,0" concept="1" trace="InterpreterDimensionsInterpreter#()V" />
+      <node id="4252203113248191803" at="59,0,62,0" concept="3" trace="getInfo#()Lcom/mbeddr/mpsutil/interpreter/rt/EvaluatorInfo;" />
+      <node id="1808378526640697902" at="81,0,84,0" concept="3" trace="populateRelationships#(Ljava/util/List;)V" />
+      <node id="4252203113248191803" at="63,0,67,0" concept="3" trace="toString#()Ljava/lang/String;" />
+      <node id="4252203113248191803" at="68,0,72,0" concept="3" trace="canLookupBeCached#()Z" />
+      <node id="4252203113248191803" at="43,121,57,9" concept="9" />
+      <node id="4252203113248191803" at="43,0,59,0" concept="3" trace="evaluateEvaluator#(Lorg/jetbrains/mps/openapi/model/SNode;Lcom/mbeddr/mpsutil/interpreter/rt/IContext;Lcom/mbeddr/mpsutil/interpreter/rt/ICoverageAnalyzer;Lcom/mbeddr/mpsutil/interpreter/rt/ComputationTrace;)Ljava/lang/Object;" />
+      <node id="4252203113248191803" at="41,76,72,7" concept="2" />
+      <node id="1808378526640697902" at="41,0,74,0" concept="3" trace="populateEvaluators#(Ljava/util/List;)V" />
+      <scope id="1808378526640697902" at="76,79,76,79" />
+      <scope id="1808378526640697902" at="37,45,38,11" />
+      <scope id="4252203113248191803" at="51,47,52,30" />
+      <scope id="4252203113248191803" at="53,49,54,19" />
+      <scope id="4252203113248191803" at="55,39,56,98" />
+      <scope id="4252203113248191803" at="59,38,60,51" />
+      <scope id="4252203113248191803" at="64,32,65,32" />
+      <scope id="4252203113248191803" at="69,42,70,21" />
+      <scope id="1808378526640697902" at="81,85,82,289" />
+      <scope id="4252203113248191803" at="51,9,53,9">
         <var name="stop" id="4252203113248191803" />
       </scope>
-      <scope id="4252203113248191803" at="45,9,47,9">
+      <scope id="4252203113248191803" at="53,9,55,9">
         <var name="ex" id="4252203113248191803" />
       </scope>
-      <scope id="4252203113248191803" at="47,9,49,9">
+      <scope id="4252203113248191803" at="55,9,57,9">
         <var name="ex" id="4252203113248191803" />
       </scope>
-      <scope id="1808378526640697902" at="68,0,70,0">
+      <scope id="1808378526640697902" at="76,0,78,0">
         <var name="typeMappers" id="1808378526640697902" />
       </scope>
-      <scope id="1808378526640697902" at="31,0,34,0" />
-      <scope id="4252203113248191803" at="51,0,54,0" />
-      <scope id="1808378526640697902" at="73,0,76,0">
+      <scope id="1808378526640697902" at="37,0,40,0" />
+      <scope id="4252203113248191803" at="59,0,62,0" />
+      <scope id="1808378526640697902" at="81,0,84,0">
         <var name="relationships" id="1808378526640697902" />
       </scope>
-      <scope id="4252203113248191803" at="38,13,42,240" />
-      <scope id="4252203113248191803" at="55,0,59,0" />
-      <scope id="4252203113248191803" at="60,0,64,0" />
-      <scope id="4252203113248191803" at="37,121,49,9" />
-      <scope id="4252203113248191803" at="37,0,51,0">
+      <scope id="4252203113248191803" at="63,0,67,0" />
+      <scope id="4252203113248191803" at="68,0,72,0" />
+      <scope id="4252203113248191803" at="44,13,50,115">
+        <var name="compositeExpressionToBase" id="1210497451904242394" />
+      </scope>
+      <scope id="4252203113248191803" at="43,121,57,9" />
+      <scope id="4252203113248191803" at="43,0,59,0">
         <var name="context" id="4252203113248191803" />
         <var name="coverage" id="4252203113248191803" />
         <var name="node" id="4252203113248191803" />
         <var name="trace" id="4252203113248191803" />
       </scope>
-      <scope id="1808378526640697902" at="35,76,64,7" />
-      <scope id="1808378526640697902" at="35,0,66,0">
+      <scope id="1808378526640697902" at="41,76,72,7" />
+      <scope id="1808378526640697902" at="41,0,74,0">
         <var name="evaluators" id="1808378526640697902" />
       </scope>
-      <unit id="1808378526640697902" at="77,0,81,0" name="jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter$LINKS" />
-      <unit id="1808378526640697902" at="82,0,86,0" name="jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter$CONCEPTS" />
-      <unit id="4252203113248191803" at="36,74,64,5" name="jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter$1" />
-      <unit id="1808378526640697902" at="30,0,87,0" name="jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter" />
+      <unit id="1808378526640697902" at="85,0,89,0" name="jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter$LINKS" />
+      <unit id="1808378526640697902" at="90,0,94,0" name="jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter$CONCEPTS" />
+      <unit id="4252203113248191803" at="42,74,72,5" name="jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter$1" />
+      <unit id="1808378526640697902" at="35,0,95,0" name="jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter" />
     </file>
   </root>
 </debug-info>

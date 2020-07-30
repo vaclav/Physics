@@ -200,12 +200,6 @@
         <child id="5455284157993911099" name="values" index="2pJxcM" />
       </concept>
     </language>
-    <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
-      <concept id="6332851714983831325" name="jetbrains.mps.baseLanguage.logging.structure.MsgStatement" flags="ng" index="2xdQw9">
-        <property id="6332851714983843871" name="severity" index="2xdLsb" />
-        <child id="5721587534047265374" name="message" index="9lYJi" />
-      </concept>
-    </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
@@ -405,12 +399,6 @@
       <node concept="aenpk" id="7tUW$K4olws" role="1Qtc8A">
         <node concept="27VH4U" id="7tUW$K4olwu" role="aenpu">
           <node concept="3clFbS" id="7tUW$K4olwv" role="2VODD2">
-            <node concept="2xdQw9" id="7tUW$K4oYWU" role="3cqZAp">
-              <property role="2xdLsb" value="h1akgim/info" />
-              <node concept="Xl_RD" id="7tUW$K4oYWW" role="9lYJi">
-                <property role="Xl_RC" value="checking for ancestors" />
-              </node>
-            </node>
             <node concept="3clFbF" id="7tUW$K4ol$p" role="3cqZAp">
               <node concept="2OqwBi" id="7tUW$K4omyv" role="3clFbG">
                 <node concept="2OqwBi" id="7tUW$K4olQF" role="2Oq$k0">
@@ -435,10 +423,6 @@
           </node>
           <node concept="3c8PGw" id="7tUW$K4on69" role="3c8PHt">
             <node concept="3clFbS" id="7tUW$K4on6a" role="2VODD2">
-              <node concept="2xdQw9" id="7tUW$K4oZbf" role="3cqZAp">
-                <property role="2xdLsb" value="h1akgim/info" />
-                <node concept="Xl_RD" id="7tUW$K4oZbh" role="9lYJi" />
-              </node>
               <node concept="3cpWs8" id="7tUW$K4onGr" role="3cqZAp">
                 <node concept="3cpWsn" id="7tUW$K4onGs" role="3cpWs9">
                   <property role="TrG5h" value="unit" />
