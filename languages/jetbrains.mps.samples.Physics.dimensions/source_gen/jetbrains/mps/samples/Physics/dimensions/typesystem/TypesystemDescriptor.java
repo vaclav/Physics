@@ -36,26 +36,22 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     {
-      SubtypingRule_Runtime subtypingRule = new subtype_Dimension_Real_SubtypingRule();
-      this.mySubtypingRules.add(subtypingRule);
-    }
-    {
       SubtypingRule_Runtime subtypingRule = new supertypeof_DimensionType_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
     }
     {
-      InequationReplacementRule_Runtime eliminationRule = new subtype_DimensionType_DimensionType_InequationReplacementRule();
+      InequationReplacementRule_Runtime eliminationRule = new replace_DimensionType_DimensionType_InequationReplacementRule();
       this.myInequationReplacementRules.add(eliminationRule);
     }
     {
-      InequationReplacementRule_Runtime eliminationRule = new subtype_UnitType_AbstractUnitType_InequationReplacementRule();
+      InequationReplacementRule_Runtime eliminationRule = new subtype_DimensionType_AbstractDimensionType_InequationReplacementRule();
       this.myInequationReplacementRules.add(eliminationRule);
     }
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.BinaryExpression$Aq));
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a8a0();
+          this.myOperandType = createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a7a0();
           this.myOperationConcept = CONCEPTS.BinaryExpression$Aq;
           this.myTypeIsExact = false;
           this.myIsStrong = true;
@@ -111,7 +107,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return n0.getResult();
     }
   }
-  private static SNode createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a8a0() {
+  private static SNode createAbstractDimensionType_3ist9o_a0a0a0a0a0a0a7a0() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractDimensionType$C7);
     return n0.getResult();
   }

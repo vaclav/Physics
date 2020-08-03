@@ -44,6 +44,7 @@
   <dependency className="jetbrains.mps.samples.Physics.plugin.InternalEntity">
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.InternalObject" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.InternalWorld" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
@@ -55,7 +56,7 @@
   <dependency className="jetbrains.mps.samples.Physics.plugin.InternalObject">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
@@ -69,7 +70,7 @@
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.WorldDefinition__BehaviorDescriptor" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
@@ -88,6 +89,7 @@
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.IEvaluator" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.IRelationship" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.ITypeMapper" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.InterpretAfterRelationshipImpl" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.InterpretBeforeRelationshipImpl" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.InterpreterEscapeException" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.InterpreterRuntimeException" />

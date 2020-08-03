@@ -9,36 +9,24 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import java.util.ArrayList;
-import jetbrains.mps.typesystem.inference.util.StructuralNodeSet;
-import jetbrains.mps.typesystem.inference.TypeChecker;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.samples.Physics.dimensions.behavior.UnitTypeHelper;
-import jetbrains.mps.internal.collections.runtime.SetSequence;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class supertypeof_DimensionType_SubtypingRule extends SubtypingRule_Runtime implements ISubtypingRule_Runtime {
   public supertypeof_DimensionType_SubtypingRule() {
   }
   public List<SNode> getSubOrSuperTypes(SNode unitType, TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    List<SNode> result = new ArrayList<SNode>();
+    List<SNode> supertypes = new ArrayList<SNode>();
 
-    // Get parent types 
-    StructuralNodeSet<?> supers = TypeChecker.getInstance().getSubtypingManager().collectImmediateSupertypes(SLinkOperations.getTarget(unitType, LINKS.baseType$fHYw));
-    Iterable<SNode> units = UnitTypeHelper.reduceUnitsToReferences(SLinkOperations.getChildren(unitType, LINKS.units$o6Ow));
+    // A dimension is basically a real number 
+    ListSequence.fromList(supertypes).addElement(createRealType_8cjfjk_a0a3a1());
 
-    // Match supertypes 
-    for (SNode type : SetSequence.fromSet(supers)) {
-      ListSequence.fromList(result).addElement(createDimensionType_8cjfjk_a0a0a7a1(units, SNodeOperations.cast(type, CONCEPTS.Type$fA)));
-    }
 
     // Return the list of supertypes 
-    return result;
+    return supertypes;
   }
   public SAbstractConcept getApplicableConcept() {
     return CONCEPTS.DimensionType$yz;
@@ -49,21 +37,13 @@ public class supertypeof_DimensionType_SubtypingRule extends SubtypingRule_Runti
   public boolean isWeak() {
     return false;
   }
-  private static SNode createDimensionType_8cjfjk_a0a0a7a1(Iterable<? extends SNode> p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
-    n0.forChild(LINKS.units$o6Ow).initNodeList(p0, CONCEPTS.DimensionReference$wa);
-    n0.forChild(LINKS.baseType$fHYw).initNode(p1, CONCEPTS.Type$fA, true);
+  private static SNode createRealType_8cjfjk_a0a3a1() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
     return n0.getResult();
   }
 
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
-  }
-
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
     /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
-    /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
+    /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
   }
 }

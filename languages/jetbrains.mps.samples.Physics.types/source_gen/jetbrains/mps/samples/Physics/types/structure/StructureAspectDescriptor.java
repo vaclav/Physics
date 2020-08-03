@@ -12,6 +12,7 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptAbstractVectorType = createDescriptorForAbstractVectorType();
   /*package*/ final ConceptDescriptor myConceptDirectionType = createDescriptorForDirectionType();
   /*package*/ final ConceptDescriptor myConceptForceType = createDescriptorForForceType();
   /*package*/ final ConceptDescriptor myConceptObjectType = createDescriptorForObjectType();
@@ -27,17 +28,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
+    deps.aggregatedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptDirectionType, myConceptForceType, myConceptObjectType, myConceptVectorType, myConceptWorldType);
+    return Arrays.asList(myConceptAbstractVectorType, myConceptDirectionType, myConceptForceType, myConceptObjectType, myConceptVectorType, myConceptWorldType);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.AbstractVectorType:
+        return myConceptAbstractVectorType;
       case LanguageConceptSwitch.DirectionType:
         return myConceptDirectionType;
       case LanguageConceptSwitch.ForceType:
@@ -58,6 +62,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForAbstractVectorType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "AbstractVectorType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L);
+    b.class_(false, true, false);
+    b.super_("jetbrains.mps.samples.Physics.types.structure.DirectionType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
+    b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/1387628150973121927");
+    b.version(2);
+    b.alias("abstract-vector");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForDirectionType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "DirectionType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
     b.class_(false, false, false);
@@ -88,9 +101,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForVectorType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "VectorType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.types.structure.DirectionType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
+    b.super_("jetbrains.mps.samples.Physics.types.structure.AbstractVectorType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553932543");
     b.version(2);
+    b.aggregate("componentType", 0x1341d8738b13c81dL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L).optional(false).ordered(true).multiple(false).origin("1387628150972991517").done();
     b.alias("vector");
     return b.create();
   }

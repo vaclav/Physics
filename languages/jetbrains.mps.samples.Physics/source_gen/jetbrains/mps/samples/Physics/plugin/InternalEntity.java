@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.plugin;
 
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -13,7 +14,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public abstract class InternalEntity<T extends SNode> extends InternalVector {
   protected T node;
 
-  public InternalEntity(InternalVector position, T object) {
+  public InternalEntity(VectorLike position, T object) {
     super(position.getX(), position.getY(), position.getZ());
     node = object;
   }
@@ -32,7 +33,7 @@ public abstract class InternalEntity<T extends SNode> extends InternalVector {
 
   public abstract SNode getMass();
 
-  public static InternalEntity from(InternalVector positionComputed, SNode localized) {
+  public static InternalEntity from(VectorLike positionComputed, SNode localized) {
     {
       final SNode world = localized;
       if (SNodeOperations.isInstanceOf(world, CONCEPTS.WorldInclusion$vO)) {

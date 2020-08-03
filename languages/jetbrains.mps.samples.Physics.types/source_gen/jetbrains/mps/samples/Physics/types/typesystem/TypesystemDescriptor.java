@@ -12,11 +12,15 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.mySubtypingRules.add(subtypingRule);
     }
     {
-      SubtypingRule_Runtime subtypingRule = new VectorIsDirection_SubtypingRule();
+      SubtypingRule_Runtime subtypingRule = new WorldIsObject_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
     }
     {
-      SubtypingRule_Runtime subtypingRule = new WorldIsObject_SubtypingRule();
+      SubtypingRule_Runtime subtypingRule = new subtype_AbstractVector_DirectionType_SubtypingRule();
+      this.mySubtypingRules.add(subtypingRule);
+    }
+    {
+      SubtypingRule_Runtime subtypingRule = new subtype_VectorType_supertypes_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
     }
   }

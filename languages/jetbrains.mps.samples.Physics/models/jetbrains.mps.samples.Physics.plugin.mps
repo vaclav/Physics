@@ -25,6 +25,7 @@
     <import index="2ahs" ref="r:ea6cf71d-29d2-478d-8027-a9f4a4de53c4(com.mbeddr.mpsutil.interpreter.rt)" />
     <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" />
     <import index="mizj" ref="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.java.common.vectors)" />
+    <import index="9ur8" ref="r:98f6e9b8-ca23-471b-9b0d-43dafe92c68d(jetbrains.mps.samples.Physics.dimensions.plugin)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
   <registry>
@@ -226,6 +227,7 @@
       <concept id="6663324787724559041" name="com.mbeddr.mpsutil.interpreter.structure.AbstractInterpreterRelationship" flags="ng" index="1J641m">
         <reference id="6663324787724987489" name="target" index="1J7WVQ" />
       </concept>
+      <concept id="6663324787725038318" name="com.mbeddr.mpsutil.interpreter.structure.InterpretAfterRelationship" flags="ng" index="1J7L1T" />
       <concept id="6663324787724987491" name="com.mbeddr.mpsutil.interpreter.structure.InterpretBeforeRelationship" flags="ng" index="1J7WVO" />
       <concept id="8511326569641889031" name="com.mbeddr.mpsutil.interpreter.structure.AbstractRecursionExpression" flags="ng" index="3SLKdG">
         <child id="8511326569641873009" name="node" index="3SLO0q" />
@@ -2026,6 +2028,9 @@
     <node concept="1J7WVO" id="1$oDF1jTbpI" role="1J4apk">
       <ref role="1J7WVQ" to="km5y:uGVYUiiVGW" resolve="ExprSimpleTypesInterpreter" />
     </node>
+    <node concept="1J7L1T" id="1d1Q7ebihJu" role="1J4apk">
+      <ref role="1J7WVQ" to="9ur8:1$oDF1jRf8I" resolve="DimensionsInterpreter" />
+    </node>
     <node concept="qq9P1" id="1$oDF1jVg8q" role="qq9xR">
       <property role="2TnfIJ" value="true" />
       <ref role="qq9wM" to="9tcj:6kwOTMl1bfn" resolve="VectorComponentTarget" />
@@ -2317,7 +2322,7 @@
       <node concept="qpFDx" id="1igjyYxxML7" role="3vbI0w">
         <ref role="qpFD$" to="9tcj:1$oDF1jRtdq" resolve="coordinates" />
         <node concept="rxStX" id="1igjyYxxMWu" role="rajlz">
-          <ref role="rxSuV" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
+          <ref role="rxSuV" to="z99z:1d1Q7eb5sm7" resolve="AbstractVectorType" />
         </node>
       </node>
       <node concept="qpFDx" id="1igjyYxyOAe" role="3vbI0w">
@@ -2580,8 +2585,8 @@
                 <ref role="37wK5l" node="31HEEbbySLI" resolve="from" />
                 <ref role="1Pybhc" node="31HEEbbynJS" resolve="InternalEntity" />
                 <node concept="10QFUN" id="1igjyYxyNbV" role="37wK5m">
-                  <node concept="3uibUv" id="1igjyYxyNbW" role="10QFUM">
-                    <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+                  <node concept="3uibUv" id="1d1Q7ebljmq" role="10QFUM">
+                    <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
                   </node>
                   <node concept="qpA2v" id="1igjyYxyNbX" role="10QFUP">
                     <node concept="2OqwBi" id="1igjyYxyNbY" role="3SLO0q">
@@ -2629,8 +2634,8 @@
                 <ref role="37wK5l" node="31HEEbbySLI" resolve="from" />
                 <ref role="1Pybhc" node="31HEEbbynJS" resolve="InternalEntity" />
                 <node concept="10QFUN" id="6yY6C98ZvGF" role="37wK5m">
-                  <node concept="3uibUv" id="6yY6C98ZvGG" role="10QFUM">
-                    <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+                  <node concept="3uibUv" id="1d1Q7ebljqL" role="10QFUM">
+                    <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
                   </node>
                   <node concept="qpA2v" id="6yY6C98ZvGH" role="10QFUP">
                     <node concept="2OqwBi" id="6yY6C98ZvGI" role="3SLO0q">
@@ -2958,8 +2963,8 @@
                 <ref role="37wK5l" node="31HEEbbySLI" resolve="from" />
                 <ref role="1Pybhc" node="31HEEbbynJS" resolve="InternalEntity" />
                 <node concept="10QFUN" id="31HEEbb_Ncg" role="37wK5m">
-                  <node concept="3uibUv" id="31HEEbb_Nch" role="10QFUM">
-                    <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+                  <node concept="3uibUv" id="1d1Q7ebmsz2" role="10QFUM">
+                    <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
                   </node>
                   <node concept="qpA2v" id="31HEEbb_Nci" role="10QFUP">
                     <node concept="2OqwBi" id="31HEEbb_Ncj" role="3SLO0q">
@@ -3344,16 +3349,16 @@
             <node concept="37vLTw" id="31HEEbbyo2h" role="2Oq$k0">
               <ref role="3cqZAo" node="31HEEbbynVN" resolve="position" />
             </node>
-            <node concept="liA8E" id="31HEEbcqJiY" role="2OqNvi">
-              <ref role="37wK5l" to="mizj:31HEEbcjwgi" resolve="getX" />
+            <node concept="liA8E" id="1d1Q7ebli$F" role="2OqNvi">
+              <ref role="37wK5l" to="mizj:G6Xgqqgk9m" resolve="getX" />
             </node>
           </node>
           <node concept="2OqwBi" id="31HEEbbypFv" role="37wK5m">
             <node concept="37vLTw" id="31HEEbbypuR" role="2Oq$k0">
               <ref role="3cqZAo" node="31HEEbbynVN" resolve="position" />
             </node>
-            <node concept="liA8E" id="31HEEbcqJqq" role="2OqNvi">
-              <ref role="37wK5l" to="mizj:31HEEbcjwgq" resolve="getY" />
+            <node concept="liA8E" id="1d1Q7ebliED" role="2OqNvi">
+              <ref role="37wK5l" to="mizj:G6Xgqqgk9u" resolve="getY" />
             </node>
           </node>
           <node concept="2OqwBi" id="31HEEbbypTZ" role="37wK5m">
@@ -3361,7 +3366,7 @@
               <ref role="3cqZAo" node="31HEEbbynVN" resolve="position" />
             </node>
             <node concept="liA8E" id="31HEEbcqJFc" role="2OqNvi">
-              <ref role="37wK5l" to="mizj:31HEEbcjwgy" resolve="getZ" />
+              <ref role="37wK5l" to="mizj:G6Xgqqgk9A" resolve="getZ" />
             </node>
           </node>
         </node>
@@ -3378,8 +3383,8 @@
       </node>
       <node concept="37vLTG" id="31HEEbbynVN" role="3clF46">
         <property role="TrG5h" value="position" />
-        <node concept="3uibUv" id="31HEEbbyOet" role="1tU5fm">
-          <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+        <node concept="3uibUv" id="1d1Q7eblisC" role="1tU5fm">
+          <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
         </node>
       </node>
       <node concept="37vLTG" id="31HEEbbyqcR" role="3clF46">
@@ -3517,8 +3522,8 @@
       </node>
       <node concept="37vLTG" id="31HEEbbyTQI" role="3clF46">
         <property role="TrG5h" value="positionComputed" />
-        <node concept="3uibUv" id="31HEEbbyTXv" role="1tU5fm">
-          <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+        <node concept="3uibUv" id="1d1Q7eblgOx" role="1tU5fm">
+          <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
         </node>
       </node>
       <node concept="37vLTG" id="31HEEbbyTcJ" role="3clF46">
@@ -3561,8 +3566,8 @@
       </node>
       <node concept="37vLTG" id="31HEEbbyQ7X" role="3clF46">
         <property role="TrG5h" value="position" />
-        <node concept="3uibUv" id="31HEEbbyQ7Y" role="1tU5fm">
-          <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+        <node concept="3uibUv" id="1d1Q7eblj08" role="1tU5fm">
+          <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
         </node>
       </node>
       <node concept="37vLTG" id="31HEEbbyQ7Z" role="3clF46">
@@ -3631,8 +3636,8 @@
       </node>
       <node concept="37vLTG" id="31HEEbbyQ1c" role="3clF46">
         <property role="TrG5h" value="position" />
-        <node concept="3uibUv" id="31HEEbbyQ1e" role="1tU5fm">
-          <ref role="3uigEE" to="mizj:6asu_4xEVX3" resolve="InternalVector" />
+        <node concept="3uibUv" id="1d1Q7ebliev" role="1tU5fm">
+          <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
         </node>
       </node>
       <node concept="37vLTG" id="31HEEbbyQ1g" role="3clF46">

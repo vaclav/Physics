@@ -13,9 +13,8 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitHandlingCapablity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitTypeHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.check_UseUnitExpressionAs_NonTypesystemRule" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_DimensionType_DimensionType_InequationReplacementRule" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_Dimension_Real_SubtypingRule" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_UnitType_AbstractUnitType_InequationReplacementRule" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.replace_DimensionType_DimensionType_InequationReplacementRule" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_DimensionType_AbstractDimensionType_InequationReplacementRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.supertypeof_DimensionType_SubtypingRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.typeof_UnitExpression_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.typeof_UseUnitExpressionAs_InferenceRule" />
@@ -38,10 +37,16 @@
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractNonTypesystemRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_DimensionType_DimensionType_InequationReplacementRule">
+  <dependency className="jetbrains.mps.samples.Physics.dimensions.typesystem.replace_DimensionType_DimensionType_InequationReplacementRule">
     <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime" />
+    <classNode dependClassName="jetbrains.mps.errors.IErrorReporter" />
+    <classNode dependClassName="jetbrains.mps.errors.messageTargets.MessageTarget" />
+    <classNode dependClassName="jetbrains.mps.errors.messageTargets.NodeMessageTarget" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.HUtil" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicable2Status" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper" />
@@ -49,24 +54,16 @@
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.EquationInfo" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
+    <classNode dependClassName="org.apache.log4j.Level" />
+    <classNode dependClassName="org.apache.log4j.LogManager" />
+    <classNode dependClassName="org.apache.log4j.Logger" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInequationReplacementRule_Runtime" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_Dimension_Real_SubtypingRule">
-    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
-    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
-    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
-    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.ISubtypingRule_Runtime" />
-    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime" />
-  </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_UnitType_AbstractUnitType_InequationReplacementRule">
+  <dependency className="jetbrains.mps.samples.Physics.dimensions.typesystem.subtype_DimensionType_AbstractDimensionType_InequationReplacementRule">
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicable2Status" />
@@ -80,23 +77,15 @@
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInequationReplacementRule_Runtime" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.dimensions.typesystem.supertypeof_DimensionType_SubtypingRule">
-    <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitTypeHelper" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
-    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
-    <classNode dependClassName="jetbrains.mps.typesystem.inference.util.StructuralNodeSet" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.ISubtypingRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime" />

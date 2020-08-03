@@ -6,9 +6,11 @@
     <use id="be81eb12-4eda-4d0e-89be-7493500ab874" name="jetbrains.mps.samples.Physics" version="1" />
     <use id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes" version="1" />
     <use id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math" version="0" />
+    <use id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
+    <import index="nas6" ref="r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)" />
     <import index="bf5" ref="r:ed131d93-9e12-43c3-b840-cc4cd82da9cd(jetbrains.mps.samples.Physics.colors)" implicit="true" />
   </imports>
   <registry>
@@ -28,6 +30,16 @@
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
       <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
         <property id="5115872837157054173" name="value" index="30bXRw" />
+      </concept>
+    </language>
+    <language id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions">
+      <concept id="8337440621611273669" name="jetbrains.mps.samples.Physics.dimensions.structure.UnitReference" flags="ng" index="CIsvn" />
+      <concept id="5534756475241782470" name="jetbrains.mps.samples.Physics.dimensions.structure.UseUnitExpressionAs" flags="ng" index="3lQNHQ" />
+      <concept id="8609460045977359684" name="jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLikeArray" flags="ng" index="1N7es8">
+        <child id="8609460045977359685" name="units" index="1N7es9" />
+      </concept>
+      <concept id="8609460045977353913" name="jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike" flags="ng" index="1N7KNP">
+        <reference id="8609460045977353916" name="unit" index="1N7KNK" />
       </concept>
     </language>
     <language id="be81eb12-4eda-4d0e-89be-7493500ab874" name="jetbrains.mps.samples.Physics">
@@ -118,9 +130,16 @@
           <property role="30bXRw" value="3" />
         </node>
         <node concept="30dDTi" id="enY1Kc$qPa" role="IFIgH">
-          <node concept="1QScDb" id="enY1Kc$qV$" role="30dEs_">
-            <node concept="3K9aLm" id="enY1Kc$qZG" role="1QScD9" />
-            <node concept="2CrqZA" id="enY1Kc$qSa" role="30czhm" />
+          <node concept="1QScDb" id="1d1Q7ebnfSE" role="30dEs_">
+            <node concept="3lQNHQ" id="1d1Q7ebnfXz" role="1QScD9">
+              <node concept="CIsvn" id="1d1Q7ebng3a" role="1N7es9">
+                <ref role="1N7KNK" to="nas6:1d1Q7eb5p5y" resolve="kg" />
+              </node>
+            </node>
+            <node concept="1QScDb" id="enY1Kc$qV$" role="30czhm">
+              <node concept="3K9aLm" id="enY1Kc$qZG" role="1QScD9" />
+              <node concept="2CrqZA" id="enY1Kc$qSa" role="30czhm" />
+            </node>
           </node>
           <node concept="a1tim" id="enY1Kc$qEz" role="30dEsF">
             <node concept="30bXRB" id="enY1Kc$qFh" role="a1tin">

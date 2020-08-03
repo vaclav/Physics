@@ -29,6 +29,7 @@ import jetbrains.mps.samples.Physics.behavior.IMayTargetWorld__BehaviorDescripto
 import com.mbeddr.mpsutil.interpreter.rt.ITypeMapper;
 import com.mbeddr.mpsutil.interpreter.rt.IRelationship;
 import com.mbeddr.mpsutil.interpreter.rt.InterpretBeforeRelationshipImpl;
+import com.mbeddr.mpsutil.interpreter.rt.InterpretAfterRelationshipImpl;
 import jetbrains.mps.lang.smodel.EnumerationLiteralsIndex;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -175,7 +176,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.RelativeCoordinates$c7, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1481770243885208091", true, new TypedChildConstraintImpl(LINKS.coordinates$l1nt, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.VectorType$Wj))), new TypedChildConstraintImpl(LINKS.relativeFrom$gwcw, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$vJ)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.RelativeCoordinates$c7, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1481770243885208091", true, new TypedChildConstraintImpl(LINKS.coordinates$l1nt, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.AbstractVectorType$6J))), new TypedChildConstraintImpl(LINKS.relativeFrom$gwcw, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$vJ)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -189,7 +190,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         } catch (InterpreterEscapeException ex) {
           throw ex;
         } catch (RuntimeException ex) {
-          throw new InterpreterRuntimeException("relative coordinates(coordinates[vector], relativeFrom[direction])", node, ex, trace);
+          throw new InterpreterRuntimeException("relative coordinates(coordinates[abstract-vector], relativeFrom[direction])", node, ex, trace);
         }
       }
       public EvaluatorInfo getInfo() {
@@ -285,7 +286,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           SNode localized = SLinkOperations.getTarget(node, LINKS.target$EWj0);
 
-          return InternalEntity.from((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.position$DoV0), context, coverage, trace, false), localized);
+          return InternalEntity.from((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.position$DoV0), context, coverage, trace, false), localized);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -316,7 +317,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           SNode localized = SLinkOperations.getTarget(node, LINKS.target$g02E);
 
-          return InternalEntity.from((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.position$DoV0), context, coverage, trace, false), localized);
+          return InternalEntity.from((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.position$DoV0), context, coverage, trace, false), localized);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -555,7 +556,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           SNode sourcePoint = (SNode) context.getRootInterpreter().evaluate(SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false), context, coverage, trace, false);
 
-          return InternalEntity.from((InternalVector) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(sourcePoint, LINKS.position$DoV0), context, coverage, trace, false), sourcePoint);
+          return InternalEntity.from((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(sourcePoint, LINKS.position$DoV0), context, coverage, trace, false), sourcePoint);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -762,6 +763,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
 
   protected void populateRelationships(List<? extends IRelationship> relationships) {
     ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretBeforeRelationshipImpl("jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter", "org.iets3.core.expr.simpleTypes.interpreter.plugin.InterpreterExprSimpleTypesInterpreter"));
+    ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretAfterRelationshipImpl("jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter", "jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter"));
   }
   private static final EnumerationLiteralsIndex enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, 0x6520d39c9504b3f4L, 0x6520d39c9504b3d9L, 0x6520d39c9504b3daL, 0x6520d39c9504b3ddL, 0x6520d39c9504b3eeL, 0x6520d39c9504b3e9L);
 
@@ -776,7 +778,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
     /*package*/ static final SConcept SphericalCoordinates$W4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, "jetbrains.mps.samples.Physics.structure.SphericalCoordinates");
     /*package*/ static final SConcept CylindricalCoordinates$9D = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, "jetbrains.mps.samples.Physics.structure.CylindricalCoordinates");
     /*package*/ static final SConcept RelativeCoordinates$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeCoordinates");
-    /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
+    /*package*/ static final SConcept AbstractVectorType$6J = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L, "jetbrains.mps.samples.Physics.types.structure.AbstractVectorType");
     /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
     /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
     /*package*/ static final SConcept DirectionalCoordinates$pa = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, "jetbrains.mps.samples.Physics.structure.DirectionalCoordinates");

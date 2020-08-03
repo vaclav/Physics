@@ -9,14 +9,16 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int DirectionType = 0;
-  public static final int ForceType = 1;
-  public static final int ObjectType = 2;
-  public static final int VectorType = 3;
-  public static final int WorldType = 4;
+  public static final int AbstractVectorType = 0;
+  public static final int DirectionType = 1;
+  public static final int ForceType = 2;
+  public static final int ObjectType = 3;
+  public static final int VectorType = 4;
+  public static final int WorldType = 5;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL);
+    builder.put(0x1341d8738b15c587L, AbstractVectorType);
     builder.put(0x6520d39c950a1448L, DirectionType);
     builder.put(0x1be152c15029f679L, ForceType);
     builder.put(0x6520d39c9501de46L, ObjectType);

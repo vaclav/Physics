@@ -9,6 +9,7 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_AbstractVectorType;
   private ConceptPresentation props_DirectionType;
   private ConceptPresentation props_ForceType;
   private ConceptPresentation props_ObjectType;
@@ -20,6 +21,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.AbstractVectorType:
+        if (props_AbstractVectorType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("abstract version of vector type (to simplify type checking of operators)");
+          props_AbstractVectorType = cpb.create();
+        }
+        return props_AbstractVectorType;
       case LanguageConceptSwitch.DirectionType:
         if (props_DirectionType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
