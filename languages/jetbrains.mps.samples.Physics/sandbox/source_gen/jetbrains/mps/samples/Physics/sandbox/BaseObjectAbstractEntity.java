@@ -7,9 +7,9 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 import java.util.Arrays;
@@ -30,10 +30,10 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
 
     // Apply styles 
     fixtureProperties.set(Prop.SHAPE, "shape");
-    fixtureProperties.set(Prop.BOX_X, BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
-    fixtureProperties.set(Prop.BOX_Y, BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
-    fixtureProperties.set(Prop.BOX_Z, BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
-    fixtureProperties.set(Prop.SPHERE_RADIUS, BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimal.valueOf(Math.PI))), currentEntity.getMass()).doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())));
+    fixtureProperties.set(Prop.BOX_X, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())), ((Number) new BigInteger("1"))));
+    fixtureProperties.set(Prop.BOX_Y, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())), ((Number) new BigInteger("1"))));
+    fixtureProperties.set(Prop.BOX_Z, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())), ((Number) new BigInteger("1"))));
+    fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimal.valueOf(Math.PI))), currentEntity.getMass()).doubleValue(), 1 / ((Number) new BigInteger("3")).doubleValue())), ((Number) new BigInteger("1"))));
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
     fixtureProperties.set(Prop.EMIT_LIGHT, false);
     fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.BOUNCE);

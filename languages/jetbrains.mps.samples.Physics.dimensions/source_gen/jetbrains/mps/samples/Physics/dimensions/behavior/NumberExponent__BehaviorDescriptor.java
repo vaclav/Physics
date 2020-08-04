@@ -14,12 +14,14 @@ import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
-import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
+import java.math.BigDecimal;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class NumberExponent__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, "jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent");
@@ -32,7 +34,7 @@ public final class NumberExponent__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static Number rawValue_id3yBD53Ww3_k(@NotNull SNode __thisNode__) {
-    return as_38p1zg_a0a0i(IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(__thisNode__, LINKS.value$FXw$)), Number.class);
+    return new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, LINKS.value$FXw$), PROPS.value$nZyY));
   }
 
   /*package*/ NumberExponent__BehaviorDescriptor() {
@@ -80,11 +82,12 @@ public final class NumberExponent__BehaviorDescriptor extends BaseBHDescriptor {
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
-  private static <T> T as_38p1zg_a0a0i(Object o, Class<T> type) {
-    return (type.isInstance(o) ? (T) o : null);
-  }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink value$FXw$ = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x300307d5d920fe97L, "value");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 }

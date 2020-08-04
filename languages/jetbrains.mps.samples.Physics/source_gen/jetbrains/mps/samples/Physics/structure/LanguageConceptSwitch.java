@@ -45,7 +45,7 @@ public final class LanguageConceptSwitch {
   public static final int InteractedObjectExpression = 33;
   public static final int InteractionForce = 34;
   public static final int NRootExpression = 35;
-  public static final int NumericStyle = 36;
+  public static final int NumericDistanceStyle = 36;
   public static final int ObjectDefinition = 37;
   public static final int ObjectDistanceWithTarget = 38;
   public static final int ObjectMassTarget = 39;
@@ -115,7 +115,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x339d8f0ab4d9124L, InteractedObjectExpression);
     builder.put(0x339d8f0ab4d56baL, InteractionForce);
     builder.put(0x5abff817741099d3L, NRootExpression);
-    builder.put(0x101711d6977a709aL, NumericStyle);
+    builder.put(0x101711d6977a709aL, NumericDistanceStyle);
     builder.put(0x6b7f605cb3278f43L, ObjectDefinition);
     builder.put(0x339d8f0ab560d03L, ObjectDistanceWithTarget);
     builder.put(0x6520d39c95047fcaL, ObjectMassTarget);

@@ -10,31 +10,12 @@
   </languages>
   <imports />
   <registry>
-    <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
-      <concept id="7089558164905593724" name="org.iets3.core.expr.base.structure.IOptionallyTyped" flags="ng" index="2zM23E">
-        <child id="7089558164905593725" name="type" index="2zM23F" />
-      </concept>
-    </language>
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
-      <concept id="1330041117646892924" name="org.iets3.core.expr.simpleTypes.structure.NumberPrecSpec" flags="ng" index="2gteS_">
-        <property id="1330041117646892934" name="prec" index="2gteVv" />
-      </concept>
-      <concept id="1330041117646892901" name="org.iets3.core.expr.simpleTypes.structure.NumberRangeSpec" flags="ng" index="2gteSW">
-        <property id="1330041117646892912" name="max" index="2gteSD" />
-        <property id="1330041117646892911" name="min" index="2gteSQ" />
-      </concept>
-      <concept id="8219602584782245544" name="org.iets3.core.expr.simpleTypes.structure.NumberType" flags="ng" index="mLuIC">
-        <child id="1330041117646892920" name="range" index="2gteSx" />
-        <child id="1330041117646892937" name="prec" index="2gteVg" />
-      </concept>
       <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
         <property id="5115872837157054173" name="value" index="30bXRw" />
       </concept>
     </language>
     <language id="71934284-d7d1-45ee-a054-8c072591085f" name="org.iets3.core.expr.toplevel">
-      <concept id="7089558164906249676" name="org.iets3.core.expr.toplevel.structure.Constant" flags="ng" index="2zPypq">
-        <child id="7089558164906249715" name="value" index="2zPyp_" />
-      </concept>
       <concept id="543569365052765011" name="org.iets3.core.expr.toplevel.structure.EmptyToplevelContent" flags="ng" index="_ixoA" />
       <concept id="543569365052711055" name="org.iets3.core.expr.toplevel.structure.Library" flags="ng" index="_iOnU">
         <child id="543569365052711058" name="contents" index="_iOnB" />
@@ -49,7 +30,6 @@
       <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent" flags="ng" index="CIsvk">
         <child id="3459617553802919575" name="value" index="3D8Z_2" />
       </concept>
-      <concept id="8337440621611273669" name="jetbrains.mps.samples.Physics.dimensions.structure.UnitReference" flags="ng" index="CIsvn" />
       <concept id="8337440621611270350" name="jetbrains.mps.samples.Physics.dimensions.structure.IUnit" flags="ng" index="CIsFs">
         <property id="8337440621611269512" name="description" index="CIruq" />
       </concept>
@@ -60,18 +40,12 @@
       </concept>
       <concept id="3181138428204837756" name="jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference" flags="ng" index="3AmWvR" />
       <concept id="3181138428204943432" name="jetbrains.mps.samples.Physics.dimensions.structure.DerivedUnit" flags="ng" index="3ADqj3" />
-      <concept id="8609460045977000906" name="jetbrains.mps.samples.Physics.dimensions.structure.DimensionType" flags="ng" index="1N6AA6">
-        <child id="8609460045977000907" name="baseType" index="1N6AA7" />
-      </concept>
       <concept id="8609460045977359684" name="jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLikeArray" flags="ng" index="1N7es8">
         <child id="8609460045977359685" name="units" index="1N7es9" />
       </concept>
       <concept id="8609460045977353913" name="jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike" flags="ng" index="1N7KNP">
         <reference id="8609460045977353916" name="unit" index="1N7KNK" />
         <child id="8609460045977353914" name="exponent" index="1N7KNQ" />
-      </concept>
-      <concept id="8609460045976871462" name="jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression" flags="ng" index="1N951E">
-        <child id="8609460045976871463" name="content" index="1N951F" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -83,7 +57,7 @@
   <node concept="_iOnU" id="1EX4m0Zv$cL">
     <property role="TrG5h" value="BaseUnits" />
     <node concept="_KLwT" id="7tUW$K4o9N4" role="_iOnB">
-      <property role="TrG5h" value="distance" />
+      <property role="TrG5h" value="length" />
       <node concept="3ADqj3" id="1fq3tlL$k6e" role="_KLwU">
         <property role="1yml5X" value="1000" />
         <property role="TrG5h" value="km" />
@@ -101,6 +75,43 @@
       </node>
     </node>
     <node concept="_ixoA" id="2K_F8Jawtjp" role="_iOnB" />
+    <node concept="_KLwT" id="RryuvUUPqw" role="_iOnB">
+      <property role="TrG5h" value="current" />
+      <node concept="CIrOH" id="RryuvUUPqy" role="_KLwW">
+        <property role="TrG5h" value="A" />
+        <property role="CIruq" value="ampere" />
+      </node>
+    </node>
+    <node concept="_ixoA" id="RryuvUUPum" role="_iOnB" />
+    <node concept="_KLwT" id="RryuvUUPtF" role="_iOnB">
+      <property role="TrG5h" value="substance amount" />
+      <node concept="CIrOH" id="RryuvUUPtH" role="_KLwW">
+        <property role="TrG5h" value="mol" />
+        <property role="CIruq" value="mole" />
+      </node>
+    </node>
+    <node concept="_ixoA" id="RryuvUUPt4" role="_iOnB" />
+    <node concept="_KLwT" id="RryuvUUPwk" role="_iOnB">
+      <property role="TrG5h" value="pixel" />
+      <node concept="CIrOH" id="RryuvUUPwm" role="_KLwW">
+        <property role="TrG5h" value="px" />
+        <property role="CIruq" value="pixel" />
+      </node>
+    </node>
+    <node concept="_ixoA" id="RryuvUUPvD" role="_iOnB" />
+    <node concept="_KLwT" id="RryuvUUPsc" role="_iOnB">
+      <property role="TrG5h" value="temperature Δ" />
+      <node concept="3ADqj3" id="RryuvUUPsO" role="_KLwU">
+        <property role="1yml5X" value="1" />
+        <property role="TrG5h" value="degreeCelsius" />
+        <property role="CIruq" value="degree celsius" />
+      </node>
+      <node concept="CIrOH" id="RryuvUUPse" role="_KLwW">
+        <property role="TrG5h" value="K" />
+        <property role="CIruq" value="kelvin" />
+      </node>
+    </node>
+    <node concept="_ixoA" id="RryuvUUPrC" role="_iOnB" />
     <node concept="_KLwT" id="1d1Q7eb4VIr" role="_iOnB">
       <property role="TrG5h" value="angle" />
       <node concept="CIrOH" id="1d1Q7eb4VIt" role="_KLwW">
@@ -113,7 +124,7 @@
       <property role="TrG5h" value="mass" />
       <node concept="CIrOH" id="1d1Q7eb5p5y" role="_KLwW">
         <property role="TrG5h" value="kg" />
-        <property role="CIruq" value="kilogramm" />
+        <property role="CIruq" value="kilogram" />
       </node>
     </node>
     <node concept="_ixoA" id="1d1Q7eb5p9h" role="_iOnB" />
@@ -131,6 +142,47 @@
       </node>
     </node>
     <node concept="_ixoA" id="3_YdNBWG6V4" role="_iOnB" />
+    <node concept="34RUgh" id="RryuvUUPyu" role="_iOnB">
+      <property role="1yml5X" value="1" />
+      <property role="TrG5h" value="force" />
+      <node concept="CIrOH" id="RryuvUUPyw" role="_KLwW">
+        <property role="TrG5h" value="N" />
+        <property role="CIruq" value="newton" />
+      </node>
+      <node concept="3AmWvR" id="RryuvUUPzi" role="1N7es9">
+        <ref role="1N7KNK" node="1d1Q7eb5p5w" resolve="mass" />
+      </node>
+      <node concept="3AmWvR" id="RryuvUUPzq" role="1N7es9">
+        <ref role="1N7KNK" node="7tUW$K4o9N4" resolve="length" />
+      </node>
+      <node concept="3AmWvR" id="RryuvUUPz$" role="1N7es9">
+        <ref role="1N7KNK" node="1fq3tlL$kMh" resolve="time" />
+        <node concept="CIsvk" id="RryuvUUPzG" role="1N7KNQ">
+          <node concept="30bXRB" id="RryuvUUPzH" role="3D8Z_2">
+            <property role="30bXRw" value="-2" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="_ixoA" id="RryuvUUPxK" role="_iOnB" />
+    <node concept="34RUgh" id="RryuvULj_Q" role="_iOnB">
+      <property role="1yml5X" value="1" />
+      <property role="TrG5h" value="frequency" />
+      <property role="1yml5Z" value="true" />
+      <node concept="CIrOH" id="RryuvULj_S" role="_KLwW">
+        <property role="TrG5h" value="hz" />
+        <property role="CIruq" value="hertz" />
+      </node>
+      <node concept="3AmWvR" id="RryuvULjAn" role="1N7es9">
+        <ref role="1N7KNK" node="1fq3tlL$kMh" resolve="time" />
+        <node concept="CIsvk" id="RryuvULjBm" role="1N7KNQ">
+          <node concept="30bXRB" id="RryuvULjBn" role="3D8Z_2">
+            <property role="30bXRw" value="-1" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="_ixoA" id="RryuvULj_r" role="_iOnB" />
     <node concept="34RUgh" id="1fq3tlL$kNU" role="_iOnB">
       <property role="1yml5X" value="1" />
       <property role="TrG5h" value="speed" />
@@ -144,7 +196,7 @@
         <property role="CIruq" value="meter per second" />
       </node>
       <node concept="3AmWvR" id="1fq3tlL$kOB" role="1N7es9">
-        <ref role="1N7KNK" node="7tUW$K4o9N4" resolve="distance" />
+        <ref role="1N7KNK" node="7tUW$K4o9N4" resolve="length" />
       </node>
       <node concept="3AmWvR" id="1fq3tlL$kOJ" role="1N7es9">
         <ref role="1N7KNK" node="1fq3tlL$kMh" resolve="time" />
@@ -156,31 +208,6 @@
       </node>
     </node>
     <node concept="_ixoA" id="1fq3tlL$kNn" role="_iOnB" />
-    <node concept="2zPypq" id="1d1Q7eb4OoV" role="_iOnB">
-      <property role="TrG5h" value="a" />
-      <node concept="1N951E" id="1d1Q7eb4Oq7" role="2zPyp_">
-        <node concept="30bXRB" id="1d1Q7eb4Opy" role="1N951F">
-          <property role="30bXRw" value="1" />
-        </node>
-        <node concept="CIsvn" id="1d1Q7eb4Oq6" role="1N7es9">
-          <ref role="1N7KNK" node="7tUW$K4o9N6" resolve="m" />
-        </node>
-      </node>
-      <node concept="1N6AA6" id="1d1Q7eb4Orn" role="2zM23F">
-        <node concept="mLuIC" id="1d1Q7eb4Oro" role="1N6AA7">
-          <node concept="2gteSW" id="1d1Q7eb4Orp" role="2gteSx">
-            <property role="2gteSQ" value="1" />
-            <property role="2gteSD" value="1" />
-          </node>
-          <node concept="2gteS_" id="1d1Q7eb4Orq" role="2gteVg">
-            <property role="2gteVv" value="0" />
-          </node>
-        </node>
-        <node concept="3AmWvR" id="1d1Q7eb4Orr" role="1N7es9">
-          <ref role="1N7KNK" node="7tUW$K4o9N4" resolve="distance" />
-        </node>
-      </node>
-    </node>
   </node>
 </model>
 

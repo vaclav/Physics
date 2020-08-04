@@ -10,6 +10,7 @@
     <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="vs0r" ref="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" implicit="true" />
+    <import index="onwr" ref="r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)" implicit="true" />
     <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" implicit="true" />
   </imports>
   <registry>
@@ -373,6 +374,9 @@
     <property role="TrG5h" value="Coordinates" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="PrWs8" id="270Q2mEVjkF" role="PzmwI">
+      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1jQexh3y6fx">
     <property role="EcuMT" value="1510458583736148961" />
@@ -544,6 +548,9 @@
     <property role="R5$K7" value="true" />
     <property role="R4oN_" value="may the force be with you" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="PrWs8" id="270Q2mEVjeE" role="PzmwI">
+      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl17Za">
     <property role="EcuMT" value="7287056866553921482" />
@@ -735,6 +742,9 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+    <node concept="PrWs8" id="270Q2mF6iUr" role="PzmwI">
+      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
+    </node>
   </node>
   <node concept="PlHQZ" id="GdoRjGrjZN">
     <property role="EcuMT" value="796402062948384755" />
@@ -759,6 +769,9 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
       <ref role="20ksaX" node="GdoRjGvRej" resolve="expression" />
+    </node>
+    <node concept="PrWs8" id="270Q2mEVj8D" role="PzmwI">
+      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
     </node>
   </node>
   <node concept="1TIwiD" id="GdoRjGvRee">
@@ -810,6 +823,9 @@
     <property role="TrG5h" value="PositionCoordinates" />
     <property role="R4oN_" value="contains coordinates and serve as coordinates target" />
     <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableExpression" />
+    <node concept="PrWs8" id="270Q2mEV8Ij" role="PzmwI">
+      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
+    </node>
   </node>
   <node concept="1TIwiD" id="M__cqnDKOa">
     <property role="EcuMT" value="911298080281136394" />
@@ -895,12 +911,12 @@
     <property role="3GE5qa" value="styles.shape.attr" />
     <property role="TrG5h" value="BoxDepthStyle" />
     <property role="34LRSv" value="box-size-z" />
-    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericStyle" />
+    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyle" />
   </node>
   <node concept="1TIwiD" id="10n4tqnuB2q">
     <property role="EcuMT" value="1159415042433249434" />
     <property role="3GE5qa" value="styles" />
-    <property role="TrG5h" value="NumericStyle" />
+    <property role="TrG5h" value="NumericDistanceStyle" />
     <property role="R4oN_" value="style with a numeric value" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="10n4tqntag_" resolve="Style" />
@@ -911,27 +927,30 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+    <node concept="PrWs8" id="270Q2mFbbD6" role="PzmwI">
+      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
+    </node>
   </node>
   <node concept="1TIwiD" id="10n4tqnuBen">
     <property role="EcuMT" value="1159415042433250199" />
     <property role="3GE5qa" value="styles.shape.attr" />
     <property role="TrG5h" value="BoxWidthStyle" />
     <property role="34LRSv" value="box-size-x" />
-    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericStyle" />
+    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyle" />
   </node>
   <node concept="1TIwiD" id="10n4tqnuBeo">
     <property role="EcuMT" value="1159415042433250200" />
     <property role="3GE5qa" value="styles.shape.attr" />
     <property role="TrG5h" value="BoxHeightStyle" />
     <property role="34LRSv" value="box-size-y" />
-    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericStyle" />
+    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyle" />
   </node>
   <node concept="1TIwiD" id="10n4tqnuBep">
     <property role="EcuMT" value="1159415042433250201" />
     <property role="3GE5qa" value="styles.shape.attr" />
     <property role="TrG5h" value="SphereRadiusStyle" />
     <property role="34LRSv" value="sphere-radius" />
-    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericStyle" />
+    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyle" />
   </node>
   <node concept="1TIwiD" id="5EZY1tO49Bj">
     <property role="EcuMT" value="6539217963580430803" />
@@ -942,7 +961,7 @@
     <node concept="1TJgyj" id="5EZY1tO4fX5" role="1TKVEi">
       <property role="IQ2ns" value="6539217963580456773" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="exponent" />
+      <property role="20kJfa" value="exponent_" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
@@ -952,6 +971,11 @@
       <property role="20kJfa" value="expression" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyi" id="4CH1R2NzOYy" role="1TKVEl">
+      <property role="IQ2nx" value="5344936513388892066" />
+      <property role="TrG5h" value="exponent" />
+      <ref role="AX2Wp" to="onwr:1fq3tlLt$w7" resolve="float" />
     </node>
   </node>
   <node concept="1TIwiD" id="k9gc968hhc">

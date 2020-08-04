@@ -15,14 +15,29 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
-import org.jetbrains.mps.openapi.language.SConcept;
+import java.math.BigDecimal;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import java.util.Map;
+import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
+import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper;
+import java.math.MathContext;
+import jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper;
+import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
+import org.iets3.core.expr.simpleTypes.behavior.NumberType__BehaviorDescriptor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
     {
       InferenceRule_Runtime inferenceRule = new typeof_AbstractForceCall_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_AbstractForceCallParameter_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -90,11 +105,19 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_RelativeCoordinates_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_Simulation_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
       InferenceRule_Runtime inferenceRule = new typeof_SphericalCoordinates_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_StaticForce_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -134,11 +157,15 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_c(CONCEPTS.MulExpression$_u));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_e(CONCEPTS.DivExpression$Li));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.PlusExpression$Dn));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b_0(CONCEPTS.NRootExpression$sH));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_c_0(CONCEPTS.NRootExpression$sH));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_f(CONCEPTS.BinaryEqualityExpression$Mj));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_d_0(CONCEPTS.PowerExpression$Cd));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_e_0(CONCEPTS.FractionExpression$6U));
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createRealType_3ist9o_a0a0a0a0a0a0a33a0();
+          this.myOperandType = createRealType_3ist9o_a0a0a0a0a0a0a04a0();
           this.myOperationConcept = CONCEPTS.NRootExpression$sH;
           this.myTypeIsExact = false;
           this.myIsStrong = false;
@@ -146,7 +173,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
           this.myRuleNodeId = "6318410611460042110";
         }
         public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
-          return createRealType_3ist9o_a0a1a0a0a0a0hb0a();
+          return createRealType_3ist9o_a0a1a0a0a0a0ob0a();
         }
         public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
           return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA));
@@ -386,10 +413,108 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return n0.getResult();
     }
   }
+  public static class CustomOverloadedOperationsTypesProvider_b_0 extends OverloadedOperationsTypesProvider {
+    public CustomOverloadedOperationsTypesProvider_b_0(SAbstractConcept concept) {
+      this.myLeftOperandType = createRealType_3ist9o_a0a0a6();
+      this.myRightOperandType = createRealType_3ist9o_a0b0a6();
+      this.myOperationConcept = concept;
+      this.myLeftTypeIsExact = false;
+      this.myRightTypeIsExact = false;
+      this.myRightIsStrong = false;
+      this.myLeftIsStrong = false;
+      this.myRuleModelId = "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)";
+      this.myRuleNodeId = "5344936513388877965";
+    }
+    public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      // TODO computation for number type? 
+      return createRealType_3ist9o_a1a1g();
+    }
+    public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA)) && (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$fA));
+    }
+    @Override
+    public void reportConflict(IRuleConflictWarningProducer producer) {
+      producer.produceWarning(myRuleModelId, myRuleNodeId);
+    }
+    private static SNode createRealType_3ist9o_a0a0a6() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      return n0.getResult();
+    }
+    private static SNode createRealType_3ist9o_a0b0a6() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      return n0.getResult();
+    }
+    private static SNode createRealType_3ist9o_a1a1g() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      return n0.getResult();
+    }
+  }
+  public static class CustomOverloadedOperationsTypesProvider_c_0 extends OverloadedOperationsTypesProvider {
+    public CustomOverloadedOperationsTypesProvider_c_0(SAbstractConcept concept) {
+      this.myLeftOperandType = createRealType_3ist9o_a0a0a7();
+      this.myRightOperandType = createAbstractDimensionType_3ist9o_a0b0a7();
+      this.myOperationConcept = concept;
+      this.myLeftTypeIsExact = false;
+      this.myRightTypeIsExact = false;
+      this.myRightIsStrong = false;
+      this.myLeftIsStrong = false;
+      this.myRuleModelId = "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)";
+      this.myRuleNodeId = "5344936513388882653";
+    }
+    public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      SNode dimension = SNodeOperations.as(rightOperandType, CONCEPTS.DimensionType$yz);
+      BigDecimal exponentValue = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.as(leftOperandType, CONCEPTS.NumberType$2D), LINKS.range$WgV$), PROPS.min$Va2));
+
+      // Add exponent to units 
+      Map<SNode, BigDecimal> unitMap = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(dimension, LINKS.units$o6Ow));
+      DimensionMapsHelper.multiply(unitMap, BigDecimal.ONE.divide(exponentValue, MathContext.DECIMAL32));
+
+      // Compute final dimension type 
+      return createDimensionType_3ist9o_a8a1h(DimensionMapsHelper.mapToReferences(unitMap), SNodeOperations.as(TypeChecker.getInstance().getRulesManager().getOperationType(operation, leftOperandType, SLinkOperations.getTarget(dimension, LINKS.baseType$fHYw)), CONCEPTS.Type$fA));
+    }
+    public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      // Left operand must be a number 
+      {
+        final SNode number = leftOperandType;
+        if (SNodeOperations.isInstanceOf(number, CONCEPTS.NumberType$2D)) {
+          // Capabilities of both types 
+          boolean caps = (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA));
+
+          // Dimension on the right 
+          boolean dimension = DimensionTypeHelper.isDimension(rightOperandType);
+
+          // Singleton range (min = max) 
+          Tuples._2<Double, Double> range = NumberType__BehaviorDescriptor.doubleRange_id3p6$WoEzKI5.invoke(number);
+          return (double) range._0() == (double) range._1() && dimension && caps;
+        }
+      }
+
+      // Otherwise cannot compute units (as influenced by exponent) 
+      return false;
+    }
+    @Override
+    public void reportConflict(IRuleConflictWarningProducer producer) {
+      producer.produceWarning(myRuleModelId, myRuleNodeId);
+    }
+    private static SNode createRealType_3ist9o_a0a0a7() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      return n0.getResult();
+    }
+    private static SNode createAbstractDimensionType_3ist9o_a0b0a7() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractDimensionType$C7);
+      return n0.getResult();
+    }
+    private static SNode createDimensionType_3ist9o_a8a1h(Iterable<? extends SNode> p0, SNode p1) {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
+      n0.forChild(LINKS.units$o6Ow).initNodeList(p0, CONCEPTS.DimensionReference$wa);
+      n0.forChild(LINKS.baseType$fHYw).initNode(p1, CONCEPTS.Type$fA, true);
+      return n0.getResult();
+    }
+  }
   public static class CustomOverloadedOperationsTypesProvider_f extends OverloadedOperationsTypesProvider {
     public CustomOverloadedOperationsTypesProvider_f(SAbstractConcept concept) {
-      this.myLeftOperandType = createAbstractVectorType_3ist9o_a0a0a6();
-      this.myRightOperandType = createAbstractVectorType_3ist9o_a0b0a6();
+      this.myLeftOperandType = createAbstractVectorType_3ist9o_a0a0a8();
+      this.myRightOperandType = createAbstractVectorType_3ist9o_a0b0a8();
       this.myOperationConcept = concept;
       this.myLeftTypeIsExact = false;
       this.myRightTypeIsExact = false;
@@ -399,7 +524,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myRuleNodeId = "553080662195601397";
     }
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
-      return createBooleanType_3ist9o_a0a1g();
+      return createBooleanType_3ist9o_a0a1i();
     }
     public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
       return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA)) && (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$fA));
@@ -408,24 +533,118 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     public void reportConflict(IRuleConflictWarningProducer producer) {
       producer.produceWarning(myRuleModelId, myRuleNodeId);
     }
-    private static SNode createAbstractVectorType_3ist9o_a0a0a6() {
+    private static SNode createAbstractVectorType_3ist9o_a0a0a8() {
       SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
       return n0.getResult();
     }
-    private static SNode createAbstractVectorType_3ist9o_a0b0a6() {
+    private static SNode createAbstractVectorType_3ist9o_a0b0a8() {
       SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
       return n0.getResult();
     }
-    private static SNode createBooleanType_3ist9o_a0a1g() {
+    private static SNode createBooleanType_3ist9o_a0a1i() {
       SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.BooleanType$h3);
       return n0.getResult();
     }
   }
-  private static SNode createRealType_3ist9o_a0a0a0a0a0a0a33a0() {
+  public static class CustomOverloadedOperationsTypesProvider_d_0 extends OverloadedOperationsTypesProvider {
+    public CustomOverloadedOperationsTypesProvider_d_0(SAbstractConcept concept) {
+      this.myLeftOperandType = createAbstractDimensionType_3ist9o_a0a0a9();
+      this.myRightOperandType = createNumberType_3ist9o_a0b0a9();
+      this.myOperationConcept = concept;
+      this.myLeftTypeIsExact = false;
+      this.myRightTypeIsExact = false;
+      this.myRightIsStrong = false;
+      this.myLeftIsStrong = false;
+      this.myRuleModelId = "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)";
+      this.myRuleNodeId = "7396263120860399018";
+    }
+    public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      SNode dimension = SNodeOperations.as(leftOperandType, CONCEPTS.DimensionType$yz);
+      Number exponentValue = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.as(rightOperandType, CONCEPTS.NumberType$2D), LINKS.range$WgV$), PROPS.min$Va2));
+
+      // Add exponent to units 
+      Map<SNode, BigDecimal> unitMap = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(dimension, LINKS.units$o6Ow));
+      DimensionMapsHelper.multiply(unitMap, exponentValue);
+
+      // Compute final dimension type 
+      return createDimensionType_3ist9o_a8a1j(DimensionMapsHelper.mapToReferences(unitMap), SNodeOperations.as(TypeChecker.getInstance().getRulesManager().getOperationType(operation, SLinkOperations.getTarget(dimension, LINKS.baseType$fHYw), rightOperandType), CONCEPTS.Type$fA));
+
+    }
+    public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      // Right operand must be a number 
+      {
+        final SNode number = rightOperandType;
+        if (SNodeOperations.isInstanceOf(number, CONCEPTS.NumberType$2D)) {
+          // Capabilities of both types 
+          boolean caps = (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$fA));
+
+          // Dimension on the right 
+          boolean dimension = DimensionTypeHelper.isDimension(leftOperandType);
+
+          // Singleton range (min = max) 
+          Tuples._2<Double, Double> range = NumberType__BehaviorDescriptor.doubleRange_id3p6$WoEzKI5.invoke(number);
+          return (double) range._0() == (double) range._1() && dimension && caps;
+        }
+      }
+
+      // Otherwise cannot compute units (as influenced by exponent) 
+      return false;
+    }
+    @Override
+    public void reportConflict(IRuleConflictWarningProducer producer) {
+      producer.produceWarning(myRuleModelId, myRuleNodeId);
+    }
+    private static SNode createAbstractDimensionType_3ist9o_a0a0a9() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractDimensionType$C7);
+      return n0.getResult();
+    }
+    private static SNode createNumberType_3ist9o_a0b0a9() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberType$2D);
+      return n0.getResult();
+    }
+    private static SNode createDimensionType_3ist9o_a8a1j(Iterable<? extends SNode> p0, SNode p1) {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
+      n0.forChild(LINKS.units$o6Ow).initNodeList(p0, CONCEPTS.DimensionReference$wa);
+      n0.forChild(LINKS.baseType$fHYw).initNode(p1, CONCEPTS.Type$fA, true);
+      return n0.getResult();
+    }
+  }
+  public static class CustomOverloadedOperationsTypesProvider_e_0 extends OverloadedOperationsTypesProvider {
+    public CustomOverloadedOperationsTypesProvider_e_0(SAbstractConcept concept) {
+      this.myLeftOperandType = createRealType_3ist9o_a0a0a01();
+      this.myRightOperandType = createRealType_3ist9o_a0b0a01();
+      this.myOperationConcept = concept;
+      this.myLeftTypeIsExact = false;
+      this.myRightTypeIsExact = false;
+      this.myRightIsStrong = false;
+      this.myLeftIsStrong = false;
+      this.myRuleModelId = "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)";
+      this.myRuleNodeId = "998543371831355892";
+    }
+    public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      return TypeChecker.getInstance().getRulesManager().getOperationType(SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression")), leftOperandType, rightOperandType);
+    }
+    public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      return DimensionTypeHelper.atLeastOneIsDimension(leftOperandType, rightOperandType);
+    }
+    @Override
+    public void reportConflict(IRuleConflictWarningProducer producer) {
+      producer.produceWarning(myRuleModelId, myRuleNodeId);
+    }
+    private static SNode createRealType_3ist9o_a0a0a01() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      return n0.getResult();
+    }
+    private static SNode createRealType_3ist9o_a0b0a01() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      return n0.getResult();
+    }
+  }
+  private static SNode createRealType_3ist9o_a0a0a0a0a0a0a04a0() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
     return n0.getResult();
   }
-  private static SNode createRealType_3ist9o_a0a1a0a0a0a0hb0a() {
+  private static SNode createRealType_3ist9o_a0a1a0a0a0a0ob0a() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
     return n0.getResult();
   }
@@ -435,16 +654,29 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     /*package*/ static final SConcept MinusExpression$pp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac5a5L, "org.iets3.core.expr.base.structure.MinusExpression");
     /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
     /*package*/ static final SConcept PlusExpression$Dn = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
-    /*package*/ static final SConcept BinaryEqualityExpression$Mj = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cc6d99L, "org.iets3.core.expr.base.structure.BinaryEqualityExpression");
     /*package*/ static final SConcept NRootExpression$sH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.structure.NRootExpression");
+    /*package*/ static final SConcept BinaryEqualityExpression$Mj = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cc6d99L, "org.iets3.core.expr.base.structure.BinaryEqualityExpression");
+    /*package*/ static final SConcept PowerExpression$Cd = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c6144L, "org.iets3.core.expr.math.structure.PowerExpression");
+    /*package*/ static final SConcept FractionExpression$6U = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9bcd46L, "org.iets3.core.expr.math.structure.FractionExpression");
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
     /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
     /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
     /*package*/ static final SConcept AbstractVectorType$6J = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L, "jetbrains.mps.samples.Physics.types.structure.AbstractVectorType");
+    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept NumberType$2D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
+    /*package*/ static final SConcept AbstractDimensionType$C7 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x300307d5d92dba32L, "jetbrains.mps.samples.Physics.dimensions.structure.AbstractDimensionType");
+    /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
     /*package*/ static final SConcept BooleanType$h3 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x670d5e92f854a617L, "org.iets3.core.expr.simpleTypes.structure.BooleanType");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink componentType$gTxy = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
+    /*package*/ static final SContainmentLink range$WgV$ = MetaAdapterFactory.getContainmentLink(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, 0x127541598201af78L, "range");
+    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty min$Va2 = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af6fL, "min");
   }
 }

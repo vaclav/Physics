@@ -22,7 +22,7 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
           return Collections.<NodeFactory>singletonList(new CoordinatesFactories.NodeFactory_4809107873070296905());
         case "CylindricalCoordinates":
           return Collections.<NodeFactory>singletonList(new CoordinatesFactories.NodeFactory_4809107873070200372());
-        case "NumericStyle":
+        case "NumericDistanceStyle":
           return Collections.<NodeFactory>singletonList(new MiscellaneousFactories.NodeFactory_1159415042434515310());
         case "SphericalCoordinates":
           return Collections.<NodeFactory>singletonList(new CoordinatesFactories.NodeFactory_4809107873070306457());

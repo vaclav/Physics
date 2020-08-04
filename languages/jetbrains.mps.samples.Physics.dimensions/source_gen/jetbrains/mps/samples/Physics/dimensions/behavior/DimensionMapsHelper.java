@@ -99,6 +99,14 @@ public class DimensionMapsHelper {
     return null;
   }
 
+  public static void multiply(Map<SNode, BigDecimal> sourceMap, final Number exponent) {
+    MapSequence.fromMap(sourceMap).visitAll(new IVisitor<IMapping<SNode, BigDecimal>>() {
+      public void visit(IMapping<SNode, BigDecimal> it) {
+        it.value(it.value().multiply(BigDecimalUtil.fromNumber(exponent), MathContext.DECIMAL32));
+      }
+    });
+  }
+
   /**
    * Multiply the source map values by a factor, then add all result in the target map
    */

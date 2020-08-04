@@ -555,11 +555,11 @@
   <node concept="37WguZ" id="10n4tqnzs4R">
     <property role="TrG5h" value="MiscellaneousFactories" />
     <node concept="37WvkG" id="10n4tqnzs5I" role="37WGs$">
-      <ref role="37XkoT" to="9tcj:10n4tqnuB2q" resolve="NumericStyle" />
+      <ref role="37XkoT" to="9tcj:10n4tqnuB2q" resolve="NumericDistanceStyle" />
       <node concept="37Y9Zx" id="10n4tqnzs5J" role="37ZfLb">
         <node concept="3clFbS" id="10n4tqnzs5K" role="2VODD2">
           <node concept="Jncv_" id="10n4tqnzs8E" role="3cqZAp">
-            <ref role="JncvD" to="9tcj:10n4tqnuB2q" resolve="NumericStyle" />
+            <ref role="JncvD" to="9tcj:10n4tqnuB2q" resolve="NumericDistanceStyle" />
             <node concept="1r4N5L" id="10n4tqnzs97" role="JncvB" />
             <node concept="3clFbS" id="10n4tqnzs8G" role="Jncv$">
               <node concept="3clFbF" id="10n4tqnzsam" role="3cqZAp">

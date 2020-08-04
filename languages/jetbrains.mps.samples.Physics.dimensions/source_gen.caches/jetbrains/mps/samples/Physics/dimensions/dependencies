@@ -8,10 +8,12 @@
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.actions.descriptor.ActionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
+    <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.actions.ActionAspectDescriptorImpl" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.editor.EditorAspectDescriptorImpl" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.intentions.IntentionsDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.structure.StructureAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.TypesystemDescriptor" />

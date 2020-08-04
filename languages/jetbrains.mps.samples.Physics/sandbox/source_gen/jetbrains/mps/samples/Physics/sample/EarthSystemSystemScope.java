@@ -10,11 +10,11 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Fixt
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 public class EarthSystemSystemScope extends SystemScope {
   public final PhysicalEntity Earth;
@@ -47,7 +47,7 @@ public class EarthSystemSystemScope extends SystemScope {
 
       // Set static properties of Earth 
       this.setMass(((Number) new BigInteger("597")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0.1000000000").setScale(10, RoundingMode.DOWN)), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Earth 
@@ -77,8 +77,8 @@ public class EarthSystemSystemScope extends SystemScope {
 
       // Set static properties of Moon 
       this.setMass(((Number) new BigDecimal("7.3").setScale(1, RoundingMode.DOWN)));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0E-10").setScale(0, RoundingMode.DOWN)), ((Number) new BigInteger("200000")), ((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("5")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("3.0400000000").setScale(10, RoundingMode.DOWN)), ((Number) new BigInteger("200000")), ((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("5.0000000000").setScale(10, RoundingMode.DOWN)), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of Moon 
       super.init(scope, world, fixtureProperties);

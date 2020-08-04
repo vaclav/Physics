@@ -16,7 +16,7 @@ public class MiscellaneousFactories {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
       {
         final SNode numeric = sampleNode;
-        if (SNodeOperations.isInstanceOf(numeric, CONCEPTS.NumericStyle$W9)) {
+        if (SNodeOperations.isInstanceOf(numeric, CONCEPTS.NumericDistanceStyle$W9)) {
           SLinkOperations.setTarget(newNode, LINKS.value$aRGu, SNodeOperations.copyNode(SLinkOperations.getTarget(numeric, LINKS.value$aRGu)));
         }
       }
@@ -24,7 +24,7 @@ public class MiscellaneousFactories {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumericStyle$W9 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d6977a709aL, "jetbrains.mps.samples.Physics.structure.NumericStyle");
+    /*package*/ static final SConcept NumericDistanceStyle$W9 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d6977a709aL, "jetbrains.mps.samples.Physics.structure.NumericDistanceStyle");
   }
 
   private static final class LINKS {

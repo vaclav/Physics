@@ -33,7 +33,7 @@ public class UnitStyles_StyleSheet {
     }
 
     private int _StyleParameter_QueryFunction_yn5akz_a0a() {
-      return (int) (EditorSettings.getInstance().getFontSize() * 0.9);
+      return (int) (EditorSettings.getInstance().getFontSize() * 0.95);
     }
   }
 }

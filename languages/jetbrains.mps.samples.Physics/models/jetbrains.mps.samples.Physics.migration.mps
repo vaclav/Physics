@@ -3,6 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="90746344-04fd-4286-97d5-b46ae6a81709" name="jetbrains.mps.lang.migration" version="2" />
+    <use id="9882f4ad-1955-46fe-8269-94189e5dbbf2" name="jetbrains.mps.lang.migration.util" version="0" />
     <devkit ref="2787ae0c-1f54-4fbf-b0b7-caf2b5beecbc(jetbrains.mps.devkit.aspect.migration)" />
   </languages>
   <imports />
@@ -15918,6 +15919,991 @@
         <property role="2pBcoG" value="794591792984526086" />
         <property role="2pBcow" value="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.vectors.common)" />
         <property role="2pBc3U" value="PublicVisibility@67918" />
+      </node>
+    </node>
+  </node>
+  <node concept="W$Crc" id="RryuvURqQz">
+    <property role="3GE5qa" value="refactoring" />
+    <property role="W$Cri" value="2" />
+    <property role="TrG5h" value="Update References: DimensionTypeHelper-&gt;DimensionTypeHelper" />
+    <node concept="1w76tK" id="RryuvURqQ$" role="1w76sc">
+      <node concept="1w76tN" id="RryuvURqQ_" role="1w76tQ">
+        <property role="1w76tO" value="moveNode.options.updateModelImports" />
+        <property role="1w7ld4" value="Update model imports" />
+      </node>
+      <node concept="1w76tN" id="RryuvURqQA" role="1w76tQ">
+        <property role="1w76tO" value="moveNode.options.updateReferencesParticipant" />
+        <property role="1w7ld4" value="Update references" />
+      </node>
+      <node concept="1w76tN" id="RryuvURqQB" role="1w76tQ">
+        <property role="1w76tO" value="moveNode.options.writeRefactoringLog" />
+        <property role="1w7ld4" value="Write refactoring log" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOj" role="hSBgu">
+        <property role="2pBcoG" value="998543371831436793" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="DimensionTypeHelper" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQC" role="hSBgs">
+        <property role="2pBcoG" value="998543371831436793" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="DimensionTypeHelper" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOk" role="hSBgu">
+        <property role="2pBcoG" value="998543371831436794" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@123691" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQE" role="hSBgs">
+        <property role="2pBcoG" value="998543371831436794" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@123691" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticMethod" />
+      <node concept="34ulmB" id="RryuvURqOn" role="hSBgu">
+        <node concept="2pBcaW" id="RryuvURqOl" role="34ulmC">
+          <property role="2pBcoG" value="998543371831436880" />
+          <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+          <property role="2pBc3U" value="isDimension" />
+        </node>
+        <node concept="2pBcaW" id="RryuvURqOm" role="34ulmE">
+          <property role="2pBcoG" value="998543371831436793" />
+          <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+          <property role="2pBc3U" value="DimensionTypeHelper" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="RryuvURqQI" role="hSBgs">
+        <node concept="2pBcaW" id="RryuvURqQG" role="34ulmC">
+          <property role="2pBcoG" value="998543371831436880" />
+          <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+          <property role="2pBc3U" value="isDimension" />
+        </node>
+        <node concept="2pBcaW" id="RryuvURqQH" role="34ulmE">
+          <property role="2pBcoG" value="998543371831436793" />
+          <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+          <property role="2pBc3U" value="DimensionTypeHelper" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOo" role="hSBgu">
+        <property role="2pBcoG" value="998543371831436880" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="isDimension" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQK" role="hSBgs">
+        <property role="2pBcoG" value="998543371831436880" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="isDimension" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOp" role="hSBgu">
+        <property role="2pBcoG" value="998543371831436883" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="StatementList@124610" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQM" role="hSBgs">
+        <property role="2pBcoG" value="998543371831436883" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="StatementList@124610" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOq" role="hSBgu">
+        <property role="2pBcoG" value="998543371831436954" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="ReturnStatement@124555" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQO" role="hSBgs">
+        <property role="2pBcoG" value="998543371831436954" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="ReturnStatement@124555" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOr" role="hSBgu">
+        <property role="2pBcoG" value="998543371831439636" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="AndExpression@126977" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQQ" role="hSBgs">
+        <property role="2pBcoG" value="998543371831439636" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="AndExpression@126977" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQT" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOs" role="hSBgu">
+        <property role="2pBcoG" value="998543371831445947" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="InstanceOfExpression@63338" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQS" role="hSBgs">
+        <property role="2pBcoG" value="998543371831445947" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="InstanceOfExpression@63338" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOt" role="hSBgu">
+        <property role="2pBcoG" value="998543371831446785" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="ClassifierType@64500" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQU" role="hSBgs">
+        <property role="2pBcoG" value="998543371831446785" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="ClassifierType@64500" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOu" role="hSBgu">
+        <property role="2pBcoG" value="998543371831444149" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="DotExpression@66144" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQW" role="hSBgs">
+        <property role="2pBcoG" value="998543371831444149" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="DotExpression@66144" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqQZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOv" role="hSBgu">
+        <property role="2pBcoG" value="998543371831442713" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="SNodeTypeCastExpression@125964" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqQY" role="hSBgs">
+        <property role="2pBcoG" value="998543371831442713" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="SNodeTypeCastExpression@125964" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqR1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOw" role="hSBgu">
+        <property role="2pBcoG" value="998543371831443011" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="RefConcept_Reference@126642" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqR0" role="hSBgs">
+        <property role="2pBcoG" value="998543371831443011" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="RefConcept_Reference@126642" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqR3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOx" role="hSBgu">
+        <property role="2pBcoG" value="998543371831440030" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@127623" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqR2" role="hSBgs">
+        <property role="2pBcoG" value="998543371831440030" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@127623" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqR5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOy" role="hSBgu">
+        <property role="2pBcoG" value="998543371831445200" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="Node_ConceptMethodCall@67141" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqR4" role="hSBgs">
+        <property role="2pBcoG" value="998543371831445200" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="Node_ConceptMethodCall@67141" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqR7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOz" role="hSBgu">
+        <property role="2pBcoG" value="998543371831437533" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="DotExpression@120904" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqR6" role="hSBgs">
+        <property role="2pBcoG" value="998543371831437533" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="DotExpression@120904" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqR9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqO$" role="hSBgu">
+        <property role="2pBcoG" value="998543371831436984" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@124525" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqR8" role="hSBgs">
+        <property role="2pBcoG" value="998543371831436984" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@124525" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqO_" role="hSBgu">
+        <property role="2pBcoG" value="998543371831438086" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="Node_IsInstanceOfOperation@121327" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRa" role="hSBgs">
+        <property role="2pBcoG" value="998543371831438086" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="Node_IsInstanceOfOperation@121327" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOA" role="hSBgu">
+        <property role="2pBcoG" value="998543371831438232" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="RefConcept_Reference@121229" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRc" role="hSBgs">
+        <property role="2pBcoG" value="998543371831438232" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="RefConcept_Reference@121229" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOB" role="hSBgu">
+        <property role="2pBcoG" value="998543371831436869" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="BooleanType@124592" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRe" role="hSBgs">
+        <property role="2pBcoG" value="998543371831436869" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="BooleanType@124592" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOC" role="hSBgu">
+        <property role="2pBcoG" value="998543371831436906" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="node" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRg" role="hSBgs">
+        <property role="2pBcoG" value="998543371831436906" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="node" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOD" role="hSBgu">
+        <property role="2pBcoG" value="998543371831436905" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@124572" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRi" role="hSBgs">
+        <property role="2pBcoG" value="998543371831436905" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@124572" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOE" role="hSBgu">
+        <property role="2pBcoG" value="998543371831446869" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@64448" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRk" role="hSBgs">
+        <property role="2pBcoG" value="998543371831446869" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@64448" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOF" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447609" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="PlaceholderMember@69868" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRm" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447609" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="PlaceholderMember@69868" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticMethod" />
+      <node concept="34ulmB" id="RryuvURqOI" role="hSBgu">
+        <node concept="2pBcaW" id="RryuvURqOG" role="34ulmC">
+          <property role="2pBcoG" value="998543371831447722" />
+          <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+          <property role="2pBc3U" value="bothAreDimensions" />
+        </node>
+        <node concept="2pBcaW" id="RryuvURqOH" role="34ulmE">
+          <property role="2pBcoG" value="998543371831436793" />
+          <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+          <property role="2pBc3U" value="DimensionTypeHelper" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="RryuvURqRq" role="hSBgs">
+        <node concept="2pBcaW" id="RryuvURqRo" role="34ulmC">
+          <property role="2pBcoG" value="998543371831447722" />
+          <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+          <property role="2pBc3U" value="bothAreDimensions" />
+        </node>
+        <node concept="2pBcaW" id="RryuvURqRp" role="34ulmE">
+          <property role="2pBcoG" value="998543371831436793" />
+          <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+          <property role="2pBc3U" value="DimensionTypeHelper" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOJ" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447722" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="bothAreDimensions" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRs" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447722" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="bothAreDimensions" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOK" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447725" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="StatementList@69720" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRu" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447725" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="StatementList@69720" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOL" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447874" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="ReturnStatement@69555" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRw" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447874" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="ReturnStatement@69555" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOM" role="hSBgu">
+        <property role="2pBcoG" value="998543371831449341" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="AndExpression@71208" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRy" role="hSBgs">
+        <property role="2pBcoG" value="998543371831449341" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="AndExpression@71208" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqR_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqON" role="hSBgu">
+        <property role="2pBcoG" value="998543371831449454" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@71063" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqR$" role="hSBgs">
+        <property role="2pBcoG" value="998543371831449454" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@71063" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOO" role="hSBgu">
+        <property role="2pBcoG" value="998543371831449561" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@70988" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRA" role="hSBgs">
+        <property role="2pBcoG" value="998543371831449561" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@70988" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOP" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447950" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@69495" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRC" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447950" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@69495" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOQ" role="hSBgu">
+        <property role="2pBcoG" value="998543371831448024" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@69453" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRE" role="hSBgs">
+        <property role="2pBcoG" value="998543371831448024" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@69453" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOR" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447674" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@69803" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRG" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447674" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@69803" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOS" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447710" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="BooleanType@69767" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRI" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447710" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="BooleanType@69767" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOT" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447770" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="one" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRK" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447770" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="one" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOU" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447769" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@69708" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRM" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447769" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@69708" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOV" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447795" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="two" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRO" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447795" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="two" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqOW" role="hSBgu">
+        <property role="2pBcoG" value="998543371831447824" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@69637" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRQ" role="hSBgs">
+        <property role="2pBcoG" value="998543371831447824" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@69637" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticMethod" />
+      <node concept="34ulmB" id="RryuvURqOZ" role="hSBgu">
+        <node concept="2pBcaW" id="RryuvURqOX" role="34ulmC">
+          <property role="2pBcoG" value="998543371831450148" />
+          <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+          <property role="2pBc3U" value="oneIsDimension" />
+        </node>
+        <node concept="2pBcaW" id="RryuvURqOY" role="34ulmE">
+          <property role="2pBcoG" value="998543371831436793" />
+          <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+          <property role="2pBc3U" value="DimensionTypeHelper" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="RryuvURqRU" role="hSBgs">
+        <node concept="2pBcaW" id="RryuvURqRS" role="34ulmC">
+          <property role="2pBcoG" value="998543371831450148" />
+          <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+          <property role="2pBc3U" value="oneIsDimension" />
+        </node>
+        <node concept="2pBcaW" id="RryuvURqRT" role="34ulmE">
+          <property role="2pBcoG" value="998543371831436793" />
+          <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+          <property role="2pBc3U" value="DimensionTypeHelper" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRX" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP0" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450148" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="oneIsDimension" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRW" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450148" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="oneIsDimension" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqRZ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP1" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450149" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="StatementList@68304" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqRY" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450149" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="StatementList@68304" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqS1" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP2" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450150" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="ReturnStatement@68303" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqS0" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450150" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="ReturnStatement@68303" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqS3" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP3" role="hSBgu">
+        <property role="2pBcoG" value="998543371831451188" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="BitwiseXorExpression@69345" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqS2" role="hSBgs">
+        <property role="2pBcoG" value="998543371831451188" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="BitwiseXorExpression@69345" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqS5" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP4" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450154" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@68315" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqS4" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450154" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@68315" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqS7" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP5" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450155" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@68314" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqS6" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450155" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@68314" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqS9" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP6" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450152" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@68317" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqS8" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450152" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@68317" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSb" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP7" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450153" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@68316" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSa" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450153" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@68316" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSd" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP8" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450156" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@68313" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSc" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450156" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@68313" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSf" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqP9" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450157" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="BooleanType@68312" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSe" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450157" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="BooleanType@68312" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSh" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPa" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450158" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="one" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSg" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450158" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="one" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSj" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPb" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450159" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@68310" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSi" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450159" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@68310" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSl" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPc" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450160" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="two" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSk" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450160" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="two" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSn" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPd" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450161" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@68324" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSm" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450161" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@68324" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSr" role="W$Crh">
+      <property role="hSBgo" value="moveNode.moveStaticMethod" />
+      <node concept="34ulmB" id="RryuvURqPg" role="hSBgu">
+        <node concept="2pBcaW" id="RryuvURqPe" role="34ulmC">
+          <property role="2pBcoG" value="998543371831450483" />
+          <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+          <property role="2pBc3U" value="atLeastOneIsDimension" />
+        </node>
+        <node concept="2pBcaW" id="RryuvURqPf" role="34ulmE">
+          <property role="2pBcoG" value="998543371831436793" />
+          <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+          <property role="2pBc3U" value="DimensionTypeHelper" />
+        </node>
+      </node>
+      <node concept="34ulmB" id="RryuvURqSq" role="hSBgs">
+        <node concept="2pBcaW" id="RryuvURqSo" role="34ulmC">
+          <property role="2pBcoG" value="998543371831450483" />
+          <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+          <property role="2pBc3U" value="atLeastOneIsDimension" />
+        </node>
+        <node concept="2pBcaW" id="RryuvURqSp" role="34ulmE">
+          <property role="2pBcoG" value="998543371831436793" />
+          <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+          <property role="2pBc3U" value="DimensionTypeHelper" />
+        </node>
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSt" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPh" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450483" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="atLeastOneIsDimension" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSs" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450483" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="atLeastOneIsDimension" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSv" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPi" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450484" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="StatementList@68001" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSu" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450484" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="StatementList@68001" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSx" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPj" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450485" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="ReturnStatement@68000" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSw" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450485" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="ReturnStatement@68000" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSz" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPk" role="hSBgu">
+        <property role="2pBcoG" value="998543371831452465" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="OrExpression@74212" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSy" role="hSBgs">
+        <property role="2pBcoG" value="998543371831452465" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="OrExpression@74212" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqS_" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPl" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450489" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@68012" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqS$" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450489" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@68012" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSB" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPm" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450490" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@68011" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSA" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450490" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@68011" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSD" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPn" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450487" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@67998" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSC" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450487" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="LocalMethodCall@67998" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSF" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPo" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450488" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@68013" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSE" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450488" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="VariableReference@68013" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSH" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPp" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450491" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@68010" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSG" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450491" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="PublicVisibility@68010" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSJ" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPq" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450492" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="BooleanType@68009" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSI" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450492" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="BooleanType@68009" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSL" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPr" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450493" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="one" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSK" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450493" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="one" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSN" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPs" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450494" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@68007" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSM" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450494" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@68007" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSP" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPt" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450495" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="two" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSO" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450495" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="two" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSR" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPu" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450496" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@67957" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSQ" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450496" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="SNodeType@67957" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqST" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPv" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450361" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="PlaceholderMember@68140" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSS" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450361" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="PlaceholderMember@68140" />
+      </node>
+    </node>
+    <node concept="7amoh" id="RryuvURqSV" role="W$Crh">
+      <property role="hSBgo" value="moveNode.updateReferences" />
+      <node concept="2pBcaW" id="RryuvURqPw" role="hSBgu">
+        <property role="2pBcoG" value="998543371831450099" />
+        <property role="2pBcow" value="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)" />
+        <property role="2pBc3U" value="PlaceholderMember@67362" />
+      </node>
+      <node concept="2pBcaW" id="RryuvURqSU" role="hSBgs">
+        <property role="2pBcoG" value="998543371831450099" />
+        <property role="2pBcow" value="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
+        <property role="2pBc3U" value="PlaceholderMember@67362" />
       </node>
     </node>
   </node>

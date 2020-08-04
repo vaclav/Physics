@@ -45,7 +45,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_InteractedObjectExpression;
   private ConceptPresentation props_InteractionForce;
   private ConceptPresentation props_NRootExpression;
-  private ConceptPresentation props_NumericStyle;
+  private ConceptPresentation props_NumericDistanceStyle;
   private ConceptPresentation props_ObjectDefinition;
   private ConceptPresentation props_ObjectDistanceWithTarget;
   private ConceptPresentation props_ObjectMassTarget;
@@ -325,13 +325,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_NRootExpression = cpb.create();
         }
         return props_NRootExpression;
-      case LanguageConceptSwitch.NumericStyle:
-        if (props_NumericStyle == null) {
+      case LanguageConceptSwitch.NumericDistanceStyle:
+        if (props_NumericDistanceStyle == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("style with a numeric value");
-          props_NumericStyle = cpb.create();
+          props_NumericDistanceStyle = cpb.create();
         }
-        return props_NumericStyle;
+        return props_NumericDistanceStyle;
       case LanguageConceptSwitch.ObjectDefinition:
         if (props_ObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

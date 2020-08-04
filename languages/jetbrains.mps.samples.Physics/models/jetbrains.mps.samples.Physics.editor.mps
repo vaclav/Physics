@@ -2085,7 +2085,7 @@
   </node>
   <node concept="24kQdi" id="10n4tqnuB2A">
     <property role="3GE5qa" value="styles" />
-    <ref role="1XX52x" to="9tcj:10n4tqnuB2q" resolve="NumericStyle" />
+    <ref role="1XX52x" to="9tcj:10n4tqnuB2q" resolve="NumericDistanceStyle" />
     <node concept="3EZMnI" id="10n4tqnuB2C" role="2wV5jI">
       <node concept="PMmxH" id="10n4tqnuB2M" role="3EZMnx">
         <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
@@ -2110,8 +2110,8 @@
       <node concept="3F1sOY" id="5EZY1tO4hP8" role="jiZDT">
         <ref role="1NtTu8" to="9tcj:5EZY1tO4hKU" resolve="expression" />
       </node>
-      <node concept="3F1sOY" id="5EZY1tO4hPb" role="jiZDM">
-        <ref role="1NtTu8" to="9tcj:5EZY1tO4fX5" resolve="exponent" />
+      <node concept="3F0A7n" id="4CH1R2NzOYA" role="jiZDM">
+        <ref role="1NtTu8" to="9tcj:4CH1R2NzOYy" resolve="exponent" />
       </node>
     </node>
   </node>

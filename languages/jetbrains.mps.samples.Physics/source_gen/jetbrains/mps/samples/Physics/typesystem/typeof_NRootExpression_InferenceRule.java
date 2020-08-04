@@ -8,12 +8,15 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import org.iets3.core.expr.base.runtime.runtime.PTF;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.errors.IRuleConflictWarningProducer;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public class typeof_NRootExpression_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
@@ -24,10 +27,12 @@ public class typeof_NRootExpression_InferenceRule extends AbstractInferenceRule_
       final SNode sqrtExpressionInnerType = typeCheckingContext.typeOf(SLinkOperations.getTarget(nRootExpression, LINKS.expression$tVRI), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3773364508684486821", true);
       typeCheckingContext.whenConcrete(sqrtExpressionInnerType, new Runnable() {
         public void run() {
+          SNode exponentType = PTF.createRealType(SPropertyOperations.getString(nRootExpression, PROPS.exponent$9cvW));
+
           {
             SNode _nodeToCheck_1029348928467 = nRootExpression;
             EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7396263120860250015", 0, null);
-            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7396263120860246629", true), (SNode) typeCheckingContext.getOverloadedOperationType(nRootExpression, typeCheckingContext.getExpandedNode(sqrtExpressionInnerType), null, new IRuleConflictWarningProducer() {
+            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7396263120860246629", true), (SNode) typeCheckingContext.getOverloadedOperationType(nRootExpression, exponentType, typeCheckingContext.getExpandedNode(sqrtExpressionInnerType), new IRuleConflictWarningProducer() {
               public void produceWarning(String modelId, String ruleId) {
                 typeCheckingContext.reportWarning(nRootExpression, "coflicting rules for overloaded operation type", modelId, ruleId, null, new NodeMessageTarget());
 
@@ -50,6 +55,10 @@ public class typeof_NRootExpression_InferenceRule extends AbstractInferenceRule_
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink expression$tVRI = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5abff817741099d3L, 0x5abff81774111c3aL, "expression");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty exponent$9cvW = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5abff817741099d3L, 0x4a2d0770b38f4fa2L, "exponent");
   }
 
   private static final class CONCEPTS {

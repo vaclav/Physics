@@ -64,7 +64,7 @@ public final class CompositeDimension__BehaviorDescriptor extends BaseBHDescript
   /*package*/ static String getTargetString_id1fq3tlLwQga(@NotNull SNode __thisNode__) {
     Iterable<String> seq = ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow)).select(new ISelector<SNode, String>() {
       public String select(SNode it) {
-        return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$2BcY), LINKS.default$rDru), PROPS.name$tAp1) + (((SLinkOperations.getTarget(it, LINKS.exponent$2Bc0) == null) ? "" : IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it)));
+        return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$2BcY), LINKS.default$rDru), PROPS.name$tAp1) + (((SLinkOperations.getTarget(it, LINKS.exponent$2Bc0) == null) ? "" : "^" + IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it)));
       }
     });
 

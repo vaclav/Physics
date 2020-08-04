@@ -3360,7 +3360,7 @@
                         <node concept="3clFbF" id="5EZY1tO4_y5" role="3cqZAp">
                           <node concept="2OqwBi" id="5EZY1tO4_y0" role="3clFbG">
                             <node concept="3TrEf2" id="5EZY1tO4_y3" role="2OqNvi">
-                              <ref role="3Tt5mk" to="9tcj:5EZY1tO4fX5" resolve="exponent" />
+                              <ref role="3Tt5mk" to="9tcj:5EZY1tO4fX5" resolve="exponent_" />
                             </node>
                             <node concept="30H73N" id="5EZY1tO4_y4" role="2Oq$k0" />
                           </node>
@@ -5280,7 +5280,7 @@
     <property role="3GE5qa" value="styles" />
     <node concept="3aamgX" id="10n4tqnDkEh" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="9tcj:10n4tqnuB2q" resolve="NumericStyle" />
+      <ref role="30HIoZ" to="9tcj:10n4tqnuB2q" resolve="NumericDistanceStyle" />
       <node concept="gft3U" id="10n4tqnDkEi" role="1lVwrX">
         <node concept="2ShNRf" id="10n4tqnDkGC" role="gfFT$">
           <node concept="1pGfFk" id="10n4tqnDkGD" role="2ShVmc">

@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.types.typesystem;
 
 import jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime;
+import jetbrains.mps.lang.typesystem.runtime.InequationReplacementRule_Runtime;
 
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
@@ -20,8 +21,12 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.mySubtypingRules.add(subtypingRule);
     }
     {
-      SubtypingRule_Runtime subtypingRule = new subtype_VectorType_supertypes_SubtypingRule();
+      SubtypingRule_Runtime subtypingRule = new subtype_VectorType_AbstractVectorType_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
+    }
+    {
+      InequationReplacementRule_Runtime eliminationRule = new replace_VectorType_VectorType_InequationReplacementRule();
+      this.myInequationReplacementRules.add(eliminationRule);
     }
   }
 }

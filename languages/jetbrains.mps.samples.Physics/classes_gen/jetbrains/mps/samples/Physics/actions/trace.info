@@ -16,13 +16,13 @@
   <root nodeRef="r:440f32ad-f2cc-41e6-bc89-c1c2af2bc770(jetbrains.mps.samples.Physics.actions)/1159415042434515255">
     <file name="MiscellaneousFactories.java">
       <node id="1159415042434515498" at="17,7,18,41" concept="4" />
-      <node id="1159415042434515606" at="19,78,20,143" concept="1" />
-      <node id="1159415042434515255" at="27,0,28,0" concept="7" trace="NumericStyle$W9" />
+      <node id="1159415042434515606" at="19,86,20,143" concept="1" />
+      <node id="1159415042434515255" at="27,0,28,0" concept="7" trace="NumericDistanceStyle$W9" />
       <node id="1159415042434515255" at="31,0,32,0" concept="7" trace="value$aRGu" />
       <node id="1159415042434515498" at="18,41,21,9" concept="2" />
       <node id="1159415042434515498" at="16,91,22,7" concept="0" />
       <node id="1159415042434515310" at="16,0,24,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
-      <scope id="1159415042434515500" at="19,78,20,143" />
+      <scope id="1159415042434515500" at="19,86,20,143" />
       <scope id="1159415042434515498" at="17,7,21,9">
         <var name="numeric" id="1159415042434515498" />
       </scope>

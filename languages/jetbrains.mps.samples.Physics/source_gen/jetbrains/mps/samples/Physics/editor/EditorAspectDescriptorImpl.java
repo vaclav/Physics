@@ -59,7 +59,7 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 18:
         return Collections.<ConceptEditor>singletonList(new NRootExpression_Editor());
       case 19:
-        return Collections.<ConceptEditor>singletonList(new NumericStyle_Editor());
+        return Collections.<ConceptEditor>singletonList(new NumericDistanceStyle_Editor());
       case 20:
         return Collections.<ConceptEditor>singletonList(new ObjectDefinition_Editor());
       case 21:
