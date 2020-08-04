@@ -156,10 +156,12 @@
       <property role="20kJfa" value="focus" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
-    <node concept="1TJgyi" id="6yY6C991R6x" role="1TKVEl">
-      <property role="IQ2nx" value="7547499172392825249" />
-      <property role="TrG5h" value="speed" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="270Q2mFfX7w" role="1TKVEi">
+      <property role="IQ2ns" value="2432181455078543840" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="simulationSpeed" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MNbVDr">

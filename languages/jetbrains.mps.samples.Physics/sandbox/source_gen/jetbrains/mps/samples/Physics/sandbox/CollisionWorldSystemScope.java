@@ -52,7 +52,7 @@ public class CollisionWorldSystemScope extends SystemScope {
       // Set static properties of A 
       this.setMass(((Number) new BigInteger("500")));
       this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("-200")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialVelocity())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0.1000000000").setScale(10, RoundingMode.DOWN)), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of A 
       super.init(scope, world, fixtureProperties);

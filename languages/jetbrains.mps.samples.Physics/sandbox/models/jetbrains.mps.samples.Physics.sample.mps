@@ -28,7 +28,6 @@
       </concept>
       <concept id="5115872837156855227" name="org.iets3.core.expr.base.structure.UnaryMinusExpression" flags="ng" index="30cIq6" />
       <concept id="5115872837156578671" name="org.iets3.core.expr.base.structure.MulExpression" flags="ng" index="30dDTi" />
-      <concept id="5115872837156578546" name="org.iets3.core.expr.base.structure.PlusExpression" flags="ng" index="30dDZf" />
       <concept id="5115872837156576277" name="org.iets3.core.expr.base.structure.BinaryExpression" flags="ng" index="30dEsC">
         <child id="5115872837156576280" name="right" index="30dEs_" />
         <child id="5115872837156576278" name="left" index="30dEsF" />
@@ -130,7 +129,7 @@
       </concept>
       <concept id="1510458583736379040" name="jetbrains.mps.samples.Physics.structure.AbstractForceCall" flags="ng" index="1nvtMO" />
       <concept id="7746015835360049752" name="jetbrains.mps.samples.Physics.structure.Simulation" flags="ng" index="3okdC4">
-        <property id="7547499172392825249" name="speed" index="xImGz" />
+        <child id="2432181455078543840" name="simulationSpeed" index="2aZKB5" />
         <child id="6184070858913522400" name="focus" index="IG9_e" />
         <child id="4383135941274869506" name="world" index="1heTBC" />
       </concept>
@@ -213,21 +212,11 @@
           <node concept="30bXRB" id="10n4tqnj6Hi" role="Y6leJ">
             <property role="30bXRw" value="0" />
           </node>
-          <node concept="1N951E" id="4CH1R2NpKks" role="Y6l9D">
-            <node concept="30bXRB" id="4CH1R2NkhLM" role="1N951F">
-              <property role="30bXRw" value="10" />
-            </node>
-            <node concept="CIsvn" id="4CH1R2NpKAj" role="1N7es9">
-              <ref role="1N7KNK" to="nas6:4NfpV2pizyw" resolve="cm" />
-            </node>
+          <node concept="30bXRB" id="270Q2mFmaeM" role="Y6l9D">
+            <property role="30bXRw" value="0" />
           </node>
-          <node concept="1N951E" id="4CH1R2NpKUR" role="Y6leK">
-            <node concept="30bXRB" id="4CH1R2NpKOu" role="1N951F">
-              <property role="30bXRw" value="1" />
-            </node>
-            <node concept="CIsvn" id="4CH1R2NpKUQ" role="1N7es9">
-              <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
-            </node>
+          <node concept="30bXRB" id="270Q2mFman1" role="Y6leK">
+            <property role="30bXRw" value="0" />
           </node>
         </node>
       </node>
@@ -264,35 +253,15 @@
       </node>
       <node concept="3Bsx3U" id="10n4tqnj6IW" role="1h9ZzG">
         <node concept="v6hs8" id="10n4tqnjap9" role="3Bsx3B">
-          <node concept="30dDZf" id="4CH1R2NpMbH" role="Y6l9D">
-            <node concept="30dDZf" id="4CH1R2NpMbI" role="30dEsF">
-              <node concept="30bXRB" id="4CH1R2NpMbJ" role="30dEsF">
-                <property role="30bXRw" value="0.0" />
-              </node>
-              <node concept="1N951E" id="4CH1R2NpLoK" role="30dEs_">
-                <node concept="30bXRB" id="4CH1R2NpLal" role="1N951F">
-                  <property role="30bXRw" value="3" />
-                </node>
-                <node concept="CIsvn" id="4CH1R2NpLoJ" role="1N7es9">
-                  <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
-                </node>
-              </node>
-            </node>
-            <node concept="1N951E" id="4CH1R2NpLXS" role="30dEs_">
-              <node concept="30bXRB" id="4CH1R2NpLJZ" role="1N951F">
-                <property role="30bXRw" value="4" />
-              </node>
-              <node concept="CIsvn" id="4CH1R2NpLXR" role="1N7es9">
-                <ref role="1N7KNK" to="nas6:4NfpV2pizyw" resolve="cm" />
-              </node>
-            </node>
+          <node concept="30bXRB" id="270Q2mFm9NO" role="Y6l9D">
+            <property role="30bXRw" value="0" />
           </node>
           <node concept="1N951E" id="1d1Q7eb9Gw4" role="Y6leK">
             <node concept="30bXRB" id="10n4tqnjapb" role="1N951F">
               <property role="30bXRw" value="200" />
             </node>
-            <node concept="CIsvn" id="1d1Q7eb9Gw3" role="1N7es9">
-              <ref role="1N7KNK" to="nas6:1fq3tlL$k6e" resolve="km" />
+            <node concept="CIsvn" id="270Q2mFma0e" role="1N7es9">
+              <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
             </node>
           </node>
           <node concept="30bXRB" id="10n4tqnjapc" role="Y6leJ">
@@ -419,14 +388,26 @@
   </node>
   <node concept="3okdC4" id="10n4tqnjauU">
     <property role="TrG5h" value="ExampleSimulation" />
-    <property role="xImGz" value="1" />
     <node concept="1t_wfn" id="10n4tqnmBN5" role="1heTBC">
       <ref role="1t_wfm" node="10n4tqnmBvH" resolve="SolarSystem" />
     </node>
-    <node concept="1QScDb" id="6yY6C98PNtg" role="IG9_e">
-      <node concept="31hh1H" id="6yY6C98sqrY" role="30czhm" />
-      <node concept="31uf54" id="ifXGYQCj0P" role="1QScD9">
-        <ref role="31ueSj" node="10n4tqnmBwp" resolve="Sun" />
+    <node concept="1QScDb" id="270Q2mFmllk" role="IG9_e">
+      <node concept="31uf54" id="270Q2mFmlz9" role="1QScD9">
+        <ref role="31ueSj" node="72SP1v_PiBJ" resolve="Earth" />
+      </node>
+      <node concept="1QScDb" id="6yY6C98PNtg" role="30czhm">
+        <node concept="31hh1H" id="6yY6C98sqrY" role="30czhm" />
+        <node concept="31uf54" id="270Q2mFml3C" role="1QScD9">
+          <ref role="31ueSj" node="10n4tqnmBvU" resolve="EarthNested" />
+        </node>
+      </node>
+    </node>
+    <node concept="1N951E" id="270Q2mFg5sF" role="2aZKB5">
+      <node concept="30bXRB" id="270Q2mFg5sE" role="1N951F">
+        <property role="30bXRw" value="10" />
+      </node>
+      <node concept="CIsvn" id="270Q2mFh9IH" role="1N7es9">
+        <ref role="1N7KNK" to="nas6:3_YdNBWG62n" resolve="h" />
       </node>
     </node>
   </node>
@@ -457,8 +438,8 @@
               <node concept="30bXRB" id="10n4tqnnKYp" role="1N951F">
                 <property role="30bXRw" value="600" />
               </node>
-              <node concept="CIsvn" id="4CH1R2NFoRa" role="1N7es9">
-                <ref role="1N7KNK" to="nas6:1fq3tlL$k6e" resolve="km" />
+              <node concept="CIsvn" id="270Q2mFfRDJ" role="1N7es9">
+                <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
               </node>
             </node>
           </node>
@@ -495,7 +476,7 @@
           <node concept="v6hsc" id="10n4tqnoi3K" role="1aLnnE">
             <node concept="1N951E" id="4CH1R2NFTWc" role="13cPWH">
               <node concept="30bXRB" id="10n4tqnoi3L" role="1N951F">
-                <property role="30bXRw" value="900" />
+                <property role="30bXRw" value="700" />
               </node>
               <node concept="CIsvn" id="4CH1R2NFTWb" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />

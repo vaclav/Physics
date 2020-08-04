@@ -11,7 +11,7 @@
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" />
-    <import index="ktwq" ref="r:72c8dc3c-5e0b-4a4a-aafa-4d8093acd09c(jetbrains.mps.samples.Physics.units)" implicit="true" />
+    <import index="nas6" ref="r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -113,8 +113,8 @@
         <node concept="3cpWs6" id="1d1Q7eb5snw" role="3cqZAp">
           <node concept="2c44tf" id="1d1Q7eb5ssc" role="3cqZAk">
             <node concept="1N6AA6" id="1d1Q7eb5suf" role="2c44tc">
-              <node concept="3AmWvR" id="1d1Q7eb5sEt" role="1N7es9">
-                <ref role="1N7KNK" to="ktwq:7tUW$K4o9N4" resolve="distance" />
+              <node concept="3AmWvR" id="270Q2mFfISa" role="1N7es9">
+                <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
               </node>
               <node concept="30bXLL" id="1d1Q7eb5swK" role="1N6AA7" />
             </node>

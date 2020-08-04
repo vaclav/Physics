@@ -7,11 +7,11 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.Arrays;
 
 public class MilkyWaySystemScope extends SystemScope {
@@ -29,7 +29,7 @@ public class MilkyWaySystemScope extends SystemScope {
     FloatingDog = withEntity(new FloatingDog1PhysicalEntity(world));
     Something = withEntity(new Something1PhysicalEntity(world));
     A = withEntity(new A1PhysicalEntity(world));
-    SolarSystem1 = withEntity(new SolarSystemSystemScope(world, position.add(InternalVector.ZERO), velocity.add(InternalVector.ZERO)));
+    SolarSystem1 = withEntity(new SolarSystemSystemScope(world, position.add(new InternalVector(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
     FloatingDog.init(this, world, new FixtureBuilder());

@@ -7,8 +7,8 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import java.math.BigInteger;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
@@ -35,7 +35,7 @@ public class TestWorldSystemScope extends SystemScope {
     Something2 = withEntity(new Something3PhysicalEntity(world));
     Hey = withEntity(new Hey1PhysicalEntity(world));
     Ho = withEntity(new Ho1PhysicalEntity(world));
-    TheOtherWorld = withEntity(new World2SystemScope(world, position.add(InternalVector.ZERO), velocity.add(InternalVector.ZERO)));
+    TheOtherWorld = withEntity(new World2SystemScope(world, position.add(new InternalVector(((Number) new BigInteger("1")), ((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
     Something2.init(this, world, new FixtureBuilder());

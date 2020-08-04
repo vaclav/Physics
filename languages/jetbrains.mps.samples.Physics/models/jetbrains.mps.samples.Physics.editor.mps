@@ -1686,9 +1686,14 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0A7n" id="6yY6C991RbX" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:6yY6C991R6x" resolve="speed" />
-        <node concept="ljvvj" id="6yY6C991Rf2" role="3F10Kt">
+      <node concept="3F1sOY" id="270Q2mFfXOv" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:270Q2mFfX7w" resolve="simulationSpeed" />
+      </node>
+      <node concept="3F0ifn" id="270Q2mFg5U2" role="3EZMnx">
+        <property role="3F0ifm" value="for 1 real time second" />
+        <ref role="1k5W1q" to="tpen:hinfsDb" resolve="EmptyCell" />
+        <node concept="VPM3Z" id="270Q2mFgbOL" role="3F10Kt" />
+        <node concept="ljvvj" id="270Q2mFg5Vb" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>

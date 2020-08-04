@@ -7,7 +7,6 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import java.util.Arrays;
-import java.math.BigInteger;
 
 public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
 
@@ -27,6 +26,6 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
     fixtureProperties.set(Prop.SHAPE, "shape");
 
     // Forces 
-    this.getForces().addAll(Arrays.asList(new GravityForce(((Number) new BigInteger("10")))));
+    this.getForces().addAll(Arrays.asList(new GravityForce()));
   }
 }

@@ -9,6 +9,7 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
+import jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper;
 import jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
@@ -32,21 +33,22 @@ public class typeof_CartesianCoordinates_InferenceRule extends AbstractInference
                   final SNode z = typeCheckingContext.typeOf(SLinkOperations.getTarget(coordinates, LINKS.dz$VWBn), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972975905", true);
                   typeCheckingContext.whenConcrete(z, new Runnable() {
                     public void run() {
+                      // TODO fix comparison operator between dimension and raw real type 
                       {
                         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coordinates, LINKS.dy$VWrJ);
                         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "y is not comparable to x", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150975304011", 0, null);
-                        typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(x), (SNode) typeCheckingContext.getExpandedNode(y), false, _info_12389875345);
+                        typeCheckingContext.createComparableEquation((SNode) DimensionTypeHelper.asDimension(typeCheckingContext.getExpandedNode(x)), (SNode) DimensionTypeHelper.asDimension(typeCheckingContext.getExpandedNode(y)), false, _info_12389875345);
                       }
                       {
                         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coordinates, LINKS.dz$VWBn);
                         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "z is not comparable to x", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150975303551", 0, null);
-                        typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(x), (SNode) typeCheckingContext.getExpandedNode(z), false, _info_12389875345);
+                        typeCheckingContext.createComparableEquation((SNode) DimensionTypeHelper.asDimension(typeCheckingContext.getExpandedNode(x)), (SNode) DimensionTypeHelper.asDimension(typeCheckingContext.getExpandedNode(z)), false, _info_12389875345);
                       }
 
                       {
                         SNode _nodeToCheck_1029348928467 = coordinates;
                         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972978069", 0, null);
-                        typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972977823", true), (SNode) createVectorType_1e9abf_a1a0c0d0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(x), typeCheckingContext.getExpandedNode(y), typeCheckingContext.getExpandedNode(z))), _info_12389875345);
+                        typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972977823", true), (SNode) createVectorType_1e9abf_a1a0c0e0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(x), typeCheckingContext.getExpandedNode(y), typeCheckingContext.getExpandedNode(z))), _info_12389875345);
                       }
                     }
                   }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972975903", false, false);
@@ -67,7 +69,7 @@ public class typeof_CartesianCoordinates_InferenceRule extends AbstractInference
   public boolean overrides() {
     return false;
   }
-  private static SNode createVectorType_1e9abf_a1a0c0d0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(SNode p0) {
+  private static SNode createVectorType_1e9abf_a1a0c0e0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
     n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
     return n0.getResult();

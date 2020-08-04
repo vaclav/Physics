@@ -7,6 +7,8 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
@@ -25,7 +27,7 @@ public class SolarSystemSystemScope extends SystemScope {
 
     //  Instanciate objects 
     Sun = withEntity(new Sun1PhysicalEntity(world));
-    EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(InternalVector.ZERO), velocity.add(InternalVector.ZERO)));
+    EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(((Number) new BigDecimal("4.184195255181698E-14").setScale(19, RoundingMode.DOWN)), ((Number) new BigDecimal("683.3309421287669").setScale(13, RoundingMode.DOWN)), ((Number) new BigDecimal("-448.14867952694067").setScale(14, RoundingMode.DOWN)))), velocity.add(new InternalVector(((Number) new BigDecimal("-3.5355339059327378").setScale(16, RoundingMode.DOWN)), ((Number) new BigDecimal("-4.3297802811774667E-16").setScale(20, RoundingMode.DOWN)), ((Number) new BigDecimal("-3.5355339059327373").setScale(16, RoundingMode.DOWN))))));
 
     // Initialize them 
     Sun.init(this, world, new FixtureBuilder());
@@ -44,7 +46,7 @@ public class SolarSystemSystemScope extends SystemScope {
 
       // Set static properties of Sun 
       this.setMass(((Number) new BigInteger("1300")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("-600000"))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("-600"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Sun 

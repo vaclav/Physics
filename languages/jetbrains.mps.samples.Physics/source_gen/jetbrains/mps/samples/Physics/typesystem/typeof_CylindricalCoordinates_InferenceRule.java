@@ -9,6 +9,7 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
+import jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper;
 import jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
@@ -38,7 +39,7 @@ public class typeof_CylindricalCoordinates_InferenceRule extends AbstractInferen
                         {
                           SNode _nodeToCheck_1029348928467 = coords;
                           EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5344936513384411659", 0, null);
-                          typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(height), (SNode) typeCheckingContext.getExpandedNode(distance), false, _info_12389875345);
+                          typeCheckingContext.createComparableEquation((SNode) DimensionTypeHelper.asDimension(typeCheckingContext.getExpandedNode(height)), (SNode) DimensionTypeHelper.asDimension(typeCheckingContext.getExpandedNode(distance)), false, _info_12389875345);
                         }
                       }
 

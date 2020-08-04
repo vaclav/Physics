@@ -14,8 +14,8 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class subtype_DimensionType_AbstractDimensionType_InequationReplacementRule extends AbstractInequationReplacementRule_Runtime {
-  public subtype_DimensionType_AbstractDimensionType_InequationReplacementRule() {
+public class replace_DimensionType_AbstractDimensionType_InequationReplacementRule extends AbstractInequationReplacementRule_Runtime {
+  public replace_DimensionType_AbstractDimensionType_InequationReplacementRule() {
   }
   public boolean isApplicableCustom(SNode subtype, SNode supertype, IsApplicable2Status status) {
     return SConceptOperations.isExactly(SNodeOperations.asSConcept(SNodeOperations.getConcept(supertype)), CONCEPTS.AbstractDimensionType$C7);

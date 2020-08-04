@@ -88,7 +88,7 @@ public class DimensionMapsHelper {
     }
 
     if (SNodeOperations.isInstanceOf(operation, CONCEPTS.DivExpression$Li)) {
-      DimensionMapsHelper.multiplyAndMergeInto(right, new BigDecimal("-1"), left);
+      DimensionMapsHelper.multiplyAndMergeInto(right, -1, left);
       return left;
     }
 

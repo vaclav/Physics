@@ -6,8 +6,10 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitHandlingCapablity;
+import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class DimensionTypeHelper {
   public static boolean isDimension(SNode node) {
@@ -24,8 +26,25 @@ public class DimensionTypeHelper {
     return isDimension(one) || isDimension(two);
   }
 
+  public static SNode asDimension(SNode node) {
+    if (isDimension(node) || NumberTypeHelper.isBaseTypeZero(node)) {
+      return node;
+    }
+
+    return createDimensionType_updygn_a2a6(SNodeOperations.as(node, CONCEPTS.Type$fA));
+  }
+  private static SNode createDimensionType_updygn_a2a6(SNode p0) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
+    n0.forChild(LINKS.baseType$fHYw).initNode(p0, CONCEPTS.Type$fA, true);
+    return n0.getResult();
+  }
+
   private static final class CONCEPTS {
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
     /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
   }
 }

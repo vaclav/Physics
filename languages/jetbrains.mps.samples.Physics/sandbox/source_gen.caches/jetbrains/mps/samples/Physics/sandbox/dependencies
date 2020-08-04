@@ -167,8 +167,10 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.TestSimulation">
+    <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.math.BigInteger" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
