@@ -29,6 +29,7 @@
     <import index="mizj" ref="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.java.common.vectors)" />
     <import index="9ur8" ref="r:98f6e9b8-ca23-471b-9b0d-43dafe92c68d(jetbrains.mps.samples.Physics.dimensions.plugin)" />
     <import index="nas6" ref="r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)" />
+    <import index="tc1u" ref="r:2c20269f-57e4-41ef-a202-e8ce4699d3fc(jetbrains.mps.samples.Physics.IETS3MathExtended.plugin)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
   <registry>
@@ -2044,6 +2045,9 @@
     <node concept="1J7L1T" id="1d1Q7ebihJu" role="1J4apk">
       <ref role="1J7WVQ" to="9ur8:1$oDF1jRf8I" resolve="DimensionsInterpreter" />
     </node>
+    <node concept="1J7L1T" id="4E4Gfvf4SS$" role="1J4apk">
+      <ref role="1J7WVQ" to="tc1u:1$oDF1jRf8I" resolve="ExtendedMathInterpreter" />
+    </node>
     <node concept="qq9P1" id="1$oDF1jVg8q" role="qq9xR">
       <property role="2TnfIJ" value="true" />
       <ref role="qq9wM" to="9tcj:6kwOTMl1bfn" resolve="VectorComponentTarget" />
@@ -3138,48 +3142,6 @@
               </node>
             </node>
           </node>
-        </node>
-      </node>
-    </node>
-    <node concept="qq9P1" id="5EZY1tO4m5I" role="qq9xR">
-      <property role="2TnfIJ" value="true" />
-      <ref role="qq9wM" to="9tcj:5EZY1tO49Bj" resolve="NRootExpression" />
-      <node concept="3vetai" id="5EZY1tO4nXY" role="3vQZUl">
-        <node concept="2YIFZM" id="5EZY1tO4vJL" role="3vdyny">
-          <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
-          <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-          <node concept="2YIFZM" id="5EZY1tO4qaX" role="37wK5m">
-            <ref role="37wK5l" to="wyt6:~Math.pow(double,double)" resolve="pow" />
-            <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
-            <node concept="2OqwBi" id="5EZY1tO4tpB" role="37wK5m">
-              <node concept="rqRoa" id="5EZY1tO4qe3" role="2Oq$k0">
-                <ref role="rqRob" to="9tcj:5EZY1tO4hKU" resolve="expression" />
-              </node>
-              <node concept="liA8E" id="5EZY1tO4ukg" role="2OqNvi">
-                <ref role="37wK5l" to="xlxw:~BigDecimal.doubleValue()" resolve="doubleValue" />
-              </node>
-            </node>
-            <node concept="2OqwBi" id="5EZY1tO4rHJ" role="37wK5m">
-              <node concept="rqRoa" id="5EZY1tO4qr2" role="2Oq$k0">
-                <ref role="rqRob" to="9tcj:5EZY1tO4fX5" resolve="exponent_" />
-              </node>
-              <node concept="liA8E" id="5EZY1tO4sGj" role="2OqNvi">
-                <ref role="37wK5l" to="xlxw:~BigDecimal.doubleValue()" resolve="doubleValue" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="qpFDx" id="5EZY1tO4o3r" role="3vbI0w">
-        <ref role="qpFD$" to="9tcj:5EZY1tO4fX5" resolve="exponent_" />
-        <node concept="rxStX" id="5EZY1tO4o8K" role="rajlz">
-          <ref role="rxSuV" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
-        </node>
-      </node>
-      <node concept="qpFDx" id="5EZY1tO4oL7" role="3vbI0w">
-        <ref role="qpFD$" to="9tcj:5EZY1tO4hKU" resolve="expression" />
-        <node concept="rxStX" id="5EZY1tO4pBr" role="rajlz">
-          <ref role="rxSuV" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
         </node>
       </node>
     </node>

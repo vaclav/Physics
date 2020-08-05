@@ -4,5 +4,5 @@ package jetbrains.mps.samples.Physics.java.runtime.objects;
 
 
 public interface Function<T, S extends SystemScope> {
-  T compute(World world, S scope, PhysicalEntity currentEntity, long time);
+  T compute(World world, S scope, PhysicalEntity currentEntity, double time);
 }

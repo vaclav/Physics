@@ -11,7 +11,7 @@ import java.math.BigInteger;
 public class GravityForce extends AbstractGravityForce<SystemScope> {
 
   public GravityForce() {
-    super(AH.mul(((Number) new BigDecimal("6.6730").setScale(4, RoundingMode.DOWN)), AH.mul(BigDecimal.valueOf(Math.pow(((Number) new BigInteger("10")).doubleValue(), ((BigInteger) ((Number) new BigInteger("11"))).negate().doubleValue())), ((Number) new BigInteger("1")))));
+    super(AH.mul(((Number) new BigDecimal("6.6730").setScale(4, RoundingMode.DOWN)), AH.mul(BigDecimal.valueOf(Math.pow(((Number) new BigInteger("10")).doubleValue(), ((BigInteger) ((Number) new BigInteger("11"))).negate().doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
   }
 
 }

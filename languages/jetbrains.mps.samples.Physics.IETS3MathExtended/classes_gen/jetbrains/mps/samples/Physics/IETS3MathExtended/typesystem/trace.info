@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root>
+    <file name="TypesystemDescriptor.java">
+      <unit at="106,0,109,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.TypesystemDescriptor$LINKS" />
+      <unit at="110,0,114,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.TypesystemDescriptor$PROPS" />
+      <unit at="98,0,105,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.TypesystemDescriptor$CONCEPTS" />
+      <unit at="24,0,115,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.TypesystemDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:eaef0861-3ed4-4442-afee-c90aaa3cdaec(jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem)/6318410611460041981">
+    <file name="TypesystemDescriptor.java">
+      <node id="5344936513388878101" at="29,5,30,126" concept="2" />
+      <node id="5344936513388877965" at="33,80,34,62" concept="2" />
+      <node id="5344936513388877965" at="34,62,35,63" concept="2" />
+      <node id="5344936513388877965" at="35,63,36,40" concept="2" />
+      <node id="5344936513388877965" at="36,40,37,37" concept="2" />
+      <node id="5344936513388877965" at="37,37,38,38" concept="2" />
+      <node id="5344936513388877965" at="38,38,39,35" concept="2" />
+      <node id="5344936513388877965" at="39,35,40,34" concept="2" />
+      <node id="5344936513388877965" at="40,34,41,128" concept="2" />
+      <node id="5344936513388877965" at="41,128,42,48" concept="2" />
+      <node id="5369611234110230142" at="45,7,46,50" concept="5" />
+      <node id="5369611234110256084" at="48,11,49,51" concept="5" />
+      <node id="5369611234110354341" at="50,81,51,70" concept="7" />
+      <node id="5369611234110296017" at="51,70,52,173" concept="5" />
+      <node id="5369611234110354958" at="52,173,53,0" concept="8" />
+      <node id="5369611234110357949" at="53,0,54,51" concept="7" />
+      <node id="5369611234110304336" at="54,51,55,181" concept="5" />
+      <node id="5369611234110346181" at="55,181,56,181" concept="5" />
+      <node id="5369611234110373709" at="56,181,57,0" concept="8" />
+      <node id="5369611234110376859" at="57,0,58,46" concept="7" />
+      <node id="5369611234110250942" at="58,46,59,121" concept="6" />
+      <node id="5369611234110424177" at="63,7,64,0" concept="8" />
+      <node id="5369611234110420509" at="64,0,65,73" concept="7" />
+      <node id="5344936513388881395" at="65,73,66,43" concept="6" />
+      <node id="5344936513388879157" at="68,132,69,301" concept="6" />
+      <node id="5344936513388877965" at="72,71,73,59" concept="2" />
+      <node id="5344936513388878160" at="75,57,76,70" concept="5" />
+      <node id="5344936513388878160" at="76,70,77,28" concept="6" />
+      <node id="5344936513388878244" at="79,57,80,70" concept="5" />
+      <node id="5344936513388878244" at="80,70,81,28" concept="6" />
+      <node id="5369611234110251039" at="83,82,84,72" concept="5" />
+      <node id="5369611234110251039" at="85,7,86,90" concept="5" />
+      <node id="5369611234110251039" at="86,90,87,42" concept="2" />
+      <node id="5369611234110251039" at="87,42,88,42" concept="2" />
+      <node id="5369611234110251039" at="89,7,90,28" concept="6" />
+      <node id="5344936513388881551" at="92,56,93,70" concept="5" />
+      <node id="5344936513388881551" at="93,70,94,28" concept="6" />
+      <node id="5344936513388877965" at="68,0,71,0" concept="4" trace="isApplicable#(Ljetbrains/mps/typesystem/inference/SubtypingManager;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="5344936513388877965" at="71,0,75,0" concept="4" trace="reportConflict#(Ljetbrains/mps/errors/IRuleConflictWarningProducer;)V" />
+      <node id="5344936513388878160" at="75,0,79,0" concept="10" trace="createRealType_3ist9o_a0a0a1#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="5344936513388878244" at="79,0,83,0" concept="10" trace="createRealType_3ist9o_a0b0a1#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="5344936513388881551" at="92,0,96,0" concept="10" trace="createRealType_3ist9o_a3a1b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="5369611234110251039" at="84,72,89,7" concept="0" />
+      <node id="5369611234110251039" at="83,0,92,0" concept="10" trace="createNumberType_3ist9o_a8a0a0a1b#(Ljava/lang/String;Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="5344936513388877965" at="33,0,44,0" concept="1" trace="CustomOverloadedOperationsTypesProvider_a#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;)V" />
+      <node id="5369611234110256084" at="49,51,60,13" concept="3" />
+      <node id="5369611234110256084" at="47,79,61,11" concept="0" />
+      <node id="5369611234110230142" at="46,50,62,9" concept="3" />
+      <node id="5369611234110230142" at="44,99,63,7" concept="0" />
+      <node id="5344936513388877965" at="44,0,68,0" concept="4" trace="getOperationType#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <scope id="5344936513388879121" at="68,132,69,301" />
+      <scope id="5344936513388877965" at="72,71,73,59" />
+      <scope id="5344936513388878160" at="75,57,77,28">
+        <var name="n0" id="5344936513388878160" />
+      </scope>
+      <scope id="5344936513388878244" at="79,57,81,28">
+        <var name="n0" id="5344936513388878244" />
+      </scope>
+      <scope id="5344936513388881551" at="92,56,94,28">
+        <var name="n0" id="5344936513388881551" />
+      </scope>
+      <scope id="5344936513388877965" at="68,0,71,0">
+        <var name="leftOperandType" id="5344936513388877965" />
+        <var name="operation" id="5344936513388877965" />
+        <var name="rightOperandType" id="5344936513388877965" />
+        <var name="subtypingManager" id="5344936513388877965" />
+      </scope>
+      <scope id="5369611234110251039" at="85,7,88,42">
+        <var name="n1" id="5369611234110251039" />
+      </scope>
+      <scope id="5344936513388877965" at="71,0,75,0">
+        <var name="producer" id="5344936513388877965" />
+      </scope>
+      <scope id="5344936513388878160" at="75,0,79,0" />
+      <scope id="5344936513388878244" at="79,0,83,0" />
+      <scope id="5344936513388881551" at="92,0,96,0" />
+      <scope id="5369611234110251039" at="83,82,90,28">
+        <var name="n0" id="5369611234110251039" />
+      </scope>
+      <scope id="5344936513388877965" at="33,80,42,48" />
+      <scope id="5369611234110256088" at="50,81,59,121">
+        <var name="expDec" id="5369611234110296018" />
+        <var name="maxRoot" id="5369611234110346184" />
+        <var name="minRoot" id="5369611234110304337" />
+      </scope>
+      <scope id="5369611234110251039" at="83,0,92,0">
+        <var name="p0" id="5369611234110251039" />
+        <var name="p1" id="5369611234110251039" />
+      </scope>
+      <scope id="5344936513388877965" at="33,0,44,0">
+        <var name="concept" id="5344936513388877965" />
+      </scope>
+      <scope id="5369611234110256084" at="48,11,60,13">
+        <var name="exponent" id="5369611234110256084" />
+      </scope>
+      <scope id="5369611234110230146" at="47,79,61,11" />
+      <scope id="5369611234110230142" at="45,7,62,9">
+        <var name="expression" id="5369611234110230142" />
+      </scope>
+      <scope id="5344936513388877990" at="44,99,66,43" />
+      <scope id="5344936513388877965" at="44,0,68,0">
+        <var name="leftOperandType" id="5344936513388877965" />
+        <var name="operation" id="5344936513388877965" />
+        <var name="rightOperandType" id="5344936513388877965" />
+      </scope>
+      <unit id="5344936513388877965" at="32,0,97,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.TypesystemDescriptor$CustomOverloadedOperationsTypesProvider_a" />
+    </file>
+  </root>
+  <root nodeRef="r:eaef0861-3ed4-4442-afee-c90aaa3cdaec(jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem)/6539217963580658292">
+    <file name="TypesystemDescriptor.java">
+      <node id="6539217963580658292" at="26,5,27,87" concept="5" />
+      <node id="6539217963580658292" at="27,87,28,47" concept="2" />
+      <node id="6539217963580658292" at="25,33,29,5" concept="0" />
+      <scope id="6539217963580658292" at="26,5,28,47">
+        <var name="inferenceRule" id="6539217963580658292" />
+      </scope>
+    </file>
+    <file name="typeof_NRootExpression_InferenceRule.java">
+      <node id="3773364508684486707" at="26,5,27,269" concept="5" />
+      <node id="5344936513388936144" at="29,27,30,119" concept="5" />
+      <node id="5344936513388937161" at="30,119,31,0" concept="8" />
+      <node id="7396263120860250015" at="32,11,33,63" concept="5" />
+      <node id="7396263120860250015" at="33,63,34,230" concept="5" />
+      <node id="7396263120860250088" at="36,73,37,165" concept="2" />
+      <node id="7396263120860250088" at="37,165,38,0" concept="8" />
+      <node id="6539217963580658292" at="46,50,47,39" concept="6" />
+      <node id="6539217963580658292" at="49,68,50,102" concept="6" />
+      <node id="6539217963580658292" at="52,30,53,17" concept="6" />
+      <node id="6539217963580658292" at="57,0,58,0" concept="9" trace="expression$tVRI" />
+      <node id="6539217963580658292" at="61,0,62,0" concept="9" trace="exponent$9cvW" />
+      <node id="6539217963580658292" at="65,0,66,0" concept="9" trace="NRootExpression$sH" />
+      <node id="6539217963580658292" at="23,0,25,0" concept="1" trace="typeof_NRootExpression_InferenceRule#()V" />
+      <node id="6539217963580658292" at="46,0,49,0" concept="4" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="6539217963580658292" at="49,0,52,0" concept="4" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="6539217963580658292" at="52,0,55,0" concept="4" trace="overrides#()Z" />
+      <node id="7396263120860250088" at="36,0,40,0" concept="4" trace="produceWarning#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="7396263120860250015" at="34,230,40,35" concept="2" />
+      <node id="7396263120860250015" at="31,0,41,11" concept="0" />
+      <node id="3773364508684486707" at="29,0,43,0" concept="4" trace="run#()V" />
+      <node id="3773364508684486707" at="27,269,43,148" concept="2" />
+      <node id="3773364508684486707" at="25,128,44,5" concept="0" />
+      <node id="6539217963580658292" at="25,0,46,0" concept="4" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="6539217963580658292" at="23,49,23,49" />
+      <scope id="6539217963580658292" at="46,50,47,39" />
+      <scope id="6539217963580658292" at="49,68,50,102" />
+      <scope id="6539217963580658292" at="52,30,53,17" />
+      <scope id="6539217963580658292" at="23,0,25,0" />
+      <scope id="7396263120860250088" at="36,73,38,0" />
+      <scope id="6539217963580658292" at="46,0,49,0" />
+      <scope id="6539217963580658292" at="49,0,52,0">
+        <var name="argument" id="6539217963580658292" />
+      </scope>
+      <scope id="6539217963580658292" at="52,0,55,0" />
+      <scope id="7396263120860250088" at="36,0,40,0">
+        <var name="modelId" id="7396263120860250088" />
+        <var name="ruleId" id="7396263120860250088" />
+      </scope>
+      <scope id="7396263120860250015" at="32,11,40,35">
+        <var name="_info_12389875345" id="7396263120860250015" />
+        <var name="_nodeToCheck_1029348928467" id="7396263120860250015" />
+      </scope>
+      <scope id="3773364508684486709" at="29,27,41,11">
+        <var name="exponentType" id="5344936513388936145" />
+      </scope>
+      <scope id="3773364508684486707" at="29,0,43,0" />
+      <scope id="3773364508684486707" at="26,5,43,148">
+        <var name="sqrtExpressionInnerType" id="3773364508684486707" />
+      </scope>
+      <scope id="6539217963580658293" at="25,128,44,5" />
+      <scope id="6539217963580658292" at="25,0,46,0">
+        <var name="nRootExpression" id="6539217963580658292" />
+        <var name="status" id="6539217963580658292" />
+        <var name="typeCheckingContext" id="6539217963580658292" />
+      </scope>
+      <unit id="6539217963580658292" at="56,0,59,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.typeof_NRootExpression_InferenceRule$LINKS" />
+      <unit id="6539217963580658292" at="60,0,63,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.typeof_NRootExpression_InferenceRule$PROPS" />
+      <unit id="6539217963580658292" at="64,0,67,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.typeof_NRootExpression_InferenceRule$CONCEPTS" />
+      <unit id="7396263120860250088" at="35,394,40,13" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.typeof_NRootExpression_InferenceRule$1$1" />
+      <unit id="3773364508684486707" at="28,68,43,7" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.typeof_NRootExpression_InferenceRule$1" />
+      <unit id="6539217963580658292" at="22,0,68,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.typeof_NRootExpression_InferenceRule" />
+    </file>
+  </root>
+</debug-info>
+

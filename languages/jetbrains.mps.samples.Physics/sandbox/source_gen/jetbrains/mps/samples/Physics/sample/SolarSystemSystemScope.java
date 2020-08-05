@@ -7,10 +7,11 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import java.math.BigInteger;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
@@ -27,7 +28,7 @@ public class SolarSystemSystemScope extends SystemScope {
 
     //  Instanciate objects 
     Sun = withEntity(new Sun1PhysicalEntity(world));
-    EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(((Number) new BigDecimal("4.184195255181698E-14").setScale(19, RoundingMode.DOWN)), ((Number) new BigDecimal("683.3309421287669").setScale(13, RoundingMode.DOWN)), ((Number) new BigDecimal("-448.14867952694067").setScale(14, RoundingMode.DOWN)))), velocity.add(new InternalVector(((Number) new BigDecimal("-3.5355339059327378").setScale(16, RoundingMode.DOWN)), ((Number) new BigDecimal("-4.3297802811774667E-16").setScale(20, RoundingMode.DOWN)), ((Number) new BigDecimal("-3.5355339059327373").setScale(16, RoundingMode.DOWN))))));
+    EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("4.7819374344933695E-14").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("780.9496481471622").setScale(13, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-426.45563374507503").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(new InternalVector(AH.mul(((Number) new BigDecimal("-3.5355339059327378").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-4.3297802811774667E-16").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-3.5355339059327373").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
 
     // Initialize them 
     Sun.init(this, world, new FixtureBuilder());
@@ -45,8 +46,8 @@ public class SolarSystemSystemScope extends SystemScope {
       Sun1PhysicalEntity currentEntity = this;
 
       // Set static properties of Sun 
-      this.setMass(((Number) new BigInteger("1300")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("-600"))).add(scope.getInitialPosition())));
+      this.setMass(((Number) new BigInteger("330000000000000")));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-600")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Sun 
@@ -56,7 +57,7 @@ public class SolarSystemSystemScope extends SystemScope {
       fixtureProperties.set(Prop.SHAPE, "shape");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
       fixtureProperties.set(Prop.EMIT_LIGHT, true);
-      fixtureProperties.set(Prop.SPHERE_RADIUS, ((Number) new BigInteger("250")));
+      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("250")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 

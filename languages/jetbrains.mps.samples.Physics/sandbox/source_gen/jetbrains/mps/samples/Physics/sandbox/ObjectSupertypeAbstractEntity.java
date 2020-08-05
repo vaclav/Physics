@@ -7,6 +7,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.StaticForce;
@@ -14,7 +15,6 @@ import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 
 public abstract class ObjectSupertypeAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
 
@@ -33,11 +33,11 @@ public abstract class ObjectSupertypeAbstractEntity<T extends SystemScope> exten
     // Apply styles 
     fixtureProperties.set(Prop.SHAPE, "shape");
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
-    fixtureProperties.set(Prop.BOX_X, ((Number) new BigInteger("4")));
-    fixtureProperties.set(Prop.BOX_Y, ((Number) new BigInteger("4")));
-    fixtureProperties.set(Prop.BOX_Z, ((Number) new BigInteger("4")));
+    fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
+    fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
+    fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
 
     // Forces 
-    this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("899.9999999999999").setScale(13, RoundingMode.DOWN)), ((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), ((Number) new BigDecimal("5.510913997958703E-14").setScale(19, RoundingMode.DOWN))))), new StaticForce(VectorHelper.fromInternal(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.47114206162369554").setScale(17, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), AH.mul(((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), ((Number) new BigDecimal("44.1814440687490434227723411264442").setScale(31, RoundingMode.DOWN)))))));
+    this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("899.9999999999999").setScale(13, RoundingMode.DOWN)), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("5.510913997958703E-14").setScale(19, RoundingMode.DOWN)), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))))), new StaticForce(VectorHelper.fromInternal(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.47114206162369554").setScale(17, RoundingMode.DOWN)), AH.mul(BigDecimal.valueOf(Math.PI), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN)), AH.mul(BigDecimal.valueOf(Math.PI), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("44.1814440687490434227723411264442").setScale(31, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))));
   }
 }

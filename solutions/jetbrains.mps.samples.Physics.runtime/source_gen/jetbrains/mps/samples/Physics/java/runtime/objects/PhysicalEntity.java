@@ -50,7 +50,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     return this.disabled;
   }
 
-  public void applyForces(long time) {
+  public void applyForces(double time) {
     if (disabled) {
       return;
     }

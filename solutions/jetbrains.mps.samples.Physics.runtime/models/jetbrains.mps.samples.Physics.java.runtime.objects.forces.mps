@@ -130,7 +130,6 @@
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
-      <concept id="1068581242867" name="jetbrains.mps.baseLanguage.structure.LongType" flags="in" index="3cpWsb" />
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
       <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
@@ -299,7 +298,7 @@
       </node>
       <node concept="37vLTG" id="5SjYD04eDnC" role="3clF46">
         <property role="TrG5h" value="time" />
-        <node concept="3cpWsb" id="5kbw6V4bUVR" role="1tU5fm" />
+        <node concept="10P55v" id="2QWokQTG7MO" role="1tU5fm" />
       </node>
     </node>
     <node concept="16euLQ" id="5kbw6V4kXya" role="16eVyc">

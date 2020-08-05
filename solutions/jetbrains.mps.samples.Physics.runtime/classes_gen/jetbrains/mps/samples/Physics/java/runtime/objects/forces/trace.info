@@ -126,11 +126,11 @@
     <file name="StaticForce.java">
       <node id="4271426636304008560" at="14,0,15,0" concept="2" trace="value" />
       <node id="4271426636304008569" at="15,39,16,23" concept="1" />
-      <node id="4271426636304008583" at="19,90,20,17" concept="7" />
+      <node id="4271426636304008583" at="19,92,20,17" concept="7" />
       <node id="4271426636304008564" at="15,0,18,0" concept="0" trace="StaticForce#(Lorg/ode4j/math/DVector3C;)V" />
-      <node id="4271426636304008576" at="18,0,22,0" concept="5" trace="compute#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;nullLjetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;J)Lorg/ode4j/math/DVector3C;" />
+      <node id="4271426636304008576" at="18,0,22,0" concept="5" trace="compute#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;nullLjetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <scope id="4271426636304008568" at="15,39,16,23" />
-      <scope id="4271426636304008582" at="19,90,20,17" />
+      <scope id="4271426636304008582" at="19,92,20,17" />
       <scope id="4271426636304008564" at="15,0,18,0">
         <var name="value" id="4271426636304008566" />
       </scope>

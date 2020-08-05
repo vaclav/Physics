@@ -10,6 +10,14 @@
   </languages>
   <imports />
   <registry>
+    <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
+      <concept id="2557074442922380897" name="de.slisson.mps.richtext.structure.Text" flags="ng" index="19SGf9">
+        <child id="2557074442922392302" name="words" index="19SJt6" />
+      </concept>
+      <concept id="2557074442922438156" name="de.slisson.mps.richtext.structure.Word" flags="ng" index="19SUe$">
+        <property id="2557074442922438158" name="escapedValue" index="19SUeA" />
+      </concept>
+    </language>
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
       <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
         <property id="5115872837157054173" name="value" index="30bXRw" />
@@ -48,7 +56,18 @@
         <child id="8609460045977353914" name="exponent" index="1N7KNQ" />
       </concept>
     </language>
+    <language id="d4280a54-f6df-4383-aa41-d1b2bffa7eb1" name="com.mbeddr.core.base">
+      <concept id="8375407818529178006" name="com.mbeddr.core.base.structure.TextBlock" flags="ng" index="OjmMv">
+        <child id="8375407818529178007" name="text" index="OjmMu" />
+      </concept>
+      <concept id="3857533489766146428" name="com.mbeddr.core.base.structure.ElementDocumentation" flags="ng" index="1z9TsT">
+        <child id="4052432714772608243" name="text" index="1w35rA" />
+      </concept>
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -69,9 +88,36 @@
         <property role="TrG5h" value="cm" />
         <property role="CIruq" value="centimetre" />
       </node>
+      <node concept="3ADqj3" id="4E4GfvfnpO5" role="_KLwU">
+        <property role="1yml5X" value="149597870700" />
+        <property role="TrG5h" value="au" />
+        <property role="CIruq" value="astronomical unit" />
+        <property role="1yml5Z" value="true" />
+      </node>
+      <node concept="3ADqj3" id="4E4GfvfnpSQ" role="_KLwU">
+        <property role="1yml5X" value="9460730472580800" />
+        <property role="TrG5h" value="ly" />
+        <property role="CIruq" value="light-year" />
+        <property role="1yml5Z" value="true" />
+      </node>
+      <node concept="3ADqj3" id="4E4GfvfnpXE" role="_KLwU">
+        <property role="1yml5X" value="30856775814671900" />
+        <property role="TrG5h" value="pc" />
+        <property role="CIruq" value="parsec" />
+        <property role="1yml5Z" value="true" />
+      </node>
       <node concept="CIrOH" id="7tUW$K4o9N6" role="_KLwW">
         <property role="TrG5h" value="m" />
         <property role="CIruq" value="metre" />
+      </node>
+      <node concept="1z9TsT" id="4E4Gfvfnplk" role="lGtFl">
+        <node concept="OjmMv" id="4E4Gfvfnpll" role="1w35rA">
+          <node concept="19SGf9" id="4E4Gfvfnplm" role="OjmMu">
+            <node concept="19SUe$" id="4E4Gfvfnpln" role="19SJt6">
+              <property role="19SUeA" value="Raw dimensions" />
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="_ixoA" id="2K_F8Jawtjp" role="_iOnB" />
@@ -114,6 +160,11 @@
     <node concept="_ixoA" id="RryuvUUPrC" role="_iOnB" />
     <node concept="_KLwT" id="1d1Q7eb4VIr" role="_iOnB">
       <property role="TrG5h" value="angle" />
+      <node concept="3ADqj3" id="4E4GfvfnoGm" role="_KLwU">
+        <property role="1yml5X" value="57.2957795131" />
+        <property role="TrG5h" value="degree" />
+        <property role="CIruq" value="degree" />
+      </node>
       <node concept="CIrOH" id="1d1Q7eb4VIt" role="_KLwW">
         <property role="TrG5h" value="rad" />
         <property role="CIruq" value="radian" />
@@ -122,6 +173,28 @@
     <node concept="_ixoA" id="1d1Q7eb4VHX" role="_iOnB" />
     <node concept="_KLwT" id="1d1Q7eb5p5w" role="_iOnB">
       <property role="TrG5h" value="mass" />
+      <node concept="3ADqj3" id="4E4GfvfnoIb" role="_KLwU">
+        <property role="1yml5X" value="1000" />
+        <property role="TrG5h" value="t" />
+        <property role="CIruq" value="tonne" />
+        <property role="1yml5Z" value="true" />
+      </node>
+      <node concept="3ADqj3" id="4E4GfvfnoKQ" role="_KLwU">
+        <property role="1yml5X" value="100" />
+        <property role="TrG5h" value="q" />
+        <property role="CIruq" value="quintal" />
+        <property role="1yml5Z" value="true" />
+      </node>
+      <node concept="3ADqj3" id="4E4GfvfnoOL" role="_KLwU">
+        <property role="1yml5X" value="1000000" />
+        <property role="TrG5h" value="mg" />
+        <property role="CIruq" value="milligram" />
+      </node>
+      <node concept="3ADqj3" id="4E4GfvfnoRq" role="_KLwU">
+        <property role="1yml5X" value="1000" />
+        <property role="TrG5h" value="g" />
+        <property role="CIruq" value="gram" />
+      </node>
       <node concept="CIrOH" id="1d1Q7eb5p5y" role="_KLwW">
         <property role="TrG5h" value="kg" />
         <property role="CIruq" value="kilogram" />
@@ -130,15 +203,81 @@
     <node concept="_ixoA" id="1d1Q7eb5p9h" role="_iOnB" />
     <node concept="_KLwT" id="1fq3tlL$kMh" role="_iOnB">
       <property role="TrG5h" value="time" />
+      <node concept="3ADqj3" id="4E4Gfvfnp$U" role="_KLwU">
+        <property role="1yml5X" value="60" />
+        <property role="TrG5h" value="min" />
+        <property role="CIruq" value="minute" />
+        <property role="1yml5Z" value="true" />
+      </node>
       <node concept="3ADqj3" id="3_YdNBWG62n" role="_KLwU">
         <property role="1yml5X" value="3600" />
         <property role="TrG5h" value="h" />
         <property role="CIruq" value="hours" />
         <property role="1yml5Z" value="true" />
       </node>
+      <node concept="3ADqj3" id="4E4GfvfnpB9" role="_KLwU">
+        <property role="1yml5X" value="1000" />
+        <property role="TrG5h" value="ms" />
+        <property role="CIruq" value="millisecond" />
+      </node>
+      <node concept="3ADqj3" id="4E4GfvfnpEd" role="_KLwU">
+        <property role="1yml5X" value="86400" />
+        <property role="TrG5h" value="day" />
+        <property role="CIruq" value="day" />
+        <property role="1yml5Z" value="true" />
+      </node>
+      <node concept="3ADqj3" id="4E4GfvfnpHk" role="_KLwU">
+        <property role="1yml5X" value="31556952" />
+        <property role="TrG5h" value="year" />
+        <property role="CIruq" value="year" />
+        <property role="1yml5Z" value="true" />
+      </node>
+      <node concept="3ADqj3" id="4E4GfvfnpKt" role="_KLwU">
+        <property role="1yml5X" value="3155695200" />
+        <property role="TrG5h" value="century" />
+        <property role="CIruq" value="century" />
+        <property role="1yml5Z" value="true" />
+      </node>
       <node concept="CIrOH" id="1fq3tlL$kMj" role="_KLwW">
         <property role="TrG5h" value="s" />
         <property role="CIruq" value="second" />
+      </node>
+    </node>
+    <node concept="_ixoA" id="4E4Gfvfnpin" role="_iOnB" />
+    <node concept="34RUgh" id="4E4Gfvfnp49" role="_iOnB">
+      <property role="1yml5X" value="1" />
+      <property role="TrG5h" value="energy" />
+      <node concept="CIrOH" id="4E4Gfvfnp4b" role="_KLwW">
+        <property role="TrG5h" value="J" />
+        <property role="CIruq" value="joule" />
+      </node>
+      <node concept="3AmWvR" id="4E4Gfvfnp8F" role="1N7es9">
+        <ref role="1N7KNK" node="1d1Q7eb5p5w" resolve="mass" />
+      </node>
+      <node concept="3AmWvR" id="4E4Gfvfnp9D" role="1N7es9">
+        <ref role="1N7KNK" node="7tUW$K4o9N4" resolve="length" />
+        <node concept="CIsvk" id="4E4Gfvfnpab" role="1N7KNQ">
+          <node concept="30bXRB" id="4E4Gfvfnpac" role="3D8Z_2">
+            <property role="30bXRw" value="2" />
+          </node>
+        </node>
+      </node>
+      <node concept="3AmWvR" id="4E4Gfvfnpbs" role="1N7es9">
+        <ref role="1N7KNK" node="1fq3tlL$kMh" resolve="time" />
+        <node concept="CIsvk" id="4E4Gfvfnpc1" role="1N7KNQ">
+          <node concept="30bXRB" id="4E4Gfvfnpc2" role="3D8Z_2">
+            <property role="30bXRw" value="-2" />
+          </node>
+        </node>
+      </node>
+      <node concept="1z9TsT" id="4E4GfvfnpsI" role="lGtFl">
+        <node concept="OjmMv" id="4E4GfvfnpsJ" role="1w35rA">
+          <node concept="19SGf9" id="4E4GfvfnpsK" role="OjmMu">
+            <node concept="19SUe$" id="4E4GfvfnpsL" role="19SJt6">
+              <property role="19SUeA" value="Composite dimensions" />
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="_ixoA" id="3_YdNBWG6V4" role="_iOnB" />

@@ -954,32 +954,6 @@
     <property role="34LRSv" value="sphere-radius" />
     <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyle" />
   </node>
-  <node concept="1TIwiD" id="5EZY1tO49Bj">
-    <property role="EcuMT" value="6539217963580430803" />
-    <property role="TrG5h" value="NRootExpression" />
-    <property role="3GE5qa" value="math" />
-    <property role="34LRSv" value="n-root" />
-    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    <node concept="1TJgyj" id="5EZY1tO4fX5" role="1TKVEi">
-      <property role="IQ2ns" value="6539217963580456773" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="exponent_" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-    <node concept="1TJgyj" id="5EZY1tO4hKU" role="1TKVEi">
-      <property role="IQ2ns" value="6539217963580464186" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="expression" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-    <node concept="1TJgyi" id="4CH1R2NzOYy" role="1TKVEl">
-      <property role="IQ2nx" value="5344936513388892066" />
-      <property role="TrG5h" value="exponent" />
-      <ref role="AX2Wp" to="onwr:1fq3tlLt$w7" resolve="float" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="k9gc968hhc">
     <property role="EcuMT" value="362892448124441676" />
     <property role="3GE5qa" value="styles" />

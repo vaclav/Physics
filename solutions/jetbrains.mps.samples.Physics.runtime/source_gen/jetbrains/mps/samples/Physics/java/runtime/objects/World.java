@@ -22,10 +22,15 @@ public class World implements DGeom.DNearCallback {
   private final HashMap<DBody, PhysicalEntity> reverseEntities = new HashMap();
 
   private boolean paused;
-  private long time;
-  private final long timeStep;
-  public World(long timeStep) {
-    this.timeStep = timeStep;
+  private double time;
+  private final double timeStep;
+
+  /**
+   * Create world with given simulation time. The simulation time is the time elapsed in the simulation
+   * during a second in the real world.
+   */
+  public World(double secondDuration) {
+    this.timeStep = secondDuration / 60;
     this.time = 0;
     this.paused = false;
     this.world = OdeHelper.createWorld();

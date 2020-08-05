@@ -7,9 +7,9 @@ import processing.core.PApplet;
 
 public abstract class Simulation implements Renderer.RendererCallback {
   protected World world;
-  protected long simulationSpeed;
+  protected double simulationSpeed;
 
-  public Simulation(long simulationSpeed) {
+  public Simulation(double simulationSpeed) {
     this.simulationSpeed = simulationSpeed;
   }
 

@@ -9,7 +9,6 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class FrictionForce<T extends SystemScope> implements Force<T> {
@@ -20,8 +19,8 @@ public class FrictionForce<T extends SystemScope> implements Force<T> {
   }
 
   @Override
-  public DVector3C compute(World world, T scope, PhysicalEntity currentEntity, long time) {
+  public DVector3C compute(World world, T scope, PhysicalEntity currentEntity, double time) {
 
-    return VectorHelper.fromInternal(currentEntity.getVelocity().mul(-1).minus(currentEntity).resize(AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getVelocity().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue())), ratio)));
+    return VectorHelper.fromInternal(currentEntity.getVelocity().mul(-1).minus(currentEntity).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
   }
 }

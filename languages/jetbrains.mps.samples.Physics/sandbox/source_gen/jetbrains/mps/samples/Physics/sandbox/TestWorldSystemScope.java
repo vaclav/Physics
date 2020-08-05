@@ -7,10 +7,10 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
@@ -35,7 +35,7 @@ public class TestWorldSystemScope extends SystemScope {
     Something2 = withEntity(new Something3PhysicalEntity(world));
     Hey = withEntity(new Hey1PhysicalEntity(world));
     Ho = withEntity(new Ho1PhysicalEntity(world));
-    TheOtherWorld = withEntity(new World2SystemScope(world, position.add(new InternalVector(((Number) new BigInteger("1")), ((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), velocity.add(InternalVector.ZERO)));
+    TheOtherWorld = withEntity(new World2SystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
     Something2.init(this, world, new FixtureBuilder());
@@ -55,8 +55,8 @@ public class TestWorldSystemScope extends SystemScope {
       Something3PhysicalEntity currentEntity = this;
 
       // Set static properties of Something 
-      this.setMass(((Number) new BigInteger("20")));
-      this.getBody().setPosition(VectorHelper.fromInternal(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), BigDecimal.valueOf(Math.PI)), ((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN))).add(scope.TheOtherWorld).add(scope.getInitialPosition())));
+      this.setMass(AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
+      this.getBody().setPosition(VectorHelper.fromInternal(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimal.valueOf(Math.PI), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimal.valueOf(Math.PI), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.TheOtherWorld).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Something 
@@ -65,16 +65,16 @@ public class TestWorldSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SHAPE, "shape");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
-      fixtureProperties.set(Prop.BOX_X, ((Number) new BigInteger("2")));
-      fixtureProperties.set(Prop.BOX_Y, ((Number) new BigInteger("2")));
-      fixtureProperties.set(Prop.BOX_Z, ((Number) new BigInteger("2")));
+      fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));
-      this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("2")), ((Number) new BigInteger("2")), ((Number) new BigInteger("2"))))), new Force<TestWorldSystemScope>() {
+      this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1")))))), new Force<TestWorldSystemScope>() {
         @Override
-        public DVector3C compute(World world, TestWorldSystemScope scope, PhysicalEntity targetEntity, long time) {
-          return VectorHelper.fromInternal(scope.Hey.minus(currentEntity).resize(((Number) new BigInteger("3"))));
+        public DVector3C compute(World world, TestWorldSystemScope scope, PhysicalEntity targetEntity, double time) {
+          return VectorHelper.fromInternal(scope.Hey.minus(currentEntity).resize(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1")))));
         }
-      }, new GravityForce(((Number) new BigInteger("4"))), new XYZForceForce(((Number) new BigInteger("4")), ((Number) new BigInteger("4")), ((Number) new BigInteger("4")))));
+      }, new GravityForce(AH.mul(((Number) new BigInteger("4")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), new XYZForceForce(AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))))));
 
       // Bind fixture and mass together 
       this.bindFixture();
@@ -93,8 +93,8 @@ public class TestWorldSystemScope extends SystemScope {
       Hey1PhysicalEntity currentEntity = this;
 
       // Set static properties of Hey 
-      this.setMass(((Number) new BigInteger("212")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("27.46035823174609274397702460056475").setScale(32, RoundingMode.DOWN)), ((Number) new BigDecimal("-90.282140454466024179938468351046636").setScale(33, RoundingMode.DOWN)), ((Number) new BigDecimal("5.627543496627525070275583761154096").setScale(33, RoundingMode.DOWN))).add(scope.getInitialPosition())));
+      this.setMass(AH.mul(((Number) new BigInteger("212")), ((Number) new BigInteger("1"))));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("27.46035823174609274397702460056475").setScale(32, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-90.282140454466024179938468351046636").setScale(33, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("5.627543496627525070275583761154096").setScale(33, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Hey 
@@ -103,7 +103,7 @@ public class TestWorldSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SHAPE, "shape");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
-      fixtureProperties.set(Prop.SPHERE_RADIUS, ((Number) new BigInteger("50")));
+      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
@@ -124,8 +124,8 @@ public class TestWorldSystemScope extends SystemScope {
       Ho1PhysicalEntity currentEntity = this;
 
       // Set static properties of Ho 
-      this.setMass(((Number) new BigInteger("120")));
-      this.getBody().setPosition(VectorHelper.fromInternal(InternalVector.fromSpherical(((Number) new BigInteger("30")), ((Number) new BigInteger("6")), ((Number) new BigInteger("80"))).add(scope.getInitialPosition())));
+      this.setMass(AH.mul(((Number) new BigInteger("120")), ((Number) new BigInteger("1"))));
+      this.getBody().setPosition(VectorHelper.fromInternal(InternalVector.fromSpherical(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("6")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("80")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Ho 
@@ -134,7 +134,7 @@ public class TestWorldSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SHAPE, "shape");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
-      fixtureProperties.set(Prop.SPHERE_RADIUS, ((Number) new BigInteger("300")));
+      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 

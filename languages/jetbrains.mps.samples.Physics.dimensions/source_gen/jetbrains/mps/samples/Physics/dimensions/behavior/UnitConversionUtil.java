@@ -4,8 +4,7 @@ package jetbrains.mps.samples.Physics.dimensions.behavior;
 
 import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
-import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
+import jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
@@ -13,6 +12,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import java.math.BigDecimal;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
@@ -21,12 +21,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class UnitConversionUtil {
-  public static SNode compositeExpressionToBase(SNode source, List<SNode> units, final boolean targetToBase) {
-    return ListSequence.fromList(units).foldLeft(source, new ILeftCombinator<SNode, SNode>() {
-      public SNode combine(SNode s, SNode it) {
-        return expressionToBase(s, it, targetToBase);
-      }
-    });
+  public static SNode compositeExpressionToBase(SNode source, List<SNode> units, boolean targetToBase) {
+    return createMulExpression_5ohk72_a0a0(source, DimensionTypeHelper.compositeConversionRatio(units, targetToBase).toString());
   }
 
 
@@ -43,7 +39,10 @@ public class UnitConversionUtil {
    * - 1 kmh would give 1 / 3.6 / 1 (kmh -> mps -> m*s-1)
    *   -> 3.6 is defined in the derived unit (1 mps = 3.6 kmh), 1 in the composite dimension (1 mps = 1 m*s-1)
    * 
+   * 
+   * @deprecated  equivalent in dimensiontypehelper
    */
+  @Deprecated
   public static SNode expressionToBase(SNode source, SNode unit, boolean targetToBase) {
     SNode result = SNodeOperations.copyNode(source);
 
@@ -69,6 +68,11 @@ public class UnitConversionUtil {
     return result;
   }
 
+  /**
+   * 
+   * @deprecated  equivalent in dimensiontypehelper
+   */
+  @Deprecated
   public static BigDecimal decompose(SNode composite) {
     final Wrappers._T<BigDecimal> result = new Wrappers._T<BigDecimal>(new BigDecimal(SPropertyOperations.getString(composite, PROPS.factor$Z2DZ)));
     result.value = (SPropertyOperations.getBoolean(composite, PROPS.selfLeft$Z2EX) ? BigDecimal.ONE.divide(result.value) : result.value);
@@ -88,6 +92,11 @@ public class UnitConversionUtil {
     return result.value;
   }
 
+  /**
+   * 
+   * @deprecated  equivalent in dimensiontypehelper
+   */
+  @Deprecated
   public static SNode converter(SNode sourceExpression, SNode targetUnit, Number exponent, boolean targetToBase) {
     // Target unit on the left of the converter (or reversed) 
     if (SPropertyOperations.getBoolean(targetUnit, PROPS.selfLeft$Z2EX) == targetToBase) {
@@ -95,6 +104,15 @@ public class UnitConversionUtil {
     } else {
       return createDivExpression_5ohk72_a0a0b0h(sourceExpression, SPropertyOperations.getString(targetUnit, PROPS.factor$Z2DZ), exponent.toString());
     }
+  }
+  private static SNode createMulExpression_5ohk72_a0a0(SNode p0, String p1) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.MulExpression$_u);
+    n0.forChild(LINKS.left$gQj0).initNode(p0, CONCEPTS.Expression$Wr, true);
+    {
+      SNodeBuilder n1 = n0.forChild(LINKS.right$gQu9).init(CONCEPTS.NumberLiteral$yW);
+      n1.setProperty(PROPS.value$nZyY, p1);
+    }
+    return n0.getResult();
   }
   private static SNode createNumberLiteral_5ohk72_a0d0f0d(String p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);
@@ -146,10 +164,10 @@ public class UnitConversionUtil {
   private static final class CONCEPTS {
     /*package*/ static final SConcept DerivedUnit$zb = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca800848L, "jetbrains.mps.samples.Physics.dimensions.structure.DerivedUnit");
     /*package*/ static final SConcept CompositeDimension$ZV = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x38a7a450fc780041L, "jetbrains.mps.samples.Physics.dimensions.structure.CompositeDimension");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
     /*package*/ static final SConcept MulExpression$_u = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
-    /*package*/ static final SConcept PowerExpression$Cd = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c6144L, "org.iets3.core.expr.math.structure.PowerExpression");
     /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
+    /*package*/ static final SConcept PowerExpression$Cd = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c6144L, "org.iets3.core.expr.math.structure.PowerExpression");
     /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
   }
 

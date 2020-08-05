@@ -7,6 +7,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import java.util.Arrays;
 
@@ -27,9 +28,9 @@ public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends 
     // Apply styles 
     fixtureProperties.set(Prop.SHAPE, "shape");
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
-    fixtureProperties.set(Prop.BOX_X, ((Number) new BigInteger("40")));
-    fixtureProperties.set(Prop.BOX_Y, ((Number) new BigInteger("40")));
-    fixtureProperties.set(Prop.BOX_Z, ((Number) new BigInteger("40")));
+    fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
+    fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
+    fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
 
     // Forces 
     this.getForces().addAll(Arrays.asList());

@@ -7,6 +7,7 @@
     <use id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes" version="1" />
     <use id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math" version="0" />
     <use id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions" version="0" />
+    <use id="f9bdc723-99df-40ff-934c-d1f848158f92" name="jetbrains.mps.samples.Physics.iets3_math.extended" version="-1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -63,11 +64,6 @@
       <concept id="1159415042433250200" name="jetbrains.mps.samples.Physics.structure.BoxHeightStyle" flags="ng" index="27rm9e" />
       <concept id="1159415042433250201" name="jetbrains.mps.samples.Physics.structure.SphereRadiusStyle" flags="ng" index="27rm9f" />
       <concept id="232455383964481302" name="jetbrains.mps.samples.Physics.structure.CurrentObjectExpression" flags="ng" index="2CrqZA" />
-      <concept id="6539217963580430803" name="jetbrains.mps.samples.Physics.structure.NRootExpression" flags="ng" index="IFQ74">
-        <property id="5344936513388892066" name="exponent" index="3TC$zi" />
-        <child id="6539217963580464186" name="expression" index="IFIgH" />
-        <child id="6539217963580456773" name="exponent_" index="IFKti" />
-      </concept>
       <concept id="1459540517659024963" name="jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition" flags="ng" index="Y6$Ct">
         <child id="1159415042434914473" name="styles" index="27xc_Z" />
       </concept>
@@ -79,6 +75,13 @@
         <property id="2993354433745639286" name="reaction" index="1nHl29" />
       </concept>
       <concept id="7287056866553921482" name="jetbrains.mps.samples.Physics.structure.ObjectMassTarget" flags="ng" index="3K9aLm" />
+    </language>
+    <language id="f9bdc723-99df-40ff-934c-d1f848158f92" name="jetbrains.mps.samples.Physics.iets3_math.extended">
+      <concept id="6539217963580430803" name="jetbrains.mps.samples.Physics.iets3_math.extended.structure.NRootExpression" flags="ng" index="IFQ74">
+        <property id="5344936513388892066" name="exponent" index="3TC$zi" />
+        <child id="6539217963580464186" name="expression" index="IFIgH" />
+        <child id="6539217963580456773" name="exponent_" index="IFKti" />
+      </concept>
     </language>
     <language id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math">
       <concept id="4944417823362108742" name="org.iets3.core.expr.math.structure.FractionExpression" flags="ng" index="a1tim">

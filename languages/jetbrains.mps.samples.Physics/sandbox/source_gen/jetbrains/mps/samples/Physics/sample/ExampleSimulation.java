@@ -4,7 +4,6 @@ package jetbrains.mps.samples.Physics.sample;
 
 import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
@@ -16,7 +15,7 @@ public class ExampleSimulation extends Simulation {
   protected SolarSystemSystemScope scope;
 
   public ExampleSimulation() {
-    super(AH.mul(BigDecimal.valueOf(Math.pow(((Number) new BigInteger("3600")).doubleValue(), ((Number) new BigInteger("1")).doubleValue())), ((Number) new BigInteger("10"))).longValue());
+    super(AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))).doubleValue());
   }
 
   @Override

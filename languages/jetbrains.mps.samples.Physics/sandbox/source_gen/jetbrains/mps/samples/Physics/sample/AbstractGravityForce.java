@@ -22,7 +22,7 @@ public class AbstractGravityForce<T extends SystemScope> implements Force<T> {
   }
 
   @Override
-  public DVector3C compute(World world, T scope, PhysicalEntity currentEntity, long time) {
+  public DVector3C compute(World world, T scope, PhysicalEntity currentEntity, double time) {
 
     VectorLike sum = InternalVector.ZERO;
     for (PhysicalEntity otherEntity : world.getEntities()) {

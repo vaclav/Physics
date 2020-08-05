@@ -2039,7 +2039,7 @@
     </node>
     <node concept="1N951E" id="270Q2mFg5sI" role="2aZKB5">
       <node concept="30bXRB" id="270Q2mFg5sH" role="1N951F">
-        <property role="30bXRw" value="10" />
+        <property role="30bXRw" value="500" />
       </node>
       <node concept="CIsvn" id="270Q2mFg5sJ" role="1N7es9">
         <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />

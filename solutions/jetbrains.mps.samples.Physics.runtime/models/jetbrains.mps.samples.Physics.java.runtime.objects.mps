@@ -36,6 +36,7 @@
       <concept id="1188208481402" name="jetbrains.mps.baseLanguage.structure.HasAnnotation" flags="ng" index="2AJDlI">
         <child id="1188208488637" name="annotation" index="2AJF6D" />
       </concept>
+      <concept id="1095950406618" name="jetbrains.mps.baseLanguage.structure.DivExpression" flags="nn" index="FJ1c_" />
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
         <child id="1154032183016" name="body" index="2LFqv$" />
       </concept>
@@ -135,7 +136,6 @@
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
-      <concept id="1068581242867" name="jetbrains.mps.baseLanguage.structure.LongType" flags="in" index="3cpWsb" />
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
       <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
@@ -784,7 +784,7 @@
       <node concept="3cqZAl" id="3H79Ykd2GzM" role="3clF45" />
       <node concept="37vLTG" id="5SjYD04eAOa" role="3clF46">
         <property role="TrG5h" value="time" />
-        <node concept="3cpWsb" id="5SjYD04eAHX" role="1tU5fm" />
+        <node concept="10P55v" id="2QWokQTFHtj" role="1tU5fm" />
       </node>
     </node>
     <node concept="3clFb_" id="k9gc96l4xe" role="jymVt">
@@ -1617,21 +1617,27 @@
     <node concept="312cEg" id="5SjYD04ehdF" role="jymVt">
       <property role="TrG5h" value="time" />
       <node concept="3Tm6S6" id="5SjYD04eeG1" role="1B3o_S" />
-      <node concept="3cpWsb" id="5SjYD04ehcf" role="1tU5fm" />
+      <node concept="10P55v" id="2QWokQTFH7w" role="1tU5fm" />
     </node>
     <node concept="312cEg" id="5SjYD04esXG" role="jymVt">
       <property role="TrG5h" value="timeStep" />
       <property role="3TUv4t" value="true" />
       <node concept="3Tm6S6" id="5SjYD04epTx" role="1B3o_S" />
-      <node concept="3cpWsb" id="5SjYD04esKQ" role="1tU5fm" />
+      <node concept="10P55v" id="2QWokQTFNDF" role="1tU5fm" />
     </node>
+    <node concept="2tJIrI" id="2QWokQTFNPV" role="jymVt" />
     <node concept="3clFbW" id="4D75T4FueWX" role="jymVt">
       <node concept="3cqZAl" id="4D75T4FueWY" role="3clF45" />
       <node concept="3clFbS" id="4D75T4FueWZ" role="3clF47">
         <node concept="3clFbF" id="5SjYD04ew0Z" role="3cqZAp">
           <node concept="37vLTI" id="5SjYD04ewM1" role="3clFbG">
-            <node concept="37vLTw" id="5SjYD04ewTa" role="37vLTx">
-              <ref role="3cqZAo" node="5SjYD04evLV" resolve="timeStep" />
+            <node concept="FJ1c_" id="2QWokQTFMTM" role="37vLTx">
+              <node concept="3cmrfG" id="2QWokQTFN2m" role="3uHU7w">
+                <property role="3cmrfH" value="60" />
+              </node>
+              <node concept="37vLTw" id="5SjYD04ewTa" role="3uHU7B">
+                <ref role="3cqZAo" node="5SjYD04evLV" resolve="secondDuration" />
+              </node>
             </node>
             <node concept="2OqwBi" id="5SjYD04ew9M" role="37vLTJ">
               <node concept="Xjq3P" id="5SjYD04ew0X" role="2Oq$k0" />
@@ -1727,8 +1733,20 @@
       </node>
       <node concept="3Tm1VV" id="4D75T4FueXk" role="1B3o_S" />
       <node concept="37vLTG" id="5SjYD04evLV" role="3clF46">
-        <property role="TrG5h" value="timeStep" />
-        <node concept="3cpWsb" id="5SjYD04evLU" role="1tU5fm" />
+        <property role="TrG5h" value="secondDuration" />
+        <node concept="10P55v" id="2QWokQTFMkI" role="1tU5fm" />
+      </node>
+      <node concept="P$JXv" id="2QWokQTFSeD" role="lGtFl">
+        <node concept="TZ5HA" id="2QWokQTFSeE" role="TZ5H$">
+          <node concept="1dT_AC" id="2QWokQTFSeF" role="1dT_Ay">
+            <property role="1dT_AB" value="Create world with given simulation time. The simulation time is the time elapsed in the simulation" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="2QWokQTFSMP" role="TZ5H$">
+          <node concept="1dT_AC" id="2QWokQTFSMQ" role="1dT_Ay">
+            <property role="1dT_AB" value="during a second in the real world." />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="4D75T4FvAiF" role="jymVt" />
@@ -2995,7 +3013,7 @@
       </node>
       <node concept="37vLTG" id="5kbw6V4bBsE" role="3clF46">
         <property role="TrG5h" value="time" />
-        <node concept="3cpWsb" id="5kbw6V4bBtc" role="1tU5fm" />
+        <node concept="10P55v" id="2QWokQTFJsg" role="1tU5fm" />
       </node>
     </node>
     <node concept="3Tm1VV" id="5kbw6V4bBoO" role="1B3o_S" />
@@ -3049,7 +3067,7 @@
       </node>
       <node concept="37vLTG" id="5kbw6V4bBTi" role="3clF46">
         <property role="TrG5h" value="time" />
-        <node concept="3cpWsb" id="5kbw6V4bBTj" role="1tU5fm" />
+        <node concept="10P55v" id="2QWokQTG9in" role="1tU5fm" />
       </node>
       <node concept="3clFbS" id="5kbw6V4bBR1" role="3clF47" />
       <node concept="3Tmbuc" id="5kbw6V4bBKb" role="1B3o_S" />
@@ -3104,7 +3122,7 @@
       </node>
       <node concept="37vLTG" id="5kbw6V4bByJ" role="3clF46">
         <property role="TrG5h" value="time" />
-        <node concept="3cpWsb" id="5kbw6V4bByK" role="1tU5fm" />
+        <node concept="10P55v" id="2QWokQTG9bF" role="1tU5fm" />
       </node>
       <node concept="3clFbS" id="5kbw6V4bByM" role="3clF47">
         <node concept="3clFbJ" id="5kbw6V4bCcn" role="3cqZAp">

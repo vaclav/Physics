@@ -16,7 +16,7 @@ public class StaticForce<T extends SystemScope> implements Force<T> {
     this.value = value;
   }
   @Override
-  public DVector3C compute(World world, T scope, PhysicalEntity targetEntity, long time) {
+  public DVector3C compute(World world, T scope, PhysicalEntity targetEntity, double time) {
     return value;
   }
 }

@@ -4,7 +4,7 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="${project_home}/dependencies/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar!/" type="java_classes">
+    <modelRoot contentPath="${project_home}/dependencies/java-runtime/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
   </models>
@@ -14,7 +14,7 @@
     </facet>
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="${project_home}/dependencies/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+    <stubModelEntry path="${project_home}/dependencies/java-runtime/target/physics-runtime-1.0-SNAPSHOT-jar-with-dependencies.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

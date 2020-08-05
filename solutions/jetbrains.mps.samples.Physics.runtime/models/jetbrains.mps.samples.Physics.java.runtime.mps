@@ -51,6 +51,7 @@
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
+      <concept id="1070534513062" name="jetbrains.mps.baseLanguage.structure.DoubleType" flags="in" index="10P55v" />
       <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
         <child id="1070534760952" name="componentType" index="10Q1$1" />
       </concept>
@@ -99,7 +100,6 @@
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
-      <concept id="1068581242867" name="jetbrains.mps.baseLanguage.structure.LongType" flags="in" index="3cpWsb" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
@@ -172,7 +172,7 @@
     <node concept="312cEg" id="6iG0F4IZtWS" role="jymVt">
       <property role="TrG5h" value="simulationSpeed" />
       <node concept="3Tmbuc" id="6iG0F4IZtQg" role="1B3o_S" />
-      <node concept="3cpWsb" id="6iG0F4IZtVe" role="1tU5fm" />
+      <node concept="10P55v" id="2QWokQTFLAV" role="1tU5fm" />
     </node>
     <node concept="2tJIrI" id="6iG0F4IZu4w" role="jymVt" />
     <node concept="3Tm1VV" id="3H79Ykd2Gyi" role="1B3o_S" />
@@ -199,7 +199,7 @@
       </node>
       <node concept="37vLTG" id="6iG0F4IZu8c" role="3clF46">
         <property role="TrG5h" value="simulationSpeed" />
-        <node concept="3cpWsb" id="6iG0F4IZu8b" role="1tU5fm" />
+        <node concept="10P55v" id="2QWokQTG$Oo" role="1tU5fm" />
       </node>
     </node>
     <node concept="2tJIrI" id="6iG0F4IZuql" role="jymVt" />

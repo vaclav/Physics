@@ -8,8 +8,10 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Fixt
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.math.BigInteger;
 
 public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
 
@@ -30,6 +32,6 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
 
     // Forces 
-    this.getForces().addAll(Arrays.asList(new GravityForce(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)))));
+    this.getForces().addAll(Arrays.asList(new GravityForce(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))));
   }
 }

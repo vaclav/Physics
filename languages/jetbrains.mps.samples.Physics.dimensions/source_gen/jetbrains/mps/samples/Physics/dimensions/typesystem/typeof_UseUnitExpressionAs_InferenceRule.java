@@ -9,18 +9,21 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import org.iets3.core.expr.base.behavior.IDotTarget__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.typesystem.inference.EquationInfo;
+import org.iets3.core.expr.base.runtime.runtime.PTF;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.typesystem.inference.EquationInfo;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.errors.IRuleConflictWarningProducer;
+import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReference__BehaviorDescriptor;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
-import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SConcept;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class typeof_UseUnitExpressionAs_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
@@ -31,31 +34,43 @@ public class typeof_UseUnitExpressionAs_InferenceRule extends AbstractInferenceR
       final SNode exprType = typeCheckingContext.typeOf(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(useUnitExpressionAs), "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5534756475242030737", true);
       typeCheckingContext.whenConcrete(exprType, new Runnable() {
         public void run() {
-          if (SNodeOperations.isInstanceOf(typeCheckingContext.getExpandedNode(exprType), CONCEPTS.DimensionType$yz)) {
-            // Infer child type 
-            {
-              SNode _nodeToCheck_1029348928467 = useUnitExpressionAs;
-              EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5534756475242601595", 0, null);
-              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5534756475242597269", true), (SNode) SLinkOperations.getTarget(SNodeOperations.as(typeCheckingContext.getExpandedNode(exprType), CONCEPTS.DimensionType$yz), LINKS.baseType$fHYw), false, true, _info_12389875345);
-            }
+          {
+            final SNode dimType = typeCheckingContext.getExpandedNode(exprType);
+            if (SNodeOperations.isInstanceOf(dimType, CONCEPTS.DimensionType$yz)) {
+              SNode conversionFactorType = PTF.createRealType(DimensionTypeHelper.compositeConversionRatio(SLinkOperations.getChildren(useUnitExpressionAs, LINKS.units$o6Ow), false).toString());
 
-            // Assert unit matches 
-            if (!(typeCheckingContext.isSingleTypeComputation())) {
+              // Infer type 
               {
                 SNode _nodeToCheck_1029348928467 = useUnitExpressionAs;
-                EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "target units does not match expression dimensions", "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5534756475242033650", 0, null);
-                typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(exprType), (SNode) createDimensionType_hmpjvi_a1a0c0a0e0a0a0a1a0b0a0b(SLinkOperations.getTarget(SNodeOperations.as(typeCheckingContext.getExpandedNode(exprType), CONCEPTS.DimensionType$yz), LINKS.baseType$fHYw), ListSequence.fromList(SLinkOperations.getChildren(useUnitExpressionAs, LINKS.units$o6Ow)).select(new ISelector<SNode, SNode>() {
-                  public SNode select(SNode it) {
-                    return (SNode) UnitReference__BehaviorDescriptor.toDimensionReference_id4NfpV2pfAzN.invoke(it);
+                EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5369611234111202224", 0, null);
+                typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5369611234111202233", true), (SNode) typeCheckingContext.getOverloadedOperationType(SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression")), SLinkOperations.getTarget(dimType, LINKS.baseType$fHYw), conversionFactorType, new IRuleConflictWarningProducer() {
+                  public void produceWarning(String modelId, String ruleId) {
+                    typeCheckingContext.reportWarning(SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression")), "coflicting rules for overloaded operation type", modelId, ruleId, null, new NodeMessageTarget());
+
                   }
-                })), true, true, _info_12389875345);
+                }), _info_12389875345);
               }
+
+
+              // Assert unit matches 
+              if (!(typeCheckingContext.isSingleTypeComputation())) {
+                {
+                  SNode _nodeToCheck_1029348928467 = useUnitExpressionAs;
+                  EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "target units does not match expression dimensions", "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5369611234111184656", 0, null);
+                  typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(exprType), (SNode) createDimensionType_hmpjvi_a1a0c0a0h0a0a0a1a0b0a0b(SLinkOperations.getTarget(dimType, LINKS.baseType$fHYw), ListSequence.fromList(SLinkOperations.getChildren(useUnitExpressionAs, LINKS.units$o6Ow)).select(new ISelector<SNode, SNode>() {
+                    public SNode select(SNode it) {
+                      return (SNode) UnitReference__BehaviorDescriptor.toDimensionReference_id4NfpV2pfAzN.invoke(it);
+                    }
+                  })), true, true, _info_12389875345);
+                }
+              }
+              return;
             }
-          } else {
-            {
-              final MessageTarget errorTarget = new NodeMessageTarget();
-              IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(useUnitExpressionAs), "no dimensions assigned to expression", "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5534756475242063588", null, errorTarget);
-            }
+          }
+
+          {
+            final MessageTarget errorTarget = new NodeMessageTarget();
+            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(useUnitExpressionAs), "no dimensions assigned to expression", "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5534756475242063588", null, errorTarget);
           }
         }
       }, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5534756475242026420", false, false);
@@ -70,7 +85,7 @@ public class typeof_UseUnitExpressionAs_InferenceRule extends AbstractInferenceR
   public boolean overrides() {
     return false;
   }
-  private static SNode createDimensionType_hmpjvi_a1a0c0a0e0a0a0a1a0b0a0b(SNode p0, Iterable<? extends SNode> p1) {
+  private static SNode createDimensionType_hmpjvi_a1a0c0a0h0a0a0a1a0b0a0b(SNode p0, Iterable<? extends SNode> p1) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
     n0.forChild(LINKS.baseType$fHYw).initNode(p0, CONCEPTS.Type$fA, true);
     n0.forChild(LINKS.units$o6Ow).initNodeList(p1, CONCEPTS.DimensionReference$wa);
@@ -85,7 +100,7 @@ public class typeof_UseUnitExpressionAs_InferenceRule extends AbstractInferenceR
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
     /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
   }
 }

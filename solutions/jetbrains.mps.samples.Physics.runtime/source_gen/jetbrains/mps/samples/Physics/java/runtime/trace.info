@@ -106,16 +106,16 @@
     <file name="Simulation.java">
       <node id="7254176059807875283" at="9,0,10,0" concept="2" trace="world" />
       <node id="7254176059807883064" at="10,0,11,0" concept="2" trace="simulationSpeed" />
-      <node id="7254176059807883789" at="12,43,13,43" concept="1" />
+      <node id="7254176059807883789" at="12,45,13,43" concept="1" />
       <node id="7254176059807875890" at="17,46,18,39" concept="1" />
       <node id="4271426636304009373" at="18,39,19,16" concept="1" />
       <node id="4271426636304008855" at="24,39,25,17" concept="1" />
       <node id="4271426636304008857" at="25,17,26,26" concept="1" />
       <node id="4271426636304009381" at="29,0,30,0" concept="4" trace="init#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
-      <node id="7254176059807883781" at="12,0,15,0" concept="0" trace="Simulation#(J)V" />
+      <node id="7254176059807883781" at="12,0,15,0" concept="0" trace="Simulation#(D)V" />
       <node id="4271426636304009364" at="16,0,21,0" concept="4" trace="initialized#(Ljetbrains/mps/samples/Physics/java/runtime/Renderer;)V" />
       <node id="7254176059807897220" at="23,0,28,0" concept="4" trace="render#(Lprocessing/core/PApplet;)V" />
-      <scope id="7254176059807883785" at="12,43,13,43" />
+      <scope id="7254176059807883785" at="12,45,13,43" />
       <scope id="4271426636304009381" at="29,0,30,0">
         <var name="world" id="4271426636304009382" />
       </scope>

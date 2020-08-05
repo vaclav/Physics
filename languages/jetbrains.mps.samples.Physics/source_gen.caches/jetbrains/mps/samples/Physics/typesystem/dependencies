@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="jetbrains.mps.samples.Physics.typesystem.TypesystemDescriptor">
-    <classNode dependClassName="java.lang.Double" />
-    <classNode dependClassName="java.lang.Iterable" />
-    <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.math.BigDecimal" />
-    <classNode dependClassName="java.math.MathContext" />
-    <classNode dependClassName="java.util.Map" />
-    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
     <classNode dependClassName="jetbrains.mps.errors.IRuleConflictWarningProducer" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.OverloadedOperationsTypesProvider" />
-    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.OverloadedOpsProvider_OneTypeSpecified" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_AbstractForceCallParameter_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_AbstractForceCall_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_CartesianCoordinates_InferenceRule" />
@@ -31,7 +18,6 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_Force_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_ILocalized_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_InteractedObjectExpression_InferenceRule" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_NRootExpression_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_NumericStyle_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_ObjectDefinition_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_ObjectMassTarget_InferenceRule" />
@@ -55,11 +41,9 @@
     <classNode dependClassName="jetbrains.mps.typesystem.inference.SubtypingManager" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
     <classNode dependClassName="org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor" />
-    <classNode dependClassName="org.iets3.core.expr.simpleTypes.behavior.NumberType__BehaviorDescriptor" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor" />
   </dependency>
@@ -220,26 +204,6 @@
     <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime" />
-    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
-  </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.typesystem.typeof_NRootExpression_InferenceRule">
-    <classNode dependClassName="java.lang.Runnable" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.errors.IRuleConflictWarningProducer" />
-    <classNode dependClassName="jetbrains.mps.errors.messageTargets.NodeMessageTarget" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
-    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
-    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
-    <classNode dependClassName="jetbrains.mps.typesystem.inference.EquationInfo" />
-    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
-    <classNode dependClassName="org.iets3.core.expr.base.runtime.runtime.PTF" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />

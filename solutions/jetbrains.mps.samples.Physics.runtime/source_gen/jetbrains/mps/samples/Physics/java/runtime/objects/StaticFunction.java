@@ -6,10 +6,10 @@ package jetbrains.mps.samples.Physics.java.runtime.objects;
 public abstract class StaticFunction<T, S extends SystemScope> implements Function<T, S> {
   private T cache;
   private boolean computed = false;
-  protected abstract T computeOnce(World world, S scope, PhysicalEntity currentEntity, long time);
+  protected abstract T computeOnce(World world, S scope, PhysicalEntity currentEntity, double time);
 
   @Override
-  public final T compute(World world, S scope, PhysicalEntity currentEntity, long time) {
+  public final T compute(World world, S scope, PhysicalEntity currentEntity, double time) {
     if (!(computed)) {
       cache = computeOnce(world, scope, currentEntity, time);
       computed = true;
