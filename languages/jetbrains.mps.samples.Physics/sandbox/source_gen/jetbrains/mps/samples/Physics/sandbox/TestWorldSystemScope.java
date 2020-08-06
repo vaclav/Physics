@@ -22,7 +22,7 @@ import org.ode4j.math.DVector3C;
 
 public class TestWorldSystemScope extends SystemScope {
   public final World2SystemScope TheOtherWorld;
-  public final PhysicalEntity Something2;
+  public final PhysicalEntity Something3;
   public final PhysicalEntity Hey;
   public final PhysicalEntity Ho;
 
@@ -32,27 +32,27 @@ public class TestWorldSystemScope extends SystemScope {
     final TestWorldSystemScope scope = this;
 
     //  Instanciate objects 
-    Something2 = withEntity(new Something3PhysicalEntity(world));
-    Hey = withEntity(new Hey1PhysicalEntity(world));
-    Ho = withEntity(new Ho1PhysicalEntity(world));
+    Something3 = withEntity(new Something5PhysicalEntity(world, "Something4"));
+    Hey = withEntity(new Hey2PhysicalEntity(world, "Hey1"));
+    Ho = withEntity(new Ho2PhysicalEntity(world, "Ho1"));
     TheOtherWorld = withEntity(new World2SystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
-    Something2.init(this, world, new FixtureBuilder());
+    Something3.init(this, world, new FixtureBuilder());
     Hey.init(this, world, new FixtureBuilder());
     Ho.init(this, world, new FixtureBuilder());
   }
 
-  public static class Something3PhysicalEntity extends ObjectSupertypeAbstractEntity<TestWorldSystemScope> {
+  public static class Something5PhysicalEntity extends ObjectSupertypeAbstractEntity<TestWorldSystemScope> {
 
-    public Something3PhysicalEntity(World world) {
-      super(world);
+    public Something5PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final TestWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Something3PhysicalEntity currentEntity = this;
+      Something5PhysicalEntity currentEntity = this;
 
       // Set static properties of Something 
       this.setMass(AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
@@ -63,7 +63,7 @@ public class TestWorldSystemScope extends SystemScope {
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.SHAPE, "shape");
+      fixtureProperties.set(Prop.SHAPE, "box");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
@@ -81,16 +81,16 @@ public class TestWorldSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Hey1PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
+  public static class Hey2PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
 
-    public Hey1PhysicalEntity(World world) {
-      super(world);
+    public Hey2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final TestWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Hey1PhysicalEntity currentEntity = this;
+      Hey2PhysicalEntity currentEntity = this;
 
       // Set static properties of Hey 
       this.setMass(AH.mul(((Number) new BigInteger("212")), ((Number) new BigInteger("1"))));
@@ -101,7 +101,7 @@ public class TestWorldSystemScope extends SystemScope {
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.SHAPE, "shape");
+      fixtureProperties.set(Prop.SHAPE, "sphere");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));
@@ -112,16 +112,16 @@ public class TestWorldSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Ho1PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
+  public static class Ho2PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
 
-    public Ho1PhysicalEntity(World world) {
-      super(world);
+    public Ho2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final TestWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Ho1PhysicalEntity currentEntity = this;
+      Ho2PhysicalEntity currentEntity = this;
 
       // Set static properties of Ho 
       this.setMass(AH.mul(((Number) new BigInteger("120")), ((Number) new BigInteger("1"))));
@@ -132,7 +132,7 @@ public class TestWorldSystemScope extends SystemScope {
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.SHAPE, "shape");
+      fixtureProperties.set(Prop.SHAPE, "sphere");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));

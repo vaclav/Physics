@@ -19,7 +19,7 @@ import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 
 public class CollisionWorldSystemScope extends SystemScope {
-  public final PhysicalEntity A2;
+  public final PhysicalEntity A3;
   public final PhysicalEntity B;
   public final PhysicalEntity C;
 
@@ -29,26 +29,26 @@ public class CollisionWorldSystemScope extends SystemScope {
     final CollisionWorldSystemScope scope = this;
 
     //  Instanciate objects 
-    A2 = withEntity(new A3PhysicalEntity(world));
-    B = withEntity(new B1PhysicalEntity(world));
-    C = withEntity(new C1PhysicalEntity(world));
+    A3 = withEntity(new A5PhysicalEntity(world, "A4"));
+    B = withEntity(new B2PhysicalEntity(world, "B1"));
+    C = withEntity(new C2PhysicalEntity(world, "C1"));
 
     // Initialize them 
-    A2.init(this, world, new FixtureBuilder());
+    A3.init(this, world, new FixtureBuilder());
     B.init(this, world, new FixtureBuilder());
     C.init(this, world, new FixtureBuilder());
   }
 
-  public static class A3PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
+  public static class A5PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
 
-    public A3PhysicalEntity(World world) {
-      super(world);
+    public A5PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final CollisionWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      A3PhysicalEntity currentEntity = this;
+      A5PhysicalEntity currentEntity = this;
 
       // Set static properties of A 
       this.setMass(((Number) new BigInteger("500")));
@@ -69,16 +69,16 @@ public class CollisionWorldSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class B1PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
+  public static class B2PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
 
-    public B1PhysicalEntity(World world) {
-      super(world);
+    public B2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final CollisionWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      B1PhysicalEntity currentEntity = this;
+      B2PhysicalEntity currentEntity = this;
 
       // Set static properties of B 
       this.setMass(((Number) new BigInteger("400")));
@@ -100,16 +100,16 @@ public class CollisionWorldSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class C1PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
+  public static class C2PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
 
-    public C1PhysicalEntity(World world) {
-      super(world);
+    public C2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final CollisionWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      C1PhysicalEntity currentEntity = this;
+      C2PhysicalEntity currentEntity = this;
 
       // Set static properties of C 
       this.setMass(((Number) new BigInteger("300")));

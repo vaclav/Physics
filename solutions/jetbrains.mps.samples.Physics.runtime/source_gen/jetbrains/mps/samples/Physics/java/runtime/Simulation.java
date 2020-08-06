@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.java.runtime;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import processing.core.PApplet;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRendering;
 
 public abstract class Simulation implements Renderer.RendererCallback {
   protected World world;
@@ -21,9 +22,19 @@ public abstract class Simulation implements Renderer.RendererCallback {
 
 
   @Override
-  public void render(PApplet context) {
+  public void render(PApplet ctx) {
     world.step();
-    world.render(context);
+    world.render(ctx);
+
+    ctx.camera();
+    ctx.noLights();
+    ctx.hint(PApplet.DISABLE_DEPTH_TEST);
+    ctx.textMode(PApplet.MODEL);
+
+    MetricsRendering.render(world, ctx);
+
+    ctx.hint(PApplet.ENABLE_DEPTH_TEST);
+
   }
 
   protected abstract void init(World world);

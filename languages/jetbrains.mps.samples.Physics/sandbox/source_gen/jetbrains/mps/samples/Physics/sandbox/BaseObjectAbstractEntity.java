@@ -16,8 +16,8 @@ import java.util.Arrays;
 
 public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends PhysicalEntity<T> {
 
-  public BaseObjectAbstractEntity(World world) {
-    super(world);
+  public BaseObjectAbstractEntity(World world, String name) {
+    super(world, name);
   }
 
 
@@ -29,7 +29,7 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
     BaseObjectAbstractEntity currentEntity = this;
 
     // Apply styles 
-    fixtureProperties.set(Prop.SHAPE, "shape");
+    fixtureProperties.set(Prop.SHAPE, "sphere");
     fixtureProperties.set(Prop.BOX_X, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
     fixtureProperties.set(Prop.BOX_Y, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
     fixtureProperties.set(Prop.BOX_Z, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));

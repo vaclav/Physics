@@ -18,8 +18,8 @@ import java.math.RoundingMode;
 
 public abstract class ObjectSupertypeAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
 
-  public ObjectSupertypeAbstractEntity(World world) {
-    super(world);
+  public ObjectSupertypeAbstractEntity(World world, String name) {
+    super(world, name);
   }
 
 
@@ -31,7 +31,7 @@ public abstract class ObjectSupertypeAbstractEntity<T extends SystemScope> exten
     ObjectSupertypeAbstractEntity currentEntity = this;
 
     // Apply styles 
-    fixtureProperties.set(Prop.SHAPE, "shape");
+    fixtureProperties.set(Prop.SHAPE, "box");
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
     fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
     fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));

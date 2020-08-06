@@ -27,24 +27,24 @@ public class EarthSystemSystemScope extends SystemScope {
     final EarthSystemSystemScope scope = this;
 
     //  Instanciate objects 
-    Earth = withEntity(new Earth1PhysicalEntity(world));
-    Moon = withEntity(new Moon1PhysicalEntity(world));
+    Earth = withEntity(new Earth2PhysicalEntity(world, "Earth1"));
+    Moon = withEntity(new Moon2PhysicalEntity(world, "Moon1"));
 
     // Initialize them 
     Earth.init(this, world, new FixtureBuilder());
     Moon.init(this, world, new FixtureBuilder());
   }
 
-  public static class Earth1PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
+  public static class Earth2PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
 
-    public Earth1PhysicalEntity(World world) {
-      super(world);
+    public Earth2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final EarthSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Earth1PhysicalEntity currentEntity = this;
+      Earth2PhysicalEntity currentEntity = this;
 
       // Set static properties of Earth 
       this.setMass(((Number) new BigInteger("79700000000000")));
@@ -65,16 +65,16 @@ public class EarthSystemSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Moon1PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
+  public static class Moon2PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
 
-    public Moon1PhysicalEntity(World world) {
-      super(world);
+    public Moon2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final EarthSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Moon1PhysicalEntity currentEntity = this;
+      Moon2PhysicalEntity currentEntity = this;
 
       // Set static properties of Moon 
       this.setMass(((Number) new BigInteger("1730000000000")));

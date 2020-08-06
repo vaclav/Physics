@@ -15,8 +15,8 @@ import java.math.BigInteger;
 
 public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
 
-  public PlanetAbstractEntity(World world) {
-    super(world);
+  public PlanetAbstractEntity(World world, String name) {
+    super(world, name);
   }
 
 
@@ -28,7 +28,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
     PlanetAbstractEntity currentEntity = this;
 
     // Apply styles 
-    fixtureProperties.set(Prop.SHAPE, "shape");
+    fixtureProperties.set(Prop.SHAPE, "sphere");
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
 
     // Forces 

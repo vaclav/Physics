@@ -31,12 +31,12 @@ public class SolarSystemSystemScope extends SystemScope {
     final SolarSystemSystemScope scope = this;
 
     //  Instanciate objects 
-    Sun = withEntity(new Sun1PhysicalEntity(world));
-    Mercury = withEntity(new Mercury1PhysicalEntity(world));
-    Venus = withEntity(new Venus1PhysicalEntity(world));
-    Earth = withEntity(new Earth1PhysicalEntity(world));
-    Moon = withEntity(new Moon1PhysicalEntity(world));
-    Mars = withEntity(new Mars1PhysicalEntity(world));
+    Sun = withEntity(new Sun2PhysicalEntity(world, "Sun1"));
+    Mercury = withEntity(new Mercury2PhysicalEntity(world, "Mercury1"));
+    Venus = withEntity(new Venus2PhysicalEntity(world, "Venus1"));
+    Earth = withEntity(new Earth2PhysicalEntity(world, "Earth1"));
+    Moon = withEntity(new Moon2PhysicalEntity(world, "Moon1"));
+    Mars = withEntity(new Mars2PhysicalEntity(world, "Mars1"));
 
     // Initialize them 
     Sun.init(this, world, new FixtureBuilder());
@@ -47,16 +47,16 @@ public class SolarSystemSystemScope extends SystemScope {
     Mars.init(this, world, new FixtureBuilder());
   }
 
-  public static class Sun1PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
+  public static class Sun2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Sun1PhysicalEntity(World world) {
-      super(world);
+    public Sun2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Sun1PhysicalEntity currentEntity = this;
+      Sun2PhysicalEntity currentEntity = this;
 
       // Set static properties of Sun 
       this.setMass(((Number) new BigInteger("500")));
@@ -67,7 +67,7 @@ public class SolarSystemSystemScope extends SystemScope {
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.SHAPE, "shape");
+      fixtureProperties.set(Prop.SHAPE, "sphere");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 165));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));
@@ -78,16 +78,16 @@ public class SolarSystemSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Mercury1PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
+  public static class Mercury2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Mercury1PhysicalEntity(World world) {
-      super(world);
+    public Mercury2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Mercury1PhysicalEntity currentEntity = this;
+      Mercury2PhysicalEntity currentEntity = this;
 
       // Set static properties of Mercury 
       this.setMass(((Number) new BigInteger("10")));
@@ -106,16 +106,16 @@ public class SolarSystemSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Venus1PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
+  public static class Venus2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Venus1PhysicalEntity(World world) {
-      super(world);
+    public Venus2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Venus1PhysicalEntity currentEntity = this;
+      Venus2PhysicalEntity currentEntity = this;
 
       // Set static properties of Venus 
       this.setMass(((Number) new BigInteger("200")));
@@ -134,16 +134,16 @@ public class SolarSystemSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Earth1PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
+  public static class Earth2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Earth1PhysicalEntity(World world) {
-      super(world);
+    public Earth2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Earth1PhysicalEntity currentEntity = this;
+      Earth2PhysicalEntity currentEntity = this;
 
       // Set static properties of Earth 
       this.setMass(((Number) new BigInteger("300")));
@@ -162,16 +162,16 @@ public class SolarSystemSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Moon1PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
+  public static class Moon2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Moon1PhysicalEntity(World world) {
-      super(world);
+    public Moon2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Moon1PhysicalEntity currentEntity = this;
+      Moon2PhysicalEntity currentEntity = this;
 
       // Set static properties of Moon 
       this.setMass(((Number) new BigInteger("50")));
@@ -182,7 +182,7 @@ public class SolarSystemSystemScope extends SystemScope {
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.SHAPE, "shape");
+      fixtureProperties.set(Prop.SHAPE, "box");
       fixtureProperties.set(Prop.TEXTURE, new Color(25, 150, 25));
       fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
@@ -195,16 +195,16 @@ public class SolarSystemSystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Mars1PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
+  public static class Mars2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Mars1PhysicalEntity(World world) {
-      super(world);
+    public Mars2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Mars1PhysicalEntity currentEntity = this;
+      Mars2PhysicalEntity currentEntity = this;
 
       // Set static properties of Mars 
       this.setMass(((Number) new BigInteger("30")));

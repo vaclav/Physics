@@ -19,6 +19,7 @@ public class World implements DGeom.DNearCallback {
   private final DSpace space;
   private final DJointGroup jointGroup;
   private final ArrayList<PhysicalEntity> entities = new ArrayList();
+  private final ArrayList<PhysicalEntity> lightsEmitter = new ArrayList();
   private final HashMap<DBody, PhysicalEntity> reverseEntities = new HashMap();
 
   private boolean paused;
@@ -96,9 +97,10 @@ public class World implements DGeom.DNearCallback {
    *  @param ctx applet context
    */
   public void render(PApplet ctx) {
-    for (PhysicalEntity entity : entities) {
+    for (PhysicalEntity entity : lightsEmitter) {
       entity.applyLights(ctx);
     }
+
     for (PhysicalEntity entity : entities) {
       entity.render(ctx);
     }
@@ -107,6 +109,10 @@ public class World implements DGeom.DNearCallback {
   public void addEntity(PhysicalEntity entity) {
     entities.add(entity);
     reverseEntities.put(entity.getBody(), entity);
+
+    if (entity.getFixture().doEmitLight()) {
+      lightsEmitter.add(entity);
+    }
   }
   public DSpace getSpace() {
     return space;
@@ -128,5 +134,10 @@ public class World implements DGeom.DNearCallback {
   }
   public void setPaused(boolean paused) {
     this.paused = paused;
+  }
+
+
+  public double getTime() {
+    return this.time;
   }
 }

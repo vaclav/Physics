@@ -6,6 +6,7 @@ import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import java.util.ArrayList;
 import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import java.math.MathContext;
 
 public abstract class SystemScope extends VectorLike implements EntityLike {
   protected ArrayList<EntityLike> nested = new ArrayList();
@@ -54,7 +55,7 @@ public abstract class SystemScope extends VectorLike implements EntityLike {
     for (EntityLike entity : nested) {
       position = position.add(entity.getPosition().mul(entity.getMass()));
     }
-    return position.mul(BigDecimal.ONE.divide(getMass()));
+    return position.mul(BigDecimal.ONE.divide(getMass(), MathContext.DECIMAL32));
   }
 
   @Override

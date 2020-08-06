@@ -8,6 +8,7 @@
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.Simulation">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRendering" />
     <classNode dependClassName="processing.core.PApplet" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
   </dependency>

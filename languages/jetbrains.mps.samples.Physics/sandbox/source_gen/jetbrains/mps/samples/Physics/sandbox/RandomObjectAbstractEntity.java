@@ -13,8 +13,8 @@ import java.util.Arrays;
 
 public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
 
-  public RandomObjectAbstractEntity(World world) {
-    super(world);
+  public RandomObjectAbstractEntity(World world, String name) {
+    super(world, name);
   }
 
 
@@ -26,7 +26,7 @@ public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends 
     RandomObjectAbstractEntity currentEntity = this;
 
     // Apply styles 
-    fixtureProperties.set(Prop.SHAPE, "shape");
+    fixtureProperties.set(Prop.SHAPE, "box");
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
     fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
     fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));

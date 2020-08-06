@@ -27,9 +27,9 @@ public class MilkyWaySystemScope extends SystemScope {
     final MilkyWaySystemScope scope = this;
 
     //  Instanciate objects 
-    FloatingDog = withEntity(new FloatingDog1PhysicalEntity(world));
-    Something = withEntity(new Something1PhysicalEntity(world));
-    A = withEntity(new A1PhysicalEntity(world));
+    FloatingDog = withEntity(new FloatingDog2PhysicalEntity(world, "FloatingDog1"));
+    Something = withEntity(new Something2PhysicalEntity(world, "Something1"));
+    A = withEntity(new A2PhysicalEntity(world, "A1"));
     SolarSystem1 = withEntity(new SolarSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
@@ -38,16 +38,16 @@ public class MilkyWaySystemScope extends SystemScope {
     A.init(this, world, new FixtureBuilder());
   }
 
-  public static class FloatingDog1PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
+  public static class FloatingDog2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
 
-    public FloatingDog1PhysicalEntity(World world) {
-      super(world);
+    public FloatingDog2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final MilkyWaySystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      FloatingDog1PhysicalEntity currentEntity = this;
+      FloatingDog2PhysicalEntity currentEntity = this;
 
       // Set static properties of Floating dog 
       this.setMass(((Number) new BigInteger("30")));
@@ -66,16 +66,16 @@ public class MilkyWaySystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class Something1PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
+  public static class Something2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
 
-    public Something1PhysicalEntity(World world) {
-      super(world);
+    public Something2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final MilkyWaySystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Something1PhysicalEntity currentEntity = this;
+      Something2PhysicalEntity currentEntity = this;
 
       // Set static properties of Something 
       this.setMass(((Number) new BigInteger("30")));
@@ -94,16 +94,16 @@ public class MilkyWaySystemScope extends SystemScope {
       world.addEntity(this);
     }
   }
-  public static class A1PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
+  public static class A2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
 
-    public A1PhysicalEntity(World world) {
-      super(world);
+    public A2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final MilkyWaySystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      A1PhysicalEntity currentEntity = this;
+      A2PhysicalEntity currentEntity = this;
 
       // Set static properties of A 
       this.setMass(((Number) new BigInteger("30")));

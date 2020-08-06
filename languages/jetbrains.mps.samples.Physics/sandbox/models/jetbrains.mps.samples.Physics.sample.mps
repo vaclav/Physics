@@ -113,9 +113,6 @@
         <child id="974138438729280780" name="value" index="2Z1ZyN" />
       </concept>
       <concept id="2521872686837820853" name="jetbrains.mps.samples.Physics.structure.CurrentWorldExpression" flags="ng" index="31hh1H" />
-      <concept id="2521872686834486428" name="jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget" flags="ng" index="31uf54">
-        <reference id="2521872686834488267" name="target" index="31ueSj" />
-      </concept>
       <concept id="362892448124441676" name="jetbrains.mps.samples.Physics.structure.EmitLightStyle" flags="ng" index="13a5ie" />
       <concept id="362892448124442942" name="jetbrains.mps.samples.Physics.structure.BooleanStyle" flags="ng" index="13a5BW">
         <property id="362892448124442943" name="value" index="13a5BX" />
@@ -130,6 +127,7 @@
       <concept id="1510458583736379040" name="jetbrains.mps.samples.Physics.structure.AbstractForceCall" flags="ng" index="1nvtMO" />
       <concept id="7746015835360049752" name="jetbrains.mps.samples.Physics.structure.Simulation" flags="ng" index="3okdC4">
         <child id="2432181455078543840" name="simulationSpeed" index="2aZKB5" />
+        <child id="6184070858913522343" name="cameraPosition" index="IG9$9" />
         <child id="6184070858913522400" name="focus" index="IG9_e" />
         <child id="4383135941274869506" name="world" index="1heTBC" />
       </concept>
@@ -154,6 +152,7 @@
         <child id="796402062949577619" name="expression" index="3Bsx3B" />
       </concept>
       <concept id="796402062949577611" name="jetbrains.mps.samples.Physics.structure.VelocityCoordinates" flags="ng" index="3Bsx3Z" />
+      <concept id="7287056866553931600" name="jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget" flags="ng" index="3K97jc" />
       <concept id="7287056866553921482" name="jetbrains.mps.samples.Physics.structure.ObjectMassTarget" flags="ng" index="3K9aLm" />
       <concept id="7287056866552793956" name="jetbrains.mps.samples.Physics.structure.AbstractForceArgument" flags="ng" index="3LOTzS" />
     </language>
@@ -391,16 +390,9 @@
     <node concept="1t_wfn" id="10n4tqnmBN5" role="1heTBC">
       <ref role="1t_wfm" node="10n4tqnmBvH" resolve="SolarSystem" />
     </node>
-    <node concept="1QScDb" id="270Q2mFmllk" role="IG9_e">
-      <node concept="31uf54" id="270Q2mFmlz9" role="1QScD9">
-        <ref role="31ueSj" node="72SP1v_PiBJ" resolve="Earth" />
-      </node>
-      <node concept="1QScDb" id="6yY6C98PNtg" role="30czhm">
-        <node concept="31hh1H" id="6yY6C98sqrY" role="30czhm" />
-        <node concept="31uf54" id="270Q2mFml3C" role="1QScD9">
-          <ref role="31ueSj" node="10n4tqnmBvU" resolve="EarthNested" />
-        </node>
-      </node>
+    <node concept="1QScDb" id="3Xqr82XjhxJ" role="IG9_e">
+      <node concept="3K97jc" id="3Xqr82Xjh$g" role="1QScD9" />
+      <node concept="31hh1H" id="3Xqr82XjhvQ" role="30czhm" />
     </node>
     <node concept="1N951E" id="270Q2mFg5sF" role="2aZKB5">
       <node concept="30bXRB" id="270Q2mFg5sE" role="1N951F">
@@ -408,6 +400,22 @@
       </node>
       <node concept="CIsvn" id="4E4Gfvfnb2G" role="1N7es9">
         <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
+      </node>
+    </node>
+    <node concept="v6hs8" id="3Xqr82Xkrq0" role="IG9$9">
+      <node concept="1N951E" id="3Xqr82Xku5H" role="Y6leK">
+        <node concept="30bXRB" id="3Xqr82Xku5G" role="1N951F">
+          <property role="30bXRw" value="1300" />
+        </node>
+        <node concept="CIsvn" id="3Xqr82Xku5I" role="1N7es9">
+          <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
+        </node>
+      </node>
+      <node concept="30bXRB" id="3Xqr82Xkunn" role="Y6l9D">
+        <property role="30bXRw" value="0" />
+      </node>
+      <node concept="30bXRB" id="3Xqr82XkuuI" role="Y6leJ">
+        <property role="30bXRw" value="0" />
       </node>
     </node>
   </node>

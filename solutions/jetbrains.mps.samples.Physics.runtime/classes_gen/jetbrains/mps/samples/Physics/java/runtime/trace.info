@@ -104,33 +104,43 @@
   </root>
   <root nodeRef="r:7a9b0b84-8d52-4661-8dd6-1e603f6ac398(jetbrains.mps.samples.Physics.java.runtime)/4271426636304009361">
     <file name="Simulation.java">
-      <node id="7254176059807875283" at="9,0,10,0" concept="2" trace="world" />
-      <node id="7254176059807883064" at="10,0,11,0" concept="2" trace="simulationSpeed" />
-      <node id="7254176059807883789" at="12,45,13,43" concept="1" />
-      <node id="7254176059807875890" at="17,46,18,39" concept="1" />
-      <node id="4271426636304009373" at="18,39,19,16" concept="1" />
-      <node id="4271426636304008855" at="24,39,25,17" concept="1" />
-      <node id="4271426636304008857" at="25,17,26,26" concept="1" />
-      <node id="4271426636304009381" at="29,0,30,0" concept="4" trace="init#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
-      <node id="7254176059807883781" at="12,0,15,0" concept="0" trace="Simulation#(D)V" />
-      <node id="4271426636304009364" at="16,0,21,0" concept="4" trace="initialized#(Ljetbrains/mps/samples/Physics/java/runtime/Renderer;)V" />
-      <node id="7254176059807897220" at="23,0,28,0" concept="4" trace="render#(Lprocessing/core/PApplet;)V" />
-      <scope id="7254176059807883785" at="12,45,13,43" />
-      <scope id="4271426636304009381" at="29,0,30,0">
+      <node id="7254176059807875283" at="10,0,11,0" concept="2" trace="world" />
+      <node id="7254176059807883064" at="11,0,12,0" concept="2" trace="simulationSpeed" />
+      <node id="7254176059807883789" at="13,45,14,43" concept="1" />
+      <node id="7254176059807875890" at="18,46,19,39" concept="1" />
+      <node id="4271426636304009373" at="19,39,20,16" concept="1" />
+      <node id="4271426636304008855" at="25,35,26,17" concept="1" />
+      <node id="4271426636304008857" at="26,17,27,22" concept="1" />
+      <node id="5369611234117742813" at="27,22,28,0" concept="7" />
+      <node id="5369611234117776443" at="28,0,29,17" concept="1" />
+      <node id="5369611234117778230" at="29,17,30,19" concept="1" />
+      <node id="5369611234117780725" at="30,19,31,41" concept="1" />
+      <node id="5369611234117784365" at="31,41,32,32" concept="1" />
+      <node id="5369611234117787828" at="32,32,33,0" concept="7" />
+      <node id="5369611234117743121" at="33,0,34,40" concept="1" />
+      <node id="5369611234117790216" at="34,40,35,0" concept="7" />
+      <node id="5369611234117788711" at="35,0,36,40" concept="1" />
+      <node id="5369611234117788296" at="36,40,37,0" concept="7" />
+      <node id="4271426636304009381" at="40,0,41,0" concept="4" trace="init#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
+      <node id="7254176059807883781" at="13,0,16,0" concept="0" trace="Simulation#(D)V" />
+      <node id="4271426636304009364" at="17,0,22,0" concept="4" trace="initialized#(Ljetbrains/mps/samples/Physics/java/runtime/Renderer;)V" />
+      <node id="7254176059807897220" at="24,0,39,0" concept="4" trace="render#(Lprocessing/core/PApplet;)V" />
+      <scope id="7254176059807883785" at="13,45,14,43" />
+      <scope id="4271426636304009381" at="40,0,41,0">
         <var name="world" id="4271426636304009382" />
       </scope>
-      <scope id="4271426636304009368" at="17,46,19,16" />
-      <scope id="7254176059807897226" at="24,39,26,26" />
-      <scope id="7254176059807883781" at="12,0,15,0">
+      <scope id="4271426636304009368" at="18,46,20,16" />
+      <scope id="7254176059807883781" at="13,0,16,0">
         <var name="simulationSpeed" id="7254176059807883788" />
       </scope>
-      <scope id="4271426636304009364" at="16,0,21,0">
+      <scope id="4271426636304009364" at="17,0,22,0">
         <var name="renderer" id="4271426636304009366" />
       </scope>
-      <scope id="7254176059807897220" at="23,0,28,0">
-        <var name="context" id="7254176059807897224" />
+      <scope id="7254176059807897226" at="25,35,37,0" />
+      <scope id="7254176059807897220" at="24,0,39,0">
+        <var name="ctx" id="7254176059807897224" />
       </scope>
-      <unit id="4271426636304009361" at="8,0,31,0" name="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
+      <unit id="4271426636304009361" at="9,0,42,0" name="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
     </file>
   </root>
 </debug-info>

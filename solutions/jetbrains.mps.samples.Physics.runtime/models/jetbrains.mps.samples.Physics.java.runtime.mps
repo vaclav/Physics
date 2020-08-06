@@ -11,6 +11,7 @@
     <import index="mizj" ref="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.java.common.vectors)" />
     <import index="xwt6" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.math(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="r7oa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:processing.core(jetbrains.mps.samples.Physics.java.runtime/)" />
+    <import index="d2el" ref="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.java.runtime.objects.rendering)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -49,6 +50,9 @@
       <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
+      <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
+        <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534513062" name="jetbrains.mps.baseLanguage.structure.DoubleType" flags="in" index="10P55v" />
@@ -249,7 +253,7 @@
       <node concept="3Tm1VV" id="6iG0F4IZxq6" role="1B3o_S" />
       <node concept="3cqZAl" id="6iG0F4IZxq7" role="3clF45" />
       <node concept="37vLTG" id="6iG0F4IZxq8" role="3clF46">
-        <property role="TrG5h" value="context" />
+        <property role="TrG5h" value="ctx" />
         <node concept="3uibUv" id="6iG0F4IZxq9" role="1tU5fm">
           <ref role="3uigEE" to="r7oa:~PApplet" resolve="PApplet" />
         </node>
@@ -273,11 +277,89 @@
             <node concept="liA8E" id="3H79Ykd2LFA" role="2OqNvi">
               <ref role="37wK5l" to="jyp0:4D75T4FueYO" resolve="render" />
               <node concept="37vLTw" id="6iG0F4IZy5z" role="37wK5m">
-                <ref role="3cqZAo" node="6iG0F4IZxq8" resolve="context" />
+                <ref role="3cqZAo" node="6iG0F4IZxq8" resolve="ctx" />
               </node>
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="4E4Gfvfyf3t" role="3cqZAp" />
+        <node concept="3clFbF" id="4E4GfvfyngV" role="3cqZAp">
+          <node concept="2OqwBi" id="4E4Gfvfynpi" role="3clFbG">
+            <node concept="37vLTw" id="4E4GfvfyngT" role="2Oq$k0">
+              <ref role="3cqZAo" node="6iG0F4IZxq8" resolve="ctx" />
+            </node>
+            <node concept="liA8E" id="4E4Gfvfyn$S" role="2OqNvi">
+              <ref role="37wK5l" to="r7oa:~PApplet.camera()" resolve="camera" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4E4GfvfynGQ" role="3cqZAp">
+          <node concept="2OqwBi" id="4E4GfvfynQ1" role="3clFbG">
+            <node concept="37vLTw" id="4E4GfvfynGO" role="2Oq$k0">
+              <ref role="3cqZAo" node="6iG0F4IZxq8" resolve="ctx" />
+            </node>
+            <node concept="liA8E" id="4E4Gfvfyo2n" role="2OqNvi">
+              <ref role="37wK5l" to="r7oa:~PApplet.noLights()" resolve="noLights" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4E4GfvfyojP" role="3cqZAp">
+          <node concept="2OqwBi" id="4E4GfvfyotO" role="3clFbG">
+            <node concept="37vLTw" id="4E4GfvfyojN" role="2Oq$k0">
+              <ref role="3cqZAo" node="6iG0F4IZxq8" resolve="ctx" />
+            </node>
+            <node concept="liA8E" id="4E4GfvfyoDw" role="2OqNvi">
+              <ref role="37wK5l" to="r7oa:~PApplet.hint(int)" resolve="hint" />
+              <node concept="10M0yZ" id="4E4Gfvfyp10" role="37wK5m">
+                <ref role="3cqZAo" to="r7oa:~PConstants.DISABLE_DEPTH_TEST" resolve="DISABLE_DEPTH_TEST" />
+                <ref role="1PxDUh" to="r7oa:~PApplet" resolve="PApplet" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4E4GfvfypcH" role="3cqZAp">
+          <node concept="2OqwBi" id="4E4Gfvfypq0" role="3clFbG">
+            <node concept="37vLTw" id="4E4GfvfypcF" role="2Oq$k0">
+              <ref role="3cqZAo" node="6iG0F4IZxq8" resolve="ctx" />
+            </node>
+            <node concept="liA8E" id="4E4GfvfypAK" role="2OqNvi">
+              <ref role="37wK5l" to="r7oa:~PApplet.textMode(int)" resolve="textMode" />
+              <node concept="10M0yZ" id="4E4GfvfypWv" role="37wK5m">
+                <ref role="3cqZAo" to="r7oa:~PConstants.MODEL" resolve="MODEL" />
+                <ref role="1PxDUh" to="r7oa:~PApplet" resolve="PApplet" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4E4Gfvfyq2O" role="3cqZAp" />
+        <node concept="3clFbF" id="4E4Gfvfyf8h" role="3cqZAp">
+          <node concept="2YIFZM" id="4E4Gfvfyfb3" role="3clFbG">
+            <ref role="37wK5l" to="d2el:4E4GfvfuTB2" resolve="render" />
+            <ref role="1Pybhc" to="d2el:4E4GfvfuT_w" resolve="MetricsRendering" />
+            <node concept="37vLTw" id="4E4Gfvfyfc_" role="37wK5m">
+              <ref role="3cqZAo" node="6iG0F4IZs3j" resolve="world" />
+            </node>
+            <node concept="37vLTw" id="4E4Gfvfyfgi" role="37wK5m">
+              <ref role="3cqZAo" node="6iG0F4IZxq8" resolve="ctx" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4E4GfvfyqC8" role="3cqZAp" />
+        <node concept="3clFbF" id="4E4GfvfyqgB" role="3cqZAp">
+          <node concept="2OqwBi" id="4E4GfvfyqgD" role="3clFbG">
+            <node concept="37vLTw" id="4E4GfvfyqgE" role="2Oq$k0">
+              <ref role="3cqZAo" node="6iG0F4IZxq8" resolve="ctx" />
+            </node>
+            <node concept="liA8E" id="4E4GfvfyqgF" role="2OqNvi">
+              <ref role="37wK5l" to="r7oa:~PApplet.hint(int)" resolve="hint" />
+              <node concept="10M0yZ" id="4E4GfvfyqqS" role="37wK5m">
+                <ref role="3cqZAo" to="r7oa:~PConstants.ENABLE_DEPTH_TEST" resolve="ENABLE_DEPTH_TEST" />
+                <ref role="1PxDUh" to="r7oa:~PApplet" resolve="PApplet" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4E4Gfvfyqa8" role="3cqZAp" />
       </node>
       <node concept="2AHcQZ" id="6iG0F4IZxqb" role="2AJF6D">
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />

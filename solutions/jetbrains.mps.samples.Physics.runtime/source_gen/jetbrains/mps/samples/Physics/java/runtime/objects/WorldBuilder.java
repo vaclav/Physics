@@ -13,11 +13,11 @@ public class WorldBuilder {
   public WorldBuilder() {
     world = new World(6);
   }
-  public WorldBuilder createEntity() {
+  public WorldBuilder createEntity(String name) {
     if (currentEntity != null) {
       world.addEntity(currentEntity);
     }
-    currentEntity = new PhysicalEntity(world);
+    currentEntity = new PhysicalEntity(world, name);
     return this;
   }
   public WorldBuilder withForce(Force force) {

@@ -27,23 +27,23 @@ public class SolarSystemSystemScope extends SystemScope {
     final SolarSystemSystemScope scope = this;
 
     //  Instanciate objects 
-    Sun = withEntity(new Sun1PhysicalEntity(world));
+    Sun = withEntity(new Sun2PhysicalEntity(world, "Sun1"));
     EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("4.7819374344933695E-14").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("780.9496481471622").setScale(13, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-426.45563374507503").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(new InternalVector(AH.mul(((Number) new BigDecimal("-3.5355339059327378").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-4.3297802811774667E-16").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-3.5355339059327373").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
 
     // Initialize them 
     Sun.init(this, world, new FixtureBuilder());
   }
 
-  public static class Sun1PhysicalEntity extends BaseObjectAbstractEntity<SolarSystemSystemScope> {
+  public static class Sun2PhysicalEntity extends BaseObjectAbstractEntity<SolarSystemSystemScope> {
 
-    public Sun1PhysicalEntity(World world) {
-      super(world);
+    public Sun2PhysicalEntity(World world, String name) {
+      super(world, name);
     }
 
     @Override
     public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
       // Escape this for nested forces 
-      Sun1PhysicalEntity currentEntity = this;
+      Sun2PhysicalEntity currentEntity = this;
 
       // Set static properties of Sun 
       this.setMass(((Number) new BigInteger("330000000000000")));
@@ -54,7 +54,7 @@ public class SolarSystemSystemScope extends SystemScope {
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.SHAPE, "shape");
+      fixtureProperties.set(Prop.SHAPE, "sphere");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
       fixtureProperties.set(Prop.EMIT_LIGHT, true);
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("250")), ((Number) new BigInteger("1"))));

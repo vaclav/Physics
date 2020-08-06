@@ -31,11 +31,14 @@ public class TestSimulation extends Simulation {
 
   @Override
   public void render(PApplet context) {
+    // Escape scope as currentEntity (for relative coordinates) 
+    VectorLike currentEntity = this.scope;
+
     // Setting camera properly 
     VectorLike position = new InternalVector(context.width / 2, context.height / 2, (context.height / 2) / PApplet.tan(PApplet.PI * 30 / 180));
     VectorLike focus = scope.SolarSystem1.Sun;
 
-    context.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, 1, 0);
+    context.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
 
     super.render(context);
   }

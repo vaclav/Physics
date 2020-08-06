@@ -23,6 +23,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   private World world;
   private Fixture fixture;
 
+  private String name;
   private BigDecimal massCached;
   private boolean disabled = false;
 
@@ -30,8 +31,9 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
    * Forces applied on the entity
    */
   private ArrayList<Force> forces = new ArrayList();
-  public PhysicalEntity(World world) {
+  public PhysicalEntity(World world, String name) {
     this.world = world;
+    this.name = name;
     // Creating body 
     body = OdeHelper.createBody(world.getWorld());
   }
@@ -144,5 +146,10 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
 
   public Fixture getFixture() {
     return this.fixture;
+  }
+
+
+  public String getName() {
+    return this.name;
   }
 }

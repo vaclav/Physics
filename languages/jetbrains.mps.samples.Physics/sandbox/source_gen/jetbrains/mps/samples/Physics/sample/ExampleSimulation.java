@@ -31,11 +31,14 @@ public class ExampleSimulation extends Simulation {
 
   @Override
   public void render(PApplet context) {
-    // Setting camera properly 
-    VectorLike position = new InternalVector(context.width / 2, context.height / 2, (context.height / 2) / PApplet.tan(PApplet.PI * 30 / 180));
-    VectorLike focus = scope.EarthNested.Earth;
+    // Escape scope as currentEntity (for relative coordinates) 
+    VectorLike currentEntity = this.scope;
 
-    context.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, 1, 0);
+    // Setting camera properly 
+    VectorLike position = new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("1300")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")));
+    VectorLike focus = scope.getPosition();
+
+    context.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
 
     super.render(context);
   }
