@@ -764,14 +764,6 @@
     <property role="TrG5h" value="VelocityCoordinates" />
     <property role="34LRSv" value="initial velocity" />
     <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableExpression" />
-    <node concept="1TJgyj" id="GdoRjGvS51" role="1TKVEi">
-      <property role="IQ2ns" value="796402062949581121" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="coordinates" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
-      <ref role="20ksaX" node="GdoRjGvRej" resolve="expression" />
-    </node>
     <node concept="PrWs8" id="270Q2mEVj8D" role="PzmwI">
       <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
     </node>

@@ -27,11 +27,13 @@ public class replace_DimensionType_DimensionType_InequationReplacementRule exten
   public replace_DimensionType_DimensionType_InequationReplacementRule() {
   }
   public void processInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, final TypeCheckingContext typeCheckingContext, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
-    {
-      SNode _nodeToCheck_1029348928467 = equationInfo.getNodeWithError();
-      EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5344936513383097766", 0, null);
-      _info_12389875345.getOuterRulesIdFromInfo(equationInfo);
-      typeCheckingContext.createLessThanInequality((SNode) SLinkOperations.getTarget(subtype, LINKS.baseType$fHYw), (SNode) SLinkOperations.getTarget(supertype, LINKS.baseType$fHYw), false, true, _info_12389875345);
+    if (!(typeCheckingContext.isSingleTypeComputation())) {
+      {
+        SNode _nodeToCheck_1029348928467 = equationInfo.getNodeWithError();
+        EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "3675770290331684097", 0, null);
+        _info_12389875345.getOuterRulesIdFromInfo(equationInfo);
+        typeCheckingContext.createLessThanInequality((SNode) SLinkOperations.getTarget(subtype, LINKS.baseType$fHYw), (SNode) SLinkOperations.getTarget(supertype, LINKS.baseType$fHYw), true, true, _info_12389875345);
+      }
     }
 
     Map<SNode, BigDecimal> sub = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(subtype, LINKS.units$o6Ow));
@@ -40,7 +42,7 @@ public class replace_DimensionType_DimensionType_InequationReplacementRule exten
     if (!(DimensionMapsHelper.matches(sub, sup))) {
       {
         final MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(equationInfo.getNodeWithError(), "non matching units", "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "8009150056676241711", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(equationInfo.getNodeWithError(), DimensionMapsHelper.mapToString(sub) + " does not match with " + DimensionMapsHelper.mapToString(sup), "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "8009150056676241711", null, errorTarget);
         HUtil.addAdditionalRuleIdsFromInfo(_reporter_2309309498, equationInfo);
       }
     }

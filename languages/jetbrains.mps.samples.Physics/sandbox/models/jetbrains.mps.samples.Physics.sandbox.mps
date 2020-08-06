@@ -5,8 +5,8 @@
     <use id="be81eb12-4eda-4d0e-89be-7493500ab874" name="jetbrains.mps.samples.Physics" version="1" />
     <use id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math" version="0" />
     <use id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes" version="1" />
-    <use id="8d269739-b4af-482c-aa58-4e6f7b951c70" name="jetbrains.mps.samples.Physics.dimensions.math" version="0" />
     <use id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions" version="0" />
+    <use id="f9bdc723-99df-40ff-934c-d1f848158f92" name="jetbrains.mps.samples.Physics.IETS3MathExtended" version="0" />
     <devkit ref="dc532898-e561-4cd2-87df-c64e0f83bf04(jetbrains.mps.samples.Physics.devkit.java)" />
   </languages>
   <imports>
@@ -173,6 +173,12 @@
       <concept id="7287056866553931600" name="jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget" flags="ng" index="3K97jc" />
       <concept id="7287056866553921482" name="jetbrains.mps.samples.Physics.structure.ObjectMassTarget" flags="ng" index="3K9aLm" />
       <concept id="7287056866552793956" name="jetbrains.mps.samples.Physics.structure.AbstractForceArgument" flags="ng" index="3LOTzS" />
+    </language>
+    <language id="f9bdc723-99df-40ff-934c-d1f848158f92" name="jetbrains.mps.samples.Physics.IETS3MathExtended">
+      <concept id="6539217963580430803" name="jetbrains.mps.samples.Physics.IETS3MathExtended.structure.NRootExpression" flags="ng" index="IFQ74">
+        <property id="5344936513388892066" name="exponent" index="3TC$zi" />
+        <child id="6539217963580464186" name="expression" index="IFIgH" />
+      </concept>
     </language>
     <language id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math">
       <concept id="4944417823362146628" name="org.iets3.core.expr.math.structure.PowerExpression" flags="ng" index="a0Byk">
@@ -2170,9 +2176,6 @@
       </node>
       <node concept="3Bsx3U" id="4E4Gfvfyy66" role="1h9ZzG">
         <node concept="v6hs8" id="4E4Gfvfz4QA" role="3Bsx3B">
-          <node concept="30bXRB" id="4E4Gfvfz4TD" role="Y6l9D">
-            <property role="30bXRw" value="0" />
-          </node>
           <node concept="30bXRB" id="3Xqr82XaeDh" role="Y6leJ">
             <property role="30bXRw" value="0" />
           </node>
@@ -2182,6 +2185,17 @@
             </node>
             <node concept="30bXRB" id="3Xqr82XioiD" role="1N951F">
               <property role="30bXRw" value="5" />
+            </node>
+          </node>
+          <node concept="IFQ74" id="6uKmUf9WhdZ" role="Y6l9D">
+            <property role="3TC$zi" value="3" />
+            <node concept="1N951E" id="6uKmUf9WxH2" role="IFIgH">
+              <node concept="CIsvn" id="6uKmUf9WxH3" role="1N7es9">
+                <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
+              </node>
+              <node concept="30bXRB" id="6uKmUf9WxH4" role="1N951F">
+                <property role="30bXRw" value="5" />
+              </node>
             </node>
           </node>
         </node>

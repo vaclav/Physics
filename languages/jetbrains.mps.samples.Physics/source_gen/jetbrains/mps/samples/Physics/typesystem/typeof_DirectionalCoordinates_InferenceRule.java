@@ -11,25 +11,26 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public class typeof_DirectionalCoordinates_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
   public typeof_DirectionalCoordinates_InferenceRule() {
   }
-  public void applyRule(final SNode directionalCoordinates, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+  public void applyRule(final SNode coords, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode directionType = typeCheckingContext.typeOf(SLinkOperations.getTarget(directionalCoordinates, LINKS.direction$2h5b), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973768552", true);
+      final SNode directionType = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.direction$2h5b), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973768552", true);
       typeCheckingContext.whenConcrete(directionType, new Runnable() {
         public void run() {
           // Check direction is actually a direction 
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = directionalCoordinates;
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.direction$2h5b);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7287056866554291920", 0, null);
-              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(directionType), (SNode) createDirectionType_m16thm_a1a0c0a0b0a0a1a0b0a0b(), true, true, _info_12389875345);
+              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(directionType), (SNode) _quotation_createNode_m16thm_a1a0c0a0b0a0a1a0b0a0b(), true, true, _info_12389875345);
             }
           }
         }
@@ -37,11 +38,11 @@ public class typeof_DirectionalCoordinates_InferenceRule extends AbstractInferen
     }
 
     {
-      final SNode length = typeCheckingContext.typeOf(SLinkOperations.getTarget(directionalCoordinates, LINKS.length$2h69), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972990113", true);
+      final SNode length = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.length$2h69), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972990113", true);
       typeCheckingContext.whenConcrete(length, new Runnable() {
         public void run() {
           {
-            SNode _nodeToCheck_1029348928467 = directionalCoordinates;
+            SNode _nodeToCheck_1029348928467 = coords;
             EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972991490", 0, null);
             typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972991353", true), (SNode) createVectorType_m16thm_a1a0c0a0a0a1a0b0c0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(length))), _info_12389875345);
           }
@@ -58,9 +59,11 @@ public class typeof_DirectionalCoordinates_InferenceRule extends AbstractInferen
   public boolean overrides() {
     return false;
   }
-  private static SNode createDirectionType_m16thm_a1a0c0a0b0a0a1a0b0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
-    return n0.getResult();
+  private static SNode _quotation_createNode_m16thm_a1a0c0a0b0a0a1a0b0a0b() {
+    PersistenceFacade facade = PersistenceFacade.getInstance();
+    SNode quotedNode_1 = null;
+    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, "jetbrains.mps.samples.Physics.types"), 0x6520d39c950a1448L, "DirectionType")).getResult();
+    return quotedNode_1;
   }
   private static SNode createVectorType_m16thm_a1a0c0a0a0a1a0b0c0b(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
@@ -76,7 +79,6 @@ public class typeof_DirectionalCoordinates_InferenceRule extends AbstractInferen
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept DirectionalCoordinates$pa = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, "jetbrains.mps.samples.Physics.structure.DirectionalCoordinates");
-    /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
     /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
   }

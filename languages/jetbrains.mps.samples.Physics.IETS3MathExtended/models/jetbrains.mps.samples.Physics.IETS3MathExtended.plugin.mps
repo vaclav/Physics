@@ -133,7 +133,7 @@
               <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
             </node>
             <node concept="liA8E" id="4E4Gfvf4WSo" role="2OqNvi">
-              <ref role="37wK5l" to="xlxw:~BigDecimal.divide(java.math.BigDecimal)" resolve="divide" />
+              <ref role="37wK5l" to="xlxw:~BigDecimal.divide(java.math.BigDecimal,java.math.MathContext)" resolve="divide" />
               <node concept="2ShNRf" id="4E4Gfvf4WTH" role="37wK5m">
                 <node concept="1pGfFk" id="4E4Gfvf56X0" role="2ShVmc">
                   <ref role="37wK5l" to="xlxw:~BigDecimal.&lt;init&gt;(java.lang.String)" resolve="BigDecimal" />
@@ -144,6 +144,10 @@
                     </node>
                   </node>
                 </node>
+              </node>
+              <node concept="10M0yZ" id="6uKmUfa19wf" role="37wK5m">
+                <ref role="3cqZAo" to="xlxw:~MathContext.DECIMAL32" resolve="DECIMAL32" />
+                <ref role="1PxDUh" to="xlxw:~MathContext" resolve="MathContext" />
               </node>
             </node>
           </node>

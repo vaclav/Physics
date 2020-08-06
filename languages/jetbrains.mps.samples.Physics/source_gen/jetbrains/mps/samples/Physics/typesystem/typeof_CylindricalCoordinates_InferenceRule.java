@@ -9,7 +9,6 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
-import jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper;
 import jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
@@ -38,16 +37,16 @@ public class typeof_CylindricalCoordinates_InferenceRule extends AbstractInferen
                       if (!(typeCheckingContext.isSingleTypeComputation())) {
                         {
                           SNode _nodeToCheck_1029348928467 = coords;
-                          EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5344936513384411659", 0, null);
-                          typeCheckingContext.createComparableEquation((SNode) DimensionTypeHelper.asDimension(typeCheckingContext.getExpandedNode(height)), (SNode) DimensionTypeHelper.asDimension(typeCheckingContext.getExpandedNode(distance)), false, _info_12389875345);
+                          EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "height and distance should be of same dimension", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5344936513384411659", 0, null);
+                          typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(height), (SNode) typeCheckingContext.getExpandedNode(distance), false, _info_12389875345);
                         }
                       }
 
                       // TODO use of allowing other kind of dimensions? (angular speed...)  
                       if (!(typeCheckingContext.isSingleTypeComputation())) {
                         {
-                          SNode _nodeToCheck_1029348928467 = coords;
-                          EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972979633", 0, null);
+                          SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.phi$ip6D);
+                          EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3675770290330346602", 0, null);
                           typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(phi), (SNode) _quotation_createNode_divah4_a1a0c0a0d0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(), true, true, _info_12389875345);
                         }
                       }

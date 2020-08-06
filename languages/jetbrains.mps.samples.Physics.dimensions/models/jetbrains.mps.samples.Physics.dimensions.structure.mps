@@ -299,6 +299,7 @@
     <property role="TrG5h" value="AbstractDimensionType" />
     <property role="R5$K7" value="true" />
     <property role="R4oN_" value="unit type but abstract, used for easier type checking (operations...)" />
+    <property role="34LRSv" value="abstract-dimension" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
   </node>
   <node concept="Az7Fb" id="1fq3tlLt$w7">

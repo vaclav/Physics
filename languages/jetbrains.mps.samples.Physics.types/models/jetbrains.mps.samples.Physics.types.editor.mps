@@ -108,5 +108,11 @@
       <node concept="l2Vlx" id="1d1Q7eb4WwX" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="3c2XpEv4L64">
+    <ref role="1XX52x" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
+    <node concept="3F0ifn" id="3c2XpEv4L66" role="2wV5jI">
+      <property role="3F0ifm" value="direction" />
+    </node>
+  </node>
 </model>
 

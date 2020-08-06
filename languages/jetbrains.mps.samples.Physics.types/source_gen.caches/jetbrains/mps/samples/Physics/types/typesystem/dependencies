@@ -12,14 +12,40 @@
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.types.typesystem.TypesystemDescriptor">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.errors.IRuleConflictWarningProducer" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.InequationReplacementRule_Runtime" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.OverloadedOperationsTypesProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.OverloadedOpsProvider_OneTypeSpecified" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.types.typesystem.ObjectIsDirection_SubtypingRule" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.types.typesystem.VectorTypeHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.types.typesystem.WorldIsObject_SubtypingRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.types.typesystem.replace_VectorType_VectorType_InequationReplacementRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.types.typesystem.subtype_AbstractVector_DirectionType_SubtypingRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.types.typesystem.subtype_VectorType_AbstractVectorType_SubtypingRule" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.SubtypingManager" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.types.typesystem.VectorHandlingCapablity">
+    <classNode extendsClassName="org.iets3.core.expr.base.behavior.ICapabilityRequirement" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.types.typesystem.VectorTypeHelper">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.types.typesystem.VectorHandlingCapablity" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.types.typesystem.WorldIsObject_SubtypingRule">
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />

@@ -13,12 +13,12 @@ import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.samples.Physics.dimensions.behavior.IUnitReferenceLike__BehaviorDescriptor;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReference__BehaviorDescriptor;
+import java.math.MathContext;
 import org.nevec.rjm.BigDecimalMath;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.samples.Physics.dimensions.behavior.BigDecimalUtil;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
-import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
@@ -30,22 +30,24 @@ public class DimensionTypeHelper {
     return SNodeOperations.isInstanceOf(node, CONCEPTS.DimensionType$yz) && Type__BehaviorDescriptor.getCapabilityRequirement_id7McqtXGyz8c.invoke(SNodeOperations.cast(node, CONCEPTS.Type$fA)) instanceof UnitHandlingCapablity;
   }
 
+  public static boolean isRegularType(SNode node) {
+    return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.as(node, CONCEPTS.Type$fA));
+  }
+
   public static boolean bothAreDimensions(SNode one, SNode two) {
     return isDimension(one) && isDimension(two);
   }
   public static boolean oneIsDimension(SNode one, SNode two) {
-    return isDimension(one) ^ isDimension(two);
+    boolean oneIsDim = isDimension(one);
+    boolean twoIsDim = isDimension(two);
+
+    return oneIsDim ^ twoIsDim && (oneIsDim || isRegularType(one)) && (twoIsDim || isRegularType(two));
   }
   public static boolean atLeastOneIsDimension(SNode one, SNode two) {
-    return isDimension(one) || isDimension(two);
-  }
+    boolean oneIsDim = isDimension(one);
+    boolean twoIsDim = isDimension(two);
 
-  public static SNode asDimension(SNode node) {
-    if (isDimension(node) || NumberTypeHelper.isBaseTypeZero(node)) {
-      return node;
-    }
-
-    return createDimensionType_updygn_a2a6(SNodeOperations.as(node, CONCEPTS.Type$fA));
+    return oneIsDim || twoIsDim && (oneIsDim || isRegularType(one)) && (twoIsDim || isRegularType(two));
   }
 
 
@@ -93,7 +95,7 @@ public class DimensionTypeHelper {
       final SNode composite = UnitReference__BehaviorDescriptor.getDimension_ideHVwIHgU5$.invoke(unit);
       if (SNodeOperations.isInstanceOf(composite, CONCEPTS.CompositeDimension$ZV)) {
         BigDecimal decompositionRatio = decomposeRatio(composite);
-        ratio = ratio.multiply((targetToBase ? BigDecimal.ONE.divide(decompositionRatio) : decompositionRatio));
+        ratio = ratio.multiply((targetToBase ? BigDecimal.ONE.divide(decompositionRatio, MathContext.DECIMAL128) : decompositionRatio));
       }
     }
 
@@ -111,7 +113,7 @@ public class DimensionTypeHelper {
     if (SPropertyOperations.getBoolean(targetUnit, PROPS.selfLeft$Z2EX) == targetToBase) {
       return pow;
     } else {
-      return BigDecimal.ONE.divide(pow);
+      return BigDecimal.ONE.divide(pow, MathContext.DECIMAL128);
     }
   }
 
@@ -121,7 +123,7 @@ public class DimensionTypeHelper {
    */
   public static BigDecimal decomposeRatio(SNode composite) {
     final Wrappers._T<BigDecimal> result = new Wrappers._T<BigDecimal>(new BigDecimal(SPropertyOperations.getString(composite, PROPS.factor$Z2DZ)));
-    result.value = (SPropertyOperations.getBoolean(composite, PROPS.selfLeft$Z2EX) ? BigDecimal.ONE.divide(result.value) : result.value);
+    result.value = (SPropertyOperations.getBoolean(composite, PROPS.selfLeft$Z2EX) ? BigDecimal.ONE.divide(result.value, MathContext.DECIMAL128) : result.value);
 
     // If the unit contains composite parent, apply their conversion ratio too 
     ListSequence.fromList(SLinkOperations.getChildren(composite, LINKS.units$o6Ow)).visitAll(new IVisitor<SNode>() {
@@ -139,12 +141,6 @@ public class DimensionTypeHelper {
   }
 
 
-  private static SNode createDimensionType_updygn_a2a6(SNode p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
-    n0.forChild(LINKS.baseType$fHYw).initNode(p0, CONCEPTS.Type$fA, true);
-    return n0.getResult();
-  }
-
   private static final class CONCEPTS {
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
     /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
@@ -155,7 +151,6 @@ public class DimensionTypeHelper {
   private static final class LINKS {
     /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
     /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
-    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
   }
 
   private static final class PROPS {

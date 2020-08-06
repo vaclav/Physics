@@ -18,6 +18,7 @@ import org.nevec.rjm.BigDecimalMath;
 import java.math.BigDecimal;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import java.math.MathContext;
 import com.mbeddr.mpsutil.interpreter.rt.StopAndReturnException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterEscapeException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterRuntimeException;
@@ -42,7 +43,7 @@ public class InterpreterExtendedMathInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return BigDecimalMath.pow(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.expression$tVRI), context, coverage, trace, false), BigDecimal.class)), BigDecimal.ONE.divide(new BigDecimal(SPropertyOperations.getString(node, PROPS.exponent$9cvW))));
+          return BigDecimalMath.pow(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.expression$tVRI), context, coverage, trace, false), BigDecimal.class)), BigDecimal.ONE.divide(new BigDecimal(SPropertyOperations.getString(node, PROPS.exponent$9cvW)), MathContext.DECIMAL32));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {

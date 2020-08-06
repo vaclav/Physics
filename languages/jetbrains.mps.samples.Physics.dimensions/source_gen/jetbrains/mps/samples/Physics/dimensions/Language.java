@@ -47,7 +47,6 @@ public class Language extends LanguageRuntime {
 
   @Override
   protected void fillExtendedLanguages(Collection<SLanguage> extendedLanguages) {
-    extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0"), "org.iets3.core.expr.math"));
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("71934284-d7d1-45ee-a054-8c072591085f"), "org.iets3.core.expr.toplevel"));
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("7b68d745-a7b8-48b9-bd9c-05c0f8725a35"), "org.iets3.core.base"));
   }
@@ -87,6 +86,5 @@ public class Language extends LanguageRuntime {
   @Override
   protected void contribute(@NotNull LanguageExtensions extensions) {
     extensions.recordContribution("org.iets3.core.expr.base", "cfaa4966-b7d5-4b69-b66a-309a6e1a7290", EditorAspectDescriptor.class);
-    extensions.recordContribution("org.iets3.core.expr.math", "6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0", EditorAspectDescriptor.class);
   }
 }

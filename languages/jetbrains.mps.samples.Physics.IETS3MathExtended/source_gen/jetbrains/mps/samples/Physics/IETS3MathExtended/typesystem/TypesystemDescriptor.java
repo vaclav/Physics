@@ -11,6 +11,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.math.BigDecimal;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import java.math.MathContext;
 import org.nevec.rjm.BigDecimalMath;
 import jetbrains.mps.typesystem.inference.SubtypingManager;
 import org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor;
@@ -49,7 +50,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
             final SNode exponent = leftOperandType;
             if (SNodeOperations.isInstanceOf(exponent, CONCEPTS.NumberType$2D)) {
               // We expect the exponent to be constant (float string) 
-              BigDecimal expDec = BigDecimal.ONE.divide(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(exponent, LINKS.range$WgV$), PROPS.min$Va2)));
+              BigDecimal expDec = BigDecimal.ONE.divide(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(exponent, LINKS.range$WgV$), PROPS.min$Va2)), MathContext.DECIMAL128);
 
               // Then we compute the min/max value 
               BigDecimal minRoot = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(expression, LINKS.range$WgV$), PROPS.min$Va2)), expDec);

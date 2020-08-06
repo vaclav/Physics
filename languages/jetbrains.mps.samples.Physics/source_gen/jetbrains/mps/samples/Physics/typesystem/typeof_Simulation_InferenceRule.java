@@ -30,9 +30,17 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
     }
     if (!(typeCheckingContext.isSingleTypeComputation())) {
       {
+        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(simulation, LINKS.cameraPosition$_PZQ);
+        EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7471572540824260993", 0, null);
+        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7471572540824260998", true), (SNode) createDirectionType_63q4hh_a1a0c0a0b0b(), true, true, _info_12389875345);
+      }
+    }
+
+    if (!(typeCheckingContext.isSingleTypeComputation())) {
+      {
         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(simulation, LINKS.simulationSpeed$m7cv);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2432181455078546504", 0, null);
-        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2432181455078544054", true), (SNode) _quotation_createNode_63q4hh_a1a0c0a0b0b(), true, true, _info_12389875345);
+        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2432181455078544054", true), (SNode) _quotation_createNode_63q4hh_a1a0c0a0d0b(), true, true, _info_12389875345);
       }
     }
   }
@@ -49,7 +57,11 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
     return n0.getResult();
   }
-  private static SNode _quotation_createNode_63q4hh_a1a0c0a0b0b() {
+  private static SNode createDirectionType_63q4hh_a1a0c0a0b0b() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
+    return n0.getResult();
+  }
+  private static SNode _quotation_createNode_63q4hh_a1a0c0a0d0b() {
     PersistenceFacade facade = PersistenceFacade.getInstance();
     SNode quotedNode_1 = null;
     SNode quotedNode_2 = null;
@@ -65,6 +77,7 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink focus$_WjO = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x55d23bae7b62a2e0L, "focus");
+    /*package*/ static final SContainmentLink cameraPosition$_PZQ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x55d23bae7b62a2a7L, "cameraPosition");
     /*package*/ static final SContainmentLink simulationSpeed$m7cv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x21c0d825ab3fd1e0L, "simulationSpeed");
   }
 

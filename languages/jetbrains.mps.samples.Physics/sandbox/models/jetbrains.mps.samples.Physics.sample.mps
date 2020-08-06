@@ -152,6 +152,7 @@
         <child id="796402062949577619" name="expression" index="3Bsx3B" />
       </concept>
       <concept id="796402062949577611" name="jetbrains.mps.samples.Physics.structure.VelocityCoordinates" flags="ng" index="3Bsx3Z" />
+      <concept id="7287056866553931547" name="jetbrains.mps.samples.Physics.structure.ObjectPositionTarget" flags="ng" index="3K97i7" />
       <concept id="7287056866553931600" name="jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget" flags="ng" index="3K97jc" />
       <concept id="7287056866553921482" name="jetbrains.mps.samples.Physics.structure.ObjectMassTarget" flags="ng" index="3K9aLm" />
       <concept id="7287056866552793956" name="jetbrains.mps.samples.Physics.structure.AbstractForceArgument" flags="ng" index="3LOTzS" />
@@ -471,6 +472,29 @@
           </node>
           <node concept="CIsvn" id="4CH1R2NFTNP" role="1N7es9">
             <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Bsx3Z" id="6uKmUf9t8Qm" role="1h9ZzH">
+        <node concept="30dDTi" id="6uKmUf9taKZ" role="3Bsx3B">
+          <node concept="1N951E" id="6uKmUf9tb6W" role="30dEs_">
+            <node concept="30bXRB" id="6uKmUf9tb6T" role="1N951F">
+              <property role="30bXRw" value="1" />
+            </node>
+            <node concept="CIsvn" id="6uKmUf9tb76" role="1N7es9">
+              <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
+              <node concept="CIsvk" id="6uKmUf9tb77" role="1N7KNQ">
+                <node concept="30bXRB" id="6uKmUf9tb78" role="3D8Z_2">
+                  <property role="30bXRw" value="-1" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1QScDb" id="6uKmUf9ta4s" role="30dEsF">
+            <node concept="3K97i7" id="6uKmUf9tahs" role="1QScD9" />
+            <node concept="3okdC7" id="6uKmUf9t9Pj" role="30czhm">
+              <ref role="3okdC0" node="10n4tqnmBvU" resolve="EarthNested" />
+            </node>
           </node>
         </node>
       </node>

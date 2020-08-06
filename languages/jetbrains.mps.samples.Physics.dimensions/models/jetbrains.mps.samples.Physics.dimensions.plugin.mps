@@ -16,6 +16,7 @@
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
     <import index="5fi3" ref="r:a08ce4c7-a3d7-4ce1-b6a4-794edd2a85d3(jetbrains.mps.samples.Physics.dimensions.behavior)" />
     <import index="pbu6" ref="r:83e946de-2a7f-4a4c-b3c9-4f671aa7f2db(org.iets3.core.expr.base.behavior)" />
+    <import index="tc1u" ref="r:2c20269f-57e4-41ef-a202-e8ce4699d3fc(jetbrains.mps.samples.Physics.IETS3MathExtended.plugin)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -230,12 +231,23 @@
     <node concept="1J7WVO" id="1$oDF1jTbpI" role="1J4apk">
       <ref role="1J7WVQ" to="km5y:uGVYUiiVGW" resolve="ExprSimpleTypesInterpreter" />
     </node>
+    <node concept="1J7WVO" id="6uKmUf9RDeU" role="1J4apk">
+      <ref role="1J7WVQ" to="tc1u:1$oDF1jRf8I" resolve="ExtendedMathInterpreter" />
+    </node>
     <node concept="rvkaK" id="3G2R3fdXMc9" role="qq9xK">
       <node concept="3uibUv" id="3G2R3fdXZjE" role="r5wI3">
         <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
       </node>
       <node concept="rxStX" id="3G2R3fdXRIy" role="rai9p">
         <ref role="rxSuV" to="onwr:7tUW$K4o9Ja" resolve="DimensionType" />
+      </node>
+    </node>
+    <node concept="rvkaK" id="3c2XpEveAMF" role="qq9xK">
+      <node concept="3uibUv" id="3c2XpEveB0P" role="r5wI3">
+        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+      </node>
+      <node concept="rxStX" id="3c2XpEveAQM" role="rai9p">
+        <ref role="rxSuV" to="onwr:3031XnpbrCM" resolve="AbstractDimensionType" />
       </node>
     </node>
   </node>

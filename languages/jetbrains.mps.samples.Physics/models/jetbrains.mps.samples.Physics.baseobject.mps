@@ -80,7 +80,6 @@
       <concept id="6539217963580430803" name="jetbrains.mps.samples.Physics.IETS3MathExtended.structure.NRootExpression" flags="ng" index="IFQ74">
         <property id="5344936513388892066" name="exponent" index="3TC$zi" />
         <child id="6539217963580464186" name="expression" index="IFIgH" />
-        <child id="6539217963580456773" name="exponent_" index="IFKti" />
       </concept>
     </language>
     <language id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math">
@@ -105,9 +104,6 @@
       <node concept="30dDTi" id="4CH1R2NDL_l" role="27rm5b">
         <node concept="IFQ74" id="enY1Kc$r6O" role="30dEsF">
           <property role="3TC$zi" value="3" />
-          <node concept="30bXRB" id="enY1Kc$r6P" role="IFKti">
-            <property role="30bXRw" value="3" />
-          </node>
           <node concept="1QScDb" id="enY1Kc$r6Q" role="IFIgH">
             <node concept="3K9aLm" id="enY1Kc$r6R" role="1QScD9" />
             <node concept="2CrqZA" id="enY1Kc$r6S" role="30czhm" />
@@ -135,9 +131,6 @@
       <node concept="30dDTi" id="4CH1R2NDLuI" role="27rm5b">
         <node concept="IFQ74" id="enY1Kc$r65" role="30dEsF">
           <property role="3TC$zi" value="3" />
-          <node concept="30bXRB" id="enY1Kc$r66" role="IFKti">
-            <property role="30bXRw" value="3" />
-          </node>
           <node concept="1QScDb" id="enY1Kc$r67" role="IFIgH">
             <node concept="3K9aLm" id="enY1Kc$r68" role="1QScD9" />
             <node concept="2CrqZA" id="enY1Kc$r69" role="30czhm" />
@@ -165,9 +158,6 @@
       <node concept="30dDTi" id="4CH1R2NDLnY" role="27rm5b">
         <node concept="IFQ74" id="enY1Kc$r30" role="30dEsF">
           <property role="3TC$zi" value="3" />
-          <node concept="30bXRB" id="enY1Kc$r3u" role="IFKti">
-            <property role="30bXRw" value="3" />
-          </node>
           <node concept="1QScDb" id="enY1Kc$r4G" role="IFIgH">
             <node concept="3K9aLm" id="enY1Kc$r5w" role="1QScD9" />
             <node concept="2CrqZA" id="enY1Kc$r45" role="30czhm" />
@@ -211,9 +201,6 @@
         </node>
         <node concept="IFQ74" id="enY1Kc$qBP" role="30dEsF">
           <property role="3TC$zi" value="3" />
-          <node concept="30bXRB" id="enY1Kc$qCd" role="IFKti">
-            <property role="30bXRw" value="3" />
-          </node>
           <node concept="30dDTi" id="enY1Kc$qPa" role="IFIgH">
             <node concept="1QScDb" id="enY1Kc$qV$" role="30dEs_">
               <node concept="3K9aLm" id="enY1Kc$qZG" role="1QScD9" />

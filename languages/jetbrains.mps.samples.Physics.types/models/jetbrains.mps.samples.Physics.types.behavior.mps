@@ -12,6 +12,8 @@
     <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" />
     <import index="nas6" ref="r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)" />
+    <import index="pbu6" ref="r:83e946de-2a7f-4a4c-b3c9-4f671aa7f2db(org.iets3.core.expr.base.behavior)" />
+    <import index="dq3m" ref="r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -38,6 +40,12 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
+        <reference id="1144433057691" name="classifier" index="1PxDUh" />
+      </concept>
+      <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
+        <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
+      </concept>
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
         <child id="1068580123133" name="returnType" index="3clF45" />
@@ -52,6 +60,9 @@
       </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+      </concept>
+      <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
+        <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
@@ -180,6 +191,22 @@
         </node>
       </node>
       <node concept="17QB3L" id="6WAdSFgy7mH" role="3clF45" />
+    </node>
+    <node concept="13i0hz" id="6uKmUf9txQ0" role="13h7CS">
+      <property role="TrG5h" value="getCapabilityRequirement" />
+      <ref role="13i0hy" to="pbu6:7McqtXGyz8c" resolve="getCapabilityRequirement" />
+      <node concept="3Tm1VV" id="6uKmUf9txQ1" role="1B3o_S" />
+      <node concept="3clFbS" id="6uKmUf9txQi" role="3clF47">
+        <node concept="3cpWs6" id="6uKmUf9txYX" role="3cqZAp">
+          <node concept="10M0yZ" id="6uKmUf9ty5t" role="3cqZAk">
+            <ref role="3cqZAo" to="dq3m:3yBD53Wtau3" resolve="INSTANCE" />
+            <ref role="1PxDUh" to="dq3m:3yBD53Wtafy" resolve="VectorHandlingCapablity" />
+          </node>
+        </node>
+      </node>
+      <node concept="3uibUv" id="6uKmUf9txQj" role="3clF45">
+        <ref role="3uigEE" to="pbu6:7McqtXGyzQo" resolve="ICapabilityRequirement" />
+      </node>
     </node>
   </node>
 </model>

@@ -31,6 +31,7 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="9dpa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.ode(jetbrains.mps.samples.Physics.java.runtime/)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
+    <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -183,6 +184,7 @@
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
+      <concept id="1204200696010" name="jetbrains.mps.baseLanguage.structure.NullType" flags="in" index="1vX6Bi" />
       <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
@@ -447,6 +449,17 @@
         <node concept="10Nm6u" id="G6XgqqTScs" role="gfFT$">
           <node concept="1sPUBX" id="G6XgqqTSct" role="lGtFl">
             <ref role="v9R2y" node="G6XgqqQVPC" resolve="TextureToExpression" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="6uKmUf9FqMG" role="3acgRq">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="hm2y:6sdnDbSlaok" resolve="Type" />
+      <node concept="gft3U" id="6uKmUf9FrjM" role="1lVwrX">
+        <node concept="1vX6Bi" id="6uKmUf9FrjS" role="gfFT$">
+          <node concept="1sPUBX" id="6uKmUf9FrjV" role="lGtFl">
+            <ref role="v9R2y" node="6uKmUf9DzQy" resolve="TypeToJavaType" />
           </node>
         </node>
       </node>
@@ -6007,6 +6020,38 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="jVnub" id="6uKmUf9DzQy">
+    <property role="TrG5h" value="TypeToJavaType" />
+    <ref role="phYkn" to="mrzi:2bLbgtyblHi" resolve="SwitchPrimitiveType" />
+    <node concept="3aamgX" id="6uKmUf9DK2u" role="3aUrZf">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
+      <node concept="1Koe21" id="6uKmUf9DK2y" role="1lVwrX">
+        <node concept="312cEg" id="6uKmUf9DK2T" role="1Koe22">
+          <property role="TrG5h" value="vec" />
+          <node concept="3Tm6S6" id="6uKmUf9DK2U" role="1B3o_S" />
+          <node concept="3uibUv" id="6uKmUf9DK31" role="1tU5fm">
+            <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
+            <node concept="raruj" id="6uKmUf9DK3b" role="lGtFl" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="6uKmUf9DK3j" role="3aUrZf">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
+      <node concept="1Koe21" id="6uKmUf9DK3t" role="1lVwrX">
+        <node concept="312cEg" id="6uKmUf9DK3u" role="1Koe22">
+          <property role="TrG5h" value="vec" />
+          <node concept="3Tm6S6" id="6uKmUf9DK3v" role="1B3o_S" />
+          <node concept="3uibUv" id="6uKmUf9DK3w" role="1tU5fm">
+            <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
+            <node concept="raruj" id="6uKmUf9DK3x" role="lGtFl" />
           </node>
         </node>
       </node>

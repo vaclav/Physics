@@ -11,11 +11,13 @@ import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import org.iets3.core.expr.base.behavior.ICapabilityRequirement;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor;
+import jetbrains.mps.samples.Physics.types.typesystem.VectorHandlingCapablity;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -26,8 +28,9 @@ public final class VectorType__BehaviorDescriptor extends BaseBHDescriptor {
 
   public static final SMethod<SNode> getComponentType_id1d1Q7eb5sml = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getComponentType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1d1Q7eb5sml").build();
   public static final SMethod<String> getDetailedPresentation_id22G2W3WJ92t = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getDetailedPresentation").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("22G2W3WJ92t").build();
+  public static final SMethod<ICapabilityRequirement> getCapabilityRequirement_id7McqtXGyz8c = new SMethodBuilder<ICapabilityRequirement>(new SJavaCompoundTypeImpl(ICapabilityRequirement.class)).name("getCapabilityRequirement").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7McqtXGyz8c").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getComponentType_id1d1Q7eb5sml, getDetailedPresentation_id22G2W3WJ92t);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getComponentType_id1d1Q7eb5sml, getDetailedPresentation_id22G2W3WJ92t, getCapabilityRequirement_id7McqtXGyz8c);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -37,6 +40,9 @@ public final class VectorType__BehaviorDescriptor extends BaseBHDescriptor {
   }
   /*package*/ static String getDetailedPresentation_id22G2W3WJ92t(@NotNull SNode __thisNode__) {
     return "vector<" + BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.componentType$gTxy)) + ">";
+  }
+  /*package*/ static ICapabilityRequirement getCapabilityRequirement_id7McqtXGyz8c(@NotNull SNode __thisNode__) {
+    return VectorHandlingCapablity.INSTANCE;
   }
 
   /*package*/ VectorType__BehaviorDescriptor() {
@@ -58,6 +64,8 @@ public final class VectorType__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((SNode) getComponentType_id1d1Q7eb5sml(node));
       case 1:
         return (T) ((String) getDetailedPresentation_id22G2W3WJ92t(node));
+      case 2:
+        return (T) ((ICapabilityRequirement) getCapabilityRequirement_id7McqtXGyz8c(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

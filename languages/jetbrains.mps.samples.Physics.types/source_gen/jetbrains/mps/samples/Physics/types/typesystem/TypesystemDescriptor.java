@@ -5,6 +5,19 @@ package jetbrains.mps.samples.Physics.types.typesystem;
 import jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.InequationReplacementRule_Runtime;
+import jetbrains.mps.lang.typesystem.runtime.OverloadedOpsProvider_OneTypeSpecified;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.typesystem.inference.TypeChecker;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.typesystem.inference.SubtypingManager;
+import jetbrains.mps.errors.IRuleConflictWarningProducer;
+import jetbrains.mps.lang.typesystem.runtime.OverloadedOperationsTypesProvider;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import jetbrains.mps.smodel.builder.SNodeBuilder;
+import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
@@ -28,5 +41,175 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       InequationReplacementRule_Runtime eliminationRule = new replace_VectorType_VectorType_InequationReplacementRule();
       this.myInequationReplacementRules.add(eliminationRule);
     }
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.MinusExpression$pp));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.PlusExpression$Dn));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_d(CONCEPTS.BinaryEqualityExpression$Mj));
+    {
+      OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
+        {
+          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a7a0();
+          this.myOperationConcept = CONCEPTS.MulExpression$_u;
+          this.myTypeIsExact = false;
+          this.myIsStrong = false;
+          this.myRuleModelId = "r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)";
+          this.myRuleNodeId = "7471572540825362773";
+        }
+        public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+          SNode vectorType = (SNodeOperations.isInstanceOf(leftOperandType, CONCEPTS.VectorType$Wj) ? SNodeOperations.cast(leftOperandType, CONCEPTS.VectorType$Wj) : SNodeOperations.cast(rightOperandType, CONCEPTS.VectorType$Wj));
+          SNode otherType = (vectorType == leftOperandType ? rightOperandType : leftOperandType);
+
+          SNode operationType = TypeChecker.getInstance().getRulesManager().getOperationType(operation, SLinkOperations.getTarget(vectorType, LINKS.componentType$gTxy), otherType);
+
+          return createVectorType_3ist9o_a5a1a0a0a0a0h0a(SNodeOperations.as(operationType, CONCEPTS.Type$fA));
+        }
+        public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+          return VectorTypeHelper.oneIsVector(leftOperandType, rightOperandType);
+        }
+        @Override
+        public void reportConflict(IRuleConflictWarningProducer producer) {
+          producer.produceWarning(myRuleModelId, myRuleNodeId);
+        }
+      };
+      this.myOverloadedOperationsTypesProviders.add(provider);
+    }
+    {
+      OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
+        {
+          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a8a0();
+          this.myOperationConcept = CONCEPTS.DivExpression$Li;
+          this.myTypeIsExact = false;
+          this.myIsStrong = false;
+          this.myRuleModelId = "r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)";
+          this.myRuleNodeId = "7471572540825399505";
+        }
+        public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+          SNode operationType = TypeChecker.getInstance().getRulesManager().getOperationType(operation, SLinkOperations.getTarget(SNodeOperations.as(leftOperandType, CONCEPTS.VectorType$Wj), LINKS.componentType$gTxy), rightOperandType);
+
+          return createVectorType_3ist9o_a2a1a0a0a0a0i0a(SNodeOperations.as(operationType, CONCEPTS.Type$fA));
+        }
+        public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+          return VectorTypeHelper.isVector(leftOperandType);
+        }
+        @Override
+        public void reportConflict(IRuleConflictWarningProducer producer) {
+          producer.produceWarning(myRuleModelId, myRuleNodeId);
+        }
+      };
+      this.myOverloadedOperationsTypesProviders.add(provider);
+    }
+  }
+  public static class CustomOverloadedOperationsTypesProvider_a extends OverloadedOperationsTypesProvider {
+    public CustomOverloadedOperationsTypesProvider_a(SAbstractConcept concept) {
+      this.myLeftOperandType = createAbstractVectorType_3ist9o_a0a0a1();
+      this.myRightOperandType = createAbstractVectorType_3ist9o_a0b0a1();
+      this.myOperationConcept = concept;
+      this.myLeftTypeIsExact = false;
+      this.myRightTypeIsExact = false;
+      this.myRightIsStrong = false;
+      this.myLeftIsStrong = false;
+      this.myRuleModelId = "r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)";
+      this.myRuleNodeId = "5115872837157481442";
+    }
+    public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      SNode operationType = TypeChecker.getInstance().getRulesManager().getOperationType(operation, SLinkOperations.getTarget(SNodeOperations.as(leftOperandType, CONCEPTS.VectorType$Wj), LINKS.componentType$gTxy), SLinkOperations.getTarget(SNodeOperations.as(rightOperandType, CONCEPTS.VectorType$Wj), LINKS.componentType$gTxy));
+
+      {
+        final SNode type = operationType;
+        if (SNodeOperations.isInstanceOf(type, CONCEPTS.Type$fA)) {
+          return createVectorType_3ist9o_a0a2a1b(type);
+        }
+      }
+
+      return operationType;
+    }
+    public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      return VectorTypeHelper.bothAreVector(leftOperandType, rightOperandType);
+    }
+    @Override
+    public void reportConflict(IRuleConflictWarningProducer producer) {
+      producer.produceWarning(myRuleModelId, myRuleNodeId);
+    }
+    private static SNode createAbstractVectorType_3ist9o_a0a0a1() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
+      return n0.getResult();
+    }
+    private static SNode createAbstractVectorType_3ist9o_a0b0a1() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
+      return n0.getResult();
+    }
+    private static SNode createVectorType_3ist9o_a0a2a1b(SNode p0) {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
+      n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
+      return n0.getResult();
+    }
+  }
+  public static class CustomOverloadedOperationsTypesProvider_d extends OverloadedOperationsTypesProvider {
+    public CustomOverloadedOperationsTypesProvider_d(SAbstractConcept concept) {
+      this.myLeftOperandType = createAbstractVectorType_3ist9o_a0a0a2();
+      this.myRightOperandType = createAbstractVectorType_3ist9o_a0b0a2();
+      this.myOperationConcept = concept;
+      this.myLeftTypeIsExact = false;
+      this.myRightTypeIsExact = false;
+      this.myRightIsStrong = false;
+      this.myLeftIsStrong = false;
+      this.myRuleModelId = "r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)";
+      this.myRuleNodeId = "553080662195601397";
+    }
+    public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      return createBooleanType_3ist9o_a0a1c();
+    }
+    public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      return VectorTypeHelper.bothAreVector(leftOperandType, rightOperandType);
+    }
+    @Override
+    public void reportConflict(IRuleConflictWarningProducer producer) {
+      producer.produceWarning(myRuleModelId, myRuleNodeId);
+    }
+    private static SNode createAbstractVectorType_3ist9o_a0a0a2() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
+      return n0.getResult();
+    }
+    private static SNode createAbstractVectorType_3ist9o_a0b0a2() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
+      return n0.getResult();
+    }
+    private static SNode createBooleanType_3ist9o_a0a1c() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.BooleanType$h3);
+      return n0.getResult();
+    }
+  }
+  private static SNode createAbstractVectorType_3ist9o_a0a0a0a0a0a0a7a0() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
+    return n0.getResult();
+  }
+  private static SNode createVectorType_3ist9o_a5a1a0a0a0a0h0a(SNode p0) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
+    n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
+    return n0.getResult();
+  }
+  private static SNode createAbstractVectorType_3ist9o_a0a0a0a0a0a0a8a0() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
+    return n0.getResult();
+  }
+  private static SNode createVectorType_3ist9o_a2a1a0a0a0a0i0a(SNode p0) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
+    n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
+    return n0.getResult();
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept MinusExpression$pp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac5a5L, "org.iets3.core.expr.base.structure.MinusExpression");
+    /*package*/ static final SConcept PlusExpression$Dn = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
+    /*package*/ static final SConcept BinaryEqualityExpression$Mj = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cc6d99L, "org.iets3.core.expr.base.structure.BinaryEqualityExpression");
+    /*package*/ static final SConcept MulExpression$_u = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
+    /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
+    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
+    /*package*/ static final SConcept AbstractVectorType$6J = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L, "jetbrains.mps.samples.Physics.types.structure.AbstractVectorType");
+    /*package*/ static final SConcept BooleanType$h3 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x670d5e92f854a617L, "org.iets3.core.expr.simpleTypes.structure.BooleanType");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink componentType$gTxy = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
   }
 }

@@ -52,6 +52,7 @@ public class Language extends LanguageRuntime {
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("4caf0310-491e-41f5-8a9b-2006b3a94898"), "jetbrains.mps.execution.util"));
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("cfaa4966-b7d5-4b69-b66a-309a6e1a7290"), "org.iets3.core.expr.base"));
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("9464fa06-5ab9-409b-9274-64ab29588457"), "org.iets3.core.expr.lambda"));
+    extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("3571bff8-cf91-4cd7-b8b7-baa06abadf7c"), "jetbrains.mps.samples.Physics.dimensions"));
   }
 
   @Override

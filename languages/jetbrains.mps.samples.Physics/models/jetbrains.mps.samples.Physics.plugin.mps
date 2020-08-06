@@ -30,6 +30,7 @@
     <import index="9ur8" ref="r:98f6e9b8-ca23-471b-9b0d-43dafe92c68d(jetbrains.mps.samples.Physics.dimensions.plugin)" />
     <import index="nas6" ref="r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)" />
     <import index="tc1u" ref="r:2c20269f-57e4-41ef-a202-e8ce4699d3fc(jetbrains.mps.samples.Physics.IETS3MathExtended.plugin)" />
+    <import index="onwr" ref="r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
   <registry>
@@ -555,8 +556,8 @@
                                     <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS7" resolve="velocity" />
                                   </node>
                                 </node>
-                                <node concept="3TrEf2" id="GdoRjGNIZ9" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="9tcj:GdoRjGvS51" resolve="coordinates" />
+                                <node concept="3TrEf2" id="6uKmUf9rZId" role="2OqNvi">
+                                  <ref role="3Tt5mk" to="9tcj:GdoRjGvRej" resolve="expression" />
                                 </node>
                               </node>
                             </node>
@@ -575,8 +576,8 @@
                                 <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS7" resolve="velocity" />
                               </node>
                             </node>
-                            <node concept="3TrEf2" id="GdoRjGxbT5" role="2OqNvi">
-                              <ref role="3Tt5mk" to="9tcj:GdoRjGvS51" resolve="coordinates" />
+                            <node concept="3TrEf2" id="6uKmUf9rZe$" role="2OqNvi">
+                              <ref role="3Tt5mk" to="9tcj:GdoRjGvRej" resolve="expression" />
                             </node>
                           </node>
                           <node concept="1P9Npp" id="31HEEbc5QoT" role="2OqNvi">
@@ -2861,8 +2862,8 @@
       </node>
       <node concept="qpFDx" id="31HEEbbTykf" role="3vbI0w">
         <ref role="qpFD$" to="9tcj:31HEEbbS$Ym" resolve="newLength" />
-        <node concept="rxStX" id="31HEEbbTypy" role="rajlz">
-          <ref role="rxSuV" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
+        <node concept="rxStX" id="3c2XpEveM60" role="rajlz">
+          <ref role="rxSuV" to="onwr:3031XnpbrCM" resolve="AbstractDimensionType" />
         </node>
       </node>
     </node>
@@ -3411,8 +3412,8 @@
                 <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS7" resolve="velocity" />
               </node>
             </node>
-            <node concept="3TrEf2" id="GdoRjGFxm0" role="2OqNvi">
-              <ref role="3Tt5mk" to="9tcj:GdoRjGvS51" resolve="coordinates" />
+            <node concept="3TrEf2" id="6uKmUf9s0tx" role="2OqNvi">
+              <ref role="3Tt5mk" to="9tcj:GdoRjGvRej" resolve="expression" />
             </node>
           </node>
         </node>
