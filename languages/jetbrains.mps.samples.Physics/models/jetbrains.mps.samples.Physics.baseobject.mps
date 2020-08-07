@@ -29,6 +29,7 @@
       </concept>
     </language>
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
+      <concept id="7425695345928358774" name="org.iets3.core.expr.simpleTypes.structure.FalseLiteral" flags="ng" index="2vmpn$" />
       <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
         <property id="5115872837157054173" name="value" index="30bXRw" />
       </concept>
@@ -50,15 +51,12 @@
       </concept>
     </language>
     <language id="be81eb12-4eda-4d0e-89be-7493500ab874" name="jetbrains.mps.samples.Physics">
-      <concept id="1159415042432873376" name="jetbrains.mps.samples.Physics.structure.TextureStyle" flags="ng" index="27oU9Q">
-        <child id="1159415042432873377" name="value" index="27oU9R" />
+      <concept id="1159415042432873376" name="jetbrains.mps.samples.Physics.structure.TextureStyleKey" flags="ng" index="27oU9Q" />
+      <concept id="1159415042432869413" name="jetbrains.mps.samples.Physics.structure.StyleDefinition" flags="ng" index="27oVnN">
+        <child id="3106918138151965346" name="value" index="39QuWR" />
+        <child id="3106918138151965263" name="key" index="39QuZq" />
       </concept>
-      <concept id="1159415042432870010" name="jetbrains.mps.samples.Physics.structure.ShapeStyle" flags="ng" index="27oVuG">
-        <property id="1159415042433249420" name="value" index="27rm5q" />
-      </concept>
-      <concept id="1159415042433249434" name="jetbrains.mps.samples.Physics.structure.NumericDistanceStyle" flags="ng" index="27rm5c">
-        <child id="1159415042433249437" name="value" index="27rm5b" />
-      </concept>
+      <concept id="1159415042432870010" name="jetbrains.mps.samples.Physics.structure.ShapeStyleKey" flags="ng" index="27oVuG" />
       <concept id="1159415042433249433" name="jetbrains.mps.samples.Physics.structure.BoxDepthStyle" flags="ng" index="27rm5f" />
       <concept id="1159415042433250199" name="jetbrains.mps.samples.Physics.structure.BoxWidthStyle" flags="ng" index="27rm91" />
       <concept id="1159415042433250200" name="jetbrains.mps.samples.Physics.structure.BoxHeightStyle" flags="ng" index="27rm9e" />
@@ -70,10 +68,14 @@
       <concept id="1459540517659024997" name="jetbrains.mps.samples.Physics.structure.DefinedColorReference" flags="ng" index="Y6$CV">
         <reference id="794591792991785009" name="color" index="2hGqkR" />
       </concept>
-      <concept id="362892448124441676" name="jetbrains.mps.samples.Physics.structure.EmitLightStyle" flags="ng" index="13a5ie" />
-      <concept id="2993354433745639261" name="jetbrains.mps.samples.Physics.structure.CollisionStyle" flags="ng" index="1nHl2y">
-        <property id="2993354433745639286" name="reaction" index="1nHl29" />
+      <concept id="362892448124441676" name="jetbrains.mps.samples.Physics.structure.EmitLightStyleKey" flags="ng" index="13a5ie" />
+      <concept id="3106918138153662052" name="jetbrains.mps.samples.Physics.structure.ShapeStyleExpression" flags="ng" index="39K0JL">
+        <property id="3106918138153662053" name="shape" index="39K0JK" />
       </concept>
+      <concept id="3106918138153354537" name="jetbrains.mps.samples.Physics.structure.CollisionReactionExpression" flags="ng" index="39LbyW">
+        <property id="3106918138153354538" name="reaction" index="39LbyZ" />
+      </concept>
+      <concept id="2993354433745639261" name="jetbrains.mps.samples.Physics.structure.CollisionStyleKey" flags="ng" index="1nHl2y" />
       <concept id="7287056866553921482" name="jetbrains.mps.samples.Physics.structure.ObjectMassTarget" flags="ng" index="3K9aLm" />
     </language>
     <language id="f9bdc723-99df-40ff-934c-d1f848158f92" name="jetbrains.mps.samples.Physics.IETS3MathExtended">
@@ -97,11 +99,15 @@
   </registry>
   <node concept="Y6$Ct" id="10n4tqnCx$N">
     <property role="TrG5h" value="BaseObject" />
-    <node concept="27oVuG" id="10n4tqnCx$W" role="27xc_Z">
-      <property role="27rm5q" value="10n4tqnuB29/sphere" />
+    <node concept="27oVnN" id="2GtZpnyOi_5" role="27xc_Z">
+      <node concept="27oVuG" id="10n4tqnCx$W" role="39QuZq" />
+      <node concept="39K0JL" id="2GtZpnzamOl" role="39QuWR">
+        <property role="39K0JK" value="10n4tqnuB29/sphere" />
+      </node>
     </node>
-    <node concept="27rm91" id="10n4tqnCx_6" role="27xc_Z">
-      <node concept="30dDTi" id="4CH1R2NDL_l" role="27rm5b">
+    <node concept="27oVnN" id="2GtZpnyLmAC" role="27xc_Z">
+      <node concept="27rm91" id="10n4tqnCx_6" role="39QuZq" />
+      <node concept="30dDTi" id="4CH1R2NDL_l" role="39QuWR">
         <node concept="IFQ74" id="enY1Kc$r6O" role="30dEsF">
           <property role="3TC$zi" value="3" />
           <node concept="1QScDb" id="enY1Kc$r6Q" role="IFIgH">
@@ -127,8 +133,9 @@
         </node>
       </node>
     </node>
-    <node concept="27rm9e" id="10n4tqnCx_p" role="27xc_Z">
-      <node concept="30dDTi" id="4CH1R2NDLuI" role="27rm5b">
+    <node concept="27oVnN" id="2GtZpnyLmA_" role="27xc_Z">
+      <node concept="27rm9e" id="10n4tqnCx_p" role="39QuZq" />
+      <node concept="30dDTi" id="4CH1R2NDLuI" role="39QuWR">
         <node concept="IFQ74" id="enY1Kc$r65" role="30dEsF">
           <property role="3TC$zi" value="3" />
           <node concept="1QScDb" id="enY1Kc$r67" role="IFIgH">
@@ -154,8 +161,9 @@
         </node>
       </node>
     </node>
-    <node concept="27rm5f" id="10n4tqnCx_K" role="27xc_Z">
-      <node concept="30dDTi" id="4CH1R2NDLnY" role="27rm5b">
+    <node concept="27oVnN" id="2GtZpnyLmAA" role="27xc_Z">
+      <node concept="27rm5f" id="10n4tqnCx_K" role="39QuZq" />
+      <node concept="30dDTi" id="4CH1R2NDLnY" role="39QuWR">
         <node concept="IFQ74" id="enY1Kc$r30" role="30dEsF">
           <property role="3TC$zi" value="3" />
           <node concept="1QScDb" id="enY1Kc$r4G" role="IFIgH">
@@ -181,8 +189,9 @@
         </node>
       </node>
     </node>
-    <node concept="27rm9f" id="10n4tqnCxBF" role="27xc_Z">
-      <node concept="30dDTi" id="4CH1R2NDJoC" role="27rm5b">
+    <node concept="27oVnN" id="2GtZpnyLmAB" role="27xc_Z">
+      <node concept="27rm9f" id="10n4tqnCxBF" role="39QuZq" />
+      <node concept="30dDTi" id="4CH1R2NDJoC" role="39QuWR">
         <node concept="1N951E" id="4CH1R2NDJBi" role="30dEs_">
           <node concept="30bXRB" id="4CH1R2NDJvS" role="1N951F">
             <property role="30bXRw" value="1" />
@@ -221,14 +230,21 @@
         </node>
       </node>
     </node>
-    <node concept="27oU9Q" id="10n4tqnCxDa" role="27xc_Z">
-      <node concept="Y6$CV" id="10n4tqnCxDz" role="27oU9R">
+    <node concept="27oVnN" id="2GtZpnyOi_2" role="27xc_Z">
+      <node concept="27oU9Q" id="10n4tqnCxDa" role="39QuZq" />
+      <node concept="Y6$CV" id="2GtZpnyOi_3" role="39QuWR">
         <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
       </node>
     </node>
-    <node concept="13a5ie" id="k9gc96d20D" role="27xc_Z" />
-    <node concept="1nHl2y" id="6qMY4Z3czQC" role="27xc_Z">
-      <property role="1nHl29" value="2AaxZXYfXtv/bounce" />
+    <node concept="27oVnN" id="2GtZpnyOi_4" role="27xc_Z">
+      <node concept="13a5ie" id="k9gc96d20D" role="39QuZq" />
+      <node concept="2vmpn$" id="2GtZpnzasHv" role="39QuWR" />
+    </node>
+    <node concept="27oVnN" id="2GtZpnzbyQs" role="27xc_Z">
+      <node concept="1nHl2y" id="6qMY4Z3czQC" role="39QuZq" />
+      <node concept="39LbyW" id="2GtZpnzbyQt" role="39QuWR">
+        <property role="39LbyZ" value="2AaxZXYfXtv/bounce" />
+      </node>
     </node>
   </node>
 </model>

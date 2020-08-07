@@ -35,9 +35,9 @@ public final class WorldNestedObjectTarget__BehaviorDescriptor extends BaseBHDes
   public static final SMethod<String> renderReadable_id6kR0qIbI2yi = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6kR0qIbI2yi").build();
   public static final SMethod<Scope> getScope_id52_Geb4QDV$ = new SMethodBuilder<Scope>(new SJavaCompoundTypeImpl(Scope.class)).name("getScope").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("52_Geb4QDV$").build(SMethodBuilder.createJavaParameter((Class<SAbstractConcept>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   public static final SMethod<SNode> getWorldTarget_id2bZvtzzMbSH = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getWorldTarget").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2bZvtzzMbSH").build();
-  public static final SMethod<SNode> getTargetLocalizedObject_idGdoRjGrk0_ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetLocalizedObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGrk0_").build();
+  public static final SMethod<SNode> getLocalizedObjectTarget_idGdoRjGrk0_ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetLocalizedObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGrk0_").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(renderReadable_id6kR0qIbI2yi, getScope_id52_Geb4QDV$, getWorldTarget_id2bZvtzzMbSH, getTargetLocalizedObject_idGdoRjGrk0_);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(renderReadable_id6kR0qIbI2yi, getScope_id52_Geb4QDV$, getWorldTarget_id2bZvtzzMbSH, getLocalizedObjectTarget_idGdoRjGrk0_);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -62,7 +62,7 @@ public final class WorldNestedObjectTarget__BehaviorDescriptor extends BaseBHDes
     }
     return null;
   }
-  /*package*/ static SNode getTargetLocalizedObject_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
+  /*package*/ static SNode getLocalizedObjectTarget_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
     return SLinkOperations.getTarget(__thisNode__, LINKS.target$g02E);
   }
 
@@ -88,7 +88,7 @@ public final class WorldNestedObjectTarget__BehaviorDescriptor extends BaseBHDes
       case 2:
         return (T) ((SNode) getWorldTarget_id2bZvtzzMbSH(node));
       case 3:
-        return (T) ((SNode) getTargetLocalizedObject_idGdoRjGrk0_(node));
+        return (T) ((SNode) getLocalizedObjectTarget_idGdoRjGrk0_(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

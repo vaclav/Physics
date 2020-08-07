@@ -743,44 +743,6 @@
   </node>
   <node concept="37WguZ" id="10n4tqnzs4R">
     <property role="TrG5h" value="MiscellaneousFactories" />
-    <node concept="37WvkG" id="10n4tqnzs5I" role="37WGs$">
-      <ref role="37XkoT" to="9tcj:10n4tqnuB2q" resolve="NumericDistanceStyle" />
-      <node concept="37Y9Zx" id="10n4tqnzs5J" role="37ZfLb">
-        <node concept="3clFbS" id="10n4tqnzs5K" role="2VODD2">
-          <node concept="Jncv_" id="10n4tqnzs8E" role="3cqZAp">
-            <ref role="JncvD" to="9tcj:10n4tqnuB2q" resolve="NumericDistanceStyle" />
-            <node concept="1r4N5L" id="10n4tqnzs97" role="JncvB" />
-            <node concept="3clFbS" id="10n4tqnzs8G" role="Jncv$">
-              <node concept="3clFbF" id="10n4tqnzsam" role="3cqZAp">
-                <node concept="37vLTI" id="10n4tqnzsFH" role="3clFbG">
-                  <node concept="2OqwBi" id="10n4tqnzttN" role="37vLTx">
-                    <node concept="2OqwBi" id="10n4tqnzsVt" role="2Oq$k0">
-                      <node concept="Jnkvi" id="10n4tqnzsKy" role="2Oq$k0">
-                        <ref role="1M0zk5" node="10n4tqnzs8H" resolve="numeric" />
-                      </node>
-                      <node concept="3TrEf2" id="10n4tqnzt6m" role="2OqNvi">
-                        <ref role="3Tt5mk" to="9tcj:10n4tqnuB2t" resolve="value" />
-                      </node>
-                    </node>
-                    <node concept="1$rogu" id="10n4tqnztV0" role="2OqNvi" />
-                  </node>
-                  <node concept="2OqwBi" id="10n4tqnzsj6" role="37vLTJ">
-                    <node concept="1r4Lsj" id="10n4tqnzsal" role="2Oq$k0" />
-                    <node concept="3TrEf2" id="10n4tqnzstx" role="2OqNvi">
-                      <ref role="3Tt5mk" to="9tcj:10n4tqnuB2t" resolve="value" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="JncvC" id="10n4tqnzs8H" role="JncvA">
-              <property role="TrG5h" value="numeric" />
-              <node concept="2jxLKc" id="10n4tqnzs8I" role="1tU5fm" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="37WvkG" id="6uKmUf9p9tL" role="37WGs$">
       <ref role="37XkoT" to="9tcj:6HZo5MNbVDo" resolve="Simulation" />
       <node concept="37Y9Zx" id="6uKmUf9p9tM" role="37ZfLb">

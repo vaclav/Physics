@@ -5,31 +5,19 @@ package jetbrains.mps.samples.Physics.actions;
 import jetbrains.mps.openapi.actions.descriptor.NodeFactory;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.model.SModel;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.smodel.SReference;
-import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class MiscellaneousFactories {
-  public static class NodeFactory_1159415042434515310 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      {
-        final SNode numeric = sampleNode;
-        if (SNodeOperations.isInstanceOf(numeric, CONCEPTS.NumericDistanceStyle$W9)) {
-          SLinkOperations.setTarget(newNode, LINKS.value$aRGu, SNodeOperations.copyNode(SLinkOperations.getTarget(numeric, LINKS.value$aRGu)));
-        }
-      }
-    }
-  }
   public static class NodeFactory_7471572540824262513 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SLinkOperations.setTarget(newNode, LINKS.simulationSpeed$m7cv, _quotation_createNode_fpwm7x_a0a0a1());
+      SLinkOperations.setTarget(newNode, LINKS.simulationSpeed$m7cv, _quotation_createNode_fpwm7x_a0a0a0());
     }
-    private static SNode _quotation_createNode_fpwm7x_a0a0a1() {
+    private static SNode _quotation_createNode_fpwm7x_a0a0a0() {
       PersistenceFacade facade = PersistenceFacade.getInstance();
       SNode quotedNode_1 = null;
       SNode quotedNode_2 = null;
@@ -45,12 +33,7 @@ public class MiscellaneousFactories {
     }
   }
 
-  private static final class CONCEPTS {
-    /*package*/ static final SConcept NumericDistanceStyle$W9 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d6977a709aL, "jetbrains.mps.samples.Physics.structure.NumericDistanceStyle");
-  }
-
   private static final class LINKS {
-    /*package*/ static final SContainmentLink value$aRGu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d6977a709aL, 0x101711d6977a709dL, "value");
     /*package*/ static final SContainmentLink simulationSpeed$m7cv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x21c0d825ab3fd1e0L, "simulationSpeed");
   }
 }

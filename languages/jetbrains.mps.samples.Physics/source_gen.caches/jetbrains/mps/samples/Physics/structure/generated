@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="84msm4p8d8na802ew4ft4iwd7czkqb4">
-  <files names="ConceptPresentationAspectImpl.java:EnumerationDescriptor_CollisionReaction.java:EnumerationDescriptor_Shapes.java:EnumerationDescriptor_VectorComponent.java:LanguageConceptSwitch.java:StructureAspectDescriptor.java" />
+<product version="3" modelHash="-8u6iviidglx921dbpp7jl3ofuoagpj5">
+  <files names="ConceptPresentationAspectImpl.java:EnumerationDescriptor_CollisionReaction.java:EnumerationDescriptor_Shape.java:EnumerationDescriptor_VectorComponent.java:LanguageConceptSwitch.java:StructureAspectDescriptor.java" />
 </product>
 

@@ -7,14 +7,12 @@ import jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.smodel.SReference;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public class typeof_NumericStyle_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
@@ -22,22 +20,13 @@ public class typeof_NumericStyle_InferenceRule extends AbstractInferenceRule_Run
   }
   public void applyRule(final SNode numericStyle, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode valueType = typeCheckingContext.typeOf(SLinkOperations.getTarget(numericStyle, LINKS.value$aRGu), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5344936513388625934", true);
-      typeCheckingContext.whenConcrete(valueType, new Runnable() {
-        public void run() {
-          if (!(typeCheckingContext.isSingleTypeComputation())) {
-            {
-              SNode _nodeToCheck_1029348928467 = numericStyle;
-              EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5344936513388627684", 0, null);
-              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(valueType), (SNode) _quotation_createNode_vkzfj8_a1a0c0a0a0a0a1a0b0a0b(), true, true, _info_12389875345);
-            }
-          }
-        }
-      }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5344936513388625869", false, false);
+      SNode _nodeToCheck_1029348928467 = numericStyle;
+      EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3106918138152003885", 0, null);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3106918138152003321", true), (SNode) _quotation_createNode_vkzfj8_a1a0c0a0b(), _info_12389875345);
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.NumericDistanceStyle$W9;
+    return CONCEPTS.NumericDistanceStyleKey$W9;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -45,7 +34,7 @@ public class typeof_NumericStyle_InferenceRule extends AbstractInferenceRule_Run
   public boolean overrides() {
     return false;
   }
-  private static SNode _quotation_createNode_vkzfj8_a1a0c0a0a0a0a1a0b0a0b() {
+  private static SNode _quotation_createNode_vkzfj8_a1a0c0a0b() {
     PersistenceFacade facade = PersistenceFacade.getInstance();
     SNode quotedNode_1 = null;
     SNode quotedNode_2 = null;
@@ -59,11 +48,7 @@ public class typeof_NumericStyle_InferenceRule extends AbstractInferenceRule_Run
     return quotedNode_1;
   }
 
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink value$aRGu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d6977a709aL, 0x101711d6977a709dL, "value");
-  }
-
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumericDistanceStyle$W9 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d6977a709aL, "jetbrains.mps.samples.Physics.structure.NumericDistanceStyle");
+    /*package*/ static final SConcept NumericDistanceStyleKey$W9 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d6977a709aL, "jetbrains.mps.samples.Physics.structure.NumericDistanceStyleKey");
   }
 }

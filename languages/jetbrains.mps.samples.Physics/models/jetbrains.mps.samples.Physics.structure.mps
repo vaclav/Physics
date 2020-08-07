@@ -22,6 +22,7 @@
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
         <child id="3348158742936976577" name="members" index="25R1y" />
       </concept>
+      <concept id="1224240836180" name="jetbrains.mps.lang.structure.structure.DeprecatedNodeAnnotation" flags="ig" index="asaX9" />
       <concept id="7862711839422615209" name="jetbrains.mps.lang.structure.structure.DocumentedNodeAnnotation" flags="ng" index="t5JxF">
         <property id="7862711839422615217" name="text" index="t5JxN" />
       </concept>
@@ -162,6 +163,13 @@
       <property role="20kJfa" value="simulationSpeed" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="38SdPTRbU0r" role="1TKVEi">
+      <property role="IQ2ns" value="3618703179458256923" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="overrideRules" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="38SdPTRbTZH" resolve="OverrideRule" />
     </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MNbVDr">
@@ -315,7 +323,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="styles" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="10n4tqntag_" resolve="Style" />
+      <ref role="20lvS9" node="10n4tqntag_" resolve="StyleDefinition" />
     </node>
     <node concept="1TJgyj" id="1h1l5SEmLT7" role="1TKVEi">
       <property role="IQ2ns" value="1459540517659024967" />
@@ -344,7 +352,7 @@
     <property role="3GE5qa" value="styles.texture" />
     <property role="TrG5h" value="Texture" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
   </node>
   <node concept="1TIwiD" id="1h1l5SEmLT_">
     <property role="EcuMT" value="1459540517659024997" />
@@ -570,9 +578,10 @@
     <property role="TrG5h" value="AbstractObjectTarget" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="6kwOTMl17vl" role="PzmwI">
-      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    <node concept="PrWs8" id="4eAl$41wjSc" role="PzmwI">
+      <ref role="PrY4T" node="4eAl$41wfr1" resolve="IObjectDotTarget" />
     </node>
+    <node concept="asaX9" id="4eAl$41wk4N" role="lGtFl" />
   </node>
   <node concept="1TIwiD" id="6kwOTMl19X7">
     <property role="EcuMT" value="7287056866553929543" />
@@ -580,9 +589,10 @@
     <property role="TrG5h" value="AbstractWorldTarget" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="6kwOTMl1atx" role="PzmwI">
-      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    <node concept="PrWs8" id="4eAl$41wneh" role="PzmwI">
+      <ref role="PrY4T" node="4eAl$41wk4P" resolve="IWorldDotTarget" />
     </node>
+    <node concept="asaX9" id="4eAl$41wnqT" role="lGtFl" />
   </node>
   <node concept="1TIwiD" id="6kwOTMl1asr">
     <property role="EcuMT" value="7287056866553931547" />
@@ -757,6 +767,9 @@
     <property role="EcuMT" value="796402062949451745" />
     <property role="3GE5qa" value="physical.vector.targets" />
     <property role="TrG5h" value="ITargetExpression" />
+    <node concept="PrWs8" id="38SdPTRd4UZ" role="PrDN$">
+      <ref role="PrY4T" node="38SdPTRbTXd" resolve="ICanBeOverridden" />
+    </node>
   </node>
   <node concept="1TIwiD" id="GdoRjGvReb">
     <property role="EcuMT" value="796402062949577611" />
@@ -850,47 +863,47 @@
     <property role="EcuMT" value="8528841372026756859" />
     <property role="TrG5h" value="UnitProviderChunk" />
     <property role="R5$K7" value="true" />
-    <property role="R4oN_" value="chunk that provides internally defined units" />
+    <property role="R4oN_" value="chunk that provides internally defined units (to be removed?)" />
     <ref role="1TJDcQ" to="vs0r:6clJcrJYOUA" resolve="Chunk" />
   </node>
   <node concept="1TIwiD" id="10n4tqntag_">
     <property role="EcuMT" value="1159415042432869413" />
     <property role="3GE5qa" value="styles" />
-    <property role="TrG5h" value="Style" />
-    <property role="R5$K7" value="true" />
+    <property role="TrG5h" value="StyleDefinition" />
     <property role="R4oN_" value="style associated with an object" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="2GtZpnyL19f" role="1TKVEi">
+      <property role="IQ2ns" value="3106918138151965263" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="key" />
+      <ref role="20lvS9" node="2GtZpnyL0Oz" resolve="StyleKey" />
+    </node>
+    <node concept="1TJgyj" id="2GtZpnyL1ay" role="1TKVEi">
+      <property role="IQ2ns" value="3106918138151965346" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
   </node>
   <node concept="1TIwiD" id="10n4tqntapU">
     <property role="EcuMT" value="1159415042432870010" />
     <property role="3GE5qa" value="styles.shape" />
-    <property role="TrG5h" value="ShapeStyle" />
+    <property role="TrG5h" value="ShapeStyleKey" />
     <property role="34LRSv" value="shape" />
-    <ref role="1TJDcQ" node="10n4tqntag_" resolve="Style" />
-    <node concept="1TJgyi" id="10n4tqnuB2c" role="1TKVEl">
-      <property role="IQ2nx" value="1159415042433249420" />
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" node="10n4tqnuB27" resolve="Shapes" />
-    </node>
+    <ref role="1TJDcQ" node="2GtZpnyL0Oz" resolve="StyleKey" />
   </node>
   <node concept="1TIwiD" id="10n4tqntbew">
     <property role="EcuMT" value="1159415042432873376" />
     <property role="3GE5qa" value="styles.texture" />
-    <property role="TrG5h" value="TextureStyle" />
+    <property role="TrG5h" value="TextureStyleKey" />
     <property role="34LRSv" value="texture" />
-    <ref role="1TJDcQ" node="10n4tqntag_" resolve="Style" />
-    <node concept="1TJgyj" id="10n4tqntbex" role="1TKVEi">
-      <property role="IQ2ns" value="1159415042432873377" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="value" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1h1l5SEmLT$" resolve="Texture" />
-    </node>
+    <ref role="1TJDcQ" node="2GtZpnyL0Oz" resolve="StyleKey" />
   </node>
   <node concept="25R3W" id="10n4tqnuB27">
     <property role="3F6X1D" value="1159415042433249415" />
     <property role="3GE5qa" value="styles.shape" />
-    <property role="TrG5h" value="Shapes" />
+    <property role="TrG5h" value="Shape" />
     <node concept="25R33" id="10n4tqnuB28" role="25R1y">
       <property role="3tVfz5" value="1159415042433249416" />
       <property role="TrG5h" value="box" />
@@ -905,60 +918,50 @@
     <property role="3GE5qa" value="styles.shape.attr" />
     <property role="TrG5h" value="BoxDepthStyle" />
     <property role="34LRSv" value="box-size-z" />
-    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyle" />
+    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyleKey" />
   </node>
   <node concept="1TIwiD" id="10n4tqnuB2q">
     <property role="EcuMT" value="1159415042433249434" />
     <property role="3GE5qa" value="styles" />
-    <property role="TrG5h" value="NumericDistanceStyle" />
+    <property role="TrG5h" value="NumericDistanceStyleKey" />
     <property role="R4oN_" value="style with a numeric value" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" node="10n4tqntag_" resolve="Style" />
-    <node concept="1TJgyj" id="10n4tqnuB2t" role="1TKVEi">
-      <property role="IQ2ns" value="1159415042433249437" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="value" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-    <node concept="PrWs8" id="270Q2mFbbD6" role="PzmwI">
-      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
-    </node>
+    <ref role="1TJDcQ" node="2GtZpnyL0Oz" resolve="StyleKey" />
   </node>
   <node concept="1TIwiD" id="10n4tqnuBen">
     <property role="EcuMT" value="1159415042433250199" />
     <property role="3GE5qa" value="styles.shape.attr" />
     <property role="TrG5h" value="BoxWidthStyle" />
     <property role="34LRSv" value="box-size-x" />
-    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyle" />
+    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyleKey" />
   </node>
   <node concept="1TIwiD" id="10n4tqnuBeo">
     <property role="EcuMT" value="1159415042433250200" />
     <property role="3GE5qa" value="styles.shape.attr" />
     <property role="TrG5h" value="BoxHeightStyle" />
     <property role="34LRSv" value="box-size-y" />
-    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyle" />
+    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyleKey" />
   </node>
   <node concept="1TIwiD" id="10n4tqnuBep">
     <property role="EcuMT" value="1159415042433250201" />
     <property role="3GE5qa" value="styles.shape.attr" />
     <property role="TrG5h" value="SphereRadiusStyle" />
     <property role="34LRSv" value="sphere-radius" />
-    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyle" />
+    <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyleKey" />
   </node>
   <node concept="1TIwiD" id="k9gc968hhc">
     <property role="EcuMT" value="362892448124441676" />
     <property role="3GE5qa" value="styles" />
-    <property role="TrG5h" value="EmitLightStyle" />
+    <property role="TrG5h" value="EmitLightStyleKey" />
     <property role="34LRSv" value="emit-light" />
-    <ref role="1TJDcQ" node="k9gc968h$Y" resolve="BooleanStyle" />
+    <ref role="1TJDcQ" node="k9gc968h$Y" resolve="BooleanStyleKey" />
   </node>
   <node concept="1TIwiD" id="k9gc968h$Y">
     <property role="EcuMT" value="362892448124442942" />
     <property role="3GE5qa" value="styles" />
-    <property role="TrG5h" value="BooleanStyle" />
+    <property role="TrG5h" value="BooleanStyleKey" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" node="10n4tqntag_" resolve="Style" />
+    <ref role="1TJDcQ" node="2GtZpnyL0Oz" resolve="StyleKey" />
     <node concept="1TJgyi" id="k9gc968h$Z" role="1TKVEl">
       <property role="IQ2nx" value="362892448124442943" />
       <property role="TrG5h" value="value" />
@@ -1013,13 +1016,14 @@
   <node concept="1TIwiD" id="2AaxZXYfXtt">
     <property role="EcuMT" value="2993354433745639261" />
     <property role="3GE5qa" value="styles.collision" />
-    <property role="TrG5h" value="CollisionStyle" />
+    <property role="TrG5h" value="CollisionStyleKey" />
     <property role="34LRSv" value="collision-reaction" />
-    <ref role="1TJDcQ" node="10n4tqntag_" resolve="Style" />
+    <ref role="1TJDcQ" node="2GtZpnyL0Oz" resolve="StyleKey" />
     <node concept="1TJgyi" id="2AaxZXYfXtQ" role="1TKVEl">
       <property role="IQ2nx" value="2993354433745639286" />
       <property role="TrG5h" value="reaction" />
       <ref role="AX2Wp" node="2AaxZXYfXtu" resolve="CollisionReaction" />
+      <node concept="asaX9" id="2GtZpnyQk_D" role="lGtFl" />
     </node>
   </node>
   <node concept="25R3W" id="2AaxZXYfXtu">
@@ -1046,6 +1050,78 @@
     <node concept="25R33" id="6qMY4Z3b3aS" role="25R1y">
       <property role="3tVfz5" value="7400250159183704760" />
       <property role="TrG5h" value="ignore" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="38SdPTRbTXd">
+    <property role="EcuMT" value="3618703179458256717" />
+    <property role="TrG5h" value="ICanBeOverridden" />
+  </node>
+  <node concept="1TIwiD" id="38SdPTRbTZH">
+    <property role="EcuMT" value="3618703179458256877" />
+    <property role="TrG5h" value="OverrideRule" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="38SdPTRbTZI" role="1TKVEi">
+      <property role="IQ2ns" value="3618703179458256878" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="38SdPTRbTZK" role="1TKVEi">
+      <property role="IQ2ns" value="3618703179458256880" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="newValue" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="4eAl$41wfr1">
+    <property role="EcuMT" value="4874678483873232577" />
+    <property role="3GE5qa" value="physical.expr" />
+    <property role="TrG5h" value="IObjectDotTarget" />
+    <node concept="PrWs8" id="4eAl$41wfr2" role="PrDN$">
+      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="4eAl$41wk4P">
+    <property role="EcuMT" value="4874678483873251637" />
+    <property role="3GE5qa" value="physical.expr" />
+    <property role="TrG5h" value="IWorldDotTarget" />
+    <node concept="PrWs8" id="4eAl$41wk4Q" role="PrDN$">
+      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2GtZpnyL0Oz">
+    <property role="EcuMT" value="3106918138151963939" />
+    <property role="3GE5qa" value="styles" />
+    <property role="TrG5h" value="StyleKey" />
+    <property role="R4oN_" value="represent a style key, having the type its value should have" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="2GtZpnyL1nw" role="PzmwI">
+      <ref role="PrY4T" node="38SdPTRbTXd" resolve="ICanBeOverridden" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2GtZpnyQkkD">
+    <property role="EcuMT" value="3106918138153354537" />
+    <property role="3GE5qa" value="styles.collision" />
+    <property role="TrG5h" value="CollisionReactionExpression" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyi" id="2GtZpnyQkkE" role="1TKVEl">
+      <property role="IQ2nx" value="3106918138153354538" />
+      <property role="TrG5h" value="reaction" />
+      <ref role="AX2Wp" node="2AaxZXYfXtu" resolve="CollisionReaction" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2GtZpnyRvp$">
+    <property role="EcuMT" value="3106918138153662052" />
+    <property role="3GE5qa" value="styles.shape" />
+    <property role="TrG5h" value="ShapeStyleExpression" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyi" id="2GtZpnyRvp_" role="1TKVEl">
+      <property role="IQ2nx" value="3106918138153662053" />
+      <property role="TrG5h" value="shape" />
+      <ref role="AX2Wp" node="10n4tqnuB27" resolve="Shape" />
     </node>
   </node>
 </model>

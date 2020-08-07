@@ -23,14 +23,14 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 public final class CurrentObjectExpression__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L, "jetbrains.mps.samples.Physics.structure.CurrentObjectExpression");
 
-  public static final SMethod<SNode> getTargetLocalizedObject_idGdoRjGrk0_ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGrk0_").build();
+  public static final SMethod<SNode> getLocalizedObjectTarget_idGdoRjGrk0_ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGrk0_").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getTargetLocalizedObject_idGdoRjGrk0_);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLocalizedObjectTarget_idGdoRjGrk0_);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static SNode getTargetLocalizedObject_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
+  /*package*/ static SNode getLocalizedObjectTarget_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
     return SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$9a, false, false);
   }
 
@@ -50,7 +50,7 @@ public final class CurrentObjectExpression__BehaviorDescriptor extends BaseBHDes
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((SNode) getTargetLocalizedObject_idGdoRjGrk0_(node));
+        return (T) ((SNode) getLocalizedObjectTarget_idGdoRjGrk0_(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

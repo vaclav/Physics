@@ -4,17 +4,12 @@ package jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem;
 
 import jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime;
-import org.apache.log4j.Logger;
-import org.apache.log4j.LogManager;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.iets3.core.expr.base.runtime.runtime.PTF;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime;
-import org.apache.log4j.Level;
-import jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor;
 import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.errors.IRuleConflictWarningProducer;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
@@ -25,7 +20,6 @@ import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public class typeof_NRootExpression_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
-  private static final Logger LOG = LogManager.getLogger(typeof_NRootExpression_InferenceRule.class);
   public typeof_NRootExpression_InferenceRule() {
   }
   public void applyRule(final SNode nRootExpression, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
@@ -34,7 +28,7 @@ public class typeof_NRootExpression_InferenceRule extends AbstractInferenceRule_
       typeCheckingContext.whenConcrete(sqrtExpressionInnerType, new Runnable() {
         public void run() {
           SNode exponentType = PTF.createRealType(SPropertyOperations.getString(nRootExpression, PROPS.exponent$9cvW));
-          LoggingRuntime.logMsgView(Level.INFO, "nroot of " + BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(exponentType) + " / " + BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(typeCheckingContext.getExpandedNode(sqrtExpressionInnerType)), typeof_NRootExpression_InferenceRule.class, null, null);
+
           {
             SNode _nodeToCheck_1029348928467 = nRootExpression;
             EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:eaef0861-3ed4-4442-afee-c90aaa3cdaec(jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem)", "7396263120860250015", 0, null);

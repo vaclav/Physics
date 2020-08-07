@@ -21,7 +21,7 @@
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_Shapes">
+  <dependency className="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_Shape">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.List" />
@@ -52,7 +52,7 @@
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="java.util.Collection" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_CollisionReaction" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_Shapes" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_Shape" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.EnumerationDescriptor_VectorComponent" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.LanguageConceptSwitch" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.MetaIdFactory" />
