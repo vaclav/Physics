@@ -16,12 +16,12 @@ import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import org.iets3.core.expr.base.behavior.IDotTarget__BehaviorDescriptor;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
+import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
-import org.jetbrains.mps.openapi.language.SInterfaceConcept;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public final class ObjectVelocityTarget__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4a4717912b4b2f7eL, "jetbrains.mps.samples.Physics.structure.ObjectVelocityTarget");
@@ -42,7 +42,15 @@ public final class ObjectVelocityTarget__BehaviorDescriptor extends BaseBHDescri
     return SLinkOperations.getTarget(object, LINKS.velocity$DoVv);
   }
   /*package*/ static void overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
-    SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(__thisNode__), CONCEPTS.ITargetObject$lA)), LINKS.velocity$DoVv), SNodeOperations.copyNode(content));
+    SNode dotTarget = IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__);
+    SNode object = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, dotTarget);
+
+    if ((object == null)) {
+      SLinkOperations.setTarget(SNodeOperations.as(ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(dotTarget), CONCEPTS.ObjectDefinition$YO), LINKS.velocity$DoVv, createVelocityCoordinates_yskieq_a0a0d0c(content));
+    } else {
+      SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(object, LINKS.expression$87ts), content);
+    }
+
   }
 
   /*package*/ ObjectVelocityTarget__BehaviorDescriptor() {
@@ -95,12 +103,20 @@ public final class ObjectVelocityTarget__BehaviorDescriptor extends BaseBHDescri
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
+  private static SNode createVelocityCoordinates_yskieq_a0a0d0c(SNode p0) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VelocityCoordinates$bc);
+    n0.forChild(LINKS.expression$87ts).initNode(p0, CONCEPTS.Expression$Wr, true);
+    return n0.getResult();
+  }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink velocity$DoVv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
+    /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ITargetObject$lA = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
+    /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
+    /*package*/ static final SConcept VelocityCoordinates$bc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738bL, "jetbrains.mps.samples.Physics.structure.VelocityCoordinates");
+    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
   }
 }

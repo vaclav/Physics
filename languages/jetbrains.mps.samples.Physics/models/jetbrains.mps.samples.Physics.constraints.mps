@@ -38,6 +38,9 @@
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
       </concept>
+      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
+        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
@@ -580,23 +583,13 @@
     <ref role="1M2myG" to="9tcj:4eAl$41wfr1" resolve="IObjectDotTarget" />
     <node concept="9S07l" id="4eAl$41wha6" role="9Vyp8">
       <node concept="3clFbS" id="4eAl$41wha7" role="2VODD2">
-        <node concept="3clFbF" id="4eAl$41what" role="3cqZAp">
-          <node concept="2OqwBi" id="4eAl$41whXe" role="3clFbG">
-            <node concept="2OqwBi" id="4eAl$41whav" role="2Oq$k0">
-              <node concept="1PxgMI" id="4eAl$41whaw" role="2Oq$k0">
-                <node concept="nLn13" id="4eAl$41whax" role="1m5AlR" />
-                <node concept="chp4Y" id="4eAl$41whay" role="3oSUPX">
-                  <ref role="cht4Q" to="hm2y:7NJy08a3O99" resolve="DotExpression" />
-                </node>
-              </node>
-              <node concept="3TrEf2" id="4eAl$41whDU" role="2OqNvi">
-                <ref role="3Tt5mk" to="hm2y:4rZeNQ6NgXF" resolve="expr" />
-              </node>
-            </node>
-            <node concept="1mIQ4w" id="4eAl$41wig3" role="2OqNvi">
-              <node concept="chp4Y" id="4eAl$41wimC" role="cj9EA">
-                <ref role="cht4Q" to="9tcj:GdoRjGrjZN" resolve="ITargetObject" />
-              </node>
+        <node concept="3clFbF" id="2AM6gIjXXhT" role="3cqZAp">
+          <node concept="2YIFZM" id="2AM6gIjXWNR" role="3clFbG">
+            <ref role="37wK5l" to="rf09:2AM6gIjXTtY" resolve="hasParentContextTargetOf" />
+            <ref role="1Pybhc" to="rf09:2AM6gIjWzyR" resolve="DotExpressionHelper" />
+            <node concept="nLn13" id="2AM6gIjXWVj" role="37wK5m" />
+            <node concept="35c_gC" id="2AM6gIjXWZg" role="37wK5m">
+              <ref role="35c_gD" to="9tcj:GdoRjGrjZN" resolve="ITargetObject" />
             </node>
           </node>
         </node>

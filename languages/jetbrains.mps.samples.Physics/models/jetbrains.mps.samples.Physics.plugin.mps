@@ -2570,7 +2570,7 @@
     </node>
     <node concept="qq9P1" id="GdoRjGP1oO" role="qq9xR">
       <property role="2TnfIJ" value="true" />
-      <ref role="qq9wM" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
+      <ref role="qq9wM" to="9tcj:GdoRjGvRee" resolve="TargetableObjectExpression" />
       <node concept="3vetai" id="GdoRjGP28k" role="3vQZUl">
         <node concept="rqRoa" id="GdoRjGP5gE" role="3vdyny">
           <ref role="rqRob" to="9tcj:GdoRjGvRej" resolve="expression" />

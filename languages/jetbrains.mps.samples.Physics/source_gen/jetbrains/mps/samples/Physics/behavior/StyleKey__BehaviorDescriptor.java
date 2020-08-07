@@ -5,58 +5,24 @@ package jetbrains.mps.samples.Physics.behavior;
 import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import jetbrains.mps.core.aspects.behaviour.api.SMethod;
-import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
-import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
-import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
-import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
+import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import jetbrains.mps.smodel.builder.SNodeBuilder;
-import org.jetbrains.mps.openapi.language.SConcept;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public final class StyleKey__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2c40d23L, "jetbrains.mps.samples.Physics.structure.StyleKey");
 
-  public static final SMethod<Void> overrideWith_id38SdPTRbTXB = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
-  public static final SMethod<String> renderReadable_id6kR0qIbI2yi = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6kR0qIbI2yi").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(overrideWith_id38SdPTRbTXB, renderReadable_id6kR0qIbI2yi);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList();
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static void overrideWith_id38SdPTRbTXB(@NotNull final SNode __thisNode__, final SNode content) {
-    SNode definition = SNodeOperations.as(ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__)), CONCEPTS.AbstractObjectDefinition$O);
-
-    boolean found = ListSequence.fromList(SLinkOperations.getChildren(definition, LINKS.styles$W8dv)).any(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.key$4rdb), SNodeOperations.asSConcept(SNodeOperations.getConcept(__thisNode__)))) {
-          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(it, LINKS.value$4y25), content);
-          return true;
-        }
-        return false;
-      }
-    });
-
-    if (!(found)) {
-      ListSequence.fromList(SLinkOperations.getChildren(definition, LINKS.styles$W8dv)).addElement(createStyleDefinition_2k1npd_a0a0a4a0(SNodeOperations.copyNode(__thisNode__), content));
-    }
-  }
-  /*package*/ static String renderReadable_id6kR0qIbI2yi(@NotNull SNode __thisNode__) {
-    return SConceptOperations.conceptAlias(SNodeOperations.getConcept(__thisNode__));
-  }
 
   /*package*/ StyleKey__BehaviorDescriptor() {
   }
@@ -73,11 +39,6 @@ public final class StyleKey__BehaviorDescriptor extends BaseBHDescriptor {
       throw new BHMethodNotFoundException(this, method);
     }
     switch (methodIndex) {
-      case 0:
-        overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]);
-        return null;
-      case 1:
-        return (T) ((String) renderReadable_id6kR0qIbI2yi(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -105,24 +66,5 @@ public final class StyleKey__BehaviorDescriptor extends BaseBHDescriptor {
   @Override
   public SAbstractConcept getConcept() {
     return CONCEPT;
-  }
-  private static SNode createStyleDefinition_2k1npd_a0a0a4a0(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.StyleDefinition$Xd);
-    n0.forChild(LINKS.key$4rdb).initNode(p0, CONCEPTS.StyleKey$l_, true);
-    n0.forChild(LINKS.value$4y25).initNode(p1, CONCEPTS.Expression$Wr, true);
-    return n0.getResult();
-  }
-
-  private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractObjectDefinition$O = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, "jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition");
-    /*package*/ static final SConcept StyleDefinition$Xd = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, "jetbrains.mps.samples.Physics.structure.StyleDefinition");
-    /*package*/ static final SConcept StyleKey$l_ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2c40d23L, "jetbrains.mps.samples.Physics.structure.StyleKey");
-    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
-  }
-
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink styles$W8dv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x101711d69793d8a9L, "styles");
-    /*package*/ static final SContainmentLink key$4rdb = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c4124fL, "key");
-    /*package*/ static final SContainmentLink value$4y25 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c412a2L, "value");
   }
 }

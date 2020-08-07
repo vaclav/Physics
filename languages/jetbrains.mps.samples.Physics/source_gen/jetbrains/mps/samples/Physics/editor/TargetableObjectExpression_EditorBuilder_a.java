@@ -19,11 +19,11 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-/*package*/ class TargetableExpression_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class TargetableObjectExpression_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public TargetableExpression_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public TargetableObjectExpression_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -40,21 +40,21 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_sgow6c_a");
+    editorCell.setCellId("Collection_5mrbd1_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createRefNode_0());
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new expressionSingleRoleHandler_sgow6c_a0(myNode, LINKS.expression$87ts, getEditorContext());
+    SingleRoleCellProvider provider = new expressionSingleRoleHandler_5mrbd1_a0(myNode, LINKS.expression$87ts, getEditorContext());
     return provider.createCell();
   }
-  private static class expressionSingleRoleHandler_sgow6c_a0 extends SingleRoleCellProvider {
+  private static class expressionSingleRoleHandler_5mrbd1_a0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public expressionSingleRoleHandler_sgow6c_a0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public expressionSingleRoleHandler_5mrbd1_a0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }

@@ -122,7 +122,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="mass" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableExpression" />
+      <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MNbVDo">
@@ -488,7 +488,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="position" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableExpression" />
+      <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
     </node>
     <node concept="1TJgyj" id="3Nk1IDHWZS7" role="1TKVEi">
       <property role="IQ2ns" value="4383135941275155975" />
@@ -567,9 +567,12 @@
     <property role="3GE5qa" value="physical.expr.dot" />
     <property role="TrG5h" value="ObjectMassTarget" />
     <property role="34LRSv" value="mass" />
-    <ref role="1TJDcQ" node="6kwOTMl17vk" resolve="AbstractObjectTarget" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="M__cqnvmu4" role="PzmwI">
       <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
+    </node>
+    <node concept="PrWs8" id="2AM6gIjV3vd" role="PzmwI">
+      <ref role="PrY4T" node="4eAl$41wfr1" resolve="IObjectDotTarget" />
     </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl17vk">
@@ -776,7 +779,7 @@
     <property role="3GE5qa" value="physical.vector.targets" />
     <property role="TrG5h" value="VelocityCoordinates" />
     <property role="34LRSv" value="initial velocity" />
-    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableExpression" />
+    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
     <node concept="PrWs8" id="270Q2mEVj8D" role="PzmwI">
       <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
     </node>
@@ -784,7 +787,7 @@
   <node concept="1TIwiD" id="GdoRjGvRee">
     <property role="EcuMT" value="796402062949577614" />
     <property role="3GE5qa" value="physical.vector.targets" />
-    <property role="TrG5h" value="TargetableExpression" />
+    <property role="TrG5h" value="TargetableObjectExpression" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="GdoRjGvReh" role="PzmwI">
       <ref role="PrY4T" to="vs0r:59HbAIOYkEn" resolve="IDetectCycle" />
@@ -829,7 +832,7 @@
     <property role="3GE5qa" value="physical.vector.targets" />
     <property role="TrG5h" value="PositionCoordinates" />
     <property role="R4oN_" value="contains coordinates and serve as coordinates target" />
-    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableExpression" />
+    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
     <node concept="PrWs8" id="270Q2mEV8Ij" role="PzmwI">
       <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
     </node>
@@ -1098,9 +1101,6 @@
     <property role="R4oN_" value="represent a style key, having the type its value should have" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="2GtZpnyL1nw" role="PzmwI">
-      <ref role="PrY4T" node="38SdPTRbTXd" resolve="ICanBeOverridden" />
-    </node>
   </node>
   <node concept="1TIwiD" id="2GtZpnyQkkD">
     <property role="EcuMT" value="3106918138153354537" />
@@ -1122,6 +1122,25 @@
       <property role="IQ2nx" value="3106918138153662053" />
       <property role="TrG5h" value="shape" />
       <ref role="AX2Wp" node="10n4tqnuB27" resolve="Shape" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2AM6gIjMe9V">
+    <property role="EcuMT" value="3004491438924292731" />
+    <property role="3GE5qa" value="physical.expr" />
+    <property role="TrG5h" value="ObjectStyleDotTarget" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="2AM6gIjMe9W" role="PzmwI">
+      <ref role="PrY4T" node="4eAl$41wfr1" resolve="IObjectDotTarget" />
+    </node>
+    <node concept="PrWs8" id="2AM6gIjNN$x" role="PzmwI">
+      <ref role="PrY4T" node="38SdPTRbTXd" resolve="ICanBeOverridden" />
+    </node>
+    <node concept="1TJgyj" id="2AM6gIjMea0" role="1TKVEi">
+      <property role="IQ2ns" value="3004491438924292736" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="styleKey" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2GtZpnyL0Oz" resolve="StyleKey" />
     </node>
   </node>
 </model>

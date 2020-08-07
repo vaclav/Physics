@@ -15,7 +15,7 @@ public class FallingBall extends Simulation {
   protected FallingBallWorldSystemScope scope;
 
   public FallingBall() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).doubleValue());
+    super(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))).doubleValue());
   }
 
   @Override

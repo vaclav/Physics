@@ -49,16 +49,16 @@ public class FallingBallWorldSystemScope extends SystemScope {
       Ball2PhysicalEntity currentEntity = this;
 
       // Set static properties of Ball 
-      this.setMass(((Number) new BigInteger("1")));
+      this.setMass(((Number) new BigInteger("35")));
       this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of Ball 
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.PAUSE_SIMULATION);
-      fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
+      fixtureProperties.set(Prop.TEXTURE, new Color(0, 0, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("-9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0")))))));

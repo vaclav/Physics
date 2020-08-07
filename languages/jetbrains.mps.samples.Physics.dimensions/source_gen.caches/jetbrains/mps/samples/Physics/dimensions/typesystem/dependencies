@@ -53,7 +53,6 @@
     <classNode dependClassName="java.math.MathContext" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
-    <classNode dependClassName="jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
     <classNode dependClassName="jetbrains.mps.errors.IRuleConflictWarningProducer" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
@@ -87,9 +86,6 @@
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.SubtypingManager" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
-    <classNode dependClassName="org.apache.log4j.Level" />
-    <classNode dependClassName="org.apache.log4j.LogManager" />
-    <classNode dependClassName="org.apache.log4j.Logger" />
     <classNode dependClassName="org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.behavior.NumberType__BehaviorDescriptor" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />

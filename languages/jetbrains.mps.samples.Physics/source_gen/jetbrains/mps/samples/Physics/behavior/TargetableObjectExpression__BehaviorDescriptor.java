@@ -30,8 +30,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 
-public final class TargetableExpression__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableExpression");
+public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableObjectExpression");
 
   public static final SMethod<Iterable<SNode>> getDependenciesRelevantForCycleDetection_id59HbAIOYveX = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getDependenciesRelevantForCycleDetection").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("59HbAIOYveX").build();
   public static final SMethod<Set<SNode>> traceBackElementInCycle_id17fjvcLF7UR = new SMethodBuilder<Set<SNode>>(new SJavaCompoundTypeImpl((Class<Set<SNode>>) ((Class) Object.class))).name("traceBackElementInCycle").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("17fjvcLF7UR").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
@@ -92,7 +92,7 @@ public final class TargetableExpression__BehaviorDescriptor extends BaseBHDescri
     return set;
   }
 
-  /*package*/ TargetableExpression__BehaviorDescriptor() {
+  /*package*/ TargetableObjectExpression__BehaviorDescriptor() {
   }
 
   @Override

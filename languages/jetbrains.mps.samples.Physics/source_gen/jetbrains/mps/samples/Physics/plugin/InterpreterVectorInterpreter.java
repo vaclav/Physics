@@ -249,7 +249,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.TargetableExpression$cD, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/796402062955124276", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.TargetableObjectExpression$cD, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/796402062955124276", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -261,16 +261,16 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         } catch (InterpreterEscapeException ex) {
           throw ex;
         } catch (RuntimeException ex) {
-          throw new InterpreterRuntimeException("TargetableExpression()", node, ex, trace);
+          throw new InterpreterRuntimeException("TargetableObjectExpression()", node, ex, trace);
         }
       }
       public EvaluatorInfo getInfo() {
-        return new EvaluatorInfo("TargetableExpression");
+        return new EvaluatorInfo("TargetableObjectExpression");
       }
 
       @Override
       public String toString() {
-        return "TargetableExpression";
+        return "TargetableObjectExpression";
       }
 
       @Override
@@ -754,7 +754,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
     /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
     /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
     /*package*/ static final SConcept DirectionalCoordinates$pa = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, "jetbrains.mps.samples.Physics.structure.DirectionalCoordinates");
-    /*package*/ static final SConcept TargetableExpression$cD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableExpression");
+    /*package*/ static final SConcept TargetableObjectExpression$cD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableObjectExpression");
     /*package*/ static final SConcept ObjectReferenceExpression$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
     /*package*/ static final SConcept WorldNestedObjectTarget$p3 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, "jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget");
     /*package*/ static final SConcept ObjectDistanceWithTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget");

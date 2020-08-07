@@ -54,6 +54,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObjectMassTarget;
   private ConceptPresentation props_ObjectPositionTarget;
   private ConceptPresentation props_ObjectReferenceExpression;
+  private ConceptPresentation props_ObjectStyleDotTarget;
   private ConceptPresentation props_ObjectVelocityTarget;
   private ConceptPresentation props_OverrideRule;
   private ConceptPresentation props_PictureTexture;
@@ -68,7 +69,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StaticForce;
   private ConceptPresentation props_StyleDefinition;
   private ConceptPresentation props_StyleKey;
-  private ConceptPresentation props_TargetableExpression;
+  private ConceptPresentation props_TargetableObjectExpression;
   private ConceptPresentation props_Texture;
   private ConceptPresentation props_TextureStyleKey;
   private ConceptPresentation props_TimeExpression;
@@ -395,6 +396,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObjectReferenceExpression = cpb.create();
         }
         return props_ObjectReferenceExpression;
+      case LanguageConceptSwitch.ObjectStyleDotTarget:
+        if (props_ObjectStyleDotTarget == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ObjectStyleDotTarget");
+          props_ObjectStyleDotTarget = cpb.create();
+        }
+        return props_ObjectStyleDotTarget;
       case LanguageConceptSwitch.ObjectVelocityTarget:
         if (props_ObjectVelocityTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -497,13 +505,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StyleKey = cpb.create();
         }
         return props_StyleKey;
-      case LanguageConceptSwitch.TargetableExpression:
-        if (props_TargetableExpression == null) {
+      case LanguageConceptSwitch.TargetableObjectExpression:
+        if (props_TargetableObjectExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          props_TargetableExpression = cpb.create();
+          props_TargetableObjectExpression = cpb.create();
         }
-        return props_TargetableExpression;
+        return props_TargetableObjectExpression;
       case LanguageConceptSwitch.Texture:
         if (props_Texture == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

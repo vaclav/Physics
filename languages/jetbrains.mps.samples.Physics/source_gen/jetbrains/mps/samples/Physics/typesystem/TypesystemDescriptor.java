@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.typesystem;
 
 import jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime;
+import jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime;
 
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
@@ -84,7 +85,15 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_ObjectStyleDotTarget_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_ObjectVelocityTarget_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_OverrideRule_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -154,6 +163,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     {
       InferenceRule_Runtime inferenceRule = new typeof_WorldNestedObjectTarget_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      NonTypesystemRule_Runtime nonTypesystemRule = new check_OverrideRule_targetIsOverridable_NonTypesystemRule();
+      this.myNonTypesystemRules.add(nonTypesystemRule);
     }
   }
 }

@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import org.iets3.core.expr.base.behavior.IDotTarget__BehaviorDescriptor;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -32,7 +31,7 @@ public final class IObjectDotTarget__BehaviorDescriptor extends BaseBHDescriptor
   }
 
   /*package*/ static SNode getLocalizedObjectTarget_id4eAl$41wire(@NotNull SNode __thisNode__) {
-    return (SNode) ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(__thisNode__), CONCEPTS.ITargetObject$lA));
+    return (SNode) ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$lA));
   }
 
   /*package*/ IObjectDotTarget__BehaviorDescriptor() {
