@@ -231,12 +231,6 @@
         <reference id="8182547171709614741" name="target" index="36bGnp" />
       </concept>
     </language>
-    <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
-      <concept id="6332851714983831325" name="jetbrains.mps.baseLanguage.logging.structure.MsgStatement" flags="ng" index="2xdQw9">
-        <property id="6332851714983843871" name="severity" index="2xdLsb" />
-        <child id="5721587534047265374" name="message" index="9lYJi" />
-      </concept>
-    </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1204834851141" name="jetbrains.mps.lang.smodel.structure.PoundExpression" flags="ng" index="25Kdxt">
         <child id="1204834868751" name="expression" index="25KhWn" />
@@ -3086,22 +3080,7 @@
             </node>
           </node>
         </node>
-        <node concept="2xdQw9" id="2AM6gIk0YYN" role="3cqZAp">
-          <property role="2xdLsb" value="h1akgim/info" />
-          <node concept="3cpWs3" id="2AM6gIk0ZC2" role="9lYJi">
-            <node concept="2OqwBi" id="2AM6gIk10Wa" role="3uHU7w">
-              <node concept="37vLTw" id="2AM6gIk0ZMi" role="2Oq$k0">
-                <ref role="3cqZAo" node="2GtZpnyL21b" resolve="definition" />
-              </node>
-              <node concept="2qgKlT" id="2AM6gIk11uE" role="2OqNvi">
-                <ref role="37wK5l" to="tpcu:22G2W3WJ92t" resolve="getDetailedPresentation" />
-              </node>
-            </node>
-            <node concept="Xl_RD" id="2AM6gIk0YYP" role="3uHU7B">
-              <property role="Xl_RC" value="will override property of " />
-            </node>
-          </node>
-        </node>
+        <node concept="3clFbH" id="2bNGZcQiGQ" role="3cqZAp" />
         <node concept="Jncv_" id="2AM6gIk2yrT" role="3cqZAp">
           <ref role="JncvD" to="9tcj:6HZo5MN9SX3" resolve="ObjectDefinition" />
           <node concept="37vLTw" id="2AM6gIk2z0d" role="JncvB">

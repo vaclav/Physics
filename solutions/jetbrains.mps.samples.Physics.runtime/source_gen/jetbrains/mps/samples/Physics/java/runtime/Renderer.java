@@ -30,12 +30,19 @@ public class Renderer extends PApplet {
 
     callback.render(this);
   }
+  @Override
+  public void keyPressed() {
+    callback.keyPressed(keyCode);
+  }
+
+
   public static void afterInit(RendererCallback cb) {
     callback = cb;
   }
   public interface RendererCallback {
     void initialized(Renderer renderer);
     void render(PApplet context);
+    void keyPressed(int code);
   }
   public static void main(String[] args) {
     PApplet.main(Renderer.class);

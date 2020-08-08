@@ -101,6 +101,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0zc);
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
@@ -129,6 +130,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a5b0zc);
           props_AbstractObjectDefinition = cpb.create();
         }
         return props_AbstractObjectDefinition;
@@ -465,6 +467,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a45b0zc);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -587,6 +590,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a17b0zc);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;

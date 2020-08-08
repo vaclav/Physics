@@ -14,6 +14,11 @@
     <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" implicit="true" />
   </imports>
   <registry>
+    <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
+      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.FileIcon" flags="ng" index="1QGGSu">
+        <property id="2756621024541341363" name="file" index="1iqoE4" />
+      </concept>
+    </language>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
         <property id="1421157252384165432" name="memberId" index="3tVfz5" />
@@ -46,6 +51,7 @@
       <concept id="1071489090640" name="jetbrains.mps.lang.structure.structure.ConceptDeclaration" flags="ig" index="1TIwiD">
         <property id="1096454100552" name="rootable" index="19KtqR" />
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
+        <child id="6327362524875300597" name="icon" index="rwd14" />
         <child id="1169129564478" name="implements" index="PzmwI" />
       </concept>
       <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
@@ -103,6 +109,9 @@
     </node>
     <node concept="PrWs8" id="2bZvtzzMjnc" role="PzmwI">
       <ref role="PrY4T" node="2bZvtzzMfx6" resolve="IProvideCurrentWorld" />
+    </node>
+    <node concept="1QGGSu" id="2bNGZcK_g7" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/world.png" />
     </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MN9SX3">
@@ -171,6 +180,9 @@
       <property role="20kJfa" value="overrideRules" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="38SdPTRbTZH" resolve="OverrideRule" />
+    </node>
+    <node concept="1QGGSu" id="2bNGZcG97Q" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/simulation.png" />
     </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MNbVDr">
@@ -287,7 +299,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="components" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oP">
@@ -334,6 +346,9 @@
     </node>
     <node concept="PrWs8" id="1h1l5SEmLTe" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1QGGSu" id="2bNGZcM4DQ" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/object.png" />
     </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEmLT4">
@@ -448,6 +463,9 @@
     </node>
     <node concept="PrWs8" id="Q4PrYMC00m" role="PzmwI">
       <ref role="PrY4T" to="zzzn:49WTic8eSCJ" resolve="IFunctionLike" />
+    </node>
+    <node concept="1QGGSu" id="2bNGZcJ85x" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/force.png" />
     </node>
   </node>
   <node concept="PlHQZ" id="3Nk1IDHVTY$">

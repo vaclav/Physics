@@ -36,6 +36,13 @@ public abstract class Simulation implements Renderer.RendererCallback {
     ctx.hint(PApplet.ENABLE_DEPTH_TEST);
 
   }
+  @Override
+  public void keyPressed(int code) {
+    // Space bar 
+    if (code == 32) {
+      world.setPaused(!(world.isPaused()));
+    }
+  }
 
   protected abstract void init(World world);
 }

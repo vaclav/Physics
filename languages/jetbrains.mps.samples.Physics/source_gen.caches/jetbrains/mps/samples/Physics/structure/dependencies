@@ -2,6 +2,7 @@
 <dependenciesRoot>
   <dependency className="jetbrains.mps.samples.Physics.structure.ConceptPresentationAspectImpl">
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.structure.IconContainer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.LanguageConceptSwitch" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.StructureAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentation" />
@@ -40,6 +41,9 @@
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.structure.IconContainer">
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.IconResource" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.structure.LanguageConceptSwitch">
     <classNode dependClassName="jetbrains.mps.lang.smodel.LanguageConceptIndex" />
