@@ -25,7 +25,7 @@ public class MetricsRendering {
       str.append("\n");
     }
 
-    ctx.color(255);
+    ctx.fill(255);
     ctx.text(str.toString(), 5, 15);
   }
 }

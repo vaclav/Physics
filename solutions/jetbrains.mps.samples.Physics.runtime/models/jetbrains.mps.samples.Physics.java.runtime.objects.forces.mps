@@ -10,7 +10,6 @@
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
     <import index="9dpa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.ode(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="xwt6" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.math(jetbrains.mps.samples.Physics.java.runtime/)" />
-    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
     <import index="d2el" ref="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.java.runtime.objects.rendering)" implicit="true" />
   </imports>
   <registry>
@@ -55,9 +54,6 @@
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
-      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
-        <property id="1070475926801" name="value" index="Xl_RC" />
-      </concept>
       <concept id="1182160077978" name="jetbrains.mps.baseLanguage.structure.AnonymousClassCreator" flags="nn" index="YeOm9">
         <child id="1182160096073" name="cls" index="YeSDq" />
       </concept>
@@ -67,6 +63,7 @@
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534513062" name="jetbrains.mps.baseLanguage.structure.DoubleType" flags="in" index="10P55v" />
       <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
@@ -94,9 +91,6 @@
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
-      </concept>
-      <concept id="1111509017652" name="jetbrains.mps.baseLanguage.structure.FloatingPointConstant" flags="nn" index="3b6qkQ">
-        <property id="1113006610751" name="value" index="$nhwW" />
       </concept>
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
         <child id="1068580123133" name="returnType" index="3clF45" />
@@ -153,7 +147,6 @@
       </concept>
       <concept id="1214918800624" name="jetbrains.mps.baseLanguage.structure.PostfixIncrementExpression" flags="nn" index="3uNrnE" />
       <concept id="7024111702304501416" name="jetbrains.mps.baseLanguage.structure.OrAssignmentExpression" flags="nn" index="3vZ8r8" />
-      <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
@@ -195,13 +188,6 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
@@ -485,6 +471,19 @@
                             </node>
                           </node>
                         </node>
+                        <node concept="3SKdUt" id="aCA7w6J$JD" role="3cqZAp">
+                          <node concept="1PaTwC" id="aCA7w6J$JE" role="1aUNEU">
+                            <node concept="3oM_SD" id="aCA7w6J$JF" role="1PaTwD">
+                              <property role="3oM_SC" value="TODO" />
+                            </node>
+                            <node concept="3oM_SD" id="aCA7w6J_36" role="1PaTwD">
+                              <property role="3oM_SC" value="from" />
+                            </node>
+                            <node concept="3oM_SD" id="aCA7w6J_3Z" role="1PaTwD">
+                              <property role="3oM_SC" value="property" />
+                            </node>
+                          </node>
+                        </node>
                         <node concept="3clFbF" id="4D75T4FueY_" role="3cqZAp">
                           <node concept="37vLTI" id="4D75T4FueYA" role="3clFbG">
                             <node concept="2OqwBi" id="4D75T4Fuksi" role="37vLTJ">
@@ -500,8 +499,8 @@
                                 <ref role="2Oxat5" to="9dpa:~DContact$DSurfaceParameters.bounce" resolve="bounce" />
                               </node>
                             </node>
-                            <node concept="3b6qkQ" id="4D75T4FueYC" role="37vLTx">
-                              <property role="$nhwW" value="0.9" />
+                            <node concept="3cmrfG" id="aCA7w6KCUF" role="37vLTx">
+                              <property role="3cmrfH" value="1" />
                             </node>
                           </node>
                         </node>
@@ -550,277 +549,169 @@
                             </node>
                           </node>
                         </node>
-                        <node concept="3clFbF" id="5kbw6V4dDhU" role="3cqZAp">
-                          <node concept="2OqwBi" id="5kbw6V4dDEx" role="3clFbG">
-                            <node concept="37vLTw" id="5kbw6V4dDhS" role="2Oq$k0">
-                              <ref role="3cqZAo" node="5kbw6V4dCMC" resolve="joint" />
+                        <node concept="3clFbH" id="aCA7w6JB6e" role="3cqZAp" />
+                        <node concept="3SKdUt" id="aCA7w6JGdZ" role="3cqZAp">
+                          <node concept="1PaTwC" id="aCA7w6JGe0" role="1aUNEU">
+                            <node concept="3oM_SD" id="aCA7w6JGe1" role="1PaTwD">
+                              <property role="3oM_SC" value="Attach" />
                             </node>
-                            <node concept="liA8E" id="4D75T4FueYJ" role="2OqNvi">
-                              <ref role="37wK5l" to="9dpa:~DJoint.attach(org.ode4j.ode.DBody,org.ode4j.ode.DBody)" resolve="attach" />
-                              <node concept="2OqwBi" id="4D75T4Fujdz" role="37wK5m">
-                                <node concept="2OqwBi" id="4D75T4Fujdx" role="2Oq$k0">
-                                  <node concept="2OqwBi" id="4D75T4Fujdv" role="2Oq$k0">
-                                    <node concept="37vLTw" id="4D75T4Fujdu" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="4D75T4FueYs" resolve="contact" />
-                                    </node>
-                                    <node concept="2OwXpG" id="39Vo6LuZtxw" role="2OqNvi">
-                                      <ref role="2Oxat5" to="9dpa:~DContact.geom" resolve="geom" />
-                                    </node>
-                                  </node>
-                                  <node concept="2OwXpG" id="39Vo6LuZtDn" role="2OqNvi">
-                                    <ref role="2Oxat5" to="9dpa:~DContactGeom.g1" resolve="g1" />
-                                  </node>
-                                </node>
-                                <node concept="liA8E" id="39Vo6LuZAg8" role="2OqNvi">
-                                  <ref role="37wK5l" to="9dpa:~DGeom.getBody()" resolve="getBody" />
-                                </node>
+                            <node concept="3oM_SD" id="aCA7w6JGCx" role="1PaTwD">
+                              <property role="3oM_SC" value="only" />
+                            </node>
+                            <node concept="3oM_SD" id="aCA7w6JGDy" role="1PaTwD">
+                              <property role="3oM_SC" value="to" />
+                            </node>
+                            <node concept="3oM_SD" id="aCA7w6JGE$" role="1PaTwD">
+                              <property role="3oM_SC" value="involved" />
+                            </node>
+                            <node concept="3oM_SD" id="aCA7w6JGHz" role="1PaTwD">
+                              <property role="3oM_SC" value="bodies" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbJ" id="aCA7w6JCA_" role="3cqZAp">
+                          <node concept="3clFbC" id="aCA7w6JCAA" role="3clFbw">
+                            <node concept="2OqwBi" id="aCA7w6JD7Y" role="3uHU7B">
+                              <node concept="37vLTw" id="aCA7w6JD7X" role="2Oq$k0">
+                                <ref role="3cqZAo" node="5kbw6V4d_Gm" resolve="otherObject" />
                               </node>
-                              <node concept="2OqwBi" id="4D75T4Fujk9" role="37wK5m">
-                                <node concept="2OqwBi" id="4D75T4Fujk7" role="2Oq$k0">
-                                  <node concept="2OqwBi" id="4D75T4Fujk5" role="2Oq$k0">
-                                    <node concept="37vLTw" id="4D75T4Fujk4" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="4D75T4FueYs" resolve="contact" />
-                                    </node>
-                                    <node concept="2OwXpG" id="39Vo6LuZtLa" role="2OqNvi">
-                                      <ref role="2Oxat5" to="9dpa:~DContact.geom" resolve="geom" />
-                                    </node>
-                                  </node>
-                                  <node concept="2OwXpG" id="39Vo6LuZtQn" role="2OqNvi">
-                                    <ref role="2Oxat5" to="9dpa:~DContactGeom.g2" resolve="g2" />
-                                  </node>
-                                </node>
-                                <node concept="liA8E" id="39Vo6LuZtVQ" role="2OqNvi">
-                                  <ref role="37wK5l" to="9dpa:~DGeom.getBody()" resolve="getBody" />
-                                </node>
+                              <node concept="liA8E" id="aCA7w6JD7Z" role="2OqNvi">
+                                <ref role="37wK5l" to="jyp0:2AaxZXYijmc" resolve="getCollisionReaction" />
                               </node>
                             </node>
-                          </node>
-                        </node>
-                        <node concept="3clFbH" id="5kbw6V4fKhQ" role="3cqZAp" />
-                        <node concept="3SKdUt" id="6qMY4Z3eGgt" role="3cqZAp">
-                          <node concept="1PaTwC" id="6qMY4Z3eGgu" role="1aUNEU">
-                            <node concept="3oM_SD" id="6qMY4Z3eGgv" role="1PaTwD">
-                              <property role="3oM_SC" value="TODO" />
-                            </node>
-                            <node concept="3oM_SD" id="6qMY4Z3eGtN" role="1PaTwD">
-                              <property role="3oM_SC" value="prevent" />
-                            </node>
-                            <node concept="3oM_SD" id="6qMY4Z3eGtY" role="1PaTwD">
-                              <property role="3oM_SC" value="reaction" />
-                            </node>
-                            <node concept="3oM_SD" id="6qMY4Z3eGua" role="1PaTwD">
-                              <property role="3oM_SC" value="(below" />
-                            </node>
-                            <node concept="3oM_SD" id="6qMY4Z3eGuJ" role="1PaTwD">
-                              <property role="3oM_SC" value="code" />
-                            </node>
-                            <node concept="3oM_SD" id="6qMY4Z3eGuX" role="1PaTwD">
-                              <property role="3oM_SC" value="give" />
-                            </node>
-                            <node concept="3oM_SD" id="6qMY4Z3eGvc" role="1PaTwD">
-                              <property role="3oM_SC" value="null" />
-                            </node>
-                            <node concept="3oM_SD" id="6qMY4Z3eGv$" role="1PaTwD">
-                              <property role="3oM_SC" value="for" />
-                            </node>
-                            <node concept="3oM_SD" id="6qMY4Z3eGwd" role="1PaTwD">
-                              <property role="3oM_SC" value="feedback)" />
+                            <node concept="Rm8GO" id="aCA7w6JD1G" role="3uHU7w">
+                              <ref role="1Px2BO" node="2AaxZXYibwz" resolve="CollisionReaction" />
+                              <ref role="Rm8GQ" node="2AaxZXYibzL" resolve="BOUNCE" />
                             </node>
                           </node>
-                        </node>
-                        <node concept="3SKdUt" id="5kbw6V4fQg5" role="3cqZAp">
-                          <node concept="1PaTwC" id="5kbw6V4fQg6" role="1aUNEU">
-                            <node concept="3oM_SD" id="5kbw6V4fQg7" role="1PaTwD">
-                              <property role="3oM_SC" value="If" />
-                            </node>
-                            <node concept="3oM_SD" id="5kbw6V4fQwz" role="1PaTwD">
-                              <property role="3oM_SC" value="the" />
-                            </node>
-                            <node concept="3oM_SD" id="5kbw6V4fQwA" role="1PaTwD">
-                              <property role="3oM_SC" value="object" />
-                            </node>
-                            <node concept="3oM_SD" id="5kbw6V4fQwE" role="1PaTwD">
-                              <property role="3oM_SC" value="object" />
-                            </node>
-                            <node concept="3oM_SD" id="5kbw6V4fQx7" role="1PaTwD">
-                              <property role="3oM_SC" value="do" />
-                            </node>
-                            <node concept="3oM_SD" id="5kbw6V4fQxW" role="1PaTwD">
-                              <property role="3oM_SC" value="not" />
-                            </node>
-                            <node concept="3oM_SD" id="5kbw6V4fQy3" role="1PaTwD">
-                              <property role="3oM_SC" value="bounce" />
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="1X3_iC" id="6qMY4Z3eFuX" role="lGtFl">
-                          <property role="3V$3am" value="statement" />
-                          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-                          <node concept="3clFbJ" id="5kbw6V4fKv9" role="8Wnug">
-                            <node concept="3clFbS" id="5kbw6V4fKvb" role="3clFbx">
-                              <node concept="3cpWs8" id="5kbw6V4fMsF" role="3cqZAp">
-                                <node concept="3cpWsn" id="5kbw6V4fMsG" role="3cpWs9">
-                                  <property role="TrG5h" value="feedback" />
-                                  <node concept="3uibUv" id="39Vo6LuXZOu" role="1tU5fm">
-                                    <ref role="3uigEE" to="9dpa:~DJoint$DJointFeedback" resolve="DJoint.DJointFeedback" />
+                          <node concept="3clFbJ" id="aCA7w6JCAJ" role="9aQIa">
+                            <node concept="3clFbC" id="aCA7w6JCAK" role="3clFbw">
+                              <node concept="37vLTw" id="aCA7w6JCAL" role="3uHU7B">
+                                <ref role="3cqZAo" node="5kbw6V4fqQs" resolve="otherGeom" />
+                              </node>
+                              <node concept="2OqwBi" id="aCA7w6JD0$" role="3uHU7w">
+                                <node concept="2OqwBi" id="aCA7w6JD0y" role="2Oq$k0">
+                                  <node concept="37vLTw" id="aCA7w6JD0x" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="4D75T4FueYs" resolve="contact" />
                                   </node>
-                                  <node concept="2OqwBi" id="5kbw6V4fMsH" role="33vP2m">
-                                    <node concept="37vLTw" id="5kbw6V4fMsI" role="2Oq$k0">
+                                  <node concept="2OwXpG" id="aCA7w6JD0z" role="2OqNvi">
+                                    <ref role="2Oxat5" to="9dpa:~DContact.geom" resolve="geom" />
+                                  </node>
+                                </node>
+                                <node concept="2OwXpG" id="aCA7w6JD0_" role="2OqNvi">
+                                  <ref role="2Oxat5" to="9dpa:~DContactGeom.g1" resolve="g1" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="9aQIb" id="aCA7w6JCAT" role="9aQIa">
+                              <node concept="3clFbS" id="aCA7w6JCAU" role="9aQI4">
+                                <node concept="3clFbF" id="aCA7w6JCAV" role="3cqZAp">
+                                  <node concept="2OqwBi" id="aCA7w6JCYd" role="3clFbG">
+                                    <node concept="37vLTw" id="aCA7w6JCYc" role="2Oq$k0">
                                       <ref role="3cqZAo" node="5kbw6V4dCMC" resolve="joint" />
                                     </node>
-                                    <node concept="liA8E" id="39Vo6LuZAts" role="2OqNvi">
-                                      <ref role="37wK5l" to="9dpa:~DJoint.getFeedback()" resolve="getFeedback" />
-                                    </node>
-                                  </node>
-                                </node>
-                              </node>
-                              <node concept="3clFbF" id="6qMY4Z35Sf4" role="3cqZAp">
-                                <node concept="2OqwBi" id="6qMY4Z35Sf1" role="3clFbG">
-                                  <node concept="10M0yZ" id="6qMY4Z35Sf2" role="2Oq$k0">
-                                    <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-                                    <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-                                  </node>
-                                  <node concept="liA8E" id="6qMY4Z35Sf3" role="2OqNvi">
-                                    <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String)" resolve="println" />
-                                    <node concept="Xl_RD" id="6qMY4Z35SlI" role="37wK5m">
-                                      <property role="Xl_RC" value="cancel other" />
-                                    </node>
-                                  </node>
-                                </node>
-                              </node>
-                              <node concept="3SKdUt" id="5kbw6V4fPDF" role="3cqZAp">
-                                <node concept="1PaTwC" id="5kbw6V4fPDG" role="1aUNEU">
-                                  <node concept="3oM_SD" id="5kbw6V4fPDH" role="1PaTwD">
-                                    <property role="3oM_SC" value="Cancel" />
-                                  </node>
-                                  <node concept="3oM_SD" id="5kbw6V4fPIg" role="1PaTwD">
-                                    <property role="3oM_SC" value="associated" />
-                                  </node>
-                                  <node concept="3oM_SD" id="5kbw6V4gZsD" role="1PaTwD">
-                                    <property role="3oM_SC" value="feedback" />
-                                  </node>
-                                </node>
-                              </node>
-                              <node concept="3clFbJ" id="5kbw6V4fMAq" role="3cqZAp">
-                                <node concept="3clFbS" id="5kbw6V4fMAs" role="3clFbx">
-                                  <node concept="3clFbF" id="5kbw6V4fNcT" role="3cqZAp">
-                                    <node concept="37vLTI" id="5kbw6V4fO_m" role="3clFbG">
-                                      <node concept="2ShNRf" id="5kbw6V4fOCn" role="37vLTx">
-                                        <node concept="1pGfFk" id="5kbw6V4fOK$" role="2ShVmc">
-                                          <ref role="37wK5l" to="xwt6:~DVector3.&lt;init&gt;()" resolve="DVector3" />
-                                        </node>
-                                      </node>
-                                      <node concept="2OqwBi" id="5kbw6V4fNgP" role="37vLTJ">
-                                        <node concept="37vLTw" id="5kbw6V4fNcR" role="2Oq$k0">
-                                          <ref role="3cqZAo" node="5kbw6V4fMsG" resolve="feedback" />
-                                        </node>
-                                        <node concept="2OwXpG" id="39Vo6LuZu8k" role="2OqNvi">
-                                          <ref role="2Oxat5" to="9dpa:~DJoint$DJointFeedback.f1" resolve="f1" />
-                                        </node>
-                                      </node>
-                                    </node>
-                                  </node>
-                                  <node concept="3clFbF" id="5kbw6V4fOLp" role="3cqZAp">
-                                    <node concept="37vLTI" id="5kbw6V4fOLr" role="3clFbG">
-                                      <node concept="2ShNRf" id="5kbw6V4fOLs" role="37vLTx">
-                                        <node concept="1pGfFk" id="5kbw6V4fOLt" role="2ShVmc">
-                                          <ref role="37wK5l" to="xwt6:~DVector3.&lt;init&gt;()" resolve="DVector3" />
-                                        </node>
-                                      </node>
-                                      <node concept="2OqwBi" id="5kbw6V4fOLu" role="37vLTJ">
-                                        <node concept="37vLTw" id="5kbw6V4fOLv" role="2Oq$k0">
-                                          <ref role="3cqZAo" node="5kbw6V4fMsG" resolve="feedback" />
-                                        </node>
-                                        <node concept="2OwXpG" id="39Vo6LuZub1" role="2OqNvi">
-                                          <ref role="2Oxat5" to="9dpa:~DJoint$DJointFeedback.t1" resolve="t1" />
-                                        </node>
-                                      </node>
-                                    </node>
-                                  </node>
-                                </node>
-                                <node concept="3clFbC" id="5kbw6V4fN0B" role="3clFbw">
-                                  <node concept="37vLTw" id="5kbw6V4fN8$" role="3uHU7w">
-                                    <ref role="3cqZAo" node="5kbw6V4fqQs" resolve="otherGeom" />
-                                  </node>
-                                  <node concept="2OqwBi" id="5kbw6V4fMRH" role="3uHU7B">
-                                    <node concept="2OqwBi" id="5kbw6V4fMJ0" role="2Oq$k0">
-                                      <node concept="37vLTw" id="5kbw6V4fMDp" role="2Oq$k0">
-                                        <ref role="3cqZAo" node="4D75T4FueYs" resolve="contact" />
-                                      </node>
-                                      <node concept="2OwXpG" id="39Vo6LuZtZY" role="2OqNvi">
-                                        <ref role="2Oxat5" to="9dpa:~DContact.geom" resolve="geom" />
-                                      </node>
-                                    </node>
-                                    <node concept="2OwXpG" id="39Vo6LuZu4P" role="2OqNvi">
-                                      <ref role="2Oxat5" to="9dpa:~DContactGeom.g1" resolve="g1" />
-                                    </node>
-                                  </node>
-                                </node>
-                                <node concept="9aQIb" id="5kbw6V4fOR5" role="9aQIa">
-                                  <node concept="3clFbS" id="5kbw6V4fOR6" role="9aQI4">
-                                    <node concept="3clFbF" id="5kbw6V4fOTA" role="3cqZAp">
-                                      <node concept="37vLTI" id="5kbw6V4fPbY" role="3clFbG">
-                                        <node concept="2ShNRf" id="5kbw6V4fPbZ" role="37vLTx">
-                                          <node concept="1pGfFk" id="5kbw6V4fPc0" role="2ShVmc">
-                                            <ref role="37wK5l" to="xwt6:~DVector3.&lt;init&gt;()" resolve="DVector3" />
+                                    <node concept="liA8E" id="aCA7w6JCYe" role="2OqNvi">
+                                      <ref role="37wK5l" to="9dpa:~DJoint.attach(org.ode4j.ode.DBody,org.ode4j.ode.DBody)" resolve="attach" />
+                                      <node concept="2OqwBi" id="aCA7w6JE3k" role="37wK5m">
+                                        <node concept="2OqwBi" id="aCA7w6JE3i" role="2Oq$k0">
+                                          <node concept="2OqwBi" id="aCA7w6JE3g" role="2Oq$k0">
+                                            <node concept="37vLTw" id="aCA7w6JE3f" role="2Oq$k0">
+                                              <ref role="3cqZAo" node="4D75T4FueYs" resolve="contact" />
+                                            </node>
+                                            <node concept="2OwXpG" id="aCA7w6JE3h" role="2OqNvi">
+                                              <ref role="2Oxat5" to="9dpa:~DContact.geom" resolve="geom" />
+                                            </node>
+                                          </node>
+                                          <node concept="2OwXpG" id="aCA7w6JE3j" role="2OqNvi">
+                                            <ref role="2Oxat5" to="9dpa:~DContactGeom.g1" resolve="g1" />
                                           </node>
                                         </node>
-                                        <node concept="2OqwBi" id="5kbw6V4fPc1" role="37vLTJ">
-                                          <node concept="37vLTw" id="5kbw6V4fPc2" role="2Oq$k0">
-                                            <ref role="3cqZAo" node="5kbw6V4fMsG" resolve="feedback" />
-                                          </node>
-                                          <node concept="2OwXpG" id="39Vo6LuZud2" role="2OqNvi">
-                                            <ref role="2Oxat5" to="9dpa:~DJoint$DJointFeedback.f2" resolve="f2" />
-                                          </node>
+                                        <node concept="liA8E" id="aCA7w6JE3l" role="2OqNvi">
+                                          <ref role="37wK5l" to="9dpa:~DGeom.getBody()" resolve="getBody" />
                                         </node>
                                       </node>
-                                    </node>
-                                    <node concept="3clFbF" id="5kbw6V4fPeb" role="3cqZAp">
-                                      <node concept="37vLTI" id="5kbw6V4fPed" role="3clFbG">
-                                        <node concept="2ShNRf" id="5kbw6V4fPee" role="37vLTx">
-                                          <node concept="1pGfFk" id="5kbw6V4fPef" role="2ShVmc">
-                                            <ref role="37wK5l" to="xwt6:~DVector3.&lt;init&gt;()" resolve="DVector3" />
-                                          </node>
-                                        </node>
-                                        <node concept="2OqwBi" id="5kbw6V4fPeg" role="37vLTJ">
-                                          <node concept="37vLTw" id="5kbw6V4fPeh" role="2Oq$k0">
-                                            <ref role="3cqZAo" node="5kbw6V4fMsG" resolve="feedback" />
-                                          </node>
-                                          <node concept="2OwXpG" id="39Vo6LuZueT" role="2OqNvi">
-                                            <ref role="2Oxat5" to="9dpa:~DJoint$DJointFeedback.t2" resolve="t2" />
-                                          </node>
-                                        </node>
-                                      </node>
-                                    </node>
-                                  </node>
-                                </node>
-                              </node>
-                              <node concept="3clFbH" id="5kbw6V4fPPM" role="3cqZAp" />
-                              <node concept="3clFbF" id="5kbw6V4fLGW" role="3cqZAp">
-                                <node concept="2OqwBi" id="5kbw6V4fLN1" role="3clFbG">
-                                  <node concept="37vLTw" id="5kbw6V4fLGU" role="2Oq$k0">
-                                    <ref role="3cqZAo" node="5kbw6V4dCMC" resolve="joint" />
-                                  </node>
-                                  <node concept="liA8E" id="5kbw6V4fLRp" role="2OqNvi">
-                                    <ref role="37wK5l" to="9dpa:~DJoint.setFeedback(org.ode4j.ode.DJoint$DJointFeedback)" resolve="setFeedback" />
-                                    <node concept="37vLTw" id="5kbw6V4fPMv" role="37wK5m">
-                                      <ref role="3cqZAo" node="5kbw6V4fMsG" resolve="feedback" />
+                                      <node concept="10Nm6u" id="aCA7w6JCYg" role="37wK5m" />
                                     </node>
                                   </node>
                                 </node>
                               </node>
                             </node>
-                            <node concept="3y3z36" id="5kbw6V4fL7P" role="3clFbw">
-                              <node concept="Rm8GO" id="5kbw6V4fLpF" role="3uHU7w">
-                                <ref role="Rm8GQ" node="2AaxZXYibzL" resolve="BOUNCE" />
-                                <ref role="1Px2BO" node="2AaxZXYibwz" resolve="CollisionReaction" />
-                              </node>
-                              <node concept="2OqwBi" id="5kbw6V4fKJs" role="3uHU7B">
-                                <node concept="37vLTw" id="5kbw6V4fKAR" role="2Oq$k0">
-                                  <ref role="3cqZAo" node="5kbw6V4d_Gm" resolve="otherObject" />
+                            <node concept="3clFbS" id="aCA7w6JCAO" role="3clFbx">
+                              <node concept="3clFbF" id="aCA7w6JCAP" role="3cqZAp">
+                                <node concept="2OqwBi" id="aCA7w6JDap" role="3clFbG">
+                                  <node concept="37vLTw" id="aCA7w6JDao" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="5kbw6V4dCMC" resolve="joint" />
+                                  </node>
+                                  <node concept="liA8E" id="aCA7w6JDaq" role="2OqNvi">
+                                    <ref role="37wK5l" to="9dpa:~DJoint.attach(org.ode4j.ode.DBody,org.ode4j.ode.DBody)" resolve="attach" />
+                                    <node concept="2OqwBi" id="aCA7w6JDGc" role="37wK5m">
+                                      <node concept="2OqwBi" id="aCA7w6JDGa" role="2Oq$k0">
+                                        <node concept="2OqwBi" id="aCA7w6JDG8" role="2Oq$k0">
+                                          <node concept="37vLTw" id="aCA7w6JDG7" role="2Oq$k0">
+                                            <ref role="3cqZAo" node="4D75T4FueYs" resolve="contact" />
+                                          </node>
+                                          <node concept="2OwXpG" id="aCA7w6JDG9" role="2OqNvi">
+                                            <ref role="2Oxat5" to="9dpa:~DContact.geom" resolve="geom" />
+                                          </node>
+                                        </node>
+                                        <node concept="2OwXpG" id="aCA7w6JDGb" role="2OqNvi">
+                                          <ref role="2Oxat5" to="9dpa:~DContactGeom.g2" resolve="g2" />
+                                        </node>
+                                      </node>
+                                      <node concept="liA8E" id="aCA7w6JDGd" role="2OqNvi">
+                                        <ref role="37wK5l" to="9dpa:~DGeom.getBody()" resolve="getBody" />
+                                      </node>
+                                    </node>
+                                    <node concept="10Nm6u" id="aCA7w6JDas" role="37wK5m" />
+                                  </node>
                                 </node>
-                                <node concept="liA8E" id="5kbw6V4fKRl" role="2OqNvi">
-                                  <ref role="37wK5l" to="jyp0:2AaxZXYijmc" resolve="getCollisionReaction" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbS" id="aCA7w6JCAE" role="3clFbx">
+                            <node concept="3clFbF" id="aCA7w6JCAF" role="3cqZAp">
+                              <node concept="2OqwBi" id="aCA7w6JDcI" role="3clFbG">
+                                <node concept="37vLTw" id="aCA7w6JDcH" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="5kbw6V4dCMC" resolve="joint" />
+                                </node>
+                                <node concept="liA8E" id="aCA7w6JDcJ" role="2OqNvi">
+                                  <ref role="37wK5l" to="9dpa:~DJoint.attach(org.ode4j.ode.DBody,org.ode4j.ode.DBody)" resolve="attach" />
+                                  <node concept="2OqwBi" id="aCA7w6JDQE" role="37wK5m">
+                                    <node concept="2OqwBi" id="aCA7w6JDQC" role="2Oq$k0">
+                                      <node concept="2OqwBi" id="aCA7w6JDQA" role="2Oq$k0">
+                                        <node concept="37vLTw" id="aCA7w6JDQ_" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="4D75T4FueYs" resolve="contact" />
+                                        </node>
+                                        <node concept="2OwXpG" id="aCA7w6JDQB" role="2OqNvi">
+                                          <ref role="2Oxat5" to="9dpa:~DContact.geom" resolve="geom" />
+                                        </node>
+                                      </node>
+                                      <node concept="2OwXpG" id="aCA7w6JDQD" role="2OqNvi">
+                                        <ref role="2Oxat5" to="9dpa:~DContactGeom.g1" resolve="g1" />
+                                      </node>
+                                    </node>
+                                    <node concept="liA8E" id="aCA7w6JDQF" role="2OqNvi">
+                                      <ref role="37wK5l" to="9dpa:~DGeom.getBody()" resolve="getBody" />
+                                    </node>
+                                  </node>
+                                  <node concept="2OqwBi" id="aCA7w6JDcL" role="37wK5m">
+                                    <node concept="2OqwBi" id="aCA7w6JDcM" role="2Oq$k0">
+                                      <node concept="2OqwBi" id="aCA7w6JDcN" role="2Oq$k0">
+                                        <node concept="37vLTw" id="aCA7w6JDcO" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="4D75T4FueYs" resolve="contact" />
+                                        </node>
+                                        <node concept="2OwXpG" id="aCA7w6JDcP" role="2OqNvi">
+                                          <ref role="2Oxat5" to="9dpa:~DContact.geom" resolve="geom" />
+                                        </node>
+                                      </node>
+                                      <node concept="2OwXpG" id="aCA7w6JDcQ" role="2OqNvi">
+                                        <ref role="2Oxat5" to="9dpa:~DContactGeom.g2" resolve="g2" />
+                                      </node>
+                                    </node>
+                                    <node concept="liA8E" id="aCA7w6JDcR" role="2OqNvi">
+                                      <ref role="37wK5l" to="9dpa:~DGeom.getBody()" resolve="getBody" />
+                                    </node>
+                                  </node>
                                 </node>
                               </node>
                             </node>

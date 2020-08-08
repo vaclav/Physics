@@ -22,7 +22,6 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
   public typeof_SphericalCoordinates_InferenceRule() {
   }
   public void applyRule(final SNode coords, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    // TODO use of allowing other kind of dimensions? (angular speed...)  
     {
       final SNode theta = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.theta$xDa9), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050934", true);
       typeCheckingContext.whenConcrete(theta, new Runnable() {
@@ -31,7 +30,7 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
             {
               SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.theta$xDa9);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050907", 0, null);
-              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(theta), (SNode) _quotation_createNode_fzfda9_a1a0c0a0a0a0a1a0b0b0b(), true, true, _info_12389875345);
+              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(theta), (SNode) _quotation_createNode_fzfda9_a1a0c0a0a0a0a1a0b0a0b(), true, true, _info_12389875345);
             }
           }
         }
@@ -45,7 +44,7 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
             {
               SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.phi$xD9b);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3675770290330332500", 0, null);
-              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(phi), (SNode) _quotation_createNode_fzfda9_a1a0c0a0a0a0a1a0b0c0b(), true, true, _info_12389875345);
+              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(phi), (SNode) _quotation_createNode_fzfda9_a1a0c0a0a0a0a1a0b0b0b(), true, true, _info_12389875345);
             }
           }
         }
@@ -59,7 +58,7 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
           {
             SNode _nodeToCheck_1029348928467 = coords;
             EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050916", 0, null);
-            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050926", true), (SNode) createVectorType_fzfda9_a1a0c0a0a0a1a0b0e0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(distance))), _info_12389875345);
+            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050926", true), (SNode) createVectorType_fzfda9_a1a0c0a0a0a1a0b0d0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(distance))), _info_12389875345);
           }
         }
       }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050882", false, false);
@@ -75,6 +74,19 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
   public boolean overrides() {
     return false;
   }
+  private static SNode _quotation_createNode_fzfda9_a1a0c0a0a0a0a1a0b0a0b() {
+    PersistenceFacade facade = PersistenceFacade.getInstance();
+    SNode quotedNode_1 = null;
+    SNode quotedNode_2 = null;
+    SNode quotedNode_3 = null;
+    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x777af24c04609bcaL, "DimensionType")).getResult();
+    quotedNode_2 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x2c25ac8bca7e6b7cL, "DimensionReference")).getResult();
+    quotedNode_2.setReference(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), SReference.create(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), quotedNode_2, facade.createModelReference("r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)"), facade.createNodeId("1387628150972988315")));
+    quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units"), quotedNode_2);
+    quotedNode_3 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e74cL, "RealType")).getResult();
+    quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType"), quotedNode_3);
+    return quotedNode_1;
+  }
   private static SNode _quotation_createNode_fzfda9_a1a0c0a0a0a0a1a0b0b0b() {
     PersistenceFacade facade = PersistenceFacade.getInstance();
     SNode quotedNode_1 = null;
@@ -88,20 +100,7 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
     quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType"), quotedNode_3);
     return quotedNode_1;
   }
-  private static SNode _quotation_createNode_fzfda9_a1a0c0a0a0a0a1a0b0c0b() {
-    PersistenceFacade facade = PersistenceFacade.getInstance();
-    SNode quotedNode_1 = null;
-    SNode quotedNode_2 = null;
-    SNode quotedNode_3 = null;
-    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x777af24c04609bcaL, "DimensionType")).getResult();
-    quotedNode_2 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x2c25ac8bca7e6b7cL, "DimensionReference")).getResult();
-    quotedNode_2.setReference(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), SReference.create(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), quotedNode_2, facade.createModelReference("r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)"), facade.createNodeId("1387628150972988315")));
-    quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units"), quotedNode_2);
-    quotedNode_3 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e74cL, "RealType")).getResult();
-    quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType"), quotedNode_3);
-    return quotedNode_1;
-  }
-  private static SNode createVectorType_fzfda9_a1a0c0a0a0a1a0b0e0b(SNode p0) {
+  private static SNode createVectorType_fzfda9_a1a0c0a0a0a1a0b0d0b(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
     n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
     return n0.getResult();

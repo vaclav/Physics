@@ -9,7 +9,6 @@ public class Renderer extends PApplet {
 
   public Renderer() {
     super();
-    // TODO detach initialized call? or use a cleaner way to do that? 
     if (callback != null) {
       callback.initialized(this);
     }

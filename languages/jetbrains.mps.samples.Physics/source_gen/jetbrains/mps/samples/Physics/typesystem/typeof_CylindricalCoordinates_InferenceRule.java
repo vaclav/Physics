@@ -42,19 +42,18 @@ public class typeof_CylindricalCoordinates_InferenceRule extends AbstractInferen
                         }
                       }
 
-                      // TODO use of allowing other kind of dimensions? (angular speed...)  
                       if (!(typeCheckingContext.isSingleTypeComputation())) {
                         {
                           SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.phi$ip6D);
                           EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3675770290330346602", 0, null);
-                          typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(phi), (SNode) _quotation_createNode_divah4_a1a0c0a0d0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(), true, true, _info_12389875345);
+                          typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(phi), (SNode) _quotation_createNode_divah4_a1a0c0a0c0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(), true, true, _info_12389875345);
                         }
                       }
 
                       {
                         SNode _nodeToCheck_1029348928467 = coords;
                         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972979639", 0, null);
-                        typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972979643", true), (SNode) createVectorType_divah4_a1a0c0f0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(height), typeCheckingContext.getExpandedNode(distance))), _info_12389875345);
+                        typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972979643", true), (SNode) createVectorType_divah4_a1a0c0e0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(height), typeCheckingContext.getExpandedNode(distance))), _info_12389875345);
                       }
                     }
                   }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972979626", false, false);
@@ -75,7 +74,7 @@ public class typeof_CylindricalCoordinates_InferenceRule extends AbstractInferen
   public boolean overrides() {
     return false;
   }
-  private static SNode _quotation_createNode_divah4_a1a0c0a0d0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b() {
+  private static SNode _quotation_createNode_divah4_a1a0c0a0c0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b() {
     PersistenceFacade facade = PersistenceFacade.getInstance();
     SNode quotedNode_1 = null;
     SNode quotedNode_2 = null;
@@ -88,7 +87,7 @@ public class typeof_CylindricalCoordinates_InferenceRule extends AbstractInferen
     quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType"), quotedNode_3);
     return quotedNode_1;
   }
-  private static SNode createVectorType_divah4_a1a0c0f0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(SNode p0) {
+  private static SNode createVectorType_divah4_a1a0c0e0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
     n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
     return n0.getResult();

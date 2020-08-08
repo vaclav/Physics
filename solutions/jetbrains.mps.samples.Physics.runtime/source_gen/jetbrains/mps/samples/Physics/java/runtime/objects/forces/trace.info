@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
@@ -12,123 +13,131 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
   <root nodeRef="r:04f45ddc-ac9c-4d8e-83e4-6d920f8101d7(jetbrains.mps.samples.Physics.java.runtime.objects.forces)/2993354433746221091">
     <file name="CollisionReaction.java">
-      <node id="5352272594420166525" at="17,122,18,61" concept="6" />
-      <node id="5352272594420166530" at="18,61,19,85" concept="6" />
-      <node id="6128132931194939539" at="19,85,20,0" concept="9" />
-      <node id="5352272594420166631" at="22,37,23,26" concept="8" />
-      <node id="5352272594420166557" at="23,26,24,51" concept="6" />
-      <node id="5352272594420166561" at="24,51,25,62" concept="1" />
-      <node id="5352272594420166565" at="25,62,26,39" concept="1" />
-      <node id="5352272594420255130" at="26,39,27,0" concept="9" />
-      <node id="5352272594420166636" at="27,0,28,30" concept="8" />
-      <node id="6128132931194358951" at="28,30,29,111" concept="6" />
-      <node id="6128132931194360954" at="29,111,30,77" concept="1" />
-      <node id="6128132931194913910" at="30,77,31,0" concept="9" />
-      <node id="7400250159184659485" at="31,0,32,71" concept="8" />
-      <node id="6128132931194938373" at="32,71,33,48" concept="8" />
-      <node id="6128132931194941053" at="40,122,41,23" concept="1" />
-      <node id="6128132931195290800" at="41,23,42,0" concept="9" />
-      <node id="6128132931195294345" at="43,78,44,30" concept="1" />
-      <node id="6128132931194941547" at="50,122,51,62" concept="1" />
-      <node id="6128132931195295556" at="51,62,52,28" concept="1" />
-      <node id="6128132931195237190" at="57,122,58,28" concept="1" />
-      <node id="6128132931194183040" at="66,0,67,0" concept="2" trace="priority" />
-      <node id="6128132931194187258" at="71,0,72,0" concept="2" trace="preventOtherReaction" />
-      <node id="6128132931194213480" at="77,0,78,0" concept="2" trace="method" />
-      <node id="6128132931194214375" at="79,102,80,29" concept="1" />
-      <node id="6128132931194214387" at="80,29,81,53" concept="1" />
-      <node id="6128132931194214399" at="81,53,82,25" concept="1" />
-      <node id="6128132931194188897" at="84,60,85,29" concept="1" />
-      <node id="6128132931194188909" at="85,29,86,45" concept="1" />
-      <node id="6128132931195290929" at="42,0,45,7" concept="4" />
-      <node id="7400250159183728273" at="88,0,91,0" concept="5" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
-      <node id="6128132931194350340" at="56,0,60,0" concept="5" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
-      <node id="6128132931194348723" at="49,0,54,0" concept="5" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
-      <node id="6128132931194214367" at="79,0,84,0" concept="0" trace="CollisionReaction#(DZLjetbrains/mps/samples/Physics/java/runtime/objects/forces/CollisionReactionFunction;)V" />
-      <node id="7400250159183720728" at="86,45,91,6" concept="1" />
-      <node id="6128132931194348182" at="39,0,47,0" concept="5" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
-      <node id="6128132931194188889" at="84,0,93,0" concept="0" trace="CollisionReaction#(DZ)V" />
-      <node id="5352272594420166543" at="21,18,34,9" concept="3" />
-      <node id="5352272594420166537" at="20,0,35,7" concept="4" />
-      <node id="6128132931194346256" at="16,0,37,0" concept="5" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
-      <scope id="7400250159183728287" at="89,124,89,124" />
-      <scope id="6128132931195290931" at="43,78,44,30" />
-      <scope id="6128132931194350347" at="57,122,58,28" />
-      <scope id="6128132931194348730" at="50,122,52,28" />
-      <scope id="6128132931194214371" at="79,102,82,25" />
-      <scope id="7400250159183728273" at="88,0,91,0">
+      <node id="5352272594420166525" at="17,122,18,61" concept="7" />
+      <node id="5352272594420166530" at="18,61,19,85" concept="7" />
+      <node id="6128132931194939539" at="19,85,20,0" concept="10" />
+      <node id="5352272594420166631" at="22,37,23,26" concept="9" />
+      <node id="5352272594420166557" at="23,26,24,51" concept="7" />
+      <node id="5352272594420166561" at="24,51,25,62" concept="2" />
+      <node id="191570625439878121" at="25,62,26,32" concept="9" />
+      <node id="5352272594420166565" at="26,32,27,37" concept="2" />
+      <node id="5352272594420255130" at="27,37,28,0" concept="10" />
+      <node id="5352272594420166636" at="28,0,29,30" concept="9" />
+      <node id="6128132931194358951" at="29,30,30,111" concept="7" />
+      <node id="191570625439887758" at="30,111,31,0" concept="10" />
+      <node id="191570625439908735" at="31,0,32,44" concept="9" />
+      <node id="191570625439893931" at="33,79,34,79" concept="2" />
+      <node id="191570625439893941" at="36,45,37,58" concept="2" />
+      <node id="191570625439893947" at="38,18,39,58" concept="2" />
+      <node id="6128132931194941053" at="47,122,48,23" concept="2" />
+      <node id="6128132931195290800" at="48,23,49,0" concept="10" />
+      <node id="6128132931195294345" at="50,78,51,30" concept="2" />
+      <node id="6128132931194941547" at="57,122,58,62" concept="2" />
+      <node id="6128132931195295556" at="58,62,59,28" concept="2" />
+      <node id="6128132931195237190" at="64,122,65,28" concept="2" />
+      <node id="6128132931194183040" at="73,0,74,0" concept="3" trace="priority" />
+      <node id="6128132931194187258" at="78,0,79,0" concept="3" trace="preventOtherReaction" />
+      <node id="6128132931194213480" at="84,0,85,0" concept="3" trace="method" />
+      <node id="6128132931194214375" at="86,102,87,29" concept="2" />
+      <node id="6128132931194214387" at="87,29,88,53" concept="2" />
+      <node id="6128132931194214399" at="88,53,89,25" concept="2" />
+      <node id="6128132931194188897" at="91,60,92,29" concept="2" />
+      <node id="6128132931194188909" at="92,29,93,45" concept="2" />
+      <node id="191570625439893945" at="38,16,40,11" concept="0" />
+      <node id="6128132931195290929" at="49,0,52,7" concept="5" />
+      <node id="7400250159183728273" at="95,0,98,0" concept="6" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
+      <node id="6128132931194350340" at="63,0,67,0" concept="6" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
+      <node id="191570625439893935" at="35,16,40,11" concept="5" />
+      <node id="6128132931194348723" at="56,0,61,0" concept="6" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
+      <node id="6128132931194214367" at="86,0,91,0" concept="1" trace="CollisionReaction#(DZLjetbrains/mps/samples/Physics/java/runtime/objects/forces/CollisionReactionFunction;)V" />
+      <node id="7400250159183720728" at="93,45,98,6" concept="2" />
+      <node id="191570625439893925" at="32,44,40,11" concept="5" />
+      <node id="6128132931194348182" at="46,0,54,0" concept="6" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
+      <node id="6128132931194188889" at="91,0,100,0" concept="1" trace="CollisionReaction#(DZ)V" />
+      <node id="5352272594420166543" at="21,18,41,9" concept="4" />
+      <node id="5352272594420166537" at="20,0,42,7" concept="5" />
+      <node id="6128132931194346256" at="16,0,44,0" concept="6" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
+      <scope id="7400250159183728287" at="96,124,96,124" />
+      <scope id="191570625439893930" at="33,79,34,79" />
+      <scope id="191570625439893940" at="36,45,37,58" />
+      <scope id="191570625439893946" at="38,18,39,58" />
+      <scope id="6128132931195290931" at="50,78,51,30" />
+      <scope id="6128132931194350347" at="64,122,65,28" />
+      <scope id="6128132931194348730" at="57,122,59,28" />
+      <scope id="6128132931194214371" at="86,102,89,25" />
+      <scope id="7400250159183728273" at="95,0,98,0">
         <var name="otherGeom" id="7400250159183728285" />
         <var name="otherObject" id="7400250159183728283" />
         <var name="target" id="7400250159183728279" />
         <var name="targetGeom" id="7400250159183728281" />
         <var name="world" id="7400250159183728277" />
       </scope>
-      <scope id="6128132931194350340" at="56,0,60,0">
+      <scope id="6128132931194350340" at="63,0,67,0">
         <var name="otherGeom" id="6128132931194828794" />
         <var name="otherObject" id="6128132931194350345" />
         <var name="target" id="6128132931194350343" />
         <var name="targetGeom" id="6128132931194828791" />
         <var name="world" id="6128132931194906753" />
       </scope>
-      <scope id="6128132931194348189" at="40,122,45,7" />
-      <scope id="6128132931194348723" at="49,0,54,0">
+      <scope id="6128132931194348189" at="47,122,52,7" />
+      <scope id="6128132931194348723" at="56,0,61,0">
         <var name="otherGeom" id="6128132931194828788" />
         <var name="otherObject" id="6128132931194348728" />
         <var name="target" id="6128132931194348726" />
         <var name="targetGeom" id="6128132931194828785" />
         <var name="world" id="6128132931194906747" />
       </scope>
-      <scope id="6128132931194214367" at="79,0,84,0">
+      <scope id="6128132931194214367" at="86,0,91,0">
         <var name="method" id="6128132931194214398" />
         <var name="preventOtherReaction" id="6128132931194214386" />
         <var name="priority" id="6128132931194214374" />
       </scope>
-      <scope id="6128132931194188893" at="84,60,91,6" />
-      <scope id="6128132931194348182" at="39,0,47,0">
+      <scope id="6128132931194188893" at="91,60,98,6" />
+      <scope id="6128132931194348182" at="46,0,54,0">
         <var name="otherGeom" id="6128132931194828782" />
         <var name="otherObject" id="6128132931194348187" />
         <var name="target" id="6128132931194348185" />
         <var name="targetGeom" id="6128132931194828779" />
         <var name="world" id="6128132931194906741" />
       </scope>
-      <scope id="6128132931194188889" at="84,0,93,0">
+      <scope id="6128132931194188889" at="91,0,100,0">
         <var name="preventOther" id="6128132931194188908" />
         <var name="priority" id="6128132931194188896" />
       </scope>
-      <scope id="5352272594420166555" at="22,37,33,48">
+      <scope id="5352272594420166555" at="22,37,40,11">
         <var name="contact" id="5352272594420166556" />
         <var name="joint" id="6128132931194358952" />
       </scope>
-      <scope id="5352272594420166542" at="21,18,34,9" />
-      <scope id="5352272594420166543" at="21,18,34,9">
+      <scope id="5352272594420166542" at="21,18,41,9" />
+      <scope id="5352272594420166543" at="21,18,41,9">
         <var name="i" id="5352272594420166544" />
       </scope>
-      <scope id="6128132931194346264" at="17,122,35,7">
+      <scope id="6128132931194346264" at="17,122,42,7">
         <var name="contacts" id="5352272594420166524" />
         <var name="n" id="5352272594420166529" />
       </scope>
-      <scope id="6128132931194346256" at="16,0,37,0">
+      <scope id="6128132931194346256" at="16,0,44,0">
         <var name="otherGeom" id="6128132931194826140" />
         <var name="otherObject" id="6128132931194346262" />
         <var name="target" id="6128132931194346260" />
         <var name="targetGeom" id="6128132931194824877" />
         <var name="world" id="6128132931194906735" />
       </scope>
-      <unit id="7400250159183728267" at="87,22,91,5" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$5" />
-      <unit id="6128132931194350338" at="55,33,60,3" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$4" />
-      <unit id="6128132931194348721" at="48,21,54,3" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$3" />
-      <unit id="6128132931194348180" at="38,25,47,3" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$2" />
-      <unit id="6128132931194346250" at="15,23,37,3" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$1" />
-      <unit id="2993354433746221091" at="14,0,94,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
+      <unit id="7400250159183728267" at="94,22,98,5" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$5" />
+      <unit id="6128132931194350338" at="62,33,67,3" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$4" />
+      <unit id="6128132931194348721" at="55,21,61,3" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$3" />
+      <unit id="6128132931194348180" at="45,25,54,3" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$2" />
+      <unit id="6128132931194346250" at="15,23,44,3" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction$1" />
+      <unit id="2993354433746221091" at="14,0,101,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     </file>
   </root>
   <root nodeRef="r:04f45ddc-ac9c-4d8e-83e4-6d920f8101d7(jetbrains.mps.samples.Physics.java.runtime.objects.forces)/4271426636304008557">
     <file name="StaticForce.java">
-      <node id="4271426636304008560" at="14,0,15,0" concept="2" trace="value" />
-      <node id="4271426636304008569" at="15,39,16,23" concept="1" />
-      <node id="4271426636304008583" at="19,92,20,17" concept="7" />
-      <node id="4271426636304008564" at="15,0,18,0" concept="0" trace="StaticForce#(Lorg/ode4j/math/DVector3C;)V" />
-      <node id="4271426636304008576" at="18,0,22,0" concept="5" trace="compute#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;nullLjetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
+      <node id="4271426636304008560" at="14,0,15,0" concept="3" trace="value" />
+      <node id="4271426636304008569" at="15,39,16,23" concept="2" />
+      <node id="4271426636304008583" at="19,92,20,17" concept="8" />
+      <node id="4271426636304008564" at="15,0,18,0" concept="1" trace="StaticForce#(Lorg/ode4j/math/DVector3C;)V" />
+      <node id="4271426636304008576" at="18,0,22,0" concept="6" trace="compute#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;nullLjetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <scope id="4271426636304008568" at="15,39,16,23" />
       <scope id="4271426636304008582" at="19,92,20,17" />
       <scope id="4271426636304008564" at="15,0,18,0">
@@ -150,7 +159,7 @@
   </root>
   <root nodeRef="r:04f45ddc-ac9c-4d8e-83e4-6d920f8101d7(jetbrains.mps.samples.Physics.java.runtime.objects.forces)/6128132931194209283">
     <file name="CollisionReactionFunction.java">
-      <node id="6128132931194209356" at="10,0,11,0" concept="5" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
+      <node id="6128132931194209356" at="10,0,11,0" concept="6" trace="react#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/ode/DGeom;)V" />
       <scope id="6128132931194209356" at="10,0,11,0">
         <var name="otherGeom" id="6128132931194828800" />
         <var name="otherObject" id="6128132931194210054" />

@@ -1018,43 +1018,6 @@
     <property role="TrG5h" value="typeof_SphericalCoordinates" />
     <property role="3GE5qa" value="physical.vector.absolute" />
     <node concept="3clFbS" id="6asu_4xGg1O" role="18ibNy">
-      <node concept="3SKdUt" id="1d1Q7eb5b0e" role="3cqZAp">
-        <node concept="1PaTwC" id="1d1Q7eb5b0f" role="1aUNEU">
-          <node concept="3oM_SD" id="1d1Q7eb5b0g" role="1PaTwD">
-            <property role="3oM_SC" value="TODO" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0h" role="1PaTwD">
-            <property role="3oM_SC" value="use" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0i" role="1PaTwD">
-            <property role="3oM_SC" value="of" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0j" role="1PaTwD">
-            <property role="3oM_SC" value="allowing" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0k" role="1PaTwD">
-            <property role="3oM_SC" value="other" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0l" role="1PaTwD">
-            <property role="3oM_SC" value="kind" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0m" role="1PaTwD">
-            <property role="3oM_SC" value="of" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0n" role="1PaTwD">
-            <property role="3oM_SC" value="dimensions?" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0o" role="1PaTwD">
-            <property role="3oM_SC" value="(angular" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0p" role="1PaTwD">
-            <property role="3oM_SC" value="speed...)" />
-          </node>
-          <node concept="3oM_SD" id="1d1Q7eb5b0q" role="1PaTwD">
-            <property role="3oM_SC" value="" />
-          </node>
-        </node>
-      </node>
       <node concept="nvevp" id="1d1Q7eb5b04" role="3cqZAp">
         <node concept="3clFbS" id="1d1Q7eb5b05" role="nvhr_">
           <node concept="1ZobV4" id="1d1Q7eb5b0r" role="3cqZAp">
@@ -1419,43 +1382,6 @@
                     </node>
                   </node>
                   <node concept="3clFbH" id="1d1Q7eb4VLE" role="3cqZAp" />
-                  <node concept="3SKdUt" id="1d1Q7eb4VL7" role="3cqZAp">
-                    <node concept="1PaTwC" id="1d1Q7eb4VL8" role="1aUNEU">
-                      <node concept="3oM_SD" id="1d1Q7eb4VL9" role="1PaTwD">
-                        <property role="3oM_SC" value="TODO" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VLz" role="1PaTwD">
-                        <property role="3oM_SC" value="use" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VM5" role="1PaTwD">
-                        <property role="3oM_SC" value="of" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VMa" role="1PaTwD">
-                        <property role="3oM_SC" value="allowing" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VMg" role="1PaTwD">
-                        <property role="3oM_SC" value="other" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VMn" role="1PaTwD">
-                        <property role="3oM_SC" value="kind" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VMv" role="1PaTwD">
-                        <property role="3oM_SC" value="of" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VMC" role="1PaTwD">
-                        <property role="3oM_SC" value="dimensions?" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VMM" role="1PaTwD">
-                        <property role="3oM_SC" value="(angular" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VMX" role="1PaTwD">
-                        <property role="3oM_SC" value="speed...)" />
-                      </node>
-                      <node concept="3oM_SD" id="1d1Q7eb4VLA" role="1PaTwD">
-                        <property role="3oM_SC" value="" />
-                      </node>
-                    </node>
-                  </node>
                   <node concept="1ZobV4" id="3c2XpEv4MhE" role="3cqZAp">
                     <property role="3wDh2S" value="true" />
                     <node concept="mw_s8" id="3c2XpEv4MhF" role="1ZfhK$">

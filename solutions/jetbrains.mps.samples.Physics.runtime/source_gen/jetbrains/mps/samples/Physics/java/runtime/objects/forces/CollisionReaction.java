@@ -23,14 +23,21 @@ public enum CollisionReaction {
           // Init contact 
           final DContact contact = contacts.get(i);
           contact.surface.mode |= OdeConstants.dContactBounce;
-          contact.surface.bounce = 0.9;
+          // TODO from property 
+          contact.surface.bounce = 1;
 
           // Attach to bodies 
           DContactJoint joint = OdeHelper.createContactJoint(world.getWorld(), world.getJointGroup(), contact);
-          joint.attach(contact.geom.g1.getBody(), contact.geom.g2.getBody());
 
-          // TODO prevent reaction (below code give null for feedback) 
-          // If the object object do not bounce 
+          // Attach only to involved bodies 
+          if (otherObject.getCollisionReaction() == CollisionReaction.BOUNCE) {
+            joint.attach(contact.geom.g1.getBody(), contact.geom.g2.getBody());
+          } else
+          if (otherGeom == contact.geom.g1) {
+            joint.attach(contact.geom.g2.getBody(), null);
+          } else {
+            joint.attach(contact.geom.g1.getBody(), null);
+          }
         }
       }
     }

@@ -2296,5 +2296,52 @@
       </node>
     </node>
   </node>
+  <node concept="22mcaB" id="aCA7w6Mt8Z">
+    <property role="3GE5qa" value="styles" />
+    <ref role="aqKnT" to="9tcj:10n4tqntag_" resolve="StyleDefinition" />
+    <node concept="22hDWj" id="aCA7w6Mt90" role="22hAXT" />
+    <node concept="3N5dw7" id="aCA7w6Mt92" role="3ft7WO">
+      <node concept="3N5aqt" id="aCA7w6Mt93" role="3Na0zg">
+        <node concept="3clFbS" id="aCA7w6Mt94" role="2VODD2">
+          <node concept="3cpWs8" id="aCA7w6MSYe" role="3cqZAp">
+            <node concept="3cpWsn" id="aCA7w6MSYf" role="3cpWs9">
+              <property role="TrG5h" value="node" />
+              <node concept="3Tqbb2" id="aCA7w6MSXY" role="1tU5fm">
+                <ref role="ehGHo" to="9tcj:10n4tqntag_" resolve="StyleDefinition" />
+              </node>
+              <node concept="2ShNRf" id="aCA7w6MSYg" role="33vP2m">
+                <node concept="3zrR0B" id="aCA7w6MSYh" role="2ShVmc">
+                  <node concept="3Tqbb2" id="aCA7w6MSYi" role="3zrR0E">
+                    <ref role="ehGHo" to="9tcj:10n4tqntag_" resolve="StyleDefinition" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="aCA7w6MTfA" role="3cqZAp">
+            <node concept="37vLTI" id="aCA7w6MU1q" role="3clFbG">
+              <node concept="3N4pyC" id="aCA7w6MU65" role="37vLTx" />
+              <node concept="2OqwBi" id="aCA7w6MTqo" role="37vLTJ">
+                <node concept="37vLTw" id="aCA7w6MTf$" role="2Oq$k0">
+                  <ref role="3cqZAo" node="aCA7w6MSYf" resolve="node" />
+                </node>
+                <node concept="3TrEf2" id="aCA7w6MTBC" role="2OqNvi">
+                  <ref role="3Tt5mk" to="9tcj:2GtZpnyL19f" resolve="key" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWs6" id="aCA7w6Mu1M" role="3cqZAp">
+            <node concept="37vLTw" id="aCA7w6MSYj" role="3cqZAk">
+              <ref role="3cqZAo" node="aCA7w6MSYf" resolve="node" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2kknPJ" id="aCA7w6MtIt" role="2klrvf">
+        <ref role="2ZyFGn" to="9tcj:2GtZpnyL0Oz" resolve="StyleKey" />
+      </node>
+    </node>
+  </node>
 </model>
 

@@ -72,7 +72,7 @@ public class InterpreterExtendedMathInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          // Fix math interpreter implementation 
+          // Replace math interpreter implementation 
           return BigDecimalMath.sqrt(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.expr$y7Am), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();

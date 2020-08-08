@@ -62,15 +62,30 @@ public abstract class Fixture {
    * Take the given fixture and merge its content into this fixture
    */
   public void mergeWith(Fixture fixture) {
-    // Destroy previous geometry 
     DBody body = geometry.getBody();
+
+    // Keep previous mass 
+    double thisMass = body.getMass().getMass();
+    double otherMass = fixture.getGeometry().getBody().getMass().getMass();
+
+    // Destroy previous previous 
     geometry.destroy();
 
     // Set volume to the sum of both 
     this.setVolume(getVolume() + fixture.getVolume());
 
+    // Merge colors accordingly 
+    Color otherTexture = fixture.getTexture();
+    int red = (int) ((texture.red * thisMass + otherTexture.red * otherMass) / (otherMass + thisMass));
+    int green = (int) ((texture.green * thisMass + otherTexture.green * otherMass) / (otherMass + thisMass));
+    int blue = (int) ((texture.blue * thisMass + otherTexture.blue * otherMass) / (otherMass + thisMass));
+    this.texture = new Color(red, green, blue);
+
+    // TODO merge velocity 
+
     // Rebuild geometry and apply to body 
-    this.bindToBody(body, body.getMass().getMass() + fixture.getGeometry().getBody().getMass().getMass());
+    this.bindToBody(body, thisMass + otherMass);
+
   }
 
   public boolean doEmitLight() {
@@ -97,5 +112,10 @@ public abstract class Fixture {
   }
   public void setTraceHandler(TraceHandler traceHandler) {
     this.traceHandler = traceHandler;
+  }
+
+
+  public Color getTexture() {
+    return this.texture;
   }
 }

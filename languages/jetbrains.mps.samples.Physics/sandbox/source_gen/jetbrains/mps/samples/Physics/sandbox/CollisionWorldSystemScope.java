@@ -15,13 +15,14 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
+import java.util.Arrays;
 
 public class CollisionWorldSystemScope extends SystemScope {
   public final PhysicalEntity A3;
   public final PhysicalEntity B;
   public final PhysicalEntity C;
+  public final PhysicalEntity D;
 
   public CollisionWorldSystemScope(World world, VectorLike position, VectorLike velocity) {
     super(position, velocity);
@@ -32,11 +33,13 @@ public class CollisionWorldSystemScope extends SystemScope {
     A3 = withEntity(new A5PhysicalEntity(world, "A4"));
     B = withEntity(new B2PhysicalEntity(world, "B1"));
     C = withEntity(new C2PhysicalEntity(world, "C1"));
+    D = withEntity(new D2PhysicalEntity(world, "D1"));
 
     // Initialize them 
     A3.init(this, world, new FixtureBuilder());
     B.init(this, world, new FixtureBuilder());
     C.init(this, world, new FixtureBuilder());
+    D.init(this, world, new FixtureBuilder());
   }
 
   public static class A5PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
@@ -51,16 +54,17 @@ public class CollisionWorldSystemScope extends SystemScope {
       A5PhysicalEntity currentEntity = this;
 
       // Set static properties of A 
-      this.setMass(((Number) new BigInteger("500")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.setMass(((Number) new BigInteger("300")));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-300")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.15").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of A 
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
-      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.TEXTURE, new Color(0, 255, 0));
+      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.BOUNCE);
+      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
@@ -81,17 +85,17 @@ public class CollisionWorldSystemScope extends SystemScope {
       B2PhysicalEntity currentEntity = this;
 
       // Set static properties of B 
-      this.setMass(((Number) new BigInteger("400")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
+      this.setMass(((Number) new BigInteger("500")));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of B 
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.TEXTURE, new Color(0, 0, 255));
-      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.BOUNCE);
+      fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
+      fixtureProperties.set(Prop.EMIT_LIGHT, true);
+      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 
@@ -112,17 +116,48 @@ public class CollisionWorldSystemScope extends SystemScope {
       C2PhysicalEntity currentEntity = this;
 
       // Set static properties of C 
-      this.setMass(((Number) new BigInteger("300")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-400")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.15").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.setMass(((Number) new BigInteger("400")));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of C 
       super.init(scope, world, fixtureProperties);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.TEXTURE, new Color(0, 255, 0));
-      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.BOUNCE);
-      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.TEXTURE, new Color(0, 0, 255));
+      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.IGNORE);
+      this.setFixture(fixtureProperties.build(world));
+      this.getForces().addAll(Arrays.asList());
+
+      // Bind fixture and mass together 
+      this.bindFixture();
+      world.addEntity(this);
+    }
+  }
+  public static class D2PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
+
+    public D2PhysicalEntity(World world, String name) {
+      super(world, name);
+    }
+
+    @Override
+    public void init(final CollisionWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+      // Escape this for nested forces 
+      D2PhysicalEntity currentEntity = this;
+
+      // Set static properties of D 
+      this.setMass(((Number) new BigInteger("200")));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-400")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
+
+      //  Forces and visual of the parent objects of D 
+      super.init(scope, world, fixtureProperties);
+
+      //  Styles (if any) and forces 
+      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.MERGE);
+      fixtureProperties.set(Prop.TEXTURE, new Color(255, 165, 0));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 

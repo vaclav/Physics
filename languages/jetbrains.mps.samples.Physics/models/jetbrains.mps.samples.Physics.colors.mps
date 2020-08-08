@@ -59,16 +59,16 @@
     <property role="TrG5h" value="purple" />
     <node concept="1nv_BP" id="G6XgqqQVrK" role="2hI$nf">
       <property role="1nv_BK" value="160" />
-      <property role="1nv_BM" value="32" />
-      <property role="1nv_BX" value="240" />
+      <property role="1nv_BM" value="240" />
+      <property role="1nv_BX" value="32" />
     </node>
   </node>
   <node concept="2hGqkC" id="G6XgqqQVkL">
     <property role="TrG5h" value="orange" />
     <node concept="1nv_BP" id="G6XgqqQVpU" role="2hI$nf">
       <property role="1nv_BK" value="255" />
-      <property role="1nv_BM" value="165" />
-      <property role="1nv_BX" value="0" />
+      <property role="1nv_BM" value="0" />
+      <property role="1nv_BX" value="165" />
     </node>
   </node>
   <node concept="2hGqkC" id="G6XgqqQVkM">

@@ -107,36 +107,53 @@
       <node id="2993354433746330031" at="57,0,58,0" concept="7" trace="getVolume#()D" />
       <node id="2993354433746383283" at="58,0,59,0" concept="7" trace="setVolume#(D)V" />
       <node id="2993354433746427627" at="59,0,60,0" concept="7" trace="buildGeometry#()Lorg/ode4j/ode/DGeom;" />
-      <node id="2993354433746549061" at="64,42,65,33" concept="10" />
-      <node id="2993354433746408725" at="65,33,66,36" concept="8" />
-      <node id="2993354433746407512" at="66,36,67,23" concept="2" />
-      <node id="2993354433746410037" at="67,23,68,0" concept="11" />
-      <node id="2993354433746549801" at="68,0,69,37" concept="10" />
-      <node id="2993354433746390173" at="69,37,70,54" concept="2" />
-      <node id="2993354433746545570" at="70,54,71,0" concept="11" />
-      <node id="2993354433746550527" at="71,0,72,42" concept="10" />
-      <node id="2993354433746391828" at="72,42,73,106" concept="2" />
-      <node id="362892448124481404" at="76,32,77,26" concept="9" />
-      <node id="362892448124481409" at="79,47,80,31" concept="2" />
-      <node id="7400250159182956857" at="84,51,85,34" concept="9" />
-      <node id="7400250159182956862" at="87,73,88,47" concept="2" />
-      <node id="1846966433404176957" at="91,36,92,37" concept="9" />
-      <node id="1846966433404175376" at="95,41,96,29" concept="9" />
-      <node id="1846966433404175381" at="98,58,99,37" concept="2" />
+      <node id="2993354433746408725" at="64,42,65,36" concept="8" />
+      <node id="191570625441901416" at="65,36,66,0" concept="11" />
+      <node id="191570625441766235" at="66,0,67,26" concept="10" />
+      <node id="191570625441758555" at="67,26,68,47" concept="8" />
+      <node id="191570625441759864" at="68,47,69,75" concept="8" />
+      <node id="191570625441900708" at="69,75,70,0" concept="11" />
+      <node id="2993354433746549061" at="70,0,71,33" concept="10" />
+      <node id="2993354433746407512" at="71,33,72,23" concept="2" />
+      <node id="2993354433746410037" at="72,23,73,0" concept="11" />
+      <node id="2993354433746549801" at="73,0,74,37" concept="10" />
+      <node id="2993354433746390173" at="74,37,75,54" concept="2" />
+      <node id="191570625441749867" at="75,54,76,0" concept="11" />
+      <node id="191570625441768133" at="76,0,77,32" concept="10" />
+      <node id="191570625441756936" at="77,32,78,46" concept="8" />
+      <node id="191570625441791070" at="78,46,79,103" concept="8" />
+      <node id="191570625441789305" at="79,103,80,109" concept="8" />
+      <node id="191570625441791875" at="80,109,81,106" concept="8" />
+      <node id="191570625441745712" at="81,106,82,47" concept="2" />
+      <node id="2993354433746545570" at="82,47,83,0" concept="11" />
+      <node id="191570625442030533" at="83,0,84,27" concept="10" />
+      <node id="191570625442029809" at="84,27,85,0" concept="11" />
+      <node id="2993354433746550527" at="85,0,86,42" concept="10" />
+      <node id="2993354433746391828" at="86,42,87,48" concept="2" />
+      <node id="191570625441744840" at="87,48,88,0" concept="11" />
+      <node id="362892448124481404" at="91,32,92,26" concept="9" />
+      <node id="362892448124481409" at="94,47,95,31" concept="2" />
+      <node id="7400250159182956857" at="99,51,100,34" concept="9" />
+      <node id="7400250159182956862" at="102,73,103,47" concept="2" />
+      <node id="1846966433404176957" at="106,36,107,37" concept="9" />
+      <node id="1846966433404175376" at="110,41,111,29" concept="9" />
+      <node id="1846966433404175381" at="113,58,114,37" concept="2" />
+      <node id="191570625441755479" at="118,29,119,24" concept="9" />
       <node id="794591792991364438" at="34,10,37,5" concept="0" />
       <node id="4271426636304008687" at="53,0,56,0" concept="7" trace="getGeometry#()Lorg/ode4j/ode/DGeom;" />
-      <node id="362892448124481400" at="76,0,79,0" concept="7" trace="doEmitLight#()Z" />
-      <node id="362892448124481405" at="79,0,82,0" concept="7" trace="setEmitLight#(Z)V" />
-      <node id="7400250159182956853" at="84,0,87,0" concept="7" trace="getCollisionReaction#()Ljetbrains/mps/samples/Physics/java/runtime/objects/forces/CollisionReaction;" />
-      <node id="7400250159182956858" at="87,0,90,0" concept="7" trace="setCollisionReaction#(Ljetbrains/mps/samples/Physics/java/runtime/objects/forces/CollisionReaction;)V" />
-      <node id="1846966433404176953" at="91,0,94,0" concept="7" trace="hasTraceHandler#()Z" />
-      <node id="1846966433404175372" at="95,0,98,0" concept="7" trace="getTraceHandler#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/TraceHandler;" />
-      <node id="1846966433404175377" at="98,0,101,0" concept="7" trace="setTraceHandler#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/TraceHandler;)V" />
+      <node id="362892448124481400" at="91,0,94,0" concept="7" trace="doEmitLight#()Z" />
+      <node id="362892448124481405" at="94,0,97,0" concept="7" trace="setEmitLight#(Z)V" />
+      <node id="7400250159182956853" at="99,0,102,0" concept="7" trace="getCollisionReaction#()Ljetbrains/mps/samples/Physics/java/runtime/objects/forces/CollisionReaction;" />
+      <node id="7400250159182956858" at="102,0,105,0" concept="7" trace="setCollisionReaction#(Ljetbrains/mps/samples/Physics/java/runtime/objects/forces/CollisionReaction;)V" />
+      <node id="1846966433404176953" at="106,0,109,0" concept="7" trace="hasTraceHandler#()Z" />
+      <node id="1846966433404175372" at="110,0,113,0" concept="7" trace="getTraceHandler#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/TraceHandler;" />
+      <node id="1846966433404175377" at="113,0,116,0" concept="7" trace="setTraceHandler#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/TraceHandler;)V" />
+      <node id="191570625441755475" at="118,0,121,0" concept="7" trace="getTexture#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;" />
       <node id="4271426636304008636" at="23,0,27,0" concept="1" trace="Fixture#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;)V" />
       <node id="794591792991363485" at="31,35,37,5" concept="6" />
       <node id="4271426636304008648" at="31,0,39,0" concept="7" trace="render#(Lprocessing/core/PApplet;)V" />
       <node id="4271426636304008660" at="44,0,53,0" concept="7" trace="bindToBody#(Lorg/ode4j/ode/DBody;D)V" />
-      <node id="2993354433746388721" at="64,0,75,0" concept="7" trace="mergeWith#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Fixture;)V" />
+      <node id="2993354433746388721" at="64,0,90,0" concept="7" trace="mergeWith#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Fixture;)V" />
       <scope id="794591792991363487" at="32,26,33,36" />
       <scope id="4271426636304008655" at="43,0,44,0" />
       <scope id="4271426636304008688" at="53,30,54,20" />
@@ -145,29 +162,31 @@
         <var name="volume" id="2993354433746383868" />
       </scope>
       <scope id="2993354433746427627" at="59,0,60,0" />
-      <scope id="362892448124481403" at="76,32,77,26" />
-      <scope id="362892448124481408" at="79,47,80,31" />
-      <scope id="7400250159182956856" at="84,51,85,34" />
-      <scope id="7400250159182956861" at="87,73,88,47" />
-      <scope id="1846966433404176956" at="91,36,92,37" />
-      <scope id="1846966433404175375" at="95,41,96,29" />
-      <scope id="1846966433404175380" at="98,58,99,37" />
+      <scope id="362892448124481403" at="91,32,92,26" />
+      <scope id="362892448124481408" at="94,47,95,31" />
+      <scope id="7400250159182956856" at="99,51,100,34" />
+      <scope id="7400250159182956861" at="102,73,103,47" />
+      <scope id="1846966433404176956" at="106,36,107,37" />
+      <scope id="1846966433404175375" at="110,41,111,29" />
+      <scope id="1846966433404175380" at="113,58,114,37" />
+      <scope id="191570625441755478" at="118,29,119,24" />
       <scope id="4271426636304008640" at="23,46,25,27" />
       <scope id="794591792991364439" at="34,12,36,19" />
       <scope id="4271426636304008687" at="53,0,56,0" />
-      <scope id="362892448124481400" at="76,0,79,0" />
-      <scope id="362892448124481405" at="79,0,82,0">
+      <scope id="362892448124481400" at="91,0,94,0" />
+      <scope id="362892448124481405" at="94,0,97,0">
         <var name="emitLight" id="362892448124481412" />
       </scope>
-      <scope id="7400250159182956853" at="84,0,87,0" />
-      <scope id="7400250159182956858" at="87,0,90,0">
+      <scope id="7400250159182956853" at="99,0,102,0" />
+      <scope id="7400250159182956858" at="102,0,105,0">
         <var name="collisionReaction" id="7400250159182956865" />
       </scope>
-      <scope id="1846966433404176953" at="91,0,94,0" />
-      <scope id="1846966433404175372" at="95,0,98,0" />
-      <scope id="1846966433404175377" at="98,0,101,0">
+      <scope id="1846966433404176953" at="106,0,109,0" />
+      <scope id="1846966433404175372" at="110,0,113,0" />
+      <scope id="1846966433404175377" at="113,0,116,0">
         <var name="traceHandler" id="1846966433404175384" />
       </scope>
+      <scope id="191570625441755475" at="118,0,121,0" />
       <scope id="4271426636304008636" at="23,0,27,0">
         <var name="texture" id="794591792994197957" />
         <var name="world" id="2993354433746439723" />
@@ -183,13 +202,19 @@
         <var name="body" id="4271426636304008661" />
         <var name="massValue" id="987409087291171502" />
       </scope>
-      <scope id="2993354433746388724" at="64,42,73,106">
+      <scope id="2993354433746388724" at="64,42,88,0">
+        <var name="blue" id="191570625441791876" />
         <var name="body" id="2993354433746408726" />
+        <var name="green" id="191570625441789306" />
+        <var name="otherMass" id="191570625441759865" />
+        <var name="otherTexture" id="191570625441756937" />
+        <var name="red" id="191570625441791071" />
+        <var name="thisMass" id="191570625441758556" />
       </scope>
-      <scope id="2993354433746388721" at="64,0,75,0">
+      <scope id="2993354433746388721" at="64,0,90,0">
         <var name="fixture" id="2993354433746389322" />
       </scope>
-      <unit id="4271426636304008626" at="12,0,102,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
+      <unit id="4271426636304008626" at="12,0,122,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
     </file>
   </root>
   <root nodeRef="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.java.runtime.objects.rendering)/4271426636304008724">
@@ -306,8 +331,8 @@
       <node id="5369611234117707026" at="23,35,24,50" concept="2" />
       <node id="5369611234117718285" at="24,50,25,23" concept="2" />
       <node id="5369611234116965173" at="26,5,27,0" concept="11" />
-      <node id="5369611234117808976" at="27,0,28,19" concept="2" />
-      <node id="5369611234117730891" at="28,19,29,36" concept="2" />
+      <node id="5369611234117808976" at="27,0,28,18" concept="2" />
+      <node id="5369611234117730891" at="28,18,29,36" concept="2" />
       <node id="5369611234116951477" at="16,20,19,5" concept="6" />
       <node id="5369611234116991158" at="21,0,26,5" concept="5" />
       <node id="5369611234116868546" at="10,0,31,0" concept="13" trace="render#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Lprocessing/core/PApplet;)V" />
