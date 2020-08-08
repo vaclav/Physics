@@ -11,8 +11,9 @@ import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import jetbrains.mps.samples.Physics.behavior.DotExpressionHelper;
+import org.iets3.core.expr.base.behavior.DotExpression__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -39,17 +40,14 @@ public class IWorldDotTarget_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, CONCEPTS.DotExpression$Af), LINKS.expr$xFwa), CONCEPTS.IMayTargetWorld$d);
+    return DotExpressionHelper.hasParentContextTargetOf(parentNode, CONCEPTS.IMayTargetWorld$d) && (boolean) DotExpression__BehaviorDescriptor.expectType_id5WNmJ7DokMG.invoke(SNodeOperations.as(parentNode, CONCEPTS.DotExpression$Af), CONCEPTS.WorldType$tu, ((boolean) true));
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "4874678483873252507");
 
   private static final class CONCEPTS {
     /*package*/ static final SInterfaceConcept IWorldDotTarget$GU = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x43a6564101814135L, "jetbrains.mps.samples.Physics.structure.IWorldDotTarget");
     /*package*/ static final SConcept DotExpression$Af = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
+    /*package*/ static final SConcept WorldType$tu = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L, "jetbrains.mps.samples.Physics.types.structure.WorldType");
     /*package*/ static final SInterfaceConcept IMayTargetWorld$d = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L, "jetbrains.mps.samples.Physics.structure.IMayTargetWorld");
-  }
-
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
   }
 }

@@ -15,13 +15,14 @@ import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.lang.editor.menus.ParameterizedMenuPart;
 import org.jetbrains.mps.openapi.language.SEnumerationLiteral;
 import org.jetbrains.annotations.Nullable;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.editor.menus.substitute.SingleItemSubstituteMenuPart;
 import org.apache.log4j.Logger;
 import jetbrains.mps.lang.editor.menus.substitute.DefaultSubstituteMenuItem;
 import jetbrains.mps.openapi.editor.menus.EditorMenuTraceInfo;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.editor.runtime.completion.CompletionItemInformation;
 import jetbrains.mps.smodel.runtime.IconResource;
@@ -70,7 +71,7 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
     @Nullable
     @Override
     protected Iterable<? extends SEnumerationLiteral> getParameters(SubstituteMenuContext _context) {
-      throw new RuntimeException("NOT IMPLEMENTED");
+      return SEnumOperations.getMembers(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL, "jetbrains.mps.samples.Physics.structure.CollisionReaction"));
     }
     private class SMP_Action_4hk85u_a0 extends SingleItemSubstituteMenuPart {
       private final SEnumerationLiteral myParameterObject;

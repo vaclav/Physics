@@ -146,7 +146,7 @@
         <child id="7887120293590353012" name="length" index="3_jIDE" />
         <child id="7887120293590353010" name="direction" index="3_jIDG" />
       </concept>
-      <concept id="796402062949577614" name="jetbrains.mps.samples.Physics.structure.TargetableExpression" flags="ng" index="3Bsx3U">
+      <concept id="796402062949577614" name="jetbrains.mps.samples.Physics.structure.TargetableObjectExpression" flags="ng" index="3Bsx3U">
         <child id="796402062949577619" name="expression" index="3Bsx3B" />
       </concept>
       <concept id="796402062949577611" name="jetbrains.mps.samples.Physics.structure.VelocityCoordinates" flags="ng" index="3Bsx3Z" />

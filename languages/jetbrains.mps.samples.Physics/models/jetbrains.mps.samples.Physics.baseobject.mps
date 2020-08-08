@@ -76,6 +76,8 @@
         <property id="3106918138153354538" name="reaction" index="39LbyZ" />
       </concept>
       <concept id="2993354433745639261" name="jetbrains.mps.samples.Physics.structure.CollisionStyleKey" flags="ng" index="1nHl2y" />
+      <concept id="1846966433400552481" name="jetbrains.mps.samples.Physics.structure.DisabledTraceExpression" flags="ng" index="1Bik8e" />
+      <concept id="1846966433400551509" name="jetbrains.mps.samples.Physics.structure.TraceStyleKey" flags="ng" index="1BikpU" />
       <concept id="7287056866553921482" name="jetbrains.mps.samples.Physics.structure.ObjectMassTarget" flags="ng" index="3K9aLm" />
     </language>
     <language id="f9bdc723-99df-40ff-934c-d1f848158f92" name="jetbrains.mps.samples.Physics.IETS3MathExtended">
@@ -245,6 +247,10 @@
       <node concept="39LbyW" id="2GtZpnzbyQt" role="39QuWR">
         <property role="39LbyZ" value="2AaxZXYfXtv/bounce" />
       </node>
+    </node>
+    <node concept="27oVnN" id="1AxJyXYVtm6" role="27xc_Z">
+      <node concept="1Bik8e" id="1AxJyXZ4Y_M" role="39QuWR" />
+      <node concept="1BikpU" id="1AxJyXYVtni" role="39QuZq" />
     </node>
   </node>
 </model>

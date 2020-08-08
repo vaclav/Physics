@@ -114,5 +114,11 @@
       <property role="3F0ifm" value="direction" />
     </node>
   </node>
+  <node concept="24kQdi" id="1AxJyXYPtTz">
+    <ref role="1XX52x" to="z99z:6kwOTMl0tT7" resolve="WorldType" />
+    <node concept="3F0ifn" id="1AxJyXYPtT_" role="2wV5jI">
+      <property role="3F0ifm" value="world" />
+    </node>
+  </node>
 </model>
 

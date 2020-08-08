@@ -19,6 +19,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
@@ -41,6 +42,11 @@
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
     <classNode dependClassName="processing.core.PApplet" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler">
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode dependClassName="processing.core.PApplet" />
   </dependency>
 </dependenciesRoot>
 

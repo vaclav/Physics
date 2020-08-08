@@ -81,7 +81,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.EDITABLE, true);
     editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.Texture$Jk));
+    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.TextureExpression$Jk));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
@@ -220,7 +220,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Texture$Jk = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L, "jetbrains.mps.samples.Physics.structure.Texture");
+    /*package*/ static final SConcept TextureExpression$Jk = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L, "jetbrains.mps.samples.Physics.structure.TextureExpression");
     /*package*/ static final SConcept PropertyAttribute$jT = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
   }
 

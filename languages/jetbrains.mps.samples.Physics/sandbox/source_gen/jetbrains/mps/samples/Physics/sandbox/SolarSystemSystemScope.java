@@ -70,6 +70,7 @@ public class SolarSystemSystemScope extends SystemScope {
       fixtureProperties.set(Prop.SHAPE, "sphere");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 165));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.TRACE, new Color(255, 255, 255));
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
 

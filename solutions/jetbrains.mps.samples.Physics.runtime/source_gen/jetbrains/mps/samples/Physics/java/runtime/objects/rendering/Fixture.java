@@ -16,6 +16,8 @@ public abstract class Fixture {
   private boolean emitLight;
   protected World world;
 
+  private TraceHandler traceHandler;
+
   private CollisionReaction collisionReaction = CollisionReaction.BOUNCE;
 
   public Fixture(World world, Color texture) {
@@ -84,5 +86,16 @@ public abstract class Fixture {
   }
   public void setCollisionReaction(CollisionReaction collisionReaction) {
     this.collisionReaction = collisionReaction;
+  }
+
+  public boolean hasTraceHandler() {
+    return this.traceHandler != null;
+  }
+
+  public TraceHandler getTraceHandler() {
+    return this.traceHandler;
+  }
+  public void setTraceHandler(TraceHandler traceHandler) {
+    this.traceHandler = traceHandler;
   }
 }

@@ -38,6 +38,9 @@
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
+      <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
+        <child id="1068580123156" name="expression" index="3clFbG" />
+      </concept>
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1082485599094" name="ifFalseStatement" index="9aQIa" />
@@ -106,6 +109,10 @@
         <child id="1185805056450" name="argument" index="nvjzm" />
         <child id="1205761991995" name="argumentRepresentator" index="2X0Ygz" />
       </concept>
+      <concept id="1175147569072" name="jetbrains.mps.lang.typesystem.structure.AbstractSubtypingRule" flags="ig" index="2sgdUx">
+        <child id="1175147624276" name="body" index="2sgrp5" />
+      </concept>
+      <concept id="1175147670730" name="jetbrains.mps.lang.typesystem.structure.SubtypingRule" flags="ig" index="2sgARr" />
       <concept id="1175517767210" name="jetbrains.mps.lang.typesystem.structure.ReportErrorStatement" flags="nn" index="2MkqsV">
         <child id="1175517851849" name="errorString" index="2MkJ7o" />
       </concept>
@@ -1761,6 +1768,7 @@
   </node>
   <node concept="1YbPZF" id="k9gc965lwp">
     <property role="TrG5h" value="typeof_Simulation" />
+    <property role="3GE5qa" value="simulation" />
     <node concept="3clFbS" id="k9gc965lwq" role="18ibNy">
       <node concept="1ZobV4" id="k9gc965m6$" role="3cqZAp">
         <property role="3wDh2S" value="true" />
@@ -2131,7 +2139,7 @@
     </node>
     <node concept="1YaCAy" id="2GtZpnyLb_6" role="1YuTPh">
       <property role="TrG5h" value="texture" />
-      <ref role="1YaFvo" to="9tcj:1h1l5SEmLT$" resolve="Texture" />
+      <ref role="1YaFvo" to="9tcj:1h1l5SEmLT$" resolve="TextureExpression" />
     </node>
   </node>
   <node concept="1YbPZF" id="2GtZpnyLbCT">
@@ -2295,6 +2303,7 @@
   </node>
   <node concept="18kY7G" id="2AM6gIjMbwy">
     <property role="TrG5h" value="check_OverrideRule_targetIsOverridable" />
+    <property role="3GE5qa" value="simulation" />
     <node concept="3clFbS" id="2AM6gIjMbwz" role="18ibNy">
       <node concept="3clFbJ" id="2AM6gIjMbwD" role="3cqZAp">
         <node concept="2OqwBi" id="2AM6gIjMc2F" role="3clFbw">
@@ -2332,6 +2341,7 @@
   </node>
   <node concept="1YbPZF" id="2AM6gIjMdgI">
     <property role="TrG5h" value="typeof_OverrideRule" />
+    <property role="3GE5qa" value="simulation" />
     <node concept="3clFbS" id="2AM6gIjMdgJ" role="18ibNy">
       <node concept="nvevp" id="2AM6gIjMdqg" role="3cqZAp">
         <node concept="3clFbS" id="2AM6gIjMdqk" role="nvhr_">
@@ -2417,6 +2427,106 @@
     <node concept="1YaCAy" id="2AM6gIjZaOi" role="1YuTPh">
       <property role="TrG5h" value="objectStyleDotTarget" />
       <ref role="1YaFvo" to="9tcj:2AM6gIjMe9V" resolve="ObjectStyleDotTarget" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1AxJyXYUfxs">
+    <property role="TrG5h" value="typeof_TraceStyleKey" />
+    <property role="3GE5qa" value="styles.trace" />
+    <node concept="3clFbS" id="1AxJyXYUfxt" role="18ibNy">
+      <node concept="3SKdUt" id="1AxJyXYUfDR" role="3cqZAp">
+        <node concept="1PaTwC" id="1AxJyXYUfDS" role="1aUNEU">
+          <node concept="3oM_SD" id="1AxJyXYUfDT" role="1PaTwD">
+            <property role="3oM_SC" value="TODO" />
+          </node>
+          <node concept="3oM_SD" id="1AxJyXYUfE6" role="1PaTwD">
+            <property role="3oM_SC" value="specify" />
+          </node>
+          <node concept="3oM_SD" id="1AxJyXYUfE9" role="1PaTwD">
+            <property role="3oM_SC" value="only" />
+          </node>
+          <node concept="3oM_SD" id="1AxJyXYUfEd" role="1PaTwD">
+            <property role="3oM_SC" value="color" />
+          </node>
+          <node concept="3oM_SD" id="1AxJyXYUfJT" role="1PaTwD">
+            <property role="3oM_SC" value="(when" />
+          </node>
+          <node concept="3oM_SD" id="1AxJyXYUfJZ" role="1PaTwD">
+            <property role="3oM_SC" value="more" />
+          </node>
+          <node concept="3oM_SD" id="1AxJyXYUfK6" role="1PaTwD">
+            <property role="3oM_SC" value="texture" />
+          </node>
+          <node concept="3oM_SD" id="1AxJyXYUfKe" role="1PaTwD">
+            <property role="3oM_SC" value="are" />
+          </node>
+          <node concept="3oM_SD" id="1AxJyXYUfKn" role="1PaTwD">
+            <property role="3oM_SC" value="available)" />
+          </node>
+        </node>
+      </node>
+      <node concept="1Z5TYs" id="1AxJyXYUfCX" role="3cqZAp">
+        <node concept="mw_s8" id="1AxJyXYUfEo" role="1ZfhKB">
+          <node concept="2pJPEk" id="1AxJyXYUfJd" role="mwGJk">
+            <node concept="2pJPED" id="1AxJyXYUfJB" role="2pJPEn">
+              <ref role="2pJxaS" to="9tcj:10n4tqntbew" resolve="TextureStyleKey" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1AxJyXYUfD0" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1AxJyXYUfxz" role="mwGJk">
+            <node concept="1YBJjd" id="1AxJyXYUfxN" role="1Z2MuG">
+              <ref role="1YBMHb" node="1AxJyXYUfxv" resolve="traceStyleKey" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1AxJyXYUfxv" role="1YuTPh">
+      <property role="TrG5h" value="traceStyleKey" />
+      <ref role="1YaFvo" to="9tcj:1AxJyXYUfxl" resolve="TraceStyleKey" />
+    </node>
+  </node>
+  <node concept="2sgARr" id="1AxJyXYUfF4">
+    <property role="3GE5qa" value="styles.trace" />
+    <property role="TrG5h" value="trace_isTexture" />
+    <node concept="3clFbS" id="1AxJyXYUfF5" role="2sgrp5">
+      <node concept="3clFbF" id="1AxJyXYUfFl" role="3cqZAp">
+        <node concept="2pJPEk" id="1AxJyXYUfFj" role="3clFbG">
+          <node concept="2pJPED" id="1AxJyXYUfFL" role="2pJPEn">
+            <ref role="2pJxaS" to="9tcj:10n4tqntbew" resolve="TextureStyleKey" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1AxJyXYUfF7" role="1YuTPh">
+      <property role="TrG5h" value="traceStyleKey" />
+      <ref role="1YaFvo" to="9tcj:1AxJyXYUfxl" resolve="TraceStyleKey" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1AxJyXYUfKH">
+    <property role="TrG5h" value="typeof_DisabledTraceExpression" />
+    <property role="3GE5qa" value="styles.trace" />
+    <node concept="3clFbS" id="1AxJyXYUfKI" role="18ibNy">
+      <node concept="1Z5TYs" id="1AxJyXYUfSe" role="3cqZAp">
+        <node concept="mw_s8" id="1AxJyXYUfSw" role="1ZfhKB">
+          <node concept="2pJPEk" id="1AxJyXYUfSM" role="mwGJk">
+            <node concept="2pJPED" id="1AxJyXYUfTc" role="2pJPEn">
+              <ref role="2pJxaS" to="9tcj:1AxJyXYUfxl" resolve="TraceStyleKey" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1AxJyXYUfSh" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1AxJyXYUfKO" role="mwGJk">
+            <node concept="1YBJjd" id="1AxJyXYUfL4" role="1Z2MuG">
+              <ref role="1YBMHb" node="1AxJyXYUfKK" resolve="disabledTraceExpression" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1AxJyXYUfKK" role="1YuTPh">
+      <property role="TrG5h" value="disabledTraceExpression" />
+      <ref role="1YaFvo" to="9tcj:1AxJyXYUfKx" resolve="DisabledTraceExpression" />
     </node>
   </node>
 </model>

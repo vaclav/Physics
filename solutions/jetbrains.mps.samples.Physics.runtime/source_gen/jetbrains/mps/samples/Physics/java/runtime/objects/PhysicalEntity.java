@@ -81,6 +81,11 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     ctx.translate((float) position.get0(), (float) position.get1(), (float) position.get2());
     fixture.render(ctx);
     ctx.popMatrix();
+
+    // Display trace if any 
+    if (fixture.hasTraceHandler()) {
+      fixture.getTraceHandler().render(position, ctx);
+    }
   }
   public void setFixture(Fixture fixture) {
     this.fixture = fixture;

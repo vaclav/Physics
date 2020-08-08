@@ -83,7 +83,7 @@ public class TestConversions_Test extends BaseTransformationTest {
       addNodeById("1139474844806320069");
       addNodeById("1139474844806327647");
       addNodeById("1139474844806955740");
-      this.assertEquals(SNodeOperations.cast(getNodeById("1139474844806959436"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, "jetbrains.mps.samples.Physics"), 0xb0d6374ec7f738eL, "TargetableExpression"))), new InternalVector(5, 10 * Math.sqrt(3) / 2, 10 * Math.sqrt(3)));
+      this.assertEquals(SNodeOperations.cast(getNodeById("1139474844806959436"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, "jetbrains.mps.samples.Physics"), 0xb0d6374ec7f738eL, "TargetableObjectExpression"))), new InternalVector(5, 10 * Math.sqrt(3) / 2, 10 * Math.sqrt(3)));
     }
     public void test_ResolveDirectionalOutsidePosition() throws Exception {
       addNodeById("4809107873077312212");

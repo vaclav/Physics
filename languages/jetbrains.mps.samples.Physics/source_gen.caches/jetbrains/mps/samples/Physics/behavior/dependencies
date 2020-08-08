@@ -112,6 +112,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.AbstractForce__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.AbstractObjectDefinition__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.CartesianCoordinates__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.CollisionStyleKey__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.Coordinates__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.CurrentObjectExpression__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.CurrentWorldExpression__BehaviorDescriptor" />
@@ -124,7 +125,9 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.IProvideCurrentWorld__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ITargetExpression__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ITargetObject__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.IUseSpecificExpressions__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.IWorldDotTarget__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.InteractedObjectExpression__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ObjectDefinition__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ObjectDistanceWithTarget__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ObjectMassTarget__BehaviorDescriptor" />
@@ -134,10 +137,12 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ObjectVelocityTarget__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.PositionCoordinates__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ShapeStyleKey__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.Simulation__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.StyleKey__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.TargetableObjectExpression__BehaviorDescriptor" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.UnitProviderChunk__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.TextureStyleKey__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.TraceStyleKey__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.VectorComponentTarget__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.VectorOppositeTarget__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.VectorResizeTarget__BehaviorDescriptor" />
@@ -164,6 +169,27 @@
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.behavior.CollisionStyleKey__BehaviorDescriptor">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.AccessPrivileges" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SMethodBuilder" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SModifiersImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SConstructor" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SMethod" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
@@ -448,6 +474,26 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.behavior.IUseSpecificExpressions__BehaviorDescriptor">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.AccessPrivileges" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SMethodBuilder" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SModifiersImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SConstructor" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SMethod" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.behavior.IWorldDotTarget__BehaviorDescriptor">
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Object" />
@@ -469,6 +515,26 @@
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SInterfaceConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.behavior.InteractedObjectExpression__BehaviorDescriptor">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.AccessPrivileges" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SMethodBuilder" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SModifiersImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SConstructor" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SMethod" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
@@ -639,7 +705,6 @@
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SMethod" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ILocalized__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.IObjectDotTarget__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.ITargetExpression__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
@@ -704,6 +769,27 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.behavior.ShapeStyleKey__BehaviorDescriptor">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.AccessPrivileges" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SMethodBuilder" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SModifiersImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SConstructor" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SMethod" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.behavior.Simulation__BehaviorDescriptor">
@@ -779,16 +865,11 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.behavior.UnitProviderChunk__BehaviorDescriptor">
-    <classNode dependClassName="java.lang.Boolean" />
+  <dependency className="jetbrains.mps.samples.Physics.behavior.TextureStyleKey__BehaviorDescriptor">
     <classNode dependClassName="java.lang.Class" />
-    <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.Void" />
-    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.Arrays" />
-    <classNode dependClassName="java.util.Collections" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.AccessPrivileges" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl" />
@@ -797,18 +878,33 @@
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SConstructor" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SMethod" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
-    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
-    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.language.SReferenceLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.behavior.TraceStyleKey__BehaviorDescriptor">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.AccessPrivileges" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SMethodBuilder" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SModifiersImpl" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SConstructor" />
+    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SMethod" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.behavior.VectorComponentTarget__BehaviorDescriptor">

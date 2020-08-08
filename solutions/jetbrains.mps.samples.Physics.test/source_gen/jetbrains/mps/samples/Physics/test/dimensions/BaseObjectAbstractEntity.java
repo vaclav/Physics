@@ -37,6 +37,7 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
     fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
     fixtureProperties.set(Prop.EMIT_LIGHT, false);
     fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.BOUNCE);
+    fixtureProperties.set(Prop.TRACE, null);
 
     // Forces 
     this.getForces().addAll(Arrays.asList());

@@ -5,6 +5,7 @@ package jetbrains.mps.samples.Physics.typesystem;
 import jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime;
+import jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime;
 
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
@@ -46,6 +47,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     }
     {
       InferenceRule_Runtime inferenceRule = new typeof_DirectionalCoordinates_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_DisabledTraceExpression_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -141,6 +146,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_TraceStyleKey_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_VectorComponentTarget_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
@@ -167,6 +176,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     {
       NonTypesystemRule_Runtime nonTypesystemRule = new check_OverrideRule_targetIsOverridable_NonTypesystemRule();
       this.myNonTypesystemRules.add(nonTypesystemRule);
+    }
+    {
+      SubtypingRule_Runtime subtypingRule = new trace_isTexture_SubtypingRule();
+      this.mySubtypingRules.add(subtypingRule);
     }
   }
 }

@@ -40,6 +40,7 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534934090" name="jetbrains.mps.baseLanguage.structure.CastExpression" flags="nn" index="10QFUN">
         <child id="1070534934091" name="type" index="10QFUM" />
         <child id="1070534934092" name="expression" index="10QFUP" />
@@ -107,6 +108,11 @@
         <reference id="1107535924139" name="classifier" index="3uigEE" />
         <child id="1109201940907" name="parameter" index="11_B2D" />
       </concept>
+      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
+        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
+        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
+      </concept>
+      <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
@@ -364,6 +370,51 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="1AxJyXZ8d3C" role="3cqZAp" />
+        <node concept="3cpWs8" id="1AxJyXZ8giM" role="3cqZAp">
+          <node concept="3cpWsn" id="1AxJyXZ8giN" role="3cpWs9">
+            <property role="TrG5h" value="traceColor" />
+            <node concept="3uibUv" id="1AxJyXZ8giO" role="1tU5fm">
+              <ref role="3uigEE" to="d2el:G6XgqqGauo" resolve="Color" />
+            </node>
+            <node concept="1rXfSq" id="1AxJyXZ8hmz" role="33vP2m">
+              <ref role="37wK5l" node="10n4tqnCLBV" resolve="get" />
+              <node concept="Rm8GO" id="1AxJyXZ8huC" role="37wK5m">
+                <ref role="Rm8GQ" node="1AxJyXZ7ocM" resolve="TRACE" />
+                <ref role="1Px2BO" node="10n4tqnCyd3" resolve="Prop" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="1AxJyXZ8i2h" role="3cqZAp">
+          <node concept="3clFbS" id="1AxJyXZ8i2j" role="3clFbx">
+            <node concept="3clFbF" id="1AxJyXZ8iM4" role="3cqZAp">
+              <node concept="2OqwBi" id="1AxJyXZ8iPJ" role="3clFbG">
+                <node concept="37vLTw" id="1AxJyXZ8iM2" role="2Oq$k0">
+                  <ref role="3cqZAo" node="k9gc9693Ax" resolve="result" />
+                </node>
+                <node concept="liA8E" id="1AxJyXZ8iSa" role="2OqNvi">
+                  <ref role="37wK5l" to="d2el:1AxJyXZ84gh" resolve="setTraceHandler" />
+                  <node concept="2ShNRf" id="1AxJyXZ8iTe" role="37wK5m">
+                    <node concept="1pGfFk" id="1AxJyXZ8j5D" role="2ShVmc">
+                      <ref role="37wK5l" to="d2el:1AxJyXZ7v26" resolve="TraceHandler" />
+                      <node concept="37vLTw" id="1AxJyXZ8j6G" role="37wK5m">
+                        <ref role="3cqZAo" node="1AxJyXZ8giN" resolve="traceColor" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3y3z36" id="1AxJyXZ8iGD" role="3clFbw">
+            <node concept="37vLTw" id="1AxJyXZ8ijP" role="3uHU7B">
+              <ref role="3cqZAo" node="1AxJyXZ8giN" resolve="traceColor" />
+            </node>
+            <node concept="10Nm6u" id="1AxJyXZ8izR" role="3uHU7w" />
+          </node>
+        </node>
+        <node concept="3clFbH" id="1AxJyXZ8j7s" role="3cqZAp" />
         <node concept="3cpWs6" id="k9gc9696L5" role="3cqZAp">
           <node concept="37vLTw" id="k9gc96971n" role="3cqZAk">
             <ref role="3cqZAo" node="k9gc9693Ax" resolve="result" />
@@ -415,6 +466,10 @@
     </node>
     <node concept="QsSxf" id="6qMY4Z380VA" role="Qtgdg">
       <property role="TrG5h" value="COLLISION_REACT" />
+      <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+    </node>
+    <node concept="QsSxf" id="1AxJyXZ7ocM" role="Qtgdg">
+      <property role="TrG5h" value="TRACE" />
       <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
     </node>
     <node concept="3Tm1VV" id="10n4tqnCyd4" role="1B3o_S" />

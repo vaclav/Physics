@@ -410,7 +410,7 @@
     </node>
     <node concept="3aamgX" id="GdoRjGNkKK" role="3acgRq">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="9tcj:GdoRjGvRee" resolve="TargetableExpression" />
+      <ref role="30HIoZ" to="9tcj:GdoRjGvRee" resolve="TargetableObjectExpression" />
       <node concept="gft3U" id="GdoRjGNl3A" role="1lVwrX">
         <node concept="2ShNRf" id="GdoRjGNl47" role="gfFT$">
           <node concept="1pGfFk" id="GdoRjGNlbH" role="2ShVmc">
@@ -5623,6 +5623,13 @@
         </node>
       </node>
     </node>
+    <node concept="3aamgX" id="1AxJyXZ8lym" role="3aUrZf">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="9tcj:1AxJyXYUfKx" resolve="DisabledTraceExpression" />
+      <node concept="gft3U" id="1AxJyXZ8lJL" role="1lVwrX">
+        <node concept="10Nm6u" id="1AxJyXZ8lJR" role="gfFT$" />
+      </node>
+    </node>
   </node>
   <node concept="jVnub" id="10n4tqnDkv0">
     <property role="TrG5h" value="StyleToPropKey" />
@@ -5695,6 +5702,16 @@
       <node concept="gft3U" id="6qMY4Z380Qe" role="1lVwrX">
         <node concept="Rm8GO" id="6qMY4Z381iG" role="gfFT$">
           <ref role="Rm8GQ" to="ok4s:6qMY4Z380VA" resolve="COLLISION_REACT" />
+          <ref role="1Px2BO" to="ok4s:10n4tqnCyd3" resolve="Prop" />
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="1AxJyXZ7owM" role="3aUrZf">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="9tcj:1AxJyXYUfxl" resolve="TraceStyleKey" />
+      <node concept="gft3U" id="1AxJyXZ7oxe" role="1lVwrX">
+        <node concept="Rm8GO" id="1AxJyXZ7pA4" role="gfFT$">
+          <ref role="Rm8GQ" to="ok4s:1AxJyXZ7ocM" resolve="TRACE" />
           <ref role="1Px2BO" to="ok4s:10n4tqnCyd3" resolve="Prop" />
         </node>
       </node>

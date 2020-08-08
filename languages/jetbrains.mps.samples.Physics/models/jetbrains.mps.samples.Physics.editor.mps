@@ -230,6 +230,10 @@
         <reference id="5455284157994012188" name="link" index="2pIpSl" />
         <child id="1595412875168045827" name="initValue" index="28nt2d" />
       </concept>
+      <concept id="5455284157993911077" name="jetbrains.mps.lang.quotation.structure.NodeBuilderInitProperty" flags="ng" index="2pJxcG">
+        <reference id="5455284157993911078" name="property" index="2pJxcJ" />
+        <child id="1595412875168045201" name="initValue" index="28ntcv" />
+      </concept>
       <concept id="5455284157993863837" name="jetbrains.mps.lang.quotation.structure.NodeBuilder" flags="nn" index="2pJPEk">
         <child id="5455284157993863838" name="quotedNode" index="2pJPEn" />
       </concept>
@@ -654,7 +658,7 @@
           <property role="VOm3f" value="true" />
         </node>
         <node concept="A1WHr" id="1jQexh3y6kR" role="3vIgyS">
-          <ref role="2ZyFGn" to="9tcj:1h1l5SEmLT$" resolve="Texture" />
+          <ref role="2ZyFGn" to="9tcj:1h1l5SEmLT$" resolve="TextureExpression" />
         </node>
       </node>
       <node concept="3F0ifn" id="1jQexh3y6g2" role="3EZMnx">
@@ -721,7 +725,7 @@
           <property role="VOm3f" value="true" />
         </node>
         <node concept="A1WHr" id="1jQexh3y6mU" role="3vIgyS">
-          <ref role="2ZyFGn" to="9tcj:1h1l5SEmLT$" resolve="Texture" />
+          <ref role="2ZyFGn" to="9tcj:1h1l5SEmLT$" resolve="TextureExpression" />
         </node>
       </node>
       <node concept="3F0ifn" id="1jQexh3y6lQ" role="3EZMnx">
@@ -1619,6 +1623,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="cTQf2Funz4">
+    <property role="3GE5qa" value="simulation" />
     <ref role="1XX52x" to="9tcj:6HZo5MNbVDo" resolve="Simulation" />
     <node concept="3EZMnI" id="cTQf2Funz6" role="2wV5jI">
       <node concept="3F0ifn" id="cTQf2Funzc" role="3EZMnx">
@@ -2071,6 +2076,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="38SdPTRbTZU">
+    <property role="3GE5qa" value="simulation" />
     <ref role="1XX52x" to="9tcj:38SdPTRbTZH" resolve="OverrideRule" />
     <node concept="3EZMnI" id="38SdPTRbTZW" role="2wV5jI">
       <node concept="3F1sOY" id="38SdPTRbU02" role="3EZMnx">
@@ -2189,6 +2195,18 @@
       <node concept="2ZThk1" id="2GtZpnyQkAq" role="2ZBHrp">
         <ref role="2ZWj4r" to="9tcj:2AaxZXYfXtu" resolve="CollisionReaction" />
       </node>
+      <node concept="2$S_p_" id="1AxJyXZ21lP" role="2$S_pT">
+        <node concept="3clFbS" id="1AxJyXZ21lQ" role="2VODD2">
+          <node concept="3clFbF" id="1AxJyXZ21ph" role="3cqZAp">
+            <node concept="2OqwBi" id="1AxJyXZ21Re" role="3clFbG">
+              <node concept="1XH99k" id="1AxJyXZ21pg" role="2Oq$k0">
+                <ref role="1XH99l" to="9tcj:2AaxZXYfXtu" resolve="CollisionReaction" />
+              </node>
+              <node concept="2ViDtN" id="1AxJyXZ22cT" role="2OqNvi" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="2GtZpnyRvpH">
@@ -2229,6 +2247,52 @@
       </node>
       <node concept="2kknPJ" id="2AM6gIjMfsF" role="2klrvf">
         <ref role="2ZyFGn" to="9tcj:2GtZpnyL0Oz" resolve="StyleKey" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1AxJyXYUfKy">
+    <property role="3GE5qa" value="styles.trace" />
+    <ref role="1XX52x" to="9tcj:1AxJyXYUfKx" resolve="DisabledTraceExpression" />
+    <node concept="3F0ifn" id="1AxJyXYUfK$" role="2wV5jI">
+      <property role="3F0ifm" value="disabled" />
+    </node>
+  </node>
+  <node concept="22mcaB" id="1AxJyXZ0ETf">
+    <property role="3GE5qa" value="styles.shape" />
+    <ref role="aqKnT" to="9tcj:2GtZpnyRvp$" resolve="ShapeStyleExpression" />
+    <node concept="22hDWj" id="1AxJyXZ0ETg" role="22hAXT" />
+    <node concept="2F$Pav" id="1AxJyXZ0EYN" role="3ft7WO">
+      <node concept="3eGOop" id="1AxJyXZ0MgZ" role="2$S_pN">
+        <node concept="ucgPf" id="1AxJyXZ0Mh1" role="3aKz83">
+          <node concept="3clFbS" id="1AxJyXZ0Mh3" role="2VODD2">
+            <node concept="3clFbF" id="1AxJyXZ0MjP" role="3cqZAp">
+              <node concept="2pJPEk" id="1AxJyXZ0MjN" role="3clFbG">
+                <node concept="2pJPED" id="1AxJyXZ0MnD" role="2pJPEn">
+                  <ref role="2pJxaS" to="9tcj:2GtZpnyRvp$" resolve="ShapeStyleExpression" />
+                  <node concept="2pJxcG" id="1AxJyXZ0MqB" role="2pJxcM">
+                    <ref role="2pJxcJ" to="9tcj:2GtZpnyRvp_" resolve="shape" />
+                    <node concept="2ZBlsa" id="1AxJyXZ0MtL" role="28ntcv" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2ZThk1" id="1AxJyXZ0EYT" role="2ZBHrp">
+        <ref role="2ZWj4r" to="9tcj:10n4tqnuB27" resolve="Shape" />
+      </node>
+      <node concept="2$S_p_" id="1AxJyXZ22iB" role="2$S_pT">
+        <node concept="3clFbS" id="1AxJyXZ22iC" role="2VODD2">
+          <node concept="3clFbF" id="1AxJyXZ22m2" role="3cqZAp">
+            <node concept="2OqwBi" id="1AxJyXZ22NZ" role="3clFbG">
+              <node concept="1XH99k" id="1AxJyXZ22m1" role="2Oq$k0">
+                <ref role="1XH99l" to="9tcj:10n4tqnuB27" resolve="Shape" />
+              </node>
+              <node concept="2ViDtN" id="1AxJyXZ237J" role="2OqNvi" />
+            </node>
+          </node>
+        </node>
       </node>
     </node>
   </node>

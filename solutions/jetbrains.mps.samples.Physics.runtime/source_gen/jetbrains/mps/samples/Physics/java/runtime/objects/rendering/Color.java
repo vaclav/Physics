@@ -24,4 +24,8 @@ public class Color {
     }
     ctx.fill(red, green, blue);
   }
+
+  public void applyAsStroke(PApplet ctx) {
+    ctx.stroke(red, green, blue);
+  }
 }

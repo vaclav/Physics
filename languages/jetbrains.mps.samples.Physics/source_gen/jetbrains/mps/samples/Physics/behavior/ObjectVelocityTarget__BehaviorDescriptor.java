@@ -46,7 +46,7 @@ public final class ObjectVelocityTarget__BehaviorDescriptor extends BaseBHDescri
     SNode object = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, dotTarget);
 
     if ((object == null)) {
-      SLinkOperations.setTarget(SNodeOperations.as(ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(dotTarget), CONCEPTS.ObjectDefinition$YO), LINKS.velocity$DoVv, createVelocityCoordinates_yskieq_a0a0d0c(content));
+      SLinkOperations.setTarget(dotTarget, LINKS.velocity$DoVv, createVelocityCoordinates_yskieq_a0a0d0c(content));
     } else {
       SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(object, LINKS.expression$87ts), content);
     }
@@ -115,7 +115,6 @@ public final class ObjectVelocityTarget__BehaviorDescriptor extends BaseBHDescri
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
     /*package*/ static final SConcept VelocityCoordinates$bc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738bL, "jetbrains.mps.samples.Physics.structure.VelocityCoordinates");
     /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
   }

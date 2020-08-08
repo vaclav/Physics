@@ -172,6 +172,7 @@
         <child id="7887120293590353012" name="length" index="3_jIDE" />
         <child id="7887120293590353010" name="direction" index="3_jIDG" />
       </concept>
+      <concept id="1846966433400551509" name="jetbrains.mps.samples.Physics.structure.TraceStyleKey" flags="ng" index="1BikpU" />
       <concept id="796402062949577614" name="jetbrains.mps.samples.Physics.structure.TargetableObjectExpression" flags="ng" index="3Bsx3U">
         <child id="796402062949577619" name="expression" index="3Bsx3B" />
       </concept>
@@ -982,6 +983,27 @@
   <node concept="3okdC4" id="6POFxU8kbPm">
     <property role="TrG5h" value="TestSimulation" />
     <property role="3GE5qa" value="test" />
+    <node concept="155UyN" id="1AxJyXZbC_N" role="155Tt5">
+      <node concept="Y6$CV" id="1AxJyXZbDfi" role="155UyI">
+        <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+      </node>
+      <node concept="1QScDb" id="1AxJyXZbCL$" role="155UyK">
+        <node concept="2UuJHK" id="1AxJyXZbCVQ" role="1QScD9">
+          <node concept="1BikpU" id="1AxJyXZbD5t" role="2UuJIb" />
+        </node>
+        <node concept="1QScDb" id="1AxJyXZbCKt" role="30czhm">
+          <node concept="1QScDb" id="1AxJyXZbCKu" role="30czhm">
+            <node concept="31uf54" id="1AxJyXZbCKv" role="1QScD9">
+              <ref role="31ueSj" node="3Nk1IDHXomK" resolve="Solar System" />
+            </node>
+            <node concept="31hh1H" id="1AxJyXZbCKw" role="30czhm" />
+          </node>
+          <node concept="31uf54" id="1AxJyXZbCKx" role="1QScD9">
+            <ref role="31ueSj" node="1jQexh3xMPv" resolve="Sun" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="1t_wfn" id="6yY6C98IG1$" role="1heTBC">
       <ref role="1t_wfm" node="3Nk1IDHWOdO" resolve="MilkyWay" />
     </node>
@@ -2202,6 +2224,22 @@
       </node>
       <node concept="Y6$CV" id="2AM6gIk0Gum" role="155UyI">
         <ref role="2hGqkR" to="bf5:G6XgqqQVkJ" resolve="blue" />
+      </node>
+    </node>
+    <node concept="155UyN" id="1AxJyXYY5Ve" role="155Tt5">
+      <node concept="1QScDb" id="1AxJyXYY67j" role="155UyK">
+        <node concept="2UuJHK" id="1AxJyXYY7DX" role="1QScD9">
+          <node concept="27oVuG" id="1AxJyXYY7DV" role="2UuJIb" />
+        </node>
+        <node concept="1QScDb" id="1AxJyXYY65z" role="30czhm">
+          <node concept="31uf54" id="1AxJyXYY66C" role="1QScD9">
+            <ref role="31ueSj" node="4E4Gfvfyy63" resolve="Ball" />
+          </node>
+          <node concept="31hh1H" id="1AxJyXYY65g" role="30czhm" />
+        </node>
+      </node>
+      <node concept="39K0JL" id="1AxJyXZ3gX$" role="155UyI">
+        <property role="39K0JK" value="10n4tqnuB28/box" />
       </node>
     </node>
     <node concept="155UyN" id="2AM6gIk5D0R" role="155Tt5">

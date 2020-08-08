@@ -60,6 +60,7 @@ public class FallingBallWorldSystemScope extends SystemScope {
       fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.PAUSE_SIMULATION);
       fixtureProperties.set(Prop.TEXTURE, new Color(0, 0, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.SHAPE, "box");
       this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("-9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0")))))));
 

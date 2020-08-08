@@ -3,7 +3,9 @@
   <dependency className="jetbrains.mps.samples.Physics.typesystem.TypesystemDescriptor">
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.check_OverrideRule_targetIsOverridable_NonTypesystemRule" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.trace_isTexture_SubtypingRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_AbstractForceCallParameter_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_AbstractForceCall_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_BooleanStyle_InferenceRule" />
@@ -14,6 +16,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_CurrentWorldExpression_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_CylindricalCoordinates_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_DirectionalCoordinates_InferenceRule" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_DisabledTraceExpression_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_DistanceWithCallTarget_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_Force_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_ILocalized_InferenceRule" />
@@ -37,6 +40,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_TextureStyleKey_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_Texture_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_TimeExpression_InferenceRule" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_TraceStyleKey_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_VectorComponentTarget_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_VectorOppositeDotTarget_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.typesystem.typeof_VectorResizeDotTarget_InferenceRule" />
@@ -60,6 +64,17 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractNonTypesystemRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.typesystem.trace_isTexture_SubtypingRule">
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.ISubtypingRule_Runtime" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.typesystem.typeof_AbstractForceCallParameter_InferenceRule">
     <classNode dependClassName="java.lang.Runnable" />
@@ -196,6 +211,18 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.typesystem.typeof_DisabledTraceExpression_InferenceRule">
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.EquationInfo" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
   </dependency>
@@ -520,6 +547,18 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.typesystem.typeof_TraceStyleKey_InferenceRule">
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.EquationInfo" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
   </dependency>

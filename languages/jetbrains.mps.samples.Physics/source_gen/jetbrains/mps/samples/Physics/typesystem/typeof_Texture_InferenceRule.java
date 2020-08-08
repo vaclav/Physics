@@ -24,7 +24,7 @@ public class typeof_Texture_InferenceRule extends AbstractInferenceRule_Runtime 
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.Texture$Jk;
+    return CONCEPTS.TextureExpression$Jk;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -38,7 +38,7 @@ public class typeof_Texture_InferenceRule extends AbstractInferenceRule_Runtime 
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Texture$Jk = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L, "jetbrains.mps.samples.Physics.structure.Texture");
+    /*package*/ static final SConcept TextureExpression$Jk = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L, "jetbrains.mps.samples.Physics.structure.TextureExpression");
     /*package*/ static final SConcept TextureStyleKey$PE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774b3a0L, "jetbrains.mps.samples.Physics.structure.TextureStyleKey");
   }
 }

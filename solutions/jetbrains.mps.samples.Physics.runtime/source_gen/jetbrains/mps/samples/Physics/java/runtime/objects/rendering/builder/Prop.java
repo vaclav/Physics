@@ -11,5 +11,6 @@ public enum Prop {
   BOX_Z(),
   TEXTURE(),
   EMIT_LIGHT(),
-  COLLISION_REACT()
+  COLLISION_REACT(),
+  TRACE()
 }
