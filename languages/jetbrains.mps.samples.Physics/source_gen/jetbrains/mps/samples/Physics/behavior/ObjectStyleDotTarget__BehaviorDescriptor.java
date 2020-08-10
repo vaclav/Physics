@@ -30,7 +30,7 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, "jetbrains.mps.samples.Physics.structure.ObjectStyleDotTarget");
 
   public static final SMethod<String> renderReadable_id6kR0qIbI2yi = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6kR0qIbI2yi").build();
-  public static final SMethod<Void> overrideWith_id38SdPTRbTXB = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> overrideWith_id38SdPTRbTXB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(renderReadable_id6kR0qIbI2yi, overrideWith_id38SdPTRbTXB);
 
@@ -40,13 +40,13 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
   /*package*/ static String renderReadable_id6kR0qIbI2yi(@NotNull SNode __thisNode__) {
     return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$ANGW));
   }
-  /*package*/ static void overrideWith_id38SdPTRbTXB(@NotNull final SNode __thisNode__, final SNode content) {
+  /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull final SNode __thisNode__, final SNode content) {
     SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__));
 
     {
       final SNode object = definition;
       if (SNodeOperations.isInstanceOf(object, CONCEPTS.ObjectDefinition$YO)) {
-        boolean found = ListSequence.fromList(SLinkOperations.getChildren(object, LINKS.styles$W8dv)).any(new IWhereFilter<SNode>() {
+        SNode found = ListSequence.fromList(SLinkOperations.getChildren(object, LINKS.styles$W8dv)).findFirst(new IWhereFilter<SNode>() {
           public boolean accept(SNode it) {
             if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.key$4rdb), SNodeOperations.asSConcept(SNodeOperations.getConcept(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$ANGW))))) {
               SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(it, LINKS.value$4y25), content);
@@ -56,11 +56,16 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
           }
         });
 
-        if (!(found)) {
-          ListSequence.fromList(SLinkOperations.getChildren(object, LINKS.styles$W8dv)).addElement(createStyleDefinition_4ptfyc_a0a0a2a2a1(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$ANGW), content));
+        if ((found == null)) {
+          SNode node = createStyleDefinition_4ptfyc_a0a0c0c0b(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$ANGW), content);
+          ListSequence.fromList(SLinkOperations.getChildren(object, LINKS.styles$W8dv)).addElement(node);
+          return node;
         }
+        return found;
       }
     }
+
+    return null;
   }
 
   /*package*/ ObjectStyleDotTarget__BehaviorDescriptor() {
@@ -81,8 +86,7 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
       case 0:
         return (T) ((String) renderReadable_id6kR0qIbI2yi(node));
       case 1:
-        overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]);
-        return null;
+        return (T) ((SNode) overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -111,7 +115,7 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
-  private static SNode createStyleDefinition_4ptfyc_a0a0a2a2a1(SNode p0, SNode p1) {
+  private static SNode createStyleDefinition_4ptfyc_a0a0c0c0b(SNode p0, SNode p1) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.StyleDefinition$Xd);
     n0.forChild(LINKS.key$4rdb).initNode(p0, CONCEPTS.StyleKey$l_, true);
     n0.forChild(LINKS.value$4y25).initNode(p1, CONCEPTS.Expression$Wr, true);

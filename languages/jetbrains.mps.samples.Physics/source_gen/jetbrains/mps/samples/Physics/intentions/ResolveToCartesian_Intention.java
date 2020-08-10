@@ -17,6 +17,7 @@ import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
 import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
+import jetbrains.mps.samples.Physics.types.typesystem.VectorTypeHelper;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -60,7 +61,7 @@ public final class ResolveToCartesian_Intention extends AbstractIntentionDescrip
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       InternalVector result = (InternalVector) IETS3ExprEvalHelper.evaluate(node);
-      SNodeOperations.replaceWithAnother(node, CoordinateExpressionConverters.rawToCartesian(result, null));
+      SNodeOperations.replaceWithAnother(node, CoordinateExpressionConverters.rawToCartesian(result, null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(node))));
     }
     @Override
     public IntentionDescriptor getDescriptor() {

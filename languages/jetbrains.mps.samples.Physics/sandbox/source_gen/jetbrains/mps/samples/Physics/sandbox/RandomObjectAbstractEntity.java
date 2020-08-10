@@ -12,8 +12,8 @@ import java.util.Arrays;
 
 public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
 
-  public RandomObjectAbstractEntity(World world, String name) {
-    super(world, name);
+  public RandomObjectAbstractEntity(World world, String name, T scope) {
+    super(world, name, scope);
   }
 
 

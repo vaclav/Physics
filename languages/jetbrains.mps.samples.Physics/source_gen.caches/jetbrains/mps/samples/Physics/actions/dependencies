@@ -19,9 +19,11 @@
     <classNode dependClassName="jetbrains.mps.openapi.actions.descriptor.NodeFactory" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.types.typesystem.VectorTypeHelper" />
     <classNode dependClassName="jetbrains.mps.smodel.SReference" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
+    <classNode dependClassName="jetbrains.mps.typechecking.TypecheckingFacade" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SModel" />

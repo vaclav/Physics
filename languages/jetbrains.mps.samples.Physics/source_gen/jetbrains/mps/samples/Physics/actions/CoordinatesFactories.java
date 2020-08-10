@@ -9,6 +9,8 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
+import jetbrains.mps.samples.Physics.types.typesystem.VectorTypeHelper;
+import jetbrains.mps.typechecking.TypecheckingFacade;
 import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -28,7 +30,7 @@ public class CoordinatesFactories {
         final SNode coords = sampleNode;
         if (SNodeOperations.isInstanceOf(coords, CONCEPTS.Coordinates$HV)) {
           VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
-          CoordinateExpressionConverters.rawToCylindrical(vector, newNode);
+          CoordinateExpressionConverters.rawToCylindrical(vector, newNode, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(coords)));
         }
       }
 
@@ -43,43 +45,22 @@ public class CoordinatesFactories {
     private static SNode _quotation_createNode_gnt87a_a0a0a0() {
       PersistenceFacade facade = PersistenceFacade.getInstance();
       SNode quotedNode_1 = null;
-      SNode quotedNode_2 = null;
-      SNode quotedNode_3 = null;
-      quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x777af24c045ea226L, "UnitExpression")).getResult();
-      quotedNode_2 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e6daL, "NumberLiteral")).getResult();
-      quotedNode_2.setProperty(MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value"), "0");
-      quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content"), quotedNode_2);
-      quotedNode_3 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x73b48a125b0d4dc5L, "UnitReference")).getResult();
-      quotedNode_3.setReference(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), SReference.create(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), quotedNode_3, facade.createModelReference("r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)"), facade.createNodeId("8609460045977001158")));
-      quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units"), quotedNode_3);
+      quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e6daL, "NumberLiteral")).getResult();
+      quotedNode_1.setProperty(MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value"), "0");
       return quotedNode_1;
     }
     private static SNode _quotation_createNode_gnt87a_a0b0a0() {
       PersistenceFacade facade = PersistenceFacade.getInstance();
       SNode quotedNode_1 = null;
-      SNode quotedNode_2 = null;
-      SNode quotedNode_3 = null;
-      quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x777af24c045ea226L, "UnitExpression")).getResult();
-      quotedNode_2 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e6daL, "NumberLiteral")).getResult();
-      quotedNode_2.setProperty(MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value"), "0");
-      quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content"), quotedNode_2);
-      quotedNode_3 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x73b48a125b0d4dc5L, "UnitReference")).getResult();
-      quotedNode_3.setReference(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), SReference.create(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), quotedNode_3, facade.createModelReference("r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)"), facade.createNodeId("8609460045977001158")));
-      quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units"), quotedNode_3);
+      quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e6daL, "NumberLiteral")).getResult();
+      quotedNode_1.setProperty(MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value"), "0");
       return quotedNode_1;
     }
     private static SNode _quotation_createNode_gnt87a_a0c0a0() {
       PersistenceFacade facade = PersistenceFacade.getInstance();
       SNode quotedNode_1 = null;
-      SNode quotedNode_2 = null;
-      SNode quotedNode_3 = null;
-      quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x777af24c045ea226L, "UnitExpression")).getResult();
-      quotedNode_2 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e6daL, "NumberLiteral")).getResult();
-      quotedNode_2.setProperty(MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value"), "0");
-      quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content"), quotedNode_2);
-      quotedNode_3 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x73b48a125b0d4dc5L, "UnitReference")).getResult();
-      quotedNode_3.setReference(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), SReference.create(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), quotedNode_3, facade.createModelReference("r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)"), facade.createNodeId("1387628150972988317")));
-      quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units"), quotedNode_3);
+      quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e6daL, "NumberLiteral")).getResult();
+      quotedNode_1.setProperty(MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value"), "0");
       return quotedNode_1;
     }
   }
@@ -93,7 +74,7 @@ public class CoordinatesFactories {
         final SNode coords = sampleNode;
         if (SNodeOperations.isInstanceOf(coords, CONCEPTS.Coordinates$HV)) {
           VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
-          CoordinateExpressionConverters.rawToCartesian(vector, newNode);
+          CoordinateExpressionConverters.rawToCartesian(vector, newNode, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(coords)));
         }
       }
 
@@ -139,7 +120,7 @@ public class CoordinatesFactories {
         final SNode coords = sampleNode;
         if (SNodeOperations.isInstanceOf(coords, CONCEPTS.Coordinates$HV)) {
           VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
-          CoordinateExpressionConverters.rawToSpherical(vector, newNode);
+          CoordinateExpressionConverters.rawToSpherical(vector, newNode, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(coords)));
         }
       }
 

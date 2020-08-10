@@ -16,9 +16,9 @@ public class SphereFixture extends Fixture {
     this.radius = radius.floatValue();
   }
   @Override
-  public void render(PGraphics ctx) {
-    super.render(ctx);
-    ctx.sphere(radius);
+  public void render(PGraphics ctx, float scale) {
+    super.render(ctx, scale);
+    ctx.sphere(radius * scale);
   }
   @Override
   protected DMass buildMass() {

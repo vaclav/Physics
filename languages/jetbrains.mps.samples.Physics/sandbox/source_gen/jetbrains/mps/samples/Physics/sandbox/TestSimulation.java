@@ -19,7 +19,7 @@ public class TestSimulation extends Simulation {
   protected MilkyWaySystemScope scope;
 
   public TestSimulation() {
-    super(AH.mul(((Number) new BigInteger("6")), ((Number) new BigInteger("1"))).doubleValue());
+    super(AH.mul(((Number) new BigInteger("6")), ((Number) new BigInteger("1"))).doubleValue(), 1);
   }
 
   @Override
@@ -44,6 +44,10 @@ public class TestSimulation extends Simulation {
     // Setting camera properly 
     VectorLike position = new InternalVector(context.width / 2, context.height / 2, (context.height / 2) / PApplet.tan(PApplet.PI * 30 / 180));
     VectorLike focus = scope.SolarSystem1.Sun;
+
+    // Apply scale 
+    position.mul(renderScale);
+    focus.mul(renderScale);
 
     graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
 

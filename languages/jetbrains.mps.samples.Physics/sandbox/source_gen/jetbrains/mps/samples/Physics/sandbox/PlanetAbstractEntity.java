@@ -14,8 +14,8 @@ import java.math.BigInteger;
 
 public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
 
-  public PlanetAbstractEntity(World world, String name) {
-    super(world, name);
+  public PlanetAbstractEntity(World world, String name, T scope) {
+    super(world, name, scope);
   }
 
 

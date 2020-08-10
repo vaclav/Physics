@@ -26,18 +26,20 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7d87e1L, "jetbrains.mps.samples.Physics.structure.ITargetExpression");
 
   public static final SMethod<SNode> getTargetCoordinates_idGdoRjGvovH = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetCoordinates").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGvovH").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
-  public static final SMethod<Void> overrideWith_id38SdPTRbTXB = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> overrideWith_id38SdPTRbTXB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getTargetCoordinates_idGdoRjGvovH, overrideWith_id38SdPTRbTXB);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static void overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
+  /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
     SNode localized = ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$lA));
 
     // Default behavior, expect targetable expression to be instanciated (!) 
-    SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized), LINKS.expression$87ts), content);
+    SNode targetCoordinates = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized);
+    SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(targetCoordinates, LINKS.expression$87ts), SNodeOperations.copyNode(content));
+    return SLinkOperations.getTarget(targetCoordinates, LINKS.expression$87ts);
   }
 
   /*package*/ ITargetExpression__BehaviorDescriptor() {
@@ -56,8 +58,7 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
     }
     switch (methodIndex) {
       case 1:
-        overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]);
-        return null;
+        return (T) ((SNode) overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

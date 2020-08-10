@@ -17,7 +17,7 @@ public class TestCollision extends Simulation {
   protected CollisionWorldSystemScope scope;
 
   public TestCollision() {
-    super(AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))).doubleValue());
+    super(AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))).floatValue());
   }
 
   @Override
@@ -41,6 +41,10 @@ public class TestCollision extends Simulation {
     // Setting camera properly 
     VectorLike position = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("600")), ((Number) new BigInteger("1")))).negate());
     VectorLike focus = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
+
+    // Apply scale 
+    position.mul(renderScale);
+    focus.mul(renderScale);
 
     graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
 

@@ -20,9 +20,9 @@ public class BoxFixture extends Fixture {
     this.depth = depth.floatValue();
   }
   @Override
-  public void render(PGraphics ctx) {
-    super.render(ctx);
-    ctx.box(width, height, depth);
+  public void render(PGraphics ctx, float scale) {
+    super.render(ctx, scale);
+    ctx.box(width * scale, height * scale, depth * scale);
   }
   @Override
   protected DMass buildMass() {

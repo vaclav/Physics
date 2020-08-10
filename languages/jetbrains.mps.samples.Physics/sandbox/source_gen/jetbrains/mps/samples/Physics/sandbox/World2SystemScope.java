@@ -28,8 +28,8 @@ public class World2SystemScope extends SystemScope {
     final World2SystemScope scope = this;
 
     //  Instanciate objects 
-    Ho3 = withEntity(new Ho5PhysicalEntity(world, "Ho4"));
-    Ha = withEntity(new Ha2PhysicalEntity(world, "Ha1"));
+    Ho3 = withEntity(new Ho5PhysicalEntity(world, "Ho4", scope));
+    Ha = withEntity(new Ha2PhysicalEntity(world, "Ha1", scope));
 
     // Initialize them 
     Ho3.init(this, world);
@@ -38,8 +38,8 @@ public class World2SystemScope extends SystemScope {
 
   public static class Ho5PhysicalEntity extends BaseObjectAbstractEntity<World2SystemScope> {
 
-    public Ho5PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Ho5PhysicalEntity(World world, String name, World2SystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -64,13 +64,17 @@ public class World2SystemScope extends SystemScope {
         public DVector3C compute(World world, World2SystemScope scope, PhysicalEntity targetEntity, double time) {
           return VectorHelper.fromInternal(scope.Ha.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
         }
+        @Override
+        public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity targetEntity, double time) {
+          return null;
+        }
       }));
     }
   }
   public static class Ha2PhysicalEntity extends BaseObjectAbstractEntity<World2SystemScope> {
 
-    public Ha2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Ha2PhysicalEntity(World world, String name, World2SystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -94,6 +98,10 @@ public class World2SystemScope extends SystemScope {
         @Override
         public DVector3C compute(World world, World2SystemScope scope, PhysicalEntity targetEntity, double time) {
           return VectorHelper.fromInternal(scope.Ho3.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
+        }
+        @Override
+        public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity targetEntity, double time) {
+          return null;
         }
       }));
     }

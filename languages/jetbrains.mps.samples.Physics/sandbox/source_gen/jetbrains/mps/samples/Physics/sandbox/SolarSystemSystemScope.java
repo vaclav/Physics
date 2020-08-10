@@ -30,12 +30,12 @@ public class SolarSystemSystemScope extends SystemScope {
     final SolarSystemSystemScope scope = this;
 
     //  Instanciate objects 
-    Sun = withEntity(new Sun2PhysicalEntity(world, "Sun1"));
-    Mercury = withEntity(new Mercury2PhysicalEntity(world, "Mercury1"));
-    Venus = withEntity(new Venus2PhysicalEntity(world, "Venus1"));
-    Earth = withEntity(new Earth2PhysicalEntity(world, "Earth1"));
-    Moon = withEntity(new Moon2PhysicalEntity(world, "Moon1"));
-    Mars = withEntity(new Mars2PhysicalEntity(world, "Mars1"));
+    Sun = withEntity(new Sun2PhysicalEntity(world, "Sun1", scope));
+    Mercury = withEntity(new Mercury2PhysicalEntity(world, "Mercury1", scope));
+    Venus = withEntity(new Venus2PhysicalEntity(world, "Venus1", scope));
+    Earth = withEntity(new Earth2PhysicalEntity(world, "Earth1", scope));
+    Moon = withEntity(new Moon2PhysicalEntity(world, "Moon1", scope));
+    Mars = withEntity(new Mars2PhysicalEntity(world, "Mars1", scope));
 
     // Initialize them 
     Sun.init(this, world);
@@ -48,8 +48,8 @@ public class SolarSystemSystemScope extends SystemScope {
 
   public static class Sun2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Sun2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Sun2PhysicalEntity(World world, String name, SolarSystemSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -74,8 +74,8 @@ public class SolarSystemSystemScope extends SystemScope {
   }
   public static class Mercury2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Mercury2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Mercury2PhysicalEntity(World world, String name, SolarSystemSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -97,8 +97,8 @@ public class SolarSystemSystemScope extends SystemScope {
   }
   public static class Venus2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Venus2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Venus2PhysicalEntity(World world, String name, SolarSystemSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -120,8 +120,8 @@ public class SolarSystemSystemScope extends SystemScope {
   }
   public static class Earth2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Earth2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Earth2PhysicalEntity(World world, String name, SolarSystemSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -143,8 +143,8 @@ public class SolarSystemSystemScope extends SystemScope {
   }
   public static class Moon2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Moon2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Moon2PhysicalEntity(World world, String name, SolarSystemSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -171,8 +171,8 @@ public class SolarSystemSystemScope extends SystemScope {
   }
   public static class Mars2PhysicalEntity extends PlanetAbstractEntity<SolarSystemSystemScope> {
 
-    public Mars2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Mars2PhysicalEntity(World world, String name, SolarSystemSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override

@@ -29,10 +29,10 @@ public class CollisionWorldSystemScope extends SystemScope {
     final CollisionWorldSystemScope scope = this;
 
     //  Instanciate objects 
-    A3 = withEntity(new A5PhysicalEntity(world, "A4"));
-    B = withEntity(new B2PhysicalEntity(world, "B1"));
-    C = withEntity(new C2PhysicalEntity(world, "C1"));
-    D = withEntity(new D2PhysicalEntity(world, "D1"));
+    A3 = withEntity(new A5PhysicalEntity(world, "A4", scope));
+    B = withEntity(new B2PhysicalEntity(world, "B1", scope));
+    C = withEntity(new C2PhysicalEntity(world, "C1", scope));
+    D = withEntity(new D2PhysicalEntity(world, "D1", scope));
 
     // Initialize them 
     A3.init(this, world);
@@ -43,8 +43,8 @@ public class CollisionWorldSystemScope extends SystemScope {
 
   public static class A5PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
 
-    public A5PhysicalEntity(World world, String name) {
-      super(world, name);
+    public A5PhysicalEntity(World world, String name, CollisionWorldSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -69,8 +69,8 @@ public class CollisionWorldSystemScope extends SystemScope {
   }
   public static class B2PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
 
-    public B2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public B2PhysicalEntity(World world, String name, CollisionWorldSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -95,8 +95,8 @@ public class CollisionWorldSystemScope extends SystemScope {
   }
   public static class C2PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
 
-    public C2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public C2PhysicalEntity(World world, String name, CollisionWorldSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -121,8 +121,8 @@ public class CollisionWorldSystemScope extends SystemScope {
   }
   public static class D2PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
 
-    public D2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public D2PhysicalEntity(World world, String name, CollisionWorldSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override

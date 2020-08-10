@@ -10,8 +10,10 @@ import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
+import jetbrains.mps.smodel.builder.SNodeBuilder;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public class typeof_RelativeCoordinates_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
@@ -30,6 +32,21 @@ public class typeof_RelativeCoordinates_InferenceRule extends AbstractInferenceR
         }
       }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "998543371830523807", false, false);
     }
+
+    {
+      final SNode relativeTargetType = typeCheckingContext.typeOf(SLinkOperations.getTarget(relativeCoordinates, LINKS.relativeFrom$gwcw), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2315070452019889310", true);
+      typeCheckingContext.whenConcrete(relativeTargetType, new Runnable() {
+        public void run() {
+          if (!(typeCheckingContext.isSingleTypeComputation())) {
+            {
+              SNode _nodeToCheck_1029348928467 = relativeCoordinates;
+              EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2315070452019891857", 0, null);
+              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(relativeTargetType), (SNode) _quotation_createNode_ipataj_a1a0c0a0a0a0a1a0b0c0b(), true, true, _info_12389875345);
+            }
+          }
+        }
+      }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2315070452019889241", false, false);
+    }
   }
   public SAbstractConcept getApplicableConcept() {
     return CONCEPTS.RelativeCoordinates$c7;
@@ -40,9 +57,16 @@ public class typeof_RelativeCoordinates_InferenceRule extends AbstractInferenceR
   public boolean overrides() {
     return false;
   }
+  private static SNode _quotation_createNode_ipataj_a1a0c0a0a0a0a1a0b0c0b() {
+    PersistenceFacade facade = PersistenceFacade.getInstance();
+    SNode quotedNode_1 = null;
+    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, "jetbrains.mps.samples.Physics.types"), 0x6520d39c950a1448L, "DirectionType")).getResult();
+    return quotedNode_1;
+  }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
+    /*package*/ static final SContainmentLink relativeFrom$gwcw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
   }
 
   private static final class CONCEPTS {

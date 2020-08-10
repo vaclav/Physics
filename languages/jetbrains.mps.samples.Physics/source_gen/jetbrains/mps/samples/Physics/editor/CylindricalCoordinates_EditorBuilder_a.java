@@ -7,17 +7,28 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
+import java.util.List;
+import de.itemis.mps.editor.math.runtime.IMathSymbol;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import java.util.ArrayList;
+import de.itemis.mps.editor.math.runtime.AbstractMathSymbol;
+import de.itemis.mps.editor.math.runtime.Dimension2DDouble;
+import java.awt.Graphics2D;
+import java.awt.geom.Rectangle2D;
+import de.itemis.mps.editor.math.runtime.MathDrawUtil;
+import de.itemis.mps.editor.math.runtime.MathCellLayout;
+import de.itemis.mps.editor.math.runtime.MathLayoutableCell;
+import de.itemis.mps.editor.math.runtime.EditorCell_MathBase;
+import java.awt.Color;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import java.awt.RenderingHints;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
-import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
-import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.KeyWordStyleClass;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
-import jetbrains.mps.lang.editor.menus.transformation.DefaultTransformationMenuLookup;
-import jetbrains.mps.smodel.language.LanguageRegistry;
-import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
-import jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.LeftParenthesisAfterNameStyleClass;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.ParenthesisAttributeLabelStyleClass;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -25,10 +36,9 @@ import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart;
 import jetbrains.mps.openapi.editor.cells.DefaultSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo;
+import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.editor.runtime.style.FocusPolicy;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
-import jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.RightParenthesisStyleClass;
-import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 /*package*/ class CylindricalCoordinates_EditorBuilder_a extends AbstractEditorBuilder {
@@ -47,51 +57,130 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   }
 
   /*package*/ EditorCell createCell() {
-    return createCollection_0();
+    return createMathBase_1();
   }
 
-  private EditorCell createCollection_0() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_ev71r3_a");
+  private EditorCell createMathBase_0(EditorContext editorContext, SNode node) {
+    double[] scales = new double[]{1.0};
+    final List<IMathSymbol> symbols = ListSequence.fromList(new ArrayList<IMathSymbol>());
+    {
+      IMathSymbol symbol = null;
+      symbol = new AbstractMathSymbol() {
+        protected void updateDimension(Dimension2DDouble dimension) {
+          dimension.width = dimension.height / 6;
+        }
+        protected void paint(Graphics2D g, Rectangle2D bounds) {
+          MathDrawUtil util = new MathDrawUtil(g);
+          util.setThinStroke(bounds);
+          util.drawLineTop(bounds);
+          util.drawLineLeft(bounds);
+          util.drawLineBottom(bounds);
+        }
+      };
+      ListSequence.fromList(symbols).addElement(symbol);
+    }
+    {
+      IMathSymbol symbol = null;
+      symbol = new AbstractMathSymbol() {
+        protected void updateDimension(Dimension2DDouble dimension) {
+          dimension.width = dimension.height / 6;
+        }
+        protected void paint(Graphics2D g, Rectangle2D bounds) {
+          MathDrawUtil util = new MathDrawUtil(g);
+          util.setThinStroke(bounds);
+          util.drawLineTop(bounds);
+          util.drawLineRight(bounds);
+          util.drawLineBottom(bounds);
+        }
+      };
+      ListSequence.fromList(symbols).addElement(symbol);
+    }
+    MathCellLayout layout = new MathCellLayout() {
+      protected void layout(MathLayoutableCell cell, List<MathLayoutableCell> childCells, List<IMathSymbol> symbols) {
+
+        ListSequence.fromList(symbols).getElement(0).setX(0);
+        ListSequence.fromList(symbols).getElement(0).setY(0);
+        ListSequence.fromList(symbols).getElement(0).setHeight(ListSequence.fromList(childCells).getElement(0).getHeight());
+        ListSequence.fromList(symbols).getElement(0).setWidth(ListSequence.fromList(symbols).getElement(0).getHeight() / 6);
+        ListSequence.fromList(symbols).getElement(0).updateDimension();
+
+        ListSequence.fromList(childCells).getElement(0).setX(ListSequence.fromList(symbols).getElement(0).getWidth());
+        ListSequence.fromList(childCells).getElement(0).setY(0);
+
+        ListSequence.fromList(symbols).getElement(1).setX(ListSequence.fromList(childCells).getElement(0).getX() + ListSequence.fromList(childCells).getElement(0).getWidth());
+        ListSequence.fromList(symbols).getElement(1).setY(0);
+        ListSequence.fromList(symbols).getElement(1).setHeight(ListSequence.fromList(childCells).getElement(0).getHeight());
+        ListSequence.fromList(symbols).getElement(1).setWidth(ListSequence.fromList(symbols).getElement(1).getHeight() / 6);
+        ListSequence.fromList(symbols).getElement(1).updateDimension();
+
+        cell.setWidth(ListSequence.fromList(symbols).getElement(1).getX() + ListSequence.fromList(symbols).getElement(1).getWidth());
+        cell.setHeight(Math.max(ListSequence.fromList(symbols).getElement(0).getHeight(), ListSequence.fromList(symbols).getElement(1).getHeight()));
+      }
+
+      @Override
+      protected int getCenterY(MathLayoutableCell cell, List<MathLayoutableCell> childCells, List<IMathSymbol> symbols) {
+        return cell.getHeightInt() / 2;
+      }
+    };
+    EditorCell_MathBase editorCell = new EditorCell_MathBase(editorContext, node, layout, scales, symbols) {
+      protected void paint(Graphics2D g, List<MathLayoutableCell> childCells, MathLayoutableCell cell, List<IMathSymbol> symbols) {
+        Color symbolColor = cell.getEditorCell().getStyle().get(StyleAttributes.getInstance().<Color>getAttribute("de.itemis.mps.editor.math", "math-symbol-color"));
+        if (symbolColor == null) {
+          symbolColor = cell.getEditorCell().getStyle().get(StyleAttributes.TEXT_COLOR);
+        }
+
+        for (IMathSymbol symbol : ListSequence.fromList(symbols).where(new IWhereFilter<IMathSymbol>() {
+          public boolean accept(IMathSymbol it) {
+            return it != null && it.isDrawAutomatically();
+          }
+        })) {
+          Graphics2D g2 = (Graphics2D) g.create();
+          g2.setColor(symbolColor);
+          g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+          g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+          g2.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+          symbol.paint(g2);
+          g2.dispose();
+        }
+      }
+      @Override
+      protected void init(SNode node, List<MathLayoutableCell> childCells, MathLayoutableCell cell, List<IMathSymbol> symbols) {
+      }
+    };
+    editorCell.setCellId("MathBase_ev71r3_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
+    editorCell.addEditorCell(createCollection_0());
+    editorCell.init();
+    return editorCell;
+  }
+  private EditorCell createMathBase_1() {
+    return createMathBase_0(getEditorContext(), myNode);
+  }
+  private EditorCell createCollection_0() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
+    editorCell.setCellId("Collection_ev71r3_a0a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createCollection_1());
+    editorCell.addEditorCell(createCollection_2());
+    editorCell.addEditorCell(createCollection_3());
+    return editorCell;
+  }
+  private EditorCell createCollection_1() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_ev71r3_a0a0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createConstant_0());
-    editorCell.addEditorCell(createConstant_1());
-    editorCell.addEditorCell(createConstant_2());
     editorCell.addEditorCell(createRefNode_0());
-    editorCell.addEditorCell(createConstant_3());
-    editorCell.addEditorCell(createConstant_4());
-    editorCell.addEditorCell(createRefNode_1());
-    editorCell.addEditorCell(createConstant_5());
-    editorCell.addEditorCell(createConstant_6());
-    editorCell.addEditorCell(createRefNode_2());
-    editorCell.addEditorCell(createConstant_7());
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "cylindrical coordinates");
-    editorCell.setCellId("Constant_ev71r3_a0");
-    Style style = new StyleImpl();
-    new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    style.set(StyleAttributes.EDITABLE, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.Coordinates$HV));
-    editorCell.setDefaultText("");
-    editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
-    return editorCell;
-  }
-  private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "(");
-    editorCell.setCellId("Constant_ev71r3_b0");
-    Style style = new StyleImpl();
-    new LeftParenthesisAfterNameStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_2() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "ρ:");
-    editorCell.setCellId("Constant_ev71r3_c0");
+    editorCell.setCellId("Constant_ev71r3_a0a0a");
     Style style = new StyleImpl();
     new ParenthesisAttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
@@ -99,14 +188,14 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new axialDistanceSingleRoleHandler_ev71r3_d0(myNode, LINKS.axialDistance$ip5F, getEditorContext());
+    SingleRoleCellProvider provider = new axialDistanceSingleRoleHandler_ev71r3_b0a0a(myNode, LINKS.axialDistance$ip5F, getEditorContext());
     return provider.createCell();
   }
-  private static class axialDistanceSingleRoleHandler_ev71r3_d0 extends SingleRoleCellProvider {
+  private static class axialDistanceSingleRoleHandler_ev71r3_b0a0a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public axialDistanceSingleRoleHandler_ev71r3_d0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public axialDistanceSingleRoleHandler_ev71r3_b0a0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -156,15 +245,19 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       return "<no axialDistance>";
     }
   }
-  private EditorCell createConstant_3() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ",");
-    editorCell.setCellId("Constant_ev71r3_e0");
-    editorCell.setDefaultText("");
+  private EditorCell createCollection_2() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_ev71r3_b0a0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_1());
+    editorCell.addEditorCell(createRefNode_1());
     return editorCell;
   }
-  private EditorCell createConstant_4() {
+  private EditorCell createConstant_1() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "φ:");
-    editorCell.setCellId("Constant_ev71r3_f0");
+    editorCell.setCellId("Constant_ev71r3_a1a0a");
     Style style = new StyleImpl();
     new ParenthesisAttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
@@ -172,14 +265,14 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new phiSingleRoleHandler_ev71r3_g0(myNode, LINKS.phi$ip6D, getEditorContext());
+    SingleRoleCellProvider provider = new phiSingleRoleHandler_ev71r3_b1a0a(myNode, LINKS.phi$ip6D, getEditorContext());
     return provider.createCell();
   }
-  private static class phiSingleRoleHandler_ev71r3_g0 extends SingleRoleCellProvider {
+  private static class phiSingleRoleHandler_ev71r3_b1a0a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public phiSingleRoleHandler_ev71r3_g0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public phiSingleRoleHandler_ev71r3_b1a0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -226,15 +319,19 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       return "<no phi>";
     }
   }
-  private EditorCell createConstant_5() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ",");
-    editorCell.setCellId("Constant_ev71r3_h0");
-    editorCell.setDefaultText("");
+  private EditorCell createCollection_3() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_ev71r3_c0a0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_2());
+    editorCell.addEditorCell(createRefNode_2());
     return editorCell;
   }
-  private EditorCell createConstant_6() {
+  private EditorCell createConstant_2() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "z:");
-    editorCell.setCellId("Constant_ev71r3_i0");
+    editorCell.setCellId("Constant_ev71r3_a2a0a");
     Style style = new StyleImpl();
     new ParenthesisAttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
@@ -242,14 +339,14 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createRefNode_2() {
-    SingleRoleCellProvider provider = new heightSingleRoleHandler_ev71r3_j0(myNode, LINKS.height$ip86, getEditorContext());
+    SingleRoleCellProvider provider = new heightSingleRoleHandler_ev71r3_b2a0a(myNode, LINKS.height$ip86, getEditorContext());
     return provider.createCell();
   }
-  private static class heightSingleRoleHandler_ev71r3_j0 extends SingleRoleCellProvider {
+  private static class heightSingleRoleHandler_ev71r3_b2a0a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public heightSingleRoleHandler_ev71r3_j0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public heightSingleRoleHandler_ev71r3_b2a0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -295,19 +392,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     protected String getNoTargetText() {
       return "<no height>";
     }
-  }
-  private EditorCell createConstant_7() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ")");
-    editorCell.setCellId("Constant_ev71r3_k0");
-    Style style = new StyleImpl();
-    new RightParenthesisStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-
-  private static final class CONCEPTS {
-    /*package*/ static final SConcept Coordinates$HV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.Coordinates");
   }
 
   private static final class LINKS {

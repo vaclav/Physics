@@ -26,9 +26,9 @@ public class MilkyWaySystemScope extends SystemScope {
     final MilkyWaySystemScope scope = this;
 
     //  Instanciate objects 
-    FloatingDog = withEntity(new FloatingDog2PhysicalEntity(world, "FloatingDog1"));
-    Something = withEntity(new Something2PhysicalEntity(world, "Something1"));
-    A = withEntity(new A2PhysicalEntity(world, "A1"));
+    FloatingDog = withEntity(new FloatingDog2PhysicalEntity(world, "FloatingDog1", scope));
+    Something = withEntity(new Something2PhysicalEntity(world, "Something1", scope));
+    A = withEntity(new A2PhysicalEntity(world, "A1", scope));
     SolarSystem1 = withEntity(new SolarSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
@@ -39,8 +39,8 @@ public class MilkyWaySystemScope extends SystemScope {
 
   public static class FloatingDog2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
 
-    public FloatingDog2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public FloatingDog2PhysicalEntity(World world, String name, MilkyWaySystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -62,8 +62,8 @@ public class MilkyWaySystemScope extends SystemScope {
   }
   public static class Something2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
 
-    public Something2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Something2PhysicalEntity(World world, String name, MilkyWaySystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -85,8 +85,8 @@ public class MilkyWaySystemScope extends SystemScope {
   }
   public static class A2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
 
-    public A2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public A2PhysicalEntity(World world, String name, MilkyWaySystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override

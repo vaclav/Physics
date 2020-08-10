@@ -486,6 +486,7 @@
     <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionMenuItemCustomizationContext" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCompositeCustomizationContext" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemModifyingCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.selection.SelectionUtil" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.CollectionSequence" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
@@ -502,6 +503,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.editor.menus.transformation.ActionItemBase" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.menus.transformation.TransformationMenuContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.menus.transformation.TransformationMenuItem" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.selection.SelectionManager" />
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.apache.log4j.Logger" />

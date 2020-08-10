@@ -5,8 +5,11 @@ package jetbrains.mps.samples.Physics.types.typesystem;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionType__BehaviorDescriptor;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class VectorTypeHelper {
   public static boolean isVector(SNode type) {
@@ -18,9 +21,28 @@ public class VectorTypeHelper {
   public static boolean oneIsVector(SNode left, SNode right) {
     return isVector(left) ^ isVector(right);
   }
+  public static Iterable<SNode> getVectorTypeUnits(SNode type) {
+    {
+      final SNode vector = type;
+      if (SNodeOperations.isInstanceOf(vector, CONCEPTS.VectorType$Wj)) {
+        {
+          final SNode dim = SLinkOperations.getTarget(vector, LINKS.componentType$gTxy);
+          if (SNodeOperations.isInstanceOf(dim, CONCEPTS.DimensionType$yz)) {
+            return DimensionType__BehaviorDescriptor.getRawUnits_id20wM4XMzAC4.invoke(dim);
+          }
+        }
+      }
+    }
+    return null;
+  }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
     /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
+    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink componentType$gTxy = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
   }
 }

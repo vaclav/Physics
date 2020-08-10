@@ -26,7 +26,7 @@ public class SolarSystemSystemScope extends SystemScope {
     final SolarSystemSystemScope scope = this;
 
     //  Instanciate objects 
-    Sun = withEntity(new Sun2PhysicalEntity(world, "Sun1"));
+    Sun = withEntity(new Sun2PhysicalEntity(world, "Sun1", scope));
     EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("4.7819374344933695E-14").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("780.9496481471622").setScale(13, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-426.45563374507503").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(new InternalVector(AH.mul(((Number) new BigDecimal("-3.5355339059327378").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-4.3297802811774667E-16").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-3.5355339059327373").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
 
     // Initialize them 
@@ -35,8 +35,8 @@ public class SolarSystemSystemScope extends SystemScope {
 
   public static class Sun2PhysicalEntity extends BaseObjectAbstractEntity<SolarSystemSystemScope> {
 
-    public Sun2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Sun2PhysicalEntity(World world, String name, SolarSystemSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override

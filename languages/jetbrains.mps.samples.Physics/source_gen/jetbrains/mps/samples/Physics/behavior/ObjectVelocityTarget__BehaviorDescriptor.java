@@ -28,7 +28,7 @@ public final class ObjectVelocityTarget__BehaviorDescriptor extends BaseBHDescri
 
   public static final SMethod<String> renderReadable_id6kR0qIbI2yi = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6kR0qIbI2yi").build();
   public static final SMethod<SNode> getTargetCoordinates_idGdoRjGvovH = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetCoordinates").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGvovH").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
-  public static final SMethod<Void> overrideWith_id38SdPTRbTXB = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> overrideWith_id38SdPTRbTXB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(renderReadable_id6kR0qIbI2yi, getTargetCoordinates_idGdoRjGvovH, overrideWith_id38SdPTRbTXB);
 
@@ -41,14 +41,16 @@ public final class ObjectVelocityTarget__BehaviorDescriptor extends BaseBHDescri
   /*package*/ static SNode getTargetCoordinates_idGdoRjGvovH(@NotNull SNode __thisNode__, SNode object) {
     return SLinkOperations.getTarget(object, LINKS.velocity$DoVv);
   }
-  /*package*/ static void overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
+  /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
     SNode dotTarget = IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__);
     SNode object = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, dotTarget);
 
     if ((object == null)) {
       SLinkOperations.setTarget(dotTarget, LINKS.velocity$DoVv, createVelocityCoordinates_yskieq_a0a0d0c(content));
+      return SLinkOperations.getTarget(SLinkOperations.getTarget(dotTarget, LINKS.velocity$DoVv), LINKS.expression$87ts);
     } else {
       SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(object, LINKS.expression$87ts), content);
+      return SLinkOperations.getTarget(object, LINKS.expression$87ts);
     }
 
   }
@@ -73,8 +75,7 @@ public final class ObjectVelocityTarget__BehaviorDescriptor extends BaseBHDescri
       case 1:
         return (T) ((SNode) getTargetCoordinates_idGdoRjGvovH(node, (SNode) parameters[0]));
       case 2:
-        overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]);
-        return null;
+        return (T) ((SNode) overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

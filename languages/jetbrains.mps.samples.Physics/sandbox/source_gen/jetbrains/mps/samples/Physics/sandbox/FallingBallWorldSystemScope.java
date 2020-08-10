@@ -28,8 +28,8 @@ public class FallingBallWorldSystemScope extends SystemScope {
     final FallingBallWorldSystemScope scope = this;
 
     //  Instanciate objects 
-    Ball = withEntity(new Ball2PhysicalEntity(world, "Ball1"));
-    Ground = withEntity(new Ground2PhysicalEntity(world, "Ground1"));
+    Ball = withEntity(new Ball2PhysicalEntity(world, "Ball1", scope));
+    Ground = withEntity(new Ground2PhysicalEntity(world, "Ground1", scope));
 
     // Initialize them 
     Ball.init(this, world);
@@ -38,8 +38,8 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
   public static class Ball2PhysicalEntity extends BaseObjectAbstractEntity<FallingBallWorldSystemScope> {
 
-    public Ball2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Ball2PhysicalEntity(World world, String name, FallingBallWorldSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -59,13 +59,13 @@ public class FallingBallWorldSystemScope extends SystemScope {
       fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.PAUSE_SIMULATION);
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
-      this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("-9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0")))))));
+      this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("-9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0")))), null)));
     }
   }
   public static class Ground2PhysicalEntity extends BaseObjectAbstractEntity<FallingBallWorldSystemScope> {
 
-    public Ground2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Ground2PhysicalEntity(World world, String name, FallingBallWorldSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override

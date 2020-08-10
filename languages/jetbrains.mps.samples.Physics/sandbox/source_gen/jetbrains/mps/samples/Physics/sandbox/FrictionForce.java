@@ -20,7 +20,12 @@ public class FrictionForce<T extends SystemScope> implements Force<T> {
 
   @Override
   public DVector3C compute(World world, T scope, PhysicalEntity currentEntity, double time) {
-
     return VectorHelper.fromInternal(currentEntity.getVelocity().mul(-1).minus(currentEntity).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
+  }
+
+
+  @Override
+  public DVector3C applicationPoint(World world, T scope, PhysicalEntity currentEntity, double time) {
+    return null;
   }
 }

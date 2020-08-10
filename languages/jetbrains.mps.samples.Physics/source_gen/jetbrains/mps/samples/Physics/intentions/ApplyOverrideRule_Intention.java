@@ -14,6 +14,8 @@ import java.util.Collections;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.editor.runtime.selection.SelectionUtil;
+import jetbrains.mps.openapi.editor.selection.SelectionManager;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 
 public final class ApplyOverrideRule_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
@@ -48,8 +50,9 @@ public final class ApplyOverrideRule_Intention extends AbstractIntentionDescript
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
-      OverrideRule__BehaviorDescriptor.apply_id2AM6gIjLTgr.invoke(node);
+      SNode target = OverrideRule__BehaviorDescriptor.apply_id2AM6gIjLTgr.invoke(node);
       SNodeOperations.deleteNode(node);
+      SelectionUtil.selectCell(editorContext, target, SelectionManager.FIRST_EDITABLE_CELL);
     }
     @Override
     public IntentionDescriptor getDescriptor() {

@@ -19,7 +19,7 @@ public class FallingBall extends Simulation {
   protected FallingBallWorldSystemScope scope;
 
   public FallingBall() {
-    super(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))).doubleValue());
+    super(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))).doubleValue(), 1);
   }
 
   @Override
@@ -47,6 +47,10 @@ public class FallingBall extends Simulation {
     // Setting camera properly 
     VectorLike position = new InternalVector(((Number) new BigInteger("0")), AH.mul(((BigInteger) ((Number) new BigInteger("20"))).negate(), ((Number) new BigInteger("1"))), ((BigInteger) AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))).negate());
     VectorLike focus = scope.getPosition();
+
+    // Apply scale 
+    position.mul(renderScale);
+    focus.mul(renderScale);
 
     graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
 

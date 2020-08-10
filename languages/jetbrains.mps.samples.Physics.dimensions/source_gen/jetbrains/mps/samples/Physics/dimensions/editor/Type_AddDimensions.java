@@ -25,6 +25,8 @@ import jetbrains.mps.openapi.editor.menus.EditorMenuTraceInfo;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.editor.runtime.selection.SelectionUtil;
+import jetbrains.mps.openapi.editor.selection.SelectionManager;
 import jetbrains.mps.openapi.editor.menus.style.EditorMenuItemStyle;
 import jetbrains.mps.editor.runtime.menus.EditorMenuItemModifyingCustomizationContext;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
@@ -109,6 +111,7 @@ public class Type_AddDimensions extends TransformationMenuBase {
       public void execute(@NotNull String pattern) {
         SNode newType = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.DimensionType$yz);
         SLinkOperations.setTarget(newType, LINKS.baseType$fHYw, _context.getNode());
+        SelectionUtil.selectCell(_context.getEditorContext(), newType, SelectionManager.LAST_EDITABLE_CELL);
       }
 
       @Override

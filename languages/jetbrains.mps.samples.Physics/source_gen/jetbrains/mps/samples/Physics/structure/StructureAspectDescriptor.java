@@ -780,7 +780,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/6362440046684076651");
     b.version(2);
     b.aggregate("coordinates", 0x1918a6b053ddd35aL).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL).optional(false).ordered(true).multiple(false).origin("1808378526640755546").done();
-    b.aggregate("relativeFrom", 0x584bed834752fa6cL).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL).optional(false).ordered(true).multiple(false).origin("6362440046684076652").done();
+    b.aggregate("relativeFrom", 0x584bed834752fa6cL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("6362440046684076652").done();
     b.alias("relative coordinates");
     return b.create();
   }
@@ -816,6 +816,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("cameraPosition", 0x55d23bae7b62a2a7L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("6184070858913522343").done();
     b.aggregate("focus", 0x55d23bae7b62a2e0L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("6184070858913522400").done();
     b.aggregate("simulationSpeed", 0x21c0d825ab3fd1e0L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("2432181455078543840").done();
+    b.aggregate("simulationScale", 0x1baa8b95dda3ac89L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("1993559260849745033").done();
     b.aggregate("views", 0x5820d9a6fbf7a533L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf789f4L).optional(true).ordered(true).multiple(true).origin("6350314785807508787").done();
     return b.create();
   }
@@ -863,6 +864,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1459540517658822194");
     b.version(2);
     b.aggregate("components", 0x1441545e2a580633L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("1459540517658822195").done();
+    b.aggregate("applicationPoint", 0x1baa8b95de1a6d46L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("1993559260857527622").done();
     b.alias("static force");
     return b.create();
   }

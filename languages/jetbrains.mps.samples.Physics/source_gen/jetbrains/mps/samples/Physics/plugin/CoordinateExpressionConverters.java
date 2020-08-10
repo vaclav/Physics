@@ -42,11 +42,11 @@ public class CoordinateExpressionConverters {
    * @param instance instance of the object to populate (if any)
    * @return cartesian coordinates
    */
-  public static SNode rawToCartesian(VectorLike rawSource, SNode instance) {
+  public static SNode rawToCartesian(VectorLike rawSource, SNode instance, Iterable<SNode> units) {
     SNode result = ((instance != null) ? instance : SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates")));
-    SLinkOperations.setTarget(result, LINKS.dx$VpuT, distanceOf(rawSource.getX()));
-    SLinkOperations.setTarget(result, LINKS.dy$VWrJ, distanceOf(rawSource.getY()));
-    SLinkOperations.setTarget(result, LINKS.dz$VWBn, distanceOf(rawSource.getZ()));
+    SLinkOperations.setTarget(result, LINKS.dx$VpuT, distanceOf(rawSource.getX(), units));
+    SLinkOperations.setTarget(result, LINKS.dy$VWrJ, distanceOf(rawSource.getY(), units));
+    SLinkOperations.setTarget(result, LINKS.dz$VWBn, distanceOf(rawSource.getZ(), units));
     return result;
   }
 
@@ -58,9 +58,9 @@ public class CoordinateExpressionConverters {
    * @param instance existing object to populate if any
    * @return spherical coordinates node
    */
-  public static SNode rawToSpherical(VectorLike rawSource, SNode instance) {
+  public static SNode rawToSpherical(VectorLike rawSource, SNode instance, Iterable<SNode> units) {
     SNode result = ((instance != null) ? instance : SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, "jetbrains.mps.samples.Physics.structure.SphericalCoordinates")));
-    SLinkOperations.setTarget(result, LINKS.distance$xDc5, distanceOf(rawSource.length()));
+    SLinkOperations.setTarget(result, LINKS.distance$xDc5, distanceOf(rawSource.length(), units));
     SLinkOperations.setTarget(result, LINKS.phi$xD9b, piRelativeOf(rawSource.getAzimutalAngle()));
     SLinkOperations.setTarget(result, LINKS.theta$xDa9, piRelativeOf(rawSource.getPolarAngle()));
     return result;
@@ -73,13 +73,13 @@ public class CoordinateExpressionConverters {
    * @param instance instance of the object to populate, if any
    * @return spherical coordinates node
    */
-  public static SNode rawToCylindrical(VectorLike rawSource, SNode instance) {
+  public static SNode rawToCylindrical(VectorLike rawSource, SNode instance, Iterable<SNode> units) {
     SNode result = ((instance != null) ? instance : SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, "jetbrains.mps.samples.Physics.structure.CylindricalCoordinates")));
 
     double axialDistanceSq = rawSource.getX().pow(2).add(rawSource.getY().pow(2)).doubleValue();
-    SLinkOperations.setTarget(result, LINKS.axialDistance$ip5F, distanceOf(Math.sqrt(axialDistanceSq)));
+    SLinkOperations.setTarget(result, LINKS.axialDistance$ip5F, distanceOf(Math.sqrt(axialDistanceSq), units));
     SLinkOperations.setTarget(result, LINKS.phi$ip6D, piRelativeOf(rawSource.getAzimutalAngle()));
-    SLinkOperations.setTarget(result, LINKS.height$ip86, distanceOf(rawSource.getZ()));
+    SLinkOperations.setTarget(result, LINKS.height$ip86, distanceOf(rawSource.getZ(), units));
     return result;
   }
 
@@ -113,8 +113,12 @@ public class CoordinateExpressionConverters {
     return createMulExpression_xupmzl_a1a51(fraction + "", _quotation_createNode_xupmzl_a0b0a1a51());
   }
 
-  private static SNode distanceOf(Number value) {
-    return _quotation_createNode_xupmzl_a0a71(createNumberLiteral_xupmzl_a0a0a0a71(value.toString()));
+  private static SNode distanceOf(Number value, Iterable<SNode> units) {
+    if (units == null) {
+      return createNumberLiteral_xupmzl_a0a0a71(value.toString());
+    }
+
+    return createUnitExpression_xupmzl_a2a71(value.toString(), units);
   }
   private static SNode createCartesianCoordinates_xupmzl_a0a11(SNode p0, SNode p1, SNode p2, SNode p3, SNode p4, SNode p5, SNode p6, SNode p7) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CartesianCoordinates$U8);
@@ -254,24 +258,18 @@ public class CoordinateExpressionConverters {
     quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content"), quotedNode_3);
     return quotedNode_1;
   }
-  private static SNode _quotation_createNode_xupmzl_a0a71(Object parameter_1) {
-    PersistenceFacade facade = PersistenceFacade.getInstance();
-    SNode quotedNode_2 = null;
-    SNode quotedNode_3 = null;
-    SNode quotedNode_4 = null;
-    quotedNode_2 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x777af24c045ea226L, "UnitExpression")).getResult();
-    quotedNode_3 = (SNode) parameter_1;
-    if (quotedNode_3 != null) {
-      quotedNode_2.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content"), SNodeOperations.copyIfNecessary(quotedNode_3));
-    }
-    quotedNode_4 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x73b48a125b0d4dc5L, "UnitReference")).getResult();
-    quotedNode_4.setReference(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), SReference.create(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), quotedNode_4, facade.createModelReference("r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)"), facade.createNodeId("8609460045977001158")));
-    quotedNode_2.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units"), quotedNode_4);
-    return quotedNode_2;
-  }
-  private static SNode createNumberLiteral_xupmzl_a0a0a0a71(String p0) {
+  private static SNode createNumberLiteral_xupmzl_a0a0a71(String p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);
     n0.setProperty(PROPS.value$nZyY, p0);
+    return n0.getResult();
+  }
+  private static SNode createUnitExpression_xupmzl_a2a71(String p0, Iterable<? extends SNode> p1) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitExpression$Bl);
+    {
+      SNodeBuilder n1 = n0.forChild(LINKS.content$Gf5w).init(CONCEPTS.NumberLiteral$yW);
+      n1.setProperty(PROPS.value$nZyY, p0);
+    }
+    n0.forChild(LINKS.units$o6Ow).initNodeList(p1, CONCEPTS.UnitReference$c4);
     return n0.getResult();
   }
 
@@ -293,6 +291,8 @@ public class CoordinateExpressionConverters {
     /*package*/ static final SContainmentLink exponent$ZOgM = MetaAdapterFactory.getContainmentLink(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c6144L, 0x46c15b39e5605f2fL, "exponent");
     /*package*/ static final SContainmentLink numerator$mY30 = MetaAdapterFactory.getContainmentLink(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9bcd46L, 0x449e19d04e9bcd47L, "numerator");
     /*package*/ static final SContainmentLink denominator$mY4t = MetaAdapterFactory.getContainmentLink(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9bcd46L, 0x449e19d04e9bcd4aL, "denominator");
+    /*package*/ static final SContainmentLink content$Gf5w = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
+    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
   }
 
   private static final class CONCEPTS {
@@ -309,6 +309,8 @@ public class CoordinateExpressionConverters {
     /*package*/ static final SConcept ArcTangens$Ic = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x1a982b99a32e3752L, "org.iets3.core.expr.math.structure.ArcTangens");
     /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
     /*package*/ static final SConcept FractionExpression$6U = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9bcd46L, "org.iets3.core.expr.math.structure.FractionExpression");
+    /*package*/ static final SConcept UnitExpression$Bl = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression");
+    /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
   }
 
   private static final class PROPS {

@@ -177,6 +177,12 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+    <node concept="1TJgyj" id="1IEyTntCUM9" role="1TKVEi">
+      <property role="IQ2ns" value="1993559260849745033" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="simulationScale" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
     <node concept="1TJgyj" id="5wwQqrVXUkN" role="1TKVEi">
       <property role="IQ2ns" value="6350314785807508787" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -224,7 +230,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="relativeFrom" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6HZo5MNbVDr" resolve="ObjectReferenceExpression" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDH">
@@ -302,6 +308,12 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="components" />
       <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="1IEyTnu6AP6" role="1TKVEi">
+      <property role="IQ2ns" value="1993559260857527622" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="applicationPoint" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>

@@ -11,17 +11,21 @@ import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.internal.collections.runtime.Sequence;
+import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
+import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
@@ -29,8 +33,9 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
 
   public static final SMethod<ICapabilityRequirement> getCapabilityRequirement_id7McqtXGyz8c = new SMethodBuilder<ICapabilityRequirement>(new SJavaCompoundTypeImpl(ICapabilityRequirement.class)).name("getCapabilityRequirement").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7McqtXGyz8c").build();
   public static final SMethod<String> getDetailedPresentation_id22G2W3WJ92t = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getDetailedPresentation").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("22G2W3WJ92t").build();
+  public static final SMethod<Iterable<SNode>> getRawUnits_id20wM4XMzAC4 = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getRawUnits").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("20wM4XMzAC4").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getCapabilityRequirement_id7McqtXGyz8c, getDetailedPresentation_id22G2W3WJ92t);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getCapabilityRequirement_id7McqtXGyz8c, getDetailedPresentation_id22G2W3WJ92t, getRawUnits_id20wM4XMzAC4);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -40,6 +45,13 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
   }
   /*package*/ static String getDetailedPresentation_id22G2W3WJ92t(@NotNull SNode __thisNode__) {
     return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.baseType$fHYw)) + "[" + DimensionReference__BehaviorDescriptor.listToString_id270Q2mEWW0n.invoke(SNodeOperations.asSConcept(CONCEPTS.DimensionReference$wa), SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow)) + "]";
+  }
+  /*package*/ static Iterable<SNode> getRawUnits_id20wM4XMzAC4(@NotNull SNode __thisNode__) {
+    return Sequence.fromIterable(UnitReduceHelper.reduceUnitsToReferences(SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow))).select(new ISelector<SNode, SNode>() {
+      public SNode select(SNode it) {
+        return createUnitReference_oyoavs_a0a0a0a0c(SLinkOperations.getTarget(it, LINKS.exponent$2Bc0), SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$2BcY), LINKS.default$rDru));
+      }
+    });
   }
 
   /*package*/ DimensionType__BehaviorDescriptor() {
@@ -61,6 +73,8 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((ICapabilityRequirement) getCapabilityRequirement_id7McqtXGyz8c(node));
       case 1:
         return (T) ((String) getDetailedPresentation_id22G2W3WJ92t(node));
+      case 2:
+        return (T) ((Iterable<SNode>) getRawUnits_id20wM4XMzAC4(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -89,13 +103,24 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
+  private static SNode createUnitReference_oyoavs_a0a0a0a0c(SNode p0, SNode p1) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitReference$c4);
+    n0.forChild(LINKS.exponent$2Bc0).initNode(p0, CONCEPTS.Exponent$nW, true);
+    n0.setReferenceTarget(LINKS.unit$2BcY, p1);
+    return n0.getResult();
+  }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
     /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
+    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SContainmentLink default$rDru = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
+    /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
+    /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
   }
 }

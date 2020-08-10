@@ -3,7 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
-    <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
   </languages>
   <imports>
     <import index="jyp0" ref="r:c76e7683-d7ce-4cb6-a6ee-fcd11243f980(jetbrains.mps.samples.Physics.java.runtime.objects)" />
@@ -13,8 +12,6 @@
     <import index="xwt6" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.math(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="r7oa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:processing.core(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="d2el" ref="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.java.runtime.objects.rendering)" />
-    <import index="6ozj" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:processing.event(jetbrains.mps.samples.Physics.java.runtime/)" />
-    <import index="dr5r" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.logging(JDK/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -73,6 +70,7 @@
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1070534436861" name="jetbrains.mps.baseLanguage.structure.FloatType" flags="in" index="10OMs4" />
       <concept id="1070534513062" name="jetbrains.mps.baseLanguage.structure.DoubleType" flags="in" index="10P55v" />
       <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
         <child id="1070534760952" name="componentType" index="10Q1$1" />
@@ -212,7 +210,12 @@
       <node concept="3Tmbuc" id="6iG0F4IZtQg" role="1B3o_S" />
       <node concept="10P55v" id="2QWokQTFLAV" role="1tU5fm" />
     </node>
-    <node concept="2tJIrI" id="6iG0F4IZu4w" role="jymVt" />
+    <node concept="312cEg" id="1IEyTntHqpT" role="jymVt">
+      <property role="TrG5h" value="renderScale" />
+      <node concept="3Tmbuc" id="1IEyTntHpW_" role="1B3o_S" />
+      <node concept="10OMs4" id="1IEyTntHqmd" role="1tU5fm" />
+    </node>
+    <node concept="2tJIrI" id="1IEyTntHqQl" role="jymVt" />
     <node concept="3Tm1VV" id="3H79Ykd2Gyi" role="1B3o_S" />
     <node concept="3uibUv" id="3H79Ykd2Gyj" role="EKbjA">
       <ref role="3uigEE" node="3H79Ykd2Gpf" resolve="Renderer.RendererCallback" />
@@ -234,10 +237,27 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="1IEyTntHrdK" role="3cqZAp">
+          <node concept="37vLTI" id="1IEyTntHrzo" role="3clFbG">
+            <node concept="37vLTw" id="1IEyTntHrHD" role="37vLTx">
+              <ref role="3cqZAo" node="1IEyTntHpFQ" resolve="renderScale" />
+            </node>
+            <node concept="2OqwBi" id="1IEyTntHrlb" role="37vLTJ">
+              <node concept="Xjq3P" id="1IEyTntHrdI" role="2Oq$k0" />
+              <node concept="2OwXpG" id="1IEyTntHrpj" role="2OqNvi">
+                <ref role="2Oxat5" node="1IEyTntHqpT" resolve="renderScale" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="37vLTG" id="6iG0F4IZu8c" role="3clF46">
         <property role="TrG5h" value="simulationSpeed" />
         <node concept="10P55v" id="2QWokQTG$Oo" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="1IEyTntHpFQ" role="3clF46">
+        <property role="TrG5h" value="renderScale" />
+        <node concept="10OMs4" id="1IEyTntHpGt" role="1tU5fm" />
       </node>
     </node>
     <node concept="2tJIrI" id="6iG0F4IZuql" role="jymVt" />
@@ -329,9 +349,12 @@
               <ref role="3cqZAo" node="6iG0F4IZs3j" resolve="world" />
             </node>
             <node concept="liA8E" id="3H79Ykd2LFA" role="2OqNvi">
-              <ref role="37wK5l" to="jyp0:4D75T4FueYO" resolve="render" />
+              <ref role="37wK5l" to="jyp0:1IEyTntGzy$" resolve="render" />
               <node concept="37vLTw" id="6iG0F4IZy5z" role="37wK5m">
                 <ref role="3cqZAo" node="6iG0F4IZxq8" resolve="ctx" />
+              </node>
+              <node concept="37vLTw" id="1IEyTntHrZv" role="37wK5m">
+                <ref role="3cqZAo" node="1IEyTntHqpT" resolve="renderScale" />
               </node>
             </node>
           </node>
@@ -1801,6 +1824,26 @@
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
     </node>
+  </node>
+  <node concept="3HP615" id="1IEyTntFS1l">
+    <property role="TrG5h" value="Renderable" />
+    <node concept="3clFb_" id="1IEyTntFS29" role="jymVt">
+      <property role="TrG5h" value="render" />
+      <node concept="3clFbS" id="1IEyTntFS2c" role="3clF47" />
+      <node concept="3Tm1VV" id="1IEyTntFS2d" role="1B3o_S" />
+      <node concept="3cqZAl" id="1IEyTntFS1W" role="3clF45" />
+      <node concept="37vLTG" id="1IEyTntFS2B" role="3clF46">
+        <property role="TrG5h" value="graphics" />
+        <node concept="3uibUv" id="1IEyTntFS2A" role="1tU5fm">
+          <ref role="3uigEE" to="r7oa:~PGraphics" resolve="PGraphics" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="1IEyTntFS2Y" role="3clF46">
+        <property role="TrG5h" value="scale" />
+        <node concept="10OMs4" id="1IEyTntHbmX" role="1tU5fm" />
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="1IEyTntFS1m" role="1B3o_S" />
   </node>
 </model>
 

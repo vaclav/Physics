@@ -10,9 +10,9 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Fixt
 import java.util.ArrayList;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.ode.OdeHelper;
-import org.ode4j.math.DVector3;
-import processing.core.PGraphics;
 import org.ode4j.math.DVector3C;
+import processing.core.PGraphics;
+import org.ode4j.math.DMatrix3C;
 import java.util.List;
 import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
@@ -22,6 +22,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   private DBody body;
   private World world;
   private Fixture fixture;
+  private T scope;
 
   private String name;
   private BigDecimal massCached;
@@ -37,11 +38,13 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
    * Forces applied on the entity
    */
   private ArrayList<Force> forces = new ArrayList();
-  public PhysicalEntity(World world, String name) {
+
+  public PhysicalEntity(World world, String name, T scope) {
     this.world = world;
     this.name = name;
     // Creating body 
     body = OdeHelper.createBody(world.getWorld());
+    this.scope = scope;
   }
 
 
@@ -64,33 +67,54 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     }
 
     for (Force force : forces) {
-      body.addForce((DVector3) force.compute(world, null, this, time));
+      DVector3C forceInitial = force.compute(world, scope, this, time);
+
+      // Apply force on body 
+      body.addForce(forceInitial);
+
+      // Compute torque with application point (if null -> apply force on center so no torque) 
+      DVector3C applicationPoint = force.applicationPoint(world, scope, this, time);
+      System.out.println(applicationPoint);
+      if (applicationPoint != null) {
+        System.out.println("computing torque : " + Force.computeTorque(forceInitial, applicationPoint, this));
+        body.addTorque(Force.computeTorque(forceInitial, applicationPoint, this));
+      }
     }
   }
-  public void applyLights(PGraphics ctx) {
+  public void applyLights(PGraphics ctx, float scale) {
     if (disabled) {
       return;
     }
 
     if (fixture.doEmitLight()) {
       DVector3C position = body.getPosition();
-      ctx.pointLight(255, 255, 255, (float) position.get0(), (float) position.get1(), (float) position.get2());
+      ctx.pointLight(255, 255, 255, (float) position.get0() * scale, (float) position.get1() * scale, (float) position.get2() * scale);
     }
   }
-  public void render(PGraphics ctx) {
+  public void render(PGraphics ctx, float scale) {
     if (disabled) {
       return;
     }
 
     DVector3C position = body.getPosition();
+
+    // https://en.wikipedia.org/wiki/Rotation_matrix 
+    DMatrix3C rotation = body.getRotation();
+
     ctx.pushMatrix();
-    ctx.translate((float) position.get0(), (float) position.get1(), (float) position.get2());
-    fixture.render(ctx);
+    ctx.translate((float) position.get0() * scale, (float) position.get1() * scale, (float) position.get2() * scale);
+
+    // https://stackoverflow.com/questions/15022630/how-to-calculate-the-angle-from-rotation-matrix 
+    ctx.rotateX((float) Math.atan2(rotation.get21(), rotation.get22()));
+    ctx.rotateY((float) Math.atan2(-rotation.get20(), (float) Math.sqrt(Math.pow(rotation.get21(), 2) + Math.pow(rotation.get22(), 2))));
+    ctx.rotateZ((float) Math.atan2(rotation.get10(), rotation.get00()));
+
+    fixture.render(ctx, scale);
     ctx.popMatrix();
 
     // Display trace if any 
     if (fixture.hasTraceHandler()) {
-      fixture.getTraceHandler().render(position, ctx);
+      fixture.getTraceHandler().render(position, ctx, scale);
     }
   }
   public void setFixture(Fixture fixture) {

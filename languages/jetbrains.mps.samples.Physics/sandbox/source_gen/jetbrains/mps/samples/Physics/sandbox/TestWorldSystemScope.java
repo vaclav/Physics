@@ -31,9 +31,9 @@ public class TestWorldSystemScope extends SystemScope {
     final TestWorldSystemScope scope = this;
 
     //  Instanciate objects 
-    Something3 = withEntity(new Something5PhysicalEntity(world, "Something4"));
-    Hey = withEntity(new Hey2PhysicalEntity(world, "Hey1"));
-    Ho = withEntity(new Ho2PhysicalEntity(world, "Ho1"));
+    Something3 = withEntity(new Something5PhysicalEntity(world, "Something4", scope));
+    Hey = withEntity(new Hey2PhysicalEntity(world, "Hey1", scope));
+    Ho = withEntity(new Ho2PhysicalEntity(world, "Ho1", scope));
     TheOtherWorld = withEntity(new World2SystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
@@ -44,8 +44,8 @@ public class TestWorldSystemScope extends SystemScope {
 
   public static class Something5PhysicalEntity extends ObjectSupertypeAbstractEntity<TestWorldSystemScope> {
 
-    public Something5PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Something5PhysicalEntity(World world, String name, TestWorldSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -67,18 +67,22 @@ public class TestWorldSystemScope extends SystemScope {
       fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
-      this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1")))))), new Force<TestWorldSystemScope>() {
+      this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))))), null), new Force<TestWorldSystemScope>() {
         @Override
         public DVector3C compute(World world, TestWorldSystemScope scope, PhysicalEntity targetEntity, double time) {
           return VectorHelper.fromInternal(scope.Hey.minus(currentEntity).resize(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1")))));
+        }
+        @Override
+        public DVector3C applicationPoint(World world, TestWorldSystemScope scope, PhysicalEntity targetEntity, double time) {
+          return null;
         }
       }, new GravityForce(AH.mul(((Number) new BigInteger("4")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), new XYZForceForce(AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))))));
     }
   }
   public static class Hey2PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
 
-    public Hey2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Hey2PhysicalEntity(World world, String name, TestWorldSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -103,8 +107,8 @@ public class TestWorldSystemScope extends SystemScope {
   }
   public static class Ho2PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
 
-    public Ho2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Ho2PhysicalEntity(World world, String name, TestWorldSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override

@@ -91,8 +91,8 @@
     <property role="TrG5h" value="yellow" />
     <node concept="1nv_BP" id="G6XgqqQVrM" role="2hI$nf">
       <property role="1nv_BK" value="255" />
-      <property role="1nv_BM" value="255" />
-      <property role="1nv_BX" value="0" />
+      <property role="1nv_BM" value="0" />
+      <property role="1nv_BX" value="255" />
     </node>
   </node>
 </model>

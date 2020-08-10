@@ -12,6 +12,8 @@
     <import index="pbu6" ref="r:83e946de-2a7f-4a4c-b3c9-4f671aa7f2db(org.iets3.core.expr.base.behavior)" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
+    <import index="onwr" ref="r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)" />
+    <import index="5fi3" ref="r:a08ce4c7-a3d7-4ce1-b6a4-794edd2a85d3(jetbrains.mps.samples.Physics.dimensions.behavior)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -37,6 +39,7 @@
         <child id="1081256993305" name="classType" index="2ZW6by" />
         <child id="1081256993304" name="leftExpression" index="2ZW6bz" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
         <child id="1095933932569" name="implementedInterface" index="EKbjA" />
@@ -211,6 +214,11 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
+      <concept id="1151689724996" name="jetbrains.mps.baseLanguage.collections.structure.SequenceType" flags="in" index="A3Dl8">
+        <child id="1151689745422" name="elementType" index="A3Ik2" />
       </concept>
     </language>
   </registry>
@@ -752,6 +760,63 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="6uKmUf9tgBS" role="1B3o_S" />
+    <node concept="2YIFZL" id="20wM4XM$$Uq" role="jymVt">
+      <property role="TrG5h" value="getVectorTypeUnits" />
+      <node concept="3clFbS" id="20wM4XM$zgZ" role="3clF47">
+        <node concept="Jncv_" id="20wM4XM$zj6" role="3cqZAp">
+          <ref role="JncvD" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
+          <node concept="37vLTw" id="20wM4XM$zjI" role="JncvB">
+            <ref role="3cqZAo" node="20wM4XM$zho" resolve="type" />
+          </node>
+          <node concept="3clFbS" id="20wM4XM$zj8" role="Jncv$">
+            <node concept="Jncv_" id="20wM4XM$zl8" role="3cqZAp">
+              <ref role="JncvD" to="onwr:7tUW$K4o9Ja" resolve="DimensionType" />
+              <node concept="2OqwBi" id="20wM4XM$zy_" role="JncvB">
+                <node concept="Jnkvi" id="20wM4XM$zlV" role="2Oq$k0">
+                  <ref role="1M0zk5" node="20wM4XM$zj9" resolve="vector" />
+                </node>
+                <node concept="3TrEf2" id="20wM4XM$zTN" role="2OqNvi">
+                  <ref role="3Tt5mk" to="z99z:1d1Q7eb4Wwt" resolve="componentType" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="20wM4XM$zla" role="Jncv$">
+                <node concept="3cpWs6" id="20wM4XM$$eU" role="3cqZAp">
+                  <node concept="2OqwBi" id="20wM4XM$0Mb" role="3cqZAk">
+                    <node concept="Jnkvi" id="20wM4XM$$4y" role="2Oq$k0">
+                      <ref role="1M0zk5" node="20wM4XM$zlb" resolve="dim" />
+                    </node>
+                    <node concept="2qgKlT" id="20wM4XM$1hq" role="2OqNvi">
+                      <ref role="37wK5l" to="5fi3:20wM4XMzAC4" resolve="getRawUnits" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="JncvC" id="20wM4XM$zlb" role="JncvA">
+                <property role="TrG5h" value="dim" />
+                <node concept="2jxLKc" id="20wM4XM$zlc" role="1tU5fm" />
+              </node>
+            </node>
+          </node>
+          <node concept="JncvC" id="20wM4XM$zj9" role="JncvA">
+            <property role="TrG5h" value="vector" />
+            <node concept="2jxLKc" id="20wM4XM$zja" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3cpWs6" id="20wM4XM$$uc" role="3cqZAp">
+          <node concept="10Nm6u" id="20wM4XM$$uM" role="3cqZAk" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="20wM4XM$zho" role="3clF46">
+        <property role="TrG5h" value="type" />
+        <node concept="3Tqbb2" id="20wM4XM$zhn" role="1tU5fm" />
+      </node>
+      <node concept="A3Dl8" id="20wM4XM$zgI" role="3clF45">
+        <node concept="3Tqbb2" id="20wM4XM$zgJ" role="A3Ik2">
+          <ref role="ehGHo" to="onwr:7eOyx9r3kR5" resolve="UnitReference" />
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="20wM4XM$zg9" role="1B3o_S" />
+    </node>
   </node>
   <node concept="312cEu" id="3yBD53Wtafy">
     <property role="TrG5h" value="VectorHandlingCapablity" />

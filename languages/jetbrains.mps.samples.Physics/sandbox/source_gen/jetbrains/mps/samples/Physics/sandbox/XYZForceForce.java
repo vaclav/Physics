@@ -23,7 +23,12 @@ public class XYZForceForce<T extends SystemScope> implements Force<T> {
 
   @Override
   public DVector3C compute(World world, T scope, PhysicalEntity currentEntity, double time) {
-
     return VectorHelper.fromInternal(new InternalVector(x, y, z));
+  }
+
+
+  @Override
+  public DVector3C applicationPoint(World world, T scope, PhysicalEntity currentEntity, double time) {
+    return null;
   }
 }

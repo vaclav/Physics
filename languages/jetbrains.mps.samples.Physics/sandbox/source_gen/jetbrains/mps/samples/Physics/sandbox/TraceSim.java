@@ -17,7 +17,7 @@ public class TraceSim extends Simulation {
   protected TraceTestSystemScope scope;
 
   public TraceSim() {
-    super(AH.mul(((Number) new BigInteger("80")), ((Number) new BigInteger("1"))).doubleValue());
+    super(AH.mul(((Number) new BigInteger("80")), ((Number) new BigInteger("1"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))).floatValue());
   }
 
   @Override
@@ -42,13 +42,17 @@ public class TraceSim extends Simulation {
     VectorLike position = new InternalVector(context.width / 2, context.height / 2, (context.height / 2) / PApplet.tan(PApplet.PI * 30 / 180));
     VectorLike focus = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
 
+    // Apply scale 
+    position.mul(renderScale);
+    focus.mul(renderScale);
+
     graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
 
     super.render(context, graphics);
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new TraceSim()));
+    Renderer.afterInit(new CompositeRendererCallback(new TraceSim(), new TraceSim0_b1e4e1_aAlternativeView(), new TraceSim1_b1e4e1_bAlternativeView()));
     Renderer.main(args);
   }
 }

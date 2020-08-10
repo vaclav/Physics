@@ -6,11 +6,11 @@ import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
-import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
@@ -26,7 +26,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
 
-  public static final SMethod<Void> apply_id2AM6gIjLTgr = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("apply").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2AM6gIjLTgr").build();
+  public static final SMethod<SNode> apply_id2AM6gIjLTgr = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("apply").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2AM6gIjLTgr").build();
   public static final SMethod<SNode> getTarget_id2AM6gIjLTgY = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTarget").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2AM6gIjLTgY").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(apply_id2AM6gIjLTgr, getTarget_id2AM6gIjLTgY);
@@ -34,8 +34,8 @@ public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static void apply_id2AM6gIjLTgr(@NotNull SNode __thisNode__) {
-    ICanBeOverridden__BehaviorDescriptor.overrideWith_id38SdPTRbTXB.invoke(OverrideRule__BehaviorDescriptor.getTarget_id2AM6gIjLTgY.invoke(__thisNode__), SLinkOperations.getTarget(__thisNode__, LINKS.newValue$_Vn9));
+  /*package*/ static SNode apply_id2AM6gIjLTgr(@NotNull SNode __thisNode__) {
+    return (SNode) ICanBeOverridden__BehaviorDescriptor.overrideWith_id38SdPTRbTXB.invoke(OverrideRule__BehaviorDescriptor.getTarget_id2AM6gIjLTgY.invoke(__thisNode__), SLinkOperations.getTarget(__thisNode__, LINKS.newValue$_Vn9));
   }
   /*package*/ static SNode getTarget_id2AM6gIjLTgY(@NotNull SNode __thisNode__) {
     // Resolve dot expression target (while may not be useful) 
@@ -71,8 +71,7 @@ public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        apply_id2AM6gIjLTgr(node);
-        return null;
+        return (T) ((SNode) apply_id2AM6gIjLTgr(node));
       case 1:
         return (T) ((SNode) getTarget_id2AM6gIjLTgY(node));
       default:

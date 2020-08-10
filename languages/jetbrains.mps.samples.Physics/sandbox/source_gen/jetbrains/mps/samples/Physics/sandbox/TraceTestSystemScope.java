@@ -26,8 +26,8 @@ public class TraceTestSystemScope extends SystemScope {
     final TraceTestSystemScope scope = this;
 
     //  Instanciate objects 
-    MovingObject = withEntity(new MovingObject2PhysicalEntity(world, "MovingObject1"));
-    MovingObject2 = withEntity(new MovingObject22PhysicalEntity(world, "MovingObject21"));
+    MovingObject = withEntity(new MovingObject2PhysicalEntity(world, "MovingObject1", scope));
+    MovingObject2 = withEntity(new MovingObject22PhysicalEntity(world, "MovingObject21", scope));
 
     // Initialize them 
     MovingObject.init(this, world);
@@ -36,8 +36,8 @@ public class TraceTestSystemScope extends SystemScope {
 
   public static class MovingObject2PhysicalEntity extends BaseObjectAbstractEntity<TraceTestSystemScope> {
 
-    public MovingObject2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public MovingObject2PhysicalEntity(World world, String name, TraceTestSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -62,13 +62,17 @@ public class TraceTestSystemScope extends SystemScope {
         public DVector3C compute(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
           return VectorHelper.fromInternal((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
         }
+        @Override
+        public DVector3C applicationPoint(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
+          return null;
+        }
       }));
     }
   }
   public static class MovingObject22PhysicalEntity extends BaseObjectAbstractEntity<TraceTestSystemScope> {
 
-    public MovingObject22PhysicalEntity(World world, String name) {
-      super(world, name);
+    public MovingObject22PhysicalEntity(World world, String name, TraceTestSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -92,6 +96,10 @@ public class TraceTestSystemScope extends SystemScope {
         @Override
         public DVector3C compute(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
           return VectorHelper.fromInternal((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
+        }
+        @Override
+        public DVector3C applicationPoint(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
+          return null;
         }
       }));
     }

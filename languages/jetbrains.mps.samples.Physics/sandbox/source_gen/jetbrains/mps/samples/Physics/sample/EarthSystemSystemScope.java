@@ -9,9 +9,9 @@ import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.util.Arrays;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -26,8 +26,8 @@ public class EarthSystemSystemScope extends SystemScope {
     final EarthSystemSystemScope scope = this;
 
     //  Instanciate objects 
-    Earth = withEntity(new Earth2PhysicalEntity(world, "Earth1"));
-    Moon = withEntity(new Moon2PhysicalEntity(world, "Moon1"));
+    Earth = withEntity(new Earth2PhysicalEntity(world, "Earth1", scope));
+    Moon = withEntity(new Moon2PhysicalEntity(world, "Moon1", scope));
 
     // Initialize them 
     Earth.init(this, world);
@@ -36,8 +36,8 @@ public class EarthSystemSystemScope extends SystemScope {
 
   public static class Earth2PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
 
-    public Earth2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Earth2PhysicalEntity(World world, String name, EarthSystemSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class EarthSystemSystemScope extends SystemScope {
 
       // Set static properties of Earth 
       this.setMass(((Number) new BigInteger("79700000000000")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Earth 
@@ -61,8 +61,8 @@ public class EarthSystemSystemScope extends SystemScope {
   }
   public static class Moon2PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
 
-    public Moon2PhysicalEntity(World world, String name) {
-      super(world, name);
+    public Moon2PhysicalEntity(World world, String name, EarthSystemSystemScope scope) {
+      super(world, name, scope);
     }
 
     @Override

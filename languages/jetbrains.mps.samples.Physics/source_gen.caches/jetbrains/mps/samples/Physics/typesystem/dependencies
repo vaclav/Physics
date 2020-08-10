@@ -403,12 +403,14 @@
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.EquationInfo" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
   </dependency>
@@ -436,8 +438,13 @@
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.typesystem.typeof_Simulation_InferenceRule">
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="jetbrains.mps.errors.IErrorReporter" />
+    <classNode dependClassName="jetbrains.mps.errors.messageTargets.MessageTarget" />
+    <classNode dependClassName="jetbrains.mps.errors.messageTargets.NodeMessageTarget" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper" />
     <classNode dependClassName="jetbrains.mps.smodel.SReference" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />

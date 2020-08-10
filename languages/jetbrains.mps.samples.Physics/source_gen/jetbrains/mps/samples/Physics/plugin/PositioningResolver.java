@@ -10,6 +10,8 @@ import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.samples.Physics.types.typesystem.VectorTypeHelper;
+import jetbrains.mps.typechecking.TypecheckingFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -31,13 +33,13 @@ public class PositioningResolver {
       public void visit(SNode it) {
         //  Compute position 
         VectorLike locationComputed = ((VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$DoV0), LINKS.expression$87ts)));
-        SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$DoV0), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(locationComputed, null));
+        SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$DoV0), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(locationComputed, null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(it, LINKS.position$DoV0)))));
 
         //  Compute speed 
         if ((SLinkOperations.getTarget(it, LINKS.velocity$DoVv) != null)) {
           VectorLike velocityComputed = (VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.expression$87ts));
 
-          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(velocityComputed, null));
+          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(velocityComputed, null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(it, LINKS.velocity$DoVv)))));
         }
 
         // Compute nested worlds 

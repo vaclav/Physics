@@ -14,6 +14,8 @@ import java.util.Collections;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
+import jetbrains.mps.editor.runtime.selection.SelectionUtil;
+import jetbrains.mps.openapi.editor.selection.SelectionManager;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 
 public final class AdaptToCartesian_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
@@ -48,7 +50,8 @@ public final class AdaptToCartesian_Intention extends AbstractIntentionDescripto
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
-      SNodeOperations.replaceWithAnother(node, CoordinateExpressionConverters.sphericalToCartesian(node));
+      SNode newNode = SNodeOperations.replaceWithAnother(node, CoordinateExpressionConverters.sphericalToCartesian(node));
+      SelectionUtil.selectCell(editorContext, newNode, SelectionManager.FIRST_EDITABLE_CELL);
     }
     @Override
     public IntentionDescriptor getDescriptor() {

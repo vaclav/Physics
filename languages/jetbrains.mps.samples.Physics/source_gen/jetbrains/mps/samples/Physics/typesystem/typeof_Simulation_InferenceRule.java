@@ -9,6 +9,10 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
+import jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper;
+import jetbrains.mps.errors.messageTargets.MessageTarget;
+import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
+import jetbrains.mps.errors.IErrorReporter;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
@@ -43,6 +47,27 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
         typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2432181455078544054", true), (SNode) _quotation_createNode_63q4hh_a1a0c0a0d0b(), true, true, _info_12389875345);
       }
     }
+
+    {
+      final SNode scaleType = typeCheckingContext.typeOf(SLinkOperations.getTarget(simulation, LINKS.simulationScale$eVy5), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1993559260849747191", true);
+      typeCheckingContext.whenConcrete(scaleType, new Runnable() {
+        public void run() {
+          if (!(typeCheckingContext.isSingleTypeComputation())) {
+            {
+              SNode _nodeToCheck_1029348928467 = simulation;
+              EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1993559260849749604", 0, null);
+              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(scaleType), (SNode) _quotation_createNode_63q4hh_a1a0c0a0a0a0a1a0b0f0b(), true, true, _info_12389875345);
+            }
+          }
+          if (NumberTypeHelper.isBaseTypeZero(typeCheckingContext.getExpandedNode(scaleType))) {
+            {
+              final MessageTarget errorTarget = new NodeMessageTarget();
+              IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(simulation, LINKS.simulationScale$eVy5), "simulation scale cannot be zero", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1993559260854602360", null, errorTarget);
+            }
+          }
+        }
+      }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1993559260849747106", false, false);
+    }
   }
   public SAbstractConcept getApplicableConcept() {
     return CONCEPTS.Simulation$oX;
@@ -74,11 +99,25 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
     quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType"), quotedNode_3);
     return quotedNode_1;
   }
+  private static SNode _quotation_createNode_63q4hh_a1a0c0a0a0a0a1a0b0f0b() {
+    PersistenceFacade facade = PersistenceFacade.getInstance();
+    SNode quotedNode_1 = null;
+    SNode quotedNode_2 = null;
+    SNode quotedNode_3 = null;
+    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x777af24c04609bcaL, "DimensionType")).getResult();
+    quotedNode_2 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e74cL, "RealType")).getResult();
+    quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType"), quotedNode_2);
+    quotedNode_3 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, "jetbrains.mps.samples.Physics.dimensions"), 0x2c25ac8bca7e6b7cL, "DimensionReference")).getResult();
+    quotedNode_3.setReference(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), SReference.create(MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit"), quotedNode_3, facade.createModelReference("r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)"), facade.createNodeId("8609460045977001156")));
+    quotedNode_1.addChild(MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units"), quotedNode_3);
+    return quotedNode_1;
+  }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink focus$_WjO = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x55d23bae7b62a2e0L, "focus");
     /*package*/ static final SContainmentLink cameraPosition$_PZQ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x55d23bae7b62a2a7L, "cameraPosition");
     /*package*/ static final SContainmentLink simulationSpeed$m7cv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x21c0d825ab3fd1e0L, "simulationSpeed");
+    /*package*/ static final SContainmentLink simulationScale$eVy5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x1baa8b95dda3ac89L, "simulationScale");
   }
 
   private static final class CONCEPTS {

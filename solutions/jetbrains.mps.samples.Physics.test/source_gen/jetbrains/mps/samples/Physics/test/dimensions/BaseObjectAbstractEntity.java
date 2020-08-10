@@ -15,8 +15,8 @@ import java.util.Arrays;
 
 public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends PhysicalEntity<T> {
 
-  public BaseObjectAbstractEntity(World world, String name) {
-    super(world, name);
+  public BaseObjectAbstractEntity(World world, String name, T scope) {
+    super(world, name, scope);
   }
 
 

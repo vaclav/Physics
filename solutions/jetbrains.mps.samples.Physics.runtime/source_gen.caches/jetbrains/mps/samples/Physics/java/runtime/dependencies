@@ -7,6 +7,9 @@
     <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.Renderable">
+    <classNode dependClassName="processing.core.PGraphics" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.Renderer">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />

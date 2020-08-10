@@ -10,9 +10,11 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRende
 public abstract class Simulation implements Renderer.RendererCallback {
   protected World world;
   protected double simulationSpeed;
+  protected float renderScale;
 
-  public Simulation(double simulationSpeed) {
+  public Simulation(double simulationSpeed, float renderScale) {
     this.simulationSpeed = simulationSpeed;
+    this.renderScale = renderScale;
   }
 
   @Override
@@ -27,7 +29,7 @@ public abstract class Simulation implements Renderer.RendererCallback {
     ctx.background(0);
 
     world.step();
-    world.render(ctx);
+    world.render(ctx, renderScale);
 
     ctx.camera();
     ctx.noLights();

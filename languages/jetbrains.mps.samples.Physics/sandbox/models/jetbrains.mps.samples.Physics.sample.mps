@@ -402,7 +402,7 @@
     </node>
     <node concept="1N951E" id="270Q2mFg5sF" role="2aZKB5">
       <node concept="30bXRB" id="270Q2mFg5sE" role="1N951F">
-        <property role="30bXRw" value="60" />
+        <property role="30bXRw" value="1" />
       </node>
       <node concept="CIsvn" id="4E4Gfvfnb2G" role="1N7es9">
         <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />

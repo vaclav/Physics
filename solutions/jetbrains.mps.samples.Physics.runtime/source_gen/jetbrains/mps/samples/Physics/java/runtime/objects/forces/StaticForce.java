@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.forces;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import org.ode4j.math.DVector3C;
+import org.ode4j.math.DVector3;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 
@@ -12,11 +13,23 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
  */
 public class StaticForce<T extends SystemScope> implements Force<T> {
   private DVector3C value;
-  public StaticForce(DVector3C value) {
+  private DVector3C applicationPoint;
+
+  public StaticForce(DVector3 value) {
+    this(value, null);
+  }
+
+  public StaticForce(DVector3C value, DVector3C applicationPoint) {
     this.value = value;
+    this.applicationPoint = applicationPoint;
   }
   @Override
   public DVector3C compute(World world, T scope, PhysicalEntity targetEntity, double time) {
     return value;
+  }
+
+  @Override
+  public DVector3C applicationPoint(World world, T scope, PhysicalEntity currentEntity, double time) {
+    return applicationPoint;
   }
 }
