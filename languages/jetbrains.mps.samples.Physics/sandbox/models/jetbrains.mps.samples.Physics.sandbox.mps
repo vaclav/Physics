@@ -94,6 +94,10 @@
         <child id="6362440046684076652" name="relativeFrom" index="v6hvJ" />
         <child id="1808378526640755546" name="coordinates" index="1aLnnE" />
       </concept>
+      <concept id="6350314785807501812" name="jetbrains.mps.samples.Physics.structure.SimulationAlternativeView" flags="ng" index="2zPP1i" />
+      <concept id="6350314785807508793" name="jetbrains.mps.samples.Physics.structure.IOverrideProperties" flags="ng" index="2zPRMv">
+        <child id="3618703179458256923" name="overrideRules" index="155Tt5" />
+      </concept>
       <concept id="232455383965895628" name="jetbrains.mps.samples.Physics.structure.VectorOppositeTarget" flags="ng" index="2CkXcW" />
       <concept id="232455383964481302" name="jetbrains.mps.samples.Physics.structure.CurrentObjectExpression" flags="ng" index="2CrqZA" />
       <concept id="232455383964585219" name="jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget" flags="ng" index="2CrXnN">
@@ -154,9 +158,9 @@
       <concept id="2993354433745639261" name="jetbrains.mps.samples.Physics.structure.CollisionStyleKey" flags="ng" index="1nHl2y" />
       <concept id="7746015835360049752" name="jetbrains.mps.samples.Physics.structure.Simulation" flags="ng" index="3okdC4">
         <child id="2432181455078543840" name="simulationSpeed" index="2aZKB5" />
+        <child id="6350314785807508787" name="views" index="2zPRMl" />
         <child id="6184070858913522343" name="cameraPosition" index="IG9$9" />
         <child id="6184070858913522400" name="focus" index="IG9_e" />
-        <child id="3618703179458256923" name="overrideRules" index="155Tt5" />
         <child id="4383135941274869506" name="world" index="1heTBC" />
       </concept>
       <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression" flags="ng" index="3okdC7">
@@ -2177,6 +2181,43 @@
   <node concept="3okdC4" id="4MH8hIBFMkr">
     <property role="3GE5qa" value="collision" />
     <property role="TrG5h" value="TestCollision" />
+    <node concept="2zPP1i" id="5wwQqrW0p_0" role="2zPRMl">
+      <node concept="155UyN" id="5wwQqrW2bJx" role="155Tt5">
+        <node concept="1QScDb" id="5wwQqrW41yB" role="155UyK">
+          <node concept="2UuJHK" id="5wwQqrW41NQ" role="1QScD9">
+            <node concept="27oU9Q" id="5wwQqrW41NO" role="2UuJIb" />
+          </node>
+          <node concept="1QScDb" id="5wwQqrW2bK3" role="30czhm">
+            <node concept="31uf54" id="5wwQqrW41dZ" role="1QScD9">
+              <ref role="31ueSj" node="6qMY4Z36dbO" resolve="A" />
+            </node>
+            <node concept="31hh1H" id="5wwQqrW2bJK" role="30czhm" />
+          </node>
+        </node>
+        <node concept="Y6$CV" id="5wwQqrWl_q9" role="155UyI">
+          <ref role="2hGqkR" to="bf5:G6XgqqQVkJ" resolve="blue" />
+        </node>
+      </node>
+      <node concept="155UyN" id="1IEyTntrA28" role="155Tt5">
+        <node concept="1QScDb" id="1IEyTntrAj_" role="155UyK">
+          <node concept="3K9aLm" id="1IEyTntrAut" role="1QScD9" />
+          <node concept="1QScDb" id="1IEyTntrA3E" role="30czhm">
+            <node concept="31hh1H" id="1IEyTntrA3n" role="30czhm" />
+            <node concept="31uf54" id="1IEyTntslfh" role="1QScD9">
+              <ref role="31ueSj" node="4MH8hIBFMkA" resolve="B" />
+            </node>
+          </node>
+        </node>
+        <node concept="1N951E" id="1IEyTntrANP" role="155UyI">
+          <node concept="30bXRB" id="1IEyTntrAC8" role="1N951F">
+            <property role="30bXRw" value="8800" />
+          </node>
+          <node concept="CIsvn" id="1IEyTntrANO" role="1N7es9">
+            <ref role="1N7KNK" to="nas6:1d1Q7eb5p5y" resolve="kg" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="1t_wfn" id="4MH8hIBFMkw" role="1heTBC">
       <ref role="1t_wfm" node="4MH8hIBFMkh" resolve="CollisionWorld" />
     </node>
@@ -2220,46 +2261,6 @@
   </node>
   <node concept="3okdC4" id="4E4Gfvfyy2T">
     <property role="TrG5h" value="FallingBall" />
-    <node concept="1t_wfn" id="4E4Gfvfz4CS" role="1heTBC">
-      <ref role="1t_wfm" node="4E4Gfvfyy3M" resolve="FallingBallWorld" />
-    </node>
-    <node concept="1N951E" id="4E4Gfvfzc2$" role="2aZKB5">
-      <node concept="CIsvn" id="4E4Gfvfzc56" role="1N7es9">
-        <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
-      </node>
-      <node concept="30bXRB" id="2AM6gIk7F9Q" role="1N951F">
-        <property role="30bXRw" value="3" />
-      </node>
-    </node>
-    <node concept="1QScDb" id="3Xqr82XiYDs" role="IG9_e">
-      <node concept="3K97jc" id="3Xqr82XiYHj" role="1QScD9" />
-      <node concept="31hh1H" id="3Xqr82XiYB3" role="30czhm" />
-    </node>
-    <node concept="v6hs8" id="3Xqr82XbrMd" role="IG9$9">
-      <node concept="30bXRB" id="3Xqr82Xbsay" role="Y6l9D">
-        <property role="30bXRw" value="0" />
-      </node>
-      <node concept="1N951E" id="3Xqr82XbJ18" role="Y6leK">
-        <node concept="30cIq6" id="3Xqr82Xc1FY" role="1N951F">
-          <node concept="30bXRB" id="3Xqr82Xc1FZ" role="30czhm">
-            <property role="30bXRw" value="20" />
-          </node>
-        </node>
-        <node concept="CIsvn" id="3Xqr82XbJ17" role="1N7es9">
-          <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
-        </node>
-      </node>
-      <node concept="30cIq6" id="3Xqr82Xbsbl" role="Y6leJ">
-        <node concept="1N951E" id="3Xqr82Xbshx" role="30czhm">
-          <node concept="30bXRB" id="3Xqr82XbsbW" role="1N951F">
-            <property role="30bXRw" value="300" />
-          </node>
-          <node concept="CIsvn" id="3Xqr82Xbshw" role="1N7es9">
-            <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="155UyN" id="38SdPTRd3CC" role="155Tt5">
       <node concept="1QScDb" id="38SdPTRd4cb" role="155UyK">
         <node concept="3K9aLm" id="38SdPTRd4yo" role="1QScD9" />
@@ -2334,6 +2335,46 @@
           </node>
           <node concept="CIsvn" id="2AM6gIk5Flo" role="1N7es9">
             <ref role="1N7KNK" to="nas6:1fq3tlL$kNW" resolve="mps" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1t_wfn" id="4E4Gfvfz4CS" role="1heTBC">
+      <ref role="1t_wfm" node="4E4Gfvfyy3M" resolve="FallingBallWorld" />
+    </node>
+    <node concept="1N951E" id="4E4Gfvfzc2$" role="2aZKB5">
+      <node concept="CIsvn" id="4E4Gfvfzc56" role="1N7es9">
+        <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
+      </node>
+      <node concept="30bXRB" id="2AM6gIk7F9Q" role="1N951F">
+        <property role="30bXRw" value="3" />
+      </node>
+    </node>
+    <node concept="1QScDb" id="3Xqr82XiYDs" role="IG9_e">
+      <node concept="3K97jc" id="3Xqr82XiYHj" role="1QScD9" />
+      <node concept="31hh1H" id="3Xqr82XiYB3" role="30czhm" />
+    </node>
+    <node concept="v6hs8" id="3Xqr82XbrMd" role="IG9$9">
+      <node concept="30bXRB" id="3Xqr82Xbsay" role="Y6l9D">
+        <property role="30bXRw" value="0" />
+      </node>
+      <node concept="1N951E" id="3Xqr82XbJ18" role="Y6leK">
+        <node concept="30cIq6" id="3Xqr82Xc1FY" role="1N951F">
+          <node concept="30bXRB" id="3Xqr82Xc1FZ" role="30czhm">
+            <property role="30bXRw" value="20" />
+          </node>
+        </node>
+        <node concept="CIsvn" id="3Xqr82XbJ17" role="1N7es9">
+          <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
+        </node>
+      </node>
+      <node concept="30cIq6" id="3Xqr82Xbsbl" role="Y6leJ">
+        <node concept="1N951E" id="3Xqr82Xbshx" role="30czhm">
+          <node concept="30bXRB" id="3Xqr82XbsbW" role="1N951F">
+            <property role="30bXRw" value="300" />
+          </node>
+          <node concept="CIsvn" id="3Xqr82Xbshw" role="1N7es9">
+            <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
           </node>
         </node>
       </node>

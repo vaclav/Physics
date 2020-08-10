@@ -7,9 +7,13 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import jetbrains.mps.samples.Physics.java.runtime.Renderer;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import processing.core.PApplet;
+import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import jetbrains.mps.samples.Physics.java.runtime.Renderer;
+import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
 public class FallingBall extends Simulation {
   protected FallingBallWorldSystemScope scope;
@@ -20,17 +24,23 @@ public class FallingBall extends Simulation {
 
   @Override
   protected void init(World world) {
-    this.scope = new FallingBallWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+    this.initScope(world);
+    this.scope.build();
   }
 
-  public static void main(String[] args) {
-    Renderer.afterInit(new FallingBall());
-    Renderer.main(args);
+  protected void initScope(World world) {
+    this.scope = new FallingBallWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+
+    scope.Ball.setMass(AH.mul(((Number) new BigInteger("35")), ((Number) new BigInteger("1"))));
+    scope.Ball.getFixtureProperties().set(Prop.TEXTURE, new Color(0, 0, 255));
+    scope.Ball.getFixtureProperties().set(Prop.SHAPE, "box");
+    scope.Ball.setVelocity(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
   }
+
 
 
   @Override
-  public void render(PApplet context) {
+  public void render(PApplet context, PGraphics graphics) {
     // Escape scope as currentEntity (for relative coordinates) 
     VectorLike currentEntity = this.scope;
 
@@ -38,8 +48,13 @@ public class FallingBall extends Simulation {
     VectorLike position = new InternalVector(((Number) new BigInteger("0")), AH.mul(((BigInteger) ((Number) new BigInteger("20"))).negate(), ((Number) new BigInteger("1"))), ((BigInteger) AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))).negate());
     VectorLike focus = scope.getPosition();
 
-    context.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
+    graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
 
-    super.render(context);
+    super.render(context, graphics);
+  }
+
+  public static void main(String[] args) {
+    Renderer.afterInit(new CompositeRendererCallback(new FallingBall()));
+    Renderer.main(args);
   }
 }

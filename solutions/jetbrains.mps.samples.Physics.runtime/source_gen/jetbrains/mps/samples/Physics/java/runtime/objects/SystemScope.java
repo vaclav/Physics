@@ -38,6 +38,13 @@ public abstract class SystemScope extends VectorLike implements EntityLike {
   }
 
   @Override
+  public void build() {
+    for (EntityLike entity : nested) {
+      entity.build();
+    }
+  }
+
+  @Override
   public BigDecimal getMass() {
     if (computedMass == null) {
       computedMass = BigDecimal.ZERO;

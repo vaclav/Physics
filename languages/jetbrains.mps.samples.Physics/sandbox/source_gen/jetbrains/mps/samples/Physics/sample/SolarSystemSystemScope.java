@@ -11,7 +11,6 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.math.BigInteger;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
@@ -31,7 +30,7 @@ public class SolarSystemSystemScope extends SystemScope {
     EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("4.7819374344933695E-14").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("780.9496481471622").setScale(13, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-426.45563374507503").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(new InternalVector(AH.mul(((Number) new BigDecimal("-3.5355339059327378").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-4.3297802811774667E-16").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-3.5355339059327373").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
 
     // Initialize them 
-    Sun.init(this, world, new FixtureBuilder());
+    Sun.init(this, world);
   }
 
   public static class Sun2PhysicalEntity extends BaseObjectAbstractEntity<SolarSystemSystemScope> {
@@ -41,7 +40,7 @@ public class SolarSystemSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final SolarSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final SolarSystemSystemScope scope, final World world) {
       // Escape this for nested forces 
       Sun2PhysicalEntity currentEntity = this;
 
@@ -51,19 +50,14 @@ public class SolarSystemSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("4.7819374344933695E-14").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("780.9496481471622").setScale(13, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-426.45563374507503").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of Sun 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SHAPE, "sphere");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
       fixtureProperties.set(Prop.EMIT_LIGHT, false);
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("250")), ((Number) new BigInteger("1"))));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
 

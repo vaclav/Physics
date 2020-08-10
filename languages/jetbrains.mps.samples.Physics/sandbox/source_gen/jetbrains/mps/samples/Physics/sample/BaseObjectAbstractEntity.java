@@ -5,7 +5,6 @@ package jetbrains.mps.samples.Physics.sample;
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
@@ -22,8 +21,8 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
 
 
   @Override
-  public void init(T scope, World world, FixtureBuilder fixtureProperties) {
-    super.init(scope, world, fixtureProperties);
+  public void init(T scope, World world) {
+    super.init(scope, world);
 
     // Escape this for nested forces 
     BaseObjectAbstractEntity currentEntity = this;

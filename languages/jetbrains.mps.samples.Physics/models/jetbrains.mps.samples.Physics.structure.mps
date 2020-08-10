@@ -149,6 +149,9 @@
     <node concept="PrWs8" id="2bZvtzzMr7G" role="PzmwI">
       <ref role="PrY4T" node="2bZvtzzMfx6" resolve="IProvideCurrentWorld" />
     </node>
+    <node concept="PrWs8" id="5wwQqrVXUlt" role="PzmwI">
+      <ref role="PrY4T" node="5wwQqrVXUkT" resolve="IOverrideProperties" />
+    </node>
     <node concept="1TJgyj" id="3Nk1IDHVTW2" role="1TKVEi">
       <property role="IQ2ns" value="4383135941274869506" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -174,12 +177,12 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
-    <node concept="1TJgyj" id="38SdPTRbU0r" role="1TKVEi">
-      <property role="IQ2ns" value="3618703179458256923" />
+    <node concept="1TJgyj" id="5wwQqrVXUkN" role="1TKVEi">
+      <property role="IQ2ns" value="6350314785807508787" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="overrideRules" />
+      <property role="20kJfa" value="views" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="38SdPTRbTZH" resolve="OverrideRule" />
+      <ref role="20lvS9" node="5wwQqrVXSBO" resolve="SimulationAlternativeView" />
     </node>
     <node concept="1QGGSu" id="2bNGZcG97Q" role="rwd14">
       <property role="1iqoE4" value="${module}/icons/simulation.png" />
@@ -1200,6 +1203,27 @@
     <property role="EcuMT" value="1846966433401591006" />
     <property role="3GE5qa" value="styles" />
     <property role="TrG5h" value="IUseStyleExpressions" />
+  </node>
+  <node concept="1TIwiD" id="5wwQqrVXSBO">
+    <property role="EcuMT" value="6350314785807501812" />
+    <property role="3GE5qa" value="simulation" />
+    <property role="TrG5h" value="SimulationAlternativeView" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5wwQqrVXUkU" role="PzmwI">
+      <ref role="PrY4T" node="5wwQqrVXUkT" resolve="IOverrideProperties" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5wwQqrVXUkT">
+    <property role="EcuMT" value="6350314785807508793" />
+    <property role="3GE5qa" value="simulation" />
+    <property role="TrG5h" value="IOverrideProperties" />
+    <node concept="1TJgyj" id="5wwQqrWm7eC" role="1TKVEi">
+      <property role="IQ2ns" value="3618703179458256923" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="overrideRules" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="38SdPTRbTZH" resolve="OverrideRule" />
+    </node>
   </node>
 </model>
 

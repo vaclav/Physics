@@ -11,10 +11,12 @@ import java.util.HashMap;
 import org.ode4j.ode.DBody;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.ode.internal.DxGeom;
-import processing.core.PApplet;
+import processing.core.PGraphics;
 import java.util.List;
 
 public class World implements DGeom.DNearCallback {
+  private static boolean colliderInitialized = false;
+
   private final DWorld world;
   private final DSpace space;
   private final DJointGroup jointGroup;
@@ -39,7 +41,10 @@ public class World implements DGeom.DNearCallback {
     this.jointGroup = OdeHelper.createJointGroup();
 
     // Init colliders 
-    DxGeom.dInitColliders();
+    if (!(colliderInitialized)) {
+      colliderInitialized = true;
+      DxGeom.dInitColliders();
+    }
   }
 
   /**
@@ -96,7 +101,7 @@ public class World implements DGeom.DNearCallback {
    * 
    *  @param ctx applet context
    */
-  public void render(PApplet ctx) {
+  public void render(PGraphics ctx) {
     for (PhysicalEntity entity : lightsEmitter) {
       entity.applyLights(ctx);
     }

@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.java.runtime;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import processing.core.PApplet;
+import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRendering;
 
 public abstract class Simulation implements Renderer.RendererCallback {
@@ -22,7 +23,9 @@ public abstract class Simulation implements Renderer.RendererCallback {
 
 
   @Override
-  public void render(PApplet ctx) {
+  public void render(PApplet applet, PGraphics ctx) {
+    ctx.background(0);
+
     world.step();
     world.render(ctx);
 

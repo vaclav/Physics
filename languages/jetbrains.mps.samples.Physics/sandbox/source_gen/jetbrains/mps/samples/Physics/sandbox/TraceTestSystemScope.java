@@ -6,7 +6,6 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
@@ -31,8 +30,8 @@ public class TraceTestSystemScope extends SystemScope {
     MovingObject2 = withEntity(new MovingObject22PhysicalEntity(world, "MovingObject21"));
 
     // Initialize them 
-    MovingObject.init(this, world, new FixtureBuilder());
-    MovingObject2.init(this, world, new FixtureBuilder());
+    MovingObject.init(this, world);
+    MovingObject2.init(this, world);
   }
 
   public static class MovingObject2PhysicalEntity extends BaseObjectAbstractEntity<TraceTestSystemScope> {
@@ -42,7 +41,7 @@ public class TraceTestSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final TraceTestSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final TraceTestSystemScope scope, final World world) {
       // Escape this for nested forces 
       MovingObject2PhysicalEntity currentEntity = this;
 
@@ -52,23 +51,18 @@ public class TraceTestSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of MovingObject 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.TRACE, new Color(0, 0, 255));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList(new Force<TraceTestSystemScope>() {
         @Override
         public DVector3C compute(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
           return VectorHelper.fromInternal((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
         }
       }));
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
   public static class MovingObject22PhysicalEntity extends BaseObjectAbstractEntity<TraceTestSystemScope> {
@@ -78,7 +72,7 @@ public class TraceTestSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final TraceTestSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final TraceTestSystemScope scope, final World world) {
       // Escape this for nested forces 
       MovingObject22PhysicalEntity currentEntity = this;
 
@@ -88,23 +82,18 @@ public class TraceTestSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-65")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of MovingObject2 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.TRACE, new Color(255, 0, 0));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList(new Force<TraceTestSystemScope>() {
         @Override
         public DVector3C compute(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
           return VectorHelper.fromInternal((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
         }
       }));
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
 

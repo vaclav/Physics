@@ -4,7 +4,6 @@ package jetbrains.mps.samples.Physics.sandbox;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
@@ -19,8 +18,8 @@ public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends 
 
 
   @Override
-  public void init(T scope, World world, FixtureBuilder fixtureProperties) {
-    super.init(scope, world, fixtureProperties);
+  public void init(T scope, World world) {
+    super.init(scope, world);
 
     // Escape this for nested forces 
     RandomObjectAbstractEntity currentEntity = this;

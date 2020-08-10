@@ -41,6 +41,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IMayTargetWorld;
   private ConceptPresentation props_IObjectDefinition;
   private ConceptPresentation props_IObjectDotTarget;
+  private ConceptPresentation props_IOverrideProperties;
   private ConceptPresentation props_IProvideCurrentWorld;
   private ConceptPresentation props_ITargetExpression;
   private ConceptPresentation props_ITargetObject;
@@ -64,6 +65,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ShapeStyleExpression;
   private ConceptPresentation props_ShapeStyleKey;
   private ConceptPresentation props_Simulation;
+  private ConceptPresentation props_SimulationAlternativeView;
   private ConceptPresentation props_SphereRadiusStyle;
   private ConceptPresentation props_SphericalCoordinates;
   private ConceptPresentation props_StatefulForce;
@@ -101,7 +103,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0zc);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0bd);
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
@@ -130,7 +132,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a5b0zc);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a5b0bd);
           props_AbstractObjectDefinition = cpb.create();
         }
         return props_AbstractObjectDefinition;
@@ -311,6 +313,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IObjectDotTarget = cpb.create();
         }
         return props_IObjectDotTarget;
+      case LanguageConceptSwitch.IOverrideProperties:
+        if (props_IOverrideProperties == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IOverrideProperties = cpb.create();
+        }
+        return props_IOverrideProperties;
       case LanguageConceptSwitch.IProvideCurrentWorld:
         if (props_IProvideCurrentWorld == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -467,10 +475,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a45b0zc);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a55b0bd);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
+      case LanguageConceptSwitch.SimulationAlternativeView:
+        if (props_SimulationAlternativeView == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SimulationAlternativeView");
+          props_SimulationAlternativeView = cpb.create();
+        }
+        return props_SimulationAlternativeView;
       case LanguageConceptSwitch.SphereRadiusStyle:
         if (props_SphereRadiusStyle == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -590,7 +605,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a17b0zc);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a37b0bd);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;

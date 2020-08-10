@@ -178,6 +178,7 @@
       <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
         <reference id="1138056516764" name="link" index="3Tt5mk" />
       </concept>
+      <concept id="1228341669568" name="jetbrains.mps.lang.smodel.structure.Node_DetachOperation" flags="nn" index="3YRAZt" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -939,6 +940,37 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2S6QgY" id="5wwQqrWcU_s">
+    <property role="TrG5h" value="ApplyOverrideRule" />
+    <ref role="2ZfgGC" to="9tcj:38SdPTRbTZH" resolve="OverrideRule" />
+    <node concept="2S6ZIM" id="5wwQqrWcU_t" role="2ZfVej">
+      <node concept="3clFbS" id="5wwQqrWcU_u" role="2VODD2">
+        <node concept="3clFbF" id="5wwQqrWcUEy" role="3cqZAp">
+          <node concept="Xl_RD" id="5wwQqrWcUEx" role="3clFbG">
+            <property role="Xl_RC" value="Apply Override Rule on Target Object and Remove" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="5wwQqrWcU_v" role="2ZfgGD">
+      <node concept="3clFbS" id="5wwQqrWcU_w" role="2VODD2">
+        <node concept="3clFbF" id="5wwQqrWcUVG" role="3cqZAp">
+          <node concept="2OqwBi" id="5wwQqrWcV4k" role="3clFbG">
+            <node concept="2Sf5sV" id="5wwQqrWcUVF" role="2Oq$k0" />
+            <node concept="2qgKlT" id="5wwQqrWcVfk" role="2OqNvi">
+              <ref role="37wK5l" to="rf09:2AM6gIjLTgr" resolve="apply" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5wwQqrWcVyO" role="3cqZAp">
+          <node concept="2OqwBi" id="5wwQqrWcVFA" role="3clFbG">
+            <node concept="2Sf5sV" id="5wwQqrWcVyN" role="2Oq$k0" />
+            <node concept="3YRAZt" id="5wwQqrWcVVE" role="2OqNvi" />
           </node>
         </node>
       </node>

@@ -34,6 +34,23 @@
     <classNode extendsClassName="jetbrains.mps.intentions.AbstractIntentionDescriptor" />
     <classNode extendsClassName="jetbrains.mps.openapi.intentions.IntentionFactory" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.intentions.ApplyOverrideRule_Intention">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="jetbrains.mps.intentions.AbstractIntentionExecutable" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionDescriptor" />
+    <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionExecutable" />
+    <classNode dependClassName="jetbrains.mps.openapi.intentions.Kind" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.intentions.AbstractIntentionDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.openapi.intentions.IntentionFactory" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.intentions.IntentionsDescriptor">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Arrays" />
@@ -45,6 +62,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionFactory" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.AdaptToCartesian_Intention" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.AdaptToSpherical_Intention" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.ApplyOverrideRule_Intention" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.ResolveNumericExpression_Intention" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.ResolveToCartesian_Intention" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.ResolveToCylindrical_Intention" />

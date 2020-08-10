@@ -5,7 +5,7 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.rendering;
 import org.ode4j.ode.DGeom;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
-import processing.core.PApplet;
+import processing.core.PGraphics;
 import org.ode4j.ode.DMass;
 import org.ode4j.ode.DBody;
 
@@ -28,7 +28,7 @@ public abstract class Fixture {
    * Render the object onto the applet at 0,0,0
    * @param ctx applet context
    */
-  public void render(PApplet ctx) {
+  public void render(PGraphics ctx) {
     if (texture != null) {
       texture.apply(ctx, emitLight);
     } else {

@@ -4,7 +4,6 @@ package jetbrains.mps.samples.Physics.sandbox;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
@@ -21,8 +20,8 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
 
 
   @Override
-  public void init(T scope, World world, FixtureBuilder fixtureProperties) {
-    super.init(scope, world, fixtureProperties);
+  public void init(T scope, World world) {
+    super.init(scope, world);
 
     // Escape this for nested forces 
     PlanetAbstractEntity currentEntity = this;

@@ -6,6 +6,20 @@ import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 
 public interface EntityLike {
+
+  /**
+   * Get the mass of the entity
+   */
   BigDecimal getMass();
+
+
+  /**
+   * Get the position of the entity
+   */
   VectorLike getPosition();
+
+  /**
+   * Build entity after it's properties are set properly
+   */
+  void build();
 }

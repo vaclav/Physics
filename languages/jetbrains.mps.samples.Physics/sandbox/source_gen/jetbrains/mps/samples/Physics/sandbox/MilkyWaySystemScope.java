@@ -11,7 +11,6 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.math.BigInteger;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import java.util.Arrays;
 
@@ -33,9 +32,9 @@ public class MilkyWaySystemScope extends SystemScope {
     SolarSystem1 = withEntity(new SolarSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
-    FloatingDog.init(this, world, new FixtureBuilder());
-    Something.init(this, world, new FixtureBuilder());
-    A.init(this, world, new FixtureBuilder());
+    FloatingDog.init(this, world);
+    Something.init(this, world);
+    A.init(this, world);
   }
 
   public static class FloatingDog2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
@@ -45,7 +44,7 @@ public class MilkyWaySystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final MilkyWaySystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final MilkyWaySystemScope scope, final World world) {
       // Escape this for nested forces 
       FloatingDog2PhysicalEntity currentEntity = this;
 
@@ -55,15 +54,10 @@ public class MilkyWaySystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Floating dog 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList(new FrictionForce(((Number) new BigInteger("4")))));
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
   public static class Something2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
@@ -73,7 +67,7 @@ public class MilkyWaySystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final MilkyWaySystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final MilkyWaySystemScope scope, final World world) {
       // Escape this for nested forces 
       Something2PhysicalEntity currentEntity = this;
 
@@ -83,15 +77,10 @@ public class MilkyWaySystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Something 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
   public static class A2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
@@ -101,7 +90,7 @@ public class MilkyWaySystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final MilkyWaySystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final MilkyWaySystemScope scope, final World world) {
       // Escape this for nested forces 
       A2PhysicalEntity currentEntity = this;
 
@@ -111,15 +100,10 @@ public class MilkyWaySystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of A 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
 

@@ -9,7 +9,6 @@ import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -38,9 +37,9 @@ public class TestWorldSystemScope extends SystemScope {
     TheOtherWorld = withEntity(new World2SystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), velocity.add(InternalVector.ZERO)));
 
     // Initialize them 
-    Something3.init(this, world, new FixtureBuilder());
-    Hey.init(this, world, new FixtureBuilder());
-    Ho.init(this, world, new FixtureBuilder());
+    Something3.init(this, world);
+    Hey.init(this, world);
+    Ho.init(this, world);
   }
 
   public static class Something5PhysicalEntity extends ObjectSupertypeAbstractEntity<TestWorldSystemScope> {
@@ -50,7 +49,7 @@ public class TestWorldSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final TestWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final TestWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
       Something5PhysicalEntity currentEntity = this;
 
@@ -60,7 +59,7 @@ public class TestWorldSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Something 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SHAPE, "box");
@@ -68,17 +67,12 @@ public class TestWorldSystemScope extends SystemScope {
       fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1")))))), new Force<TestWorldSystemScope>() {
         @Override
         public DVector3C compute(World world, TestWorldSystemScope scope, PhysicalEntity targetEntity, double time) {
           return VectorHelper.fromInternal(scope.Hey.minus(currentEntity).resize(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1")))));
         }
       }, new GravityForce(AH.mul(((Number) new BigInteger("4")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), new XYZForceForce(AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))))));
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
   public static class Hey2PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
@@ -88,7 +82,7 @@ public class TestWorldSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final TestWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final TestWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
       Hey2PhysicalEntity currentEntity = this;
 
@@ -98,18 +92,13 @@ public class TestWorldSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Hey 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SHAPE, "sphere");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
   public static class Ho2PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
@@ -119,7 +108,7 @@ public class TestWorldSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final TestWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final TestWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
       Ho2PhysicalEntity currentEntity = this;
 
@@ -129,18 +118,13 @@ public class TestWorldSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Ho 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SHAPE, "sphere");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
 

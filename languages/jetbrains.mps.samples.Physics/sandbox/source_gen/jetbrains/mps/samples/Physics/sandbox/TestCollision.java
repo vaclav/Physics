@@ -7,9 +7,11 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import jetbrains.mps.samples.Physics.java.runtime.Renderer;
 import processing.core.PApplet;
+import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import jetbrains.mps.samples.Physics.java.runtime.Renderer;
+import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
 public class TestCollision extends Simulation {
   protected CollisionWorldSystemScope scope;
@@ -20,17 +22,19 @@ public class TestCollision extends Simulation {
 
   @Override
   protected void init(World world) {
-    this.scope = new CollisionWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+    this.initScope(world);
+    this.scope.build();
   }
 
-  public static void main(String[] args) {
-    Renderer.afterInit(new TestCollision());
-    Renderer.main(args);
+  protected void initScope(World world) {
+    this.scope = new CollisionWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+
   }
+
 
 
   @Override
-  public void render(PApplet context) {
+  public void render(PApplet context, PGraphics graphics) {
     // Escape scope as currentEntity (for relative coordinates) 
     VectorLike currentEntity = this.scope;
 
@@ -38,8 +42,13 @@ public class TestCollision extends Simulation {
     VectorLike position = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("600")), ((Number) new BigInteger("1")))).negate());
     VectorLike focus = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
 
-    context.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
+    graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
 
-    super.render(context);
+    super.render(context, graphics);
+  }
+
+  public static void main(String[] args) {
+    Renderer.afterInit(new CompositeRendererCallback(new TestCollision(), new TestCollision0_rr4rio_aAlternativeView()));
+    Renderer.main(args);
   }
 }

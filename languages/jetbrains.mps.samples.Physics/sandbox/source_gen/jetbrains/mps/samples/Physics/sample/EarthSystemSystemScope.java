@@ -6,7 +6,6 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
@@ -31,8 +30,8 @@ public class EarthSystemSystemScope extends SystemScope {
     Moon = withEntity(new Moon2PhysicalEntity(world, "Moon1"));
 
     // Initialize them 
-    Earth.init(this, world, new FixtureBuilder());
-    Moon.init(this, world, new FixtureBuilder());
+    Earth.init(this, world);
+    Moon.init(this, world);
   }
 
   public static class Earth2PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
@@ -42,7 +41,7 @@ public class EarthSystemSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final EarthSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final EarthSystemSystemScope scope, final World world) {
       // Escape this for nested forces 
       Earth2PhysicalEntity currentEntity = this;
 
@@ -52,17 +51,12 @@ public class EarthSystemSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Earth 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.TEXTURE, new Color(0, 0, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("63")), ((Number) new BigInteger("1"))));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
   public static class Moon2PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
@@ -72,7 +66,7 @@ public class EarthSystemSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final EarthSystemSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final EarthSystemSystemScope scope, final World world) {
       // Escape this for nested forces 
       Moon2PhysicalEntity currentEntity = this;
 
@@ -82,17 +76,12 @@ public class EarthSystemSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("6")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of Moon 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("17")), ((Number) new BigInteger("1"))));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
 

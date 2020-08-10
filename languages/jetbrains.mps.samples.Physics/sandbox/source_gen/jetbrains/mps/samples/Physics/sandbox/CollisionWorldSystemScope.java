@@ -6,7 +6,6 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
@@ -36,10 +35,10 @@ public class CollisionWorldSystemScope extends SystemScope {
     D = withEntity(new D2PhysicalEntity(world, "D1"));
 
     // Initialize them 
-    A3.init(this, world, new FixtureBuilder());
-    B.init(this, world, new FixtureBuilder());
-    C.init(this, world, new FixtureBuilder());
-    D.init(this, world, new FixtureBuilder());
+    A3.init(this, world);
+    B.init(this, world);
+    C.init(this, world);
+    D.init(this, world);
   }
 
   public static class A5PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
@@ -49,7 +48,7 @@ public class CollisionWorldSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final CollisionWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final CollisionWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
       A5PhysicalEntity currentEntity = this;
 
@@ -59,18 +58,13 @@ public class CollisionWorldSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.15").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of A 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.TEXTURE, new Color(0, 255, 0));
       fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.BOUNCE);
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
   public static class B2PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
@@ -80,7 +74,7 @@ public class CollisionWorldSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final CollisionWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final CollisionWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
       B2PhysicalEntity currentEntity = this;
 
@@ -90,18 +84,13 @@ public class CollisionWorldSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of B 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
       fixtureProperties.set(Prop.EMIT_LIGHT, true);
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
   public static class C2PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
@@ -111,7 +100,7 @@ public class CollisionWorldSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final CollisionWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final CollisionWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
       C2PhysicalEntity currentEntity = this;
 
@@ -121,18 +110,13 @@ public class CollisionWorldSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of C 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.TEXTURE, new Color(0, 0, 255));
       fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.IGNORE);
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
   public static class D2PhysicalEntity extends BaseObjectAbstractEntity<CollisionWorldSystemScope> {
@@ -142,7 +126,7 @@ public class CollisionWorldSystemScope extends SystemScope {
     }
 
     @Override
-    public void init(final CollisionWorldSystemScope scope, final World world, FixtureBuilder fixtureProperties) {
+    public void init(final CollisionWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
       D2PhysicalEntity currentEntity = this;
 
@@ -152,18 +136,13 @@ public class CollisionWorldSystemScope extends SystemScope {
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of D 
-      super.init(scope, world, fixtureProperties);
+      super.init(scope, world);
 
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.MERGE);
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 165, 0));
-      this.setFixture(fixtureProperties.build(world));
       this.getForces().addAll(Arrays.asList());
-
-      // Bind fixture and mass together 
-      this.bindFixture();
-      world.addEntity(this);
     }
   }
 

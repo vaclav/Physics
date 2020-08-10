@@ -9,11 +9,11 @@
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
-    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color">
-    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture">
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
@@ -23,13 +23,13 @@
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
-    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRendering">
     <classNode dependClassName="java.lang.StringBuilder" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
-    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture">
     <classNode dependClassName="java.lang.Math" />
@@ -40,13 +40,13 @@
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
-    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler">
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
-    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
   </dependency>
 </dependenciesRoot>
 

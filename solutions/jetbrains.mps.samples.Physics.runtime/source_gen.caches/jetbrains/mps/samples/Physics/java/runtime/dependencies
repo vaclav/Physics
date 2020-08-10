@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.Renderer">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="processing.core.PApplet" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.Simulation">
@@ -10,6 +18,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRendering" />
     <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.VectorHelper">

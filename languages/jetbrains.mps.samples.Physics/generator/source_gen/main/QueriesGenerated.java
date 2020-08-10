@@ -13,7 +13,6 @@ import jetbrains.mps.samples.Physics.plugin.PositioningResolver;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
-import jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor;
 import java.util.Map;
 import jetbrains.mps.generator.impl.query.ScriptCodeBlock;
 import java.util.HashMap;
@@ -59,11 +58,6 @@ public class QueriesGenerated extends QueryProviderBase {
     SModelOperations.addRootNode(_context.getModel(), baseObject);
   }
   public static void mappingScript_CodeBlock_3(final MappingScriptContext _context) {
-    ListSequence.fromList(SModelOperations.nodes(_context.getModel(), CONCEPTS.OverrideRule$lC)).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        OverrideRule__BehaviorDescriptor.apply_id2AM6gIjLTgr.invoke(it);
-      }
-    });
   }
   private final Map<String, ScriptCodeBlock> mscbMethods = new HashMap<String, ScriptCodeBlock>();
   {
@@ -118,7 +112,6 @@ public class QueriesGenerated extends QueryProviderBase {
   private static final class CONCEPTS {
     /*package*/ static final SConcept Simulation$oX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, "jetbrains.mps.samples.Physics.structure.Simulation");
     /*package*/ static final SConcept AbstractObjectDefinition$O = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, "jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition");
-    /*package*/ static final SConcept OverrideRule$lC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
     /*package*/ static final SConcept AbstractObjectReference$1j = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, "jetbrains.mps.samples.Physics.structure.AbstractObjectReference");
   }
 
