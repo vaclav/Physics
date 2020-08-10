@@ -215,14 +215,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.CurrentObjectExpression:
         if (props_CurrentObjectExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("current object");
+          cpb.rawPresentation("self");
           props_CurrentObjectExpression = cpb.create();
         }
         return props_CurrentObjectExpression;
       case LanguageConceptSwitch.CurrentWorldExpression:
         if (props_CurrentWorldExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("current world");
+          cpb.rawPresentation("world");
           props_CurrentWorldExpression = cpb.create();
         }
         return props_CurrentWorldExpression;

@@ -1035,8 +1035,8 @@
     <file name="ConceptPresentationAspectImpl.java">
       <node id="232455383964481302" at="29,0,30,0" concept="2" trace="props_CurrentObjectExpression" />
       <node id="232455383964481302" at="216,52,217,76" concept="5" />
-      <node id="232455383964481302" at="217,76,218,48" concept="1" />
-      <node id="232455383964481302" at="218,48,219,55" concept="1" />
+      <node id="232455383964481302" at="217,76,218,38" concept="1" />
+      <node id="232455383964481302" at="218,38,219,55" concept="1" />
       <node id="232455383964481302" at="220,9,221,45" concept="6" />
       <node id="232455383964481302" at="215,57,220,9" concept="3" />
       <scope id="232455383964481302" at="216,52,219,55">
@@ -1056,8 +1056,8 @@
       <node id="232455383964481302" at="458,34,459,125" concept="1" />
       <node id="232455383964481302" at="460,75,461,115" concept="1" />
       <node id="232455383964481302" at="461,115,462,17" concept="1" />
-      <node id="232455383964481302" at="462,17,463,30" concept="1" />
-      <node id="232455383964481302" at="463,30,464,22" concept="6" />
+      <node id="232455383964481302" at="462,17,463,20" concept="1" />
+      <node id="232455383964481302" at="463,20,464,22" concept="6" />
       <node id="232455383964481302" at="456,0,466,0" concept="8" trace="createDescriptorForCurrentObjectExpression#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="232455383964481302" at="158,57,159,48" />
       <scope id="232455383964481302" at="456,81,464,22">
@@ -1178,8 +1178,8 @@
     <file name="ConceptPresentationAspectImpl.java">
       <node id="2521872686837820853" at="30,0,31,0" concept="2" trace="props_CurrentWorldExpression" />
       <node id="2521872686837820853" at="223,51,224,76" concept="5" />
-      <node id="2521872686837820853" at="224,76,225,47" concept="1" />
-      <node id="2521872686837820853" at="225,47,226,54" concept="1" />
+      <node id="2521872686837820853" at="224,76,225,39" concept="1" />
+      <node id="2521872686837820853" at="225,39,226,54" concept="1" />
       <node id="2521872686837820853" at="227,9,228,44" concept="6" />
       <node id="2521872686837820853" at="222,56,227,9" concept="3" />
       <scope id="2521872686837820853" at="223,51,226,54">
@@ -1199,8 +1199,8 @@
       <node id="2521872686837820853" at="468,34,469,125" concept="1" />
       <node id="2521872686837820853" at="470,76,471,116" concept="1" />
       <node id="2521872686837820853" at="471,116,472,17" concept="1" />
-      <node id="2521872686837820853" at="472,17,473,29" concept="1" />
-      <node id="2521872686837820853" at="473,29,474,22" concept="6" />
+      <node id="2521872686837820853" at="472,17,473,21" concept="1" />
+      <node id="2521872686837820853" at="473,21,474,22" concept="6" />
       <node id="2521872686837820853" at="466,0,476,0" concept="8" trace="createDescriptorForCurrentWorldExpression#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="2521872686837820853" at="160,56,161,47" />
       <scope id="2521872686837820853" at="466,80,474,22">

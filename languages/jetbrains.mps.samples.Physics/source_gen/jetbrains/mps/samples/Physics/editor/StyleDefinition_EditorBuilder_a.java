@@ -23,6 +23,7 @@ import jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.StyleNameSt
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.editor.runtime.style.FocusPolicy;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 /*package*/ class StyleDefinition_EditorBuilder_a extends AbstractEditorBuilder {
@@ -168,6 +169,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
       if (editorCell.getSRole() == null) {
         editorCell.setSRole(LINKS.value$4y25);
+      }
+      if (true) {
+        editorCell.getStyle().set(StyleAttributes.FOCUS_POLICY, FocusPolicy.ATTRACTS_FOCUS);
       }
     }
     @Override

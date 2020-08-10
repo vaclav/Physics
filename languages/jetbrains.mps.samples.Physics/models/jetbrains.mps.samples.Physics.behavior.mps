@@ -1730,7 +1730,7 @@
       <node concept="3clFbS" id="GdoRjGrkQG" role="2VODD2" />
     </node>
     <node concept="13i0hz" id="GdoRjGrkQP" role="13h7CS">
-      <property role="TrG5h" value="getTargetObject" />
+      <property role="TrG5h" value="getLocalizedTargetObject" />
       <ref role="13i0hy" node="GdoRjGrk0_" resolve="getLocalizedObjectTarget" />
       <node concept="3Tm1VV" id="GdoRjGrkQQ" role="1B3o_S" />
       <node concept="3clFbS" id="GdoRjGrkQT" role="3clF47">
@@ -1750,6 +1750,19 @@
       <node concept="3Tqbb2" id="GdoRjGrkQU" role="3clF45">
         <ref role="ehGHo" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
       </node>
+    </node>
+    <node concept="13i0hz" id="7PRrf2c1ivO" role="13h7CS">
+      <property role="TrG5h" value="renderReadable" />
+      <ref role="13i0hy" to="pbu6:4Y0vh0cfqjE" resolve="renderReadable" />
+      <node concept="3Tm1VV" id="7PRrf2c1ivP" role="1B3o_S" />
+      <node concept="3clFbS" id="7PRrf2c1iw2" role="3clF47">
+        <node concept="3clFbF" id="7PRrf2c1iDU" role="3cqZAp">
+          <node concept="Xl_RD" id="7PRrf2c1iDT" role="3clFbG">
+            <property role="Xl_RC" value="self" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="7PRrf2c1iw3" role="3clF45" />
     </node>
   </node>
   <node concept="13h7C7" id="GdoRjGvovy">
@@ -3659,6 +3672,19 @@
       <node concept="3Tqbb2" id="1pEOKrtw_4j" role="3clF45">
         <ref role="ehGHo" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
       </node>
+    </node>
+    <node concept="13i0hz" id="7PRrf2c1ifB" role="13h7CS">
+      <property role="TrG5h" value="renderReadable" />
+      <ref role="13i0hy" to="pbu6:4Y0vh0cfqjE" resolve="renderReadable" />
+      <node concept="3Tm1VV" id="7PRrf2c1ifC" role="1B3o_S" />
+      <node concept="3clFbS" id="7PRrf2c1ifP" role="3clF47">
+        <node concept="3clFbF" id="7PRrf2c1itU" role="3cqZAp">
+          <node concept="Xl_RD" id="7PRrf2c1itT" role="3clFbG">
+            <property role="Xl_RC" value="otherObject" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="7PRrf2c1ifQ" role="3clF45" />
     </node>
   </node>
 </model>

@@ -21,6 +21,7 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.KeyWordStyleClass;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 /*package*/ class RelativeCoordinates_EditorBuilder_a extends AbstractEditorBuilder {
@@ -112,7 +113,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.setCellId("Constant_6rdvla_b0");
     Style style = new StyleImpl();
     new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.EDITABLE, false);
     editorCell.getStyle().putAll(style);
+    removeRelativeCoordinates.setCellActions(editorCell, myNode, getEditorContext());
     editorCell.setDefaultText("");
     return editorCell;
   }

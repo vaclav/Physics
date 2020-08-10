@@ -23,15 +23,19 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 public final class CurrentObjectExpression__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L, "jetbrains.mps.samples.Physics.structure.CurrentObjectExpression");
 
-  public static final SMethod<SNode> getLocalizedObjectTarget_idGdoRjGrk0_ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGrk0_").build();
+  public static final SMethod<SNode> getLocalizedObjectTarget_idGdoRjGrk0_ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLocalizedTargetObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGrk0_").build();
+  public static final SMethod<String> renderReadable_id4Y0vh0cfqjE = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4Y0vh0cfqjE").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLocalizedObjectTarget_idGdoRjGrk0_);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLocalizedObjectTarget_idGdoRjGrk0_, renderReadable_id4Y0vh0cfqjE);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
   /*package*/ static SNode getLocalizedObjectTarget_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
     return SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$9a, false, false);
+  }
+  /*package*/ static String renderReadable_id4Y0vh0cfqjE(@NotNull SNode __thisNode__) {
+    return "self";
   }
 
   /*package*/ CurrentObjectExpression__BehaviorDescriptor() {
@@ -51,6 +55,8 @@ public final class CurrentObjectExpression__BehaviorDescriptor extends BaseBHDes
     switch (methodIndex) {
       case 0:
         return (T) ((SNode) getLocalizedObjectTarget_idGdoRjGrk0_(node));
+      case 1:
+        return (T) ((String) renderReadable_id4Y0vh0cfqjE(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

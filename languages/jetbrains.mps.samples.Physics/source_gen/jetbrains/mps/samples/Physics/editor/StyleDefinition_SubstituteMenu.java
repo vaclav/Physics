@@ -21,6 +21,8 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.editor.runtime.selection.SelectionUtil;
+import jetbrains.mps.openapi.editor.selection.SelectionManager;
 import jetbrains.mps.openapi.editor.menus.style.EditorMenuItemStyle;
 import jetbrains.mps.lang.editor.menus.substitute.SubstituteMenuContextToEditorMenuItemCreatingCustomizationContext;
 import jetbrains.mps.lang.editor.menus.substitute.SubstituteMenuContextToEditorMenuItemModifyingCustomizationContext;
@@ -90,6 +92,7 @@ public class StyleDefinition_SubstituteMenu extends SubstituteMenuBase {
           myCreatedNode = nodeToWrap;
           SNode node = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, "jetbrains.mps.samples.Physics.structure.StyleDefinition"));
           SLinkOperations.setTarget(node, LINKS.key$4rdb, nodeToWrap);
+          SelectionUtil.selectCell(_context.getEditorContext(), node, SelectionManager.LAST_EDITABLE_CELL);
           return node;
         }
         @Override

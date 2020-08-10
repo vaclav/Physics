@@ -696,7 +696,7 @@
     <property role="EcuMT" value="232455383964481302" />
     <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="CurrentObjectExpression" />
-    <property role="34LRSv" value="current object" />
+    <property role="34LRSv" value="self" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="PrWs8" id="GdoRjGrkQC" role="PzmwI">
       <ref role="PrY4T" node="GdoRjGrjZN" resolve="ITargetObject" />
@@ -1029,7 +1029,7 @@
     <property role="EcuMT" value="2521872686837820853" />
     <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="CurrentWorldExpression" />
-    <property role="34LRSv" value="current world" />
+    <property role="34LRSv" value="world" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="PrWs8" id="2bZvtzzMbTC" role="PzmwI">
       <ref role="PrY4T" node="2bZvtzzMbPQ" resolve="IMayTargetWorld" />
