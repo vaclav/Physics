@@ -22,7 +22,7 @@ import junit.framework.Assert;
 @MPSLaunch
 public class TestConversions_Test extends BaseTransformationTest {
   @ClassRule
-  public static final TestParametersCache ourParamCache = new TestParametersCache(TestConversions_Test.class, "${project_home}", "r:27937d7a-e9ee-450f-ab75-2e6d6320871f(jetbrains.mps.samples.Physics.test.interpreter@tests)", false);
+  public static final TestParametersCache ourParamCache = new TestParametersCache(TestConversions_Test.class, "${jetbrains.mps.samples.Physics.home}", "r:27937d7a-e9ee-450f-ab75-2e6d6320871f(jetbrains.mps.samples.Physics.test.interpreter@tests)", false);
   @Rule
   public final RunWithCommand myWithCommandRule = new RunWithCommand(this);
 

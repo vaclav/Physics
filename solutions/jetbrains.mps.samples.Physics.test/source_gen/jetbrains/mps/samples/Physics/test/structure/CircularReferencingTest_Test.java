@@ -20,7 +20,7 @@ import jetbrains.mps.project.ProjectBase;
 @MPSLaunch
 public class CircularReferencingTest_Test extends BaseTransformationTest {
   @ClassRule
-  public static final TestParametersCache ourParamCache = new TestParametersCache(CircularReferencingTest_Test.class, "${project_home}", "r:0aef0149-b947-489c-9913-1dba741f6bbb(jetbrains.mps.samples.Physics.test.structure@tests)", false);
+  public static final TestParametersCache ourParamCache = new TestParametersCache(CircularReferencingTest_Test.class, "${jetbrains.mps.samples.Physics.home}", "r:0aef0149-b947-489c-9913-1dba741f6bbb(jetbrains.mps.samples.Physics.test.structure@tests)", false);
   @Rule
   public final RunWithCommand myWithCommandRule = new RunWithCommand(this);
 

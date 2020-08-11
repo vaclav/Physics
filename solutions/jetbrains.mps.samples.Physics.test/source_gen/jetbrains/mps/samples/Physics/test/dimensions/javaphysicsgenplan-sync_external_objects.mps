@@ -887,7 +887,7 @@
         <node concept="385nmt" id="3U" role="385vvn">
           <property role="385vuF" value="BaseObject" />
           <node concept="2$VJBW" id="3W" role="385v07">
-            <property role="2$VJBR" value="4225643208649616422" />
+            <property role="2$VJBR" value="2779508323578328447" />
             <node concept="2x4n5u" id="3X" role="3iCydw">
               <property role="2x4mPI" value="AbstractObjectDefinition" />
               <property role="2x4n5l" value="b377xleir29v" />
@@ -1915,7 +1915,7 @@
     </node>
   </node>
   <node concept="2XOHcx" id="ae">
-    <property role="2XOHcw" value="${project_home}" />
+    <property role="2XOHcw" value="${jetbrains.mps.samples.Physics.home}" />
     <node concept="cd27G" id="af" role="lGtFl">
       <node concept="3u3nmq" id="ag" role="cd27D">
         <property role="3u3nmv" value="1655454202714848752" />

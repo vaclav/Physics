@@ -921,7 +921,7 @@
     </node>
   </node>
   <node concept="2XOHcx" id="1rTmHeeJJRK">
-    <property role="2XOHcw" value="${project_home}" />
+    <property role="2XOHcw" value="${jetbrains.mps.samples.Physics.home}" />
   </node>
 </model>
 

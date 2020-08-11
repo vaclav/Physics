@@ -515,7 +515,7 @@
     </node>
   </node>
   <node concept="2XOHcx" id="1rTmHeeJJRK">
-    <property role="2XOHcw" value="${project_home}" />
+    <property role="2XOHcw" value="${jetbrains.mps.samples.Physics.home}" />
   </node>
   <node concept="1lH9Xt" id="M__cqnvbp2">
     <property role="TrG5h" value="UndefinedPropertiesTest" />
