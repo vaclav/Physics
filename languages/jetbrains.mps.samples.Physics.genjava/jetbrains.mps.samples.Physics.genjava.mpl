@@ -135,9 +135,6 @@
       <mapping-priorities />
     </generator>
   </generators>
-  <stubModelEntries>
-    <stubModelEntry path="C:/Users/clebo/.m2/repository/org/ode4j/core/0.4.0/core-0.4.0.jar" />
-  </stubModelEntries>
   <sourcePath />
   <dependencies>
     <dependency reexport="false">59283cba-afa8-49c4-b10d-6ff0ede2c408(jetbrains.mps.samples.Physics.java.runtime)</dependency>
