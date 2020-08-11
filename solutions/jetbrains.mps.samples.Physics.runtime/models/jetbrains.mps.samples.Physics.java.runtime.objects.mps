@@ -18,7 +18,6 @@
     <import index="r7oa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:processing.core(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="xwt6" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.math(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="bz7x" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.ode.internal(jetbrains.mps.samples.Physics.java.runtime/)" />
-    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -963,49 +962,8 @@
                 </node>
               </node>
             </node>
-            <node concept="3clFbF" id="20wM4XNw$Yo" role="3cqZAp">
-              <node concept="2OqwBi" id="20wM4XNw$Yl" role="3clFbG">
-                <node concept="10M0yZ" id="20wM4XNw$Ym" role="2Oq$k0">
-                  <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-                  <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-                </node>
-                <node concept="liA8E" id="20wM4XNw$Yn" role="2OqNvi">
-                  <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.Object)" resolve="println" />
-                  <node concept="37vLTw" id="20wM4XNw_6A" role="37wK5m">
-                    <ref role="3cqZAo" node="20wM4XN4eJi" resolve="applicationPoint" />
-                  </node>
-                </node>
-              </node>
-            </node>
             <node concept="3clFbJ" id="20wM4XN4fs5" role="3cqZAp">
               <node concept="3clFbS" id="20wM4XN4fs7" role="3clFbx">
-                <node concept="3clFbF" id="20wM4XNw_fd" role="3cqZAp">
-                  <node concept="2OqwBi" id="20wM4XNw_fa" role="3clFbG">
-                    <node concept="10M0yZ" id="20wM4XNw_fb" role="2Oq$k0">
-                      <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-                      <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-                    </node>
-                    <node concept="liA8E" id="20wM4XNw_fc" role="2OqNvi">
-                      <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String)" resolve="println" />
-                      <node concept="3cpWs3" id="20wM4XNw_Nn" role="37wK5m">
-                        <node concept="Xl_RD" id="20wM4XNw_jw" role="3uHU7B">
-                          <property role="Xl_RC" value="computing torque : " />
-                        </node>
-                        <node concept="2YIFZM" id="20wM4XNw_PW" role="3uHU7w">
-                          <ref role="1Pybhc" to="4bo7:3H79Ykd2G_d" resolve="Force" />
-                          <ref role="37wK5l" to="4bo7:20wM4XN4gBv" resolve="computeTorque" />
-                          <node concept="37vLTw" id="20wM4XNw_PX" role="37wK5m">
-                            <ref role="3cqZAo" node="20wM4XN4dtc" resolve="forceInitial" />
-                          </node>
-                          <node concept="37vLTw" id="20wM4XNw_PY" role="37wK5m">
-                            <ref role="3cqZAo" node="20wM4XN4eJi" resolve="applicationPoint" />
-                          </node>
-                          <node concept="Xjq3P" id="20wM4XNw_PZ" role="37wK5m" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
                 <node concept="3clFbF" id="20wM4XN4fZb" role="3cqZAp">
                   <node concept="2OqwBi" id="20wM4XN4gjX" role="3clFbG">
                     <node concept="37vLTw" id="20wM4XN4fZ9" role="2Oq$k0">

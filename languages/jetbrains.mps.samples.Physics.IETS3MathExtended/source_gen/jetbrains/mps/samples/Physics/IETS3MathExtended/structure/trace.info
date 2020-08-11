@@ -15,7 +15,12 @@
       <unit at="10,0,28,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="15,0,63,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.structure.StructureAspectDescriptor" />
+      <unit at="18,0,71,0" name="jetbrains.mps.samples.Physics.IETS3MathExtended.structure.StructureAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.IETS3MathExtended.structure)/1430471042026326023">
+    <file name="StructureAspectDescriptor.java">
+      <node id="1430471042026326023" at="20,0,21,0" concept="1" trace="myCSDatatypefloat" />
     </file>
   </root>
   <root nodeRef="r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.IETS3MathExtended.structure)/6539217963580430803">
@@ -36,23 +41,23 @@
       <node id="6539217963580430803" at="15,116,16,54" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <node id="6539217963580430803" at="16,0,17,0" concept="1" trace="myConceptNRootExpression" />
-      <node id="6539217963580430803" at="39,49,40,40" concept="4" />
-      <node id="6539217963580430803" at="51,73,52,197" concept="3" />
-      <node id="6539217963580430803" at="52,197,53,34" concept="0" />
-      <node id="6539217963580430803" at="53,34,54,125" concept="0" />
-      <node id="6539217963580430803" at="54,125,55,134" concept="0" />
-      <node id="6539217963580430803" at="55,134,56,17" concept="0" />
-      <node id="5344936513388892066" at="56,17,57,179" concept="0" />
-      <node id="6539217963580464186" at="57,179,58,204" concept="0" />
-      <node id="6539217963580430803" at="58,204,59,22" concept="0" />
-      <node id="6539217963580430803" at="59,22,60,22" concept="4" />
-      <node id="6539217963580430803" at="51,0,62,0" concept="6" trace="createDescriptorForNRootExpression#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
-      <scope id="6539217963580430803" at="39,49,40,40" />
-      <scope id="6539217963580430803" at="51,73,60,22">
+      <node id="6539217963580430803" at="19,0,20,0" concept="1" trace="myConceptNRootExpression" />
+      <node id="6539217963580430803" at="43,49,44,40" concept="4" />
+      <node id="6539217963580430803" at="59,73,60,197" concept="3" />
+      <node id="6539217963580430803" at="60,197,61,34" concept="0" />
+      <node id="6539217963580430803" at="61,34,62,125" concept="0" />
+      <node id="6539217963580430803" at="62,125,63,134" concept="0" />
+      <node id="6539217963580430803" at="63,134,64,17" concept="0" />
+      <node id="5344936513388892066" at="64,17,65,179" concept="0" />
+      <node id="6539217963580464186" at="65,179,66,204" concept="0" />
+      <node id="6539217963580430803" at="66,204,67,22" concept="0" />
+      <node id="6539217963580430803" at="67,22,68,22" concept="4" />
+      <node id="6539217963580430803" at="59,0,70,0" concept="6" trace="createDescriptorForNRootExpression#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="6539217963580430803" at="43,49,44,40" />
+      <scope id="6539217963580430803" at="59,73,68,22">
         <var name="b" id="6539217963580430803" />
       </scope>
-      <scope id="6539217963580430803" at="51,0,62,0" />
+      <scope id="6539217963580430803" at="59,0,70,0" />
     </file>
   </root>
 </debug-info>

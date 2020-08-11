@@ -4,13 +4,10 @@ package jetbrains.mps.samples.Physics.dimensions.structure;
 
 import jetbrains.mps.smodel.runtime.BaseStructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptDescriptor;
-import jetbrains.mps.smodel.runtime.ConstrainedStringDatatypeDescriptor;
-import jetbrains.mps.smodel.runtime.ConstrainedStringDatatypeDescriptorImpl;
 import java.util.Collection;
 import java.util.Arrays;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
-import jetbrains.mps.smodel.runtime.DataTypeDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
@@ -35,7 +32,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptUnitExpression = createDescriptorForUnitExpression();
   /*package*/ final ConceptDescriptor myConceptUnitReference = createDescriptorForUnitReference();
   /*package*/ final ConceptDescriptor myConceptUseUnitExpressionAs = createDescriptorForUseUnitExpressionAs();
-  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypefloat = new ConstrainedStringDatatypeDescriptorImpl(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571764807L, "float", "r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/1430471042026326023", "-?[0-9]+\\.?[0-9]*([Ee][\\+\\-]?[0-9]+)?");
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -103,10 +99,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     }
   }
 
-  @Override
-  public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myCSDatatypefloat);
-  }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
     return myIndexSwitch.index(c);
@@ -193,7 +185,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.interface_();
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/1430471042027183270");
     b.version(2);
-    b.property("factor", 0x13da0dd571835ca8L).type(MetaIdFactory.dataTypeId(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571764807L)).origin("1430471042027183272").done();
+    b.property("factor", 0x13da0dd571835ca8L).type(MetaIdFactory.dataTypeId(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x13da0dd571764807L)).origin("1430471042027183272").done();
     b.property("selfLeft", 0x13da0dd571835caaL).type(PrimitiveTypeId.BOOLEAN).origin("1430471042027183274").done();
     return b.create();
   }

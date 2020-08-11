@@ -74,9 +74,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
 
       // Compute torque with application point (if null -> apply force on center so no torque) 
       DVector3C applicationPoint = force.applicationPoint(world, scope, this, time);
-      System.out.println(applicationPoint);
       if (applicationPoint != null) {
-        System.out.println("computing torque : " + Force.computeTorque(forceInitial, applicationPoint, this));
         body.addTorque(Force.computeTorque(forceInitial, applicationPoint, this));
       }
     }

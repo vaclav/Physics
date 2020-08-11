@@ -7,10 +7,15 @@
   </languages>
   <imports>
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
-    <import index="onwr" ref="r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
+        <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
+      </concept>
+      <concept id="1082978499127" name="jetbrains.mps.lang.structure.structure.ConstrainedDataTypeDeclaration" flags="ng" index="Az7Fb">
+        <property id="1083066089218" name="constraint" index="FLfZY" />
+      </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
@@ -57,8 +62,13 @@
     <node concept="1TJgyi" id="4CH1R2NzOYy" role="1TKVEl">
       <property role="IQ2nx" value="5344936513388892066" />
       <property role="TrG5h" value="exponent" />
-      <ref role="AX2Wp" to="onwr:1fq3tlLt$w7" resolve="float" />
+      <ref role="AX2Wp" node="1fq3tlLt$w7" resolve="float" />
     </node>
+  </node>
+  <node concept="Az7Fb" id="1fq3tlLt$w7">
+    <property role="3F6X1D" value="1430471042026326023" />
+    <property role="FLfZY" value="-?[0-9]+\\.?[0-9]*([Ee][\\+\\-]?[0-9]+)?" />
+    <property role="TrG5h" value="float" />
   </node>
 </model>
 
