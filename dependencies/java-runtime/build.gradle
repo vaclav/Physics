@@ -1,0 +1,20 @@
+plugins {
+    id 'java-library' 
+    id "com.github.johnrengelman.shadow" version "5.2.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Java runtime dependencies
+    api "org.ode4j:core:0.4.0"
+    api "org.slf4j:slf4j-api:1.5.6"
+    api "org.slf4j:slf4j-simple:1.5.6"
+    api "org.processing:core:3.3.6"
+    api "org.jogamp.jogl:jogl-all-main:2.3.2"
+    api "org.jogamp.gluegen:gluegen-rt-main:2.3.2"
+}
+
+defaultTasks 'shadowJar'

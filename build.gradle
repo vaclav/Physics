@@ -1,0 +1,15 @@
+task applyLibraries(type: Copy) {
+	from 'dependencies/.libraries.xml'
+	into '.mps/'
+	rename { String fileName -> 'libraries.xml' }
+}
+
+task packageJavaRuntime {
+	dependsOn ":dependencies:java-runtime:shadowJar"
+}
+
+task resolveDependencies {
+    dependsOn packageJavaRuntime
+    dependsOn gradle.includedBuild('iets3.opensource').task(':buildLanguages')
+    dependsOn applyLibraries
+}
