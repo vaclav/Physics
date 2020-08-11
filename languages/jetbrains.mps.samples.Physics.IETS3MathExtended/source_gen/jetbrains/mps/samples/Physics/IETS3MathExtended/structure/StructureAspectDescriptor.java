@@ -4,16 +4,20 @@ package jetbrains.mps.samples.Physics.IETS3MathExtended.structure;
 
 import jetbrains.mps.smodel.runtime.BaseStructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptDescriptor;
+import jetbrains.mps.smodel.runtime.ConstrainedStringDatatypeDescriptor;
+import jetbrains.mps.smodel.runtime.ConstrainedStringDatatypeDescriptorImpl;
 import java.util.Collection;
 import java.util.Arrays;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
+import jetbrains.mps.smodel.runtime.DataTypeDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptNRootExpression = createDescriptorForNRootExpression();
+  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypefloat = new ConstrainedStringDatatypeDescriptorImpl(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x13da0dd571764807L, "float", "r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.IETS3MathExtended.structure)/1430471042026326023", "-?[0-9]+\\.?[0-9]*([Ee][\\+\\-]?[0-9]+)?");
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -43,6 +47,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     }
   }
 
+  @Override
+  public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
+    return Arrays.asList(myCSDatatypefloat);
+  }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
     return myIndexSwitch.index(c);
@@ -54,7 +62,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
     b.origin("r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.IETS3MathExtended.structure)/6539217963580430803");
     b.version(2);
-    b.property("exponent", 0x4a2d0770b38f4fa2L).type(MetaIdFactory.dataTypeId(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571764807L)).origin("5344936513388892066").done();
+    b.property("exponent", 0x4a2d0770b38f4fa2L).type(MetaIdFactory.dataTypeId(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x13da0dd571764807L)).origin("5344936513388892066").done();
     b.aggregate("expression", 0x5abff81774111c3aL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("6539217963580464186").done();
     b.alias("n-root");
     return b.create();
