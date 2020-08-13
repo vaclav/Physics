@@ -9,20 +9,26 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
+import jetbrains.mps.lang.editor.menus.transformation.NamedTransformationMenuLookup;
+import jetbrains.mps.smodel.language.LanguageRegistry;
+import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart;
 import jetbrains.mps.openapi.editor.cells.DefaultSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo;
-import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.KeyWordStyleClass;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
+import jetbrains.mps.nodeEditor.cells.EditorCell_ContextAssistantComponent;
+import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 /*package*/ class RelativeCoordinates_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -48,10 +54,19 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.setCellId("Collection_6rdvla_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.RelativeCoordinates$c7, "jetbrains.mps.samples.Physics.editor.Oriented_RelativeCoordinates_Transform"));
+    editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     editorCell.addEditorCell(createRefNode_0());
     editorCell.addEditorCell(createConstant_0());
+    if (nodeCondition_6rdvla_a2a()) {
+      editorCell.addEditorCell(createConstant_1());
+    }
     editorCell.addEditorCell(createRefNode_1());
+    editorCell.addEditorCell(createContextAssistant_0());
     return editorCell;
+  }
+  private boolean nodeCondition_6rdvla_a2a() {
+    return SPropertyOperations.getBoolean(myNode, PROPS.isOriented$Afmy);
   }
   private EditorCell createRefNode_0() {
     SingleRoleCellProvider provider = new coordinatesSingleRoleHandler_6rdvla_a0(myNode, LINKS.coordinates$l1nt, getEditorContext());
@@ -115,19 +130,32 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.EDITABLE, false);
     editorCell.getStyle().putAll(style);
-    removeRelativeCoordinates.setCellActions(editorCell, myNode, getEditorContext());
+    RelativeCoordinates_Remove.setCellActions(editorCell, myNode, getEditorContext());
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.RelativeCoordinates$c7, "jetbrains.mps.samples.Physics.editor.Oriented_RelativeCoordinates_Transform"));
+    editorCell.setDefaultText("");
+    editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
+    return editorCell;
+  }
+  private EditorCell createConstant_1() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "oriented");
+    editorCell.setCellId("Constant_6rdvla_c0");
+    Style style = new StyleImpl();
+    new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.EDITABLE, false);
+    editorCell.getStyle().putAll(style);
+    Oriented_RelativeCoordinates_Remove.setCellActions(editorCell, myNode, getEditorContext());
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new relativeFromSingleRoleHandler_6rdvla_c0(myNode, LINKS.relativeFrom$gwcw, getEditorContext());
+    SingleRoleCellProvider provider = new relativeFromSingleRoleHandler_6rdvla_d0(myNode, LINKS.relativeFrom$gwcw, getEditorContext());
     return provider.createCell();
   }
-  private static class relativeFromSingleRoleHandler_6rdvla_c0 extends SingleRoleCellProvider {
+  private static class relativeFromSingleRoleHandler_6rdvla_d0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public relativeFromSingleRoleHandler_6rdvla_c0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public relativeFromSingleRoleHandler_6rdvla_d0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -173,6 +201,22 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     protected String getNoTargetText() {
       return "<no relativeFrom>";
     }
+  }
+  private EditorCell createContextAssistant_0() {
+    EditorCell editorCell = new EditorCell_ContextAssistantComponent(getEditorContext(), myNode);
+    editorCell.setCellId("ContextAssistant_6rdvla_e0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    return editorCell;
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept RelativeCoordinates$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeCoordinates");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty isOriented$Afmy = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x89beb47905fe8dbL, "isOriented");
   }
 
   private static final class LINKS {

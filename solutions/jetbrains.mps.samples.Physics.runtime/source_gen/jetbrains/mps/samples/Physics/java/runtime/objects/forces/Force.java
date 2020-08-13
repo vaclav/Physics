@@ -6,27 +6,26 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
-import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import org.ode4j.math.DVector3;
 
 /**
  * Object able to compute force from given world and target physical entity
  */
 public interface Force<T extends SystemScope> {
-  DVector3C applicationPoint(World world, T scope, PhysicalEntity currentEntity, double time);
-  DVector3C compute(World world, T scope, PhysicalEntity currentEntity, double time);
 
   /**
-   * Compute torque on object for a given force applied at some point
-   * 
-   * see https://en.wikipedia.org/wiki/Screw_theory
+   * Compute the linear force
    */
-  static DVector3C computeTorque(DVector3C force, DVector3C applicationPoint, VectorLike object) {
-    double leverX = applicationPoint.get0() - object.getX().doubleValue();
-    double leverY = applicationPoint.get1() - object.getY().doubleValue();
-    double leverZ = applicationPoint.get2() - object.getZ().doubleValue();
+  DVector3C linearForce(World world, T scope, PhysicalEntity currentEntity, double time);
 
-    // Mb = Ma + BA ∧ F with Ma = 0, BA above vector components and F the force 
-    return new DVector3(leverY * force.get2() - leverZ * force.get1(), leverZ * force.get0() - leverX * force.get2(), leverX * force.get1() - leverY * force.get0());
+  /**
+   * Compute the application point of the force
+   */
+  DVector3C applicationPoint(World world, T scope, PhysicalEntity currentEntity, double time);
+
+  /**
+   * Returns whether the current force is applied as linear force, as torque or both
+   */
+  default int forceMode() {
+    return ForceMode.DEFAULT;
   }
 }

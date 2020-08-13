@@ -11,11 +11,13 @@ import java.util.ArrayList;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.math.DVector3C;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceMode;
+import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
+import org.ode4j.math.DVector3;
 import processing.core.PGraphics;
 import org.ode4j.math.DMatrix3C;
 import java.util.List;
 import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
-import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 
 public class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike {
@@ -67,15 +69,34 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     }
 
     for (Force force : forces) {
-      DVector3C forceInitial = force.compute(world, scope, this, time);
-
-      // Apply force on body 
-      body.addForce(forceInitial);
-
-      // Compute torque with application point (if null -> apply force on center so no torque) 
+      DVector3C forceLinear = force.linearForce(world, scope, this, time);
       DVector3C applicationPoint = force.applicationPoint(world, scope, this, time);
-      if (applicationPoint != null) {
-        body.addTorque(Force.computeTorque(forceInitial, applicationPoint, this));
+      int mode = force.forceMode();
+
+      // Linear force alterations 
+      if (ForceMode.hasMode(mode, ForceMode.LINEAR_FORCE_ROTATED)) {
+        forceLinear = Math3DHelper.rotateLikeObject(this, forceLinear);
+      }
+
+      // Application point alterations 
+      if (ForceMode.hasMode(mode, ForceMode.APPLICATION_POINT_RELATIVE) && applicationPoint != null) {
+        // If the application point is not yet relative, make it relative 
+        applicationPoint = applicationPoint.reSub(VectorHelper.fromInternal(this));
+      }
+      if (ForceMode.hasMode(mode, ForceMode.APPLICATION_POINT_ROTATED) && applicationPoint != null) {
+        applicationPoint = Math3DHelper.rotateLikeObject(this, applicationPoint);
+      }
+      if (applicationPoint == null) {
+        applicationPoint = new DVector3();
+      }
+
+      // Apply force on body depending on the application mode 
+      if (ForceMode.hasMode(mode, ForceMode.APPLY_FULL)) {
+        body.addForceAtRelPos(forceLinear, applicationPoint);
+      } else if (ForceMode.hasMode(mode, ForceMode.APPLY_TORQUE)) {
+        body.addTorque(Math3DHelper.computeTorque(forceLinear, applicationPoint));
+      } else if (ForceMode.hasMode(mode, ForceMode.APPLY_LINEAR_FORCE)) {
+        body.addForce(forceLinear);
       }
     }
   }

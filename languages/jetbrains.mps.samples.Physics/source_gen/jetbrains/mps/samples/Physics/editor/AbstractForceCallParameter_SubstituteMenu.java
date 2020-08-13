@@ -32,6 +32,7 @@ import jetbrains.mps.smodel.runtime.IconResource;
 import jetbrains.mps.smodel.runtime.IconResourceUtil;
 import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class AbstractForceCallParameter_SubstituteMenu extends SubstituteMenuBase {
   @NotNull
@@ -123,6 +124,7 @@ public class AbstractForceCallParameter_SubstituteMenu extends SubstituteMenuBas
         public SNode createNode(@NotNull String pattern) {
           SNode node = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter"));
           SLinkOperations.setTarget(node, LINKS.argument$kXZ1, myParameterObject);
+          SLinkOperations.setTarget(node, LINKS.value$59jW, SNodeOperations.copyNode(SLinkOperations.getTarget(_context.getCurrentTargetNode(), LINKS.value$59jW)));
           SelectionUtil.selectCell(_context.getEditorContext(), node, SelectionManager.FIRST_EDITABLE_CELL);
           return node;
         }
@@ -171,5 +173,6 @@ public class AbstractForceCallParameter_SubstituteMenu extends SubstituteMenuBas
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink argument$kXZ1 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
+    /*package*/ static final SContainmentLink value$59jW = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb2832d0cL, "value");
   }
 }

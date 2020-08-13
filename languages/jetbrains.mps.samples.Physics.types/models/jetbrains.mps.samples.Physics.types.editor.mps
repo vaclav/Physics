@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" implicit="true" />
+    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -19,6 +20,9 @@
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
+      </concept>
+      <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
+        <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
       <concept id="615427434521884870" name="jetbrains.mps.lang.editor.structure.SubstituteMenuPart_Subconcepts" flags="ng" index="2VfDsV" />
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
@@ -54,27 +58,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="22mcaB" id="3KiIDZ00qTN">
-    <property role="3GE5qa" value="vector" />
-    <ref role="aqKnT" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
-    <node concept="22hDWj" id="3KiIDZ00qTO" role="22hAXT" />
-    <node concept="2VfDsV" id="3KiIDZ00qTP" role="3ft7WO" />
-  </node>
-  <node concept="22mcaB" id="3KiIDZ00qTZ">
-    <ref role="aqKnT" to="z99z:6kwOTMl0tT7" resolve="WorldType" />
-    <node concept="22hDWj" id="3KiIDZ00qU0" role="22hAXT" />
-    <node concept="2VfDsV" id="3KiIDZ00qU1" role="3ft7WO" />
-  </node>
-  <node concept="22mcaB" id="3KiIDZ00qTB">
-    <ref role="aqKnT" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
-    <node concept="22hDWj" id="3KiIDZ00qTC" role="22hAXT" />
-    <node concept="2VfDsV" id="3KiIDZ00qTD" role="3ft7WO" />
-  </node>
-  <node concept="22mcaB" id="3KiIDZ00qTr">
-    <ref role="aqKnT" to="z99z:1JxkG5gavpT" resolve="ForceType" />
-    <node concept="22hDWj" id="3KiIDZ00qTs" role="22hAXT" />
-    <node concept="2VfDsV" id="3KiIDZ00qTt" role="3ft7WO" />
-  </node>
   <node concept="22mcaB" id="3KiIDZ00qTf">
     <ref role="aqKnT" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
     <node concept="22hDWj" id="3KiIDZ00qTg" role="22hAXT" />
@@ -110,8 +93,8 @@
   </node>
   <node concept="24kQdi" id="3c2XpEv4L64">
     <ref role="1XX52x" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
-    <node concept="3F0ifn" id="3c2XpEv4L66" role="2wV5jI">
-      <property role="3F0ifm" value="direction" />
+    <node concept="PMmxH" id="yrUOugQ9JY" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
     </node>
   </node>
   <node concept="24kQdi" id="1AxJyXYPtTz">

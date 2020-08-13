@@ -18,18 +18,19 @@
     <classNode dependClassName="org.ode4j.ode.DGeom" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force">
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
-    <classNode dependClassName="org.ode4j.math.DVector3" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceMode" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceMode" />
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.StaticForce">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceMode" />
     <classNode dependClassName="org.ode4j.math.DVector3" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />

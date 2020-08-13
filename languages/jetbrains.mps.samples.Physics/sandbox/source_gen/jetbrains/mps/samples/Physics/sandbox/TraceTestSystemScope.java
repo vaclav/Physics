@@ -58,12 +58,14 @@ public class TraceTestSystemScope extends SystemScope {
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.TRACE, new Color(0, 0, 255));
       this.getForces().addAll(Arrays.asList(new Force<TraceTestSystemScope>() {
+
         @Override
-        public DVector3C compute(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
+        public DVector3C linearForce(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
+
           return VectorHelper.fromInternal((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
         }
         @Override
-        public DVector3C applicationPoint(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
+        public DVector3C applicationPoint(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
         }
       }));
@@ -93,12 +95,14 @@ public class TraceTestSystemScope extends SystemScope {
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.TRACE, new Color(255, 0, 0));
       this.getForces().addAll(Arrays.asList(new Force<TraceTestSystemScope>() {
+
         @Override
-        public DVector3C compute(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
+        public DVector3C linearForce(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
+
           return VectorHelper.fromInternal((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
         }
         @Override
-        public DVector3C applicationPoint(World world, TraceTestSystemScope scope, PhysicalEntity targetEntity, double time) {
+        public DVector3C applicationPoint(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
         }
       }));

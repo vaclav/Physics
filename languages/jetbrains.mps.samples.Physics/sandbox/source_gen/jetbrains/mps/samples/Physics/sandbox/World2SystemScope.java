@@ -60,12 +60,14 @@ public class World2SystemScope extends SystemScope {
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<World2SystemScope>() {
+
         @Override
-        public DVector3C compute(World world, World2SystemScope scope, PhysicalEntity targetEntity, double time) {
+        public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
+
           return VectorHelper.fromInternal(scope.Ha.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
         }
         @Override
-        public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity targetEntity, double time) {
+        public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
         }
       }));
@@ -95,12 +97,14 @@ public class World2SystemScope extends SystemScope {
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
       fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<World2SystemScope>() {
+
         @Override
-        public DVector3C compute(World world, World2SystemScope scope, PhysicalEntity targetEntity, double time) {
+        public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
+
           return VectorHelper.fromInternal(scope.Ho3.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
         }
         @Override
-        public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity targetEntity, double time) {
+        public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
         }
       }));

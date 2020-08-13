@@ -17,6 +17,7 @@
     <import index="rf09" ref="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)" implicit="true" />
     <import index="hyib" ref="r:450dc9b1-d2ee-47aa-855f-b1113676a8f9(jetbrains.mps.samples.Physics.types.behavior)" implicit="true" />
     <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" implicit="true" />
+    <import index="700h" ref="r:61b1de80-490d-4fee-8e95-b956503290e9(org.iets3.core.expr.collections.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -34,6 +35,9 @@
       </concept>
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
+      <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
+        <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
@@ -68,6 +72,12 @@
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
       <concept id="7425695345928349207" name="org.iets3.core.expr.simpleTypes.structure.BooleanType" flags="ng" index="2vmvy5" />
       <concept id="5115872837157054284" name="org.iets3.core.expr.simpleTypes.structure.RealType" flags="ng" index="30bXLL" />
+    </language>
+    <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
+      <concept id="1199569711397" name="jetbrains.mps.baseLanguage.closures.structure.ClosureLiteral" flags="nn" index="1bVj0M">
+        <child id="1199569906740" name="parameter" index="1bW2Oz" />
+        <child id="1199569916463" name="body" index="1bW5cS" />
+      </concept>
     </language>
     <language id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions">
       <concept id="3181138428204837756" name="jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference" flags="ng" index="3AmWvR" />
@@ -152,6 +162,7 @@
       <concept id="1174663314467" name="jetbrains.mps.lang.typesystem.structure.CreateComparableEquationStatement" flags="nn" index="1ZoVOM" />
     </language>
     <language id="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca" name="jetbrains.mps.samples.Physics.types">
+      <concept id="7287056866553749062" name="jetbrains.mps.samples.Physics.types.structure.ObjectType" flags="ng" index="3K8gRq" />
       <concept id="7287056866553932543" name="jetbrains.mps.samples.Physics.types.structure.VectorType" flags="ng" index="3K97_z">
         <child id="1387628150972991517" name="componentType" index="2okx1I" />
       </concept>
@@ -193,6 +204,9 @@
       <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
         <reference id="1138056516764" name="link" index="3Tt5mk" />
       </concept>
+      <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
+        <reference id="1138056546658" name="link" index="3TtcxE" />
+      </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
@@ -209,6 +223,13 @@
       <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
         <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
+    </language>
+    <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
+      <concept id="1204796164442" name="jetbrains.mps.baseLanguage.collections.structure.InternalSequenceOperation" flags="nn" index="23sCx2">
+        <child id="1204796294226" name="closure" index="23t8la" />
+      </concept>
+      <concept id="1204980550705" name="jetbrains.mps.baseLanguage.collections.structure.VisitAllOperation" flags="nn" index="2es0OD" />
+      <concept id="1203518072036" name="jetbrains.mps.baseLanguage.collections.structure.SmartClosureParameterDeclaration" flags="ig" index="Rh6nW" />
     </language>
   </registry>
   <node concept="1YbPZF" id="1JxkG5gax_9">
@@ -364,7 +385,7 @@
   </node>
   <node concept="1YbPZF" id="6kwOTMl1aul">
     <property role="TrG5h" value="typeof_WorldMassCenterTarget" />
-    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="3GE5qa" value="physical.expr.dot.world" />
     <node concept="3clFbS" id="6kwOTMl1aum" role="18ibNy">
       <node concept="1Z5TYs" id="6kwOTMl1a$O" role="3cqZAp">
         <node concept="mw_s8" id="6kwOTMl1a$R" role="1ZfhK$">
@@ -395,7 +416,7 @@
   </node>
   <node concept="1YbPZF" id="6kwOTMl1zQP">
     <property role="TrG5h" value="typeof_VectorComponentTarget" />
-    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="3GE5qa" value="physical.expr.dot.vector" />
     <node concept="3clFbS" id="6kwOTMl1zQQ" role="18ibNy">
       <node concept="3SKdUt" id="1d1Q7eb5lfo" role="3cqZAp">
         <node concept="1PaTwC" id="1d1Q7eb5lfp" role="1aUNEU">
@@ -536,7 +557,7 @@
   </node>
   <node concept="1YbPZF" id="6kwOTMl1BRF">
     <property role="TrG5h" value="typeof_ObjectMassTarget" />
-    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="3GE5qa" value="physical.expr.dot.object" />
     <node concept="3clFbS" id="6kwOTMl1BRG" role="18ibNy">
       <node concept="1Z5TYs" id="6kwOTMl1BRM" role="3cqZAp">
         <node concept="mw_s8" id="6kwOTMl1BRR" role="1ZfhK$">
@@ -565,7 +586,7 @@
   </node>
   <node concept="1YbPZF" id="6kwOTMl1BYr">
     <property role="TrG5h" value="typeof_ObjectPositionTarget" />
-    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="3GE5qa" value="physical.expr.dot.object" />
     <node concept="3clFbS" id="6kwOTMl1BYs" role="18ibNy">
       <node concept="1Z5TYs" id="6kwOTMl1BYy" role="3cqZAp">
         <node concept="mw_s8" id="6kwOTMl1BYB" role="1ZfhK$">
@@ -714,7 +735,7 @@
   </node>
   <node concept="1YbPZF" id="cTQf2FkHOe">
     <property role="TrG5h" value="typeof_InteractedObjectExpression" />
-    <property role="3GE5qa" value="physical.force.implemented.interaction" />
+    <property role="3GE5qa" value="physical.force.implemented.simple.interaction" />
     <node concept="3clFbS" id="cTQf2FkHOf" role="18ibNy">
       <node concept="1Z5TYs" id="cTQf2FkHZb" role="3cqZAp">
         <node concept="mw_s8" id="cTQf2FkHZe" role="1ZfhK$">
@@ -751,10 +772,8 @@
           </node>
         </node>
         <node concept="mw_s8" id="6asu_4xHbd0" role="1ZfhKB">
-          <node concept="2pJPEk" id="6asu_4xHbcW" role="mwGJk">
-            <node concept="2pJPED" id="6asu_4xHbdb" role="2pJPEn">
-              <ref role="2pJxaS" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
-            </node>
+          <node concept="2c44tf" id="yrUOugSDwL" role="mwGJk">
+            <node concept="3K8gRq" id="yrUOugSDx9" role="2c44tc" />
           </node>
         </node>
       </node>
@@ -766,7 +785,7 @@
   </node>
   <node concept="1YbPZF" id="cTQf2FlwP1">
     <property role="TrG5h" value="typeof_DistanceWithCallTarget" />
-    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="3GE5qa" value="physical.expr.dot.object" />
     <node concept="3clFbS" id="cTQf2FlwP2" role="18ibNy">
       <node concept="nvevp" id="1d1Q7eb5puZ" role="3cqZAp">
         <node concept="3clFbS" id="1d1Q7eb5pv1" role="nvhr_">
@@ -829,7 +848,7 @@
   </node>
   <node concept="1YbPZF" id="cTQf2FqwJq">
     <property role="TrG5h" value="typeof_VectorOppositeDotTarget" />
-    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="3GE5qa" value="physical.expr.dot.vector" />
     <node concept="3clFbS" id="cTQf2FqwJr" role="18ibNy">
       <node concept="nvevp" id="1d1Q7eb5l_F" role="3cqZAp">
         <node concept="3clFbS" id="1d1Q7eb5l_M" role="nvhr_">
@@ -1162,7 +1181,7 @@
   </node>
   <node concept="1YbPZF" id="31HEEbbSHz9">
     <property role="TrG5h" value="typeof_VectorResizeDotTarget" />
-    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="3GE5qa" value="physical.expr.dot.vector" />
     <node concept="3clFbS" id="31HEEbbSHza" role="18ibNy">
       <node concept="nvevp" id="1d1Q7eb5mvS" role="3cqZAp">
         <node concept="3clFbS" id="1d1Q7eb5mvT" role="nvhr_">
@@ -1297,7 +1316,7 @@
   </node>
   <node concept="1YbPZF" id="4D75T4FiN07">
     <property role="TrG5h" value="typeof_ObjectVelocityTarget" />
-    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="3GE5qa" value="physical.expr.dot.object" />
     <node concept="3clFbS" id="4D75T4FiN08" role="18ibNy">
       <node concept="1Z5TYs" id="1d1Q7eb5gJM" role="3cqZAp">
         <node concept="mw_s8" id="1d1Q7eb5gJN" role="1ZfhK$">
@@ -1861,7 +1880,7 @@
   </node>
   <node concept="1YbPZF" id="6yY6C98u6YV">
     <property role="TrG5h" value="typeof_WorldNestedObjectTarget" />
-    <property role="3GE5qa" value="physical.expr.dot" />
+    <property role="3GE5qa" value="physical.expr.dot.world" />
     <node concept="3clFbS" id="6yY6C98u6YW" role="18ibNy">
       <node concept="1Z5TYs" id="6yY6C98u7zR" role="3cqZAp">
         <node concept="mw_s8" id="6yY6C98u7$b" role="1ZfhKB">
@@ -1971,7 +1990,7 @@
   </node>
   <node concept="1YbPZF" id="RryuvUUPGs">
     <property role="TrG5h" value="typeof_StaticForce" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.simple" />
     <node concept="3clFbS" id="RryuvUUPGt" role="18ibNy">
       <node concept="nvevp" id="RryuvUUQp9" role="3cqZAp">
         <node concept="3clFbS" id="RryuvUUQpb" role="nvhr_">
@@ -2546,6 +2565,119 @@
     <node concept="1YaCAy" id="1AxJyXYUfKK" role="1YuTPh">
       <property role="TrG5h" value="disabledTraceExpression" />
       <ref role="1YaFvo" to="9tcj:1AxJyXYUfKx" resolve="DisabledTraceExpression" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="yrUOugQ7E6">
+    <property role="TrG5h" value="typeof_SimulationObjectsExpression" />
+    <property role="3GE5qa" value="physical.expr" />
+    <node concept="3clFbS" id="yrUOugQ7E7" role="18ibNy">
+      <node concept="1Z5TYs" id="yrUOugQ8cJ" role="3cqZAp">
+        <node concept="mw_s8" id="yrUOugQ8cM" role="1ZfhK$">
+          <node concept="1Z2H0r" id="yrUOugQ7Ed" role="mwGJk">
+            <node concept="1YBJjd" id="yrUOugQ7Et" role="1Z2MuG">
+              <ref role="1YBMHb" node="yrUOugQ7E9" resolve="simulationObjectsExpression" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="yrUOugQdYE" role="1ZfhKB">
+          <node concept="2pJPEk" id="yrUOugQdYC" role="mwGJk">
+            <node concept="2pJPED" id="yrUOugQdYP" role="2pJPEn">
+              <ref role="2pJxaS" to="700h:6zmBjqUinsw" resolve="ListType" />
+              <node concept="2pIpSj" id="yrUOugQdZ9" role="2pJxcM">
+                <ref role="2pIpSl" to="700h:6zmBjqUily6" resolve="baseType" />
+                <node concept="2pJPED" id="yrUOugQdZm" role="28nt2d">
+                  <ref role="2pJxaS" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="yrUOugQ7E9" role="1YuTPh">
+      <property role="TrG5h" value="simulationObjectsExpression" />
+      <ref role="1YaFvo" to="9tcj:yrUOugQ7DZ" resolve="AllObjectsExpression" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="yrUOugVbwA">
+    <property role="TrG5h" value="typeof_AbstractForce" />
+    <property role="3GE5qa" value="physical.force.abstract" />
+    <node concept="3clFbS" id="yrUOugVbwB" role="18ibNy">
+      <node concept="1ZobV4" id="yrUOugVd8i" role="3cqZAp">
+        <property role="3wDh2S" value="true" />
+        <node concept="mw_s8" id="yrUOugVd91" role="1ZfhKB">
+          <node concept="2pJPEk" id="yrUOugVd8X" role="mwGJk">
+            <node concept="2pJPED" id="yrUOugVd9c" role="2pJPEn">
+              <ref role="2pJxaS" to="z99z:1JxkG5gavpT" resolve="ForceType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="yrUOugVd8l" role="1ZfhK$">
+          <node concept="1Z2H0r" id="yrUOugVbwH" role="mwGJk">
+            <node concept="2OqwBi" id="yrUOugVbLp" role="1Z2MuG">
+              <node concept="1YBJjd" id="yrUOugVbwX" role="2Oq$k0">
+                <ref role="1YBMHb" node="yrUOugVbwD" resolve="abstractForce" />
+              </node>
+              <node concept="3TrEf2" id="7zgzoeT_q1L" role="2OqNvi">
+                <ref role="3Tt5mk" to="zzzn:6zmBjqUkwH3" resolve="expression" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="yrUOugVbwD" role="1YuTPh">
+      <property role="TrG5h" value="abstractForce" />
+      <ref role="1YaFvo" to="9tcj:34ALWs$saY6" resolve="AbstractForce" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="7zgzoeTziAx">
+    <property role="TrG5h" value="typeof_AbstractObjectDefinition" />
+    <property role="3GE5qa" value="physical" />
+    <node concept="3clFbS" id="7zgzoeTziAy" role="18ibNy">
+      <node concept="3clFbF" id="7zgzoeTziAD" role="3cqZAp">
+        <node concept="2OqwBi" id="7zgzoeTzkL4" role="3clFbG">
+          <node concept="2OqwBi" id="7zgzoeTziJg" role="2Oq$k0">
+            <node concept="1YBJjd" id="7zgzoeTziAC" role="2Oq$k0">
+              <ref role="1YBMHb" node="7zgzoeTziA$" resolve="abstractObjectDefinition" />
+            </node>
+            <node concept="3Tsc0h" id="7zgzoeTziVx" role="2OqNvi">
+              <ref role="3TtcxE" to="9tcj:1h1l5SEmLT9" resolve="forces" />
+            </node>
+          </node>
+          <node concept="2es0OD" id="7zgzoeTzmYd" role="2OqNvi">
+            <node concept="1bVj0M" id="7zgzoeTzmYf" role="23t8la">
+              <node concept="3clFbS" id="7zgzoeTzmYg" role="1bW5cS">
+                <node concept="1ZobV4" id="7zgzoeTznUN" role="3cqZAp">
+                  <property role="3wDh2S" value="true" />
+                  <node concept="mw_s8" id="7zgzoeTznZf" role="1ZfhK$">
+                    <node concept="1Z2H0r" id="7zgzoeTGcsf" role="mwGJk">
+                      <node concept="37vLTw" id="7zgzoeTGcsg" role="1Z2MuG">
+                        <ref role="3cqZAo" node="7zgzoeTzmYh" resolve="it" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="mw_s8" id="7zgzoeTzo2C" role="1ZfhKB">
+                    <node concept="2pJPEk" id="7zgzoeTzo2$" role="mwGJk">
+                      <node concept="2pJPED" id="7zgzoeTzo56" role="2pJPEn">
+                        <ref role="2pJxaS" to="z99z:1JxkG5gavpT" resolve="ForceType" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="Rh6nW" id="7zgzoeTzmYh" role="1bW2Oz">
+                <property role="TrG5h" value="it" />
+                <node concept="2jxLKc" id="7zgzoeTzmYi" role="1tU5fm" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="7zgzoeTziA$" role="1YuTPh">
+      <property role="TrG5h" value="abstractObjectDefinition" />
+      <ref role="1YaFvo" to="9tcj:1h1l5SEmLT3" resolve="AbstractObjectDefinition" />
     </node>
   </node>
 </model>

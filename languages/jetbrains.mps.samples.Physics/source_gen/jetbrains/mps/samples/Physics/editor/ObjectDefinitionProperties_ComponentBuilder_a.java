@@ -115,7 +115,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return LINKS.forces$OiCr;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.Force$pC;
+      return CONCEPTS.Expression$Wr;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -298,7 +298,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Force$pC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
+    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
     /*package*/ static final SConcept StyleDefinition$Xd = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, "jetbrains.mps.samples.Physics.structure.StyleDefinition");
   }
 }

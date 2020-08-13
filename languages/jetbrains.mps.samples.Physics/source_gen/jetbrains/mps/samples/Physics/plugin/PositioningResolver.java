@@ -54,7 +54,7 @@ public class PositioningResolver {
         {
           final SNode definition = it;
           if (SNodeOperations.isInstanceOf(definition, CONCEPTS.ObjectDefinition$YO)) {
-            SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(definition, LINKS.mass$9nTx), createNumberLiteral_y7gfbj_a0a0a11a0a0a0a(IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(definition, LINKS.mass$9nTx)).toString()));
+            SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(definition, LINKS.mass$9nTx), LINKS.expression$87ts), createNumberLiteral_y7gfbj_a0a0a11a0a0a0a(IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(definition, LINKS.mass$9nTx), LINKS.expression$87ts)).toString()));
           }
         }
       }

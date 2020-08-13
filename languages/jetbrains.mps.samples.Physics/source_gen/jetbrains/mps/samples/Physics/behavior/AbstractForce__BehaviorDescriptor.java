@@ -23,15 +23,15 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class AbstractForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, "jetbrains.mps.samples.Physics.structure.AbstractForce");
 
-  public static final SMethod<String> asString_id6iqfHNBPkjP = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("asString").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6iqfHNBPkjP").build();
+  public static final SMethod<String> renderReadable_id4Y0vh0cfqjE = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4Y0vh0cfqjE").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(asString_id6iqfHNBPkjP);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(renderReadable_id4Y0vh0cfqjE);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static String asString_id6iqfHNBPkjP(@NotNull SNode __thisNode__) {
-    return "[abstract force] " + SPropertyOperations.getString(__thisNode__, PROPS.name$tAp1);
+  /*package*/ static String renderReadable_id4Y0vh0cfqjE(@NotNull SNode __thisNode__) {
+    return SPropertyOperations.getString(__thisNode__, PROPS.name$tAp1);
   }
 
   /*package*/ AbstractForce__BehaviorDescriptor() {
@@ -50,7 +50,7 @@ public final class AbstractForce__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((String) asString_id6iqfHNBPkjP(node));
+        return (T) ((String) renderReadable_id4Y0vh0cfqjE(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

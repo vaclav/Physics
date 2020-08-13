@@ -13,7 +13,8 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.StaticForce;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
+import org.ode4j.math.DVector3C;
 
 public class TorqueSystemScope extends SystemScope {
   public final PhysicalEntity Light;
@@ -83,7 +84,37 @@ public class TorqueSystemScope extends SystemScope {
       fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))));
-      this.getForces().addAll(Arrays.asList(new StaticForce(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))))), VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))))), new StaticForce(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))).negate())), VectorHelper.fromInternal(new InternalVector(((BigInteger) AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).negate(), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")))))));
+      this.getForces().addAll(Arrays.asList(new Force<TorqueSystemScope>() {
+        private DVector3C cached;
+
+        @Override
+        public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
+          if (cached == null) {
+            cached = VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))));
+          }
+
+          return cached;
+        }
+        @Override
+        public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+        }
+      }, new Force<TorqueSystemScope>() {
+        private DVector3C cached;
+
+        @Override
+        public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
+          if (cached == null) {
+            cached = VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))).negate()));
+          }
+
+          return cached;
+        }
+        @Override
+        public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return VectorHelper.fromInternal(new InternalVector(((BigInteger) AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).negate(), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+        }
+      }));
     }
   }
 

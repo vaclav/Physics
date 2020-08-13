@@ -14,22 +14,30 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 public class StaticForce<T extends SystemScope> implements Force<T> {
   private DVector3C value;
   private DVector3C applicationPoint;
+  private int mode;
 
   public StaticForce(DVector3 value) {
-    this(value, null);
+    this(value, null, ForceMode.DEFAULT);
   }
 
-  public StaticForce(DVector3C value, DVector3C applicationPoint) {
+  public StaticForce(DVector3C value, DVector3C applicationPoint, int mode) {
     this.value = value;
+    this.mode = mode;
     this.applicationPoint = applicationPoint;
   }
   @Override
-  public DVector3C compute(World world, T scope, PhysicalEntity targetEntity, double time) {
+  public DVector3C linearForce(World world, T scope, PhysicalEntity targetEntity, double time) {
     return value;
   }
 
   @Override
   public DVector3C applicationPoint(World world, T scope, PhysicalEntity currentEntity, double time) {
     return applicationPoint;
+  }
+
+
+  @Override
+  public int forceMode() {
+    return mode;
   }
 }

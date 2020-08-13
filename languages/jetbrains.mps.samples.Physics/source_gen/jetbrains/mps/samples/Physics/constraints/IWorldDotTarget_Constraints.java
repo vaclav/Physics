@@ -11,7 +11,6 @@ import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
-import jetbrains.mps.samples.Physics.behavior.DotExpressionHelper;
 import org.iets3.core.expr.base.behavior.DotExpression__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.SNodePointer;
@@ -40,7 +39,8 @@ public class IWorldDotTarget_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return DotExpressionHelper.hasParentContextTargetOf(parentNode, CONCEPTS.IMayTargetWorld$d) && (boolean) DotExpression__BehaviorDescriptor.expectType_id5WNmJ7DokMG.invoke(SNodeOperations.as(parentNode, CONCEPTS.DotExpression$Af), CONCEPTS.WorldType$tu, ((boolean) true));
+    return (boolean) DotExpression__BehaviorDescriptor.expectType_id5WNmJ7DokMG.invoke(SNodeOperations.cast(parentNode, CONCEPTS.DotExpression$Af), CONCEPTS.WorldType$tu, ((boolean) true));
+    // <node>
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "4874678483873252507");
 

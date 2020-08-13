@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
-import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.editor.runtime.cells.BigCellUtil;
 
 /*package*/ class DirectionType_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -25,15 +25,16 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
   }
 
   /*package*/ EditorCell createCell() {
-    return createConstant_0();
+    return createComponent_0();
   }
 
-  private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "direction");
-    editorCell.setCellId("Constant_tptyuh_a");
-    editorCell.setBig(true);
-    setCellContext(editorCell);
-    editorCell.setDefaultText("");
+  private EditorCell createComponent_0() {
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.lang.core.editor.alias");
+    EditorCell bigCell = BigCellUtil.findBigCell(editorCell, getNode());
+    if (bigCell != null) {
+      bigCell.setBig(true);
+      setCellContext(bigCell);
+    }
     return editorCell;
   }
 }

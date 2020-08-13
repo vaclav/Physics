@@ -17,32 +17,48 @@ import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
+import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
 
   public static final SMethod<Iterable<SNode>> remainingArguments_idQ4PrYMwPsY = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("remainingArguments").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("Q4PrYMwPsY").build();
+  public static final SMethod<SNode> getForceExpression_idyrUOugQKBO = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getForceExpression").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("yrUOugQKBO").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(remainingArguments_idQ4PrYMwPsY);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(remainingArguments_idQ4PrYMwPsY, getForceExpression_idyrUOugQKBO);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
   /*package*/ static Iterable<SNode> remainingArguments_idQ4PrYMwPsY(@NotNull final SNode __thisNode__) {
-    return ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(__thisNode__, LINKS.function$k4nP), LINKS.args$gQ4W)).where(new IWhereFilter<SNode>() {
+    return ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(__thisNode__, LINKS.force$tsf5), LINKS.args$G1Ow)).where(new IWhereFilter<SNode>() {
       public boolean accept(final SNode refArg) {
-        return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.args$k4mR)).all(new IWhereFilter<SNode>() {
+        return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.parameterValues$tsg3)).all(new IWhereFilter<SNode>() {
           public boolean accept(SNode implArg) {
             return refArg != SLinkOperations.getTarget(implArg, LINKS.argument$kXZ1);
           }
         });
       }
     });
+  }
+  /*package*/ static SNode getForceExpression_idyrUOugQKBO(@NotNull final SNode __thisNode__) {
+    // forceLambda.exec(args) 
+    return createDotExpression_yqfunp_a1a1(SLinkOperations.getTarget(__thisNode__, LINKS.force$tsf5), ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.parameterValues$tsg3)).sort(new ISelector<SNode, Integer>() {
+      public Integer select(SNode it) {
+        return ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(__thisNode__, LINKS.force$tsf5), LINKS.args$G1Ow)).indexOf(SLinkOperations.getTarget(it, LINKS.argument$kXZ1));
+      }
+    }, true).select(new ISelector<SNode, SNode>() {
+      public SNode select(SNode it) {
+        return SLinkOperations.getTarget(it, LINKS.value$59jW);
+      }
+    }));
   }
 
   /*package*/ AbstractForceCall__BehaviorDescriptor() {
@@ -62,6 +78,8 @@ public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescripto
     switch (methodIndex) {
       case 0:
         return (T) ((Iterable<SNode>) remainingArguments_idQ4PrYMwPsY(node));
+      case 1:
+        return (T) ((SNode) getForceExpression_idyrUOugQKBO(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -90,11 +108,30 @@ public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescripto
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
+  private static SNode createDotExpression_yqfunp_a1a1(SNode p0, Iterable<? extends SNode> p1) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DotExpression$Af);
+    n0.forChild(LINKS.expr$xFwa).initNode(p0, CONCEPTS.Expression$Wr, true);
+    {
+      SNodeBuilder n1 = n0.forChild(LINKS.target$NL8Z).init(CONCEPTS.ExecOp$G);
+      n1.forChild(LINKS.args$ysDY).initNodeList(p1, CONCEPTS.Expression$Wr);
+    }
+    return n0.getResult();
+  }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink function$k4nP = MetaAdapterFactory.getReferenceLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x427ce5230841f89cL, 0x427ce5230841f8a8L, "function");
-    /*package*/ static final SContainmentLink args$gQ4W = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x427ce523083b8a2fL, 0x427ce523083b8a3fL, "args");
-    /*package*/ static final SContainmentLink args$k4mR = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x427ce5230841f89cL, 0x427ce5230841f8a6L, "args");
+    /*package*/ static final SReferenceLink force$tsf5 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, 0x3126c7c72473eb96L, "force");
+    /*package*/ static final SContainmentLink args$G1Ow = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba520706L, 0x68d69d36ba520707L, "args");
+    /*package*/ static final SContainmentLink parameterValues$tsg3 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, 0x3126c7c72473eb98L, "parameterValues");
     /*package*/ static final SReferenceLink argument$kXZ1 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
+    /*package*/ static final SContainmentLink value$59jW = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb2832d0cL, "value");
+    /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
+    /*package*/ static final SContainmentLink target$NL8Z = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
+    /*package*/ static final SContainmentLink args$ysDY = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba557186L, 0x68d69d36ba55d55aL, "args");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept DotExpression$Af = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
+    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept ExecOp$G = MetaAdapterFactory.getConcept(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba557186L, "org.iets3.core.expr.lambda.structure.ExecOp");
   }
 }

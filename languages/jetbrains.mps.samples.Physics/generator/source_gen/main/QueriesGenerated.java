@@ -57,14 +57,11 @@ public class QueriesGenerated extends QueryProviderBase {
 
     SModelOperations.addRootNode(_context.getModel(), baseObject);
   }
-  public static void mappingScript_CodeBlock_3(final MappingScriptContext _context) {
-  }
   private final Map<String, ScriptCodeBlock> mscbMethods = new HashMap<String, ScriptCodeBlock>();
   {
     int i = 0;
     mscbMethods.put("3489632902467729511", new SCB(i++));
     mscbMethods.put("1159415042436192181", new SCB(i++));
-    mscbMethods.put("3004491438924190314", new SCB(i++));
   }
   @Override
   @NotNull
@@ -88,9 +85,6 @@ public class QueriesGenerated extends QueryProviderBase {
           return;
         case 1:
           QueriesGenerated.mappingScript_CodeBlock_2(ctx);
-          return;
-        case 2:
-          QueriesGenerated.mappingScript_CodeBlock_3(ctx);
           return;
         default:
           throw new GenerationFailureException(String.format("There's no code block with method index %d ", methodKey));

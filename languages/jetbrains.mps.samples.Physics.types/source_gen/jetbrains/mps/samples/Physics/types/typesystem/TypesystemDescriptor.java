@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.types.typesystem;
 
 import jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.SubtypingRule_Runtime;
+import jetbrains.mps.lang.typesystem.runtime.ComparisonRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.InequationReplacementRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.OverloadedOpsProvider_OneTypeSpecified;
 import org.jetbrains.mps.openapi.model.SNode;
@@ -38,16 +39,21 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.mySubtypingRules.add(subtypingRule);
     }
     {
+      ComparisonRule_Runtime comparisonRule = new compare_ObjectTypes_ComparisonRule();
+      this.myComparisonRules.add(comparisonRule);
+    }
+    {
       InequationReplacementRule_Runtime eliminationRule = new replace_VectorType_VectorType_InequationReplacementRule();
       this.myInequationReplacementRules.add(eliminationRule);
     }
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.MinusExpression$pp));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.PlusExpression$Dn));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_d(CONCEPTS.BinaryEqualityExpression$Mj));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a_0(CONCEPTS.BinaryEqualityExpression$Mj));
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a7a0();
+          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a9a0();
           this.myOperationConcept = CONCEPTS.MulExpression$_u;
           this.myTypeIsExact = false;
           this.myIsStrong = false;
@@ -60,7 +66,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
 
           SNode operationType = TypeChecker.getInstance().getRulesManager().getOperationType(operation, SLinkOperations.getTarget(vectorType, LINKS.componentType$gTxy), otherType);
 
-          return createVectorType_3ist9o_a5a1a0a0a0a0h0a(SNodeOperations.as(operationType, CONCEPTS.Type$fA));
+          return createVectorType_3ist9o_a5a1a0a0a0a0j0a(SNodeOperations.as(operationType, CONCEPTS.Type$fA));
         }
         public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
           return VectorTypeHelper.oneIsVector(leftOperandType, rightOperandType);
@@ -75,7 +81,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a8a0();
+          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a01a0();
           this.myOperationConcept = CONCEPTS.DivExpression$Li;
           this.myTypeIsExact = false;
           this.myIsStrong = false;
@@ -85,7 +91,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
         public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
           SNode operationType = TypeChecker.getInstance().getRulesManager().getOperationType(operation, SLinkOperations.getTarget(SNodeOperations.as(leftOperandType, CONCEPTS.VectorType$Wj), LINKS.componentType$gTxy), rightOperandType);
 
-          return createVectorType_3ist9o_a2a1a0a0a0a0i0a(SNodeOperations.as(operationType, CONCEPTS.Type$fA));
+          return createVectorType_3ist9o_a2a1a0a0a0a0k0a(SNodeOperations.as(operationType, CONCEPTS.Type$fA));
         }
         public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
           return VectorTypeHelper.isVector(leftOperandType);
@@ -178,20 +184,52 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return n0.getResult();
     }
   }
-  private static SNode createAbstractVectorType_3ist9o_a0a0a0a0a0a0a7a0() {
+  public static class CustomOverloadedOperationsTypesProvider_a_0 extends OverloadedOperationsTypesProvider {
+    public CustomOverloadedOperationsTypesProvider_a_0(SAbstractConcept concept) {
+      this.myLeftOperandType = createDirectionType_3ist9o_a0a0a3();
+      this.myRightOperandType = createDirectionType_3ist9o_a0b0a3();
+      this.myOperationConcept = concept;
+      this.myLeftTypeIsExact = false;
+      this.myRightTypeIsExact = false;
+      this.myRightIsStrong = false;
+      this.myLeftIsStrong = false;
+      this.myRuleModelId = "r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)";
+      this.myRuleNodeId = "8705613676604840799";
+    }
+    public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      return createBooleanType_3ist9o_a0a1d();
+    }
+    @Override
+    public void reportConflict(IRuleConflictWarningProducer producer) {
+      producer.produceWarning(myRuleModelId, myRuleNodeId);
+    }
+    private static SNode createDirectionType_3ist9o_a0a0a3() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
+      return n0.getResult();
+    }
+    private static SNode createDirectionType_3ist9o_a0b0a3() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
+      return n0.getResult();
+    }
+    private static SNode createBooleanType_3ist9o_a0a1d() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.BooleanType$h3);
+      return n0.getResult();
+    }
+  }
+  private static SNode createAbstractVectorType_3ist9o_a0a0a0a0a0a0a9a0() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
     return n0.getResult();
   }
-  private static SNode createVectorType_3ist9o_a5a1a0a0a0a0h0a(SNode p0) {
+  private static SNode createVectorType_3ist9o_a5a1a0a0a0a0j0a(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
     n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
     return n0.getResult();
   }
-  private static SNode createAbstractVectorType_3ist9o_a0a0a0a0a0a0a8a0() {
+  private static SNode createAbstractVectorType_3ist9o_a0a0a0a0a0a0a01a0() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$6J);
     return n0.getResult();
   }
-  private static SNode createVectorType_3ist9o_a2a1a0a0a0a0i0a(SNode p0) {
+  private static SNode createVectorType_3ist9o_a2a1a0a0a0a0k0a(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
     n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
     return n0.getResult();
@@ -207,6 +245,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
     /*package*/ static final SConcept AbstractVectorType$6J = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L, "jetbrains.mps.samples.Physics.types.structure.AbstractVectorType");
     /*package*/ static final SConcept BooleanType$h3 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x670d5e92f854a617L, "org.iets3.core.expr.simpleTypes.structure.BooleanType");
+    /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
   }
 
   private static final class LINKS {
