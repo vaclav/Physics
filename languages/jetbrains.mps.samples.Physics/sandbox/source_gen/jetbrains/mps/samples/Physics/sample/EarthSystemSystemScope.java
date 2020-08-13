@@ -68,7 +68,6 @@ public class EarthSystemSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(final World world, EarthSystemSystemScope scope, final PhysicalEntity currentEntity, double time) {
-
           return VectorHelper.fromInternal(new _FunctionTypes._return_P0_E0<VectorLike>() {
             public VectorLike invoke() {
               VectorLike seed = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
@@ -96,10 +95,16 @@ public class EarthSystemSystemScope extends SystemScope {
               return seed;
             }
           }.invoke());
+
         }
         @Override
         public DVector3C applicationPoint(World world, EarthSystemSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }));
     }

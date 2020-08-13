@@ -16,6 +16,7 @@ import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -28,14 +29,18 @@ public final class Force__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
 
   public static final SMethod<Iterable<List<SNode>>> getRequiredDimensions_id270Q2mETulL = new SMethodBuilder<Iterable<List<SNode>>>(new SJavaCompoundTypeImpl((Class<Iterable<List<SNode>>>) ((Class) Object.class))).name("getRequiredDimensions").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("270Q2mETulL").build();
+  public static final SMethod<Integer> getForceMode_id7VyKdWRpcSx = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7VyKdWRpcSx").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getRequiredDimensions_id270Q2mETulL);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getRequiredDimensions_id270Q2mETulL, getForceMode_id7VyKdWRpcSx);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
   /*package*/ static Iterable<List<SNode>> getRequiredDimensions_id270Q2mETulL(@NotNull SNode __thisNode__) {
     return Sequence.<List<SNode>>singleton(SLinkOperations.getChildren((_quotation_createNode_xr2do3_a0a0a0a0()), LINKS.units$o6Ow));
+  }
+  /*package*/ static int getForceMode_id7VyKdWRpcSx(@NotNull SNode __thisNode__) {
+    return ForceMode.DEFAULT;
   }
 
   /*package*/ Force__BehaviorDescriptor() {
@@ -55,6 +60,8 @@ public final class Force__BehaviorDescriptor extends BaseBHDescriptor {
     switch (methodIndex) {
       case 0:
         return (T) ((Iterable<List<SNode>>) getRequiredDimensions_id270Q2mETulL(node));
+      case 1:
+        return (T) ((Integer) getForceMode_id7VyKdWRpcSx(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

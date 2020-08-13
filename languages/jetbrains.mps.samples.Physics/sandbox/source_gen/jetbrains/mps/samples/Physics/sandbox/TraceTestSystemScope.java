@@ -61,12 +61,17 @@ public class TraceTestSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
-
           return VectorHelper.fromInternal((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
+
         }
         @Override
         public DVector3C applicationPoint(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }));
     }
@@ -98,12 +103,17 @@ public class TraceTestSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
-
           return VectorHelper.fromInternal((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
+
         }
         @Override
         public DVector3C applicationPoint(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }));
     }

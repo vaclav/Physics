@@ -15,6 +15,7 @@
   </facets>
   <stubModelEntries>
     <stubModelEntry path="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" />
+    <stubModelEntry path="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

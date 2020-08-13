@@ -22,12 +22,12 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
           return Collections.<NodeFactory>singletonList(new CoordinatesFactories.NodeFactory_4809107873070296905());
         case "CylindricalCoordinates":
           return Collections.<NodeFactory>singletonList(new CoordinatesFactories.NodeFactory_4809107873070200372());
+        case "SimpleForce":
+          return Collections.<NodeFactory>singletonList(new ForceFactories.NodeFactory_4809107873070311133());
         case "Simulation":
           return Collections.<NodeFactory>singletonList(new MiscellaneousFactories.NodeFactory_7471572540824262513());
         case "SphericalCoordinates":
           return Collections.<NodeFactory>singletonList(new CoordinatesFactories.NodeFactory_4809107873070306457());
-        case "StaticForce":
-          return Collections.<NodeFactory>singletonList(new ForceFactories.NodeFactory_4809107873070311133());
         default:
       }
     }

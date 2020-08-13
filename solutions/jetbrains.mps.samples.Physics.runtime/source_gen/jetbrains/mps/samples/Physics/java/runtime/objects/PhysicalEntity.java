@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.math.DVector3C;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceMode;
+import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import org.ode4j.math.DVector3;
 import processing.core.PGraphics;
@@ -74,16 +74,16 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
       int mode = force.forceMode();
 
       // Linear force alterations 
-      if (ForceMode.hasMode(mode, ForceMode.LINEAR_FORCE_ROTATED)) {
+      if (ForceMode.haveAll(mode, ForceMode.LINEAR_FORCE_ROTATED)) {
         forceLinear = Math3DHelper.rotateLikeObject(this, forceLinear);
       }
 
       // Application point alterations 
-      if (ForceMode.hasMode(mode, ForceMode.APPLICATION_POINT_RELATIVE) && applicationPoint != null) {
+      if (ForceMode.haveAll(mode, ForceMode.APPLICATION_POINT_RELATIVE) && applicationPoint != null) {
         // If the application point is not yet relative, make it relative 
         applicationPoint = applicationPoint.reSub(VectorHelper.fromInternal(this));
       }
-      if (ForceMode.hasMode(mode, ForceMode.APPLICATION_POINT_ROTATED) && applicationPoint != null) {
+      if (ForceMode.haveAll(mode, ForceMode.APPLICATION_POINT_ROTATED) && applicationPoint != null) {
         applicationPoint = Math3DHelper.rotateLikeObject(this, applicationPoint);
       }
       if (applicationPoint == null) {
@@ -91,11 +91,11 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
       }
 
       // Apply force on body depending on the application mode 
-      if (ForceMode.hasMode(mode, ForceMode.APPLY_FULL)) {
+      if (!(ForceMode.haveOne(mode, ForceMode.SKIP_TORQUE, ForceMode.SKIP_LINEAR_FORCE))) {
         body.addForceAtRelPos(forceLinear, applicationPoint);
-      } else if (ForceMode.hasMode(mode, ForceMode.APPLY_TORQUE)) {
+      } else if (!(ForceMode.haveAll(mode, ForceMode.SKIP_TORQUE))) {
         body.addTorque(Math3DHelper.computeTorque(forceLinear, applicationPoint));
-      } else if (ForceMode.hasMode(mode, ForceMode.APPLY_LINEAR_FORCE)) {
+      } else if (!(ForceMode.haveAll(mode, ForceMode.SKIP_LINEAR_FORCE))) {
         body.addForce(forceLinear);
       }
     }

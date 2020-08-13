@@ -113,9 +113,6 @@
       <concept id="232455383964029220" name="jetbrains.mps.samples.Physics.structure.InteractedObjectExpression" flags="ng" index="2Ct4Bk" />
       <concept id="232455383964014266" name="jetbrains.mps.samples.Physics.structure.InteractionForce" flags="ng" index="2Ct8Ta" />
       <concept id="1459540517658822197" name="jetbrains.mps.samples.Physics.structure.DynamicForce" flags="ng" index="Y6l9F" />
-      <concept id="1459540517658822194" name="jetbrains.mps.samples.Physics.structure.StaticForce" flags="ng" index="Y6l9G">
-        <child id="1459540517658822195" name="components" index="Y6l9H" />
-      </concept>
       <concept id="1459540517659024964" name="jetbrains.mps.samples.Physics.structure.AbstractObjectReference" flags="ng" index="Y6$Cq">
         <reference id="1459540517659024965" name="target" index="Y6$Cr" />
       </concept>
@@ -132,6 +129,9 @@
         <child id="974138438729280780" name="value" index="2Z1ZyN" />
       </concept>
       <concept id="2521872686837820853" name="jetbrains.mps.samples.Physics.structure.CurrentWorldExpression" flags="ng" index="31hh1H" />
+      <concept id="8705613676600461664" name="jetbrains.mps.samples.Physics.structure.SimpleForce" flags="ng" index="31ngjz">
+        <child id="1459540517658822195" name="components" index="Y6l9H" />
+      </concept>
       <concept id="362892448124441676" name="jetbrains.mps.samples.Physics.structure.EmitLightStyleKey" flags="ng" index="13a5ie" />
       <concept id="3106918138153662052" name="jetbrains.mps.samples.Physics.structure.ShapeStyleExpression" flags="ng" index="39K0JL">
         <property id="3106918138153662053" name="shape" index="39K0JK" />

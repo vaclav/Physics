@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="main.QueriesGenerated">
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.behavior.IInterpreterWrapperType__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
@@ -8,10 +9,12 @@
     <classNode dependClassName="java.util.Collection" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime" />
     <classNode dependClassName="jetbrains.mps.generator.impl.GenerationFailureException" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.CallArgumentQuery" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.IfMacroCondition" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.InlineSwitchCaseCondition" />
+    <classNode dependClassName="jetbrains.mps.generator.impl.query.InsertMacroQuery" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.PropertyValueQuery" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.QueryKey" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.QueryKeyImpl" />
@@ -23,23 +26,31 @@
     <classNode dependClassName="jetbrains.mps.generator.template.BaseMappingRuleContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.IfMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.InlineSwitchCaseContext" />
+    <classNode dependClassName="jetbrains.mps.generator.template.InsertMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.PropertyMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.ReductionRuleQueryContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.ReferenceMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.TemplateArgumentContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.Force__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.SimpleForce__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitConversionUtil" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
     <classNode dependClassName="jetbrains.mps.typechecking.TypecheckingFacade" />
     <classNode dependClassName="jetbrains.mps.util.IterableUtil" />
+    <classNode dependClassName="org.apache.log4j.Level" />
+    <classNode dependClassName="org.apache.log4j.LogManager" />
+    <classNode dependClassName="org.apache.log4j.Logger" />
+    <classNode dependClassName="org.iets3.core.expr.base.behavior.Expression__BehaviorDescriptor" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />

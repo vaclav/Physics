@@ -4,21 +4,24 @@ package jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem;
 
 import jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime;
+import jetbrains.mps.lang.typesystem.runtime.OverloadedOpsProvider_OneTypeSpecified;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.typesystem.inference.SubtypingManager;
+import org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.errors.IRuleConflictWarningProducer;
 import jetbrains.mps.lang.typesystem.runtime.OverloadedOperationsTypesProvider;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.math.BigDecimal;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import java.math.MathContext;
 import org.nevec.rjm.BigDecimalMath;
-import jetbrains.mps.typesystem.inference.SubtypingManager;
-import org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor;
-import jetbrains.mps.errors.IRuleConflictWarningProducer;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
-import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.typechecking.TypecheckingFacade;
+import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
@@ -29,6 +32,30 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.NRootExpression$sH));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.PowerExpression$Cd));
+    {
+      OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
+        {
+          this.myOperandType = createRealType_3ist9o_a0a0a0a0a0a0a3a0();
+          this.myOperationConcept = CONCEPTS.ExpExpression$7t;
+          this.myTypeIsExact = false;
+          this.myIsStrong = false;
+          this.myRuleModelId = "r:eaef0861-3ed4-4442-afee-c90aaa3cdaec(jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem)";
+          this.myRuleNodeId = "9143082258461674507";
+        }
+        public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+          return createRealType_3ist9o_a0a1a0a0a0a0d0a();
+        }
+        public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+          return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA));
+        }
+        @Override
+        public void reportConflict(IRuleConflictWarningProducer producer) {
+          producer.produceWarning(myRuleModelId, myRuleNodeId);
+        }
+      };
+      this.myOverloadedOperationsTypesProviders.add(provider);
+    }
   }
   public static class CustomOverloadedOperationsTypesProvider_a extends OverloadedOperationsTypesProvider {
     public CustomOverloadedOperationsTypesProvider_a(SAbstractConcept concept) {
@@ -95,13 +122,60 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return n0.getResult();
     }
   }
+  public static class CustomOverloadedOperationsTypesProvider_b extends OverloadedOperationsTypesProvider {
+    public CustomOverloadedOperationsTypesProvider_b(SAbstractConcept concept) {
+      this.myLeftOperandType = createRealType_3ist9o_a0a0a2();
+      this.myRightOperandType = createRealType_3ist9o_a0b0a2();
+      this.myOperationConcept = concept;
+      this.myLeftTypeIsExact = false;
+      this.myRightTypeIsExact = false;
+      this.myRightIsStrong = false;
+      this.myLeftIsStrong = false;
+      this.myRuleModelId = "r:eaef0861-3ed4-4442-afee-c90aaa3cdaec(jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem)";
+      this.myRuleNodeId = "7396263120860399018";
+    }
+    public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType"));
+    }
+    public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
+      // Integer type already handled somewhere else 
+      return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA)) && (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$fA)) && !(TypecheckingFacade.getFromContext().isSubtype(rightOperandType, createIntegerType_3ist9o_b0a0a1a2c()));
+    }
+    @Override
+    public void reportConflict(IRuleConflictWarningProducer producer) {
+      producer.produceWarning(myRuleModelId, myRuleNodeId);
+    }
+    private static SNode createRealType_3ist9o_a0a0a2() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      return n0.getResult();
+    }
+    private static SNode createRealType_3ist9o_a0b0a2() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      return n0.getResult();
+    }
+    private static SNode createIntegerType_3ist9o_b0a0a1a2c() {
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.IntegerType$oi);
+      return n0.getResult();
+    }
+  }
+  private static SNode createRealType_3ist9o_a0a0a0a0a0a0a3a0() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    return n0.getResult();
+  }
+  private static SNode createRealType_3ist9o_a0a1a0a0a0a0d0a() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    return n0.getResult();
+  }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept NRootExpression$sH = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.IETS3MathExtended.structure.NRootExpression");
-    /*package*/ static final SConcept NumberType$2D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
+    /*package*/ static final SConcept PowerExpression$Cd = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c6144L, "org.iets3.core.expr.math.structure.PowerExpression");
+    /*package*/ static final SConcept ExpExpression$7t = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x7ee2c0df37c860b9L, "jetbrains.mps.samples.Physics.IETS3MathExtended.structure.ExpExpression");
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept NumberType$2D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
     /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
     /*package*/ static final SConcept NumberRangeSpec$5D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, "org.iets3.core.expr.simpleTypes.structure.NumberRangeSpec");
+    /*package*/ static final SConcept IntegerType$oi = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6d9L, "org.iets3.core.expr.simpleTypes.structure.IntegerType");
   }
 
   private static final class LINKS {

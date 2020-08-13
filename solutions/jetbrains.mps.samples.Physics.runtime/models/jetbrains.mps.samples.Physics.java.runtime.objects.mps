@@ -936,15 +936,15 @@
                   </node>
                 </node>
               </node>
-              <node concept="2YIFZM" id="6cgWs$PgXF" role="3clFbw">
-                <ref role="1Pybhc" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
-                <ref role="37wK5l" to="4bo7:6cgWs$PdRH" resolve="hasMode" />
+              <node concept="2YIFZM" id="7VyKdWRp31P" role="3clFbw">
+                <ref role="37wK5l" to="mizj:6cgWs$PdRH" resolve="haveAll" />
+                <ref role="1Pybhc" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
                 <node concept="37vLTw" id="6cgWs$PgXG" role="37wK5m">
                   <ref role="3cqZAo" node="6cgWs$OQsR" resolve="mode" />
                 </node>
-                <node concept="10M0yZ" id="6cgWs$Ph27" role="37wK5m">
-                  <ref role="3cqZAo" to="4bo7:6cgWs$O6o7" resolve="LINEAR_FORCE_ROTATED" />
-                  <ref role="1PxDUh" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
+                <node concept="10M0yZ" id="7VyKdWRp31K" role="37wK5m">
+                  <ref role="3cqZAo" to="mizj:6cgWs$O6o7" resolve="LINEAR_FORCE_ROTATED" />
+                  <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
                 </node>
               </node>
             </node>
@@ -1029,15 +1029,15 @@
                     <ref role="3cqZAo" node="20wM4XN4eJi" resolve="applicationPoint" />
                   </node>
                 </node>
-                <node concept="2YIFZM" id="6cgWs$PgQL" role="3uHU7B">
-                  <ref role="1Pybhc" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
-                  <ref role="37wK5l" to="4bo7:6cgWs$PdRH" resolve="hasMode" />
+                <node concept="2YIFZM" id="7VyKdWRp31Q" role="3uHU7B">
+                  <ref role="37wK5l" to="mizj:6cgWs$PdRH" resolve="haveAll" />
+                  <ref role="1Pybhc" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
                   <node concept="37vLTw" id="6cgWs$PgQM" role="37wK5m">
                     <ref role="3cqZAo" node="6cgWs$OQsR" resolve="mode" />
                   </node>
-                  <node concept="10M0yZ" id="6cgWs$PgUL" role="37wK5m">
-                    <ref role="3cqZAo" to="4bo7:6cgWs$O6rY" resolve="APPLICATION_POINT_RELATIVE" />
-                    <ref role="1PxDUh" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
+                  <node concept="10M0yZ" id="7VyKdWRp31M" role="37wK5m">
+                    <ref role="3cqZAo" to="mizj:6cgWs$O6rY" resolve="APPLICATION_POINT_RELATIVE" />
+                    <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
                   </node>
                 </node>
               </node>
@@ -1067,15 +1067,15 @@
                     <ref role="3cqZAo" node="20wM4XN4eJi" resolve="applicationPoint" />
                   </node>
                 </node>
-                <node concept="2YIFZM" id="6cgWs$PgJH" role="3uHU7B">
-                  <ref role="1Pybhc" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
-                  <ref role="37wK5l" to="4bo7:6cgWs$PdRH" resolve="hasMode" />
+                <node concept="2YIFZM" id="7VyKdWRp31R" role="3uHU7B">
+                  <ref role="37wK5l" to="mizj:6cgWs$PdRH" resolve="haveAll" />
+                  <ref role="1Pybhc" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
                   <node concept="37vLTw" id="6cgWs$PgJI" role="37wK5m">
                     <ref role="3cqZAo" node="6cgWs$OQsR" resolve="mode" />
                   </node>
-                  <node concept="10M0yZ" id="6cgWs$PgNM" role="37wK5m">
-                    <ref role="3cqZAo" to="4bo7:6cgWs$OUij" resolve="APPLICATION_POINT_ROTATED" />
-                    <ref role="1PxDUh" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
+                  <node concept="10M0yZ" id="7VyKdWRp31L" role="37wK5m">
+                    <ref role="3cqZAo" to="mizj:6cgWs$OUij" resolve="APPLICATION_POINT_ROTATED" />
+                    <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
                   </node>
                 </node>
               </node>
@@ -1153,15 +1153,21 @@
                   </node>
                 </node>
               </node>
-              <node concept="2YIFZM" id="6cgWs$Pgyp" role="3clFbw">
-                <ref role="37wK5l" to="4bo7:6cgWs$PdRH" resolve="hasMode" />
-                <ref role="1Pybhc" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
-                <node concept="37vLTw" id="6cgWs$PgAk" role="37wK5m">
-                  <ref role="3cqZAo" node="6cgWs$OQsR" resolve="mode" />
-                </node>
-                <node concept="10M0yZ" id="6cgWs$P6ED" role="37wK5m">
-                  <ref role="3cqZAo" to="4bo7:6cgWs$NTHy" resolve="APPLY_FULL" />
-                  <ref role="1PxDUh" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
+              <node concept="3fqX7Q" id="7VyKdWRsgC2" role="3clFbw">
+                <node concept="2YIFZM" id="7VyKdWRsgC4" role="3fr31v">
+                  <ref role="37wK5l" to="mizj:7VyKdWRs8cO" resolve="haveOne" />
+                  <ref role="1Pybhc" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+                  <node concept="37vLTw" id="7VyKdWRsgC5" role="37wK5m">
+                    <ref role="3cqZAo" node="6cgWs$OQsR" resolve="mode" />
+                  </node>
+                  <node concept="10M0yZ" id="7VyKdWRsgC6" role="37wK5m">
+                    <ref role="3cqZAo" to="mizj:6cgWs$NTFz" resolve="SKIP_TORQUE" />
+                    <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+                  </node>
+                  <node concept="10M0yZ" id="7VyKdWRsgC7" role="37wK5m">
+                    <ref role="3cqZAo" to="mizj:6cgWs$NTDn" resolve="SKIP_LINEAR_FORCE" />
+                    <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+                  </node>
                 </node>
               </node>
               <node concept="3eNFk2" id="6cgWs$P7oi" role="3eNLev">
@@ -1187,15 +1193,17 @@
                     </node>
                   </node>
                 </node>
-                <node concept="2YIFZM" id="6cgWs$PgCq" role="3eO9$A">
-                  <ref role="1Pybhc" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
-                  <ref role="37wK5l" to="4bo7:6cgWs$PdRH" resolve="hasMode" />
-                  <node concept="37vLTw" id="6cgWs$PgCr" role="37wK5m">
-                    <ref role="3cqZAo" node="6cgWs$OQsR" resolve="mode" />
-                  </node>
-                  <node concept="10M0yZ" id="6cgWs$PgFA" role="37wK5m">
-                    <ref role="3cqZAo" to="4bo7:6cgWs$NTFz" resolve="APPLY_TORQUE" />
-                    <ref role="1PxDUh" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
+                <node concept="3fqX7Q" id="7VyKdWRsgHk" role="3eO9$A">
+                  <node concept="2YIFZM" id="7VyKdWRsgHm" role="3fr31v">
+                    <ref role="37wK5l" to="mizj:6cgWs$PdRH" resolve="haveAll" />
+                    <ref role="1Pybhc" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+                    <node concept="37vLTw" id="7VyKdWRsgHn" role="37wK5m">
+                      <ref role="3cqZAo" node="6cgWs$OQsR" resolve="mode" />
+                    </node>
+                    <node concept="10M0yZ" id="7VyKdWRsgHo" role="37wK5m">
+                      <ref role="3cqZAo" to="mizj:6cgWs$NTFz" resolve="SKIP_TORQUE" />
+                      <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -1215,15 +1223,17 @@
                     </node>
                   </node>
                 </node>
-                <node concept="2YIFZM" id="6cgWs$PgG9" role="3eO9$A">
-                  <ref role="1Pybhc" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
-                  <ref role="37wK5l" to="4bo7:6cgWs$PdRH" resolve="hasMode" />
-                  <node concept="37vLTw" id="6cgWs$PgGa" role="37wK5m">
-                    <ref role="3cqZAo" node="6cgWs$OQsR" resolve="mode" />
-                  </node>
-                  <node concept="10M0yZ" id="6cgWs$PgJ8" role="37wK5m">
-                    <ref role="3cqZAo" to="4bo7:6cgWs$NTDn" resolve="APPLY_LINEAR_FORCE" />
-                    <ref role="1PxDUh" to="4bo7:6cgWs$Oa5R" resolve="ForceMode" />
+                <node concept="3fqX7Q" id="7VyKdWRsgKx" role="3eO9$A">
+                  <node concept="2YIFZM" id="7VyKdWRsgKz" role="3fr31v">
+                    <ref role="37wK5l" to="mizj:6cgWs$PdRH" resolve="haveAll" />
+                    <ref role="1Pybhc" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+                    <node concept="37vLTw" id="7VyKdWRsgK$" role="37wK5m">
+                      <ref role="3cqZAo" node="6cgWs$OQsR" resolve="mode" />
+                    </node>
+                    <node concept="10M0yZ" id="7VyKdWRsgK_" role="37wK5m">
+                      <ref role="3cqZAo" to="mizj:6cgWs$NTDn" resolve="SKIP_LINEAR_FORCE" />
+                      <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -4318,8 +4328,8 @@
           </node>
         </node>
         <node concept="3cpWs6" id="6cgWs$N2H$" role="3cqZAp">
-          <node concept="37vLTw" id="6cgWs$N2LM" role="3cqZAk">
-            <ref role="3cqZAo" node="5ckWEYjjEyw" resolve="vector" />
+          <node concept="37vLTw" id="4R4wXcvdPQp" role="3cqZAk">
+            <ref role="3cqZAo" node="6cgWs$N2nN" resolve="result" />
           </node>
         </node>
       </node>

@@ -6,14 +6,17 @@
     <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.math.MathContext" />
     <classNode dependClassName="jetbrains.mps.errors.IRuleConflictWarningProducer" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.OverloadedOperationsTypesProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.OverloadedOpsProvider_OneTypeSpecified" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.IETS3MathExtended.typesystem.typeof_NRootExpression_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
+    <classNode dependClassName="jetbrains.mps.typechecking.TypecheckingFacade" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.SubtypingManager" />
     <classNode dependClassName="org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />

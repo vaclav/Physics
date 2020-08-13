@@ -57,7 +57,6 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
 
                   @Override
                   public DVector3C linearForce(final World world, SystemScope scope, final PhysicalEntity currentEntity, double time) {
-
                     return VectorHelper.fromInternal(new _FunctionTypes._return_P0_E0<VectorLike>() {
                       public VectorLike invoke() {
                         VectorLike seed = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
@@ -85,10 +84,16 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
                         return seed;
                       }
                     }.invoke());
+
                   }
                   @Override
                   public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
                     return null;
+                  }
+
+                  @Override
+                  public int forceMode() {
+                    return 0;
                   }
                 };
               }

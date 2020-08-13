@@ -22,7 +22,7 @@ public class Oriented_ForceComponents_Remove {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        SPropertyOperations.assign(node, PROPS.isComponentsOriented$Y$0p, false);
+        SPropertyOperations.assign(node, PROPS.isComponentsOriented$72Cn, false);
       }
 
     };
@@ -70,6 +70,6 @@ public class Oriented_ForceComponents_Remove {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isComponentsOriented$Y$0p = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x69b11d4c0911a593L, "isComponentsOriented");
+    /*package*/ static final SProperty isComponentsOriented$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsOriented");
   }
 }

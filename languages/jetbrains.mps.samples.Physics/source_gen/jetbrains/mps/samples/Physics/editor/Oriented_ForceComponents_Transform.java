@@ -101,12 +101,12 @@ public class Oriented_ForceComponents_Transform extends TransformationMenuBase {
 
       @Override
       public void execute(@NotNull String pattern) {
-        SPropertyOperations.assign(_context.getNode(), PROPS.isComponentsOriented$Y$0p, true);
+        SPropertyOperations.assign(_context.getNode(), PROPS.isComponentsOriented$72Cn, true);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isComponentsOriented$Y$0p));
+        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isComponentsOriented$72Cn));
       }
 
 
@@ -129,6 +129,6 @@ public class Oriented_ForceComponents_Transform extends TransformationMenuBase {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isComponentsOriented$Y$0p = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x69b11d4c0911a593L, "isComponentsOriented");
+    /*package*/ static final SProperty isComponentsOriented$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsOriented");
   }
 }

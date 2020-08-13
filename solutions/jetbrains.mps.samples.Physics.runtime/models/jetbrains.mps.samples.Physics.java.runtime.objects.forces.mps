@@ -26,8 +26,6 @@
         <child id="2323553266850475953" name="modifiers" index="2frcjj" />
       </concept>
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
-      <concept id="1224500764161" name="jetbrains.mps.baseLanguage.structure.BitwiseAndExpression" flags="nn" index="pVHWs" />
-      <concept id="1224500790866" name="jetbrains.mps.baseLanguage.structure.BitwiseOrExpression" flags="nn" index="pVOtf" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
       <concept id="1239714755177" name="jetbrains.mps.baseLanguage.structure.AbstractUnaryNumberOperation" flags="nn" index="2$Kvd9">
         <child id="1239714902950" name="expression" index="2$L3a6" />
@@ -60,12 +58,10 @@
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
-      <concept id="1070462154015" name="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" flags="ig" index="Wx3nA" />
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
       <concept id="1182160077978" name="jetbrains.mps.baseLanguage.structure.AnonymousClassCreator" flags="nn" index="YeOm9">
         <child id="1182160096073" name="cls" index="YeSDq" />
       </concept>
-      <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
@@ -78,7 +74,6 @@
       <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
-        <property id="1075300953594" name="abstractClass" index="1sVAO0" />
         <child id="1095933932569" name="implementedInterface" index="EKbjA" />
       </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
@@ -136,9 +131,6 @@
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
-      <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
-        <child id="1079359253376" name="expression" index="1eOMHV" />
-      </concept>
       <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
       <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
@@ -170,7 +162,6 @@
         <child id="1144231399730" name="condition" index="1Dwp0S" />
         <child id="1144231408325" name="iteration" index="1Dwrff" />
       </concept>
-      <concept id="1225892208569" name="jetbrains.mps.baseLanguage.structure.ShiftLeftExpression" flags="nn" index="1GRDU$" />
       <concept id="1107796713796" name="jetbrains.mps.baseLanguage.structure.Interface" flags="ig" index="3HP615" />
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="8356039341262087992" name="line" index="1aUNEU" />
@@ -260,9 +251,9 @@
             <ref role="3cqZAo" node="20wM4XN49s4" resolve="value" />
           </node>
           <node concept="10Nm6u" id="20wM4XN49KN" role="37wK5m" />
-          <node concept="10M0yZ" id="6cgWs$OcCP" role="37wK5m">
-            <ref role="3cqZAo" node="6cgWs$O9ba" resolve="DEFAULT" />
-            <ref role="1PxDUh" node="6cgWs$Oa5R" resolve="ForceMode" />
+          <node concept="10M0yZ" id="7VyKdWRp31N" role="37wK5m">
+            <ref role="3cqZAo" to="mizj:6cgWs$O9ba" resolve="DEFAULT" />
+            <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
           </node>
         </node>
       </node>
@@ -522,9 +513,9 @@
       <property role="TrG5h" value="forceMode" />
       <node concept="3clFbS" id="6cgWs$NOzs" role="3clF47">
         <node concept="3cpWs6" id="6cgWs$NODh" role="3cqZAp">
-          <node concept="10M0yZ" id="6cgWs$Oa$2" role="3cqZAk">
-            <ref role="1PxDUh" node="6cgWs$Oa5R" resolve="ForceMode" />
-            <ref role="3cqZAo" node="6cgWs$O9ba" resolve="DEFAULT" />
+          <node concept="10M0yZ" id="7VyKdWRp31O" role="3cqZAk">
+            <ref role="3cqZAo" to="mizj:6cgWs$O9ba" resolve="DEFAULT" />
+            <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
           </node>
         </node>
       </node>
@@ -1506,187 +1497,6 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="5kbw6V4d4g4" role="1B3o_S" />
-  </node>
-  <node concept="312cEu" id="6cgWs$Oa5R">
-    <property role="TrG5h" value="ForceMode" />
-    <property role="1sVAO0" value="true" />
-    <node concept="Wx3nA" id="6cgWs$NTFz" role="jymVt">
-      <property role="TrG5h" value="APPLY_TORQUE" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="6cgWs$NTF$" role="1B3o_S" />
-      <node concept="10Oyi0" id="6cgWs$NTF_" role="1tU5fm" />
-      <node concept="1GRDU$" id="6cgWs$O83D" role="33vP2m">
-        <node concept="3cmrfG" id="6cgWs$NTFA" role="3uHU7B">
-          <property role="3cmrfH" value="1" />
-        </node>
-        <node concept="3cmrfG" id="6cgWs$O81H" role="3uHU7w">
-          <property role="3cmrfH" value="0" />
-        </node>
-      </node>
-      <node concept="z59LJ" id="6cgWs$O9Rl" role="lGtFl">
-        <node concept="TZ5HA" id="6cgWs$O9Rm" role="TZ5H$">
-          <node concept="1dT_AC" id="6cgWs$O9Rn" role="1dT_Ay">
-            <property role="1dT_AB" value="Mode flag to apply the torque from the force on the object" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="Wx3nA" id="6cgWs$NTDn" role="jymVt">
-      <property role="TrG5h" value="APPLY_LINEAR_FORCE" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="6cgWs$NTDo" role="1B3o_S" />
-      <node concept="10Oyi0" id="6cgWs$NTCX" role="1tU5fm" />
-      <node concept="1GRDU$" id="6cgWs$O8yg" role="33vP2m">
-        <node concept="3cmrfG" id="6cgWs$O8$M" role="3uHU7w">
-          <property role="3cmrfH" value="1" />
-        </node>
-        <node concept="3cmrfG" id="6cgWs$NTF2" role="3uHU7B">
-          <property role="3cmrfH" value="1" />
-        </node>
-      </node>
-      <node concept="z59LJ" id="6cgWs$O9Kj" role="lGtFl">
-        <node concept="TZ5HA" id="6cgWs$O9Kk" role="TZ5H$">
-          <node concept="1dT_AC" id="6cgWs$O9Kl" role="1dT_Ay">
-            <property role="1dT_AB" value="Mode flag to apply the linear force on the object" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="Wx3nA" id="6cgWs$NTHy" role="jymVt">
-      <property role="TrG5h" value="APPLY_FULL" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="6cgWs$NTHz" role="1B3o_S" />
-      <node concept="10Oyi0" id="6cgWs$NTH$" role="1tU5fm" />
-      <node concept="pVOtf" id="6cgWs$NU__" role="33vP2m">
-        <node concept="37vLTw" id="6cgWs$Oamh" role="3uHU7B">
-          <ref role="3cqZAo" node="6cgWs$NTFz" resolve="APPLY_TORQUE" />
-        </node>
-        <node concept="37vLTw" id="6cgWs$Oaml" role="3uHU7w">
-          <ref role="3cqZAo" node="6cgWs$NTDn" resolve="APPLY_LINEAR_FORCE" />
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="6cgWs$NUAU" role="jymVt" />
-    <node concept="2tJIrI" id="6cgWs$O9k2" role="jymVt" />
-    <node concept="Wx3nA" id="6cgWs$O6o7" role="jymVt">
-      <property role="TrG5h" value="LINEAR_FORCE_ROTATED" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="6cgWs$O6o8" role="1B3o_S" />
-      <node concept="10Oyi0" id="6cgWs$O6o9" role="1tU5fm" />
-      <node concept="1GRDU$" id="6cgWs$O8EM" role="33vP2m">
-        <node concept="3cmrfG" id="6cgWs$O8Gz" role="3uHU7w">
-          <property role="3cmrfH" value="2" />
-        </node>
-        <node concept="3cmrfG" id="6cgWs$O6oa" role="3uHU7B">
-          <property role="3cmrfH" value="1" />
-        </node>
-      </node>
-      <node concept="z59LJ" id="6cgWs$O9mz" role="lGtFl">
-        <node concept="TZ5HA" id="6cgWs$O9m$" role="TZ5H$">
-          <node concept="1dT_AC" id="6cgWs$O9m_" role="1dT_Ay">
-            <property role="1dT_AB" value="Mode flag to set the linear force rotated like the object" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="Wx3nA" id="6cgWs$OUij" role="jymVt">
-      <property role="TrG5h" value="APPLICATION_POINT_ROTATED" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="6cgWs$OUik" role="1B3o_S" />
-      <node concept="10Oyi0" id="6cgWs$OUil" role="1tU5fm" />
-      <node concept="1GRDU$" id="6cgWs$OUim" role="33vP2m">
-        <node concept="3cmrfG" id="6cgWs$OUio" role="3uHU7B">
-          <property role="3cmrfH" value="1" />
-        </node>
-        <node concept="3cmrfG" id="6cgWs$OUlT" role="3uHU7w">
-          <property role="3cmrfH" value="3" />
-        </node>
-      </node>
-      <node concept="z59LJ" id="6cgWs$OUip" role="lGtFl">
-        <node concept="TZ5HA" id="6cgWs$OUiq" role="TZ5H$">
-          <node concept="1dT_AC" id="6cgWs$OUir" role="1dT_Ay">
-            <property role="1dT_AB" value="Mode flag to set the application point rotated like the object" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="Wx3nA" id="6cgWs$O6rY" role="jymVt">
-      <property role="TrG5h" value="APPLICATION_POINT_RELATIVE" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="6cgWs$O6rZ" role="1B3o_S" />
-      <node concept="10Oyi0" id="6cgWs$O6s0" role="1tU5fm" />
-      <node concept="1GRDU$" id="6cgWs$O8XU" role="33vP2m">
-        <node concept="3cmrfG" id="6cgWs$O6s1" role="3uHU7B">
-          <property role="3cmrfH" value="1" />
-        </node>
-        <node concept="3cmrfG" id="6cgWs$OUnk" role="3uHU7w">
-          <property role="3cmrfH" value="4" />
-        </node>
-      </node>
-      <node concept="z59LJ" id="6cgWs$O9qv" role="lGtFl">
-        <node concept="TZ5HA" id="6cgWs$O9qw" role="TZ5H$">
-          <node concept="1dT_AC" id="6cgWs$O9qx" role="1dT_Ay">
-            <property role="1dT_AB" value="Mode flag to set the application point relative to the object position" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="6cgWs$O6ln" role="jymVt" />
-    <node concept="Wx3nA" id="6cgWs$O9ba" role="jymVt">
-      <property role="TrG5h" value="DEFAULT" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="6cgWs$O9bb" role="1B3o_S" />
-      <node concept="10Oyi0" id="6cgWs$O9a8" role="1tU5fm" />
-      <node concept="pVOtf" id="6cgWs$OUVi" role="33vP2m">
-        <node concept="37vLTw" id="6cgWs$OUWv" role="3uHU7w">
-          <ref role="3cqZAo" node="6cgWs$OUij" resolve="APPLICATION_POINT_ROTATED" />
-        </node>
-        <node concept="pVOtf" id="6cgWs$O9dA" role="3uHU7B">
-          <node concept="37vLTw" id="6cgWs$Oamt" role="3uHU7B">
-            <ref role="3cqZAo" node="6cgWs$NTHy" resolve="APPLY_FULL" />
-          </node>
-          <node concept="37vLTw" id="6cgWs$Oamp" role="3uHU7w">
-            <ref role="3cqZAo" node="6cgWs$O6rY" resolve="APPLICATION_POINT_RELATIVE" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="6cgWs$Oam3" role="jymVt" />
-    <node concept="2tJIrI" id="6AL7kK8Um4i" role="jymVt" />
-    <node concept="2tJIrI" id="6AL7kK8Um5Q" role="jymVt" />
-    <node concept="2YIFZL" id="6cgWs$PdRH" role="jymVt">
-      <property role="TrG5h" value="hasMode" />
-      <node concept="3clFbS" id="6cgWs$PdRK" role="3clF47">
-        <node concept="3cpWs6" id="6cgWs$PdVn" role="3cqZAp">
-          <node concept="3clFbC" id="6cgWs$PeyA" role="3cqZAk">
-            <node concept="37vLTw" id="6cgWs$Pe$1" role="3uHU7w">
-              <ref role="3cqZAo" node="6cgWs$PdTM" resolve="expected" />
-            </node>
-            <node concept="1eOMI4" id="6cgWs$PdVW" role="3uHU7B">
-              <node concept="pVHWs" id="6cgWs$PenQ" role="1eOMHV">
-                <node concept="37vLTw" id="6cgWs$Pep0" role="3uHU7w">
-                  <ref role="3cqZAo" node="6cgWs$PdTM" resolve="expected" />
-                </node>
-                <node concept="37vLTw" id="6cgWs$PdWL" role="3uHU7B">
-                  <ref role="3cqZAo" node="6cgWs$PdTh" resolve="mode" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3Tm1VV" id="6cgWs$PdMW" role="1B3o_S" />
-      <node concept="10P_77" id="6cgWs$PdOB" role="3clF45" />
-      <node concept="37vLTG" id="6cgWs$PdTh" role="3clF46">
-        <property role="TrG5h" value="mode" />
-        <node concept="10Oyi0" id="6cgWs$PdTg" role="1tU5fm" />
-      </node>
-      <node concept="37vLTG" id="6cgWs$PdTM" role="3clF46">
-        <property role="TrG5h" value="expected" />
-        <node concept="10Oyi0" id="6cgWs$PdUl" role="1tU5fm" />
-      </node>
-    </node>
-    <node concept="3Tm1VV" id="6cgWs$Oa5S" role="1B3o_S" />
   </node>
 </model>
 

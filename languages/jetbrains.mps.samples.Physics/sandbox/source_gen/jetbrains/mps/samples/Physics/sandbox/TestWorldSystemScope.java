@@ -12,6 +12,8 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import org.nevec.rjm.BigDecimalMath;
+import java.math.MathContext;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
@@ -60,7 +62,7 @@ public class TestWorldSystemScope extends SystemScope {
 
       // Set static properties of Something 
       this.setMass(AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
-      this.getBody().setPosition(VectorHelper.fromInternal(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimal.valueOf(Math.PI), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimal.valueOf(Math.PI), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.TheOtherWorld).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.TheOtherWorld).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Something 
@@ -80,23 +82,33 @@ public class TestWorldSystemScope extends SystemScope {
           if (cached == null) {
             cached = VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1")))));
           }
-
           return cached;
+
         }
         @Override
         public DVector3C applicationPoint(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }, new Force<TestWorldSystemScope>() {
 
         @Override
         public DVector3C linearForce(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-
           return VectorHelper.fromInternal(scope.Hey.minus(currentEntity).resize(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1")))));
+
         }
         @Override
         public DVector3C applicationPoint(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }, new Force<TestWorldSystemScope>() {
         private Force internal;
@@ -113,7 +125,6 @@ public class TestWorldSystemScope extends SystemScope {
 
                     @Override
                     public DVector3C linearForce(final World world, SystemScope scope, final PhysicalEntity currentEntity, double time) {
-
                       return VectorHelper.fromInternal(new _FunctionTypes._return_P0_E0<VectorLike>() {
                         public VectorLike invoke() {
                           VectorLike seed = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
@@ -141,10 +152,16 @@ public class TestWorldSystemScope extends SystemScope {
                           return seed;
                         }
                       }.invoke());
+
                     }
                     @Override
                     public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
                       return null;
+                    }
+
+                    @Override
+                    public int forceMode() {
+                      return 0;
                     }
                   };
                 }
@@ -187,12 +204,17 @@ public class TestWorldSystemScope extends SystemScope {
 
                     @Override
                     public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-
                       return VectorHelper.fromInternal(new InternalVector(x, y, z));
+
                     }
                     @Override
                     public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
                       return null;
+                    }
+
+                    @Override
+                    public int forceMode() {
+                      return 0;
                     }
                   };
                 }

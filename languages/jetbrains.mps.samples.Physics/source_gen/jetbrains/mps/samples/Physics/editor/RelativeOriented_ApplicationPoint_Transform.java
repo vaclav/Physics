@@ -102,12 +102,12 @@ public class RelativeOriented_ApplicationPoint_Transform extends TransformationM
 
       @Override
       public void execute(@NotNull String pattern) {
-        SPropertyOperations.assign(_context.getNode(), PROPS.isPointRelative$Y$1n, true);
+        SPropertyOperations.assign(_context.getNode(), PROPS.isPointRelative$72Dl, true);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isPointRelative$Y$1n));
+        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isPointRelative$72Dl));
       }
 
 
@@ -166,12 +166,12 @@ public class RelativeOriented_ApplicationPoint_Transform extends TransformationM
 
       @Override
       public void execute(@NotNull String pattern) {
-        SPropertyOperations.assign(_context.getNode(), PROPS.isPointOriented$Y$cZ, true);
+        SPropertyOperations.assign(_context.getNode(), PROPS.isPointOriented$72OX, true);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isPointOriented$Y$cZ));
+        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isPointOriented$72OX));
       }
 
 
@@ -194,7 +194,7 @@ public class RelativeOriented_ApplicationPoint_Transform extends TransformationM
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isPointRelative$Y$1n = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x69b11d4c0911a595L, "isPointRelative");
-    /*package*/ static final SProperty isPointOriented$Y$cZ = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x69b11d4c0911a598L, "isPointOriented");
+    /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
+    /*package*/ static final SProperty isPointOriented$72OX = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a598L, "isPointOriented");
   }
 }

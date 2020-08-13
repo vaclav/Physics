@@ -70,5 +70,11 @@
     <property role="FLfZY" value="-?[0-9]+\\.?[0-9]*([Ee][\\+\\-]?[0-9]+)?" />
     <property role="TrG5h" value="float" />
   </node>
+  <node concept="1TIwiD" id="7VyKdWRM62T">
+    <property role="EcuMT" value="9143082258461647033" />
+    <property role="TrG5h" value="ExpExpression" />
+    <property role="34LRSv" value="exp" />
+    <ref role="1TJDcQ" to="hm2y:4rZeNQ6NgXD" resolve="UnaryExpression" />
+  </node>
 </model>
 

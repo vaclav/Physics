@@ -28,7 +28,7 @@ public class Math3DHelper {
   public static DVector3C rotateLikeObject(PhysicalEntity object, DVector3C vector) {
     DVector3 result = new DVector3();
     OdeMath.dMultiply0(result, object.getBody().getRotation(), vector);
-    return vector;
+    return result;
   }
 
 }

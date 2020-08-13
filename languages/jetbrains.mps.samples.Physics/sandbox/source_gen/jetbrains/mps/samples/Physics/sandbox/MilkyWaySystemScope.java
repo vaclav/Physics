@@ -81,12 +81,17 @@ public class MilkyWaySystemScope extends SystemScope {
 
                         @Override
                         public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-
                           return VectorHelper.fromInternal(v.minus(currentEntity).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
+
                         }
                         @Override
                         public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
                           return null;
+                        }
+
+                        @Override
+                        public int forceMode() {
+                          return 0;
                         }
                       };
                     }

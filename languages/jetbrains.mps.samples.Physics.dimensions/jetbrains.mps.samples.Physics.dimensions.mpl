@@ -124,6 +124,7 @@
     <dependency reexport="false">f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.IETS3MathExtended)</dependency>
     <dependency reexport="false" scope="generate-into">6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)</dependency>
     <dependency reexport="false" scope="generate-into">7b68d745-a7b8-48b9-bd9c-05c0f8725a35(org.iets3.core.base)</dependency>
+    <dependency reexport="false">47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:47f075a6-558e-4640-a606-7ce0236c8023:com.mbeddr.mpsutil.interpreter" version="1" />

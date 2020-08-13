@@ -63,12 +63,17 @@ public class World2SystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
-
           return VectorHelper.fromInternal(scope.Ha.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
+
         }
         @Override
         public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }));
     }
@@ -100,12 +105,17 @@ public class World2SystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
-
           return VectorHelper.fromInternal(scope.Ho3.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
+
         }
         @Override
         public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }));
     }

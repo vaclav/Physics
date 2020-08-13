@@ -19,13 +19,13 @@
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.ForceMode" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.Math3DHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceMode" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder" />
     <classNode dependClassName="org.ode4j.math.DMatrix3C" />

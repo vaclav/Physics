@@ -16,6 +16,7 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptExpExpression = createDescriptorForExpExpression();
   /*package*/ final ConceptDescriptor myConceptNRootExpression = createDescriptorForNRootExpression();
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypefloat = new ConstrainedStringDatatypeDescriptorImpl(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x13da0dd571764807L, "float", "r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.IETS3MathExtended.structure)/1430471042026326023", "-?[0-9]+\\.?[0-9]*([Ee][\\+\\-]?[0-9]+)?");
   private final LanguageConceptSwitch myIndexSwitch;
@@ -33,13 +34,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptNRootExpression);
+    return Arrays.asList(myConceptExpExpression, myConceptNRootExpression);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.ExpExpression:
+        return myConceptExpExpression;
       case LanguageConceptSwitch.NRootExpression:
         return myConceptNRootExpression;
       default:
@@ -56,6 +59,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForExpExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.IETS3MathExtended", "ExpExpression", 0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x7ee2c0df37c860b9L);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.UnaryExpression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L);
+    b.origin("r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.IETS3MathExtended.structure)/9143082258461647033");
+    b.version(2);
+    b.alias("exp");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForNRootExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.IETS3MathExtended", "NRootExpression", 0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L);
     b.class_(false, false, false);

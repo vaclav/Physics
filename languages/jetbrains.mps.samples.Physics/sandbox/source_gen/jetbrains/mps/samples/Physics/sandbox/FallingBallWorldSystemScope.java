@@ -68,12 +68,17 @@ public class FallingBallWorldSystemScope extends SystemScope {
           if (cached == null) {
             cached = VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("-9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0"))));
           }
-
           return cached;
+
         }
         @Override
         public DVector3C applicationPoint(World world, FallingBallWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }));
     }

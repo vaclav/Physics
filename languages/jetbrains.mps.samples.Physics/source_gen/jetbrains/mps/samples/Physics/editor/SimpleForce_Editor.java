@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class StaticForce_Editor extends DefaultNodeEditor {
+public class SimpleForce_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new StaticForce_EditorBuilder_a(editorContext, node).createCell();
+    return new SimpleForce_EditorBuilder_a(editorContext, node).createCell();
   }
 }

@@ -6,6 +6,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
+import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
 
 /**
  * Object able to compute force from given world and target physical entity

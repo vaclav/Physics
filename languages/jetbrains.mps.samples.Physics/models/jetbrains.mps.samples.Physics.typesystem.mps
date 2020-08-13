@@ -1989,7 +1989,7 @@
     </node>
   </node>
   <node concept="1YbPZF" id="RryuvUUPGs">
-    <property role="TrG5h" value="typeof_StaticForce" />
+    <property role="TrG5h" value="typeof_SimpleForce" />
     <property role="3GE5qa" value="physical.force.implemented.simple" />
     <node concept="3clFbS" id="RryuvUUPGt" role="18ibNy">
       <node concept="nvevp" id="RryuvUUQp9" role="3cqZAp">
@@ -2018,7 +2018,7 @@
             </node>
             <node concept="2OqwBi" id="RryuvUURem" role="1ZmcU8">
               <node concept="1YBJjd" id="RryuvUUR3c" role="2Oq$k0">
-                <ref role="1YBMHb" node="RryuvUUPGv" resolve="staticForce" />
+                <ref role="1YBMHb" node="RryuvUUPGv" resolve="simpleForce" />
               </node>
               <node concept="3TrEf2" id="RryuvUUR$V" role="2OqNvi">
                 <ref role="3Tt5mk" to="9tcj:1h1l5SEm0oN" resolve="components" />
@@ -2029,7 +2029,7 @@
         <node concept="1Z2H0r" id="RryuvUUQq9" role="nvjzm">
           <node concept="2OqwBi" id="RryuvUUQAY" role="1Z2MuG">
             <node concept="1YBJjd" id="RryuvUUQq_" role="2Oq$k0">
-              <ref role="1YBMHb" node="RryuvUUPGv" resolve="staticForce" />
+              <ref role="1YBMHb" node="RryuvUUPGv" resolve="simpleForce" />
             </node>
             <node concept="3TrEf2" id="RryuvUUQTU" role="2OqNvi">
               <ref role="3Tt5mk" to="9tcj:1h1l5SEm0oN" resolve="components" />
@@ -2043,8 +2043,8 @@
       </node>
     </node>
     <node concept="1YaCAy" id="RryuvUUPGv" role="1YuTPh">
-      <property role="TrG5h" value="staticForce" />
-      <ref role="1YaFvo" to="9tcj:1h1l5SEm0oM" resolve="StaticForce" />
+      <property role="TrG5h" value="simpleForce" />
+      <ref role="1YaFvo" to="9tcj:7zgzoeTzo_w" resolve="SimpleForce" />
     </node>
   </node>
   <node concept="1YbPZF" id="270Q2mF5iZ9">

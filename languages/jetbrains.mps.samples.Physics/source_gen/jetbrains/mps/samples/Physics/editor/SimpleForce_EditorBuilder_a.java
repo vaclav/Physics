@@ -31,11 +31,11 @@ import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class StaticForce_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class SimpleForce_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public StaticForce_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public SimpleForce_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -52,33 +52,33 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_82sbyf_a");
+    editorCell.setCellId("Collection_fo54x5_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createComponent_0());
     editorCell.addEditorCell(createConstant_0());
-    if (nodeCondition_82sbyf_a2a()) {
+    if (nodeCondition_fo54x5_a2a()) {
       editorCell.addEditorCell(createConstant_1());
     }
     editorCell.addEditorCell(createRefNode_0());
     editorCell.addEditorCell(createConstant_2());
-    if (nodeCondition_82sbyf_a5a()) {
+    if (nodeCondition_fo54x5_a5a()) {
       editorCell.addEditorCell(createConstant_3());
     }
-    if (nodeCondition_82sbyf_a6a()) {
+    if (nodeCondition_fo54x5_a6a()) {
       editorCell.addEditorCell(createConstant_4());
     }
     editorCell.addEditorCell(createRefNode_1());
     return editorCell;
   }
-  private boolean nodeCondition_82sbyf_a2a() {
-    return SPropertyOperations.getBoolean(myNode, PROPS.isComponentsOriented$Y$0p);
+  private boolean nodeCondition_fo54x5_a2a() {
+    return SPropertyOperations.getBoolean(myNode, PROPS.isComponentsOriented$72Cn);
   }
-  private boolean nodeCondition_82sbyf_a5a() {
-    return SPropertyOperations.getBoolean(myNode, PROPS.isPointOriented$Y$cZ);
+  private boolean nodeCondition_fo54x5_a5a() {
+    return SPropertyOperations.getBoolean(myNode, PROPS.isPointOriented$72OX);
   }
-  private boolean nodeCondition_82sbyf_a6a() {
-    return SPropertyOperations.getBoolean(myNode, PROPS.isPointRelative$Y$1n);
+  private boolean nodeCondition_fo54x5_a6a() {
+    return SPropertyOperations.getBoolean(myNode, PROPS.isPointRelative$72Dl);
   }
   private EditorCell createComponent_0() {
     EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.lang.core.editor.alias");
@@ -91,18 +91,18 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "following");
-    editorCell.setCellId("Constant_82sbyf_b0");
+    editorCell.setCellId("Constant_fo54x5_b0");
     Style style = new StyleImpl();
     new AttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.StaticForce$r5, "jetbrains.mps.samples.Physics.editor.Oriented_ForceComponents_Transform"));
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.SimpleForce$M7, "jetbrains.mps.samples.Physics.editor.Oriented_ForceComponents_Transform"));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
   }
   private EditorCell createConstant_1() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "oriented");
-    editorCell.setCellId("Constant_82sbyf_c0");
+    editorCell.setCellId("Constant_fo54x5_c0");
     Style style = new StyleImpl();
     new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.EDITABLE, false);
@@ -112,14 +112,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new componentsSingleRoleHandler_82sbyf_d0(myNode, LINKS.components$Kpdw, getEditorContext());
+    SingleRoleCellProvider provider = new componentsSingleRoleHandler_fo54x5_d0(myNode, LINKS.components$SRPu, getEditorContext());
     return provider.createCell();
   }
-  private static class componentsSingleRoleHandler_82sbyf_d0 extends SingleRoleCellProvider {
+  private static class componentsSingleRoleHandler_fo54x5_d0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public componentsSingleRoleHandler_82sbyf_d0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public componentsSingleRoleHandler_fo54x5_d0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -132,8 +132,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.components$Kpdw, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.components$Kpdw, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.components$SRPu, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.components$SRPu, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -145,13 +145,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.components$Kpdw);
+        editorCell.setSRole(LINKS.components$SRPu);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.components$Kpdw));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.components$SRPu));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_components");
@@ -168,19 +168,19 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_2() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "applied at");
-    editorCell.setCellId("Constant_82sbyf_e0");
+    editorCell.setCellId("Constant_fo54x5_e0");
     Style style = new StyleImpl();
     new AttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.StaticForce$r5, "jetbrains.mps.samples.Physics.editor.RelativeOriented_ApplicationPoint_Transform"));
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.SimpleForce$M7, "jetbrains.mps.samples.Physics.editor.RelativeOriented_ApplicationPoint_Transform"));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
   }
   private EditorCell createConstant_3() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "oriented");
-    editorCell.setCellId("Constant_82sbyf_f0");
+    editorCell.setCellId("Constant_fo54x5_f0");
     Style style = new StyleImpl();
     new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.EDITABLE, false);
@@ -191,7 +191,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_4() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "relative");
-    editorCell.setCellId("Constant_82sbyf_g0");
+    editorCell.setCellId("Constant_fo54x5_g0");
     Style style = new StyleImpl();
     new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.EDITABLE, false);
@@ -201,14 +201,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new applicationPointSingleRoleHandler_82sbyf_h0(myNode, LINKS.applicationPoint$ZNBs, getEditorContext());
+    SingleRoleCellProvider provider = new applicationPointSingleRoleHandler_fo54x5_h0(myNode, LINKS.applicationPoint$8ifq, getEditorContext());
     return provider.createCell();
   }
-  private static class applicationPointSingleRoleHandler_82sbyf_h0 extends SingleRoleCellProvider {
+  private static class applicationPointSingleRoleHandler_fo54x5_h0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public applicationPointSingleRoleHandler_82sbyf_h0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public applicationPointSingleRoleHandler_fo54x5_h0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -221,8 +221,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.applicationPoint$ZNBs, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.applicationPoint$ZNBs, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.applicationPoint$8ifq, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.applicationPoint$8ifq, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -234,13 +234,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.applicationPoint$ZNBs);
+        editorCell.setSRole(LINKS.applicationPoint$8ifq);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.applicationPoint$ZNBs));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.applicationPoint$8ifq));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_applicationPoint");
@@ -257,18 +257,18 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isComponentsOriented$Y$0p = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x69b11d4c0911a593L, "isComponentsOriented");
-    /*package*/ static final SProperty isPointOriented$Y$cZ = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x69b11d4c0911a598L, "isPointOriented");
-    /*package*/ static final SProperty isPointRelative$Y$1n = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x69b11d4c0911a595L, "isPointRelative");
+    /*package*/ static final SProperty isComponentsOriented$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsOriented");
+    /*package*/ static final SProperty isPointOriented$72OX = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a598L, "isPointOriented");
+    /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Force$pC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
-    /*package*/ static final SConcept StaticForce$r5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, "jetbrains.mps.samples.Physics.structure.StaticForce");
+    /*package*/ static final SConcept SimpleForce$M7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, "jetbrains.mps.samples.Physics.structure.SimpleForce");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink components$Kpdw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x1441545e2a580633L, "components");
-    /*package*/ static final SContainmentLink applicationPoint$ZNBs = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x1baa8b95de1a6d46L, "applicationPoint");
+    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
+    /*package*/ static final SContainmentLink applicationPoint$8ifq = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1baa8b95de1a6d46L, "applicationPoint");
   }
 }

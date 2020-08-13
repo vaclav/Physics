@@ -9,10 +9,12 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class ForceFactories {
   public static class NodeFactory_4809107873068929002 implements NodeFactory {
@@ -29,10 +31,17 @@ public class ForceFactories {
   }
   public static class NodeFactory_4809107873070311133 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+      SPropertyOperations.assign(newNode, PROPS.isComponentsOriented$72Cn, false);
+      SPropertyOperations.assign(newNode, PROPS.isPointOriented$72OX, true);
+      SPropertyOperations.assign(newNode, PROPS.isPointRelative$72Dl, true);
+
       {
         final SNode force = sampleNode;
-        if (SNodeOperations.isInstanceOf(force, CONCEPTS.StaticForce$r5)) {
-          SLinkOperations.setTarget(newNode, LINKS.components$Kpdw, SNodeOperations.copyNode(SLinkOperations.getTarget(force, LINKS.components$Kpdw)));
+        if (SNodeOperations.isInstanceOf(force, CONCEPTS.SimpleForce$M7)) {
+          SLinkOperations.setTarget(newNode, LINKS.components$SRPu, SNodeOperations.copyNode(SLinkOperations.getTarget(force, LINKS.components$SRPu)));
+          SPropertyOperations.assign(newNode, PROPS.isComponentsOriented$72Cn, SPropertyOperations.getBoolean(force, PROPS.isComponentsOriented$72Cn));
+          SPropertyOperations.assign(newNode, PROPS.isPointOriented$72OX, SPropertyOperations.getBoolean(force, PROPS.isPointOriented$72OX));
+          SPropertyOperations.assign(newNode, PROPS.isPointRelative$72Dl, SPropertyOperations.getBoolean(force, PROPS.isPointRelative$72Dl));
         }
       }
     }
@@ -41,12 +50,18 @@ public class ForceFactories {
   private static final class LINKS {
     /*package*/ static final SReferenceLink argument$kXZ1 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
     /*package*/ static final SContainmentLink value$59jW = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb2832d0cL, "value");
-    /*package*/ static final SContainmentLink components$Kpdw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x1441545e2a580633L, "components");
+    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept AbstractForceCall$Wc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
     /*package*/ static final SConcept AbstractForceCallParameter$Xs = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter");
-    /*package*/ static final SConcept StaticForce$r5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, "jetbrains.mps.samples.Physics.structure.StaticForce");
+    /*package*/ static final SConcept SimpleForce$M7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, "jetbrains.mps.samples.Physics.structure.SimpleForce");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty isComponentsOriented$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsOriented");
+    /*package*/ static final SProperty isPointOriented$72OX = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a598L, "isPointOriented");
+    /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
   }
 }

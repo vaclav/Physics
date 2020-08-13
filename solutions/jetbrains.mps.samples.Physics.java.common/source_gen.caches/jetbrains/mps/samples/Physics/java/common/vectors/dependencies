@@ -4,6 +4,7 @@
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.math.BigDecimal" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.common.vectors.ForceMode" />
   <dependency className="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector">
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />

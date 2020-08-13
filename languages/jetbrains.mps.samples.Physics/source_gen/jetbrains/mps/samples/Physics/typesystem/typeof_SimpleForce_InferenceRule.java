@@ -17,19 +17,19 @@ import jetbrains.mps.smodel.SReference;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-public class typeof_StaticForce_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
-  public typeof_StaticForce_InferenceRule() {
+public class typeof_SimpleForce_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
+  public typeof_SimpleForce_InferenceRule() {
   }
-  public void applyRule(final SNode staticForce, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+  public void applyRule(final SNode simpleForce, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode forceType = typeCheckingContext.typeOf(SLinkOperations.getTarget(staticForce, LINKS.components$Kpdw), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "998543371832878729", true);
+      final SNode forceType = typeCheckingContext.typeOf(SLinkOperations.getTarget(simpleForce, LINKS.components$SRPu), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "998543371832878729", true);
       typeCheckingContext.whenConcrete(forceType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(staticForce, LINKS.components$Kpdw);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(simpleForce, LINKS.components$SRPu);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "a force content should be expressed as with components of dimension mass * length * time^-2", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "998543371832881027", 0, null);
-              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(forceType), (SNode) _quotation_createNode_bdtyky_a1a0c0a0a0a0a1a0b0a0b(), true, true, _info_12389875345);
+              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(forceType), (SNode) _quotation_createNode_tb8a5s_a1a0c0a0a0a0a1a0b0a0b(), true, true, _info_12389875345);
             }
           }
         }
@@ -37,7 +37,7 @@ public class typeof_StaticForce_InferenceRule extends AbstractInferenceRule_Runt
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.StaticForce$r5;
+    return CONCEPTS.SimpleForce$M7;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -45,7 +45,7 @@ public class typeof_StaticForce_InferenceRule extends AbstractInferenceRule_Runt
   public boolean overrides() {
     return false;
   }
-  private static SNode _quotation_createNode_bdtyky_a1a0c0a0a0a0a1a0b0a0b() {
+  private static SNode _quotation_createNode_tb8a5s_a1a0c0a0a0a0a1a0b0a0b() {
     PersistenceFacade facade = PersistenceFacade.getInstance();
     SNode quotedNode_1 = null;
     SNode quotedNode_2 = null;
@@ -63,10 +63,10 @@ public class typeof_StaticForce_InferenceRule extends AbstractInferenceRule_Runt
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink components$Kpdw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x1441545e2a580633L, "components");
+    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept StaticForce$r5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, "jetbrains.mps.samples.Physics.structure.StaticForce");
+    /*package*/ static final SConcept SimpleForce$M7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, "jetbrains.mps.samples.Physics.structure.SimpleForce");
   }
 }

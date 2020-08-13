@@ -53,6 +53,7 @@
       </concept>
     </language>
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
+      <concept id="7425695345928358745" name="org.iets3.core.expr.simpleTypes.structure.TrueLiteral" flags="ng" index="2vmpnb" />
       <concept id="5115872837157054284" name="org.iets3.core.expr.simpleTypes.structure.RealType" flags="ng" index="30bXLL" />
       <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
         <property id="5115872837157054173" name="value" index="30bXRw" />
@@ -65,15 +66,23 @@
       <concept id="1177093525992" name="jetbrains.mps.lang.generator.structure.InlineTemplate_RuleConsequence" flags="lg" index="gft3U">
         <child id="1177093586806" name="templateNode" index="gfFT$" />
       </concept>
+      <concept id="1112730859144" name="jetbrains.mps.lang.generator.structure.TemplateSwitch" flags="ig" index="jVnub">
+        <child id="1167340453568" name="reductionMappingRule" index="3aUrZf" />
+      </concept>
+      <concept id="1722980698497626400" name="jetbrains.mps.lang.generator.structure.ITemplateCall" flags="ng" index="v9R3L">
+        <reference id="1722980698497626483" name="template" index="v9R2y" />
+      </concept>
       <concept id="1167168920554" name="jetbrains.mps.lang.generator.structure.BaseMappingRule_Condition" flags="in" index="30G5F_" />
       <concept id="1167169188348" name="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode" flags="nn" index="30H73N" />
       <concept id="1167169308231" name="jetbrains.mps.lang.generator.structure.BaseMappingRule" flags="ng" index="30H$t8">
+        <property id="1167272244852" name="applyToConceptInheritors" index="36QftV" />
         <reference id="1167169349424" name="applicableConcept" index="30HIoZ" />
         <child id="1167169362365" name="conditionFunction" index="30HLyM" />
       </concept>
       <concept id="1167327847730" name="jetbrains.mps.lang.generator.structure.Reduction_MappingRule" flags="lg" index="3aamgX">
         <child id="1169672767469" name="ruleConsequence" index="1lVwrX" />
       </concept>
+      <concept id="982871510068000147" name="jetbrains.mps.lang.generator.structure.TemplateSwitchMacro" flags="lg" index="1sPUBX" />
       <concept id="1311078761699563727" name="jetbrains.mps.lang.generator.structure.InsertMacro_CreateNodeQuery" flags="in" index="3_AbJw" />
       <concept id="1311078761699563726" name="jetbrains.mps.lang.generator.structure.InsertMacro" flags="ln" index="3_AbJx">
         <child id="1311078761699602381" name="createNodeQuery" index="3_A0Ny" />
@@ -114,7 +123,32 @@
   </registry>
   <node concept="bUwia" id="1EX4m0ZvhN2">
     <property role="TrG5h" value="dimensions" />
-    <node concept="3aamgX" id="1d1Q7eb3jVd" role="3acgRq">
+    <node concept="3aamgX" id="4R4wXcuLYfk" role="3acgRq">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      <node concept="gft3U" id="4R4wXcuLYfo" role="1lVwrX">
+        <node concept="2vmpnb" id="4R4wXcuLYfu" role="gfFT$">
+          <node concept="1sPUBX" id="4R4wXcuLYfA" role="lGtFl">
+            <ref role="v9R2y" node="4R4wXcuLWFG" resolve="DimensionExpressionToExpression" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="4R4wXcuLYfF" role="3acgRq">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="hm2y:6sdnDbSlaok" resolve="Type" />
+      <node concept="gft3U" id="4R4wXcuLYfN" role="1lVwrX">
+        <node concept="30bXLL" id="4R4wXcuLYfT" role="gfFT$">
+          <node concept="1sPUBX" id="4R4wXcuLYfY" role="lGtFl">
+            <ref role="v9R2y" node="4R4wXcuLXZq" resolve="DimensionTypeToType" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="jVnub" id="4R4wXcuLWFG">
+    <property role="TrG5h" value="DimensionExpressionToExpression" />
+    <node concept="3aamgX" id="1d1Q7eb3jVd" role="3aUrZf">
       <ref role="30HIoZ" to="onwr:7tUW$K4nE8A" resolve="UnitExpression" />
       <node concept="gft3U" id="1d1Q7eb3qwC" role="1lVwrX">
         <node concept="30bXRB" id="1d1Q7eb3ozO" role="gfFT$">
@@ -124,8 +158,8 @@
               <node concept="3clFbS" id="1d1Q7eb3oOu" role="2VODD2">
                 <node concept="3clFbF" id="1d1Q7eb3oVs" role="3cqZAp">
                   <node concept="2YIFZM" id="1d1Q7eb3oXg" role="3clFbG">
-                    <ref role="1Pybhc" to="5fi3:3G2R3fdY2Kt" resolve="UnitConversionUtil" />
                     <ref role="37wK5l" to="5fi3:3G2R3fdYdts" resolve="compositeExpressionToBase" />
+                    <ref role="1Pybhc" to="5fi3:3G2R3fdY2Kt" resolve="UnitConversionUtil" />
                     <node concept="2OqwBi" id="1d1Q7eb3pga" role="37wK5m">
                       <node concept="30H73N" id="1d1Q7eb3p0Q" role="2Oq$k0" />
                       <node concept="3TrEf2" id="1d1Q7eb3p$9" role="2OqNvi">
@@ -149,7 +183,7 @@
         </node>
       </node>
     </node>
-    <node concept="3aamgX" id="1d1Q7eb3qAB" role="3acgRq">
+    <node concept="3aamgX" id="1d1Q7eb3qAB" role="3aUrZf">
       <ref role="30HIoZ" to="hm2y:7NJy08a3O99" resolve="DotExpression" />
       <node concept="gft3U" id="1d1Q7eb3qAV" role="1lVwrX">
         <node concept="30bXRB" id="1d1Q7eb3qB1" role="gfFT$">
@@ -179,8 +213,8 @@
                 </node>
                 <node concept="3clFbF" id="1d1Q7eb3qB5" role="3cqZAp">
                   <node concept="2YIFZM" id="1d1Q7eb3qB6" role="3clFbG">
-                    <ref role="37wK5l" to="5fi3:3G2R3fdYdts" resolve="compositeExpressionToBase" />
                     <ref role="1Pybhc" to="5fi3:3G2R3fdY2Kt" resolve="UnitConversionUtil" />
+                    <ref role="37wK5l" to="5fi3:3G2R3fdYdts" resolve="compositeExpressionToBase" />
                     <node concept="2OqwBi" id="1d1Q7eb3qB7" role="37wK5m">
                       <node concept="30H73N" id="1d1Q7eb3qB8" role="2Oq$k0" />
                       <node concept="3TrEf2" id="1d1Q7eb3vkZ" role="2OqNvi">
@@ -223,7 +257,10 @@
         </node>
       </node>
     </node>
-    <node concept="3aamgX" id="270Q2mFafRm" role="3acgRq">
+  </node>
+  <node concept="jVnub" id="4R4wXcuLXZq">
+    <property role="TrG5h" value="DimensionTypeToType" />
+    <node concept="3aamgX" id="270Q2mFafRm" role="3aUrZf">
       <ref role="30HIoZ" to="onwr:7tUW$K4o9Ja" resolve="DimensionType" />
       <node concept="gft3U" id="3c2XpEvuNM9" role="1lVwrX">
         <node concept="30bXLL" id="3c2XpEvuNMf" role="gfFT$" />

@@ -14,6 +14,7 @@
     <import index="kj90" ref="r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.IETS3MathExtended.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
+    <import index="3673" ref="r:78633c85-d020-485e-aaa3-59e2daa3b826(com.mbeddr.mpsutil.interpreter.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -221,6 +222,9 @@
     </node>
     <node concept="PrWs8" id="7tUW$K4pNGr" role="PzmwI">
       <ref role="PrY4T" node="7tUW$K4pxl4" resolve="IUnitReferenceLikeArray" />
+    </node>
+    <node concept="PrWs8" id="J_e9hzn8Os" role="PzmwI">
+      <ref role="PrY4T" to="3673:6bG6MAFRAaG" resolve="IInterpreterWrapperType" />
     </node>
   </node>
   <node concept="PlHQZ" id="7tUW$K4pvUT">

@@ -8,7 +8,7 @@
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" />
     <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="vs0r" ref="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" implicit="true" />
     <import index="onwr" ref="r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)" implicit="true" />
     <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" implicit="true" />
@@ -311,34 +311,6 @@
     <property role="34LRSv" value="static force" />
     <property role="R4oN_" value="force computed once and applied constantly" />
     <ref role="1TJDcQ" node="7zgzoeTzo_w" resolve="SimpleForce" />
-    <node concept="1TJgyj" id="1h1l5SEm0oN" role="1TKVEi">
-      <property role="IQ2ns" value="1459540517658822195" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="components" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-    <node concept="1TJgyj" id="1IEyTnu6AP6" role="1TKVEi">
-      <property role="IQ2ns" value="1993559260857527622" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="applicationPoint" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-    <node concept="1TJgyi" id="6AL7kK94qmj" role="1TKVEl">
-      <property role="IQ2nx" value="7615900657267090835" />
-      <property role="TrG5h" value="isComponentsOriented" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
-    </node>
-    <node concept="1TJgyi" id="6AL7kK94qml" role="1TKVEl">
-      <property role="IQ2nx" value="7615900657267090837" />
-      <property role="TrG5h" value="isPointRelative" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
-    </node>
-    <node concept="1TJgyi" id="6AL7kK94qmo" role="1TKVEl">
-      <property role="IQ2nx" value="7615900657267090840" />
-      <property role="TrG5h" value="isPointOriented" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
-    </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oP">
     <property role="EcuMT" value="1459540517658822197" />
@@ -346,7 +318,7 @@
     <property role="TrG5h" value="DynamicForce" />
     <property role="34LRSv" value="dynamic force" />
     <property role="R4oN_" value="same as static force but provides dynamic variables to use in the expression" />
-    <ref role="1TJDcQ" node="1h1l5SEm0oM" resolve="StaticForce" />
+    <ref role="1TJDcQ" node="7zgzoeTzo_w" resolve="SimpleForce" />
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oQ">
     <property role="EcuMT" value="1459540517658822198" />
@@ -675,7 +647,7 @@
     <property role="TrG5h" value="InteractionForce" />
     <property role="R4oN_" value="force that results of the interaction of two elements" />
     <property role="34LRSv" value="interaction force" />
-    <ref role="1TJDcQ" node="1h1l5SEm0oP" resolve="DynamicForce" />
+    <ref role="1TJDcQ" node="7zgzoeTzo_w" resolve="SimpleForce" />
   </node>
   <node concept="1TIwiD" id="cTQf2Fjp4$">
     <property role="EcuMT" value="232455383964029220" />
@@ -1274,7 +1246,44 @@
     <property role="TrG5h" value="SimpleForce" />
     <property role="R5$K7" value="true" />
     <property role="R4oN_" value="force with simple linear force and application point expression" />
+    <property role="34LRSv" value="simple force" />
     <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
+    <node concept="1TJgyj" id="1IEyTnu6AP6" role="1TKVEi">
+      <property role="IQ2ns" value="1993559260857527622" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="applicationPoint" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="1h1l5SEm0oN" role="1TKVEi">
+      <property role="IQ2ns" value="1459540517658822195" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="components" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyi" id="6AL7kK94qmj" role="1TKVEl">
+      <property role="IQ2nx" value="7615900657267090835" />
+      <property role="TrG5h" value="isComponentsOriented" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="6AL7kK94qml" role="1TKVEl">
+      <property role="IQ2nx" value="7615900657267090837" />
+      <property role="TrG5h" value="isPointRelative" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="6AL7kK94qmo" role="1TKVEl">
+      <property role="IQ2nx" value="7615900657267090840" />
+      <property role="TrG5h" value="isPointOriented" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4R4wXcuYiKN">
+    <property role="EcuMT" value="5603748779136724019" />
+    <property role="3GE5qa" value="physical.force.implemented.simple" />
+    <property role="TrG5h" value="MomentForce" />
+    <property role="34LRSv" value="moment force" />
+    <property role="R4oN_" value="force that only result as a moment" />
+    <ref role="1TJDcQ" node="7zgzoeTzo_w" resolve="SimpleForce" />
   </node>
 </model>
 

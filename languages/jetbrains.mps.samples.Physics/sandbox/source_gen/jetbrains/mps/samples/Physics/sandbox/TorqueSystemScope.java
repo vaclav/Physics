@@ -92,12 +92,17 @@ public class TorqueSystemScope extends SystemScope {
           if (cached == null) {
             cached = VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))));
           }
-
           return cached;
+
         }
         @Override
         public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
           return VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }, new Force<TorqueSystemScope>() {
         private DVector3C cached;
@@ -107,12 +112,17 @@ public class TorqueSystemScope extends SystemScope {
           if (cached == null) {
             cached = VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))).negate()));
           }
-
           return cached;
+
         }
         @Override
         public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
           return VectorHelper.fromInternal(new InternalVector(((BigInteger) AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).negate(), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+        }
+
+        @Override
+        public int forceMode() {
+          return 0;
         }
       }));
     }

@@ -5,6 +5,7 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.forces;
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import org.ode4j.math.DVector3C;
 import org.ode4j.math.DVector3;
+import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 

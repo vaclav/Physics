@@ -53,6 +53,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IWorldDotTarget;
   private ConceptPresentation props_InteractedObjectExpression;
   private ConceptPresentation props_InteractionForce;
+  private ConceptPresentation props_MomentForce;
   private ConceptPresentation props_NumericDistanceStyleKey;
   private ConceptPresentation props_ObjectDefinition;
   private ConceptPresentation props_ObjectDistanceWithTarget;
@@ -107,7 +108,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0fd);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0gd);
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
@@ -130,7 +131,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0fd);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0gd);
           props_AbstractObjectDefinition = cpb.create();
         }
         return props_AbstractObjectDefinition;
@@ -396,6 +397,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InteractionForce = cpb.create();
         }
         return props_InteractionForce;
+      case LanguageConceptSwitch.MomentForce:
+        if (props_MomentForce == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("force that only result as a moment");
+          cpb.rawPresentation("moment force");
+          props_MomentForce = cpb.create();
+        }
+        return props_MomentForce;
       case LanguageConceptSwitch.NumericDistanceStyleKey:
         if (props_NumericDistanceStyleKey == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -509,7 +518,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a95b0fd);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a06b0gd);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -638,7 +647,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a77b0fd);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a87b0gd);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;

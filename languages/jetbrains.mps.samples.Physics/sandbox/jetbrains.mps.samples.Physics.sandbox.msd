@@ -31,6 +31,7 @@
     <language slang="l:8585453e-6bfb-4d80-98de-b16074f1d86c:jetbrains.mps.lang.test" version="5" />
     <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
     <language slang="l:be81eb12-4eda-4d0e-89be-7493500ab874:jetbrains.mps.samples.Physics" version="1" />
+    <language slang="l:f9bdc723-99df-40ff-934c-d1f848158f92:jetbrains.mps.samples.Physics.IETS3MathExtended" version="0" />
     <language slang="l:3571bff8-cf91-4cd7-b8b7-baa06abadf7c:jetbrains.mps.samples.Physics.dimensions" version="0" />
     <language slang="l:25646cd1-304a-482d-bf04-f6e37e1e5a87:jetbrains.mps.samples.Physics.genjava" version="0" />
     <language slang="l:f3e9841e-b1da-4548-9cb8-14aebaf1d1ca:jetbrains.mps.samples.Physics.types" version="0" />

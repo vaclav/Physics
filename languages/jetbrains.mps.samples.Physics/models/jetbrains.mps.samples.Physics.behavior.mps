@@ -64,6 +64,7 @@
       </concept>
       <concept id="4836112446988635817" name="jetbrains.mps.baseLanguage.structure.UndefinedType" flags="in" index="2jxLKc" />
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
+      <concept id="1224500790866" name="jetbrains.mps.baseLanguage.structure.BitwiseOrExpression" flags="nn" index="pVOtf" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
       <concept id="1076505808687" name="jetbrains.mps.baseLanguage.structure.WhileStatement" flags="nn" index="2$JKZl">
         <child id="1076505808688" name="condition" index="2$JKZa" />
@@ -88,7 +89,11 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
+      <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
+        <reference id="1144433057691" name="classifier" index="1PxDUh" />
+      </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
+      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
@@ -125,6 +130,9 @@
       <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
         <property id="1068580123138" name="value" index="3clFbU" />
       </concept>
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
       <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
@@ -150,6 +158,7 @@
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
+      <concept id="7024111702304501416" name="jetbrains.mps.baseLanguage.structure.OrAssignmentExpression" flags="nn" index="3vZ8r8" />
       <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
@@ -3031,6 +3040,20 @@
         </node>
       </node>
     </node>
+    <node concept="13i0hz" id="7VyKdWRpcSx" role="13h7CS">
+      <property role="TrG5h" value="getForceMode" />
+      <property role="13i0it" value="true" />
+      <node concept="3Tm1VV" id="7VyKdWRpcSy" role="1B3o_S" />
+      <node concept="10Oyi0" id="7VyKdWRpcT1" role="3clF45" />
+      <node concept="3clFbS" id="7VyKdWRpcS$" role="3clF47">
+        <node concept="3cpWs6" id="7VyKdWRpcTs" role="3cqZAp">
+          <node concept="10M0yZ" id="7VyKdWRpcUj" role="3cqZAk">
+            <ref role="3cqZAo" to="mizj:6cgWs$O9ba" resolve="DEFAULT" />
+            <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="13h7C7" id="38SdPTRbTXs">
     <property role="3GE5qa" value="simulation" />
@@ -3943,81 +3966,6 @@
     <node concept="13hLZK" id="yrUOugPYll" role="13h7CW">
       <node concept="3clFbS" id="yrUOugPYlm" role="2VODD2" />
     </node>
-    <node concept="13i0hz" id="yrUOugPYlv" role="13h7CS">
-      <property role="TrG5h" value="getLinearForceExpression" />
-      <ref role="13i0hy" node="yrUOugPRqG" resolve="getLinearForceExpression" />
-      <node concept="3Tm1VV" id="yrUOugPYlw" role="1B3o_S" />
-      <node concept="3clFbS" id="yrUOugPYm6" role="3clF47">
-        <node concept="3SKdUt" id="yrUOugPZ8H" role="3cqZAp">
-          <node concept="1PaTwC" id="yrUOugPZ8I" role="1aUNEU">
-            <node concept="3oM_SD" id="yrUOugPZ8J" role="1PaTwD">
-              <property role="3oM_SC" value="Computed" />
-            </node>
-            <node concept="3oM_SD" id="yrUOugPZc0" role="1PaTwD">
-              <property role="3oM_SC" value="on" />
-            </node>
-            <node concept="3oM_SD" id="yrUOugPZc3" role="1PaTwD">
-              <property role="3oM_SC" value="each" />
-            </node>
-            <node concept="3oM_SD" id="yrUOugPZcf" role="1PaTwD">
-              <property role="3oM_SC" value="iteration" />
-            </node>
-          </node>
-        </node>
-        <node concept="3cpWs6" id="yrUOugPYw2" role="3cqZAp">
-          <node concept="2OqwBi" id="yrUOugPYHO" role="3cqZAk">
-            <node concept="13iPFW" id="yrUOugPYwF" role="2Oq$k0" />
-            <node concept="3TrEf2" id="yrUOugPZ55" role="2OqNvi">
-              <ref role="3Tt5mk" to="9tcj:1h1l5SEm0oN" resolve="components" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3Tqbb2" id="yrUOugPYm7" role="3clF45" />
-    </node>
-    <node concept="13i0hz" id="yrUOugPZg$" role="13h7CS">
-      <property role="TrG5h" value="getApplicationPointExpression" />
-      <ref role="13i0hy" node="yrUOugPRt7" resolve="getApplicationPointExpression" />
-      <node concept="3Tm1VV" id="yrUOugPZg_" role="1B3o_S" />
-      <node concept="3clFbS" id="yrUOugPZgG" role="3clF47">
-        <node concept="3SKdUt" id="yrUOugQ0qC" role="3cqZAp">
-          <node concept="1PaTwC" id="yrUOugQ0qD" role="1aUNEU">
-            <node concept="3oM_SD" id="yrUOugQ0qE" role="1PaTwD">
-              <property role="3oM_SC" value="Computed" />
-            </node>
-            <node concept="3oM_SD" id="yrUOugQ0qF" role="1PaTwD">
-              <property role="3oM_SC" value="on" />
-            </node>
-            <node concept="3oM_SD" id="yrUOugQ0qG" role="1PaTwD">
-              <property role="3oM_SC" value="each" />
-            </node>
-            <node concept="3oM_SD" id="yrUOugQ0qH" role="1PaTwD">
-              <property role="3oM_SC" value="iteration" />
-            </node>
-          </node>
-        </node>
-        <node concept="3cpWs6" id="yrUOugPZtX" role="3cqZAp">
-          <node concept="2OqwBi" id="yrUOugQ0aN" role="3cqZAk">
-            <node concept="13iPFW" id="yrUOugPZYH" role="2Oq$k0" />
-            <node concept="3TrEf2" id="yrUOugQ0n0" role="2OqNvi">
-              <ref role="3Tt5mk" to="9tcj:1IEyTnu6AP6" resolve="applicationPoint" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3Tqbb2" id="yrUOugPZgH" role="3clF45" />
-    </node>
-    <node concept="13i0hz" id="7zgzoeUe70T" role="13h7CS">
-      <property role="TrG5h" value="isStatic" />
-      <ref role="13i0hy" node="7zgzoeUdjtW" resolve="isStatic" />
-      <node concept="3Tm1VV" id="7zgzoeUe70U" role="1B3o_S" />
-      <node concept="3clFbS" id="7zgzoeUe70Z" role="3clF47">
-        <node concept="3cpWs6" id="7zgzoeUe79Z" role="3cqZAp">
-          <node concept="3clFbT" id="7zgzoeUe7X_" role="3cqZAk" />
-        </node>
-      </node>
-      <node concept="10P_77" id="7zgzoeUe710" role="3clF45" />
-    </node>
   </node>
   <node concept="13h7C7" id="yrUOugQ0uv">
     <property role="3GE5qa" value="physical.force.implemented.simple.interaction" />
@@ -4558,18 +4506,34 @@
     <node concept="13i0hz" id="yrUOugPRqG" role="13h7CS">
       <property role="TrG5h" value="getLinearForceExpression" />
       <property role="13i0it" value="true" />
-      <property role="13i0iv" value="true" />
       <node concept="3Tm1VV" id="yrUOugPRqH" role="1B3o_S" />
       <node concept="3Tqbb2" id="yrUOugPRrc" role="3clF45" />
-      <node concept="3clFbS" id="yrUOugPRqJ" role="3clF47" />
+      <node concept="3clFbS" id="yrUOugPRqJ" role="3clF47">
+        <node concept="3cpWs6" id="7VyKdWRpef6" role="3cqZAp">
+          <node concept="2OqwBi" id="7VyKdWRperC" role="3cqZAk">
+            <node concept="13iPFW" id="7VyKdWRpefn" role="2Oq$k0" />
+            <node concept="3TrEf2" id="7VyKdWRpeKM" role="2OqNvi">
+              <ref role="3Tt5mk" to="9tcj:1h1l5SEm0oN" resolve="components" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="13i0hz" id="yrUOugPRt7" role="13h7CS">
       <property role="TrG5h" value="getApplicationPointExpression" />
       <property role="13i0it" value="true" />
-      <property role="13i0iv" value="true" />
       <node concept="3Tm1VV" id="yrUOugPRt8" role="1B3o_S" />
       <node concept="3Tqbb2" id="yrUOugPRtF" role="3clF45" />
-      <node concept="3clFbS" id="yrUOugPRta" role="3clF47" />
+      <node concept="3clFbS" id="yrUOugPRta" role="3clF47">
+        <node concept="3cpWs6" id="7VyKdWRpeO8" role="3cqZAp">
+          <node concept="2OqwBi" id="7VyKdWRpf0w" role="3cqZAk">
+            <node concept="13iPFW" id="7VyKdWRpeOf" role="2Oq$k0" />
+            <node concept="3TrEf2" id="7VyKdWRpflE" role="2OqNvi">
+              <ref role="3Tt5mk" to="9tcj:1IEyTnu6AP6" resolve="applicationPoint" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="13i0hz" id="7zgzoeUdjtW" role="13h7CS">
       <property role="TrG5h" value="isStatic" />
@@ -4594,6 +4558,113 @@
     </node>
     <node concept="13hLZK" id="7zgzoeTzoFH" role="13h7CW">
       <node concept="3clFbS" id="7zgzoeTzoFI" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="7VyKdWRrRrh" role="13h7CS">
+      <property role="TrG5h" value="getForceMode" />
+      <ref role="13i0hy" node="7VyKdWRpcSx" resolve="getForceMode" />
+      <node concept="3Tm1VV" id="7VyKdWRrRri" role="1B3o_S" />
+      <node concept="3clFbS" id="7VyKdWRrRrn" role="3clF47">
+        <node concept="3cpWs8" id="7VyKdWRrRJX" role="3cqZAp">
+          <node concept="3cpWsn" id="7VyKdWRrRK0" role="3cpWs9">
+            <property role="TrG5h" value="mode" />
+            <node concept="10Oyi0" id="7VyKdWRrRJW" role="1tU5fm" />
+            <node concept="3K4zz7" id="7VyKdWRrU$X" role="33vP2m">
+              <node concept="10M0yZ" id="7VyKdWRrUFp" role="3K4E3e">
+                <ref role="3cqZAo" to="mizj:6cgWs$O6o7" resolve="LINEAR_FORCE_ROTATED" />
+                <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+              </node>
+              <node concept="3cmrfG" id="7VyKdWRrUIJ" role="3K4GZi">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="2OqwBi" id="7VyKdWRrRZf" role="3K4Cdx">
+                <node concept="13iPFW" id="7VyKdWRrRKx" role="2Oq$k0" />
+                <node concept="3TrcHB" id="7VyKdWRrSkn" role="2OqNvi">
+                  <ref role="3TsBF5" to="9tcj:6AL7kK94qmj" resolve="isComponentsOriented" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="7VyKdWRrUXh" role="3cqZAp">
+          <node concept="3vZ8r8" id="7VyKdWRrZc8" role="3clFbG">
+            <node concept="37vLTw" id="7VyKdWRrZca" role="37vLTJ">
+              <ref role="3cqZAo" node="7VyKdWRrRK0" resolve="mode" />
+            </node>
+            <node concept="3K4zz7" id="7VyKdWRrZcb" role="37vLTx">
+              <node concept="10M0yZ" id="7VyKdWRrZcc" role="3K4E3e">
+                <ref role="3cqZAo" to="mizj:6cgWs$OUij" resolve="APPLICATION_POINT_ROTATED" />
+                <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+              </node>
+              <node concept="3cmrfG" id="7VyKdWRrZcd" role="3K4GZi">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="2OqwBi" id="7VyKdWRrZce" role="3K4Cdx">
+                <node concept="13iPFW" id="7VyKdWRrZcf" role="2Oq$k0" />
+                <node concept="3TrcHB" id="7VyKdWRrZcg" role="2OqNvi">
+                  <ref role="3TsBF5" to="9tcj:6AL7kK94qmo" resolve="isPointOriented" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="7VyKdWRrX39" role="3cqZAp">
+          <node concept="3vZ8r8" id="7VyKdWRrZ7b" role="3clFbG">
+            <node concept="37vLTw" id="7VyKdWRrZ7d" role="37vLTJ">
+              <ref role="3cqZAo" node="7VyKdWRrRK0" resolve="mode" />
+            </node>
+            <node concept="3K4zz7" id="7VyKdWRrZ7e" role="37vLTx">
+              <node concept="10M0yZ" id="7VyKdWRshgq" role="3K4E3e">
+                <ref role="3cqZAo" to="mizj:6cgWs$O6rY" resolve="APPLICATION_POINT_RELATIVE" />
+                <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+              </node>
+              <node concept="3cmrfG" id="7VyKdWRrZ7g" role="3K4GZi">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="2OqwBi" id="7VyKdWRrZ7h" role="3K4Cdx">
+                <node concept="13iPFW" id="7VyKdWRrZ7i" role="2Oq$k0" />
+                <node concept="3TrcHB" id="7VyKdWRrZ7j" role="2OqNvi">
+                  <ref role="3TsBF5" to="9tcj:6AL7kK94qml" resolve="isPointRelative" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="7VyKdWRrUSO" role="3cqZAp">
+          <node concept="37vLTw" id="7VyKdWRrUTN" role="3cqZAk">
+            <ref role="3cqZAo" node="7VyKdWRrRK0" resolve="mode" />
+          </node>
+        </node>
+      </node>
+      <node concept="10Oyi0" id="7VyKdWRrRro" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="4R4wXcuYiTg">
+    <property role="3GE5qa" value="physical.force.implemented.simple" />
+    <ref role="13h7C2" to="9tcj:4R4wXcuYiKN" resolve="MomentForce" />
+    <node concept="13hLZK" id="4R4wXcuYiTh" role="13h7CW">
+      <node concept="3clFbS" id="4R4wXcuYiTi" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="4R4wXcuYiTr" role="13h7CS">
+      <property role="TrG5h" value="getForceMode" />
+      <ref role="13i0hy" node="7VyKdWRpcSx" resolve="getForceMode" />
+      <node concept="3Tm1VV" id="4R4wXcuYiTs" role="1B3o_S" />
+      <node concept="3clFbS" id="4R4wXcuYiTW" role="3clF47">
+        <node concept="3clFbF" id="4R4wXcuYiU1" role="3cqZAp">
+          <node concept="pVOtf" id="4R4wXcuYjZF" role="3clFbG">
+            <node concept="10M0yZ" id="4R4wXcuYkpS" role="3uHU7w">
+              <ref role="3cqZAo" to="mizj:6cgWs$NTDn" resolve="SKIP_LINEAR_FORCE" />
+              <ref role="1PxDUh" to="mizj:6cgWs$Oa5R" resolve="ForceMode" />
+            </node>
+            <node concept="2OqwBi" id="4R4wXcuYiTY" role="3uHU7B">
+              <node concept="13iAh5" id="4R4wXcuYiTZ" role="2Oq$k0" />
+              <node concept="2qgKlT" id="4R4wXcuYiU0" role="2OqNvi">
+                <ref role="37wK5l" node="7VyKdWRpcSx" resolve="getForceMode" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="10Oyi0" id="4R4wXcuYiTX" role="3clF45" />
     </node>
   </node>
 </model>

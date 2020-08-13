@@ -7,6 +7,7 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.MathContext" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
@@ -14,6 +15,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.nevec.rjm.BigDecimalMath" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
   </dependency>
 </dependenciesRoot>

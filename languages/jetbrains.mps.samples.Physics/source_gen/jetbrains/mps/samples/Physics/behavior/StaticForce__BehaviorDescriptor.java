@@ -33,10 +33,10 @@ public final class StaticForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static SNode getLinearForceExpression_idyrUOugPRqG(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.components$Kpdw);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.components$SRPu);
   }
   /*package*/ static SNode getApplicationPointExpression_idyrUOugPRt7(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.applicationPoint$ZNBs);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.applicationPoint$8ifq);
   }
   /*package*/ static boolean isStatic_id7zgzoeUdjtW(@NotNull SNode __thisNode__) {
     return true;
@@ -93,7 +93,7 @@ public final class StaticForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink components$Kpdw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x1441545e2a580633L, "components");
-    /*package*/ static final SContainmentLink applicationPoint$ZNBs = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, 0x1baa8b95de1a6d46L, "applicationPoint");
+    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
+    /*package*/ static final SContainmentLink applicationPoint$8ifq = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1baa8b95de1a6d46L, "applicationPoint");
   }
 }

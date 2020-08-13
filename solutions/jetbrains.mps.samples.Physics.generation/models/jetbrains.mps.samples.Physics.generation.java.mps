@@ -43,10 +43,6 @@
         <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
         <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
       </node>
-      <node concept="2V$Bhx" id="1d1Q7eb4Ooz" role="1t_9vn">
-        <property role="2V$B1T" value="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" />
-        <property role="2V$B1Q" value="jetbrains.mps.samples.Physics.dimensions" />
-      </node>
     </node>
     <node concept="2VgMA2" id="6uKmUf9Uaol" role="2VgMA7">
       <node concept="2V$Bhx" id="6uKmUf9UaoA" role="1t_9vn">

@@ -1377,10 +1377,10 @@
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/362892448123672601">
     <file name="TypesystemDescriptor.java">
-      <node id="362892448123672601" at="124,5,125,82" concept="5" />
-      <node id="362892448123672601" at="125,82,126,47" concept="2" />
-      <node id="362892448123672601" at="123,5,127,5" concept="0" />
-      <scope id="362892448123672601" at="124,5,126,47">
+      <node id="362892448123672601" at="128,5,129,82" concept="5" />
+      <node id="362892448123672601" at="129,82,130,47" concept="2" />
+      <node id="362892448123672601" at="127,5,131,5" concept="0" />
+      <scope id="362892448123672601" at="128,5,130,47">
         <var name="inferenceRule" id="362892448123672601" />
       </scope>
     </file>
@@ -1605,10 +1605,10 @@
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/620348066298886790">
     <file name="TypesystemDescriptor.java">
-      <node id="620348066298886790" at="128,5,129,99" concept="5" />
-      <node id="620348066298886790" at="129,99,130,47" concept="2" />
-      <node id="620348066298886790" at="127,5,131,5" concept="0" />
-      <scope id="620348066298886790" at="128,5,130,47">
+      <node id="620348066298886790" at="132,5,133,99" concept="5" />
+      <node id="620348066298886790" at="133,99,134,47" concept="2" />
+      <node id="620348066298886790" at="131,5,135,5" concept="0" />
+      <scope id="620348066298886790" at="132,5,134,47">
         <var name="inferenceRule" id="620348066298886790" />
       </scope>
     </file>
@@ -1834,10 +1834,10 @@
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/7105688800959987827">
     <file name="TypesystemDescriptor.java">
-      <node id="7105688800959987827" at="132,5,133,92" concept="5" />
-      <node id="7105688800959987827" at="133,92,134,47" concept="2" />
-      <node id="7105688800959987827" at="131,5,135,5" concept="0" />
-      <scope id="7105688800959987827" at="132,5,134,47">
+      <node id="7105688800959987827" at="136,5,137,92" concept="5" />
+      <node id="7105688800959987827" at="137,92,138,47" concept="2" />
+      <node id="7105688800959987827" at="135,5,139,5" concept="0" />
+      <scope id="7105688800959987827" at="136,5,138,47">
         <var name="inferenceRule" id="7105688800959987827" />
       </scope>
     </file>
@@ -3240,14 +3240,14 @@
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/998543371832875804">
     <file name="TypesystemDescriptor.java">
-      <node id="998543371832875804" at="136,5,137,83" concept="5" />
-      <node id="998543371832875804" at="137,83,138,47" concept="2" />
-      <node id="998543371832875804" at="135,5,139,5" concept="0" />
-      <scope id="998543371832875804" at="136,5,138,47">
+      <node id="998543371832875804" at="124,5,125,83" concept="5" />
+      <node id="998543371832875804" at="125,83,126,47" concept="2" />
+      <node id="998543371832875804" at="123,5,127,5" concept="0" />
+      <scope id="998543371832875804" at="124,5,126,47">
         <var name="inferenceRule" id="998543371832875804" />
       </scope>
     </file>
-    <file name="typeof_StaticForce_InferenceRule.java">
+    <file name="typeof_SimpleForce_InferenceRule.java">
       <node id="998543371832878665" at="24,5,25,232" concept="5" />
       <node id="998543371832881027" at="29,13,30,111" concept="5" />
       <node id="998543371832881027" at="30,111,31,302" concept="5" />
@@ -3269,9 +3269,9 @@
       <node id="998543371832881044" at="59,238,60,175" concept="2" />
       <node id="998543371832881044" at="60,175,61,180" concept="2" />
       <node id="998543371832881044" at="61,180,62,24" concept="6" />
-      <node id="998543371832875804" at="66,0,67,0" concept="9" trace="components$Kpdw" />
-      <node id="998543371832875804" at="70,0,71,0" concept="9" trace="StaticForce$r5" />
-      <node id="998543371832875804" at="21,0,23,0" concept="1" trace="typeof_StaticForce_InferenceRule#()V" />
+      <node id="998543371832875804" at="66,0,67,0" concept="9" trace="components$SRPu" />
+      <node id="998543371832875804" at="70,0,71,0" concept="9" trace="SimpleForce$M7" />
+      <node id="998543371832875804" at="21,0,23,0" concept="1" trace="typeof_SimpleForce_InferenceRule#()V" />
       <node id="998543371832875804" at="39,0,42,0" concept="4" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
       <node id="998543371832875804" at="42,0,45,0" concept="4" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
       <node id="998543371832875804" at="45,0,48,0" concept="4" trace="overrides#()Z" />
@@ -3281,7 +3281,7 @@
       <node id="998543371832878665" at="25,232,36,129" concept="2" />
       <node id="998543371832878665" at="23,124,37,5" concept="0" />
       <node id="998543371832875804" at="23,0,39,0" concept="4" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
-      <node id="998543371832881044" at="48,0,64,0" concept="10" trace="_quotation_createNode_bdtyky_a1a0c0a0a0a0a1a0b0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="998543371832881044" at="48,0,64,0" concept="10" trace="_quotation_createNode_tb8a5s_a1a0c0a0a0a0a1a0b0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
       <scope id="998543371832875804" at="21,45,21,45" />
       <scope id="998543371832875804" at="39,50,40,35" />
       <scope id="998543371832875804" at="42,68,43,102" />
@@ -3311,15 +3311,15 @@
         <var name="quotedNode_4" id="998543371832881044" />
       </scope>
       <scope id="998543371832875804" at="23,0,39,0">
-        <var name="staticForce" id="998543371832875804" />
+        <var name="simpleForce" id="998543371832875804" />
         <var name="status" id="998543371832875804" />
         <var name="typeCheckingContext" id="998543371832875804" />
       </scope>
       <scope id="998543371832881044" at="48,0,64,0" />
-      <unit id="998543371832875804" at="65,0,68,0" name="jetbrains.mps.samples.Physics.typesystem.typeof_StaticForce_InferenceRule$LINKS" />
-      <unit id="998543371832875804" at="69,0,72,0" name="jetbrains.mps.samples.Physics.typesystem.typeof_StaticForce_InferenceRule$CONCEPTS" />
-      <unit id="998543371832878665" at="26,54,36,7" name="jetbrains.mps.samples.Physics.typesystem.typeof_StaticForce_InferenceRule$1" />
-      <unit id="998543371832875804" at="20,0,73,0" name="jetbrains.mps.samples.Physics.typesystem.typeof_StaticForce_InferenceRule" />
+      <unit id="998543371832875804" at="65,0,68,0" name="jetbrains.mps.samples.Physics.typesystem.typeof_SimpleForce_InferenceRule$LINKS" />
+      <unit id="998543371832875804" at="69,0,72,0" name="jetbrains.mps.samples.Physics.typesystem.typeof_SimpleForce_InferenceRule$CONCEPTS" />
+      <unit id="998543371832878665" at="26,54,36,7" name="jetbrains.mps.samples.Physics.typesystem.typeof_SimpleForce_InferenceRule$1" />
+      <unit id="998543371832875804" at="20,0,73,0" name="jetbrains.mps.samples.Physics.typesystem.typeof_SimpleForce_InferenceRule" />
     </file>
   </root>
 </debug-info>
