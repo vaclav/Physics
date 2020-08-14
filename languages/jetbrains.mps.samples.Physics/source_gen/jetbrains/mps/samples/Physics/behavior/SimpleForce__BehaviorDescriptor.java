@@ -6,50 +6,50 @@ import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public final class SimpleForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, "jetbrains.mps.samples.Physics.structure.SimpleForce");
 
-  public static final SMethod<SNode> getLinearForceExpression_idyrUOugPRqG = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("yrUOugPRqG").build();
-  public static final SMethod<SNode> getApplicationPointExpression_idyrUOugPRt7 = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("yrUOugPRt7").build();
   public static final SMethod<Boolean> isStatic_id7zgzoeUdjtW = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isStatic").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7zgzoeUdjtW").build();
-  public static final SMethod<Integer> getForceMode_id7VyKdWRpcSx = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7VyKdWRpcSx").build();
+  public static final SMethod<Integer> getForceMode_id4$vyCQBiMP2 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBiMP2").build();
+  public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$go").build();
+  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLinearForceExpression_idyrUOugPRqG, getApplicationPointExpression_idyrUOugPRt7, isStatic_id7zgzoeUdjtW, getForceMode_id7VyKdWRpcSx);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(isStatic_id7zgzoeUdjtW, getForceMode_id4$vyCQBiMP2, getApplicationPointExpression_id4$vyCQBi$go, getLinearForceExpression_id4$vyCQBi$gg);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static SNode getLinearForceExpression_idyrUOugPRqG(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.components$SRPu);
-  }
-  /*package*/ static SNode getApplicationPointExpression_idyrUOugPRt7(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.applicationPoint$8ifq);
-  }
   /*package*/ static boolean isStatic_id7zgzoeUdjtW(@NotNull SNode __thisNode__) {
     return false;
   }
-  /*package*/ static int getForceMode_id7VyKdWRpcSx(@NotNull SNode __thisNode__) {
+  /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
     int mode = (SPropertyOperations.getBoolean(__thisNode__, PROPS.isComponentsOriented$72Cn) ? ForceMode.LINEAR_FORCE_ROTATED : 0);
     mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isPointOriented$72OX) ? ForceMode.APPLICATION_POINT_ROTATED : 0);
     mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isPointRelative$72Dl) ? ForceMode.APPLICATION_POINT_RELATIVE : 0);
     return mode;
+  }
+  /*package*/ static SNode getApplicationPointExpression_id4$vyCQBi$go(@NotNull SNode __thisNode__) {
+    return SLinkOperations.getTarget(__thisNode__, LINKS.applicationPoint$8ifq);
+  }
+  /*package*/ static SNode getLinearForceExpression_id4$vyCQBi$gg(@NotNull SNode __thisNode__) {
+    return SLinkOperations.getTarget(__thisNode__, LINKS.components$SRPu);
   }
 
   /*package*/ SimpleForce__BehaviorDescriptor() {
@@ -68,13 +68,13 @@ public final class SimpleForce__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((SNode) getLinearForceExpression_idyrUOugPRqG(node));
-      case 1:
-        return (T) ((SNode) getApplicationPointExpression_idyrUOugPRt7(node));
-      case 2:
         return (T) ((Boolean) isStatic_id7zgzoeUdjtW(node));
+      case 1:
+        return (T) ((Integer) getForceMode_id4$vyCQBiMP2(node));
+      case 2:
+        return (T) ((SNode) getApplicationPointExpression_id4$vyCQBi$go(node));
       case 3:
-        return (T) ((Integer) getForceMode_id7VyKdWRpcSx(node));
+        return (T) ((SNode) getLinearForceExpression_id4$vyCQBi$gg(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -104,14 +104,14 @@ public final class SimpleForce__BehaviorDescriptor extends BaseBHDescriptor {
     return CONCEPT;
   }
 
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
-    /*package*/ static final SContainmentLink applicationPoint$8ifq = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1baa8b95de1a6d46L, "applicationPoint");
-  }
-
   private static final class PROPS {
     /*package*/ static final SProperty isComponentsOriented$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsOriented");
     /*package*/ static final SProperty isPointOriented$72OX = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a598L, "isPointOriented");
     /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink applicationPoint$8ifq = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1baa8b95de1a6d46L, "applicationPoint");
+    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
   }
 }

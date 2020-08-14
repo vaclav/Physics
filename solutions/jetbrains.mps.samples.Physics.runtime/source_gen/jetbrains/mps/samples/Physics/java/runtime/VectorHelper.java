@@ -17,6 +17,16 @@ public class VectorHelper {
     return new DVector3(vec.getX().doubleValue(), vec.getY().doubleValue(), vec.getZ().doubleValue());
   }
 
+  public static DVector3C anyToDVector3C(Object vec) {
+    if (vec instanceof VectorLike) {
+      return fromInternal(as_2xd9bs_a0a0a0a4(vec, VectorLike.class));
+    } else if (vec instanceof DVector3C) {
+      return as_2xd9bs_a0a0a0a4_0(vec, DVector3C.class);
+    }
+    System.err.println("[vectorhelper] unhandled vector type : " + vec.getClass().getName());
+    return null;
+  }
+
   public static DVector3C fromCartesian(BigDecimal x, BigDecimal y, BigDecimal z) {
     return new DVector3(x.doubleValue(), y.doubleValue(), z.doubleValue());
   }
@@ -27,5 +37,11 @@ public class VectorHelper {
 
   public static DVector3C relativeTo(DVector3C vector, DVector3C relativeTo) {
     return new DVector3(vector.get0() + relativeTo.get0(), vector.get1() + relativeTo.get1(), vector.get2() + relativeTo.get2());
+  }
+  private static <T> T as_2xd9bs_a0a0a0a4(Object o, Class<T> type) {
+    return (type.isInstance(o) ? (T) o : null);
+  }
+  private static <T> T as_2xd9bs_a0a0a0a4_0(Object o, Class<T> type) {
+    return (type.isInstance(o) ? (T) o : null);
   }
 }

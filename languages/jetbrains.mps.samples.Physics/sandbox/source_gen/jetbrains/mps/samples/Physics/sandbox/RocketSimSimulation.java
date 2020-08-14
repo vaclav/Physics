@@ -5,11 +5,14 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import processing.core.PApplet;
 import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import processing.core.PConstants;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
 import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
@@ -17,7 +20,7 @@ public class RocketSimSimulation extends Simulation {
   protected RocketWorldSystemScope scope;
 
   public RocketSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).doubleValue(), 1);
+    super(AH.mul(((Number) new BigInteger("150")), ((Number) new BigDecimal("6E+1").setScale(0, RoundingMode.DOWN))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))).floatValue());
   }
 
   @Override
@@ -39,14 +42,18 @@ public class RocketSimSimulation extends Simulation {
     VectorLike currentEntity = this.scope;
 
     // Setting camera properly 
-    VectorLike position = scope.RocketEuropaS452G.getPosition().add(new InternalVector(AH.mul(((Number) new BigInteger("-200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-200")), ((Number) new BigInteger("1")))));
+    VectorLike position = scope.RocketEuropaS452G.getPosition().add(new InternalVector(AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))), ((BigInteger) AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1")))).negate()));
     VectorLike focus = scope.RocketEuropaS452G;
 
     // Apply scale 
-    position.mul(renderScale);
-    focus.mul(renderScale);
+    position = position.mul(renderScale);
+    focus = focus.mul(renderScale);
 
     graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
+
+    // Float.MAX_VALUE divided by 1000 to prevent an overflow in internal computations 
+    // (resulting in a black screen) 
+    graphics.perspective(PConstants.PI / 3, ((float) graphics.width) / ((float) graphics.height), 10, Float.MAX_VALUE / 100);
 
     super.render(context, graphics);
   }

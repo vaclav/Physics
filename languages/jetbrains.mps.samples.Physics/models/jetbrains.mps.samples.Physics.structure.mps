@@ -311,6 +311,9 @@
     <property role="34LRSv" value="static force" />
     <property role="R4oN_" value="force computed once and applied constantly" />
     <ref role="1TJDcQ" node="7zgzoeTzo_w" resolve="SimpleForce" />
+    <node concept="PrWs8" id="4$vyCQBiyUH" role="PzmwI">
+      <ref role="PrY4T" node="4$vyCQBisan" resolve="IForceWithCache" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oP">
     <property role="EcuMT" value="1459540517658822197" />
@@ -550,6 +553,9 @@
       <property role="20kJfa" value="parameterValues" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="Q4PrYMwcs1" resolve="AbstractForceCallParameter" />
+    </node>
+    <node concept="PrWs8" id="4$vyCQBitux" role="PzmwI">
+      <ref role="PrY4T" node="4$vyCQBisan" resolve="IForceWithCache" />
     </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oJ">
@@ -1284,6 +1290,46 @@
     <property role="34LRSv" value="moment force" />
     <property role="R4oN_" value="force that only result as a moment" />
     <ref role="1TJDcQ" node="7zgzoeTzo_w" resolve="SimpleForce" />
+  </node>
+  <node concept="1TIwiD" id="4$vyCQBikuI">
+    <property role="EcuMT" value="5269082430048389038" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="ConditionalForce" />
+    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
+    <node concept="PrWs8" id="4$vyCQBisfs" role="PzmwI">
+      <ref role="PrY4T" node="4$vyCQBisan" resolve="IForceWithCache" />
+    </node>
+    <node concept="1TJgyj" id="4$vyCQBisgt" role="1TKVEi">
+      <property role="IQ2ns" value="5269082430048420893" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="nested" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1h1l5SEm0oJ" resolve="Force" />
+    </node>
+    <node concept="1TJgyj" id="4$vyCQBiwMo" role="1TKVEi">
+      <property role="IQ2ns" value="5269082430048439448" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="4$vyCQBisan">
+    <property role="EcuMT" value="5269082430048420503" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="IForceWithCache" />
+  </node>
+  <node concept="1TIwiD" id="4$vyCQByB8V">
+    <property role="EcuMT" value="5269082430052659771" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="CachedObjectExpression" />
+    <property role="R4oN_" value="internal concept used for generation" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyj" id="4$vyCQByB8W" role="1TKVEi">
+      <property role="IQ2ns" value="5269082430052659772" />
+      <property role="20kJfa" value="cacheOf" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4$vyCQBisan" resolve="IForceWithCache" />
+    </node>
   </node>
 </model>
 

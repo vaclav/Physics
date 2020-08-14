@@ -12,6 +12,7 @@ import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import processing.core.PApplet;
 import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import processing.core.PConstants;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
 import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
@@ -45,10 +46,14 @@ public class TorqueTestSimulation extends Simulation {
     VectorLike focus = scope.SampleBox;
 
     // Apply scale 
-    position.mul(renderScale);
-    focus.mul(renderScale);
+    position = position.mul(renderScale);
+    focus = focus.mul(renderScale);
 
     graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
+
+    // Float.MAX_VALUE divided by 1000 to prevent an overflow in internal computations 
+    // (resulting in a black screen) 
+    graphics.perspective(PConstants.PI / 3, ((float) graphics.width) / ((float) graphics.height), 10, Float.MAX_VALUE / 100);
 
     super.render(context, graphics);
   }

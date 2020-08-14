@@ -23,15 +23,15 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class MomentForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, "jetbrains.mps.samples.Physics.structure.MomentForce");
 
-  public static final SMethod<Integer> getForceMode_id7VyKdWRpcSx = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7VyKdWRpcSx").build();
+  public static final SMethod<Integer> getForceMode_id4$vyCQBiMP2 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBiMP2").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getForceMode_id7VyKdWRpcSx);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getForceMode_id4$vyCQBiMP2);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static int getForceMode_id7VyKdWRpcSx(@NotNull SNode __thisNode__) {
-    return ((int) Force__BehaviorDescriptor.getForceMode_id7VyKdWRpcSx.invokeSuper(__thisNode__, CONCEPTS.MomentForce$kK)) | ForceMode.SKIP_LINEAR_FORCE;
+  /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
+    return ((int) Force__BehaviorDescriptor.getForceMode_id4$vyCQBiMP2.invokeSuper(__thisNode__, CONCEPTS.MomentForce$kK)) | ForceMode.SKIP_LINEAR_FORCE;
   }
 
   /*package*/ MomentForce__BehaviorDescriptor() {
@@ -50,7 +50,7 @@ public final class MomentForce__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((Integer) getForceMode_id7VyKdWRpcSx(node));
+        return (T) ((Integer) getForceMode_id4$vyCQBiMP2(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

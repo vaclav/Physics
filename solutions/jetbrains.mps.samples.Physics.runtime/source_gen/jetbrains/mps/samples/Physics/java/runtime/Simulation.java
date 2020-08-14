@@ -28,8 +28,8 @@ public abstract class Simulation implements Renderer.RendererCallback {
   public void render(PApplet applet, PGraphics ctx) {
     ctx.background(0);
 
-    world.step();
     world.render(ctx, renderScale);
+    world.step();
 
     ctx.camera();
     ctx.noLights();

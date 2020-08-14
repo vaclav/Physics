@@ -85,19 +85,20 @@ public class TorqueSystemScope extends SystemScope {
       fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<TorqueSystemScope>() {
-        private DVector3C cached;
+        private VectorLike cached;
 
         @Override
         public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
           if (cached == null) {
-            cached = VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))));
+            cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
           }
-          return cached;
+
+          return VectorHelper.anyToDVector3C(cached);
 
         }
         @Override
         public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+          return VectorHelper.anyToDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
         }
 
         @Override
@@ -105,19 +106,20 @@ public class TorqueSystemScope extends SystemScope {
           return 0;
         }
       }, new Force<TorqueSystemScope>() {
-        private DVector3C cached;
+        private VectorLike cached;
 
         @Override
         public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
           if (cached == null) {
-            cached = VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))).negate()));
+            cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))).negate());
           }
-          return cached;
+
+          return VectorHelper.anyToDVector3C(cached);
 
         }
         @Override
         public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.fromInternal(new InternalVector(((BigInteger) AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).negate(), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+          return VectorHelper.anyToDVector3C(new InternalVector(((BigInteger) AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).negate(), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
         }
 
         @Override

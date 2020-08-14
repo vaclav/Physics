@@ -6,12 +6,12 @@ import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
-import java.util.List;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.internal.collections.runtime.Sequence;
@@ -28,18 +28,20 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public final class Force__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
 
+  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
+  public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$go").build();
   public static final SMethod<Iterable<List<SNode>>> getRequiredDimensions_id270Q2mETulL = new SMethodBuilder<Iterable<List<SNode>>>(new SJavaCompoundTypeImpl((Class<Iterable<List<SNode>>>) ((Class) Object.class))).name("getRequiredDimensions").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("270Q2mETulL").build();
-  public static final SMethod<Integer> getForceMode_id7VyKdWRpcSx = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7VyKdWRpcSx").build();
+  public static final SMethod<Integer> getForceMode_id4$vyCQBiMP2 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBiMP2").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getRequiredDimensions_id270Q2mETulL, getForceMode_id7VyKdWRpcSx);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLinearForceExpression_id4$vyCQBi$gg, getApplicationPointExpression_id4$vyCQBi$go, getRequiredDimensions_id270Q2mETulL, getForceMode_id4$vyCQBiMP2);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
   /*package*/ static Iterable<List<SNode>> getRequiredDimensions_id270Q2mETulL(@NotNull SNode __thisNode__) {
-    return Sequence.<List<SNode>>singleton(SLinkOperations.getChildren((_quotation_createNode_xr2do3_a0a0a0a0()), LINKS.units$o6Ow));
+    return Sequence.<List<SNode>>singleton(SLinkOperations.getChildren((_quotation_createNode_xr2do3_a0a0a0a2()), LINKS.units$o6Ow));
   }
-  /*package*/ static int getForceMode_id7VyKdWRpcSx(@NotNull SNode __thisNode__) {
+  /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
     return ForceMode.DEFAULT;
   }
 
@@ -58,10 +60,10 @@ public final class Force__BehaviorDescriptor extends BaseBHDescriptor {
       throw new BHMethodNotFoundException(this, method);
     }
     switch (methodIndex) {
-      case 0:
+      case 2:
         return (T) ((Iterable<List<SNode>>) getRequiredDimensions_id270Q2mETulL(node));
-      case 1:
-        return (T) ((Integer) getForceMode_id7VyKdWRpcSx(node));
+      case 3:
+        return (T) ((Integer) getForceMode_id4$vyCQBiMP2(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -90,7 +92,7 @@ public final class Force__BehaviorDescriptor extends BaseBHDescriptor {
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
-  private static SNode _quotation_createNode_xr2do3_a0a0a0a0() {
+  private static SNode _quotation_createNode_xr2do3_a0a0a0a2() {
     PersistenceFacade facade = PersistenceFacade.getInstance();
     SNode quotedNode_1 = null;
     SNode quotedNode_2 = null;

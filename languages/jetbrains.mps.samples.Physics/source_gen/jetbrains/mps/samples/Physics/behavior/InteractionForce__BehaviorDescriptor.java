@@ -29,14 +29,14 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class InteractionForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d56baL, "jetbrains.mps.samples.Physics.structure.InteractionForce");
 
-  public static final SMethod<SNode> getLinearForceExpression_idyrUOugPRqG = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("yrUOugPRqG").build();
+  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLinearForceExpression_idyrUOugPRqG);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLinearForceExpression_id4$vyCQBi$gg);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static SNode getLinearForceExpression_idyrUOugPRqG(@NotNull SNode __thisNode__) {
+  /*package*/ static SNode getLinearForceExpression_id4$vyCQBi$gg(@NotNull SNode __thisNode__) {
     // TODO move this to the generation part? 
     // Lambda arguments (ref will be required within the lambda below) 
     SNode seedArg = createLambdaArg_3otbl8_a0c0a();
@@ -64,7 +64,7 @@ public final class InteractionForce__BehaviorDescriptor extends BaseBHDescriptor
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((SNode) getLinearForceExpression_idyrUOugPRqG(node));
+        return (T) ((SNode) getLinearForceExpression_id4$vyCQBi$gg(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

@@ -6,29 +6,30 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import java.math.BigInteger;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
+import org.ode4j.math.DVector3C;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper;
 import java.util.function.Function;
-import org.ode4j.math.DVector3C;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import org.iets3.core.expr.base.runtime.runtime.MinMaxHelper;
-import java.util.List;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
-import java.util.ArrayList;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
+import org.pcollections.TreePVector;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
+import java.math.MathContext;
 
 public class RocketWorldSystemScope extends SystemScope {
   public final PhysicalEntity RocketEuropaS452G;
-  public final PhysicalEntity Ground3;
+  public final PhysicalEntity Earth3;
 
   public RocketWorldSystemScope(World world, VectorLike position, VectorLike velocity) {
     super(position, velocity);
@@ -37,11 +38,11 @@ public class RocketWorldSystemScope extends SystemScope {
 
     //  Instanciate objects 
     RocketEuropaS452G = withEntity(new RocketEuropaS452G2PhysicalEntity(world, "RocketEuropaS452G1", scope));
-    Ground3 = withEntity(new Ground5PhysicalEntity(world, "Ground4", scope));
+    Earth3 = withEntity(new Earth5PhysicalEntity(world, "Earth4", scope));
 
     // Initialize them 
     RocketEuropaS452G.init(this, world);
-    Ground3.init(this, world);
+    Earth3.init(this, world);
   }
 
   public static class RocketEuropaS452G2PhysicalEntity extends BaseObjectAbstractEntity<RocketWorldSystemScope> {
@@ -56,7 +57,7 @@ public class RocketWorldSystemScope extends SystemScope {
       RocketEuropaS452G2PhysicalEntity currentEntity = this;
 
       // Set static properties of Rocket Europa-S452G 
-      this.setMass(((Number) new BigInteger("1")));
+      this.setMass(((Number) new BigDecimal("1.21E+4").setScale(5, RoundingMode.DOWN)));
       this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
@@ -64,61 +65,116 @@ public class RocketWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
+      fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
+      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.IGNORE);
       fixtureProperties.set(Prop.SHAPE, "box");
       fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
       fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<RocketWorldSystemScope>() {
-        private Force internal;
-
-        public void init() {
-          internal = new _FunctionTypes._return_P0_E0<Force>() {
-            public Force invoke() {
-              ParameterSetWrapper param = new ParameterSetWrapper();
-              return new Function<ParameterSetWrapper, Force>() {
-                public Force apply(ParameterSetWrapper param) {
-                  return new Force<SystemScope>() {
-                    private DVector3C cached;
-
-                    @Override
-                    public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-                      if (cached == null) {
-                        cached = VectorHelper.fromInternal(new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(currentEntity.getMass(), ((Number) new BigDecimal("-9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0"))));
-                      }
-                      return cached;
-
-                    }
-                    @Override
-                    public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-                      return null;
-                    }
-
-                    @Override
-                    public int forceMode() {
-                      return 0;
-                    }
-                  };
-                }
-              }.apply(param);
-            }
-          }.invoke();
-        }
+        private Force cached;
 
         @Override
         public DVector3C linearForce(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (internal == null) {
-            init();
+          if (cached == null) {
+            cached = new _FunctionTypes._return_P0_E0<Force>() {
+              public Force invoke() {
+                ParameterSetWrapper param = new ParameterSetWrapper();
+                return new Function<ParameterSetWrapper, Force>() {
+                  public Force apply(ParameterSetWrapper param) {
+                    return new Force<SystemScope>() {
+                      private Force cached;
+
+                      @Override
+                      public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+                        if (cached == null) {
+                          cached = new _FunctionTypes._return_P0_E0<Force>() {
+                            public Force invoke() {
+                              ParameterSetWrapper param = new ParameterSetWrapper();
+                              param.parameters.add(AH.mul(((Number) new BigDecimal("6.67430e-11").setScale(9, RoundingMode.DOWN)), ((Number) new BigInteger("1"))));
+                              return new Function<ParameterSetWrapper, Force>() {
+                                public Force apply(ParameterSetWrapper param) {
+                                  Number G = (Number) param.parameters.get(0);
+                                  return new Force<SystemScope>() {
+
+                                    @Override
+                                    public DVector3C linearForce(final World world, SystemScope scope, final PhysicalEntity currentEntity, double time) {
+
+                                      return VectorHelper.anyToDVector3C(new _FunctionTypes._return_P0_E0<VectorLike>() {
+                                        public VectorLike invoke() {
+                                          VectorLike seed = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
+                                          for (Object current : TreePVector.from(TreePVector.from(world.getEntities().stream().filter(new Predicate<PhysicalEntity>() {
+                                            public boolean test(PhysicalEntity o) {
+                                              return new Function<ParameterSetWrapper, Boolean>() {
+                                                public Boolean apply(ParameterSetWrapper param) {
+                                                  PhysicalEntity it = (PhysicalEntity) param.parameters.get(0);
+                                                  return it != currentEntity;
+                                                }
+                                              }.apply(new ParameterSetWrapper(o));
+                                            }
+                                          }).collect(Collectors.toList())).stream().map(new Function<PhysicalEntity, VectorLike>() {
+                                            public VectorLike apply(PhysicalEntity param) {
+                                              return new Function<ParameterSetWrapper, VectorLike>() {
+                                                public VectorLike apply(ParameterSetWrapper param) {
+                                                  PhysicalEntity it = (PhysicalEntity) param.parameters.get(0);
+                                                  return it.minus(currentEntity).resize(AH.div(AH.mul(AH.mul(G, it.getMass()), currentEntity.getMass()), BigDecimal.valueOf(Math.pow(currentEntity.minus(it).length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))));
+                                                }
+                                              }.apply(new ParameterSetWrapper(param));
+                                            }
+                                          }).collect(Collectors.toList()))) {
+                                            seed = seed.add(((VectorLike) current));
+                                          }
+                                          return seed;
+                                        }
+                                      }.invoke());
+
+                                    }
+                                    @Override
+                                    public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+                                      return null;
+                                    }
+
+                                    @Override
+                                    public int forceMode() {
+                                      return 0;
+                                    }
+                                  };
+                                }
+                              }.apply(param);
+                            }
+                          }.invoke();
+                        }
+
+                        return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
+
+                      }
+                      @Override
+                      public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+                        return null;
+                      }
+
+                      @Override
+                      public int forceMode() {
+                        return 24;
+                      }
+                    };
+                  }
+                }.apply(param);
+              }
+            }.invoke();
           }
-          return internal.linearForce(world, scope, currentEntity, time);
+
+          return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
+
         }
         @Override
         public DVector3C applicationPoint(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (internal == null) {
-            init();
-          }
+          return null;
+        }
 
-          return internal.applicationPoint(world, scope, currentEntity, time);
+        @Override
+        public int forceMode() {
+          return 24;
         }
       }, /* 
        * Actual boost
@@ -141,36 +197,31 @@ public class RocketWorldSystemScope extends SystemScope {
       new Force<RocketWorldSystemScope>() {
 
         @Override
-        public DVector3C linearForce(final World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))).mul(((Number) MinMaxHelper.max(new _FunctionTypes._return_P0_E0<List<BigDecimal>>() {
-            public List<BigDecimal> invoke() {
-              List<BigDecimal> l = ListSequence.fromList(new ArrayList<BigDecimal>());
-              ListSequence.fromList(l).addElement((BigDecimal) AH.add(AH.mul(AH.mul(BigDecimal.valueOf(world.getTime()), ((Number) new BigInteger("1"))), ((BigDecimal) ((Number) new BigDecimal("0.2").setScale(1, RoundingMode.DOWN))).negate()), ((Number) new BigInteger("2"))));
-              ListSequence.fromList(l).addElement((BigDecimal) ((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)));
-              return l;
-            }
-          }.invoke(), true, null))));
+        public DVector3C linearForce(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
+
+          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("10000")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))).mul(BigDecimal.ONE.divide(BigDecimalHelper.of((AH.add(AH.mul(BigDecimal.valueOf(world.getTime()), ((Number) new BigInteger("1"))), ((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN))))), MathContext.DECIMAL32)));
 
         }
         @Override
         public DVector3C applicationPoint(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return null;
+          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).negate(), ((Number) new BigInteger("0"))));
         }
 
         @Override
         public int forceMode() {
-          return 4;
+          return 28;
         }
       }, new Force<RocketWorldSystemScope>() {
 
         @Override
         public DVector3C linearForce(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))));
+
+          return VectorHelper.anyToDVector3C(new InternalVector(AH.mul(((Number) new BigDecimal("0.00001").setScale(5, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).mul(((Number) new BigInteger("1"))).mul(BigDecimal.ONE.divide(BigDecimalHelper.of((AH.add(AH.mul(BigDecimal.valueOf(world.getTime()), ((Number) new BigInteger("1"))), ((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN))))), MathContext.DECIMAL32)));
 
         }
         @Override
         public DVector3C applicationPoint(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
         }
 
         @Override
@@ -180,31 +231,30 @@ public class RocketWorldSystemScope extends SystemScope {
       }));
     }
   }
-  public static class Ground5PhysicalEntity extends BaseObjectAbstractEntity<RocketWorldSystemScope> {
+  public static class Earth5PhysicalEntity extends BaseObjectAbstractEntity<RocketWorldSystemScope> {
 
-    public Ground5PhysicalEntity(World world, String name, RocketWorldSystemScope scope) {
+    public Earth5PhysicalEntity(World world, String name, RocketWorldSystemScope scope) {
       super(world, name, scope);
     }
 
     @Override
     public void init(final RocketWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
-      Ground5PhysicalEntity currentEntity = this;
+      Earth5PhysicalEntity currentEntity = this;
 
-      // Set static properties of Ground 
-      this.setMass(((Number) new BigInteger("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      // Set static properties of Earth 
+      this.setMass(((Number) new BigDecimal("5.972E+24").setScale(7, RoundingMode.DOWN)));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-6371015")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Ground 
+      //  Forces and visual of the parent objects of Earth 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.IGNORE);
-      fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.SHAPE, "box");
+      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.PAUSE_SIMULATION);
+      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
+      fixtureProperties.set(Prop.TEXTURE, new Color(0, 255, 0));
+      fixtureProperties.set(Prop.SHAPE, "sphere");
       this.getForces().addAll(Arrays.asList());
     }
   }

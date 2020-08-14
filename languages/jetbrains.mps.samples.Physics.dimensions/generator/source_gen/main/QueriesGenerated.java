@@ -28,13 +28,13 @@ public class QueriesGenerated extends QueryProviderBase {
   public QueriesGenerated() {
     super(1);
   }
-  public static boolean rule_Condition_0_0(final BaseMappingRuleContext _context) {
+  public static boolean rule_Condition_1_0(final BaseMappingRuleContext _context) {
     return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.UseUnitExpressionAs$IL);
   }
-  public static SNode insertMacro_Query_0_0(final InsertMacroContext _context) {
+  public static SNode insertMacro_Query_1_0(final InsertMacroContext _context) {
     return UnitConversionUtil.compositeExpressionToBase(SLinkOperations.getTarget(_context.getNode(), LINKS.content$Gf5w), SLinkOperations.getChildren(_context.getNode(), LINKS.units$o6Ow), true);
   }
-  public static SNode insertMacro_Query_0_1(final InsertMacroContext _context) {
+  public static SNode insertMacro_Query_1_1(final InsertMacroContext _context) {
     SNode target = SNodeOperations.as(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.UseUnitExpressionAs$IL);
     return UnitConversionUtil.compositeExpressionToBase(SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa), SLinkOperations.getChildren(target, LINKS.units$o6Ow), false);
   }
@@ -61,7 +61,7 @@ public class QueriesGenerated extends QueryProviderBase {
     public boolean check(ReductionRuleQueryContext ctx) throws GenerationFailureException {
       switch (methodKey) {
         case 0:
-          return QueriesGenerated.rule_Condition_0_0(ctx);
+          return QueriesGenerated.rule_Condition_1_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for rule %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -90,9 +90,9 @@ public class QueriesGenerated extends QueryProviderBase {
     public SNode evaluate(@NotNull InsertMacroContext ctx) throws GenerationFailureException {
       switch (methodKey) {
         case 0:
-          return QueriesGenerated.insertMacro_Query_0_0(ctx);
+          return QueriesGenerated.insertMacro_Query_1_0(ctx);
         case 1:
-          return QueriesGenerated.insertMacro_Query_0_1(ctx);
+          return QueriesGenerated.insertMacro_Query_1_1(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }

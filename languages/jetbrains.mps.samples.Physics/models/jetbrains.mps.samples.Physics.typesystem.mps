@@ -2680,5 +2680,52 @@
       <ref role="1YaFvo" to="9tcj:1h1l5SEmLT3" resolve="AbstractObjectDefinition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="4$vyCQByBFC">
+    <property role="TrG5h" value="typeof_CachedObjectExpression" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <node concept="3clFbS" id="4$vyCQByBFD" role="18ibNy">
+      <node concept="nvevp" id="4$vyCQByBFJ" role="3cqZAp">
+        <node concept="3clFbS" id="4$vyCQByBFK" role="nvhr_">
+          <node concept="1Z5TYs" id="4$vyCQByD6e" role="3cqZAp">
+            <node concept="mw_s8" id="4$vyCQByD6w" role="1ZfhKB">
+              <node concept="2X3wrD" id="4$vyCQByD6u" role="mwGJk">
+                <ref role="2X3Bk0" node="4$vyCQByBFM" resolve="cacheType" />
+              </node>
+            </node>
+            <node concept="mw_s8" id="4$vyCQByD6h" role="1ZfhK$">
+              <node concept="1Z2H0r" id="4$vyCQByCUc" role="mwGJk">
+                <node concept="1YBJjd" id="4$vyCQByCUs" role="1Z2MuG">
+                  <ref role="1YBMHb" node="4$vyCQByBFF" resolve="cachedObjectExpression" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1Z2H0r" id="4$vyCQByBGx" role="nvjzm">
+          <node concept="2OqwBi" id="4$vyCQByCz9" role="1Z2MuG">
+            <node concept="2OqwBi" id="4$vyCQByBRj" role="2Oq$k0">
+              <node concept="1YBJjd" id="4$vyCQByBGX" role="2Oq$k0">
+                <ref role="1YBMHb" node="4$vyCQByBFF" resolve="cachedObjectExpression" />
+              </node>
+              <node concept="3TrEf2" id="4$vyCQByC6M" role="2OqNvi">
+                <ref role="3Tt5mk" to="9tcj:4$vyCQByB8W" resolve="cacheOf" />
+              </node>
+            </node>
+            <node concept="2qgKlT" id="4$vyCQByCOR" role="2OqNvi">
+              <ref role="37wK5l" to="rf09:4$vyCQBisbm" resolve="cacheType" />
+            </node>
+          </node>
+        </node>
+        <node concept="2X1qdy" id="4$vyCQByBFM" role="2X0Ygz">
+          <property role="TrG5h" value="cacheType" />
+          <node concept="2jxLKc" id="4$vyCQByBFN" role="1tU5fm" />
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="4$vyCQByBFF" role="1YuTPh">
+      <property role="TrG5h" value="cachedObjectExpression" />
+      <ref role="1YaFvo" to="9tcj:4$vyCQByB8V" resolve="CachedObjectExpression" />
+    </node>
+  </node>
 </model>
 

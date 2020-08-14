@@ -25,6 +25,9 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.VectorHelper">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
