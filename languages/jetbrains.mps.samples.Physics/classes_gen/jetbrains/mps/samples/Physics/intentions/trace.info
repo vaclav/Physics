@@ -113,8 +113,8 @@
       <node id="3489632902465168269" at="65,37,66,83" concept="2" />
       <node id="3489632902465168269" at="68,5,69,16" concept="8" />
       <node id="3489632902465455877" at="71,86,72,103" concept="7" />
-      <node id="3489632902465477886" at="72,103,73,315" concept="7" />
-      <node id="3489632902465459945" at="73,315,74,0" concept="10" />
+      <node id="3489632902465477886" at="72,103,73,310" concept="7" />
+      <node id="3489632902465459945" at="73,310,74,0" concept="10" />
       <node id="3489632902465437505" at="74,0,75,111" concept="9" />
       <node id="3489632902465197022" at="77,39,78,121" concept="8" />
       <node id="3489632902465168269" at="83,0,84,0" concept="3" trace="myParameter" />
@@ -122,18 +122,18 @@
       <node id="3489632902465321740" at="88,87,89,174" concept="8" />
       <node id="3489632902465287709" at="92,78,93,83" concept="7" />
       <node id="3489632902465290099" at="93,83,94,145" concept="7" />
-      <node id="3489632902465295937" at="94,145,95,275" concept="2" />
+      <node id="3489632902465295937" at="94,145,95,270" concept="2" />
       <node id="3489632902465168269" at="98,48,99,46" concept="8" />
       <node id="3489632902465168269" at="101,34,102,25" concept="8" />
-      <node id="3489632902465298427" at="105,84,106,79" concept="7" />
-      <node id="3489632902465298427" at="106,79,107,92" concept="2" />
+      <node id="3489632902465298427" at="105,79,106,74" concept="7" />
+      <node id="3489632902465298427" at="106,74,107,92" concept="2" />
       <node id="3489632902465298427" at="108,5,109,105" concept="7" />
       <node id="3489632902465298427" at="109,105,110,51" concept="2" />
       <node id="3489632902465298427" at="111,5,112,26" concept="8" />
       <node id="3489632902465168269" at="116,0,117,0" concept="11" trace="Expression$Wr" />
       <node id="3489632902465168269" at="117,0,118,0" concept="11" trace="VectorType$Wj" />
       <node id="3489632902465168269" at="118,0,119,0" concept="11" trace="ILocalized$9a" />
-      <node id="3489632902465168269" at="119,0,120,0" concept="11" trace="RelativeCoordinates$c7" />
+      <node id="3489632902465168269" at="119,0,120,0" concept="11" trace="RelativeVector$c7" />
       <node id="3489632902465168269" at="120,0,121,0" concept="11" trace="ObjectReferenceExpression$qq" />
       <node id="3489632902465168269" at="121,0,122,0" concept="11" trace="WorldDefinition$Xn" />
       <node id="3489632902465168269" at="122,0,123,0" concept="11" trace="AbsoluteCoordinates$d5" />
@@ -158,7 +158,7 @@
       <node id="3489632902465173056" at="75,111,80,24" concept="8" />
       <node id="3489632902465168269" at="91,0,97,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
       <node id="3489632902465168269" at="47,0,54,0" concept="6" trace="isApplicable#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Z" />
-      <node id="3489632902465298427" at="105,0,114,0" concept="12" trace="createRelativeCoordinates_d9qn55_a0a2a0#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3489632902465298427" at="105,0,114,0" concept="12" trace="createRelativeVector_d9qn55_a0a2a0#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="3489632902465168269" at="61,0,71,0" concept="6" trace="instances#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/util/Collection;" />
       <node id="3489632902465168269" at="71,0,82,0" concept="6" trace="parameter#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/util/List;" />
       <scope id="3489632902465168269" at="40,40,41,154" />
@@ -190,7 +190,7 @@
       <scope id="3489632902465168269" at="84,0,87,0">
         <var name="parameter" id="3489632902465168269" />
       </scope>
-      <scope id="3489632902465168273" at="92,78,95,275">
+      <scope id="3489632902465168273" at="92,78,95,270">
         <var name="current" id="3489632902465287710" />
         <var name="relativeTarget" id="3489632902465290100" />
       </scope>
@@ -211,7 +211,7 @@
         <var name="editorContext" id="3489632902465168269" />
         <var name="node" id="3489632902465168269" />
       </scope>
-      <scope id="3489632902465298427" at="105,84,112,26">
+      <scope id="3489632902465298427" at="105,79,112,26">
         <var name="n0" id="3489632902465298427" />
       </scope>
       <scope id="3489632902465168269" at="61,99,69,16">

@@ -144,14 +144,14 @@ public class AbsoluteCoordinates_TransformationMenu extends TransformationMenuBa
 
       @Override
       public void execute(@NotNull String pattern) {
-        SNode relative = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.RelativeCoordinates$c7);
+        SNode relative = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.RelativeVector$c7);
         SLinkOperations.setTarget(relative, LINKS.coordinates$l1nt, _context.getNode());
         SelectionUtil.selectCell(_context.getEditorContext(), relative, SelectionManager.LAST_EDITABLE_CELL);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(_context.getNode()), CONCEPTS.RelativeCoordinates$c7));
+        return !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(_context.getNode()), CONCEPTS.RelativeVector$c7));
       }
 
 
@@ -200,7 +200,7 @@ public class AbsoluteCoordinates_TransformationMenu extends TransformationMenuBa
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept AbsoluteCoordinates$d5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL, "jetbrains.mps.samples.Physics.structure.AbsoluteCoordinates");
-    /*package*/ static final SConcept RelativeCoordinates$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeCoordinates");
+    /*package*/ static final SConcept RelativeVector$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
   }
 
   private static final class LINKS {

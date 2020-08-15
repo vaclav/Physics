@@ -6,6 +6,7 @@
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
+    <import index="onwr" ref="r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
   <registry>
@@ -86,6 +87,21 @@
     <property role="R4oN_" value="abstract version of vector type (to simplify type checking of operators)" />
     <property role="34LRSv" value="abstract-vector" />
     <ref role="1TJDcQ" node="6kwOTMl2xh8" resolve="DirectionType" />
+  </node>
+  <node concept="1TIwiD" id="4RbBgkBKyyA">
+    <property role="EcuMT" value="5605746806660147366" />
+    <property role="3GE5qa" value="vector" />
+    <property role="TrG5h" value="RotationType" />
+    <property role="R4oN_" value="expression of a rotation" />
+    <property role="34LRSv" value="rotation" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
+    <node concept="1TJgyj" id="7tUW$K4pvUN" role="1TKVEi">
+      <property role="IQ2ns" value="8609460045977353907" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="nestedType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSlaok" resolve="Type" />
+    </node>
   </node>
 </model>
 

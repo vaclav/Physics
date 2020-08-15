@@ -132,6 +132,12 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
     </node>
+    <node concept="1TJgyj" id="4RbBgkBL4O6" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660287750" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rotationSpeed" />
+      <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6HZo5MNbVDo">
     <property role="EcuMT" value="7746015835360049752" />
@@ -213,11 +219,11 @@
   </node>
   <node concept="1TIwiD" id="5xbVod7kJDF">
     <property role="EcuMT" value="6362440046684076651" />
-    <property role="TrG5h" value="RelativeCoordinates" />
+    <property role="TrG5h" value="RelativeVector" />
     <property role="34LRSv" value="relative coordinates" />
     <property role="3GE5qa" value="physical.vector" />
     <property role="R4oN_" value="coordinates relative to a point in space or another object" />
-    <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="Coordinates" />
+    <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="VectorExpression" />
     <node concept="1TJgyj" id="1$oDF1jRtdq" role="1TKVEi">
       <property role="IQ2ns" value="1808378526640755546" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -246,7 +252,7 @@
     <property role="3GE5qa" value="physical.vector.absolute" />
     <property role="TrG5h" value="AbsoluteCoordinates" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="Coordinates" />
+    <ref role="1TJDcQ" node="1jQexh3x$_T" resolve="VectorExpression" />
   </node>
   <node concept="1TIwiD" id="5xbVod7kJEb">
     <property role="EcuMT" value="6362440046684076683" />
@@ -411,7 +417,7 @@
   <node concept="1TIwiD" id="1jQexh3x$_T">
     <property role="EcuMT" value="1510458583736011129" />
     <property role="3GE5qa" value="physical.vector" />
-    <property role="TrG5h" value="Coordinates" />
+    <property role="TrG5h" value="VectorExpression" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="PrWs8" id="270Q2mEVjkF" role="PzmwI">
@@ -508,7 +514,13 @@
       <property role="IQ2ns" value="4383135941275155975" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="velocity" />
-      <ref role="20lvS9" node="GdoRjGvReb" resolve="VelocityCoordinates" />
+      <ref role="20lvS9" node="GdoRjGvReb" resolve="VelocityVector" />
+    </node>
+    <node concept="1TJgyj" id="4RbBgkBN0cp" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660793113" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rotation" />
+      <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
     </node>
     <node concept="PrWs8" id="1rTmHeeK7HT" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -773,7 +785,7 @@
   <node concept="1TIwiD" id="GdoRjGvReb">
     <property role="EcuMT" value="796402062949577611" />
     <property role="3GE5qa" value="physical.vector.targets" />
-    <property role="TrG5h" value="VelocityCoordinates" />
+    <property role="TrG5h" value="VelocityVector" />
     <property role="34LRSv" value="initial velocity" />
     <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
     <node concept="PrWs8" id="270Q2mEVj8D" role="PzmwI">
@@ -821,16 +833,6 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="height" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="GdoRjGvovs">
-    <property role="EcuMT" value="796402062949451740" />
-    <property role="3GE5qa" value="physical.vector.targets" />
-    <property role="TrG5h" value="PositionCoordinates" />
-    <property role="R4oN_" value="contains coordinates and serve as coordinates target" />
-    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
-    <node concept="PrWs8" id="270Q2mEV8Ij" role="PzmwI">
-      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
     </node>
   </node>
   <node concept="1TIwiD" id="M__cqnDKOa">
@@ -1329,6 +1331,85 @@
       <property role="20kJfa" value="cacheOf" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="4$vyCQBisan" resolve="IForceWithCache" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4RbBgkBKzbL">
+    <property role="EcuMT" value="5605746806660150001" />
+    <property role="3GE5qa" value="physical.vector.rotation" />
+    <property role="TrG5h" value="EulerRotationExpression" />
+    <property role="34LRSv" value="euler axis rotation" />
+    <ref role="1TJDcQ" node="4RbBgkBKyld" resolve="RotationExpression" />
+    <node concept="1TJgyj" id="4RbBgkBK$Aq" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660155802" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="axis" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5xbVod7kJEb" resolve="CartesianCoordinates" />
+    </node>
+    <node concept="1TJgyj" id="4RbBgkBK$Av" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660155807" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="angle" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4RbBgkBKyld">
+    <property role="EcuMT" value="5605746806660146509" />
+    <property role="3GE5qa" value="physical.vector.rotation" />
+    <property role="TrG5h" value="RotationExpression" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="4RbBgkBK$Bp">
+    <property role="EcuMT" value="5605746806660155865" />
+    <property role="3GE5qa" value="physical.vector.rotation" />
+    <property role="TrG5h" value="RotationMatrixExpression" />
+    <property role="34LRSv" value="rotation matrix" />
+    <ref role="1TJDcQ" node="4RbBgkBKyld" resolve="RotationExpression" />
+    <node concept="1TJgyj" id="4RbBgkBK$Kf" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660156431" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="c1" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5xbVod7kJEb" resolve="CartesianCoordinates" />
+    </node>
+    <node concept="1TJgyj" id="4RbBgkBK$Kh" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660156433" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="c2" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5xbVod7kJEb" resolve="CartesianCoordinates" />
+    </node>
+    <node concept="1TJgyj" id="4RbBgkBK$Kk" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660156436" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="c3" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5xbVod7kJEb" resolve="CartesianCoordinates" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4RbBgkBL017">
+    <property role="EcuMT" value="5605746806660268103" />
+    <property role="3GE5qa" value="physical.vector.rotation" />
+    <property role="TrG5h" value="YawPitchRollExpression" />
+    <ref role="1TJDcQ" node="4RbBgkBKyld" resolve="RotationExpression" />
+    <node concept="1TJgyj" id="4RbBgkBL01a" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660268106" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="yaw" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="4RbBgkBL018" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660268104" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="pitch" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="4RbBgkBL01n" role="1TKVEi">
+      <property role="IQ2ns" value="5605746806660268119" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="roll" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
 </model>

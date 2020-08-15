@@ -1417,7 +1417,7 @@
                 </node>
                 <node concept="2pJPEk" id="1AxJyXYRP8S" role="37vLTx">
                   <node concept="2pJPED" id="1AxJyXYRP8T" role="2pJPEn">
-                    <ref role="2pJxaS" to="9tcj:GdoRjGvReb" resolve="VelocityCoordinates" />
+                    <ref role="2pJxaS" to="9tcj:GdoRjGvReb" resolve="VelocityVector" />
                     <node concept="2pIpSj" id="1AxJyXYRP8U" role="2pJxcM">
                       <ref role="2pIpSl" to="9tcj:GdoRjGvRej" resolve="expression" />
                       <node concept="36biLy" id="1AxJyXYRP8V" role="28nt2d">
@@ -1821,7 +1821,7 @@
   </node>
   <node concept="13h7C7" id="GdoRjGrc_6">
     <property role="3GE5qa" value="physical.vector" />
-    <ref role="13h7C2" to="9tcj:1jQexh3x$_T" resolve="Coordinates" />
+    <ref role="13h7C2" to="9tcj:1jQexh3x$_T" resolve="VectorExpression" />
     <node concept="13hLZK" id="GdoRjGrc_7" role="13h7CW">
       <node concept="3clFbS" id="GdoRjGrc_8" role="2VODD2" />
     </node>
@@ -2974,52 +2974,9 @@
       </node>
     </node>
   </node>
-  <node concept="13h7C7" id="270Q2mEV8In">
-    <property role="3GE5qa" value="physical.vector.targets" />
-    <ref role="13h7C2" to="9tcj:GdoRjGvovs" resolve="PositionCoordinates" />
-    <node concept="13hLZK" id="270Q2mEV8Io" role="13h7CW">
-      <node concept="3clFbS" id="270Q2mEV8Ip" role="2VODD2" />
-    </node>
-    <node concept="13i0hz" id="270Q2mEV8IU" role="13h7CS">
-      <property role="TrG5h" value="getRequiredDimensions" />
-      <ref role="13i0hy" to="5fi3:270Q2mETulL" resolve="getRequiredDimensions" />
-      <node concept="3Tm1VV" id="270Q2mEV8Jf" role="1B3o_S" />
-      <node concept="3clFbS" id="270Q2mEV8IZ" role="3clF47">
-        <node concept="3cpWs6" id="270Q2mEV8Jq" role="3cqZAp">
-          <node concept="2ShNRf" id="270Q2mEV9_J" role="3cqZAk">
-            <node concept="2HTt$P" id="270Q2mEVi6u" role="2ShVmc">
-              <node concept="2OqwBi" id="270Q2mEV9aB" role="2HTEbv">
-                <node concept="1eOMI4" id="270Q2mEV8Vg" role="2Oq$k0">
-                  <node concept="2c44tf" id="270Q2mEV8K2" role="1eOMHV">
-                    <node concept="1N6AA6" id="270Q2mEV8NW" role="2c44tc">
-                      <node concept="3AmWvR" id="270Q2mEV8U5" role="1N7es9">
-                        <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
-                      </node>
-                      <node concept="30bXLL" id="270Q2mEV8QZ" role="1N6AA7" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3Tsc0h" id="270Q2mEV9w2" role="2OqNvi">
-                  <ref role="3TtcxE" to="onwr:7tUW$K4pvUN" resolve="units" />
-                </node>
-              </node>
-              <node concept="2I9FWS" id="270Q2mEViXL" role="2HTBi0">
-                <ref role="2I9WkF" to="onwr:2K_F8JavAHW" resolve="DimensionReference" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="A3Dl8" id="270Q2mEVj3X" role="3clF45">
-        <node concept="2I9FWS" id="270Q2mETumd" role="A3Ik2">
-          <ref role="2I9WkF" to="onwr:2K_F8JavAHW" resolve="DimensionReference" />
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="13h7C7" id="270Q2mEVj8H">
     <property role="3GE5qa" value="physical.vector.targets" />
-    <ref role="13h7C2" to="9tcj:GdoRjGvReb" resolve="VelocityCoordinates" />
+    <ref role="13h7C2" to="9tcj:GdoRjGvReb" resolve="VelocityVector" />
     <node concept="13hLZK" id="270Q2mEVj8I" role="13h7CW">
       <node concept="3clFbS" id="270Q2mEVj8J" role="2VODD2" />
     </node>

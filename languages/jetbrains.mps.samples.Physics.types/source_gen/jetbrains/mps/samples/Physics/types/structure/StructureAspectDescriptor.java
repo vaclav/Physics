@@ -16,6 +16,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDirectionType = createDescriptorForDirectionType();
   /*package*/ final ConceptDescriptor myConceptForceType = createDescriptorForForceType();
   /*package*/ final ConceptDescriptor myConceptObjectType = createDescriptorForObjectType();
+  /*package*/ final ConceptDescriptor myConceptRotationType = createDescriptorForRotationType();
   /*package*/ final ConceptDescriptor myConceptVectorType = createDescriptorForVectorType();
   /*package*/ final ConceptDescriptor myConceptWorldType = createDescriptorForWorldType();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -33,7 +34,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractVectorType, myConceptDirectionType, myConceptForceType, myConceptObjectType, myConceptVectorType, myConceptWorldType);
+    return Arrays.asList(myConceptAbstractVectorType, myConceptDirectionType, myConceptForceType, myConceptObjectType, myConceptRotationType, myConceptVectorType, myConceptWorldType);
   }
 
   @Override
@@ -48,6 +49,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptForceType;
       case LanguageConceptSwitch.ObjectType:
         return myConceptObjectType;
+      case LanguageConceptSwitch.RotationType:
+        return myConceptRotationType;
       case LanguageConceptSwitch.VectorType:
         return myConceptVectorType;
       case LanguageConceptSwitch.WorldType:
@@ -96,6 +99,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553749062");
     b.version(2);
     b.alias("object");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForRotationType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "RotationType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.Type", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
+    b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/5605746806660147366");
+    b.version(2);
+    b.aggregate("nestedType", 0x777af24c0465feb3L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L).optional(false).ordered(true).multiple(false).origin("8609460045977353907").done();
+    b.alias("rotation");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForVectorType() {

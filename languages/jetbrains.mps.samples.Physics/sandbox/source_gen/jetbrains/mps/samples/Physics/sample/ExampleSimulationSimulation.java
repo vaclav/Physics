@@ -18,7 +18,7 @@ public class ExampleSimulationSimulation extends Simulation {
   protected SolarSystemSystemScope scope;
 
   public ExampleSimulationSimulation() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).doubleValue(), 1);
+    super(AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))).doubleValue(), 1);
   }
 
   @Override
@@ -41,7 +41,7 @@ public class ExampleSimulationSimulation extends Simulation {
 
     // Setting camera properly 
     VectorLike position = new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("1300")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")));
-    VectorLike focus = scope.getPosition();
+    VectorLike focus = scope.Sun;
 
     // Apply scale 
     position = position.mul(renderScale);

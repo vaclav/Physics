@@ -18,9 +18,8 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor myObjectDistanceWithTarget__BehaviorDescriptor = new ObjectDistanceWithTarget__BehaviorDescriptor();
   private final BHDescriptor myVectorOppositeTarget__BehaviorDescriptor = new VectorOppositeTarget__BehaviorDescriptor();
   private final BHDescriptor myITargetObject__BehaviorDescriptor = new ITargetObject__BehaviorDescriptor();
-  private final BHDescriptor myPositionCoordinates__BehaviorDescriptor = new PositionCoordinates__BehaviorDescriptor();
   private final BHDescriptor myITargetExpression__BehaviorDescriptor = new ITargetExpression__BehaviorDescriptor();
-  private final BHDescriptor myVelocityCoordinates__BehaviorDescriptor = new VelocityCoordinates__BehaviorDescriptor();
+  private final BHDescriptor myVelocityVector__BehaviorDescriptor = new VelocityVector__BehaviorDescriptor();
   private final BHDescriptor myTargetableObjectExpression__BehaviorDescriptor = new TargetableObjectExpression__BehaviorDescriptor();
   private final BHDescriptor myAbstractForceCallParameter__BehaviorDescriptor = new AbstractForceCallParameter__BehaviorDescriptor();
   private final BHDescriptor myShapeStyleKey__BehaviorDescriptor = new ShapeStyleKey__BehaviorDescriptor();
@@ -29,7 +28,7 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor myStaticForce__BehaviorDescriptor = new StaticForce__BehaviorDescriptor();
   private final BHDescriptor myDynamicForce__BehaviorDescriptor = new DynamicForce__BehaviorDescriptor();
   private final BHDescriptor myAbstractObjectDefinition__BehaviorDescriptor = new AbstractObjectDefinition__BehaviorDescriptor();
-  private final BHDescriptor myCoordinates__BehaviorDescriptor = new Coordinates__BehaviorDescriptor();
+  private final BHDescriptor myVectorExpression__BehaviorDescriptor = new VectorExpression__BehaviorDescriptor();
   private final BHDescriptor myAbstractForceCall__BehaviorDescriptor = new AbstractForceCall__BehaviorDescriptor();
   private final BHDescriptor myTraceStyleKey__BehaviorDescriptor = new TraceStyleKey__BehaviorDescriptor();
   private final BHDescriptor myIUseSpecificExpressions__BehaviorDescriptor = new IUseSpecificExpressions__BehaviorDescriptor();
@@ -87,98 +86,96 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 6:
         return myConditionalForce__BehaviorDescriptor;
       case 7:
-        return myCoordinates__BehaviorDescriptor;
-      case 8:
         return myCurrentObjectExpression__BehaviorDescriptor;
-      case 9:
+      case 8:
         return myCurrentWorldExpression__BehaviorDescriptor;
-      case 10:
+      case 9:
         return myDynamicForce__BehaviorDescriptor;
-      case 11:
+      case 10:
         return myForce__BehaviorDescriptor;
-      case 12:
+      case 11:
         return myICanBeOverridden__BehaviorDescriptor;
-      case 13:
+      case 12:
         return myIForceDotTarget__BehaviorDescriptor;
-      case 14:
+      case 13:
         return myIForceWithCache__BehaviorDescriptor;
-      case 15:
+      case 14:
         return myILocalized__BehaviorDescriptor;
-      case 16:
+      case 15:
         return myIMayTargetWorld__BehaviorDescriptor;
-      case 17:
+      case 16:
         return myIObjectDefinition__BehaviorDescriptor;
-      case 18:
+      case 17:
         return myIObjectDotTarget__BehaviorDescriptor;
-      case 19:
+      case 18:
         return myIProvideCurrentWorld__BehaviorDescriptor;
-      case 20:
+      case 19:
         return myITargetExpression__BehaviorDescriptor;
-      case 21:
+      case 20:
         return myITargetObject__BehaviorDescriptor;
-      case 22:
+      case 21:
         return myIUseSpecificExpressions__BehaviorDescriptor;
-      case 23:
+      case 22:
         return myIWorldDotTarget__BehaviorDescriptor;
-      case 24:
+      case 23:
         return myInteractedObjectExpression__BehaviorDescriptor;
-      case 25:
+      case 24:
         return myInteractionForce__BehaviorDescriptor;
-      case 26:
+      case 25:
         return myMomentForce__BehaviorDescriptor;
-      case 27:
+      case 26:
         return myObjectDefinition__BehaviorDescriptor;
-      case 28:
+      case 27:
         return myObjectDistanceWithTarget__BehaviorDescriptor;
-      case 29:
+      case 28:
         return myObjectMassTarget__BehaviorDescriptor;
-      case 30:
+      case 29:
         return myObjectPositionTarget__BehaviorDescriptor;
-      case 31:
+      case 30:
         return myObjectReferenceExpression__BehaviorDescriptor;
-      case 32:
+      case 31:
         return myObjectStyleDotTarget__BehaviorDescriptor;
-      case 33:
+      case 32:
         return myObjectVelocityTarget__BehaviorDescriptor;
-      case 34:
+      case 33:
         return myOverrideRule__BehaviorDescriptor;
-      case 35:
-        return myPositionCoordinates__BehaviorDescriptor;
-      case 36:
+      case 34:
         return myShapeStyleKey__BehaviorDescriptor;
-      case 37:
+      case 35:
         return mySimpleForce__BehaviorDescriptor;
-      case 38:
+      case 36:
         return mySimulation__BehaviorDescriptor;
-      case 39:
+      case 37:
         return myStaticForce__BehaviorDescriptor;
-      case 40:
+      case 38:
         return myStyleKey__BehaviorDescriptor;
-      case 41:
+      case 39:
         return myTargetableObjectExpression__BehaviorDescriptor;
-      case 42:
+      case 40:
         return myTextureStyleKey__BehaviorDescriptor;
-      case 43:
+      case 41:
         return myTraceStyleKey__BehaviorDescriptor;
-      case 44:
+      case 42:
         return myVectorComponentTarget__BehaviorDescriptor;
-      case 45:
+      case 43:
+        return myVectorExpression__BehaviorDescriptor;
+      case 44:
         return myVectorOppositeTarget__BehaviorDescriptor;
-      case 46:
+      case 45:
         return myVectorResizeTarget__BehaviorDescriptor;
+      case 46:
+        return myVelocityVector__BehaviorDescriptor;
       case 47:
-        return myVelocityCoordinates__BehaviorDescriptor;
-      case 48:
         return myWorldDefinition__BehaviorDescriptor;
-      case 49:
+      case 48:
         return myWorldInclusion__BehaviorDescriptor;
-      case 50:
+      case 49:
         return myWorldMassCenterTarget__BehaviorDescriptor;
-      case 51:
+      case 50:
         return myWorldNestedObjectTarget__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580635L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9f4dL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98a634eL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da749c297L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6def9fa4L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x43a656410180f6c1L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8f846L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7d87e1L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7ef2e456L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x43a6564101814135L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d9124L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d56baL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a71bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4a4717912b4b2f7eL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7d87dcL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a67aL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2c40d23L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774b3a0L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7ee8f855L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a750L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580635L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9f4dL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98a634eL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da749c297L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6def9fa4L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x43a656410180f6c1L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8f846L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7d87e1L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7ef2e456L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x43a6564101814135L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d9124L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d56baL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a71bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4a4717912b4b2f7eL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a67aL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2c40d23L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774b3a0L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7ee8f855L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738bL), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a750L), MetaIdFactory.conceptId(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL)).seal();
 }

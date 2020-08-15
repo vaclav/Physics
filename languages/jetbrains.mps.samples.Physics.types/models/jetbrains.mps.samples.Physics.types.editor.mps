@@ -103,5 +103,27 @@
       <property role="3F0ifm" value="world" />
     </node>
   </node>
+  <node concept="24kQdi" id="4RbBgkBK$Qk">
+    <property role="3GE5qa" value="vector" />
+    <ref role="1XX52x" to="z99z:4RbBgkBKyyA" resolve="RotationType" />
+    <node concept="3EZMnI" id="4RbBgkBK$Qm" role="2wV5jI">
+      <node concept="3F0ifn" id="4RbBgkBK$Qs" role="3EZMnx">
+        <property role="3F0ifm" value="rotation&lt;" />
+        <node concept="11LMrY" id="4RbBgkBKTpl" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="4RbBgkBK$QO" role="3EZMnx">
+        <ref role="1NtTu8" to="z99z:7tUW$K4pvUN" resolve="nestedType" />
+      </node>
+      <node concept="3F0ifn" id="4RbBgkBK$QW" role="3EZMnx">
+        <property role="3F0ifm" value="&gt;" />
+        <node concept="11L4FC" id="4RbBgkBKTpj" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="4RbBgkBK$Qo" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

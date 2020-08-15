@@ -218,7 +218,7 @@
             </node>
           </node>
           <node concept="Jncv_" id="4aXoy5WYq3z" role="3cqZAp">
-            <ref role="JncvD" to="9tcj:1jQexh3x$_T" resolve="Coordinates" />
+            <ref role="JncvD" to="9tcj:1jQexh3x$_T" resolve="VectorExpression" />
             <node concept="1r4N5L" id="4aXoy5WYqbT" role="JncvB" />
             <node concept="3clFbS" id="4aXoy5WYq3B" role="Jncv$">
               <node concept="3cpWs8" id="4aXoy5WSUJ1" role="3cqZAp">
@@ -379,7 +379,7 @@
           </node>
           <node concept="3clFbH" id="6uKmUf9pdSH" role="3cqZAp" />
           <node concept="Jncv_" id="4aXoy5WYq$2" role="3cqZAp">
-            <ref role="JncvD" to="9tcj:1jQexh3x$_T" resolve="Coordinates" />
+            <ref role="JncvD" to="9tcj:1jQexh3x$_T" resolve="VectorExpression" />
             <node concept="1r4N5L" id="4aXoy5WYq$3" role="JncvB" />
             <node concept="3clFbS" id="4aXoy5WYq$4" role="Jncv$">
               <node concept="3cpWs8" id="4aXoy5WYq$5" role="3cqZAp">
@@ -552,7 +552,7 @@
           <node concept="3clFbH" id="6uKmUf9pfF_" role="3cqZAp" />
           <node concept="3clFbH" id="6uKmUf9pfGg" role="3cqZAp" />
           <node concept="Jncv_" id="4aXoy5WYqTj" role="3cqZAp">
-            <ref role="JncvD" to="9tcj:1jQexh3x$_T" resolve="Coordinates" />
+            <ref role="JncvD" to="9tcj:1jQexh3x$_T" resolve="VectorExpression" />
             <node concept="1r4N5L" id="4aXoy5WYqTk" role="JncvB" />
             <node concept="3clFbS" id="4aXoy5WYqTl" role="Jncv$">
               <node concept="3cpWs8" id="4aXoy5WYqTm" role="3cqZAp">

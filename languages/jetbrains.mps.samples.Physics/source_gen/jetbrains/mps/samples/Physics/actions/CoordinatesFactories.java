@@ -28,7 +28,7 @@ public class CoordinatesFactories {
       //  Convert coordinates 
       {
         final SNode coords = sampleNode;
-        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.Coordinates$HV)) {
+        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.VectorExpression$HV)) {
           VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
           CoordinateExpressionConverters.rawToCylindrical(vector, newNode, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(coords)));
         }
@@ -72,7 +72,7 @@ public class CoordinatesFactories {
 
       {
         final SNode coords = sampleNode;
-        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.Coordinates$HV)) {
+        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.VectorExpression$HV)) {
           VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
           CoordinateExpressionConverters.rawToCartesian(vector, newNode, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(coords)));
         }
@@ -118,7 +118,7 @@ public class CoordinatesFactories {
 
       {
         final SNode coords = sampleNode;
-        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.Coordinates$HV)) {
+        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.VectorExpression$HV)) {
           VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
           CoordinateExpressionConverters.rawToSpherical(vector, newNode, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(coords)));
         }
@@ -182,7 +182,7 @@ public class CoordinatesFactories {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Coordinates$HV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.Coordinates");
+    /*package*/ static final SConcept VectorExpression$HV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.VectorExpression");
     /*package*/ static final SConcept CartesianCoordinates$U8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates");
     /*package*/ static final SConcept CylindricalCoordinates$9D = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, "jetbrains.mps.samples.Physics.structure.CylindricalCoordinates");
   }

@@ -13,6 +13,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DirectionType;
   private ConceptPresentation props_ForceType;
   private ConceptPresentation props_ObjectType;
+  private ConceptPresentation props_RotationType;
   private ConceptPresentation props_VectorType;
   private ConceptPresentation props_WorldType;
 
@@ -51,6 +52,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObjectType = cpb.create();
         }
         return props_ObjectType;
+      case LanguageConceptSwitch.RotationType:
+        if (props_RotationType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("expression of a rotation");
+          cpb.rawPresentation("rotation");
+          props_RotationType = cpb.create();
+        }
+        return props_RotationType;
       case LanguageConceptSwitch.VectorType:
         if (props_VectorType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

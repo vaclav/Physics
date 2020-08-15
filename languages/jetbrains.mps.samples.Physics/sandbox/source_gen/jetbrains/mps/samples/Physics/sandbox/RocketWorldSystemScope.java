@@ -204,29 +204,12 @@ public class RocketWorldSystemScope extends SystemScope {
         }
         @Override
         public DVector3C applicationPoint(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).negate(), ((Number) new BigInteger("0"))));
+          return null;
         }
 
         @Override
         public int forceMode() {
           return 28;
-        }
-      }, new Force<RocketWorldSystemScope>() {
-
-        @Override
-        public DVector3C linearForce(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-
-          return VectorHelper.anyToDVector3C(new InternalVector(AH.mul(((Number) new BigDecimal("0.00001").setScale(5, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).mul(((Number) new BigInteger("1"))).mul(BigDecimal.ONE.divide(BigDecimalHelper.of((AH.add(AH.mul(BigDecimal.valueOf(world.getTime()), ((Number) new BigInteger("1"))), ((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN))))), MathContext.DECIMAL32)));
-
-        }
-        @Override
-        public DVector3C applicationPoint(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
-        }
-
-        @Override
-        public int forceMode() {
-          return 30;
         }
       }));
     }

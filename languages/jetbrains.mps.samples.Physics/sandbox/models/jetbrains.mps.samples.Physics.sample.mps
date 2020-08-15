@@ -55,7 +55,7 @@
       </concept>
     </language>
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
-      <concept id="7425695345928358774" name="org.iets3.core.expr.simpleTypes.structure.FalseLiteral" flags="ng" index="2vmpn$" />
+      <concept id="7425695345928358745" name="org.iets3.core.expr.simpleTypes.structure.TrueLiteral" flags="ng" index="2vmpnb" />
       <concept id="5115872837157054284" name="org.iets3.core.expr.simpleTypes.structure.RealType" flags="ng" index="30bXLL" />
       <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
         <property id="5115872837157054173" name="value" index="30bXRw" />
@@ -101,7 +101,7 @@
         <child id="7105688800959866232" name="theta" index="13cPWD" />
         <child id="7105688800959866236" name="distance" index="13cPWH" />
       </concept>
-      <concept id="6362440046684076651" name="jetbrains.mps.samples.Physics.structure.RelativeCoordinates" flags="ng" index="v6hvC">
+      <concept id="6362440046684076651" name="jetbrains.mps.samples.Physics.structure.RelativeVector" flags="ng" index="v6hvC">
         <property id="620348066290985179" name="isOriented" index="2oL0es" />
         <child id="6362440046684076652" name="relativeFrom" index="v6hvJ" />
         <child id="1808378526640755546" name="coordinates" index="1aLnnE" />
@@ -131,6 +131,9 @@
       <concept id="2521872686837820853" name="jetbrains.mps.samples.Physics.structure.CurrentWorldExpression" flags="ng" index="31hh1H" />
       <concept id="8705613676600461664" name="jetbrains.mps.samples.Physics.structure.SimpleForce" flags="ng" index="31ngjz">
         <child id="1459540517658822195" name="components" index="Y6l9H" />
+      </concept>
+      <concept id="2521872686834486428" name="jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget" flags="ng" index="31uf54">
+        <reference id="2521872686834488267" name="target" index="31ueSj" />
       </concept>
       <concept id="362892448124441676" name="jetbrains.mps.samples.Physics.structure.EmitLightStyleKey" flags="ng" index="13a5ie" />
       <concept id="3106918138153662052" name="jetbrains.mps.samples.Physics.structure.ShapeStyleExpression" flags="ng" index="39K0JL">
@@ -173,9 +176,8 @@
       <concept id="796402062949577614" name="jetbrains.mps.samples.Physics.structure.TargetableObjectExpression" flags="ng" index="3Bsx3U">
         <child id="796402062949577619" name="expression" index="3Bsx3B" />
       </concept>
-      <concept id="796402062949577611" name="jetbrains.mps.samples.Physics.structure.VelocityCoordinates" flags="ng" index="3Bsx3Z" />
+      <concept id="796402062949577611" name="jetbrains.mps.samples.Physics.structure.VelocityVector" flags="ng" index="3Bsx3Z" />
       <concept id="7287056866553931547" name="jetbrains.mps.samples.Physics.structure.ObjectPositionTarget" flags="ng" index="3K97i7" />
-      <concept id="7287056866553931600" name="jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget" flags="ng" index="3K97jc" />
       <concept id="7287056866553921482" name="jetbrains.mps.samples.Physics.structure.ObjectMassTarget" flags="ng" index="3K9aLm" />
     </language>
     <language id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math">
@@ -528,13 +530,9 @@
     <node concept="1t_wfn" id="10n4tqnmBN5" role="1heTBC">
       <ref role="1t_wfm" node="10n4tqnmBvH" resolve="SolarSystem" />
     </node>
-    <node concept="1QScDb" id="3Xqr82XjhxJ" role="IG9_e">
-      <node concept="3K97jc" id="3Xqr82Xjh$g" role="1QScD9" />
-      <node concept="31hh1H" id="3Xqr82XjhvQ" role="30czhm" />
-    </node>
     <node concept="1N951E" id="270Q2mFg5sF" role="2aZKB5">
       <node concept="30bXRB" id="270Q2mFg5sE" role="1N951F">
-        <property role="30bXRw" value="1" />
+        <property role="30bXRw" value="300" />
       </node>
       <node concept="CIsvn" id="4E4Gfvfnb2G" role="1N7es9">
         <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
@@ -555,6 +553,12 @@
       <node concept="30bXRB" id="3Xqr82XkuuI" role="Y6leJ">
         <property role="30bXRw" value="0" />
       </node>
+    </node>
+    <node concept="1QScDb" id="2GTttGmPONu" role="IG9_e">
+      <node concept="31uf54" id="2GTttGmPOUN" role="1QScD9">
+        <ref role="31ueSj" node="10n4tqnmBwp" resolve="Sun" />
+      </node>
+      <node concept="31hh1H" id="2GTttGmPOHw" role="30czhm" />
     </node>
   </node>
   <node concept="3omeWs" id="10n4tqnmBvH">
@@ -605,7 +609,7 @@
       </node>
       <node concept="27oVnN" id="2GtZpnyOi_d" role="27xc_Z">
         <node concept="13a5ie" id="k9gc96gv9P" role="39QuZq" />
-        <node concept="2vmpn$" id="2GtZpnzasFQ" role="39QuWR" />
+        <node concept="2vmpnb" id="2GTttGmQiSX" role="39QuWR" />
       </node>
       <node concept="27oVnN" id="2GtZpnyLmAF" role="27xc_Z">
         <node concept="27rm9f" id="5EZY1tNZyb$" role="39QuZq" />
@@ -615,29 +619,6 @@
           </node>
           <node concept="CIsvn" id="4CH1R2NFTNP" role="1N7es9">
             <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
-          </node>
-        </node>
-      </node>
-      <node concept="3Bsx3Z" id="6uKmUf9t8Qm" role="1h9ZzH">
-        <node concept="30dDTi" id="6uKmUf9taKZ" role="3Bsx3B">
-          <node concept="1N951E" id="6uKmUf9tb6W" role="30dEs_">
-            <node concept="30bXRB" id="6uKmUf9tb6T" role="1N951F">
-              <property role="30bXRw" value="1" />
-            </node>
-            <node concept="CIsvn" id="6uKmUf9tb76" role="1N7es9">
-              <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
-              <node concept="CIsvk" id="6uKmUf9tb77" role="1N7KNQ">
-                <node concept="30bXRB" id="6uKmUf9tb78" role="3D8Z_2">
-                  <property role="30bXRw" value="-1" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1QScDb" id="6uKmUf9ta4s" role="30dEsF">
-            <node concept="3K97i7" id="6uKmUf9tahs" role="1QScD9" />
-            <node concept="3okdC7" id="6uKmUf9t9Pj" role="30czhm">
-              <ref role="3okdC0" node="10n4tqnmBvU" resolve="EarthNested" />
-            </node>
           </node>
         </node>
       </node>
