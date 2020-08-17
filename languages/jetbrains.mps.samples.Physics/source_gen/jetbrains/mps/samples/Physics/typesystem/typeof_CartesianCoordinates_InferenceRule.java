@@ -8,6 +8,10 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
+import jetbrains.mps.errors.messageTargets.MessageTarget;
+import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
+import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
@@ -19,32 +23,38 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public class typeof_CartesianCoordinates_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
   public typeof_CartesianCoordinates_InferenceRule() {
   }
-  public void applyRule(final SNode coordinates, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+  public void applyRule(final SNode coords, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode x = typeCheckingContext.typeOf(SLinkOperations.getTarget(coordinates, LINKS.dx$VpuT), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972972948", true);
+      final SNode x = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.dx$VpuT), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972972948", true);
       typeCheckingContext.whenConcrete(x, new Runnable() {
         public void run() {
           {
-            final SNode y = typeCheckingContext.typeOf(SLinkOperations.getTarget(coordinates, LINKS.dy$VWrJ), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972975480", true);
+            final SNode y = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.dy$VWrJ), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972975480", true);
             typeCheckingContext.whenConcrete(y, new Runnable() {
               public void run() {
                 {
-                  final SNode z = typeCheckingContext.typeOf(SLinkOperations.getTarget(coordinates, LINKS.dz$VWBn), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972975905", true);
+                  final SNode z = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.dz$VWBn), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972975905", true);
                   typeCheckingContext.whenConcrete(z, new Runnable() {
                     public void run() {
-                      {
-                        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coordinates, LINKS.dy$VWrJ);
-                        EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "y is not comparable to x", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150975304011", 0, null);
-                        typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(x), (SNode) typeCheckingContext.getExpandedNode(y), false, _info_12389875345);
-                      }
-                      {
-                        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coordinates, LINKS.dz$VWBn);
-                        EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "z is not comparable to x", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150975303551", 0, null);
-                        typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(x), (SNode) typeCheckingContext.getExpandedNode(z), false, _info_12389875345);
-                      }
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(x), typeCheckingContext.getExpandedNode(y), "x", "y", new _FunctionTypes._void_P1_E0<String>() {
+                        public void invoke(String text) {
+                          {
+                            final MessageTarget errorTarget = new NodeMessageTarget();
+                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(coords, LINKS.dy$VWrJ), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988904095", null, errorTarget);
+                          }
+                        }
+                      });
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(x), typeCheckingContext.getExpandedNode(z), "x", "z", new _FunctionTypes._void_P1_E0<String>() {
+                        public void invoke(String text) {
+                          {
+                            final MessageTarget errorTarget = new NodeMessageTarget();
+                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(coords, LINKS.dz$VWBn), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988904745", null, errorTarget);
+                          }
+                        }
+                      });
 
                       {
-                        SNode _nodeToCheck_1029348928467 = coordinates;
+                        SNode _nodeToCheck_1029348928467 = coords;
                         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972978069", 0, null);
                         typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972977823", true), (SNode) createVectorType_1e9abf_a1a0c0d0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(x), typeCheckingContext.getExpandedNode(y), typeCheckingContext.getExpandedNode(z))), _info_12389875345);
                       }

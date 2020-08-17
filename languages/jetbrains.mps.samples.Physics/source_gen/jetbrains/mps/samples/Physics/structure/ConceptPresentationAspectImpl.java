@@ -36,7 +36,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DisabledTraceExpression;
   private ConceptPresentation props_DynamicForce;
   private ConceptPresentation props_EmitLightStyleKey;
-  private ConceptPresentation props_EulerRotationExpression;
+  private ConceptPresentation props_EulerAnglesRotationExpression;
+  private ConceptPresentation props_EulerAxisRotationExpression;
   private ConceptPresentation props_Force;
   private ConceptPresentation props_ForceApplicationPointTarget;
   private ConceptPresentation props_ForceComponentsTarget;
@@ -97,7 +98,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_WorldMassCenterTarget;
   private ConceptPresentation props_WorldNestedObjectTarget;
   private ConceptPresentation props_WorldReference;
-  private ConceptPresentation props_YawPitchRollExpression;
 
   @Override
   @Nullable
@@ -298,13 +298,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EmitLightStyleKey = cpb.create();
         }
         return props_EmitLightStyleKey;
-      case LanguageConceptSwitch.EulerRotationExpression:
-        if (props_EulerRotationExpression == null) {
+      case LanguageConceptSwitch.EulerAnglesRotationExpression:
+        if (props_EulerAnglesRotationExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("euler angles rotation");
+          props_EulerAnglesRotationExpression = cpb.create();
+        }
+        return props_EulerAnglesRotationExpression;
+      case LanguageConceptSwitch.EulerAxisRotationExpression:
+        if (props_EulerAxisRotationExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.rawPresentation("euler axis rotation");
-          props_EulerRotationExpression = cpb.create();
+          props_EulerAxisRotationExpression = cpb.create();
         }
-        return props_EulerRotationExpression;
+        return props_EulerAxisRotationExpression;
       case LanguageConceptSwitch.Force:
         if (props_Force == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -515,6 +522,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.RotationExpression:
         if (props_RotationExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("expression of a rotation");
           props_RotationExpression = cpb.create();
         }
         return props_RotationExpression;
@@ -551,7 +559,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a46b0md);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a56b0md);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -686,7 +694,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a38b0md);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a48b0md);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;
@@ -719,13 +727,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_WorldReference = cpb.create();
         }
         return props_WorldReference;
-      case LanguageConceptSwitch.YawPitchRollExpression:
-        if (props_YawPitchRollExpression == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("YawPitchRollExpression");
-          props_YawPitchRollExpression = cpb.create();
-        }
-        return props_YawPitchRollExpression;
     }
     return null;
   }

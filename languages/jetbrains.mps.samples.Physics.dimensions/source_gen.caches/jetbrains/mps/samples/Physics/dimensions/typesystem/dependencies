@@ -5,6 +5,7 @@
     <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.math.MathContext" />
     <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ILeftCombinator" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
@@ -13,8 +14,10 @@
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.BigDecimalUtil" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.IUnitReferenceLike__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitHandlingCapablity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitReference__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor" />

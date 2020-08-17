@@ -90,7 +90,7 @@ public class TestConversions_Test extends BaseTransformationTest {
       addNodeById("1139474844806320069");
       addNodeById("1139474844806327647");
       addNodeById("1139474844806955740");
-      this.assertEquals(SNodeOperations.cast(getNodeById("1139474844807592803"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, "jetbrains.mps.samples.Physics"), 0xb0d6374ec7f738bL, "VelocityCoordinates"))), new InternalVector(-3, -3 * Math.sqrt(3), -3 / 2 * Math.sqrt(3)));
+      this.assertEquals(SNodeOperations.cast(getNodeById("1139474844807592803"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, "jetbrains.mps.samples.Physics"), 0xb0d6374ec7f738bL, "VelocityVector"))), new InternalVector(-3, -3 * Math.sqrt(3), -3 / 2 * Math.sqrt(3)));
     }
 
 

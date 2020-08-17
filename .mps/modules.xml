@@ -5,6 +5,7 @@
       <modulePath path="$PROJECT_DIR$/devkits/jetbrains.mps.samples.Physics.devkit.java/jetbrains.mps.samples.Physics.devkit.java.devkit" folder="java" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.IETS3MathExtended/jetbrains.mps.samples.Physics.IETS3MathExtended.mpl" folder="math" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.dimensions/jetbrains.mps.samples.Physics.dimensions.mpl" folder="base" />
+      <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.genbase/jetbrains.mps.samples.Physics.genbase.mpl" folder="base" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.genjava/jetbrains.mps.samples.Physics.genjava.mpl" folder="java" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.types/jetbrains.mps.samples.Physics.types.mpl" folder="base" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.mpl" folder="base" />

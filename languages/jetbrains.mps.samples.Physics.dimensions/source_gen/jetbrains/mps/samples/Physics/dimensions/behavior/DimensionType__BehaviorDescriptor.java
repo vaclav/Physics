@@ -13,6 +13,7 @@ import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
+import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor;
@@ -20,6 +21,8 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.ISelector;
+import jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper;
+import org.iets3.core.expr.base.behavior.IParameterizedTypeSupportsEquals__BehaviorDescriptor;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -27,6 +30,7 @@ import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
@@ -36,8 +40,10 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
   public static final SMethod<Iterable<SNode>> getRawUnits_id20wM4XMzAC4 = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getRawUnits").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("20wM4XMzAC4").build();
   public static final SMethod<SNode> wrappedType_id6bG6MAFRDvi = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("wrappedType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6bG6MAFRDvi").build();
   public static final SMethod<SNode> reWrap_id6bG6MAG4Mv3 = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("reWrap").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6bG6MAG4Mv3").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<List<SNode>> getTypeParameters_idKoRsm$Us0E = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("getTypeParameters").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("KoRsm$Us0E").build();
+  public static final SMethod<Void> ensureParameterizedTypeComparability_id7KDVkAErfTB = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("ensureParameterizedTypeComparability").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7KDVkAErfTB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<_FunctionTypes._return_P2_E0<? extends Boolean, ? super SNode, ? super SNode>>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<_FunctionTypes._void_P2_E0<? super SNode, ? super SNode>>) ((Class) Object.class), ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getCapabilityRequirement_id7McqtXGyz8c, getDetailedPresentation_id22G2W3WJ92t, getRawUnits_id20wM4XMzAC4, wrappedType_id6bG6MAFRDvi, reWrap_id6bG6MAG4Mv3);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getCapabilityRequirement_id7McqtXGyz8c, getDetailedPresentation_id22G2W3WJ92t, getRawUnits_id20wM4XMzAC4, wrappedType_id6bG6MAFRDvi, reWrap_id6bG6MAG4Mv3, getTypeParameters_idKoRsm$Us0E, ensureParameterizedTypeComparability_id7KDVkAErfTB);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -62,6 +68,20 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
     SNode copy = SNodeOperations.copyNode(__thisNode__);
     SLinkOperations.setTarget(copy, LINKS.baseType$fHYw, SNodeOperations.cast(newBaseType, CONCEPTS.Type$fA));
     return copy;
+  }
+  /*package*/ static List<SNode> getTypeParameters_idKoRsm$Us0E(@NotNull SNode __thisNode__) {
+    return Sequence.fromIterable(Sequence.<SNode>singleton(SLinkOperations.getTarget(__thisNode__, LINKS.baseType$fHYw))).toListSequence();
+  }
+  /*package*/ static void ensureParameterizedTypeComparability_id7KDVkAErfTB(@NotNull SNode __thisNode__, SNode otherType, _FunctionTypes._return_P2_E0<? extends Boolean, ? super SNode, ? super SNode> isPrimitiveTypeComparableTo, _FunctionTypes._void_P2_E0<? super SNode, ? super SNode> createError) {
+    {
+      final SNode dimType = otherType;
+      if (SNodeOperations.isInstanceOf(dimType, CONCEPTS.DimensionType$yz)) {
+        if (!(DimensionTypeHelper.areCompatible(__thisNode__, dimType))) {
+          createError.invoke(__thisNode__, otherType);
+        }
+      }
+    }
+    IParameterizedTypeSupportsEquals__BehaviorDescriptor.ensureParameterizedTypeComparability_id7KDVkAErfTB.invoke0(__thisNode__, CONCEPTS.IParameterizedTypeSupportsEquals$PK, otherType, isPrimitiveTypeComparableTo, createError);
   }
 
   /*package*/ DimensionType__BehaviorDescriptor() {
@@ -89,6 +109,11 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((SNode) wrappedType_id6bG6MAFRDvi(node));
       case 4:
         return (T) ((SNode) reWrap_id6bG6MAG4Mv3(node, (SNode) parameters[0], (SNode) parameters[1]));
+      case 5:
+        return (T) ((List<SNode>) getTypeParameters_idKoRsm$Us0E(node));
+      case 6:
+        ensureParameterizedTypeComparability_id7KDVkAErfTB(node, (SNode) parameters[0], (_FunctionTypes._return_P2_E0<? extends Boolean, ? super SNode, ? super SNode>) parameters[1], (_FunctionTypes._void_P2_E0<? super SNode, ? super SNode>) parameters[2]);
+        return null;
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -135,6 +160,8 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
   private static final class CONCEPTS {
     /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SInterfaceConcept IParameterizedTypeSupportsEquals$PK = MetaAdapterFactory.getInterfaceConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7c29ed49aa581218L, "org.iets3.core.expr.base.structure.IParameterizedTypeSupportsEquals");
     /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
     /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
   }

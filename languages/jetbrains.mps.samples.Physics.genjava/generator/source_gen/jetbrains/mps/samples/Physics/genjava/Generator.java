@@ -35,6 +35,7 @@ public class Generator extends TemplateModuleInterpreted2 {
   @Override
   protected void fillReferencedGenerators(TemplateModuleBase.ReferencedGenerators referencedGenerators) {
     referencedGenerators.extended("0ab6f947-2451-4a3a-80a3-33b77e399874(org.iets3.core.expr.genjava.simpleTypes#8286534136182342700)");
+    referencedGenerators.employed("5f859e48-fb44-4e21-806a-f5167871a2b0(jetbrains.mps.samples.Physics#01)");
   }
 
   @Override

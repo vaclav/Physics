@@ -43,7 +43,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDisabledTraceExpression = createDescriptorForDisabledTraceExpression();
   /*package*/ final ConceptDescriptor myConceptDynamicForce = createDescriptorForDynamicForce();
   /*package*/ final ConceptDescriptor myConceptEmitLightStyleKey = createDescriptorForEmitLightStyleKey();
-  /*package*/ final ConceptDescriptor myConceptEulerRotationExpression = createDescriptorForEulerRotationExpression();
+  /*package*/ final ConceptDescriptor myConceptEulerAnglesRotationExpression = createDescriptorForEulerAnglesRotationExpression();
+  /*package*/ final ConceptDescriptor myConceptEulerAxisRotationExpression = createDescriptorForEulerAxisRotationExpression();
   /*package*/ final ConceptDescriptor myConceptForce = createDescriptorForForce();
   /*package*/ final ConceptDescriptor myConceptForceApplicationPointTarget = createDescriptorForForceApplicationPointTarget();
   /*package*/ final ConceptDescriptor myConceptForceComponentsTarget = createDescriptorForForceComponentsTarget();
@@ -104,7 +105,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptWorldMassCenterTarget = createDescriptorForWorldMassCenterTarget();
   /*package*/ final ConceptDescriptor myConceptWorldNestedObjectTarget = createDescriptorForWorldNestedObjectTarget();
   /*package*/ final ConceptDescriptor myConceptWorldReference = createDescriptorForWorldReference();
-  /*package*/ final ConceptDescriptor myConceptYawPitchRollExpression = createDescriptorForYawPitchRollExpression();
   /*package*/ final EnumerationDescriptor myEnumerationCollisionReaction = new EnumerationDescriptor_CollisionReaction();
   /*package*/ final EnumerationDescriptor myEnumerationShape = new EnumerationDescriptor_Shape();
   /*package*/ final EnumerationDescriptor myEnumerationVectorComponent = new EnumerationDescriptor_VectorComponent();
@@ -125,7 +125,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractVectorTarget, myConceptAllObjectsExpression, myConceptBooleanStyleKey, myConceptBoxDepthStyle, myConceptBoxHeightStyle, myConceptBoxWidthStyle, myConceptCachedObjectExpression, myConceptCartesianCoordinates, myConceptCollisionReactionExpression, myConceptCollisionStyleKey, myConceptColorDefinition, myConceptConditionalForce, myConceptCurrentObjectExpression, myConceptCurrentWorldExpression, myConceptCustomColorTexture, myConceptCylindricalCoordinates, myConceptDefinedColorReference, myConceptDirectionalCoordinates, myConceptDisabledTraceExpression, myConceptDynamicForce, myConceptEmitLightStyleKey, myConceptEulerRotationExpression, myConceptForce, myConceptForceApplicationPointTarget, myConceptForceComponentsTarget, myConceptICanBeOverridden, myConceptIForceDotTarget, myConceptIForceWithCache, myConceptILocalized, myConceptIMayTargetWorld, myConceptIObjectDefinition, myConceptIObjectDotTarget, myConceptIOverrideProperties, myConceptIProvideCurrentWorld, myConceptITargetExpression, myConceptITargetObject, myConceptIUseSpecificExpressions, myConceptIUseStyleExpressions, myConceptIWorldDotTarget, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptMomentForce, myConceptNumericDistanceStyleKey, myConceptObjectDefinition, myConceptObjectDistanceWithTarget, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReferenceExpression, myConceptObjectStyleDotTarget, myConceptObjectVelocityTarget, myConceptOverrideRule, myConceptPictureTexture, myConceptRelativeVector, myConceptRotationExpression, myConceptRotationMatrixExpression, myConceptShapeStyleExpression, myConceptShapeStyleKey, myConceptSimpleForce, myConceptSimulation, myConceptSimulationAlternativeView, myConceptSphereRadiusStyle, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptStyleDefinition, myConceptStyleKey, myConceptStyleSpecificExpression, myConceptTargetableObjectExpression, myConceptTextureExpression, myConceptTextureStyleKey, myConceptTimeExpression, myConceptTraceStyleKey, myConceptVectorComponentTarget, myConceptVectorExpression, myConceptVectorOppositeTarget, myConceptVectorResizeTarget, myConceptVelocityVector, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldNestedObjectTarget, myConceptWorldReference, myConceptYawPitchRollExpression);
+    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractVectorTarget, myConceptAllObjectsExpression, myConceptBooleanStyleKey, myConceptBoxDepthStyle, myConceptBoxHeightStyle, myConceptBoxWidthStyle, myConceptCachedObjectExpression, myConceptCartesianCoordinates, myConceptCollisionReactionExpression, myConceptCollisionStyleKey, myConceptColorDefinition, myConceptConditionalForce, myConceptCurrentObjectExpression, myConceptCurrentWorldExpression, myConceptCustomColorTexture, myConceptCylindricalCoordinates, myConceptDefinedColorReference, myConceptDirectionalCoordinates, myConceptDisabledTraceExpression, myConceptDynamicForce, myConceptEmitLightStyleKey, myConceptEulerAnglesRotationExpression, myConceptEulerAxisRotationExpression, myConceptForce, myConceptForceApplicationPointTarget, myConceptForceComponentsTarget, myConceptICanBeOverridden, myConceptIForceDotTarget, myConceptIForceWithCache, myConceptILocalized, myConceptIMayTargetWorld, myConceptIObjectDefinition, myConceptIObjectDotTarget, myConceptIOverrideProperties, myConceptIProvideCurrentWorld, myConceptITargetExpression, myConceptITargetObject, myConceptIUseSpecificExpressions, myConceptIUseStyleExpressions, myConceptIWorldDotTarget, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptMomentForce, myConceptNumericDistanceStyleKey, myConceptObjectDefinition, myConceptObjectDistanceWithTarget, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReferenceExpression, myConceptObjectStyleDotTarget, myConceptObjectVelocityTarget, myConceptOverrideRule, myConceptPictureTexture, myConceptRelativeVector, myConceptRotationExpression, myConceptRotationMatrixExpression, myConceptShapeStyleExpression, myConceptShapeStyleKey, myConceptSimpleForce, myConceptSimulation, myConceptSimulationAlternativeView, myConceptSphereRadiusStyle, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptStyleDefinition, myConceptStyleKey, myConceptStyleSpecificExpression, myConceptTargetableObjectExpression, myConceptTextureExpression, myConceptTextureStyleKey, myConceptTimeExpression, myConceptTraceStyleKey, myConceptVectorComponentTarget, myConceptVectorExpression, myConceptVectorOppositeTarget, myConceptVectorResizeTarget, myConceptVelocityVector, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldNestedObjectTarget, myConceptWorldReference);
   }
 
   @Override
@@ -186,8 +186,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDynamicForce;
       case LanguageConceptSwitch.EmitLightStyleKey:
         return myConceptEmitLightStyleKey;
-      case LanguageConceptSwitch.EulerRotationExpression:
-        return myConceptEulerRotationExpression;
+      case LanguageConceptSwitch.EulerAnglesRotationExpression:
+        return myConceptEulerAnglesRotationExpression;
+      case LanguageConceptSwitch.EulerAxisRotationExpression:
+        return myConceptEulerAxisRotationExpression;
       case LanguageConceptSwitch.Force:
         return myConceptForce;
       case LanguageConceptSwitch.ForceApplicationPointTarget:
@@ -308,8 +310,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptWorldNestedObjectTarget;
       case LanguageConceptSwitch.WorldReference:
         return myConceptWorldReference;
-      case LanguageConceptSwitch.YawPitchRollExpression:
-        return myConceptYawPitchRollExpression;
       default:
         return null;
     }
@@ -591,8 +591,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("emit-light");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForEulerRotationExpression() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "EulerRotationExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c232f1L);
+  private static ConceptDescriptor createDescriptorForEulerAnglesRotationExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "EulerAnglesRotationExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L);
+    b.class_(false, false, false);
+    b.super_("jetbrains.mps.samples.Physics.structure.RotationExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c2254dL);
+    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/5605746806660268103");
+    b.version(2);
+    b.aggregate("alpha", 0x4dcb9d0527c4004aL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("5605746806660268106").done();
+    b.aggregate("beta", 0x4dcb9d0527c40048L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("5605746806660268104").done();
+    b.aggregate("gamma", 0x4dcb9d0527c40057L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("5605746806660268119").done();
+    b.alias("euler angles rotation");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEulerAxisRotationExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "EulerAxisRotationExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c232f1L);
     b.class_(false, false, false);
     b.super_("jetbrains.mps.samples.Physics.structure.RotationExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c2254dL);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/5605746806660150001");
@@ -691,6 +703,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/6350314785807508793");
     b.version(2);
     b.aggregate("overrideRules", 0x3238375e772fa01bL).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL).optional(true).ordered(true).multiple(true).origin("6350314785813853096").done();
+    b.aggregate("cameraPosition", 0x55d23bae7b62a2a7L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("6184070858913522343").done();
+    b.aggregate("cameraFocus", 0x55d23bae7b62a2e0L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("6184070858913522400").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIProvideCurrentWorld() {
@@ -941,8 +955,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7746015835360049752");
     b.version(2);
     b.aggregate("world", 0x3cd406ea6def9f02L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L).optional(true).ordered(true).multiple(false).origin("4383135941274869506").done();
-    b.aggregate("cameraPosition", 0x55d23bae7b62a2a7L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("6184070858913522343").done();
-    b.aggregate("focus", 0x55d23bae7b62a2e0L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("6184070858913522400").done();
     b.aggregate("simulationSpeed", 0x21c0d825ab3fd1e0L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("2432181455078543840").done();
     b.aggregate("simulationScale", 0x1baa8b95dda3ac89L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("1993559260849745033").done();
     b.aggregate("views", 0x5820d9a6fbf7a533L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf789f4L).optional(true).ordered(true).multiple(true).origin("6350314785807508787").done();
@@ -1166,17 +1178,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/420466128549300320");
     b.version(2);
     b.associate("target", 0x5d5cbb75843c861L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L).optional(false).origin("420466128549300321").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForYawPitchRollExpression() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "YawPitchRollExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L);
-    b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.structure.RotationExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c2254dL);
-    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/5605746806660268103");
-    b.version(2);
-    b.aggregate("yaw", 0x4dcb9d0527c4004aL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("5605746806660268106").done();
-    b.aggregate("pitch", 0x4dcb9d0527c40048L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("5605746806660268104").done();
-    b.aggregate("roll", 0x4dcb9d0527c40057L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("5605746806660268119").done();
     return b.create();
   }
 }

@@ -5,12 +5,12 @@ package jetbrains.mps.samples.Physics.sample;
 import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import processing.core.PApplet;
-import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import processing.core.PConstants;
+import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
 import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
@@ -18,7 +18,7 @@ public class ExampleSimulationSimulation extends Simulation {
   protected SolarSystemSystemScope scope;
 
   public ExampleSimulationSimulation() {
-    super(AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))).doubleValue(), 1);
+    super(AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("86396"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("1000")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))).floatValue());
   }
 
   @Override
@@ -33,31 +33,22 @@ public class ExampleSimulationSimulation extends Simulation {
   }
 
 
-
   @Override
-  public void render(PApplet context, PGraphics graphics) {
-    // Escape scope as currentEntity (for relative coordinates) 
+  public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    // Setting camera properly 
-    VectorLike position = new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("1300")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")));
-    VectorLike focus = scope.Sun;
+    return scope.EarthNested.Earth.getPosition().add(new InternalVector(AH.mul(((Number) new BigInteger("190000")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).add((scope.EarthNested.Earth.getPosition().add(scope.Sun.getPosition())).minus(currentEntity).resize(AH.mul(((Number) new BigInteger("744000")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN)))));
+  }
 
-    // Apply scale 
-    position = position.mul(renderScale);
-    focus = focus.mul(renderScale);
+  @Override
+  public VectorLike getCameraFocus(PGraphics graphics) {
+    VectorLike currentEntity = this.scope;
 
-    graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
-
-    // Float.MAX_VALUE divided by 1000 to prevent an overflow in internal computations 
-    // (resulting in a black screen) 
-    graphics.perspective(PConstants.PI / 3, ((float) graphics.width) / ((float) graphics.height), 10, Float.MAX_VALUE / 100);
-
-    super.render(context, graphics);
+    return scope.EarthNested.Earth;
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new ExampleSimulationSimulation()));
+    Renderer.afterInit(new CompositeRendererCallback(new ExampleSimulationSimulation(), new ExampleSimulation1AlternativeView0()));
     Renderer.main(args);
   }
 }

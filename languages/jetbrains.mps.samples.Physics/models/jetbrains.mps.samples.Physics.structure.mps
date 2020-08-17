@@ -163,18 +163,6 @@
       <property role="20kJfa" value="world" />
       <ref role="20lvS9" node="nlMVtogWxw" resolve="WorldReference" />
     </node>
-    <node concept="1TJgyj" id="5nieUTVoEaB" role="1TKVEi">
-      <property role="IQ2ns" value="6184070858913522343" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="cameraPosition" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-    <node concept="1TJgyj" id="5nieUTVoEbw" role="1TKVEi">
-      <property role="IQ2ns" value="6184070858913522400" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="focus" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
     <node concept="1TJgyj" id="270Q2mFfX7w" role="1TKVEi">
       <property role="IQ2ns" value="2432181455078543840" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -1211,6 +1199,18 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="38SdPTRbTZH" resolve="OverrideRule" />
     </node>
+    <node concept="1TJgyj" id="5nieUTVoEaB" role="1TKVEi">
+      <property role="IQ2ns" value="6184070858913522343" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="cameraPosition" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="5nieUTVoEbw" role="1TKVEi">
+      <property role="IQ2ns" value="6184070858913522400" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="cameraFocus" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
   </node>
   <node concept="1TIwiD" id="yrUOugQ7DZ">
     <property role="EcuMT" value="620348066298886783" />
@@ -1336,7 +1336,7 @@
   <node concept="1TIwiD" id="4RbBgkBKzbL">
     <property role="EcuMT" value="5605746806660150001" />
     <property role="3GE5qa" value="physical.vector.rotation" />
-    <property role="TrG5h" value="EulerRotationExpression" />
+    <property role="TrG5h" value="EulerAxisRotationExpression" />
     <property role="34LRSv" value="euler axis rotation" />
     <ref role="1TJDcQ" node="4RbBgkBKyld" resolve="RotationExpression" />
     <node concept="1TJgyj" id="4RbBgkBK$Aq" role="1TKVEi">
@@ -1358,6 +1358,7 @@
     <property role="3GE5qa" value="physical.vector.rotation" />
     <property role="TrG5h" value="RotationExpression" />
     <property role="R5$K7" value="true" />
+    <property role="R4oN_" value="expression of a rotation" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
   </node>
   <node concept="1TIwiD" id="4RbBgkBK$Bp">
@@ -1391,24 +1392,25 @@
   <node concept="1TIwiD" id="4RbBgkBL017">
     <property role="EcuMT" value="5605746806660268103" />
     <property role="3GE5qa" value="physical.vector.rotation" />
-    <property role="TrG5h" value="YawPitchRollExpression" />
+    <property role="TrG5h" value="EulerAnglesRotationExpression" />
+    <property role="34LRSv" value="euler angles rotation" />
     <ref role="1TJDcQ" node="4RbBgkBKyld" resolve="RotationExpression" />
     <node concept="1TJgyj" id="4RbBgkBL01a" role="1TKVEi">
       <property role="IQ2ns" value="5605746806660268106" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="yaw" />
+      <property role="20kJfa" value="alpha" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
     <node concept="1TJgyj" id="4RbBgkBL018" role="1TKVEi">
       <property role="IQ2ns" value="5605746806660268104" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="pitch" />
+      <property role="20kJfa" value="beta" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
     <node concept="1TJgyj" id="4RbBgkBL01n" role="1TKVEi">
       <property role="IQ2ns" value="5605746806660268119" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="roll" />
+      <property role="20kJfa" value="gamma" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>

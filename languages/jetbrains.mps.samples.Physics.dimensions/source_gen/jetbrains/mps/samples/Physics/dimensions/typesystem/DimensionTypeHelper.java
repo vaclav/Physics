@@ -6,11 +6,14 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitHandlingCapablity;
+import java.util.Map;
 import java.math.BigDecimal;
+import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.samples.Physics.dimensions.behavior.IUnitReferenceLike__BehaviorDescriptor;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReference__BehaviorDescriptor;
 import java.math.MathContext;
@@ -21,8 +24,8 @@ import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class DimensionTypeHelper {
@@ -48,6 +51,13 @@ public class DimensionTypeHelper {
     boolean twoIsDim = isDimension(two);
 
     return oneIsDim || twoIsDim && (oneIsDim || isRegularType(one)) && (twoIsDim || isRegularType(two));
+  }
+
+  public static boolean areCompatible(SNode left, SNode right) {
+    Map<SNode, BigDecimal> leftUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(left, LINKS.units$o6Ow));
+    Map<SNode, BigDecimal> rightUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(right, LINKS.units$o6Ow));
+
+    return DimensionMapsHelper.matches(leftUnits, rightUnits);
   }
 
 
@@ -149,8 +159,8 @@ public class DimensionTypeHelper {
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
     /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
   }
 
   private static final class PROPS {

@@ -27,7 +27,7 @@ public class SolarSystemSystemScope extends SystemScope {
 
     //  Instanciate objects 
     Sun = withEntity(new Sun2PhysicalEntity(world, "Sun1", scope));
-    EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("4.7819374344933695E-14").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("780.9496481471622").setScale(13, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-426.45563374507503").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(new InternalVector(AH.mul(((Number) new BigDecimal("-3.5355339059327378").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-4.3297802811774667E-16").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-3.5355339059327373").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
+    EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("0.00000905280530567526").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("147843530264.85965").setScale(5, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("32854117236.63548").setScale(5, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(new InternalVector(AH.mul(((Number) new BigDecimal("-18915.106396740146").setScale(12, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-2.3164324504299443E-12").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-18915.106396740146").setScale(12, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
 
     // Initialize them 
     Sun.init(this, world);
@@ -45,7 +45,7 @@ public class SolarSystemSystemScope extends SystemScope {
       Sun2PhysicalEntity currentEntity = this;
 
       // Set static properties of Sun 
-      this.setMass(((Number) new BigInteger("330000000000000")));
+      this.setMass(((Number) new BigDecimal("1.989E+30").setScale(7, RoundingMode.DOWN)));
       this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-600")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
@@ -55,8 +55,7 @@ public class SolarSystemSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       fixtureProperties.set(Prop.SHAPE, "sphere");
       fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
-      fixtureProperties.set(Prop.EMIT_LIGHT, true);
-      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("250")), ((Number) new BigInteger("1"))));
+      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("696340")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
       this.getForces().addAll(Arrays.asList());
     }
   }

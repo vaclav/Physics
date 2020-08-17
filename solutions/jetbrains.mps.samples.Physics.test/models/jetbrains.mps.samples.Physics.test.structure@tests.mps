@@ -86,7 +86,7 @@
         <child id="1459540517658822641" name="dz" index="Y6leJ" />
         <child id="1459540517658822638" name="dy" index="Y6leK" />
       </concept>
-      <concept id="6362440046684076651" name="jetbrains.mps.samples.Physics.structure.RelativeCoordinates" flags="ng" index="v6hvC">
+      <concept id="6362440046684076651" name="jetbrains.mps.samples.Physics.structure.RelativeVector" flags="ng" index="v6hvC">
         <child id="6362440046684076652" name="relativeFrom" index="v6hvJ" />
         <child id="1808378526640755546" name="coordinates" index="1aLnnE" />
       </concept>
@@ -110,7 +110,7 @@
         <child id="4383135941275155974" name="position" index="1h9ZzG" />
         <child id="4383135941275155975" name="velocity" index="1h9ZzH" />
       </concept>
-      <concept id="1510458583736011129" name="jetbrains.mps.samples.Physics.structure.Coordinates" flags="ng" index="1ns7dH" />
+      <concept id="1510458583736011129" name="jetbrains.mps.samples.Physics.structure.VectorExpression" flags="ng" index="1ns7dH" />
       <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression" flags="ng" index="3okdC7">
         <reference id="7746015835360049756" name="target" index="3okdC0" />
       </concept>
@@ -132,7 +132,7 @@
       <concept id="796402062949577614" name="jetbrains.mps.samples.Physics.structure.TargetableObjectExpression" flags="ng" index="3Bsx3U">
         <child id="796402062949577619" name="expression" index="3Bsx3B" />
       </concept>
-      <concept id="796402062949577611" name="jetbrains.mps.samples.Physics.structure.VelocityCoordinates" flags="ng" index="3Bsx3Z" />
+      <concept id="796402062949577611" name="jetbrains.mps.samples.Physics.structure.VelocityVector" flags="ng" index="3Bsx3Z" />
       <concept id="7287056866553934807" name="jetbrains.mps.samples.Physics.structure.VectorComponentTarget" flags="ng" index="3K961b">
         <property id="7287056866553934843" name="component" index="3K961B" />
       </concept>

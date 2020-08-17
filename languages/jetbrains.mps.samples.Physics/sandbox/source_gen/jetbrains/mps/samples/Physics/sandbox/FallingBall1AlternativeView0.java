@@ -15,4 +15,7 @@ public class FallingBall1AlternativeView0 extends FallingBallSimulation {
     // Override properties 
     scope.Ball.setMass(AH.mul(((Number) new BigInteger("35")), ((Number) new BigInteger("1"))));
   }
+
+
+
 }

@@ -16,4 +16,7 @@ public class TraceSim2AlternativeView1 extends TraceSimSimulation {
     scope.MovingObject.getFixtureProperties().set(Prop.TRACE, new Color(255, 255, 0));
     scope.MovingObject2.getFixtureProperties().set(Prop.TRACE, new Color(220, 220, 220));
   }
+
+
+
 }

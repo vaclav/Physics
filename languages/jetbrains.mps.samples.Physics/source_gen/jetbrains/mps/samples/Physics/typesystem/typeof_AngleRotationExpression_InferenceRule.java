@@ -8,8 +8,12 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
+import jetbrains.mps.errors.messageTargets.MessageTarget;
+import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
+import jetbrains.mps.errors.IErrorReporter;
+import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
@@ -30,11 +34,14 @@ public class typeof_AngleRotationExpression_InferenceRule extends AbstractInfere
             typeCheckingContext.whenConcrete(angleType, new Runnable() {
               public void run() {
                 // Check that type match (rotation speed with rotation speed for example) 
-                {
-                  SNode _nodeToCheck_1029348928467 = self;
-                  EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660238423", 0, null);
-                  typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(axisType), (SNode) createVectorType_lfsqg_a1a0c0b0a0a1a0b0a0a0a1a0b0a0b(SNodeOperations.as(typeCheckingContext.getExpandedNode(angleType), CONCEPTS.Type$fA)), false, _info_12389875345);
-                }
+                TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(axisType), createVectorType_lfsqg_c0b0a0a1a0b0a0a0a1a0b0a0b(SNodeOperations.as(typeCheckingContext.getExpandedNode(angleType), CONCEPTS.Type$fA)), "axis", "angle", new _FunctionTypes._void_P1_E0<String>() {
+                  public void invoke(String text) {
+                    {
+                      final MessageTarget errorTarget = new NodeMessageTarget();
+                      IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(self, LINKS.angle$r4CS), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988911429", null, errorTarget);
+                    }
+                  }
+                });
 
                 {
                   SNode _nodeToCheck_1029348928467 = self;
@@ -49,7 +56,7 @@ public class typeof_AngleRotationExpression_InferenceRule extends AbstractInfere
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.EulerRotationExpression$Yn;
+    return CONCEPTS.EulerAxisRotationExpression$Yn;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -57,7 +64,7 @@ public class typeof_AngleRotationExpression_InferenceRule extends AbstractInfere
   public boolean overrides() {
     return false;
   }
-  private static SNode createVectorType_lfsqg_a1a0c0b0a0a1a0b0a0a0a1a0b0a0b(SNode p0) {
+  private static SNode createVectorType_lfsqg_c0b0a0a1a0b0a0a0a1a0b0a0b(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
     n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
     return n0.getResult();
@@ -78,7 +85,7 @@ public class typeof_AngleRotationExpression_InferenceRule extends AbstractInfere
   private static final class CONCEPTS {
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
     /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
-    /*package*/ static final SConcept EulerRotationExpression$Yn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c232f1L, "jetbrains.mps.samples.Physics.structure.EulerRotationExpression");
+    /*package*/ static final SConcept EulerAxisRotationExpression$Yn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c232f1L, "jetbrains.mps.samples.Physics.structure.EulerAxisRotationExpression");
     /*package*/ static final SConcept RotationType$YX = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L, "jetbrains.mps.samples.Physics.types.structure.RotationType");
   }
 }

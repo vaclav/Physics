@@ -8,8 +8,12 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.typesystem.inference.EquationInfo;
+import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
+import jetbrains.mps.errors.messageTargets.MessageTarget;
+import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
+import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.typesystem.inference.EquationInfo;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -32,16 +36,22 @@ public class typeof_RotationMatrixExpression_InferenceRule extends AbstractInfer
                   final SNode thirdType = typeCheckingContext.typeOf(SLinkOperations.getTarget(rotationMatrixExpression, LINKS.c3$uK02), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660261274", true);
                   typeCheckingContext.whenConcrete(thirdType, new Runnable() {
                     public void run() {
-                      {
-                        SNode _nodeToCheck_1029348928467 = rotationMatrixExpression;
-                        EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660263265", 0, null);
-                        typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(firstType), (SNode) typeCheckingContext.getExpandedNode(secondType), false, _info_12389875345);
-                      }
-                      {
-                        SNode _nodeToCheck_1029348928467 = rotationMatrixExpression;
-                        EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660263240", 0, null);
-                        typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(thirdType), (SNode) typeCheckingContext.getExpandedNode(secondType), false, _info_12389875345);
-                      }
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(firstType), typeCheckingContext.getExpandedNode(secondType), "first column", "second column", new _FunctionTypes._void_P1_E0<String>() {
+                        public void invoke(String text) {
+                          {
+                            final MessageTarget errorTarget = new NodeMessageTarget();
+                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(rotationMatrixExpression, LINKS.c2$uJY_), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988913468", null, errorTarget);
+                          }
+                        }
+                      });
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(firstType), typeCheckingContext.getExpandedNode(thirdType), "first column", "third column", new _FunctionTypes._void_P1_E0<String>() {
+                        public void invoke(String text) {
+                          {
+                            final MessageTarget errorTarget = new NodeMessageTarget();
+                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(rotationMatrixExpression, LINKS.c3$uK02), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988915886", null, errorTarget);
+                          }
+                        }
+                      });
 
                       SNode baseType = SLinkOperations.getTarget(SNodeOperations.as(typeCheckingContext.getExpandedNode(firstType), CONCEPTS.VectorType$Wj), LINKS.componentType$gTxy);
                       {

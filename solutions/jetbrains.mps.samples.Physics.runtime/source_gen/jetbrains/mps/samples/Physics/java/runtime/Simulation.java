@@ -5,7 +5,10 @@ package jetbrains.mps.samples.Physics.java.runtime;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import processing.core.PApplet;
 import processing.core.PGraphics;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import processing.core.PConstants;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRendering;
+import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 
 public abstract class Simulation implements Renderer.RendererCallback {
   protected World world;
@@ -28,6 +31,17 @@ public abstract class Simulation implements Renderer.RendererCallback {
   public void render(PApplet applet, PGraphics ctx) {
     ctx.background(0);
 
+    // Setting camera properly 
+    VectorLike position = getCameraPosition(ctx).mul(renderScale);
+    VectorLike focus = getCameraFocus(ctx).mul(renderScale);
+
+    ctx.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
+
+    // Float.MAX_VALUE divided by 1000 to prevent an overflow in internal computations 
+    // (resulting in a black screen) 
+    ctx.perspective(PConstants.PI / 3, ((float) ctx.width) / ((float) ctx.height), 10, Float.MAX_VALUE / 100);
+
+
     world.render(ctx, renderScale);
     world.step();
 
@@ -41,6 +55,14 @@ public abstract class Simulation implements Renderer.RendererCallback {
     ctx.hint(PApplet.ENABLE_DEPTH_TEST);
 
   }
+
+  public VectorLike getCameraPosition(PGraphics graphics) {
+    return new InternalVector(graphics.width / 2, graphics.height / 2, (graphics.height / 2) / PApplet.tan(PApplet.PI * 30 / 180));
+  }
+  public VectorLike getCameraFocus(PGraphics graphics) {
+    return new InternalVector(graphics.width / 2, graphics.height / 2, 0);
+  }
+
   @Override
   public void keyPressed(int code) {
     // Space bar 

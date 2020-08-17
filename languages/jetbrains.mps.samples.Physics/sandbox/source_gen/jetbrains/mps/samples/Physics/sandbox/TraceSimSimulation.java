@@ -7,10 +7,8 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import processing.core.PApplet;
-import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import processing.core.PConstants;
+import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
 import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
@@ -35,25 +33,10 @@ public class TraceSimSimulation extends Simulation {
 
 
   @Override
-  public void render(PApplet context, PGraphics graphics) {
-    // Escape scope as currentEntity (for relative coordinates) 
+  public VectorLike getCameraFocus(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    // Setting camera properly 
-    VectorLike position = new InternalVector(context.width / 2, context.height / 2, (context.height / 2) / PApplet.tan(PApplet.PI * 30 / 180));
-    VectorLike focus = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
-
-    // Apply scale 
-    position = position.mul(renderScale);
-    focus = focus.mul(renderScale);
-
-    graphics.camera(position.getX().floatValue(), position.getY().floatValue(), position.getZ().floatValue(), focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, -1, 0);
-
-    // Float.MAX_VALUE divided by 1000 to prevent an overflow in internal computations 
-    // (resulting in a black screen) 
-    graphics.perspective(PConstants.PI / 3, ((float) graphics.width) / ((float) graphics.height), 10, Float.MAX_VALUE / 100);
-
-    super.render(context, graphics);
+    return new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
   }
 
   public static void main(String[] args) {

@@ -8,6 +8,10 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
+import jetbrains.mps.errors.messageTargets.MessageTarget;
+import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
+import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
@@ -34,13 +38,14 @@ public class typeof_CylindricalCoordinates_InferenceRule extends AbstractInferen
                   final SNode phi = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.phi$ip6D), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972979645", true);
                   typeCheckingContext.whenConcrete(phi, new Runnable() {
                     public void run() {
-                      if (!(typeCheckingContext.isSingleTypeComputation())) {
-                        {
-                          SNode _nodeToCheck_1029348928467 = coords;
-                          EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "height and distance should be of same dimension", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5344936513384411659", 0, null);
-                          typeCheckingContext.createComparableEquation((SNode) typeCheckingContext.getExpandedNode(height), (SNode) typeCheckingContext.getExpandedNode(distance), false, _info_12389875345);
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(height), typeCheckingContext.getExpandedNode(distance), "z", "rho", new _FunctionTypes._void_P1_E0<String>() {
+                        public void invoke(String text) {
+                          {
+                            final MessageTarget errorTarget = new NodeMessageTarget();
+                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(coords, LINKS.height$ip86), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988907324", null, errorTarget);
+                          }
                         }
-                      }
+                      });
 
                       if (!(typeCheckingContext.isSingleTypeComputation())) {
                         {
