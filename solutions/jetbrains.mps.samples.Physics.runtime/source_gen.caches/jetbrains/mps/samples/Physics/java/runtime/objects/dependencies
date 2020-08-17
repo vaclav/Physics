@@ -22,12 +22,12 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.ForceMode" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.Math3DHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntityProperties" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropertiesBuilder" />
     <classNode dependClassName="org.ode4j.math.DMatrix3C" />
     <classNode dependClassName="org.ode4j.math.DVector3" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
@@ -36,6 +36,11 @@
     <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.EntityLike" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntityProperties">
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope">
     <classNode dependClassName="java.lang.Override" />
@@ -53,6 +58,7 @@
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.DJointGroup" />
     <classNode dependClassName="org.ode4j.ode.DSpace" />

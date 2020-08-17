@@ -18,6 +18,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AbstractVectorTarget;
   private ConceptPresentation props_AllObjectsExpression;
   private ConceptPresentation props_BooleanStyleKey;
+  private ConceptPresentation props_BounceCollisionReaction;
   private ConceptPresentation props_BoxDepthStyle;
   private ConceptPresentation props_BoxHeightStyle;
   private ConceptPresentation props_BoxWidthStyle;
@@ -67,12 +68,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObjectStyleDotTarget;
   private ConceptPresentation props_ObjectVelocityTarget;
   private ConceptPresentation props_OverrideRule;
+  private ConceptPresentation props_PauseOnCollisionStyleKey;
   private ConceptPresentation props_PictureTexture;
   private ConceptPresentation props_RelativeVector;
   private ConceptPresentation props_RotationExpression;
   private ConceptPresentation props_RotationMatrixExpression;
   private ConceptPresentation props_ShapeStyleExpression;
   private ConceptPresentation props_ShapeStyleKey;
+  private ConceptPresentation props_SimpleCollisionReactionExpression;
   private ConceptPresentation props_SimpleForce;
   private ConceptPresentation props_Simulation;
   private ConceptPresentation props_SimulationAlternativeView;
@@ -114,7 +117,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0md);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0pd);
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
@@ -137,7 +140,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0md);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0pd);
           props_AbstractObjectDefinition = cpb.create();
         }
         return props_AbstractObjectDefinition;
@@ -168,6 +171,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BooleanStyleKey = cpb.create();
         }
         return props_BooleanStyleKey;
+      case LanguageConceptSwitch.BounceCollisionReaction:
+        if (props_BounceCollisionReaction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("bounce");
+          props_BounceCollisionReaction = cpb.create();
+        }
+        return props_BounceCollisionReaction;
       case LanguageConceptSwitch.BoxDepthStyle:
         if (props_BoxDepthStyle == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -207,7 +217,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.CollisionReactionExpression:
         if (props_CollisionReactionExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("CollisionReactionExpression");
           props_CollisionReactionExpression = cpb.create();
         }
         return props_CollisionReactionExpression;
@@ -504,6 +513,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OverrideRule = cpb.create();
         }
         return props_OverrideRule;
+      case LanguageConceptSwitch.PauseOnCollisionStyleKey:
+        if (props_PauseOnCollisionStyleKey == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("pause-on-collision");
+          props_PauseOnCollisionStyleKey = cpb.create();
+        }
+        return props_PauseOnCollisionStyleKey;
       case LanguageConceptSwitch.PictureTexture:
         if (props_PictureTexture == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -548,6 +564,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ShapeStyleKey = cpb.create();
         }
         return props_ShapeStyleKey;
+      case LanguageConceptSwitch.SimpleCollisionReactionExpression:
+        if (props_SimpleCollisionReactionExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SimpleCollisionReactionExpression");
+          props_SimpleCollisionReactionExpression = cpb.create();
+        }
+        return props_SimpleCollisionReactionExpression;
       case LanguageConceptSwitch.SimpleForce:
         if (props_SimpleForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -559,7 +582,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a56b0md);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a86b0pd);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -694,7 +717,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a48b0md);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a78b0pd);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;

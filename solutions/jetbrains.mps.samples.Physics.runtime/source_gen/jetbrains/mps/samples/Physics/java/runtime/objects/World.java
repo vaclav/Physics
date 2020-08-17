@@ -12,6 +12,7 @@ import java.util.HashMap;
 import org.ode4j.ode.DBody;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.ode.internal.DxGeom;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 import processing.core.PGraphics;
 import java.util.List;
 
@@ -22,7 +23,6 @@ public class World implements DGeom.DNearCallback, Renderable {
   private final DSpace space;
   private final DJointGroup jointGroup;
   private final ArrayList<PhysicalEntity> entities = new ArrayList();
-  private final ArrayList<PhysicalEntity> lightsEmitter = new ArrayList();
   private final HashMap<DBody, PhysicalEntity> reverseEntities = new HashMap();
 
   private boolean paused;
@@ -83,23 +83,30 @@ public class World implements DGeom.DNearCallback, Renderable {
     PhysicalEntity e1 = reverseEntities.get(g1.getBody());
     PhysicalEntity e2 = reverseEntities.get(g2.getBody());
 
-    PhysicalEntity first = (e1.hasReactionPriority(e2) ? e1 : e2);
-    PhysicalEntity second = (first == e1 ? e2 : e1);
-    DGeom firstGeom = (first == e1 ? g1 : g2);
-    DGeom secondGeom = (firstGeom == g1 ? g2 : g1);
+    final PhysicalEntity first = (CollisionReaction.hasPriority(e1, e2) ? e1 : e2);
+    final PhysicalEntity second = (first == e1 ? e2 : e1);
+    final DGeom firstGeom = (first == e1 ? g1 : g2);
+    final DGeom secondGeom = (firstGeom == g1 ? g2 : g1);
 
     // React with the reaction with highest priority first 
-    first.getCollisionReaction().method.react(this, first, firstGeom, second, secondGeom);
+    final CollisionReaction firstReaction = first.properties().getCollisionReaction();
+    firstReaction.react(this, first, firstGeom, second, secondGeom);
 
-    // If the first reaction allow the second one to be performed aswell 
-    if (!(first.getCollisionReaction().preventOtherReaction) && first.getCollisionReaction() != second.getCollisionReaction()) {
-      second.getCollisionReaction().method.react(this, second, secondGeom, first, firstGeom);
+    // If the first reaction allow the second one to be performed as well 
+    final CollisionReaction secondReaction = second.properties().getCollisionReaction();
+    if (!(firstReaction.preventDifferentReaction()) && firstReaction.equals(secondReaction)) {
+      secondReaction.react(this, second, secondGeom, first, firstGeom);
+    }
+
+    // Pause world if required 
+    if (first.properties().isPauseOnCollision() || second.properties().isPauseOnCollision()) {
+      this.setPaused(true);
     }
   }
 
   @Override
   public void render(PGraphics ctx, float scale) {
-    for (PhysicalEntity entity : lightsEmitter) {
+    for (PhysicalEntity entity : entities) {
       entity.applyLights(ctx, scale);
     }
 
@@ -111,10 +118,6 @@ public class World implements DGeom.DNearCallback, Renderable {
   public void addEntity(PhysicalEntity entity) {
     entities.add(entity);
     reverseEntities.put(entity.getBody(), entity);
-
-    if (entity.getFixture().doEmitLight()) {
-      lightsEmitter.add(entity);
-    }
   }
   public DSpace getSpace() {
     return space;

@@ -4,7 +4,7 @@ package jetbrains.mps.samples.Physics.sandbox;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
@@ -35,11 +35,11 @@ public abstract class ObjectSupertypeAbstractEntity<T extends SystemScope> exten
     ObjectSupertypeAbstractEntity currentEntity = this;
 
     // Apply styles 
-    fixtureProperties.set(Prop.SHAPE, "box");
-    fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
-    fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
-    fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
-    fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.SHAPE, "box");
+    propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+    propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
 
     // Forces 
     this.getForces().addAll(Arrays.asList(new Force<SystemScope>() {

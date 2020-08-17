@@ -5,7 +5,6 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.rendering;
 import jetbrains.mps.samples.Physics.java.runtime.Renderable;
 import org.ode4j.ode.DGeom;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 import processing.core.PGraphics;
 import org.ode4j.ode.DMass;
 import org.ode4j.ode.DBody;
@@ -16,10 +15,6 @@ public abstract class Fixture implements Renderable {
   protected Color texture;
   private boolean emitLight;
   protected World world;
-
-  private TraceHandler traceHandler;
-
-  private CollisionReaction collisionReaction = CollisionReaction.BOUNCE;
 
   public Fixture(World world, Color texture) {
     this.world = world;
@@ -95,26 +90,6 @@ public abstract class Fixture implements Renderable {
   public void setEmitLight(boolean emitLight) {
     this.emitLight = emitLight;
   }
-
-
-  public CollisionReaction getCollisionReaction() {
-    return this.collisionReaction;
-  }
-  public void setCollisionReaction(CollisionReaction collisionReaction) {
-    this.collisionReaction = collisionReaction;
-  }
-
-  public boolean hasTraceHandler() {
-    return this.traceHandler != null;
-  }
-
-  public TraceHandler getTraceHandler() {
-    return this.traceHandler;
-  }
-  public void setTraceHandler(TraceHandler traceHandler) {
-    this.traceHandler = traceHandler;
-  }
-
 
   public Color getTexture() {
     return this.texture;

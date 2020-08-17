@@ -5,96 +5,33 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.forces;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import org.ode4j.ode.DGeom;
-import org.ode4j.ode.DContactBuffer;
-import org.ode4j.ode.OdeHelper;
-import org.ode4j.ode.DContact;
-import org.ode4j.ode.OdeConstants;
-import org.ode4j.ode.DContactJoint;
 
-public enum CollisionReaction {
-  BOUNCE(4, false, new CollisionReactionFunction() {
-    @Override
-    public void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom) {
-      final DContactBuffer contacts = new DContactBuffer(32);
-      int n = OdeHelper.collide(targetGeom, otherGeom, 32, contacts.getGeomBuffer());
-
-      if (n > 0) {
-        for (int i = 0; i < n; i++) {
-          // Init contact 
-          final DContact contact = contacts.get(i);
-          contact.surface.mode |= OdeConstants.dContactBounce;
-          // TODO from property 
-          contact.surface.bounce = 1;
-
-          // Attach to bodies 
-          DContactJoint joint = OdeHelper.createContactJoint(world.getWorld(), world.getJointGroup(), contact);
-
-          // Attach only to involved bodies 
-          if (otherObject.getCollisionReaction() == CollisionReaction.BOUNCE) {
-            joint.attach(contact.geom.g1.getBody(), contact.geom.g2.getBody());
-          } else
-          if (otherGeom == contact.geom.g1) {
-            joint.attach(contact.geom.g2.getBody(), null);
-          } else {
-            joint.attach(contact.geom.g1.getBody(), null);
-          }
-        }
-      }
-    }
-  }),
-  DISAPPEAR(1, true, new CollisionReactionFunction() {
-    @Override
-    public void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom) {
-      target.disable();
-
-      if (otherObject.getCollisionReaction() == CollisionReaction.DISAPPEAR) {
-        otherObject.disable();
-      }
-    }
-  }),
-  MERGE(3, true, new CollisionReactionFunction() {
-    @Override
-    public void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom) {
-      target.getFixture().mergeWith(otherObject.getFixture());
-      otherObject.disable();
-    }
-  }),
-  PAUSE_SIMULATION(0, false, new CollisionReactionFunction() {
-    @Override
-    public void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom) {
-      world.setPaused(true);
-    }
-  }),
-  IGNORE(100, false);
+public interface CollisionReaction {
 
   /**
-   * Priority of the reaction, low value mean high priority
+   * Priority of the reaction, high value means high priority
    */
-  public double priority;
+  int getPriority();
+
 
   /**
-   * Whether the reaction prevent other object reaction from happening
+   * Whether different reactions with small priority should be ignored after the current priority
    */
-  public boolean preventOtherReaction;
+  boolean preventDifferentReaction();
+
 
   /**
-   * Reaction handler, should apply reaction to both object if they have the same reaction,
-   * otherwise only apply to the first one
+   * Apply the reaction on both objects, the target object refer to the object the current reaction is applied on
    */
-  public CollisionReactionFunction method;
+  void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom);
 
-  CollisionReaction(double priority, boolean preventOtherReaction, CollisionReactionFunction method) {
-    this.priority = priority;
-    this.preventOtherReaction = preventOtherReaction;
-    this.method = method;
+  static void apply(World world, PhysicalEntity e1, DGeom g1, PhysicalEntity e2, DGeom g2) {
   }
-  CollisionReaction(double priority, boolean preventOther) {
-    this.priority = priority;
-    this.preventOtherReaction = preventOther;
-    this.method = new CollisionReactionFunction() {
-      @Override
-      public void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom) {
-      }
-    };
+
+  static boolean hasPriority(PhysicalEntity self, PhysicalEntity compared) {
+    CollisionReaction selfReaction = self.properties().getCollisionReaction();
+    CollisionReaction cmpReaction = compared.properties().getCollisionReaction();
+
+    return selfReaction.getPriority() > cmpReaction.getPriority() || (selfReaction.getPriority() == cmpReaction.getPriority() && self.getMass().compareTo(compared.getMass()) >= 0);
   }
 }

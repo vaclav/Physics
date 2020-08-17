@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder">
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropertiesBuilder">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.BoxFixture" />
@@ -11,8 +13,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop" />
 </dependenciesRoot>
 

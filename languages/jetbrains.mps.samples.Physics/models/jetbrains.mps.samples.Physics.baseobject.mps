@@ -72,10 +72,11 @@
       <concept id="3106918138153662052" name="jetbrains.mps.samples.Physics.structure.ShapeStyleExpression" flags="ng" index="39K0JL">
         <property id="3106918138153662053" name="shape" index="39K0JK" />
       </concept>
-      <concept id="3106918138153354537" name="jetbrains.mps.samples.Physics.structure.CollisionReactionExpression" flags="ng" index="39LbyW">
-        <property id="3106918138153354538" name="reaction" index="39LbyZ" />
-      </concept>
       <concept id="2993354433745639261" name="jetbrains.mps.samples.Physics.structure.CollisionStyleKey" flags="ng" index="1nHl2y" />
+      <concept id="6576997179995760305" name="jetbrains.mps.samples.Physics.structure.PauseOnCollisionStyleKey" flags="ng" index="3x8DqB" />
+      <concept id="6576997179998067710" name="jetbrains.mps.samples.Physics.structure.BounceCollisionReaction" flags="ng" index="3xKuJC">
+        <child id="6576997179998067941" name="bounceFactor" index="3xKuNN" />
+      </concept>
       <concept id="1846966433400552481" name="jetbrains.mps.samples.Physics.structure.DisabledTraceExpression" flags="ng" index="1Bik8e" />
       <concept id="1846966433400551509" name="jetbrains.mps.samples.Physics.structure.TraceStyleKey" flags="ng" index="1BikpU" />
       <concept id="7287056866553921482" name="jetbrains.mps.samples.Physics.structure.ObjectMassTarget" flags="ng" index="3K9aLm" />
@@ -244,9 +245,15 @@
     </node>
     <node concept="27oVnN" id="2GtZpnzbyQs" role="27xc_Z">
       <node concept="1nHl2y" id="6qMY4Z3czQC" role="39QuZq" />
-      <node concept="39LbyW" id="2GtZpnzbyQt" role="39QuWR">
-        <property role="39LbyZ" value="2AaxZXYfXtv/bounce" />
+      <node concept="3xKuJC" id="7dIb8AZ2EzK" role="39QuWR">
+        <node concept="30bXRB" id="7dIb8AZ2EzL" role="3xKuNN">
+          <property role="30bXRw" value="1" />
+        </node>
       </node>
+    </node>
+    <node concept="27oVnN" id="7dIb8AZ7mkL" role="27xc_Z">
+      <node concept="2vmpn$" id="7dIb8AZ7mmt" role="39QuWR" />
+      <node concept="3x8DqB" id="7dIb8AZ7mm1" role="39QuZq" />
     </node>
     <node concept="27oVnN" id="1AxJyXYVtm6" role="27xc_Z">
       <node concept="1Bik8e" id="1AxJyXZ4Y_M" role="39QuWR" />

@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction">
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReactionFunction" />
     <classNode dependClassName="org.ode4j.ode.DContact" />
     <classNode dependClassName="org.ode4j.ode.DContactBuffer" />
     <classNode dependClassName="org.ode4j.ode.DContactJoint" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.OdeConstants" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReactionFunction">
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction">
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
@@ -23,6 +26,13 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.SimpleCollisionReaction">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
+    <classNode dependClassName="org.ode4j.ode.DGeom" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.StaticForce">
     <classNode dependClassName="java.lang.Override" />

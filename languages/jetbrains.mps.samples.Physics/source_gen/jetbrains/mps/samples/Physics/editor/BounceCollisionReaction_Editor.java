@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class CollisionReactionExpression_Editor extends DefaultNodeEditor {
+public class BounceCollisionReaction_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new CollisionReactionExpression_EditorBuilder_a(editorContext, node).createCell();
+    return new BounceCollisionReaction_EditorBuilder_a(editorContext, node).createCell();
   }
 }

@@ -10,6 +10,7 @@ import jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem;
 import jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext;
 import java.util.ArrayList;
 import jetbrains.mps.lang.editor.menus.substitute.ConstraintsFilteringSubstituteMenuPartDecorator;
+import jetbrains.mps.lang.editor.menus.substitute.SimpleConceptSubstituteMenuPart;
 import jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase;
 import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.lang.editor.menus.ParameterizedMenuPart;
@@ -34,7 +35,21 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_4hk85u_a(), CONCEPTS.CollisionReactionExpression$z5));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SimpleConceptSubstituteMenuPart(CONCEPTS.BounceCollisionReaction$lY) {
+
+      @NotNull
+      @Override
+      public List<SubstituteMenuItem> createItems(SubstituteMenuContext context) {
+        context.getEditorMenuTrace().pushTraceInfo();
+        context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("simple substitute menu part for concept: " + "BounceCollisionReaction", new SNodePointer("r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)", "6576997179998205909")));
+        try {
+          return super.createItems(context);
+        } finally {
+          context.getEditorMenuTrace().popTraceInfo();
+        }
+      }
+    }, CONCEPTS.BounceCollisionReaction$lY));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_4hk85u_b(), CONCEPTS.CollisionReactionExpression$mt));
     return result;
   }
 
@@ -51,11 +66,11 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
   }
 
 
-  private class SMP_Param_4hk85u_a extends ParameterizedMenuPart<SEnumerationLiteral, SubstituteMenuItem, SubstituteMenuContext> {
+  private class SMP_Param_4hk85u_b extends ParameterizedMenuPart<SEnumerationLiteral, SubstituteMenuItem, SubstituteMenuContext> {
     @NotNull
     @Override
     protected List<SubstituteMenuItem> createItems(SEnumerationLiteral parameter, SubstituteMenuContext context) {
-      return new SMP_Action_4hk85u_a0(parameter).createItems(context);
+      return new SMP_Action_4hk85u_a1(parameter).createItems(context);
     }
     @NotNull
     @Override
@@ -71,11 +86,11 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
     @Nullable
     @Override
     protected Iterable<? extends SEnumerationLiteral> getParameters(SubstituteMenuContext _context) {
-      return SEnumOperations.getMembers(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL, "jetbrains.mps.samples.Physics.structure.CollisionReaction"));
+      return SEnumOperations.getMembers(MetaAdapterFactory.getEnumeration(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL, "jetbrains.mps.samples.Physics.structure.SimpleCollisionReaction"));
     }
-    private class SMP_Action_4hk85u_a0 extends SingleItemSubstituteMenuPart {
+    private class SMP_Action_4hk85u_a1 extends SingleItemSubstituteMenuPart {
       private final SEnumerationLiteral myParameterObject;
-      public SMP_Action_4hk85u_a0(SEnumerationLiteral parameterObject) {
+      public SMP_Action_4hk85u_a1(SEnumerationLiteral parameterObject) {
         myParameterObject = parameterObject;
       }
 
@@ -106,7 +121,7 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
         private final SubstituteMenuContext _context;
         private EditorMenuTraceInfo myTraceInfo;
         public Item(SubstituteMenuContext context) {
-          super(CONCEPTS.CollisionReactionExpression$z5, context);
+          super(CONCEPTS.CollisionReactionExpression$mt, context);
           _context = context;
         }
 
@@ -117,7 +132,7 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
         @Nullable
         @Override
         public SNode createNode(@NotNull String pattern) {
-          SNode collision = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2d94529L, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression"));
+          SNode collision = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2d94529L, "jetbrains.mps.samples.Physics.structure.SimpleCollisionReactionExpression"));
           SPropertyOperations.assignEnum(collision, PROPS.reaction$_ldw, myParameterObject);
           return collision;
         }
@@ -128,7 +143,7 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
         }
         @NotNull
         protected CompletionItemInformation createInformation(String pattern) {
-          return new CompletionItemInformation(myParameterObject, CONCEPTS.CollisionReactionExpression$z5, getMatchingText(pattern), getDescriptionText(pattern));
+          return new CompletionItemInformation(myParameterObject, CONCEPTS.CollisionReactionExpression$mt, getMatchingText(pattern), getDescriptionText(pattern));
         }
         @Nullable
         @Override
@@ -151,7 +166,8 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CollisionReactionExpression$z5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2d94529L, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression");
+    /*package*/ static final SConcept BounceCollisionReaction$lY = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, "jetbrains.mps.samples.Physics.structure.BounceCollisionReaction");
+    /*package*/ static final SConcept CollisionReactionExpression$mt = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbffL, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression");
   }
 
   private static final class PROPS {

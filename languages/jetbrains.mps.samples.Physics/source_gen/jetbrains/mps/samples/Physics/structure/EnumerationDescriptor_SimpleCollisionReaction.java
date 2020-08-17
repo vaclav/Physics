@@ -9,20 +9,18 @@ import java.util.List;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.NotNull;
 
-public class EnumerationDescriptor_CollisionReaction extends EnumerationDescriptorBase {
+public class EnumerationDescriptor_SimpleCollisionReaction extends EnumerationDescriptorBase {
 
-  public EnumerationDescriptor_CollisionReaction() {
-    super(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL, "CollisionReaction", "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639262");
+  public EnumerationDescriptor_SimpleCollisionReaction() {
+    super(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL, "SimpleCollisionReaction", "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639262");
   }
 
-  private final EnumerationDescriptor.MemberDescriptor myMember_bounce_0 = new EnumerationDescriptor.MemberDescriptor("bounce", "bounce", 0x298a87ff7e3fd75fL, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639263");
-  private final EnumerationDescriptor.MemberDescriptor myMember_pause_simulation_0 = new EnumerationDescriptor.MemberDescriptor("pause_simulation", "pause simulation", 0x298a87ff7e3fd760L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639264");
   private final EnumerationDescriptor.MemberDescriptor myMember_disappear_0 = new EnumerationDescriptor.MemberDescriptor("disappear", "disappear", 0x298a87ff7e3fd763L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639267");
   private final EnumerationDescriptor.MemberDescriptor myMember_merge_0 = new EnumerationDescriptor.MemberDescriptor("merge", "merge", 0x298a87ff7e3fd767L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2993354433745639271");
   private final EnumerationDescriptor.MemberDescriptor myMember_ignore_0 = new EnumerationDescriptor.MemberDescriptor("ignore", "ignore", 0x66b2f84fc32c32b8L, "r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/7400250159183704760");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL, 0x298a87ff7e3fd75fL, 0x298a87ff7e3fd760L, 0x298a87ff7e3fd763L, 0x298a87ff7e3fd767L, 0x66b2f84fc32c32b8L);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_bounce_0, myMember_pause_simulation_0, myMember_disappear_0, myMember_merge_0, myMember_ignore_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75eL, 0x298a87ff7e3fd763L, 0x298a87ff7e3fd767L, 0x66b2f84fc32c32b8L);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_disappear_0, myMember_merge_0, myMember_ignore_0);
 
   @Nullable
   @Override
@@ -43,10 +41,6 @@ public class EnumerationDescriptor_CollisionReaction extends EnumerationDescript
       return null;
     }
     switch (memberName) {
-      case "bounce":
-        return myMember_bounce_0;
-      case "pause_simulation":
-        return myMember_pause_simulation_0;
       case "disappear":
         return myMember_disappear_0;
       case "merge":

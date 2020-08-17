@@ -10,7 +10,7 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
@@ -54,8 +54,8 @@ public class TorqueSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.EMIT_LIGHT, true);
-      fixtureProperties.set(Prop.SPHERE_RADIUS, ((Number) new BigInteger("0")));
+      propertiesBuilder.set(PropKey.EMIT_LIGHT, true);
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) new BigInteger("0")));
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -79,11 +79,11 @@ public class TorqueSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.SHAPE, "box");
-      fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
-      fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SHAPE, "box");
+      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 0, 0));
+      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<TorqueSystemScope>() {
         private VectorLike cached;
 

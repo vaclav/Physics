@@ -30,7 +30,7 @@ public final class CollisionStyleKey__BehaviorDescriptor extends BaseBHDescripto
   }
 
   /*package*/ static SAbstractConcept getSpecificExpressionConcept_id1AxJyXYWKCb(@NotNull SNode __thisNode__) {
-    return CONCEPTS.CollisionReactionExpression$z5;
+    return CONCEPTS.CollisionReactionExpression$mt;
   }
 
   /*package*/ CollisionStyleKey__BehaviorDescriptor() {
@@ -80,6 +80,6 @@ public final class CollisionStyleKey__BehaviorDescriptor extends BaseBHDescripto
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CollisionReactionExpression$z5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2d94529L, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression");
+    /*package*/ static final SConcept CollisionReactionExpression$mt = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbffL, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression");
   }
 }

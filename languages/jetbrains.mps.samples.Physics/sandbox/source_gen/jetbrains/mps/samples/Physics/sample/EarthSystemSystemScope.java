@@ -11,7 +11,7 @@ import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import java.math.BigInteger;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.util.Arrays;
@@ -54,8 +54,8 @@ public class EarthSystemSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.TEXTURE, new Color(0, 0, 255));
-      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
+      propertiesBuilder.set(PropKey.TEXTURE, new Color(0, 0, 255));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -79,8 +79,8 @@ public class EarthSystemSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
-      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigDecimal("1737.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
+      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigDecimal("1737.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
       this.getForces().addAll(Arrays.asList());
     }
   }

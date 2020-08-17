@@ -22,7 +22,6 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
         <property id="1421157252384165432" name="memberId" index="3tVfz5" />
-        <property id="672037151186491528" name="presentation" index="1L1pqM" />
       </concept>
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
         <child id="3348158742936976577" name="members" index="25R1y" />
@@ -1017,7 +1016,7 @@
     <node concept="1TJgyi" id="2AaxZXYfXtQ" role="1TKVEl">
       <property role="IQ2nx" value="2993354433745639286" />
       <property role="TrG5h" value="reaction" />
-      <ref role="AX2Wp" node="2AaxZXYfXtu" resolve="CollisionReaction" />
+      <ref role="AX2Wp" node="2AaxZXYfXtu" resolve="SimpleCollisionReaction" />
       <node concept="asaX9" id="2GtZpnyQk_D" role="lGtFl" />
     </node>
     <node concept="PrWs8" id="1AxJyXZ23c$" role="PzmwI">
@@ -1027,16 +1026,7 @@
   <node concept="25R3W" id="2AaxZXYfXtu">
     <property role="3F6X1D" value="2993354433745639262" />
     <property role="3GE5qa" value="styles.collision" />
-    <property role="TrG5h" value="CollisionReaction" />
-    <node concept="25R33" id="2AaxZXYfXtv" role="25R1y">
-      <property role="3tVfz5" value="2993354433745639263" />
-      <property role="TrG5h" value="bounce" />
-    </node>
-    <node concept="25R33" id="2AaxZXYfXtw" role="25R1y">
-      <property role="3tVfz5" value="2993354433745639264" />
-      <property role="TrG5h" value="pause_simulation" />
-      <property role="1L1pqM" value="pause simulation" />
-    </node>
+    <property role="TrG5h" value="SimpleCollisionReaction" />
     <node concept="25R33" id="2AaxZXYfXtz" role="25R1y">
       <property role="3tVfz5" value="2993354433745639267" />
       <property role="TrG5h" value="disappear" />
@@ -1105,12 +1095,12 @@
   <node concept="1TIwiD" id="2GtZpnyQkkD">
     <property role="EcuMT" value="3106918138153354537" />
     <property role="3GE5qa" value="styles.collision" />
-    <property role="TrG5h" value="CollisionReactionExpression" />
-    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <property role="TrG5h" value="SimpleCollisionReactionExpression" />
+    <ref role="1TJDcQ" node="5H6c1qUxXJZ" resolve="CollisionReactionExpression" />
     <node concept="1TJgyi" id="2GtZpnyQkkE" role="1TKVEl">
       <property role="IQ2nx" value="3106918138153354538" />
       <property role="TrG5h" value="reaction" />
-      <ref role="AX2Wp" node="2AaxZXYfXtu" resolve="CollisionReaction" />
+      <ref role="AX2Wp" node="2AaxZXYfXtu" resolve="SimpleCollisionReaction" />
     </node>
   </node>
   <node concept="1TIwiD" id="2GtZpnyRvp$">
@@ -1413,6 +1403,34 @@
       <property role="20kJfa" value="gamma" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="5H6c1qUpaqL">
+    <property role="EcuMT" value="6576997179995760305" />
+    <property role="3GE5qa" value="styles.collision" />
+    <property role="TrG5h" value="PauseOnCollisionStyleKey" />
+    <property role="34LRSv" value="pause-on-collision" />
+    <ref role="1TJDcQ" node="k9gc968h$Y" resolve="BooleanStyleKey" />
+  </node>
+  <node concept="1TIwiD" id="5H6c1qUxXJY">
+    <property role="EcuMT" value="6576997179998067710" />
+    <property role="3GE5qa" value="styles.collision" />
+    <property role="TrG5h" value="BounceCollisionReaction" />
+    <property role="34LRSv" value="bounce" />
+    <ref role="1TJDcQ" node="5H6c1qUxXJZ" resolve="CollisionReactionExpression" />
+    <node concept="1TJgyj" id="5H6c1qUxXN_" role="1TKVEi">
+      <property role="IQ2ns" value="6576997179998067941" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="bounceFactor" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5H6c1qUxXJZ">
+    <property role="EcuMT" value="6576997179998067711" />
+    <property role="3GE5qa" value="styles.collision" />
+    <property role="TrG5h" value="CollisionReactionExpression" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
   </node>
 </model>
 

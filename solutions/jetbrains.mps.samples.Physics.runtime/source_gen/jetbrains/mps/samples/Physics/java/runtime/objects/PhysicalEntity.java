@@ -6,7 +6,7 @@ import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.ode4j.ode.DBody;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture;
 import java.math.BigDecimal;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.FixtureBuilder;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropertiesBuilder;
 import java.util.ArrayList;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.ode.OdeHelper;
@@ -18,7 +18,6 @@ import processing.core.PGraphics;
 import org.ode4j.math.DMatrix3C;
 import java.util.List;
 import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 
 public class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike {
   private DBody body;
@@ -30,11 +29,12 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   private BigDecimal massCached;
   private boolean disabled = false;
 
+  private PhysicalEntityProperties properties = new PhysicalEntityProperties();
 
   /**
    * Object containing the fixture properties
    */
-  protected FixtureBuilder fixtureProperties = new FixtureBuilder();
+  protected PropertiesBuilder propertiesBuilder = new PropertiesBuilder();
 
   /**
    * Forces applied on the entity
@@ -132,12 +132,9 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     ctx.popMatrix();
 
     // Display trace if any 
-    if (fixture.hasTraceHandler()) {
-      fixture.getTraceHandler().render(position, ctx, scale);
+    if (properties.getTraceHandler() != null) {
+      properties.getTraceHandler().render(position, ctx, scale);
     }
-  }
-  public void setFixture(Fixture fixture) {
-    this.fixture = fixture;
   }
   public DBody getBody() {
     return body;
@@ -188,15 +185,6 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   }
 
 
-  public CollisionReaction getCollisionReaction() {
-    return this.fixture.getCollisionReaction();
-  }
-  public boolean hasReactionPriority(PhysicalEntity cmp) {
-    //  Either highest priority or equal priority but greater mass 
-    return this.getCollisionReaction().priority > cmp.getCollisionReaction().priority || (this.getCollisionReaction().priority == cmp.getCollisionReaction().priority && getMass().compareTo(cmp.getMass()) >= 0);
-  }
-
-
   /**
    * Initialize the object properties
    */
@@ -205,27 +193,25 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   }
 
   public void build() {
-    // Build fixture 
-    this.fixture = this.fixtureProperties.build(world);
-
-    // Creating mass representation 
-    this.fixture.bindToBody(body, massCached.doubleValue());
-
-    //  Add to world 
-    world.addEntity(this);
+    // Build fixture and other properties 
+    this.propertiesBuilder.applyOn(world, this);
   }
 
   public Fixture getFixture() {
     return this.fixture;
   }
-
-
-
+  public void setFixture(Fixture fixture) {
+    this.fixture = fixture;
+  }
 
   public String getName() {
     return this.name;
   }
-  public FixtureBuilder getFixtureProperties() {
-    return this.fixtureProperties;
+  public PropertiesBuilder getFixtureProperties() {
+    return this.propertiesBuilder;
+  }
+
+  public PhysicalEntityProperties properties() {
+    return this.properties;
   }
 }

@@ -12,9 +12,9 @@ import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.SimpleCollisionReaction;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
@@ -65,12 +65,12 @@ public class RocketWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
-      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.IGNORE);
-      fixtureProperties.set(Prop.SHAPE, "box");
-      fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
+      propertiesBuilder.set(PropKey.SHAPE, "box");
+      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<RocketWorldSystemScope>() {
         private Force cached;
 
@@ -234,10 +234,10 @@ public class RocketWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.PAUSE_SIMULATION);
-      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
-      fixtureProperties.set(Prop.TEXTURE, new Color(0, 255, 0));
-      fixtureProperties.set(Prop.SHAPE, "sphere");
+      propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, true);
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
+      propertiesBuilder.set(PropKey.TEXTURE, new Color(0, 255, 0));
+      propertiesBuilder.set(PropKey.SHAPE, "sphere");
       this.getForces().addAll(Arrays.asList());
     }
   }

@@ -5,14 +5,14 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.nevec.rjm.BigDecimalMath;
 import java.math.MathContext;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction;
 import java.util.Arrays;
 
 public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends PhysicalEntity<T> {
@@ -30,15 +30,16 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
     BaseObjectAbstractEntity currentEntity = this;
 
     // Apply styles 
-    fixtureProperties.set(Prop.SHAPE, "sphere");
-    fixtureProperties.set(Prop.BOX_X, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
-    fixtureProperties.set(Prop.BOX_Y, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
-    fixtureProperties.set(Prop.BOX_Z, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
-    fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimalMath.pi(MathContext.DECIMAL32))), currentEntity.getMass()).doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
-    fixtureProperties.set(Prop.TEXTURE, new Color(255, 255, 255));
-    fixtureProperties.set(Prop.EMIT_LIGHT, false);
-    fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.BOUNCE);
-    fixtureProperties.set(Prop.TRACE, null);
+    propertiesBuilder.set(PropKey.SHAPE, "sphere");
+    propertiesBuilder.set(PropKey.BOX_X, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
+    propertiesBuilder.set(PropKey.BOX_Y, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
+    propertiesBuilder.set(PropKey.BOX_Z, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
+    propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimalMath.pi(MathContext.DECIMAL32))), currentEntity.getMass()).doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
+    propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+    propertiesBuilder.set(PropKey.EMIT_LIGHT, false);
+    propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, false);
+    propertiesBuilder.set(PropKey.TRACE, null);
 
     // Forces 
     this.getForces().addAll(Arrays.asList());

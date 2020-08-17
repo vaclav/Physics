@@ -7,7 +7,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import processing.core.PGraphics;
@@ -30,7 +30,7 @@ public class TestSimulationSimulation extends Simulation {
   protected void initScope(World world) {
     this.scope = new MilkyWaySystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
 
-    scope.SolarSystem1.Sun.getFixtureProperties().set(Prop.TRACE, new Color(255, 255, 255));
+    scope.SolarSystem1.Sun.getFixtureProperties().set(PropKey.TRACE, new Color(255, 255, 255));
   }
 
 

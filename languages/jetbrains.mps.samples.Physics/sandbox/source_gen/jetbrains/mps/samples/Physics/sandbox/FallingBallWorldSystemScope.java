@@ -10,8 +10,8 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
@@ -57,9 +57,10 @@ public class FallingBallWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.COLLISION_REACT, CollisionReaction.PAUSE_SIMULATION);
-      fixtureProperties.set(Prop.TEXTURE, new Color(255, 0, 0));
-      fixtureProperties.set(Prop.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, true);
+      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 0, 0));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<FallingBallWorldSystemScope>() {
         private VectorLike cached;
 
@@ -104,10 +105,10 @@ public class FallingBallWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      fixtureProperties.set(Prop.BOX_X, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.BOX_Z, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
-      fixtureProperties.set(Prop.SHAPE, "box");
+      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SHAPE, "box");
       this.getForces().addAll(Arrays.asList());
     }
   }

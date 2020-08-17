@@ -119,6 +119,9 @@
       <concept id="7342352913006985483" name="jetbrains.mps.lang.editor.structure.SubstituteMenuPart_Action" flags="ng" index="3eGOop">
         <child id="8612453216082699922" name="substituteHandler" index="3aKz83" />
       </concept>
+      <concept id="414384289274424754" name="jetbrains.mps.lang.editor.structure.SubstituteMenuPart_AddConcept" flags="ng" index="3ft5Ry">
+        <reference id="697754674827630451" name="concept" index="4PJHt" />
+      </concept>
       <concept id="5266818545798688928" name="jetbrains.mps.lang.editor.structure.ShowBoundariesInStyleClassItem" flags="lg" index="1fO$WK" />
       <concept id="1139535219966" name="jetbrains.mps.lang.editor.structure.CellActionMapDeclaration" flags="ig" index="1h_SRR">
         <reference id="1139535219968" name="applicableConcept" index="1h_SK9" />
@@ -198,6 +201,7 @@
         <child id="7980428675268276159" name="parts" index="1Qtc8A" />
       </concept>
       <concept id="1176717841777" name="jetbrains.mps.lang.editor.structure.QueryFunction_ModelAccess_Getter" flags="in" index="3TQlhw" />
+      <concept id="2722384699544370949" name="jetbrains.mps.lang.editor.structure.SubstituteMenuPart_Placeholder" flags="ng" index="3VyMlK" />
       <concept id="1950447826681509042" name="jetbrains.mps.lang.editor.structure.ApplyStyleClass" flags="lg" index="3Xmtl4">
         <child id="1950447826683828796" name="target" index="3XvnJa" />
       </concept>
@@ -2387,14 +2391,21 @@
   </node>
   <node concept="24kQdi" id="2GtZpnyQk_M">
     <property role="3GE5qa" value="styles.collision" />
-    <ref role="1XX52x" to="9tcj:2GtZpnyQkkD" resolve="CollisionReactionExpression" />
+    <ref role="1XX52x" to="9tcj:2GtZpnyQkkD" resolve="SimpleCollisionReactionExpression" />
     <node concept="3F0A7n" id="2GtZpnyQk_O" role="2wV5jI">
       <ref role="1NtTu8" to="9tcj:2GtZpnyQkkE" resolve="reaction" />
+      <node concept="A1WHr" id="5H6c1qUyvCO" role="3vIgyS">
+        <ref role="2ZyFGn" to="9tcj:5H6c1qUxXJZ" resolve="CollisionReactionExpression" />
+      </node>
     </node>
   </node>
   <node concept="22mcaB" id="2GtZpnyQkAh">
     <property role="3GE5qa" value="styles.collision" />
-    <ref role="aqKnT" to="9tcj:2GtZpnyQkkD" resolve="CollisionReactionExpression" />
+    <ref role="aqKnT" to="9tcj:5H6c1qUxXJZ" resolve="CollisionReactionExpression" />
+    <node concept="3ft5Ry" id="5H6c1qUyvvl" role="3ft7WO">
+      <ref role="4PJHt" to="9tcj:5H6c1qUxXJY" resolve="BounceCollisionReaction" />
+    </node>
+    <node concept="3VyMlK" id="5H6c1qUyv$C" role="3ft7WO" />
     <node concept="22hDWj" id="2GtZpnyQkAi" role="22hAXT" />
     <node concept="2F$Pav" id="2GtZpnyQkAk" role="3ft7WO">
       <node concept="3eGOop" id="2GtZpnyQkA_" role="2$S_pN">
@@ -2404,12 +2415,12 @@
               <node concept="3cpWsn" id="2GtZpnyQxC4" role="3cpWs9">
                 <property role="TrG5h" value="collision" />
                 <node concept="3Tqbb2" id="2GtZpnyQxBO" role="1tU5fm">
-                  <ref role="ehGHo" to="9tcj:2GtZpnyQkkD" resolve="CollisionReactionExpression" />
+                  <ref role="ehGHo" to="9tcj:2GtZpnyQkkD" resolve="SimpleCollisionReactionExpression" />
                 </node>
                 <node concept="2ShNRf" id="2GtZpnyQxC5" role="33vP2m">
                   <node concept="3zrR0B" id="2GtZpnyQxC6" role="2ShVmc">
                     <node concept="3Tqbb2" id="2GtZpnyQxC7" role="3zrR0E">
-                      <ref role="ehGHo" to="9tcj:2GtZpnyQkkD" resolve="CollisionReactionExpression" />
+                      <ref role="ehGHo" to="9tcj:2GtZpnyQkkD" resolve="SimpleCollisionReactionExpression" />
                     </node>
                   </node>
                 </node>
@@ -2437,14 +2448,14 @@
         </node>
       </node>
       <node concept="2ZThk1" id="2GtZpnyQkAq" role="2ZBHrp">
-        <ref role="2ZWj4r" to="9tcj:2AaxZXYfXtu" resolve="CollisionReaction" />
+        <ref role="2ZWj4r" to="9tcj:2AaxZXYfXtu" resolve="SimpleCollisionReaction" />
       </node>
       <node concept="2$S_p_" id="1AxJyXZ21lP" role="2$S_pT">
         <node concept="3clFbS" id="1AxJyXZ21lQ" role="2VODD2">
           <node concept="3clFbF" id="1AxJyXZ21ph" role="3cqZAp">
             <node concept="2OqwBi" id="1AxJyXZ21Re" role="3clFbG">
               <node concept="1XH99k" id="1AxJyXZ21pg" role="2Oq$k0">
-                <ref role="1XH99l" to="9tcj:2AaxZXYfXtu" resolve="CollisionReaction" />
+                <ref role="1XH99l" to="9tcj:2AaxZXYfXtu" resolve="SimpleCollisionReaction" />
               </node>
               <node concept="2ViDtN" id="1AxJyXZ22cT" role="2OqNvi" />
             </node>
@@ -3518,6 +3529,33 @@
         </node>
       </node>
       <node concept="l2Vlx" id="5H6c1qTKXlR" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="5H6c1qUxXNI">
+    <property role="3GE5qa" value="styles.collision" />
+    <ref role="1XX52x" to="9tcj:5H6c1qUxXJY" resolve="BounceCollisionReaction" />
+    <node concept="3EZMnI" id="5H6c1qUxXNK" role="2wV5jI">
+      <node concept="3F0ifn" id="5H6c1qUxXNQ" role="3EZMnx">
+        <property role="3F0ifm" value="bounce" />
+        <node concept="VPxyj" id="5H6c1qUyvCQ" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="A1WHr" id="5H6c1qUyvCS" role="3vIgyS">
+          <ref role="2ZyFGn" to="9tcj:5H6c1qUxXJZ" resolve="CollisionReactionExpression" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="5H6c1qUxXNW" role="3EZMnx">
+        <property role="3F0ifm" value="[" />
+        <ref role="1k5W1q" node="5SjYD03W97U" resolve="LeftParenthesisAfterName" />
+      </node>
+      <node concept="3F1sOY" id="5H6c1qUxXO4" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:5H6c1qUxXN_" resolve="bounceFactor" />
+      </node>
+      <node concept="3F0ifn" id="5H6c1qUxXOe" role="3EZMnx">
+        <property role="3F0ifm" value="]" />
+        <ref role="1k5W1q" node="5SjYD03W98J" resolve="RightParenthesis" />
+      </node>
+      <node concept="l2Vlx" id="5H6c1qUxXNM" role="2iSdaV" />
     </node>
   </node>
 </model>

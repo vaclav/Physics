@@ -7,7 +7,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import processing.core.PGraphics;
@@ -31,7 +31,7 @@ public class FallingBallSimulation extends Simulation {
     this.scope = new FallingBallWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
 
     scope.Ball.setMass(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))));
-    scope.Ball.getFixtureProperties().set(Prop.TEXTURE, new Color(0, 0, 255));
+    scope.Ball.getFixtureProperties().set(PropKey.TEXTURE, new Color(0, 0, 255));
     scope.Ball.setVelocity(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
   }
 

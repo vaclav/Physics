@@ -53,10 +53,6 @@
       <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
         <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
-      <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
-        <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
-        <reference id="1144432896254" name="enumClass" index="1Px2BO" />
-      </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
@@ -261,26 +257,6 @@
       </node>
     </node>
     <node concept="2tJIrI" id="2AaxZXYj04f" role="jymVt" />
-    <node concept="312cEg" id="1AxJyXZ83CO" role="jymVt">
-      <property role="TrG5h" value="traceHandler" />
-      <node concept="3Tm6S6" id="1AxJyXZ83pZ" role="1B3o_S" />
-      <node concept="3uibUv" id="1AxJyXZ83Ce" role="1tU5fm">
-        <ref role="3uigEE" node="1AxJyXZ7uHp" resolve="TraceHandler" />
-      </node>
-    </node>
-    <node concept="2tJIrI" id="1AxJyXZ835k" role="jymVt" />
-    <node concept="312cEg" id="2AaxZXYieTn" role="jymVt">
-      <property role="TrG5h" value="collisionReaction" />
-      <node concept="3Tm6S6" id="2AaxZXYicB5" role="1B3o_S" />
-      <node concept="3uibUv" id="2AaxZXYieM4" role="1tU5fm">
-        <ref role="3uigEE" to="4bo7:2AaxZXYibwz" resolve="CollisionReaction" />
-      </node>
-      <node concept="Rm8GO" id="6qMY4Z36F48" role="33vP2m">
-        <ref role="1Px2BO" to="4bo7:2AaxZXYibwz" resolve="CollisionReaction" />
-        <ref role="Rm8GQ" to="4bo7:2AaxZXYibzL" resolve="BOUNCE" />
-      </node>
-    </node>
-    <node concept="2tJIrI" id="6qMY4Z38aEe" role="jymVt" />
     <node concept="3clFbW" id="3H79Ykd2GmW" role="jymVt">
       <node concept="3cqZAl" id="3H79Ykd2GmX" role="3clF45" />
       <node concept="37vLTG" id="2AaxZXYj0SF" role="3clF46">
@@ -1068,115 +1044,6 @@
         <node concept="10P_77" id="k9gc968qY5" role="1tU5fm" />
       </node>
     </node>
-    <node concept="2tJIrI" id="6qMY4Z38cfZ" role="jymVt" />
-    <node concept="2tJIrI" id="6qMY4Z38ck1" role="jymVt" />
-    <node concept="3clFb_" id="6qMY4Z38c$P" role="jymVt">
-      <property role="TrG5h" value="getCollisionReaction" />
-      <node concept="3uibUv" id="6qMY4Z38c$Q" role="3clF45">
-        <ref role="3uigEE" to="4bo7:2AaxZXYibwz" resolve="CollisionReaction" />
-      </node>
-      <node concept="3Tm1VV" id="6qMY4Z38c$R" role="1B3o_S" />
-      <node concept="3clFbS" id="6qMY4Z38c$S" role="3clF47">
-        <node concept="3clFbF" id="6qMY4Z38c$T" role="3cqZAp">
-          <node concept="2OqwBi" id="6qMY4Z38c$M" role="3clFbG">
-            <node concept="Xjq3P" id="6qMY4Z38c$N" role="2Oq$k0" />
-            <node concept="2OwXpG" id="6qMY4Z38c$O" role="2OqNvi">
-              <ref role="2Oxat5" node="2AaxZXYieTn" resolve="collisionReaction" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="3clFb_" id="6qMY4Z38c$U" role="jymVt">
-      <property role="TrG5h" value="setCollisionReaction" />
-      <node concept="3cqZAl" id="6qMY4Z38c$V" role="3clF45" />
-      <node concept="3Tm1VV" id="6qMY4Z38c$W" role="1B3o_S" />
-      <node concept="3clFbS" id="6qMY4Z38c$X" role="3clF47">
-        <node concept="3clFbF" id="6qMY4Z38c$Y" role="3cqZAp">
-          <node concept="37vLTI" id="6qMY4Z38c$Z" role="3clFbG">
-            <node concept="37vLTw" id="6qMY4Z38c_0" role="37vLTx">
-              <ref role="3cqZAo" node="6qMY4Z38c_1" resolve="collisionReaction" />
-            </node>
-            <node concept="2OqwBi" id="6qMY4Z38c$J" role="37vLTJ">
-              <node concept="Xjq3P" id="6qMY4Z38c$K" role="2Oq$k0" />
-              <node concept="2OwXpG" id="6qMY4Z38c$L" role="2OqNvi">
-                <ref role="2Oxat5" node="2AaxZXYieTn" resolve="collisionReaction" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="37vLTG" id="6qMY4Z38c_1" role="3clF46">
-        <property role="TrG5h" value="collisionReaction" />
-        <node concept="3uibUv" id="6qMY4Z38c_2" role="1tU5fm">
-          <ref role="3uigEE" to="4bo7:2AaxZXYibwz" resolve="CollisionReaction" />
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="1AxJyXZ83Xx" role="jymVt" />
-    <node concept="3clFb_" id="1AxJyXZ84CT" role="jymVt">
-      <property role="TrG5h" value="hasTraceHandler" />
-      <node concept="10P_77" id="1AxJyXZ85E3" role="3clF45" />
-      <node concept="3Tm1VV" id="1AxJyXZ84CV" role="1B3o_S" />
-      <node concept="3clFbS" id="1AxJyXZ84CW" role="3clF47">
-        <node concept="3clFbF" id="1AxJyXZ84CX" role="3cqZAp">
-          <node concept="3y3z36" id="1AxJyXZ85vW" role="3clFbG">
-            <node concept="10Nm6u" id="1AxJyXZ85_f" role="3uHU7w" />
-            <node concept="2OqwBi" id="1AxJyXZ84CY" role="3uHU7B">
-              <node concept="Xjq3P" id="1AxJyXZ84CZ" role="2Oq$k0" />
-              <node concept="2OwXpG" id="1AxJyXZ84D0" role="2OqNvi">
-                <ref role="2Oxat5" node="1AxJyXZ83CO" resolve="traceHandler" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="1AxJyXZ841M" role="jymVt" />
-    <node concept="3clFb_" id="1AxJyXZ84gc" role="jymVt">
-      <property role="TrG5h" value="getTraceHandler" />
-      <node concept="3uibUv" id="1AxJyXZ84gd" role="3clF45">
-        <ref role="3uigEE" node="1AxJyXZ7uHp" resolve="TraceHandler" />
-      </node>
-      <node concept="3Tm1VV" id="1AxJyXZ84ge" role="1B3o_S" />
-      <node concept="3clFbS" id="1AxJyXZ84gf" role="3clF47">
-        <node concept="3clFbF" id="1AxJyXZ84gg" role="3cqZAp">
-          <node concept="2OqwBi" id="1AxJyXZ84g9" role="3clFbG">
-            <node concept="Xjq3P" id="1AxJyXZ84ga" role="2Oq$k0" />
-            <node concept="2OwXpG" id="1AxJyXZ84gb" role="2OqNvi">
-              <ref role="2Oxat5" node="1AxJyXZ83CO" resolve="traceHandler" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="3clFb_" id="1AxJyXZ84gh" role="jymVt">
-      <property role="TrG5h" value="setTraceHandler" />
-      <node concept="3cqZAl" id="1AxJyXZ84gi" role="3clF45" />
-      <node concept="3Tm1VV" id="1AxJyXZ84gj" role="1B3o_S" />
-      <node concept="3clFbS" id="1AxJyXZ84gk" role="3clF47">
-        <node concept="3clFbF" id="1AxJyXZ84gl" role="3cqZAp">
-          <node concept="37vLTI" id="1AxJyXZ84gm" role="3clFbG">
-            <node concept="37vLTw" id="1AxJyXZ84gn" role="37vLTx">
-              <ref role="3cqZAo" node="1AxJyXZ84go" resolve="traceHandler" />
-            </node>
-            <node concept="2OqwBi" id="1AxJyXZ84g6" role="37vLTJ">
-              <node concept="Xjq3P" id="1AxJyXZ84g7" role="2Oq$k0" />
-              <node concept="2OwXpG" id="1AxJyXZ84g8" role="2OqNvi">
-                <ref role="2Oxat5" node="1AxJyXZ83CO" resolve="traceHandler" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="37vLTG" id="1AxJyXZ84go" role="3clF46">
-        <property role="TrG5h" value="traceHandler" />
-        <node concept="3uibUv" id="1AxJyXZ84gp" role="1tU5fm">
-          <ref role="3uigEE" node="1AxJyXZ7uHp" resolve="TraceHandler" />
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="aCA7w6QIwp" role="jymVt" />
     <node concept="2tJIrI" id="aCA7w6QI_n" role="jymVt" />
     <node concept="3clFb_" id="aCA7w6QJ5j" role="jymVt">
       <property role="TrG5h" value="getTexture" />

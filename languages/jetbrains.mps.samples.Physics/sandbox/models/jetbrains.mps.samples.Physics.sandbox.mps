@@ -158,7 +158,7 @@
       <concept id="3106918138153662052" name="jetbrains.mps.samples.Physics.structure.ShapeStyleExpression" flags="ng" index="39K0JL">
         <property id="3106918138153662053" name="shape" index="39K0JK" />
       </concept>
-      <concept id="3106918138153354537" name="jetbrains.mps.samples.Physics.structure.CollisionReactionExpression" flags="ng" index="39LbyW">
+      <concept id="3106918138153354537" name="jetbrains.mps.samples.Physics.structure.SimpleCollisionReactionExpression" flags="ng" index="39LbyW">
         <property id="3106918138153354538" name="reaction" index="39LbyZ" />
       </concept>
       <concept id="4383135941275108256" name="jetbrains.mps.samples.Physics.structure.WorldInclusion" flags="ng" index="1h9Ola">
@@ -198,6 +198,10 @@
         <reference id="420466128549300321" name="target" index="1t_wfm" />
       </concept>
       <concept id="5352272594417168254" name="jetbrains.mps.samples.Physics.structure.ObjectVelocityTarget" flags="ng" index="1x33zJ" />
+      <concept id="6576997179995760305" name="jetbrains.mps.samples.Physics.structure.PauseOnCollisionStyleKey" flags="ng" index="3x8DqB" />
+      <concept id="6576997179998067710" name="jetbrains.mps.samples.Physics.structure.BounceCollisionReaction" flags="ng" index="3xKuJC">
+        <child id="6576997179998067941" name="bounceFactor" index="3xKuNN" />
+      </concept>
       <concept id="7887120293590353009" name="jetbrains.mps.samples.Physics.structure.DirectionalCoordinates" flags="ng" index="3_jIDJ">
         <child id="7887120293590353012" name="length" index="3_jIDE" />
         <child id="7887120293590353010" name="direction" index="3_jIDG" />
@@ -1968,8 +1972,10 @@
       </node>
       <node concept="27oVnN" id="2GtZpnzbyQw" role="27xc_Z">
         <node concept="1nHl2y" id="6qMY4Z3b38L" role="39QuZq" />
-        <node concept="39LbyW" id="2GtZpnzbyQx" role="39QuWR">
-          <property role="39LbyZ" value="2AaxZXYfXtv/bounce" />
+        <node concept="3xKuJC" id="7dIb8AZ2EzM" role="39QuWR">
+          <node concept="30bXRB" id="7dIb8AZ2EzN" role="3xKuNN">
+            <property role="30bXRw" value="1" />
+          </node>
         </node>
       </node>
       <node concept="27oVnN" id="2GtZpnyLmAH" role="27xc_Z">
@@ -2150,6 +2156,10 @@
         <node concept="Y6$CV" id="2GtZpnyOi_i" role="39QuWR">
           <ref role="2hGqkR" to="bf5:G6XgqqQVkJ" resolve="blue" />
         </node>
+      </node>
+      <node concept="27oVnN" id="7dIb8AZj7vi" role="27xc_Z">
+        <node concept="2vmpnb" id="7dIb8AZj7Dm" role="39QuWR" />
+        <node concept="3x8DqB" id="7dIb8AZj7D6" role="39QuZq" />
       </node>
       <node concept="27oVnN" id="2GtZpnzbyQu" role="27xc_Z">
         <node concept="1nHl2y" id="6qMY4Z3b32b" role="39QuZq" />
@@ -2438,9 +2448,15 @@
       <property role="TrG5h" value="Ball" />
       <node concept="27oVnN" id="2GtZpnzbyQy" role="27xc_Z">
         <node concept="1nHl2y" id="4E4GfvfzvCT" role="39QuZq" />
-        <node concept="39LbyW" id="2GtZpnzbyQz" role="39QuWR">
-          <property role="39LbyZ" value="2AaxZXYfXtw/pause_simulation" />
+        <node concept="3xKuJC" id="7dIb8AZbtcn" role="39QuWR">
+          <node concept="30bXRB" id="7dIb8AZbtcJ" role="3xKuNN">
+            <property role="30bXRw" value="1" />
+          </node>
         </node>
+      </node>
+      <node concept="27oVnN" id="7dIb8AZbtdy" role="27xc_Z">
+        <node concept="2vmpnb" id="7dIb8AZbt$d" role="39QuWR" />
+        <node concept="3x8DqB" id="7dIb8AZbtzP" role="39QuZq" />
       </node>
       <node concept="27oVnN" id="2GtZpnyOi_l" role="27xc_Z">
         <node concept="27oU9Q" id="3Xqr82XhWHW" role="39QuZq" />
@@ -3413,11 +3429,9 @@
     </node>
     <node concept="3omeWv" id="7VyKdWRHu2b" role="3omeWq">
       <property role="TrG5h" value="Earth" />
-      <node concept="27oVnN" id="7VyKdWRHuGk" role="27xc_Z">
-        <node concept="39LbyW" id="7GjkYGKG32R" role="39QuWR">
-          <property role="39LbyZ" value="2AaxZXYfXtw/pause_simulation" />
-        </node>
-        <node concept="1nHl2y" id="7VyKdWRHuPl" role="39QuZq" />
+      <node concept="27oVnN" id="7dIb8AZbv62" role="27xc_Z">
+        <node concept="2vmpnb" id="7dIb8AZbvlA" role="39QuWR" />
+        <node concept="3x8DqB" id="7dIb8AZbvlk" role="39QuZq" />
       </node>
       <node concept="3Bsx3U" id="7VyKdWRHu2c" role="1bLhCY">
         <node concept="1N951E" id="7VyKdWRHu2d" role="3Bsx3B">

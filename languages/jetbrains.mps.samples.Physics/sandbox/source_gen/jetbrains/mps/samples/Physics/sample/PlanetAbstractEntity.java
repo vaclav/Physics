@@ -4,7 +4,7 @@ package jetbrains.mps.samples.Physics.sample;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
@@ -38,7 +38,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
     PlanetAbstractEntity currentEntity = this;
 
     // Apply styles 
-    fixtureProperties.set(Prop.SHAPE, "sphere");
+    propertiesBuilder.set(PropKey.SHAPE, "sphere");
 
     // Forces 
     this.getForces().addAll(Arrays.asList(new Force<SystemScope>() {
