@@ -13,6 +13,7 @@ import java.math.RoundingMode;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 
@@ -54,7 +55,7 @@ public class SolarSystemSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 0, 0));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("696340")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
       this.getForces().addAll(Arrays.asList());
     }

@@ -47,7 +47,7 @@ public class TraceHandler {
 
     // Display history 
     ctx.noFill();
-    aspect.applyAsStroke(ctx);
+    ctx.stroke(aspect.r, aspect.g, aspect.b);
     ctx.beginShape();
     for (int i = 0; i < currentCapacity; i++) {
       vertexAt(ctx, (i + offset) % MAX_CAPACITY);

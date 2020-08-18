@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-10q6h5437w5eadzzu3716a7zybynwm4">
-  <files names="ObjectIsDirection_SubtypingRule.java:TypesystemDescriptor.java:VectorHandlingCapablity.java:VectorTypeHelper.java:WorldIsObject_SubtypingRule.java:compare_ObjectTypes_ComparisonRule.java:replace_VectorType_VectorType_InequationReplacementRule.java:subtype_AbstractVector_DirectionType_SubtypingRule.java:subtype_VectorType_AbstractVectorType_SubtypingRule.java" />
+<product version="3" modelHash="68ktk0966c224p38eqsfd866nbkk2h5">
+  <files names="ObjectIsDirection_SubtypingRule.java:TypesystemDescriptor.java:VectorHandlingCapablity.java:VectorTypeHelper.java:WorldIsObject_SubtypingRule.java:compare_ObjectTypes_ComparisonRule.java:replace_RotationType_RotationType_InequationReplacementRule.java:replace_VectorType_VectorType_InequationReplacementRule.java:subtype_AbstractVector_DirectionType_SubtypingRule.java:subtype_VectorType_AbstractVectorType_SubtypingRule.java" />
 </product>
 

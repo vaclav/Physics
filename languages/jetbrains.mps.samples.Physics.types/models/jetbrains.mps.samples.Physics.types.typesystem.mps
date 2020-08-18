@@ -897,5 +897,41 @@
       </node>
     </node>
   </node>
+  <node concept="35pCF_" id="MHm3quXcwD">
+    <property role="3GE5qa" value="vector" />
+    <property role="TrG5h" value="replace_RotationType_RotationType" />
+    <node concept="1YaCAy" id="MHm3quXcwE" role="35pZ6h">
+      <property role="TrG5h" value="supType" />
+      <ref role="1YaFvo" to="z99z:4RbBgkBKyyA" resolve="RotationType" />
+    </node>
+    <node concept="3clFbS" id="MHm3quXcwF" role="2sgrp5">
+      <node concept="1ZobV4" id="MHm3quXcwG" role="3cqZAp">
+        <node concept="mw_s8" id="MHm3quXcwH" role="1ZfhKB">
+          <node concept="2OqwBi" id="MHm3quXcwI" role="mwGJk">
+            <node concept="1YBJjd" id="MHm3quXcwJ" role="2Oq$k0">
+              <ref role="1YBMHb" node="MHm3quXcwE" resolve="supType" />
+            </node>
+            <node concept="3TrEf2" id="MHm3quXcZk" role="2OqNvi">
+              <ref role="3Tt5mk" to="z99z:7tUW$K4pvUN" resolve="nestedType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="MHm3quXcwL" role="1ZfhK$">
+          <node concept="2OqwBi" id="MHm3quXcwM" role="mwGJk">
+            <node concept="1YBJjd" id="MHm3quXcwN" role="2Oq$k0">
+              <ref role="1YBMHb" node="MHm3quXcwP" resolve="subType" />
+            </node>
+            <node concept="3TrEf2" id="MHm3quXcUV" role="2OqNvi">
+              <ref role="3Tt5mk" to="z99z:7tUW$K4pvUN" resolve="nestedType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="MHm3quXcwP" role="1YuTPh">
+      <property role="TrG5h" value="subType" />
+      <ref role="1YaFvo" to="z99z:4RbBgkBKyyA" resolve="RotationType" />
+    </node>
+  </node>
 </model>
 

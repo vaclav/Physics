@@ -40,6 +40,24 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.constraints.ColorTexture_Constraints">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.CheckingNodeContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintContext_CanBeParent" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintFunction" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.constraints.ConstraintsAspectDescriptor">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.ConceptSwitchIndex" />
@@ -47,7 +65,8 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.AbstractForceCallParameter_Constraints" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.AbstractForceCall_Constraints" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.AbstractVectorTarget_Constraints" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.CustomColorTexture_Constraints" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.ColorTexture_Constraints" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.CustomColor_Constraints" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.IForceDotTarget_Constraints" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.IObjectDotTarget_Constraints" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.IWorldDotTarget_Constraints" />
@@ -62,7 +81,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BaseConstraintsAspectDescriptor" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.constraints.CustomColorTexture_Constraints">
+  <dependency className="jetbrains.mps.samples.Physics.constraints.CustomColor_Constraints">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.HashMap" />

@@ -379,9 +379,9 @@
   </node>
   <node concept="1TIwiD" id="1h1l5SEmLT_">
     <property role="EcuMT" value="1459540517659024997" />
-    <property role="3GE5qa" value="styles.texture" />
+    <property role="3GE5qa" value="styles.texture.color" />
     <property role="TrG5h" value="DefinedColorReference" />
-    <ref role="1TJDcQ" node="1h1l5SEmLT$" resolve="TextureExpression" />
+    <ref role="1TJDcQ" node="MHm3qvaE2V" resolve="ColorExpression" />
     <node concept="1TJgyj" id="G6XgqqHP0L" role="1TKVEi">
       <property role="IQ2ns" value="794591792991785009" />
       <property role="20kJfa" value="color" />
@@ -413,10 +413,10 @@
   </node>
   <node concept="1TIwiD" id="1jQexh3y6fx">
     <property role="EcuMT" value="1510458583736148961" />
-    <property role="3GE5qa" value="styles.texture" />
-    <property role="TrG5h" value="CustomColorTexture" />
+    <property role="3GE5qa" value="styles.texture.color" />
+    <property role="TrG5h" value="CustomColor" />
     <property role="34LRSv" value="custom color" />
-    <ref role="1TJDcQ" node="1h1l5SEmLT$" resolve="TextureExpression" />
+    <ref role="1TJDcQ" node="MHm3qvaE2V" resolve="ColorExpression" />
     <node concept="1TJgyi" id="1jQexh3y6f$" role="1TKVEl">
       <property role="IQ2nx" value="1510458583736148964" />
       <property role="TrG5h" value="red" />
@@ -437,9 +437,12 @@
     <property role="EcuMT" value="1510458583736149342" />
     <property role="3GE5qa" value="styles.texture" />
     <property role="TrG5h" value="PictureTexture" />
+    <property role="34LRSv" value="picture texture" />
     <ref role="1TJDcQ" node="1h1l5SEmLT$" resolve="TextureExpression" />
-    <node concept="PrWs8" id="1jQexh3y6lv" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <node concept="1TJgyi" id="MHm3quyTUh" role="1TKVEl">
+      <property role="IQ2nx" value="913483291037507217" />
+      <property role="TrG5h" value="url" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
   <node concept="1TIwiD" id="34ALWs$saY6">
@@ -831,7 +834,7 @@
   </node>
   <node concept="1TIwiD" id="G6XgqqHP0I">
     <property role="EcuMT" value="794591792991785006" />
-    <property role="3GE5qa" value="styles.texture" />
+    <property role="3GE5qa" value="styles.texture.color" />
     <property role="TrG5h" value="ColorDefinition" />
     <property role="19KtqR" value="true" />
     <property role="R4oN_" value="definition of a new named color that can be reused" />
@@ -847,7 +850,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="definition" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1jQexh3y6fx" resolve="CustomColorTexture" />
+      <ref role="20lvS9" node="1jQexh3y6fx" resolve="CustomColor" />
     </node>
   </node>
   <node concept="1TIwiD" id="10n4tqntag_">
@@ -1307,12 +1310,12 @@
   </node>
   <node concept="PlHQZ" id="4$vyCQBisan">
     <property role="EcuMT" value="5269082430048420503" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.cached" />
     <property role="TrG5h" value="IForceWithCache" />
   </node>
   <node concept="1TIwiD" id="4$vyCQByB8V">
     <property role="EcuMT" value="5269082430052659771" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.cached" />
     <property role="TrG5h" value="CachedObjectExpression" />
     <property role="R4oN_" value="internal concept used for generation" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
@@ -1431,6 +1434,52 @@
     <property role="TrG5h" value="CollisionReactionExpression" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="MHm3quySZA">
+    <property role="EcuMT" value="913483291037503462" />
+    <property role="3GE5qa" value="physical.force.implemented.cached" />
+    <property role="TrG5h" value="UpdateCacheExpression" />
+    <property role="R4oN_" value="expression to replace the current cache value" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyj" id="MHm3quyT04" role="1TKVEi">
+      <property role="IQ2ns" value="913483291037503492" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="newValue" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="MHm3qvaDZW">
+    <property role="EcuMT" value="913483291047927804" />
+    <property role="3GE5qa" value="styles.texture" />
+    <property role="TrG5h" value="ColorTexture" />
+    <property role="34LRSv" value="color texture" />
+    <ref role="1TJDcQ" node="1h1l5SEmLT$" resolve="TextureExpression" />
+    <node concept="1TJgyj" id="MHm3qvaE9L" role="1TKVEi">
+      <property role="IQ2ns" value="913483291047928433" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="color" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="MHm3qvaEb4" role="1TKVEi">
+      <property role="IQ2ns" value="913483291047928516" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="stroke" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="MHm3qvaE2V">
+    <property role="EcuMT" value="913483291047927995" />
+    <property role="3GE5qa" value="styles.texture.color" />
+    <property role="TrG5h" value="ColorExpression" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="1AxJyXYVtU5" resolve="StyleSpecificExpression" />
+  </node>
+  <node concept="1TIwiD" id="MHm3qvb7YK">
+    <property role="EcuMT" value="913483291048050608" />
+    <property role="3GE5qa" value="styles.texture.color" />
+    <property role="TrG5h" value="ColorType" />
+    <property role="R4oN_" value="internal color type" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
 </model>
 

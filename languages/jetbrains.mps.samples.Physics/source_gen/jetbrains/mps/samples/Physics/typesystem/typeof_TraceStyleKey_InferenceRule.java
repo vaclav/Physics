@@ -17,11 +17,10 @@ public class typeof_TraceStyleKey_InferenceRule extends AbstractInferenceRule_Ru
   public typeof_TraceStyleKey_InferenceRule() {
   }
   public void applyRule(final SNode traceStyleKey, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    // TODO specify only color (when more texture are available) 
     {
       SNode _nodeToCheck_1029348928467 = traceStyleKey;
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1846966433400551997", 0, null);
-      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1846966433400551523", true), (SNode) createTextureStyleKey_1y3dv1_a1a0c0b0b(), _info_12389875345);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1846966433400551523", true), (SNode) createTraceStyleKey_1y3dv1_a1a0c0a0b(), _info_12389875345);
     }
   }
   public SAbstractConcept getApplicableConcept() {
@@ -33,13 +32,12 @@ public class typeof_TraceStyleKey_InferenceRule extends AbstractInferenceRule_Ru
   public boolean overrides() {
     return false;
   }
-  private static SNode createTextureStyleKey_1y3dv1_a1a0c0b0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TextureStyleKey$PE);
+  private static SNode createTraceStyleKey_1y3dv1_a1a0c0a0b() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TraceStyleKey$P4);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept TraceStyleKey$P4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7ee8f855L, "jetbrains.mps.samples.Physics.structure.TraceStyleKey");
-    /*package*/ static final SConcept TextureStyleKey$PE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774b3a0L, "jetbrains.mps.samples.Physics.structure.TextureStyleKey");
   }
 }

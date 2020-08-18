@@ -748,8 +748,8 @@
     </node>
   </node>
   <node concept="24kQdi" id="1jQexh3y6fO">
-    <property role="3GE5qa" value="styles.texture" />
-    <ref role="1XX52x" to="9tcj:1jQexh3y6fx" resolve="CustomColorTexture" />
+    <property role="3GE5qa" value="styles.texture.color" />
+    <ref role="1XX52x" to="9tcj:1jQexh3y6fx" resolve="CustomColor" />
     <node concept="3EZMnI" id="1jQexh3y6fQ" role="2wV5jI">
       <node concept="3F0ifn" id="1jQexh3y6fW" role="3EZMnx">
         <property role="3F0ifm" value="color" />
@@ -758,7 +758,7 @@
           <property role="VOm3f" value="true" />
         </node>
         <node concept="A1WHr" id="1jQexh3y6kR" role="3vIgyS">
-          <ref role="2ZyFGn" to="9tcj:1h1l5SEmLT$" resolve="TextureExpression" />
+          <ref role="2ZyFGn" to="9tcj:MHm3qvaE2V" resolve="ColorExpression" />
         </node>
       </node>
       <node concept="3F0ifn" id="1jQexh3y6g2" role="3EZMnx">
@@ -800,7 +800,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="1jQexh3y6l0">
-    <property role="3GE5qa" value="styles.texture" />
+    <property role="3GE5qa" value="styles.texture.color" />
     <ref role="1XX52x" to="9tcj:1h1l5SEmLT_" resolve="DefinedColorReference" />
     <node concept="1iCGBv" id="G6XgqqHP0P" role="2wV5jI">
       <ref role="1NtTu8" to="9tcj:G6XgqqHP0L" resolve="color" />
@@ -838,8 +838,8 @@
       <node concept="3F0ifn" id="1jQexh3y6m8" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
-      <node concept="3F0A7n" id="1jQexh3y6mk" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      <node concept="3F0A7n" id="MHm3quyTUu" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:MHm3quyTUh" resolve="url" />
       </node>
       <node concept="3F0ifn" id="1jQexh3y6my" role="3EZMnx">
         <property role="3F0ifm" value=")" />
@@ -3325,7 +3325,7 @@
     <node concept="22hDWj" id="4$vyCQBoUyE" role="22hAXT" />
   </node>
   <node concept="22mcaB" id="4$vyCQByB9O">
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.cached" />
     <ref role="aqKnT" to="9tcj:4$vyCQByB8V" resolve="CachedObjectExpression" />
     <node concept="22hDWj" id="4$vyCQByBrt" role="22hAXT" />
   </node>
@@ -3556,6 +3556,82 @@
         <ref role="1k5W1q" node="5SjYD03W98J" resolve="RightParenthesis" />
       </node>
       <node concept="l2Vlx" id="5H6c1qUxXNM" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="22mcaB" id="MHm3quyT01">
+    <property role="3GE5qa" value="physical.force.implemented.cached" />
+    <ref role="aqKnT" to="9tcj:MHm3quySZA" resolve="UpdateCacheExpression" />
+    <node concept="22hDWj" id="MHm3quyT02" role="22hAXT" />
+  </node>
+  <node concept="24kQdi" id="MHm3qvaGC8">
+    <property role="3GE5qa" value="styles.texture" />
+    <ref role="1XX52x" to="9tcj:MHm3qvaDZW" resolve="ColorTexture" />
+    <node concept="3EZMnI" id="MHm3qvaGCa" role="2wV5jI">
+      <node concept="3F0ifn" id="MHm3qvaGCg" role="3EZMnx">
+        <property role="3F0ifm" value="use colors" />
+        <ref role="1k5W1q" node="6HZo5MNae36" resolve="KeyWord" />
+        <node concept="A1WHr" id="MHm3qvaGCj" role="3vIgyS">
+          <ref role="2ZyFGn" to="9tcj:1h1l5SEmLT$" resolve="TextureExpression" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="MHm3qvaGCp" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+        <ref role="1k5W1q" node="5SjYD03W97U" resolve="LeftParenthesisAfterName" />
+      </node>
+      <node concept="3F0ifn" id="MHm3qvaGCz" role="3EZMnx">
+        <property role="3F0ifm" value="fill:" />
+        <ref role="1k5W1q" node="6HZo5MNae3n" resolve="AttributeLabel" />
+      </node>
+      <node concept="3F1sOY" id="MHm3qvaGCX" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:MHm3qvaE9L" resolve="color" />
+      </node>
+      <node concept="3F0ifn" id="MHm3qvaGDd" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+        <node concept="11L4FC" id="MHm3qvaGEF" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="MHm3qvaGDv" role="3EZMnx">
+        <property role="3F0ifm" value="stroke:" />
+      </node>
+      <node concept="3F1sOY" id="MHm3qvaGDN" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:MHm3qvaEb4" resolve="stroke" />
+      </node>
+      <node concept="3F0ifn" id="MHm3qvaGE9" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+        <ref role="1k5W1q" node="5SjYD03W98J" resolve="RightParenthesis" />
+      </node>
+      <node concept="l2Vlx" id="MHm3qvaGCc" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="22mcaB" id="MHm3qvbYVV">
+    <property role="3GE5qa" value="styles.texture" />
+    <ref role="aqKnT" to="9tcj:MHm3qvaDZW" resolve="ColorTexture" />
+    <node concept="22hDWj" id="MHm3qvbYVW" role="22hAXT" />
+    <node concept="3ft5Ry" id="MHm3qvbYVY" role="3ft7WO">
+      <ref role="4PJHt" to="9tcj:MHm3qvaDZW" resolve="ColorTexture" />
+    </node>
+    <node concept="3N5dw7" id="MHm3qvbYW3" role="3ft7WO">
+      <node concept="3N5aqt" id="MHm3qvbYW5" role="3Na0zg">
+        <node concept="3clFbS" id="MHm3qvbYW7" role="2VODD2">
+          <node concept="3clFbF" id="MHm3qvbYZI" role="3cqZAp">
+            <node concept="2pJPEk" id="MHm3qvbYZG" role="3clFbG">
+              <node concept="2pJPED" id="MHm3qvbZ64" role="2pJPEn">
+                <ref role="2pJxaS" to="9tcj:MHm3qvaDZW" resolve="ColorTexture" />
+                <node concept="2pIpSj" id="MHm3qvbZ6B" role="2pJxcM">
+                  <ref role="2pIpSl" to="9tcj:MHm3qvaE9L" resolve="color" />
+                  <node concept="36biLy" id="MHm3qvbZi_" role="28nt2d">
+                    <node concept="3N4pyC" id="MHm3qvbZlP" role="36biLW" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2kknPJ" id="MHm3qvbYZ4" role="2klrvf">
+        <ref role="2ZyFGn" to="9tcj:1h1l5SEmLT_" resolve="DefinedColorReference" />
+      </node>
     </node>
   </node>
 </model>

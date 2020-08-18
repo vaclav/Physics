@@ -61,6 +61,10 @@
       <concept id="1159415042433250199" name="jetbrains.mps.samples.Physics.structure.BoxWidthStyle" flags="ng" index="27rm91" />
       <concept id="1159415042433250200" name="jetbrains.mps.samples.Physics.structure.BoxHeightStyle" flags="ng" index="27rm9e" />
       <concept id="1159415042433250201" name="jetbrains.mps.samples.Physics.structure.SphereRadiusStyle" flags="ng" index="27rm9f" />
+      <concept id="913483291047927804" name="jetbrains.mps.samples.Physics.structure.ColorTexture" flags="ng" index="2jxWva">
+        <child id="913483291047928433" name="color" index="2jxZD7" />
+        <child id="913483291047928516" name="stroke" index="2jxZFM" />
+      </concept>
       <concept id="232455383964481302" name="jetbrains.mps.samples.Physics.structure.CurrentObjectExpression" flags="ng" index="2CrqZA" />
       <concept id="1459540517659024963" name="jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition" flags="ng" index="Y6$Ct">
         <child id="1159415042434914473" name="styles" index="27xc_Z" />
@@ -235,8 +239,13 @@
     </node>
     <node concept="27oVnN" id="2GtZpnyOi_2" role="27xc_Z">
       <node concept="27oU9Q" id="10n4tqnCxDa" role="39QuZq" />
-      <node concept="Y6$CV" id="2GtZpnyOi_3" role="39QuWR">
-        <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+      <node concept="2jxWva" id="MHm3qvb7uh" role="39QuWR">
+        <node concept="Y6$CV" id="MHm3qvb7ui" role="2jxZD7">
+          <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+        </node>
+        <node concept="Y6$CV" id="MHm3qvBI8x" role="2jxZFM">
+          <ref role="2hGqkR" to="bf5:G6XgqqQVkN" resolve="black" />
+        </node>
       </node>
     </node>
     <node concept="27oVnN" id="2GtZpnyOi_4" role="27xc_Z">

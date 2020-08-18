@@ -15,6 +15,7 @@ import java.math.RoundingMode;
 import org.nevec.rjm.BigDecimalMath;
 import java.math.MathContext;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
@@ -70,7 +71,7 @@ public class TestWorldSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "box");
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
@@ -264,7 +265,7 @@ public class TestWorldSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList());
     }
@@ -290,7 +291,7 @@ public class TestWorldSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList());
     }

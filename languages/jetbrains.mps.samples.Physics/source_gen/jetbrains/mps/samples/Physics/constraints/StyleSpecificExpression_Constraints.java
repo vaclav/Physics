@@ -38,7 +38,7 @@ public class StyleSpecificExpression_Constraints extends BaseConstraintsDescript
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.IUseStyleExpressions$pB);
+    return (SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.IUseStyleExpressions$pB, true, false) != null);
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "1846966433400872587");
 

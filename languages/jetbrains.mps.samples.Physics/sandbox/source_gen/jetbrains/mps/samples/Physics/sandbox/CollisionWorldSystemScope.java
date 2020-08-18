@@ -13,6 +13,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction;
 import java.util.Arrays;
@@ -62,7 +63,7 @@ public class CollisionWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(0, 255, 0));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), null));
       propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList());
@@ -88,7 +89,7 @@ public class CollisionWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 0, 0));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
       propertiesBuilder.set(PropKey.EMIT_LIGHT, true);
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList());
@@ -115,7 +116,7 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(0, 0, 255));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 0, 255), null));
       propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, true);
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
       this.getForces().addAll(Arrays.asList());
@@ -143,7 +144,7 @@ public class CollisionWorldSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.MERGE.reaction);
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 165, 0));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 165, 0), null));
       this.getForces().addAll(Arrays.asList());
     }
   }

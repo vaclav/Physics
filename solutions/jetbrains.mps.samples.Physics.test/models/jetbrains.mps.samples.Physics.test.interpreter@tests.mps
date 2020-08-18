@@ -141,6 +141,9 @@
       <concept id="1159415042433250199" name="jetbrains.mps.samples.Physics.structure.BoxWidthStyle" flags="ng" index="27rm91" />
       <concept id="1159415042433250200" name="jetbrains.mps.samples.Physics.structure.BoxHeightStyle" flags="ng" index="27rm9e" />
       <concept id="1159415042433250201" name="jetbrains.mps.samples.Physics.structure.SphereRadiusStyle" flags="ng" index="27rm9f" />
+      <concept id="913483291047927804" name="jetbrains.mps.samples.Physics.structure.ColorTexture" flags="ng" index="2jxWva">
+        <child id="913483291047928433" name="color" index="2jxZD7" />
+      </concept>
       <concept id="6362440046684076683" name="jetbrains.mps.samples.Physics.structure.CartesianCoordinates" flags="ng" index="v6hs8">
         <child id="1459540517658822199" name="dx" index="Y6l9D" />
         <child id="1459540517658822641" name="dz" index="Y6leJ" />
@@ -805,8 +808,10 @@
           </node>
           <node concept="27oVnN" id="2GtZpnyOi_Q" role="27xc_Z">
             <node concept="27oU9Q" id="5EZY1tNZycP" role="39QuZq" />
-            <node concept="Y6$CV" id="2GtZpnyOi_R" role="39QuWR">
-              <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+            <node concept="2jxWva" id="MHm3qvb7v1" role="39QuWR">
+              <node concept="Y6$CV" id="MHm3qvb7v2" role="2jxZD7">
+                <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+              </node>
             </node>
           </node>
           <node concept="27oVnN" id="2GtZpnyLmB6" role="27xc_Z">
@@ -899,10 +904,12 @@
           </node>
           <node concept="27oVnN" id="2GtZpnyOi_T" role="27xc_Z">
             <node concept="27oU9Q" id="5EZY1tNZycY" role="39QuZq" />
-            <node concept="1nv_BP" id="2GtZpnyOi_U" role="39QuWR">
-              <property role="1nv_BK" value="10" />
-              <property role="1nv_BM" value="50" />
-              <property role="1nv_BX" value="200" />
+            <node concept="2jxWva" id="MHm3qvxpd2" role="39QuWR">
+              <node concept="1nv_BP" id="2GtZpnyOi_U" role="2jxZD7">
+                <property role="1nv_BK" value="10" />
+                <property role="1nv_BM" value="50" />
+                <property role="1nv_BX" value="200" />
+              </node>
             </node>
           </node>
           <node concept="27oVnN" id="2GtZpnyLmB7" role="27xc_Z">

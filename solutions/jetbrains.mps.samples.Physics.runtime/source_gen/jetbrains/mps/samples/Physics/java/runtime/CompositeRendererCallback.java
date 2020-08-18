@@ -16,9 +16,9 @@ public class CompositeRendererCallback implements Renderer.RendererCallback {
   }
 
   @Override
-  public void initialized(Renderer renderer) {
+  public void setup(Renderer renderer) {
     for (int i = 0; i < simulations.length; i++) {
-      simulations[i].initialized(renderer);
+      simulations[i].setup(renderer);
     }
 
     this.viewWidth = renderer.width / simulations.length;

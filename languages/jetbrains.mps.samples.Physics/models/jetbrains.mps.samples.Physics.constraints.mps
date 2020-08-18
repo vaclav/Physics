@@ -163,6 +163,9 @@
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
+      <concept id="1138411891628" name="jetbrains.mps.lang.smodel.structure.SNodeOperation" flags="nn" index="eCIE_">
+        <child id="1144104376918" name="parameter" index="1xVPHs" />
+      </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="4693937538533521280" name="jetbrains.mps.lang.smodel.structure.OfConceptOperation" flags="ng" index="v3k3i">
         <child id="4693937538533538124" name="requestedConcept" index="v3oSu" />
@@ -180,6 +183,7 @@
       </concept>
       <concept id="1883223317721008713" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVariable" flags="ng" index="JncvC" />
       <concept id="1883223317721107059" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVarReference" flags="nn" index="Jnkvi" />
+      <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
       <concept id="1180031783296" name="jetbrains.mps.lang.smodel.structure.Concept_IsSubConceptOfOperation" flags="nn" index="2Zo12i">
         <child id="1180031783297" name="conceptArgument" index="2Zo12j" />
       </concept>
@@ -193,6 +197,11 @@
       <concept id="6677504323281689838" name="jetbrains.mps.lang.smodel.structure.SConceptType" flags="in" index="3bZ5Sz" />
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
+      </concept>
+      <concept id="1172008320231" name="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" flags="nn" index="3x8VRR" />
+      <concept id="1144100932627" name="jetbrains.mps.lang.smodel.structure.OperationParm_Inclusion" flags="ng" index="1xIGOp" />
+      <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
+        <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
       </concept>
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI">
         <property id="1238684351431" name="asCast" index="1BlNFB" />
@@ -329,8 +338,8 @@
     <ref role="1M2myG" to="9tcj:1jQexh3yYqw" resolve="AbstractForceCall" />
   </node>
   <node concept="1M2fIO" id="M__cqnF0h6">
-    <property role="3GE5qa" value="styles.texture" />
-    <ref role="1M2myG" to="9tcj:1jQexh3y6fx" resolve="CustomColorTexture" />
+    <property role="3GE5qa" value="styles.texture.color" />
+    <ref role="1M2myG" to="9tcj:1jQexh3y6fx" resolve="CustomColor" />
     <node concept="EnEH3" id="M__cqnF0h7" role="1MhHOB">
       <ref role="EomxK" to="9tcj:1jQexh3y6fA" resolve="blue" />
       <node concept="QB0g5" id="M__cqnF0iD" role="QCWH9">
@@ -664,14 +673,20 @@
     <ref role="1M2myG" to="9tcj:1AxJyXYVtU5" resolve="StyleSpecificExpression" />
     <node concept="9S07l" id="1AxJyXYVtUb" role="9Vyp8">
       <node concept="3clFbS" id="1AxJyXYVtUc" role="2VODD2">
-        <node concept="3clFbF" id="1AxJyXYVtY6" role="3cqZAp">
-          <node concept="2OqwBi" id="1AxJyXYVuaD" role="3clFbG">
-            <node concept="nLn13" id="1AxJyXYVtY5" role="2Oq$k0" />
-            <node concept="1mIQ4w" id="1AxJyXYVuji" role="2OqNvi">
-              <node concept="chp4Y" id="1AxJyXYYdAR" role="cj9EA">
-                <ref role="cht4Q" to="9tcj:1AxJyXYYdju" resolve="IUseStyleExpressions" />
+        <node concept="3clFbF" id="MHm3qvghN$" role="3cqZAp">
+          <node concept="2OqwBi" id="MHm3qvgix4" role="3clFbG">
+            <node concept="2OqwBi" id="MHm3qvghVm" role="2Oq$k0">
+              <node concept="nLn13" id="MHm3qvghNz" role="2Oq$k0" />
+              <node concept="2Xjw5R" id="MHm3qvgid1" role="2OqNvi">
+                <node concept="1xMEDy" id="MHm3qvgid3" role="1xVPHs">
+                  <node concept="chp4Y" id="MHm3qvgifH" role="ri$Ld">
+                    <ref role="cht4Q" to="9tcj:1AxJyXYYdju" resolve="IUseStyleExpressions" />
+                  </node>
+                </node>
+                <node concept="1xIGOp" id="MHm3qvgijo" role="1xVPHs" />
               </node>
             </node>
+            <node concept="3x8VRR" id="MHm3qvgiEP" role="2OqNvi" />
           </node>
         </node>
       </node>
@@ -880,6 +895,24 @@
               </node>
               <node concept="3clFbT" id="7zgzoeTyAxi" role="37wK5m">
                 <property role="3clFbU" value="true" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="MHm3qvaEyS">
+    <property role="3GE5qa" value="styles.texture" />
+    <ref role="1M2myG" to="9tcj:MHm3qvaDZW" resolve="ColorTexture" />
+    <node concept="9SLcT" id="MHm3qvea3U" role="9SGkU">
+      <node concept="3clFbS" id="MHm3qvea3V" role="2VODD2">
+        <node concept="3clFbF" id="MHm3qvea4h" role="3cqZAp">
+          <node concept="2OqwBi" id="MHm3qvaFQ$" role="3clFbG">
+            <node concept="2DD5aU" id="MHm3qvaFBn" role="2Oq$k0" />
+            <node concept="2Zo12i" id="MHm3qvaG6s" role="2OqNvi">
+              <node concept="chp4Y" id="MHm3qvaGhx" role="2Zo12j">
+                <ref role="cht4Q" to="9tcj:MHm3qvaE2V" resolve="ColorExpression" />
               </node>
             </node>
           </node>

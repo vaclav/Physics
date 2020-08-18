@@ -4,7 +4,9 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.rendering;
 
 import jetbrains.mps.samples.Physics.java.runtime.Renderable;
 import org.ode4j.ode.DGeom;
+import processing.core.PShape;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
+import processing.core.PApplet;
 import processing.core.PGraphics;
 import org.ode4j.ode.DMass;
 import org.ode4j.ode.DBody;
@@ -12,26 +14,25 @@ import org.ode4j.ode.DBody;
 public abstract class Fixture implements Renderable {
   public static final double DENSITY = 1;
   protected DGeom geometry;
-  protected Color texture;
+  protected Texture texture;
+  protected PShape shape;
   private boolean emitLight;
   protected World world;
 
-  public Fixture(World world, Color texture) {
+  public Fixture(World world, Texture texture) {
     this.world = world;
     this.texture = texture;
   }
-  /**
-   * Render the object onto the applet at 0,0,0
-   * @param ctx applet context
-   */
-  public void render(PGraphics ctx, float scale) {
-    if (texture != null) {
-      texture.apply(ctx, emitLight);
-    } else {
-      ctx.stroke(255);
-      ctx.noFill();
-    }
+
+  public void setup(PApplet app, float scale) {
+    texture.setup(app, shape, emitLight);
   }
+
+  @Override
+  public final void render(PGraphics graphics, float scale) {
+    graphics.shape(this.shape);
+  }
+
   /**
    * Construct mass adequate to fixture implementation
    * @return mass with appropriate representation
@@ -70,12 +71,7 @@ public abstract class Fixture implements Renderable {
     // Set volume to the sum of both 
     this.setVolume(getVolume() + fixture.getVolume());
 
-    // Merge colors accordingly 
-    Color otherTexture = fixture.getTexture();
-    int red = (int) ((texture.red * thisMass + otherTexture.red * otherMass) / (otherMass + thisMass));
-    int green = (int) ((texture.green * thisMass + otherTexture.green * otherMass) / (otherMass + thisMass));
-    int blue = (int) ((texture.blue * thisMass + otherTexture.blue * otherMass) / (otherMass + thisMass));
-    this.texture = new Color(red, green, blue);
+    // TODO Merge colors accordingly 
 
     // TODO merge velocity 
 
@@ -91,7 +87,11 @@ public abstract class Fixture implements Renderable {
     this.emitLight = emitLight;
   }
 
-  public Color getTexture() {
+  public Texture getTexture() {
     return this.texture;
+  }
+
+  public PShape getShape() {
+    return this.shape;
   }
 }

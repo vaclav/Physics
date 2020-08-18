@@ -33,8 +33,10 @@
     <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
+    <classNode dependClassName="processing.core.PApplet" />
     <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderable" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.EntityLike" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntityProperties">
@@ -65,6 +67,7 @@
     <classNode dependClassName="org.ode4j.ode.DWorld" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
     <classNode dependClassName="org.ode4j.ode.internal.DxGeom" />
+    <classNode dependClassName="processing.core.PApplet" />
     <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderable" />
     <classNode extendsClassName="org.ode4j.ode.DGeom" />

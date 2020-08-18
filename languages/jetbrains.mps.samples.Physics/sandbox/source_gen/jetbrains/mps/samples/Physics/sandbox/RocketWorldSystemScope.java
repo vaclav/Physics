@@ -13,6 +13,7 @@ import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.SimpleCollisionReaction;
 import java.util.Arrays;
@@ -26,6 +27,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
 import java.math.MathContext;
+import jetbrains.mps.samples.Physics.java.runtime.RotationHelper;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ImageTexture;
 
 public class RocketWorldSystemScope extends SystemScope {
   public final PhysicalEntity RocketEuropaS452G;
@@ -65,7 +68,7 @@ public class RocketWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), new Color(0, 0, 0)));
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
       propertiesBuilder.set(PropKey.SHAPE, "box");
       propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
@@ -229,6 +232,7 @@ public class RocketWorldSystemScope extends SystemScope {
       this.setMass(((Number) new BigDecimal("5.972E+24").setScale(7, RoundingMode.DOWN)));
       this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-6371015")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
+      this.getBody().setRotation(RotationHelper.eulerAnglesToMatrix(AH.mul(((Number) new BigInteger("-14")), ((Number) new BigDecimal("0.01666666666666666666666666666666667").setScale(35, RoundingMode.DOWN))), ((Number) new BigInteger("0")), AH.mul(AH.sub(((Number) new BigInteger("180")), ((Number) new BigDecimal("40.4085").setScale(4, RoundingMode.DOWN))), ((Number) new BigDecimal("0.01666666666666666666666666666666667").setScale(35, RoundingMode.DOWN)))));
 
       //  Forces and visual of the parent objects of Earth 
       super.init(scope, world);
@@ -236,7 +240,7 @@ public class RocketWorldSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, true);
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(0, 255, 0));
+      propertiesBuilder.set(PropKey.TEXTURE, new ImageTexture("https://upload.wikimedia.org/wikipedia/commons/4/4d/Whole_world_-_land_and_oceans.jpg"));
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       this.getForces().addAll(Arrays.asList());
     }

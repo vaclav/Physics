@@ -13,6 +13,7 @@ import org.ode4j.ode.DBody;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.ode.internal.DxGeom;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
+import processing.core.PApplet;
 import processing.core.PGraphics;
 import java.util.List;
 
@@ -101,6 +102,14 @@ public class World implements DGeom.DNearCallback, Renderable {
     // Pause world if required 
     if (first.properties().isPauseOnCollision() || second.properties().isPauseOnCollision()) {
       this.setPaused(true);
+    }
+  }
+
+
+  @Override
+  public void setup(PApplet app, float scale) {
+    for (PhysicalEntity entity : entities) {
+      entity.setup(app, scale);
     }
   }
 

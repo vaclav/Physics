@@ -11,6 +11,7 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
@@ -57,7 +58,7 @@ public class World2SystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<World2SystemScope>() {
 
@@ -100,7 +101,7 @@ public class World2SystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<World2SystemScope>() {
 

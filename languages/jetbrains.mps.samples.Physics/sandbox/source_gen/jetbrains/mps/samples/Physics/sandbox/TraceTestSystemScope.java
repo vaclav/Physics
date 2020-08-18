@@ -11,6 +11,7 @@ import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
@@ -54,7 +55,7 @@ public class TraceTestSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.TRACE, new Color(0, 0, 255));
       this.getForces().addAll(Arrays.asList(new Force<TraceTestSystemScope>() {
@@ -97,7 +98,7 @@ public class TraceTestSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.TRACE, new Color(255, 0, 0));
       this.getForces().addAll(Arrays.asList(new Force<TraceTestSystemScope>() {

@@ -34,10 +34,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptCollisionReactionExpression = createDescriptorForCollisionReactionExpression();
   /*package*/ final ConceptDescriptor myConceptCollisionStyleKey = createDescriptorForCollisionStyleKey();
   /*package*/ final ConceptDescriptor myConceptColorDefinition = createDescriptorForColorDefinition();
+  /*package*/ final ConceptDescriptor myConceptColorExpression = createDescriptorForColorExpression();
+  /*package*/ final ConceptDescriptor myConceptColorTexture = createDescriptorForColorTexture();
+  /*package*/ final ConceptDescriptor myConceptColorType = createDescriptorForColorType();
   /*package*/ final ConceptDescriptor myConceptConditionalForce = createDescriptorForConditionalForce();
   /*package*/ final ConceptDescriptor myConceptCurrentObjectExpression = createDescriptorForCurrentObjectExpression();
   /*package*/ final ConceptDescriptor myConceptCurrentWorldExpression = createDescriptorForCurrentWorldExpression();
-  /*package*/ final ConceptDescriptor myConceptCustomColorTexture = createDescriptorForCustomColorTexture();
+  /*package*/ final ConceptDescriptor myConceptCustomColor = createDescriptorForCustomColor();
   /*package*/ final ConceptDescriptor myConceptCylindricalCoordinates = createDescriptorForCylindricalCoordinates();
   /*package*/ final ConceptDescriptor myConceptDefinedColorReference = createDescriptorForDefinedColorReference();
   /*package*/ final ConceptDescriptor myConceptDirectionalCoordinates = createDescriptorForDirectionalCoordinates();
@@ -98,6 +101,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptTextureStyleKey = createDescriptorForTextureStyleKey();
   /*package*/ final ConceptDescriptor myConceptTimeExpression = createDescriptorForTimeExpression();
   /*package*/ final ConceptDescriptor myConceptTraceStyleKey = createDescriptorForTraceStyleKey();
+  /*package*/ final ConceptDescriptor myConceptUpdateCacheExpression = createDescriptorForUpdateCacheExpression();
   /*package*/ final ConceptDescriptor myConceptVectorComponentTarget = createDescriptorForVectorComponentTarget();
   /*package*/ final ConceptDescriptor myConceptVectorExpression = createDescriptorForVectorExpression();
   /*package*/ final ConceptDescriptor myConceptVectorOppositeTarget = createDescriptorForVectorOppositeTarget();
@@ -128,7 +132,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractVectorTarget, myConceptAllObjectsExpression, myConceptBooleanStyleKey, myConceptBounceCollisionReaction, myConceptBoxDepthStyle, myConceptBoxHeightStyle, myConceptBoxWidthStyle, myConceptCachedObjectExpression, myConceptCartesianCoordinates, myConceptCollisionReactionExpression, myConceptCollisionStyleKey, myConceptColorDefinition, myConceptConditionalForce, myConceptCurrentObjectExpression, myConceptCurrentWorldExpression, myConceptCustomColorTexture, myConceptCylindricalCoordinates, myConceptDefinedColorReference, myConceptDirectionalCoordinates, myConceptDisabledTraceExpression, myConceptDynamicForce, myConceptEmitLightStyleKey, myConceptEulerAnglesRotationExpression, myConceptEulerAxisRotationExpression, myConceptForce, myConceptForceApplicationPointTarget, myConceptForceComponentsTarget, myConceptICanBeOverridden, myConceptIForceDotTarget, myConceptIForceWithCache, myConceptILocalized, myConceptIMayTargetWorld, myConceptIObjectDefinition, myConceptIObjectDotTarget, myConceptIOverrideProperties, myConceptIProvideCurrentWorld, myConceptITargetExpression, myConceptITargetObject, myConceptIUseSpecificExpressions, myConceptIUseStyleExpressions, myConceptIWorldDotTarget, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptMomentForce, myConceptNumericDistanceStyleKey, myConceptObjectDefinition, myConceptObjectDistanceWithTarget, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReferenceExpression, myConceptObjectStyleDotTarget, myConceptObjectVelocityTarget, myConceptOverrideRule, myConceptPauseOnCollisionStyleKey, myConceptPictureTexture, myConceptRelativeVector, myConceptRotationExpression, myConceptRotationMatrixExpression, myConceptShapeStyleExpression, myConceptShapeStyleKey, myConceptSimpleCollisionReactionExpression, myConceptSimpleForce, myConceptSimulation, myConceptSimulationAlternativeView, myConceptSphereRadiusStyle, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptStyleDefinition, myConceptStyleKey, myConceptStyleSpecificExpression, myConceptTargetableObjectExpression, myConceptTextureExpression, myConceptTextureStyleKey, myConceptTimeExpression, myConceptTraceStyleKey, myConceptVectorComponentTarget, myConceptVectorExpression, myConceptVectorOppositeTarget, myConceptVectorResizeTarget, myConceptVelocityVector, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldNestedObjectTarget, myConceptWorldReference);
+    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractVectorTarget, myConceptAllObjectsExpression, myConceptBooleanStyleKey, myConceptBounceCollisionReaction, myConceptBoxDepthStyle, myConceptBoxHeightStyle, myConceptBoxWidthStyle, myConceptCachedObjectExpression, myConceptCartesianCoordinates, myConceptCollisionReactionExpression, myConceptCollisionStyleKey, myConceptColorDefinition, myConceptColorExpression, myConceptColorTexture, myConceptColorType, myConceptConditionalForce, myConceptCurrentObjectExpression, myConceptCurrentWorldExpression, myConceptCustomColor, myConceptCylindricalCoordinates, myConceptDefinedColorReference, myConceptDirectionalCoordinates, myConceptDisabledTraceExpression, myConceptDynamicForce, myConceptEmitLightStyleKey, myConceptEulerAnglesRotationExpression, myConceptEulerAxisRotationExpression, myConceptForce, myConceptForceApplicationPointTarget, myConceptForceComponentsTarget, myConceptICanBeOverridden, myConceptIForceDotTarget, myConceptIForceWithCache, myConceptILocalized, myConceptIMayTargetWorld, myConceptIObjectDefinition, myConceptIObjectDotTarget, myConceptIOverrideProperties, myConceptIProvideCurrentWorld, myConceptITargetExpression, myConceptITargetObject, myConceptIUseSpecificExpressions, myConceptIUseStyleExpressions, myConceptIWorldDotTarget, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptMomentForce, myConceptNumericDistanceStyleKey, myConceptObjectDefinition, myConceptObjectDistanceWithTarget, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReferenceExpression, myConceptObjectStyleDotTarget, myConceptObjectVelocityTarget, myConceptOverrideRule, myConceptPauseOnCollisionStyleKey, myConceptPictureTexture, myConceptRelativeVector, myConceptRotationExpression, myConceptRotationMatrixExpression, myConceptShapeStyleExpression, myConceptShapeStyleKey, myConceptSimpleCollisionReactionExpression, myConceptSimpleForce, myConceptSimulation, myConceptSimulationAlternativeView, myConceptSphereRadiusStyle, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptStyleDefinition, myConceptStyleKey, myConceptStyleSpecificExpression, myConceptTargetableObjectExpression, myConceptTextureExpression, myConceptTextureStyleKey, myConceptTimeExpression, myConceptTraceStyleKey, myConceptUpdateCacheExpression, myConceptVectorComponentTarget, myConceptVectorExpression, myConceptVectorOppositeTarget, myConceptVectorResizeTarget, myConceptVelocityVector, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldNestedObjectTarget, myConceptWorldReference);
   }
 
   @Override
@@ -171,14 +175,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptCollisionStyleKey;
       case LanguageConceptSwitch.ColorDefinition:
         return myConceptColorDefinition;
+      case LanguageConceptSwitch.ColorExpression:
+        return myConceptColorExpression;
+      case LanguageConceptSwitch.ColorTexture:
+        return myConceptColorTexture;
+      case LanguageConceptSwitch.ColorType:
+        return myConceptColorType;
       case LanguageConceptSwitch.ConditionalForce:
         return myConceptConditionalForce;
       case LanguageConceptSwitch.CurrentObjectExpression:
         return myConceptCurrentObjectExpression;
       case LanguageConceptSwitch.CurrentWorldExpression:
         return myConceptCurrentWorldExpression;
-      case LanguageConceptSwitch.CustomColorTexture:
-        return myConceptCustomColorTexture;
+      case LanguageConceptSwitch.CustomColor:
+        return myConceptCustomColor;
       case LanguageConceptSwitch.CylindricalCoordinates:
         return myConceptCylindricalCoordinates;
       case LanguageConceptSwitch.DefinedColorReference:
@@ -299,6 +309,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptTimeExpression;
       case LanguageConceptSwitch.TraceStyleKey:
         return myConceptTraceStyleKey;
+      case LanguageConceptSwitch.UpdateCacheExpression:
+        return myConceptUpdateCacheExpression;
       case LanguageConceptSwitch.VectorComponentTarget:
         return myConceptVectorComponentTarget;
       case LanguageConceptSwitch.VectorExpression:
@@ -507,6 +519,32 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("definition", 0xb06f5069abcb0c9L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L).optional(false).ordered(true).multiple(false).origin("794591792992137417").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForColorExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "ColorExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2aa0bbL);
+    b.class_(false, true, false);
+    b.super_("jetbrains.mps.samples.Physics.structure.StyleSpecificExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7eedde85L);
+    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/913483291047927995");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForColorTexture() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "ColorTexture", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2a9ffcL);
+    b.class_(false, false, false);
+    b.super_("jetbrains.mps.samples.Physics.structure.TextureExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L);
+    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/913483291047927804");
+    b.version(2);
+    b.aggregate("color", 0xcad58369f2aa271L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("913483291047928433").done();
+    b.aggregate("stroke", 0xcad58369f2aa2c4L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("913483291047928516").done();
+    b.alias("color texture");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForColorType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "ColorType", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2c7fb0L);
+    b.class_(false, false, false);
+    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/913483291048050608");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForConditionalForce() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "ConditionalForce", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL);
     b.class_(false, false, false);
@@ -538,10 +576,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("world");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForCustomColorTexture() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "CustomColorTexture", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L);
+  private static ConceptDescriptor createDescriptorForCustomColor() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "CustomColor", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.structure.TextureExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L);
+    b.super_("jetbrains.mps.samples.Physics.structure.ColorExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2aa0bbL);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1510458583736148961");
     b.version(2);
     b.property("red", 0x14f63a14438863e4L).type(PrimitiveTypeId.INTEGER).origin("1510458583736148964").done();
@@ -565,7 +603,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForDefinedColorReference() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "DefinedColorReference", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.structure.TextureExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L);
+    b.super_("jetbrains.mps.samples.Physics.structure.ColorExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2aa0bbL);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1459540517659024997");
     b.version(2);
     b.associate("color", 0xb06f5069ab75031L).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb06f5069ab7502eL).optional(false).origin("794591792991785009").done();
@@ -902,9 +940,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "PictureTexture", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a144388655eL);
     b.class_(false, false, false);
     b.super_("jetbrains.mps.samples.Physics.structure.TextureExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1510458583736149342");
     b.version(2);
+    b.property("url", 0xcad58369e8b9e91L).type(PrimitiveTypeId.STRING).origin("913483291037507217").done();
+    b.alias("picture texture");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForRelativeVector() {
@@ -1112,6 +1151,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1846966433400551509");
     b.version(2);
     b.alias("trace");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForUpdateCacheExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "UpdateCacheExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369e8b8fe6L);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
+    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/913483291037503462");
+    b.version(2);
+    b.aggregate("newValue", 0xcad58369e8b9004L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("913483291037503492").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForVectorComponentTarget() {

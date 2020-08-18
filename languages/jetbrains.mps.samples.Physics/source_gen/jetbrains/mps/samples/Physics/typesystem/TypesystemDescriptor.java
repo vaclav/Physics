@@ -54,6 +54,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_ColorExpression_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_CurrentObjectExpression_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
@@ -210,7 +214,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     {
-      SubtypingRule_Runtime subtypingRule = new trace_isTexture_SubtypingRule();
+      SubtypingRule_Runtime subtypingRule = new color_isTrace_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
     }
   }

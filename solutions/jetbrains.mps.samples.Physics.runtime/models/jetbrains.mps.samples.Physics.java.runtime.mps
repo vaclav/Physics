@@ -288,7 +288,7 @@
     </node>
     <node concept="2tJIrI" id="6iG0F4IZuql" role="jymVt" />
     <node concept="3clFb_" id="3H79Ykd2Gyk" role="jymVt">
-      <property role="TrG5h" value="initialized" />
+      <property role="TrG5h" value="setup" />
       <node concept="2AHcQZ" id="3H79Ykd2Gyl" role="2AJF6D">
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
@@ -319,6 +319,23 @@
             <ref role="37wK5l" node="3H79Ykd2Gy_" resolve="init" />
             <node concept="37vLTw" id="6iG0F4IZuG0" role="37wK5m">
               <ref role="3cqZAo" node="6iG0F4IZs3j" resolve="world" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="MHm3qu_PDv" role="3cqZAp" />
+        <node concept="3clFbF" id="MHm3qu_PL6" role="3cqZAp">
+          <node concept="2OqwBi" id="MHm3qu_Q15" role="3clFbG">
+            <node concept="37vLTw" id="MHm3qu_PL4" role="2Oq$k0">
+              <ref role="3cqZAo" node="6iG0F4IZs3j" resolve="world" />
+            </node>
+            <node concept="liA8E" id="MHm3qu_Q98" role="2OqNvi">
+              <ref role="37wK5l" to="jyp0:MHm3qu_Hyz" resolve="setup" />
+              <node concept="37vLTw" id="MHm3qu_Qw7" role="37wK5m">
+                <ref role="3cqZAo" node="3H79Ykd2Gym" resolve="renderer" />
+              </node>
+              <node concept="37vLTw" id="MHm3qu_QBF" role="37wK5m">
+                <ref role="3cqZAo" node="1IEyTntHqpT" resolve="renderScale" />
+              </node>
             </node>
           </node>
         </node>
@@ -1065,13 +1082,44 @@
           </node>
         </node>
         <node concept="3clFbH" id="1IEyTnt9Ntw" role="3cqZAp" />
+        <node concept="3clFbF" id="MHm3qv7ksH" role="3cqZAp">
+          <node concept="1rXfSq" id="MHm3qv7ksF" role="3clFbG">
+            <ref role="37wK5l" to="r7oa:~PApplet.background(int)" resolve="background" />
+            <node concept="3cmrfG" id="MHm3qv7kNo" role="37wK5m">
+              <property role="3cmrfH" value="0" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="MHm3qv7oE3" role="3cqZAp">
+          <node concept="1rXfSq" id="MHm3qv7oE1" role="3clFbG">
+            <ref role="37wK5l" to="r7oa:~PApplet.fill(int)" resolve="fill" />
+            <node concept="3cmrfG" id="MHm3qv7oU5" role="37wK5m">
+              <property role="3cmrfH" value="255" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="MHm3qv7pcJ" role="3cqZAp">
+          <node concept="1rXfSq" id="MHm3qv7pcH" role="3clFbG">
+            <ref role="37wK5l" to="r7oa:~PApplet.text(java.lang.String,float,float)" resolve="text" />
+            <node concept="Xl_RD" id="MHm3qv7prq" role="37wK5m">
+              <property role="Xl_RC" value="loading textures and setting up properties..." />
+            </node>
+            <node concept="3cmrfG" id="MHm3qv7q1K" role="37wK5m">
+              <property role="3cmrfH" value="5" />
+            </node>
+            <node concept="3cmrfG" id="MHm3qv7q2n" role="37wK5m">
+              <property role="3cmrfH" value="15" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="MHm3qv7kRD" role="3cqZAp" />
         <node concept="3clFbF" id="1IEyTnt9NyE" role="3cqZAp">
           <node concept="2OqwBi" id="1IEyTnt9NFr" role="3clFbG">
             <node concept="37vLTw" id="1IEyTnt9NyC" role="2Oq$k0">
               <ref role="3cqZAo" node="3H79Ykd2Gpr" resolve="callback" />
             </node>
             <node concept="liA8E" id="1IEyTnt9NPJ" role="2OqNvi">
-              <ref role="37wK5l" node="3H79Ykd2Gph" resolve="initialized" />
+              <ref role="37wK5l" node="3H79Ykd2Gph" resolve="setup" />
               <node concept="Xjq3P" id="1IEyTnt9NS1" role="37wK5m" />
             </node>
           </node>
@@ -1294,7 +1342,7 @@
       <property role="2bfB8j" value="true" />
       <node concept="3Tm1VV" id="3H79Ykd2Gpg" role="1B3o_S" />
       <node concept="3clFb_" id="3H79Ykd2Gph" role="jymVt">
-        <property role="TrG5h" value="initialized" />
+        <property role="TrG5h" value="setup" />
         <node concept="3Tm1VV" id="3H79Ykd2Gpi" role="1B3o_S" />
         <node concept="37vLTG" id="3H79Ykd2Gpj" role="3clF46">
           <property role="TrG5h" value="renderer" />
@@ -1862,7 +1910,7 @@
     </node>
     <node concept="2tJIrI" id="1IEyTnsZgPE" role="jymVt" />
     <node concept="3clFb_" id="1IEyTnsZgTC" role="jymVt">
-      <property role="TrG5h" value="initialized" />
+      <property role="TrG5h" value="setup" />
       <node concept="3Tm1VV" id="1IEyTnsZgTD" role="1B3o_S" />
       <node concept="37vLTG" id="1IEyTnsZgTE" role="3clF46">
         <property role="TrG5h" value="renderer" />
@@ -1885,7 +1933,7 @@
                   </node>
                 </node>
                 <node concept="liA8E" id="1IEyTnsZkbV" role="2OqNvi">
-                  <ref role="37wK5l" node="3H79Ykd2Gyk" resolve="initialized" />
+                  <ref role="37wK5l" node="3H79Ykd2Gyk" resolve="setup" />
                   <node concept="37vLTw" id="1IEyTnsZkfd" role="37wK5m">
                     <ref role="3cqZAo" node="1IEyTnsZgTE" resolve="renderer" />
                   </node>
@@ -2357,6 +2405,23 @@
   </node>
   <node concept="3HP615" id="1IEyTntFS1l">
     <property role="TrG5h" value="Renderable" />
+    <node concept="3clFb_" id="MHm3quz9YX" role="jymVt">
+      <property role="TrG5h" value="setup" />
+      <node concept="3clFbS" id="MHm3quz9Z0" role="3clF47" />
+      <node concept="3Tm1VV" id="MHm3quz9Z1" role="1B3o_S" />
+      <node concept="3cqZAl" id="MHm3quz9YB" role="3clF45" />
+      <node concept="37vLTG" id="MHm3quza09" role="3clF46">
+        <property role="TrG5h" value="app" />
+        <node concept="3uibUv" id="MHm3quza08" role="1tU5fm">
+          <ref role="3uigEE" to="r7oa:~PApplet" resolve="PApplet" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="MHm3qu_a1Q" role="3clF46">
+        <property role="TrG5h" value="scale" />
+        <node concept="10OMs4" id="MHm3qu_a1R" role="1tU5fm" />
+      </node>
+      <node concept="2JFqV2" id="MHm3quza3B" role="2frcjj" />
+    </node>
     <node concept="3clFb_" id="1IEyTntFS29" role="jymVt">
       <property role="TrG5h" value="render" />
       <node concept="3clFbS" id="1IEyTntFS2c" role="3clF47" />

@@ -150,10 +150,11 @@
       <node id="5344936513396626791" at="31,55,32,71" concept="1" />
       <node id="5344936513396626791" at="33,9,34,0" concept="6" />
       <node id="5344936513396626791" at="34,0,35,22" concept="5" />
-      <node id="5344936513396626816" at="39,128,40,79" concept="5" />
+      <node id="5344936513396626816" at="39,128,40,146" concept="5" />
       <node id="5344936513396626791" at="42,0,43,0" concept="7" trace="canBeChildBreakingPoint" />
       <node id="5344936513396626791" at="45,0,46,0" concept="7" trace="DimensionReference$wa" />
-      <node id="5344936513396626791" at="46,0,47,0" concept="7" trace="DimensionType$yz" />
+      <node id="5344936513396626791" at="46,0,47,0" concept="7" trace="Dimension$7F" />
+      <node id="5344936513396626791" at="47,0,48,0" concept="7" trace="DimensionType$yz" />
       <node id="5344936513396626791" at="20,0,23,0" concept="0" trace="DimensionReference_Constraints#()V" />
       <node id="5344936513396626791" at="30,0,33,9" concept="2" />
       <node id="5344936513396626791" at="39,0,42,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
@@ -162,7 +163,7 @@
       <node id="5344936513396626791" at="24,0,39,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
       <scope id="5344936513396626791" at="20,43,21,42" />
       <scope id="5344936513396626791" at="31,55,32,71" />
-      <scope id="5344936513396626793" at="39,128,40,79" />
+      <scope id="5344936513396626793" at="39,128,40,146" />
       <scope id="5344936513396626791" at="20,0,23,0" />
       <scope id="5344936513396626791" at="39,0,42,0">
         <var name="childConcept" id="5344936513396626791" />
@@ -179,9 +180,9 @@
       </scope>
       <scope id="5344936513396626791" at="25,103,37,6" />
       <scope id="5344936513396626791" at="24,0,39,0" />
-      <unit id="5344936513396626791" at="44,0,48,0" name="jetbrains.mps.samples.Physics.dimensions.constraints.DimensionReference_Constraints$CONCEPTS" />
+      <unit id="5344936513396626791" at="44,0,49,0" name="jetbrains.mps.samples.Physics.dimensions.constraints.DimensionReference_Constraints$CONCEPTS" />
       <unit id="5344936513396626791" at="26,15,37,5" name="jetbrains.mps.samples.Physics.dimensions.constraints.DimensionReference_Constraints$1" />
-      <unit id="5344936513396626791" at="19,0,49,0" name="jetbrains.mps.samples.Physics.dimensions.constraints.DimensionReference_Constraints" />
+      <unit id="5344936513396626791" at="19,0,50,0" name="jetbrains.mps.samples.Physics.dimensions.constraints.DimensionReference_Constraints" />
     </file>
   </root>
   <root nodeRef="r:e874131b-1e6d-4f17-b0bc-ba705a6c7173(jetbrains.mps.samples.Physics.dimensions.constraints)/5534756475241785410">

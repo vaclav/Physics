@@ -26,7 +26,11 @@ public class Renderer extends PApplet {
     surface.setResizable(true);
     surface.setTitle("Physical simulation");
 
-    callback.initialized(this);
+    background(0);
+    fill(255);
+    text("loading textures and setting up properties...", 5, 15);
+
+    callback.setup(this);
   }
   @Override
   public void draw() {
@@ -59,7 +63,7 @@ public class Renderer extends PApplet {
     callback = cb;
   }
   public interface RendererCallback {
-    void initialized(Renderer renderer);
+    void setup(Renderer renderer);
     void render(PApplet applet, PGraphics context);
     void keyPressed(int code);
     default void frameResized(PApplet app, int w, int h) {

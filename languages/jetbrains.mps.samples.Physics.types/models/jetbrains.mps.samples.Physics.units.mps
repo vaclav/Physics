@@ -163,7 +163,7 @@
       <node concept="3ADqj3" id="4E4GfvfnoGm" role="_KLwU">
         <property role="1yml5X" value="57.2957795131" />
         <property role="TrG5h" value="degree" />
-        <property role="CIruq" value="degree" />
+        <property role="CIruq" value="deg" />
       </node>
       <node concept="CIrOH" id="1d1Q7eb4VIt" role="_KLwW">
         <property role="TrG5h" value="rad" />

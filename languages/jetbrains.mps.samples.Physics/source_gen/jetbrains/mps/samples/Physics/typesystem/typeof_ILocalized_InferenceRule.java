@@ -57,7 +57,7 @@ public class typeof_ILocalized_InferenceRule extends AbstractInferenceRule_Runti
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = iLocalized;
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(iLocalized, LINKS.rotation$Wt3h);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660796684", 0, null);
               typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(rotationType), (SNode) _quotation_createNode_jxrkm3_a1a0c0a0a0a0a1a0b0e0b(), true, true, _info_12389875345);
             }

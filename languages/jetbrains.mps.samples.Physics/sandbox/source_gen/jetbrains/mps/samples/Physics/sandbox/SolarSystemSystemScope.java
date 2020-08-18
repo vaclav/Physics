@@ -13,6 +13,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 
@@ -67,7 +68,7 @@ public class SolarSystemSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 165, 0));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 165, 0), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList());
     }
@@ -162,7 +163,7 @@ public class SolarSystemSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "box");
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(25, 150, 25));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(25, 150, 25), null));
       propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));

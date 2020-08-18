@@ -12,6 +12,7 @@ import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
@@ -59,7 +60,7 @@ public class FallingBallWorldSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, true);
-      propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 0, 0));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<FallingBallWorldSystemScope>() {
         private VectorLike cached;

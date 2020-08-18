@@ -5,24 +5,43 @@
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
-    <classNode dependClassName="processing.core.PGraphics" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PShape" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color">
-    <classNode dependClassName="processing.core.PGraphics" />
+    <classNode dependClassName="processing.core.PApplet" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PShape" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture">
+    <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
+    <classNode dependClassName="processing.core.PApplet" />
     <classNode dependClassName="processing.core.PGraphics" />
+    <classNode dependClassName="processing.core.PShape" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderable" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ImageTexture">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PImage" />
+    <classNode dependClassName="processing.core.PShape" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRendering">
     <classNode dependClassName="java.lang.StringBuilder" />
@@ -35,12 +54,17 @@
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
-    <classNode dependClassName="processing.core.PGraphics" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PShape" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture">
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PShape" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler">
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />

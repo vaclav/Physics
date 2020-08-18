@@ -81,6 +81,9 @@
       <concept id="1159415042433250199" name="jetbrains.mps.samples.Physics.structure.BoxWidthStyle" flags="ng" index="27rm91" />
       <concept id="1159415042433250200" name="jetbrains.mps.samples.Physics.structure.BoxHeightStyle" flags="ng" index="27rm9e" />
       <concept id="1159415042433250201" name="jetbrains.mps.samples.Physics.structure.SphereRadiusStyle" flags="ng" index="27rm9f" />
+      <concept id="913483291047927804" name="" flags="ng" index="2jxWva">
+        <child id="913483291047928433" name="" index="2jxZD7" />
+      </concept>
       <concept id="6362440046684076683" name="jetbrains.mps.samples.Physics.structure.CartesianCoordinates" flags="ng" index="v6hs8">
         <child id="1459540517658822199" name="dx" index="Y6l9D" />
         <child id="1459540517658822641" name="dz" index="Y6leJ" />
@@ -252,8 +255,10 @@
           </node>
           <node concept="27oVnN" id="2GtZpnyOi_W" role="27xc_Z">
             <node concept="27oU9Q" id="5EZY1tNZyd3" role="39QuZq" />
-            <node concept="Y6$CV" id="2GtZpnyOi_X" role="39QuWR">
-              <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+            <node concept="2jxWva" id="MHm3qvb7v3" role="39QuWR">
+              <node concept="Y6$CV" id="MHm3qvb7v4" role="2jxZD7">
+                <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+              </node>
             </node>
           </node>
           <node concept="27oVnN" id="2GtZpnyLmBa" role="27xc_Z">
@@ -423,8 +428,10 @@
           </node>
           <node concept="27oVnN" id="2GtZpnyOi_Z" role="27xc_Z">
             <node concept="27oU9Q" id="5EZY1tNZydc" role="39QuZq" />
-            <node concept="Y6$CV" id="2GtZpnyOiA0" role="39QuWR">
-              <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+            <node concept="2jxWva" id="MHm3qvb7v5" role="39QuWR">
+              <node concept="Y6$CV" id="MHm3qvb7v6" role="2jxZD7">
+                <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+              </node>
             </node>
           </node>
           <node concept="27oVnN" id="2GtZpnyLmBb" role="27xc_Z">
@@ -593,8 +600,10 @@
         </node>
         <node concept="27oVnN" id="2GtZpnyOiA2" role="27xc_Z">
           <node concept="27oU9Q" id="5EZY1tNZydh" role="39QuZq" />
-          <node concept="Y6$CV" id="2GtZpnyOiA3" role="39QuWR">
-            <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+          <node concept="2jxWva" id="MHm3qvb7v7" role="39QuWR">
+            <node concept="Y6$CV" id="MHm3qvb7v8" role="2jxZD7">
+              <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
+            </node>
           </node>
         </node>
       </node>

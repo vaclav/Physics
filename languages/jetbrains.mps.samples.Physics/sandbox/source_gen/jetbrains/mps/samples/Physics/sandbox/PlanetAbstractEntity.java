@@ -5,6 +5,7 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
@@ -39,7 +40,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
 
     // Apply styles 
     propertiesBuilder.set(PropKey.SHAPE, "sphere");
-    propertiesBuilder.set(PropKey.TEXTURE, new Color(255, 255, 255));
+    propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
 
     // Forces 
     this.getForces().addAll(Arrays.asList(new Force<SystemScope>() {

@@ -4921,7 +4921,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="4$vyCQBisao">
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.cached" />
     <ref role="13h7C2" to="9tcj:4$vyCQBisan" resolve="IForceWithCache" />
     <node concept="13i0hz" id="4$vyCQBisbm" role="13h7CS">
       <property role="13i0iv" value="true" />

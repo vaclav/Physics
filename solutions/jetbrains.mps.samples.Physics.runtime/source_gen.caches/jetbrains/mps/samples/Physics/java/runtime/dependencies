@@ -8,6 +8,7 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.Renderable">
+    <classNode dependClassName="processing.core.PApplet" />
     <classNode dependClassName="processing.core.PGraphics" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.Renderer">

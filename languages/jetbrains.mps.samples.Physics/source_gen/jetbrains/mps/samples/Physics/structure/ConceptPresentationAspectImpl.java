@@ -27,10 +27,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CollisionReactionExpression;
   private ConceptPresentation props_CollisionStyleKey;
   private ConceptPresentation props_ColorDefinition;
+  private ConceptPresentation props_ColorExpression;
+  private ConceptPresentation props_ColorTexture;
+  private ConceptPresentation props_ColorType;
   private ConceptPresentation props_ConditionalForce;
   private ConceptPresentation props_CurrentObjectExpression;
   private ConceptPresentation props_CurrentWorldExpression;
-  private ConceptPresentation props_CustomColorTexture;
+  private ConceptPresentation props_CustomColor;
   private ConceptPresentation props_CylindricalCoordinates;
   private ConceptPresentation props_DefinedColorReference;
   private ConceptPresentation props_DirectionalCoordinates;
@@ -91,6 +94,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_TextureStyleKey;
   private ConceptPresentation props_TimeExpression;
   private ConceptPresentation props_TraceStyleKey;
+  private ConceptPresentation props_UpdateCacheExpression;
   private ConceptPresentation props_VectorComponentTarget;
   private ConceptPresentation props_VectorExpression;
   private ConceptPresentation props_VectorOppositeTarget;
@@ -117,7 +121,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0pd);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0td);
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
@@ -140,7 +144,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0pd);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0td);
           props_AbstractObjectDefinition = cpb.create();
         }
         return props_AbstractObjectDefinition;
@@ -236,6 +240,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ColorDefinition = cpb.create();
         }
         return props_ColorDefinition;
+      case LanguageConceptSwitch.ColorExpression:
+        if (props_ColorExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ColorExpression = cpb.create();
+        }
+        return props_ColorExpression;
+      case LanguageConceptSwitch.ColorTexture:
+        if (props_ColorTexture == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("color texture");
+          props_ColorTexture = cpb.create();
+        }
+        return props_ColorTexture;
+      case LanguageConceptSwitch.ColorType:
+        if (props_ColorType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("internal color type");
+          cpb.rawPresentation("ColorType");
+          props_ColorType = cpb.create();
+        }
+        return props_ColorType;
       case LanguageConceptSwitch.ConditionalForce:
         if (props_ConditionalForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -257,13 +282,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CurrentWorldExpression = cpb.create();
         }
         return props_CurrentWorldExpression;
-      case LanguageConceptSwitch.CustomColorTexture:
-        if (props_CustomColorTexture == null) {
+      case LanguageConceptSwitch.CustomColor:
+        if (props_CustomColor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.rawPresentation("custom color");
-          props_CustomColorTexture = cpb.create();
+          props_CustomColor = cpb.create();
         }
-        return props_CustomColorTexture;
+        return props_CustomColor;
       case LanguageConceptSwitch.CylindricalCoordinates:
         if (props_CylindricalCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -523,7 +548,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.PictureTexture:
         if (props_PictureTexture == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
+          cpb.rawPresentation("picture texture");
           props_PictureTexture = cpb.create();
         }
         return props_PictureTexture;
@@ -582,7 +607,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a86b0pd);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a17b0td);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -679,6 +704,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TraceStyleKey = cpb.create();
         }
         return props_TraceStyleKey;
+      case LanguageConceptSwitch.UpdateCacheExpression:
+        if (props_UpdateCacheExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("expression to replace the current cache value");
+          cpb.rawPresentation("UpdateCacheExpression");
+          props_UpdateCacheExpression = cpb.create();
+        }
+        return props_UpdateCacheExpression;
       case LanguageConceptSwitch.VectorComponentTarget:
         if (props_VectorComponentTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -717,7 +750,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a78b0pd);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a19b0td);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;

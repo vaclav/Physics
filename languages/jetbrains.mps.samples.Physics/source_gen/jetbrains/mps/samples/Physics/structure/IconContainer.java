@@ -5,8 +5,8 @@ package jetbrains.mps.samples.Physics.structure;
 import jetbrains.mps.smodel.runtime.IconResource;
 
 public class IconContainer {
-  protected static IconResource RESOURCE_a0a2a0a1b0pd = new IconResource("force.png", IconContainer.class);
-  protected static IconResource RESOURCE_a0a2a0a4b0pd = new IconResource("object.png", IconContainer.class);
-  protected static IconResource RESOURCE_a0a2a0a86b0pd = new IconResource("simulation.png", IconContainer.class);
-  protected static IconResource RESOURCE_a0a2a0a78b0pd = new IconResource("world.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a2a0a1b0td = new IconResource("force.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a2a0a4b0td = new IconResource("object.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a2a0a17b0td = new IconResource("simulation.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a2a0a19b0td = new IconResource("world.png", IconContainer.class);
 }

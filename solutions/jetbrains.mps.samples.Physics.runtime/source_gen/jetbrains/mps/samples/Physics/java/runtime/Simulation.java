@@ -21,9 +21,11 @@ public abstract class Simulation implements Renderer.RendererCallback {
   }
 
   @Override
-  public void initialized(Renderer renderer) {
+  public void setup(Renderer renderer) {
     world = new World(simulationSpeed);
     init(world);
+
+    world.setup(renderer, renderScale);
   }
 
 

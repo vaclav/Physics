@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.sandbox;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
@@ -15,7 +16,7 @@ public class TestCollision1AlternativeView0 extends TestCollisionSimulation {
     super.initScope(world);
 
     // Override properties 
-    scope.A3.getPropertiesBuilder().set(PropKey.TEXTURE, new Color(160, 32, 240));
+    scope.A3.getPropertiesBuilder().set(PropKey.TEXTURE, new ColorTexture(new Color(160, 32, 240), null));
     scope.B.setMass(AH.mul(((Number) new BigInteger("8800")), ((Number) new BigInteger("1"))));
   }
 
