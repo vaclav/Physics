@@ -519,7 +519,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="2K_F8JawJOP">
-    <property role="3GE5qa" value="definition" />
+    <property role="3GE5qa" value="expr" />
     <ref role="13h7C2" to="onwr:7eOyx9r3kR5" resolve="UnitReference" />
     <node concept="13hLZK" id="2K_F8JawJOQ" role="13h7CW">
       <node concept="3clFbS" id="2K_F8JawJOR" role="2VODD2" />
@@ -612,7 +612,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="3yBD53Wtnj5">
-    <property role="3GE5qa" value="definition.dimension" />
+    <property role="3GE5qa" value="type" />
     <ref role="13h7C2" to="onwr:7tUW$K4o9Ja" resolve="DimensionType" />
     <node concept="13hLZK" id="3yBD53Wtnj6" role="13h7CW">
       <node concept="3clFbS" id="3yBD53Wtnj7" role="2VODD2" />
@@ -3529,7 +3529,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="1fq3tlLzPQi">
-    <property role="3GE5qa" value="definition" />
+    <property role="3GE5qa" value="definition.unit" />
     <ref role="13h7C2" to="onwr:2K_F8Jaw0x8" resolve="DerivedUnit" />
     <node concept="13hLZK" id="1fq3tlLzPQj" role="13h7CW">
       <node concept="3clFbS" id="1fq3tlLzPQk" role="2VODD2" />
@@ -3725,6 +3725,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="4NfpV2p55N9">
+    <property role="3GE5qa" value="expr" />
     <ref role="13h7C2" to="onwr:4NfpV2p55N6" resolve="UseUnitExpressionAs" />
     <node concept="13hLZK" id="4NfpV2p55Na" role="13h7CW">
       <node concept="3clFbS" id="4NfpV2p55Nb" role="2VODD2" />
@@ -3762,7 +3763,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="7PRrf2c39ji">
-    <property role="3GE5qa" value="definition" />
+    <property role="3GE5qa" value="expr" />
     <ref role="13h7C2" to="onwr:7tUW$K4nE8A" resolve="UnitExpression" />
     <node concept="13hLZK" id="7PRrf2c39jj" role="13h7CW">
       <node concept="3clFbS" id="7PRrf2c39jk" role="2VODD2" />

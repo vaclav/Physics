@@ -22,6 +22,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IUnitReferenceLike;
   private ConceptPresentation props_IUnitReferenceLikeArray;
   private ConceptPresentation props_IUseSpecificDimensions;
+  private ConceptPresentation props_IUseUnits;
   private ConceptPresentation props_NumberExponent;
   private ConceptPresentation props_Unit;
   private ConceptPresentation props_UnitExpression;
@@ -119,6 +120,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IUseSpecificDimensions = cpb.create();
         }
         return props_IUseSpecificDimensions;
+      case LanguageConceptSwitch.IUseUnits:
+        if (props_IUseUnits == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IUseUnits = cpb.create();
+        }
+        return props_IUseUnits;
       case LanguageConceptSwitch.NumberExponent:
         if (props_NumberExponent == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

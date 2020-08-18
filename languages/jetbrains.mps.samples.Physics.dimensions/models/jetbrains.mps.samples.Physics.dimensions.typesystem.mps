@@ -387,7 +387,7 @@
   </registry>
   <node concept="1YbPZF" id="7tUW$K4pbvf">
     <property role="TrG5h" value="typeof_UnitExpression" />
-    <property role="3GE5qa" value="definition" />
+    <property role="3GE5qa" value="expr" />
     <node concept="3clFbS" id="7tUW$K4pbvg" role="18ibNy">
       <node concept="nvevp" id="7tUW$K4pbHn" role="3cqZAp">
         <node concept="3clFbS" id="7tUW$K4pbHp" role="nvhr_">
@@ -891,7 +891,7 @@
   </node>
   <node concept="35pCF_" id="4jkbLB60y4q">
     <property role="TrG5h" value="replace_DimensionType_AbstractDimensionType" />
-    <property role="3GE5qa" value="" />
+    <property role="3GE5qa" value="type" />
     <node concept="1YaCAy" id="4jkbLB60y4I" role="35pZ6h">
       <property role="TrG5h" value="abstractUnitType" />
       <ref role="1YaFvo" to="onwr:3031XnpbrCM" resolve="AbstractDimensionType" />
@@ -939,7 +939,7 @@
     </node>
   </node>
   <node concept="35pCF_" id="3031XnpoCvB">
-    <property role="3GE5qa" value="definition.dimension" />
+    <property role="3GE5qa" value="type" />
     <property role="TrG5h" value="replace_DimensionType_DimensionType" />
     <node concept="1YaCAy" id="3031XnpoCvR" role="35pZ6h">
       <property role="TrG5h" value="superType" />
@@ -1074,6 +1074,7 @@
   </node>
   <node concept="1YbPZF" id="4NfpV2p61mH">
     <property role="TrG5h" value="typeof_UseUnitExpressionAs" />
+    <property role="3GE5qa" value="expr" />
     <node concept="3clFbS" id="4NfpV2p61mI" role="18ibNy">
       <node concept="nvevp" id="4NfpV2p61mO" role="3cqZAp">
         <node concept="3clFbS" id="4NfpV2p61mP" role="nvhr_">
@@ -1281,6 +1282,7 @@
   </node>
   <node concept="18kY7G" id="4NfpV2p8D0E">
     <property role="TrG5h" value="check_UseUnitExpressionAs" />
+    <property role="3GE5qa" value="expr" />
     <node concept="3clFbS" id="4NfpV2p8D0F" role="18ibNy" />
     <node concept="1YaCAy" id="4NfpV2p8D0H" role="1YuTPh">
       <property role="TrG5h" value="useUnitExpressionAs" />
@@ -2983,7 +2985,7 @@
     </node>
   </node>
   <node concept="3aFulz" id="3c2XpEvl4Yz">
-    <property role="3GE5qa" value="definition.dimension" />
+    <property role="3GE5qa" value="type" />
     <property role="TrG5h" value="compare_DimensionTypes" />
     <node concept="1YaCAy" id="3c2XpEvl50w" role="3bfgSz">
       <property role="TrG5h" value="right" />
@@ -3060,7 +3062,7 @@
     </node>
   </node>
   <node concept="2sgARr" id="3_YdNBWGaGw">
-    <property role="3GE5qa" value="definition.dimension" />
+    <property role="3GE5qa" value="type" />
     <property role="TrG5h" value="subtype_Dimension_BaseType" />
     <node concept="3clFbS" id="3_YdNBWGaGx" role="2sgrp5">
       <node concept="3clFbF" id="2QWokQTJaA5" role="3cqZAp">

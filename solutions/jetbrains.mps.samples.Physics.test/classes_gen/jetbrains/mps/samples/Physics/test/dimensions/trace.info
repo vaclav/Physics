@@ -19,41 +19,47 @@
       <node id="6576997179991215709" at="44,93,45,84" concept="2" />
       <node id="3675770290334790775" at="48,84,49,75" concept="2" />
       <node id="6576997179991224256" at="52,85,53,76" concept="2" />
-      <node id="3675770290330257092" at="58,52,59,19" concept="9" />
-      <node id="3675770290334303671" at="63,91,64,65" concept="5" />
-      <node id="3675770290334303671" at="64,65,65,63" concept="5" />
-      <node id="3675770290334303671" at="65,63,66,320" concept="2" />
-      <node id="3675770290334303673" at="68,92,69,65" concept="5" />
-      <node id="3675770290334303673" at="69,65,70,63" concept="5" />
-      <node id="3675770290334303673" at="70,63,71,304" concept="2" />
-      <node id="3675770290334309929" at="73,91,74,65" concept="5" />
-      <node id="3675770290334309929" at="74,65,75,63" concept="5" />
-      <node id="3675770290334309929" at="75,63,76,320" concept="2" />
-      <node id="6576997179991215709" at="78,95,79,65" concept="5" />
-      <node id="6576997179991215709" at="79,65,80,63" concept="5" />
-      <node id="6576997179991215709" at="80,63,81,309" concept="2" />
-      <node id="3675770290334790775" at="83,86,84,65" concept="5" />
-      <node id="3675770290334790775" at="84,65,85,63" concept="5" />
-      <node id="3675770290334790775" at="85,63,86,320" concept="2" />
-      <node id="6576997179991224256" at="88,87,89,65" concept="5" />
-      <node id="6576997179991224256" at="89,65,90,63" concept="5" />
-      <node id="6576997179991224256" at="90,63,91,309" concept="2" />
+      <node id="913483291034780537" at="56,92,57,83" concept="2" />
+      <node id="3675770290330257092" at="62,52,63,19" concept="9" />
+      <node id="3675770290334303671" at="67,91,68,65" concept="5" />
+      <node id="3675770290334303671" at="68,65,69,63" concept="5" />
+      <node id="3675770290334303671" at="69,63,70,320" concept="2" />
+      <node id="3675770290334303673" at="72,92,73,65" concept="5" />
+      <node id="3675770290334303673" at="73,65,74,63" concept="5" />
+      <node id="3675770290334303673" at="74,63,75,304" concept="2" />
+      <node id="3675770290334309929" at="77,91,78,65" concept="5" />
+      <node id="3675770290334309929" at="78,65,79,63" concept="5" />
+      <node id="3675770290334309929" at="79,63,80,320" concept="2" />
+      <node id="6576997179991215709" at="82,95,83,65" concept="5" />
+      <node id="6576997179991215709" at="83,65,84,63" concept="5" />
+      <node id="6576997179991215709" at="84,63,85,309" concept="2" />
+      <node id="3675770290334790775" at="87,86,88,65" concept="5" />
+      <node id="3675770290334790775" at="88,65,89,63" concept="5" />
+      <node id="3675770290334790775" at="89,63,90,320" concept="2" />
+      <node id="6576997179991224256" at="92,87,93,65" concept="5" />
+      <node id="6576997179991224256" at="93,65,94,63" concept="5" />
+      <node id="6576997179991224256" at="94,63,95,309" concept="2" />
+      <node id="913483291034780537" at="97,94,98,64" concept="5" />
+      <node id="913483291034780537" at="98,64,99,62" concept="5" />
+      <node id="913483291034780537" at="99,62,100,309" concept="2" />
       <node id="3675770290330257092" at="22,0,24,0" concept="7" trace="ourParamCache" />
       <node id="3675770290330257092" at="24,0,26,0" concept="3" trace="myWithCommandRule" />
       <node id="3675770290330257092" at="27,0,30,0" concept="1" trace="TestUnitCheck_Test#()V" />
-      <node id="3675770290330257092" at="58,0,61,0" concept="1" trace="TestBody#(Ljetbrains/mps/lang/test/runtime/TransformationTest;)V" />
+      <node id="3675770290330257092" at="62,0,65,0" concept="1" trace="TestBody#(Ljetbrains/mps/lang/test/runtime/TransformationTest;)V" />
       <node id="3675770290334303671" at="31,0,35,0" concept="4" trace="test_NodeDimensionRuntimeErrorCheck3675770290334303671#()V" />
       <node id="3675770290334303673" at="35,0,39,0" concept="4" trace="test_NodeCannotBeAppliedToTypesCheck3675770290334303673#()V" />
       <node id="3675770290334309929" at="39,0,43,0" concept="4" trace="test_NodeDimensionRuntimeErrorCheck3675770290334309929#()V" />
       <node id="6576997179991215709" at="43,0,47,0" concept="4" trace="test_NodeXZComponentsNotComparableCheck6576997179991215709#()V" />
       <node id="3675770290334790775" at="47,0,51,0" concept="4" trace="test_NodeDoesNotMatchWithCheck3675770290334790775#()V" />
       <node id="6576997179991224256" at="51,0,55,0" concept="4" trace="test_NodeZRhoNotComparableCheck6576997179991224256#()V" />
-      <node id="3675770290334303671" at="63,0,68,0" concept="4" trace="test_NodeDimensionRuntimeErrorCheck3675770290334303671#()V" />
-      <node id="3675770290334303673" at="68,0,73,0" concept="4" trace="test_NodeCannotBeAppliedToTypesCheck3675770290334303673#()V" />
-      <node id="3675770290334309929" at="73,0,78,0" concept="4" trace="test_NodeDimensionRuntimeErrorCheck3675770290334309929#()V" />
-      <node id="6576997179991215709" at="78,0,83,0" concept="4" trace="test_NodeXZComponentsNotComparableCheck6576997179991215709#()V" />
-      <node id="3675770290334790775" at="83,0,88,0" concept="4" trace="test_NodeDoesNotMatchWithCheck3675770290334790775#()V" />
-      <node id="6576997179991224256" at="88,0,93,0" concept="4" trace="test_NodeZRhoNotComparableCheck6576997179991224256#()V" />
+      <node id="913483291034780537" at="55,0,59,0" concept="4" trace="test_NodeXYComponentsNotComparableCheck913483291034780537#()V" />
+      <node id="3675770290334303671" at="67,0,72,0" concept="4" trace="test_NodeDimensionRuntimeErrorCheck3675770290334303671#()V" />
+      <node id="3675770290334303673" at="72,0,77,0" concept="4" trace="test_NodeCannotBeAppliedToTypesCheck3675770290334303673#()V" />
+      <node id="3675770290334309929" at="77,0,82,0" concept="4" trace="test_NodeDimensionRuntimeErrorCheck3675770290334309929#()V" />
+      <node id="6576997179991215709" at="82,0,87,0" concept="4" trace="test_NodeXZComponentsNotComparableCheck6576997179991215709#()V" />
+      <node id="3675770290334790775" at="87,0,92,0" concept="4" trace="test_NodeDoesNotMatchWithCheck3675770290334790775#()V" />
+      <node id="6576997179991224256" at="92,0,97,0" concept="4" trace="test_NodeZRhoNotComparableCheck6576997179991224256#()V" />
+      <node id="913483291034780537" at="97,0,102,0" concept="4" trace="test_NodeXYComponentsNotComparableCheck913483291034780537#()V" />
       <scope id="3675770290330257092" at="27,31,28,25" />
       <scope id="3675770290334303671" at="32,89,33,80" />
       <scope id="3675770290334303673" at="36,90,37,81" />
@@ -61,34 +67,39 @@
       <scope id="6576997179991215709" at="44,93,45,84" />
       <scope id="3675770290334790775" at="48,84,49,75" />
       <scope id="6576997179991224256" at="52,85,53,76" />
-      <scope id="3675770290330257092" at="58,52,59,19" />
+      <scope id="913483291034780537" at="56,92,57,83" />
+      <scope id="3675770290330257092" at="62,52,63,19" />
       <scope id="3675770290330257092" at="27,0,30,0" />
-      <scope id="3675770290330257092" at="58,0,61,0">
+      <scope id="3675770290330257092" at="62,0,65,0">
         <var name="owner" id="3675770290330257092" />
       </scope>
-      <scope id="3675770290334303671" at="63,91,66,320">
+      <scope id="3675770290334303671" at="67,91,70,320">
         <var name="nodeToCheck" id="3675770290334303671" />
         <var name="operation" id="3675770290334303671" />
       </scope>
-      <scope id="3675770290334303673" at="68,92,71,304">
+      <scope id="3675770290334303673" at="72,92,75,304">
         <var name="nodeToCheck" id="3675770290334303673" />
         <var name="operation" id="3675770290334303673" />
       </scope>
-      <scope id="3675770290334309929" at="73,91,76,320">
+      <scope id="3675770290334309929" at="77,91,80,320">
         <var name="nodeToCheck" id="3675770290334309929" />
         <var name="operation" id="3675770290334309929" />
       </scope>
-      <scope id="6576997179991215709" at="78,95,81,309">
+      <scope id="6576997179991215709" at="82,95,85,309">
         <var name="nodeToCheck" id="6576997179991215709" />
         <var name="operation" id="6576997179991215709" />
       </scope>
-      <scope id="3675770290334790775" at="83,86,86,320">
+      <scope id="3675770290334790775" at="87,86,90,320">
         <var name="nodeToCheck" id="3675770290334790775" />
         <var name="operation" id="3675770290334790775" />
       </scope>
-      <scope id="6576997179991224256" at="88,87,91,309">
+      <scope id="6576997179991224256" at="92,87,95,309">
         <var name="nodeToCheck" id="6576997179991224256" />
         <var name="operation" id="6576997179991224256" />
+      </scope>
+      <scope id="913483291034780537" at="97,94,100,309">
+        <var name="nodeToCheck" id="913483291034780537" />
+        <var name="operation" id="913483291034780537" />
       </scope>
       <scope id="3675770290334303671" at="31,0,35,0" />
       <scope id="3675770290334303673" at="35,0,39,0" />
@@ -96,14 +107,16 @@
       <scope id="6576997179991215709" at="43,0,47,0" />
       <scope id="3675770290334790775" at="47,0,51,0" />
       <scope id="6576997179991224256" at="51,0,55,0" />
-      <scope id="3675770290334303671" at="63,0,68,0" />
-      <scope id="3675770290334303673" at="68,0,73,0" />
-      <scope id="3675770290334309929" at="73,0,78,0" />
-      <scope id="6576997179991215709" at="78,0,83,0" />
-      <scope id="3675770290334790775" at="83,0,88,0" />
-      <scope id="6576997179991224256" at="88,0,93,0" />
-      <unit id="3675770290330257092" at="56,0,95,0" name="jetbrains.mps.samples.Physics.test.dimensions.TestUnitCheck_Test$TestBody" />
-      <unit id="3675770290330257092" at="20,0,96,0" name="jetbrains.mps.samples.Physics.test.dimensions.TestUnitCheck_Test" />
+      <scope id="913483291034780537" at="55,0,59,0" />
+      <scope id="3675770290334303671" at="67,0,72,0" />
+      <scope id="3675770290334303673" at="72,0,77,0" />
+      <scope id="3675770290334309929" at="77,0,82,0" />
+      <scope id="6576997179991215709" at="82,0,87,0" />
+      <scope id="3675770290334790775" at="87,0,92,0" />
+      <scope id="6576997179991224256" at="92,0,97,0" />
+      <scope id="913483291034780537" at="97,0,102,0" />
+      <unit id="3675770290330257092" at="60,0,104,0" name="jetbrains.mps.samples.Physics.test.dimensions.TestUnitCheck_Test$TestBody" />
+      <unit id="3675770290330257092" at="20,0,105,0" name="jetbrains.mps.samples.Physics.test.dimensions.TestUnitCheck_Test" />
     </file>
   </root>
   <root nodeRef="r:9a3ea34d-0c77-435f-a352-ec4c196ca592(jetbrains.mps.samples.Physics.test.dimensions@tests)/7471572540825847424">

@@ -135,7 +135,7 @@
   </node>
   <node concept="1TIwiD" id="7eOyx9r3jsZ">
     <property role="TrG5h" value="Unit" />
-    <property role="3GE5qa" value="definition" />
+    <property role="3GE5qa" value="definition.unit" />
     <property role="34LRSv" value="unit" />
     <property role="R4oN_" value="Unit Definition" />
     <property role="EcuMT" value="8337440621611267903" />
@@ -165,7 +165,7 @@
   </node>
   <node concept="1TIwiD" id="2K_F8Jaw0x8">
     <property role="EcuMT" value="3181138428204943432" />
-    <property role="3GE5qa" value="definition" />
+    <property role="3GE5qa" value="definition.unit" />
     <property role="TrG5h" value="DerivedUnit" />
     <property role="R4oN_" value="a unit that can be converted to its group base unit with simple operation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
@@ -178,7 +178,7 @@
   </node>
   <node concept="1TIwiD" id="7tUW$K4nE8A">
     <property role="EcuMT" value="8609460045976871462" />
-    <property role="3GE5qa" value="definition" />
+    <property role="3GE5qa" value="expr" />
     <property role="TrG5h" value="UnitExpression" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyj" id="7tUW$K4nE8B" role="1TKVEi">
@@ -202,7 +202,7 @@
   </node>
   <node concept="1TIwiD" id="7tUW$K4o9Ja">
     <property role="EcuMT" value="8609460045977000906" />
-    <property role="3GE5qa" value="definition.dimension" />
+    <property role="3GE5qa" value="type" />
     <property role="TrG5h" value="DimensionType" />
     <property role="34LRSv" value="dimension" />
     <ref role="1TJDcQ" node="3031XnpbrCM" resolve="AbstractDimensionType" />
@@ -249,7 +249,7 @@
   </node>
   <node concept="1TIwiD" id="7eOyx9r3kR5">
     <property role="TrG5h" value="UnitReference" />
-    <property role="3GE5qa" value="definition" />
+    <property role="3GE5qa" value="expr" />
     <property role="EcuMT" value="8337440621611273669" />
     <node concept="1TJgyj" id="7eOyx9r3qFW" role="1TKVEi">
       <property role="20kJfa" value="target" />
@@ -323,12 +323,16 @@
     <property role="TrG5h" value="UseUnitExpressionAs" />
     <property role="34LRSv" value="useAs" />
     <property role="R4oN_" value="allow one to strip the unit from the type and give an evaluated value in the given units" />
+    <property role="3GE5qa" value="expr" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4NfpV2p55N7" role="PzmwI">
       <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
     </node>
     <node concept="PrWs8" id="4NfpV2p56vP" role="PzmwI">
       <ref role="PrY4T" node="7tUW$K4pxl4" resolve="IUnitReferenceLikeArray" />
+    </node>
+    <node concept="PrWs8" id="MHm3qumh$6" role="PzmwI">
+      <ref role="PrY4T" node="MHm3qumh$1" resolve="IUseUnits" />
     </node>
     <node concept="1TJgyj" id="4NfpV2p56vK" role="1TKVEi">
       <property role="IQ2ns" value="5534756475241785328" />
@@ -342,6 +346,10 @@
   <node concept="PlHQZ" id="270Q2mETul_">
     <property role="EcuMT" value="2432181455072650597" />
     <property role="TrG5h" value="IUseSpecificDimensions" />
+  </node>
+  <node concept="PlHQZ" id="MHm3qumh$1">
+    <property role="EcuMT" value="913483291034196225" />
+    <property role="TrG5h" value="IUseUnits" />
   </node>
 </model>
 

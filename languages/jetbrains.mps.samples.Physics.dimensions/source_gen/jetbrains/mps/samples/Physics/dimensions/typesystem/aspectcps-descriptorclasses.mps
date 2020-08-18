@@ -11967,6 +11967,7 @@
     </node>
   </node>
   <node concept="312cEu" id="18H">
+    <property role="3GE5qa" value="expr" />
     <property role="TrG5h" value="check_UseUnitExpressionAs_NonTypesystemRule" />
     <node concept="3clFbW" id="18I" role="jymVt">
       <node concept="3clFbS" id="18R" role="3clF47">
@@ -12844,7 +12845,7 @@
     </node>
   </node>
   <node concept="312cEu" id="1eb">
-    <property role="3GE5qa" value="definition.dimension" />
+    <property role="3GE5qa" value="type" />
     <property role="TrG5h" value="compare_DimensionTypes_ComparisonRule" />
     <node concept="3clFbW" id="1ec" role="jymVt">
       <node concept="3cqZAl" id="1en" role="3clF45">
@@ -13571,7 +13572,7 @@
     </node>
   </node>
   <node concept="312cEu" id="1iI">
-    <property role="3GE5qa" value="" />
+    <property role="3GE5qa" value="type" />
     <property role="TrG5h" value="replace_DimensionType_AbstractDimensionType_InequationReplacementRule" />
     <node concept="3clFbW" id="1iJ" role="jymVt">
       <node concept="3clFbS" id="1iW" role="3clF47">
@@ -14590,7 +14591,7 @@
     </node>
   </node>
   <node concept="312cEu" id="1p3">
-    <property role="3GE5qa" value="definition.dimension" />
+    <property role="3GE5qa" value="type" />
     <property role="TrG5h" value="replace_DimensionType_DimensionType_InequationReplacementRule" />
     <node concept="3clFbW" id="1p4" role="jymVt">
       <node concept="3clFbS" id="1pg" role="3clF47">
@@ -17416,7 +17417,7 @@
     </node>
   </node>
   <node concept="312cEu" id="1Ep">
-    <property role="3GE5qa" value="definition.dimension" />
+    <property role="3GE5qa" value="type" />
     <property role="TrG5h" value="subtype_Dimension_BaseType_SubtypingRule" />
     <node concept="3clFbW" id="1Eq" role="jymVt">
       <node concept="3clFbS" id="1E$" role="3clF47">
@@ -17855,7 +17856,7 @@
     </node>
   </node>
   <node concept="312cEu" id="1Ha">
-    <property role="3GE5qa" value="definition" />
+    <property role="3GE5qa" value="expr" />
     <property role="TrG5h" value="typeof_UnitExpression_InferenceRule" />
     <node concept="3clFbW" id="1Hb" role="jymVt">
       <node concept="3clFbS" id="1Hk" role="3clF47">
@@ -19040,6 +19041,7 @@
     </node>
   </node>
   <node concept="312cEu" id="1Ot">
+    <property role="3GE5qa" value="expr" />
     <property role="TrG5h" value="typeof_UseUnitExpressionAs_InferenceRule" />
     <node concept="3clFbW" id="1Ou" role="jymVt">
       <node concept="3clFbS" id="1OB" role="3clF47">

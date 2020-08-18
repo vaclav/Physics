@@ -418,6 +418,31 @@
         </node>
       </node>
     </node>
+    <node concept="1qefOq" id="MHm3qunmuN" role="1SKRRt">
+      <node concept="v6hs8" id="MHm3qunmww" role="1qenE9">
+        <node concept="30bXRB" id="MHm3qunmwz" role="Y6leJ">
+          <property role="30bXRw" value="0" />
+        </node>
+        <node concept="1N951E" id="MHm3quounI" role="Y6l9D">
+          <node concept="30bXRB" id="MHm3qunmyN" role="1N951F">
+            <property role="30bXRw" value="4" />
+          </node>
+          <node concept="CIsvn" id="MHm3quounH" role="1N7es9">
+            <ref role="1N7KNK" to="nas6:1fq3tlL$k6e" resolve="km" />
+          </node>
+        </node>
+        <node concept="30bXRB" id="MHm3quousi" role="Y6leK">
+          <property role="30bXRw" value="4" />
+          <node concept="7CXmI" id="MHm3quoux0" role="lGtFl">
+            <node concept="1TM$A" id="MHm3quowdT" role="7EUXB">
+              <node concept="2PYRI3" id="MHm3quowdU" role="3lydEf">
+                <ref role="39XzEq" to="y3qk:5H6c1qTZ0yv" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="2XOHcx" id="1rTmHeeJJRK">
     <property role="2XOHcw" value="${jetbrains.mps.samples.Physics.home}" />

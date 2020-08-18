@@ -14,9 +14,14 @@ import jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase;
 import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.lang.editor.menus.substitute.ReferenceScopeSubstituteMenuPart;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import jetbrains.mps.lang.editor.menus.substitute.ReferenceScopeSubstituteMenuItem;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.openapi.editor.menus.EditorMenuTraceInfo;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class UnitReference_SubstituteMenu extends SubstituteMenuBase {
   @NotNull
@@ -58,6 +63,32 @@ public class UnitReference_SubstituteMenu extends SubstituteMenuBase {
       }
     }
 
+    @Override
+    @NotNull
+    protected ReferenceScopeSubstituteMenuItem createItem(SubstituteMenuContext context, SNode referencedNode) {
+      return new Item(context, referencedNode, getSConcept(), getReferenceLink());
+    }
+    private class Item extends ReferenceScopeSubstituteMenuItem {
+      private final SubstituteMenuContext _context;
+      private final SNode referencedNode;
+      private EditorMenuTraceInfo myTraceInfo;
+
+      private Item(SubstituteMenuContext context, SNode refNode, SAbstractConcept concept, SReferenceLink referenceLink) {
+        super(concept, context, refNode, referenceLink);
+        _context = context;
+        referencedNode = refNode;
+        myTraceInfo = context.getEditorMenuTrace().getTraceInfo();
+      }
+      @Override
+      public String getDescriptionText(String pattern) {
+        return SPropertyOperations.getString(referencedNode, PROPS.description$Lld3);
+      }
+
+      @Override
+      public EditorMenuTraceInfo getTraceInfo() {
+        return myTraceInfo;
+      }
+    }
   }
 
   private static final class CONCEPTS {
@@ -66,5 +97,9 @@ public class UnitReference_SubstituteMenu extends SubstituteMenuBase {
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty description$Lld3 = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d40ceL, 0x73b48a125b0d3d88L, "description");
   }
 }

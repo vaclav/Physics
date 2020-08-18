@@ -263,7 +263,7 @@
       <node id="6128132931194945526" at="200,0,203,0" concept="5" trace="getFixture#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Fixture;" />
       <node id="4271426636304009487" at="203,0,206,0" concept="5" trace="setFixture#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Fixture;)V" />
       <node id="5369611234117061246" at="207,0,210,0" concept="5" trace="getName#()Ljava/lang/String;" />
-      <node id="6350314785813399466" at="210,0,213,0" concept="5" trace="getFixtureProperties#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/builder/PropertiesBuilder;" />
+      <node id="6350314785813399466" at="210,0,213,0" concept="5" trace="getPropertiesBuilder#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/builder/PropertiesBuilder;" />
       <node id="6576997179996127868" at="214,0,217,0" concept="5" trace="properties#()Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntityProperties;" />
       <node id="111538613372836780" at="81,39,85,7" concept="4" />
       <node id="362892448127813974" at="107,0,111,5" concept="4" />

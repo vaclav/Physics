@@ -15,7 +15,7 @@ public class TestCollision1AlternativeView0 extends TestCollisionSimulation {
     super.initScope(world);
 
     // Override properties 
-    scope.A3.getFixtureProperties().set(PropKey.TEXTURE, new Color(160, 32, 240));
+    scope.A3.getPropertiesBuilder().set(PropKey.TEXTURE, new Color(160, 32, 240));
     scope.B.setMass(AH.mul(((Number) new BigInteger("8800")), ((Number) new BigInteger("1"))));
   }
 

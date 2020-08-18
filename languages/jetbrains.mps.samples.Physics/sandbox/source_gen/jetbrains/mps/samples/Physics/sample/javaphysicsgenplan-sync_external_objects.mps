@@ -4209,7 +4209,7 @@
                 </node>
               </node>
               <node concept="liA8E" id="nW" role="2OqNvi">
-                <ref role="37wK5l" to="jyp0:5wwQqrWkouE" resolve="getFixtureProperties" />
+                <ref role="37wK5l" to="jyp0:5wwQqrWkouE" resolve="getPropertiesBuilder" />
                 <node concept="cd27G" id="oc" role="lGtFl">
                   <node concept="3u3nmq" id="od" role="cd27D">
                     <property role="3u3nmv" value="6576997179988564945" />
@@ -6531,7 +6531,7 @@
         <node concept="385nmt" id="Ao" role="385vvn">
           <property role="385vuF" value="BaseObject" />
           <node concept="2$VJBW" id="Aq" role="385v07">
-            <property role="2$VJBR" value="8317634531931285739" />
+            <property role="2$VJBR" value="913483291036254627" />
             <node concept="2x4n5u" id="Ar" role="3iCydw">
               <property role="2x4mPI" value="AbstractObjectDefinition" />
               <property role="2x4n5l" value="b377xleir29v" />

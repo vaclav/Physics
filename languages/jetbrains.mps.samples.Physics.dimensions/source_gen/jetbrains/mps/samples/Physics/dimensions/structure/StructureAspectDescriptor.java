@@ -27,6 +27,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptIUnitReferenceLike = createDescriptorForIUnitReferenceLike();
   /*package*/ final ConceptDescriptor myConceptIUnitReferenceLikeArray = createDescriptorForIUnitReferenceLikeArray();
   /*package*/ final ConceptDescriptor myConceptIUseSpecificDimensions = createDescriptorForIUseSpecificDimensions();
+  /*package*/ final ConceptDescriptor myConceptIUseUnits = createDescriptorForIUseUnits();
   /*package*/ final ConceptDescriptor myConceptNumberExponent = createDescriptorForNumberExponent();
   /*package*/ final ConceptDescriptor myConceptUnit = createDescriptorForUnit();
   /*package*/ final ConceptDescriptor myConceptUnitExpression = createDescriptorForUnitExpression();
@@ -51,7 +52,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractDimensionType, myConceptCompositeDimension, myConceptDerivedUnit, myConceptDimension, myConceptDimensionReference, myConceptDimensionType, myConceptExponent, myConceptFractionalExponent, myConceptISimpleConverter, myConceptIUnit, myConceptIUnitReferenceLike, myConceptIUnitReferenceLikeArray, myConceptIUseSpecificDimensions, myConceptNumberExponent, myConceptUnit, myConceptUnitExpression, myConceptUnitReference, myConceptUseUnitExpressionAs);
+    return Arrays.asList(myConceptAbstractDimensionType, myConceptCompositeDimension, myConceptDerivedUnit, myConceptDimension, myConceptDimensionReference, myConceptDimensionType, myConceptExponent, myConceptFractionalExponent, myConceptISimpleConverter, myConceptIUnit, myConceptIUnitReferenceLike, myConceptIUnitReferenceLikeArray, myConceptIUseSpecificDimensions, myConceptIUseUnits, myConceptNumberExponent, myConceptUnit, myConceptUnitExpression, myConceptUnitReference, myConceptUseUnitExpressionAs);
   }
 
   @Override
@@ -84,6 +85,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptIUnitReferenceLikeArray;
       case LanguageConceptSwitch.IUseSpecificDimensions:
         return myConceptIUseSpecificDimensions;
+      case LanguageConceptSwitch.IUseUnits:
+        return myConceptIUseUnits;
       case LanguageConceptSwitch.NumberExponent:
         return myConceptNumberExponent;
       case LanguageConceptSwitch.Unit:
@@ -224,6 +227,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForIUseUnits() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "IUseUnits", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0xcad58369e591901L);
+    b.interface_();
+    b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/913483291034196225");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForNumberExponent() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "NumberExponent", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L);
     b.class_(false, false, false);
@@ -266,6 +276,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.parent(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f424aL);
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L);
+    b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0xcad58369e591901L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/5534756475241782470");
     b.version(2);
     b.alias("useAs");

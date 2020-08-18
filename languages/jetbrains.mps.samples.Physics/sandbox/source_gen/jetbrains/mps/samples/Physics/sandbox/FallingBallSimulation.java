@@ -31,7 +31,7 @@ public class FallingBallSimulation extends Simulation {
     this.scope = new FallingBallWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
 
     scope.Ball.setMass(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))));
-    scope.Ball.getFixtureProperties().set(PropKey.TEXTURE, new Color(0, 0, 255));
+    scope.Ball.getPropertiesBuilder().set(PropKey.TEXTURE, new Color(0, 0, 255));
     scope.Ball.setVelocity(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
   }
 
@@ -40,7 +40,7 @@ public class FallingBallSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return new InternalVector(((Number) new BigInteger("0")), AH.mul(((BigInteger) ((Number) new BigInteger("20"))).negate(), ((Number) new BigInteger("1"))), ((BigInteger) AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))).negate());
+    return new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("-20")), ((Number) new BigInteger("1"))), ((BigInteger) AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))).negate());
   }
 
   @Override

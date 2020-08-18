@@ -30,7 +30,7 @@ public class TestSimulationSimulation extends Simulation {
   protected void initScope(World world) {
     this.scope = new MilkyWaySystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
 
-    scope.SolarSystem1.Sun.getFixtureProperties().set(PropKey.TRACE, new Color(255, 255, 255));
+    scope.SolarSystem1.Sun.getPropertiesBuilder().set(PropKey.TRACE, new Color(255, 255, 255));
   }
 
 

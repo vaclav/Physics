@@ -145,7 +145,7 @@ public class IUnitReferenceLike_TransformationMenu extends TransformationMenuBas
     @Nullable
     @Override
     protected SNode getNode(TransformationMenuContext _context) {
-      // Transformations occurs only on the parent (so we cannot tag complex expressions) 
+      // Include operations available for the expression holding this node 
       return SNodeOperations.getParent(_context.getNode());
     }
 

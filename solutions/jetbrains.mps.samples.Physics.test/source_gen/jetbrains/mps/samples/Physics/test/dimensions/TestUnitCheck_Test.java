@@ -52,6 +52,10 @@ public class TestUnitCheck_Test extends BaseTransformationTest {
   public void test_NodeZRhoNotComparableCheck6576997179991224256() throws Throwable {
     new TestBody(this).test_NodeZRhoNotComparableCheck6576997179991224256();
   }
+  @Test
+  public void test_NodeXYComponentsNotComparableCheck913483291034780537() throws Throwable {
+    new TestBody(this).test_NodeXYComponentsNotComparableCheck913483291034780537();
+  }
 
   /*package*/ static class TestBody extends BaseTestBody {
 
@@ -89,6 +93,11 @@ public class TestUnitCheck_Test extends BaseTransformationTest {
       SNode nodeToCheck = getRealNodeById("6576997179991219892");
       SNode operation = getRealNodeById("6576997179991224256");
       new CheckExpectedMessageRunnable.CheckExpectedRuleMessageRunnable(nodeToCheck, MessageStatus.ERROR, new SNodePointer("r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988907324"), "", myProject.getRepository(), ((ProjectBase) myProject).getPlatform()).run();
+    }
+    public void test_NodeXYComponentsNotComparableCheck913483291034780537() throws Exception {
+      SNode nodeToCheck = getRealNodeById("913483291034773266");
+      SNode operation = getRealNodeById("913483291034780537");
+      new CheckExpectedMessageRunnable.CheckExpectedRuleMessageRunnable(nodeToCheck, MessageStatus.ERROR, new SNodePointer("r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988904095"), "", myProject.getRepository(), ((ProjectBase) myProject).getPlatform()).run();
     }
 
   }

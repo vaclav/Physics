@@ -20,7 +20,7 @@ public class ExampleSimulation1AlternativeView0 extends ExampleSimulationSimulat
     super.initScope(world);
 
     // Override properties 
-    scope.EarthNested.Earth.getFixtureProperties().set(PropKey.TRACE, new Color(0, 0, 255));
+    scope.EarthNested.Earth.getPropertiesBuilder().set(PropKey.TRACE, new Color(0, 0, 255));
   }
 
   @Override

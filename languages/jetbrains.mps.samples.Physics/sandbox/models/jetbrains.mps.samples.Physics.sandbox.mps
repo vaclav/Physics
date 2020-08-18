@@ -2416,10 +2416,8 @@
         <property role="30bXRw" value="0" />
       </node>
       <node concept="1N951E" id="3Xqr82XbJ18" role="Y6leK">
-        <node concept="30cIq6" id="3Xqr82Xc1FY" role="1N951F">
-          <node concept="30bXRB" id="3Xqr82Xc1FZ" role="30czhm">
-            <property role="30bXRw" value="20" />
-          </node>
+        <node concept="30bXRB" id="3Xqr82Xc1FZ" role="1N951F">
+          <property role="30bXRw" value="-20" />
         </node>
         <node concept="CIsvn" id="3Xqr82XbJ17" role="1N7es9">
           <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />

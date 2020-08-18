@@ -207,7 +207,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   public String getName() {
     return this.name;
   }
-  public PropertiesBuilder getFixtureProperties() {
+  public PropertiesBuilder getPropertiesBuilder() {
     return this.propertiesBuilder;
   }
 

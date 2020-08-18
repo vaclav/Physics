@@ -2228,7 +2228,7 @@
       </node>
     </node>
     <node concept="3clFb_" id="5wwQqrWkouE" role="jymVt">
-      <property role="TrG5h" value="getFixtureProperties" />
+      <property role="TrG5h" value="getPropertiesBuilder" />
       <node concept="3uibUv" id="5wwQqrWkouF" role="3clF45">
         <ref role="3uigEE" to="ok4s:10n4tqnCy26" resolve="PropertiesBuilder" />
       </node>
