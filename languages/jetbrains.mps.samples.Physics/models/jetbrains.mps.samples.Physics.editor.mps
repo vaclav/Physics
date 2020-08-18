@@ -987,20 +987,20 @@
         <property role="3F0ifm" value="following" />
         <ref role="1k5W1q" node="6HZo5MNae3n" resolve="AttributeLabel" />
         <node concept="A1WHu" id="6AL7kK96ity" role="3vIgyS">
-          <ref role="A1WHt" node="6AL7kK96dGx" resolve="Oriented_ForceComponents_Transform" />
+          <ref role="A1WHt" node="6AL7kK96dGx" resolve="Relative_ForceComponents_Transform" />
         </node>
       </node>
       <node concept="3F0ifn" id="6AL7kK92OhJ" role="3EZMnx">
-        <property role="3F0ifm" value="oriented" />
+        <property role="3F0ifm" value="relative" />
         <ref role="1k5W1q" node="6HZo5MNae36" resolve="KeyWord" />
-        <ref role="1ERwB7" node="6AL7kK97Z_D" resolve="Oriented_ForceComponents_Remove" />
+        <ref role="1ERwB7" node="6AL7kK97Z_D" resolve="Relative_ForceComponents_Remove" />
         <node concept="pkWqt" id="6AL7kK94qms" role="pqm2j">
           <node concept="3clFbS" id="6AL7kK94qmt" role="2VODD2">
             <node concept="3clFbF" id="6AL7kK94qmy" role="3cqZAp">
               <node concept="2OqwBi" id="6AL7kK94qCO" role="3clFbG">
                 <node concept="pncrf" id="6AL7kK94qmx" role="2Oq$k0" />
                 <node concept="3TrcHB" id="6AL7kK94r2y" role="2OqNvi">
-                  <ref role="3TsBF5" to="9tcj:6AL7kK94qmj" resolve="isComponentsOriented" />
+                  <ref role="3TsBF5" to="9tcj:6AL7kK94qmj" resolve="isComponentsRelative" />
                 </node>
               </node>
             </node>
@@ -1018,44 +1018,26 @@
           <property role="VOm3f" value="true" />
         </node>
         <node concept="A1WHu" id="6AL7kK99Bmm" role="3vIgyS">
-          <ref role="A1WHt" node="6AL7kK96b6O" resolve="RelativeOriented_ApplicationPoint_Transform" />
+          <ref role="A1WHt" node="6AL7kK96b6O" resolve="Relative_ApplicationPoint_Transform" />
         </node>
       </node>
       <node concept="3F0ifn" id="6AL7kK92Oip" role="3EZMnx">
-        <property role="3F0ifm" value="oriented" />
+        <property role="3F0ifm" value="relative" />
         <ref role="1k5W1q" node="6HZo5MNae36" resolve="KeyWord" />
-        <ref role="1ERwB7" node="6AL7kK97Y1F" resolve="Oriented_ApplicationPoint_Remove" />
+        <ref role="1ERwB7" node="6AL7kK97WZo" resolve="Relative_ApplicationPoint_Remove" />
         <node concept="pkWqt" id="6AL7kK94r9w" role="pqm2j">
           <node concept="3clFbS" id="6AL7kK94r9x" role="2VODD2">
             <node concept="3clFbF" id="6AL7kK94rdr" role="3cqZAp">
               <node concept="2OqwBi" id="6AL7kK94rvH" role="3clFbG">
                 <node concept="pncrf" id="6AL7kK94rdq" role="2Oq$k0" />
-                <node concept="3TrcHB" id="6AL7kK94rPS" role="2OqNvi">
-                  <ref role="3TsBF5" to="9tcj:6AL7kK94qmo" resolve="isPointOriented" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="VPxyj" id="6AL7kK97WK1" role="3F10Kt" />
-      </node>
-      <node concept="3F0ifn" id="6AL7kK92OiL" role="3EZMnx">
-        <property role="3F0ifm" value="relative" />
-        <ref role="1k5W1q" node="6HZo5MNae36" resolve="KeyWord" />
-        <ref role="1ERwB7" node="6AL7kK97WZo" resolve="Relative_ApplicationPoint_Remove" />
-        <node concept="pkWqt" id="6AL7kK94s0p" role="pqm2j">
-          <node concept="3clFbS" id="6AL7kK94s0q" role="2VODD2">
-            <node concept="3clFbF" id="6AL7kK94s0L" role="3cqZAp">
-              <node concept="2OqwBi" id="6AL7kK94sj3" role="3clFbG">
-                <node concept="pncrf" id="6AL7kK94s0K" role="2Oq$k0" />
-                <node concept="3TrcHB" id="6AL7kK94sGL" role="2OqNvi">
+                <node concept="3TrcHB" id="7wGEeqb4VUs" role="2OqNvi">
                   <ref role="3TsBF5" to="9tcj:6AL7kK94qml" resolve="isPointRelative" />
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="VPxyj" id="6AL7kK97WQS" role="3F10Kt" />
+        <node concept="VPxyj" id="6AL7kK97WK1" role="3F10Kt" />
       </node>
       <node concept="3F1sOY" id="1IEyTnuc0wk" role="3EZMnx">
         <property role="1$x2rV" value="object center" />
@@ -2884,51 +2866,9 @@
           </node>
         </node>
       </node>
-      <node concept="IWgqT" id="6AL7kK96c8s" role="1Qtc8A">
-        <node concept="1hCUdq" id="6AL7kK96c8u" role="1hCUd6">
-          <node concept="3clFbS" id="6AL7kK96c8w" role="2VODD2">
-            <node concept="3clFbF" id="6AL7kK96ce0" role="3cqZAp">
-              <node concept="Xl_RD" id="6AL7kK96cdZ" role="3clFbG">
-                <property role="Xl_RC" value="oriented" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="IWg2L" id="6AL7kK96c8y" role="IWgqQ">
-          <node concept="3clFbS" id="6AL7kK96c8$" role="2VODD2">
-            <node concept="3clFbF" id="6AL7kK96cf4" role="3cqZAp">
-              <node concept="37vLTI" id="6AL7kK96d8I" role="3clFbG">
-                <node concept="3clFbT" id="6AL7kK96d98" role="37vLTx">
-                  <property role="3clFbU" value="true" />
-                </node>
-                <node concept="2OqwBi" id="6AL7kK96ct$" role="37vLTJ">
-                  <node concept="7Obwk" id="6AL7kK96cf3" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="6AL7kK96cNx" role="2OqNvi">
-                    <ref role="3TsBF5" to="9tcj:6AL7kK94qmo" resolve="isPointOriented" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="27VH4U" id="6AL7kK96hs2" role="2jiSrf">
-          <node concept="3clFbS" id="6AL7kK96hs3" role="2VODD2">
-            <node concept="3clFbF" id="6AL7kK96hsR" role="3cqZAp">
-              <node concept="3fqX7Q" id="6AL7kK96hsP" role="3clFbG">
-                <node concept="2OqwBi" id="6AL7kK96hJT" role="3fr31v">
-                  <node concept="7Obwk" id="6AL7kK96hty" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="6AL7kK96idl" role="2OqNvi">
-                    <ref role="3TsBF5" to="9tcj:6AL7kK94qmo" resolve="isPointOriented" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
     </node>
     <node concept="22hDWg" id="6AL7kK96b6P" role="22hAXT">
-      <property role="TrG5h" value="RelativeOriented_ApplicationPoint_Transform" />
+      <property role="TrG5h" value="Relative_ApplicationPoint_Transform" />
     </node>
   </node>
   <node concept="3ICUPy" id="6AL7kK96dGx">
@@ -2960,7 +2900,7 @@
                 <node concept="2OqwBi" id="6AL7kK96dYz" role="37vLTJ">
                   <node concept="7Obwk" id="6AL7kK96dM$" role="2Oq$k0" />
                   <node concept="3TrcHB" id="6AL7kK96ekd" role="2OqNvi">
-                    <ref role="3TsBF5" to="9tcj:6AL7kK94qmj" resolve="isComponentsOriented" />
+                    <ref role="3TsBF5" to="9tcj:6AL7kK94qmj" resolve="isComponentsRelative" />
                   </node>
                 </node>
               </node>
@@ -2974,7 +2914,7 @@
                 <node concept="2OqwBi" id="6AL7kK96giV" role="3fr31v">
                   <node concept="7Obwk" id="6AL7kK96giW" role="2Oq$k0" />
                   <node concept="3TrcHB" id="6AL7kK96giX" role="2OqNvi">
-                    <ref role="3TsBF5" to="9tcj:6AL7kK94qmj" resolve="isComponentsOriented" />
+                    <ref role="3TsBF5" to="9tcj:6AL7kK94qmj" resolve="isComponentsRelative" />
                   </node>
                 </node>
               </node>
@@ -2984,7 +2924,7 @@
       </node>
     </node>
     <node concept="22hDWg" id="6AL7kK96dGy" role="22hAXT">
-      <property role="TrG5h" value="Oriented_ForceComponents_Transform" />
+      <property role="TrG5h" value="Relative_ForceComponents_Transform" />
     </node>
   </node>
   <node concept="1h_SRR" id="6AL7kK97WZo">
@@ -3010,32 +2950,9 @@
       </node>
     </node>
   </node>
-  <node concept="1h_SRR" id="6AL7kK97Y1F">
-    <property role="3GE5qa" value="physical.force.implemented.simple" />
-    <property role="TrG5h" value="Oriented_ApplicationPoint_Remove" />
-    <ref role="1h_SK9" to="9tcj:7zgzoeTzo_w" resolve="SimpleForce" />
-    <node concept="1hA7zw" id="6AL7kK97Y1G" role="1h_SK8">
-      <property role="1hAc7j" value="7P1WhNABvta/backspace_action_id" />
-      <node concept="1hAIg9" id="6AL7kK97Y1H" role="1hA7z_">
-        <node concept="3clFbS" id="6AL7kK97Y1I" role="2VODD2">
-          <node concept="3clFbF" id="6AL7kK97Y1J" role="3cqZAp">
-            <node concept="37vLTI" id="6AL7kK97Y1K" role="3clFbG">
-              <node concept="3clFbT" id="6AL7kK97Y1L" role="37vLTx" />
-              <node concept="2OqwBi" id="6AL7kK97Y1M" role="37vLTJ">
-                <node concept="0IXxy" id="6AL7kK97Y1N" role="2Oq$k0" />
-                <node concept="3TrcHB" id="6AL7kK97YAx" role="2OqNvi">
-                  <ref role="3TsBF5" to="9tcj:6AL7kK94qmo" resolve="isPointOriented" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="1h_SRR" id="6AL7kK97Z_D">
     <property role="3GE5qa" value="physical.force.implemented.simple" />
-    <property role="TrG5h" value="Oriented_ForceComponents_Remove" />
+    <property role="TrG5h" value="Relative_ForceComponents_Remove" />
     <ref role="1h_SK9" to="9tcj:7zgzoeTzo_w" resolve="SimpleForce" />
     <node concept="1hA7zw" id="6AL7kK97Z_E" role="1h_SK8">
       <property role="1hAc7j" value="7P1WhNABvta/backspace_action_id" />
@@ -3047,7 +2964,7 @@
               <node concept="2OqwBi" id="6AL7kK97Z_K" role="37vLTJ">
                 <node concept="0IXxy" id="6AL7kK97Z_L" role="2Oq$k0" />
                 <node concept="3TrcHB" id="6AL7kK9808H" role="2OqNvi">
-                  <ref role="3TsBF5" to="9tcj:6AL7kK94qmj" resolve="isComponentsOriented" />
+                  <ref role="3TsBF5" to="9tcj:6AL7kK94qmj" resolve="isComponentsRelative" />
                 </node>
               </node>
             </node>
@@ -3381,7 +3298,7 @@
         <node concept="3EZMnI" id="4RbBgkBL01F" role="3EZMnx">
           <node concept="VPM3Z" id="4RbBgkBL01G" role="3F10Kt" />
           <node concept="3F0ifn" id="4RbBgkBL01H" role="3EZMnx">
-            <property role="3F0ifm" value="α:" />
+            <property role="3F0ifm" value="θx:" />
             <ref role="1k5W1q" node="60D2cmu5xP2" resolve="ParenthesisAttributeLabel" />
           </node>
           <node concept="3F1sOY" id="4RbBgkBL01I" role="3EZMnx">
@@ -3393,7 +3310,7 @@
         <node concept="3EZMnI" id="4RbBgkBL01K" role="3EZMnx">
           <node concept="VPM3Z" id="4RbBgkBL01L" role="3F10Kt" />
           <node concept="3F0ifn" id="4RbBgkBL01M" role="3EZMnx">
-            <property role="3F0ifm" value="β:" />
+            <property role="3F0ifm" value="θy':" />
             <ref role="1k5W1q" node="60D2cmu5xP2" resolve="ParenthesisAttributeLabel" />
           </node>
           <node concept="3F1sOY" id="4RbBgkBL01N" role="3EZMnx">
@@ -3405,7 +3322,7 @@
           <node concept="VPM3Z" id="4RbBgkBL01Q" role="3F10Kt" />
           <node concept="l2Vlx" id="4RbBgkBL01R" role="2iSdaV" />
           <node concept="3F0ifn" id="4RbBgkBL01S" role="3EZMnx">
-            <property role="3F0ifm" value="γ:" />
+            <property role="3F0ifm" value="θz'':" />
             <ref role="1k5W1q" node="60D2cmu5xP2" resolve="ParenthesisAttributeLabel" />
           </node>
           <node concept="3F1sOY" id="4RbBgkBL01T" role="3EZMnx">

@@ -39,6 +39,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.IForceWithCache__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitConversionUtil" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.genjava.behavior.NumberGenerationHelper" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
     <classNode dependClassName="jetbrains.mps.typechecking.TypecheckingFacade" />

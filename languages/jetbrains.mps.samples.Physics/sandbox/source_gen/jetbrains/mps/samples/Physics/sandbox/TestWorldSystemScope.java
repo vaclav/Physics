@@ -186,7 +186,7 @@ public class TestWorldSystemScope extends SystemScope {
 
         @Override
         public int forceMode() {
-          return 24;
+          return 16;
         }
       }, new Force<TestWorldSystemScope>() {
         private Force cached;
@@ -239,7 +239,7 @@ public class TestWorldSystemScope extends SystemScope {
 
         @Override
         public int forceMode() {
-          return 24;
+          return 16;
         }
       }));
     }

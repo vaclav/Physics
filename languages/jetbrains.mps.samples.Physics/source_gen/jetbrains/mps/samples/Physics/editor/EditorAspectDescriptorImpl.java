@@ -193,10 +193,10 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 1:
         if (true) {
           switch (menuId.getFqName()) {
-            case "jetbrains.mps.samples.Physics.editor.Oriented_ForceComponents_Transform":
-              return Arrays.asList(new TransformationMenu[]{new Oriented_ForceComponents_Transform()});
-            case "jetbrains.mps.samples.Physics.editor.RelativeOriented_ApplicationPoint_Transform":
-              return Arrays.asList(new TransformationMenu[]{new RelativeOriented_ApplicationPoint_Transform()});
+            case "jetbrains.mps.samples.Physics.editor.Relative_ApplicationPoint_Transform":
+              return Arrays.asList(new TransformationMenu[]{new Relative_ApplicationPoint_Transform()});
+            case "jetbrains.mps.samples.Physics.editor.Relative_ForceComponents_Transform":
+              return Arrays.asList(new TransformationMenu[]{new Relative_ForceComponents_Transform()});
             default:
           }
         }

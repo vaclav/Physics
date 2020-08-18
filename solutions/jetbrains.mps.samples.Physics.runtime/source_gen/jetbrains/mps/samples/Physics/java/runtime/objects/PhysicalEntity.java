@@ -12,14 +12,15 @@ import java.util.ArrayList;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.math.DVector3C;
-import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
-import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import org.ode4j.math.DVector3;
+import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceModeApplication;
 import processing.core.PGraphics;
 import processing.core.PApplet;
 import org.ode4j.math.DMatrix3C;
 import java.util.List;
 import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
+import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 
 public class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike, Renderable {
   private DBody body;
@@ -75,31 +76,12 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
       DVector3C applicationPoint = force.applicationPoint(world, scope, this, time);
       int mode = force.forceMode();
 
-      // Linear force alterations 
-      if (ForceMode.haveAll(mode, ForceMode.LINEAR_FORCE_ROTATED)) {
-        forceLinear = Math3DHelper.rotateLikeObject(this, forceLinear);
-      }
-
-      // Application point alterations 
-      if (ForceMode.haveAll(mode, ForceMode.APPLICATION_POINT_RELATIVE) && applicationPoint != null) {
-        // If the application point is not yet relative, make it relative 
-        applicationPoint = applicationPoint.reSub(VectorHelper.fromInternal(this));
-      }
-      if (ForceMode.haveAll(mode, ForceMode.APPLICATION_POINT_ROTATED) && applicationPoint != null) {
-        applicationPoint = Math3DHelper.rotateLikeObject(this, applicationPoint);
-      }
       if (applicationPoint == null) {
         applicationPoint = new DVector3();
+        mode |= ForceMode.APPLICATION_POINT_RELATIVE;
       }
 
-      // Apply force on body depending on the application mode 
-      if (!(ForceMode.haveOne(mode, ForceMode.SKIP_TORQUE, ForceMode.SKIP_LINEAR_FORCE))) {
-        body.addForceAtRelPos(forceLinear, applicationPoint);
-      } else if (!(ForceMode.haveAll(mode, ForceMode.SKIP_TORQUE))) {
-        body.addTorque(Math3DHelper.computeTorque(forceLinear, applicationPoint));
-      } else if (!(ForceMode.haveAll(mode, ForceMode.SKIP_LINEAR_FORCE))) {
-        body.addForce(forceLinear);
-      }
+      ForceModeApplication.apply(mode, this, forceLinear, applicationPoint);
     }
   }
   public void applyLights(PGraphics ctx, float scale) {
@@ -125,16 +107,12 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
 
     DVector3C position = body.getPosition();
 
-    // https://en.wikipedia.org/wiki/Rotation_matrix 
-    DMatrix3C rotation = body.getRotation();
-
     ctx.pushMatrix();
     ctx.translate((float) position.get0() * scale, (float) position.get1() * scale, (float) position.get2() * scale);
 
-    // https://stackoverflow.com/questions/15022630/how-to-calculate-the-angle-from-rotation-matrix 
-    ctx.rotateX((float) Math.atan2(rotation.get21(), rotation.get22()));
-    ctx.rotateY((float) Math.atan2(-rotation.get20(), (float) Math.sqrt(Math.pow(rotation.get21(), 2) + Math.pow(rotation.get22(), 2))));
-    ctx.rotateZ((float) Math.atan2(rotation.get10(), rotation.get00()));
+    // https://en.wikipedia.org/wiki/Rotation_matrix (https://en.wikipedia.org/wiki/Rotation_matrix) 
+    DMatrix3C rotation = body.getRotation();
+    ctx.applyMatrix((float) rotation.get00(), (float) rotation.get01(), (float) rotation.get02(), 0, (float) rotation.get10(), (float) rotation.get11(), (float) rotation.get12(), 0, (float) rotation.get20(), (float) rotation.get21(), (float) rotation.get22(), 0, 0, 0, 0, 1);
 
     ctx.shape(fixture.getShape());
     ctx.popMatrix();

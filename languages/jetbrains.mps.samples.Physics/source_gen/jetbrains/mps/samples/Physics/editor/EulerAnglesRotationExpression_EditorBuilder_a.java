@@ -179,7 +179,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "α:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "θx:");
     editorCell.setCellId("Constant_9rw7ye_a0a0a");
     Style style = new StyleImpl();
     new ParenthesisAttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
@@ -256,7 +256,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "β:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "θy':");
     editorCell.setCellId("Constant_9rw7ye_a1a0a");
     Style style = new StyleImpl();
     new ParenthesisAttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
@@ -330,7 +330,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createConstant_2() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "γ:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "θz'':");
     editorCell.setCellId("Constant_9rw7ye_a2a0a");
     Style style = new StyleImpl();
     new ParenthesisAttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);

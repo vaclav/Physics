@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-5ympxgdemiwbmdtsj7nc21ji5pxhc4w">
-  <files names="BounceCollisionReaction.java:CollisionReaction.java:Force.java:SimpleCollisionReaction.java:StaticForce.java" />
+<product version="3" modelHash="-agpsdn9ay86blwy9wa2c1t3ztvgvajz">
+  <files names="BounceCollisionReaction.java:CollisionReaction.java:Force.java:ForceModeApplication.java:SimpleCollisionReaction.java:StaticForce.java" />
 </product>
 

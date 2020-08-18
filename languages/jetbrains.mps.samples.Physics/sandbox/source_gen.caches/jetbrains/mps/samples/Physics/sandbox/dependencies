@@ -215,7 +215,6 @@
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.Collectors" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.RotationHelper" />
@@ -231,6 +230,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity" />
     <classNode dependClassName="org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.nevec.rjm.BigDecimalMath" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode dependClassName="org.pcollections.TreePVector" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />

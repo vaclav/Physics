@@ -297,5 +297,58 @@
       <unit id="6576997179995840822" at="14,0,87,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction" />
     </file>
   </root>
+  <root nodeRef="r:04f45ddc-ac9c-4d8e-83e4-6d920f8101d7(jetbrains.mps.samples.Physics.java.runtime.objects.forces)/8659481891654750505">
+    <file name="ForceModeApplication.java">
+      <node id="8659481891654798810" at="15,86,16,13" concept="8" />
+      <node id="8659481891654798823" at="17,5,18,0" concept="10" />
+      <node id="8659481891654825704" at="19,57,20,27" concept="9" />
+      <node id="8659481891654800409" at="21,69,22,44" concept="2" />
+      <node id="8659481891654802042" at="23,14,24,41" concept="2" />
+      <node id="8659481891654826132" at="26,70,27,21" concept="9" />
+      <node id="8659481891654804435" at="28,74,29,91" concept="2" />
+      <node id="8659481891654804446" at="30,14,31,127" concept="2" />
+      <node id="8659481891654826720" at="33,12,34,14" concept="9" />
+      <node id="8659481891654817841" at="36,76,37,72" concept="2" />
+      <node id="8659481891654819850" at="38,16,39,69" concept="2" />
+      <node id="8659481891654823222" at="42,76,43,69" concept="2" />
+      <node id="8659481891654823232" at="44,16,45,66" concept="2" />
+      <node id="8659481891654800349" at="23,12,25,7" concept="0" />
+      <node id="8659481891654804444" at="30,12,32,7" concept="0" />
+      <node id="8659481891654819739" at="38,14,40,9" concept="0" />
+      <node id="8659481891654823230" at="44,14,46,9" concept="0" />
+      <node id="8659481891654796701" at="14,106,17,5" concept="5" />
+      <node id="8659481891654799378" at="20,27,25,7" concept="5" />
+      <node id="8659481891654804433" at="27,21,32,7" concept="5" />
+      <node id="8659481891654815103" at="35,69,40,9" concept="5" />
+      <node id="8659481891654823217" at="41,14,46,9" concept="5" />
+      <node id="8659481891654821647" at="41,12,47,7" concept="0" />
+      <node id="8659481891654821635" at="34,14,47,7" concept="5" />
+      <node id="8659481891654814803" at="33,10,48,5" concept="0" />
+      <node id="8659481891654798923" at="18,0,48,5" concept="5" />
+      <node id="8659481891654793602" at="14,0,50,0" concept="12" trace="apply#(ILjetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;Lorg/ode4j/math/DVector3C;Lorg/ode4j/math/DVector3C;)V" />
+      <scope id="8659481891654796703" at="15,86,16,13" />
+      <scope id="8659481891654799380" at="21,69,22,44" />
+      <scope id="8659481891654800350" at="23,14,24,41" />
+      <scope id="8659481891654804434" at="28,74,29,91" />
+      <scope id="8659481891654804445" at="30,14,31,127" />
+      <scope id="8659481891654815105" at="36,76,37,72" />
+      <scope id="8659481891654819740" at="38,16,39,69" />
+      <scope id="8659481891654823221" at="42,76,43,69" />
+      <scope id="8659481891654823231" at="44,16,45,66" />
+      <scope id="8659481891654821636" at="35,69,40,9" />
+      <scope id="8659481891654821648" at="41,14,46,9" />
+      <scope id="8659481891654798925" at="19,57,25,7" />
+      <scope id="8659481891654804176" at="26,70,32,7" />
+      <scope id="8659481891654814804" at="33,12,47,7" />
+      <scope id="8659481891654793605" at="14,106,48,5" />
+      <scope id="8659481891654793602" at="14,0,50,0">
+        <var name="applicationPoint" id="8659481891654796258" />
+        <var name="entity" id="8659481891654796254" />
+        <var name="force" id="8659481891654796256" />
+        <var name="mode" id="8659481891654796532" />
+      </scope>
+      <unit id="8659481891654750505" at="10,0,52,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceModeApplication" />
+    </file>
+  </root>
 </debug-info>
 

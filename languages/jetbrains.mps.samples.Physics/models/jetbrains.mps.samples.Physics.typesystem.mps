@@ -3349,7 +3349,7 @@
     </node>
   </node>
   <node concept="1YbPZF" id="4RbBgkBL0ax">
-    <property role="TrG5h" value="typeof_YawPitchRollExpression" />
+    <property role="TrG5h" value="typeof_EulerAnglesRotationExpression" />
     <property role="3GE5qa" value="physical.vector.rotation" />
     <node concept="3clFbS" id="4RbBgkBL0ay" role="18ibNy">
       <node concept="nvevp" id="4RbBgkBL0aC" role="3cqZAp">

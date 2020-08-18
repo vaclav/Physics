@@ -27,6 +27,12 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceModeApplication">
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.ForceMode" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.Math3DHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.SimpleCollisionReaction">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />

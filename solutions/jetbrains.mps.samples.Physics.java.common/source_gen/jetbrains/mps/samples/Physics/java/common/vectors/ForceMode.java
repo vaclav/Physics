@@ -8,6 +8,7 @@ package jetbrains.mps.samples.Physics.java.common.vectors;
  * applied to an object
  */
 public abstract class ForceMode {
+  public static final int NONE = 0;
   /**
    * Mode flag to not apply the torque from the force on the object
    */
@@ -21,17 +22,13 @@ public abstract class ForceMode {
   /**
    * Mode flag to set the linear force rotated like the object
    */
-  public static final int LINEAR_FORCE_ROTATED = 1 << 2;
-  /**
-   * Mode flag to set the application point rotated like the object
-   */
-  public static final int APPLICATION_POINT_ROTATED = 1 << 3;
+  public static final int LINEAR_FORCE_RELATIVE = 1 << 2;
   /**
    * Mode flag to set the application point relative to the object position
    */
   public static final int APPLICATION_POINT_RELATIVE = 1 << 4;
 
-  public static final int DEFAULT = APPLICATION_POINT_RELATIVE | APPLICATION_POINT_ROTATED;
+  public static final int DEFAULT = APPLICATION_POINT_RELATIVE;
 
 
   public static boolean haveOne(int mode, int... expected) {

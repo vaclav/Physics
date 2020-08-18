@@ -18,6 +18,7 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext;
 import jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor;
 import jetbrains.mps.samples.Physics.behavior.IForceWithCache__BehaviorDescriptor;
+import jetbrains.mps.samples.Physics.genjava.behavior.NumberGenerationHelper;
 import jetbrains.mps.generator.template.TemplateArgumentContext;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
 import jetbrains.mps.generator.template.InsertMacroContext;
@@ -604,16 +605,16 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.axis$r4At);
   }
   public static SNode sourceNodeQuery_16_4(final SourceSubstituteMacroNodeContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.angle$r4CS);
+    return NumberGenerationHelper.nodeOrZero(SLinkOperations.getTarget(_context.getNode(), LINKS.angle$r4CS));
   }
   public static SNode sourceNodeQuery_16_5(final SourceSubstituteMacroNodeContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.alpha$XgMY);
+    return NumberGenerationHelper.nodeOrZero(SLinkOperations.getTarget(_context.getNode(), LINKS.alpha$XgMY));
   }
   public static SNode sourceNodeQuery_16_6(final SourceSubstituteMacroNodeContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.beta$XgM0);
+    return NumberGenerationHelper.nodeOrZero(SLinkOperations.getTarget(_context.getNode(), LINKS.beta$XgM0));
   }
   public static SNode sourceNodeQuery_16_7(final SourceSubstituteMacroNodeContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.gamma$Xh3s);
+    return NumberGenerationHelper.nodeOrZero(SLinkOperations.getTarget(_context.getNode(), LINKS.gamma$Xh3s));
   }
   public static Object templateArgumentQuery_0_0(final TemplateArgumentContext _context) {
     return SLinkOperations.getTarget(SNodeOperations.as(SLinkOperations.getTarget(_context.getNode(), LINKS.target$_Vc0), CONCEPTS.DotExpression$Af), LINKS.expr$xFwa);

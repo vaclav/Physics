@@ -18,7 +18,7 @@ public class RocketSimSimulation extends Simulation {
   protected RocketWorldSystemScope scope;
 
   public RocketSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("150")), ((Number) new BigDecimal("6E+1").setScale(0, RoundingMode.DOWN))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))).floatValue());
+    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigDecimal("6E+1").setScale(0, RoundingMode.DOWN))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))).floatValue());
   }
 
   @Override
@@ -37,14 +37,14 @@ public class RocketSimSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.RocketEuropaS452G.getPosition().add(new InternalVector(AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))), ((BigInteger) AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1")))).negate()));
+    return scope.RocketEuropaS452G.getPosition().add((scope.RocketEuropaS452G.getPosition().add(scope.Earth3.getPosition())).resize(AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))));
   }
 
   @Override
   public VectorLike getCameraFocus(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.RocketEuropaS452G;
+    return scope.Earth3;
   }
 
   public static void main(String[] args) {

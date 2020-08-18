@@ -125,7 +125,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
 
                     @Override
                     public int forceMode() {
-                      return 24;
+                      return 16;
                     }
                   };
                 }
@@ -144,7 +144,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
 
       @Override
       public int forceMode() {
-        return 24;
+        return 16;
       }
     }));
   }

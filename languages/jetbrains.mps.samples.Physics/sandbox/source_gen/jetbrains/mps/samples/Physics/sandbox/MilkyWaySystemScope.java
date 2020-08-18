@@ -115,7 +115,7 @@ public class MilkyWaySystemScope extends SystemScope {
 
         @Override
         public int forceMode() {
-          return 24;
+          return 16;
         }
       }));
     }

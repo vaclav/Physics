@@ -40,8 +40,7 @@ public final class SimpleForce__BehaviorDescriptor extends BaseBHDescriptor {
     return false;
   }
   /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
-    int mode = (SPropertyOperations.getBoolean(__thisNode__, PROPS.isComponentsOriented$72Cn) ? ForceMode.LINEAR_FORCE_ROTATED : 0);
-    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isPointOriented$72OX) ? ForceMode.APPLICATION_POINT_ROTATED : 0);
+    int mode = (SPropertyOperations.getBoolean(__thisNode__, PROPS.isComponentsRelative$72Cn) ? ForceMode.LINEAR_FORCE_RELATIVE : 0);
     mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isPointRelative$72Dl) ? ForceMode.APPLICATION_POINT_RELATIVE : 0);
     return mode;
   }
@@ -105,8 +104,7 @@ public final class SimpleForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isComponentsOriented$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsOriented");
-    /*package*/ static final SProperty isPointOriented$72OX = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a598L, "isPointOriented");
+    /*package*/ static final SProperty isComponentsRelative$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsRelative");
     /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
   }
 

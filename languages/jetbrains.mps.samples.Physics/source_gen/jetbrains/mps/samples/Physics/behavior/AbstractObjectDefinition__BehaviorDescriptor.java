@@ -15,28 +15,48 @@ import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import jetbrains.mps.smodel.SNodePointer;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, "jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition");
 
   public static final SMethod<SNode> getParent_id5EZY1tN$xQa = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getParent").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5EZY1tN$xQa").build();
+  public static final SMethod<SNode> getStyleValueForKey_id5hZn_PXc5xY = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getStyleValueForKey").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5hZn_PXc5xY").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getParent_id5EZY1tN$xQa);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getParent_id5EZY1tN$xQa, getStyleValueForKey_id5hZn_PXc5xY);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
   /*package*/ static SNode getParent_id5EZY1tN$xQa(@NotNull SNode __thisNode__) {
-    return ((SLinkOperations.getTarget(__thisNode__, LINKS.parent$OiBt) != null) ? SLinkOperations.getTarget(__thisNode__, LINKS.parent$OiBt) : createAbstractObjectReference_jt2hvi_a0a0a());
+    SNode baseObject = createAbstractObjectReference_jt2hvi_a0a0a();
+    if (__thisNode__ == SLinkOperations.getTarget(baseObject, LINKS.target$OiAw)) {
+      return null;
+    }
+    return ((SLinkOperations.getTarget(__thisNode__, LINKS.parent$OiBt) != null) ? SLinkOperations.getTarget(__thisNode__, LINKS.parent$OiBt) : baseObject);
+  }
+  /*package*/ static SNode getStyleValueForKey_id5hZn_PXc5xY(@NotNull SNode __thisNode__, final SNode key) {
+    SNode node = ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.styles$W8dv)).findFirst(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.key$4rdb), SNodeOperations.asSConcept(SNodeOperations.getConcept(key)));
+      }
+    });
+    if ((node != null)) {
+      return SLinkOperations.getTarget(node, LINKS.value$4y25);
+    }
+
+    return AbstractObjectDefinition__BehaviorDescriptor.getStyleValueForKey_id5hZn_PXc5xY.invoke(SLinkOperations.getTarget(AbstractObjectDefinition__BehaviorDescriptor.getParent_id5EZY1tN$xQa.invoke(__thisNode__), LINKS.target$OiAw), key);
   }
 
   /*package*/ AbstractObjectDefinition__BehaviorDescriptor() {
@@ -56,6 +76,8 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
     switch (methodIndex) {
       case 0:
         return (T) ((SNode) getParent_id5EZY1tN$xQa(node));
+      case 1:
+        return (T) ((SNode) getStyleValueForKey_id5hZn_PXc5xY(node, (SNode) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -92,8 +114,11 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink parent$OiBt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e47L, "parent");
     /*package*/ static final SReferenceLink target$OiAw = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, 0x1441545e2a5b1e45L, "target");
+    /*package*/ static final SContainmentLink parent$OiBt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e47L, "parent");
+    /*package*/ static final SContainmentLink styles$W8dv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x101711d69793d8a9L, "styles");
+    /*package*/ static final SContainmentLink key$4rdb = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c4124fL, "key");
+    /*package*/ static final SContainmentLink value$4y25 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c412a2L, "value");
   }
 
   private static final class CONCEPTS {

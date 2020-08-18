@@ -82,7 +82,7 @@ public final class LanguageConceptSwitch {
   public static final int SimpleForce = 70;
   public static final int Simulation = 71;
   public static final int SimulationAlternativeView = 72;
-  public static final int SphereRadiusStyle = 73;
+  public static final int SphereRadiusStyleKey = 73;
   public static final int SphericalCoordinates = 74;
   public static final int StatefulForce = 75;
   public static final int StaticForce = 76;
@@ -181,7 +181,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x78d08d83b98d8960L, SimpleForce);
     builder.put(0x6b7f605cb32fba58L, Simulation);
     builder.put(0x5820d9a6fbf789f4L, SimulationAlternativeView);
-    builder.put(0x101711d6977a7399L, SphereRadiusStyle);
+    builder.put(0x101711d6977a7399L, SphereRadiusStyleKey);
     builder.put(0x584bed834752fa8fL, SphericalCoordinates);
     builder.put(0x1441545e2a580636L, StatefulForce);
     builder.put(0x1441545e2a580632L, StaticForce);

@@ -82,7 +82,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_SimpleForce;
   private ConceptPresentation props_Simulation;
   private ConceptPresentation props_SimulationAlternativeView;
-  private ConceptPresentation props_SphereRadiusStyle;
+  private ConceptPresentation props_SphereRadiusStyleKey;
   private ConceptPresentation props_SphericalCoordinates;
   private ConceptPresentation props_StatefulForce;
   private ConceptPresentation props_StaticForce;
@@ -335,6 +335,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.EulerAnglesRotationExpression:
         if (props_EulerAnglesRotationExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("expression of euler angles rotation, rotating on x, then resulting y, then resulting z");
           cpb.rawPresentation("euler angles rotation");
           props_EulerAnglesRotationExpression = cpb.create();
         }
@@ -342,6 +343,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.EulerAxisRotationExpression:
         if (props_EulerAxisRotationExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("rotation using an axis to rotate around");
           cpb.rawPresentation("euler axis rotation");
           props_EulerAxisRotationExpression = cpb.create();
         }
@@ -618,13 +620,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SimulationAlternativeView = cpb.create();
         }
         return props_SimulationAlternativeView;
-      case LanguageConceptSwitch.SphereRadiusStyle:
-        if (props_SphereRadiusStyle == null) {
+      case LanguageConceptSwitch.SphereRadiusStyleKey:
+        if (props_SphereRadiusStyleKey == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.rawPresentation("sphere-radius");
-          props_SphereRadiusStyle = cpb.create();
+          props_SphereRadiusStyleKey = cpb.create();
         }
-        return props_SphereRadiusStyle;
+        return props_SphereRadiusStyleKey;
       case LanguageConceptSwitch.SphericalCoordinates:
         if (props_SphericalCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

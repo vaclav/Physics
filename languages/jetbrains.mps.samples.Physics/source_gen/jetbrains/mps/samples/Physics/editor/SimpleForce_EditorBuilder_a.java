@@ -65,19 +65,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
     if (nodeCondition_fo54x5_a5a()) {
       editorCell.addEditorCell(createConstant_3());
     }
-    if (nodeCondition_fo54x5_a6a()) {
-      editorCell.addEditorCell(createConstant_4());
-    }
     editorCell.addEditorCell(createRefNode_1());
     return editorCell;
   }
   private boolean nodeCondition_fo54x5_a2a() {
-    return SPropertyOperations.getBoolean(myNode, PROPS.isComponentsOriented$72Cn);
+    return SPropertyOperations.getBoolean(myNode, PROPS.isComponentsRelative$72Cn);
   }
   private boolean nodeCondition_fo54x5_a5a() {
-    return SPropertyOperations.getBoolean(myNode, PROPS.isPointOriented$72OX);
-  }
-  private boolean nodeCondition_fo54x5_a6a() {
     return SPropertyOperations.getBoolean(myNode, PROPS.isPointRelative$72Dl);
   }
   private EditorCell createComponent_0() {
@@ -95,19 +89,19 @@ import org.jetbrains.mps.openapi.language.SConcept;
     Style style = new StyleImpl();
     new AttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.SimpleForce$M7, "jetbrains.mps.samples.Physics.editor.Oriented_ForceComponents_Transform"));
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.SimpleForce$M7, "jetbrains.mps.samples.Physics.editor.Relative_ForceComponents_Transform"));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "oriented");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "relative");
     editorCell.setCellId("Constant_fo54x5_c0");
     Style style = new StyleImpl();
     new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.EDITABLE, false);
     editorCell.getStyle().putAll(style);
-    Oriented_ForceComponents_Remove.setCellActions(editorCell, myNode, getEditorContext());
+    Relative_ForceComponents_Remove.setCellActions(editorCell, myNode, getEditorContext());
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -173,25 +167,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     new AttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.SimpleForce$M7, "jetbrains.mps.samples.Physics.editor.RelativeOriented_ApplicationPoint_Transform"));
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.SimpleForce$M7, "jetbrains.mps.samples.Physics.editor.Relative_ApplicationPoint_Transform"));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
   }
   private EditorCell createConstant_3() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "oriented");
-    editorCell.setCellId("Constant_fo54x5_f0");
-    Style style = new StyleImpl();
-    new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    style.set(StyleAttributes.EDITABLE, false);
-    editorCell.getStyle().putAll(style);
-    Oriented_ApplicationPoint_Remove.setCellActions(editorCell, myNode, getEditorContext());
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_4() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "relative");
-    editorCell.setCellId("Constant_fo54x5_g0");
+    editorCell.setCellId("Constant_fo54x5_f0");
     Style style = new StyleImpl();
     new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.EDITABLE, false);
@@ -201,14 +184,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new applicationPointSingleRoleHandler_fo54x5_h0(myNode, LINKS.applicationPoint$8ifq, getEditorContext());
+    SingleRoleCellProvider provider = new applicationPointSingleRoleHandler_fo54x5_g0(myNode, LINKS.applicationPoint$8ifq, getEditorContext());
     return provider.createCell();
   }
-  private static class applicationPointSingleRoleHandler_fo54x5_h0 extends SingleRoleCellProvider {
+  private static class applicationPointSingleRoleHandler_fo54x5_g0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public applicationPointSingleRoleHandler_fo54x5_h0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public applicationPointSingleRoleHandler_fo54x5_g0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -257,8 +240,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isComponentsOriented$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsOriented");
-    /*package*/ static final SProperty isPointOriented$72OX = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a598L, "isPointOriented");
+    /*package*/ static final SProperty isComponentsRelative$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsRelative");
     /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
   }
 

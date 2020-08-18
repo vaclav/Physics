@@ -8,10 +8,8 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="org.ode4j.math.DVector3" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
-    <classNode dependClassName="org.ode4j.ode.OdeMath" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity">
-    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -21,11 +19,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.ForceMode" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.Math3DHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntityProperties" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceModeApplication" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropertiesBuilder" />
     <classNode dependClassName="org.ode4j.math.DMatrix3C" />

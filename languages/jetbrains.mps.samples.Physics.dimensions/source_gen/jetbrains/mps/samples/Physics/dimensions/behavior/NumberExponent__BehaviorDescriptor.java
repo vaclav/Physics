@@ -14,9 +14,9 @@ import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
-import java.math.BigDecimal;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import java.math.BigDecimal;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -34,7 +34,10 @@ public final class NumberExponent__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static Number rawValue_id3yBD53Ww3_k(@NotNull SNode __thisNode__) {
-    return new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, LINKS.value$FXw$), PROPS.value$nZyY));
+    if ((SLinkOperations.getTarget(__thisNode__, LINKS.value$FXw$) != null) && isNotEmptyString(SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, LINKS.value$FXw$), PROPS.value$nZyY))) {
+      return new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, LINKS.value$FXw$), PROPS.value$nZyY));
+    }
+    return BigDecimal.ONE;
   }
 
   /*package*/ NumberExponent__BehaviorDescriptor() {
@@ -81,6 +84,9 @@ public final class NumberExponent__BehaviorDescriptor extends BaseBHDescriptor {
   @Override
   public SAbstractConcept getConcept() {
     return CONCEPT;
+  }
+  private static boolean isNotEmptyString(String str) {
+    return str != null && str.length() > 0;
   }
 
   private static final class LINKS {

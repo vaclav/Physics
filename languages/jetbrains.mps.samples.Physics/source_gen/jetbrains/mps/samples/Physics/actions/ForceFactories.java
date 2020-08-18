@@ -31,16 +31,14 @@ public class ForceFactories {
   }
   public static class NodeFactory_4809107873070311133 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SPropertyOperations.assign(newNode, PROPS.isComponentsOriented$72Cn, false);
-      SPropertyOperations.assign(newNode, PROPS.isPointOriented$72OX, true);
+      SPropertyOperations.assign(newNode, PROPS.isComponentsRelative$72Cn, false);
       SPropertyOperations.assign(newNode, PROPS.isPointRelative$72Dl, true);
 
       {
         final SNode force = sampleNode;
         if (SNodeOperations.isInstanceOf(force, CONCEPTS.SimpleForce$M7)) {
           SLinkOperations.setTarget(newNode, LINKS.components$SRPu, SNodeOperations.copyNode(SLinkOperations.getTarget(force, LINKS.components$SRPu)));
-          SPropertyOperations.assign(newNode, PROPS.isComponentsOriented$72Cn, SPropertyOperations.getBoolean(force, PROPS.isComponentsOriented$72Cn));
-          SPropertyOperations.assign(newNode, PROPS.isPointOriented$72OX, SPropertyOperations.getBoolean(force, PROPS.isPointOriented$72OX));
+          SPropertyOperations.assign(newNode, PROPS.isComponentsRelative$72Cn, SPropertyOperations.getBoolean(force, PROPS.isComponentsRelative$72Cn));
           SPropertyOperations.assign(newNode, PROPS.isPointRelative$72Dl, SPropertyOperations.getBoolean(force, PROPS.isPointRelative$72Dl));
         }
       }
@@ -60,8 +58,7 @@ public class ForceFactories {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isComponentsOriented$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsOriented");
-    /*package*/ static final SProperty isPointOriented$72OX = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a598L, "isPointOriented");
+    /*package*/ static final SProperty isComponentsRelative$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsRelative");
     /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
   }
 }

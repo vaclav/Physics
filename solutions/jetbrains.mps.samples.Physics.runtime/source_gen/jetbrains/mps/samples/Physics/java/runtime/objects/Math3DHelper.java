@@ -4,7 +4,6 @@ package jetbrains.mps.samples.Physics.java.runtime.objects;
 
 import org.ode4j.math.DVector3C;
 import org.ode4j.math.DVector3;
-import org.ode4j.ode.OdeMath;
 
 public class Math3DHelper {
   /**
@@ -23,11 +22,11 @@ public class Math3DHelper {
 
 
   /**
-   * Apply the object rotation on the given vector
+   * Apply the object rotation/position on the given vector
    */
-  public static DVector3C rotateLikeObject(PhysicalEntity object, DVector3C vector) {
+  public static DVector3C relativePoint(PhysicalEntity object, DVector3C vector) {
     DVector3 result = new DVector3();
-    OdeMath.dMultiply0(result, object.getBody().getRotation(), vector);
+    object.getBody().getRelPointPos(vector, result);
     return result;
   }
 

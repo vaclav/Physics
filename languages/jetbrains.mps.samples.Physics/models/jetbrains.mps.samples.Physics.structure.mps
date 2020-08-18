@@ -942,7 +942,7 @@
   <node concept="1TIwiD" id="10n4tqnuBep">
     <property role="EcuMT" value="1159415042433250201" />
     <property role="3GE5qa" value="styles.shape.attr" />
-    <property role="TrG5h" value="SphereRadiusStyle" />
+    <property role="TrG5h" value="SphereRadiusStyleKey" />
     <property role="34LRSv" value="sphere-radius" />
     <ref role="1TJDcQ" node="10n4tqnuB2q" resolve="NumericDistanceStyleKey" />
   </node>
@@ -1264,17 +1264,12 @@
     </node>
     <node concept="1TJgyi" id="6AL7kK94qmj" role="1TKVEl">
       <property role="IQ2nx" value="7615900657267090835" />
-      <property role="TrG5h" value="isComponentsOriented" />
+      <property role="TrG5h" value="isComponentsRelative" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
     <node concept="1TJgyi" id="6AL7kK94qml" role="1TKVEl">
       <property role="IQ2nx" value="7615900657267090837" />
       <property role="TrG5h" value="isPointRelative" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
-    </node>
-    <node concept="1TJgyi" id="6AL7kK94qmo" role="1TKVEl">
-      <property role="IQ2nx" value="7615900657267090840" />
-      <property role="TrG5h" value="isPointOriented" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
   </node>
@@ -1331,6 +1326,7 @@
     <property role="3GE5qa" value="physical.vector.rotation" />
     <property role="TrG5h" value="EulerAxisRotationExpression" />
     <property role="34LRSv" value="euler axis rotation" />
+    <property role="R4oN_" value="rotation using an axis to rotate around" />
     <ref role="1TJDcQ" node="4RbBgkBKyld" resolve="RotationExpression" />
     <node concept="1TJgyj" id="4RbBgkBK$Aq" role="1TKVEi">
       <property role="IQ2ns" value="5605746806660155802" />
@@ -1387,6 +1383,7 @@
     <property role="3GE5qa" value="physical.vector.rotation" />
     <property role="TrG5h" value="EulerAnglesRotationExpression" />
     <property role="34LRSv" value="euler angles rotation" />
+    <property role="R4oN_" value="expression of euler angles rotation, rotating on x, then resulting y, then resulting z" />
     <ref role="1TJDcQ" node="4RbBgkBKyld" resolve="RotationExpression" />
     <node concept="1TJgyj" id="4RbBgkBL01a" role="1TKVEi">
       <property role="IQ2ns" value="5605746806660268106" />

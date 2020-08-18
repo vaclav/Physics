@@ -12,6 +12,9 @@ import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
+import jetbrains.mps.samples.Physics.java.runtime.RotationHelper;
+import org.nevec.rjm.BigDecimalMath;
+import java.math.MathContext;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
@@ -25,9 +28,6 @@ import java.util.function.Function;
 import org.pcollections.TreePVector;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
-import java.math.MathContext;
-import jetbrains.mps.samples.Physics.java.runtime.RotationHelper;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ImageTexture;
 
 public class RocketWorldSystemScope extends SystemScope {
@@ -61,8 +61,9 @@ public class RocketWorldSystemScope extends SystemScope {
 
       // Set static properties of Rocket Europa-S452G 
       this.setMass(((Number) new BigDecimal("1.21E+4").setScale(5, RoundingMode.DOWN)));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("1154982.997142537").setScale(9, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-4498361.775686384").setScale(9, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4361259.8800782645").setScale(10, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
+      this.getBody().setRotation(RotationHelper.eulerAnglesToMatrix(AH.mul(AH.mul(((Number) new BigDecimal("0.26").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), BigDecimalMath.pi(MathContext.DECIMAL32)), AH.mul(AH.mul(((Number) new BigDecimal("1.58").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), BigDecimalMath.pi(MathContext.DECIMAL32)), ((Number) new BigInteger("0"))));
 
       //  Forces and visual of the parent objects of Rocket Europa-S452G 
       super.init(scope, world);
@@ -94,7 +95,7 @@ public class RocketWorldSystemScope extends SystemScope {
                           cached = new _FunctionTypes._return_P0_E0<Force>() {
                             public Force invoke() {
                               ParameterSetWrapper param = new ParameterSetWrapper();
-                              param.parameters.add(AH.mul(((Number) new BigDecimal("6.67430e-11").setScale(9, RoundingMode.DOWN)), ((Number) new BigInteger("1"))));
+                              param.parameters.add(AH.mul(AH.mul(((Number) new BigDecimal("6.67430").setScale(5, RoundingMode.DOWN)), BigDecimal.valueOf(Math.pow(((Number) new BigInteger("10")).doubleValue(), ((BigInteger) ((Number) new BigInteger("11"))).negate().doubleValue()))), ((Number) new BigInteger("1"))));
                               return new Function<ParameterSetWrapper, Force>() {
                                 public Force apply(ParameterSetWrapper param) {
                                   Number G = (Number) param.parameters.get(0);
@@ -158,7 +159,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
                       @Override
                       public int forceMode() {
-                        return 24;
+                        return 16;
                       }
                     };
                   }
@@ -177,7 +178,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
         @Override
         public int forceMode() {
-          return 24;
+          return 16;
         }
       }, /* 
        * Actual boost
@@ -202,7 +203,7 @@ public class RocketWorldSystemScope extends SystemScope {
         @Override
         public DVector3C linearForce(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
 
-          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("10000")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))).mul(BigDecimal.ONE.divide(BigDecimalHelper.of((AH.add(AH.mul(BigDecimal.valueOf(world.getTime()), ((Number) new BigInteger("1"))), ((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN))))), MathContext.DECIMAL32)));
+          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(AH.mul(((BigInteger) ((Number) new BigInteger("11"))).negate(), ((Number) new BigInteger("1"))), currentEntity.getMass()), ((Number) new BigInteger("0"))));
 
         }
         @Override
@@ -212,7 +213,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
         @Override
         public int forceMode() {
-          return 28;
+          return 20;
         }
       }));
     }
@@ -230,15 +231,15 @@ public class RocketWorldSystemScope extends SystemScope {
 
       // Set static properties of Earth 
       this.setMass(((Number) new BigDecimal("5.972E+24").setScale(7, RoundingMode.DOWN)));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-6371015")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
-      this.getBody().setRotation(RotationHelper.eulerAnglesToMatrix(AH.mul(((Number) new BigInteger("-14")), ((Number) new BigDecimal("0.01666666666666666666666666666666667").setScale(35, RoundingMode.DOWN))), ((Number) new BigInteger("0")), AH.mul(AH.sub(((Number) new BigInteger("180")), ((Number) new BigDecimal("40.4085").setScale(4, RoundingMode.DOWN))), ((Number) new BigDecimal("0.01666666666666666666666666666666667").setScale(35, RoundingMode.DOWN)))));
+      this.getBody().setAngularVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), AH.div(AH.mul(((Number) new BigInteger("360")), ((Number) new BigDecimal("0.01666666666666666666666666666666667").setScale(35, RoundingMode.DOWN))), (AH.add(AH.add(AH.mul(((Number) new BigInteger("23")), ((Number) new BigDecimal("4E+3").setScale(0, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("56")), ((Number) new BigDecimal("6E+1").setScale(0, RoundingMode.DOWN)))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1")))))), ((Number) new BigInteger("0")))));
 
       //  Forces and visual of the parent objects of Earth 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, true);
+      propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
       propertiesBuilder.set(PropKey.TEXTURE, new ImageTexture("https://upload.wikimedia.org/wikipedia/commons/4/4d/Whole_world_-_land_and_oceans.jpg"));
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
