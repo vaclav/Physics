@@ -27,6 +27,7 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />

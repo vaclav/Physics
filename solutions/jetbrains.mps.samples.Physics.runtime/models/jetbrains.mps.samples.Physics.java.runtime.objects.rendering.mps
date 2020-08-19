@@ -367,16 +367,6 @@
       <property role="DiZV1" value="true" />
       <node concept="3Tm1VV" id="MHm3qu_jrz" role="1B3o_S" />
       <node concept="3cqZAl" id="MHm3qu_jr$" role="3clF45" />
-      <node concept="37vLTG" id="MHm3qu_jr_" role="3clF46">
-        <property role="TrG5h" value="graphics" />
-        <node concept="3uibUv" id="MHm3qu_jrA" role="1tU5fm">
-          <ref role="3uigEE" to="r7oa:~PGraphics" resolve="PGraphics" />
-        </node>
-      </node>
-      <node concept="37vLTG" id="MHm3qu_jrB" role="3clF46">
-        <property role="TrG5h" value="scale" />
-        <node concept="10OMs4" id="MHm3qu_jrC" role="1tU5fm" />
-      </node>
       <node concept="3clFbS" id="MHm3qu_jrD" role="3clF47">
         <node concept="3clFbF" id="MHm3qu_jPD" role="3cqZAp">
           <node concept="2OqwBi" id="MHm3qu_jZQ" role="3clFbG">
@@ -397,6 +387,22 @@
       </node>
       <node concept="2AHcQZ" id="MHm3qu_jrE" role="2AJF6D">
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+      <node concept="37vLTG" id="MHm3qu_jr_" role="3clF46">
+        <property role="TrG5h" value="graphics" />
+        <node concept="3uibUv" id="6wUuoe0ldGm" role="1tU5fm">
+          <ref role="3uigEE" to="r7oa:~PGraphics" resolve="PGraphics" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="MHm3qu_jrB" role="3clF46">
+        <property role="TrG5h" value="scale" />
+        <node concept="10OMs4" id="6wUuoe0ldGn" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6wUuoe0l3da" role="3clF46">
+        <property role="TrG5h" value="scaledOffset" />
+        <node concept="3uibUv" id="6wUuoe0ldGo" role="1tU5fm">
+          <ref role="3uigEE" to="xwt6:~DVector3C" resolve="DVector3C" />
+        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="MHm3quzRnc" role="jymVt" />

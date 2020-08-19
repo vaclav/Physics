@@ -59,6 +59,7 @@
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.DJointGroup" />
     <classNode dependClassName="org.ode4j.ode.DSpace" />

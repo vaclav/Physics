@@ -100,26 +100,26 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     this.fixture.setup(app, scale);
   }
 
-  public void render(PGraphics ctx, float scale) {
+  public void render(PGraphics graphics, float scale, DVector3C scaledOffset) {
     if (disabled) {
       return;
     }
 
     DVector3C position = body.getPosition();
 
-    ctx.pushMatrix();
-    ctx.translate((float) position.get0() * scale, (float) position.get1() * scale, (float) position.get2() * scale);
+    graphics.pushMatrix();
+    graphics.translate((float) (position.get0() * scale + scaledOffset.get0()), (float) (position.get1() * scale + scaledOffset.get1()), (float) (position.get2() * scale + scaledOffset.get2()));
 
     // https://en.wikipedia.org/wiki/Rotation_matrix (https://en.wikipedia.org/wiki/Rotation_matrix) 
     DMatrix3C rotation = body.getRotation();
-    ctx.applyMatrix((float) rotation.get00(), (float) rotation.get01(), (float) rotation.get02(), 0, (float) rotation.get10(), (float) rotation.get11(), (float) rotation.get12(), 0, (float) rotation.get20(), (float) rotation.get21(), (float) rotation.get22(), 0, 0, 0, 0, 1);
+    graphics.applyMatrix((float) rotation.get00(), (float) rotation.get01(), (float) rotation.get02(), 0, (float) rotation.get10(), (float) rotation.get11(), (float) rotation.get12(), 0, (float) rotation.get20(), (float) rotation.get21(), (float) rotation.get22(), 0, 0, 0, 0, 1);
 
-    ctx.shape(fixture.getShape());
-    ctx.popMatrix();
+    graphics.shape(fixture.getShape());
+    graphics.popMatrix();
 
     // Display trace if any 
     if (properties.getTraceHandler() != null) {
-      properties.getTraceHandler().render(position, ctx, scale);
+      properties.getTraceHandler().render(position, graphics, scale);
     }
   }
   public DBody getBody() {

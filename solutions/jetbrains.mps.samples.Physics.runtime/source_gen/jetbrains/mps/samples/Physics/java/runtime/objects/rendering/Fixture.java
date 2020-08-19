@@ -8,6 +8,7 @@ import processing.core.PShape;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import processing.core.PApplet;
 import processing.core.PGraphics;
+import org.ode4j.math.DVector3C;
 import org.ode4j.ode.DMass;
 import org.ode4j.ode.DBody;
 
@@ -29,7 +30,7 @@ public abstract class Fixture implements Renderable {
   }
 
   @Override
-  public final void render(PGraphics graphics, float scale) {
+  public final void render(PGraphics graphics, float scale, DVector3C scaledOffset) {
     graphics.shape(this.shape);
   }
 

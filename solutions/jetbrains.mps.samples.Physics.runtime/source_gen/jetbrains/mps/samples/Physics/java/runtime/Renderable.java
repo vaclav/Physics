@@ -4,9 +4,10 @@ package jetbrains.mps.samples.Physics.java.runtime;
 
 import processing.core.PApplet;
 import processing.core.PGraphics;
+import org.ode4j.math.DVector3C;
 
 public interface Renderable {
   default void setup(PApplet app, float scale) {
   }
-  void render(PGraphics graphics, float scale);
+  void render(PGraphics graphics, float scale, DVector3C scaledOffset);
 }

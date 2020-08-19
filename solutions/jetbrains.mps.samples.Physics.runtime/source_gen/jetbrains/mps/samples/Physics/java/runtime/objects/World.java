@@ -15,6 +15,7 @@ import org.ode4j.ode.internal.DxGeom;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
 import processing.core.PApplet;
 import processing.core.PGraphics;
+import org.ode4j.math.DVector3C;
 import java.util.List;
 
 public class World implements DGeom.DNearCallback, Renderable {
@@ -114,13 +115,13 @@ public class World implements DGeom.DNearCallback, Renderable {
   }
 
   @Override
-  public void render(PGraphics ctx, float scale) {
+  public void render(PGraphics graphics, float scale, DVector3C scaledOffset) {
     for (PhysicalEntity entity : entities) {
-      entity.applyLights(ctx, scale);
+      entity.applyLights(graphics, scale);
     }
 
     for (PhysicalEntity entity : entities) {
-      entity.render(ctx, scale);
+      entity.render(graphics, scale, scaledOffset);
     }
   }
 
