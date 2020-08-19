@@ -321,6 +321,7 @@
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
+      <concept id="1172008320231" name="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" flags="nn" index="3x8VRR" />
       <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
         <child id="1180636770616" name="createdType" index="3zrR0E" />
       </concept>
@@ -1374,96 +1375,112 @@
             <ref role="3cqZAo" node="4CH1R2NkhYP" resolve="type" />
           </node>
           <node concept="3clFbS" id="4CH1R2Nksng" role="Jncv$">
-            <node concept="3cpWs8" id="4CH1R2NfKBW" role="3cqZAp">
-              <node concept="3cpWsn" id="4CH1R2NfKBX" role="3cpWs9">
-                <property role="TrG5h" value="min" />
-                <node concept="3uibUv" id="4CH1R2NfJYR" role="1tU5fm">
-                  <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                </node>
-                <node concept="2ShNRf" id="4CH1R2NfKBY" role="33vP2m">
-                  <node concept="1pGfFk" id="4CH1R2NfKBZ" role="2ShVmc">
-                    <ref role="37wK5l" to="xlxw:~BigDecimal.&lt;init&gt;(java.lang.String)" resolve="BigDecimal" />
-                    <node concept="2OqwBi" id="4CH1R2NfKC0" role="37wK5m">
-                      <node concept="2OqwBi" id="4CH1R2NfKC1" role="2Oq$k0">
-                        <node concept="Jnkvi" id="4CH1R2Nkuhc" role="2Oq$k0">
-                          <ref role="1M0zk5" node="4CH1R2Nksni" resolve="number" />
-                        </node>
-                        <node concept="3TrEf2" id="4CH1R2NfKC3" role="2OqNvi">
-                          <ref role="3Tt5mk" to="5qo5:19PglA20qXS" resolve="range" />
+            <node concept="3clFbJ" id="3Vp3qmbzN9O" role="3cqZAp">
+              <node concept="3clFbS" id="3Vp3qmbzN9Q" role="3clFbx">
+                <node concept="3cpWs8" id="4CH1R2NfKBW" role="3cqZAp">
+                  <node concept="3cpWsn" id="4CH1R2NfKBX" role="3cpWs9">
+                    <property role="TrG5h" value="min" />
+                    <node concept="3uibUv" id="4CH1R2NfJYR" role="1tU5fm">
+                      <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                    </node>
+                    <node concept="2ShNRf" id="4CH1R2NfKBY" role="33vP2m">
+                      <node concept="1pGfFk" id="4CH1R2NfKBZ" role="2ShVmc">
+                        <ref role="37wK5l" to="xlxw:~BigDecimal.&lt;init&gt;(java.lang.String)" resolve="BigDecimal" />
+                        <node concept="2OqwBi" id="4CH1R2NfKC0" role="37wK5m">
+                          <node concept="2OqwBi" id="4CH1R2NfKC1" role="2Oq$k0">
+                            <node concept="Jnkvi" id="4CH1R2Nkuhc" role="2Oq$k0">
+                              <ref role="1M0zk5" node="4CH1R2Nksni" resolve="number" />
+                            </node>
+                            <node concept="3TrEf2" id="4CH1R2NfKC3" role="2OqNvi">
+                              <ref role="3Tt5mk" to="5qo5:19PglA20qXS" resolve="range" />
+                            </node>
+                          </node>
+                          <node concept="3TrcHB" id="4CH1R2NfKC4" role="2OqNvi">
+                            <ref role="3TsBF5" to="5qo5:19PglA20qXJ" resolve="min" />
+                          </node>
                         </node>
                       </node>
-                      <node concept="3TrcHB" id="4CH1R2NfKC4" role="2OqNvi">
-                        <ref role="3TsBF5" to="5qo5:19PglA20qXJ" resolve="min" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3cpWs8" id="4CH1R2NfKIF" role="3cqZAp">
+                  <node concept="3cpWsn" id="4CH1R2NfKIG" role="3cpWs9">
+                    <property role="TrG5h" value="max" />
+                    <node concept="3uibUv" id="4CH1R2NfKHR" role="1tU5fm">
+                      <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                    </node>
+                    <node concept="2ShNRf" id="4CH1R2NfKIH" role="33vP2m">
+                      <node concept="1pGfFk" id="4CH1R2NfKII" role="2ShVmc">
+                        <ref role="37wK5l" to="xlxw:~BigDecimal.&lt;init&gt;(java.lang.String)" resolve="BigDecimal" />
+                        <node concept="2OqwBi" id="4CH1R2NfKIJ" role="37wK5m">
+                          <node concept="2OqwBi" id="4CH1R2NfKIK" role="2Oq$k0">
+                            <node concept="Jnkvi" id="4CH1R2Nkv1J" role="2Oq$k0">
+                              <ref role="1M0zk5" node="4CH1R2Nksni" resolve="number" />
+                            </node>
+                            <node concept="3TrEf2" id="4CH1R2NfKIM" role="2OqNvi">
+                              <ref role="3Tt5mk" to="5qo5:19PglA20qXS" resolve="range" />
+                            </node>
+                          </node>
+                          <node concept="3TrcHB" id="4CH1R2NfKIN" role="2OqNvi">
+                            <ref role="3TsBF5" to="5qo5:19PglA20qXK" resolve="max" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbH" id="3Vp3qmbzN9P" role="3cqZAp" />
+                <node concept="3cpWs6" id="4CH1R2Ngiow" role="3cqZAp">
+                  <node concept="1Wc70l" id="4CH1R2NgjIW" role="3cqZAk">
+                    <node concept="3clFbC" id="4CH1R2Ngj6a" role="3uHU7B">
+                      <node concept="2OqwBi" id="4CH1R2NfH1d" role="3uHU7B">
+                        <node concept="37vLTw" id="4CH1R2NfKC5" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4CH1R2NfKBX" resolve="min" />
+                        </node>
+                        <node concept="liA8E" id="4CH1R2NfHlw" role="2OqNvi">
+                          <ref role="37wK5l" to="xlxw:~BigDecimal.compareTo(java.math.BigDecimal)" resolve="compareTo" />
+                          <node concept="37vLTw" id="4CH1R2NfKIO" role="37wK5m">
+                            <ref role="3cqZAo" node="4CH1R2NfKIG" resolve="max" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3cmrfG" id="4CH1R2NfJYc" role="3uHU7w">
+                        <property role="3cmrfH" value="0" />
+                      </node>
+                    </node>
+                    <node concept="3clFbC" id="4CH1R2NgjM1" role="3uHU7w">
+                      <node concept="2OqwBi" id="4CH1R2NfO$V" role="3uHU7B">
+                        <node concept="37vLTw" id="4CH1R2NfNOF" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4CH1R2NfKBX" resolve="min" />
+                        </node>
+                        <node concept="liA8E" id="4CH1R2NfOBk" role="2OqNvi">
+                          <ref role="37wK5l" to="xlxw:~BigDecimal.compareTo(java.math.BigDecimal)" resolve="compareTo" />
+                          <node concept="10M0yZ" id="4CH1R2NfPBx" role="37wK5m">
+                            <ref role="3cqZAo" to="xlxw:~BigDecimal.ZERO" resolve="ZERO" />
+                            <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3cmrfG" id="4CH1R2NfR33" role="3uHU7w">
+                        <property role="3cmrfH" value="0" />
                       </node>
                     </node>
                   </node>
                 </node>
               </node>
-            </node>
-            <node concept="3cpWs8" id="4CH1R2NfKIF" role="3cqZAp">
-              <node concept="3cpWsn" id="4CH1R2NfKIG" role="3cpWs9">
-                <property role="TrG5h" value="max" />
-                <node concept="3uibUv" id="4CH1R2NfKHR" role="1tU5fm">
-                  <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                </node>
-                <node concept="2ShNRf" id="4CH1R2NfKIH" role="33vP2m">
-                  <node concept="1pGfFk" id="4CH1R2NfKII" role="2ShVmc">
-                    <ref role="37wK5l" to="xlxw:~BigDecimal.&lt;init&gt;(java.lang.String)" resolve="BigDecimal" />
-                    <node concept="2OqwBi" id="4CH1R2NfKIJ" role="37wK5m">
-                      <node concept="2OqwBi" id="4CH1R2NfKIK" role="2Oq$k0">
-                        <node concept="Jnkvi" id="4CH1R2Nkv1J" role="2Oq$k0">
-                          <ref role="1M0zk5" node="4CH1R2Nksni" resolve="number" />
-                        </node>
-                        <node concept="3TrEf2" id="4CH1R2NfKIM" role="2OqNvi">
-                          <ref role="3Tt5mk" to="5qo5:19PglA20qXS" resolve="range" />
-                        </node>
-                      </node>
-                      <node concept="3TrcHB" id="4CH1R2NfKIN" role="2OqNvi">
-                        <ref role="3TsBF5" to="5qo5:19PglA20qXK" resolve="max" />
-                      </node>
-                    </node>
+              <node concept="2OqwBi" id="3Vp3qmbzOTb" role="3clFbw">
+                <node concept="2OqwBi" id="3Vp3qmbzNxW" role="2Oq$k0">
+                  <node concept="Jnkvi" id="3Vp3qmbzNiu" role="2Oq$k0">
+                    <ref role="1M0zk5" node="4CH1R2Nksni" resolve="number" />
+                  </node>
+                  <node concept="3TrEf2" id="3Vp3qmbzOIW" role="2OqNvi">
+                    <ref role="3Tt5mk" to="5qo5:19PglA20qXS" resolve="range" />
                   </node>
                 </node>
+                <node concept="3x8VRR" id="3Vp3qmbzPfZ" role="2OqNvi" />
               </node>
             </node>
             <node concept="3clFbH" id="4CH1R2Ngijm" role="3cqZAp" />
-            <node concept="3cpWs6" id="4CH1R2Ngiow" role="3cqZAp">
-              <node concept="1Wc70l" id="4CH1R2NgjIW" role="3cqZAk">
-                <node concept="3clFbC" id="4CH1R2Ngj6a" role="3uHU7B">
-                  <node concept="2OqwBi" id="4CH1R2NfH1d" role="3uHU7B">
-                    <node concept="37vLTw" id="4CH1R2NfKC5" role="2Oq$k0">
-                      <ref role="3cqZAo" node="4CH1R2NfKBX" resolve="min" />
-                    </node>
-                    <node concept="liA8E" id="4CH1R2NfHlw" role="2OqNvi">
-                      <ref role="37wK5l" to="xlxw:~BigDecimal.compareTo(java.math.BigDecimal)" resolve="compareTo" />
-                      <node concept="37vLTw" id="4CH1R2NfKIO" role="37wK5m">
-                        <ref role="3cqZAo" node="4CH1R2NfKIG" resolve="max" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3cmrfG" id="4CH1R2NfJYc" role="3uHU7w">
-                    <property role="3cmrfH" value="0" />
-                  </node>
-                </node>
-                <node concept="3clFbC" id="4CH1R2NgjM1" role="3uHU7w">
-                  <node concept="2OqwBi" id="4CH1R2NfO$V" role="3uHU7B">
-                    <node concept="37vLTw" id="4CH1R2NfNOF" role="2Oq$k0">
-                      <ref role="3cqZAo" node="4CH1R2NfKBX" resolve="min" />
-                    </node>
-                    <node concept="liA8E" id="4CH1R2NfOBk" role="2OqNvi">
-                      <ref role="37wK5l" to="xlxw:~BigDecimal.compareTo(java.math.BigDecimal)" resolve="compareTo" />
-                      <node concept="10M0yZ" id="4CH1R2NfPBx" role="37wK5m">
-                        <ref role="3cqZAo" to="xlxw:~BigDecimal.ZERO" resolve="ZERO" />
-                        <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3cmrfG" id="4CH1R2NfR33" role="3uHU7w">
-                    <property role="3cmrfH" value="0" />
-                  </node>
-                </node>
-              </node>
-            </node>
           </node>
           <node concept="JncvC" id="4CH1R2Nksni" role="JncvA">
             <property role="TrG5h" value="number" />

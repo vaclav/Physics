@@ -111,6 +111,7 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.math.BigInteger" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />

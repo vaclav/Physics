@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-wiq1lm4me2trzbo996mx5f7ub6lt35">
+<product version="3" modelHash="-cum9dh8xtqtwswgdw7adntcx6w7tf44">
   <files names="DimensionTypeHelper.java:NumberTypeHelper.java:TypesystemDescriptor.java:check_UseUnitExpressionAs_NonTypesystemRule.java:check_dimensionError_NonTypesystemRule.java:compare_DimensionTypes_ComparisonRule.java:replace_DimensionType_AbstractDimensionType_InequationReplacementRule.java:replace_DimensionType_DimensionType_InequationReplacementRule.java:replace_ZeroValue_DimensionType_InequationReplacementRule.java:subtype_Dimension_BaseType_SubtypingRule.java:typeof_UnitExpression_InferenceRule.java:typeof_UseUnitExpressionAs_InferenceRule.java" />
 </product>
 

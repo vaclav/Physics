@@ -7,6 +7,7 @@
     <use id="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca" name="jetbrains.mps.samples.Physics.types" version="0" />
     <use id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes" version="1" />
     <use id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions" version="0" />
+    <use id="be81eb12-4eda-4d0e-89be-7493500ab874" name="jetbrains.mps.samples.Physics" version="1" />
   </languages>
   <imports>
     <import index="nas6" ref="r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)" implicit="true" />
@@ -81,16 +82,16 @@
       <node concept="1N951E" id="3PeuB2_WZgP" role="1qenE9">
         <node concept="30bXRB" id="3PeuB2_WZgr" role="1N951F">
           <property role="30bXRw" value="3" />
-          <node concept="LIFWc" id="3PeuB2_WZsg" role="lGtFl">
-            <property role="ZRATv" value="true" />
-            <property role="OXtK3" value="true" />
-            <property role="p6zMq" value="1" />
-            <property role="p6zMs" value="1" />
-            <property role="LIFWd" value="property_value" />
-          </node>
         </node>
         <node concept="CIsvn" id="3PeuB2_WZgO" role="1N7es9">
           <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
+        </node>
+        <node concept="LIFWc" id="3Vp3qmbT3Aj" role="lGtFl">
+          <property role="ZRATv" value="true" />
+          <property role="OXtK3" value="true" />
+          <property role="p6zMq" value="1" />
+          <property role="p6zMs" value="1" />
+          <property role="LIFWd" value="Constant_6i7014_d0" />
         </node>
       </node>
     </node>

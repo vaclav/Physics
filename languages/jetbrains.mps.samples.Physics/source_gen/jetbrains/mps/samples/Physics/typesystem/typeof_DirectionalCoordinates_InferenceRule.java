@@ -36,6 +36,22 @@ public class typeof_DirectionalCoordinates_InferenceRule extends AbstractInferen
         }
       }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973768464", false, false);
     }
+    {
+      final SNode sourceType = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.source$L$qG), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "4528665904958330492", true);
+      typeCheckingContext.whenConcrete(sourceType, new Runnable() {
+        public void run() {
+          // Check direction is actually a direction 
+          if (!(typeCheckingContext.isSingleTypeComputation())) {
+            {
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.source$L$qG);
+              EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "4528665904958330483", 0, null);
+              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(sourceType), (SNode) _quotation_createNode_m16thm_a1a0c0a0b0a0a1a0b0b0b(), true, true, _info_12389875345);
+            }
+          }
+        }
+      }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "4528665904958330473", false, false);
+    }
+
 
     {
       final SNode length = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.length$2h69), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972990113", true);
@@ -44,7 +60,7 @@ public class typeof_DirectionalCoordinates_InferenceRule extends AbstractInferen
           {
             SNode _nodeToCheck_1029348928467 = coords;
             EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972991490", 0, null);
-            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972991353", true), (SNode) createVectorType_m16thm_a1a0c0a0a0a1a0b0c0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(length))), _info_12389875345);
+            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972991353", true), (SNode) createVectorType_m16thm_a1a0c0a0a0a1a0b0e0b(NumberTypeHelper.approximateToDimensions(typeCheckingContext.getExpandedNode(length))), _info_12389875345);
           }
         }
       }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972990061", false, false);
@@ -65,7 +81,13 @@ public class typeof_DirectionalCoordinates_InferenceRule extends AbstractInferen
     quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, "jetbrains.mps.samples.Physics.types"), 0x6520d39c950a1448L, "DirectionType")).getResult();
     return quotedNode_1;
   }
-  private static SNode createVectorType_m16thm_a1a0c0a0a0a1a0b0c0b(SNode p0) {
+  private static SNode _quotation_createNode_m16thm_a1a0c0a0b0a0a1a0b0b0b() {
+    PersistenceFacade facade = PersistenceFacade.getInstance();
+    SNode quotedNode_1 = null;
+    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, "jetbrains.mps.samples.Physics.types"), 0x6520d39c950a1448L, "DirectionType")).getResult();
+    return quotedNode_1;
+  }
+  private static SNode createVectorType_m16thm_a1a0c0a0a0a1a0b0e0b(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
     n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
     return n0.getResult();
@@ -73,6 +95,7 @@ public class typeof_DirectionalCoordinates_InferenceRule extends AbstractInferen
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink direction$2h5b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4472L, "direction");
+    /*package*/ static final SContainmentLink source$L$qG = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x3ed90da58b6e2fb6L, "source");
     /*package*/ static final SContainmentLink length$2h69 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4474L, "length");
     /*package*/ static final SContainmentLink componentType$gTxy = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
   }

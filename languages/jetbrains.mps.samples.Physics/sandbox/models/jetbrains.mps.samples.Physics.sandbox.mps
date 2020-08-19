@@ -222,6 +222,7 @@
         <child id="6576997179998067941" name="bounceFactor" index="3xKuNN" />
       </concept>
       <concept id="7887120293590353009" name="jetbrains.mps.samples.Physics.structure.DirectionalCoordinates" flags="ng" index="3_jIDJ">
+        <child id="4528665904957763510" name="source" index="2PHM8j" />
         <child id="7887120293590353012" name="length" index="3_jIDE" />
         <child id="7887120293590353010" name="direction" index="3_jIDG" />
       </concept>
@@ -1116,7 +1117,7 @@
     </node>
     <node concept="1aduha" id="yrUOug_ZK6" role="3ix9pP">
       <node concept="1adJid" id="yrUOug_ZK0" role="1aduh9">
-        <property role="TrG5h" value="v" />
+        <property role="TrG5h" value="vel" />
         <node concept="1QScDb" id="yrUOug_ZK1" role="1adJii">
           <node concept="2CkXcW" id="yrUOug_ZK2" role="1QScD9" />
           <node concept="1QScDb" id="yrUOug_ZK3" role="30czhm">
@@ -1128,7 +1129,10 @@
       <node concept="2zH6wq" id="yrUOugBSrL" role="1aduh9" />
       <node concept="Y6l9F" id="6kwOTMkY3JM" role="1aduh9">
         <property role="2Ol3pS" value="false" />
-        <node concept="3_jIDJ" id="cTQf2Fq6MJ" role="Y6l9H">
+        <node concept="3_jIDJ" id="3Vp3qmbzD8A" role="Y6l9H">
+          <node concept="1adzI2" id="3Vp3qmbzDrX" role="3_jIDG">
+            <ref role="1adwt6" node="yrUOug_ZK0" resolve="vel" />
+          </node>
           <node concept="30dDTi" id="5qrSK19GYIN" role="3_jIDE">
             <node concept="30dDTi" id="5qrSK19GYIG" role="30dEsF">
               <node concept="3ix4Yz" id="6hOouYNhoVM" role="30dEs_">
@@ -1166,8 +1170,16 @@
               </node>
             </node>
           </node>
-          <node concept="1adzI2" id="yrUOugBSVH" role="3_jIDG">
-            <ref role="1adwt6" node="yrUOug_ZK0" resolve="v" />
+          <node concept="v6hs8" id="3Vp3qmbEVFG" role="2PHM8j">
+            <node concept="30bXRB" id="3Vp3qmbEVFH" role="Y6l9D">
+              <property role="30bXRw" value="0" />
+            </node>
+            <node concept="30bXRB" id="3Vp3qmbEVFI" role="Y6leK">
+              <property role="30bXRw" value="0" />
+            </node>
+            <node concept="30bXRB" id="3Vp3qmbEVFJ" role="Y6leJ">
+              <property role="30bXRw" value="0" />
+            </node>
           </node>
         </node>
       </node>

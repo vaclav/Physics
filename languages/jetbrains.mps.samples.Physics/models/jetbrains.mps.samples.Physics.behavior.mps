@@ -29,6 +29,7 @@
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
     <import index="700h" ref="r:61b1de80-490d-4fee-8e95-b956503290e9(org.iets3.core.expr.collections.structure)" />
     <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" />
+    <import index="s6tv" ref="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
   <registry>
@@ -273,6 +274,7 @@
         <child id="4693937538533538124" name="requestedConcept" index="v3oSu" />
       </concept>
       <concept id="7453996997717780434" name="jetbrains.mps.lang.smodel.structure.Node_GetSConceptOperation" flags="nn" index="2yIwOk" />
+      <concept id="1173122760281" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorsOperation" flags="nn" index="z$bX8" />
       <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
         <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
@@ -392,6 +394,7 @@
       <concept id="1225727723840" name="jetbrains.mps.baseLanguage.collections.structure.FindFirstOperation" flags="nn" index="1z4cxt" />
       <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
       <concept id="1202128969694" name="jetbrains.mps.baseLanguage.collections.structure.SelectOperation" flags="nn" index="3$u5V9" />
+      <concept id="1172254888721" name="jetbrains.mps.baseLanguage.collections.structure.ContainsOperation" flags="nn" index="3JPx81" />
       <concept id="1180964022718" name="jetbrains.mps.baseLanguage.collections.structure.ConcatOperation" flags="nn" index="3QWeyG" />
     </language>
   </registry>
@@ -5085,6 +5088,78 @@
     </node>
     <node concept="13hLZK" id="4$vyCQBisap" role="13h7CW">
       <node concept="3clFbS" id="4$vyCQBisaq" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="3Vp3qmbplYl">
+    <property role="3GE5qa" value="physical.vector.absolute" />
+    <ref role="13h7C2" to="9tcj:6POFxU8e$hL" resolve="DirectionalCoordinates" />
+    <node concept="13i0hz" id="3Vp3qmbplYw" role="13h7CS">
+      <property role="TrG5h" value="hasLocalizedReference" />
+      <node concept="3Tm1VV" id="3Vp3qmbplYx" role="1B3o_S" />
+      <node concept="10P_77" id="3Vp3qmbplYK" role="3clF45" />
+      <node concept="3clFbS" id="3Vp3qmbplYz" role="3clF47">
+        <node concept="3cpWs6" id="3Vp3qmbplZF" role="3cqZAp">
+          <node concept="2OqwBi" id="3Vp3qmbpmO3" role="3cqZAk">
+            <node concept="2OqwBi" id="3Vp3qmbpmfE" role="2Oq$k0">
+              <node concept="13iPFW" id="3Vp3qmbplZU" role="2Oq$k0" />
+              <node concept="2Xjw5R" id="3Vp3qmbpmAV" role="2OqNvi">
+                <node concept="1xMEDy" id="3Vp3qmbpmAX" role="1xVPHs">
+                  <node concept="chp4Y" id="3Vp3qmbpmDi" role="ri$Ld">
+                    <ref role="cht4Q" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3x8VRR" id="3Vp3qmbpn1l" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="3Vp3qmbrxhw" role="13h7CS">
+      <property role="TrG5h" value="isPartOfPositionDefinition" />
+      <node concept="3Tm1VV" id="3Vp3qmbrxhx" role="1B3o_S" />
+      <node concept="10P_77" id="3Vp3qmbrxil" role="3clF45" />
+      <node concept="3clFbS" id="3Vp3qmbrxhz" role="3clF47">
+        <node concept="3cpWs8" id="3Vp3qmbrxvg" role="3cqZAp">
+          <node concept="3cpWsn" id="31HEEbbLaLg" role="3cpWs9">
+            <property role="TrG5h" value="ancestor" />
+            <node concept="3Tqbb2" id="31HEEbbLapc" role="1tU5fm">
+              <ref role="ehGHo" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
+            </node>
+            <node concept="2OqwBi" id="31HEEbbLaLh" role="33vP2m">
+              <node concept="2Xjw5R" id="31HEEbbLaLj" role="2OqNvi">
+                <node concept="1xMEDy" id="31HEEbbLaLk" role="1xVPHs">
+                  <node concept="chp4Y" id="31HEEbbLaLl" role="ri$Ld">
+                    <ref role="cht4Q" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
+                  </node>
+                </node>
+              </node>
+              <node concept="13iPFW" id="3Vp3qmbrxIZ" role="2Oq$k0" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="3Vp3qmbrxDr" role="3cqZAp">
+          <node concept="2OqwBi" id="Zge_mbdVLt" role="3cqZAk">
+            <node concept="2OqwBi" id="Zge_mbdTXz" role="2Oq$k0">
+              <node concept="z$bX8" id="Zge_mbdUsg" role="2OqNvi" />
+              <node concept="13iPFW" id="3Vp3qmbrxOa" role="2Oq$k0" />
+            </node>
+            <node concept="3JPx81" id="Zge_mbdXnM" role="2OqNvi">
+              <node concept="2OqwBi" id="Zge_mbdXA1" role="25WWJ7">
+                <node concept="37vLTw" id="Zge_mbdXoW" role="2Oq$k0">
+                  <ref role="3cqZAo" node="31HEEbbLaLg" resolve="ancestor" />
+                </node>
+                <node concept="3TrEf2" id="Zge_mbdXVX" role="2OqNvi">
+                  <ref role="3Tt5mk" to="9tcj:3Nk1IDHWZS6" resolve="position" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13hLZK" id="3Vp3qmbplYm" role="13h7CW">
+      <node concept="3clFbS" id="3Vp3qmbplYn" role="2VODD2" />
     </node>
   </node>
 </model>

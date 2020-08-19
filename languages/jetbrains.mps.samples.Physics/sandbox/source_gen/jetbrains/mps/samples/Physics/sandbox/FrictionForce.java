@@ -10,21 +10,22 @@ import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import java.math.BigInteger;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 
 public class FrictionForce {
   public static Force get(World world, SystemScope scope, final PhysicalEntity currentEntity, double time, final Number ratio) {
     Force force = new _FunctionTypes._return_P0_E0<Force<SystemScope>>() {
       public Force<SystemScope> invoke() {
-        VectorLike v = currentEntity.getVelocity().mul(-1);
+        VectorLike vel = currentEntity.getVelocity().mul(-1);
 
         return new Force<SystemScope>() {
 
           @Override
           public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
 
-            return VectorHelper.anyToDVector3C(v.minus(currentEntity).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
+            return VectorHelper.anyToDVector3C(vel.minus(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
 
           }
           @Override

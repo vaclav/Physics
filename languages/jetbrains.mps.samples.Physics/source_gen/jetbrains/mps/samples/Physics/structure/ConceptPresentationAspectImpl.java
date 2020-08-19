@@ -306,6 +306,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.DirectionalCoordinates:
         if (props_DirectionalCoordinates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("coordinates that rely on a length and a direction");
           cpb.rawPresentation("directional coordinates");
           props_DirectionalCoordinates = cpb.create();
         }

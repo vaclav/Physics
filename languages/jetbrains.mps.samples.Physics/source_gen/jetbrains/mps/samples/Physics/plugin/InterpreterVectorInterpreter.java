@@ -215,18 +215,24 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           VectorLike directionPoint = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.direction$2h5b), context, coverage, trace, false), VectorLike.class));
-          SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false);
 
           VectorLike sourcePoint;
-
-          // No localized ancestor or we try to define position in the current expression 
-          if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(node, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0))) {
-            // -> world origin 
-            sourcePoint = InternalVector.ZERO;
+          if ((SLinkOperations.getTarget(node, LINKS.source$L$qG) != null)) {
+            sourcePoint = ((VectorLike) ((Object) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.source$L$qG), context, coverage, trace, false), Object.class)));
           } else {
-            // -> ancestor position 
-            sourcePoint = ((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0), context, coverage, trace, false));
+            SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false);
+
+            // No localized ancestor or we try to define position in the current expression 
+            if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(node, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0))) {
+              // -> world origin 
+              sourcePoint = InternalVector.ZERO;
+            } else {
+              // -> ancestor position 
+              sourcePoint = ((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0), context, coverage, trace, false));
+            }
           }
+
+
           return directionPoint.minus(sourcePoint).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.length$2h69), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
@@ -818,6 +824,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
     /*package*/ static final SContainmentLink relativeFrom$gwcw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
     /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
     /*package*/ static final SContainmentLink direction$2h5b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4472L, "direction");
+    /*package*/ static final SContainmentLink source$L$qG = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x3ed90da58b6e2fb6L, "source");
     /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
     /*package*/ static final SContainmentLink length$2h69 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4474L, "length");
     /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");

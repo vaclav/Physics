@@ -521,12 +521,19 @@
     <property role="3GE5qa" value="physical.vector.absolute" />
     <property role="TrG5h" value="DirectionalCoordinates" />
     <property role="34LRSv" value="directional coordinates" />
+    <property role="R4oN_" value="coordinates that rely on a length and a direction" />
     <ref role="1TJDcQ" node="5xbVod7kJDH" resolve="AbsoluteCoordinates" />
     <node concept="1TJgyj" id="6POFxU8e$hO" role="1TKVEi">
       <property role="IQ2ns" value="7887120293590353012" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="length" />
       <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="3Vp3qmbryYQ" role="1TKVEi">
+      <property role="IQ2ns" value="4528665904957763510" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="source" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
     <node concept="1TJgyj" id="6POFxU8e$hM" role="1TKVEi">

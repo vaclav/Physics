@@ -4,9 +4,9 @@ package jetbrains.mps.samples.Physics.dimensions.typesystem;
 
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import java.math.BigDecimal;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
@@ -27,10 +27,13 @@ public class NumberTypeHelper {
     {
       final SNode number = type;
       if (SNodeOperations.isInstanceOf(number, CONCEPTS.NumberType$2D)) {
-        BigDecimal min = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(number, LINKS.range$WgV$), PROPS.min$Va2));
-        BigDecimal max = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(number, LINKS.range$WgV$), PROPS.max$Vax));
+        if ((SLinkOperations.getTarget(number, LINKS.range$WgV$) != null)) {
+          BigDecimal min = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(number, LINKS.range$WgV$), PROPS.min$Va2));
+          BigDecimal max = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(number, LINKS.range$WgV$), PROPS.max$Vax));
 
-        return min.compareTo(max) == 0 && min.compareTo(BigDecimal.ZERO) == 0;
+          return min.compareTo(max) == 0 && min.compareTo(BigDecimal.ZERO) == 0;
+        }
+
       }
     }
 

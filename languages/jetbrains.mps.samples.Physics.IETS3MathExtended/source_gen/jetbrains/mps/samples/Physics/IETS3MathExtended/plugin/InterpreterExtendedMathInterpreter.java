@@ -66,36 +66,6 @@ public class InterpreterExtendedMathInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.SqrtExpression$9T, "r:2c20269f-57e4-41ef-a202-e8ce4699d3fc(jetbrains.mps.samples.Physics.IETS3MathExtended.plugin)/6990314453967047973", true, new TypedChildConstraintImpl(LINKS.expr$y7Am, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
-      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
-        try {
-          coverage.visitedEvaluator(this);
-          coverage.visitedConcept(this.concept);
-          coverage.visitedConcept(SNodeOperations.getConcept(node));
-          // Replace math interpreter implementation 
-          return BigDecimalMath.sqrt(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.expr$y7Am), context, coverage, trace, false), BigDecimal.class)));
-        } catch (StopAndReturnException stop) {
-          return stop.value();
-        } catch (InterpreterEscapeException ex) {
-          throw ex;
-        } catch (RuntimeException ex) {
-          throw new InterpreterRuntimeException("sqrt(expr[real])", node, ex, trace);
-        }
-      }
-      public EvaluatorInfo getInfo() {
-        return new EvaluatorInfo("SqrtExpression");
-      }
-
-      @Override
-      public String toString() {
-        return "SqrtExpression";
-      }
-
-      @Override
-      public boolean canLookupBeCached() {
-        return false;
-      }
-    });
   }
 
 
@@ -110,7 +80,6 @@ public class InterpreterExtendedMathInterpreter extends InterpreterBase {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink expression$tVRI = MetaAdapterFactory.getContainmentLink(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x5abff81774111c3aL, "expression");
-    /*package*/ static final SContainmentLink expr$y7Am = MetaAdapterFactory.getContainmentLink(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c8de8L, 0x449e19d04e9c9e3cL, "expr");
   }
 
   private static final class PROPS {
@@ -120,6 +89,5 @@ public class InterpreterExtendedMathInterpreter extends InterpreterBase {
   private static final class CONCEPTS {
     /*package*/ static final SConcept NRootExpression$sH = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.IETS3MathExtended.structure.NRootExpression");
     /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
-    /*package*/ static final SConcept SqrtExpression$9T = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c8de8L, "org.iets3.core.expr.math.structure.SqrtExpression");
   }
 }
