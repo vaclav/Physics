@@ -17,6 +17,8 @@
     <classNode dependClassName="processing.core.PApplet" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="processing.core.PApplet" />
@@ -27,6 +29,7 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
+    <classNode dependClassName="org.ode4j.math.DVector3" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />

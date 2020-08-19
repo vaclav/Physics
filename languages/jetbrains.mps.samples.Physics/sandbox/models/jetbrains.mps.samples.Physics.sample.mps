@@ -23,14 +23,10 @@
       </concept>
     </language>
     <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
-      <concept id="5115872837157187871" name="org.iets3.core.expr.base.structure.ParensExpression" flags="ng" index="30bsCy">
-        <child id="5115872837157187954" name="expr" index="30bsDf" />
-      </concept>
       <concept id="5115872837156802409" name="org.iets3.core.expr.base.structure.UnaryExpression" flags="ng" index="30czhk">
         <child id="5115872837156802411" name="expr" index="30czhm" />
       </concept>
       <concept id="5115872837156855227" name="org.iets3.core.expr.base.structure.UnaryMinusExpression" flags="ng" index="30cIq6" />
-      <concept id="5115872837156652453" name="org.iets3.core.expr.base.structure.MinusExpression" flags="ng" index="30dvUo" />
       <concept id="5115872837156578671" name="org.iets3.core.expr.base.structure.MulExpression" flags="ng" index="30dDTi" />
       <concept id="5115872837156578546" name="org.iets3.core.expr.base.structure.PlusExpression" flags="ng" index="30dDZf" />
       <concept id="5115872837156576277" name="org.iets3.core.expr.base.structure.BinaryExpression" flags="ng" index="30dEsC">
@@ -172,6 +168,7 @@
         <reference id="420466128549300321" name="target" index="1t_wfm" />
       </concept>
       <concept id="7887120293590353009" name="jetbrains.mps.samples.Physics.structure.DirectionalCoordinates" flags="ng" index="3_jIDJ">
+        <child id="4528665904957763510" name="source" index="2PHM8j" />
         <child id="7887120293590353012" name="length" index="3_jIDE" />
         <child id="7887120293590353010" name="direction" index="3_jIDG" />
       </concept>
@@ -296,7 +293,7 @@
           </node>
         </node>
       </node>
-      <node concept="Y6$Cq" id="10n4tqnj6LY" role="Y6$Cp">
+      <node concept="Y6$Cq" id="5claIBneI9q" role="Y6$Cp">
         <ref role="Y6$Cr" node="72SP1v_PiCq" resolve="Planet" />
       </node>
       <node concept="3Bsx3Z" id="10n4tqnmoNe" role="1h9ZzH">
@@ -529,32 +526,28 @@
             <ref role="1N7KNK" to="nas6:1fq3tlL$k6e" resolve="km" />
           </node>
         </node>
-        <node concept="30bsCy" id="5H6c1qT_adU" role="3_jIDG">
-          <node concept="30dvUo" id="5H6c1qT_adV" role="30bsDf">
-            <node concept="1QScDb" id="5H6c1qT_adW" role="30dEsF">
-              <node concept="1QScDb" id="5H6c1qT_adX" role="30czhm">
-                <node concept="1QScDb" id="5H6c1qT_adY" role="30czhm">
-                  <node concept="31hh1H" id="6MvaUakLcLd" role="30czhm" />
-                  <node concept="31uf54" id="6MvaUakN7sr" role="1QScD9">
-                    <ref role="31ueSj" node="10n4tqnmBvU" resolve="EarthNested" />
-                  </node>
-                </node>
-                <node concept="31uf54" id="6MvaUakN8rV" role="1QScD9">
-                  <ref role="31ueSj" node="72SP1v_PiBJ" resolve="Earth" />
-                </node>
-              </node>
-              <node concept="3K97i7" id="6MvaUakNac$" role="1QScD9" />
-            </node>
-            <node concept="1QScDb" id="5H6c1qT_adZ" role="30dEs_">
-              <node concept="1QScDb" id="5H6c1qT_ae0" role="30czhm">
-                <node concept="31hh1H" id="6MvaUakLdxl" role="30czhm" />
-                <node concept="31uf54" id="6MvaUakLdYN" role="1QScD9">
-                  <ref role="31ueSj" node="10n4tqnmBwp" resolve="Sun" />
-                </node>
-              </node>
-              <node concept="3K97i7" id="6MvaUakLdxo" role="1QScD9" />
+        <node concept="1QScDb" id="5H6c1qT_adZ" role="2PHM8j">
+          <node concept="1QScDb" id="5H6c1qT_ae0" role="30czhm">
+            <node concept="31hh1H" id="6MvaUakLdxl" role="30czhm" />
+            <node concept="31uf54" id="6MvaUakLdYN" role="1QScD9">
+              <ref role="31ueSj" node="10n4tqnmBwp" resolve="Sun" />
             </node>
           </node>
+          <node concept="3K97i7" id="6MvaUakLdxo" role="1QScD9" />
+        </node>
+        <node concept="1QScDb" id="5claIBn8Xwk" role="3_jIDG">
+          <node concept="1QScDb" id="5claIBn8YGY" role="30czhm">
+            <node concept="31uf54" id="5claIBn8Zi8" role="1QScD9">
+              <ref role="31ueSj" node="72SP1v_PiBJ" resolve="Earth" />
+            </node>
+            <node concept="1QScDb" id="5claIBn8Xwl" role="30czhm">
+              <node concept="31hh1H" id="5claIBn8Xwm" role="30czhm" />
+              <node concept="31uf54" id="5claIBn8Y6Y" role="1QScD9">
+                <ref role="31ueSj" node="10n4tqnmBvU" resolve="EarthNested" />
+              </node>
+            </node>
+          </node>
+          <node concept="3K97i7" id="5claIBn8Xwo" role="1QScD9" />
         </node>
       </node>
     </node>

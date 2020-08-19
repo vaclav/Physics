@@ -39,7 +39,7 @@ public abstract class Simulation implements Renderer.RendererCallback {
 
     ctx.camera(0, 0, 0, focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, 1, 0);
 
-    // Float.MAX_VALUE divided by 1000 to prevent an overflow in internal computations 
+    // Float.MAX_VALUE divided by 100 to prevent an overflow in internal computations 
     // (resulting in a black screen) 
     ctx.perspective(PConstants.PI / 3, ((float) ctx.width) / ((float) ctx.height), 1, Float.MAX_VALUE / 100);
 
@@ -67,11 +67,12 @@ public abstract class Simulation implements Renderer.RendererCallback {
 
   @Override
   public void keyPressed(int code) {
-    // Space bar 
-    if (code == 32) {
-      world.setPaused(!(world.isPaused()));
-    }
   }
 
   protected abstract void init(World world);
+
+
+  public World getWorld() {
+    return this.world;
+  }
 }

@@ -32,4 +32,26 @@ public class ColorTexture extends Texture {
     }
   }
 
+  @Override
+  public Texture mergeWith(Texture other, float participation) {
+    if (other instanceof ColorTexture) {
+      ColorTexture colorTexture = as_8d58a4_a0a0a0a8(other, ColorTexture.class);
+      return new ColorTexture(Color.merge(fill, colorTexture.getFill(), participation), Color.merge(stroke, colorTexture.getStroke(), participation));
+    } else if (participation > 0.5) {
+      return this;
+    } else {
+      return other;
+    }
+  }
+
+
+  public Color getFill() {
+    return this.fill;
+  }
+  public Color getStroke() {
+    return this.stroke;
+  }
+  private static <T> T as_8d58a4_a0a0a0a8(Object o, Class<T> type) {
+    return (type.isInstance(o) ? (T) o : null);
+  }
 }

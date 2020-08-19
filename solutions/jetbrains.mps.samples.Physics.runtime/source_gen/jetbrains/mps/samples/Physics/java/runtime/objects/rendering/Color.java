@@ -15,8 +15,28 @@ public class Color {
     this.b = b;
   }
 
-  public int toInt(PApplet p) {
-    return p.color(r, g, b);
+  public Color merge(float selfRatio, Color color) {
+    float rev = 1 - selfRatio;
+    return new Color((int) (r * selfRatio + color.r * rev), (int) (g * selfRatio + color.g * rev), (int) (b * selfRatio + color.b * rev));
   }
 
+  public int toInt(PApplet applet) {
+    return applet.color(r, g, b);
+  }
+
+  public static Color merge(Color left, Color right, float leftRatio) {
+    if (left == null && right == null) {
+      return null;
+    }
+
+    float rev = 1 - leftRatio;
+    if (left == null) {
+      left = new Color(0, 0, 0);
+    }
+    if (right == null) {
+      right = new Color(0, 0, 0);
+    }
+
+    return new Color((int) (left.r * leftRatio + right.r * rev), (int) (left.g * leftRatio + right.g * rev), (int) (left.b * leftRatio + right.b * rev));
+  }
 }

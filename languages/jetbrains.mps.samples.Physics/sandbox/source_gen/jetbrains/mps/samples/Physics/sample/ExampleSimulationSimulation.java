@@ -37,7 +37,7 @@ public class ExampleSimulationSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.EarthNested.Earth.getPosition().add(new InternalVector(AH.mul(((Number) new BigInteger("190000")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).add((scope.EarthNested.Earth.getPosition().add(scope.Sun.getPosition())).minus(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).resize(AH.mul(((Number) new BigInteger("744000")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN)))));
+    return scope.EarthNested.Earth.getPosition().add(new InternalVector(AH.mul(((Number) new BigInteger("190000")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).add(scope.EarthNested.Earth.getPosition().minus(scope.Sun.getPosition()).resize(AH.mul(((Number) new BigInteger("744000")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN)))));
   }
 
   @Override

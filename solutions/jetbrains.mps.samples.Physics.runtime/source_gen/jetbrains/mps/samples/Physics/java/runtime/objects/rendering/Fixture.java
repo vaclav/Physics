@@ -11,6 +11,7 @@ import processing.core.PGraphics;
 import org.ode4j.math.DVector3C;
 import org.ode4j.ode.DMass;
 import org.ode4j.ode.DBody;
+import org.ode4j.math.DVector3;
 
 public abstract class Fixture implements Renderable {
   public static final double DENSITY = 1;
@@ -20,12 +21,15 @@ public abstract class Fixture implements Renderable {
   private boolean emitLight;
   protected World world;
 
+  private PApplet appletCache;
+
   public Fixture(World world, Texture texture) {
     this.world = world;
     this.texture = texture;
   }
 
   public void setup(PApplet app, float scale) {
+    this.appletCache = app;
     texture.setup(app, shape, emitLight);
   }
 
@@ -61,10 +65,11 @@ public abstract class Fixture implements Renderable {
    */
   public void mergeWith(Fixture fixture) {
     DBody body = geometry.getBody();
+    DBody otherBody = fixture.getGeometry().getBody();
 
     // Keep previous mass 
     double thisMass = body.getMass().getMass();
-    double otherMass = fixture.getGeometry().getBody().getMass().getMass();
+    double otherMass = otherBody.getMass().getMass();
 
     // Destroy previous previous 
     geometry.destroy();
@@ -72,9 +77,16 @@ public abstract class Fixture implements Renderable {
     // Set volume to the sum of both 
     this.setVolume(getVolume() + fixture.getVolume());
 
-    // TODO Merge colors accordingly 
+    double thisRatio = thisMass / (otherMass + thisMass);
+    double otherRatio = 1 - thisRatio;
+    Texture resultingTexture = texture.mergeWith(fixture.getTexture(), (float) thisRatio);
+    resultingTexture.setup(appletCache, this.shape, this.emitLight);
 
-    // TODO merge velocity 
+    DVector3C thisVel = body.getLinearVel();
+    DVector3C otherVel = otherBody.getLinearVel();
+    body.setLinearVel(new DVector3(thisVel.get0() * thisRatio + otherVel.get0() * otherRatio, thisVel.get1() * thisRatio + otherVel.get1() * otherRatio, thisVel.get2() * thisRatio + otherVel.get2() * otherRatio));
+
+    // TODO merge angular velocity 
 
     // Rebuild geometry and apply to body 
     this.bindToBody(body, thisMass + otherMass);

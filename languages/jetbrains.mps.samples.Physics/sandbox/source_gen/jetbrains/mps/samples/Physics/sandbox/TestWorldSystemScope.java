@@ -95,7 +95,7 @@ public class TestWorldSystemScope extends SystemScope {
         @Override
         public DVector3C linearForce(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
 
-          return VectorHelper.anyToDVector3C(scope.Hey.minus(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.TheOtherWorld)).resize(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1")))));
+          return VectorHelper.anyToDVector3C(scope.Hey.minus(currentEntity).resize(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1")))));
 
         }
         @Override

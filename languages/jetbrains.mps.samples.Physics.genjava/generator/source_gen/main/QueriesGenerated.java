@@ -17,11 +17,11 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.IfMacroContext;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext;
 import jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.samples.Physics.behavior.IForceWithCache__BehaviorDescriptor;
 import jetbrains.mps.samples.Physics.genjava.behavior.NumberGenerationHelper;
 import jetbrains.mps.generator.template.TemplateArgumentContext;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.generator.template.InsertMacroContext;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitConversionUtil;
@@ -383,16 +383,7 @@ public class QueriesGenerated extends QueryProviderBase {
     if ((SLinkOperations.getTarget(_context.getNode(), LINKS.source$L$qG) != null)) {
       return SLinkOperations.getTarget(_context.getNode(), LINKS.source$L$qG);
     } else {
-      SNode ancestor = SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.ILocalized$9a, false, false);
-
-      // No localized ancestor or we try to define position in the current expression 
-      if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(_context.getNode(), null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0))) {
-        // -> world origin 
-        return createCartesianCoordinates_x583g4_a1a3a0a0de();
-      } else {
-        // -> ancestor position 
-        return SLinkOperations.getTarget(ancestor, LINKS.position$DoV0);
-      }
+      return createCurrentObjectExpression_x583g4_a0a0a0de();
     }
   }
   public static SNode sourceNodeQuery_3_13(final SourceSubstituteMacroNodeContext _context) {
@@ -1661,20 +1652,8 @@ public class QueriesGenerated extends QueryProviderBase {
     quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, "jetbrains.mps.samples.Physics.types"), 0x6520d39c950a1448L, "DirectionType")).getResult();
     return quotedNode_1;
   }
-  private static SNode createCartesianCoordinates_x583g4_a1a3a0a0de() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CartesianCoordinates$U8);
-    {
-      SNodeBuilder n1 = n0.forChild(LINKS.dx$VpuT).init(CONCEPTS.NumberLiteral$yW);
-      n1.setProperty(PROPS.value$nZyY, "0");
-    }
-    {
-      SNodeBuilder n2 = n0.forChild(LINKS.dy$VWrJ).init(CONCEPTS.NumberLiteral$yW);
-      n2.setProperty(PROPS.value$nZyY, "0");
-    }
-    {
-      SNodeBuilder n3 = n0.forChild(LINKS.dz$VWBn).init(CONCEPTS.NumberLiteral$yW);
-      n3.setProperty(PROPS.value$nZyY, "0");
-    }
+  private static SNode createCurrentObjectExpression_x583g4_a0a0a0de() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CurrentObjectExpression$eH);
     return n0.getResult();
   }
 
@@ -1716,7 +1695,6 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink height$ip86 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996957L, "height");
     /*package*/ static final SContainmentLink direction$2h5b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4472L, "direction");
     /*package*/ static final SContainmentLink source$L$qG = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x3ed90da58b6e2fb6L, "source");
-    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
     /*package*/ static final SContainmentLink length$2h69 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4474L, "length");
     /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
     /*package*/ static final SContainmentLink target$oizF = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, 0x339d8f0ab560d04L, "target");
@@ -1731,6 +1709,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink lower$No2S = MetaAdapterFactory.getContainmentLink(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9be6f0L, 0xd7c3339c4f027e5L, "lower");
     /*package*/ static final SContainmentLink body$Bhy2 = MetaAdapterFactory.getContainmentLink(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9be6f0L, 0xd7c3339c4eec946L, "body");
     /*package*/ static final SContainmentLink expression$tVRI = MetaAdapterFactory.getContainmentLink(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x5abff81774111c3aL, "expression");
+    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
     /*package*/ static final SContainmentLink mass$9nTx = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x1be152c1502448ffL, "mass");
     /*package*/ static final SContainmentLink bounceFactor$1OL1 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, 0x5b463016ba87dce5L, "bounceFactor");
     /*package*/ static final SReferenceLink color$x_mI = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, 0xb06f5069ab75031L, "color");
@@ -1780,9 +1759,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SConcept WorldDefinition$Xn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
     /*package*/ static final SConcept Simulation$oX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, "jetbrains.mps.samples.Physics.structure.Simulation");
     /*package*/ static final SInterfaceConcept IForceWithCache$ie = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da749c297L, "jetbrains.mps.samples.Physics.structure.IForceWithCache");
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
-    /*package*/ static final SConcept CartesianCoordinates$U8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
+    /*package*/ static final SConcept CurrentObjectExpression$eH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L, "jetbrains.mps.samples.Physics.structure.CurrentObjectExpression");
   }
 
   private static final class PROPS {
@@ -1795,6 +1772,5 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty green$ELp = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, 0x14f63a14438863e9L, "green");
     /*package*/ static final SProperty blue$EJW = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, 0x14f63a14438863e6L, "blue");
     /*package*/ static final SProperty url$RYh0 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a144388655eL, 0xcad58369e8b9e91L, "url");
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 }

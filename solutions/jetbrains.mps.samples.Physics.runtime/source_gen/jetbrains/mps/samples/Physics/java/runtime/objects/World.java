@@ -117,7 +117,7 @@ public class World implements DGeom.DNearCallback, Renderable {
   @Override
   public void render(PGraphics graphics, float scale, DVector3C scaledOffset) {
     for (PhysicalEntity entity : entities) {
-      entity.applyLights(graphics, scale);
+      entity.applyLights(graphics, scale, scaledOffset);
     }
 
     for (PhysicalEntity entity : entities) {

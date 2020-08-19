@@ -84,14 +84,14 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
       ForceModeApplication.apply(mode, this, forceLinear, applicationPoint);
     }
   }
-  public void applyLights(PGraphics ctx, float scale) {
+  public void applyLights(PGraphics ctx, float scale, DVector3C scaledOffset) {
     if (disabled) {
       return;
     }
 
     if (fixture.doEmitLight()) {
       DVector3C position = body.getPosition();
-      ctx.pointLight(255, 255, 255, (float) position.get0() * scale, (float) position.get1() * scale, (float) position.get2() * scale);
+      ctx.pointLight(255, 255, 255, (float) (position.get0() * scale + scaledOffset.get0()), (float) (position.get1() * scale + scaledOffset.get1()), (float) (position.get2() * scale + scaledOffset.get2()));
     }
   }
 
@@ -119,7 +119,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
 
     // Display trace if any 
     if (properties.getTraceHandler() != null) {
-      properties.getTraceHandler().render(position, graphics, scale);
+      properties.getTraceHandler().render(position, graphics, scale, scaledOffset);
     }
   }
   public DBody getBody() {

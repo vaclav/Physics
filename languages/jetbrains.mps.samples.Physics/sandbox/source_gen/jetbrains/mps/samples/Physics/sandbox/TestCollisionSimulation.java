@@ -16,7 +16,7 @@ public class TestCollisionSimulation extends Simulation {
   protected CollisionWorldSystemScope scope;
 
   public TestCollisionSimulation() {
-    super(AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))).floatValue());
+    super(AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).floatValue());
   }
 
   @Override
@@ -35,14 +35,14 @@ public class TestCollisionSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("600")), ((Number) new BigInteger("1")))).negate());
+    return new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("800")), ((Number) new BigInteger("1"))));
   }
 
   @Override
   public VectorLike getCameraFocus(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
+    return scope.getPosition();
   }
 
   public static void main(String[] args) {

@@ -44,7 +44,7 @@ public class GravityForce {
                 return new Function<ParameterSetWrapper, VectorLike>() {
                   public VectorLike apply(ParameterSetWrapper param) {
                     PhysicalEntity it = (PhysicalEntity) param.parameters.get(0);
-                    return it.minus(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).resize(AH.div(AH.mul(AH.mul(G, it.getMass()), currentEntity.getMass()), BigDecimal.valueOf(Math.pow(currentEntity.minus(it).length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))));
+                    return it.minus(currentEntity).resize(AH.div(AH.mul(AH.mul(G, it.getMass()), currentEntity.getMass()), BigDecimal.valueOf(Math.pow(currentEntity.minus(it).length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))));
                   }
                 }.apply(new ParameterSetWrapper(param));
               }

@@ -6,7 +6,7 @@ import org.ode4j.math.DVector3C;
 import processing.core.PGraphics;
 
 public class TraceHandler {
-  public static final int MAX_CAPACITY = 300;
+  public static final int MAX_CAPACITY = 600;
 
   private Color aspect;
 
@@ -20,25 +20,25 @@ public class TraceHandler {
     this.offset = 0;
   }
 
-  private void writeAt(DVector3C positions, int cursor, float scale) {
-    content[cursor][0] = (float) positions.get0() * scale;
-    content[cursor][1] = (float) positions.get1() * scale;
-    content[cursor][2] = (float) positions.get2() * scale;
+  private void writeAt(DVector3C positions, int cursor, float scale, DVector3C scaledOffset) {
+    content[cursor][0] = (float) (positions.get0() * scale + scaledOffset.get0());
+    content[cursor][1] = (float) (positions.get1() * scale + scaledOffset.get1());
+    content[cursor][2] = (float) (positions.get2() * scale + scaledOffset.get2());
   }
 
   private void vertexAt(PGraphics ctx, int cursor) {
     ctx.vertex(content[cursor][0], content[cursor][1], content[cursor][2]);
   }
 
-  public void render(DVector3C newPositions, PGraphics ctx, float scale) {
+  public void render(DVector3C newPositions, PGraphics ctx, float scale, DVector3C scaledOffset) {
     // Write new position 
     if (currentCapacity < MAX_CAPACITY) {
       // Write and increase capacity 
-      writeAt(newPositions, currentCapacity, scale);
+      writeAt(newPositions, currentCapacity, scale, scaledOffset);
       currentCapacity += 1;
     } else {
       // Write and shift offset 
-      writeAt(newPositions, offset, scale);
+      writeAt(newPositions, offset, scale, scaledOffset);
       offset += 1;
       if (offset >= MAX_CAPACITY) {
         offset = 0;
