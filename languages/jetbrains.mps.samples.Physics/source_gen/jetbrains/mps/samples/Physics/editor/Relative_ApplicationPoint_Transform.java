@@ -101,12 +101,12 @@ public class Relative_ApplicationPoint_Transform extends TransformationMenuBase 
 
       @Override
       public void execute(@NotNull String pattern) {
-        SPropertyOperations.assign(_context.getNode(), PROPS.isPointRelative$72Dl, true);
+        SPropertyOperations.assign(_context.getNode(), PROPS.isPointRelative$86Nw, true);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isPointRelative$72Dl));
+        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isPointRelative$86Nw));
       }
 
 
@@ -129,6 +129,6 @@ public class Relative_ApplicationPoint_Transform extends TransformationMenuBase 
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
+    /*package*/ static final SProperty isPointRelative$86Nw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bddL, "isPointRelative");
   }
 }

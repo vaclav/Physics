@@ -20,7 +20,7 @@ public class typeof_CachedObjectExpression_InferenceRule extends AbstractInferen
   }
   public void applyRule(final SNode cachedObjectExpression, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode cacheType = typeCheckingContext.typeOf(IForceWithCache__BehaviorDescriptor.cacheType_id4$vyCQBisbm.invoke(SLinkOperations.getTarget(cachedObjectExpression, LINKS.cacheOf$q$Y0)), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5269082430052662049", true);
+      final SNode cacheType = typeCheckingContext.typeOf(IForceWithCache__BehaviorDescriptor.getCacheType_id4$vyCQBisbm.invoke(SLinkOperations.getTarget(cachedObjectExpression, LINKS.cacheOf$q$Y0)), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5269082430052662049", true);
       typeCheckingContext.whenConcrete(cacheType, new Runnable() {
         public void run() {
           {

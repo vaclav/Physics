@@ -74,9 +74,9 @@
         <child id="3106918138151965263" name="key" index="39QuZq" />
       </concept>
       <concept id="1159415042432870010" name="jetbrains.mps.samples.Physics.structure.ShapeStyleKey" flags="ng" index="27oVuG" />
-      <concept id="1159415042433250201" name="jetbrains.mps.samples.Physics.structure.SphereRadiusStyle" flags="ng" index="27rm9f" />
-      <concept id="913483291047927804" name="" flags="ng" index="2jxWva">
-        <child id="913483291047928433" name="" index="2jxZD7" />
+      <concept id="1159415042433250201" name="jetbrains.mps.samples.Physics.structure.SphereRadiusStyleKey" flags="ng" index="27rm9f" />
+      <concept id="913483291047927804" name="jetbrains.mps.samples.Physics.structure.ColorTexture" flags="ng" index="2jxWva">
+        <child id="913483291047928433" name="color" index="2jxZD7" />
       </concept>
       <concept id="3541737815097257862" name="jetbrains.mps.samples.Physics.structure.AbstractForce" flags="ng" index="llAx1" />
       <concept id="6362440046684076683" name="jetbrains.mps.samples.Physics.structure.CartesianCoordinates" flags="ng" index="v6hs8">
@@ -106,6 +106,9 @@
       </concept>
       <concept id="232455383964029220" name="jetbrains.mps.samples.Physics.structure.InteractedObjectExpression" flags="ng" index="2Ct4Bk" />
       <concept id="232455383964014266" name="jetbrains.mps.samples.Physics.structure.InteractionForce" flags="ng" index="2Ct8Ta" />
+      <concept id="4528665904943021020" name="jetbrains.mps.samples.Physics.structure.IForceWithApplicationPoint" flags="ng" index="2Ol3pT">
+        <property id="4528665904943021021" name="isPointRelative" index="2Ol3pS" />
+      </concept>
       <concept id="3004491438924292731" name="jetbrains.mps.samples.Physics.structure.ObjectStyleDotTarget" flags="ng" index="2UuJHK">
         <child id="3004491438924292736" name="styleKey" index="2UuJIb" />
       </concept>
@@ -384,6 +387,7 @@
       </node>
     </node>
     <node concept="2Ct8Ta" id="cTQf2FkHNB" role="3ix9pP">
+      <property role="2Ol3pS" value="false" />
       <node concept="3_jIDJ" id="cTQf2FkHNN" role="Y6l9H">
         <node concept="a1tim" id="270Q2mETi3g" role="3_jIDE">
           <node concept="a0Byk" id="270Q2mETi3h" role="a1tiq">

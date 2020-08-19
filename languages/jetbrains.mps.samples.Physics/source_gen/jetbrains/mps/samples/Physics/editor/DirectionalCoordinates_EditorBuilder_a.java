@@ -39,6 +39,8 @@ import jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.editor.runtime.style.FocusPolicy;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
+import jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet.EmptyCellStyleClass;
+import jetbrains.mps.nodeEditor.EditorSettings;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 /*package*/ class DirectionalCoordinates_EditorBuilder_a extends AbstractEditorBuilder {
@@ -250,18 +252,38 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_1());
+    editorCell.addEditorCell(createCollection_3());
     editorCell.addEditorCell(createRefNode_1());
+    return editorCell;
+  }
+  private EditorCell createCollection_3() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
+    editorCell.setCellId("Collection_zi1iot_a1a0a");
+    editorCell.addEditorCell(createConstant_1());
+    editorCell.addEditorCell(createConstant_2());
     return editorCell;
   }
   private EditorCell createConstant_1() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "direction:");
-    editorCell.setCellId("Constant_zi1iot_a1a0a");
+    editorCell.setCellId("Constant_zi1iot_a0b0a0");
     Style style = new StyleImpl();
     new ParenthesisAttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
+  }
+  private EditorCell createConstant_2() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "(absolute point)");
+    editorCell.setCellId("Constant_zi1iot_b0b0a0");
+    Style style = new StyleImpl();
+    new EmptyCellStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.FONT_SIZE, _StyleParameter_QueryFunction_zi1iot_a0b0b0a0());
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private int _StyleParameter_QueryFunction_zi1iot_a0b0b0a0() {
+    return (int) (EditorSettings.getInstance().getFontSize() * 0.8);
   }
   private EditorCell createRefNode_1() {
     SingleRoleCellProvider provider = new directionSingleRoleHandler_zi1iot_b1a0a(myNode, LINKS.direction$2h5b, getEditorContext());

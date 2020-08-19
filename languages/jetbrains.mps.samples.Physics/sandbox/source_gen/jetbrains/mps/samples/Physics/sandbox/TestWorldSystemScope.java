@@ -20,12 +20,6 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
-import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
-import org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper;
-import java.util.function.Function;
-import org.pcollections.TreePVector;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class TestWorldSystemScope extends SystemScope {
   public final World2SystemScope TheOtherWorld;
@@ -80,7 +74,7 @@ public class TestWorldSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (cached == null) {
+          if (cached != null) {
             cached = new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
           }
 
@@ -118,70 +112,14 @@ public class TestWorldSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (cached == null) {
-            cached = new _FunctionTypes._return_P0_E0<Force>() {
-              public Force invoke() {
-                ParameterSetWrapper param = new ParameterSetWrapper();
-                param.parameters.add(AH.mul(((Number) new BigInteger("4")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
-                return new Function<ParameterSetWrapper, Force>() {
-                  public Force apply(ParameterSetWrapper param) {
-                    Number G = (Number) param.parameters.get(0);
-                    return new Force<SystemScope>() {
-
-                      @Override
-                      public DVector3C linearForce(final World world, SystemScope scope, final PhysicalEntity currentEntity, double time) {
-
-                        return VectorHelper.anyToDVector3C(new _FunctionTypes._return_P0_E0<VectorLike>() {
-                          public VectorLike invoke() {
-                            VectorLike seed = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
-                            for (Object current : TreePVector.from(TreePVector.from(world.getEntities().stream().filter(new Predicate<PhysicalEntity>() {
-                              public boolean test(PhysicalEntity o) {
-                                return new Function<ParameterSetWrapper, Boolean>() {
-                                  public Boolean apply(ParameterSetWrapper param) {
-                                    PhysicalEntity it = (PhysicalEntity) param.parameters.get(0);
-                                    return it != currentEntity;
-                                  }
-                                }.apply(new ParameterSetWrapper(o));
-                              }
-                            }).collect(Collectors.toList())).stream().map(new Function<PhysicalEntity, VectorLike>() {
-                              public VectorLike apply(PhysicalEntity param) {
-                                return new Function<ParameterSetWrapper, VectorLike>() {
-                                  public VectorLike apply(ParameterSetWrapper param) {
-                                    PhysicalEntity it = (PhysicalEntity) param.parameters.get(0);
-                                    return it.minus(currentEntity).resize(AH.div(AH.mul(AH.mul(G, it.getMass()), currentEntity.getMass()), BigDecimal.valueOf(Math.pow(currentEntity.minus(it).length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))));
-                                  }
-                                }.apply(new ParameterSetWrapper(param));
-                              }
-                            }).collect(Collectors.toList()))) {
-                              seed = seed.add(((VectorLike) current));
-                            }
-                            return seed;
-                          }
-                        }.invoke());
-
-                      }
-                      @Override
-                      public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-                        return null;
-                      }
-
-                      @Override
-                      public int forceMode() {
-                        return 0;
-                      }
-                    };
-                  }
-                }.apply(param);
-              }
-            }.invoke();
-          }
+          cached = GravityForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("4")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
 
           return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
 
         }
         @Override
         public DVector3C applicationPoint(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return null;
+          return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
         }
 
         @Override
@@ -193,48 +131,14 @@ public class TestWorldSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (cached == null) {
-            cached = new _FunctionTypes._return_P0_E0<Force>() {
-              public Force invoke() {
-                ParameterSetWrapper param = new ParameterSetWrapper();
-                param.parameters.add(AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
-                param.parameters.add(AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
-                param.parameters.add(AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
-                return new Function<ParameterSetWrapper, Force>() {
-                  public Force apply(ParameterSetWrapper param) {
-                    Number x = (Number) param.parameters.get(0);
-                    Number y = (Number) param.parameters.get(1);
-                    Number z = (Number) param.parameters.get(2);
-                    return new Force<SystemScope>() {
-
-                      @Override
-                      public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-
-                        return VectorHelper.anyToDVector3C(new InternalVector(x, y, z));
-
-                      }
-                      @Override
-                      public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-                        return null;
-                      }
-
-                      @Override
-                      public int forceMode() {
-                        return 0;
-                      }
-                    };
-                  }
-                }.apply(param);
-              }
-            }.invoke();
-          }
+          cached = XYZForceForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
 
           return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
 
         }
         @Override
         public DVector3C applicationPoint(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return null;
+          return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
         }
 
         @Override

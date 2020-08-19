@@ -22,6 +22,8 @@ public class VectorHelper {
       return fromInternal(as_2xd9bs_a0a0a0a4(vec, VectorLike.class));
     } else if (vec instanceof DVector3C) {
       return as_2xd9bs_a0a0a0a4_0(vec, DVector3C.class);
+    } else if (vec == null) {
+      return null;
     }
     System.err.println("[vectorhelper] unhandled vector type : " + vec.getClass().getName());
     return null;

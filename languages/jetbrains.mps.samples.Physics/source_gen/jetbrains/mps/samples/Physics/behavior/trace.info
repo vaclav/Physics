@@ -2415,21 +2415,21 @@
   <root nodeRef="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)/5269082430048407565">
     <file name="ConditionalForce__BehaviorDescriptor.java">
       <node id="5269082430048407565" at="30,0,31,0" concept="9" trace="CONCEPT" />
-      <node id="5269082430048407565" at="32,0,33,0" concept="9" trace="cachedValueExpression_id4$vyCQBisaz" />
-      <node id="5269082430048407565" at="33,0,34,0" concept="9" trace="cacheType_id4$vyCQBisbm" />
+      <node id="5269082430048407565" at="32,0,33,0" concept="9" trace="getCachedValueExpression_id4$vyCQBisaz" />
+      <node id="5269082430048407565" at="33,0,34,0" concept="9" trace="getCacheType_id4$vyCQBisbm" />
       <node id="5269082430048407565" at="34,0,35,0" concept="9" trace="getLinearForceExpression_id4$vyCQBi$gg" />
       <node id="5269082430048407565" at="35,0,36,0" concept="9" trace="getApplicationPointExpression_id4$vyCQBi$go" />
       <node id="5269082430048407565" at="37,0,38,0" concept="9" trace="BH_METHODS" />
-      <node id="5269082430048420927" at="42,93,43,70" concept="6" />
-      <node id="5269082430048425116" at="45,81,46,47" concept="6" />
+      <node id="5269082430048420927" at="42,96,43,70" concept="6" />
+      <node id="5269082430048425116" at="45,84,46,47" concept="6" />
       <node id="5269082430048447697" at="48,96,49,55" concept="7" />
       <node id="5269082430048439209" at="49,55,50,145" concept="6" />
       <node id="5269082430048848118" at="52,101,53,156" concept="6" />
       <node id="5269082430048407565" at="60,114,61,21" concept="2" />
       <node id="5269082430048407565" at="65,114,66,49" concept="5" />
       <node id="5269082430048407565" at="67,26,68,56" concept="12" />
-      <node id="5269082430048407565" at="71,13,72,71" concept="6" />
-      <node id="5269082430048407565" at="73,13,74,59" concept="6" />
+      <node id="5269082430048407565" at="71,13,72,74" concept="6" />
+      <node id="5269082430048407565" at="73,13,74,62" concept="6" />
       <node id="5269082430048407565" at="75,13,76,74" concept="6" />
       <node id="5269082430048407565" at="77,13,78,79" concept="6" />
       <node id="5269082430048407565" at="79,14,80,58" concept="12" />
@@ -2480,8 +2480,8 @@
       <node id="5269082430048407565" at="172,0,173,0" concept="9" trace="value$nZyY" />
       <node id="5269082430048407565" at="39,0,41,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="5269082430048407565" at="56,0,58,0" concept="1" trace="ConditionalForce__BehaviorDescriptor#()V" />
-      <node id="5269082430048407565" at="42,0,45,0" concept="10" trace="cachedValueExpression_id4$vyCQBisaz#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="5269082430048407565" at="45,0,48,0" concept="10" trace="cacheType_id4$vyCQBisbm#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="5269082430048407565" at="42,0,45,0" concept="10" trace="getCachedValueExpression_id4$vyCQBisaz#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="5269082430048407565" at="45,0,48,0" concept="10" trace="getCacheType_id4$vyCQBisbm#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="5269082430048407565" at="52,0,55,0" concept="10" trace="getApplicationPointExpression_id4$vyCQBi$go#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="5269082430048407565" at="66,49,69,5" concept="3" />
       <node id="5269082430048407565" at="86,49,89,5" concept="3" />
@@ -2504,13 +2504,13 @@
       <node id="5269082430048439266" at="113,0,144,0" concept="10" trace="createIfExpression_z9hyna_a1a2#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <scope id="5269082430048407565" at="39,63,39,63" />
       <scope id="5269082430048407565" at="56,54,56,54" />
-      <scope id="5269082430048420843" at="42,93,43,70" />
-      <scope id="5269082430048420849" at="45,81,46,47" />
+      <scope id="5269082430048420843" at="42,96,43,70" />
+      <scope id="5269082430048420849" at="45,84,46,47" />
       <scope id="5269082430048847757" at="52,101,53,156" />
       <scope id="5269082430048407565" at="60,114,61,21" />
       <scope id="5269082430048407565" at="67,26,68,56" />
-      <scope id="5269082430048407565" at="71,13,72,71" />
-      <scope id="5269082430048407565" at="73,13,74,59" />
+      <scope id="5269082430048407565" at="71,13,72,74" />
+      <scope id="5269082430048407565" at="73,13,74,62" />
       <scope id="5269082430048407565" at="75,13,76,74" />
       <scope id="5269082430048407565" at="77,13,78,79" />
       <scope id="5269082430048407565" at="79,14,80,58" />
@@ -2600,8 +2600,8 @@
   <root nodeRef="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)/5269082430048420504">
     <file name="IForceWithCache__BehaviorDescriptor.java">
       <node id="5269082430048420504" at="22,0,23,0" concept="9" trace="CONCEPT" />
-      <node id="5269082430048420504" at="24,0,25,0" concept="9" trace="cacheType_id4$vyCQBisbm" />
-      <node id="5269082430048420504" at="25,0,26,0" concept="9" trace="cachedValueExpression_id4$vyCQBisaz" />
+      <node id="5269082430048420504" at="24,0,25,0" concept="9" trace="getCacheType_id4$vyCQBisbm" />
+      <node id="5269082430048420504" at="25,0,26,0" concept="9" trace="getCachedValueExpression_id4$vyCQBisaz" />
       <node id="5269082430048420504" at="27,0,28,0" concept="9" trace="BH_METHODS" />
       <node id="5269082430048420504" at="37,114,38,21" concept="2" />
       <node id="5269082430048420504" at="42,114,43,49" concept="5" />
@@ -2862,20 +2862,20 @@
     <file name="StaticForce__BehaviorDescriptor.java">
       <node id="620348066298820552" at="29,0,30,0" concept="9" trace="CONCEPT" />
       <node id="620348066298820552" at="31,0,32,0" concept="9" trace="isStatic_id7zgzoeUdjtW" />
-      <node id="620348066298820552" at="32,0,33,0" concept="9" trace="cachedValueExpression_id4$vyCQBisaz" />
-      <node id="620348066298820552" at="33,0,34,0" concept="9" trace="cacheType_id4$vyCQBisbm" />
+      <node id="620348066298820552" at="32,0,33,0" concept="9" trace="getCachedValueExpression_id4$vyCQBisaz" />
+      <node id="620348066298820552" at="33,0,34,0" concept="9" trace="getCacheType_id4$vyCQBisbm" />
       <node id="620348066298820552" at="34,0,35,0" concept="9" trace="getLinearForceExpression_id4$vyCQBi$gg" />
       <node id="620348066298820552" at="36,0,37,0" concept="9" trace="BH_METHODS" />
       <node id="8705613676611656787" at="41,82,42,16" concept="6" />
-      <node id="5269082430048448296" at="44,93,45,74" concept="6" />
-      <node id="5269082430048451297" at="47,81,48,47" concept="6" />
+      <node id="5269082430048448296" at="44,96,45,74" concept="6" />
+      <node id="5269082430048451297" at="47,84,48,47" concept="6" />
       <node id="5269082430048451681" at="50,96,51,66" concept="6" />
       <node id="620348066298820552" at="58,114,59,21" concept="2" />
       <node id="620348066298820552" at="63,114,64,49" concept="5" />
       <node id="620348066298820552" at="65,26,66,56" concept="12" />
       <node id="620348066298820552" at="69,13,70,60" concept="6" />
-      <node id="620348066298820552" at="71,13,72,71" concept="6" />
-      <node id="620348066298820552" at="73,13,74,59" concept="6" />
+      <node id="620348066298820552" at="71,13,72,74" concept="6" />
+      <node id="620348066298820552" at="73,13,74,62" concept="6" />
       <node id="620348066298820552" at="75,13,76,74" concept="6" />
       <node id="620348066298820552" at="77,14,78,58" concept="12" />
       <node id="620348066298820552" at="83,128,84,49" concept="5" />
@@ -2906,8 +2906,8 @@
       <node id="620348066298820552" at="38,0,40,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="620348066298820552" at="54,0,56,0" concept="1" trace="StaticForce__BehaviorDescriptor#()V" />
       <node id="620348066298820552" at="41,0,44,0" concept="10" trace="isStatic_id7zgzoeUdjtW#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="620348066298820552" at="44,0,47,0" concept="10" trace="cachedValueExpression_id4$vyCQBisaz#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="620348066298820552" at="47,0,50,0" concept="10" trace="cacheType_id4$vyCQBisbm#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="620348066298820552" at="44,0,47,0" concept="10" trace="getCachedValueExpression_id4$vyCQBisaz#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="620348066298820552" at="47,0,50,0" concept="10" trace="getCacheType_id4$vyCQBisbm#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="620348066298820552" at="50,0,53,0" concept="10" trace="getLinearForceExpression_id4$vyCQBi$gg#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="620348066298820552" at="64,49,67,5" concept="3" />
       <node id="620348066298820552" at="84,49,87,5" concept="3" />
@@ -2923,14 +2923,14 @@
       <scope id="620348066298820552" at="38,63,38,63" />
       <scope id="620348066298820552" at="54,49,54,49" />
       <scope id="8705613676611655874" at="41,82,42,16" />
-      <scope id="5269082430048448232" at="44,93,45,74" />
-      <scope id="5269082430048448238" at="47,81,48,47" />
+      <scope id="5269082430048448232" at="44,96,45,74" />
+      <scope id="5269082430048448238" at="47,84,48,47" />
       <scope id="5269082430052681587" at="50,96,51,66" />
       <scope id="620348066298820552" at="58,114,59,21" />
       <scope id="620348066298820552" at="65,26,66,56" />
       <scope id="620348066298820552" at="69,13,70,60" />
-      <scope id="620348066298820552" at="71,13,72,71" />
-      <scope id="620348066298820552" at="73,13,74,59" />
+      <scope id="620348066298820552" at="71,13,72,74" />
+      <scope id="620348066298820552" at="73,13,74,62" />
       <scope id="620348066298820552" at="75,13,76,74" />
       <scope id="620348066298820552" at="77,14,78,58" />
       <scope id="620348066298820552" at="85,26,86,56" />
@@ -4693,8 +4693,8 @@
       <node id="8705613676600462060" at="96,48,97,22" concept="6" />
       <node id="8705613676600462060" at="102,40,103,19" concept="6" />
       <node id="8705613676600462060" at="107,0,108,0" concept="9" trace="isComponentsRelative$72Cn" />
-      <node id="8705613676600462060" at="108,0,109,0" concept="9" trace="isPointRelative$72Dl" />
-      <node id="8705613676600462060" at="112,0,113,0" concept="9" trace="applicationPoint$8ifq" />
+      <node id="8705613676600462060" at="108,0,109,0" concept="9" trace="isPointRelative$86Nw" />
+      <node id="8705613676600462060" at="112,0,113,0" concept="9" trace="applicationPoint$86Ou" />
       <node id="8705613676600462060" at="113,0,114,0" concept="9" trace="components$SRPu" />
       <node id="8705613676600462060" at="36,0,38,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="8705613676600462060" at="54,0,56,0" concept="1" trace="SimpleForce__BehaviorDescriptor#()V" />
@@ -4778,24 +4778,24 @@
     <file name="AbstractForceCall__BehaviorDescriptor.java">
       <node id="974138438729127763" at="31,0,32,0" concept="9" trace="CONCEPT" />
       <node id="974138438729127763" at="33,0,34,0" concept="9" trace="remainingArguments_idQ4PrYMwPsY" />
-      <node id="974138438729127763" at="34,0,35,0" concept="9" trace="cachedValueExpression_id4$vyCQBisaz" />
-      <node id="974138438729127763" at="35,0,36,0" concept="9" trace="cacheType_id4$vyCQBisbm" />
+      <node id="974138438729127763" at="34,0,35,0" concept="9" trace="getCachedValueExpression_id4$vyCQBisaz" />
+      <node id="974138438729127763" at="35,0,36,0" concept="9" trace="getCacheType_id4$vyCQBisbm" />
       <node id="974138438729127763" at="36,0,37,0" concept="9" trace="getLinearForceExpression_id4$vyCQBi$gg" />
       <node id="974138438729127763" at="37,0,38,0" concept="9" trace="getApplicationPointExpression_id4$vyCQBi$go" />
       <node id="974138438729127763" at="39,0,40,0" concept="9" trace="BH_METHODS" />
       <node id="974138438729235158" at="48,48,49,85" concept="6" />
-      <node id="5269082430048436099" at="55,99,56,30" concept="7" />
+      <node id="5269082430048436099" at="55,102,56,30" concept="7" />
       <node id="5269082430048431986" at="58,39,59,202" concept="6" />
       <node id="5269082430048432003" at="62,37,63,63" concept="6" />
-      <node id="5269082430048437875" at="67,81,68,47" concept="6" />
+      <node id="5269082430048437875" at="67,84,68,47" concept="6" />
       <node id="5269082430048439027" at="70,96,71,57" concept="6" />
-      <node id="5269082430048847243" at="73,101,74,16" concept="6" />
+      <node id="4528665904943154747" at="73,101,74,57" concept="6" />
       <node id="974138438729127763" at="81,114,82,21" concept="2" />
       <node id="974138438729127763" at="86,114,87,49" concept="5" />
       <node id="974138438729127763" at="88,26,89,56" concept="12" />
       <node id="974138438729127763" at="92,13,93,77" concept="6" />
-      <node id="974138438729127763" at="94,13,95,71" concept="6" />
-      <node id="974138438729127763" at="96,13,97,59" concept="6" />
+      <node id="974138438729127763" at="94,13,95,74" concept="6" />
+      <node id="974138438729127763" at="96,13,97,62" concept="6" />
       <node id="974138438729127763" at="98,13,99,74" concept="6" />
       <node id="974138438729127763" at="100,13,101,79" concept="6" />
       <node id="974138438729127763" at="102,14,103,58" concept="12" />
@@ -4818,26 +4818,32 @@
       <node id="5269082430048439028" at="148,94,149,52" concept="2" />
       <node id="5269082430048439028" at="150,5,151,75" concept="2" />
       <node id="5269082430048439028" at="151,75,152,26" concept="6" />
-      <node id="974138438729127763" at="156,0,157,0" concept="9" trace="force$tsf5" />
-      <node id="974138438729127763" at="157,0,158,0" concept="9" trace="args$G1Ow" />
-      <node id="974138438729127763" at="158,0,159,0" concept="9" trace="parameterValues$tsg3" />
-      <node id="974138438729127763" at="159,0,160,0" concept="9" trace="argument$kXZ1" />
-      <node id="974138438729127763" at="160,0,161,0" concept="9" trace="value$59jW" />
-      <node id="974138438729127763" at="161,0,162,0" concept="9" trace="expr$xFwa" />
-      <node id="974138438729127763" at="162,0,163,0" concept="9" trace="target$NL8Z" />
-      <node id="974138438729127763" at="163,0,164,0" concept="9" trace="args$ysDY" />
-      <node id="974138438729127763" at="164,0,165,0" concept="9" trace="cacheOf$q$Y0" />
-      <node id="974138438729127763" at="168,0,169,0" concept="9" trace="DotExpression$Af" />
-      <node id="974138438729127763" at="169,0,170,0" concept="9" trace="Expression$Wr" />
-      <node id="974138438729127763" at="170,0,171,0" concept="9" trace="ExecOp$G" />
-      <node id="974138438729127763" at="171,0,172,0" concept="9" trace="CachedObjectExpression$O4" />
-      <node id="974138438729127763" at="172,0,173,0" concept="9" trace="ForceComponentsTarget$W$" />
+      <node id="4528665904943157483" at="154,66,155,73" concept="5" />
+      <node id="4528665904943157483" at="156,5,157,94" concept="5" />
+      <node id="4528665904943157483" at="157,94,158,52" concept="2" />
+      <node id="4528665904943157483" at="159,5,160,81" concept="2" />
+      <node id="4528665904943157483" at="160,81,161,26" concept="6" />
+      <node id="974138438729127763" at="165,0,166,0" concept="9" trace="force$tsf5" />
+      <node id="974138438729127763" at="166,0,167,0" concept="9" trace="args$G1Ow" />
+      <node id="974138438729127763" at="167,0,168,0" concept="9" trace="parameterValues$tsg3" />
+      <node id="974138438729127763" at="168,0,169,0" concept="9" trace="argument$kXZ1" />
+      <node id="974138438729127763" at="169,0,170,0" concept="9" trace="value$59jW" />
+      <node id="974138438729127763" at="170,0,171,0" concept="9" trace="expr$xFwa" />
+      <node id="974138438729127763" at="171,0,172,0" concept="9" trace="target$NL8Z" />
+      <node id="974138438729127763" at="172,0,173,0" concept="9" trace="args$ysDY" />
+      <node id="974138438729127763" at="173,0,174,0" concept="9" trace="cacheOf$q$Y0" />
+      <node id="974138438729127763" at="177,0,178,0" concept="9" trace="DotExpression$Af" />
+      <node id="974138438729127763" at="178,0,179,0" concept="9" trace="Expression$Wr" />
+      <node id="974138438729127763" at="179,0,180,0" concept="9" trace="ExecOp$G" />
+      <node id="974138438729127763" at="180,0,181,0" concept="9" trace="CachedObjectExpression$O4" />
+      <node id="974138438729127763" at="181,0,182,0" concept="9" trace="ForceComponentsTarget$W$" />
+      <node id="974138438729127763" at="182,0,183,0" concept="9" trace="ForceApplicationPointTarget$GC" />
       <node id="974138438729127763" at="41,0,43,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="974138438729127763" at="77,0,79,0" concept="1" trace="AbstractForceCall__BehaviorDescriptor#()V" />
       <node id="974138438729235156" at="48,0,51,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="5269082430048431984" at="58,0,61,0" concept="4" trace="select#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/Integer;" />
       <node id="5269082430048432001" at="62,0,65,0" concept="4" trace="select#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="974138438729127763" at="67,0,70,0" concept="10" trace="cacheType_id4$vyCQBisbm#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="974138438729127763" at="67,0,70,0" concept="10" trace="getCacheType_id4$vyCQBisbm#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="974138438729127763" at="70,0,73,0" concept="10" trace="getLinearForceExpression_id4$vyCQBi$gg#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="974138438729127763" at="73,0,76,0" concept="10" trace="getApplicationPointExpression_id4$vyCQBi$go#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="974138438729127763" at="87,49,90,5" concept="3" />
@@ -4846,6 +4852,7 @@
       <node id="974138438729127763" at="112,5,116,5" concept="11" />
       <node id="5269082430048431967" at="132,76,136,5" concept="0" />
       <node id="5269082430048439028" at="146,73,150,5" concept="0" />
+      <node id="4528665904943157483" at="155,73,159,5" concept="0" />
       <node id="974138438729235150" at="46,49,51,11" concept="6" />
       <node id="974138438729127763" at="119,0,124,0" concept="4" trace="getDeclaredMethods#()Ljava/util/List;" />
       <node id="974138438729127763" at="125,0,130,0" concept="4" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
@@ -4855,9 +4862,10 @@
       <node id="5269082430048431939" at="56,30,65,8" concept="6" />
       <node id="5269082430048431967" at="130,0,139,0" concept="10" trace="createDotExpression_yqfunp_a1a1#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Iterable;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="5269082430048439028" at="145,0,154,0" concept="10" trace="createDotExpression_yqfunp_a0a3#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="4528665904943157483" at="154,0,163,0" concept="10" trace="createDotExpression_yqfunp_a0a4#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="974138438729127763" at="44,0,55,0" concept="10" trace="remainingArguments_idQ4PrYMwPsY#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/Iterable;" />
       <node id="974138438729127763" at="107,0,118,0" concept="4" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
-      <node id="974138438729127763" at="55,0,67,0" concept="10" trace="cachedValueExpression_id4$vyCQBisaz#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="974138438729127763" at="55,0,67,0" concept="10" trace="getCachedValueExpression_id4$vyCQBisaz#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="974138438729127763" at="90,5,104,5" concept="11" />
       <node id="974138438729127763" at="85,0,106,0" concept="4" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <scope id="974138438729127763" at="41,63,41,63" />
@@ -4865,14 +4873,14 @@
       <scope id="974138438729235157" at="48,48,49,85" />
       <scope id="5269082430048431985" at="58,39,59,202" />
       <scope id="5269082430048432002" at="62,37,63,63" />
-      <scope id="5269082430048429724" at="67,81,68,47" />
+      <scope id="5269082430048429724" at="67,84,68,47" />
       <scope id="5269082430052677744" at="70,96,71,57" />
-      <scope id="5269082430048844586" at="73,101,74,16" />
+      <scope id="5269082430048844586" at="73,101,74,57" />
       <scope id="974138438729127763" at="81,114,82,21" />
       <scope id="974138438729127763" at="88,26,89,56" />
       <scope id="974138438729127763" at="92,13,93,77" />
-      <scope id="974138438729127763" at="94,13,95,71" />
-      <scope id="974138438729127763" at="96,13,97,59" />
+      <scope id="974138438729127763" at="94,13,95,74" />
+      <scope id="974138438729127763" at="96,13,97,62" />
       <scope id="974138438729127763" at="98,13,99,74" />
       <scope id="974138438729127763" at="100,13,101,79" />
       <scope id="974138438729127763" at="102,14,103,58" />
@@ -4889,6 +4897,9 @@
       </scope>
       <scope id="5269082430048439028" at="147,5,149,52">
         <var name="n1" id="5269082430048439028" />
+      </scope>
+      <scope id="4528665904943157483" at="156,5,158,52">
+        <var name="n1" id="4528665904943157483" />
       </scope>
       <scope id="974138438729235156" at="48,0,51,0">
         <var name="implArg" id="974138438729235156" />
@@ -4930,6 +4941,9 @@
       <scope id="5269082430048439028" at="145,66,152,26">
         <var name="n0" id="5269082430048439028" />
       </scope>
+      <scope id="4528665904943157483" at="154,66,161,26">
+        <var name="n0" id="4528665904943157483" />
+      </scope>
       <scope id="974138438729127763" at="108,128,116,5">
         <var name="methodIndex" id="974138438729127763" />
       </scope>
@@ -4941,7 +4955,10 @@
       <scope id="5269082430048439028" at="145,0,154,0">
         <var name="p0" id="5269082430048439028" />
       </scope>
-      <scope id="5269082430048429718" at="55,99,65,8" />
+      <scope id="4528665904943157483" at="154,0,163,0">
+        <var name="p0" id="4528665904943157483" />
+      </scope>
+      <scope id="5269082430048429718" at="55,102,65,8" />
       <scope id="974138438729127763" at="44,0,55,0">
         <var name="__thisNode__" id="974138438729127763" />
       </scope>
@@ -4964,10 +4981,10 @@
       <unit id="974138438729235156" at="47,116,51,9" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor$1$1" />
       <unit id="5269082430048431984" at="57,204,61,5" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor$2" />
       <unit id="5269082430048432001" at="61,24,65,5" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor$3" />
-      <unit id="974138438729127763" at="167,0,174,0" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor$CONCEPTS" />
       <unit id="974138438729235148" at="45,148,53,5" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor$1" />
-      <unit id="974138438729127763" at="155,0,166,0" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor$LINKS" />
-      <unit id="974138438729127763" at="30,0,175,0" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor" />
+      <unit id="974138438729127763" at="176,0,184,0" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor$CONCEPTS" />
+      <unit id="974138438729127763" at="164,0,175,0" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor$LINKS" />
+      <unit id="974138438729127763" at="30,0,185,0" name="jetbrains.mps.samples.Physics.behavior.AbstractForceCall__BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>

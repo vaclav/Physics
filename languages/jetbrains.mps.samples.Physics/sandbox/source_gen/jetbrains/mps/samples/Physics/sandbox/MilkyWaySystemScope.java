@@ -15,9 +15,6 @@ import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
-import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
-import org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper;
-import java.util.function.Function;
 
 public class MilkyWaySystemScope extends SystemScope {
   public final SolarSystemSystemScope SolarSystem1;
@@ -67,50 +64,14 @@ public class MilkyWaySystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, MilkyWaySystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (cached == null) {
-            cached = new _FunctionTypes._return_P0_E0<Force>() {
-              public Force invoke() {
-                ParameterSetWrapper param = new ParameterSetWrapper();
-                param.parameters.add(((Number) new BigInteger("4")));
-                return new Function<ParameterSetWrapper, Force>() {
-                  public Force apply(ParameterSetWrapper param) {
-                    Number ratio = (Number) param.parameters.get(0);
-                    return new _FunctionTypes._return_P0_E0<Force<SystemScope>>() {
-                      public Force<SystemScope> invoke() {
-                        VectorLike v = currentEntity.getVelocity().mul(-1);
-
-                        return new Force<SystemScope>() {
-
-                          @Override
-                          public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-
-                            return VectorHelper.anyToDVector3C(v.minus(currentEntity).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
-
-                          }
-                          @Override
-                          public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-                            return null;
-                          }
-
-                          @Override
-                          public int forceMode() {
-                            return 0;
-                          }
-                        };
-                      }
-                    }.invoke();
-                  }
-                }.apply(param);
-              }
-            }.invoke();
-          }
+          cached = FrictionForce.get(world, scope, currentEntity, time, ((Number) new BigInteger("4")));
 
           return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
 
         }
         @Override
         public DVector3C applicationPoint(World world, MilkyWaySystemScope scope, PhysicalEntity currentEntity, double time) {
-          return null;
+          return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
         }
 
         @Override

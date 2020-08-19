@@ -47,6 +47,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ForceComponentsTarget;
   private ConceptPresentation props_ICanBeOverridden;
   private ConceptPresentation props_IForceDotTarget;
+  private ConceptPresentation props_IForceWithApplicationPoint;
   private ConceptPresentation props_IForceWithCache;
   private ConceptPresentation props_ILocalized;
   private ConceptPresentation props_IMayTargetWorld;
@@ -94,7 +95,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_TextureStyleKey;
   private ConceptPresentation props_TimeExpression;
   private ConceptPresentation props_TraceStyleKey;
-  private ConceptPresentation props_UpdateCacheExpression;
   private ConceptPresentation props_VectorComponentTarget;
   private ConceptPresentation props_VectorExpression;
   private ConceptPresentation props_VectorOppositeTarget;
@@ -381,6 +381,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IForceDotTarget = cpb.create();
         }
         return props_IForceDotTarget;
+      case LanguageConceptSwitch.IForceWithApplicationPoint:
+        if (props_IForceWithApplicationPoint == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IForceWithApplicationPoint = cpb.create();
+        }
+        return props_IForceWithApplicationPoint;
       case LanguageConceptSwitch.IForceWithCache:
         if (props_IForceWithCache == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -609,7 +615,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a17b0td);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a27b0td);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -706,14 +712,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TraceStyleKey = cpb.create();
         }
         return props_TraceStyleKey;
-      case LanguageConceptSwitch.UpdateCacheExpression:
-        if (props_UpdateCacheExpression == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("expression to replace the current cache value");
-          cpb.rawPresentation("UpdateCacheExpression");
-          props_UpdateCacheExpression = cpb.create();
-        }
-        return props_UpdateCacheExpression;
       case LanguageConceptSwitch.VectorComponentTarget:
         if (props_VectorComponentTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

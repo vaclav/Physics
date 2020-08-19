@@ -29,11 +29,11 @@ public final class StaticForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580632L, "jetbrains.mps.samples.Physics.structure.StaticForce");
 
   public static final SMethod<Boolean> isStatic_id7zgzoeUdjtW = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isStatic").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7zgzoeUdjtW").build();
-  public static final SMethod<SNode> cachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("cachedValueExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisaz").build();
-  public static final SMethod<SNode> cacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("cacheType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisbm").build();
+  public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisaz").build();
+  public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisbm").build();
   public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(isStatic_id7zgzoeUdjtW, cachedValueExpression_id4$vyCQBisaz, cacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(isStatic_id7zgzoeUdjtW, getCachedValueExpression_id4$vyCQBisaz, getCacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -41,10 +41,10 @@ public final class StaticForce__BehaviorDescriptor extends BaseBHDescriptor {
   /*package*/ static boolean isStatic_id7zgzoeUdjtW(@NotNull SNode __thisNode__) {
     return true;
   }
-  /*package*/ static SNode cachedValueExpression_id4$vyCQBisaz(@NotNull SNode __thisNode__) {
+  /*package*/ static SNode getCachedValueExpression_id4$vyCQBisaz(@NotNull SNode __thisNode__) {
     return SLinkOperations.getTarget(__thisNode__, LINKS.components$SRPu);
   }
-  /*package*/ static SNode cacheType_id4$vyCQBisbm(@NotNull SNode __thisNode__) {
+  /*package*/ static SNode getCacheType_id4$vyCQBisbm(@NotNull SNode __thisNode__) {
     return _quotation_createNode_j9nyyi_a0a2();
   }
   /*package*/ static SNode getLinearForceExpression_id4$vyCQBi$gg(@NotNull SNode __thisNode__) {
@@ -69,9 +69,9 @@ public final class StaticForce__BehaviorDescriptor extends BaseBHDescriptor {
       case 0:
         return (T) ((Boolean) isStatic_id7zgzoeUdjtW(node));
       case 1:
-        return (T) ((SNode) cachedValueExpression_id4$vyCQBisaz(node));
+        return (T) ((SNode) getCachedValueExpression_id4$vyCQBisaz(node));
       case 2:
-        return (T) ((SNode) cacheType_id4$vyCQBisbm(node));
+        return (T) ((SNode) getCacheType_id4$vyCQBisbm(node));
       case 3:
         return (T) ((SNode) getLinearForceExpression_id4$vyCQBi$gg(node));
       default:

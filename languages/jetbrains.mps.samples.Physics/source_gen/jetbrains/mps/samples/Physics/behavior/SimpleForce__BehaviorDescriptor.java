@@ -41,11 +41,11 @@ public final class SimpleForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
   /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
     int mode = (SPropertyOperations.getBoolean(__thisNode__, PROPS.isComponentsRelative$72Cn) ? ForceMode.LINEAR_FORCE_RELATIVE : 0);
-    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isPointRelative$72Dl) ? ForceMode.APPLICATION_POINT_RELATIVE : 0);
+    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isPointRelative$86Nw) ? ForceMode.APPLICATION_POINT_RELATIVE : 0);
     return mode;
   }
   /*package*/ static SNode getApplicationPointExpression_id4$vyCQBi$go(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.applicationPoint$8ifq);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.applicationPoint$86Ou);
   }
   /*package*/ static SNode getLinearForceExpression_id4$vyCQBi$gg(@NotNull SNode __thisNode__) {
     return SLinkOperations.getTarget(__thisNode__, LINKS.components$SRPu);
@@ -105,11 +105,11 @@ public final class SimpleForce__BehaviorDescriptor extends BaseBHDescriptor {
 
   private static final class PROPS {
     /*package*/ static final SProperty isComponentsRelative$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsRelative");
-    /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
+    /*package*/ static final SProperty isPointRelative$86Nw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bddL, "isPointRelative");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink applicationPoint$8ifq = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1baa8b95de1a6d46L, "applicationPoint");
+    /*package*/ static final SContainmentLink applicationPoint$86Ou = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bdfL, "applicationPoint");
     /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
   }
 }

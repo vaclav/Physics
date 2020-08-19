@@ -23,7 +23,7 @@ public class typeof_AbstractForce_InferenceRule extends AbstractInferenceRule_Ru
       {
         SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(abstractForce, LINKS.expression$JE7U);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "620348066300219922", 0, null);
-        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "620348066300213293", true), (SNode) createForceType_4s2iuw_a1a0c0a0a0b(), true, true, _info_12389875345);
+        typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(SLinkOperations.getTarget(abstractForce, LINKS.expression$JE7U), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "620348066300213293", true), (SNode) createForceType_4s2iuw_a1a0c0a0a0b(), true, true, _info_12389875345);
       }
     }
   }

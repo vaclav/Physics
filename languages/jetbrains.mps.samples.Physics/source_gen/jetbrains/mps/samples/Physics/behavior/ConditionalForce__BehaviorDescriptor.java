@@ -29,20 +29,20 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL, "jetbrains.mps.samples.Physics.structure.ConditionalForce");
 
-  public static final SMethod<SNode> cachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("cachedValueExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisaz").build();
-  public static final SMethod<SNode> cacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("cacheType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisbm").build();
+  public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisaz").build();
+  public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisbm").build();
   public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
   public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$go").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(cachedValueExpression_id4$vyCQBisaz, cacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg, getApplicationPointExpression_id4$vyCQBi$go);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getCachedValueExpression_id4$vyCQBisaz, getCacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg, getApplicationPointExpression_id4$vyCQBi$go);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static SNode cachedValueExpression_id4$vyCQBisaz(@NotNull SNode __thisNode__) {
+  /*package*/ static SNode getCachedValueExpression_id4$vyCQBisaz(@NotNull SNode __thisNode__) {
     return SLinkOperations.getTarget(__thisNode__, LINKS.nested$$QTy);
   }
-  /*package*/ static SNode cacheType_id4$vyCQBisbm(@NotNull SNode __thisNode__) {
+  /*package*/ static SNode getCacheType_id4$vyCQBisbm(@NotNull SNode __thisNode__) {
     return _quotation_createNode_z9hyna_a0a1();
   }
   /*package*/ static SNode getLinearForceExpression_id4$vyCQBi$gg(@NotNull SNode __thisNode__) {
@@ -69,9 +69,9 @@ public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((SNode) cachedValueExpression_id4$vyCQBisaz(node));
+        return (T) ((SNode) getCachedValueExpression_id4$vyCQBisaz(node));
       case 1:
-        return (T) ((SNode) cacheType_id4$vyCQBisbm(node));
+        return (T) ((SNode) getCacheType_id4$vyCQBisbm(node));
       case 2:
         return (T) ((SNode) getLinearForceExpression_id4$vyCQBi$gg(node));
       case 3:

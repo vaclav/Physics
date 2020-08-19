@@ -539,7 +539,7 @@
   </node>
   <node concept="1TIwiD" id="1jQexh3yYqw">
     <property role="EcuMT" value="1510458583736379040" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
     <property role="TrG5h" value="AbstractForceCall" />
     <property role="34LRSv" value="defined force" />
     <property role="R4oN_" value="call of an external abstract force" />
@@ -558,6 +558,9 @@
     </node>
     <node concept="PrWs8" id="4$vyCQBitux" role="PzmwI">
       <ref role="PrY4T" node="4$vyCQBisan" resolve="IForceWithCache" />
+    </node>
+    <node concept="PrWs8" id="3Vp3qmazGea" role="PzmwI">
+      <ref role="PrY4T" node="3Vp3qmazjJs" resolve="IForceWithApplicationPoint" />
     </node>
   </node>
   <node concept="1TIwiD" id="1h1l5SEm0oJ">
@@ -739,7 +742,7 @@
   </node>
   <node concept="1TIwiD" id="Q4PrYMwcs1">
     <property role="EcuMT" value="974138438729123585" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
     <property role="TrG5h" value="AbstractForceCallParameter" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyj" id="Q4PrYMwdta" role="1TKVEi">
@@ -1249,12 +1252,6 @@
     <property role="R4oN_" value="force with simple linear force and application point expression" />
     <property role="34LRSv" value="simple force" />
     <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
-    <node concept="1TJgyj" id="1IEyTnu6AP6" role="1TKVEi">
-      <property role="IQ2ns" value="1993559260857527622" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="applicationPoint" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
     <node concept="1TJgyj" id="1h1l5SEm0oN" role="1TKVEi">
       <property role="IQ2ns" value="1459540517658822195" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -1267,10 +1264,8 @@
       <property role="TrG5h" value="isComponentsRelative" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
-    <node concept="1TJgyi" id="6AL7kK94qml" role="1TKVEl">
-      <property role="IQ2nx" value="7615900657267090837" />
-      <property role="TrG5h" value="isPointRelative" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    <node concept="PrWs8" id="3Vp3qmazoAp" role="PzmwI">
+      <ref role="PrY4T" node="3Vp3qmazjJs" resolve="IForceWithApplicationPoint" />
     </node>
   </node>
   <node concept="1TIwiD" id="4R4wXcuYiKN">
@@ -1432,19 +1427,6 @@
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
   </node>
-  <node concept="1TIwiD" id="MHm3quySZA">
-    <property role="EcuMT" value="913483291037503462" />
-    <property role="3GE5qa" value="physical.force.implemented.cached" />
-    <property role="TrG5h" value="UpdateCacheExpression" />
-    <property role="R4oN_" value="expression to replace the current cache value" />
-    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    <node concept="1TJgyj" id="MHm3quyT04" role="1TKVEi">
-      <property role="IQ2ns" value="913483291037503492" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="newValue" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="MHm3qvaDZW">
     <property role="EcuMT" value="913483291047927804" />
     <property role="3GE5qa" value="styles.texture" />
@@ -1477,6 +1459,22 @@
     <property role="TrG5h" value="ColorType" />
     <property role="R4oN_" value="internal color type" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="PlHQZ" id="3Vp3qmazjJs">
+    <property role="EcuMT" value="4528665904943021020" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="IForceWithApplicationPoint" />
+    <node concept="1TJgyi" id="3Vp3qmazjJt" role="1TKVEl">
+      <property role="IQ2nx" value="4528665904943021021" />
+      <property role="TrG5h" value="isPointRelative" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyj" id="3Vp3qmazjJv" role="1TKVEi">
+      <property role="IQ2ns" value="4528665904943021023" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="applicationPoint" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
   </node>
 </model>
 

@@ -22,7 +22,7 @@ public class Relative_ApplicationPoint_Remove {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        SPropertyOperations.assign(node, PROPS.isPointRelative$72Dl, false);
+        SPropertyOperations.assign(node, PROPS.isPointRelative$86Nw, false);
       }
 
     };
@@ -70,6 +70,6 @@ public class Relative_ApplicationPoint_Remove {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isPointRelative$72Dl = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a595L, "isPointRelative");
+    /*package*/ static final SProperty isPointRelative$86Nw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bddL, "isPointRelative");
   }
 }

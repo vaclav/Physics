@@ -84,6 +84,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createRefNodeList_0());
     editorCell.addEditorCell(createConstant_3());
+    editorCell.addEditorCell(createComponent_0());
     return editorCell;
   }
   private EditorCell createConstant_0() {
@@ -310,6 +311,10 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   }
   private boolean nodeCondition_o8rq82_a4a() {
     return ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(myNode, LINKS.force$tsf5), LINKS.args$G1Ow)).isEmpty();
+  }
+  private EditorCell createComponent_0() {
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.samples.Physics.editor.ApplicationPointEditor");
+    return editorCell;
   }
 
   private static final class CONCEPTS {

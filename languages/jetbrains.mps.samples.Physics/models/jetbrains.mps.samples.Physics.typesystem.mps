@@ -1559,7 +1559,7 @@
   </node>
   <node concept="1YbPZF" id="Q4PrYMC3J8">
     <property role="TrG5h" value="typeof_AbstractForceCall" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
     <node concept="3clFbS" id="Q4PrYMC3J9" role="18ibNy">
       <node concept="1Z5TYs" id="Q4PrYMC3FL" role="3cqZAp">
         <node concept="mw_s8" id="Q4PrYMC3G5" role="1ZfhKB">
@@ -1575,6 +1575,53 @@
               <ref role="1YBMHb" node="Q4PrYMC3Jb" resolve="abstractForceCall" />
             </node>
           </node>
+        </node>
+      </node>
+      <node concept="3clFbH" id="3Vp3qmazhSU" role="3cqZAp" />
+      <node concept="nvevp" id="3Vp3qmazhTd" role="3cqZAp">
+        <node concept="3clFbS" id="3Vp3qmazhTf" role="nvhr_">
+          <node concept="1ZobV4" id="3Vp3qmaziyz" role="3cqZAp">
+            <property role="3wDh2S" value="true" />
+            <node concept="mw_s8" id="3Vp3qmaziyF" role="1ZfhK$">
+              <node concept="2X3wrD" id="3Vp3qmaziyD" role="mwGJk">
+                <ref role="2X3Bk0" node="3Vp3qmazhTj" resolve="pointType" />
+              </node>
+            </node>
+            <node concept="mw_s8" id="3Vp3qmaziyS" role="1ZfhKB">
+              <node concept="2c44tf" id="3Vp3qmaziyO" role="mwGJk">
+                <node concept="3K97_z" id="3Vp3qmazizg" role="2c44tc">
+                  <node concept="1N6AA6" id="3Vp3qmazi$3" role="2okx1I">
+                    <node concept="30bXLL" id="3Vp3qmazizI" role="1N6AA7" />
+                    <node concept="3AmWvR" id="3Vp3qmazi$O" role="1N7es9">
+                      <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="3Vp3qmazi_n" role="1ZmcU8">
+              <node concept="1YBJjd" id="3Vp3qmazi_o" role="2Oq$k0">
+                <ref role="1YBMHb" node="Q4PrYMC3Jb" resolve="abstractForceCall" />
+              </node>
+              <node concept="3TrEf2" id="3Vp3qmazHEA" role="2OqNvi">
+                <ref role="3Tt5mk" to="9tcj:3Vp3qmazjJv" resolve="applicationPoint" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1Z2H0r" id="3Vp3qmazhUb" role="nvjzm">
+          <node concept="2OqwBi" id="3Vp3qmazi7Y" role="1Z2MuG">
+            <node concept="1YBJjd" id="3Vp3qmazhUB" role="2Oq$k0">
+              <ref role="1YBMHb" node="Q4PrYMC3Jb" resolve="abstractForceCall" />
+            </node>
+            <node concept="3TrEf2" id="3Vp3qmazH_u" role="2OqNvi">
+              <ref role="3Tt5mk" to="9tcj:3Vp3qmazjJv" resolve="applicationPoint" />
+            </node>
+          </node>
+        </node>
+        <node concept="2X1qdy" id="3Vp3qmazhTj" role="2X0Ygz">
+          <property role="TrG5h" value="pointType" />
+          <node concept="2jxLKc" id="3Vp3qmazhTk" role="1tU5fm" />
         </node>
       </node>
     </node>
@@ -2331,7 +2378,7 @@
   </node>
   <node concept="1YbPZF" id="270Q2mF5iZ9">
     <property role="TrG5h" value="typeof_AbstractForceCallParameter" />
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
     <node concept="3clFbS" id="270Q2mF5iZa" role="18ibNy">
       <node concept="nvevp" id="270Q2mF5iZg" role="3cqZAp">
         <node concept="3clFbS" id="270Q2mF5iZh" role="nvhr_">
@@ -2875,6 +2922,14 @@
             </node>
           </node>
         </node>
+        <node concept="2OqwBi" id="3Vp3qmayjn3" role="1ZmcU8">
+          <node concept="1YBJjd" id="3Vp3qmayj6S" role="2Oq$k0">
+            <ref role="1YBMHb" node="yrUOugVbwD" resolve="abstractForce" />
+          </node>
+          <node concept="3TrEf2" id="3Vp3qmayjUI" role="2OqNvi">
+            <ref role="3Tt5mk" to="zzzn:6zmBjqUkwH3" resolve="expression" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="1YaCAy" id="yrUOugVbwD" role="1YuTPh">
@@ -2963,7 +3018,7 @@
               </node>
             </node>
             <node concept="2qgKlT" id="4$vyCQByCOR" role="2OqNvi">
-              <ref role="37wK5l" to="rf09:4$vyCQBisbm" resolve="cacheType" />
+              <ref role="37wK5l" to="rf09:4$vyCQBisbm" resolve="getCacheType" />
             </node>
           </node>
         </node>

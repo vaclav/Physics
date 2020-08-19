@@ -90,7 +90,7 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (cached == null) {
+          if (cached != null) {
             cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
           }
 
@@ -111,7 +111,7 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (cached == null) {
+          if (cached != null) {
             cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))).negate());
           }
 

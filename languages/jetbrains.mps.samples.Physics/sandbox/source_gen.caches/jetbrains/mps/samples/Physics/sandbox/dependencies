@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.sandbox.AirDragForce">
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.RoundingMode" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity">
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
@@ -91,6 +106,44 @@
     <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.sandbox.FrictionForce">
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.sandbox.GravityForce">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.util.function.Function" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode dependClassName="org.pcollections.TreePVector" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.MilkyWaySystemScope">
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
@@ -99,17 +152,15 @@
     <classNode dependClassName="java.math.BigInteger" />
     <classNode dependClassName="java.math.RoundingMode" />
     <classNode dependClassName="java.util.Arrays" />
-    <classNode dependClassName="java.util.function.Function" />
-    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.FrictionForce" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.RandomObjectAbstractEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.SolarSystemSystemScope" />
-    <classNode dependClassName="org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
@@ -139,21 +190,11 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.PlanetAbstractEntity">
-    <classNode dependClassName="java.lang.Boolean" />
-    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
-    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.math.BigInteger" />
     <classNode dependClassName="java.util.Arrays" />
-    <classNode dependClassName="java.util.function.Function" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="java.util.stream.Collectors" />
-    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
@@ -162,10 +203,9 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
-    <classNode dependClassName="org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.GravityForce" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
-    <classNode dependClassName="org.pcollections.TreePVector" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.RandomObjectAbstractEntity">
@@ -181,6 +221,22 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.sandbox.RealGravityForce">
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.RoundingMode" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.GravityForce" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.RocketSimSimulation">
     <classNode dependClassName="java.lang.Number" />
@@ -200,10 +256,7 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.RocketWorldSystemScope">
-    <classNode dependClassName="java.lang.Boolean" />
-    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
-    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.math.BigDecimal" />
@@ -211,9 +264,6 @@
     <classNode dependClassName="java.math.MathContext" />
     <classNode dependClassName="java.math.RoundingMode" />
     <classNode dependClassName="java.util.Arrays" />
-    <classNode dependClassName="java.util.function.Function" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="java.util.stream.Collectors" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
@@ -227,12 +277,12 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ImageTexture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.AirDragForce" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity" />
-    <classNode dependClassName="org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.RealGravityForce" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode dependClassName="org.nevec.rjm.BigDecimalMath" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
-    <classNode dependClassName="org.pcollections.TreePVector" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.SolarSystemSystemScope">
@@ -300,10 +350,7 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope">
-    <classNode dependClassName="java.lang.Boolean" />
-    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
-    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.math.BigDecimal" />
@@ -311,10 +358,6 @@
     <classNode dependClassName="java.math.MathContext" />
     <classNode dependClassName="java.math.RoundingMode" />
     <classNode dependClassName="java.util.Arrays" />
-    <classNode dependClassName="java.util.function.Function" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="java.util.stream.Collectors" />
-    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
@@ -325,13 +368,13 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.GravityForce" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.ObjectSupertypeAbstractEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.World2SystemScope" />
-    <classNode dependClassName="org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.XYZForceForce" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode dependClassName="org.nevec.rjm.BigDecimalMath" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
-    <classNode dependClassName="org.pcollections.TreePVector" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.TorqueSystemScope">
@@ -443,6 +486,17 @@
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.sandbox.XYZForceForce">
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
   </dependency>
 </dependenciesRoot>
 

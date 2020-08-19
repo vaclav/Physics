@@ -1630,7 +1630,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="Q4PrYMwdtj">
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
     <ref role="13h7C2" to="9tcj:1jQexh3yYqw" resolve="AbstractForceCall" />
     <node concept="13hLZK" id="Q4PrYMwdtk" role="13h7CW">
       <node concept="3clFbS" id="Q4PrYMwdtl" role="2VODD2" />
@@ -1707,8 +1707,8 @@
       </node>
     </node>
     <node concept="13i0hz" id="4$vyCQBiuqi" role="13h7CS">
-      <property role="TrG5h" value="cachedValueExpression" />
-      <ref role="13i0hy" node="4$vyCQBisaz" resolve="cachedValueExpression" />
+      <property role="TrG5h" value="getCachedValueExpression" />
+      <ref role="13i0hy" node="4$vyCQBisaz" resolve="getCachedValueExpression" />
       <node concept="3Tm1VV" id="4$vyCQBiuqj" role="1B3o_S" />
       <node concept="3clFbS" id="4$vyCQBiuqm" role="3clF47">
         <node concept="3SKdUt" id="4$vyCQBivY3" role="3cqZAp">
@@ -1816,11 +1816,13 @@
           </node>
         </node>
       </node>
-      <node concept="3Tqbb2" id="4$vyCQBiuqn" role="3clF45" />
+      <node concept="3Tqbb2" id="4$vyCQBiuqn" role="3clF45">
+        <ref role="ehGHo" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      </node>
     </node>
     <node concept="13i0hz" id="4$vyCQBiuqo" role="13h7CS">
-      <property role="TrG5h" value="cacheType" />
-      <ref role="13i0hy" node="4$vyCQBisbm" resolve="cacheType" />
+      <property role="TrG5h" value="getCacheType" />
+      <ref role="13i0hy" node="4$vyCQBisbm" resolve="getCacheType" />
       <node concept="3Tm1VV" id="4$vyCQBiuqp" role="1B3o_S" />
       <node concept="3clFbS" id="4$vyCQBiuqs" role="3clF47">
         <node concept="3cpWs6" id="4$vyCQBiwpN" role="3cqZAp">
@@ -1871,8 +1873,30 @@
       <ref role="13i0hy" node="4$vyCQBi$go" resolve="getApplicationPointExpression" />
       <node concept="3Tm1VV" id="4$vyCQBk3GB" role="1B3o_S" />
       <node concept="3clFbS" id="4$vyCQBk3GE" role="3clF47">
-        <node concept="3clFbF" id="4$vyCQBk4mb" role="3cqZAp">
-          <node concept="10Nm6u" id="4$vyCQBk4ma" role="3clFbG" />
+        <node concept="3cpWs6" id="3Vp3qmazOoV" role="3cqZAp">
+          <node concept="2pJPEk" id="3Vp3qmazP3F" role="3cqZAk">
+            <node concept="2pJPED" id="3Vp3qmazP3G" role="2pJPEn">
+              <ref role="2pJxaS" to="hm2y:7NJy08a3O99" resolve="DotExpression" />
+              <node concept="2pIpSj" id="3Vp3qmazP3H" role="2pJxcM">
+                <ref role="2pIpSl" to="hm2y:4rZeNQ6NgXF" resolve="expr" />
+                <node concept="2pJPED" id="3Vp3qmazP3I" role="28nt2d">
+                  <ref role="2pJxaS" to="9tcj:4$vyCQByB8V" resolve="CachedObjectExpression" />
+                  <node concept="2pIpSj" id="3Vp3qmazP3J" role="2pJxcM">
+                    <ref role="2pIpSl" to="9tcj:4$vyCQByB8W" resolve="cacheOf" />
+                    <node concept="36biLy" id="3Vp3qmazP3K" role="28nt2d">
+                      <node concept="13iPFW" id="3Vp3qmazP3L" role="36biLW" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2pIpSj" id="3Vp3qmazP3M" role="2pJxcM">
+                <ref role="2pIpSl" to="hm2y:7NJy08a3O9b" resolve="target" />
+                <node concept="2pJPED" id="3Vp3qmazP5n" role="28nt2d">
+                  <ref role="2pJxaS" to="9tcj:7zgzoeTyCTQ" resolve="ForceApplicationPointTarget" />
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
       <node concept="3Tqbb2" id="4$vyCQBk3GF" role="3clF45" />
@@ -2685,7 +2709,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="4aXoy5WPFMx">
-    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
     <ref role="13h7C2" to="9tcj:Q4PrYMwcs1" resolve="AbstractForceCallParameter" />
     <node concept="13hLZK" id="4aXoy5WPFMy" role="13h7CW">
       <node concept="3clFbS" id="4aXoy5WPFMz" role="2VODD2" />
@@ -4097,8 +4121,8 @@
       <node concept="10P_77" id="7zgzoeUe5z3" role="3clF45" />
     </node>
     <node concept="13i0hz" id="4$vyCQBiyV$" role="13h7CS">
-      <property role="TrG5h" value="cachedValueExpression" />
-      <ref role="13i0hy" node="4$vyCQBisaz" resolve="cachedValueExpression" />
+      <property role="TrG5h" value="getCachedValueExpression" />
+      <ref role="13i0hy" node="4$vyCQBisaz" resolve="getCachedValueExpression" />
       <node concept="3Tm1VV" id="4$vyCQBiyV_" role="1B3o_S" />
       <node concept="3clFbS" id="4$vyCQBiyVC" role="3clF47">
         <node concept="3cpWs6" id="4$vyCQBiyWC" role="3cqZAp">
@@ -4110,11 +4134,13 @@
           </node>
         </node>
       </node>
-      <node concept="3Tqbb2" id="4$vyCQBiyVD" role="3clF45" />
+      <node concept="3Tqbb2" id="4$vyCQBiyVD" role="3clF45">
+        <ref role="ehGHo" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      </node>
     </node>
     <node concept="13i0hz" id="4$vyCQBiyVE" role="13h7CS">
-      <property role="TrG5h" value="cacheType" />
-      <ref role="13i0hy" node="4$vyCQBisbm" resolve="cacheType" />
+      <property role="TrG5h" value="getCacheType" />
+      <ref role="13i0hy" node="4$vyCQBisbm" resolve="getCacheType" />
       <node concept="3Tm1VV" id="4$vyCQBiyVF" role="1B3o_S" />
       <node concept="3clFbS" id="4$vyCQBiyVI" role="3clF47">
         <node concept="3cpWs6" id="4$vyCQBizFx" role="3cqZAp">
@@ -4764,8 +4790,8 @@
               </node>
               <node concept="2OqwBi" id="7VyKdWRrZ7h" role="3K4Cdx">
                 <node concept="13iPFW" id="7VyKdWRrZ7i" role="2Oq$k0" />
-                <node concept="3TrcHB" id="7VyKdWRrZ7j" role="2OqNvi">
-                  <ref role="3TsBF5" to="9tcj:6AL7kK94qml" resolve="isPointRelative" />
+                <node concept="3TrcHB" id="3Vp3qmazNJZ" role="2OqNvi">
+                  <ref role="3TsBF5" to="9tcj:3Vp3qmazjJt" resolve="isPointRelative" />
                 </node>
               </node>
             </node>
@@ -4787,8 +4813,8 @@
         <node concept="3cpWs6" id="7VyKdWRpeO8" role="3cqZAp">
           <node concept="2OqwBi" id="7VyKdWRpf0w" role="3cqZAk">
             <node concept="13iPFW" id="7VyKdWRpeOf" role="2Oq$k0" />
-            <node concept="3TrEf2" id="7VyKdWRpflE" role="2OqNvi">
-              <ref role="3Tt5mk" to="9tcj:1IEyTnu6AP6" resolve="applicationPoint" />
+            <node concept="3TrEf2" id="3Vp3qmazNO2" role="2OqNvi">
+              <ref role="3Tt5mk" to="9tcj:3Vp3qmazjJv" resolve="applicationPoint" />
             </node>
           </node>
         </node>
@@ -4848,8 +4874,8 @@
       <node concept="3clFbS" id="4$vyCQBip0f" role="2VODD2" />
     </node>
     <node concept="13i0hz" id="4$vyCQBisfB" role="13h7CS">
-      <property role="TrG5h" value="cachedValueExpression" />
-      <ref role="13i0hy" node="4$vyCQBisaz" resolve="cachedValueExpression" />
+      <property role="TrG5h" value="getCachedValueExpression" />
+      <ref role="13i0hy" node="4$vyCQBisaz" resolve="getCachedValueExpression" />
       <node concept="3Tm1VV" id="4$vyCQBisfC" role="1B3o_S" />
       <node concept="3clFbS" id="4$vyCQBisfF" role="3clF47">
         <node concept="3cpWs6" id="4$vyCQBisgZ" role="3cqZAp">
@@ -4861,11 +4887,13 @@
           </node>
         </node>
       </node>
-      <node concept="3Tqbb2" id="4$vyCQBisfG" role="3clF45" />
+      <node concept="3Tqbb2" id="4$vyCQBisfG" role="3clF45">
+        <ref role="ehGHo" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      </node>
     </node>
     <node concept="13i0hz" id="4$vyCQBisfH" role="13h7CS">
-      <property role="TrG5h" value="cacheType" />
-      <ref role="13i0hy" node="4$vyCQBisbm" resolve="cacheType" />
+      <property role="TrG5h" value="getCacheType" />
+      <ref role="13i0hy" node="4$vyCQBisbm" resolve="getCacheType" />
       <node concept="3Tm1VV" id="4$vyCQBisfI" role="1B3o_S" />
       <node concept="3clFbS" id="4$vyCQBisfL" role="3clF47">
         <node concept="3cpWs6" id="4$vyCQBitis" role="3cqZAp">
@@ -5038,7 +5066,7 @@
     <node concept="13i0hz" id="4$vyCQBisbm" role="13h7CS">
       <property role="13i0iv" value="true" />
       <property role="13i0it" value="true" />
-      <property role="TrG5h" value="cacheType" />
+      <property role="TrG5h" value="getCacheType" />
       <node concept="3Tm1VV" id="4$vyCQBisbn" role="1B3o_S" />
       <node concept="3Tqbb2" id="4$vyCQBisbE" role="3clF45">
         <ref role="ehGHo" to="hm2y:6sdnDbSlaok" resolve="Type" />
@@ -5048,9 +5076,11 @@
     <node concept="13i0hz" id="4$vyCQBisaz" role="13h7CS">
       <property role="13i0iv" value="true" />
       <property role="13i0it" value="true" />
-      <property role="TrG5h" value="cachedValueExpression" />
+      <property role="TrG5h" value="getCachedValueExpression" />
       <node concept="3Tm1VV" id="4$vyCQBisa$" role="1B3o_S" />
-      <node concept="3Tqbb2" id="4$vyCQBisaN" role="3clF45" />
+      <node concept="3Tqbb2" id="4$vyCQBisaN" role="3clF45">
+        <ref role="ehGHo" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      </node>
       <node concept="3clFbS" id="4$vyCQBisaA" role="3clF47" />
     </node>
     <node concept="13hLZK" id="4$vyCQBisap" role="13h7CW">
