@@ -2052,7 +2052,7 @@
         <node concept="1nHl2y" id="6qMY4Z3b38L" role="39QuZq" />
         <node concept="3xKuJC" id="7dIb8AZ2EzM" role="39QuWR">
           <node concept="30bXRB" id="7dIb8AZ2EzN" role="3xKuNN">
-            <property role="30bXRw" value="1" />
+            <property role="30bXRw" value="0.3" />
           </node>
         </node>
       </node>
@@ -2793,8 +2793,8 @@
             <node concept="CIsvn" id="2bNGZd79sI" role="1N7es9">
               <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
             </node>
-            <node concept="30bXRB" id="2bNGZd79sJ" role="1N951F">
-              <property role="30bXRw" value="0" />
+            <node concept="30bXRB" id="1DKsCvM8XmQ" role="1N951F">
+              <property role="30bXRw" value="1.00e-11" />
             </node>
           </node>
           <node concept="1N951E" id="2bNGZd79sK" role="Y6leK">

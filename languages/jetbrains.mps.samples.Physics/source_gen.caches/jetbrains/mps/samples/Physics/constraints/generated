@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-e59goscy2zl1e85c5k9sbga1d4syy3w">
-  <files names="AbstractForceCallParameter_Constraints.java:AbstractForceCall_Constraints.java:AbstractVectorTarget_Constraints.java:ColorTexture_Constraints.java:ConstraintsAspectDescriptor.java:CustomColor_Constraints.java:IForceDotTarget_Constraints.java:IObjectDotTarget_Constraints.java:IWorldDotTarget_Constraints.java:InteractedObjectExpression_Constraints.java:ObjectReferenceExpression_Constraints.java:StyleDefinition_Constraints.java:StyleSpecificExpression_Constraints.java:StylesHelper.java:WorldNestedObjectTarget_Constraints.java" />
+<product version="3" modelHash="vxsron1dxvd7g9uxae514zdl3pm8nx">
+  <files names="AbstractForceCallParameter_Constraints.java:AbstractForceCall_Constraints.java:AbstractVectorTarget_Constraints.java:ColorTexture_Constraints.java:ConstraintsAspectDescriptor.java:CurrentObjectExpression_Constraints.java:CurrentWorldExpression_Constraints.java:CustomColor_Constraints.java:IForceDotTarget_Constraints.java:IObjectDotTarget_Constraints.java:IRuntimeExpression_Constraints.java:IWorldDotTarget_Constraints.java:InteractedObjectExpression_Constraints.java:ObjectReferenceExpression_Constraints.java:StyleDefinition_Constraints.java:StyleSpecificExpression_Constraints.java:StylesHelper.java:WorldNestedObjectTarget_Constraints.java" />
 </product>
 

@@ -46,6 +46,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ForceApplicationPointTarget;
   private ConceptPresentation props_ForceComponentsTarget;
   private ConceptPresentation props_ICanBeOverridden;
+  private ConceptPresentation props_ICurrentObjectContext;
+  private ConceptPresentation props_ICurrentWorldContext;
   private ConceptPresentation props_IForceDotTarget;
   private ConceptPresentation props_IForceWithApplicationPoint;
   private ConceptPresentation props_IForceWithCache;
@@ -55,6 +57,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IObjectDotTarget;
   private ConceptPresentation props_IOverrideProperties;
   private ConceptPresentation props_IProvideCurrentWorld;
+  private ConceptPresentation props_IRuntimeContext;
+  private ConceptPresentation props_IRuntimeExpression;
   private ConceptPresentation props_ITargetExpression;
   private ConceptPresentation props_ITargetObject;
   private ConceptPresentation props_IUseSpecificExpressions;
@@ -121,7 +125,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0td);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0xd);
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
@@ -144,7 +148,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0td);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0xd);
           props_AbstractObjectDefinition = cpb.create();
         }
         return props_AbstractObjectDefinition;
@@ -271,6 +275,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.CurrentObjectExpression:
         if (props_CurrentObjectExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("expression that targets the current object in a generic way");
           cpb.rawPresentation("self");
           props_CurrentObjectExpression = cpb.create();
         }
@@ -278,6 +283,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.CurrentWorldExpression:
         if (props_CurrentWorldExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("expression that targets the current world in a generic way");
           cpb.rawPresentation("world");
           props_CurrentWorldExpression = cpb.create();
         }
@@ -376,6 +382,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ICanBeOverridden = cpb.create();
         }
         return props_ICanBeOverridden;
+      case LanguageConceptSwitch.ICurrentObjectContext:
+        if (props_ICurrentObjectContext == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ICurrentObjectContext = cpb.create();
+        }
+        return props_ICurrentObjectContext;
+      case LanguageConceptSwitch.ICurrentWorldContext:
+        if (props_ICurrentWorldContext == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ICurrentWorldContext = cpb.create();
+        }
+        return props_ICurrentWorldContext;
       case LanguageConceptSwitch.IForceDotTarget:
         if (props_IForceDotTarget == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -430,6 +448,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IProvideCurrentWorld = cpb.create();
         }
         return props_IProvideCurrentWorld;
+      case LanguageConceptSwitch.IRuntimeContext:
+        if (props_IRuntimeContext == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IRuntimeContext = cpb.create();
+        }
+        return props_IRuntimeContext;
+      case LanguageConceptSwitch.IRuntimeExpression:
+        if (props_IRuntimeExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IRuntimeExpression = cpb.create();
+        }
+        return props_IRuntimeExpression;
       case LanguageConceptSwitch.ITargetExpression:
         if (props_ITargetExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -616,7 +646,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a27b0td);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a67b0xd);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -751,7 +781,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a19b0td);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a59b0xd);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;

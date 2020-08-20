@@ -96,7 +96,7 @@ public class World implements DGeom.DNearCallback, Renderable {
 
     // If the first reaction allow the second one to be performed as well 
     final CollisionReaction secondReaction = second.properties().getCollisionReaction();
-    if (!(firstReaction.preventDifferentReaction()) && firstReaction.equals(secondReaction)) {
+    if (!(firstReaction.preventDifferentReaction()) && !(firstReaction.equals(secondReaction))) {
       secondReaction.react(this, second, secondGeom, first, firstGeom);
     }
 

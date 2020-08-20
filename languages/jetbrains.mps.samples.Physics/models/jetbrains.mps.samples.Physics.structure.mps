@@ -124,6 +124,9 @@
     <node concept="PrWs8" id="3Nk1IDHWZSf" role="PzmwI">
       <ref role="PrY4T" node="3Nk1IDHWZS5" resolve="ILocalized" />
     </node>
+    <node concept="PrWs8" id="5claIBnuhDs" role="PzmwI">
+      <ref role="PrY4T" node="5claIBnrbab" resolve="ICurrentObjectContext" />
+    </node>
     <node concept="1TJgyj" id="1JxkG5g94zZ" role="1TKVEi">
       <property role="IQ2ns" value="2008977899010672895" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -354,6 +357,9 @@
     <node concept="PrWs8" id="1h1l5SEmLTe" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="PrWs8" id="5claIBnANko" role="PzmwI">
+      <ref role="PrY4T" node="5claIBnxy$a" resolve="ICurrentWorldContext" />
+    </node>
     <node concept="1QGGSu" id="2bNGZcM4DQ" role="rwd14">
       <property role="1iqoE4" value="${module}/icons/object.png" />
     </node>
@@ -454,6 +460,15 @@
     <ref role="1TJDcQ" to="zzzn:6zmBjqUkws6" resolve="LambdaExpression" />
     <node concept="PrWs8" id="Q4PrYM_8hh" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="5claIBnueKJ" role="PzmwI">
+      <ref role="PrY4T" node="5claIBnrbab" resolve="ICurrentObjectContext" />
+    </node>
+    <node concept="PrWs8" id="5claIBn$DBe" role="PzmwI">
+      <ref role="PrY4T" node="5claIBnxy$a" resolve="ICurrentWorldContext" />
+    </node>
+    <node concept="PrWs8" id="5claIBnD59m" role="PzmwI">
+      <ref role="PrY4T" node="5claIBnD44W" resolve="IRuntimeContext" />
     </node>
     <node concept="1QGGSu" id="2bNGZcJ85x" role="rwd14">
       <property role="1iqoE4" value="${module}/icons/force.png" />
@@ -580,6 +595,9 @@
     <node concept="PrWs8" id="270Q2mEVjeE" role="PzmwI">
       <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
     </node>
+    <node concept="PrWs8" id="5claIBnD59d" role="PzmwI">
+      <ref role="PrY4T" node="5claIBnD44W" resolve="IRuntimeContext" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6kwOTMl17Za">
     <property role="EcuMT" value="7287056866553921482" />
@@ -682,6 +700,7 @@
     <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="CurrentObjectExpression" />
     <property role="34LRSv" value="self" />
+    <property role="R4oN_" value="expression that targets the current object in a generic way" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="PrWs8" id="GdoRjGrkQC" role="PzmwI">
       <ref role="PrY4T" node="GdoRjGrjZN" resolve="ITargetObject" />
@@ -773,6 +792,9 @@
     <property role="EcuMT" value="796402062948384755" />
     <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="ITargetObject" />
+    <node concept="t5JxF" id="5claIBnD05h" role="lGtFl">
+      <property role="t5JxN" value="Node that targets an existing object" />
+    </node>
   </node>
   <node concept="PlHQZ" id="GdoRjGvovx">
     <property role="EcuMT" value="796402062949451745" />
@@ -841,6 +863,9 @@
     <property role="TrG5h" value="TimeExpression" />
     <property role="34LRSv" value="time" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="PrWs8" id="5claIBnD05t" role="PzmwI">
+      <ref role="PrY4T" node="5claIBnD05q" resolve="IRuntimeExpression" />
+    </node>
   </node>
   <node concept="1TIwiD" id="G6XgqqHP0I">
     <property role="EcuMT" value="794591792991785006" />
@@ -1005,6 +1030,7 @@
     <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="CurrentWorldExpression" />
     <property role="34LRSv" value="world" />
+    <property role="R4oN_" value="expression that targets the current world in a generic way" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="PrWs8" id="2bZvtzzMbTC" role="PzmwI">
       <ref role="PrY4T" node="2bZvtzzMbPQ" resolve="IMayTargetWorld" />
@@ -1014,11 +1040,20 @@
     <property role="EcuMT" value="2521872686838758774" />
     <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="IMayTargetWorld" />
+    <node concept="t5JxF" id="5claIBnD04X" role="lGtFl">
+      <property role="t5JxN" value="Expression / node that target may a given world depending on its state" />
+    </node>
   </node>
   <node concept="PlHQZ" id="2bZvtzzMfx6">
     <property role="EcuMT" value="2521872686838773830" />
     <property role="3GE5qa" value="physical.expr.context" />
     <property role="TrG5h" value="IProvideCurrentWorld" />
+    <node concept="PrWs8" id="5claIBnxy$b" role="PrDN$">
+      <ref role="PrY4T" node="5claIBnxy$a" resolve="ICurrentWorldContext" />
+    </node>
+    <node concept="t5JxF" id="5claIBnD05f" role="lGtFl">
+      <property role="t5JxN" value="Node that is able to provide the current world (in child context)" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2AaxZXYfXtt">
     <property role="EcuMT" value="2993354433745639261" />
@@ -1222,6 +1257,9 @@
     <property role="34LRSv" value="allObjects" />
     <property role="R4oN_" value="target all objects within the simulation, runtime variable" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="PrWs8" id="5claIBnD05r" role="PzmwI">
+      <ref role="PrY4T" node="5claIBnD05q" resolve="IRuntimeExpression" />
+    </node>
   </node>
   <node concept="PlHQZ" id="7zgzoeTyAde">
     <property role="EcuMT" value="8705613676600255310" />
@@ -1481,6 +1519,35 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="applicationPoint" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5claIBnrbab">
+    <property role="EcuMT" value="5986738463488914059" />
+    <property role="3GE5qa" value="physical.expr.context" />
+    <property role="TrG5h" value="ICurrentObjectContext" />
+    <node concept="t5JxF" id="5claIBnD05m" role="lGtFl">
+      <property role="t5JxN" value="Node allowing children to use a current object expression, as it will be available on runtime" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5claIBnxy$a">
+    <property role="EcuMT" value="5986738463490582794" />
+    <property role="3GE5qa" value="physical.expr.context" />
+    <property role="TrG5h" value="ICurrentWorldContext" />
+    <node concept="t5JxF" id="5claIBnD05j" role="lGtFl">
+      <property role="t5JxN" value="Node allowing children to use a current world expression, as it will be available on runtime" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5claIBnD05q">
+    <property role="EcuMT" value="5986738463492538714" />
+    <property role="3GE5qa" value="physical.expr.context" />
+    <property role="TrG5h" value="IRuntimeExpression" />
+  </node>
+  <node concept="PlHQZ" id="5claIBnD44W">
+    <property role="EcuMT" value="5986738463492555068" />
+    <property role="3GE5qa" value="physical.expr.context" />
+    <property role="TrG5h" value="IRuntimeContext" />
+    <node concept="t5JxF" id="5claIBnD44X" role="lGtFl">
+      <property role="t5JxN" value="Node whose expressions are available on runtime" />
     </node>
   </node>
 </model>
