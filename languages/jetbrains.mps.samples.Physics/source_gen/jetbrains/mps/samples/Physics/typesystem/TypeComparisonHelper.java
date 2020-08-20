@@ -8,14 +8,13 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.samples.Physics.dimensions.typesystem.NumberTypeHelper;
-import jetbrains.mps.typechecking.TypecheckingFacade;
 import org.iets3.core.expr.base.typesystem.TypingHelper;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.errors.IRuleConflictWarningProducer;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
+import jetbrains.mps.typechecking.TypecheckingFacade;
 import jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor;
-import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SConcept;
 
@@ -36,10 +35,10 @@ public class TypeComparisonHelper {
     final SNode rightType = SNodeOperations.as(right, CONCEPTS.Type$fA);
 
     //  Allow 0 as exception for numeric types 
-    if (NumberTypeHelper.isBaseTypeZero(leftType) && TypecheckingFacade.getFromContext().isSubtype(rightType, _quotation_createNode_u2iiiw_b0a0e0b())) {
+    if (NumberTypeHelper.isBaseTypeZero(leftType)) {
       return;
     }
-    if (NumberTypeHelper.isBaseTypeZero(rightType) && TypecheckingFacade.getFromContext().isSubtype(leftType, _quotation_createNode_u2iiiw_b0a0f0b())) {
+    if (NumberTypeHelper.isBaseTypeZero(rightType)) {
       return;
     }
 
@@ -62,18 +61,6 @@ public class TypeComparisonHelper {
     });
   }
 
-  private static SNode _quotation_createNode_u2iiiw_b0a0e0b() {
-    PersistenceFacade facade = PersistenceFacade.getInstance();
-    SNode quotedNode_1 = null;
-    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e74cL, "RealType")).getResult();
-    return quotedNode_1;
-  }
-  private static SNode _quotation_createNode_u2iiiw_b0a0f0b() {
-    PersistenceFacade facade = PersistenceFacade.getInstance();
-    SNode quotedNode_1 = null;
-    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, "org.iets3.core.expr.simpleTypes"), 0x46ff3b3d86d0e74cL, "RealType")).getResult();
-    return quotedNode_1;
-  }
   private static SNode createRuntimeErrorType_u2iiiw_b0a0a3a2a7a1() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RuntimeErrorType$Lm);
     return n0.getResult();

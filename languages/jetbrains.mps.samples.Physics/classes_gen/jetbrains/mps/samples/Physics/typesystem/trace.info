@@ -2518,80 +2518,60 @@
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/6576997179988766517">
     <file name="TypeComparisonHelper.java">
-      <node id="6576997179990079944" at="34,228,35,70" concept="5" />
-      <node id="6576997179990082283" at="35,70,36,72" concept="5" />
-      <node id="6576997179990085061" at="36,72,37,0" concept="8" />
-      <node id="6576997179991566457" at="37,0,38,47" concept="7" />
-      <node id="6576997179991561608" at="39,152,40,13" concept="6" />
-      <node id="6576997179991561592" at="42,152,43,13" concept="6" />
-      <node id="6576997179991548445" at="44,5,45,0" concept="8" />
-      <node id="6576997179988792565" at="47,54,48,171" concept="7" />
-      <node id="6576997179989492242" at="50,69,51,327" concept="2" />
-      <node id="6576997179989492242" at="51,327,52,0" concept="8" />
-      <node id="6576997179988792603" at="54,11,55,0" concept="8" />
-      <node id="6576997179988792604" at="55,0,56,136" concept="6" />
-      <node id="6576997179988881988" at="59,51,60,287" concept="2" />
-      <node id="6576997179991561612" at="65,63,66,63" concept="5" />
-      <node id="6576997179991561612" at="66,63,67,30" concept="5" />
-      <node id="6576997179991561612" at="67,30,68,238" concept="2" />
-      <node id="6576997179991561612" at="68,238,69,24" concept="6" />
-      <node id="6576997179991561261" at="71,63,72,63" concept="5" />
-      <node id="6576997179991561261" at="72,63,73,30" concept="5" />
-      <node id="6576997179991561261" at="73,30,74,238" concept="2" />
-      <node id="6576997179991561261" at="74,238,75,24" concept="6" />
-      <node id="6576997179988792612" at="77,69,78,76" concept="5" />
-      <node id="6576997179988792612" at="78,76,79,26" concept="6" />
-      <node id="6576997179988766517" at="83,0,84,0" concept="9" trace="Type$fA" />
-      <node id="6576997179988766517" at="84,0,85,0" concept="9" trace="RuntimeErrorType$Lm" />
-      <node id="6576997179991561606" at="38,47,41,5" concept="3" />
-      <node id="6576997179991549620" at="41,5,44,5" concept="3" />
-      <node id="6576997179988812653" at="59,0,62,0" concept="4" trace="invoke#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="6576997179989492242" at="50,0,54,0" concept="4" trace="produceWarning#(Ljava/lang/String;Ljava/lang/String;)V" />
-      <node id="6576997179988792612" at="77,0,81,0" concept="10" trace="createRuntimeErrorType_u2iiiw_b0a0a3a2a7a1#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="6576997179989491091" at="48,171,54,11" concept="5" />
-      <node id="6576997179991561612" at="65,0,71,0" concept="10" trace="_quotation_createNode_u2iiiw_b0a0e0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="6576997179991561261" at="71,0,77,0" concept="10" trace="_quotation_createNode_u2iiiw_b0a0f0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="6576997179988792559" at="47,0,58,0" concept="4" trace="invoke#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/Boolean;" />
-      <node id="6576997179988792551" at="45,0,62,7" concept="2" />
-      <node id="6576997179988792548" at="33,0,64,0" concept="10" trace="assertComparable#(Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;Ljava/lang/String;Ljetbrains/mps/baseLanguage/closures/runtime/_FunctionTypes/_void_P1_E0;)V" />
-      <scope id="6576997179991561607" at="39,152,40,13" />
-      <scope id="6576997179991549622" at="42,152,43,13" />
-      <scope id="6576997179988812658" at="59,51,60,287" />
-      <scope id="6576997179989492242" at="50,69,52,0" />
-      <scope id="6576997179988792612" at="77,69,79,26">
+      <node id="6576997179990079944" at="33,228,34,70" concept="5" />
+      <node id="6576997179990082283" at="34,70,35,72" concept="5" />
+      <node id="6576997179990085061" at="35,72,36,0" concept="8" />
+      <node id="6576997179991566457" at="36,0,37,47" concept="7" />
+      <node id="6576997179991561608" at="38,52,39,13" concept="6" />
+      <node id="6576997179991561592" at="41,53,42,13" concept="6" />
+      <node id="6576997179991548445" at="43,5,44,0" concept="8" />
+      <node id="6576997179988792565" at="46,54,47,171" concept="7" />
+      <node id="6576997179989492242" at="49,69,50,327" concept="2" />
+      <node id="6576997179989492242" at="50,327,51,0" concept="8" />
+      <node id="6576997179988792603" at="53,11,54,0" concept="8" />
+      <node id="6576997179988792604" at="54,0,55,136" concept="6" />
+      <node id="6576997179988881988" at="58,51,59,287" concept="2" />
+      <node id="6576997179988792612" at="64,69,65,76" concept="5" />
+      <node id="6576997179988792612" at="65,76,66,26" concept="6" />
+      <node id="6576997179988766517" at="70,0,71,0" concept="9" trace="Type$fA" />
+      <node id="6576997179988766517" at="71,0,72,0" concept="9" trace="RuntimeErrorType$Lm" />
+      <node id="6576997179991561606" at="37,47,40,5" concept="3" />
+      <node id="6576997179991549620" at="40,5,43,5" concept="3" />
+      <node id="6576997179988812653" at="58,0,61,0" concept="4" trace="invoke#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="6576997179989492242" at="49,0,53,0" concept="4" trace="produceWarning#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="6576997179988792612" at="64,0,68,0" concept="10" trace="createRuntimeErrorType_u2iiiw_b0a0a3a2a7a1#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="6576997179989491091" at="47,171,53,11" concept="5" />
+      <node id="6576997179988792559" at="46,0,57,0" concept="4" trace="invoke#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/Boolean;" />
+      <node id="6576997179988792551" at="44,0,61,7" concept="2" />
+      <node id="6576997179988792548" at="32,0,63,0" concept="10" trace="assertComparable#(Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;Ljava/lang/String;Ljetbrains/mps/baseLanguage/closures/runtime/_FunctionTypes/_void_P1_E0;)V" />
+      <scope id="6576997179991561607" at="38,52,39,13" />
+      <scope id="6576997179991549622" at="41,53,42,13" />
+      <scope id="6576997179988812658" at="58,51,59,287" />
+      <scope id="6576997179989492242" at="49,69,51,0" />
+      <scope id="6576997179988792612" at="64,69,66,26">
         <var name="n0" id="6576997179988792612" />
       </scope>
-      <scope id="6576997179988812653" at="59,0,62,0">
+      <scope id="6576997179988812653" at="58,0,61,0">
         <var name="left" id="6576997179988812653" />
         <var name="right" id="6576997179988812653" />
       </scope>
-      <scope id="6576997179989492242" at="50,0,54,0">
+      <scope id="6576997179989492242" at="49,0,53,0">
         <var name="modelId" id="6576997179989492242" />
         <var name="ruleId" id="6576997179989492242" />
       </scope>
-      <scope id="6576997179991561612" at="65,63,69,24">
-        <var name="facade" id="6576997179991561612" />
-        <var name="quotedNode_1" id="6576997179991561612" />
-      </scope>
-      <scope id="6576997179991561261" at="71,63,75,24">
-        <var name="facade" id="6576997179991561261" />
-        <var name="quotedNode_1" id="6576997179991561261" />
-      </scope>
-      <scope id="6576997179988792612" at="77,0,81,0" />
-      <scope id="6576997179991561612" at="65,0,71,0" />
-      <scope id="6576997179991561261" at="71,0,77,0" />
-      <scope id="6576997179988792564" at="47,54,56,136">
+      <scope id="6576997179988792612" at="64,0,68,0" />
+      <scope id="6576997179988792564" at="46,54,55,136">
         <var name="opType" id="6576997179989491094" />
       </scope>
-      <scope id="6576997179988792559" at="47,0,58,0">
+      <scope id="6576997179988792559" at="46,0,57,0">
         <var name="left" id="6576997179988792559" />
         <var name="right" id="6576997179988792559" />
       </scope>
-      <scope id="6576997179988792550" at="34,228,62,7">
+      <scope id="6576997179988792550" at="33,228,61,7">
         <var name="leftType" id="6576997179990079945" />
         <var name="rightType" id="6576997179990082284" />
       </scope>
-      <scope id="6576997179988792548" at="33,0,64,0">
+      <scope id="6576997179988792548" at="32,0,63,0">
         <var name="errorStringCallback" id="6576997179988811535" />
         <var name="left" id="6576997179988792617" />
         <var name="leftName" id="6576997179988792621" />
@@ -2599,11 +2579,11 @@
         <var name="rightName" id="6576997179988811112" />
         <var name="typeCheckingContext" id="6576997179988792548" />
       </scope>
-      <unit id="6576997179988812653" at="58,11,62,5" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper$2" />
-      <unit id="6576997179988766517" at="82,0,86,0" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper$CONCEPTS" />
-      <unit id="6576997179989492242" at="49,270,54,9" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper$1$1" />
-      <unit id="6576997179988792559" at="46,66,58,5" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper$1" />
-      <unit id="6576997179988766517" at="22,0,87,0" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper" />
+      <unit id="6576997179988812653" at="57,11,61,5" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper$2" />
+      <unit id="6576997179988766517" at="69,0,73,0" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper$CONCEPTS" />
+      <unit id="6576997179989492242" at="48,270,53,9" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper$1$1" />
+      <unit id="6576997179988792559" at="45,66,57,5" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper$1" />
+      <unit id="6576997179988766517" at="21,0,74,0" name="jetbrains.mps.samples.Physics.typesystem.TypeComparisonHelper" />
     </file>
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/6576997179998098817">
