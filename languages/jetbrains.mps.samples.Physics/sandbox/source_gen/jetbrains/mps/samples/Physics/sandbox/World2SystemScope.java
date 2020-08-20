@@ -66,8 +66,13 @@ public class World2SystemScope extends SystemScope {
         public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
 
           return VectorHelper.anyToDVector3C(scope.Ha.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
-
         }
+
+        @Override
+        public DVector3C moment(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
+          return null;
+        }
+
         @Override
         public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
@@ -109,8 +114,13 @@ public class World2SystemScope extends SystemScope {
         public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
 
           return VectorHelper.anyToDVector3C(scope.Ho3.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
-
         }
+
+        @Override
+        public DVector3C moment(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
+          return null;
+        }
+
         @Override
         public DVector3C applicationPoint(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;

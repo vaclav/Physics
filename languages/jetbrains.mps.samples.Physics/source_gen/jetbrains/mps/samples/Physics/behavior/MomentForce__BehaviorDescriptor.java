@@ -6,6 +6,7 @@ import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
@@ -13,25 +14,41 @@ import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class MomentForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, "jetbrains.mps.samples.Physics.structure.MomentForce");
 
+  public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$go").build();
+  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
+  public static final SMethod<SNode> getMomentExpression_id2rJkT1EYuGl = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getMomentExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2rJkT1EYuGl").build();
   public static final SMethod<Integer> getForceMode_id4$vyCQBiMP2 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBiMP2").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getForceMode_id4$vyCQBiMP2);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getApplicationPointExpression_id4$vyCQBi$go, getLinearForceExpression_id4$vyCQBi$gg, getMomentExpression_id2rJkT1EYuGl, getForceMode_id4$vyCQBiMP2);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
+  /*package*/ static SNode getApplicationPointExpression_id4$vyCQBi$go(@NotNull SNode __thisNode__) {
+    return null;
+  }
+  /*package*/ static SNode getLinearForceExpression_id4$vyCQBi$gg(@NotNull SNode __thisNode__) {
+    return null;
+  }
+  /*package*/ static SNode getMomentExpression_id2rJkT1EYuGl(@NotNull SNode __thisNode__) {
+    return SLinkOperations.getTarget(__thisNode__, LINKS.moment$q6Qs);
+  }
   /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
-    return ((int) Force__BehaviorDescriptor.getForceMode_id4$vyCQBiMP2.invokeSuper(__thisNode__, CONCEPTS.MomentForce$kK)) | ForceMode.SKIP_LINEAR_FORCE;
+    int mode = ForceMode.SKIP_LINEAR_FORCE;
+    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isMomentRelative$rXiD) ? ForceMode.TORQUE_RELATIVE : 1);
+    return mode;
   }
 
   /*package*/ MomentForce__BehaviorDescriptor() {
@@ -50,6 +67,12 @@ public final class MomentForce__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
+        return (T) ((SNode) getApplicationPointExpression_id4$vyCQBi$go(node));
+      case 1:
+        return (T) ((SNode) getLinearForceExpression_id4$vyCQBi$gg(node));
+      case 2:
+        return (T) ((SNode) getMomentExpression_id2rJkT1EYuGl(node));
+      case 3:
         return (T) ((Integer) getForceMode_id4$vyCQBiMP2(node));
       default:
         throw new BHMethodNotFoundException(this, method);
@@ -80,7 +103,11 @@ public final class MomentForce__BehaviorDescriptor extends BaseBHDescriptor {
     return CONCEPT;
   }
 
-  private static final class CONCEPTS {
-    /*package*/ static final SConcept MomentForce$kK = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, "jetbrains.mps.samples.Physics.structure.MomentForce");
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink moment$q6Qs = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906af9f596L, "moment");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty isMomentRelative$rXiD = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
   }
 }

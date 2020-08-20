@@ -30,6 +30,7 @@ import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 /*package*/ class SimpleForce_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -65,7 +66,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private boolean nodeCondition_fo54x5_a2a() {
-    return SPropertyOperations.getBoolean(myNode, PROPS.isComponentsRelative$72Cn);
+    return SPropertyOperations.getBoolean(myNode, PROPS.isLinearForceRelative$HMCw);
   }
   private EditorCell createComponent_0() {
     EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.lang.core.editor.alias");
@@ -82,7 +83,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     Style style = new StyleImpl();
     new AttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.SimpleForce$M7, "jetbrains.mps.samples.Physics.editor.Relative_ForceComponents_Transform"));
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.IForceWithLinearForce$3f, "jetbrains.mps.samples.Physics.editor.Relative_LinearForce_Transform"));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
@@ -94,19 +95,19 @@ import org.jetbrains.mps.openapi.language.SConcept;
     new KeyWordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.EDITABLE, false);
     editorCell.getStyle().putAll(style);
-    Relative_ForceComponents_Remove.setCellActions(editorCell, myNode, getEditorContext());
+    Relative_LinearForce_Remove.setCellActions(editorCell, myNode, getEditorContext());
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new componentsSingleRoleHandler_fo54x5_d0(myNode, LINKS.components$SRPu, getEditorContext());
+    SingleRoleCellProvider provider = new linearForceSingleRoleHandler_fo54x5_d0(myNode, LINKS.linearForce$Wp95, getEditorContext());
     return provider.createCell();
   }
-  private static class componentsSingleRoleHandler_fo54x5_d0 extends SingleRoleCellProvider {
+  private static class linearForceSingleRoleHandler_fo54x5_d0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public componentsSingleRoleHandler_fo54x5_d0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public linearForceSingleRoleHandler_fo54x5_d0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -119,8 +120,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.components$SRPu, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.components$SRPu, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.linearForce$Wp95, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.linearForce$Wp95, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -132,16 +133,16 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.components$SRPu);
+        editorCell.setSRole(LINKS.linearForce$Wp95);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.components$SRPu));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.linearForce$Wp95));
       try {
         EditorCell editorCell = super.createEmptyCell();
-        editorCell.setCellId("empty_components");
+        editorCell.setCellId("empty_linearForce");
         installCellInfo(null, editorCell, true);
         setCellContext(editorCell);
         return editorCell;
@@ -150,7 +151,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
     protected String getNoTargetText() {
-      return "<no components>";
+      return "[0, 0, 0]";
     }
   }
   private EditorCell createComponent_1() {
@@ -159,15 +160,15 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isComponentsRelative$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsRelative");
+    /*package*/ static final SProperty isLinearForceRelative$HMCw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b38efc0L, "isLinearForceRelative");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Force$pC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
-    /*package*/ static final SConcept SimpleForce$M7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, "jetbrains.mps.samples.Physics.structure.SimpleForce");
+    /*package*/ static final SInterfaceConcept IForceWithLinearForce$3f = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, "jetbrains.mps.samples.Physics.structure.IForceWithLinearForce");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
+    /*package*/ static final SContainmentLink linearForce$Wp95 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
   }
 }

@@ -48,13 +48,18 @@ public abstract class ObjectSupertypeAbstractEntity<T extends SystemScope> exten
 
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        if (cached != null) {
+        if (cached == null) {
           cached = new InternalVector(AH.mul(((Number) new BigDecimal("899.9999999999999").setScale(13, RoundingMode.DOWN)), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("5.510913997958703E-14").setScale(19, RoundingMode.DOWN)), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
         }
 
         return VectorHelper.anyToDVector3C(cached);
-
       }
+
+      @Override
+      public DVector3C moment(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        return null;
+      }
+
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         return null;
@@ -69,13 +74,18 @@ public abstract class ObjectSupertypeAbstractEntity<T extends SystemScope> exten
 
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        if (cached != null) {
+        if (cached == null) {
           cached = InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.47114206162369554").setScale(17, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigDecimal("44.1814440687490434227723411264442").setScale(31, RoundingMode.DOWN)), ((Number) new BigInteger("1"))));
         }
 
         return VectorHelper.anyToDVector3C(cached);
-
       }
+
+      @Override
+      public DVector3C moment(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        return null;
+      }
+
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         return null;

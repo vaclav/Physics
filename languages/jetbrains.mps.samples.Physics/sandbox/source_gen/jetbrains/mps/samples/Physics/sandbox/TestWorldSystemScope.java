@@ -74,13 +74,18 @@ public class TestWorldSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (cached != null) {
+          if (cached == null) {
             cached = new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
           }
 
           return VectorHelper.anyToDVector3C(cached);
-
         }
+
+        @Override
+        public DVector3C moment(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return null;
+        }
+
         @Override
         public DVector3C applicationPoint(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
@@ -96,8 +101,13 @@ public class TestWorldSystemScope extends SystemScope {
         public DVector3C linearForce(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
 
           return VectorHelper.anyToDVector3C(scope.Hey.minus(currentEntity).resize(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1")))));
-
         }
+
+        @Override
+        public DVector3C moment(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return null;
+        }
+
         @Override
         public DVector3C applicationPoint(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           return null;
@@ -115,8 +125,13 @@ public class TestWorldSystemScope extends SystemScope {
           cached = GravityForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("4")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
 
           return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
-
         }
+
+        @Override
+        public DVector3C moment(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return VectorHelper.anyToDVector3C(cached.moment(world, scope, currentEntity, time));
+        }
+
         @Override
         public DVector3C applicationPoint(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
@@ -134,8 +149,13 @@ public class TestWorldSystemScope extends SystemScope {
           cached = XYZForceForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))));
 
           return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
-
         }
+
+        @Override
+        public DVector3C moment(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return VectorHelper.anyToDVector3C(cached.moment(world, scope, currentEntity, time));
+        }
+
         @Override
         public DVector3C applicationPoint(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));

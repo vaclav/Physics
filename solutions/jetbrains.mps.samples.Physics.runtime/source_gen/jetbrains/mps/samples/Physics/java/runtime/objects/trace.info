@@ -183,186 +183,196 @@
       <node id="7400250159182425015" at="70,19,71,13" concept="7" />
       <node id="7400250159182420252" at="72,5,73,0" concept="9" />
       <node id="2315070452026890059" at="74,32,75,74" concept="6" />
-      <node id="2315070452026895313" at="75,74,76,84" concept="6" />
-      <node id="111538613372806964" at="76,84,77,35" concept="6" />
-      <node id="2315070452026893401" at="77,35,78,0" concept="9" />
-      <node id="8659481891657942484" at="79,37,80,42" concept="1" />
-      <node id="8659481891657945117" at="80,42,81,53" concept="1" />
-      <node id="8659481891657939969" at="82,7,83,0" concept="9" />
-      <node id="8659481891654850178" at="83,0,84,76" concept="1" />
-      <node id="7400250159182418167" at="88,19,89,13" concept="7" />
-      <node id="7400250159182419942" at="90,5,91,0" concept="9" />
-      <node id="362892448127848664" at="92,32,93,46" concept="6" />
-      <node id="1159415042432596827" at="93,46,94,207" concept="1" />
-      <node id="913483291038078579" at="99,47,100,35" concept="1" />
-      <node id="7400250159182418610" at="104,19,105,13" concept="7" />
-      <node id="7400250159182418247" at="106,5,107,0" concept="9" />
-      <node id="4271426636304009464" at="107,0,108,44" concept="6" />
-      <node id="2315070452034684985" at="108,44,109,0" concept="9" />
-      <node id="4271426636304009467" at="109,0,110,26" concept="1" />
-      <node id="4271426636304009469" at="110,26,111,194" concept="1" />
-      <node id="2315070452034892296" at="111,194,112,0" concept="9" />
-      <node id="2315070452034686321" at="112,0,113,101" concept="8" />
-      <node id="2315070452034659188" at="113,101,114,44" concept="6" />
-      <node id="6088688976845148204" at="114,44,115,280" concept="1" />
-      <node id="2315070452034717291" at="115,280,116,0" concept="9" />
-      <node id="913483291037936297" at="116,0,117,39" concept="1" />
-      <node id="4271426636304009483" at="117,39,118,25" concept="1" />
-      <node id="1846966433404185408" at="118,25,119,0" concept="9" />
-      <node id="1846966433404203654" at="119,0,120,28" concept="8" />
-      <node id="1846966433404189192" at="121,47,122,83" concept="1" />
-      <node id="4271426636304009504" at="125,26,126,16" concept="7" />
-      <node id="4271426636304009510" at="128,34,129,18" concept="7" />
-      <node id="911298080288453615" at="132,37,133,44" concept="1" />
-      <node id="3489632902471337150" at="137,28,138,67" concept="7" />
-      <node id="3489632902471412427" at="141,28,142,67" concept="7" />
-      <node id="3489632902471420138" at="145,28,146,67" concept="7" />
-      <node id="3489632902472522633" at="150,29,151,64" concept="1" />
-      <node id="3489632902472530136" at="152,5,153,22" concept="7" />
-      <node id="3489632902472576910" at="156,35,157,71" concept="7" />
-      <node id="6350314785813327489" at="160,43,161,63" concept="1" />
-      <node id="6350314785813333467" at="164,43,165,64" concept="1" />
-      <node id="5352272594417274238" at="169,35,170,72" concept="7" />
-      <node id="6350314785812775310" at="177,42,178,19" concept="8" />
-      <node id="6350314785812693178" at="181,23,182,42" concept="8" />
-      <node id="6350314785812594065" at="182,42,183,48" concept="1" />
-      <node id="6128132931194945530" at="186,31,187,24" concept="7" />
-      <node id="4271426636304009491" at="189,43,190,27" concept="1" />
-      <node id="5369611234117061250" at="193,27,194,21" concept="7" />
-      <node id="6350314785813399470" at="196,51,197,34" concept="7" />
-      <node id="6576997179996127872" at="200,48,201,27" concept="7" />
+      <node id="2805552972619260227" at="75,74,76,64" concept="6" />
+      <node id="2315070452026895313" at="76,64,77,84" concept="6" />
+      <node id="111538613372806964" at="77,84,78,35" concept="6" />
+      <node id="2315070452026893401" at="78,35,79,0" concept="9" />
+      <node id="2805552972619321026" at="80,32,81,37" concept="1" />
+      <node id="2805552972619317451" at="82,7,83,0" concept="9" />
+      <node id="2805552972619275001" at="84,27,85,32" concept="1" />
+      <node id="2805552972619271319" at="86,7,87,0" concept="9" />
+      <node id="8659481891657942484" at="88,37,89,42" concept="1" />
+      <node id="8659481891657945117" at="89,42,90,53" concept="1" />
+      <node id="8659481891657939969" at="91,7,92,0" concept="9" />
+      <node id="8659481891654850178" at="92,0,93,84" concept="1" />
+      <node id="7400250159182418167" at="97,19,98,13" concept="7" />
+      <node id="7400250159182419942" at="99,5,100,0" concept="9" />
+      <node id="362892448127848664" at="101,32,102,46" concept="6" />
+      <node id="1159415042432596827" at="102,46,103,207" concept="1" />
+      <node id="913483291038078579" at="108,47,109,35" concept="1" />
+      <node id="7400250159182418610" at="113,19,114,13" concept="7" />
+      <node id="7400250159182418247" at="115,5,116,0" concept="9" />
+      <node id="4271426636304009464" at="116,0,117,44" concept="6" />
+      <node id="2315070452034684985" at="117,44,118,0" concept="9" />
+      <node id="4271426636304009467" at="118,0,119,26" concept="1" />
+      <node id="4271426636304009469" at="119,26,120,194" concept="1" />
+      <node id="2315070452034892296" at="120,194,121,0" concept="9" />
+      <node id="2315070452034686321" at="121,0,122,101" concept="8" />
+      <node id="2315070452034659188" at="122,101,123,44" concept="6" />
+      <node id="6088688976845148204" at="123,44,124,280" concept="1" />
+      <node id="2315070452034717291" at="124,280,125,0" concept="9" />
+      <node id="913483291037936297" at="125,0,126,39" concept="1" />
+      <node id="4271426636304009483" at="126,39,127,25" concept="1" />
+      <node id="1846966433404185408" at="127,25,128,0" concept="9" />
+      <node id="1846966433404203654" at="128,0,129,28" concept="8" />
+      <node id="1846966433404189192" at="130,47,131,83" concept="1" />
+      <node id="4271426636304009504" at="134,26,135,16" concept="7" />
+      <node id="4271426636304009510" at="137,34,138,18" concept="7" />
+      <node id="911298080288453615" at="141,37,142,44" concept="1" />
+      <node id="3489632902471337150" at="146,28,147,67" concept="7" />
+      <node id="3489632902471412427" at="150,28,151,67" concept="7" />
+      <node id="3489632902471420138" at="154,28,155,67" concept="7" />
+      <node id="3489632902472522633" at="159,29,160,64" concept="1" />
+      <node id="3489632902472530136" at="161,5,162,22" concept="7" />
+      <node id="3489632902472576910" at="165,35,166,71" concept="7" />
+      <node id="6350314785813327489" at="169,43,170,63" concept="1" />
+      <node id="6350314785813333467" at="173,43,174,64" concept="1" />
+      <node id="5352272594417274238" at="178,35,179,72" concept="7" />
+      <node id="6350314785812775310" at="186,42,187,19" concept="8" />
+      <node id="6350314785812693178" at="190,23,191,42" concept="8" />
+      <node id="6350314785812594065" at="191,42,192,48" concept="1" />
+      <node id="6128132931194945530" at="195,31,196,24" concept="7" />
+      <node id="4271426636304009491" at="198,43,199,27" concept="1" />
+      <node id="5369611234117061250" at="202,27,203,21" concept="7" />
+      <node id="6350314785813399470" at="205,51,206,34" concept="7" />
+      <node id="6576997179996127872" at="209,48,210,27" concept="7" />
       <node id="6128132931194074912" at="65,0,68,0" concept="5" trace="isDisabled#()Z" />
       <node id="7400250159182425013" at="69,40,72,5" concept="4" />
-      <node id="7400250159182416512" at="87,79,90,5" concept="4" />
-      <node id="7400250159182418608" at="103,79,106,5" concept="4" />
-      <node id="1846966433404186318" at="120,28,123,5" concept="4" />
-      <node id="4271426636304009502" at="125,0,128,0" concept="5" trace="getBody#()Lorg/ode4j/ode/DBody;" />
-      <node id="4271426636304009508" at="128,0,131,0" concept="5" trace="getForces#()Ljava/util/List;" />
-      <node id="974138438732512710" at="132,0,135,0" concept="5" trace="setMass#(Ljava/lang/Number;)V" />
-      <node id="3489632902472520566" at="149,31,152,5" concept="4" />
-      <node id="3489632902472569204" at="156,0,159,0" concept="5" trace="getPosition#()Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;" />
-      <node id="6350314785813299693" at="160,0,163,0" concept="5" trace="setPosition#(Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;)V" />
-      <node id="6350314785813333465" at="164,0,167,0" concept="5" trace="setVelocity#(Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;)V" />
-      <node id="5352272594417266647" at="169,0,172,0" concept="5" trace="getVelocity#()Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;" />
-      <node id="1139474844808861236" at="177,0,180,0" concept="5" trace="init#(nullLjetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
-      <node id="6128132931194945526" at="186,0,189,0" concept="5" trace="getFixture#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Fixture;" />
-      <node id="4271426636304009487" at="189,0,192,0" concept="5" trace="setFixture#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Fixture;)V" />
-      <node id="5369611234117061246" at="193,0,196,0" concept="5" trace="getName#()Ljava/lang/String;" />
-      <node id="6350314785813399466" at="196,0,199,0" concept="5" trace="getPropertiesBuilder#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/builder/PropertiesBuilder;" />
-      <node id="6576997179996127868" at="200,0,203,0" concept="5" trace="properties#()Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntityProperties;" />
-      <node id="8659481891657941118" at="78,0,82,7" concept="4" />
-      <node id="362892448127813974" at="91,0,95,5" concept="4" />
-      <node id="913483291038064907" at="98,0,102,0" concept="5" trace="setup#(Lprocessing/core/PApplet;F)V" />
-      <node id="3489632902471322859" at="136,0,140,0" concept="5" trace="getX#()Ljava/math/BigDecimal;" />
-      <node id="3489632902471322871" at="140,0,144,0" concept="5" trace="getY#()Ljava/math/BigDecimal;" />
-      <node id="3489632902471322883" at="144,0,148,0" concept="5" trace="getZ#()Ljava/math/BigDecimal;" />
-      <node id="6350314785812493581" at="181,0,185,0" concept="5" trace="build#()V" />
+      <node id="2805552972619319524" at="79,0,82,7" concept="4" />
+      <node id="2805552972619271877" at="83,0,86,7" concept="4" />
+      <node id="7400250159182416512" at="96,79,99,5" concept="4" />
+      <node id="7400250159182418608" at="112,79,115,5" concept="4" />
+      <node id="1846966433404186318" at="129,28,132,5" concept="4" />
+      <node id="4271426636304009502" at="134,0,137,0" concept="5" trace="getBody#()Lorg/ode4j/ode/DBody;" />
+      <node id="4271426636304009508" at="137,0,140,0" concept="5" trace="getForces#()Ljava/util/List;" />
+      <node id="974138438732512710" at="141,0,144,0" concept="5" trace="setMass#(Ljava/lang/Number;)V" />
+      <node id="3489632902472520566" at="158,31,161,5" concept="4" />
+      <node id="3489632902472569204" at="165,0,168,0" concept="5" trace="getPosition#()Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;" />
+      <node id="6350314785813299693" at="169,0,172,0" concept="5" trace="setPosition#(Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;)V" />
+      <node id="6350314785813333465" at="173,0,176,0" concept="5" trace="setVelocity#(Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;)V" />
+      <node id="5352272594417266647" at="178,0,181,0" concept="5" trace="getVelocity#()Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;" />
+      <node id="1139474844808861236" at="186,0,189,0" concept="5" trace="init#(nullLjetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
+      <node id="6128132931194945526" at="195,0,198,0" concept="5" trace="getFixture#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Fixture;" />
+      <node id="4271426636304009487" at="198,0,201,0" concept="5" trace="setFixture#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Fixture;)V" />
+      <node id="5369611234117061246" at="202,0,205,0" concept="5" trace="getName#()Ljava/lang/String;" />
+      <node id="6350314785813399466" at="205,0,208,0" concept="5" trace="getPropertiesBuilder#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/builder/PropertiesBuilder;" />
+      <node id="6576997179996127868" at="209,0,212,0" concept="5" trace="properties#()Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntityProperties;" />
+      <node id="8659481891657941118" at="87,0,91,7" concept="4" />
+      <node id="362892448127813974" at="100,0,104,5" concept="4" />
+      <node id="913483291038064907" at="107,0,111,0" concept="5" trace="setup#(Lprocessing/core/PApplet;F)V" />
+      <node id="3489632902471322859" at="145,0,149,0" concept="5" trace="getX#()Ljava/math/BigDecimal;" />
+      <node id="3489632902471322871" at="149,0,153,0" concept="5" trace="getY#()Ljava/math/BigDecimal;" />
+      <node id="3489632902471322883" at="153,0,157,0" concept="5" trace="getZ#()Ljava/math/BigDecimal;" />
+      <node id="6350314785812493581" at="190,0,194,0" concept="5" trace="build#()V" />
       <node id="6128132931193986110" at="59,0,64,0" concept="5" trace="disable#()V" />
-      <node id="3489632902472482551" at="149,0,155,0" concept="5" trace="getMass#()Ljava/math/BigDecimal;" />
+      <node id="3489632902472482551" at="158,0,164,0" concept="5" trace="getMass#()Ljava/math/BigDecimal;" />
       <node id="4271426636304009416" at="47,0,54,0" concept="0" trace="PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;null)V" />
-      <node id="362892448127797326" at="87,0,97,0" concept="5" trace="applyLights#(Lprocessing/core/PGraphics;FLorg/ode4j/math/DVector3C;)V" />
-      <node id="4271426636304258642" at="73,0,85,5" concept="3" />
-      <node id="4271426636304009453" at="69,0,87,0" concept="5" trace="applyForces#(D)V" />
-      <node id="4271426636304009459" at="103,0,125,0" concept="5" trace="render#(Lprocessing/core/PGraphics;FLorg/ode4j/math/DVector3C;)V" />
+      <node id="362892448127797326" at="96,0,106,0" concept="5" trace="applyLights#(Lprocessing/core/PGraphics;FLorg/ode4j/math/DVector3C;)V" />
+      <node id="4271426636304258642" at="73,0,94,5" concept="3" />
+      <node id="4271426636304009459" at="112,0,134,0" concept="5" trace="render#(Lprocessing/core/PGraphics;FLorg/ode4j/math/DVector3C;)V" />
+      <node id="4271426636304009453" at="69,0,96,0" concept="5" trace="applyForces#(D)V" />
       <scope id="6128132931194074915" at="65,31,66,25" />
       <scope id="7400250159182425014" at="70,19,71,13" />
-      <scope id="7400250159182416514" at="88,19,89,13" />
-      <scope id="913483291038064914" at="99,47,100,35" />
-      <scope id="7400250159182418609" at="104,19,105,13" />
-      <scope id="1846966433404186320" at="121,47,122,83" />
-      <scope id="4271426636304009503" at="125,26,126,16" />
-      <scope id="4271426636304009509" at="128,34,129,18" />
-      <scope id="974138438732512713" at="132,37,133,44" />
-      <scope id="3489632902471322867" at="137,28,138,67" />
-      <scope id="3489632902471322879" at="141,28,142,67" />
-      <scope id="3489632902471322891" at="145,28,146,67" />
-      <scope id="3489632902472520568" at="150,29,151,64" />
-      <scope id="3489632902472569207" at="156,35,157,71" />
-      <scope id="6350314785813299696" at="160,43,161,63" />
-      <scope id="6350314785813333466" at="164,43,165,64" />
-      <scope id="5352272594417266650" at="169,35,170,72" />
-      <scope id="1139474844808861239" at="177,42,178,19" />
-      <scope id="6128132931194945529" at="186,31,187,24" />
-      <scope id="4271426636304009490" at="189,43,190,27" />
-      <scope id="5369611234117061249" at="193,27,194,21" />
-      <scope id="6350314785813399469" at="196,51,197,34" />
-      <scope id="6576997179996127871" at="200,48,201,27" />
-      <scope id="8659481891657941120" at="79,37,81,53" />
-      <scope id="362892448127813976" at="92,32,94,207">
+      <scope id="2805552972619319526" at="80,32,81,37" />
+      <scope id="2805552972619271879" at="84,27,85,32" />
+      <scope id="7400250159182416514" at="97,19,98,13" />
+      <scope id="913483291038064914" at="108,47,109,35" />
+      <scope id="7400250159182418609" at="113,19,114,13" />
+      <scope id="1846966433404186320" at="130,47,131,83" />
+      <scope id="4271426636304009503" at="134,26,135,16" />
+      <scope id="4271426636304009509" at="137,34,138,18" />
+      <scope id="974138438732512713" at="141,37,142,44" />
+      <scope id="3489632902471322867" at="146,28,147,67" />
+      <scope id="3489632902471322879" at="150,28,151,67" />
+      <scope id="3489632902471322891" at="154,28,155,67" />
+      <scope id="3489632902472520568" at="159,29,160,64" />
+      <scope id="3489632902472569207" at="165,35,166,71" />
+      <scope id="6350314785813299696" at="169,43,170,63" />
+      <scope id="6350314785813333466" at="173,43,174,64" />
+      <scope id="5352272594417266650" at="178,35,179,72" />
+      <scope id="1139474844808861239" at="186,42,187,19" />
+      <scope id="6128132931194945529" at="195,31,196,24" />
+      <scope id="4271426636304009490" at="198,43,199,27" />
+      <scope id="5369611234117061249" at="202,27,203,21" />
+      <scope id="6350314785813399469" at="205,51,206,34" />
+      <scope id="6576997179996127871" at="209,48,210,27" />
+      <scope id="8659481891657941120" at="88,37,90,53" />
+      <scope id="362892448127813976" at="101,32,103,207">
         <var name="position" id="362892448127848665" />
       </scope>
-      <scope id="6350314785812493584" at="181,23,183,48" />
+      <scope id="6350314785812493584" at="190,23,192,48" />
       <scope id="6128132931193986111" at="59,25,62,25" />
       <scope id="6128132931194074912" at="65,0,68,0" />
-      <scope id="4271426636304009502" at="125,0,128,0" />
-      <scope id="4271426636304009508" at="128,0,131,0" />
-      <scope id="974138438732512710" at="132,0,135,0">
+      <scope id="4271426636304009502" at="134,0,137,0" />
+      <scope id="4271426636304009508" at="137,0,140,0" />
+      <scope id="974138438732512710" at="141,0,144,0">
         <var name="value" id="974138438732520752" />
       </scope>
-      <scope id="3489632902472569204" at="156,0,159,0" />
-      <scope id="6350314785813299693" at="160,0,163,0">
+      <scope id="3489632902472569204" at="165,0,168,0" />
+      <scope id="6350314785813299693" at="169,0,172,0">
         <var name="pos" id="6350314785813317450" />
       </scope>
-      <scope id="6350314785813333465" at="164,0,167,0">
+      <scope id="6350314785813333465" at="173,0,176,0">
         <var name="pos" id="6350314785813333477" />
       </scope>
-      <scope id="5352272594417266647" at="169,0,172,0" />
-      <scope id="1139474844808861236" at="177,0,180,0">
+      <scope id="5352272594417266647" at="178,0,181,0" />
+      <scope id="1139474844808861236" at="186,0,189,0">
         <var name="scope" id="1139474844808869174" />
         <var name="world" id="1139474844808876888" />
       </scope>
-      <scope id="6128132931194945526" at="186,0,189,0" />
-      <scope id="4271426636304009487" at="189,0,192,0">
+      <scope id="6128132931194945526" at="195,0,198,0" />
+      <scope id="4271426636304009487" at="198,0,201,0">
         <var name="fixture" id="4271426636304009488" />
       </scope>
-      <scope id="5369611234117061246" at="193,0,196,0" />
-      <scope id="6350314785813399466" at="196,0,199,0" />
-      <scope id="6576997179996127868" at="200,0,203,0" />
-      <scope id="913483291038064907" at="98,0,102,0">
+      <scope id="5369611234117061246" at="202,0,205,0" />
+      <scope id="6350314785813399466" at="205,0,208,0" />
+      <scope id="6576997179996127868" at="209,0,212,0" />
+      <scope id="913483291038064907" at="107,0,111,0">
         <var name="app" id="913483291038064911" />
         <var name="scale" id="913483291038106574" />
       </scope>
-      <scope id="3489632902471322859" at="136,0,140,0" />
-      <scope id="3489632902471322871" at="140,0,144,0" />
-      <scope id="3489632902471322883" at="144,0,148,0" />
-      <scope id="3489632902472482554" at="149,31,153,22" />
-      <scope id="6350314785812493581" at="181,0,185,0" />
+      <scope id="3489632902471322859" at="145,0,149,0" />
+      <scope id="3489632902471322871" at="149,0,153,0" />
+      <scope id="3489632902471322883" at="153,0,157,0" />
+      <scope id="3489632902472482554" at="158,31,162,22" />
+      <scope id="6350314785812493581" at="190,0,194,0" />
       <scope id="4271426636304009420" at="47,60,52,23" />
       <scope id="6128132931193986110" at="59,0,64,0" />
-      <scope id="3489632902472482551" at="149,0,155,0" />
+      <scope id="3489632902472482551" at="158,0,164,0" />
       <scope id="4271426636304009416" at="47,0,54,0">
         <var name="name" id="5369611234117044982" />
         <var name="scope" id="2315070452027198438" />
         <var name="world" id="4271426636304009418" />
       </scope>
-      <scope id="362892448127797329" at="87,79,95,5" />
-      <scope id="4271426636304258644" at="74,32,84,76">
-        <var name="applicationPoint" id="2315070452026895314" />
-        <var name="forceLinear" id="2315070452026890060" />
-        <var name="mode" id="111538613372806967" />
-      </scope>
-      <scope id="362892448127797326" at="87,0,97,0">
+      <scope id="362892448127797329" at="96,79,104,5" />
+      <scope id="362892448127797326" at="96,0,106,0">
         <var name="ctx" id="362892448127805097" />
         <var name="scale" id="1993559260851134219" />
         <var name="scaledOffset" id="5986738463487809129" />
       </scope>
-      <scope id="4271426636304258642" at="73,0,85,5">
-        <var name="force" id="4271426636304258645" />
+      <scope id="4271426636304258644" at="74,32,93,84">
+        <var name="applicationPoint" id="2315070452026895314" />
+        <var name="forceLinear" id="2315070452026890060" />
+        <var name="mode" id="111538613372806967" />
+        <var name="moment" id="2805552972619260228" />
       </scope>
-      <scope id="4271426636304009454" at="69,40,85,5" />
-      <scope id="4271426636304009453" at="69,0,87,0">
-        <var name="time" id="6779037360575900938" />
-      </scope>
-      <scope id="4271426636304009462" at="103,79,123,5">
+      <scope id="4271426636304009462" at="112,79,132,5">
         <var name="position" id="4271426636304009463" />
         <var name="rotation" id="2315070452034659189" />
       </scope>
-      <scope id="4271426636304009459" at="103,0,125,0">
+      <scope id="4271426636304258642" at="73,0,94,5">
+        <var name="force" id="4271426636304258645" />
+      </scope>
+      <scope id="4271426636304009459" at="112,0,134,0">
         <var name="graphics" id="4271426636304009460" />
         <var name="scale" id="1993559260850791799" />
         <var name="scaledOffset" id="7510448934294401870" />
       </scope>
-      <unit id="4271426636304009395" at="25,0,204,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+      <scope id="4271426636304009454" at="69,40,94,5" />
+      <scope id="4271426636304009453" at="69,0,96,0">
+        <var name="time" id="6779037360575900938" />
+      </scope>
+      <unit id="4271426636304009395" at="25,0,213,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     </file>
   </root>
   <root nodeRef="r:c76e7683-d7ce-4cb6-a6ee-fcd11243f980(jetbrains.mps.samples.Physics.java.runtime.objects)/5352272594420166441">

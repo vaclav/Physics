@@ -24,6 +24,11 @@ public abstract class ForceMode {
    */
   public static final int LINEAR_FORCE_RELATIVE = 1 << 2;
   /**
+   * Mode flag to set the torque/moment rotated like the object
+   */
+  public static final int TORQUE_RELATIVE = 1 << 3;
+
+  /**
    * Mode flag to set the application point relative to the object position
    */
   public static final int APPLICATION_POINT_RELATIVE = 1 << 4;

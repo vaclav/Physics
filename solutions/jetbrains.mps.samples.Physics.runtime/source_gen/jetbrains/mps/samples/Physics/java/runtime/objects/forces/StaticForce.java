@@ -13,24 +13,32 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
  * Force that do not change over time
  */
 public class StaticForce<T extends SystemScope> implements Force<T> {
-  private DVector3C value;
+  private DVector3C linearForce;
+  private DVector3C moment;
   private DVector3C applicationPoint;
   private int mode;
 
+  public StaticForce(DVector3C linearForce, DVector3C moment, DVector3C applicationPoint, int mode) {
+    this.applicationPoint = applicationPoint;
+    this.linearForce = linearForce;
+    this.mode = mode;
+    this.moment = moment;
+  }
   public StaticForce(DVector3 value) {
-    this(value, null, ForceMode.DEFAULT);
+    this(value, null, null, ForceMode.DEFAULT);
   }
 
-  public StaticForce(DVector3C value, DVector3C applicationPoint, int mode) {
-    this.value = value;
-    this.mode = mode;
-    this.applicationPoint = applicationPoint;
-  }
+
   @Override
   public DVector3C linearForce(World world, T scope, PhysicalEntity targetEntity, double time) {
-    return value;
+    return linearForce;
   }
 
+  @Override
+  public DVector3C moment(World world, T scope, PhysicalEntity currentEntity, double time) {
+    return moment;
+
+  }
   @Override
   public DVector3C applicationPoint(World world, T scope, PhysicalEntity currentEntity, double time) {
     return applicationPoint;

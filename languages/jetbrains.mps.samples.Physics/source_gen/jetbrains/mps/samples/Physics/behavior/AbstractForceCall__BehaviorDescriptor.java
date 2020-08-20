@@ -34,9 +34,10 @@ public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescripto
   public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisaz").build();
   public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisbm").build();
   public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
+  public static final SMethod<SNode> getMomentExpression_id2rJkT1EYuGl = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getMomentExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2rJkT1EYuGl").build();
   public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$go").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(remainingArguments_idQ4PrYMwPsY, getCachedValueExpression_id4$vyCQBisaz, getCacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg, getApplicationPointExpression_id4$vyCQBi$go);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(remainingArguments_idQ4PrYMwPsY, getCachedValueExpression_id4$vyCQBisaz, getCacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg, getMomentExpression_id2rJkT1EYuGl, getApplicationPointExpression_id4$vyCQBi$go);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -70,8 +71,11 @@ public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescripto
   /*package*/ static SNode getLinearForceExpression_id4$vyCQBi$gg(@NotNull SNode __thisNode__) {
     return createDotExpression_yqfunp_a0a3(__thisNode__);
   }
-  /*package*/ static SNode getApplicationPointExpression_id4$vyCQBi$go(@NotNull SNode __thisNode__) {
+  /*package*/ static SNode getMomentExpression_id2rJkT1EYuGl(@NotNull SNode __thisNode__) {
     return createDotExpression_yqfunp_a0a4(__thisNode__);
+  }
+  /*package*/ static SNode getApplicationPointExpression_id4$vyCQBi$go(@NotNull SNode __thisNode__) {
+    return createDotExpression_yqfunp_a0a5(__thisNode__);
   }
 
   /*package*/ AbstractForceCall__BehaviorDescriptor() {
@@ -98,6 +102,8 @@ public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescripto
       case 3:
         return (T) ((SNode) getLinearForceExpression_id4$vyCQBi$gg(node));
       case 4:
+        return (T) ((SNode) getMomentExpression_id2rJkT1EYuGl(node));
+      case 5:
         return (T) ((SNode) getApplicationPointExpression_id4$vyCQBi$go(node));
       default:
         throw new BHMethodNotFoundException(this, method);
@@ -157,6 +163,15 @@ public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescripto
       SNodeBuilder n1 = n0.forChild(LINKS.expr$xFwa).init(CONCEPTS.CachedObjectExpression$O4);
       n1.setReferenceTarget(LINKS.cacheOf$q$Y0, p0);
     }
+    n0.forChild(LINKS.target$NL8Z).init(CONCEPTS.ForceMomentTarget$wp);
+    return n0.getResult();
+  }
+  private static SNode createDotExpression_yqfunp_a0a5(SNode p0) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DotExpression$Af);
+    {
+      SNodeBuilder n1 = n0.forChild(LINKS.expr$xFwa).init(CONCEPTS.CachedObjectExpression$O4);
+      n1.setReferenceTarget(LINKS.cacheOf$q$Y0, p0);
+    }
     n0.forChild(LINKS.target$NL8Z).init(CONCEPTS.ForceApplicationPointTarget$GC);
     return n0.getResult();
   }
@@ -179,6 +194,7 @@ public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescripto
     /*package*/ static final SConcept ExecOp$G = MetaAdapterFactory.getConcept(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba557186L, "org.iets3.core.expr.lambda.structure.ExecOp");
     /*package*/ static final SConcept CachedObjectExpression$O4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, "jetbrains.mps.samples.Physics.structure.CachedObjectExpression");
     /*package*/ static final SConcept ForceComponentsTarget$W$ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98a73b5L, "jetbrains.mps.samples.Physics.structure.ForceComponentsTarget");
+    /*package*/ static final SConcept ForceMomentTarget$wp = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906afd798eL, "jetbrains.mps.samples.Physics.structure.ForceMomentTarget");
     /*package*/ static final SConcept ForceApplicationPointTarget$GC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98a8e76L, "jetbrains.mps.samples.Physics.structure.ForceApplicationPointTarget");
   }
 }

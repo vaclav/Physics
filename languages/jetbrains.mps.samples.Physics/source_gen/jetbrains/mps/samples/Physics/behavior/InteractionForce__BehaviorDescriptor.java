@@ -44,7 +44,7 @@ public final class InteractionForce__BehaviorDescriptor extends BaseBHDescriptor
 
     // An interaction force it the sum of force depending each on an object of the simulation 
     // The cast operation a bit below is mandatory due to current generation 
-    SNode node = createDotExpression_3otbl8_a0h0a(SLinkOperations.getTarget(__thisNode__, LINKS.components$SRPu), seedArg, currentArg, seedArg, currentArg);
+    SNode node = createDotExpression_3otbl8_a0h0a(SLinkOperations.getTarget(__thisNode__, LINKS.linearForce$Wp95), seedArg, currentArg, seedArg, currentArg);
     return node;
   }
 
@@ -209,7 +209,7 @@ public final class InteractionForce__BehaviorDescriptor extends BaseBHDescriptor
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
+    /*package*/ static final SContainmentLink linearForce$Wp95 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
     /*package*/ static final SContainmentLink type$G1QY = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba520709L, 0x68d69d36ba52070cL, "type");
     /*package*/ static final SContainmentLink componentType$gTxy = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
     /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");

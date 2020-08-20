@@ -64,7 +64,7 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), null));
-      propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN))));
+      propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigDecimal("0.3").setScale(1, RoundingMode.DOWN))));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList());
     }

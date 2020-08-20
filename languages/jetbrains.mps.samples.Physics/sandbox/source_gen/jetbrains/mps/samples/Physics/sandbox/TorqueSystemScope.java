@@ -90,13 +90,18 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (cached != null) {
+          if (cached == null) {
             cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
           }
 
           return VectorHelper.anyToDVector3C(cached);
-
         }
+
+        @Override
+        public DVector3C moment(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return null;
+        }
+
         @Override
         public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
           return VectorHelper.anyToDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
@@ -111,13 +116,18 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          if (cached != null) {
+          if (cached == null) {
             cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))).negate());
           }
 
           return VectorHelper.anyToDVector3C(cached);
-
         }
+
+        @Override
+        public DVector3C moment(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return null;
+        }
+
         @Override
         public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
           return VectorHelper.anyToDVector3C(new InternalVector(((BigInteger) AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).negate(), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));

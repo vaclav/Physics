@@ -1866,6 +1866,28 @@
         </node>
       </node>
     </node>
+    <node concept="Wx3nA" id="2rJkT1FecEz" role="jymVt">
+      <property role="TrG5h" value="TORQUE_RELATIVE" />
+      <property role="3TUv4t" value="true" />
+      <node concept="3Tm1VV" id="2rJkT1FecE$" role="1B3o_S" />
+      <node concept="10Oyi0" id="2rJkT1FecE_" role="1tU5fm" />
+      <node concept="1GRDU$" id="2rJkT1FecEA" role="33vP2m">
+        <node concept="3cmrfG" id="2rJkT1FecEC" role="3uHU7B">
+          <property role="3cmrfH" value="1" />
+        </node>
+        <node concept="3cmrfG" id="2rJkT1FecNg" role="3uHU7w">
+          <property role="3cmrfH" value="3" />
+        </node>
+      </node>
+      <node concept="z59LJ" id="2rJkT1FecED" role="lGtFl">
+        <node concept="TZ5HA" id="2rJkT1FecEE" role="TZ5H$">
+          <node concept="1dT_AC" id="2rJkT1FecEF" role="1dT_Ay">
+            <property role="1dT_AB" value="Mode flag to set the torque/moment rotated like the object" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="2rJkT1FecCf" role="jymVt" />
     <node concept="Wx3nA" id="6cgWs$O6rY" role="jymVt">
       <property role="TrG5h" value="APPLICATION_POINT_RELATIVE" />
       <property role="3TUv4t" value="true" />

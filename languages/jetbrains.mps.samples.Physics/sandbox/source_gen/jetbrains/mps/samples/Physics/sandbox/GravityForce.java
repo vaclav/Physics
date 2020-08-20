@@ -54,8 +54,13 @@ public class GravityForce {
             return seed;
           }
         }.invoke());
-
       }
+
+      @Override
+      public DVector3C moment(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        return null;
+      }
+
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         return null;

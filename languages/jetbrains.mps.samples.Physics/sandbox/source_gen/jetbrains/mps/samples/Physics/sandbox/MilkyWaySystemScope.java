@@ -67,8 +67,13 @@ public class MilkyWaySystemScope extends SystemScope {
           cached = FrictionForce.get(world, scope, currentEntity, time, ((Number) new BigInteger("4")));
 
           return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
-
         }
+
+        @Override
+        public DVector3C moment(World world, MilkyWaySystemScope scope, PhysicalEntity currentEntity, double time) {
+          return VectorHelper.anyToDVector3C(cached.moment(world, scope, currentEntity, time));
+        }
+
         @Override
         public DVector3C applicationPoint(World world, MilkyWaySystemScope scope, PhysicalEntity currentEntity, double time) {
           return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));

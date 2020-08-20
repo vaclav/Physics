@@ -73,15 +73,24 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
 
     for (Force force : forces) {
       DVector3C forceLinear = force.linearForce(world, scope, this, time);
+      DVector3C moment = force.moment(world, scope, this, time);
       DVector3C applicationPoint = force.applicationPoint(world, scope, this, time);
       int mode = force.forceMode();
+
+      if (forceLinear == null) {
+        forceLinear = new DVector3();
+      }
+
+      if (moment == null) {
+        moment = new DVector3();
+      }
 
       if (applicationPoint == null) {
         applicationPoint = new DVector3();
         mode |= ForceMode.APPLICATION_POINT_RELATIVE;
       }
 
-      ForceModeApplication.apply(mode, this, forceLinear, applicationPoint);
+      ForceModeApplication.apply(mode, this, forceLinear, moment, applicationPoint);
     }
   }
   public void applyLights(PGraphics ctx, float scale, DVector3C scaledOffset) {

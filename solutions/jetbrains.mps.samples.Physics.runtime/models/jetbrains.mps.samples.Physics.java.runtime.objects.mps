@@ -869,6 +869,32 @@
                 </node>
               </node>
             </node>
+            <node concept="3cpWs8" id="2rJkT1FwM53" role="3cqZAp">
+              <node concept="3cpWsn" id="2rJkT1FwM54" role="3cpWs9">
+                <property role="TrG5h" value="moment" />
+                <node concept="3uibUv" id="2rJkT1FwM55" role="1tU5fm">
+                  <ref role="3uigEE" to="xwt6:~DVector3C" resolve="DVector3C" />
+                </node>
+                <node concept="2OqwBi" id="2rJkT1FwN5k" role="33vP2m">
+                  <node concept="37vLTw" id="2rJkT1FwN19" role="2Oq$k0">
+                    <ref role="3cqZAo" node="3H79Ykd3Dpl" resolve="force" />
+                  </node>
+                  <node concept="liA8E" id="2rJkT1FwNki" role="2OqNvi">
+                    <ref role="37wK5l" to="4bo7:2rJkT1Fv5yi" resolve="moment" />
+                    <node concept="37vLTw" id="2rJkT1FwNnS" role="37wK5m">
+                      <ref role="3cqZAo" node="3H79Ykd2GyT" resolve="world" />
+                    </node>
+                    <node concept="37vLTw" id="2rJkT1FwNGm" role="37wK5m">
+                      <ref role="3cqZAo" node="20wM4XN5pl0" resolve="scope" />
+                    </node>
+                    <node concept="Xjq3P" id="2rJkT1FwNMF" role="37wK5m" />
+                    <node concept="37vLTw" id="2rJkT1FwO0y" role="37wK5m">
+                      <ref role="3cqZAo" node="5SjYD04eAOa" resolve="time" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
             <node concept="3cpWs8" id="20wM4XN4eJh" role="3cqZAp">
               <node concept="3cpWsn" id="20wM4XN4eJi" role="3cpWs9">
                 <property role="TrG5h" value="applicationPoint" />
@@ -910,6 +936,52 @@
               </node>
             </node>
             <node concept="3clFbH" id="20wM4XN4ehp" role="3cqZAp" />
+            <node concept="3clFbJ" id="2rJkT1Fx0z$" role="3cqZAp">
+              <node concept="3clFbS" id="2rJkT1Fx0zA" role="3clFbx">
+                <node concept="3clFbF" id="2rJkT1Fx0V2" role="3cqZAp">
+                  <node concept="37vLTI" id="2rJkT1Fx10F" role="3clFbG">
+                    <node concept="2ShNRf" id="2rJkT1Fx157" role="37vLTx">
+                      <node concept="1pGfFk" id="2rJkT1Fx1p3" role="2ShVmc">
+                        <ref role="37wK5l" to="xwt6:~DVector3.&lt;init&gt;()" resolve="DVector3" />
+                      </node>
+                    </node>
+                    <node concept="37vLTw" id="2rJkT1Fx0V0" role="37vLTJ">
+                      <ref role="3cqZAo" node="20wM4XN4dtc" resolve="forceLinear" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbC" id="2rJkT1Fx0Ph" role="3clFbw">
+                <node concept="10Nm6u" id="2rJkT1Fx0So" role="3uHU7w" />
+                <node concept="37vLTw" id="2rJkT1Fx0Ii" role="3uHU7B">
+                  <ref role="3cqZAo" node="20wM4XN4dtc" resolve="forceLinear" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbH" id="2rJkT1Fx03b" role="3cqZAp" />
+            <node concept="3clFbJ" id="2rJkT1FwOV5" role="3cqZAp">
+              <node concept="3clFbS" id="2rJkT1FwOV7" role="3clFbx">
+                <node concept="3clFbF" id="2rJkT1FwPFT" role="3cqZAp">
+                  <node concept="37vLTI" id="2rJkT1FwPLb" role="3clFbG">
+                    <node concept="2ShNRf" id="2rJkT1FwPPg" role="37vLTx">
+                      <node concept="1pGfFk" id="2rJkT1FwQ94" role="2ShVmc">
+                        <ref role="37wK5l" to="xwt6:~DVector3.&lt;init&gt;()" resolve="DVector3" />
+                      </node>
+                    </node>
+                    <node concept="37vLTw" id="2rJkT1FwPFR" role="37vLTJ">
+                      <ref role="3cqZAo" node="2rJkT1FwM54" resolve="moment" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbC" id="2rJkT1FwPAB" role="3clFbw">
+                <node concept="10Nm6u" id="2rJkT1FwPC0" role="3uHU7w" />
+                <node concept="37vLTw" id="2rJkT1FwPxm" role="3uHU7B">
+                  <ref role="3cqZAo" node="2rJkT1FwM54" resolve="moment" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbH" id="2rJkT1FwOMn" role="3cqZAp" />
             <node concept="3clFbJ" id="7wGEeqbcK1Y" role="3cqZAp">
               <node concept="3clFbS" id="7wGEeqbcK20" role="3clFbx">
                 <node concept="3clFbF" id="7wGEeqbcKnk" role="3cqZAp">
@@ -954,6 +1026,9 @@
                 <node concept="Xjq3P" id="7wGEeqb0XHk" role="37wK5m" />
                 <node concept="37vLTw" id="7wGEeqb0XPA" role="37wK5m">
                   <ref role="3cqZAo" node="20wM4XN4dtc" resolve="forceLinear" />
+                </node>
+                <node concept="37vLTw" id="2rJkT1FwT38" role="37wK5m">
+                  <ref role="3cqZAo" node="2rJkT1FwM54" resolve="moment" />
                 </node>
                 <node concept="37vLTw" id="7wGEeqb0XVw" role="37wK5m">
                   <ref role="3cqZAo" node="20wM4XN4eJi" resolve="applicationPoint" />

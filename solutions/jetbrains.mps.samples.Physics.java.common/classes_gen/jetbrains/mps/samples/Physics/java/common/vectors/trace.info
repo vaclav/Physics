@@ -19,39 +19,40 @@
       <node id="111538613372558051" at="15,0,16,0" concept="10" trace="SKIP_TORQUE" />
       <node id="111538613372557911" at="19,0,20,0" concept="10" trace="SKIP_LINEAR_FORCE" />
       <node id="111538613372610055" at="25,0,26,0" concept="10" trace="LINEAR_FORCE_RELATIVE" />
-      <node id="111538613372610302" at="29,0,30,0" concept="10" trace="APPLICATION_POINT_RELATIVE" />
-      <node id="111538613372621514" at="31,0,32,0" concept="10" trace="DEFAULT" />
-      <node id="9143082258455888698" at="36,48,37,20" concept="7" />
-      <node id="9143082258455888720" at="39,5,40,17" concept="7" />
-      <node id="9143082258455888252" at="45,48,46,21" concept="7" />
-      <node id="9143082258455888527" at="48,5,49,16" concept="7" />
-      <node id="9143082258455888696" at="35,47,38,7" concept="4" />
-      <node id="9143082258455886448" at="44,47,47,7" concept="4" />
-      <node id="9143082258455888694" at="34,60,39,5" concept="3" />
-      <node id="9143082258455882501" at="43,60,48,5" concept="3" />
-      <node id="9143082258455888692" at="34,0,42,0" concept="11" trace="haveOne#(Inull)Z" />
-      <node id="111538613372902893" at="43,0,51,0" concept="11" trace="haveAll#(Inull)Z" />
-      <scope id="9143082258455888697" at="36,48,37,20" />
-      <scope id="9143082258455886450" at="45,48,46,21" />
-      <scope id="9143082258455888695" at="35,47,38,7" />
-      <scope id="9143082258455882503" at="44,47,47,7" />
-      <scope id="9143082258455888694" at="34,60,39,5">
+      <node id="2805552972614388387" at="29,0,30,0" concept="10" trace="TORQUE_RELATIVE" />
+      <node id="111538613372610302" at="34,0,35,0" concept="10" trace="APPLICATION_POINT_RELATIVE" />
+      <node id="111538613372621514" at="36,0,37,0" concept="10" trace="DEFAULT" />
+      <node id="9143082258455888698" at="41,48,42,20" concept="7" />
+      <node id="9143082258455888720" at="44,5,45,17" concept="7" />
+      <node id="9143082258455888252" at="50,48,51,21" concept="7" />
+      <node id="9143082258455888527" at="53,5,54,16" concept="7" />
+      <node id="9143082258455888696" at="40,47,43,7" concept="4" />
+      <node id="9143082258455886448" at="49,47,52,7" concept="4" />
+      <node id="9143082258455888694" at="39,60,44,5" concept="3" />
+      <node id="9143082258455882501" at="48,60,53,5" concept="3" />
+      <node id="9143082258455888692" at="39,0,47,0" concept="11" trace="haveOne#(Inull)Z" />
+      <node id="111538613372902893" at="48,0,56,0" concept="11" trace="haveAll#(Inull)Z" />
+      <scope id="9143082258455888697" at="41,48,42,20" />
+      <scope id="9143082258455886450" at="50,48,51,21" />
+      <scope id="9143082258455888695" at="40,47,43,7" />
+      <scope id="9143082258455882503" at="49,47,52,7" />
+      <scope id="9143082258455888694" at="39,60,44,5">
         <var name="i" id="9143082258455888710" />
       </scope>
-      <scope id="9143082258455882501" at="43,60,48,5">
+      <scope id="9143082258455882501" at="48,60,53,5">
         <var name="i" id="9143082258455882504" />
       </scope>
-      <scope id="9143082258455888693" at="34,60,40,17" />
-      <scope id="111538613372902896" at="43,60,49,16" />
-      <scope id="9143082258455888692" at="34,0,42,0">
+      <scope id="9143082258455888693" at="39,60,45,17" />
+      <scope id="111538613372902896" at="48,60,54,16" />
+      <scope id="9143082258455888692" at="39,0,47,0">
         <var name="expected" id="9143082258455888726" />
         <var name="mode" id="9143082258455888724" />
       </scope>
-      <scope id="111538613372902893" at="43,0,51,0">
+      <scope id="111538613372902893" at="48,0,56,0">
         <var name="expected" id="111538613372903026" />
         <var name="mode" id="111538613372902993" />
       </scope>
-      <unit id="111538613372625271" at="10,0,52,0" name="jetbrains.mps.samples.Physics.java.common.vectors.ForceMode" />
+      <unit id="111538613372625271" at="10,0,57,0" name="jetbrains.mps.samples.Physics.java.common.vectors.ForceMode" />
     </file>
   </root>
   <root nodeRef="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.java.common.vectors)/7105688800959643459">

@@ -1297,29 +1297,31 @@
     <property role="R4oN_" value="force with simple linear force and application point expression" />
     <property role="34LRSv" value="simple force" />
     <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
-    <node concept="1TJgyj" id="1h1l5SEm0oN" role="1TKVEi">
-      <property role="IQ2ns" value="1459540517658822195" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="components" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-    <node concept="1TJgyi" id="6AL7kK94qmj" role="1TKVEl">
-      <property role="IQ2nx" value="7615900657267090835" />
-      <property role="TrG5h" value="isComponentsRelative" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
-    </node>
     <node concept="PrWs8" id="3Vp3qmazoAp" role="PzmwI">
       <ref role="PrY4T" node="3Vp3qmazjJs" resolve="IForceWithApplicationPoint" />
+    </node>
+    <node concept="PrWs8" id="2rJkT1Feg25" role="PzmwI">
+      <ref role="PrY4T" node="2rJkT1FeeYZ" resolve="IForceWithLinearForce" />
     </node>
   </node>
   <node concept="1TIwiD" id="4R4wXcuYiKN">
     <property role="EcuMT" value="5603748779136724019" />
-    <property role="3GE5qa" value="physical.force.implemented.simple" />
+    <property role="3GE5qa" value="physical.force.implemented" />
     <property role="TrG5h" value="MomentForce" />
     <property role="34LRSv" value="moment force" />
     <property role="R4oN_" value="force that only result as a moment" />
-    <ref role="1TJDcQ" node="7zgzoeTzo_w" resolve="SimpleForce" />
+    <ref role="1TJDcQ" node="1h1l5SEm0oJ" resolve="Force" />
+    <node concept="1TJgyj" id="2rJkT1EYvmm" role="1TKVEi">
+      <property role="IQ2ns" value="2805552972610270614" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="moment" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyi" id="2rJkT1Fe0u2" role="1TKVEl">
+      <property role="IQ2nx" value="2805552972614338434" />
+      <property role="TrG5h" value="isMomentRelative" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4$vyCQBikuI">
     <property role="EcuMT" value="5269082430048389038" />
@@ -1548,6 +1550,42 @@
     <property role="TrG5h" value="IRuntimeContext" />
     <node concept="t5JxF" id="5claIBnD44X" role="lGtFl">
       <property role="t5JxN" value="Node whose expressions are available on runtime" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2rJkT1EZnAe">
+    <property role="EcuMT" value="2805552972610501006" />
+    <property role="3GE5qa" value="physical.expr.dot.force" />
+    <property role="TrG5h" value="ForceMomentTarget" />
+    <property role="34LRSv" value="moment" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="2rJkT1EZnAf" role="PzmwI">
+      <ref role="PrY4T" node="7zgzoeTyAde" resolve="IForceDotTarget" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2rJkT1F4lMr">
+    <property role="EcuMT" value="2805552972611804315" />
+    <property role="3GE5qa" value="physical.expr.dot.object" />
+    <property role="TrG5h" value="ObjectAngularVelocityTarget" />
+    <property role="34LRSv" value="angular velocity" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="2rJkT1F4lMs" role="PzmwI">
+      <ref role="PrY4T" node="4eAl$41wfr1" resolve="IObjectDotTarget" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="2rJkT1FeeYZ">
+    <property role="EcuMT" value="2805552972614397887" />
+    <property role="3GE5qa" value="physical.force.implemented" />
+    <property role="TrG5h" value="IForceWithLinearForce" />
+    <node concept="1TJgyi" id="2rJkT1FeeZ0" role="1TKVEl">
+      <property role="IQ2nx" value="2805552972614397888" />
+      <property role="TrG5h" value="isLinearForceRelative" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyj" id="2rJkT1Fk$9H" role="1TKVEi">
+      <property role="IQ2ns" value="2805552972616057453" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="linearForce" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
 </model>

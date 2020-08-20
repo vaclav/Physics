@@ -21,8 +21,13 @@ public class AirDragForce {
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
 
         return VectorHelper.anyToDVector3C((currentEntity.getVelocity().mul(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))).mul(-1).resize(AH.mul(AH.mul(AH.mul(AH.mul(((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN)), dragCoef), airDensity), area), BigDecimal.valueOf(Math.pow(currentEntity.getVelocity().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue())))));
-
       }
+
+      @Override
+      public DVector3C moment(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        return null;
+      }
+
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         return null;

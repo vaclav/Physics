@@ -42,7 +42,7 @@ public final class StaticForce__BehaviorDescriptor extends BaseBHDescriptor {
     return true;
   }
   /*package*/ static SNode getCachedValueExpression_id4$vyCQBisaz(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.components$SRPu);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.linearForce$Wp95);
   }
   /*package*/ static SNode getCacheType_id4$vyCQBisbm(@NotNull SNode __thisNode__) {
     return _quotation_createNode_j9nyyi_a0a2();
@@ -125,7 +125,7 @@ public final class StaticForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
+    /*package*/ static final SContainmentLink linearForce$Wp95 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
     /*package*/ static final SReferenceLink cacheOf$q$Y0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, 0x491f8a8da78a723cL, "cacheOf");
   }
 

@@ -14,6 +14,7 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class ForceFactories {
@@ -29,17 +30,27 @@ public class ForceFactories {
       }
     }
   }
-  public static class NodeFactory_4809107873070311133 implements NodeFactory {
+  public static class NodeFactory_2805552972616035457 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SPropertyOperations.assign(newNode, PROPS.isComponentsRelative$72Cn, false);
       SPropertyOperations.assign(newNode, PROPS.isPointRelative$86Nw, true);
 
       {
         final SNode force = sampleNode;
-        if (SNodeOperations.isInstanceOf(force, CONCEPTS.SimpleForce$M7)) {
-          SLinkOperations.setTarget(newNode, LINKS.components$SRPu, SNodeOperations.copyNode(SLinkOperations.getTarget(force, LINKS.components$SRPu)));
-          SPropertyOperations.assign(newNode, PROPS.isComponentsRelative$72Cn, SPropertyOperations.getBoolean(force, PROPS.isComponentsRelative$72Cn));
+        if (SNodeOperations.isInstanceOf(force, CONCEPTS.IForceWithApplicationPoint$_T)) {
           SPropertyOperations.assign(newNode, PROPS.isPointRelative$86Nw, SPropertyOperations.getBoolean(force, PROPS.isPointRelative$86Nw));
+          SLinkOperations.setTarget(newNode, LINKS.applicationPoint$86Ou, SNodeOperations.copyNode(SLinkOperations.getTarget(force, LINKS.applicationPoint$86Ou)));
+        }
+      }
+    }
+  }
+  public static class NodeFactory_2805552972616080516 implements NodeFactory {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+      SPropertyOperations.assign(newNode, PROPS.isLinearForceRelative$HMCw, false);
+
+      {
+        final SNode force = sampleNode;
+        if (SNodeOperations.isInstanceOf(force, CONCEPTS.IForceWithLinearForce$3f)) {
+          SLinkOperations.setTarget(newNode, LINKS.linearForce$Wp95, SNodeOperations.copyNode(SLinkOperations.getTarget(force, LINKS.linearForce$Wp95)));
         }
       }
     }
@@ -48,17 +59,19 @@ public class ForceFactories {
   private static final class LINKS {
     /*package*/ static final SReferenceLink argument$kXZ1 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
     /*package*/ static final SContainmentLink value$59jW = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb2832d0cL, "value");
-    /*package*/ static final SContainmentLink components$SRPu = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x1441545e2a580633L, "components");
+    /*package*/ static final SContainmentLink applicationPoint$86Ou = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bdfL, "applicationPoint");
+    /*package*/ static final SContainmentLink linearForce$Wp95 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept AbstractForceCall$Wc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
     /*package*/ static final SConcept AbstractForceCallParameter$Xs = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter");
-    /*package*/ static final SConcept SimpleForce$M7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, "jetbrains.mps.samples.Physics.structure.SimpleForce");
+    /*package*/ static final SInterfaceConcept IForceWithApplicationPoint$_T = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, "jetbrains.mps.samples.Physics.structure.IForceWithApplicationPoint");
+    /*package*/ static final SInterfaceConcept IForceWithLinearForce$3f = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, "jetbrains.mps.samples.Physics.structure.IForceWithLinearForce");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isComponentsRelative$72Cn = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98d8960L, 0x69b11d4c0911a593L, "isComponentsRelative");
     /*package*/ static final SProperty isPointRelative$86Nw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bddL, "isPointRelative");
+    /*package*/ static final SProperty isLinearForceRelative$HMCw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b38efc0L, "isLinearForceRelative");
   }
 }

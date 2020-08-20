@@ -18,8 +18,13 @@ public class XYZForceForce {
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
 
         return VectorHelper.anyToDVector3C(new InternalVector(x, y, z));
-
       }
+
+      @Override
+      public DVector3C moment(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        return null;
+      }
+
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         return null;

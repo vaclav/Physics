@@ -18,6 +18,8 @@ public interface Force<T extends SystemScope> {
    */
   DVector3C linearForce(World world, T scope, PhysicalEntity currentEntity, double time);
 
+  DVector3C moment(World world, T scope, PhysicalEntity currentEntity, double time);
+
   /**
    * Compute the application point of the force
    */

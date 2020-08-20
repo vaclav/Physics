@@ -42,8 +42,13 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
         cached = GravityForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))));
 
         return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
-
       }
+
+      @Override
+      public DVector3C moment(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        return VectorHelper.anyToDVector3C(cached.moment(world, scope, currentEntity, time));
+      }
+
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));

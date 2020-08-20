@@ -24,7 +24,6 @@ import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
-import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL, "jetbrains.mps.samples.Physics.structure.ConditionalForce");
@@ -32,9 +31,11 @@ public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor
   public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisaz").build();
   public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisbm").build();
   public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
+  public static final SMethod<SNode> getMomentExpression_id2rJkT1EYuGl = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getMomentExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2rJkT1EYuGl").build();
   public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$go").build();
+  public static final SMethod<Integer> getForceMode_id4$vyCQBiMP2 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBiMP2").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getCachedValueExpression_id4$vyCQBisaz, getCacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg, getApplicationPointExpression_id4$vyCQBi$go);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getCachedValueExpression_id4$vyCQBisaz, getCacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg, getMomentExpression_id2rJkT1EYuGl, getApplicationPointExpression_id4$vyCQBi$go, getForceMode_id4$vyCQBiMP2);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -49,8 +50,15 @@ public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor
     // If (condition) nested.components else [0, 0, 0] 
     return createIfExpression_z9hyna_a1a2(SNodeOperations.copyNode(SLinkOperations.getTarget(__thisNode__, LINKS.condition$Ljr$)), __thisNode__);
   }
+  /*package*/ static SNode getMomentExpression_id2rJkT1EYuGl(@NotNull SNode __thisNode__) {
+    // If (condition) nested.moment else [0, 0, 0] 
+    return createIfExpression_z9hyna_a1a3(SNodeOperations.copyNode(SLinkOperations.getTarget(__thisNode__, LINKS.condition$Ljr$)), __thisNode__);
+  }
   /*package*/ static SNode getApplicationPointExpression_id4$vyCQBi$go(@NotNull SNode __thisNode__) {
     return (SNode) Force__BehaviorDescriptor.getApplicationPointExpression_id4$vyCQBi$go.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.nested$$QTy));
+  }
+  /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
+    return (int) Force__BehaviorDescriptor.getForceMode_id4$vyCQBiMP2.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.nested$$QTy));
   }
 
   /*package*/ ConditionalForce__BehaviorDescriptor() {
@@ -75,7 +83,11 @@ public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor
       case 2:
         return (T) ((SNode) getLinearForceExpression_id4$vyCQBi$gg(node));
       case 3:
+        return (T) ((SNode) getMomentExpression_id2rJkT1EYuGl(node));
+      case 4:
         return (T) ((SNode) getApplicationPointExpression_id4$vyCQBi$go(node));
+      case 5:
+        return (T) ((Integer) getForceMode_id4$vyCQBiMP2(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -123,21 +135,24 @@ public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor
     }
     {
       SNodeBuilder n3 = n0.forChild(LINKS.elseSection$qFgA).init(CONCEPTS.IfElseSection$TU);
+      n3.forChild(LINKS.expr$SkHb).init(CONCEPTS.NoneLiteral$R_);
+    }
+    return n0.getResult();
+  }
+  private static SNode createIfExpression_z9hyna_a1a3(SNode p0, SNode p1) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.IfExpression$pq);
+    n0.forChild(LINKS.condition$3GN0).initNode(p0, CONCEPTS.Expression$Wr, true);
+    {
+      SNodeBuilder n1 = n0.forChild(LINKS.thenPart$3GNY).init(CONCEPTS.DotExpression$Af);
       {
-        SNodeBuilder n4 = n3.forChild(LINKS.expr$SkHb).init(CONCEPTS.CartesianCoordinates$U8);
-        {
-          SNodeBuilder n5 = n4.forChild(LINKS.dx$VpuT).init(CONCEPTS.NumberLiteral$yW);
-          n5.setProperty(PROPS.value$nZyY, "0");
-        }
-        {
-          SNodeBuilder n6 = n4.forChild(LINKS.dy$VWrJ).init(CONCEPTS.NumberLiteral$yW);
-          n6.setProperty(PROPS.value$nZyY, "0");
-        }
-        {
-          SNodeBuilder n7 = n4.forChild(LINKS.dz$VWBn).init(CONCEPTS.NumberLiteral$yW);
-          n7.setProperty(PROPS.value$nZyY, "0");
-        }
+        SNodeBuilder n2 = n1.forChild(LINKS.expr$xFwa).init(CONCEPTS.CachedObjectExpression$O4);
+        n2.setReferenceTarget(LINKS.cacheOf$q$Y0, p1);
       }
+      n1.forChild(LINKS.target$NL8Z).init(CONCEPTS.ForceMomentTarget$wp);
+    }
+    {
+      SNodeBuilder n3 = n0.forChild(LINKS.elseSection$qFgA).init(CONCEPTS.IfElseSection$TU);
+      n3.forChild(LINKS.expr$SkHb).init(CONCEPTS.NoneLiteral$R_);
     }
     return n0.getResult();
   }
@@ -152,9 +167,6 @@ public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor
     /*package*/ static final SContainmentLink target$NL8Z = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
     /*package*/ static final SContainmentLink elseSection$qFgA = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x6cef3d81a56f626aL, 0x86c00f011503ff8L, "elseSection");
     /*package*/ static final SContainmentLink expr$SkHb = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x86c00f011503ffdL, 0x86c00f011503ffeL, "expr");
-    /*package*/ static final SContainmentLink dx$VpuT = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a580637L, "dx");
-    /*package*/ static final SContainmentLink dy$VWrJ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807eeL, "dy");
-    /*package*/ static final SContainmentLink dz$VWBn = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807f1L, "dz");
   }
 
   private static final class CONCEPTS {
@@ -164,11 +176,7 @@ public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor
     /*package*/ static final SConcept CachedObjectExpression$O4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, "jetbrains.mps.samples.Physics.structure.CachedObjectExpression");
     /*package*/ static final SConcept ForceComponentsTarget$W$ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98a73b5L, "jetbrains.mps.samples.Physics.structure.ForceComponentsTarget");
     /*package*/ static final SConcept IfElseSection$TU = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x86c00f011503ffdL, "org.iets3.core.expr.base.structure.IfElseSection");
-    /*package*/ static final SConcept CartesianCoordinates$U8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
-  }
-
-  private static final class PROPS {
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
+    /*package*/ static final SConcept NoneLiteral$R_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x26f4f2a81cae2cf5L, "org.iets3.core.expr.base.structure.NoneLiteral");
+    /*package*/ static final SConcept ForceMomentTarget$wp = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906afd798eL, "jetbrains.mps.samples.Physics.structure.ForceMomentTarget");
   }
 }
