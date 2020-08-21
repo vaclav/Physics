@@ -14,6 +14,8 @@
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
     <import index="5fi3" ref="r:a08ce4c7-a3d7-4ce1-b6a4-794edd2a85d3(jetbrains.mps.samples.Physics.dimensions.behavior)" />
+    <import index="s2qo" ref="r:ab4665d9-6baf-4005-b8e4-87240839fe18(org.iets3.core.expr.math.interpreter.plugin)" />
+    <import index="ngze" ref="f9bdc723-99df-40ff-934c-d1f848158f92/java:org.nevec.rjm(jetbrains.mps.samples.Physics.IETS3MathExtended/)" />
   </imports>
   <registry>
     <language id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts">
@@ -25,6 +27,9 @@
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
+      <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
+        <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
@@ -63,6 +68,7 @@
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
+      <concept id="1212685548494" name="jetbrains.mps.baseLanguage.structure.ClassCreator" flags="nn" index="1pGfFk" />
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
@@ -225,8 +231,8 @@
               <node concept="3Tqbb2" id="RryuvUVJBe" role="3rvQeY">
                 <ref role="ehGHo" to="onwr:1EX4m0Zvw_p" resolve="Dimension" />
               </node>
-              <node concept="3uibUv" id="RryuvUVJBf" role="3rvSg0">
-                <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+              <node concept="3uibUv" id="azHAkNo9FF" role="3rvSg0">
+                <ref role="3uigEE" to="ngze:~Rational" resolve="Rational" />
               </node>
             </node>
             <node concept="2YIFZM" id="RryuvUVJBg" role="33vP2m">
@@ -278,8 +284,8 @@
                   <node concept="3Tqbb2" id="RryuvUVIH$" role="3rvQeY">
                     <ref role="ehGHo" to="onwr:1EX4m0Zvw_p" resolve="Dimension" />
                   </node>
-                  <node concept="3uibUv" id="RryuvUVIH_" role="3rvSg0">
-                    <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+                  <node concept="3uibUv" id="azHAkNFDdu" role="3rvSg0">
+                    <ref role="3uigEE" to="ngze:~Rational" resolve="Rational" />
                   </node>
                 </node>
                 <node concept="2YIFZM" id="RryuvUVPaP" role="33vP2m">
@@ -326,8 +332,13 @@
                 <node concept="37vLTw" id="RryuvUVPiK" role="37wK5m">
                   <ref role="3cqZAo" node="RryuvUVJno" resolve="sourceUnits" />
                 </node>
-                <node concept="3cmrfG" id="RryuvUVP3P" role="37wK5m">
-                  <property role="3cmrfH" value="-1" />
+                <node concept="2ShNRf" id="azHAkNFEMc" role="37wK5m">
+                  <node concept="1pGfFk" id="azHAkNFEZb" role="2ShVmc">
+                    <ref role="37wK5l" to="ngze:~Rational.&lt;init&gt;(int)" resolve="Rational" />
+                    <node concept="3cmrfG" id="azHAkNFF2a" role="37wK5m">
+                      <property role="3cmrfH" value="-1" />
+                    </node>
+                  </node>
                 </node>
                 <node concept="37vLTw" id="RryuvUVP3Q" role="37wK5m">
                   <ref role="3cqZAo" node="RryuvUVJBc" resolve="targetUnits" />

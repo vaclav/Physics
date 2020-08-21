@@ -8,10 +8,6 @@ import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicable2Status;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import java.util.Map;
-import java.math.BigDecimal;
-import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
-import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
@@ -36,28 +32,20 @@ public class replace_DimensionType_DimensionType_InequationReplacementRule exten
       }
     }
 
-    Map<SNode, BigDecimal> sub = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(subtype, LINKS.units$o6Ow));
-    Map<SNode, BigDecimal> sup = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(supertype, LINKS.units$o6Ow));
-
-    if (!(DimensionMapsHelper.matches(sub, sup))) {
+    if (!(DimensionTypeHelper.areCompatible(subtype, supertype))) {
       {
         final MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(equationInfo.getNodeWithError(), DimensionMapsHelper.mapToString(sub) + " does not match with " + DimensionMapsHelper.mapToString(sup), "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "8009150056676241711", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(equationInfo.getNodeWithError(), subtype + " does not match with " + supertype, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "8009150056676241711", null, errorTarget);
         HUtil.addAdditionalRuleIdsFromInfo(_reporter_2309309498, equationInfo);
       }
     }
   }
   public boolean checkInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
     boolean result_14532009 = true;
-    {
-      result_14532009 = result_14532009 && TypecheckingFacade.getFromContext().isSubtype((SNode) SLinkOperations.getTarget(subtype, LINKS.baseType$fHYw), (SNode) SLinkOperations.getTarget(supertype, LINKS.baseType$fHYw));
+    result_14532009 = result_14532009 && TypecheckingFacade.getFromContext().isSubtype((SNode) SLinkOperations.getTarget(subtype, LINKS.baseType$fHYw), (SNode) SLinkOperations.getTarget(supertype, LINKS.baseType$fHYw));
 
-      Map<SNode, BigDecimal> sub = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(subtype, LINKS.units$o6Ow));
-      Map<SNode, BigDecimal> sup = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(supertype, LINKS.units$o6Ow));
-
-      if (!(DimensionMapsHelper.matches(sub, sup))) {
-        result_14532009 = false;
-      }
+    if (!(DimensionTypeHelper.areCompatible(subtype, supertype))) {
+      result_14532009 = false;
     }
     return result_14532009;
   }
@@ -80,7 +68,6 @@ public class replace_DimensionType_DimensionType_InequationReplacementRule exten
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
   }
 
   private static final class CONCEPTS {

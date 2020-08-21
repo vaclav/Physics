@@ -31,9 +31,8 @@ public class FallingBallSimulation extends Simulation {
   protected void initScope(World world) {
     this.scope = new FallingBallWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
 
-    scope.Ball.setMass(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))));
+    scope.Ball.setMass(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
     scope.Ball.getPropertiesBuilder().set(PropKey.TEXTURE, new ColorTexture(new Color(0, 0, 255), null));
-    scope.Ball.setVelocity(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
   }
 
 
@@ -41,14 +40,14 @@ public class FallingBallSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("-20")), ((Number) new BigInteger("1"))), ((BigInteger) AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))).negate());
+    return new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))));
   }
 
   @Override
   public VectorLike getCameraFocus(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.getPosition();
+    return new InternalVector(scope.Ball.getPosition().getX(), AH.add(AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0")));
   }
 
   public static void main(String[] args) {

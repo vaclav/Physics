@@ -8,6 +8,7 @@
     <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
     <use id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions" version="0" />
     <use id="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca" name="jetbrains.mps.samples.Physics.types" version="0" />
+    <use id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes" version="1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -1270,6 +1271,19 @@
         <node concept="3Tqbb2" id="5hZn_PXc5$1" role="1tU5fm">
           <ref role="ehGHo" to="9tcj:2GtZpnyL0Oz" resolve="StyleKey" />
         </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="azHAkNBvWt" role="13h7CS">
+      <property role="TrG5h" value="getCurrentObject" />
+      <ref role="13i0hy" node="2_PGqGCjHbe" resolve="getCurrentObject" />
+      <node concept="3Tm1VV" id="azHAkNBvWu" role="1B3o_S" />
+      <node concept="3clFbS" id="azHAkNBvW_" role="3clF47">
+        <node concept="3clFbF" id="azHAkNBw2y" role="3cqZAp">
+          <node concept="10Nm6u" id="azHAkNBw2x" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="azHAkNBvWA" role="3clF45">
+        <ref role="ehGHo" to="9tcj:6HZo5MN9SX3" resolve="ObjectDefinition" />
       </node>
     </node>
   </node>

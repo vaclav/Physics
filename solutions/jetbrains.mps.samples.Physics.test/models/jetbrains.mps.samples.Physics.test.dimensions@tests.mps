@@ -90,8 +90,8 @@
       </concept>
     </language>
     <language id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions">
-      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent" flags="ng" index="CIsvk">
-        <child id="3459617553802919575" name="value" index="3D8Z_2" />
+      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent" flags="ng" index="CIsvk">
+        <property id="190196155049109992" name="value" index="LYPYd" />
       </concept>
       <concept id="8337440621611273669" name="jetbrains.mps.samples.Physics.dimensions.structure.UnitReference" flags="ng" index="CIsvn" />
       <concept id="3181138428204837756" name="jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference" flags="ng" index="3AmWvR" />
@@ -187,6 +187,10 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="4222318806802425298" name="jetbrains.mps.lang.core.structure.SuppressErrorsAnnotation" flags="ng" index="15s5l7">
+        <property id="8575328350543493365" name="message" index="huDt6" />
+        <property id="2423417345669755629" name="filter" index="1eyWvh" />
       </concept>
     </language>
     <language id="9464fa06-5ab9-409b-9274-64ab29588457" name="org.iets3.core.expr.lambda">
@@ -517,9 +521,7 @@
                 <node concept="3AmWvR" id="3PeuB2_WiNc" role="1N7es9">
                   <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
                   <node concept="CIsvk" id="3PeuB2_WiZs" role="1N7KNQ">
-                    <node concept="30bXRB" id="3PeuB2_WiZt" role="3D8Z_2">
-                      <property role="30bXRw" value="2" />
-                    </node>
+                    <property role="LYPYd" value="2" />
                   </node>
                 </node>
               </node>
@@ -579,9 +581,7 @@
                   <node concept="3AmWvR" id="5H6c1qUnlO2" role="1N7es9">
                     <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
                     <node concept="CIsvk" id="5H6c1qUnlO3" role="1N7KNQ">
-                      <node concept="30bXRB" id="5H6c1qUnlO4" role="3D8Z_2">
-                        <property role="30bXRw" value="1" />
-                      </node>
+                      <property role="LYPYd" value="1" />
                     </node>
                   </node>
                 </node>
@@ -607,17 +607,13 @@
                   <node concept="3AmWvR" id="5H6c1qUnlSo" role="1N7es9">
                     <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
                     <node concept="CIsvk" id="5H6c1qUnlSp" role="1N7KNQ">
-                      <node concept="30bXRB" id="5H6c1qUnlSq" role="3D8Z_2">
-                        <property role="30bXRw" value="1" />
-                      </node>
+                      <property role="LYPYd" value="1" />
                     </node>
                   </node>
                   <node concept="3AmWvR" id="5H6c1qUnlSr" role="1N7es9">
                     <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
                     <node concept="CIsvk" id="5H6c1qUnlSs" role="1N7KNQ">
-                      <node concept="30bXRB" id="5H6c1qUnlSt" role="3D8Z_2">
-                        <property role="30bXRw" value="-1" />
-                      </node>
+                      <property role="LYPYd" value="-1" />
                     </node>
                   </node>
                 </node>
@@ -646,9 +642,7 @@
             <node concept="CIsvn" id="6uKmUf9vc7a" role="1N7es9">
               <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
               <node concept="CIsvk" id="5H6c1qUnbfR" role="1N7KNQ">
-                <node concept="30bXRB" id="5H6c1qUnbfS" role="3D8Z_2">
-                  <property role="30bXRw" value="-1" />
-                </node>
+                <property role="LYPYd" value="-1" />
               </node>
             </node>
           </node>
@@ -715,9 +709,7 @@
           <node concept="CIsvn" id="6uKmUf9veDq" role="1N7es9">
             <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
             <node concept="CIsvk" id="6uKmUf9vfqV" role="1N7KNQ">
-              <node concept="30bXRB" id="6uKmUf9vfqW" role="3D8Z_2">
-                <property role="30bXRw" value="2" />
-              </node>
+              <property role="LYPYd" value="2" />
             </node>
           </node>
         </node>
@@ -851,9 +843,7 @@
                 <node concept="3AmWvR" id="2rJkT1G4EB_" role="1N7es9">
                   <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
                   <node concept="CIsvk" id="2rJkT1G4EBA" role="1N7KNQ">
-                    <node concept="30bXRB" id="2rJkT1G4EBB" role="3D8Z_2">
-                      <property role="30bXRw" value="1" />
-                    </node>
+                    <property role="LYPYd" value="1" />
                   </node>
                 </node>
               </node>
@@ -967,17 +957,13 @@
                 <node concept="3AmWvR" id="2rJkT1G4Llh" role="1N7es9">
                   <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
                   <node concept="CIsvk" id="2rJkT1G4Lli" role="1N7KNQ">
-                    <node concept="30bXRB" id="2rJkT1G4Llj" role="3D8Z_2">
-                      <property role="30bXRw" value="10" />
-                    </node>
+                    <property role="LYPYd" value="10" />
                   </node>
                 </node>
                 <node concept="3AmWvR" id="2rJkT1G4Llk" role="1N7es9">
                   <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
                   <node concept="CIsvk" id="2rJkT1G4Lll" role="1N7KNQ">
-                    <node concept="30bXRB" id="2rJkT1G4Llm" role="3D8Z_2">
-                      <property role="30bXRw" value="-10" />
-                    </node>
+                    <property role="LYPYd" value="-10" />
                   </node>
                 </node>
               </node>
@@ -1007,9 +993,7 @@
                 <node concept="3AmWvR" id="2rJkT1G7Ely" role="1N7es9">
                   <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
                   <node concept="CIsvk" id="2rJkT1G7Elz" role="1N7KNQ">
-                    <node concept="30bXRB" id="2rJkT1G7El$" role="3D8Z_2">
-                      <property role="30bXRw" value="-5" />
-                    </node>
+                    <property role="LYPYd" value="-5" />
                   </node>
                 </node>
               </node>
@@ -1054,9 +1038,7 @@
           <node concept="CIsvn" id="2rJkT1G4D9d" role="1N7es9">
             <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
             <node concept="CIsvk" id="2rJkT1G4Dcb" role="1N7KNQ">
-              <node concept="30bXRB" id="2rJkT1G4Dcc" role="3D8Z_2">
-                <property role="30bXRw" value="2" />
-              </node>
+              <property role="LYPYd" value="2" />
             </node>
           </node>
           <node concept="30bXRB" id="2rJkT1G4DnM" role="1N951F">
@@ -1161,6 +1143,10 @@
         <node concept="3xLA65" id="2rJkT1G4GCI" role="lGtFl">
           <property role="TrG5h" value="integral" />
         </node>
+      </node>
+      <node concept="15s5l7" id="7jlSyDSrPik" role="lGtFl">
+        <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;" />
+        <property role="huDt6" value="all typesystem messages" />
       </node>
     </node>
     <node concept="1qefOq" id="2rJkT1G4ITp" role="1SKRRt">

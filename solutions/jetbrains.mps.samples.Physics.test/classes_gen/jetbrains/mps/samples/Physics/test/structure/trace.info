@@ -146,15 +146,15 @@
     <file name="UndefinedPropertiesTest_Test.java">
       <node id="911298080278361666" at="27,41,28,25" concept="6" />
       <node id="911298080279481047" at="32,90,33,81" concept="1" />
-      <node id="911298080278845010" at="36,90,37,81" concept="1" />
+      <node id="8418883750478317526" at="36,91,37,82" concept="1" />
       <node id="911298080279481354" at="40,90,41,81" concept="1" />
       <node id="911298080278361666" at="46,52,47,19" concept="6" />
       <node id="911298080279481047" at="51,92,52,64" concept="4" />
       <node id="911298080279481047" at="52,64,53,62" concept="4" />
       <node id="911298080279481047" at="53,62,54,303" concept="1" />
-      <node id="911298080278845010" at="56,92,57,64" concept="4" />
-      <node id="911298080278845010" at="57,64,58,62" concept="4" />
-      <node id="911298080278845010" at="58,62,59,303" concept="1" />
+      <node id="8418883750478317526" at="56,93,57,65" concept="4" />
+      <node id="8418883750478317526" at="57,65,58,63" concept="4" />
+      <node id="8418883750478317526" at="58,63,59,303" concept="1" />
       <node id="911298080279481354" at="61,92,62,64" concept="4" />
       <node id="911298080279481354" at="62,64,63,62" concept="4" />
       <node id="911298080279481354" at="63,62,64,303" concept="1" />
@@ -163,14 +163,14 @@
       <node id="911298080278361666" at="27,0,30,0" concept="0" trace="UndefinedPropertiesTest_Test#()V" />
       <node id="911298080278361666" at="46,0,49,0" concept="0" trace="TestBody#(Ljetbrains/mps/lang/test/runtime/TransformationTest;)V" />
       <node id="911298080279481047" at="31,0,35,0" concept="3" trace="test_NodeAbstractConceptInstanceCheck911298080279481047#()V" />
-      <node id="911298080278845010" at="35,0,39,0" concept="3" trace="test_NodeAbstractConceptInstanceCheck911298080278845010#()V" />
+      <node id="8418883750478317526" at="35,0,39,0" concept="3" trace="test_NodeAbstractConceptInstanceCheck8418883750478317526#()V" />
       <node id="911298080279481354" at="39,0,43,0" concept="3" trace="test_NodeAbstractConceptInstanceCheck911298080279481354#()V" />
       <node id="911298080279481047" at="51,0,56,0" concept="3" trace="test_NodeAbstractConceptInstanceCheck911298080279481047#()V" />
-      <node id="911298080278845010" at="56,0,61,0" concept="3" trace="test_NodeAbstractConceptInstanceCheck911298080278845010#()V" />
+      <node id="8418883750478317526" at="56,0,61,0" concept="3" trace="test_NodeAbstractConceptInstanceCheck8418883750478317526#()V" />
       <node id="911298080279481354" at="61,0,66,0" concept="3" trace="test_NodeAbstractConceptInstanceCheck911298080279481354#()V" />
       <scope id="911298080278361666" at="27,41,28,25" />
       <scope id="911298080279481047" at="32,90,33,81" />
-      <scope id="911298080278845010" at="36,90,37,81" />
+      <scope id="8418883750478317526" at="36,91,37,82" />
       <scope id="911298080279481354" at="40,90,41,81" />
       <scope id="911298080278361666" at="46,52,47,19" />
       <scope id="911298080278361666" at="27,0,30,0" />
@@ -181,19 +181,19 @@
         <var name="nodeToCheck" id="911298080279481047" />
         <var name="operation" id="911298080279481047" />
       </scope>
-      <scope id="911298080278845010" at="56,92,59,303">
-        <var name="nodeToCheck" id="911298080278845010" />
-        <var name="operation" id="911298080278845010" />
+      <scope id="8418883750478317526" at="56,93,59,303">
+        <var name="nodeToCheck" id="8418883750478317526" />
+        <var name="operation" id="8418883750478317526" />
       </scope>
       <scope id="911298080279481354" at="61,92,64,303">
         <var name="nodeToCheck" id="911298080279481354" />
         <var name="operation" id="911298080279481354" />
       </scope>
       <scope id="911298080279481047" at="31,0,35,0" />
-      <scope id="911298080278845010" at="35,0,39,0" />
+      <scope id="8418883750478317526" at="35,0,39,0" />
       <scope id="911298080279481354" at="39,0,43,0" />
       <scope id="911298080279481047" at="51,0,56,0" />
-      <scope id="911298080278845010" at="56,0,61,0" />
+      <scope id="8418883750478317526" at="56,0,61,0" />
       <scope id="911298080279481354" at="61,0,66,0" />
       <unit id="911298080278361666" at="44,0,68,0" name="jetbrains.mps.samples.Physics.test.structure.UndefinedPropertiesTest_Test$TestBody" />
       <unit id="911298080278361666" at="20,0,69,0" name="jetbrains.mps.samples.Physics.test.structure.UndefinedPropertiesTest_Test" />

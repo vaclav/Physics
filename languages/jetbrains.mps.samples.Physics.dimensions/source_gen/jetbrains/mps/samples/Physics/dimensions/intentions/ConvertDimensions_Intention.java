@@ -21,7 +21,7 @@ import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.openapi.intentions.ParameterizedIntentionExecutable;
 import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionReference__BehaviorDescriptor;
 import java.util.Map;
-import java.math.BigDecimal;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
 import jetbrains.mps.typechecking.TypecheckingFacade;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
@@ -80,16 +80,16 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
-      Map<SNode, BigDecimal> targetUnits = UnitReduceHelper.reduceUnits(myParameter);
+      Map<SNode, Rational> targetUnits = UnitReduceHelper.reduceUnits(myParameter);
 
       // If the type of the node is already dimensioned 
       {
         final SNode sourceDimensions = TypecheckingFacade.getFromContext().getInferredType(node);
         if (SNodeOperations.isInstanceOf(sourceDimensions, CONCEPTS.DimensionType$yz)) {
-          Map<SNode, BigDecimal> sourceUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(sourceDimensions, LINKS.units$o6Ow));
+          Map<SNode, Rational> sourceUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(sourceDimensions, LINKS.units$o6Ow));
 
           // Apply inverted factor on current units 
-          DimensionMapsHelper.multiplyAndMergeInto(sourceUnits, -1, targetUnits);
+          DimensionMapsHelper.multiplyAndMergeInto(sourceUnits, new Rational(-1), targetUnits);
         }
       }
 

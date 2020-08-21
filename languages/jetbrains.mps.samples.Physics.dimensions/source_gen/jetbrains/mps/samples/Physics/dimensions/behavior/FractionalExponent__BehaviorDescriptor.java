@@ -6,6 +6,7 @@ import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
@@ -14,25 +15,24 @@ import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
-import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class FractionalExponent__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, "jetbrains.mps.samples.Physics.dimensions.structure.FractionalExponent");
 
-  public static final SMethod<Number> rawValue_id3yBD53Ww3_k = new SMethodBuilder<Number>(new SJavaCompoundTypeImpl(Number.class)).name("rawValue").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3yBD53Ww3_k").build();
+  public static final SMethod<Rational> rawValue_id3yBD53Ww3_k = new SMethodBuilder<Rational>(new SJavaCompoundTypeImpl(Rational.class)).name("rawValue").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3yBD53Ww3_k").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(rawValue_id3yBD53Ww3_k);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static Number rawValue_id3yBD53Ww3_k(@NotNull SNode __thisNode__) {
-    return as_ia6r26_a0a0i(IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(__thisNode__, LINKS.fraction$XuZu)), Number.class);
+  /*package*/ static Rational rawValue_id3yBD53Ww3_k(@NotNull SNode __thisNode__) {
+    return new Rational(SPropertyOperations.getInteger(__thisNode__, PROPS.numer$RN1x), SPropertyOperations.getInteger(__thisNode__, PROPS.denom$RN2v));
   }
 
   /*package*/ FractionalExponent__BehaviorDescriptor() {
@@ -51,7 +51,7 @@ public final class FractionalExponent__BehaviorDescriptor extends BaseBHDescript
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((Number) rawValue_id3yBD53Ww3_k(node));
+        return (T) ((Rational) rawValue_id3yBD53Ww3_k(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -80,11 +80,9 @@ public final class FractionalExponent__BehaviorDescriptor extends BaseBHDescript
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
-  private static <T> T as_ia6r26_a0a0i(Object o, Class<T> type) {
-    return (type.isInstance(o) ? (T) o : null);
-  }
 
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink fraction$XuZu = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x34c38940d09979deL, "fraction");
+  private static final class PROPS {
+    /*package*/ static final SProperty numer$RN1x = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc5L, "numer");
+    /*package*/ static final SProperty denom$RN2v = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc7L, "denom");
   }
 }

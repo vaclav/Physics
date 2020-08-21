@@ -12,9 +12,8 @@
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" />
     <import index="kj90" ref="r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.IETS3MathExtended.structure)" />
+    <import index="3673" ref="r:78633c85-d020-485e-aaa3-59e2daa3b826(com.mbeddr.mpsutil.interpreter.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
-    <import index="3673" ref="r:78633c85-d020-485e-aaa3-59e2daa3b826(com.mbeddr.mpsutil.interpreter.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -99,25 +98,26 @@
     <property role="TrG5h" value="FractionalExponent" />
     <property role="EcuMT" value="3802033421901431993" />
     <ref role="1TJDcQ" node="3j3yk3guAAl" resolve="Exponent" />
-    <node concept="1TJgyj" id="3j3yk3gAnBu" role="1TKVEi">
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="fraction" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <property role="IQ2ns" value="3802033421901461982" />
-      <ref role="20lvS9" to="1qv1:4iu6t1eAWP6" resolve="FractionExpression" />
+    <node concept="1TJgyi" id="azHAkNmtR5" role="1TKVEl">
+      <property role="IQ2nx" value="190196155049172421" />
+      <property role="TrG5h" value="numer" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="azHAkNmtR7" role="1TKVEl">
+      <property role="IQ2nx" value="190196155049172423" />
+      <property role="TrG5h" value="denom" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
   <node concept="1TIwiD" id="7eOyx9r3kR6">
-    <property role="TrG5h" value="NumberExponent" />
+    <property role="TrG5h" value="IntegerExponent" />
     <property role="3GE5qa" value="definition.exponent" />
     <property role="EcuMT" value="8337440621611273670" />
     <ref role="1TJDcQ" node="3j3yk3guAAl" resolve="Exponent" />
-    <node concept="1TJgyj" id="3031Xnp8fUn" role="1TKVEi">
-      <property role="IQ2ns" value="3459617553802919575" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="value" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="5qo5:4rZeNQ6Oerq" resolve="NumberLiteral" />
+    <node concept="1TJgyi" id="azHAkNmeBC" role="1TKVEl">
+      <property role="IQ2nx" value="190196155049109992" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
   <node concept="PlHQZ" id="7eOyx9r3k3e">

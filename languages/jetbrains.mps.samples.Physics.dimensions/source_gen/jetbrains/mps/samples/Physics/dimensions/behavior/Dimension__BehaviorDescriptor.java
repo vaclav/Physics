@@ -8,7 +8,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import java.util.Map;
 import org.jetbrains.mps.openapi.model.SNode;
-import java.math.BigDecimal;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
@@ -25,7 +25,7 @@ import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 public final class Dimension__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
 
-  public static final SMethod<Map<SNode, BigDecimal>> getRawTypes_id3yBD53WvLzq = new SMethodBuilder<Map<SNode, BigDecimal>>(new SJavaCompoundTypeImpl((Class<Map<SNode, BigDecimal>>) ((Class) Object.class))).name("getRawTypes").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3yBD53WvLzq").build();
+  public static final SMethod<Map<SNode, Rational>> getRawTypes_id3yBD53WvLzq = new SMethodBuilder<Map<SNode, Rational>>(new SJavaCompoundTypeImpl((Class<Map<SNode, Rational>>) ((Class) Object.class))).name("getRawTypes").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3yBD53WvLzq").build();
   public static final SMethod<Boolean> allowNonIdentifierNames_id4SwD0JT7m0l = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("allowNonIdentifierNames").modifiers(SModifiersImpl.create(9, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4SwD0JT7m0l").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getRawTypes_id3yBD53WvLzq, allowNonIdentifierNames_id4SwD0JT7m0l);
@@ -33,9 +33,9 @@ public final class Dimension__BehaviorDescriptor extends BaseBHDescriptor {
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static Map<SNode, BigDecimal> getRawTypes_id3yBD53WvLzq(@NotNull SNode __thisNode__) {
-    Map<SNode, BigDecimal> nodes = MapSequence.fromMap(new HashMap<SNode, BigDecimal>());
-    MapSequence.fromMap(nodes).put(__thisNode__, BigDecimal.ONE);
+  /*package*/ static Map<SNode, Rational> getRawTypes_id3yBD53WvLzq(@NotNull SNode __thisNode__) {
+    Map<SNode, Rational> nodes = MapSequence.fromMap(new HashMap<SNode, Rational>());
+    MapSequence.fromMap(nodes).put(__thisNode__, new Rational(1));
     return nodes;
   }
   /*package*/ static boolean allowNonIdentifierNames_id4SwD0JT7m0l(@NotNull SAbstractConcept __thisConcept__) {
@@ -58,7 +58,7 @@ public final class Dimension__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((Map<SNode, BigDecimal>) getRawTypes_id3yBD53WvLzq(node));
+        return (T) ((Map<SNode, Rational>) getRawTypes_id3yBD53WvLzq(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

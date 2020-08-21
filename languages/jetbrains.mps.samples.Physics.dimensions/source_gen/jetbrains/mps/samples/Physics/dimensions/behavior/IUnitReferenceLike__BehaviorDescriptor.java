@@ -6,6 +6,7 @@ import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
@@ -15,7 +16,6 @@ import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import java.math.BigDecimal;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -24,15 +24,15 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public final class IUnitReferenceLike__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, "jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike");
 
-  public static final SMethod<Number> getRawExponent_id3031Xnpas0C = new SMethodBuilder<Number>(new SJavaCompoundTypeImpl(Number.class)).name("getRawExponent").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3031Xnpas0C").build();
+  public static final SMethod<Rational> getRawExponent_id3031Xnpas0C = new SMethodBuilder<Rational>(new SJavaCompoundTypeImpl(Rational.class)).name("getRawExponent").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3031Xnpas0C").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getRawExponent_id3031Xnpas0C);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static Number getRawExponent_id3031Xnpas0C(@NotNull SNode __thisNode__) {
-    return ((SLinkOperations.getTarget(__thisNode__, LINKS.exponent$2Bc0) == null) ? BigDecimal.ONE : Exponent__BehaviorDescriptor.rawValue_id3yBD53Ww3_k.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.exponent$2Bc0)));
+  /*package*/ static Rational getRawExponent_id3031Xnpas0C(@NotNull SNode __thisNode__) {
+    return ((SLinkOperations.getTarget(__thisNode__, LINKS.exponent$2Bc0) == null) ? new Rational(1) : Exponent__BehaviorDescriptor.rawValue_id3yBD53Ww3_k.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.exponent$2Bc0)));
   }
 
   /*package*/ IUnitReferenceLike__BehaviorDescriptor() {
@@ -51,7 +51,7 @@ public final class IUnitReferenceLike__BehaviorDescriptor extends BaseBHDescript
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((Number) getRawExponent_id3031Xnpas0C(node));
+        return (T) ((Rational) getRawExponent_id3031Xnpas0C(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

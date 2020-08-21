@@ -9,7 +9,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.Map;
-import java.math.BigDecimal;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterBaseException;
@@ -43,11 +43,11 @@ public class UnitReduceHelper {
 
       try {
         // Compute units on both sides (could throw runtime exception) 
-        Map<SNode, BigDecimal> leftUnits = reduceUnits(SLinkOperations.getChildren(SNodeOperations.as(left, CONCEPTS.DimensionType$yz), LINKS.units$o6Ow));
-        Map<SNode, BigDecimal> rightUnits = reduceUnits(SLinkOperations.getChildren(SNodeOperations.as(right, CONCEPTS.DimensionType$yz), LINKS.units$o6Ow));
+        Map<SNode, Rational> leftUnits = reduceUnits(SLinkOperations.getChildren(SNodeOperations.as(left, CONCEPTS.DimensionType$yz), LINKS.units$o6Ow));
+        Map<SNode, Rational> rightUnits = reduceUnits(SLinkOperations.getChildren(SNodeOperations.as(right, CONCEPTS.DimensionType$yz), LINKS.units$o6Ow));
 
         // Combine them (can throw unit computation exception) 
-        Map<SNode, BigDecimal> combination = DimensionMapsHelper.combine(leftUnits, rightUnits, operator);
+        Map<SNode, Rational> combination = DimensionMapsHelper.combine(leftUnits, rightUnits, operator);
 
         // Set the result 
         ListSequence.fromList(SLinkOperations.getChildren(result, LINKS.units$o6Ow)).addSequence(Sequence.fromIterable(DimensionMapsHelper.mapToReferences(combination)));
@@ -80,7 +80,7 @@ public class UnitReduceHelper {
         // Reverse units 
         ListSequence.fromList(targetUnits).visitAll(new IVisitor<SNode>() {
           public void visit(SNode it) {
-            SLinkOperations.setTarget(it, LINKS.exponent$2Bc0, createNumberExponent_5s5y64_a0a0a0a1a4a0c0e(BigDecimal.ZERO.subtract(BigDecimalUtil.fromNumber(IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it))).toString()));
+            SLinkOperations.setTarget(it, LINKS.exponent$2Bc0, ExponentHelper.rationalToExponent(IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it).negate()));
           }
         });
       }
@@ -114,8 +114,8 @@ public class UnitReduceHelper {
    * (complex units are turned back into their simple parts, for example :
    * 1 mps -> 1 m^1*s^-1)
    */
-  public static Map<SNode, BigDecimal> reduceUnits(Iterable<SNode> units) {
-    final Map<SNode, BigDecimal> result = MapSequence.fromMap(new HashMap<SNode, BigDecimal>());
+  public static Map<SNode, Rational> reduceUnits(Iterable<SNode> units) {
+    final Map<SNode, Rational> result = MapSequence.fromMap(new HashMap<SNode, Rational>());
     Sequence.fromIterable(units).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         DimensionMapsHelper.multiplyAndMergeInto(Dimension__BehaviorDescriptor.getRawTypes_id3yBD53WvLzq.invoke(SLinkOperations.getTarget(it, LINKS.unit$2BcY)), IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it), result);
@@ -147,14 +147,6 @@ public class UnitReduceHelper {
     n0.setProperty(PROPS.errorText$kxP0, "division by 0");
     return n0.getResult();
   }
-  private static SNode createNumberExponent_5s5y64_a0a0a0a1a4a0c0e(String p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberExponent$mI);
-    {
-      SNodeBuilder n1 = n0.forChild(LINKS.value$FXw$).init(CONCEPTS.NumberLiteral$yW);
-      n1.setProperty(PROPS.value$nZyY, p0);
-    }
-    return n0.getResult();
-  }
   private static SNode createDimensionType_5s5y64_a6a0c0e(SNode p0, Iterable<? extends SNode> p1) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
     n0.forChild(LINKS.baseType$fHYw).initNode(p0, CONCEPTS.Type$fA, true);
@@ -167,7 +159,6 @@ public class UnitReduceHelper {
     /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
     /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
     /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
-    /*package*/ static final SContainmentLink value$FXw$ = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x300307d5d920fe97L, "value");
   }
 
   private static final class CONCEPTS {
@@ -177,12 +168,9 @@ public class UnitReduceHelper {
     /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
     /*package*/ static final SConcept RuntimeErrorType$Lm = MetaAdapterFactory.getConcept(0x7a5dda6291404668L, 0xab76d5ed1746f2b2L, 0x113f84956f9L, "jetbrains.mps.lang.typesystem.structure.RuntimeErrorType");
     /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
-    /*package*/ static final SConcept NumberExponent$mI = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, "jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty errorText$kxP0 = MetaAdapterFactory.getProperty(0x7a5dda6291404668L, 0xab76d5ed1746f2b2L, 0x113f84956f9L, 0x113f84956faL, "errorText");
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 }

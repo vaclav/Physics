@@ -23,7 +23,7 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor myUseUnitExpressionAs__BehaviorDescriptor = new UseUnitExpressionAs__BehaviorDescriptor();
   private final BHDescriptor myIUnit__BehaviorDescriptor = new IUnit__BehaviorDescriptor();
   private final BHDescriptor myUnitReference__BehaviorDescriptor = new UnitReference__BehaviorDescriptor();
-  private final BHDescriptor myNumberExponent__BehaviorDescriptor = new NumberExponent__BehaviorDescriptor();
+  private final BHDescriptor myIntegerExponent__BehaviorDescriptor = new IntegerExponent__BehaviorDescriptor();
   private final BHDescriptor myUnitExpression__BehaviorDescriptor = new UnitExpression__BehaviorDescriptor();
   private final BHDescriptor myDimensionType__BehaviorDescriptor = new DimensionType__BehaviorDescriptor();
   private final BHDescriptor myIUnitReferenceLike__BehaviorDescriptor = new IUnitReferenceLike__BehaviorDescriptor();
@@ -58,7 +58,7 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 10:
         return myIUseSpecificDimensions__BehaviorDescriptor;
       case 11:
-        return myNumberExponent__BehaviorDescriptor;
+        return myIntegerExponent__BehaviorDescriptor;
       case 12:
         return myUnitExpression__BehaviorDescriptor;
       case 13:

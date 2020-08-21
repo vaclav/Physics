@@ -23,7 +23,7 @@ public final class LanguageConceptSwitch {
   public static final int IUnitReferenceLikeArray = 11;
   public static final int IUseSpecificDimensions = 12;
   public static final int IUseUnits = 13;
-  public static final int NumberExponent = 14;
+  public static final int IntegerExponent = 14;
   public static final int Unit = 15;
   public static final int UnitExpression = 16;
   public static final int UnitReference = 17;
@@ -45,7 +45,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x777af24c04661544L, IUnitReferenceLikeArray);
     builder.put(0x21c0d825aae5e565L, IUseSpecificDimensions);
     builder.put(0xcad58369e591901L, IUseUnits);
-    builder.put(0x73b48a125b0d4dc6L, NumberExponent);
+    builder.put(0x73b48a125b0d4dc6L, IntegerExponent);
     builder.put(0x73b48a125b0d373fL, Unit);
     builder.put(0x777af24c045ea226L, UnitExpression);
     builder.put(0x73b48a125b0d4dc5L, UnitReference);

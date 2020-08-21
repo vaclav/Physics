@@ -33,8 +33,9 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
 
   public static final SMethod<SNode> getParent_id5EZY1tN$xQa = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getParent").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5EZY1tN$xQa").build();
   public static final SMethod<SNode> getStyleValueForKey_id5hZn_PXc5xY = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getStyleValueForKey").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5hZn_PXc5xY").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> getCurrentObject_id2_PGqGCjHbe = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCurrentObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2_PGqGCjHbe").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getParent_id5EZY1tN$xQa, getStyleValueForKey_id5hZn_PXc5xY);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getParent_id5EZY1tN$xQa, getStyleValueForKey_id5hZn_PXc5xY, getCurrentObject_id2_PGqGCjHbe);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -58,6 +59,9 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
 
     return AbstractObjectDefinition__BehaviorDescriptor.getStyleValueForKey_id5hZn_PXc5xY.invoke(SLinkOperations.getTarget(AbstractObjectDefinition__BehaviorDescriptor.getParent_id5EZY1tN$xQa.invoke(__thisNode__), LINKS.target$OiAw), key);
   }
+  /*package*/ static SNode getCurrentObject_id2_PGqGCjHbe(@NotNull SNode __thisNode__) {
+    return null;
+  }
 
   /*package*/ AbstractObjectDefinition__BehaviorDescriptor() {
   }
@@ -78,6 +82,8 @@ public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDe
         return (T) ((SNode) getParent_id5EZY1tN$xQa(node));
       case 1:
         return (T) ((SNode) getStyleValueForKey_id5hZn_PXc5xY(node, (SNode) parameters[0]));
+      case 2:
+        return (T) ((SNode) getCurrentObject_id2_PGqGCjHbe(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

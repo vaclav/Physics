@@ -18,7 +18,7 @@ public class TorqueTestSimulation extends Simulation {
   protected TorqueSystemScope scope;
 
   public TorqueTestSimulation() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigDecimal("6E+1").setScale(0, RoundingMode.DOWN))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("30")), ((Number) new BigDecimal("0.01").setScale(2, RoundingMode.DOWN))).floatValue());
+    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("60"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("30")), ((Number) new BigDecimal("0.01").setScale(2, RoundingMode.DOWN))).floatValue());
   }
 
   @Override

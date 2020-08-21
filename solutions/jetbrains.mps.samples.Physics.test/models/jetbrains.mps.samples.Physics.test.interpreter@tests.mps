@@ -118,7 +118,7 @@
     </language>
     <language id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions">
       <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent" flags="ng" index="CIsvk">
-        <child id="3459617553802919575" name="value" index="3D8Z_2" />
+        <property id="190196155049109992" name="value" index="LYPYd" />
       </concept>
       <concept id="8337440621611273669" name="jetbrains.mps.samples.Physics.dimensions.structure.UnitReference" flags="ng" index="CIsvn" />
       <concept id="8609460045977359684" name="jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLikeArray" flags="ng" index="1N7es8">
@@ -793,9 +793,7 @@
                   <node concept="CIsvn" id="5qrSK19EA1w" role="1N7es9">
                     <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
                     <node concept="CIsvk" id="5qrSK19EA1x" role="1N7KNQ">
-                      <node concept="30bXRB" id="5qrSK19EA1y" role="3D8Z_2">
-                        <property role="30bXRw" value="1" />
-                      </node>
+                      <property role="LYPYd" value="1" />
                     </node>
                   </node>
                 </node>

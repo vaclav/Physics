@@ -7,10 +7,11 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitHandlingCapablity;
 import java.util.Map;
-import java.math.BigDecimal;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper;
+import java.math.BigDecimal;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
@@ -19,7 +20,6 @@ import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReference__Behavior
 import java.math.MathContext;
 import org.nevec.rjm.BigDecimalMath;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.samples.Physics.dimensions.behavior.BigDecimalUtil;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import org.jetbrains.mps.openapi.language.SConcept;
@@ -54,8 +54,8 @@ public class DimensionTypeHelper {
   }
 
   public static boolean areCompatible(SNode left, SNode right) {
-    Map<SNode, BigDecimal> leftUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(left, LINKS.units$o6Ow));
-    Map<SNode, BigDecimal> rightUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(right, LINKS.units$o6Ow));
+    Map<SNode, Rational> leftUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(left, LINKS.units$o6Ow));
+    Map<SNode, Rational> rightUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(right, LINKS.units$o6Ow));
 
     return DimensionMapsHelper.matches(leftUnits, rightUnits);
   }
@@ -116,8 +116,8 @@ public class DimensionTypeHelper {
   /**
    * Conversion ratio issued from a converter (composite dimension, derived unit...)
    */
-  public static BigDecimal simpleConverterRatio(SNode targetUnit, Number exponent, boolean targetToBase) {
-    BigDecimal pow = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(targetUnit, PROPS.factor$Z2DZ)), BigDecimalUtil.fromNumber(exponent));
+  public static BigDecimal simpleConverterRatio(SNode targetUnit, Rational exponent, boolean targetToBase) {
+    BigDecimal pow = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(targetUnit, PROPS.factor$Z2DZ)), exponent.BigDecimalValue(MathContext.DECIMAL32));
 
     // Target unit on the left of the converter (or reversed) 
     if (SPropertyOperations.getBoolean(targetUnit, PROPS.selfLeft$Z2EX) == targetToBase) {

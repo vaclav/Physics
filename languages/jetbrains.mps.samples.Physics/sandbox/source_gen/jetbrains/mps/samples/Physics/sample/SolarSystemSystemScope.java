@@ -28,7 +28,7 @@ public class SolarSystemSystemScope extends SystemScope {
 
     //  Instanciate objects 
     Sun = withEntity(new Sun2PhysicalEntity(world, "Sun1", scope));
-    EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("0.00000905280530567526").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("147843530264.85965").setScale(5, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("32854117236.63548").setScale(5, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(new InternalVector(AH.mul(((Number) new BigDecimal("-18915.106396740146").setScale(12, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-2.3164324504299443E-12").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-18915.106396740146").setScale(12, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
+    EarthNested = withEntity(new EarthSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("0.00000905280530567526").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("147843530264.85965").setScale(5, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("32854117236.63548").setScale(5, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(new InternalVector(AH.mul(((Number) new BigDecimal("-20448.763672151512").setScale(12, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-2.5042512977621023E-12").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-20448.76367215151").setScale(11, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
 
     // Initialize them 
     Sun.init(this, world);
@@ -56,7 +56,7 @@ public class SolarSystemSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("696340")), ((Number) new BigDecimal("1E+3").setScale(0, RoundingMode.DOWN))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("696340")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))));
       this.getForces().addAll(Arrays.asList());
     }
   }

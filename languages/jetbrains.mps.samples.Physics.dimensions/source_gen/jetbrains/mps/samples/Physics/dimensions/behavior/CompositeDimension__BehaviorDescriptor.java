@@ -8,7 +8,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import java.util.Map;
 import org.jetbrains.mps.openapi.model.SNode;
-import java.math.BigDecimal;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
@@ -35,7 +35,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class CompositeDimension__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x38a7a450fc780041L, "jetbrains.mps.samples.Physics.dimensions.structure.CompositeDimension");
 
-  public static final SMethod<Map<SNode, BigDecimal>> getRawTypes_id3yBD53WvLzq = new SMethodBuilder<Map<SNode, BigDecimal>>(new SJavaCompoundTypeImpl((Class<Map<SNode, BigDecimal>>) ((Class) Object.class))).name("getRawTypes").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3yBD53WvLzq").build();
+  public static final SMethod<Map<SNode, Rational>> getRawTypes_id3yBD53WvLzq = new SMethodBuilder<Map<SNode, Rational>>(new SJavaCompoundTypeImpl((Class<Map<SNode, Rational>>) ((Class) Object.class))).name("getRawTypes").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3yBD53WvLzq").build();
   public static final SMethod<String> getSelfString_id1fq3tlLwQff = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getSelfString").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1fq3tlLwQff").build();
   public static final SMethod<String> getTargetString_id1fq3tlLwQga = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getTargetString").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1fq3tlLwQga").build();
 
@@ -44,12 +44,12 @@ public final class CompositeDimension__BehaviorDescriptor extends BaseBHDescript
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static Map<SNode, BigDecimal> getRawTypes_id3yBD53WvLzq(@NotNull SNode __thisNode__) {
-    final Map<SNode, BigDecimal> exponents = MapSequence.fromMap(new HashMap<SNode, BigDecimal>());
+  /*package*/ static Map<SNode, Rational> getRawTypes_id3yBD53WvLzq(@NotNull SNode __thisNode__) {
+    final Map<SNode, Rational> exponents = MapSequence.fromMap(new HashMap<SNode, Rational>());
 
     ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode parentUnit) {
-        Number parentPower = IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(parentUnit);
+        Rational parentPower = IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(parentUnit);
 
         // Add parent units multiplied by the exponent 
         DimensionMapsHelper.multiplyAndMergeInto(Dimension__BehaviorDescriptor.getRawTypes_id3yBD53WvLzq.invoke(SLinkOperations.getTarget(parentUnit, LINKS.unit$2BcY)), parentPower, exponents);
@@ -91,7 +91,7 @@ public final class CompositeDimension__BehaviorDescriptor extends BaseBHDescript
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((Map<SNode, BigDecimal>) getRawTypes_id3yBD53WvLzq(node));
+        return (T) ((Map<SNode, Rational>) getRawTypes_id3yBD53WvLzq(node));
       case 1:
         return (T) ((String) getSelfString_id1fq3tlLwQff(node));
       case 2:

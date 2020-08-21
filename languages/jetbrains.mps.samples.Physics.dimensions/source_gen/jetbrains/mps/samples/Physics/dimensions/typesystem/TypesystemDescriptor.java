@@ -20,16 +20,15 @@ import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
-import java.math.BigDecimal;
-import jetbrains.mps.samples.Physics.dimensions.behavior.BigDecimalUtil;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.samples.Physics.dimensions.behavior.IUnitReferenceLike__BehaviorDescriptor;
+import jetbrains.mps.samples.Physics.dimensions.behavior.ExponentHelper;
 import jetbrains.mps.lang.typesystem.runtime.OverloadedOperationsTypesProvider;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import java.util.Map;
 import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper;
-import java.math.MathContext;
 import org.iets3.core.expr.base.behavior.Type__BehaviorDescriptor;
 import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
 import org.iets3.core.expr.simpleTypes.behavior.NumberType__BehaviorDescriptor;
@@ -186,7 +185,8 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
           List<SNode> units = SLinkOperations.getChildren(SNodeOperations.cast(leftOperandType, CONCEPTS.DimensionType$yz), LINKS.units$o6Ow);
           ListSequence.fromList(units).visitAll(new IVisitor<SNode>() {
             public void visit(SNode it) {
-              SLinkOperations.setTarget(it, LINKS.exponent$2Bc0, createNumberExponent_3ist9o_a0a0a0a1a1a0a0a0a0q0a(new BigDecimal("0.5").multiply(BigDecimalUtil.fromNumber(IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it))).toString()));
+              Rational exponent = IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it).multiply(new Rational(1, 2));
+              SLinkOperations.setTarget(it, LINKS.exponent$2Bc0, ExponentHelper.rationalToExponent(exponent));
             }
           });
 
@@ -251,14 +251,17 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     }
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
       SNode dimension = SNodeOperations.as(rightOperandType, CONCEPTS.DimensionType$yz);
-      BigDecimal exponentValue = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.as(leftOperandType, CONCEPTS.NumberType$2D), LINKS.range$WgV$), PROPS.min$Va2));
+
+      // Compute numerator from value then swap values 
+      Rational exponentValue = new Rational(SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.as(leftOperandType, CONCEPTS.NumberType$2D), LINKS.range$WgV$), PROPS.min$Va2));
+      exponentValue = new Rational(exponentValue.denom(), exponentValue.numer());
 
       // Add exponent to units 
-      Map<SNode, BigDecimal> unitMap = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(dimension, LINKS.units$o6Ow));
-      DimensionMapsHelper.multiply(unitMap, BigDecimal.ONE.divide(exponentValue, MathContext.DECIMAL32));
+      Map<SNode, Rational> unitMap = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(dimension, LINKS.units$o6Ow));
+      DimensionMapsHelper.multiply(unitMap, exponentValue);
 
       // Compute final dimension type 
-      return createDimensionType_3ist9o_a8a1c(DimensionMapsHelper.mapToReferences(unitMap), SNodeOperations.as(TypeChecker.getInstance().getRulesManager().getOperationType(operation, leftOperandType, SLinkOperations.getTarget(dimension, LINKS.baseType$fHYw)), CONCEPTS.Type$fA));
+      return createDimensionType_3ist9o_a11a1c(DimensionMapsHelper.mapToReferences(unitMap), SNodeOperations.as(TypeChecker.getInstance().getRulesManager().getOperationType(operation, leftOperandType, SLinkOperations.getTarget(dimension, LINKS.baseType$fHYw)), CONCEPTS.Type$fA));
     }
     public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
       // Left operand must be a number 
@@ -293,7 +296,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractDimensionType$C7);
       return n0.getResult();
     }
-    private static SNode createDimensionType_3ist9o_a8a1c(Iterable<? extends SNode> p0, SNode p1) {
+    private static SNode createDimensionType_3ist9o_a11a1c(Iterable<? extends SNode> p0, SNode p1) {
       SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
       n0.forChild(LINKS.units$o6Ow).initNodeList(p0, CONCEPTS.DimensionReference$wa);
       n0.forChild(LINKS.baseType$fHYw).initNode(p1, CONCEPTS.Type$fA, true);
@@ -345,10 +348,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     }
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
       SNode dimension = SNodeOperations.as(leftOperandType, CONCEPTS.DimensionType$yz);
-      Number exponentValue = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.as(rightOperandType, CONCEPTS.NumberType$2D), LINKS.range$WgV$), PROPS.min$Va2));
+      Rational exponentValue = new Rational(SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.as(rightOperandType, CONCEPTS.NumberType$2D), LINKS.range$WgV$), PROPS.min$Va2));
 
       // Add exponent to units 
-      Map<SNode, BigDecimal> unitMap = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(dimension, LINKS.units$o6Ow));
+      Map<SNode, Rational> unitMap = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(dimension, LINKS.units$o6Ow));
       DimensionMapsHelper.multiply(unitMap, exponentValue);
 
       // Compute final dimension type 
@@ -426,14 +429,6 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractDimensionType$C7);
     return n0.getResult();
   }
-  private static SNode createNumberExponent_3ist9o_a0a0a0a1a1a0a0a0a0q0a(String p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberExponent$mI);
-    {
-      SNodeBuilder n1 = n0.forChild(LINKS.value$FXw$).init(CONCEPTS.NumberLiteral$yW);
-      n1.setProperty(PROPS.value$nZyY, p0);
-    }
-    return n0.getResult();
-  }
   private static SNode createDimensionType_3ist9o_a3a1a0a0a0a0q0a(Iterable<? extends SNode> p0, SNode p1) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
     n0.forChild(LINKS.units$o6Ow).initNodeList(p0, CONCEPTS.DimensionReference$wa);
@@ -455,8 +450,6 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     /*package*/ static final SConcept NumberType$2D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
     /*package*/ static final SConcept AbstractDimensionType$C7 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x300307d5d92dba32L, "jetbrains.mps.samples.Physics.dimensions.structure.AbstractDimensionType");
     /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
-    /*package*/ static final SConcept NumberExponent$mI = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, "jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
   }
 
   private static final class LINKS {
@@ -464,11 +457,9 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
     /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
     /*package*/ static final SContainmentLink range$WgV$ = MetaAdapterFactory.getContainmentLink(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, 0x127541598201af78L, "range");
-    /*package*/ static final SContainmentLink value$FXw$ = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x300307d5d920fe97L, "value");
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty min$Va2 = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af6fL, "min");
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 }

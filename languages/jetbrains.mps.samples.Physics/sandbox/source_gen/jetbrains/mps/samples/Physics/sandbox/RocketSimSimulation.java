@@ -5,8 +5,6 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
@@ -18,7 +16,7 @@ public class RocketSimSimulation extends Simulation {
   protected RocketWorldSystemScope scope;
 
   public RocketSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigDecimal("6E+1").setScale(0, RoundingMode.DOWN))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))).floatValue());
+    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("60"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))).floatValue());
   }
 
   @Override

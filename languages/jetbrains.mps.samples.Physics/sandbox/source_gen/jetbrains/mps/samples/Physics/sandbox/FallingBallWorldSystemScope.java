@@ -12,13 +12,14 @@ import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.SimpleCollisionReaction;
 
 public class FallingBallWorldSystemScope extends SystemScope {
   public final PhysicalEntity Ball;
@@ -51,24 +52,48 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
       // Set static properties of Ball 
       this.setMass(((Number) new BigInteger("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-90")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-5")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of Ball 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, true);
+      propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigDecimal("0.9").setScale(1, RoundingMode.DOWN))));
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.TRACE, new Color(255, 0, 0));
       this.getForces().addAll(Arrays.asList(new Force<FallingBallWorldSystemScope>() {
+        private Force cached;
+
+        @Override
+        public DVector3C linearForce(World world, FallingBallWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
+          cached = FrictionForce.get(world, scope, currentEntity, time, ((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)));
+
+          return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
+        }
+
+        @Override
+        public DVector3C moment(World world, FallingBallWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return VectorHelper.anyToDVector3C(cached.moment(world, scope, currentEntity, time));
+        }
+
+        @Override
+        public DVector3C applicationPoint(World world, FallingBallWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
+          return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
+        }
+
+        @Override
+        public int forceMode() {
+          return 16;
+        }
+      }, new Force<FallingBallWorldSystemScope>() {
         private VectorLike cached;
 
         @Override
         public DVector3C linearForce(World world, FallingBallWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           if (cached == null) {
-            cached = new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("-9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0")));
+            cached = new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0")));
           }
 
           return VectorHelper.anyToDVector3C(cached);
@@ -104,16 +129,17 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
       // Set static properties of Ground 
       this.setMass(((Number) new BigInteger("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-151")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("151")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Ground 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
       propertiesBuilder.set(PropKey.SHAPE, "box");
       this.getForces().addAll(Arrays.asList());
     }

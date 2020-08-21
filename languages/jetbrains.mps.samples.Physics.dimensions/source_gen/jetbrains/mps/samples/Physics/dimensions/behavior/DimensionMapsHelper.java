@@ -4,7 +4,7 @@ package jetbrains.mps.samples.Physics.dimensions.behavior;
 
 import java.util.Map;
 import org.jetbrains.mps.openapi.model.SNode;
-import java.math.BigDecimal;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.internal.collections.runtime.MapSequence;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.internal.collections.runtime.IMapping;
@@ -14,7 +14,6 @@ import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
-import java.math.MathContext;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -27,9 +26,9 @@ public class DimensionMapsHelper {
   /**
    * Returns true if both maps of units contains the same exponents
    */
-  public static boolean matches(Map<SNode, BigDecimal> left, final Map<SNode, BigDecimal> right) {
-    return MapSequence.fromMap(left).count() == MapSequence.fromMap(right).count() && MapSequence.fromMap(left).all(new IWhereFilter<IMapping<SNode, BigDecimal>>() {
-      public boolean accept(IMapping<SNode, BigDecimal> it) {
+  public static boolean matches(Map<SNode, Rational> left, final Map<SNode, Rational> right) {
+    return MapSequence.fromMap(left).count() == MapSequence.fromMap(right).count() && MapSequence.fromMap(left).all(new IWhereFilter<IMapping<SNode, Rational>>() {
+      public boolean accept(IMapping<SNode, Rational> it) {
         return MapSequence.fromMap(right).containsKey(it.key()) && MapSequence.fromMap(right).get(it.key()).compareTo(it.value()) == 0;
       }
     });
@@ -39,9 +38,9 @@ public class DimensionMapsHelper {
   /**
    * Display the given map in a readable format such as m^2 * s^-1
    */
-  public static String mapToString(Map<SNode, BigDecimal> map) {
-    Iterable<String> seq = MapSequence.fromMap(map).select(new ISelector<IMapping<SNode, BigDecimal>, String>() {
-      public String select(IMapping<SNode, BigDecimal> it) {
+  public static String mapToString(Map<SNode, Rational> map) {
+    Iterable<String> seq = MapSequence.fromMap(map).select(new ISelector<IMapping<SNode, Rational>, String>() {
+      public String select(IMapping<SNode, Rational> it) {
         return SPropertyOperations.getString(it.key(), PROPS.name$tAp1) + "^" + it.value().toString();
       }
     });
@@ -56,14 +55,14 @@ public class DimensionMapsHelper {
   /**
    * Convert the map back to references
    */
-  public static Iterable<SNode> mapToReferences(Map<SNode, BigDecimal> map) {
-    return MapSequence.fromMap(map).where(new IWhereFilter<IMapping<SNode, BigDecimal>>() {
-      public boolean accept(IMapping<SNode, BigDecimal> it) {
-        return it != null && it.value().compareTo(BigDecimal.ZERO) != 0;
+  public static Iterable<SNode> mapToReferences(Map<SNode, Rational> map) {
+    return MapSequence.fromMap(map).where(new IWhereFilter<IMapping<SNode, Rational>>() {
+      public boolean accept(IMapping<SNode, Rational> it) {
+        return it != null && it.value().compareTo(Rational.ZERO) != 0;
       }
-    }).select(new ISelector<IMapping<SNode, BigDecimal>, SNode>() {
-      public SNode select(IMapping<SNode, BigDecimal> it) {
-        return createDimensionReference_6b7pfp_a0a0a0a0h(it.key(), it.value().toString());
+    }).select(new ISelector<IMapping<SNode, Rational>, SNode>() {
+      public SNode select(IMapping<SNode, Rational> it) {
+        return createDimensionReference_6b7pfp_a0a0a0a0h(it.key(), ExponentHelper.rationalToExponent(it.value()));
       }
     });
   }
@@ -72,7 +71,7 @@ public class DimensionMapsHelper {
   /**
    * Combine values depending on the basic operations
    */
-  public static Map<SNode, BigDecimal> combine(Map<SNode, BigDecimal> left, Map<SNode, BigDecimal> right, SNode operation) throws UnitComputationException {
+  public static Map<SNode, Rational> combine(Map<SNode, Rational> left, Map<SNode, Rational> right, SNode operation) throws UnitComputationException {
 
     if (SNodeOperations.isInstanceOf(operation, CONCEPTS.PlusExpression$Dn) || SNodeOperations.isInstanceOf(operation, CONCEPTS.MinusExpression$pp)) {
       if (matches(left, right)) {
@@ -83,12 +82,12 @@ public class DimensionMapsHelper {
     }
 
     if (SNodeOperations.isInstanceOf(operation, CONCEPTS.MulExpression$_u)) {
-      DimensionMapsHelper.multiplyAndMergeInto(left, BigDecimal.ONE, right);
+      DimensionMapsHelper.multiplyAndMergeInto(left, new Rational(1), right);
       return right;
     }
 
     if (SNodeOperations.isInstanceOf(operation, CONCEPTS.DivExpression$Li)) {
-      DimensionMapsHelper.multiplyAndMergeInto(right, -1, left);
+      DimensionMapsHelper.multiplyAndMergeInto(right, new Rational(-1), left);
       return left;
     }
 
@@ -99,10 +98,10 @@ public class DimensionMapsHelper {
     return null;
   }
 
-  public static void multiply(Map<SNode, BigDecimal> sourceMap, final Number exponent) {
-    MapSequence.fromMap(sourceMap).visitAll(new IVisitor<IMapping<SNode, BigDecimal>>() {
-      public void visit(IMapping<SNode, BigDecimal> it) {
-        it.value(it.value().multiply(BigDecimalUtil.fromNumber(exponent), MathContext.DECIMAL32));
+  public static void multiply(Map<SNode, Rational> sourceMap, final Rational exponent) {
+    MapSequence.fromMap(sourceMap).visitAll(new IVisitor<IMapping<SNode, Rational>>() {
+      public void visit(IMapping<SNode, Rational> it) {
+        it.value(it.value().multiply(exponent));
       }
     });
   }
@@ -110,15 +109,15 @@ public class DimensionMapsHelper {
   /**
    * Multiply the source map values by a factor, then add all result in the target map
    */
-  public static void multiplyAndMergeInto(Map<SNode, BigDecimal> sourceMap, final Number exponent, final Map<SNode, BigDecimal> targetMap) {
+  public static void multiplyAndMergeInto(Map<SNode, Rational> sourceMap, final Rational exponent, final Map<SNode, Rational> targetMap) {
     // Multiply the power of the child units by it's power 
-    MapSequence.fromMap(sourceMap).visitAll(new IVisitor<IMapping<SNode, BigDecimal>>() {
-      public void visit(IMapping<SNode, BigDecimal> it) {
-        BigDecimal power = it.value().multiply(BigDecimalUtil.fromNumber(exponent), MathContext.DECIMAL32);
+    MapSequence.fromMap(sourceMap).visitAll(new IVisitor<IMapping<SNode, Rational>>() {
+      public void visit(IMapping<SNode, Rational> it) {
+        Rational power = it.value().multiply(exponent);
 
         // Add it to the map 
         if (MapSequence.fromMap(targetMap).containsKey(it.key())) {
-          MapSequence.fromMap(targetMap).put(it.key(), MapSequence.fromMap(targetMap).get(it.key()).add(power, MathContext.DECIMAL32));
+          MapSequence.fromMap(targetMap).put(it.key(), MapSequence.fromMap(targetMap).get(it.key()).add(power));
         } else {
           MapSequence.fromMap(targetMap).put(it.key(), power);
         }
@@ -126,22 +125,15 @@ public class DimensionMapsHelper {
     });
   }
 
-  private static SNode createDimensionReference_6b7pfp_a0a0a0a0h(SNode p0, String p1) {
+  private static SNode createDimensionReference_6b7pfp_a0a0a0a0h(SNode p0, SNode p1) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionReference$wa);
     n0.setReferenceTarget(LINKS.unit$2BcY, p0);
-    {
-      SNodeBuilder n1 = n0.forChild(LINKS.exponent$2Bc0).init(CONCEPTS.NumberExponent$mI);
-      {
-        SNodeBuilder n2 = n1.forChild(LINKS.value$FXw$).init(CONCEPTS.NumberLiteral$yW);
-        n2.setProperty(PROPS.value$nZyY, p1);
-      }
-    }
+    n0.forChild(LINKS.exponent$2Bc0).initNode(p1, CONCEPTS.Exponent$nW, true);
     return n0.getResult();
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 
   private static final class CONCEPTS {
@@ -151,13 +143,11 @@ public class DimensionMapsHelper {
     /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
     /*package*/ static final SConcept BinaryComparisonExpression$qp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cb4f93L, "org.iets3.core.expr.base.structure.BinaryComparisonExpression");
     /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
-    /*package*/ static final SConcept NumberExponent$mI = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, "jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
+    /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
   }
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
     /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
-    /*package*/ static final SContainmentLink value$FXw$ = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x300307d5d920fe97L, "value");
   }
 }

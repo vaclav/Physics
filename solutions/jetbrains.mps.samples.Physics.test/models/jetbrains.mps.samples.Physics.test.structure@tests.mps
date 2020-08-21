@@ -55,8 +55,8 @@
       </concept>
     </language>
     <language id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions">
-      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent" flags="ng" index="CIsvk">
-        <child id="3459617553802919575" name="value" index="3D8Z_2" />
+      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent" flags="ng" index="CIsvk">
+        <property id="190196155049109992" name="value" index="LYPYd" />
       </concept>
       <concept id="8337440621611273669" name="jetbrains.mps.samples.Physics.dimensions.structure.UnitReference" flags="ng" index="CIsvn" />
       <concept id="8609460045977359684" name="jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLikeArray" flags="ng" index="1N7es8">
@@ -80,9 +80,9 @@
       <concept id="1159415042433249433" name="jetbrains.mps.samples.Physics.structure.BoxDepthStyle" flags="ng" index="27rm5f" />
       <concept id="1159415042433250199" name="jetbrains.mps.samples.Physics.structure.BoxWidthStyle" flags="ng" index="27rm91" />
       <concept id="1159415042433250200" name="jetbrains.mps.samples.Physics.structure.BoxHeightStyle" flags="ng" index="27rm9e" />
-      <concept id="1159415042433250201" name="jetbrains.mps.samples.Physics.structure.SphereRadiusStyle" flags="ng" index="27rm9f" />
-      <concept id="913483291047927804" name="" flags="ng" index="2jxWva">
-        <child id="913483291047928433" name="" index="2jxZD7" />
+      <concept id="1159415042433250201" name="jetbrains.mps.samples.Physics.structure.SphereRadiusStyleKey" flags="ng" index="27rm9f" />
+      <concept id="913483291047927804" name="jetbrains.mps.samples.Physics.structure.ColorTexture" flags="ng" index="2jxWva">
+        <child id="913483291047928433" name="color" index="2jxZD7" />
       </concept>
       <concept id="6362440046684076683" name="jetbrains.mps.samples.Physics.structure.CartesianCoordinates" flags="ng" index="v6hs8">
         <child id="1459540517658822199" name="dx" index="Y6l9D" />
@@ -113,7 +113,6 @@
         <child id="4383135941275155974" name="position" index="1h9ZzG" />
         <child id="4383135941275155975" name="velocity" index="1h9ZzH" />
       </concept>
-      <concept id="1510458583736011129" name="jetbrains.mps.samples.Physics.structure.VectorExpression" flags="ng" index="1ns7dH" />
       <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression" flags="ng" index="3okdC7">
         <reference id="7746015835360049756" name="target" index="3okdC0" />
       </concept>
@@ -176,9 +175,7 @@
                     <node concept="CIsvn" id="5qrSK19KtYf" role="1N7es9">
                       <ref role="1N7KNK" to="nas6:1d1Q7eb5p5y" resolve="kg" />
                       <node concept="CIsvk" id="5qrSK19Kvtt" role="1N7KNQ">
-                        <node concept="30bXRB" id="5qrSK19Kvtu" role="3D8Z_2">
-                          <property role="30bXRw" value="-1" />
-                        </node>
+                        <property role="LYPYd" value="-1" />
                       </node>
                     </node>
                     <node concept="CIsvn" id="5qrSK19KuTo" role="1N7es9">
@@ -345,9 +342,7 @@
                   <node concept="CIsvn" id="5qrSK19KGI5" role="1N7es9">
                     <ref role="1N7KNK" to="nas6:1d1Q7eb5p5y" resolve="kg" />
                     <node concept="CIsvk" id="5qrSK19KHno" role="1N7KNQ">
-                      <node concept="30bXRB" id="5qrSK19KHnp" role="3D8Z_2">
-                        <property role="30bXRw" value="-1" />
-                      </node>
+                      <property role="LYPYd" value="-1" />
                     </node>
                   </node>
                 </node>
@@ -375,9 +370,7 @@
                   <node concept="CIsvn" id="5qrSK19KJ2U" role="1N7es9">
                     <ref role="1N7KNK" to="nas6:1d1Q7eb5p5y" resolve="kg" />
                     <node concept="CIsvk" id="5qrSK19KJ2V" role="1N7KNQ">
-                      <node concept="30bXRB" id="5qrSK19KJ2W" role="3D8Z_2">
-                        <property role="30bXRw" value="-1" />
-                      </node>
+                      <property role="LYPYd" value="-1" />
                     </node>
                   </node>
                 </node>
@@ -390,9 +383,7 @@
                   <node concept="CIsvn" id="5qrSK19KMrh" role="1N7es9">
                     <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
                     <node concept="CIsvk" id="5qrSK19KNb_" role="1N7KNQ">
-                      <node concept="30bXRB" id="5qrSK19KNbA" role="3D8Z_2">
-                        <property role="30bXRw" value="-1" />
-                      </node>
+                      <property role="LYPYd" value="-1" />
                     </node>
                   </node>
                 </node>
@@ -562,10 +553,10 @@
         <node concept="3omeWv" id="M__cqnvbpr" role="3omeWq">
           <property role="TrG5h" value="BlackHole" />
           <node concept="3Bsx3U" id="M__cqnx1pf" role="1h9ZzG">
-            <node concept="1ns7dH" id="M__cqnx1pg" role="3Bsx3B">
-              <node concept="7CXmI" id="M__cqnx1ph" role="lGtFl">
-                <node concept="1TM$A" id="M__cqnx1pi" role="7EUXB">
-                  <node concept="2PYRI3" id="M__cqnx1pj" role="3lydEf">
+            <node concept="2vmvVl" id="7jlSyDS$ogk" role="3Bsx3B">
+              <node concept="7CXmI" id="7jlSyDS$okb" role="lGtFl">
+                <node concept="1TM$A" id="7jlSyDS$ovm" role="7EUXB">
+                  <node concept="2PYRI3" id="7jlSyDS$ovn" role="3lydEf">
                     <ref role="39XzEq" to="wxye:6klo$89LFBy" />
                   </node>
                 </node>

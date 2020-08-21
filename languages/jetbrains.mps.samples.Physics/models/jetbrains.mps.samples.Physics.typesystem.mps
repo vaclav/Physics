@@ -137,9 +137,6 @@
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
       <concept id="7425695345928349207" name="org.iets3.core.expr.simpleTypes.structure.BooleanType" flags="ng" index="2vmvy5" />
       <concept id="5115872837157054284" name="org.iets3.core.expr.simpleTypes.structure.RealType" flags="ng" index="30bXLL" />
-      <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
-        <property id="5115872837157054173" name="value" index="30bXRw" />
-      </concept>
     </language>
     <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
       <concept id="1235746970280" name="jetbrains.mps.baseLanguage.closures.structure.CompactInvokeFunctionExpression" flags="nn" index="2Sg_IR">
@@ -157,7 +154,7 @@
     </language>
     <language id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions">
       <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent" flags="ng" index="CIsvk">
-        <child id="3459617553802919575" name="value" index="3D8Z_2" />
+        <property id="190196155049109992" name="value" index="LYPYd" />
       </concept>
       <concept id="3181138428204837756" name="jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference" flags="ng" index="3AmWvR" />
       <concept id="8609460045977000906" name="jetbrains.mps.samples.Physics.dimensions.structure.DimensionType" flags="ng" index="1N6AA6">
@@ -452,9 +449,7 @@
                     <node concept="3AmWvR" id="3PeuB2_EUUc" role="1N7es9">
                       <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
                       <node concept="CIsvk" id="3PeuB2_EUUV" role="1N7KNQ">
-                        <node concept="30bXRB" id="3PeuB2_EUUW" role="3D8Z_2">
-                          <property role="30bXRw" value="-1" />
-                        </node>
+                        <property role="LYPYd" value="-1" />
                       </node>
                     </node>
                   </node>
@@ -4281,9 +4276,7 @@
                 <node concept="3AmWvR" id="2rJkT1F4m4Q" role="1N7es9">
                   <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
                   <node concept="CIsvk" id="2rJkT1F4m5L" role="1N7KNQ">
-                    <node concept="30bXRB" id="2rJkT1F4m5M" role="3D8Z_2">
-                      <property role="30bXRw" value="-1" />
-                    </node>
+                    <property role="LYPYd" value="-1" />
                   </node>
                 </node>
               </node>

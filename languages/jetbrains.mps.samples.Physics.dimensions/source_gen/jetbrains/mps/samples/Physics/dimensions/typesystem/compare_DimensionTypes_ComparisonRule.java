@@ -5,25 +5,16 @@ package jetbrains.mps.samples.Physics.dimensions.typesystem;
 import jetbrains.mps.lang.typesystem.runtime.ComparisonRule_Runtime;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicable2Status;
-import java.util.Map;
-import java.math.BigDecimal;
-import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class compare_DimensionTypes_ComparisonRule extends ComparisonRule_Runtime {
   public compare_DimensionTypes_ComparisonRule() {
   }
   public boolean areComparable(SNode node1, SNode node2, IsApplicable2Status status) {
-    Map<SNode, BigDecimal> leftUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(node1, LINKS.units$o6Ow));
-    Map<SNode, BigDecimal> rightUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(node2, LINKS.units$o6Ow));
-
-    return DimensionMapsHelper.matches(leftUnits, rightUnits);
+    return DimensionTypeHelper.areCompatible(node1, node2);
   }
   public boolean isWeak() {
     return true;
@@ -40,10 +31,6 @@ public class compare_DimensionTypes_ComparisonRule extends ComparisonRule_Runtim
   }
   public SAbstractConcept getApplicableConcept2() {
     return CONCEPTS.DimensionType$yz;
-  }
-
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
   }
 
   private static final class CONCEPTS {
