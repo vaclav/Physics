@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.iets3.ext.math.plugin.ExtendedMathInterpreter_extension">
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.CachedInterpreterFinder" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.IInterpreter" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.iets3.ext.math.plugin.InterpreterExtendedMathInterpreter" />
+    <classNode extendsClassName="jetbrains.mps.smodel.structure.Extension" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.iets3.ext.math.plugin.ExtensionDescriptor">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.iets3.ext.math.plugin.ExtendedMathInterpreter_extension" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.Extension" />
+    <classNode extendsClassName="jetbrains.mps.smodel.structure.DefaultExtensionDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.iets3.ext.math.plugin.InterpreterExtendedMathInterpreter">
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.ComputationTrace" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.ConceptEvaluatorBase" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.EvaluatorInfo" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.IContext" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.ICoverageAnalyzer" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.IEvaluator" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.IRelationship" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.ITypeMapper" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.InterpretBeforeRelationshipImpl" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.InterpreterEscapeException" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.InterpreterRuntimeException" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.StopAndReturnException" />
+    <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.TypedChildConstraintImpl" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.RuntimeException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.MathContext" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="org.nevec.rjm.BigDecimalMath" />
+    <classNode extendsClassName="com.mbeddr.mpsutil.interpreter.rt.InterpreterBase" />
+  </dependency>
+</dependenciesRoot>
+

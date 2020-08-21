@@ -114,8 +114,8 @@
         <module reference="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" version="0" />
         <module reference="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" version="2" />
         <module reference="5f859e48-fb44-4e21-806a-f5167871a2b0(jetbrains.mps.samples.Physics#01)" version="0" />
-        <module reference="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.IETS3MathExtended)" version="0" />
         <module reference="3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)" version="0" />
+        <module reference="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.iets3.ext.math)" version="0" />
         <module reference="b350740a-2805-4655-bc71-743d6ba419e6(jetbrains.mps.samples.Physics.kernelf_requirements)" version="0" />
         <module reference="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)" version="0" />
         <module reference="db8bd035-3f51-41d8-8fed-954c202d18be(org.iets3.analysis.base)" version="0" />
@@ -145,7 +145,7 @@
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
     <dependency reexport="true">f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)</dependency>
     <dependency reexport="true">3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)</dependency>
-    <dependency reexport="true">f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.IETS3MathExtended)</dependency>
+    <dependency reexport="true">f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.iets3.ext.math)</dependency>
     <dependency reexport="false">22562cc6-29e7-43d0-b046-5e85dce22227(jetbrains.mps.samples.Physics.java.common)</dependency>
     <dependency reexport="false">8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)</dependency>
     <dependency reexport="false">2f7e2e35-6e74-4c43-9fa5-2465d68f5996(org.iets3.core.expr.collections)</dependency>
@@ -261,8 +261,8 @@
     <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
     <module reference="7a5dda62-9140-4668-ab76-d5ed1746f2b2(jetbrains.mps.lang.typesystem)" version="0" />
     <module reference="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" version="2" />
-    <module reference="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.IETS3MathExtended)" version="0" />
     <module reference="3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)" version="0" />
+    <module reference="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.iets3.ext.math)" version="0" />
     <module reference="22562cc6-29e7-43d0-b046-5e85dce22227(jetbrains.mps.samples.Physics.java.common)" version="0" />
     <module reference="b350740a-2805-4655-bc71-743d6ba419e6(jetbrains.mps.samples.Physics.kernelf_requirements)" version="0" />
     <module reference="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)" version="0" />

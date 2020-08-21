@@ -44,7 +44,7 @@
       </concept>
     </language>
     <language id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions">
-      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent" flags="ng" index="CIsvk">
+      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent" flags="ng" index="CIsvk">
         <property id="190196155049109992" name="value" index="LYPYd" />
       </concept>
       <concept id="8337440621611273669" name="jetbrains.mps.samples.Physics.dimensions.structure.UnitReference" flags="ng" index="CIsvn" />
@@ -232,10 +232,10 @@
           <node concept="30bXRB" id="10n4tqnj6Hi" role="Y6leJ">
             <property role="30bXRw" value="0" />
           </node>
-          <node concept="30bXRB" id="270Q2mFmaeM" role="Y6l9D">
+          <node concept="30bXRB" id="2_PGqGCmH3X" role="Y6leK">
             <property role="30bXRw" value="0" />
           </node>
-          <node concept="30bXRB" id="2_PGqGCmH3X" role="Y6leK">
+          <node concept="30bXRB" id="270Q2mFmaeM" role="Y6l9D">
             <property role="30bXRw" value="0" />
           </node>
         </node>

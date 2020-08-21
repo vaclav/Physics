@@ -772,7 +772,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
   protected void populateRelationships(List<? extends IRelationship> relationships) {
     ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretBeforeRelationshipImpl("jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter", "org.iets3.core.expr.simpleTypes.interpreter.plugin.InterpreterExprSimpleTypesInterpreter"));
     ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretAfterRelationshipImpl("jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter", "jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter"));
-    ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretAfterRelationshipImpl("jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter", "jetbrains.mps.samples.Physics.IETS3MathExtended.plugin.InterpreterExtendedMathInterpreter"));
+    ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretAfterRelationshipImpl("jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter", "jetbrains.mps.samples.Physics.iets3.ext.math.plugin.InterpreterExtendedMathInterpreter"));
   }
   private static final EnumerationLiteralsIndex enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, 0x6520d39c9504b3f4L, 0x6520d39c9504b3d9L, 0x6520d39c9504b3daL, 0x6520d39c9504b3ddL, 0x6520d39c9504b3eeL, 0x6520d39c9504b3e9L);
 

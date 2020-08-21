@@ -94,10 +94,10 @@
         <module reference="9e98f4e2-decf-4e97-bf80-9109e8b759aa(jetbrains.mps.lang.feedback.context)" version="0" />
         <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
         <module reference="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" version="2" />
-        <module reference="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.IETS3MathExtended)" version="0" />
         <module reference="3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)" version="0" />
         <module reference="61cc869c-376a-409d-b749-694ad057266b(jetbrains.mps.samples.Physics.genbase)" version="0" />
         <module reference="651de985-500e-4007-9995-364e1c242fe2(jetbrains.mps.samples.Physics.genbase#01)" version="0" />
+        <module reference="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.iets3.ext.math)" version="0" />
         <module reference="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)" version="0" />
         <module reference="db8bd035-3f51-41d8-8fed-954c202d18be(org.iets3.analysis.base)" version="0" />
         <module reference="7b68d745-a7b8-48b9-bd9c-05c0f8725a35(org.iets3.core.base)" version="0" />

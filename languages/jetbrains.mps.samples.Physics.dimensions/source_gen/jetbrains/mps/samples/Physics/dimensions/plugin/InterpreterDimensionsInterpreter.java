@@ -104,7 +104,7 @@ public class InterpreterDimensionsInterpreter extends InterpreterBase {
 
   protected void populateRelationships(List<? extends IRelationship> relationships) {
     ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretBeforeRelationshipImpl("jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter", "org.iets3.core.expr.simpleTypes.interpreter.plugin.InterpreterExprSimpleTypesInterpreter"));
-    ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretBeforeRelationshipImpl("jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter", "jetbrains.mps.samples.Physics.IETS3MathExtended.plugin.InterpreterExtendedMathInterpreter"));
+    ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretBeforeRelationshipImpl("jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter", "jetbrains.mps.samples.Physics.iets3.ext.math.plugin.InterpreterExtendedMathInterpreter"));
   }
 
   private static final class LINKS {

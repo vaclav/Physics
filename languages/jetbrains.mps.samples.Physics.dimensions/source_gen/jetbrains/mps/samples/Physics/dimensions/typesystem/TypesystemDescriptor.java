@@ -438,7 +438,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept BinaryExpression$Aq = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, "org.iets3.core.expr.base.structure.BinaryExpression");
-    /*package*/ static final SConcept NRootExpression$sH = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.IETS3MathExtended.structure.NRootExpression");
+    /*package*/ static final SConcept NRootExpression$sH = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.NRootExpression");
     /*package*/ static final SConcept PowerExpression$Cd = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c6144L, "org.iets3.core.expr.math.structure.PowerExpression");
     /*package*/ static final SConcept AbsExpression$gV = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9bc799L, "org.iets3.core.expr.math.structure.AbsExpression");
     /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
