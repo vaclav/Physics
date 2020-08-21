@@ -37,6 +37,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DefinedColorReference;
   private ConceptPresentation props_DirectionalCoordinates;
   private ConceptPresentation props_DisabledTraceExpression;
+  private ConceptPresentation props_DisplayedMetric;
   private ConceptPresentation props_DynamicForce;
   private ConceptPresentation props_ElasticCollisionReaction;
   private ConceptPresentation props_EmitLightStyleKey;
@@ -128,7 +129,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0ae);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0be);
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
@@ -151,7 +152,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0ae);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0be);
           props_AbstractObjectDefinition = cpb.create();
         }
         return props_AbstractObjectDefinition;
@@ -320,6 +321,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DisabledTraceExpression = cpb.create();
         }
         return props_DisabledTraceExpression;
+      case LanguageConceptSwitch.DisplayedMetric:
+        if (props_DisplayedMetric == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("metric that will be displayed on runtime");
+          cpb.presentationByName();
+          props_DisplayedMetric = cpb.create();
+        }
+        return props_DisplayedMetric;
       case LanguageConceptSwitch.DynamicForce:
         if (props_DynamicForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -669,7 +678,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a97b0ae);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a08b0be);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -804,7 +813,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a89b0ae);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a99b0be);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;

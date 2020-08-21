@@ -5,6 +5,7 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
+import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
@@ -16,7 +17,7 @@ public class RocketSimSimulation extends Simulation {
   protected RocketWorldSystemScope scope;
 
   public RocketSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("60"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))).floatValue());
+    super(AH.mul(((Number) new BigInteger("1")), new BigDecimal("60")).doubleValue(), 1 / AH.mul(((Number) new BigInteger("10")), new BigDecimal("1")).floatValue());
   }
 
   @Override
@@ -35,7 +36,7 @@ public class RocketSimSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.RocketEuropaS452G.getPosition().add((scope.RocketEuropaS452G.getPosition().add(scope.Earth3.getPosition())).resize(AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))));
+    return scope.RocketEuropaS452G.getPosition().add((scope.RocketEuropaS452G.getPosition().add(scope.Earth3.getPosition())).resize(AH.mul(((Number) new BigInteger("300")), new BigDecimal("1"))));
   }
 
   @Override
@@ -43,6 +44,10 @@ public class RocketSimSimulation extends Simulation {
     VectorLike currentEntity = this.scope;
 
     return scope.Earth3;
+  }
+
+  @Override
+  protected void renderMetrics(PGraphics ctx) {
   }
 
   public static void main(String[] args) {

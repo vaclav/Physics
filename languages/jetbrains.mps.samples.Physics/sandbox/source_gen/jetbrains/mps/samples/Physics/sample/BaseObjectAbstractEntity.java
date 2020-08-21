@@ -33,10 +33,10 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
 
     // Apply styles 
     propertiesBuilder.set(PropKey.SHAPE, "sphere");
-    propertiesBuilder.set(PropKey.BOX_X, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
-    propertiesBuilder.set(PropKey.BOX_Y, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
-    propertiesBuilder.set(PropKey.BOX_Z, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
-    propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimalMath.pi(MathContext.DECIMAL32))), currentEntity.getMass()).doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
+    propertiesBuilder.set(PropKey.BOX_X, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), new BigDecimal("1"))));
+    propertiesBuilder.set(PropKey.BOX_Y, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), new BigDecimal("1"))));
+    propertiesBuilder.set(PropKey.BOX_Z, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), new BigDecimal("1"))));
+    propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimalMath.pi(MathContext.DECIMAL32))), currentEntity.getMass()).doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), new BigDecimal("1"))));
     propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), new Color(0, 0, 0)));
     propertiesBuilder.set(PropKey.EMIT_LIGHT, false);
     propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigDecimal("100.0").setScale(1, RoundingMode.DOWN))));

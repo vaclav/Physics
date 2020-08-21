@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="atmmanva8b9211qcdfydnqkhz2gls2r">
-  <files names="BoxFixture.java:Color.java:ColorTexture.java:Fixture.java:ImageTexture.java:MetricsRendering.java:SphereFixture.java:Texture.java:TraceHandler.java" />
+<product version="3" modelHash="dlaivi7vd7hqa7tejt3o2e7kzudg4fw">
+  <files names="BoxFixture.java:Color.java:ColorTexture.java:Fixture.java:ImageTexture.java:MetricsRenderer.java:RenderableMetric.java:SphereFixture.java:Texture.java:TraceHandler.java" />
 </product>
 

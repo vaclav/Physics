@@ -8,6 +8,8 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
+import java.math.BigDecimal;
+import processing.core.PGraphics;
 
 public class TestCollision1AlternativeView0 extends TestCollisionSimulation {
 
@@ -17,9 +19,14 @@ public class TestCollision1AlternativeView0 extends TestCollisionSimulation {
 
     // Override properties 
     scope.A3.getPropertiesBuilder().set(PropKey.TEXTURE, new ColorTexture(new Color(160, 32, 240), null));
-    scope.B.setMass(AH.mul(((Number) new BigInteger("8800")), ((Number) new BigInteger("1"))));
+    scope.B.setMass(AH.mul(((Number) new BigInteger("8800")), new BigDecimal("1")));
   }
 
 
+
+  @Override
+  protected void renderMetrics(PGraphics ctx) {
+    super.renderMetrics(ctx);
+  }
 
 }

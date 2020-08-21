@@ -3424,6 +3424,40 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3F0ifn" id="3L71doTiHHF" role="3EZMnx">
+        <property role="3F0ifm" value="Displayed metrics:" />
+        <node concept="ljvvj" id="3L71doTiHHG" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+          <node concept="3nzxsE" id="3L71doTiHHH" role="3n$kyP">
+            <node concept="3clFbS" id="3L71doTiHHI" role="2VODD2">
+              <node concept="3clFbF" id="3L71doTiHHJ" role="3cqZAp">
+                <node concept="2OqwBi" id="3L71doTiHHK" role="3clFbG">
+                  <node concept="2OqwBi" id="3L71doTiHHL" role="2Oq$k0">
+                    <node concept="pncrf" id="3L71doTiHHM" role="2Oq$k0" />
+                    <node concept="3Tsc0h" id="3L71doTiIoB" role="2OqNvi">
+                      <ref role="3TtcxE" to="9tcj:3L71doTiHrz" resolve="metrics" />
+                    </node>
+                  </node>
+                  <node concept="3GX2aA" id="3L71doTiHHO" role="2OqNvi" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3F2HdR" id="3L71doTiHHP" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:3L71doTiHrz" resolve="metrics" />
+        <node concept="2iRkQZ" id="3L71doTiHHQ" role="2czzBx" />
+        <node concept="lj46D" id="3L71doTiHHR" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="3F0ifn" id="3L71doTiHHS" role="2czzBI">
+          <property role="ilYzB" value="no custom metrics" />
+        </node>
+        <node concept="ljvvj" id="3L71doTiHHT" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="l2Vlx" id="5H6c1qTKXlR" role="2iSdaV" />
     </node>
   </node>
@@ -3755,6 +3789,27 @@
       </node>
     </node>
     <node concept="3VyMlK" id="2_PGqGCdsWW" role="3ft7WO" />
+  </node>
+  <node concept="24kQdi" id="3L71doTltaA">
+    <property role="3GE5qa" value="simulation" />
+    <ref role="1XX52x" to="9tcj:3L71doTiHcb" resolve="DisplayedMetric" />
+    <node concept="3EZMnI" id="3L71doTlwib" role="2wV5jI">
+      <node concept="3F0ifn" id="3L71doTlwk1" role="3EZMnx">
+        <property role="3F0ifm" value="metric" />
+        <ref role="1k5W1q" node="6HZo5MNae36" resolve="KeyWord" />
+        <node concept="VPxyj" id="3L71doTlwp8" role="3F10Kt" />
+      </node>
+      <node concept="3F0A7n" id="3L71doTlwlN" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="3L71doTlwmm" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F1sOY" id="3L71doTlwnL" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:3L71doTiHo9" resolve="value" />
+      </node>
+      <node concept="l2Vlx" id="3L71doTlwid" role="2iSdaV" />
+    </node>
   </node>
 </model>
 

@@ -6,7 +6,6 @@ import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
@@ -18,7 +17,7 @@ public class TorqueTestSimulation extends Simulation {
   protected TorqueSystemScope scope;
 
   public TorqueTestSimulation() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("60"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("30")), ((Number) new BigDecimal("0.01").setScale(2, RoundingMode.DOWN))).floatValue());
+    super(AH.mul(((Number) new BigInteger("1")), new BigDecimal("60")).doubleValue(), 1 / AH.mul(((Number) new BigInteger("30")), new BigDecimal("0.01")).floatValue());
   }
 
   @Override
@@ -39,6 +38,10 @@ public class TorqueTestSimulation extends Simulation {
     VectorLike currentEntity = this.scope;
 
     return scope.SampleBox;
+  }
+
+  @Override
+  protected void renderMetrics(PGraphics ctx) {
   }
 
   public static void main(String[] args) {

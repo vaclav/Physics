@@ -29,8 +29,8 @@ import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
-import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SInterfaceConcept;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
@@ -52,7 +52,7 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
     return UnitHandlingCapablity.INSTANCE;
   }
   /*package*/ static String getDetailedPresentation_id22G2W3WJ92t(@NotNull SNode __thisNode__) {
-    return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.baseType$fHYw)) + "[" + DimensionReference__BehaviorDescriptor.listToString_id270Q2mEWW0n.invoke(SNodeOperations.asSConcept(CONCEPTS.DimensionReference$wa), SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow)) + "]";
+    return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.baseType$fHYw)) + "[" + IUnitReferenceLike__BehaviorDescriptor.listToString_id3L71doTUROP.invoke(SNodeOperations.asSConcept(CONCEPTS.IUnitReferenceLike$XC), SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow)) + "]";
   }
   /*package*/ static Iterable<SNode> getRawUnits_id20wM4XMzAC4(@NotNull SNode __thisNode__) {
     return Sequence.fromIterable(UnitReduceHelper.reduceUnitsToReferences(SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow))).select(new ISelector<SNode, SNode>() {
@@ -158,7 +158,7 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
+    /*package*/ static final SInterfaceConcept IUnitReferenceLike$XC = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, "jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike");
     /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
     /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
     /*package*/ static final SInterfaceConcept IParameterizedTypeSupportsEquals$PK = MetaAdapterFactory.getInterfaceConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7c29ed49aa581218L, "org.iets3.core.expr.base.structure.IParameterizedTypeSupportsEquals");

@@ -22,7 +22,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.intentions.Kind" />
     <classNode dependClassName="jetbrains.mps.openapi.intentions.ParameterizedIntentionExecutable" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.DimensionReference__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.IUnitReferenceLike__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.IUseSpecificDimensions__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper" />
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />

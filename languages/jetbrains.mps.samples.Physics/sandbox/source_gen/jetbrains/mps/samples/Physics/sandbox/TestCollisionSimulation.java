@@ -5,6 +5,7 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
+import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
@@ -16,7 +17,7 @@ public class TestCollisionSimulation extends Simulation {
   protected CollisionWorldSystemScope scope;
 
   public TestCollisionSimulation() {
-    super(AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).floatValue());
+    super(AH.mul(((Number) new BigInteger("500")), new BigDecimal("1")).doubleValue(), 1 / AH.mul(((Number) new BigInteger("1")), new BigDecimal("1")).floatValue());
   }
 
   @Override
@@ -35,7 +36,7 @@ public class TestCollisionSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("800")), ((Number) new BigInteger("1"))));
+    return new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("800")), new BigDecimal("1")));
   }
 
   @Override
@@ -43,6 +44,10 @@ public class TestCollisionSimulation extends Simulation {
     VectorLike currentEntity = this.scope;
 
     return scope.getPosition();
+  }
+
+  @Override
+  protected void renderMetrics(PGraphics ctx) {
   }
 
   public static void main(String[] args) {

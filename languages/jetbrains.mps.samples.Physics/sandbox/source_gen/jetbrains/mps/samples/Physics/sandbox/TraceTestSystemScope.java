@@ -50,22 +50,22 @@ public class TraceTestSystemScope extends SystemScope {
 
       // Set static properties of MovingObject 
       this.setMass(((Number) new BigInteger("5")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("1.00E-11").setScale(6, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("150")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("1.00E-11").setScale(6, RoundingMode.DOWN)), new BigDecimal("1")), AH.mul(((Number) new BigInteger("150")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-30")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("-50")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("2")), new BigDecimal("1"))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of MovingObject 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), new BigDecimal("1")));
       propertiesBuilder.set(PropKey.TRACE, new Color(0, 0, 255));
       this.getForces().addAll(Arrays.asList(new Force<TraceTestSystemScope>() {
 
         @Override
         public DVector3C linearForce(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
 
-          return VectorHelper.anyToDVector3C((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
+          return VectorHelper.anyToDVector3C((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), new BigDecimal("1")))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), new BigDecimal("1")))));
         }
 
         @Override
@@ -98,22 +98,22 @@ public class TraceTestSystemScope extends SystemScope {
 
       // Set static properties of MovingObject2 
       this.setMass(((Number) new BigInteger("5")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("150")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("150")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-65")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("150")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("150")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("30")), new BigDecimal("1"))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-30")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("50")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("-65")), new BigDecimal("1"))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of MovingObject2 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), new BigDecimal("1")));
       propertiesBuilder.set(PropKey.TRACE, new Color(255, 0, 0));
       this.getForces().addAll(Arrays.asList(new Force<TraceTestSystemScope>() {
 
         @Override
         public DVector3C linearForce(World world, TraceTestSystemScope scope, PhysicalEntity currentEntity, double time) {
 
-          return VectorHelper.anyToDVector3C((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), ((Number) new BigInteger("1"))))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), ((Number) new BigInteger("1"))))));
+          return VectorHelper.anyToDVector3C((currentEntity.getPosition().mul(AH.mul(((Number) new BigInteger("-1")), new BigDecimal("1")))).resize(AH.mul(((Number) new BigInteger("6")), AH.mul(((Number) new BigInteger("8")), new BigDecimal("1")))));
         }
 
         @Override

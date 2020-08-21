@@ -56,9 +56,9 @@ public class RocketWorldSystemScope extends SystemScope {
 
       // Set static properties of Rocket Europa-S452G 
       this.setMass(((Number) new BigInteger("12100")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("1154982.997142537").setScale(9, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("-4498361.775686384").setScale(9, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4361259.8800782645").setScale(10, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("1154982.997142537").setScale(9, RoundingMode.DOWN)), new BigDecimal("1")), AH.mul(((Number) new BigDecimal("-4498361.775686384").setScale(9, RoundingMode.DOWN)), new BigDecimal("1")), AH.mul(((Number) new BigDecimal("4361259.8800782645").setScale(10, RoundingMode.DOWN)), new BigDecimal("1"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
-      this.getBody().setRotation(RotationHelper.eulerAnglesToMatrix(AH.mul(AH.mul(((Number) new BigDecimal("0.26").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), BigDecimalMath.pi(MathContext.DECIMAL32)), AH.mul(AH.mul(((Number) new BigDecimal("1.58").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), BigDecimalMath.pi(MathContext.DECIMAL32)), ((Number) new BigInteger("0"))));
+      this.getBody().setRotation(RotationHelper.eulerAnglesToMatrix(AH.mul(AH.mul(((Number) new BigDecimal("0.26").setScale(2, RoundingMode.DOWN)), new BigDecimal("1")), BigDecimalMath.pi(MathContext.DECIMAL32)), AH.mul(AH.mul(((Number) new BigDecimal("1.58").setScale(2, RoundingMode.DOWN)), new BigDecimal("1")), BigDecimalMath.pi(MathContext.DECIMAL32)), ((Number) new BigInteger("0"))));
 
       //  Forces and visual of the parent objects of Rocket Europa-S452G 
       super.init(scope, world);
@@ -67,9 +67,9 @@ public class RocketWorldSystemScope extends SystemScope {
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), new Color(0, 0, 0)));
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
       propertiesBuilder.set(PropKey.SHAPE, "box");
-      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("5")), new BigDecimal("1")));
+      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("30")), new BigDecimal("1")));
+      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("5")), new BigDecimal("1")));
       this.getForces().addAll(Arrays.asList(new Force<RocketWorldSystemScope>() {
         private Force cached;
 
@@ -113,10 +113,10 @@ public class RocketWorldSystemScope extends SystemScope {
               }.invoke();
               return new _FunctionTypes._return_P0_E0<Number>() {
                 public Number invoke() {
-                  if (AH.isGreater(positiveDistance, AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))))) {
+                  if (AH.isGreater(positiveDistance, AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), new BigDecimal("1.00E+3")))) {
                     return ((Number) new BigInteger("0"));
                   } else {
-                    return AH.mul(AH.div((AH.sub(AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))), positiveDistance)), AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN)))), AH.mul(((Number) new BigDecimal("1.225055").setScale(6, RoundingMode.DOWN)), ((Number) new BigInteger("1"))));
+                    return AH.mul(AH.div((AH.sub(AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), new BigDecimal("1.00E+3")), positiveDistance)), AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), new BigDecimal("1.00E+3"))), AH.mul(((Number) new BigDecimal("1.225055").setScale(6, RoundingMode.DOWN)), new BigDecimal("1")));
                   }
                 }
               }.invoke();
@@ -156,7 +156,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
               @Override
               public DVector3C moment(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-                return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+                return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("10")), new BigDecimal("1")), ((Number) new BigInteger("0"))));
               }
 
               @Override
@@ -173,7 +173,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
           return VectorHelper.anyToDVector3C(new _FunctionTypes._return_P0_E0<DVector3C>() {
             public DVector3C invoke() {
-              if (AH.isLess(VectorHelper.internalFromDVector3C(currentEntity.getBody().getLinearVel()).length(), AH.mul(((Number) new BigInteger("300")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))))) {
+              if (AH.isLess(VectorHelper.internalFromDVector3C(currentEntity.getBody().getLinearVel()).length(), AH.mul(((Number) new BigInteger("300")), new BigDecimal("0.01745328627927352441191151881987859")))) {
                 return cached.linearForce(world, scope, currentEntity, time);
               } else {
                 return null;
@@ -186,7 +186,7 @@ public class RocketWorldSystemScope extends SystemScope {
         public DVector3C moment(final World world, final RocketWorldSystemScope scope, final PhysicalEntity currentEntity, final double time) {
           return VectorHelper.anyToDVector3C(new _FunctionTypes._return_P0_E0<DVector3C>() {
             public DVector3C invoke() {
-              if (AH.isLess(VectorHelper.internalFromDVector3C(currentEntity.getBody().getLinearVel()).length(), AH.mul(((Number) new BigInteger("300")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))))) {
+              if (AH.isLess(VectorHelper.internalFromDVector3C(currentEntity.getBody().getLinearVel()).length(), AH.mul(((Number) new BigInteger("300")), new BigDecimal("0.01745328627927352441191151881987859")))) {
                 return cached.moment(world, scope, currentEntity, time);
               } else {
                 return null;
@@ -227,7 +227,7 @@ public class RocketWorldSystemScope extends SystemScope {
         @Override
         public DVector3C linearForce(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
 
-          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(AH.mul(((BigInteger) ((Number) new BigInteger("11"))).negate(), ((Number) new BigInteger("1"))), currentEntity.getMass()), ((Number) new BigInteger("0"))));
+          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(AH.mul(((BigInteger) ((Number) new BigInteger("11"))).negate(), new BigDecimal("1")), currentEntity.getMass()), ((Number) new BigInteger("0"))));
         }
 
         @Override
@@ -262,14 +262,14 @@ public class RocketWorldSystemScope extends SystemScope {
       this.setMass(((Number) new BigDecimal("5.972E+24").setScale(7, RoundingMode.DOWN)));
       this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
-      this.getBody().setAngularVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), AH.div(AH.mul(((Number) new BigInteger("360")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))), (AH.add(AH.add(AH.mul(((Number) new BigInteger("23")), ((Number) new BigInteger("3600"))), AH.mul(((Number) new BigInteger("56")), ((Number) new BigInteger("60")))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1")))))), ((Number) new BigInteger("0")))));
+      this.getBody().setAngularVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), AH.div(AH.mul(((Number) new BigInteger("360")), new BigDecimal("0.01745328627927352441191151881987859")), (AH.add(AH.add(AH.mul(((Number) new BigInteger("23")), new BigDecimal("3600")), AH.mul(((Number) new BigInteger("56")), new BigDecimal("60"))), AH.mul(((Number) new BigInteger("4")), new BigDecimal("1"))))), ((Number) new BigInteger("0")))));
 
       //  Forces and visual of the parent objects of Earth 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), new BigDecimal("1.00E+3")));
       propertiesBuilder.set(PropKey.TEXTURE, new ImageTexture("https://upload.wikimedia.org/wikipedia/commons/4/4d/Whole_world_-_land_and_oceans.jpg"));
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       this.getForces().addAll(Arrays.asList());

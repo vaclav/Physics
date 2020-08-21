@@ -5,6 +5,7 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
+import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
@@ -16,7 +17,7 @@ public class TraceSimSimulation extends Simulation {
   protected TraceTestSystemScope scope;
 
   public TraceSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("80")), ((Number) new BigInteger("1"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))).floatValue());
+    super(AH.mul(((Number) new BigInteger("80")), new BigDecimal("1")).doubleValue(), 1 / AH.mul(((Number) new BigInteger("2")), new BigDecimal("1")).floatValue());
   }
 
   @Override
@@ -37,6 +38,10 @@ public class TraceSimSimulation extends Simulation {
     VectorLike currentEntity = this.scope;
 
     return new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
+  }
+
+  @Override
+  protected void renderMetrics(PGraphics ctx) {
   }
 
   public static void main(String[] args) {

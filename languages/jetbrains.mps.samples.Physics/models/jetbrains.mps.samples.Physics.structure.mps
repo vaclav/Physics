@@ -1252,6 +1252,13 @@
       <property role="20kJfa" value="cameraFocus" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+    <node concept="1TJgyj" id="3L71doTiHrz" role="1TKVEi">
+      <property role="IQ2ns" value="4343445683752851171" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="metrics" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3L71doTiHcb" resolve="DisplayedMetric" />
+    </node>
   </node>
   <node concept="1TIwiD" id="yrUOugQ7DZ">
     <property role="EcuMT" value="620348066298886783" />
@@ -1588,6 +1595,26 @@
       <property role="IQ2ns" value="2805552972616057453" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="linearForce" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3L71doTiHcb">
+    <property role="EcuMT" value="4343445683752850187" />
+    <property role="3GE5qa" value="simulation" />
+    <property role="TrG5h" value="DisplayedMetric" />
+    <property role="R4oN_" value="metric that will be displayed on runtime" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="3L71doTiHdt" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="3L71doTiHmO" role="PzmwI">
+      <ref role="PrY4T" node="5claIBnD44W" resolve="IRuntimeContext" />
+    </node>
+    <node concept="1TJgyj" id="3L71doTiHo9" role="1TKVEi">
+      <property role="IQ2ns" value="4343445683752850953" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>

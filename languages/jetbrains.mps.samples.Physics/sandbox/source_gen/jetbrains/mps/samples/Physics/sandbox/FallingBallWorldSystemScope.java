@@ -10,9 +10,9 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ElasticCollisionReaction;
-import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
@@ -52,16 +52,16 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
       // Set static properties of Ball 
       this.setMass(((Number) new BigInteger("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-90")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-5")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-90")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("-5")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("2")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of Ball 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigDecimal("90.0").setScale(1, RoundingMode.DOWN))));
-      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), null));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("7")), new BigDecimal("1")));
       propertiesBuilder.set(PropKey.TRACE, new Color(255, 0, 0));
       this.getForces().addAll(Arrays.asList(new Force<FallingBallWorldSystemScope>() {
         private Force cached;
@@ -93,7 +93,7 @@ public class FallingBallWorldSystemScope extends SystemScope {
         @Override
         public DVector3C linearForce(World world, FallingBallWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           if (cached == null) {
-            cached = new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0")));
+            cached = new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), new BigDecimal("1"))), ((Number) new BigInteger("0")));
           }
 
           return VectorHelper.anyToDVector3C(cached);
@@ -129,16 +129,16 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
       // Set static properties of Ground 
       this.setMass(((Number) new BigInteger("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("151")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("151")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Ground 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("500")), new BigDecimal("1")));
+      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("2")), new BigDecimal("1")));
+      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("200")), new BigDecimal("1")));
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
       propertiesBuilder.set(PropKey.SHAPE, "box");
       this.getForces().addAll(Arrays.asList());

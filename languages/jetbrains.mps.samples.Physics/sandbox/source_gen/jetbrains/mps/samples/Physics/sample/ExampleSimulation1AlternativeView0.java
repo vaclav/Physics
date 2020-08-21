@@ -27,7 +27,7 @@ public class ExampleSimulation1AlternativeView0 extends ExampleSimulationSimulat
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return new InternalVector(AH.mul(((Number) new BigDecimal("300.e6").setScale(2, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
+    return new InternalVector(AH.mul(((Number) new BigDecimal("300.e6").setScale(2, RoundingMode.DOWN)), new BigDecimal("1.00E+3")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
   }
 
   @Override
@@ -35,6 +35,11 @@ public class ExampleSimulation1AlternativeView0 extends ExampleSimulationSimulat
     VectorLike currentEntity = this.scope;
 
     return scope.Sun;
+  }
+
+  @Override
+  protected void renderMetrics(PGraphics ctx) {
+    super.renderMetrics(ctx);
   }
 
 }

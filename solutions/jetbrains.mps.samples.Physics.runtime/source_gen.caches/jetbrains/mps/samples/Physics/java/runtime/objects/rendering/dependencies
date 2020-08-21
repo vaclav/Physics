@@ -14,7 +14,10 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color">
+    <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture">
     <classNode dependClassName="java.lang.Class" />
@@ -22,7 +25,9 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
     <classNode dependClassName="processing.core.PShape" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture">
@@ -47,10 +52,19 @@
     <classNode dependClassName="processing.core.PShape" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
   </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRendering">
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.StringBuilder" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.RoundingMode" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric" />
+    <classNode dependClassName="processing.core.PApplet" />
+    <classNode dependClassName="processing.core.PGraphics" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric">
     <classNode dependClassName="processing.core.PGraphics" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture">

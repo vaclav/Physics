@@ -5,6 +5,7 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
+import processing.core.PGraphics;
 
 public class TraceSim1AlternativeView0 extends TraceSimSimulation {
 
@@ -18,5 +19,10 @@ public class TraceSim1AlternativeView0 extends TraceSimSimulation {
   }
 
 
+
+  @Override
+  protected void renderMetrics(PGraphics ctx) {
+    super.renderMetrics(ctx);
+  }
 
 }

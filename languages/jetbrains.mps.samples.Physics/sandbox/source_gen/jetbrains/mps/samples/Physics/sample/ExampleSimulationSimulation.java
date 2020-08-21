@@ -6,7 +6,6 @@ import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
@@ -18,7 +17,7 @@ public class ExampleSimulationSimulation extends Simulation {
   protected SolarSystemSystemScope scope;
 
   public ExampleSimulationSimulation() {
-    super(AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("86396"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("1000")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))).floatValue());
+    super(AH.mul(((Number) new BigInteger("10")), new BigDecimal("86396")).doubleValue(), 1 / AH.mul(((Number) new BigInteger("1000")), new BigDecimal("1.00E+3")).floatValue());
   }
 
   @Override
@@ -37,7 +36,7 @@ public class ExampleSimulationSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.EarthNested.Earth.getPosition().add(new InternalVector(AH.mul(((Number) new BigInteger("190000")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).add(scope.EarthNested.Earth.getPosition().minus(scope.Sun.getPosition()).resize(AH.mul(((Number) new BigInteger("744000")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN)))));
+    return scope.EarthNested.Earth.getPosition().add(new InternalVector(AH.mul(((Number) new BigInteger("190000")), new BigDecimal("1.00E+3")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).add(scope.EarthNested.Earth.getPosition().minus(scope.Sun.getPosition()).resize(AH.mul(((Number) new BigInteger("744000")), new BigDecimal("1.00E+3"))));
   }
 
   @Override
@@ -45,6 +44,10 @@ public class ExampleSimulationSimulation extends Simulation {
     VectorLike currentEntity = this.scope;
 
     return scope.EarthNested.Earth;
+  }
+
+  @Override
+  protected void renderMetrics(PGraphics ctx) {
   }
 
   public static void main(String[] args) {

@@ -4,8 +4,9 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.rendering;
 
 import processing.core.PApplet;
 import processing.core.PShape;
+import processing.core.PGraphics;
 
-public class ColorTexture extends Texture {
+public class ColorTexture extends Texture implements RenderableMetric {
   private Color stroke;
   private Color fill;
 
@@ -50,6 +51,21 @@ public class ColorTexture extends Texture {
   }
   public Color getStroke() {
     return this.stroke;
+  }
+  @Override
+  public float render(PGraphics context, float topY, float lineHeight) {
+    if (stroke != null) {
+      context.stroke(stroke.toInt(context));
+    } else {
+      context.noStroke();
+    }
+    if (fill != null) {
+      context.fill(fill.toInt(context));
+    } else {
+      context.noFill();
+    }
+    context.rect(0, topY, lineHeight, lineHeight - 3);
+    return 0;
   }
   private static <T> T as_8d58a4_a0a0a0a8(Object o, Class<T> type) {
     return (type.isInstance(o) ? (T) o : null);

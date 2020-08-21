@@ -20,7 +20,7 @@ public class RealGravityForce {
 
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        cached = GravityForce.get(world, scope, currentEntity, time, AH.mul(AH.mul(((Number) new BigDecimal("6.67430").setScale(5, RoundingMode.DOWN)), BigDecimal.valueOf(Math.pow(((Number) new BigInteger("10")).doubleValue(), ((BigInteger) ((Number) new BigInteger("11"))).negate().doubleValue()))), ((Number) new BigInteger("1"))));
+        cached = GravityForce.get(world, scope, currentEntity, time, AH.mul(AH.mul(((Number) new BigDecimal("6.67430").setScale(5, RoundingMode.DOWN)), BigDecimal.valueOf(Math.pow(((Number) new BigInteger("10")).doubleValue(), ((BigInteger) ((Number) new BigInteger("11"))).negate().doubleValue()))), new BigDecimal("1")));
 
         return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
       }

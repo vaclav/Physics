@@ -5,6 +5,8 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
+import java.math.BigDecimal;
+import processing.core.PGraphics;
 
 public class FallingBall1AlternativeView0 extends FallingBallSimulation {
 
@@ -13,9 +15,14 @@ public class FallingBall1AlternativeView0 extends FallingBallSimulation {
     super.initScope(world);
 
     // Override properties 
-    scope.Ball.setMass(AH.mul(((Number) new BigInteger("35")), ((Number) new BigInteger("1"))));
+    scope.Ball.setMass(AH.mul(((Number) new BigInteger("35")), new BigDecimal("1")));
   }
 
 
+
+  @Override
+  protected void renderMetrics(PGraphics ctx) {
+    super.renderMetrics(ctx);
+  }
 
 }

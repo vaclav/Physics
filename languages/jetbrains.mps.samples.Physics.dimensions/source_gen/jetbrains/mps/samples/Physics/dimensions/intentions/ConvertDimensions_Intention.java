@@ -19,7 +19,7 @@ import jetbrains.mps.internal.collections.runtime.ITranslator2;
 import jetbrains.mps.samples.Physics.dimensions.behavior.IUseSpecificDimensions__BehaviorDescriptor;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.openapi.intentions.ParameterizedIntentionExecutable;
-import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionReference__BehaviorDescriptor;
+import jetbrains.mps.samples.Physics.dimensions.behavior.IUnitReferenceLike__BehaviorDescriptor;
 import java.util.Map;
 import org.nevec.rjm.Rational;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
@@ -76,7 +76,7 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
     }
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
-      return "Add Conversion Value to " + DimensionReference__BehaviorDescriptor.listToString_id270Q2mEWW0n.invoke(SNodeOperations.asSConcept(CONCEPTS.DimensionReference$wa), myParameter);
+      return "Add Conversion Value to " + IUnitReferenceLike__BehaviorDescriptor.listToString_id3L71doTUROP.invoke(SNodeOperations.asSConcept(CONCEPTS.IUnitReferenceLike$XC), myParameter);
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
@@ -139,7 +139,7 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
 
   private static final class CONCEPTS {
     /*package*/ static final SInterfaceConcept IUseSpecificDimensions$IZ = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x21c0d825aae5e565L, "jetbrains.mps.samples.Physics.dimensions.structure.IUseSpecificDimensions");
-    /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
+    /*package*/ static final SInterfaceConcept IUnitReferenceLike$XC = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, "jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike");
     /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
     /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
     /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");

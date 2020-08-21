@@ -10,6 +10,7 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
@@ -48,7 +49,7 @@ public class TorqueSystemScope extends SystemScope {
 
       // Set static properties of Light 
       this.setMass(((Number) new BigInteger("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("60")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("60")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("60")), new BigDecimal("1"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Light 
@@ -82,16 +83,16 @@ public class TorqueSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "box");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
-      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("50")), new BigDecimal("1")));
+      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("30")), new BigDecimal("1")));
+      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("10")), new BigDecimal("1")));
       this.getForces().addAll(Arrays.asList(new Force<TorqueSystemScope>() {
         private VectorLike cached;
 
         @Override
         public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
           if (cached == null) {
-            cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
+            cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("20")), new BigDecimal("1")));
           }
 
           return VectorHelper.anyToDVector3C(cached);
@@ -104,7 +105,7 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+          return VectorHelper.anyToDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("30")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("50")), new BigDecimal("1")), ((Number) new BigInteger("0"))));
         }
 
         @Override
@@ -117,7 +118,7 @@ public class TorqueSystemScope extends SystemScope {
         @Override
         public DVector3C linearForce(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
           if (cached == null) {
-            cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1")))).negate());
+            cached = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((BigInteger) AH.mul(((Number) new BigInteger("20")), new BigDecimal("1"))).negate());
           }
 
           return VectorHelper.anyToDVector3C(cached);
@@ -130,7 +131,7 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C applicationPoint(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(new InternalVector(((BigInteger) AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1")))).negate(), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+          return VectorHelper.anyToDVector3C(new InternalVector(((BigInteger) AH.mul(((Number) new BigInteger("30")), new BigDecimal("1"))).negate(), AH.mul(((Number) new BigInteger("-50")), new BigDecimal("1")), ((Number) new BigInteger("0"))));
         }
 
         @Override

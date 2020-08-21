@@ -56,7 +56,7 @@ public class EarthSystemSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 0, 255), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("6371")), new BigDecimal("1.00E+3")));
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -73,15 +73,15 @@ public class EarthSystemSystemScope extends SystemScope {
 
       // Set static properties of Moon 
       this.setMass(((Number) new BigDecimal("7.35E+22").setScale(6, RoundingMode.DOWN)));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("3.8440000E+8").setScale(10, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("1000.0000000000000000000000000000001100").setScale(34, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigDecimal("3.8440000E+8").setScale(10, RoundingMode.DOWN)), new BigDecimal("1")), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), new BigDecimal("1"))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("1000.0000000000000000000000000000001100").setScale(34, RoundingMode.DOWN)), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of Moon 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigDecimal("1737.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigDecimal("1737.1").setScale(1, RoundingMode.DOWN)), new BigDecimal("1.00E+3")));
       this.getForces().addAll(Arrays.asList());
     }
   }

@@ -56,8 +56,8 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       // Set static properties of A 
       this.setMass(((Number) new BigInteger("300")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-300")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.15").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-300")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.15").setScale(2, RoundingMode.DOWN)), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of A 
       super.init(scope, world);
@@ -65,7 +65,7 @@ public class CollisionWorldSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), null));
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigDecimal("30.0").setScale(1, RoundingMode.DOWN))));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("30")), new BigDecimal("1")));
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -82,8 +82,8 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       // Set static properties of B 
       this.setMass(((Number) new BigInteger("500")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-200")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialPosition())));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialVelocity())));
 
       //  Forces and visual of the parent objects of B 
       super.init(scope, world);
@@ -91,7 +91,7 @@ public class CollisionWorldSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
       propertiesBuilder.set(PropKey.EMIT_LIGHT, true);
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("50")), new BigDecimal("1")));
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -108,14 +108,14 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       // Set static properties of C 
       this.setMass(((Number) new BigInteger("400")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("200")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of C 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("40")), new BigDecimal("1")));
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 0, 255), null));
       propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, true);
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
@@ -135,14 +135,14 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       // Set static properties of D 
       this.setMass(((Number) new BigInteger("200")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-400")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-400")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("0")), new BigDecimal("1"))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of D 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("20")), new BigDecimal("1")));
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.MERGE.reaction);
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 165, 0), null));
       this.getForces().addAll(Arrays.asList());

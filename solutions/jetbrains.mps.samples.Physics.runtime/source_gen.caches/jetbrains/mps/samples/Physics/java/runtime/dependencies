@@ -33,7 +33,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRendering" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer" />
     <classNode dependClassName="processing.core.PApplet" />
     <classNode dependClassName="processing.core.PConstants" />
     <classNode dependClassName="processing.core.PGraphics" />

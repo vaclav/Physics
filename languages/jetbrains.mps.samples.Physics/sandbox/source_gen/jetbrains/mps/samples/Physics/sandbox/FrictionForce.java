@@ -12,6 +12,7 @@ import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import java.math.BigInteger;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import java.math.BigDecimal;
 
 public class FrictionForce {
   public static Force get(World world, SystemScope scope, PhysicalEntity currentEntity, double time, final Number ratio) {
@@ -23,7 +24,7 @@ public class FrictionForce {
           @Override
           public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
 
-            return VectorHelper.anyToDVector3C(currentEntity.getVelocity().mul(-1).minus(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
+            return VectorHelper.anyToDVector3C(currentEntity.getVelocity().mul(-1).minus(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), AH.mul(((Number) new BigInteger("1")), new BigDecimal("1")))));
           }
 
           @Override
