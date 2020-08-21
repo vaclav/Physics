@@ -35,20 +35,20 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SimpleConceptSubstituteMenuPart(CONCEPTS.BounceCollisionReaction$lY) {
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SimpleConceptSubstituteMenuPart(CONCEPTS.ElasticCollisionReaction$lY) {
 
       @NotNull
       @Override
       public List<SubstituteMenuItem> createItems(SubstituteMenuContext context) {
         context.getEditorMenuTrace().pushTraceInfo();
-        context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("simple substitute menu part for concept: " + "BounceCollisionReaction", new SNodePointer("r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)", "6576997179998205909")));
+        context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("simple substitute menu part for concept: " + "ElasticCollisionReaction", new SNodePointer("r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)", "6576997179998205909")));
         try {
           return super.createItems(context);
         } finally {
           context.getEditorMenuTrace().popTraceInfo();
         }
       }
-    }, CONCEPTS.BounceCollisionReaction$lY));
+    }, CONCEPTS.ElasticCollisionReaction$lY));
     result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_4hk85u_b(), CONCEPTS.CollisionReactionExpression$mt));
     return result;
   }
@@ -166,7 +166,7 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept BounceCollisionReaction$lY = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, "jetbrains.mps.samples.Physics.structure.BounceCollisionReaction");
+    /*package*/ static final SConcept ElasticCollisionReaction$lY = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, "jetbrains.mps.samples.Physics.structure.ElasticCollisionReaction");
     /*package*/ static final SConcept CollisionReactionExpression$mt = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbffL, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression");
   }
 

@@ -18,7 +18,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AbstractVectorTarget;
   private ConceptPresentation props_AllObjectsExpression;
   private ConceptPresentation props_BooleanStyleKey;
-  private ConceptPresentation props_BounceCollisionReaction;
   private ConceptPresentation props_BoxDepthStyle;
   private ConceptPresentation props_BoxHeightStyle;
   private ConceptPresentation props_BoxWidthStyle;
@@ -39,6 +38,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DirectionalCoordinates;
   private ConceptPresentation props_DisabledTraceExpression;
   private ConceptPresentation props_DynamicForce;
+  private ConceptPresentation props_ElasticCollisionReaction;
   private ConceptPresentation props_EmitLightStyleKey;
   private ConceptPresentation props_EulerAnglesRotationExpression;
   private ConceptPresentation props_EulerAxisRotationExpression;
@@ -182,13 +182,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BooleanStyleKey = cpb.create();
         }
         return props_BooleanStyleKey;
-      case LanguageConceptSwitch.BounceCollisionReaction:
-        if (props_BounceCollisionReaction == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("bounce");
-          props_BounceCollisionReaction = cpb.create();
-        }
-        return props_BounceCollisionReaction;
       case LanguageConceptSwitch.BoxDepthStyle:
         if (props_BoxDepthStyle == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -335,6 +328,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DynamicForce = cpb.create();
         }
         return props_DynamicForce;
+      case LanguageConceptSwitch.ElasticCollisionReaction:
+        if (props_ElasticCollisionReaction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("elastic reaction");
+          props_ElasticCollisionReaction = cpb.create();
+        }
+        return props_ElasticCollisionReaction;
       case LanguageConceptSwitch.EmitLightStyleKey:
         if (props_EmitLightStyleKey == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

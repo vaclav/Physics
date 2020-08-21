@@ -236,6 +236,7 @@
       <node id="5369611234117061250" at="202,27,203,21" concept="7" />
       <node id="6350314785813399470" at="205,51,206,34" concept="7" />
       <node id="6576997179996127872" at="209,48,210,27" concept="7" />
+      <node id="632920307788494243" at="212,36,213,21" concept="1" />
       <node id="6128132931194074912" at="65,0,68,0" concept="5" trace="isDisabled#()Z" />
       <node id="7400250159182425013" at="69,40,72,5" concept="4" />
       <node id="2805552972619319524" at="79,0,82,7" concept="4" />
@@ -257,6 +258,7 @@
       <node id="5369611234117061246" at="202,0,205,0" concept="5" trace="getName#()Ljava/lang/String;" />
       <node id="6350314785813399466" at="205,0,208,0" concept="5" trace="getPropertiesBuilder#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/builder/PropertiesBuilder;" />
       <node id="6576997179996127868" at="209,0,212,0" concept="5" trace="properties#()Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntityProperties;" />
+      <node id="632920307788494239" at="212,0,215,0" concept="5" trace="setName#(Ljava/lang/String;)V" />
       <node id="8659481891657941118" at="87,0,91,7" concept="4" />
       <node id="362892448127813974" at="100,0,104,5" concept="4" />
       <node id="913483291038064907" at="107,0,111,0" concept="5" trace="setup#(Lprocessing/core/PApplet;F)V" />
@@ -296,6 +298,7 @@
       <scope id="5369611234117061249" at="202,27,203,21" />
       <scope id="6350314785813399469" at="205,51,206,34" />
       <scope id="6576997179996127871" at="209,48,210,27" />
+      <scope id="632920307788494242" at="212,36,213,21" />
       <scope id="8659481891657941120" at="88,37,90,53" />
       <scope id="362892448127813976" at="101,32,103,207">
         <var name="position" id="362892448127848665" />
@@ -327,6 +330,9 @@
       <scope id="5369611234117061246" at="202,0,205,0" />
       <scope id="6350314785813399466" at="205,0,208,0" />
       <scope id="6576997179996127868" at="209,0,212,0" />
+      <scope id="632920307788494239" at="212,0,215,0">
+        <var name="name" id="632920307788494246" />
+      </scope>
       <scope id="913483291038064907" at="107,0,111,0">
         <var name="app" id="913483291038064911" />
         <var name="scale" id="913483291038106574" />
@@ -372,7 +378,7 @@
       <scope id="4271426636304009453" at="69,0,96,0">
         <var name="time" id="6779037360575900938" />
       </scope>
-      <unit id="4271426636304009395" at="25,0,213,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+      <unit id="4271426636304009395" at="25,0,216,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     </file>
   </root>
   <root nodeRef="r:c76e7683-d7ce-4cb6-a6ee-fcd11243f980(jetbrains.mps.samples.Physics.java.runtime.objects)/5352272594420166441">

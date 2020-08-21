@@ -12,44 +12,76 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
     <file name="ActionAspectDescriptorImpl.java">
-      <unit at="12,0,40,0" name="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
+      <unit at="12,0,42,0" name="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
     </file>
   </root>
   <root nodeRef="r:440f32ad-f2cc-41e6-bc89-c1c2af2bc770(jetbrains.mps.samples.Physics.actions)/1159415042434515255">
     <file name="MiscellaneousFactories.java">
-      <node id="7471572540824262546" at="17,91,18,108" concept="1" />
-      <node id="7471572540824267947" at="20,64,21,65" concept="4" />
-      <node id="7471572540824267947" at="21,65,22,32" concept="4" />
-      <node id="7471572540824267947" at="22,32,23,32" concept="4" />
-      <node id="7471572540824267947" at="23,32,24,32" concept="4" />
-      <node id="7471572540824267947" at="24,32,25,255" concept="1" />
-      <node id="7471572540824267947" at="25,255,26,245" concept="1" />
-      <node id="7471572540824267947" at="26,245,27,161" concept="1" />
-      <node id="7471572540824267947" at="27,161,28,176" concept="1" />
-      <node id="7471572540824267947" at="28,176,29,254" concept="1" />
-      <node id="7471572540824267947" at="29,254,30,475" concept="1" />
-      <node id="7471572540824267947" at="30,475,31,174" concept="1" />
-      <node id="7471572540824267947" at="31,174,32,26" concept="5" />
-      <node id="1159415042434515255" at="37,0,38,0" concept="8" trace="simulationSpeed$m7cv" />
-      <node id="7471572540824262513" at="17,0,20,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
-      <node id="7471572540824267947" at="20,0,34,0" concept="9" trace="_quotation_createNode_fpwm7x_a0a0a0#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <scope id="7471572540824262513" at="17,91,18,108" />
-      <scope id="7471572540824262513" at="17,0,20,0">
+      <node id="7471572540824262546" at="20,91,21,108" concept="1" />
+      <node id="7471572540824267947" at="23,64,24,65" concept="4" />
+      <node id="7471572540824267947" at="24,65,25,32" concept="4" />
+      <node id="7471572540824267947" at="25,32,26,32" concept="4" />
+      <node id="7471572540824267947" at="26,32,27,32" concept="4" />
+      <node id="7471572540824267947" at="27,32,28,255" concept="1" />
+      <node id="7471572540824267947" at="28,255,29,245" concept="1" />
+      <node id="7471572540824267947" at="29,245,30,161" concept="1" />
+      <node id="7471572540824267947" at="30,161,31,176" concept="1" />
+      <node id="7471572540824267947" at="31,176,32,254" concept="1" />
+      <node id="7471572540824267947" at="32,254,33,475" concept="1" />
+      <node id="7471572540824267947" at="33,475,34,174" concept="1" />
+      <node id="7471572540824267947" at="34,174,35,26" concept="5" />
+      <node id="632920307791887951" at="39,91,40,109" concept="1" />
+      <node id="632920307791893862" at="41,7,42,41" concept="4" />
+      <node id="632920307791894331" at="43,90,44,169" concept="1" />
+      <node id="632920307791891805" at="48,62,49,75" concept="4" />
+      <node id="632920307791891805" at="49,75,50,46" concept="1" />
+      <node id="632920307791891805" at="50,46,51,28" concept="5" />
+      <node id="1159415042434515255" at="56,0,57,0" concept="8" trace="simulationSpeed$m7cv" />
+      <node id="1159415042434515255" at="57,0,58,0" concept="8" trace="restitutionPercent$1OL1" />
+      <node id="1159415042434515255" at="61,0,62,0" concept="8" trace="ElasticCollisionReaction$lY" />
+      <node id="1159415042434515255" at="62,0,63,0" concept="8" trace="NumberLiteral$yW" />
+      <node id="1159415042434515255" at="66,0,67,0" concept="8" trace="value$nZyY" />
+      <node id="7471572540824262513" at="20,0,23,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <node id="632920307791893862" at="42,41,45,9" concept="2" />
+      <node id="632920307791891805" at="48,0,53,0" concept="9" trace="createNumberLiteral_fpwm7x_a0a0a1#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="632920307791893862" at="40,109,46,7" concept="0" />
+      <node id="632920307791887924" at="39,0,48,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <node id="7471572540824267947" at="23,0,37,0" concept="9" trace="_quotation_createNode_fpwm7x_a0a0a0#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <scope id="7471572540824262513" at="20,91,21,108" />
+      <scope id="632920307791893876" at="43,90,44,169" />
+      <scope id="7471572540824262513" at="20,0,23,0">
         <var name="enclosingNode" id="7471572540824262513" />
         <var name="model" id="7471572540824262513" />
         <var name="newNode" id="7471572540824262513" />
         <var name="sampleNode" id="7471572540824262513" />
       </scope>
-      <scope id="7471572540824267947" at="20,64,32,26">
+      <scope id="632920307791891805" at="48,62,51,28">
+        <var name="n0" id="632920307791891805" />
+      </scope>
+      <scope id="632920307791893862" at="41,7,45,9">
+        <var name="elastic" id="632920307791893862" />
+      </scope>
+      <scope id="632920307791891805" at="48,0,53,0" />
+      <scope id="632920307791887924" at="39,91,46,7" />
+      <scope id="632920307791887924" at="39,0,48,0">
+        <var name="enclosingNode" id="632920307791887924" />
+        <var name="model" id="632920307791887924" />
+        <var name="newNode" id="632920307791887924" />
+        <var name="sampleNode" id="632920307791887924" />
+      </scope>
+      <scope id="7471572540824267947" at="23,64,35,26">
         <var name="facade" id="7471572540824267947" />
         <var name="quotedNode_1" id="7471572540824267947" />
         <var name="quotedNode_2" id="7471572540824267947" />
         <var name="quotedNode_3" id="7471572540824267947" />
       </scope>
-      <scope id="7471572540824267947" at="20,0,34,0" />
-      <unit id="1159415042434515255" at="36,0,39,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$LINKS" />
-      <unit id="7471572540824262513" at="16,0,35,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$NodeFactory_7471572540824262513" />
-      <unit id="1159415042434515255" at="15,0,40,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories" />
+      <scope id="7471572540824267947" at="23,0,37,0" />
+      <unit id="1159415042434515255" at="65,0,68,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$PROPS" />
+      <unit id="1159415042434515255" at="55,0,59,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$LINKS" />
+      <unit id="1159415042434515255" at="60,0,64,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$CONCEPTS" />
+      <unit id="632920307791887924" at="38,0,54,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$NodeFactory_632920307791887924" />
+      <unit id="7471572540824262513" at="19,0,38,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories$NodeFactory_7471572540824262513" />
+      <unit id="1159415042434515255" at="18,0,69,0" name="jetbrains.mps.samples.Physics.actions.MiscellaneousFactories" />
     </file>
   </root>
   <root nodeRef="r:440f32ad-f2cc-41e6-bc89-c1c2af2bc770(jetbrains.mps.samples.Physics.actions)/4809107873070310008">

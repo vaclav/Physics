@@ -11,7 +11,7 @@ import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ElasticCollisionReaction;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
@@ -59,7 +59,7 @@ public class FallingBallWorldSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigDecimal("0.9").setScale(1, RoundingMode.DOWN))));
+      propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigDecimal("90.0").setScale(1, RoundingMode.DOWN))));
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
       propertiesBuilder.set(PropKey.TRACE, new Color(255, 0, 0));

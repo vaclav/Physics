@@ -1459,13 +1459,13 @@
   <node concept="1TIwiD" id="5H6c1qUxXJY">
     <property role="EcuMT" value="6576997179998067710" />
     <property role="3GE5qa" value="styles.collision" />
-    <property role="TrG5h" value="BounceCollisionReaction" />
-    <property role="34LRSv" value="bounce" />
+    <property role="TrG5h" value="ElasticCollisionReaction" />
+    <property role="34LRSv" value="elastic reaction" />
     <ref role="1TJDcQ" node="5H6c1qUxXJZ" resolve="CollisionReactionExpression" />
     <node concept="1TJgyj" id="5H6c1qUxXN_" role="1TKVEi">
       <property role="IQ2ns" value="6576997179998067941" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="bounceFactor" />
+      <property role="20kJfa" value="restitutionPercent" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>

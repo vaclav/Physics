@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction">
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction">
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="org.ode4j.ode.DGeom" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ElasticCollisionReaction">
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Object" />
@@ -14,11 +19,6 @@
     <classNode dependClassName="org.ode4j.ode.OdeConstants" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
-  </dependency>
-  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction">
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
-    <classNode dependClassName="org.ode4j.ode.DGeom" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force">
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.ForceMode" />

@@ -153,7 +153,7 @@
       </concept>
     </language>
     <language id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions">
-      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent" flags="ng" index="CIsvk">
+      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent" flags="ng" index="CIsvk">
         <property id="190196155049109992" name="value" index="LYPYd" />
       </concept>
       <concept id="3181138428204837756" name="jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference" flags="ng" index="3AmWvR" />
@@ -4031,21 +4031,21 @@
                       </node>
                     </node>
                     <node concept="3cmrfG" id="5H6c1qUy4X0" role="3uHU7w">
-                      <property role="3cmrfH" value="1" />
+                      <property role="3cmrfH" value="100" />
                     </node>
                   </node>
                 </node>
                 <node concept="3clFbS" id="5H6c1qUy0e2" role="3clFbx">
                   <node concept="2MkqsV" id="5H6c1qUy5iz" role="3cqZAp">
                     <node concept="Xl_RD" id="5H6c1qUy5ls" role="2MkJ7o">
-                      <property role="Xl_RC" value="bounce ratio should be between 0 and 1" />
+                      <property role="Xl_RC" value="restitution coefficient should be between 0 and 100 %" />
                     </node>
                     <node concept="2OqwBi" id="5H6c1qUy67b" role="1urrMF">
                       <node concept="1YBJjd" id="5H6c1qUy5UM" role="2Oq$k0">
                         <ref role="1YBMHb" node="5H6c1qUy5m4" resolve="bounceCollisionReaction" />
                       </node>
                       <node concept="3TrEf2" id="5H6c1qUy6vN" role="2OqNvi">
-                        <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="bounceFactor" />
+                        <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="restitutionPercent" />
                       </node>
                     </node>
                   </node>
@@ -4064,7 +4064,7 @@
               <ref role="1YBMHb" node="5H6c1qUy5m4" resolve="bounceCollisionReaction" />
             </node>
             <node concept="3TrEf2" id="5H6c1qUy04O" role="2OqNvi">
-              <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="bounceFactor" />
+              <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="restitutionPercent" />
             </node>
           </node>
         </node>
@@ -4076,7 +4076,7 @@
     </node>
     <node concept="1YaCAy" id="5H6c1qUy5m4" role="1YuTPh">
       <property role="TrG5h" value="bounceCollisionReaction" />
-      <ref role="1YaFvo" to="9tcj:5H6c1qUxXJY" resolve="BounceCollisionReaction" />
+      <ref role="1YaFvo" to="9tcj:5H6c1qUxXJY" resolve="ElasticCollisionReaction" />
     </node>
   </node>
   <node concept="1YbPZF" id="MHm3qvb7YR">

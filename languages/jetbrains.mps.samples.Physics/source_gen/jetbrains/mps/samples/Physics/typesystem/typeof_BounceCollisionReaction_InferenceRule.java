@@ -27,7 +27,7 @@ public class typeof_BounceCollisionReaction_InferenceRule extends AbstractInfere
   }
   public void applyRule(final SNode bounceCollisionReaction, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode factorType = typeCheckingContext.typeOf(SLinkOperations.getTarget(bounceCollisionReaction, LINKS.bounceFactor$1OL1), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179998077366", true);
+      final SNode factorType = typeCheckingContext.typeOf(SLinkOperations.getTarget(bounceCollisionReaction, LINKS.restitutionPercent$1OL1), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179998077366", true);
       typeCheckingContext.whenConcrete(factorType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
@@ -42,10 +42,10 @@ public class typeof_BounceCollisionReaction_InferenceRule extends AbstractInfere
             final SNode number = typeCheckingContext.getExpandedNode(factorType);
             if (SNodeOperations.isInstanceOf(number, CONCEPTS.NumberType$2D)) {
               Tuples._2<Double, Double> range = NumberType__BehaviorDescriptor.doubleRange_id3p6$WoEzKI5.invoke(number);
-              if ((double) range._0() < 0 || (double) range._1() > 1) {
+              if ((double) range._0() < 0 || (double) range._1() > 100) {
                 {
                   final MessageTarget errorTarget = new NodeMessageTarget();
-                  IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(bounceCollisionReaction, LINKS.bounceFactor$1OL1), "bounce ratio should be between 0 and 1", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179998098595", null, errorTarget);
+                  IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(bounceCollisionReaction, LINKS.restitutionPercent$1OL1), "restitution coefficient should be between 0 and 100 %", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179998098595", null, errorTarget);
                 }
               }
             }
@@ -55,7 +55,7 @@ public class typeof_BounceCollisionReaction_InferenceRule extends AbstractInfere
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.BounceCollisionReaction$lY;
+    return CONCEPTS.ElasticCollisionReaction$lY;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -71,11 +71,11 @@ public class typeof_BounceCollisionReaction_InferenceRule extends AbstractInfere
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink bounceFactor$1OL1 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, 0x5b463016ba87dce5L, "bounceFactor");
+    /*package*/ static final SContainmentLink restitutionPercent$1OL1 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, 0x5b463016ba87dce5L, "restitutionPercent");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept NumberType$2D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
-    /*package*/ static final SConcept BounceCollisionReaction$lY = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, "jetbrains.mps.samples.Physics.structure.BounceCollisionReaction");
+    /*package*/ static final SConcept ElasticCollisionReaction$lY = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, "jetbrains.mps.samples.Physics.structure.ElasticCollisionReaction");
   }
 }

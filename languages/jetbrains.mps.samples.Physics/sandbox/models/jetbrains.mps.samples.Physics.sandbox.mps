@@ -68,7 +68,7 @@
       </concept>
     </language>
     <language id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions">
-      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent" flags="ng" index="CIsvk">
+      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent" flags="ng" index="CIsvk">
         <property id="190196155049109992" name="value" index="LYPYd" />
       </concept>
       <concept id="8337440621611273669" name="jetbrains.mps.samples.Physics.dimensions.structure.UnitReference" flags="ng" index="CIsvn" />
@@ -222,8 +222,8 @@
       </concept>
       <concept id="5352272594417168254" name="jetbrains.mps.samples.Physics.structure.ObjectVelocityTarget" flags="ng" index="1x33zJ" />
       <concept id="6576997179995760305" name="jetbrains.mps.samples.Physics.structure.PauseOnCollisionStyleKey" flags="ng" index="3x8DqB" />
-      <concept id="6576997179998067710" name="jetbrains.mps.samples.Physics.structure.BounceCollisionReaction" flags="ng" index="3xKuJC">
-        <child id="6576997179998067941" name="bounceFactor" index="3xKuNN" />
+      <concept id="6576997179998067710" name="jetbrains.mps.samples.Physics.structure.ElasticCollisionReaction" flags="ng" index="3xKuJC">
+        <child id="6576997179998067941" name="restitutionPercent" index="3xKuNN" />
       </concept>
       <concept id="7887120293590353009" name="jetbrains.mps.samples.Physics.structure.DirectionalCoordinates" flags="ng" index="3_jIDJ">
         <child id="4528665904957763510" name="source" index="2PHM8j" />
@@ -2012,7 +2012,7 @@
         <node concept="1nHl2y" id="6qMY4Z3b38L" role="39QuZq" />
         <node concept="3xKuJC" id="7dIb8AZ2EzM" role="39QuWR">
           <node concept="30bXRB" id="7dIb8AZ2EzN" role="3xKuNN">
-            <property role="30bXRw" value="0.3" />
+            <property role="30bXRw" value="30.0" />
           </node>
         </node>
       </node>
@@ -2491,7 +2491,7 @@
         <node concept="1nHl2y" id="4E4GfvfzvCT" role="39QuZq" />
         <node concept="3xKuJC" id="7dIb8AZbtcn" role="39QuWR">
           <node concept="30bXRB" id="azHAkO1w6h" role="3xKuNN">
-            <property role="30bXRw" value="0.9" />
+            <property role="30bXRw" value="90.0" />
           </node>
         </node>
       </node>

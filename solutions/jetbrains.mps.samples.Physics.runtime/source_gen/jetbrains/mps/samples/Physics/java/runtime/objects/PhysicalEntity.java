@@ -209,4 +209,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   public PhysicalEntityProperties properties() {
     return this.properties;
   }
+  public void setName(String name) {
+    this.name = name;
+  }
 }

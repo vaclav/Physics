@@ -2592,7 +2592,7 @@
       </scope>
     </file>
     <file name="typeof_BounceCollisionReaction_InferenceRule.java">
-      <node id="6576997179998077304" at="29,5,30,248" concept="5" />
+      <node id="6576997179998077304" at="29,5,30,254" concept="5" />
       <node id="6576997179998105286" at="34,13,35,73" concept="5" />
       <node id="6576997179998105286" at="35,73,36,214" concept="5" />
       <node id="6576997179998105286" at="36,214,37,209" concept="2" />
@@ -2600,22 +2600,22 @@
       <node id="6576997179998077750" at="41,11,42,81" concept="5" />
       <node id="6576997179998085992" at="43,79,44,120" concept="5" />
       <node id="6576997179998098595" at="46,17,47,76" concept="5" />
-      <node id="6576997179998098595" at="47,76,48,337" concept="5" />
-      <node id="6576997179998098817" at="57,50,58,47" concept="6" />
+      <node id="6576997179998098595" at="47,76,48,358" concept="5" />
+      <node id="6576997179998098817" at="57,50,58,48" concept="6" />
       <node id="6576997179998098817" at="60,68,61,102" concept="6" />
       <node id="6576997179998098817" at="63,30,64,17" concept="6" />
       <node id="6576997179998105483" at="66,77,67,63" concept="5" />
       <node id="6576997179998105483" at="67,63,68,30" concept="5" />
       <node id="6576997179998105483" at="68,30,69,238" concept="2" />
       <node id="6576997179998105483" at="69,238,70,24" concept="6" />
-      <node id="6576997179998098817" at="74,0,75,0" concept="9" trace="bounceFactor$1OL1" />
+      <node id="6576997179998098817" at="74,0,75,0" concept="9" trace="restitutionPercent$1OL1" />
       <node id="6576997179998098817" at="78,0,79,0" concept="9" trace="NumberType$2D" />
-      <node id="6576997179998098817" at="79,0,80,0" concept="9" trace="BounceCollisionReaction$lY" />
+      <node id="6576997179998098817" at="79,0,80,0" concept="9" trace="ElasticCollisionReaction$lY" />
       <node id="6576997179998098817" at="26,0,28,0" concept="1" trace="typeof_BounceCollisionReaction_InferenceRule#()V" />
       <node id="6576997179998098817" at="57,0,60,0" concept="4" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
       <node id="6576997179998098817" at="60,0,63,0" concept="4" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
       <node id="6576997179998098817" at="63,0,66,0" concept="4" trace="overrides#()Z" />
-      <node id="6576997179998098595" at="45,71,49,17" concept="0" />
+      <node id="6576997179998098595" at="45,73,49,17" concept="0" />
       <node id="6576997179998105286" at="33,65,38,13" concept="0" />
       <node id="6576997179998077824" at="44,120,50,15" concept="3" />
       <node id="6576997179998105483" at="66,0,72,0" concept="10" trace="_quotation_createNode_74vvu5_a1a0c0a0a0a0a1a0b0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
@@ -2623,15 +2623,15 @@
       <node id="6576997179998077750" at="42,81,51,13" concept="3" />
       <node id="6576997179998077750" at="40,0,52,11" concept="0" />
       <node id="6576997179998077304" at="32,0,54,0" concept="4" trace="run#()V" />
-      <node id="6576997179998077304" at="30,248,54,130" concept="2" />
+      <node id="6576997179998077304" at="30,254,54,130" concept="2" />
       <node id="6576997179998077304" at="28,136,55,5" concept="0" />
       <node id="6576997179998098817" at="28,0,57,0" concept="4" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
       <scope id="6576997179998098817" at="26,57,26,57" />
-      <scope id="6576997179998098817" at="57,50,58,47" />
+      <scope id="6576997179998098817" at="57,50,58,48" />
       <scope id="6576997179998098817" at="60,68,61,102" />
       <scope id="6576997179998098817" at="63,30,64,17" />
       <scope id="6576997179998098817" at="26,0,28,0" />
-      <scope id="6576997179998098595" at="46,17,48,337">
+      <scope id="6576997179998098595" at="46,17,48,358">
         <var name="_reporter_2309309498" id="6576997179998098595" />
         <var name="errorTarget" id="6576997179998098595" />
       </scope>
@@ -2644,7 +2644,7 @@
         <var name="argument" id="6576997179998098817" />
       </scope>
       <scope id="6576997179998098817" at="63,0,66,0" />
-      <scope id="6576997179998077826" at="45,71,49,17" />
+      <scope id="6576997179998077826" at="45,73,49,17" />
       <scope id="6576997179998105483" at="66,77,70,24">
         <var name="facade" id="6576997179998105483" />
         <var name="quotedNode_1" id="6576997179998105483" />

@@ -13,7 +13,8 @@ import org.nevec.rjm.BigDecimalMath;
 import java.math.MathContext;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction;
+import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ElasticCollisionReaction;
+import java.math.RoundingMode;
 import java.util.Arrays;
 
 public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends PhysicalEntity<T> {
@@ -38,7 +39,7 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
     propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(BigDecimal.valueOf(Math.pow(AH.mul(AH.div(((Number) new BigInteger("3")), AH.mul(((Number) new BigInteger("4")), BigDecimalMath.pi(MathContext.DECIMAL32))), currentEntity.getMass()).doubleValue(), 1 / new BigDecimal("3").doubleValue())), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
     propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), new Color(0, 0, 0)));
     propertiesBuilder.set(PropKey.EMIT_LIGHT, false);
-    propertiesBuilder.set(PropKey.COLLISION_REACT, new BounceCollisionReaction(((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigDecimal("100.0").setScale(1, RoundingMode.DOWN))));
     propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, false);
     propertiesBuilder.set(PropKey.TRACE, null);
 

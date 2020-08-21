@@ -11,13 +11,13 @@ import org.ode4j.ode.DContact;
 import org.ode4j.ode.OdeConstants;
 import org.ode4j.ode.DContactJoint;
 
-public class BounceCollisionReaction implements CollisionReaction {
-  public static final BounceCollisionReaction DEFAULT = new BounceCollisionReaction(1.0);
+public class ElasticCollisionReaction implements CollisionReaction {
+  public static final ElasticCollisionReaction DEFAULT = new ElasticCollisionReaction(1.0);
 
   private double bounceRatio;
 
-  public BounceCollisionReaction(Number bounceRatio) {
-    this.bounceRatio = bounceRatio.doubleValue();
+  public ElasticCollisionReaction(Number bouncePercent) {
+    this.bounceRatio = bouncePercent.doubleValue() / 100;
   }
 
   @Override
@@ -29,9 +29,10 @@ public class BounceCollisionReaction implements CollisionReaction {
       for (int i = 0; i < n; i++) {
         // Init contact 
         final DContact contact = contacts.get(i);
-        contact.surface.mode |= OdeConstants.dContactBounce;
-        // TODO from property 
-        contact.surface.bounce = bounceRatio;
+        if (bounceRatio > 0) {
+          contact.surface.mode |= OdeConstants.dContactBounce;
+          contact.surface.bounce = bounceRatio;
+        }
 
         // Attach to bodies 
         DContactJoint joint = OdeHelper.createContactJoint(world.getWorld(), world.getJointGroup(), contact);
@@ -76,7 +77,7 @@ public class BounceCollisionReaction implements CollisionReaction {
       return false;
     }
 
-    BounceCollisionReaction that = (BounceCollisionReaction) o;
+    ElasticCollisionReaction that = (ElasticCollisionReaction) o;
     if (Double.compare(that.bounceRatio, bounceRatio) != 0) {
       return false;
     }

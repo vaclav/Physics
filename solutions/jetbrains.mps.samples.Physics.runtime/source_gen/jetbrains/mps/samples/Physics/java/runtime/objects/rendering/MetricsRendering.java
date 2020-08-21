@@ -20,9 +20,11 @@ public class MetricsRendering {
     str.append("\n\n");
 
     for (PhysicalEntity entity : world.getEntities()) {
-      str.append(entity.getName());
-      str.append(entity.getPosition().toString());
-      str.append("\n");
+      if (!(entity.isDisabled())) {
+        str.append(entity.getName());
+        str.append(entity.getPosition().toString());
+        str.append("\n");
+      }
     }
 
     ctx.fill(255);

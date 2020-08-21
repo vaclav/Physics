@@ -22,6 +22,7 @@ public abstract class Fixture implements Renderable {
   protected World world;
 
   private PApplet appletCache;
+  private float scaleCache;
 
   public Fixture(World world, Texture texture) {
     this.world = world;
@@ -29,7 +30,11 @@ public abstract class Fixture implements Renderable {
   }
 
   public void setup(PApplet app, float scale) {
-    this.appletCache = app;
+    if (appletCache == null) {
+      this.appletCache = app;
+      this.scaleCache = scale;
+    }
+
     texture.setup(app, shape, emitLight);
   }
 
@@ -75,18 +80,22 @@ public abstract class Fixture implements Renderable {
     geometry.destroy();
 
     // Set volume to the sum of both 
-    this.setVolume(getVolume() + fixture.getVolume());
+    double volume = getVolume() + fixture.getVolume();
+    this.setVolume(volume);
 
+    // Choose resulting texture 
     double thisRatio = thisMass / (otherMass + thisMass);
     double otherRatio = 1 - thisRatio;
-    Texture resultingTexture = texture.mergeWith(fixture.getTexture(), (float) thisRatio);
-    resultingTexture.setup(appletCache, this.shape, this.emitLight);
+    this.texture = texture.mergeWith(fixture.getTexture(), (float) thisRatio);
+
+    //  Setup again (to apply volume and texture) 
+    this.setup(appletCache, scaleCache);
 
     DVector3C thisVel = body.getLinearVel();
     DVector3C otherVel = otherBody.getLinearVel();
     body.setLinearVel(new DVector3(thisVel.get0() * thisRatio + otherVel.get0() * otherRatio, thisVel.get1() * thisRatio + otherVel.get1() * otherRatio, thisVel.get2() * thisRatio + otherVel.get2() * otherRatio));
 
-    // TODO merge angular velocity 
+    // TODO merge angular velocity? 
 
     // Rebuild geometry and apply to body 
     this.bindToBody(body, thisMass + otherMass);

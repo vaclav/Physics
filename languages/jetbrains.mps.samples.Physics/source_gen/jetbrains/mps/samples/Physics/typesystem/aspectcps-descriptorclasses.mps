@@ -12463,7 +12463,7 @@
                         </node>
                       </node>
                       <node concept="3TrEf2" id="16y" role="2OqNvi">
-                        <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="bounceFactor" />
+                        <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="restitutionPercent" />
                         <node concept="cd27G" id="16A" role="lGtFl">
                           <node concept="3u3nmq" id="16B" role="cd27D">
                             <property role="3u3nmv" value="6576997179998077236" />
@@ -12837,7 +12837,7 @@
                                         </node>
                                       </node>
                                       <node concept="3cmrfG" id="18S" role="3uHU7w">
-                                        <property role="3cmrfH" value="1" />
+                                        <property role="3cmrfH" value="100" />
                                         <node concept="cd27G" id="192" role="lGtFl">
                                           <node concept="3u3nmq" id="193" role="cd27D">
                                             <property role="3u3nmv" value="6576997179998097216" />
@@ -12898,7 +12898,7 @@
                                                     </node>
                                                   </node>
                                                   <node concept="3TrEf2" id="19u" role="2OqNvi">
-                                                    <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="bounceFactor" />
+                                                    <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="restitutionPercent" />
                                                     <node concept="cd27G" id="19y" role="lGtFl">
                                                       <node concept="3u3nmq" id="19z" role="cd27D">
                                                         <property role="3u3nmv" value="6576997179998103539" />
@@ -12912,7 +12912,7 @@
                                                   </node>
                                                 </node>
                                                 <node concept="Xl_RD" id="19o" role="37wK5m">
-                                                  <property role="Xl_RC" value="bounce ratio should be between 0 and 1" />
+                                                  <property role="Xl_RC" value="restitution coefficient should be between 0 and 100 %" />
                                                   <node concept="cd27G" id="19_" role="lGtFl">
                                                     <node concept="3u3nmq" id="19A" role="cd27D">
                                                       <property role="3u3nmv" value="6576997179998098780" />
@@ -13047,7 +13047,7 @@
       <node concept="3clFbS" id="19S" role="3clF47">
         <node concept="3cpWs6" id="19X" role="3cqZAp">
           <node concept="35c_gC" id="19Z" role="3cqZAk">
-            <ref role="35c_gD" to="9tcj:5H6c1qUxXJY" resolve="BounceCollisionReaction" />
+            <ref role="35c_gD" to="9tcj:5H6c1qUxXJY" resolve="ElasticCollisionReaction" />
             <node concept="cd27G" id="1a1" role="lGtFl">
               <node concept="3u3nmq" id="1a2" role="cd27D">
                 <property role="3u3nmv" value="6576997179998098817" />

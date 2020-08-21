@@ -38,8 +38,8 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.EntityLike" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntityProperties">
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.BounceCollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ElasticCollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope">

@@ -2364,7 +2364,7 @@
     <property role="3GE5qa" value="styles.collision" />
     <ref role="aqKnT" to="9tcj:5H6c1qUxXJZ" resolve="CollisionReactionExpression" />
     <node concept="3ft5Ry" id="5H6c1qUyvvl" role="3ft7WO">
-      <ref role="4PJHt" to="9tcj:5H6c1qUxXJY" resolve="BounceCollisionReaction" />
+      <ref role="4PJHt" to="9tcj:5H6c1qUxXJY" resolve="ElasticCollisionReaction" />
     </node>
     <node concept="3VyMlK" id="5H6c1qUyv$C" role="3ft7WO" />
     <node concept="22hDWj" id="2GtZpnyQkAi" role="22hAXT" />
@@ -3429,26 +3429,38 @@
   </node>
   <node concept="24kQdi" id="5H6c1qUxXNI">
     <property role="3GE5qa" value="styles.collision" />
-    <ref role="1XX52x" to="9tcj:5H6c1qUxXJY" resolve="BounceCollisionReaction" />
+    <ref role="1XX52x" to="9tcj:5H6c1qUxXJY" resolve="ElasticCollisionReaction" />
     <node concept="3EZMnI" id="5H6c1qUxXNK" role="2wV5jI">
+      <node concept="3F0ifn" id="z8_qE$Z$Gn" role="3EZMnx">
+        <property role="3F0ifm" value="elastic reaction" />
+        <node concept="A1WHr" id="z8_qE$Z$H5" role="3vIgyS">
+          <ref role="2ZyFGn" to="9tcj:5H6c1qUxXJZ" resolve="CollisionReactionExpression" />
+        </node>
+        <node concept="VPxyj" id="z8_qE$Z$H7" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="z8_qE$Z$GD" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+        <ref role="1k5W1q" node="5SjYD03W97U" resolve="LeftParenthesisAfterName" />
+      </node>
       <node concept="3F0ifn" id="5H6c1qUxXNQ" role="3EZMnx">
-        <property role="3F0ifm" value="bounce" />
+        <property role="3F0ifm" value="restitution:" />
+        <ref role="1k5W1q" node="60D2cmu5xP2" resolve="ParenthesisAttributeLabel" />
         <node concept="VPxyj" id="5H6c1qUyvCQ" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
-        <node concept="A1WHr" id="5H6c1qUyvCS" role="3vIgyS">
-          <ref role="2ZyFGn" to="9tcj:5H6c1qUxXJZ" resolve="CollisionReactionExpression" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="5H6c1qUxXNW" role="3EZMnx">
-        <property role="3F0ifm" value="[" />
-        <ref role="1k5W1q" node="5SjYD03W97U" resolve="LeftParenthesisAfterName" />
       </node>
       <node concept="3F1sOY" id="5H6c1qUxXO4" role="3EZMnx">
-        <ref role="1NtTu8" to="9tcj:5H6c1qUxXN_" resolve="bounceFactor" />
+        <property role="1cu_pB" value="gtguBGO/firstEditableCell" />
+        <ref role="1NtTu8" to="9tcj:5H6c1qUxXN_" resolve="restitutionPercent" />
+      </node>
+      <node concept="3F0ifn" id="z8_qE$Z$Ii" role="3EZMnx">
+        <property role="3F0ifm" value="%" />
+        <ref role="1k5W1q" to="tpen:hinfsDb" resolve="EmptyCell" />
       </node>
       <node concept="3F0ifn" id="5H6c1qUxXOe" role="3EZMnx">
-        <property role="3F0ifm" value="]" />
+        <property role="3F0ifm" value=")" />
         <ref role="1k5W1q" node="5SjYD03W98J" resolve="RightParenthesis" />
       </node>
       <node concept="l2Vlx" id="5H6c1qUxXNM" role="2iSdaV" />

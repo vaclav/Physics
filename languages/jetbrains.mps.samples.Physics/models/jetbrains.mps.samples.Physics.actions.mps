@@ -15,6 +15,7 @@
     <import index="dq3m" ref="r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)" />
     <import index="9tcj" ref="r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)" />
     <import index="rf09" ref="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)" implicit="true" />
+    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -29,6 +30,9 @@
       </concept>
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
+      </concept>
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
@@ -91,6 +95,20 @@
     <language id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation">
       <concept id="1196350785113" name="jetbrains.mps.lang.quotation.structure.Quotation" flags="nn" index="2c44tf">
         <child id="1196350785114" name="quotedNode" index="2c44tc" />
+      </concept>
+      <concept id="5455284157993911077" name="jetbrains.mps.lang.quotation.structure.NodeBuilderInitProperty" flags="ng" index="2pJxcG">
+        <reference id="5455284157993911078" name="property" index="2pJxcJ" />
+        <child id="1595412875168045201" name="initValue" index="28ntcv" />
+      </concept>
+      <concept id="5455284157993863837" name="jetbrains.mps.lang.quotation.structure.NodeBuilder" flags="nn" index="2pJPEk">
+        <child id="5455284157993863838" name="quotedNode" index="2pJPEn" />
+      </concept>
+      <concept id="5455284157993863840" name="jetbrains.mps.lang.quotation.structure.NodeBuilderNode" flags="nn" index="2pJPED">
+        <reference id="5455284157993910961" name="concept" index="2pJxaS" />
+        <child id="5455284157993911099" name="values" index="2pJxcM" />
+      </concept>
+      <concept id="6985522012210254362" name="jetbrains.mps.lang.quotation.structure.NodeBuilderPropertyExpression" flags="nn" index="WxPPo">
+        <child id="6985522012210254363" name="expression" index="WxPPp" />
       </concept>
     </language>
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem">
@@ -873,6 +891,67 @@
                   </node>
                 </node>
               </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="37WvkG" id="z8_qE_4fSO" role="37WGs$">
+      <ref role="37XkoT" to="9tcj:5H6c1qUxXJY" resolve="ElasticCollisionReaction" />
+      <node concept="37Y9Zx" id="z8_qE_4fSP" role="37ZfLb">
+        <node concept="3clFbS" id="z8_qE_4fSQ" role="2VODD2">
+          <node concept="3clFbF" id="z8_qE_4fTf" role="3cqZAp">
+            <node concept="37vLTI" id="z8_qE_4gOO" role="3clFbG">
+              <node concept="2pJPEk" id="z8_qE_4gPt" role="37vLTx">
+                <node concept="2pJPED" id="z8_qE_4gW8" role="2pJPEn">
+                  <ref role="2pJxaS" to="5qo5:4rZeNQ6Oerq" resolve="NumberLiteral" />
+                  <node concept="2pJxcG" id="z8_qE_4gYE" role="2pJxcM">
+                    <ref role="2pJxcJ" to="5qo5:4rZeNQ6Oert" resolve="value" />
+                    <node concept="WxPPo" id="z8_qE_4gYJ" role="28ntcv">
+                      <node concept="Xl_RD" id="z8_qE_4gYI" role="WxPPp">
+                        <property role="Xl_RC" value="100" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="z8_qE_4g4x" role="37vLTJ">
+                <node concept="1r4Lsj" id="z8_qE_4fTe" role="2Oq$k0" />
+                <node concept="3TrEf2" id="z8_qE_4gnT" role="2OqNvi">
+                  <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="restitutionPercent" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="Jncv_" id="z8_qE_4hlA" role="3cqZAp">
+            <ref role="JncvD" to="9tcj:5H6c1qUxXJY" resolve="ElasticCollisionReaction" />
+            <node concept="1r4N5L" id="z8_qE_4jEP" role="JncvB" />
+            <node concept="3clFbS" id="z8_qE_4hlO" role="Jncv$">
+              <node concept="3clFbF" id="z8_qE_4hsV" role="3cqZAp">
+                <node concept="37vLTI" id="z8_qE_4j_o" role="3clFbG">
+                  <node concept="2OqwBi" id="z8_qE_4iNW" role="37vLTJ">
+                    <node concept="1r4Lsj" id="z8_qE_4iCG" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="z8_qE_4jrz" role="2OqNvi">
+                      <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="restitutionPercent" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="z8_qE_4kSS" role="37vLTx">
+                    <node concept="2OqwBi" id="z8_qE_4k4c" role="2Oq$k0">
+                      <node concept="Jnkvi" id="z8_qE_4jQH" role="2Oq$k0">
+                        <ref role="1M0zk5" node="z8_qE_4hlV" resolve="elastic" />
+                      </node>
+                      <node concept="3TrEf2" id="z8_qE_4kzx" role="2OqNvi">
+                        <ref role="3Tt5mk" to="9tcj:5H6c1qUxXN_" resolve="restitutionPercent" />
+                      </node>
+                    </node>
+                    <node concept="1$rogu" id="z8_qE_4l9x" role="2OqNvi" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="JncvC" id="z8_qE_4hlV" role="JncvA">
+              <property role="TrG5h" value="elastic" />
+              <node concept="2jxLKc" id="z8_qE_4hlW" role="1tU5fm" />
             </node>
           </node>
         </node>

@@ -15,7 +15,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="BaseObjectAbstractEntity.java">
-      <unit at="19,0,49,0" name="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity" />
+      <unit at="20,0,50,0" name="jetbrains.mps.samples.Physics.sandbox.BaseObjectAbstractEntity" />
     </file>
   </root>
   <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/1510458583736069912">
@@ -1463,8 +1463,8 @@
       <node id="5369611234117820803" at="58,58,59,31" concept="2" />
       <node id="5369611234117820803" at="59,31,60,0" concept="10" />
       <node id="5369611234117820803" at="60,0,61,37" concept="9" />
-      <node id="3106918138158919074" at="61,37,62,147" concept="2" />
-      <node id="3106918138152823125" at="62,147,63,91" concept="2" />
+      <node id="3106918138158919074" at="61,37,62,149" concept="2" />
+      <node id="3106918138152823125" at="62,149,63,91" concept="2" />
       <node id="3106918138152053167" at="63,91,64,123" concept="2" />
       <node id="190196155059450109" at="64,123,65,65" concept="2" />
       <node id="190196155062378418" at="67,0,68,0" concept="3" trace="cached" />
@@ -1638,8 +1638,8 @@
       <node id="7400250159182435060" at="63,31,64,0" concept="10" />
       <node id="7400250159182435060" at="64,0,65,37" concept="9" />
       <node id="3106918138152823123" at="65,37,66,91" concept="2" />
-      <node id="3106918138158919072" at="66,91,67,147" concept="2" />
-      <node id="3106918138152053165" at="67,147,68,124" concept="2" />
+      <node id="3106918138158919072" at="66,91,67,149" concept="2" />
+      <node id="3106918138152053165" at="67,149,68,124" concept="2" />
       <node id="7400250159182435060" at="68,124,69,47" concept="2" />
       <node id="5525108720514573606" at="74,88,75,32" concept="12" />
       <node id="5525108720514573606" at="79,80,80,39" concept="9" />

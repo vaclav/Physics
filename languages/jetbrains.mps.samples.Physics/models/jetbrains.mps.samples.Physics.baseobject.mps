@@ -79,8 +79,8 @@
       </concept>
       <concept id="2993354433745639261" name="jetbrains.mps.samples.Physics.structure.CollisionStyleKey" flags="ng" index="1nHl2y" />
       <concept id="6576997179995760305" name="jetbrains.mps.samples.Physics.structure.PauseOnCollisionStyleKey" flags="ng" index="3x8DqB" />
-      <concept id="6576997179998067710" name="jetbrains.mps.samples.Physics.structure.BounceCollisionReaction" flags="ng" index="3xKuJC">
-        <child id="6576997179998067941" name="bounceFactor" index="3xKuNN" />
+      <concept id="6576997179998067710" name="jetbrains.mps.samples.Physics.structure.ElasticCollisionReaction" flags="ng" index="3xKuJC">
+        <child id="6576997179998067941" name="restitutionPercent" index="3xKuNN" />
       </concept>
       <concept id="1846966433400552481" name="jetbrains.mps.samples.Physics.structure.DisabledTraceExpression" flags="ng" index="1Bik8e" />
       <concept id="1846966433400551509" name="jetbrains.mps.samples.Physics.structure.TraceStyleKey" flags="ng" index="1BikpU" />
@@ -251,9 +251,9 @@
     </node>
     <node concept="27oVnN" id="2GtZpnzbyQs" role="27xc_Z">
       <node concept="1nHl2y" id="6qMY4Z3czQC" role="39QuZq" />
-      <node concept="3xKuJC" id="7dIb8AZ2EzK" role="39QuWR">
-        <node concept="30bXRB" id="7dIb8AZ2EzL" role="3xKuNN">
-          <property role="30bXRw" value="1" />
+      <node concept="3xKuJC" id="z8_qE_6Tgx" role="39QuWR">
+        <node concept="30bXRB" id="z8_qE_6Tg_" role="3xKuNN">
+          <property role="30bXRw" value="100.0" />
         </node>
       </node>
     </node>
