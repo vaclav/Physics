@@ -600,7 +600,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2521872686837820853");
     b.version(2);
-    b.alias("world");
+    b.alias("current world");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCustomColor() {

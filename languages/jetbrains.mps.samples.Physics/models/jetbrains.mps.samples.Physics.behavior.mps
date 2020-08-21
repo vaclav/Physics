@@ -785,6 +785,19 @@
       </node>
       <node concept="17QB3L" id="yrUOugXiF7" role="3clF45" />
     </node>
+    <node concept="13i0hz" id="2_PGqGCkpYJ" role="13h7CS">
+      <property role="TrG5h" value="getCurrentObject" />
+      <ref role="13i0hy" node="2_PGqGCjHbe" resolve="getCurrentObject" />
+      <node concept="3Tm1VV" id="2_PGqGCkpYK" role="1B3o_S" />
+      <node concept="3clFbS" id="2_PGqGCkpYR" role="3clF47">
+        <node concept="3clFbF" id="2_PGqGCkq42" role="3cqZAp">
+          <node concept="10Nm6u" id="2_PGqGCkq41" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="2_PGqGCkpYS" role="3clF45">
+        <ref role="ehGHo" to="9tcj:6HZo5MN9SX3" resolve="ObjectDefinition" />
+      </node>
+    </node>
   </node>
   <node concept="13h7C7" id="6kwOTMl19xC">
     <property role="3GE5qa" value="physical.expr.dot.object" />
@@ -1346,6 +1359,19 @@
       </node>
       <node concept="3Tqbb2" id="31HEEbbXs7l" role="3clF45">
         <ref role="ehGHo" to="9tcj:3Nk1IDHVTY$" resolve="IObjectDefinition" />
+      </node>
+    </node>
+    <node concept="13i0hz" id="2_PGqGCkq66" role="13h7CS">
+      <property role="TrG5h" value="getCurrentObject" />
+      <ref role="13i0hy" node="2_PGqGCjHbe" resolve="getCurrentObject" />
+      <node concept="3Tm1VV" id="2_PGqGCkq67" role="1B3o_S" />
+      <node concept="3clFbS" id="2_PGqGCkq6e" role="3clF47">
+        <node concept="3clFbF" id="2_PGqGCkq8k" role="3cqZAp">
+          <node concept="13iPFW" id="2_PGqGCkq8j" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="2_PGqGCkq6f" role="3clF45">
+        <ref role="ehGHo" to="9tcj:6HZo5MN9SX3" resolve="ObjectDefinition" />
       </node>
     </node>
   </node>
@@ -5361,6 +5387,33 @@
         </node>
       </node>
       <node concept="17QB3L" id="2rJkT1F4mtG" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="2_PGqGCjHb3">
+    <property role="3GE5qa" value="physical.expr.context" />
+    <ref role="13h7C2" to="9tcj:5claIBnrbab" resolve="ICurrentObjectContext" />
+    <node concept="13i0hz" id="2_PGqGCjHbe" role="13h7CS">
+      <property role="13i0iv" value="true" />
+      <property role="13i0it" value="true" />
+      <property role="TrG5h" value="getCurrentObject" />
+      <node concept="3Tm1VV" id="2_PGqGCjHbf" role="1B3o_S" />
+      <node concept="3Tqbb2" id="2_PGqGCjHbu" role="3clF45">
+        <ref role="ehGHo" to="9tcj:6HZo5MN9SX3" resolve="ObjectDefinition" />
+      </node>
+      <node concept="3clFbS" id="2_PGqGCjHbh" role="3clF47" />
+      <node concept="P$JXv" id="2_PGqGCjHc1" role="lGtFl">
+        <node concept="TZ5HA" id="2_PGqGCjHc2" role="TZ5H$">
+          <node concept="1dT_AC" id="2_PGqGCjHc3" role="1dT_Ay">
+            <property role="1dT_AB" value="Returns current object target, if any" />
+          </node>
+        </node>
+        <node concept="x79VA" id="2_PGqGCjHc4" role="3nqlJM">
+          <property role="x79VB" value="object definition if existing" />
+        </node>
+      </node>
+    </node>
+    <node concept="13hLZK" id="2_PGqGCjHb4" role="13h7CW">
+      <node concept="3clFbS" id="2_PGqGCjHb5" role="2VODD2" />
     </node>
   </node>
 </model>

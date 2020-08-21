@@ -287,7 +287,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_CurrentWorldExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("expression that targets the current world in a generic way");
-          cpb.rawPresentation("world");
+          cpb.rawPresentation("current world");
           props_CurrentWorldExpression = cpb.create();
         }
         return props_CurrentWorldExpression;

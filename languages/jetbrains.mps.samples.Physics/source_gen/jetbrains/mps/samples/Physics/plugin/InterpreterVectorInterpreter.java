@@ -598,7 +598,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         } catch (InterpreterEscapeException ex) {
           throw ex;
         } catch (RuntimeException ex) {
-          throw new InterpreterRuntimeException("world()", node, ex, trace);
+          throw new InterpreterRuntimeException("current world()", node, ex, trace);
         }
       }
       public EvaluatorInfo getInfo() {

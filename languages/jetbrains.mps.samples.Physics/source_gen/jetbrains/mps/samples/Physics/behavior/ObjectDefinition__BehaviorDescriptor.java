@@ -23,8 +23,9 @@ public final class ObjectDefinition__BehaviorDescriptor extends BaseBHDescriptor
 
   public static final SMethod<SNode> findLocalizedImplementation_id1igjyYxxAPt = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("findLocalizedImplementation").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1igjyYxxAPt").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   public static final SMethod<SNode> getDefinition_id31HEEbbXs3G = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDefinition").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("31HEEbbXs3G").build();
+  public static final SMethod<SNode> getCurrentObject_id2_PGqGCjHbe = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCurrentObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2_PGqGCjHbe").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(findLocalizedImplementation_id1igjyYxxAPt, getDefinition_id31HEEbbXs3G);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(findLocalizedImplementation_id1igjyYxxAPt, getDefinition_id31HEEbbXs3G, getCurrentObject_id2_PGqGCjHbe);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -33,6 +34,9 @@ public final class ObjectDefinition__BehaviorDescriptor extends BaseBHDescriptor
     return __thisNode__;
   }
   /*package*/ static SNode getDefinition_id31HEEbbXs3G(@NotNull SNode __thisNode__) {
+    return __thisNode__;
+  }
+  /*package*/ static SNode getCurrentObject_id2_PGqGCjHbe(@NotNull SNode __thisNode__) {
     return __thisNode__;
   }
 
@@ -55,6 +59,8 @@ public final class ObjectDefinition__BehaviorDescriptor extends BaseBHDescriptor
         return (T) ((SNode) findLocalizedImplementation_id1igjyYxxAPt(node, (SNode) parameters[0]));
       case 1:
         return (T) ((SNode) getDefinition_id31HEEbbXs3G(node));
+      case 2:
+        return (T) ((SNode) getCurrentObject_id2_PGqGCjHbe(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
