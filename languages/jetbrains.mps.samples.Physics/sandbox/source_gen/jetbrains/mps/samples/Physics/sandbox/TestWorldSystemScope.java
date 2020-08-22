@@ -57,7 +57,7 @@ public class TestWorldSystemScope extends SystemScope {
 
       // Set static properties of Something 
       this.setMass(AH.mul(((Number) new BigInteger("20")), new BigDecimal("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), new BigDecimal("1"))), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), new BigDecimal("1"))), AH.mul(((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN)), new BigDecimal("1"))).add(scope.TheOtherWorld).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), new BigDecimal("1"))), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), new BigDecimal("1"))), AH.add(AH.mul(((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN)), new BigDecimal("1")), AH.div(AH.mul(((Number) new BigInteger("1")), new BigDecimal("1")), ((Number) new BigInteger("2"))))).add(scope.TheOtherWorld).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Something 

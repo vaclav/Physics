@@ -290,7 +290,7 @@
   </node>
   <node concept="3hdX5o" id="5uJwfA98ANX">
     <property role="3GE5qa" value="" />
-    <property role="TrG5h" value="ExtendedMathOperationRules" />
+    <property role="TrG5h" value="ExtendedMath_OpRules" />
     <node concept="3ciAk0" id="4CH1R2NzLyd" role="3he0YX">
       <node concept="2pJPEk" id="4CH1R2NzL_g" role="3ciSkW">
         <node concept="2pJPED" id="4CH1R2NzL_$" role="2pJPEn">

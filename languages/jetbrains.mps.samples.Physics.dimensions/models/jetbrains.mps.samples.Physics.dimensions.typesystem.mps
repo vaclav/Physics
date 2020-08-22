@@ -578,7 +578,7 @@
     </node>
   </node>
   <node concept="3hdX5o" id="3yBD53Wt7TJ">
-    <property role="TrG5h" value="DimensionsOperations" />
+    <property role="TrG5h" value="Dimensions_OpRules" />
     <node concept="32tXgB" id="4HxogODTnvf" role="3he0YX">
       <property role="3Q2AdP" value="true" />
       <node concept="2pJPEk" id="4HxogODTnzi" role="32tDTd">
@@ -2971,7 +2971,7 @@
   </node>
   <node concept="3hdX5o" id="5uJwfA98ANX">
     <property role="3GE5qa" value="math" />
-    <property role="TrG5h" value="MathWithDimensionsOperationRules" />
+    <property role="TrG5h" value="MathWithDimensions_OpRules" />
     <node concept="3ciAk0" id="4CH1R2NzMFt" role="3he0YX">
       <node concept="2pJPEk" id="4CH1R2NzMSC" role="3ciSkW">
         <node concept="2pJPED" id="4CH1R2NzMSW" role="2pJPEn">
