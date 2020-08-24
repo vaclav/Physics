@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<checkpoints>
-  <plan id="JavaPhysicsGenplan">
-    <checkpoint id="sync_external_objects" file="javaphysicsgenplan-sync_external_objects.mps" />
-  </plan>
-</checkpoints>
-

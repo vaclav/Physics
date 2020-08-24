@@ -27,8 +27,10 @@ import jetbrains.mps.editor.runtime.completion.CompletionItemInformation;
 import jetbrains.mps.smodel.presentation.NodePresentationUtil;
 import jetbrains.mps.smodel.runtime.IconResource;
 import jetbrains.mps.smodel.runtime.IconResourceUtil;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class AbstractForceCall_SubstituteMenu extends SubstituteMenuBase {
   @NotNull
@@ -141,19 +143,16 @@ public class AbstractForceCall_SubstituteMenu extends SubstituteMenuBase {
         }
         @Nullable
         @Override
-        public String getDescriptionText(@NotNull String pattern) {
-          if (myParameterObject instanceof SNode) {
-            return NodePresentationUtil.descriptionText((SNode) myParameterObject);
-          }
-          return "" + myParameterObject;
-        }
-        @Nullable
-        @Override
         public IconResource getIcon(@NotNull String pattern) {
           if (myParameterObject instanceof SNode) {
             return IconResourceUtil.getIconResourceForNode(((SNode) myParameterObject));
           }
           return null;
+        }
+        @Nullable
+        @Override
+        public String getDescriptionText(@NotNull String pattern) {
+          return SPropertyOperations.getString(myParameterObject, PROPS.description$ByyT);
         }
       }
     }
@@ -167,5 +166,9 @@ public class AbstractForceCall_SubstituteMenu extends SubstituteMenuBase {
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink force$tsf5 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, 0x3126c7c72473eb96L, "force");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty description$ByyT = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, 0x6ff53cf970bd1386L, "description");
   }
 }

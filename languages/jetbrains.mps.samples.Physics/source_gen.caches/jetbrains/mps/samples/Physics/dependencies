@@ -14,6 +14,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.findUsages.FindUsagesDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.intentions.IntentionsDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.migration.MigrationDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.structure.ConceptPresentationAspectImpl" />
@@ -25,6 +26,7 @@
     <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.FindUsageAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />

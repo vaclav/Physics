@@ -55,6 +55,11 @@ public class ForceFactories {
       }
     }
   }
+  public static class NodeFactory_8067421349543645741 implements NodeFactory {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+      SPropertyOperations.assign(newNode, PROPS.isMomentRelative$rXiD, true);
+    }
+  }
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink argument$kXZ1 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
@@ -73,5 +78,6 @@ public class ForceFactories {
   private static final class PROPS {
     /*package*/ static final SProperty isPointRelative$86Nw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bddL, "isPointRelative");
     /*package*/ static final SProperty isLinearForceRelative$HMCw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b38efc0L, "isLinearForceRelative");
+    /*package*/ static final SProperty isMomentRelative$rXiD = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
   }
 }

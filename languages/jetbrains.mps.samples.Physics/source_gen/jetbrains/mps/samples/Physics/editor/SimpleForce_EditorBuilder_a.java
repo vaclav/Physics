@@ -63,6 +63,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     }
     editorCell.addEditorCell(createRefNode_0());
     editorCell.addEditorCell(createComponent_1());
+    editorCell.addEditorCell(createConstant_2());
     return editorCell;
   }
   private boolean nodeCondition_fo54x5_a2a() {
@@ -156,6 +157,14 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
   }
   private EditorCell createComponent_1() {
     EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.samples.Physics.editor.ApplicationPointEditor");
+    return editorCell;
+  }
+  private EditorCell createConstant_2() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_fo54x5_f0");
+    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.Force$pC));
+    editorCell.setDefaultText("");
+    editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
   }
 

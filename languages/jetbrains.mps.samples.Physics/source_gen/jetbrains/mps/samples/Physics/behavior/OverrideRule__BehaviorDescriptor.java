@@ -11,11 +11,13 @@ import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import jetbrains.mps.smodel.runtime.IconResource;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -28,8 +30,9 @@ public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
 
   public static final SMethod<SNode> apply_id2AM6gIjLTgr = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("apply").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2AM6gIjLTgr").build();
   public static final SMethod<SNode> getTarget_id2AM6gIjLTgY = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTarget").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2AM6gIjLTgY").build();
+  public static final SMethod<IconResource> getSideIcon_id6TtJ6IUjtJX = new SMethodBuilder<IconResource>(new SJavaCompoundTypeImpl(IconResource.class)).name("getSideIcon").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6TtJ6IUjtJX").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(apply_id2AM6gIjLTgr, getTarget_id2AM6gIjLTgY);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(apply_id2AM6gIjLTgr, getTarget_id2AM6gIjLTgY, getSideIcon_id6TtJ6IUjtJX);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -54,6 +57,9 @@ public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
 
     return null;
   }
+  /*package*/ static IconResource getSideIcon_id6TtJ6IUjtJX(@NotNull SNode __thisNode__) {
+    return ((IconResource) BaseConcept__BehaviorDescriptor.getSideIcon_id6TtJ6IUjtJX.invokeSuper(__thisNode__, CONCEPTS.OverrideRule$lC));
+  }
 
   /*package*/ OverrideRule__BehaviorDescriptor() {
   }
@@ -74,6 +80,8 @@ public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((SNode) apply_id2AM6gIjLTgr(node));
       case 1:
         return (T) ((SNode) getTarget_id2AM6gIjLTgY(node));
+      case 2:
+        return (T) ((IconResource) getSideIcon_id6TtJ6IUjtJX(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -112,5 +120,6 @@ public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
   private static final class CONCEPTS {
     /*package*/ static final SConcept DotExpression$Af = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
     /*package*/ static final SInterfaceConcept ICanBeOverridden$E3 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9f4dL, "jetbrains.mps.samples.Physics.structure.ICanBeOverridden");
+    /*package*/ static final SConcept OverrideRule$lC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
   }
 }

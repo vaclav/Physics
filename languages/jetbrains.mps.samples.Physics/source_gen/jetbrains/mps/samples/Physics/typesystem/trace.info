@@ -13,7 +13,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
     <file name="TypesystemDescriptor.java">
-      <unit at="10,0,242,0" name="jetbrains.mps.samples.Physics.typesystem.TypesystemDescriptor" />
+      <unit at="10,0,246,0" name="jetbrains.mps.samples.Physics.typesystem.TypesystemDescriptor" />
     </file>
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/1159415042433249550">
@@ -138,10 +138,10 @@
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/1846966433400552132">
     <file name="TypesystemDescriptor.java">
-      <node id="1846966433400552132" at="236,5,237,78" concept="5" />
-      <node id="1846966433400552132" at="237,78,238,47" concept="2" />
-      <node id="1846966433400552132" at="235,5,239,5" concept="0" />
-      <scope id="1846966433400552132" at="236,5,238,47">
+      <node id="1846966433400552132" at="240,5,241,78" concept="5" />
+      <node id="1846966433400552132" at="241,78,242,47" concept="2" />
+      <node id="1846966433400552132" at="239,5,243,5" concept="0" />
+      <scope id="1846966433400552132" at="240,5,242,47">
         <var name="subtypingRule" id="1846966433400552132" />
       </scope>
     </file>
@@ -1068,10 +1068,10 @@
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/3004491438924281890">
     <file name="TypesystemDescriptor.java">
-      <node id="3004491438924281890" at="232,5,233,115" concept="5" />
-      <node id="3004491438924281890" at="233,115,234,55" concept="2" />
-      <node id="3004491438924281890" at="231,5,235,5" concept="0" />
-      <scope id="3004491438924281890" at="232,5,234,55">
+      <node id="3004491438924281890" at="236,5,237,115" concept="5" />
+      <node id="3004491438924281890" at="237,115,238,55" concept="2" />
+      <node id="3004491438924281890" at="235,5,239,5" concept="0" />
+      <scope id="3004491438924281890" at="236,5,238,55">
         <var name="nonTypesystemRule" id="3004491438924281890" />
       </scope>
     </file>
@@ -3837,6 +3837,86 @@
       <unit id="1387628150972979624" at="35,57,67,13" name="jetbrains.mps.samples.Physics.typesystem.typeof_CylindricalCoordinates_InferenceRule$1$1" />
       <unit id="1387628150972979622" at="31,53,70,7" name="jetbrains.mps.samples.Physics.typesystem.typeof_CylindricalCoordinates_InferenceRule$1" />
       <unit id="796402062951278986" at="25,0,114,0" name="jetbrains.mps.samples.Physics.typesystem.typeof_CylindricalCoordinates_InferenceRule" />
+    </file>
+  </root>
+  <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/8067421349532935509">
+    <file name="TypesystemDescriptor.java">
+      <node id="8067421349532935509" at="232,5,233,110" concept="5" />
+      <node id="8067421349532935509" at="233,110,234,55" concept="2" />
+      <node id="8067421349532935509" at="231,5,235,5" concept="0" />
+      <scope id="8067421349532935509" at="232,5,234,55">
+        <var name="nonTypesystemRule" id="8067421349532935509" />
+      </scope>
+    </file>
+    <file name="check_AbstractForceCall_Arguments_NonTypesystemRule.java">
+      <node id="8067421349533095132" at="32,44,33,77" concept="6" />
+      <node id="8067421349533107919" at="37,11,38,70" concept="5" />
+      <node id="8067421349533107919" at="38,70,39,315" concept="5" />
+      <node id="8067421349533141414" at="42,11,43,70" concept="5" />
+      <node id="8067421349533141414" at="43,70,44,308" concept="5" />
+      <node id="8067421349532935509" at="50,50,51,41" concept="6" />
+      <node id="8067421349532935509" at="53,68,54,102" concept="6" />
+      <node id="8067421349532935509" at="56,30,57,17" concept="6" />
+      <node id="8067421349532935509" at="61,0,62,0" concept="9" trace="force$tsf5" />
+      <node id="8067421349532935509" at="62,0,63,0" concept="9" trace="args$G1Ow" />
+      <node id="8067421349532935509" at="63,0,64,0" concept="9" trace="parameterValues$tsg3" />
+      <node id="8067421349532935509" at="64,0,65,0" concept="9" trace="argument$kXZ1" />
+      <node id="8067421349532935509" at="68,0,69,0" concept="9" trace="name$tAp1" />
+      <node id="8067421349532935509" at="72,0,73,0" concept="9" trace="AbstractForceCall$Wc" />
+      <node id="8067421349532935509" at="26,0,28,0" concept="1" trace="check_AbstractForceCall_Arguments_NonTypesystemRule#()V" />
+      <node id="8067421349533095130" at="32,0,35,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="8067421349532935509" at="50,0,53,0" concept="4" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8067421349532935509" at="53,0,56,0" concept="4" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8067421349532935509" at="56,0,59,0" concept="4" trace="overrides#()Z" />
+      <node id="8067421349533107919" at="36,24,40,11" concept="0" />
+      <node id="8067421349533141414" at="41,30,45,11" concept="0" />
+      <node id="8067421349533095122" at="30,41,35,19" concept="5" />
+      <node id="8067421349533035783" at="35,19,46,9" concept="3" />
+      <node id="8067421349533035640" at="30,0,48,0" concept="4" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="8067421349533021943" at="28,130,48,7" concept="2" />
+      <node id="8067421349532935509" at="28,0,50,0" concept="4" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8067421349532935509" at="26,64,26,64" />
+      <scope id="8067421349533095131" at="32,44,33,77" />
+      <scope id="8067421349532935509" at="50,50,51,41" />
+      <scope id="8067421349532935509" at="53,68,54,102" />
+      <scope id="8067421349532935509" at="56,30,57,17" />
+      <scope id="8067421349532935509" at="26,0,28,0" />
+      <scope id="8067421349533107919" at="37,11,39,315">
+        <var name="_reporter_2309309498" id="8067421349533107919" />
+        <var name="errorTarget" id="8067421349533107919" />
+      </scope>
+      <scope id="8067421349533141414" at="42,11,44,308">
+        <var name="_reporter_2309309498" id="8067421349533141414" />
+        <var name="errorTarget" id="8067421349533141414" />
+      </scope>
+      <scope id="8067421349533095130" at="32,0,35,0">
+        <var name="val" id="8067421349533095130" />
+      </scope>
+      <scope id="8067421349532935509" at="50,0,53,0" />
+      <scope id="8067421349532935509" at="53,0,56,0">
+        <var name="argument" id="8067421349532935509" />
+      </scope>
+      <scope id="8067421349532935509" at="56,0,59,0" />
+      <scope id="8067421349533035785" at="36,24,40,11" />
+      <scope id="8067421349533129816" at="41,30,45,11" />
+      <scope id="8067421349533035641" at="30,41,46,9">
+        <var name="size" id="8067421349533095123" />
+      </scope>
+      <scope id="8067421349533035640" at="30,0,48,0">
+        <var name="it" id="8067421349533035640" />
+      </scope>
+      <scope id="8067421349532935510" at="28,130,48,7" />
+      <scope id="8067421349532935509" at="28,0,50,0">
+        <var name="abstractForceCall" id="8067421349532935509" />
+        <var name="status" id="8067421349532935509" />
+        <var name="typeCheckingContext" id="8067421349532935509" />
+      </scope>
+      <unit id="8067421349532935509" at="67,0,70,0" name="jetbrains.mps.samples.Physics.typesystem.check_AbstractForceCall_Arguments_NonTypesystemRule$PROPS" />
+      <unit id="8067421349532935509" at="71,0,74,0" name="jetbrains.mps.samples.Physics.typesystem.check_AbstractForceCall_Arguments_NonTypesystemRule$CONCEPTS" />
+      <unit id="8067421349533095130" at="31,127,35,9" name="jetbrains.mps.samples.Physics.typesystem.check_AbstractForceCall_Arguments_NonTypesystemRule$1$1" />
+      <unit id="8067421349532935509" at="60,0,66,0" name="jetbrains.mps.samples.Physics.typesystem.check_AbstractForceCall_Arguments_NonTypesystemRule$LINKS" />
+      <unit id="8067421349533035640" at="29,149,48,5" name="jetbrains.mps.samples.Physics.typesystem.check_AbstractForceCall_Arguments_NonTypesystemRule$1" />
+      <unit id="8067421349532935509" at="25,0,75,0" name="jetbrains.mps.samples.Physics.typesystem.check_AbstractForceCall_Arguments_NonTypesystemRule" />
     </file>
   </root>
   <root nodeRef="r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)/8705613676600437153">

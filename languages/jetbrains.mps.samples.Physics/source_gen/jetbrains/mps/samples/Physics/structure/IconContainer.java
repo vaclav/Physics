@@ -5,8 +5,23 @@ package jetbrains.mps.samples.Physics.structure;
 import jetbrains.mps.smodel.runtime.IconResource;
 
 public class IconContainer {
-  protected static IconResource RESOURCE_a0a2a0a1b0ae = new IconResource("force.png", IconContainer.class);
-  protected static IconResource RESOURCE_a0a2a0a4b0ae = new IconResource("object.png", IconContainer.class);
-  protected static IconResource RESOURCE_a0a2a0a08b0ae = new IconResource("simulation.png", IconContainer.class);
-  protected static IconResource RESOURCE_a0a2a0a89b0ae = new IconResource("world.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a2a0a1b0zd = new IconResource("force.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a2a0a4b0zd = new IconResource("object.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a7b0zd = new IconResource("object.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a12b0zd = new IconResource("object.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a22b0zd = new IconResource("world.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a2a0a43b0zd = new IconResource("force.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a53b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a63b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a73b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a26b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a66b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a96b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a2a0a08b0zd = new IconResource("simulation.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a1a0a49b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a59b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a69b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a2a0a79b0zd = new IconResource("world.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a99b0zd = new IconResource("vector.png", IconContainer.class);
+  protected static IconResource RESOURCE_a0a3a0a001b0zd = new IconResource("object.png", IconContainer.class);
 }

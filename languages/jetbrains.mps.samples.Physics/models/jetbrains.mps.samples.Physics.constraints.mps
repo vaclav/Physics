@@ -255,7 +255,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="cTQf2Fjp4N">
-    <property role="3GE5qa" value="physical.force.implemented.simple.interaction" />
+    <property role="3GE5qa" value="physical.force.simple.interaction" />
     <ref role="1M2myG" to="9tcj:cTQf2Fjp4$" resolve="InteractedObjectExpression" />
     <node concept="9S07l" id="cTQf2Fjp4O" role="9Vyp8">
       <node concept="3clFbS" id="cTQf2Fjp4P" role="2VODD2">
@@ -316,7 +316,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="Q4PrYMwcs4">
-    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
+    <property role="3GE5qa" value="physical.force.abstract.call" />
     <ref role="1M2myG" to="9tcj:Q4PrYMwcs1" resolve="AbstractForceCallParameter" />
     <node concept="9S07l" id="Q4PrYMwcOR" role="9Vyp8">
       <node concept="3clFbS" id="Q4PrYMwcOS" role="2VODD2">
@@ -334,7 +334,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="Q4PrYMBY2j">
-    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
+    <property role="3GE5qa" value="physical.force.abstract.call" />
     <ref role="1M2myG" to="9tcj:1jQexh3yYqw" resolve="AbstractForceCall" />
   </node>
   <node concept="1M2fIO" id="M__cqnF0h6">

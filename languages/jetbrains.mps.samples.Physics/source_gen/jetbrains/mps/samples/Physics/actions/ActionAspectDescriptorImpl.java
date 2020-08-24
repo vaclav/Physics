@@ -28,6 +28,8 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
           return Collections.<NodeFactory>singletonList(new ForceFactories.NodeFactory_2805552972616035457());
         case "IForceWithLinearForce":
           return Collections.<NodeFactory>singletonList(new ForceFactories.NodeFactory_2805552972616080516());
+        case "MomentForce":
+          return Collections.<NodeFactory>singletonList(new ForceFactories.NodeFactory_8067421349543645741());
         case "Simulation":
           return Collections.<NodeFactory>singletonList(new MiscellaneousFactories.NodeFactory_7471572540824262513());
         case "SphericalCoordinates":

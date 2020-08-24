@@ -31,8 +31,9 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
 
   public static final SMethod<String> renderReadable_id6kR0qIbI2yi = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6kR0qIbI2yi").build();
   public static final SMethod<SNode> overrideWith_id38SdPTRbTXB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> getNodeTarget_id6ZPff_L2lbX = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getNodeTarget").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6ZPff_L2lbX").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(renderReadable_id6kR0qIbI2yi, overrideWith_id38SdPTRbTXB);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(renderReadable_id6kR0qIbI2yi, overrideWith_id38SdPTRbTXB, getNodeTarget_id6ZPff_L2lbX);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -67,6 +68,18 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
 
     return null;
   }
+  /*package*/ static SNode getNodeTarget_id6ZPff_L2lbX(@NotNull SNode __thisNode__) {
+    SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__));
+
+    {
+      final SNode object = definition;
+      if (SNodeOperations.isInstanceOf(object, CONCEPTS.ObjectDefinition$YO)) {
+        return AbstractObjectDefinition__BehaviorDescriptor.getStyleValueForKey_id5hZn_PXc5xY.invoke(object, SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$ANGW));
+      }
+    }
+
+    return null;
+  }
 
   /*package*/ ObjectStyleDotTarget__BehaviorDescriptor() {
   }
@@ -87,6 +100,8 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
         return (T) ((String) renderReadable_id6kR0qIbI2yi(node));
       case 1:
         return (T) ((SNode) overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]));
+      case 2:
+        return (T) ((SNode) getNodeTarget_id6ZPff_L2lbX(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

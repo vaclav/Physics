@@ -317,7 +317,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="0">
-    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
+    <property role="3GE5qa" value="physical.force.abstract.call" />
     <property role="TrG5h" value="AbstractForceCallParameter_Constraints" />
     <node concept="3Tm1VV" id="1" role="1B3o_S">
       <node concept="cd27G" id="8" role="lGtFl">
@@ -1042,7 +1042,7 @@
     </node>
   </node>
   <node concept="312cEu" id="4q">
-    <property role="3GE5qa" value="physical.force.implemented.abstractcall" />
+    <property role="3GE5qa" value="physical.force.abstract.call" />
     <property role="TrG5h" value="AbstractForceCall_Constraints" />
     <node concept="3Tm1VV" id="4r" role="1B3o_S">
       <node concept="cd27G" id="4w" role="lGtFl">
@@ -9942,7 +9942,7 @@
     </node>
   </node>
   <node concept="312cEu" id="UC">
-    <property role="3GE5qa" value="physical.force.implemented.simple.interaction" />
+    <property role="3GE5qa" value="physical.force.simple.interaction" />
     <property role="TrG5h" value="InteractedObjectExpression_Constraints" />
     <node concept="3Tm1VV" id="UD" role="1B3o_S">
       <node concept="cd27G" id="UK" role="lGtFl">

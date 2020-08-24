@@ -12,7 +12,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
     <file name="ActionAspectDescriptorImpl.java">
-      <unit at="12,0,42,0" name="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
+      <unit at="12,0,44,0" name="jetbrains.mps.samples.Physics.actions.ActionAspectDescriptorImpl" />
     </file>
   </root>
   <root nodeRef="r:440f32ad-f2cc-41e6-bc89-c1c2af2bc770(jetbrains.mps.samples.Physics.actions)/1159415042434515255">
@@ -99,18 +99,21 @@
       <node id="2805552972616081515" at="48,83,49,0" concept="7" />
       <node id="2805552972616080632" at="50,7,51,39" concept="4" />
       <node id="2805552972616082310" at="52,85,53,153" concept="1" />
-      <node id="4809107873070310008" at="60,0,61,0" concept="8" trace="argument$kXZ1" />
-      <node id="4809107873070310008" at="61,0,62,0" concept="8" trace="value$59jW" />
-      <node id="4809107873070310008" at="62,0,63,0" concept="8" trace="applicationPoint$86Ou" />
-      <node id="4809107873070310008" at="63,0,64,0" concept="8" trace="linearForce$Wp95" />
-      <node id="4809107873070310008" at="67,0,68,0" concept="8" trace="AbstractForceCall$Wc" />
-      <node id="4809107873070310008" at="68,0,69,0" concept="8" trace="AbstractForceCallParameter$Xs" />
-      <node id="4809107873070310008" at="69,0,70,0" concept="8" trace="IForceWithApplicationPoint$_T" />
-      <node id="4809107873070310008" at="70,0,71,0" concept="8" trace="IForceWithLinearForce$3f" />
-      <node id="4809107873070310008" at="74,0,75,0" concept="8" trace="isPointRelative$86Nw" />
-      <node id="4809107873070310008" at="75,0,76,0" concept="8" trace="isLinearForceRelative$HMCw" />
+      <node id="8067421349543645845" at="59,91,60,77" concept="1" />
+      <node id="4809107873070310008" at="65,0,66,0" concept="8" trace="argument$kXZ1" />
+      <node id="4809107873070310008" at="66,0,67,0" concept="8" trace="value$59jW" />
+      <node id="4809107873070310008" at="67,0,68,0" concept="8" trace="applicationPoint$86Ou" />
+      <node id="4809107873070310008" at="68,0,69,0" concept="8" trace="linearForce$Wp95" />
+      <node id="4809107873070310008" at="72,0,73,0" concept="8" trace="AbstractForceCall$Wc" />
+      <node id="4809107873070310008" at="73,0,74,0" concept="8" trace="AbstractForceCallParameter$Xs" />
+      <node id="4809107873070310008" at="74,0,75,0" concept="8" trace="IForceWithApplicationPoint$_T" />
+      <node id="4809107873070310008" at="75,0,76,0" concept="8" trace="IForceWithLinearForce$3f" />
+      <node id="4809107873070310008" at="79,0,80,0" concept="8" trace="isPointRelative$86Nw" />
+      <node id="4809107873070310008" at="80,0,81,0" concept="8" trace="isLinearForceRelative$HMCw" />
+      <node id="4809107873070310008" at="81,0,82,0" concept="8" trace="isMomentRelative$rXiD" />
       <node id="4809107873070189239" at="26,43,29,9" concept="2" />
       <node id="2805552972616080632" at="51,39,54,9" concept="2" />
+      <node id="8067421349543645741" at="59,0,62,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
       <node id="2805552972616038981" at="38,39,42,9" concept="2" />
       <node id="4809107873070189239" at="24,0,30,7" concept="0" />
       <node id="2805552972616080632" at="49,0,55,7" concept="0" />
@@ -120,7 +123,14 @@
       <node id="2805552972616035457" at="34,0,45,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
       <scope id="4809107873070189243" at="27,94,28,145" />
       <scope id="2805552972616080634" at="52,85,53,153" />
+      <scope id="8067421349543645741" at="59,91,60,77" />
       <scope id="2805552972616038985" at="39,90,41,163" />
+      <scope id="8067421349543645741" at="59,0,62,0">
+        <var name="enclosingNode" id="8067421349543645741" />
+        <var name="model" id="8067421349543645741" />
+        <var name="newNode" id="8067421349543645741" />
+        <var name="sampleNode" id="8067421349543645741" />
+      </scope>
       <scope id="4809107873070189239" at="25,7,29,9">
         <var name="parameter" id="4809107873070189239" />
       </scope>
@@ -151,13 +161,14 @@
         <var name="newNode" id="2805552972616035457" />
         <var name="sampleNode" id="2805552972616035457" />
       </scope>
-      <unit id="4809107873070310008" at="73,0,77,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$PROPS" />
-      <unit id="4809107873070310008" at="59,0,65,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$LINKS" />
-      <unit id="4809107873070310008" at="66,0,72,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$CONCEPTS" />
+      <unit id="8067421349543645741" at="58,0,63,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$NodeFactory_8067421349543645741" />
+      <unit id="4809107873070310008" at="78,0,83,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$PROPS" />
+      <unit id="4809107873070310008" at="64,0,70,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$LINKS" />
+      <unit id="4809107873070310008" at="71,0,77,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$CONCEPTS" />
       <unit id="4809107873068929002" at="21,0,33,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$NodeFactory_4809107873068929002" />
       <unit id="2805552972616080516" at="46,0,58,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$NodeFactory_2805552972616080516" />
       <unit id="2805552972616035457" at="33,0,46,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories$NodeFactory_2805552972616035457" />
-      <unit id="4809107873070310008" at="20,0,78,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories" />
+      <unit id="4809107873070310008" at="20,0,84,0" name="jetbrains.mps.samples.Physics.actions.ForceFactories" />
     </file>
   </root>
   <root nodeRef="r:440f32ad-f2cc-41e6-bc89-c1c2af2bc770(jetbrains.mps.samples.Physics.actions)/7746015835359887683">

@@ -230,6 +230,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      NonTypesystemRule_Runtime nonTypesystemRule = new check_AbstractForceCall_Arguments_NonTypesystemRule();
+      this.myNonTypesystemRules.add(nonTypesystemRule);
+    }
+    {
       NonTypesystemRule_Runtime nonTypesystemRule = new check_OverrideRule_targetIsOverridable_NonTypesystemRule();
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }

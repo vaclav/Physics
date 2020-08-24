@@ -27,8 +27,9 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
 
   public static final SMethod<SNode> getTargetCoordinates_idGdoRjGvovH = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetCoordinates").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGvovH").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   public static final SMethod<SNode> overrideWith_id38SdPTRbTXB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> getNodeTarget_id6ZPff_L2lbX = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getNodeTarget").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6ZPff_L2lbX").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getTargetCoordinates_idGdoRjGvovH, overrideWith_id38SdPTRbTXB);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getTargetCoordinates_idGdoRjGvovH, overrideWith_id38SdPTRbTXB, getNodeTarget_id6ZPff_L2lbX);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -40,6 +41,17 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
     SNode targetCoordinates = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized);
     SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(targetCoordinates, LINKS.expression$87ts), SNodeOperations.copyNode(content));
     return SLinkOperations.getTarget(targetCoordinates, LINKS.expression$87ts);
+  }
+  /*package*/ static SNode getNodeTarget_id6ZPff_L2lbX(@NotNull SNode __thisNode__) {
+    SNode localized = ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$lA));
+
+    // Get the target coordinates or the  
+    SNode targetCoordinates = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized);
+    if ((targetCoordinates == null)) {
+      return localized;
+    } else {
+      return targetCoordinates;
+    }
   }
 
   /*package*/ ITargetExpression__BehaviorDescriptor() {
@@ -59,6 +71,8 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
     switch (methodIndex) {
       case 1:
         return (T) ((SNode) overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]));
+      case 2:
+        return (T) ((SNode) getNodeTarget_id6ZPff_L2lbX(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

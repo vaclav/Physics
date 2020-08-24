@@ -207,6 +207,7 @@
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.menus.EditorMenuTraceInfo" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
@@ -219,6 +220,7 @@
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SReferenceLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
@@ -684,6 +686,22 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.CurrentObject_Customization">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionItemInformation" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionMenuItemCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCreatingConceptContextMatcher" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCreatingCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemStyle" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SInterfaceConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizer" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.editor.CurrentWorldExpression_Editor">
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
@@ -752,6 +770,22 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SInterfaceConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.CurrentWorld_Customization">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionItemInformation" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionMenuItemCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCreatingConceptContextMatcher" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCreatingCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemStyle" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SInterfaceConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizer" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.editor.CustomColor_Editor">
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
@@ -1056,6 +1090,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.NamedMenuId" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.SubstituteMenu" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.TransformationMenu" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.AbsoluteCoordinates_TransformationMenu" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.AbstractForceCallParameter_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.AbstractForceCallParameter_SubstituteMenu" />
@@ -1074,8 +1109,10 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ColorTexture_SubstituteMenu" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ConditionalForce_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.CurrentObjectExpression_Editor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.CurrentObject_Customization" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.CurrentWorldExpression_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.CurrentWorldExpression_SubstituteMenu" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.CurrentWorld_Customization" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.CustomColor_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.CylindricalCoordinates_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.DefinedColorReference_Editor" />
@@ -1086,6 +1123,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ElasticCollisionReaction_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.EulerAnglesRotationExpression_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.EulerAxisRotationExpression_Editor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.Force_Customization" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.Force_TransformationMenu" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.IForceDotTarget_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.IObjectDotTarget_Editor" />
@@ -1127,6 +1165,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.VectorComponentTarget_SubstituteMenu" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.VectorOppositeTarget_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.VectorResizeTarget_Editor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.Vector_Customization" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.WorldDefinition_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.WorldInclusion_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.WorldMassCenterTarget_Editor" />
@@ -1275,6 +1314,22 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.Force_Customization">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Objects" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionItemInformation" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionMenuItemCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCreatingConceptContextMatcher" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCreatingCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemStyle" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizer" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.editor.Force_TransformationMenu">
     <classNode dependClassName="java.lang.Override" />
@@ -2774,6 +2829,21 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.Vector_Customization">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionItemInformation" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.completion.CompletionMenuItemCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCreatingConceptContextMatcher" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.menus.EditorMenuItemCreatingCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizationContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemStyle" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizer" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.editor.WorldDefinition_Editor">
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
@@ -2786,6 +2856,7 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Objects" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet.EmptyCellStyleClass" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />

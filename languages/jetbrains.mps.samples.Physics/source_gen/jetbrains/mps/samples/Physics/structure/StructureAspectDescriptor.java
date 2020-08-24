@@ -100,7 +100,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptSimulationAlternativeView = createDescriptorForSimulationAlternativeView();
   /*package*/ final ConceptDescriptor myConceptSphereRadiusStyleKey = createDescriptorForSphereRadiusStyleKey();
   /*package*/ final ConceptDescriptor myConceptSphericalCoordinates = createDescriptorForSphericalCoordinates();
-  /*package*/ final ConceptDescriptor myConceptStatefulForce = createDescriptorForStatefulForce();
   /*package*/ final ConceptDescriptor myConceptStaticForce = createDescriptorForStaticForce();
   /*package*/ final ConceptDescriptor myConceptStyleDefinition = createDescriptorForStyleDefinition();
   /*package*/ final ConceptDescriptor myConceptStyleKey = createDescriptorForStyleKey();
@@ -139,7 +138,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractVectorTarget, myConceptAllObjectsExpression, myConceptBooleanStyleKey, myConceptBoxDepthStyle, myConceptBoxHeightStyle, myConceptBoxWidthStyle, myConceptCachedObjectExpression, myConceptCartesianCoordinates, myConceptCollisionReactionExpression, myConceptCollisionStyleKey, myConceptColorDefinition, myConceptColorExpression, myConceptColorTexture, myConceptColorType, myConceptConditionalForce, myConceptCurrentObjectExpression, myConceptCurrentWorldExpression, myConceptCustomColor, myConceptCylindricalCoordinates, myConceptDefinedColorReference, myConceptDirectionalCoordinates, myConceptDisabledTraceExpression, myConceptDisplayedMetric, myConceptDynamicForce, myConceptElasticCollisionReaction, myConceptEmitLightStyleKey, myConceptEulerAnglesRotationExpression, myConceptEulerAxisRotationExpression, myConceptForce, myConceptForceApplicationPointTarget, myConceptForceComponentsTarget, myConceptForceMomentTarget, myConceptICanBeOverridden, myConceptICurrentObjectContext, myConceptICurrentWorldContext, myConceptIForceDotTarget, myConceptIForceWithApplicationPoint, myConceptIForceWithCache, myConceptIForceWithLinearForce, myConceptILocalized, myConceptIMayTargetWorld, myConceptIObjectDefinition, myConceptIObjectDotTarget, myConceptIOverrideProperties, myConceptIProvideCurrentWorld, myConceptIRuntimeContext, myConceptIRuntimeExpression, myConceptITargetExpression, myConceptITargetObject, myConceptIUseSpecificExpressions, myConceptIUseStyleExpressions, myConceptIWorldDotTarget, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptMomentForce, myConceptNumericDistanceStyleKey, myConceptObjectAngularVelocityTarget, myConceptObjectDefinition, myConceptObjectDistanceWithTarget, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReferenceExpression, myConceptObjectStyleDotTarget, myConceptObjectVelocityTarget, myConceptOverrideRule, myConceptPauseOnCollisionStyleKey, myConceptPictureTexture, myConceptRelativeVector, myConceptRotationExpression, myConceptRotationMatrixExpression, myConceptShapeStyleExpression, myConceptShapeStyleKey, myConceptSimpleCollisionReactionExpression, myConceptSimpleForce, myConceptSimulation, myConceptSimulationAlternativeView, myConceptSphereRadiusStyleKey, myConceptSphericalCoordinates, myConceptStatefulForce, myConceptStaticForce, myConceptStyleDefinition, myConceptStyleKey, myConceptStyleSpecificExpression, myConceptTargetableObjectExpression, myConceptTextureExpression, myConceptTextureStyleKey, myConceptTimeExpression, myConceptTraceStyleKey, myConceptVectorComponentTarget, myConceptVectorExpression, myConceptVectorOppositeTarget, myConceptVectorResizeTarget, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldNestedObjectTarget, myConceptWorldReference);
+    return Arrays.asList(myConceptAbsoluteCoordinates, myConceptAbstractForce, myConceptAbstractForceCall, myConceptAbstractForceCallParameter, myConceptAbstractObjectDefinition, myConceptAbstractObjectReference, myConceptAbstractVectorTarget, myConceptAllObjectsExpression, myConceptBooleanStyleKey, myConceptBoxDepthStyle, myConceptBoxHeightStyle, myConceptBoxWidthStyle, myConceptCachedObjectExpression, myConceptCartesianCoordinates, myConceptCollisionReactionExpression, myConceptCollisionStyleKey, myConceptColorDefinition, myConceptColorExpression, myConceptColorTexture, myConceptColorType, myConceptConditionalForce, myConceptCurrentObjectExpression, myConceptCurrentWorldExpression, myConceptCustomColor, myConceptCylindricalCoordinates, myConceptDefinedColorReference, myConceptDirectionalCoordinates, myConceptDisabledTraceExpression, myConceptDisplayedMetric, myConceptDynamicForce, myConceptElasticCollisionReaction, myConceptEmitLightStyleKey, myConceptEulerAnglesRotationExpression, myConceptEulerAxisRotationExpression, myConceptForce, myConceptForceApplicationPointTarget, myConceptForceComponentsTarget, myConceptForceMomentTarget, myConceptICanBeOverridden, myConceptICurrentObjectContext, myConceptICurrentWorldContext, myConceptIForceDotTarget, myConceptIForceWithApplicationPoint, myConceptIForceWithCache, myConceptIForceWithLinearForce, myConceptILocalized, myConceptIMayTargetWorld, myConceptIObjectDefinition, myConceptIObjectDotTarget, myConceptIOverrideProperties, myConceptIProvideCurrentWorld, myConceptIRuntimeContext, myConceptIRuntimeExpression, myConceptITargetExpression, myConceptITargetObject, myConceptIUseSpecificExpressions, myConceptIUseStyleExpressions, myConceptIWorldDotTarget, myConceptInteractedObjectExpression, myConceptInteractionForce, myConceptMomentForce, myConceptNumericDistanceStyleKey, myConceptObjectAngularVelocityTarget, myConceptObjectDefinition, myConceptObjectDistanceWithTarget, myConceptObjectMassTarget, myConceptObjectPositionTarget, myConceptObjectReferenceExpression, myConceptObjectStyleDotTarget, myConceptObjectVelocityTarget, myConceptOverrideRule, myConceptPauseOnCollisionStyleKey, myConceptPictureTexture, myConceptRelativeVector, myConceptRotationExpression, myConceptRotationMatrixExpression, myConceptShapeStyleExpression, myConceptShapeStyleKey, myConceptSimpleCollisionReactionExpression, myConceptSimpleForce, myConceptSimulation, myConceptSimulationAlternativeView, myConceptSphereRadiusStyleKey, myConceptSphericalCoordinates, myConceptStaticForce, myConceptStyleDefinition, myConceptStyleKey, myConceptStyleSpecificExpression, myConceptTargetableObjectExpression, myConceptTextureExpression, myConceptTextureStyleKey, myConceptTimeExpression, myConceptTraceStyleKey, myConceptVectorComponentTarget, myConceptVectorExpression, myConceptVectorOppositeTarget, myConceptVectorResizeTarget, myConceptWorldDefinition, myConceptWorldInclusion, myConceptWorldMassCenterTarget, myConceptWorldNestedObjectTarget, myConceptWorldReference);
   }
 
   @Override
@@ -314,8 +313,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptSphereRadiusStyleKey;
       case LanguageConceptSwitch.SphericalCoordinates:
         return myConceptSphericalCoordinates;
-      case LanguageConceptSwitch.StatefulForce:
-        return myConceptStatefulForce;
       case LanguageConceptSwitch.StaticForce:
         return myConceptStaticForce;
       case LanguageConceptSwitch.StyleDefinition:
@@ -384,6 +381,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d7a4413cL);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/3541737815097257862");
     b.version(2);
+    b.property("description", 0x6ff53cf970bd1386L).type(PrimitiveTypeId.STRING).origin("8067421349540074374").done();
     b.alias("force");
     return b.create();
   }
@@ -572,6 +570,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("nested", 0x491f8a8da749c41dL).target(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL).optional(false).ordered(true).multiple(false).origin("5269082430048420893").done();
     b.aggregate("condition", 0x491f8a8da74a0c98L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("5269082430048439448").done();
+    b.alias("conditional force");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCurrentObjectExpression() {
@@ -946,6 +945,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "ObjectAngularVelocityTarget", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b115c9bL);
     b.class_(false, false, false);
     b.parent(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x43a656410180f6c1L);
+    b.parent(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7d87e1L);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/2805552972611804315");
     b.version(2);
     b.alias("angular velocity");
@@ -1168,14 +1168,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("phi", 0x629c7a5121af2576L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("7105688800959866230").done();
     b.aggregate("distance", 0x629c7a5121af257cL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("7105688800959866236").done();
     b.alias("spherical coordinates");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForStatefulForce() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "StatefulForce", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a580636L);
-    b.class_(false, true, false);
-    b.super_("jetbrains.mps.samples.Physics.structure.Force", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL);
-    b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/1459540517658822198");
-    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForStaticForce() {

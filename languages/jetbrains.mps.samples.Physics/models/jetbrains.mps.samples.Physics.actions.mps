@@ -14,7 +14,8 @@
     <import index="nas6" ref="r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)" />
     <import index="dq3m" ref="r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)" />
     <import index="9tcj" ref="r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)" />
-    <import index="rf09" ref="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)" implicit="true" />
+    <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" />
+    <import index="rf09" ref="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)" />
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
   </imports>
   <registry>
@@ -861,6 +862,26 @@
             <node concept="JncvC" id="2rJkT1FkDOd" role="JncvA">
               <property role="TrG5h" value="force" />
               <node concept="2jxLKc" id="2rJkT1FkDOe" role="1tU5fm" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="37WvkG" id="6ZPff_KWT8H" role="37WGs$">
+      <ref role="37XkoT" to="9tcj:4R4wXcuYiKN" resolve="MomentForce" />
+      <node concept="37Y9Zx" id="6ZPff_KWT8I" role="37ZfLb">
+        <node concept="3clFbS" id="6ZPff_KWT8J" role="2VODD2">
+          <node concept="3clFbF" id="6ZPff_KWTal" role="3cqZAp">
+            <node concept="37vLTI" id="6ZPff_KWU6x" role="3clFbG">
+              <node concept="3clFbT" id="6ZPff_KWU75" role="37vLTx">
+                <property role="3clFbU" value="true" />
+              </node>
+              <node concept="2OqwBi" id="6ZPff_KWTpZ" role="37vLTJ">
+                <node concept="1r4Lsj" id="6ZPff_KWTak" role="2Oq$k0" />
+                <node concept="3TrcHB" id="6ZPff_KWTLc" role="2OqNvi">
+                  <ref role="3TsBF5" to="9tcj:2rJkT1Fe0u2" resolve="isMomentRelative" />
+                </node>
+              </node>
             </node>
           </node>
         </node>

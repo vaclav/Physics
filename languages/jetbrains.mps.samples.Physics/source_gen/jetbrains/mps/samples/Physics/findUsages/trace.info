@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root>
+    <file name="FindUsagesDescriptor.java">
+      <unit at="34,0,37,0" name="jetbrains.mps.samples.Physics.findUsages.FindUsagesDescriptor$CONCEPTS" />
+      <unit at="13,0,38,0" name="jetbrains.mps.samples.Physics.findUsages.FindUsagesDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:4a437d36-246c-43cd-b8b4-f748a821fcf5(jetbrains.mps.samples.Physics.findUsages)/8067421349545066944">
+    <file name="FindOverridenValue_Finder.java">
+      <node id="8067421349545066944" at="23,34,24,30" concept="5" />
+      <node id="8067421349545066944" at="27,38,28,14" concept="5" />
+      <node id="8067421349545066944" at="31,41,32,36" concept="5" />
+      <node id="8067421349545066944" at="36,122,37,39" concept="1" />
+      <node id="8067421349545182869" at="38,9,39,169" concept="4" />
+      <node id="8067421349545186307" at="40,34,41,63" concept="1" />
+      <node id="8067421349545066944" at="43,15,44,21" concept="1" />
+      <node id="8067421349545166362" at="49,45,50,30" concept="5" />
+      <node id="8067421349545066944" at="55,46,56,89" concept="5" />
+      <node id="8067421349545066944" at="60,0,61,0" concept="6" trace="OverrideRule$lC" />
+      <node id="8067421349545066944" at="20,0,22,0" concept="0" trace="FindOverridenValue_Finder#()V" />
+      <node id="8067421349545183989" at="39,169,42,7" concept="2" />
+      <node id="8067421349545066944" at="22,0,26,0" concept="3" trace="getDescription#()Ljava/lang/String;" />
+      <node id="8067421349545066944" at="26,0,30,0" concept="3" trace="getLongDescription#()Ljava/lang/String;" />
+      <node id="8067421349545066944" at="30,0,34,0" concept="3" trace="getSConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8067421349545066944" at="48,0,52,0" concept="3" trace="getNodeCategory#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8067421349545066944" at="53,0,58,0" concept="3" trace="getDeclarationNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8067421349545066944" at="37,39,45,5" concept="7" />
+      <node id="8067421349545066944" at="35,0,47,0" concept="3" trace="doFind0#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/module/SearchScope;Ljetbrains/mps/ide/findusages/findalgorithm/finders/IFinder/FindCallback;Lorg/jetbrains/mps/openapi/util/ProgressMonitor;)V" />
+      <scope id="8067421349545066944" at="20,38,20,38" />
+      <scope id="8067421349545066944" at="23,34,24,30" />
+      <scope id="8067421349545066944" at="27,38,28,14" />
+      <scope id="8067421349545066944" at="31,41,32,36" />
+      <scope id="8067421349545183991" at="40,34,41,63" />
+      <scope id="8067421349545066944" at="43,15,44,21" />
+      <scope id="8067421349545165556" at="49,45,50,30" />
+      <scope id="8067421349545066944" at="55,46,56,89" />
+      <scope id="8067421349545066944" at="20,0,22,0" />
+      <scope id="8067421349545066944" at="22,0,26,0" />
+      <scope id="8067421349545066944" at="26,0,30,0" />
+      <scope id="8067421349545066944" at="30,0,34,0" />
+      <scope id="8067421349545066946" at="38,9,42,7">
+        <var name="valueTarget" id="8067421349545182870" />
+      </scope>
+      <scope id="8067421349545066944" at="48,0,52,0">
+        <var name="node" id="8067421349545066944" />
+      </scope>
+      <scope id="8067421349545066944" at="53,0,58,0" />
+      <scope id="8067421349545066944" at="36,122,45,5" />
+      <scope id="8067421349545066944" at="35,0,47,0">
+        <var name="callback" id="8067421349545066944" />
+        <var name="monitor" id="8067421349545066944" />
+        <var name="node" id="8067421349545066944" />
+        <var name="scope" id="8067421349545066944" />
+      </scope>
+      <unit id="8067421349545066944" at="59,0,62,0" name="jetbrains.mps.samples.Physics.findUsages.FindOverridenValue_Finder$CONCEPTS" />
+      <unit id="8067421349545066944" at="19,0,63,0" name="jetbrains.mps.samples.Physics.findUsages.FindOverridenValue_Finder" />
+    </file>
+    <file name="FindUsagesDescriptor.java">
+      <node id="8067421349545066944" at="22,13,23,47" concept="5" />
+      <node id="8067421349545066944" at="30,40,31,63" concept="1" />
+      <scope id="8067421349545066944" at="22,13,23,47" />
+    </file>
+  </root>
+</debug-info>
+

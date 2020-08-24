@@ -10,26 +10,54 @@ import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
+import jetbrains.mps.smodel.builder.SNodeBuilder;
+import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public final class ObjectAngularVelocityTarget__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b115c9bL, "jetbrains.mps.samples.Physics.structure.ObjectAngularVelocityTarget");
 
   public static final SMethod<String> renderReadable_id6kR0qIbI2yi = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6kR0qIbI2yi").build();
+  public static final SMethod<SNode> getTargetCoordinates_idGdoRjGvovH = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetCoordinates").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGvovH").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> overrideWith_id38SdPTRbTXB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(renderReadable_id6kR0qIbI2yi);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(renderReadable_id6kR0qIbI2yi, getTargetCoordinates_idGdoRjGvovH, overrideWith_id38SdPTRbTXB);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
   /*package*/ static String renderReadable_id6kR0qIbI2yi(@NotNull SNode __thisNode__) {
     return "angular velocity";
+  }
+  /*package*/ static SNode getTargetCoordinates_idGdoRjGvovH(@NotNull SNode __thisNode__, SNode object) {
+    return SLinkOperations.getTarget(SNodeOperations.as(object, CONCEPTS.ObjectDefinition$YO), LINKS.rotationSpeed$YVgC);
+  }
+  /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
+    {
+      final SNode dotTarget = IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__);
+      if (SNodeOperations.isInstanceOf(dotTarget, CONCEPTS.ObjectDefinition$YO)) {
+        SNode object = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, dotTarget);
+
+        if ((object == null)) {
+          SLinkOperations.setTarget(dotTarget, LINKS.rotationSpeed$YVgC, createTargetableObjectExpression_paku00_a0a0c0a0c(content));
+          return SLinkOperations.getTarget(SLinkOperations.getTarget(dotTarget, LINKS.velocity$DoVv), LINKS.expression$87ts);
+        } else {
+          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(object, LINKS.expression$87ts), content);
+          return SLinkOperations.getTarget(object, LINKS.expression$87ts);
+        }
+      }
+    }
+
+    return null;
   }
 
   /*package*/ ObjectAngularVelocityTarget__BehaviorDescriptor() {
@@ -49,6 +77,10 @@ public final class ObjectAngularVelocityTarget__BehaviorDescriptor extends BaseB
     switch (methodIndex) {
       case 0:
         return (T) ((String) renderReadable_id6kR0qIbI2yi(node));
+      case 1:
+        return (T) ((SNode) getTargetCoordinates_idGdoRjGvovH(node, (SNode) parameters[0]));
+      case 2:
+        return (T) ((SNode) overrideWith_id38SdPTRbTXB(node, (SNode) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -76,5 +108,22 @@ public final class ObjectAngularVelocityTarget__BehaviorDescriptor extends BaseB
   @Override
   public SAbstractConcept getConcept() {
     return CONCEPT;
+  }
+  private static SNode createTargetableObjectExpression_paku00_a0a0c0a0c(SNode p0) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TargetableObjectExpression$cD);
+    n0.forChild(LINKS.expression$87ts).initNode(p0, CONCEPTS.Expression$Wr, true);
+    return n0.getResult();
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
+    /*package*/ static final SConcept TargetableObjectExpression$cD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableObjectExpression");
+    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink rotationSpeed$YVgC = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x4dcb9d0527c44d06L, "rotationSpeed");
+    /*package*/ static final SContainmentLink velocity$DoVv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
+    /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
   }
 }

@@ -14,6 +14,8 @@ import jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor;
 import jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor;
 import jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl;
+import jetbrains.mps.smodel.runtime.FindUsageAspectDescriptor;
+import jetbrains.mps.samples.Physics.findUsages.FindUsagesDescriptor;
 import jetbrains.mps.openapi.intentions.IntentionAspectDescriptor;
 import jetbrains.mps.samples.Physics.intentions.IntentionsDescriptor;
 import jetbrains.mps.lang.migration.runtime.base.MigrationAspectDescriptor;
@@ -72,6 +74,9 @@ public class Language extends LanguageRuntime {
     }
     if (aspectClass == EditorAspectDescriptor.class) {
       return aspectClass.cast(new EditorAspectDescriptorImpl());
+    }
+    if (aspectClass == FindUsageAspectDescriptor.class) {
+      return aspectClass.cast(new FindUsagesDescriptor());
     }
     if (aspectClass == IntentionAspectDescriptor.class) {
       return aspectClass.cast(new IntentionsDescriptor());
