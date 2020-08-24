@@ -7,6 +7,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
@@ -28,7 +29,7 @@ public class TestSimulationSimulation extends Simulation {
   }
 
   protected void initScope(World world) {
-    this.scope = new MilkyWaySystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+    this.scope = new MilkyWaySystemScope(world, InternalVector.ZERO, InternalVector.ZERO, new DMatrix3(1, 0, 0, 0, 1, 0, 0, 0, 1));
 
     scope.SolarSystem1.Sun.getPropertiesBuilder().set(PropKey.TRACE, new Color(255, 255, 255));
   }

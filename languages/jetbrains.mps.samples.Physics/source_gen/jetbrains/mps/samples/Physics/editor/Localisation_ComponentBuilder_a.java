@@ -236,7 +236,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
       editorCell.getStyle().putAll(style);
-      editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.VelocityVector$bc));
+      editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.TargetableObjectExpression$cD));
     }
     @Override
     protected EditorCell createEmptyCell() {
@@ -264,6 +264,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept VelocityVector$bc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738bL, "jetbrains.mps.samples.Physics.structure.VelocityVector");
+    /*package*/ static final SConcept TargetableObjectExpression$cD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableObjectExpression");
   }
 }

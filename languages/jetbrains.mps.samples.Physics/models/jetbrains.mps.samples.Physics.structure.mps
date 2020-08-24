@@ -522,7 +522,7 @@
       <property role="IQ2ns" value="4383135941275155975" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="velocity" />
-      <ref role="20lvS9" node="GdoRjGvReb" resolve="VelocityVector" />
+      <ref role="20lvS9" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
     </node>
     <node concept="1TJgyj" id="4RbBgkBN0cp" role="1TKVEi">
       <property role="IQ2ns" value="5605746806660793113" />
@@ -805,16 +805,6 @@
     <property role="TrG5h" value="ITargetExpression" />
     <node concept="PrWs8" id="38SdPTRd4UZ" role="PrDN$">
       <ref role="PrY4T" node="38SdPTRbTXd" resolve="ICanBeOverridden" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="GdoRjGvReb">
-    <property role="EcuMT" value="796402062949577611" />
-    <property role="3GE5qa" value="physical.vector.targets" />
-    <property role="TrG5h" value="VelocityVector" />
-    <property role="34LRSv" value="initial velocity" />
-    <ref role="1TJDcQ" node="GdoRjGvRee" resolve="TargetableObjectExpression" />
-    <node concept="PrWs8" id="270Q2mEVj8D" role="PzmwI">
-      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
     </node>
   </node>
   <node concept="1TIwiD" id="GdoRjGvRee">

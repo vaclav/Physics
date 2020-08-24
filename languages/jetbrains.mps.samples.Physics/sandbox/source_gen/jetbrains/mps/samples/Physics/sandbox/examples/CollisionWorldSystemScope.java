@@ -6,6 +6,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import org.ode4j.math.DMatrix3C;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
@@ -25,8 +26,8 @@ public class CollisionWorldSystemScope extends SystemScope {
   public final PhysicalEntity C;
   public final PhysicalEntity D;
 
-  public CollisionWorldSystemScope(World world, VectorLike position, VectorLike velocity) {
-    super(position, velocity);
+  public CollisionWorldSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
+    super(position, velocity, rotation);
     // Save this as scope (to simplify generated mapping) 
     final CollisionWorldSystemScope scope = this;
 
@@ -56,8 +57,8 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       // Set static properties of A 
       this.setMass(((Number) new BigInteger("300")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-300")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.15").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("-300")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(AH.mul(((Number) new BigDecimal("0.15").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
 
       //  Forces and visual of the parent objects of A 
       super.init(scope, world);
@@ -82,8 +83,8 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       // Set static properties of B 
       this.setMass(((Number) new BigInteger("500")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("-200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
 
       //  Forces and visual of the parent objects of B 
       super.init(scope, world);
@@ -108,7 +109,7 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       // Set static properties of C 
       this.setMass(((Number) new BigInteger("400")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of C 
@@ -135,7 +136,7 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       // Set static properties of D 
       this.setMass(((Number) new BigInteger("200")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-400")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("-400")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of D 

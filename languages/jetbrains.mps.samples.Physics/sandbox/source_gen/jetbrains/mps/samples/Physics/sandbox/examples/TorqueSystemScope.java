@@ -6,6 +6,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import org.ode4j.math.DMatrix3C;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
@@ -23,8 +24,8 @@ public class TorqueSystemScope extends SystemScope {
   public final PhysicalEntity Light;
   public final PhysicalEntity SampleBox;
 
-  public TorqueSystemScope(World world, VectorLike position, VectorLike velocity) {
-    super(position, velocity);
+  public TorqueSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
+    super(position, velocity, rotation);
     // Save this as scope (to simplify generated mapping) 
     final TorqueSystemScope scope = this;
 
@@ -50,7 +51,7 @@ public class TorqueSystemScope extends SystemScope {
 
       // Set static properties of Light 
       this.setMass(((Number) new BigInteger("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Light 
@@ -75,7 +76,7 @@ public class TorqueSystemScope extends SystemScope {
 
       // Set static properties of SampleBox 
       this.setMass(((Number) new BigInteger("50")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of SampleBox 
@@ -97,7 +98,7 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C moment(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))));
+          return VectorHelper.toDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))));
         }
 
         @Override
@@ -119,7 +120,7 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C moment(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+          return VectorHelper.toDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
         }
 
         @Override

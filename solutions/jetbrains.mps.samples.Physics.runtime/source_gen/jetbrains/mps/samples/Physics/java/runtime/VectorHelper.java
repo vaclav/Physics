@@ -5,19 +5,22 @@ package jetbrains.mps.samples.Physics.java.runtime;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.ode4j.math.DVector3C;
 import java.math.BigDecimal;
-import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.ode4j.math.DVector3;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import org.ode4j.math.DMatrix3;
+import org.ode4j.math.DMatrix3C;
+import org.ode4j.ode.OdeMath;
 
-public class VectorHelper {
-  public static InternalVector internalFromDVector3C(DVector3C vec) {
+public abstract class VectorHelper {
+  public static InternalVector fromDVector3C(DVector3C vec) {
     return new InternalVector(BigDecimal.valueOf(vec.get0()), BigDecimal.valueOf(vec.get1()), BigDecimal.valueOf(vec.get2()));
   }
 
-  public static DVector3C fromInternal(VectorLike vec) {
+  public static DVector3 fromInternal(VectorLike vec) {
     return new DVector3(vec.getX().doubleValue(), vec.getY().doubleValue(), vec.getZ().doubleValue());
   }
 
-  public static DVector3C anyToDVector3C(Object vec) {
+  public static DVector3C toDVector3C(Object vec) {
     if (vec instanceof VectorLike) {
       return fromInternal(as_2xd9bs_a0a0a0a4(vec, VectorLike.class));
     } else if (vec instanceof DVector3C) {
@@ -37,8 +40,14 @@ public class VectorHelper {
     return new DVector3(theta.doubleValue(), phi.doubleValue(), length.doubleValue());
   }
 
-  public static DVector3C relativeTo(DVector3C vector, DVector3C relativeTo) {
+  public static DVector3C add(DVector3C vector, DVector3C relativeTo) {
     return new DVector3(vector.get0() + relativeTo.get0(), vector.get1() + relativeTo.get1(), vector.get2() + relativeTo.get2());
+  }
+
+  public static DMatrix3 addRotation(DMatrix3C initialRotation, DMatrix3C relativeRotation) {
+    DMatrix3 result = new DMatrix3();
+    OdeMath.dMultiply0(result, relativeRotation, initialRotation);
+    return result;
   }
   private static <T> T as_2xd9bs_a0a0a0a4(Object o, Class<T> type) {
     return (type.isInstance(o) ? (T) o : null);

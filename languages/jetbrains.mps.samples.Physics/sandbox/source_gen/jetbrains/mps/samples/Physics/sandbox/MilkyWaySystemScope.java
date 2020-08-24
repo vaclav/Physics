@@ -6,6 +6,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import org.ode4j.math.DMatrix3C;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
@@ -22,8 +23,8 @@ public class MilkyWaySystemScope extends SystemScope {
   public final PhysicalEntity Something;
   public final PhysicalEntity A;
 
-  public MilkyWaySystemScope(World world, VectorLike position, VectorLike velocity) {
-    super(position, velocity);
+  public MilkyWaySystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
+    super(position, velocity, rotation);
     // Save this as scope (to simplify generated mapping) 
     final MilkyWaySystemScope scope = this;
 
@@ -31,7 +32,7 @@ public class MilkyWaySystemScope extends SystemScope {
     FloatingDog = withEntity(new FloatingDog2PhysicalEntity(world, "FloatingDog1", scope));
     Something = withEntity(new Something2PhysicalEntity(world, "Something1", scope));
     A = withEntity(new A2PhysicalEntity(world, "A1", scope));
-    SolarSystem1 = withEntity(new SolarSystemSystemScope(world, position.add(new InternalVector(AH.mul(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), velocity.add(InternalVector.ZERO)));
+    SolarSystem1 = withEntity(new SolarSystemSystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
 
     // Initialize them 
     FloatingDog.init(this, world);
@@ -52,7 +53,7 @@ public class MilkyWaySystemScope extends SystemScope {
 
       // Set static properties of Floating dog 
       this.setMass(((Number) new BigInteger("30")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("8.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("50004.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("10.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("8.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("50004.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("10.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Floating dog 
@@ -66,17 +67,17 @@ public class MilkyWaySystemScope extends SystemScope {
         public DVector3C linearForce(World world, MilkyWaySystemScope scope, PhysicalEntity currentEntity, double time) {
           cached = FrictionForce.get(world, scope, currentEntity, time, ((Number) new BigInteger("4")));
 
-          return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
+          return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
         }
 
         @Override
         public DVector3C moment(World world, MilkyWaySystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(cached.moment(world, scope, currentEntity, time));
+          return VectorHelper.toDVector3C(cached.moment(world, scope, currentEntity, time));
         }
 
         @Override
         public DVector3C applicationPoint(World world, MilkyWaySystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
+          return VectorHelper.toDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
         }
 
         @Override
@@ -99,7 +100,7 @@ public class MilkyWaySystemScope extends SystemScope {
 
       // Set static properties of Something 
       this.setMass(((Number) new BigInteger("30")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.008099351758686229689152452006379259").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("44.99999837126069715293084237640952").setScale(32, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.008999279731873589543422694659709127").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("0.008099351758686229689152452006379259").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("44.99999837126069715293084237640952").setScale(32, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.008999279731873589543422694659709127").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Something 
@@ -122,7 +123,7 @@ public class MilkyWaySystemScope extends SystemScope {
 
       // Set static properties of A 
       this.setMass(((Number) new BigInteger("30")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of A 

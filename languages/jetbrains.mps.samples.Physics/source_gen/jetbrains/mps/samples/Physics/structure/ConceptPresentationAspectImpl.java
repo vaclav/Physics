@@ -107,7 +107,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_VectorExpression;
   private ConceptPresentation props_VectorOppositeTarget;
   private ConceptPresentation props_VectorResizeTarget;
-  private ConceptPresentation props_VelocityVector;
   private ConceptPresentation props_WorldDefinition;
   private ConceptPresentation props_WorldInclusion;
   private ConceptPresentation props_WorldMassCenterTarget;
@@ -129,7 +128,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0be);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0ae);
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
@@ -152,7 +151,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0be);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0ae);
           props_AbstractObjectDefinition = cpb.create();
         }
         return props_AbstractObjectDefinition;
@@ -678,7 +677,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a08b0be);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a08b0ae);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -802,18 +801,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VectorResizeTarget = cpb.create();
         }
         return props_VectorResizeTarget;
-      case LanguageConceptSwitch.VelocityVector:
-        if (props_VelocityVector == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_VelocityVector = cpb.create();
-        }
-        return props_VelocityVector;
       case LanguageConceptSwitch.WorldDefinition:
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a99b0be);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a89b0ae);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;

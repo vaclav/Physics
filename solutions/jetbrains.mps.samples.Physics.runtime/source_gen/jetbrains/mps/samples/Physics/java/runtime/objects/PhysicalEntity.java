@@ -163,7 +163,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   }
 
   public VectorLike getPosition() {
-    return VectorHelper.internalFromDVector3C(getBody().getPosition());
+    return VectorHelper.fromDVector3C(getBody().getPosition());
   }
 
   public void setPosition(VectorLike pos) {
@@ -176,7 +176,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
 
 
   public VectorLike getVelocity() {
-    return VectorHelper.internalFromDVector3C(getBody().getLinearVel());
+    return VectorHelper.fromDVector3C(getBody().getLinearVel());
   }
 
 

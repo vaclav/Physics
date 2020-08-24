@@ -7,6 +7,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
@@ -29,7 +30,7 @@ public class TorqueSimSimulation extends Simulation {
   }
 
   protected void initScope(World world) {
-    this.scope = new TorqueSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+    this.scope = new TorqueSystemScope(world, InternalVector.ZERO, InternalVector.ZERO, new DMatrix3(1, 0, 0, 0, 1, 0, 0, 0, 1));
 
   }
 
@@ -50,7 +51,7 @@ public class TorqueSimSimulation extends Simulation {
 
   @Override
   protected void renderMetrics(PGraphics ctx) {
-    this.metricsRenderer.renderMetric(ctx, "Rotation speed", AH.mul(VectorHelper.internalFromDVector3C(scope.SampleBox.getBody().getAngularVel()).length(), ((Number) new BigDecimal("57.2958").setScale(4, RoundingMode.DOWN))));
+    this.metricsRenderer.renderMetric(ctx, "Rotation speed", AH.mul(VectorHelper.fromDVector3C(scope.SampleBox.getBody().getAngularVel()).length(), ((Number) new BigDecimal("57.2958").setScale(4, RoundingMode.DOWN))));
   }
 
   public static void main(String[] args) {

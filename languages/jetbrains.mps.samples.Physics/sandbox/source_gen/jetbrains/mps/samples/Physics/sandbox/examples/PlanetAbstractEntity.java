@@ -36,17 +36,17 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         cached = RealGravityForce.get(world, scope, currentEntity, time);
 
-        return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
+        return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
       }
 
       @Override
       public DVector3C moment(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        return VectorHelper.anyToDVector3C(cached.moment(world, scope, currentEntity, time));
+        return VectorHelper.toDVector3C(cached.moment(world, scope, currentEntity, time));
       }
 
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
+        return VectorHelper.toDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
       }
 
       @Override

@@ -1593,7 +1593,7 @@
                 </node>
                 <node concept="2pJPEk" id="1AxJyXYRP8S" role="37vLTx">
                   <node concept="2pJPED" id="1AxJyXYRP8T" role="2pJPEn">
-                    <ref role="2pJxaS" to="9tcj:GdoRjGvReb" resolve="VelocityVector" />
+                    <ref role="2pJxaS" to="9tcj:GdoRjGvRee" resolve="TargetableObjectExpression" />
                     <node concept="2pIpSj" id="1AxJyXYRP8U" role="2pJxcM">
                       <ref role="2pIpSl" to="9tcj:GdoRjGvRej" resolve="expression" />
                       <node concept="36biLy" id="1AxJyXYRP8V" role="28nt2d">
@@ -3204,49 +3204,6 @@
       </node>
       <node concept="3Tqbb2" id="6yY6C98YkW8" role="3clF45">
         <ref role="ehGHo" to="9tcj:3Nk1IDHWZS5" resolve="ILocalized" />
-      </node>
-    </node>
-  </node>
-  <node concept="13h7C7" id="270Q2mEVj8H">
-    <property role="3GE5qa" value="physical.vector.targets" />
-    <ref role="13h7C2" to="9tcj:GdoRjGvReb" resolve="VelocityVector" />
-    <node concept="13hLZK" id="270Q2mEVj8I" role="13h7CW">
-      <node concept="3clFbS" id="270Q2mEVj8J" role="2VODD2" />
-    </node>
-    <node concept="13i0hz" id="270Q2mEVj8S" role="13h7CS">
-      <property role="TrG5h" value="getRequiredDimensions" />
-      <ref role="13i0hy" to="5fi3:270Q2mETulL" resolve="getRequiredDimensions" />
-      <node concept="3Tm1VV" id="270Q2mEVj8T" role="1B3o_S" />
-      <node concept="3clFbS" id="270Q2mEVj8X" role="3clF47">
-        <node concept="3cpWs6" id="270Q2mEVj9d" role="3cqZAp">
-          <node concept="2ShNRf" id="270Q2mEVj9e" role="3cqZAk">
-            <node concept="2HTt$P" id="270Q2mEVj9f" role="2ShVmc">
-              <node concept="2OqwBi" id="270Q2mEVj9g" role="2HTEbv">
-                <node concept="1eOMI4" id="270Q2mEVj9h" role="2Oq$k0">
-                  <node concept="2c44tf" id="270Q2mEVj9i" role="1eOMHV">
-                    <node concept="1N6AA6" id="270Q2mEVj9j" role="2c44tc">
-                      <node concept="3AmWvR" id="270Q2mEVjdH" role="1N7es9">
-                        <ref role="1N7KNK" to="nas6:1fq3tlL$kNU" resolve="speed" />
-                      </node>
-                      <node concept="30bXLL" id="270Q2mEVj9l" role="1N6AA7" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3Tsc0h" id="270Q2mEVj9m" role="2OqNvi">
-                  <ref role="3TtcxE" to="onwr:7tUW$K4pvUN" resolve="units" />
-                </node>
-              </node>
-              <node concept="2I9FWS" id="270Q2mEVj9n" role="2HTBi0">
-                <ref role="2I9WkF" to="onwr:2K_F8JavAHW" resolve="DimensionReference" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="A3Dl8" id="270Q2mEVj8Y" role="3clF45">
-        <node concept="2I9FWS" id="270Q2mEVj8Z" role="A3Ik2">
-          <ref role="2I9WkF" to="onwr:2K_F8JavAHW" resolve="DimensionReference" />
-        </node>
       </node>
     </node>
   </node>

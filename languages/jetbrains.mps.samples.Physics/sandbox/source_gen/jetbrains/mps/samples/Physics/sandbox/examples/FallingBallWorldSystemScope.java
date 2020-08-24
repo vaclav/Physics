@@ -6,6 +6,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import org.ode4j.math.DMatrix3C;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
@@ -26,8 +27,8 @@ public class FallingBallWorldSystemScope extends SystemScope {
   public final PhysicalEntity Ball;
   public final PhysicalEntity Ground;
 
-  public FallingBallWorldSystemScope(World world, VectorLike position, VectorLike velocity) {
-    super(position, velocity);
+  public FallingBallWorldSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
+    super(position, velocity, rotation);
     // Save this as scope (to simplify generated mapping) 
     final FallingBallWorldSystemScope scope = this;
 
@@ -53,8 +54,8 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
       // Set static properties of Ball 
       this.setMass(((Number) new BigInteger("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("-90")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-5")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialVelocity())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("-90")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-5")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
 
       //  Forces and visual of the parent objects of Ball 
       super.init(scope, world);
@@ -71,17 +72,17 @@ public class FallingBallWorldSystemScope extends SystemScope {
         public DVector3C linearForce(World world, FallingBallWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
           cached = FrictionForce.get(world, scope, currentEntity, time, ((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)));
 
-          return VectorHelper.anyToDVector3C(cached.linearForce(world, scope, currentEntity, time));
+          return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
         }
 
         @Override
         public DVector3C moment(World world, FallingBallWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(cached.moment(world, scope, currentEntity, time));
+          return VectorHelper.toDVector3C(cached.moment(world, scope, currentEntity, time));
         }
 
         @Override
         public DVector3C applicationPoint(World world, FallingBallWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.anyToDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
+          return VectorHelper.toDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
         }
 
         @Override
@@ -97,7 +98,7 @@ public class FallingBallWorldSystemScope extends SystemScope {
             cached = new InternalVector(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), AH.mul(AH.mul(scope.Ball.getMass(), ((Number) new BigDecimal("9.81").setScale(2, RoundingMode.DOWN))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), ((Number) new BigInteger("0")));
           }
 
-          return VectorHelper.anyToDVector3C(cached);
+          return VectorHelper.toDVector3C(cached);
         }
 
         @Override
@@ -130,7 +131,7 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
       // Set static properties of Ground 
       this.setMass(((Number) new BigInteger("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("151")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("151")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Ground 

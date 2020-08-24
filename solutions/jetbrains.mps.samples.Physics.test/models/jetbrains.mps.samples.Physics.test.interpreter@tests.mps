@@ -190,7 +190,6 @@
       <concept id="796402062949577614" name="jetbrains.mps.samples.Physics.structure.TargetableObjectExpression" flags="ng" index="3Bsx3U">
         <child id="796402062949577619" name="expression" index="3Bsx3B" />
       </concept>
-      <concept id="796402062949577611" name="jetbrains.mps.samples.Physics.structure.VelocityVector" flags="ng" index="3Bsx3Z" />
       <concept id="796402062951278929" name="jetbrains.mps.samples.Physics.structure.CylindricalCoordinates" flags="ng" index="3B_0C_">
         <child id="796402062951278932" name="phi" index="3B_0Cw" />
         <child id="796402062951278935" name="height" index="3B_0Cz" />
@@ -562,8 +561,8 @@
             <node concept="2WthIp" id="Zge_mbg2d3" role="2Oq$k0" />
             <node concept="2XshWL" id="Zge_mbg2kk" role="2OqNvi">
               <ref role="2WH_rO" node="Zge_mbaWro" resolve="assertEquals" />
-              <node concept="3xONca" id="Zge_mbgeWj" role="2XxRq1">
-                <ref role="3xOPvv" node="Zge_mbg2R_" resolve="directionalVelocity" />
+              <node concept="3xONca" id="5IWtzQzkrk4" role="2XxRq1">
+                <ref role="3xOPvv" node="5IWtzQyLNxS" resolve="directionalVelocity" />
               </node>
               <node concept="2ShNRf" id="Zge_mbg41B" role="2XxRq1">
                 <node concept="1pGfFk" id="Zge_mbg48P" role="2ShVmc">
@@ -878,22 +877,22 @@
               <property role="TrG5h" value="directionalPosition" />
             </node>
           </node>
-          <node concept="3Bsx3Z" id="Zge_mbfZHz" role="1h9ZzH">
-            <node concept="3_jIDJ" id="Zge_mbg0cR" role="3Bsx3B">
-              <node concept="3okdC7" id="Zge_mbg0dg" role="3_jIDG">
+          <node concept="3Bsx3U" id="5IWtzQyLNxR" role="1h9ZzH">
+            <node concept="3xLA65" id="5IWtzQyLNxS" role="lGtFl">
+              <property role="TrG5h" value="directionalVelocity" />
+            </node>
+            <node concept="3_jIDJ" id="5IWtzQyLNxT" role="3Bsx3B">
+              <node concept="3okdC7" id="5IWtzQyLNxU" role="3_jIDG">
                 <ref role="3okdC0" node="Zge_mbd$Ex" resolve="AnObjectSomewhere" />
               </node>
-              <node concept="1N951E" id="5qrSK19fPV5" role="3_jIDE">
-                <node concept="30bXRB" id="Zge_mbg0Xy" role="1N951F">
+              <node concept="1N951E" id="5IWtzQyLNxV" role="3_jIDE">
+                <node concept="30bXRB" id="5IWtzQyLNxW" role="1N951F">
                   <property role="30bXRw" value="12" />
                 </node>
-                <node concept="CIsvn" id="5qrSK19fQzO" role="1N7es9">
+                <node concept="CIsvn" id="5IWtzQyLNxX" role="1N7es9">
                   <ref role="1N7KNK" to="nas6:1fq3tlL$kNW" resolve="mps" />
                 </node>
               </node>
-            </node>
-            <node concept="3xLA65" id="Zge_mbg2R_" role="lGtFl">
-              <property role="TrG5h" value="directionalVelocity" />
             </node>
           </node>
           <node concept="27oVnN" id="2GtZpnyOi_V" role="27xc_Z">

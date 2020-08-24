@@ -6,6 +6,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import org.ode4j.math.DMatrix3C;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
@@ -23,8 +24,8 @@ public class World2SystemScope extends SystemScope {
   public final PhysicalEntity Ho3;
   public final PhysicalEntity Ha;
 
-  public World2SystemScope(World world, VectorLike position, VectorLike velocity) {
-    super(position, velocity);
+  public World2SystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
+    super(position, velocity, rotation);
     // Save this as scope (to simplify generated mapping) 
     final World2SystemScope scope = this;
 
@@ -50,7 +51,7 @@ public class World2SystemScope extends SystemScope {
 
       // Set static properties of Ho 
       this.setMass(AH.add(AH.mul(((Number) new BigInteger("456")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("45")), ((Number) new BigInteger("1")))));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Ho 
@@ -65,7 +66,7 @@ public class World2SystemScope extends SystemScope {
         @Override
         public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
 
-          return VectorHelper.anyToDVector3C(scope.Ha.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
+          return VectorHelper.toDVector3C(scope.Ha.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
         }
 
         @Override
@@ -98,7 +99,7 @@ public class World2SystemScope extends SystemScope {
 
       // Set static properties of Ha 
       this.setMass(AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Ha 
@@ -113,7 +114,7 @@ public class World2SystemScope extends SystemScope {
         @Override
         public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
 
-          return VectorHelper.anyToDVector3C(scope.Ho3.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
+          return VectorHelper.toDVector3C(scope.Ho3.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
         }
 
         @Override

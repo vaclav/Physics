@@ -7,6 +7,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
@@ -16,7 +17,7 @@ public class CollisionSimSimulation extends Simulation {
   protected CollisionWorldSystemScope scope;
 
   public CollisionSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).floatValue());
+    super(AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))).doubleValue(), 1);
   }
 
   @Override
@@ -26,7 +27,7 @@ public class CollisionSimSimulation extends Simulation {
   }
 
   protected void initScope(World world) {
-    this.scope = new CollisionWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+    this.scope = new CollisionWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO, new DMatrix3(1, 0, 0, 0, 1, 0, 0, 0, 1));
 
   }
 

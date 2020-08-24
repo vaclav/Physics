@@ -48,6 +48,10 @@
     <classNode dependClassName="java.math.MathContext" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
+    <classNode dependClassName="org.ode4j.math.DMatrix3C" />
+    <classNode dependClassName="org.ode4j.math.DVector3" />
+    <classNode dependClassName="org.ode4j.ode.OdeMath" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.EntityLike" />
   </dependency>

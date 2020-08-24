@@ -7,6 +7,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
+import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
@@ -31,7 +32,7 @@ public class FallingBallSimulation extends Simulation {
   }
 
   protected void initScope(World world) {
-    this.scope = new FallingBallWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO);
+    this.scope = new FallingBallWorldSystemScope(world, InternalVector.ZERO, InternalVector.ZERO, new DMatrix3(1, 0, 0, 0, 1, 0, 0, 0, 1));
 
     scope.Ball.setMass(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
   }

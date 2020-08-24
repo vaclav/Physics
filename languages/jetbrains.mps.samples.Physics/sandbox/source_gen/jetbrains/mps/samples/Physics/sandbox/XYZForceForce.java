@@ -17,7 +17,7 @@ public class XYZForceForce {
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
 
-        return VectorHelper.anyToDVector3C(new InternalVector(x, y, z));
+        return VectorHelper.toDVector3C(new InternalVector(x, y, z));
       }
 
       @Override

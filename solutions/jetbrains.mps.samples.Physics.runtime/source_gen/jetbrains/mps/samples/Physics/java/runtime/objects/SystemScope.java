@@ -4,7 +4,11 @@ package jetbrains.mps.samples.Physics.java.runtime.objects;
 
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import java.util.ArrayList;
+import org.ode4j.math.DMatrix3C;
 import java.math.BigDecimal;
+import org.ode4j.math.DVector3;
+import org.ode4j.ode.OdeMath;
+import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import java.math.MathContext;
 
@@ -13,11 +17,13 @@ public abstract class SystemScope extends VectorLike implements EntityLike {
 
   protected VectorLike initialPosition;
   protected VectorLike initialVelocity;
+  protected DMatrix3C initialRotation;
   protected BigDecimal computedMass;
 
-  public SystemScope(VectorLike position, VectorLike velocity) {
+  public SystemScope(VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     this.initialPosition = position;
     this.initialVelocity = velocity;
+    this.initialRotation = rotation;
   }
 
   public ArrayList<EntityLike> getNested() {
@@ -30,9 +36,32 @@ public abstract class SystemScope extends VectorLike implements EntityLike {
     return entity;
   }
 
-  public VectorLike getInitialPosition() {
-    return this.initialPosition;
+
+  /**
+   * Compute the absolute initial position compared to a relative one
+   */
+  public VectorLike getAbsoluteInitialPosition(VectorLike position) {
+    if (initialRotation != null) {
+      DVector3 result = new DVector3();
+      OdeMath.dMultiply0_331(result, initialRotation, VectorHelper.fromInternal(position));
+      position = VectorHelper.fromDVector3C(result);
+    }
+
+    return position.add(initialPosition);
+
   }
+
+  public VectorLike getAbsoluteInitialVelocity(VectorLike velocity) {
+    // Rotated velocity + initial velocity 
+    if (initialRotation != null) {
+      DVector3 result = new DVector3();
+      OdeMath.dMultiply0_331(result, initialRotation, VectorHelper.fromInternal(velocity));
+      velocity = VectorHelper.fromDVector3C(result);
+    }
+
+    return velocity.add(initialVelocity);
+  }
+
   public VectorLike getInitialVelocity() {
     return this.initialVelocity;
   }

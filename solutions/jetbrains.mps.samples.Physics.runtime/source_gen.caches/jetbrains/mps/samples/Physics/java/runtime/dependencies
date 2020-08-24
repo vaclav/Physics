@@ -46,8 +46,11 @@
     <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode dependClassName="org.ode4j.math.DMatrix3" />
+    <classNode dependClassName="org.ode4j.math.DMatrix3C" />
     <classNode dependClassName="org.ode4j.math.DVector3" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode dependClassName="org.ode4j.ode.OdeMath" />
   </dependency>
 </dependenciesRoot>
 

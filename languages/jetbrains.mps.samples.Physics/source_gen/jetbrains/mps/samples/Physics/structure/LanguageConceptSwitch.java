@@ -107,12 +107,11 @@ public final class LanguageConceptSwitch {
   public static final int VectorExpression = 95;
   public static final int VectorOppositeTarget = 96;
   public static final int VectorResizeTarget = 97;
-  public static final int VelocityVector = 98;
-  public static final int WorldDefinition = 99;
-  public static final int WorldInclusion = 100;
-  public static final int WorldMassCenterTarget = 101;
-  public static final int WorldNestedObjectTarget = 102;
-  public static final int WorldReference = 103;
+  public static final int WorldDefinition = 98;
+  public static final int WorldInclusion = 99;
+  public static final int WorldMassCenterTarget = 100;
+  public static final int WorldNestedObjectTarget = 101;
+  public static final int WorldReference = 102;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xbe81eb124eda4d0eL, 0x89be7493500ab874L);
@@ -214,7 +213,6 @@ public final class LanguageConceptSwitch {
     builder.put(0x14f63a1443864979L, VectorExpression);
     builder.put(0x339d8f0ab6a0bccL, VectorOppositeTarget);
     builder.put(0x306daaa2cbe24f94L, VectorResizeTarget);
-    builder.put(0xb0d6374ec7f738bL, VelocityVector);
     builder.put(0x6b7f605cb3278f40L, WorldDefinition);
     builder.put(0x3cd406ea6df343a0L, WorldInclusion);
     builder.put(0x6520d39c9504a750L, WorldMassCenterTarget);

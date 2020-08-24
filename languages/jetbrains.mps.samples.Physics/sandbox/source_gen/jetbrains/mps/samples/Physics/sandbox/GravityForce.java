@@ -27,7 +27,7 @@ public class GravityForce {
       @Override
       public DVector3C linearForce(final World world, SystemScope scope, final PhysicalEntity currentEntity, double time) {
 
-        return VectorHelper.anyToDVector3C(new _FunctionTypes._return_P0_E0<VectorLike>() {
+        return VectorHelper.toDVector3C(new _FunctionTypes._return_P0_E0<VectorLike>() {
           public VectorLike invoke() {
             VectorLike seed = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
             for (Object current : TreePVector.from(TreePVector.from(world.getEntities().stream().filter(new Predicate<PhysicalEntity>() {

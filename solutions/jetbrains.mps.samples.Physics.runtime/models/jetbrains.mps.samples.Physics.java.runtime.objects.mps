@@ -1874,7 +1874,7 @@
       <node concept="3clFbS" id="31HEEbcp95R" role="3clF47">
         <node concept="3cpWs6" id="31HEEbcpaYe" role="3cqZAp">
           <node concept="2YIFZM" id="53HP48IbGuv" role="3cqZAk">
-            <ref role="37wK5l" to="t4bh:31HEEbcpzIA" resolve="internalFromDVector3C" />
+            <ref role="37wK5l" to="t4bh:31HEEbcpzIA" resolve="fromDVector3C" />
             <ref role="1Pybhc" to="t4bh:31HEEbcijiK" resolve="VectorHelper" />
             <node concept="2OqwBi" id="31HEEbcpmVY" role="37wK5m">
               <node concept="1rXfSq" id="31HEEbcpmVZ" role="2Oq$k0">
@@ -1968,7 +1968,7 @@
         <node concept="3cpWs6" id="4D75T4FjcPY" role="3cqZAp">
           <node concept="2YIFZM" id="4D75T4Fji0F" role="3cqZAk">
             <ref role="1Pybhc" to="t4bh:31HEEbcijiK" resolve="VectorHelper" />
-            <ref role="37wK5l" to="t4bh:31HEEbcpzIA" resolve="internalFromDVector3C" />
+            <ref role="37wK5l" to="t4bh:31HEEbcpzIA" resolve="fromDVector3C" />
             <node concept="2OqwBi" id="4D75T4FjkUk" role="37wK5m">
               <node concept="1rXfSq" id="4D75T4Fjjs0" role="2Oq$k0">
                 <ref role="37wK5l" node="3H79Ykd2G$u" resolve="getBody" />
@@ -3374,6 +3374,13 @@
         <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
       </node>
     </node>
+    <node concept="312cEg" id="5IWtzQyv4kP" role="jymVt">
+      <property role="TrG5h" value="initialRotation" />
+      <node concept="3Tmbuc" id="5IWtzQyv0vR" role="1B3o_S" />
+      <node concept="3uibUv" id="5IWtzQyv4d_" role="1tU5fm">
+        <ref role="3uigEE" to="xwt6:~DMatrix3C" resolve="DMatrix3C" />
+      </node>
+    </node>
     <node concept="312cEg" id="G6Xgqqlg9A" role="jymVt">
       <property role="TrG5h" value="computedMass" />
       <node concept="3Tmbuc" id="G6XgqqlezR" role="1B3o_S" />
@@ -3412,6 +3419,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="5IWtzQyoI7X" role="3cqZAp">
+          <node concept="37vLTI" id="5IWtzQyoInR" role="3clFbG">
+            <node concept="37vLTw" id="5IWtzQyoIwi" role="37vLTx">
+              <ref role="3cqZAo" node="5IWtzQyoyx$" resolve="rotation" />
+            </node>
+            <node concept="2OqwBi" id="5IWtzQyoIeJ" role="37vLTJ">
+              <node concept="Xjq3P" id="5IWtzQyoI7V" role="2Oq$k0" />
+              <node concept="2OwXpG" id="5IWtzQyoIjF" role="2OqNvi">
+                <ref role="2Oxat5" node="5IWtzQyv4kP" resolve="initialRotation" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="37vLTG" id="G6Xgqq2dkN" role="3clF46">
         <property role="TrG5h" value="position" />
@@ -3423,6 +3443,12 @@
         <property role="TrG5h" value="velocity" />
         <node concept="3uibUv" id="G6XgqqkZQU" role="1tU5fm">
           <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="5IWtzQyoyx$" role="3clF46">
+        <property role="TrG5h" value="rotation" />
+        <node concept="3uibUv" id="5IWtzQyoyDf" role="1tU5fm">
+          <ref role="3uigEE" to="xwt6:~DMatrix3C" resolve="DMatrix3C" />
         </node>
       </node>
     </node>
@@ -3492,35 +3518,218 @@
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="Zge_mbjqXC" role="jymVt" />
-    <node concept="3clFb_" id="G6Xgqq2Rav" role="jymVt">
-      <property role="TrG5h" value="getInitialPosition" />
-      <node concept="3uibUv" id="G6Xgqql0qu" role="3clF45">
+    <node concept="2tJIrI" id="5IWtzQyoIzB" role="jymVt" />
+    <node concept="2tJIrI" id="5IWtzQyoTZE" role="jymVt" />
+    <node concept="3clFb_" id="5IWtzQyoQlh" role="jymVt">
+      <property role="TrG5h" value="getAbsoluteInitialPosition" />
+      <node concept="3clFbS" id="5IWtzQyoQlk" role="3clF47">
+        <node concept="3clFbJ" id="5IWtzQyqOmx" role="3cqZAp">
+          <node concept="3clFbS" id="5IWtzQyqOmy" role="3clFbx">
+            <node concept="3cpWs8" id="5IWtzQyp25P" role="3cqZAp">
+              <node concept="3cpWsn" id="5IWtzQyp25Q" role="3cpWs9">
+                <property role="TrG5h" value="result" />
+                <node concept="3uibUv" id="5IWtzQyp286" role="1tU5fm">
+                  <ref role="3uigEE" to="xwt6:~DVector3" resolve="DVector3" />
+                </node>
+                <node concept="2ShNRf" id="5IWtzQyp2a9" role="33vP2m">
+                  <node concept="1pGfFk" id="5IWtzQyp293" role="2ShVmc">
+                    <ref role="37wK5l" to="xwt6:~DVector3.&lt;init&gt;()" resolve="DVector3" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="5IWtzQyp1Hn" role="3cqZAp">
+              <node concept="2YIFZM" id="5IWtzQyp213" role="3clFbG">
+                <ref role="37wK5l" to="9dpa:~OdeMath.dMultiply0_331(org.ode4j.math.DVector3,org.ode4j.math.DMatrix3C,org.ode4j.math.DVector3C)" resolve="dMultiply0_331" />
+                <ref role="1Pybhc" to="9dpa:~OdeMath" resolve="OdeMath" />
+                <node concept="37vLTw" id="5IWtzQyp2bn" role="37wK5m">
+                  <ref role="3cqZAo" node="5IWtzQyp25Q" resolve="result" />
+                </node>
+                <node concept="37vLTw" id="5IWtzQyp2eT" role="37wK5m">
+                  <ref role="3cqZAo" node="5IWtzQyv4kP" resolve="initialRotation" />
+                </node>
+                <node concept="2YIFZM" id="5IWtzQyvsWd" role="37wK5m">
+                  <ref role="37wK5l" to="t4bh:39Vo6Lv1DmF" resolve="fromInternal" />
+                  <ref role="1Pybhc" to="t4bh:31HEEbcijiK" resolve="VectorHelper" />
+                  <node concept="37vLTw" id="5IWtzQyvtbL" role="37wK5m">
+                    <ref role="3cqZAo" node="5IWtzQyp2qY" resolve="position" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="5IWtzQyw7FF" role="3cqZAp">
+              <node concept="37vLTI" id="5IWtzQywb5y" role="3clFbG">
+                <node concept="2YIFZM" id="5IWtzQywyAI" role="37vLTx">
+                  <ref role="37wK5l" to="t4bh:31HEEbcpzIA" resolve="fromDVector3C" />
+                  <ref role="1Pybhc" to="t4bh:31HEEbcijiK" resolve="VectorHelper" />
+                  <node concept="37vLTw" id="5IWtzQywyCq" role="37wK5m">
+                    <ref role="3cqZAo" node="5IWtzQyp25Q" resolve="result" />
+                  </node>
+                </node>
+                <node concept="37vLTw" id="5IWtzQywytr" role="37vLTJ">
+                  <ref role="3cqZAo" node="5IWtzQyp2qY" resolve="position" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3y3z36" id="5IWtzQyvSFt" role="3clFbw">
+            <node concept="37vLTw" id="5IWtzQyqOmE" role="3uHU7B">
+              <ref role="3cqZAo" node="5IWtzQyv4kP" resolve="initialRotation" />
+            </node>
+            <node concept="10Nm6u" id="5IWtzQyqOmD" role="3uHU7w" />
+          </node>
+        </node>
+        <node concept="3clFbH" id="5IWtzQyqOme" role="3cqZAp" />
+        <node concept="3cpWs6" id="5IWtzQys5Jj" role="3cqZAp">
+          <node concept="2OqwBi" id="5IWtzQywPs$" role="3cqZAk">
+            <node concept="37vLTw" id="5IWtzQywM6i" role="2Oq$k0">
+              <ref role="3cqZAo" node="5IWtzQyp2qY" resolve="position" />
+            </node>
+            <node concept="liA8E" id="5IWtzQywSpt" role="2OqNvi">
+              <ref role="37wK5l" to="mizj:G6Xgqqgk43" resolve="add" />
+              <node concept="37vLTw" id="5IWtzQywWrA" role="37wK5m">
+                <ref role="3cqZAo" node="G6Xgqq2crM" resolve="initialPosition" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5IWtzQyvKXJ" role="3cqZAp" />
+      </node>
+      <node concept="3Tm1VV" id="5IWtzQyoMx8" role="1B3o_S" />
+      <node concept="3uibUv" id="5IWtzQywAK9" role="3clF45">
         <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
       </node>
-      <node concept="3Tm1VV" id="G6Xgqq2Rax" role="1B3o_S" />
-      <node concept="3clFbS" id="G6Xgqq2Ray" role="3clF47">
-        <node concept="3clFbF" id="G6Xgqq2Raz" role="3cqZAp">
-          <node concept="2OqwBi" id="G6Xgqq2Ras" role="3clFbG">
-            <node concept="Xjq3P" id="G6Xgqq2Rat" role="2Oq$k0" />
-            <node concept="2OwXpG" id="G6Xgqq2Rau" role="2OqNvi">
-              <ref role="2Oxat5" node="G6Xgqq2crM" resolve="initialPosition" />
+      <node concept="P$JXv" id="5IWtzQyoXVb" role="lGtFl">
+        <node concept="TZ5HA" id="5IWtzQyoXVc" role="TZ5H$">
+          <node concept="1dT_AC" id="5IWtzQyoXVd" role="1dT_Ay">
+            <property role="1dT_AB" value="Compute the absolute initial position compared to a relative one" />
+          </node>
+        </node>
+      </node>
+      <node concept="37vLTG" id="5IWtzQyp2qY" role="3clF46">
+        <property role="TrG5h" value="position" />
+        <node concept="3uibUv" id="5IWtzQyp2qX" role="1tU5fm">
+          <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="5IWtzQypOxY" role="jymVt" />
+    <node concept="3clFb_" id="5IWtzQypWs9" role="jymVt">
+      <property role="TrG5h" value="getAbsoluteInitialVelocity" />
+      <node concept="3clFbS" id="5IWtzQypWsc" role="3clF47">
+        <node concept="3SKdUt" id="5IWtzQyqce8" role="3cqZAp">
+          <node concept="1PaTwC" id="5IWtzQyqce9" role="1aUNEU">
+            <node concept="3oM_SD" id="5IWtzQyqcea" role="1PaTwD">
+              <property role="3oM_SC" value="Rotated" />
+            </node>
+            <node concept="3oM_SD" id="5IWtzQyqfRS" role="1PaTwD">
+              <property role="3oM_SC" value="velocity" />
+            </node>
+            <node concept="3oM_SD" id="5IWtzQyqfTJ" role="1PaTwD">
+              <property role="3oM_SC" value="+" />
+            </node>
+            <node concept="3oM_SD" id="5IWtzQyqfUL" role="1PaTwD">
+              <property role="3oM_SC" value="initial" />
+            </node>
+            <node concept="3oM_SD" id="5IWtzQyqfWE" role="1PaTwD">
+              <property role="3oM_SC" value="velocity" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="5IWtzQyx042" role="3cqZAp">
+          <node concept="3clFbS" id="5IWtzQyx043" role="3clFbx">
+            <node concept="3cpWs8" id="5IWtzQyx044" role="3cqZAp">
+              <node concept="3cpWsn" id="5IWtzQyx045" role="3cpWs9">
+                <property role="TrG5h" value="result" />
+                <node concept="3uibUv" id="5IWtzQyx046" role="1tU5fm">
+                  <ref role="3uigEE" to="xwt6:~DVector3" resolve="DVector3" />
+                </node>
+                <node concept="2ShNRf" id="5IWtzQyx047" role="33vP2m">
+                  <node concept="1pGfFk" id="5IWtzQyx048" role="2ShVmc">
+                    <ref role="37wK5l" to="xwt6:~DVector3.&lt;init&gt;()" resolve="DVector3" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="5IWtzQyx049" role="3cqZAp">
+              <node concept="2YIFZM" id="5IWtzQyx04a" role="3clFbG">
+                <ref role="1Pybhc" to="9dpa:~OdeMath" resolve="OdeMath" />
+                <ref role="37wK5l" to="9dpa:~OdeMath.dMultiply0_331(org.ode4j.math.DVector3,org.ode4j.math.DMatrix3C,org.ode4j.math.DVector3C)" resolve="dMultiply0_331" />
+                <node concept="37vLTw" id="5IWtzQyx04b" role="37wK5m">
+                  <ref role="3cqZAo" node="5IWtzQyx045" resolve="result" />
+                </node>
+                <node concept="37vLTw" id="5IWtzQyx04c" role="37wK5m">
+                  <ref role="3cqZAo" node="5IWtzQyv4kP" resolve="initialRotation" />
+                </node>
+                <node concept="2YIFZM" id="5IWtzQyx04d" role="37wK5m">
+                  <ref role="37wK5l" to="t4bh:39Vo6Lv1DmF" resolve="fromInternal" />
+                  <ref role="1Pybhc" to="t4bh:31HEEbcijiK" resolve="VectorHelper" />
+                  <node concept="37vLTw" id="5IWtzQyx47j" role="37wK5m">
+                    <ref role="3cqZAo" node="5IWtzQyq07Z" resolve="velocity" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="5IWtzQyx04f" role="3cqZAp">
+              <node concept="37vLTI" id="5IWtzQyx04g" role="3clFbG">
+                <node concept="2YIFZM" id="5IWtzQyx04h" role="37vLTx">
+                  <ref role="1Pybhc" to="t4bh:31HEEbcijiK" resolve="VectorHelper" />
+                  <ref role="37wK5l" to="t4bh:31HEEbcpzIA" resolve="fromDVector3C" />
+                  <node concept="37vLTw" id="5IWtzQyx04i" role="37wK5m">
+                    <ref role="3cqZAo" node="5IWtzQyx045" resolve="result" />
+                  </node>
+                </node>
+                <node concept="37vLTw" id="5IWtzQyx4bf" role="37vLTJ">
+                  <ref role="3cqZAo" node="5IWtzQyq07Z" resolve="velocity" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3y3z36" id="5IWtzQyx04k" role="3clFbw">
+            <node concept="37vLTw" id="5IWtzQyx04l" role="3uHU7B">
+              <ref role="3cqZAo" node="5IWtzQyv4kP" resolve="initialRotation" />
+            </node>
+            <node concept="10Nm6u" id="5IWtzQyx04m" role="3uHU7w" />
+          </node>
+        </node>
+        <node concept="3clFbH" id="5IWtzQyx04n" role="3cqZAp" />
+        <node concept="3cpWs6" id="5IWtzQyx04o" role="3cqZAp">
+          <node concept="2OqwBi" id="5IWtzQyx04p" role="3cqZAk">
+            <node concept="37vLTw" id="5IWtzQyx8fk" role="2Oq$k0">
+              <ref role="3cqZAo" node="5IWtzQyq07Z" resolve="velocity" />
+            </node>
+            <node concept="liA8E" id="5IWtzQyx04r" role="2OqNvi">
+              <ref role="37wK5l" to="mizj:G6Xgqqgk43" resolve="add" />
+              <node concept="37vLTw" id="5IWtzQyx4ee" role="37wK5m">
+                <ref role="3cqZAo" node="G6Xgqq2crP" resolve="initialVelocity" />
+              </node>
             </node>
           </node>
         </node>
       </node>
-    </node>
-    <node concept="3clFb_" id="G6Xgqq2RaB" role="jymVt">
-      <property role="TrG5h" value="getInitialVelocity" />
-      <node concept="3uibUv" id="G6Xgqql0Pg" role="3clF45">
+      <node concept="3Tm1VV" id="5IWtzQypSgs" role="1B3o_S" />
+      <node concept="3uibUv" id="5IWtzQyxjz2" role="3clF45">
         <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
       </node>
-      <node concept="3Tm1VV" id="G6Xgqq2RaD" role="1B3o_S" />
-      <node concept="3clFbS" id="G6Xgqq2RaE" role="3clF47">
-        <node concept="3clFbF" id="G6Xgqq2RaF" role="3cqZAp">
-          <node concept="2OqwBi" id="G6Xgqq2Ra$" role="3clFbG">
-            <node concept="Xjq3P" id="G6Xgqq2Ra_" role="2Oq$k0" />
-            <node concept="2OwXpG" id="G6Xgqq2RaA" role="2OqNvi">
+      <node concept="37vLTG" id="5IWtzQyq07Z" role="3clF46">
+        <property role="TrG5h" value="velocity" />
+        <node concept="3uibUv" id="5IWtzQyq3JK" role="1tU5fm">
+          <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="5IWtzQytq2u" role="jymVt" />
+    <node concept="3clFb_" id="5IWtzQytu7C" role="jymVt">
+      <property role="TrG5h" value="getInitialVelocity" />
+      <node concept="3uibUv" id="5IWtzQywnKV" role="3clF45">
+        <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
+      </node>
+      <node concept="3Tm1VV" id="5IWtzQytu7E" role="1B3o_S" />
+      <node concept="3clFbS" id="5IWtzQytu7F" role="3clF47">
+        <node concept="3clFbF" id="5IWtzQytu7G" role="3cqZAp">
+          <node concept="2OqwBi" id="5IWtzQytu7_" role="3clFbG">
+            <node concept="Xjq3P" id="5IWtzQytu7A" role="2Oq$k0" />
+            <node concept="2OwXpG" id="5IWtzQytu7B" role="2OqNvi">
               <ref role="2Oxat5" node="G6Xgqq2crP" resolve="initialVelocity" />
             </node>
           </node>
@@ -4215,7 +4424,7 @@
       </node>
       <node concept="10M0yZ" id="5H6c1qUq8we" role="33vP2m">
         <ref role="3cqZAo" to="4bo7:5H6c1qUq7pH" resolve="DEFAULT" />
-        <ref role="1PxDUh" to="4bo7:5H6c1qUpu4Q" resolve="BounceCollisionReaction" />
+        <ref role="1PxDUh" to="4bo7:5H6c1qUpu4Q" resolve="ElasticCollisionReaction" />
       </node>
     </node>
     <node concept="312cEg" id="1AxJyXZ83CO" role="jymVt">

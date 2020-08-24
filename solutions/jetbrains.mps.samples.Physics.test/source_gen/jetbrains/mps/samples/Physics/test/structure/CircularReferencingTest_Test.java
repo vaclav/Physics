@@ -37,8 +37,8 @@ public class CircularReferencingTest_Test extends BaseTransformationTest {
     new TestBody(this).test_NodeUnnamedErrorCheck911298080278844967();
   }
   @Test
-  public void test_NodeUnnamedErrorCheck911298080278352162() throws Throwable {
-    new TestBody(this).test_NodeUnnamedErrorCheck911298080278352162();
+  public void test_NodeUnnamedErrorCheck6610288360169093255() throws Throwable {
+    new TestBody(this).test_NodeUnnamedErrorCheck6610288360169093255();
   }
   @Test
   public void test_NodeUnnamedErrorCheck911298080278844980() throws Throwable {
@@ -82,9 +82,9 @@ public class CircularReferencingTest_Test extends BaseTransformationTest {
       SNode operation = getRealNodeById("911298080278844967");
       new CheckExpectedMessageRunnable.CheckExpectedRuleMessageRunnable(nodeToCheck, MessageStatus.ERROR, new SNodePointer("r:1b0f275e-bd62-4f6e-8c4b-51b05d651a63(com.mbeddr.core.base.typesystem)", "1283330125729692364"), "", myProject.getRepository(), ((ProjectBase) myProject).getPlatform()).run();
     }
-    public void test_NodeUnnamedErrorCheck911298080278352162() throws Exception {
-      SNode nodeToCheck = getRealNodeById("911298080278350058");
-      SNode operation = getRealNodeById("911298080278352162");
+    public void test_NodeUnnamedErrorCheck6610288360169093255() throws Exception {
+      SNode nodeToCheck = getRealNodeById("6610288360169093253");
+      SNode operation = getRealNodeById("6610288360169093255");
       new CheckExpectedMessageRunnable.CheckExpectedRuleMessageRunnable(nodeToCheck, MessageStatus.ERROR, new SNodePointer("r:1b0f275e-bd62-4f6e-8c4b-51b05d651a63(com.mbeddr.core.base.typesystem)", "1283330125729692364"), "", myProject.getRepository(), ((ProjectBase) myProject).getPlatform()).run();
     }
     public void test_NodeUnnamedErrorCheck911298080278844980() throws Exception {
