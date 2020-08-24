@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="jetbrains.mps.samples.Physics.examples.AirDragForce">
+  <dependency className="jetbrains.mps.samples.Physics.examples.AirResistanceForce">
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
@@ -146,6 +146,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.SimpleCollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.FrictionForce" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
@@ -253,7 +254,7 @@
     <classNode dependClassName="java.math.RoundingMode" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.examples.AirDragForce" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.examples.AirResistanceForce" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.BaseObjectAbstractEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.RealGravityForce" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
@@ -350,6 +351,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode dependClassName="processing.core.PGraphics" />
@@ -442,6 +444,7 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.InfiniteTraceHandler" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.examples.TraceSimSimulation" />
@@ -450,6 +453,7 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.examples.TraceSimSimulation" />
@@ -489,6 +493,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3C" />

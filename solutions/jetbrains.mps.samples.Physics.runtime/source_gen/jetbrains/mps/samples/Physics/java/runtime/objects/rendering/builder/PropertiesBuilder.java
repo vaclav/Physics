@@ -9,7 +9,6 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.BoxFixture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler;
 
 public class PropertiesBuilder {
@@ -47,9 +46,9 @@ public class PropertiesBuilder {
     entity.properties().setPauseOnCollision(get(PropKey.PAUSE_ON_COLLISION));
 
     // Trace 
-    Color traceColor = get(PropKey.TRACE);
-    if (traceColor != null) {
-      entity.properties().setTraceHandler(new TraceHandler(traceColor));
+    final TraceHandler traceHandler = get(PropKey.TRACE);
+    if (traceHandler != null) {
+      entity.properties().setTraceHandler(traceHandler);
     }
   }
 }

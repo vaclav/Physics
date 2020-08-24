@@ -128,7 +128,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
 
     // Display trace if any 
     if (properties.getTraceHandler() != null) {
-      properties.getTraceHandler().render(position, graphics, scale, scaledOffset);
+      properties.getTraceHandler().render(position, graphics, scale, scaledOffset, world.isPaused());
     }
   }
   public DBody getBody() {

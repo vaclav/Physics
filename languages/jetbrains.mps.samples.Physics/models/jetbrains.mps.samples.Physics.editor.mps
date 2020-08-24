@@ -2515,6 +2515,9 @@
     <ref role="1XX52x" to="9tcj:1AxJyXYUfKx" resolve="DisabledTraceExpression" />
     <node concept="3F0ifn" id="1AxJyXYUfK$" role="2wV5jI">
       <property role="3F0ifm" value="disabled" />
+      <node concept="A1WHr" id="6ZPff_LgONe" role="3vIgyS">
+        <ref role="2ZyFGn" to="9tcj:6ZPff_LgONd" resolve="TraceExpression" />
+      </node>
     </node>
   </node>
   <node concept="22mcaB" id="1AxJyXZ0ETf">
@@ -4014,6 +4017,48 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="6ZPff_LgOA6">
+    <property role="3GE5qa" value="styles.trace" />
+    <ref role="1XX52x" to="9tcj:6ZPff_LgO_Q" resolve="EnabledTraceExpression" />
+    <node concept="3EZMnI" id="6ZPff_LgOA8" role="2wV5jI">
+      <node concept="3F0ifn" id="6ZPff_LgOAe" role="3EZMnx">
+        <property role="3F0ifm" value="enabled" />
+        <ref role="1k5W1q" node="6HZo5MNae36" resolve="KeyWord" />
+        <node concept="VPxyj" id="6ZPff_LgOBG" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="A1WHr" id="6ZPff_LgONg" role="3vIgyS">
+          <ref role="2ZyFGn" to="9tcj:6ZPff_LgONd" resolve="TraceExpression" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="6ZPff_LgOBy" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+        <ref role="1k5W1q" node="5SjYD03W97U" resolve="LeftParenthesisAfterName" />
+      </node>
+      <node concept="3F0ifn" id="6ZPff_LgOAk" role="3EZMnx">
+        <property role="3F0ifm" value="color:" />
+        <ref role="1k5W1q" node="60D2cmu5xP2" resolve="ParenthesisAttributeLabel" />
+      </node>
+      <node concept="3F1sOY" id="6ZPff_LgOAs" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:6ZPff_LgO_R" resolve="color" />
+      </node>
+      <node concept="3F0ifn" id="6ZPff_LgOAA" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="6ZPff_LgOAM" role="3EZMnx">
+        <property role="3F0ifm" value="infinite:" />
+        <ref role="1k5W1q" node="60D2cmu5xP2" resolve="ParenthesisAttributeLabel" />
+      </node>
+      <node concept="3F0A7n" id="6ZPff_LgOB0" role="3EZMnx">
+        <ref role="1NtTu8" to="9tcj:6ZPff_LgO_T" resolve="isInfinite" />
+      </node>
+      <node concept="3F0ifn" id="6ZPff_LgOBg" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+        <ref role="1k5W1q" node="5SjYD03W98J" resolve="RightParenthesis" />
+      </node>
+      <node concept="l2Vlx" id="6ZPff_LgOAa" role="2iSdaV" />
     </node>
   </node>
 </model>

@@ -5,53 +5,33 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.rendering;
 import org.ode4j.math.DVector3C;
 import processing.core.PGraphics;
 
-public class TraceHandler {
-  public static final int MAX_CAPACITY = 600;
+public abstract class TraceHandler {
 
   private Color aspect;
 
-  private float[][] content;
-  private int offset;
-  private int currentCapacity;
 
   public TraceHandler(Color aspect) {
     this.aspect = aspect;
-    this.content = new float[MAX_CAPACITY][3];
-    this.offset = 0;
   }
 
-  private void writeAt(DVector3C positions, int cursor, float scale, DVector3C scaledOffset) {
-    content[cursor][0] = (float) (positions.get0() * scale + scaledOffset.get0());
-    content[cursor][1] = (float) (positions.get1() * scale + scaledOffset.get1());
-    content[cursor][2] = (float) (positions.get2() * scale + scaledOffset.get2());
-  }
+  protected abstract void write(DVector3C positions, float scale);
 
-  private void vertexAt(PGraphics ctx, int cursor) {
-    ctx.vertex(content[cursor][0], content[cursor][1], content[cursor][2]);
-  }
+  protected abstract void vertices(PGraphics ctx);
 
-  public void render(DVector3C newPositions, PGraphics ctx, float scale, DVector3C scaledOffset) {
+  public void render(DVector3C newPositions, PGraphics ctx, float scale, DVector3C scaledOffset, boolean paused) {
     // Write new position 
-    if (currentCapacity < MAX_CAPACITY) {
-      // Write and increase capacity 
-      writeAt(newPositions, currentCapacity, scale, scaledOffset);
-      currentCapacity += 1;
-    } else {
-      // Write and shift offset 
-      writeAt(newPositions, offset, scale, scaledOffset);
-      offset += 1;
-      if (offset >= MAX_CAPACITY) {
-        offset = 0;
-      }
+    if (!(paused)) {
+      write(newPositions, scale);
     }
 
     // Display history 
     ctx.noFill();
     ctx.stroke(aspect.r, aspect.g, aspect.b);
+    ctx.translate((float) scaledOffset.get0(), (float) scaledOffset.get1(), (float) scaledOffset.get2());
     ctx.beginShape();
-    for (int i = 0; i < currentCapacity; i++) {
-      vertexAt(ctx, (i + offset) % MAX_CAPACITY);
-    }
+
+    vertices(ctx);
+
     ctx.endShape();
   }
 }

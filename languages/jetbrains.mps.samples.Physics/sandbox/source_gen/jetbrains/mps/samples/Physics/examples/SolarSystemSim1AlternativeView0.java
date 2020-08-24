@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.examples;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import processing.core.PGraphics;
@@ -20,7 +21,7 @@ public class SolarSystemSim1AlternativeView0 extends SolarSystemSimSimulation {
     super.initScope(world);
 
     // Override properties 
-    scope.EarthNested.Earth3.getPropertiesBuilder().set(PropKey.TRACE, new Color(0, 0, 255));
+    scope.EarthNested.Earth3.getPropertiesBuilder().set(PropKey.TRACE, new FiniteTraceHandler(new Color(0, 0, 255)));
   }
 
   @Override

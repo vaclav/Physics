@@ -169,6 +169,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.MilkyWaySystemScope" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />

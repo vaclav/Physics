@@ -8,6 +8,11 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.lang.editor.menus.transformation.DefaultTransformationMenuLookup;
+import jetbrains.mps.smodel.language.LanguageRegistry;
+import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
+import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 /*package*/ class DisabledTraceExpression_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -33,7 +38,13 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
     editorCell.setCellId("Constant_jkycxx_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
+    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.TraceExpression$54));
     editorCell.setDefaultText("");
+    editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept TraceExpression$54 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6ff53cf971434ccdL, "jetbrains.mps.samples.Physics.structure.TraceExpression");
   }
 }

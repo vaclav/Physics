@@ -49,6 +49,7 @@
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
+        <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
       <concept id="1109279763828" name="jetbrains.mps.baseLanguage.structure.TypeVariableDeclaration" flags="ng" index="16euLQ" />
@@ -532,9 +533,10 @@
         </node>
         <node concept="3cpWs8" id="1AxJyXZ8giM" role="3cqZAp">
           <node concept="3cpWsn" id="1AxJyXZ8giN" role="3cpWs9">
-            <property role="TrG5h" value="traceColor" />
-            <node concept="3uibUv" id="MHm3qvm2vx" role="1tU5fm">
-              <ref role="3uigEE" to="d2el:MHm3qviJ4h" resolve="Color" />
+            <property role="TrG5h" value="traceHandler" />
+            <property role="3TUv4t" value="true" />
+            <node concept="3uibUv" id="6ZPff_LgOpR" role="1tU5fm">
+              <ref role="3uigEE" to="d2el:1AxJyXZ7uHp" resolve="TraceHandler" />
             </node>
             <node concept="1rXfSq" id="1AxJyXZ8hmz" role="33vP2m">
               <ref role="37wK5l" node="10n4tqnCLBV" resolve="get" />
@@ -559,13 +561,8 @@
                 </node>
                 <node concept="liA8E" id="1AxJyXZ8iSa" role="2OqNvi">
                   <ref role="37wK5l" to="jyp0:5H6c1qUrset" resolve="setTraceHandler" />
-                  <node concept="2ShNRf" id="1AxJyXZ8iTe" role="37wK5m">
-                    <node concept="1pGfFk" id="1AxJyXZ8j5D" role="2ShVmc">
-                      <ref role="37wK5l" to="d2el:1AxJyXZ7v26" resolve="TraceHandler" />
-                      <node concept="37vLTw" id="1AxJyXZ8j6G" role="37wK5m">
-                        <ref role="3cqZAo" node="1AxJyXZ8giN" resolve="traceColor" />
-                      </node>
-                    </node>
+                  <node concept="37vLTw" id="6ZPff_LgOsK" role="37wK5m">
+                    <ref role="3cqZAo" node="1AxJyXZ8giN" resolve="traceHandler" />
                   </node>
                 </node>
               </node>
@@ -573,7 +570,7 @@
           </node>
           <node concept="3y3z36" id="1AxJyXZ8iGD" role="3clFbw">
             <node concept="37vLTw" id="1AxJyXZ8ijP" role="3uHU7B">
-              <ref role="3cqZAo" node="1AxJyXZ8giN" resolve="traceColor" />
+              <ref role="3cqZAo" node="1AxJyXZ8giN" resolve="traceHandler" />
             </node>
             <node concept="10Nm6u" id="1AxJyXZ8izR" role="3uHU7w" />
           </node>

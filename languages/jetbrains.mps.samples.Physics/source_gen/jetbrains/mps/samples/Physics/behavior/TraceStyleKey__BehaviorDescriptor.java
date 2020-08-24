@@ -30,8 +30,7 @@ public final class TraceStyleKey__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static SAbstractConcept getSpecificExpressionConcept_id1AxJyXYWKCb(@NotNull SNode __thisNode__) {
-    // TODO find a better common concept for trace color and texture  
-    return CONCEPTS.StyleSpecificExpression$jm;
+    return CONCEPTS.TraceExpression$54;
   }
 
   /*package*/ TraceStyleKey__BehaviorDescriptor() {
@@ -81,6 +80,6 @@ public final class TraceStyleKey__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept StyleSpecificExpression$jm = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7eedde85L, "jetbrains.mps.samples.Physics.structure.StyleSpecificExpression");
+    /*package*/ static final SConcept TraceExpression$54 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6ff53cf971434ccdL, "jetbrains.mps.samples.Physics.structure.TraceExpression");
   }
 }

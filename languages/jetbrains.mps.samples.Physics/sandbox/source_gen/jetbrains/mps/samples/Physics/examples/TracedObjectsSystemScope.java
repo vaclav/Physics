@@ -16,6 +16,7 @@ import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
@@ -60,7 +61,7 @@ public class TracedObjectsSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.TRACE, new Color(0, 0, 255));
+      propertiesBuilder.set(PropKey.TRACE, new FiniteTraceHandler(new Color(0, 0, 255)));
       this.getForces().addAll(Arrays.asList(new Force<TracedObjectsSystemScope>() {
 
         @Override
@@ -108,7 +109,7 @@ public class TracedObjectsSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.TRACE, new Color(255, 0, 0));
+      propertiesBuilder.set(PropKey.TRACE, new FiniteTraceHandler(new Color(255, 0, 0)));
       this.getForces().addAll(Arrays.asList(new Force<TracedObjectsSystemScope>() {
 
         @Override

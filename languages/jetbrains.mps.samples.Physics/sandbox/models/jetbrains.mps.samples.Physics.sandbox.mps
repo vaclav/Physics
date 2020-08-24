@@ -77,6 +77,9 @@
         <child id="913483291047928433" name="color" index="2jxZD7" />
       </concept>
       <concept id="3541737815097257862" name="jetbrains.mps.samples.Physics.structure.AbstractForce" flags="ng" index="llAx1" />
+      <concept id="8067421349548870006" name="jetbrains.mps.samples.Physics.structure.EnabledTraceExpression" flags="ng" index="uHBmf">
+        <child id="8067421349548870007" name="color" index="uHBme" />
+      </concept>
       <concept id="6362440046684076683" name="jetbrains.mps.samples.Physics.structure.CartesianCoordinates" flags="ng" index="v6hs8">
         <child id="1459540517658822199" name="dx" index="Y6l9D" />
         <child id="1459540517658822641" name="dz" index="Y6leJ" />
@@ -904,9 +907,6 @@
     <property role="TrG5h" value="TestSimulation" />
     <property role="3GE5qa" value="test" />
     <node concept="155UyN" id="1AxJyXZbC_N" role="155Tt5">
-      <node concept="Y6$CV" id="1AxJyXZbDfi" role="155UyI">
-        <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
-      </node>
       <node concept="1QScDb" id="1AxJyXZbCL$" role="155UyK">
         <node concept="2UuJHK" id="1AxJyXZbCVQ" role="1QScD9">
           <node concept="1BikpU" id="1AxJyXZbD5t" role="2UuJIb" />
@@ -921,6 +921,11 @@
           <node concept="31uf54" id="1AxJyXZbCKx" role="1QScD9">
             <ref role="31ueSj" node="1jQexh3xMPv" resolve="Sun" />
           </node>
+        </node>
+      </node>
+      <node concept="uHBmf" id="6ZPff_Lna6L" role="155UyI">
+        <node concept="Y6$CV" id="6ZPff_Lnb4I" role="uHBme">
+          <ref role="2hGqkR" to="bf5:G6XgqqOcJv" resolve="white" />
         </node>
       </node>
     </node>

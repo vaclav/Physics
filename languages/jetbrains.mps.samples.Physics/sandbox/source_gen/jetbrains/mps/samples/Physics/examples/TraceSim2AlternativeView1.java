@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.examples;
 
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import processing.core.PGraphics;
 
@@ -14,8 +15,8 @@ public class TraceSim2AlternativeView1 extends TraceSimSimulation {
     super.initScope(world);
 
     // Override properties 
-    scope.MovingObject.getPropertiesBuilder().set(PropKey.TRACE, new Color(255, 255, 0));
-    scope.MovingObject2.getPropertiesBuilder().set(PropKey.TRACE, new Color(220, 220, 220));
+    scope.MovingObject.getPropertiesBuilder().set(PropKey.TRACE, new FiniteTraceHandler(new Color(255, 255, 0)));
+    scope.MovingObject2.getPropertiesBuilder().set(PropKey.TRACE, new FiniteTraceHandler(new Color(220, 220, 220)));
   }
 
 

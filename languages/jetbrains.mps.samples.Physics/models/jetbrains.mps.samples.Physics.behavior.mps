@@ -4337,49 +4337,9 @@
       <ref role="13i0hy" node="1AxJyXYWKCb" resolve="getSpecificExpressionConcept" />
       <node concept="3Tm1VV" id="1AxJyXZ3Kef" role="1B3o_S" />
       <node concept="3clFbS" id="1AxJyXZ3Kei" role="3clF47">
-        <node concept="3SKdUt" id="1AxJyXZ3KiR" role="3cqZAp">
-          <node concept="1PaTwC" id="1AxJyXZ3KiS" role="1aUNEU">
-            <node concept="3oM_SD" id="1AxJyXZ3KiT" role="1PaTwD">
-              <property role="3oM_SC" value="TODO" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3Kjb" role="1PaTwD">
-              <property role="3oM_SC" value="find" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3Kjm" role="1PaTwD">
-              <property role="3oM_SC" value="a" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3Kjy" role="1PaTwD">
-              <property role="3oM_SC" value="better" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3KjJ" role="1PaTwD">
-              <property role="3oM_SC" value="common" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3KjP" role="1PaTwD">
-              <property role="3oM_SC" value="concept" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3KjW" role="1PaTwD">
-              <property role="3oM_SC" value="for" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3Kkc" role="1PaTwD">
-              <property role="3oM_SC" value="trace" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3Kk_" role="1PaTwD">
-              <property role="3oM_SC" value="color" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3Kl2" role="1PaTwD">
-              <property role="3oM_SC" value="and" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3Klm" role="1PaTwD">
-              <property role="3oM_SC" value="texture" />
-            </node>
-            <node concept="3oM_SD" id="1AxJyXZ3KkJ" role="1PaTwD">
-              <property role="3oM_SC" value="" />
-            </node>
-          </node>
-        </node>
         <node concept="3clFbF" id="1AxJyXZ3Kex" role="3cqZAp">
           <node concept="35c_gC" id="1AxJyXZ3Kew" role="3clFbG">
-            <ref role="35c_gD" to="9tcj:1AxJyXYVtU5" resolve="StyleSpecificExpression" />
+            <ref role="35c_gD" to="9tcj:6ZPff_LgONd" resolve="TraceExpression" />
           </node>
         </node>
       </node>

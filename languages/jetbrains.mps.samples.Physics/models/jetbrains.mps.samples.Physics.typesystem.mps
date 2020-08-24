@@ -231,10 +231,6 @@
         <child id="1185805056450" name="argument" index="nvjzm" />
         <child id="1205761991995" name="argumentRepresentator" index="2X0Ygz" />
       </concept>
-      <concept id="1175147569072" name="jetbrains.mps.lang.typesystem.structure.AbstractSubtypingRule" flags="ig" index="2sgdUx">
-        <child id="1175147624276" name="body" index="2sgrp5" />
-      </concept>
-      <concept id="1175147670730" name="jetbrains.mps.lang.typesystem.structure.SubtypingRule" flags="ig" index="2sgARr" />
       <concept id="7992060018732187438" name="jetbrains.mps.lang.typesystem.structure.ReportErrorStatementAnnotation" flags="ng" index="AMVWg" />
       <concept id="1175517767210" name="jetbrains.mps.lang.typesystem.structure.ReportErrorStatement" flags="nn" index="2MkqsV">
         <child id="1175517851849" name="errorString" index="2MkJ7o" />
@@ -2889,49 +2885,6 @@
       <ref role="1YaFvo" to="9tcj:1AxJyXYUfxl" resolve="TraceStyleKey" />
     </node>
   </node>
-  <node concept="2sgARr" id="1AxJyXYUfF4">
-    <property role="3GE5qa" value="styles.trace" />
-    <property role="TrG5h" value="color_isTrace" />
-    <node concept="3clFbS" id="1AxJyXYUfF5" role="2sgrp5">
-      <node concept="3clFbF" id="1AxJyXYUfFl" role="3cqZAp">
-        <node concept="2pJPEk" id="1AxJyXYUfFj" role="3clFbG">
-          <node concept="2pJPED" id="MHm3qvb8dc" role="2pJPEn">
-            <ref role="2pJxaS" to="9tcj:1AxJyXYUfxl" resolve="TraceStyleKey" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="1AxJyXYUfF7" role="1YuTPh">
-      <property role="TrG5h" value="colorType" />
-      <ref role="1YaFvo" to="9tcj:MHm3qvb7YK" resolve="ColorType" />
-    </node>
-  </node>
-  <node concept="1YbPZF" id="1AxJyXYUfKH">
-    <property role="TrG5h" value="typeof_DisabledTraceExpression" />
-    <property role="3GE5qa" value="styles.trace" />
-    <node concept="3clFbS" id="1AxJyXYUfKI" role="18ibNy">
-      <node concept="1Z5TYs" id="1AxJyXYUfSe" role="3cqZAp">
-        <node concept="mw_s8" id="1AxJyXYUfSw" role="1ZfhKB">
-          <node concept="2pJPEk" id="1AxJyXYUfSM" role="mwGJk">
-            <node concept="2pJPED" id="1AxJyXYUfTc" role="2pJPEn">
-              <ref role="2pJxaS" to="9tcj:1AxJyXYUfxl" resolve="TraceStyleKey" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="1AxJyXYUfSh" role="1ZfhK$">
-          <node concept="1Z2H0r" id="1AxJyXYUfKO" role="mwGJk">
-            <node concept="1YBJjd" id="1AxJyXYUfL4" role="1Z2MuG">
-              <ref role="1YBMHb" node="1AxJyXYUfKK" resolve="disabledTraceExpression" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="1AxJyXYUfKK" role="1YuTPh">
-      <property role="TrG5h" value="disabledTraceExpression" />
-      <ref role="1YaFvo" to="9tcj:1AxJyXYUfKx" resolve="DisabledTraceExpression" />
-    </node>
-  </node>
   <node concept="1YbPZF" id="yrUOugQ7E6">
     <property role="TrG5h" value="typeof_SimulationObjectsExpression" />
     <property role="3GE5qa" value="physical.expr" />
@@ -4446,6 +4399,32 @@
     <node concept="1YaCAy" id="6ZPff_Kk2lo" role="1YuTPh">
       <property role="TrG5h" value="abstractForceCall" />
       <ref role="1YaFvo" to="9tcj:1jQexh3yYqw" resolve="AbstractForceCall" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="6ZPff_LgOBO">
+    <property role="TrG5h" value="typeof_TraceExpression" />
+    <property role="3GE5qa" value="styles.trace" />
+    <node concept="3clFbS" id="6ZPff_LgOBP" role="18ibNy">
+      <node concept="1Z5TYs" id="6ZPff_LgOJl" role="3cqZAp">
+        <node concept="mw_s8" id="6ZPff_LgOJD" role="1ZfhKB">
+          <node concept="2pJPEk" id="6ZPff_LgOJ_" role="mwGJk">
+            <node concept="2pJPED" id="6ZPff_LgOJO" role="2pJPEn">
+              <ref role="2pJxaS" to="9tcj:1AxJyXYUfxl" resolve="TraceStyleKey" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="6ZPff_LgOJo" role="1ZfhK$">
+          <node concept="1Z2H0r" id="6ZPff_LgOBV" role="mwGJk">
+            <node concept="1YBJjd" id="6ZPff_LgOCb" role="1Z2MuG">
+              <ref role="1YBMHb" node="6ZPff_LgOBR" resolve="traceExpression" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="6ZPff_LgOBR" role="1YuTPh">
+      <property role="TrG5h" value="traceExpression" />
+      <ref role="1YaFvo" to="9tcj:6ZPff_LgONd" resolve="TraceExpression" />
     </node>
   </node>
 </model>

@@ -1618,6 +1618,14 @@
                   <node concept="37vLTw" id="5claIBng9qX" role="37wK5m">
                     <ref role="3cqZAo" node="6wUuoe0l3de" resolve="scaledOffset" />
                   </node>
+                  <node concept="2OqwBi" id="6ZPff_Lfjra" role="37wK5m">
+                    <node concept="37vLTw" id="6ZPff_LfiXe" role="2Oq$k0">
+                      <ref role="3cqZAo" node="3H79Ykd2GyT" resolve="world" />
+                    </node>
+                    <node concept="liA8E" id="6ZPff_Lfjz$" role="2OqNvi">
+                      <ref role="37wK5l" node="5kbw6V4gU$9" resolve="isPaused" />
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>

@@ -30,6 +30,13 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
   </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode dependClassName="processing.core.PGraphics" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
@@ -51,6 +58,15 @@
     <classNode dependClassName="processing.core.PImage" />
     <classNode dependClassName="processing.core.PShape" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.InfiniteTraceHandler">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+    <classNode dependClassName="processing.core.PGraphics" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer">
     <classNode dependClassName="java.lang.Class" />

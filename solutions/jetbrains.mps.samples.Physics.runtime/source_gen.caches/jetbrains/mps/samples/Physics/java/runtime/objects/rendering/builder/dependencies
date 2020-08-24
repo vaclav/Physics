@@ -9,7 +9,6 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.BoxFixture" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler" />

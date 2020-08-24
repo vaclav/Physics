@@ -1223,8 +1223,8 @@
     <property role="EcuMT" value="1846966433400552481" />
     <property role="3GE5qa" value="styles.trace" />
     <property role="TrG5h" value="DisabledTraceExpression" />
-    <property role="34LRSv" value="disabled" />
-    <ref role="1TJDcQ" node="1AxJyXYVtU5" resolve="StyleSpecificExpression" />
+    <property role="34LRSv" value="disabled trace" />
+    <ref role="1TJDcQ" node="6ZPff_LgONd" resolve="TraceExpression" />
   </node>
   <node concept="1TIwiD" id="1AxJyXYVtU5">
     <property role="EcuMT" value="1846966433400872581" />
@@ -1665,6 +1665,31 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="6ZPff_LgO_Q">
+    <property role="EcuMT" value="8067421349548870006" />
+    <property role="3GE5qa" value="styles.trace" />
+    <property role="TrG5h" value="EnabledTraceExpression" />
+    <property role="34LRSv" value="enabled trace" />
+    <ref role="1TJDcQ" node="6ZPff_LgONd" resolve="TraceExpression" />
+    <node concept="1TJgyi" id="6ZPff_LgO_T" role="1TKVEl">
+      <property role="IQ2nx" value="8067421349548870009" />
+      <property role="TrG5h" value="isInfinite" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyj" id="6ZPff_LgO_R" role="1TKVEi">
+      <property role="IQ2ns" value="8067421349548870007" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="color" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="MHm3qvaE2V" resolve="ColorExpression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6ZPff_LgONd">
+    <property role="EcuMT" value="8067421349548870861" />
+    <property role="3GE5qa" value="styles.trace" />
+    <property role="TrG5h" value="TraceExpression" />
+    <ref role="1TJDcQ" node="1AxJyXYVtU5" resolve="StyleSpecificExpression" />
   </node>
 </model>
 

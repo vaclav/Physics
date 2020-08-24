@@ -7033,6 +7033,76 @@
         <node concept="10Nm6u" id="1AxJyXZ8lJR" role="gfFT$" />
       </node>
     </node>
+    <node concept="3aamgX" id="6ZPff_Lj9b3" role="3aUrZf">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="9tcj:6ZPff_LgO_Q" resolve="EnabledTraceExpression" />
+      <node concept="gft3U" id="6ZPff_Lj9$K" role="1lVwrX">
+        <node concept="2ShNRf" id="6ZPff_Lj9OU" role="gfFT$">
+          <node concept="1pGfFk" id="6ZPff_Lj9OW" role="2ShVmc">
+            <ref role="37wK5l" to="d2el:6ZPff_LgvJa" resolve="InfiniteTraceHandler" />
+            <node concept="2ShNRf" id="6ZPff_LjaAo" role="37wK5m">
+              <node concept="1pGfFk" id="6ZPff_LjaXb" role="2ShVmc">
+                <ref role="37wK5l" to="d2el:MHm3qvivNd" resolve="Color" />
+              </node>
+              <node concept="29HgVG" id="6ZPff_Ljb4Y" role="lGtFl">
+                <node concept="3NFfHV" id="6ZPff_Ljb5K" role="3NFExx">
+                  <node concept="3clFbS" id="6ZPff_Ljb5L" role="2VODD2">
+                    <node concept="3clFbF" id="6ZPff_Ljb8u" role="3cqZAp">
+                      <node concept="2OqwBi" id="6ZPff_Ljbmq" role="3clFbG">
+                        <node concept="30H73N" id="6ZPff_Ljb8t" role="2Oq$k0" />
+                        <node concept="3TrEf2" id="6ZPff_LjbFs" role="2OqNvi">
+                          <ref role="3Tt5mk" to="9tcj:6ZPff_LgO_R" resolve="color" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1W57fq" id="6ZPff_Lj9Pd" role="lGtFl">
+            <node concept="3IZrLx" id="6ZPff_Lj9Pe" role="3IZSJc">
+              <node concept="3clFbS" id="6ZPff_Lj9Pf" role="2VODD2">
+                <node concept="3clFbF" id="6ZPff_Lj9PH" role="3cqZAp">
+                  <node concept="2OqwBi" id="6ZPff_Lja7Z" role="3clFbG">
+                    <node concept="30H73N" id="6ZPff_Lj9PG" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="6ZPff_LjawT" role="2OqNvi">
+                      <ref role="3TsBF5" to="9tcj:6ZPff_LgO_T" resolve="isInfinite" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="gft3U" id="6ZPff_LjbKt" role="UU_$l">
+              <node concept="2ShNRf" id="6ZPff_LjbKx" role="gfFT$">
+                <node concept="1pGfFk" id="6ZPff_LjbKy" role="2ShVmc">
+                  <ref role="37wK5l" to="d2el:6ZPff_Lg2Gp" resolve="FiniteTraceHandler" />
+                  <node concept="2ShNRf" id="6ZPff_LjbKz" role="37wK5m">
+                    <node concept="1pGfFk" id="6ZPff_LjbK$" role="2ShVmc">
+                      <ref role="37wK5l" to="d2el:MHm3qvivNd" resolve="Color" />
+                    </node>
+                    <node concept="29HgVG" id="6ZPff_LjbK_" role="lGtFl">
+                      <node concept="3NFfHV" id="6ZPff_LjbKA" role="3NFExx">
+                        <node concept="3clFbS" id="6ZPff_LjbKB" role="2VODD2">
+                          <node concept="3clFbF" id="6ZPff_LjbKC" role="3cqZAp">
+                            <node concept="2OqwBi" id="6ZPff_LjbKD" role="3clFbG">
+                              <node concept="30H73N" id="6ZPff_LjbKE" role="2Oq$k0" />
+                              <node concept="3TrEf2" id="6ZPff_LjbKF" role="2OqNvi">
+                                <ref role="3Tt5mk" to="9tcj:6ZPff_LgO_R" resolve="color" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="jVnub" id="10n4tqnDkv0">
     <property role="TrG5h" value="StyleToPropKey" />

@@ -100,7 +100,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, final RocketWorldSystemScope scope, final PhysicalEntity currentEntity, double time) {
-          cached = AirDragForce.get(world, scope, currentEntity, time, ((Number) new BigDecimal("0.75").setScale(2, RoundingMode.DOWN)), new _FunctionTypes._return_P0_E0<Number>() {
+          cached = AirResistanceForce.get(world, scope, currentEntity, time, ((Number) new BigDecimal("0.75").setScale(2, RoundingMode.DOWN)), new _FunctionTypes._return_P0_E0<Number>() {
             public Number invoke() {
               final Number distance = AH.sub(currentEntity.minus(scope.Earth).length(), scope.Earth.getPropertiesBuilder().get(PropKey.SPHERE_RADIUS));
               final Number positiveDistance = new _FunctionTypes._return_P0_E0<Number>() {
