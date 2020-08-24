@@ -8,7 +8,6 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
-import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
@@ -17,6 +16,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
+import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class World2SystemScope extends SystemScope {
@@ -49,8 +49,8 @@ public class World2SystemScope extends SystemScope {
       Ho5PhysicalEntity currentEntity = this;
 
       // Set static properties of Ho 
-      this.setMass(AH.add(AH.mul(((Number) new BigInteger("456")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("45")), new BigDecimal("1"))));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("4")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("4")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("4")), new BigDecimal("1"))).add(scope.getInitialPosition())));
+      this.setMass(AH.add(AH.mul(((Number) new BigInteger("456")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("45")), ((Number) new BigInteger("1")))));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Ho 
@@ -59,13 +59,13 @@ public class World2SystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("200")), new BigDecimal("1")));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<World2SystemScope>() {
 
         @Override
         public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
 
-          return VectorHelper.anyToDVector3C(scope.Ha.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), new BigDecimal("1"))));
+          return VectorHelper.anyToDVector3C(scope.Ha.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
         }
 
         @Override
@@ -97,8 +97,8 @@ public class World2SystemScope extends SystemScope {
       Ha2PhysicalEntity currentEntity = this;
 
       // Set static properties of Ha 
-      this.setMass(AH.mul(((Number) new BigInteger("100")), new BigDecimal("1")));
-      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("100")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("100")), new BigDecimal("1")), AH.mul(((Number) new BigInteger("100")), new BigDecimal("1"))).add(scope.getInitialPosition())));
+      this.setMass(AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))));
+      this.getBody().setPosition(VectorHelper.fromInternal(new InternalVector(AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1")))).add(scope.getInitialPosition())));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Ha 
@@ -107,13 +107,13 @@ public class World2SystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("100")), new BigDecimal("1")));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))));
       this.getForces().addAll(Arrays.asList(new Force<World2SystemScope>() {
 
         @Override
         public DVector3C linearForce(World world, World2SystemScope scope, PhysicalEntity currentEntity, double time) {
 
-          return VectorHelper.anyToDVector3C(scope.Ho3.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), new BigDecimal("1"))));
+          return VectorHelper.anyToDVector3C(scope.Ho3.minus(currentEntity).resize(AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))));
         }
 
         @Override

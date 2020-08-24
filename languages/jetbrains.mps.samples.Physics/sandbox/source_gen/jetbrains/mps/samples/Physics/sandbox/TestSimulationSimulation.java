@@ -5,7 +5,6 @@ package jetbrains.mps.samples.Physics.sandbox;
 import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
-import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
@@ -19,7 +18,7 @@ public class TestSimulationSimulation extends Simulation {
   protected MilkyWaySystemScope scope;
 
   public TestSimulationSimulation() {
-    super(AH.mul(((Number) new BigInteger("6")), new BigDecimal("1")).doubleValue(), 1);
+    super(AH.mul(((Number) new BigInteger("6")), ((Number) new BigInteger("1"))).doubleValue(), 1);
   }
 
   @Override

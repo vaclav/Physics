@@ -47,7 +47,7 @@ public final class MomentForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
   /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
     int mode = ForceMode.SKIP_LINEAR_FORCE;
-    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isMomentRelative$rXiD) ? ForceMode.TORQUE_RELATIVE : 1);
+    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isMomentRelative$rXiD) ? ForceMode.TORQUE_RELATIVE : 0);
     return mode;
   }
 

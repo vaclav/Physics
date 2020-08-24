@@ -9,7 +9,6 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
@@ -29,9 +28,9 @@ public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends 
     // Apply styles 
     propertiesBuilder.set(PropKey.SHAPE, "box");
     propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
-    propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("40")), new BigDecimal("1")));
-    propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("40")), new BigDecimal("1")));
-    propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("40")), new BigDecimal("1")));
+    propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
 
     // Forces 
     this.getForces().addAll(Arrays.asList());
