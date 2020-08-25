@@ -174,7 +174,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
           return VectorHelper.toDVector3C(new _FunctionTypes._return_P0_E0<DVector3C>() {
             public DVector3C invoke() {
-              if (AH.isLess(VectorHelper.fromDVector3C(currentEntity.getBody().getAngularVel()).length(), AH.mul(((Number) new BigInteger("300")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))))) {
+              if (AH.isLess(VectorHelper.fromDVector3C(currentEntity.getBody().getAngularVel()).length(), AH.mul(((Number) new BigInteger("3")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))))) {
                 return cached.linearForce(world, scope, currentEntity, time);
               } else {
                 return null;
@@ -187,7 +187,7 @@ public class RocketWorldSystemScope extends SystemScope {
         public DVector3C moment(final World world, final RocketWorldSystemScope scope, final PhysicalEntity currentEntity, final double time) {
           return VectorHelper.toDVector3C(new _FunctionTypes._return_P0_E0<DVector3C>() {
             public DVector3C invoke() {
-              if (AH.isLess(VectorHelper.fromDVector3C(currentEntity.getBody().getAngularVel()).length(), AH.mul(((Number) new BigInteger("300")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))))) {
+              if (AH.isLess(VectorHelper.fromDVector3C(currentEntity.getBody().getAngularVel()).length(), AH.mul(((Number) new BigInteger("3")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))))) {
                 return cached.moment(world, scope, currentEntity, time);
               } else {
                 return null;

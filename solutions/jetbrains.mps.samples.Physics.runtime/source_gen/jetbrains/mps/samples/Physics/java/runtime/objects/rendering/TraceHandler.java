@@ -27,11 +27,14 @@ public abstract class TraceHandler {
     // Display history 
     ctx.noFill();
     ctx.stroke(aspect.r, aspect.g, aspect.b);
+    ctx.pushMatrix();
     ctx.translate((float) scaledOffset.get0(), (float) scaledOffset.get1(), (float) scaledOffset.get2());
     ctx.beginShape();
 
     vertices(ctx);
 
     ctx.endShape();
+    ctx.popMatrix();
+
   }
 }
