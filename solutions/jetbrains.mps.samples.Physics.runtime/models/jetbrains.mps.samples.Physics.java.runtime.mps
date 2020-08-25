@@ -1060,16 +1060,10 @@
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
       <node concept="3clFbS" id="3H79Ykd2GpM" role="3clF47">
-        <node concept="3clFbF" id="3H79Ykd2GpN" role="3cqZAp">
-          <node concept="1rXfSq" id="3H79Ykd2GpO" role="3clFbG">
-            <ref role="37wK5l" to="r7oa:~PApplet.size(int,int,java.lang.String)" resolve="size" />
-            <node concept="3cmrfG" id="3H79Ykd2GpP" role="37wK5m">
-              <property role="3cmrfH" value="800" />
-            </node>
-            <node concept="3cmrfG" id="3H79Ykd2GpQ" role="37wK5m">
-              <property role="3cmrfH" value="600" />
-            </node>
-            <node concept="37vLTw" id="3H79Ykd31ng" role="37wK5m">
+        <node concept="3clFbF" id="1nCAtVyIjyq" role="3cqZAp">
+          <node concept="1rXfSq" id="1nCAtVyIjyo" role="3clFbG">
+            <ref role="37wK5l" to="r7oa:~PApplet.fullScreen(java.lang.String)" resolve="fullScreen" />
+            <node concept="37vLTw" id="1nCAtVyIk3R" role="37wK5m">
               <ref role="3cqZAo" to="r7oa:~PConstants.P3D" resolve="P3D" />
             </node>
           </node>

@@ -6,7 +6,7 @@
     <classNode dependClassName="org.ode4j.ode.DGeom" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ElasticCollisionReaction">
-    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />

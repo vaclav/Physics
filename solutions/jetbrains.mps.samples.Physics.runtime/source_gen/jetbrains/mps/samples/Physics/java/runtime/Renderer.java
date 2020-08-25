@@ -17,7 +17,7 @@ public class Renderer extends PApplet {
   }
   @Override
   public void settings() {
-    size(800, 600, P3D);
+    fullScreen(P3D);
     lastWidth = 800;
     lastHeight = 600;
   }

@@ -76,7 +76,7 @@ public class RotationAndCollisionSystemScope extends SystemScope {
       StaticSphere2PhysicalEntity currentEntity = this;
 
       // Set static properties of StaticSphere 
-      this.setMass(((Number) new BigInteger("50")));
+      this.setMass(((Number) new BigInteger("5000")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 

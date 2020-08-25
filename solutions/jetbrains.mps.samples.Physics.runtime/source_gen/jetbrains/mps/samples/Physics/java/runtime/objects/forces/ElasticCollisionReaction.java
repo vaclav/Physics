@@ -27,18 +27,27 @@ public class ElasticCollisionReaction implements CollisionReaction {
 
     if (n > 0) {
       for (int i = 0; i < n; i++) {
+        CollisionReaction otherReaction = otherObject.properties().getCollisionReaction();
+
         // Init contact 
         final DContact contact = contacts.get(i);
-        if (bounceRatio > 0) {
-          contact.surface.mode |= OdeConstants.dContactBounce;
+
+        // Set bounce ratio 
+        if (otherReaction instanceof ElasticCollisionReaction) {
+          contact.surface.bounce = (bounceRatio * target.getMass().doubleValue() + as_3bje03_a0a0a0a0a0g0a0d0g(otherReaction, ElasticCollisionReaction.class).bounceRatio * otherObject.getMass().doubleValue()) / (target.getMass().doubleValue() + otherObject.getMass().doubleValue());
+        } else {
           contact.surface.bounce = bounceRatio;
+        }
+
+        if (contact.surface.bounce > 0) {
+          contact.surface.mode |= OdeConstants.dContactBounce;
         }
 
         // Attach to bodies 
         DContactJoint joint = OdeHelper.createContactJoint(world.getWorld(), world.getJointGroup(), contact);
 
         // Attach only to involved bodies 
-        if (otherObject.properties().getCollisionReaction().equals(this)) {
+        if (otherReaction instanceof ElasticCollisionReaction) {
           joint.attach(contact.geom.g1.getBody(), contact.geom.g2.getBody());
         } else
         if (otherGeom == contact.geom.g1) {
@@ -77,11 +86,9 @@ public class ElasticCollisionReaction implements CollisionReaction {
       return false;
     }
 
-    ElasticCollisionReaction that = (ElasticCollisionReaction) o;
-    if (Double.compare(that.bounceRatio, bounceRatio) != 0) {
-      return false;
-    }
-
     return true;
+  }
+  private static <T> T as_3bje03_a0a0a0a0a0g0a0d0g(Object o, Class<T> type) {
+    return (type.isInstance(o) ? (T) o : null);
   }
 }

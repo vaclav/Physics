@@ -34,6 +34,7 @@
     <language slang="l:3571bff8-cf91-4cd7-b8b7-baa06abadf7c:jetbrains.mps.samples.Physics.dimensions" version="0" />
     <language slang="l:61cc869c-376a-409d-b749-694ad057266b:jetbrains.mps.samples.Physics.genbase" version="0" />
     <language slang="l:25646cd1-304a-482d-bf04-f6e37e1e5a87:jetbrains.mps.samples.Physics.genjava" version="0" />
+    <language slang="l:f9bdc723-99df-40ff-934c-d1f848158f92:jetbrains.mps.samples.Physics.iets3.ext.math" version="0" />
     <language slang="l:f3e9841e-b1da-4548-9cb8-14aebaf1d1ca:jetbrains.mps.samples.Physics.types" version="0" />
     <language slang="l:db8bd035-3f51-41d8-8fed-954c202d18be:org.iets3.analysis.base" version="0" />
     <language slang="l:7b68d745-a7b8-48b9-bd9c-05c0f8725a35:org.iets3.core.base" version="0" />

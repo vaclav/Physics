@@ -554,10 +554,6 @@
           </node>
         </node>
       </node>
-      <node concept="27oVnN" id="7dIb8AZj7vi" role="27xc_Z">
-        <node concept="2vmpnb" id="7dIb8AZj7Dm" role="39QuWR" />
-        <node concept="3x8DqB" id="7dIb8AZj7D6" role="39QuZq" />
-      </node>
       <node concept="27oVnN" id="2GtZpnzbyQu" role="27xc_Z">
         <node concept="1nHl2y" id="6qMY4Z3b32b" role="39QuZq" />
         <node concept="39LbyW" id="aCA7w6L8Qd" role="39QuWR">
@@ -608,6 +604,10 @@
         </node>
         <node concept="27rm9f" id="aCA7w6PZ5l" role="39QuZq" />
       </node>
+      <node concept="27oVnN" id="7dIb8AZj7vi" role="27xc_Z">
+        <node concept="2vmpnb" id="7dIb8AZj7Dm" role="39QuWR" />
+        <node concept="3x8DqB" id="7dIb8AZj7D6" role="39QuZq" />
+      </node>
       <node concept="27oVnN" id="aCA7w6PZbP" role="27xc_Z">
         <node concept="39LbyW" id="aCA7w6PZl7" role="39QuWR">
           <property role="39LbyZ" value="2AaxZXYfXtB/merge" />
@@ -627,6 +627,27 @@
   <node concept="3okdC4" id="4MH8hIBFMkr">
     <property role="3GE5qa" value="collision.linear" />
     <property role="TrG5h" value="CollisionSim" />
+    <node concept="2zPP1i" id="1nCAtVza$jx" role="2zPRMl">
+      <node concept="155UyN" id="1nCAtVza$po" role="155Tt5">
+        <node concept="1QScDb" id="1nCAtVza$HT" role="155UyK">
+          <node concept="3K9aLm" id="1nCAtVza$WJ" role="1QScD9" />
+          <node concept="1QScDb" id="1nCAtVza$pN" role="30czhm">
+            <node concept="31hh1H" id="1nCAtVza$px" role="30czhm" />
+            <node concept="31uf54" id="1nCAtVzbD8x" role="1QScD9">
+              <ref role="31ueSj" node="4MH8hIBFMkA" resolve="B" />
+            </node>
+          </node>
+        </node>
+        <node concept="1N951E" id="1nCAtVza_qP" role="155UyI">
+          <node concept="30bXRB" id="1nCAtVza_bq" role="1N951F">
+            <property role="30bXRw" value="1" />
+          </node>
+          <node concept="CIsvn" id="1nCAtVza_qO" role="1N7es9">
+            <ref role="1N7KNK" to="nas6:1d1Q7eb5p5y" resolve="kg" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="1t_wfn" id="5IWtzQyWdO3" role="1heTBC">
       <ref role="1t_wfm" node="4MH8hIBFMkh" resolve="CollisionWorld" />
     </node>
@@ -3293,7 +3314,7 @@
       <node concept="3Bsx3U" id="5IWtzQxDu$C" role="1bLhCY">
         <node concept="1N951E" id="5IWtzQxDuMq" role="3Bsx3B">
           <node concept="30bXRB" id="5IWtzQxDuKm" role="1N951F">
-            <property role="30bXRw" value="50" />
+            <property role="30bXRw" value="5000" />
           </node>
           <node concept="CIsvn" id="5IWtzQxDuMp" role="1N7es9">
             <ref role="1N7KNK" to="nas6:1d1Q7eb5p5y" resolve="kg" />

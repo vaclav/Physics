@@ -11,7 +11,7 @@
       <concept id="794591792991785006" name="jetbrains.mps.samples.Physics.structure.ColorDefinition" flags="ng" index="2hGqkC">
         <child id="794591792992137417" name="definition" index="2hI$nf" />
       </concept>
-      <concept id="1510458583736148961" name="jetbrains.mps.samples.Physics.structure.CustomColorTexture" flags="ng" index="1nv_BP">
+      <concept id="1510458583736148961" name="jetbrains.mps.samples.Physics.structure.CustomColor" flags="ng" index="1nv_BP">
         <property id="1510458583736148964" name="red" index="1nv_BK" />
         <property id="1510458583736148966" name="blue" index="1nv_BM" />
         <property id="1510458583736148969" name="green" index="1nv_BX" />
