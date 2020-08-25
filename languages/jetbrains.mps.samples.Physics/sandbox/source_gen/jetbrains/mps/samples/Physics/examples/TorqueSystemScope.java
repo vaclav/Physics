@@ -98,7 +98,7 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C moment(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.toDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))));
+          return VectorHelper.toDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))));
         }
 
         @Override
@@ -120,7 +120,7 @@ public class TorqueSystemScope extends SystemScope {
 
         @Override
         public DVector3C moment(World world, TorqueSystemScope scope, PhysicalEntity currentEntity, double time) {
-          return VectorHelper.toDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
+          return VectorHelper.toDVector3C(new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0"))));
         }
 
         @Override

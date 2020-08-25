@@ -28,8 +28,7 @@
     <import index="kj90" ref="r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.iets3.ext.math.structure)" />
     <import index="b1h1" ref="r:ac5f749f-6179-4d4f-ad24-ad9edbd8077b(org.iets3.core.expr.simpleTypes.behavior)" />
     <import index="1qv1" ref="r:c53b8bbc-6142-4787-a6e4-66310b772b37(org.iets3.core.expr.math.structure)" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
-    <import index="s2qo" ref="r:ab4665d9-6baf-4005-b8e4-87240839fe18(org.iets3.core.expr.math.interpreter.plugin)" />
+    <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" implicit="true" />
   </imports>
   <registry>
     <language id="a247e09e-2435-45ba-b8d2-07e93feba96a" name="jetbrains.mps.baseLanguage.tuples">
@@ -971,12 +970,22 @@
         <node concept="3clFbS" id="6WAdSFgZadZ" role="3clFbx">
           <node concept="2MkqsV" id="6WAdSFgZb4J" role="3cqZAp">
             <node concept="3cpWs3" id="3c2XpEvyJce" role="2MkJ7o">
-              <node concept="1YBJjd" id="azHAkNp8qL" role="3uHU7w">
-                <ref role="1YBMHb" node="3031XnpoCvR" resolve="superType" />
+              <node concept="2OqwBi" id="4gQsfBJ8vQx" role="3uHU7w">
+                <node concept="1YBJjd" id="azHAkNp8qL" role="2Oq$k0">
+                  <ref role="1YBMHb" node="3031XnpoCvR" resolve="superType" />
+                </node>
+                <node concept="2qgKlT" id="4gQsfBJ8wtS" role="2OqNvi">
+                  <ref role="37wK5l" to="tpcu:22G2W3WJ92t" resolve="getDetailedPresentation" />
+                </node>
               </node>
               <node concept="3cpWs3" id="3c2XpEvyIt7" role="3uHU7B">
-                <node concept="1YBJjd" id="azHAkNp8d3" role="3uHU7B">
-                  <ref role="1YBMHb" node="3031XnpoCvF" resolve="subType" />
+                <node concept="2OqwBi" id="4gQsfBJ8vcz" role="3uHU7B">
+                  <node concept="1YBJjd" id="azHAkNp8d3" role="2Oq$k0">
+                    <ref role="1YBMHb" node="3031XnpoCvF" resolve="subType" />
+                  </node>
+                  <node concept="2qgKlT" id="4gQsfBJ8vDv" role="2OqNvi">
+                    <ref role="37wK5l" to="tpcu:22G2W3WJ92t" resolve="getDetailedPresentation" />
+                  </node>
                 </node>
                 <node concept="Xl_RD" id="6WAdSFgZb56" role="3uHU7w">
                   <property role="Xl_RC" value=" does not match with " />

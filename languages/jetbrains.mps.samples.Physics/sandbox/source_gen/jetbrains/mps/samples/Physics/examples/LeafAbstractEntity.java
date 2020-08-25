@@ -38,7 +38,7 @@ public abstract class LeafAbstractEntity<T extends SystemScope> extends BaseObje
 
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        cached = GravityForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("10")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
+        cached = GravitationForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("10")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
 
         return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
       }

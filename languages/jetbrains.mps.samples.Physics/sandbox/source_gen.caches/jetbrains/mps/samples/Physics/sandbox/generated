@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="43juma8zkvjzwmdqx7atr5lgr0ll7by">
-  <files names="BaseObjectAbstractEntity.java:FrictionForce.java:GravityForce.java:MilkyWaySystemScope.java:ObjectSupertypeAbstractEntity.java:PlanetAbstractEntity.java:RandomObjectAbstractEntity.java:SolarSystemSystemScope.java:TestSimulationSimulation.java:TestWorldSystemScope.java:World2SystemScope.java:XYZForceForce.java" />
+<product version="3" modelHash="ecjzs0lqz5fx0hm5kf57wafq13ihhl8">
+  <files names="BaseObjectAbstractEntity.java:FrictionForce.java:GravityForce.java:InteractionForceForce.java:MilkyWaySystemScope.java:ObjectSupertypeAbstractEntity.java:PlanetAbstractEntity.java:RandomObjectAbstractEntity.java:SolarSystemSystemScope.java:TestSimulationSimulation.java:TestWorldSystemScope.java:World2SystemScope.java:XYZForceForce.java" />
 </product>
 

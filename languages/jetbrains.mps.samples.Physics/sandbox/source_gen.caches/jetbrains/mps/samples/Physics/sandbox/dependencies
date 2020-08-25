@@ -35,12 +35,28 @@
     <classNode dependClassName="org.ode4j.math.DVector3C" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.sandbox.GravityForce">
-    <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.util.function.Function" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.sandbox.InteractionForceForce" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.ode4j.math.DVector3C" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.sandbox.InteractionForceForce">
+    <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.math.BigInteger" />
     <classNode dependClassName="java.util.function.Function" />
     <classNode dependClassName="java.util.function.Predicate" />
@@ -54,7 +70,6 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force" />
     <classNode dependClassName="org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper" />
-    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode dependClassName="org.pcollections.TreePVector" />
   </dependency>

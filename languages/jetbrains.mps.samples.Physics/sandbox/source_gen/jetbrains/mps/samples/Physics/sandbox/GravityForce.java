@@ -7,68 +7,44 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import org.ode4j.math.DVector3C;
-import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
-import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
-import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import java.math.BigInteger;
-import org.pcollections.TreePVector;
-import java.util.function.Predicate;
 import java.util.function.Function;
 import org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper;
-import java.util.stream.Collectors;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigDecimal;
+import java.math.BigInteger;
+import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 
 public class GravityForce {
-  public static Force get(World world, SystemScope scope, PhysicalEntity currentEntity, double time, final Number G) {
+  public static Force get(World world, SystemScope scope, PhysicalEntity currentEntity, double time, Number G) {
     Force force = new Force<SystemScope>() {
+      private Force cached;
 
       @Override
-      public DVector3C linearForce(final World world, SystemScope scope, final PhysicalEntity currentEntity, double time) {
-
-        return VectorHelper.toDVector3C(new _FunctionTypes._return_P0_E0<VectorLike>() {
-          public VectorLike invoke() {
-            VectorLike seed = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
-            for (Object current : TreePVector.from(TreePVector.from(world.getEntities().stream().filter(new Predicate<PhysicalEntity>() {
-              public boolean test(PhysicalEntity o) {
-                return new Function<ParameterSetWrapper, Boolean>() {
-                  public Boolean apply(ParameterSetWrapper param) {
-                    PhysicalEntity it = (PhysicalEntity) param.parameters.get(0);
-                    return it != currentEntity;
-                  }
-                }.apply(new ParameterSetWrapper(o));
-              }
-            }).collect(Collectors.toList())).stream().map(new Function<PhysicalEntity, VectorLike>() {
-              public VectorLike apply(PhysicalEntity param) {
-                return new Function<ParameterSetWrapper, VectorLike>() {
-                  public VectorLike apply(ParameterSetWrapper param) {
-                    PhysicalEntity it = (PhysicalEntity) param.parameters.get(0);
-                    return it.minus(currentEntity).resize(AH.div(AH.mul(AH.mul(G, it.getMass()), currentEntity.getMass()), BigDecimal.valueOf(Math.pow(currentEntity.minus(it).length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))));
-                  }
-                }.apply(new ParameterSetWrapper(param));
-              }
-            }).collect(Collectors.toList()))) {
-              seed = seed.add(((VectorLike) current));
-            }
-            return seed;
+      public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        cached = InteractionForceForce.get(world, scope, currentEntity, time, new Function<ParameterSetWrapper, VectorLike>() {
+          public VectorLike apply(ParameterSetWrapper param) {
+            PhysicalEntity it = (PhysicalEntity) param.parameters.get(0);
+            return it.minus(currentEntity).resize(AH.div(AH.mul(AH.mul(G, it.getMass()), currentEntity.getMass()), BigDecimal.valueOf(Math.pow(currentEntity.minus(it).length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))));
           }
-        }.invoke());
+        });
+
+        return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
       }
 
       @Override
       public DVector3C moment(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        return null;
+        return VectorHelper.toDVector3C(cached.moment(world, scope, currentEntity, time));
       }
 
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        return null;
+        return VectorHelper.toDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
       }
 
       @Override
       public int forceMode() {
-        return 0;
+        return 16;
       }
     };
     return force;

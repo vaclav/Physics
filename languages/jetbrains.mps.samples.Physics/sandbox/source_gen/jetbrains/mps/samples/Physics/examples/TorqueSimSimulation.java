@@ -10,9 +10,8 @@ import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import processing.core.PGraphics;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
 import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
@@ -51,11 +50,11 @@ public class TorqueSimSimulation extends Simulation {
 
   @Override
   protected void renderMetrics(PGraphics ctx) {
-    this.metricsRenderer.renderMetric(ctx, "Rotation speed", AH.mul(VectorHelper.fromDVector3C(scope.SampleBox.getBody().getAngularVel()).length(), ((Number) new BigDecimal("57.2958").setScale(4, RoundingMode.DOWN))));
+    this.metricsRenderer.renderMetric(ctx, "Rotation speed", MetricsRenderer.anyToString(VectorHelper.fromDVector3C(scope.SampleBox.getBody().getAngularVel()).length()) + " rad * s^-1");
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new TorqueSimSimulation()));
+    Renderer.afterInit(new CompositeRendererCallback(new TorqueSimSimulation(), new TorqueSim1AlternativeView0()));
     Renderer.main(args);
   }
 }

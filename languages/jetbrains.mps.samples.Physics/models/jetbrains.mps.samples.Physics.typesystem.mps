@@ -3054,7 +3054,7 @@
     </node>
   </node>
   <node concept="1YbPZF" id="4RbBgkBKzcK">
-    <property role="TrG5h" value="typeof_AngleRotationExpression" />
+    <property role="TrG5h" value="typeof_EulerAxisRotationExpression" />
     <property role="3GE5qa" value="physical.vector.rotation" />
     <node concept="3clFbS" id="4RbBgkBKzcL" role="18ibNy">
       <node concept="nvevp" id="4RbBgkBKzcR" role="3cqZAp">

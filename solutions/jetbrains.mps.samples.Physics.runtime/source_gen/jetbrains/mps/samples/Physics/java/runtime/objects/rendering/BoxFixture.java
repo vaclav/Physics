@@ -30,9 +30,10 @@ public class BoxFixture extends Fixture {
   }
 
   @Override
-  protected DMass buildMass() {
+  protected DMass buildMass(double massValue) {
     DMass mass = OdeHelper.createMass();
-    mass.setBox(Fixture.DENSITY, width, height, depth);
+    mass.setMass(massValue);
+    mass.setBox(massValue / getVolume(), width, height, depth);
     return mass;
   }
 

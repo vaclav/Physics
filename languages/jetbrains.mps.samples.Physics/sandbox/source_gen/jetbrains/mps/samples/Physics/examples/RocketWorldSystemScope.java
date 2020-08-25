@@ -76,7 +76,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, RocketWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          cached = RealGravityForce.get(world, scope, currentEntity, time);
+          cached = RealGravitationForce.get(world, scope, currentEntity, time);
 
           return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
         }

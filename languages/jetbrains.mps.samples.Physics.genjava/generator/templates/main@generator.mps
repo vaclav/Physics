@@ -6,10 +6,6 @@
     <use id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext" version="2" />
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="5" />
     <use id="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca" name="jetbrains.mps.samples.Physics.types" version="0" />
-    <use id="9464fa06-5ab9-409b-9274-64ab29588457" name="org.iets3.core.expr.lambda" version="1" />
-    <use id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes" version="1" />
-    <use id="2f7e2e35-6e74-4c43-9fa5-2465d68f5996" name="org.iets3.core.expr.collections" version="5" />
-    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="2" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
@@ -40,28 +36,12 @@
     <import index="9dpa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.ode(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="fxul" ref="r:e3f953af-78f9-46f1-9f68-de224a3dec61(jetbrains.mps.samples.Physics.genjava.behavior)" />
     <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" />
-    <import index="s6tv" ref="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
-    <import index="boxz" ref="r:89e950b9-8c66-4fca-a5c0-614e0548d83a(org.iets3.core.expr.math.behavior)" />
-    <import index="7xqi" ref="r:d2ff18ef-a6af-4ccc-bbe9-c907db320eae(org.iets3.core.expr.math.plugin)" />
-    <import index="1ctc" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.stream(JDK/)" />
-    <import index="e1fw" ref="b0f8641f-bd77-4421-8425-30d9088a82f7/java:org.apache.commons.math3.analysis.polynomials(org.apache.commons/)" />
-    <import index="3rlt" ref="b0f8641f-bd77-4421-8425-30d9088a82f7/java:org.apache.commons.math3.analysis.integration(org.apache.commons/)" />
-    <import index="pbu6" ref="r:83e946de-2a7f-4a4c-b3c9-4f671aa7f2db(org.iets3.core.expr.base.behavior)" />
     <import index="2lf9" ref="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
-    <import index="kqnq" ref="r:7628c3bd-6988-4d33-9682-86b8cef4b8c0(com.mbeddr.mpsutil.interpreter.behavior)" />
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
-    <import index="3673" ref="r:78633c85-d020-485e-aaa3-59e2daa3b826(com.mbeddr.mpsutil.interpreter.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
   <registry>
-    <language id="2f7e2e35-6e74-4c43-9fa5-2465d68f5996" name="org.iets3.core.expr.collections">
-      <concept id="7554398283340640412" name="org.iets3.core.expr.collections.structure.MapOp" flags="ng" index="3iw6QE" />
-      <concept id="7554398283340020764" name="org.iets3.core.expr.collections.structure.OneArgCollectionOp" flags="ng" index="3iAY4E">
-        <child id="7554398283340020765" name="arg" index="3iAY4F" />
-      </concept>
-      <concept id="6414340278546763815" name="org.iets3.core.expr.collections.structure.AsSingletonList" flags="ng" index="3MhG1o" />
-    </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
@@ -244,22 +224,6 @@
       <concept id="1170345865475" name="jetbrains.mps.baseLanguage.structure.AnonymousClass" flags="ig" index="1Y3b0j">
         <reference id="1170346070688" name="classifier" index="1Y3XeK" />
         <child id="1201186121363" name="typeParameter" index="2Ghqu4" />
-      </concept>
-    </language>
-    <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
-      <concept id="1019070541450016346" name="org.iets3.core.expr.base.structure.TupleValue" flags="ng" index="m5g4o">
-        <child id="1019070541450016347" name="values" index="m5g4p" />
-      </concept>
-      <concept id="5115872837156802409" name="org.iets3.core.expr.base.structure.UnaryExpression" flags="ng" index="30czhk">
-        <child id="5115872837156802411" name="expr" index="30czhm" />
-      </concept>
-      <concept id="9002563722476995145" name="org.iets3.core.expr.base.structure.DotExpression" flags="ng" index="1QScDb">
-        <child id="9002563722476995147" name="target" index="1QScD9" />
-      </concept>
-    </language>
-    <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
-      <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
-        <property id="5115872837157054173" name="value" index="30bXRw" />
       </concept>
     </language>
     <language id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator">
@@ -488,18 +452,6 @@
       <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
         <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
-    </language>
-    <language id="9464fa06-5ab9-409b-9274-64ab29588457" name="org.iets3.core.expr.lambda">
-      <concept id="4790956042240983401" name="org.iets3.core.expr.lambda.structure.BlockExpression" flags="ng" index="1aduha">
-        <child id="4790956042240983402" name="expressions" index="1aduh9" />
-      </concept>
-      <concept id="4790956042241053102" name="org.iets3.core.expr.lambda.structure.ValExpression" flags="ng" index="1adJid">
-        <child id="4790956042241053105" name="expr" index="1adJii" />
-      </concept>
-      <concept id="7554398283340741814" name="org.iets3.core.expr.lambda.structure.ShortLambdaExpression" flags="ng" index="3izI60">
-        <child id="7554398283340741815" name="expression" index="3izI61" />
-      </concept>
-      <concept id="7554398283340826520" name="org.iets3.core.expr.lambda.structure.ShortLambdaItExpression" flags="ng" index="3izPEI" />
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="1204796164442" name="jetbrains.mps.baseLanguage.collections.structure.InternalSequenceOperation" flags="nn" index="23sCx2">
@@ -1717,27 +1669,25 @@
     </node>
     <node concept="3aamgX" id="31HEEbciiXE" role="3aUrZf">
       <ref role="30HIoZ" to="9tcj:cTQf2Fjp4$" resolve="InteractedObjectExpression" />
-      <node concept="1Koe21" id="6hOouYMIpqW" role="1lVwrX">
-        <node concept="1aduha" id="6hOouYMIqtv" role="1Koe22">
-          <node concept="1adJid" id="6hOouYMIqwe" role="1aduh9">
-            <property role="TrG5h" value="a" />
-            <node concept="1QScDb" id="6hOouYMJrlB" role="1adJii">
-              <node concept="3iw6QE" id="6hOouYMJrM3" role="1QScD9">
-                <node concept="3izI60" id="6hOouYMJrM4" role="3iAY4F">
-                  <node concept="3izPEI" id="6hOouYMJrM6" role="3izI61">
-                    <node concept="raruj" id="6hOouYMJvg$" role="lGtFl" />
-                  </node>
+      <node concept="1Koe21" id="6giFUYY5piw" role="1lVwrX">
+        <node concept="9aQIb" id="6giFUYY5pix" role="1Koe22">
+          <node concept="3clFbS" id="6giFUYY5piy" role="9aQI4">
+            <node concept="3cpWs8" id="6giFUYY5piz" role="3cqZAp">
+              <node concept="3cpWsn" id="6giFUYY5pi$" role="3cpWs9">
+                <property role="TrG5h" value="otherObject" />
+                <node concept="3uibUv" id="6giFUYY5pi_" role="1tU5fm">
+                  <ref role="3uigEE" to="jyp0:3H79Ykd2GyN" resolve="PhysicalEntity" />
                 </node>
               </node>
-              <node concept="1QScDb" id="6hOouYMJpQr" role="30czhm">
-                <node concept="3MhG1o" id="6hOouYMJqE0" role="1QScD9" />
-                <node concept="m5g4o" id="6hOouYMIvSz" role="30czhm">
-                  <node concept="30bXRB" id="6hOouYMIw8L" role="m5g4p">
-                    <property role="30bXRw" value="0" />
-                  </node>
-                  <node concept="30bXRB" id="6hOouYMJqnf" role="m5g4p">
-                    <property role="30bXRw" value="3" />
-                  </node>
+            </node>
+            <node concept="3clFbF" id="6giFUYY5piA" role="3cqZAp">
+              <node concept="2OqwBi" id="6giFUYY5piB" role="3clFbG">
+                <node concept="37vLTw" id="6giFUYY5piC" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6giFUYY5pi$" resolve="otherObject" />
+                  <node concept="raruj" id="6giFUYY5piD" role="lGtFl" />
+                </node>
+                <node concept="liA8E" id="6giFUYY5piE" role="2OqNvi">
+                  <ref role="37wK5l" to="jyp0:31HEEbckoNF" resolve="getX" />
                 </node>
               </node>
             </node>
@@ -8597,10 +8547,6 @@
       </node>
     </node>
   </node>
-  <node concept="jVnub" id="7zgzoeTXakZ">
-    <property role="3GE5qa" value="expr" />
-    <property role="TrG5h" value="DirectionBinaryEqualityToExpression" />
-  </node>
   <node concept="jVnub" id="3PeuB2_D9Hm">
     <property role="3GE5qa" value="expr.vector" />
     <property role="TrG5h" value="RotationToExpression" />
@@ -8873,10 +8819,10 @@
           <node concept="3zFVjK" id="3Vp3qmaychd" role="3zH0cK">
             <node concept="3clFbS" id="3Vp3qmayche" role="2VODD2">
               <node concept="3clFbF" id="3Vp3qmaychf" role="3cqZAp">
-                <node concept="2OqwBi" id="3Vp3qmaychg" role="3clFbG">
-                  <node concept="1iwH7S" id="3Vp3qmaychh" role="2Oq$k0" />
-                  <node concept="1AYpvF" id="3Vp3qmaychi" role="2OqNvi">
-                    <node concept="30H73N" id="3Vp3qmaychj" role="2QPDDZ" />
+                <node concept="2OqwBi" id="4gQsfBIXh$T" role="3clFbG">
+                  <node concept="30H73N" id="4gQsfBIXhjV" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="4gQsfBIXhYm" role="2OqNvi">
+                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                   </node>
                 </node>
               </node>

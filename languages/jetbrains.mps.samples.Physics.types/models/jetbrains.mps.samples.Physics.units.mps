@@ -4,7 +4,6 @@
   <attribute name="doNotGenerate" value="true" />
   <languages>
     <use id="71934284-d7d1-45ee-a054-8c072591085f" name="org.iets3.core.expr.toplevel" version="4" />
-    <use id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes" version="1" />
     <use id="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" name="jetbrains.mps.samples.Physics.dimensions" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
@@ -30,7 +29,7 @@
         <child id="1926715320664197468" name="default" index="_KLwW" />
       </concept>
       <concept id="8337440621611267903" name="jetbrains.mps.samples.Physics.dimensions.structure.Unit" flags="ng" index="CIrOH" />
-      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.NumberExponent" flags="ng" index="CIsvk">
+      <concept id="8337440621611273670" name="jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent" flags="ng" index="CIsvk">
         <property id="190196155049109992" name="value" index="LYPYd" />
       </concept>
       <concept id="8337440621611270350" name="jetbrains.mps.samples.Physics.dimensions.structure.IUnit" flags="ng" index="CIsFs">

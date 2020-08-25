@@ -14,7 +14,6 @@ import org.ode4j.ode.DBody;
 import org.ode4j.math.DVector3;
 
 public abstract class Fixture implements Renderable {
-  public static final double DENSITY = 1;
   protected DGeom geometry;
   protected Texture texture;
   protected PShape shape;
@@ -47,11 +46,10 @@ public abstract class Fixture implements Renderable {
    * Construct mass adequate to fixture implementation
    * @return mass with appropriate representation
    */
-  protected abstract DMass buildMass();
+  protected abstract DMass buildMass(double massValue);
   public void bindToBody(DBody body, double massValue) {
     // Build and apply mass 
-    DMass mass = buildMass();
-    mass.setMass(massValue);
+    DMass mass = buildMass(massValue);
     body.setMass(mass);
     // Set the body of this fixture geometry 
     geometry = buildGeometry();

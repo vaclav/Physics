@@ -10,8 +10,6 @@
     <import index="jyp0" ref="r:c76e7683-d7ce-4cb6-a6ee-fcd11243f980(jetbrains.mps.samples.Physics.java.runtime.objects)" />
     <import index="9dpa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.ode(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="r7oa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:processing.core(jetbrains.mps.samples.Physics.java.runtime/)" />
-    <import index="4bo7" ref="r:04f45ddc-ac9c-4d8e-83e4-6d920f8101d7(jetbrains.mps.samples.Physics.java.runtime.objects.forces)" />
-    <import index="mizj" ref="r:e13ffd21-a802-400e-89dc-127dd029bfcd(jetbrains.mps.samples.Physics.java.common.vectors)" />
     <import index="xwt6" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.math(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="t4bh" ref="r:7a9b0b84-8d52-4661-8dd6-1e603f6ac398(jetbrains.mps.samples.Physics.java.runtime)" />
     <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
@@ -269,15 +267,6 @@
     <property role="2bfB8j" value="true" />
     <property role="1sVAO0" value="true" />
     <node concept="3Tm1VV" id="3H79Ykd2GmN" role="1B3o_S" />
-    <node concept="Wx3nA" id="3H79Ykd2GmO" role="jymVt">
-      <property role="TrG5h" value="DENSITY" />
-      <property role="3TUv4t" value="true" />
-      <node concept="10P55v" id="3H79Ykd2GmP" role="1tU5fm" />
-      <node concept="3cmrfG" id="3H79Ykd2GmQ" role="33vP2m">
-        <property role="3cmrfH" value="1" />
-      </node>
-      <node concept="3Tm1VV" id="3H79Ykd2GmR" role="1B3o_S" />
-    </node>
     <node concept="312cEg" id="3H79Ykd2GmS" role="jymVt">
       <property role="TrG5h" value="geometry" />
       <node concept="3uibUv" id="39Vo6LuX73u" role="1tU5fm">
@@ -508,6 +497,10 @@
           </node>
         </node>
       </node>
+      <node concept="37vLTG" id="1nCAtVyrY2h" role="3clF46">
+        <property role="TrG5h" value="massValue" />
+        <node concept="10P55v" id="1nCAtVyrY2g" role="1tU5fm" />
+      </node>
     </node>
     <node concept="3clFb_" id="3H79Ykd2Gnk" role="jymVt">
       <property role="TrG5h" value="bindToBody" />
@@ -542,17 +535,7 @@
             </node>
             <node concept="1rXfSq" id="3H79Ykd2GnA" role="33vP2m">
               <ref role="37wK5l" node="3H79Ykd2Gnf" resolve="buildMass" />
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="QNYPlnYUru" role="3cqZAp">
-          <node concept="2OqwBi" id="QNYPlnYUyD" role="3clFbG">
-            <node concept="37vLTw" id="QNYPlnYUrs" role="2Oq$k0">
-              <ref role="3cqZAo" node="3H79Ykd2Gnz" resolve="mass" />
-            </node>
-            <node concept="liA8E" id="QNYPlnYUCz" role="2OqNvi">
-              <ref role="37wK5l" to="9dpa:~DMass.setMass(double)" resolve="setMass" />
-              <node concept="37vLTw" id="QNYPlnYUD_" role="37wK5m">
+              <node concept="37vLTw" id="1nCAtVyrYRM" role="37wK5m">
                 <ref role="3cqZAo" node="QNYPlnYUaI" resolve="massValue" />
               </node>
             </node>
@@ -1401,6 +1384,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="1nCAtVyrZQG" role="3cqZAp">
+          <node concept="2OqwBi" id="QNYPlnYUyD" role="3clFbG">
+            <node concept="37vLTw" id="QNYPlnYUrs" role="2Oq$k0">
+              <ref role="3cqZAo" node="3H79Ykd2GoV" resolve="mass" />
+            </node>
+            <node concept="liA8E" id="QNYPlnYUCz" role="2OqNvi">
+              <ref role="37wK5l" to="9dpa:~DMass.setMass(double)" resolve="setMass" />
+              <node concept="37vLTw" id="1nCAtVys167" role="37wK5m">
+                <ref role="3cqZAo" node="1nCAtVys0ia" resolve="massValue" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="3H79Ykd2GoZ" role="3cqZAp">
           <node concept="2OqwBi" id="3H79Ykd2LGs" role="3clFbG">
             <node concept="37vLTw" id="3H79Ykd2LGr" role="2Oq$k0">
@@ -1408,9 +1404,13 @@
             </node>
             <node concept="liA8E" id="3H79Ykd2LGt" role="2OqNvi">
               <ref role="37wK5l" to="9dpa:~DMass.setSphere(double,double)" resolve="setSphere" />
-              <node concept="10M0yZ" id="3H79Ykd2N04" role="37wK5m">
-                <ref role="1PxDUh" node="3H79Ykd2GmM" resolve="Fixture" />
-                <ref role="3cqZAo" node="3H79Ykd2GmO" resolve="DENSITY" />
+              <node concept="FJ1c_" id="1nCAtVys1Mu" role="37wK5m">
+                <node concept="1rXfSq" id="1nCAtVys1TY" role="3uHU7w">
+                  <ref role="37wK5l" node="2AaxZXYiAT3" resolve="getVolume" />
+                </node>
+                <node concept="37vLTw" id="1nCAtVys1qY" role="3uHU7B">
+                  <ref role="3cqZAo" node="1nCAtVys0ia" resolve="massValue" />
+                </node>
               </node>
               <node concept="37vLTw" id="3H79Ykd2LGx" role="37wK5m">
                 <ref role="3cqZAo" node="3H79Ykd2Gon" resolve="radius" />
@@ -1427,6 +1427,10 @@
       <node concept="3Tmbuc" id="3H79Ykd2Gp5" role="1B3o_S" />
       <node concept="3uibUv" id="3H79Ykd3N5E" role="3clF45">
         <ref role="3uigEE" to="9dpa:~DMass" resolve="DMass" />
+      </node>
+      <node concept="37vLTG" id="1nCAtVys0ia" role="3clF46">
+        <property role="TrG5h" value="massValue" />
+        <node concept="10P55v" id="1nCAtVys0i9" role="1tU5fm" />
       </node>
     </node>
     <node concept="2tJIrI" id="2AaxZXYiAEr" role="jymVt" />
@@ -1772,6 +1776,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="1nCAtVysMlp" role="3cqZAp">
+          <node concept="2OqwBi" id="1nCAtVysMlr" role="3clFbG">
+            <node concept="37vLTw" id="1nCAtVysMls" role="2Oq$k0">
+              <ref role="3cqZAo" node="3H79Ykd2Gu6" resolve="mass" />
+            </node>
+            <node concept="liA8E" id="1nCAtVysMlt" role="2OqNvi">
+              <ref role="37wK5l" to="9dpa:~DMass.setMass(double)" resolve="setMass" />
+              <node concept="37vLTw" id="1nCAtVysMlu" role="37wK5m">
+                <ref role="3cqZAo" node="1nCAtVys2Vn" resolve="massValue" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="3H79Ykd2Gua" role="3cqZAp">
           <node concept="2OqwBi" id="3H79Ykd2LGX" role="3clFbG">
             <node concept="37vLTw" id="3H79Ykd2LGW" role="2Oq$k0">
@@ -1779,9 +1796,13 @@
             </node>
             <node concept="liA8E" id="3H79Ykd2LGY" role="2OqNvi">
               <ref role="37wK5l" to="9dpa:~DMass.setBox(double,double,double,double)" resolve="setBox" />
-              <node concept="10M0yZ" id="3H79Ykd2N05" role="37wK5m">
-                <ref role="1PxDUh" node="3H79Ykd2GmM" resolve="Fixture" />
-                <ref role="3cqZAo" node="3H79Ykd2GmO" resolve="DENSITY" />
+              <node concept="FJ1c_" id="1nCAtVys2$H" role="37wK5m">
+                <node concept="1rXfSq" id="1nCAtVys2$I" role="3uHU7w">
+                  <ref role="37wK5l" node="2AaxZXYiH2Y" resolve="getVolume" />
+                </node>
+                <node concept="37vLTw" id="1nCAtVys2$J" role="3uHU7B">
+                  <ref role="3cqZAo" node="1nCAtVys2Vn" resolve="massValue" />
+                </node>
               </node>
               <node concept="37vLTw" id="3H79Ykd2LH2" role="37wK5m">
                 <ref role="3cqZAo" node="3H79Ykd2Gt4" resolve="width" />
@@ -1804,6 +1825,10 @@
       <node concept="3Tmbuc" id="3H79Ykd2Gui" role="1B3o_S" />
       <node concept="3uibUv" id="3H79Ykd3M4E" role="3clF45">
         <ref role="3uigEE" to="9dpa:~DMass" resolve="DMass" />
+      </node>
+      <node concept="37vLTG" id="1nCAtVys2Vn" role="3clF46">
+        <property role="TrG5h" value="massValue" />
+        <node concept="10P55v" id="1nCAtVys2Vm" role="1tU5fm" />
       </node>
     </node>
     <node concept="2tJIrI" id="2AaxZXYiGDg" role="jymVt" />

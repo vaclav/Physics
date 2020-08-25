@@ -25,9 +25,10 @@ public class SphereFixture extends Fixture {
   }
 
   @Override
-  protected DMass buildMass() {
+  protected DMass buildMass(double massValue) {
     DMass mass = OdeHelper.createMass();
-    mass.setSphere(Fixture.DENSITY, radius);
+    mass.setMass(massValue);
+    mass.setSphere(massValue / getVolume(), radius);
     return mass;
   }
 
