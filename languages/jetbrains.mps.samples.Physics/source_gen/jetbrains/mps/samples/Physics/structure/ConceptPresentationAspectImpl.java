@@ -789,7 +789,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.TraceExpression:
         if (props_TraceExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("TraceExpression");
           props_TraceExpression = cpb.create();
         }
         return props_TraceExpression;

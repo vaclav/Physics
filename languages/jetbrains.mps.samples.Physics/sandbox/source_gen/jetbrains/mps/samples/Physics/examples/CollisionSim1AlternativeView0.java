@@ -14,7 +14,7 @@ public class CollisionSim1AlternativeView0 extends CollisionSimSimulation {
     super.initScope(world);
 
     // Override properties 
-    scope.B.setMass(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))));
+    scope.C.setMass(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))));
   }
 
 

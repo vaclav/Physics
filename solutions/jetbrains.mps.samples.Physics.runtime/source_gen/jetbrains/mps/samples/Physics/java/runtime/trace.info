@@ -206,85 +206,86 @@
       <node id="1993559260844617251" at="12,0,13,0" concept="2" trace="lastHeight" />
       <node id="1993559260844623559" at="13,0,14,0" concept="2" trace="resizeWait" />
       <node id="4271426636304030422" at="15,21,16,12" concept="12" />
-      <node id="1578680851958937754" at="19,26,20,20" concept="1" />
-      <node id="1993559260844631548" at="20,20,21,20" concept="1" />
-      <node id="1993559260844626175" at="21,20,22,21" concept="1" />
-      <node id="1159415042431703887" at="25,23,26,31" concept="1" />
-      <node id="1159415042431705937" at="26,31,27,44" concept="1" />
-      <node id="1993559260841588576" at="27,44,28,0" concept="9" />
-      <node id="913483291047053101" at="28,0,29,18" concept="1" />
-      <node id="913483291047070339" at="29,18,30,14" concept="1" />
-      <node id="913483291047072559" at="30,14,31,65" concept="1" />
-      <node id="913483291047054825" at="31,65,32,0" concept="9" />
-      <node id="1993559260841588906" at="32,0,33,25" concept="1" />
-      <node id="1993559260844696262" at="36,22,37,26" concept="8" />
-      <node id="1993559260844653691" at="39,29,40,24" concept="1" />
-      <node id="1993559260844658848" at="41,7,42,0" concept="9" />
-      <node id="1993559260844659625" at="42,0,43,19" concept="1" />
-      <node id="1993559260844668759" at="44,28,45,24" concept="1" />
-      <node id="1993559260844685704" at="45,24,46,26" concept="1" />
-      <node id="1993559260844680794" at="46,26,47,28" concept="1" />
-      <node id="1993559260844676527" at="47,28,48,51" concept="1" />
-      <node id="1993559260844635728" at="50,5,51,0" concept="9" />
-      <node id="4271426636304008836" at="51,0,52,18" concept="1" />
-      <node id="362892448127498155" at="52,18,53,0" concept="9" />
-      <node id="7254176059807893223" at="53,0,54,34" concept="1" />
-      <node id="39352413657847644" at="57,28,58,33" concept="1" />
-      <node id="4271426636304008866" at="62,53,63,18" concept="1" />
-      <node id="4271426636304008785" at="66,0,67,0" concept="5" trace="setup#(Ljetbrains/mps/samples/Physics/java/runtime/Renderer;)V" />
-      <node id="7254176059807890438" at="67,0,68,0" concept="5" trace="render#(Lprocessing/core/PApplet;Lprocessing/core/PGraphics;)V" />
-      <node id="39352413657845660" at="68,0,69,0" concept="5" trace="keyPressed#(I)V" />
-      <node id="4271426636304008895" at="73,42,74,33" concept="1" />
-      <node id="1993559260843582189" at="69,0,71,0" concept="5" trace="frameResized#(Lprocessing/core/PApplet;II)V" />
+      <node id="1578680851977276310" at="19,26,20,71" concept="1" />
+      <node id="1578680851977274034" at="20,71,21,0" concept="9" />
+      <node id="1993559260844631548" at="21,0,22,20" concept="1" />
+      <node id="1993559260844626175" at="22,20,23,21" concept="1" />
+      <node id="1159415042431703887" at="26,23,27,31" concept="1" />
+      <node id="1159415042431705937" at="27,31,28,44" concept="1" />
+      <node id="1993559260841588576" at="28,44,29,0" concept="9" />
+      <node id="913483291047053101" at="29,0,30,18" concept="1" />
+      <node id="913483291047070339" at="30,18,31,14" concept="1" />
+      <node id="913483291047072559" at="31,14,32,65" concept="1" />
+      <node id="913483291047054825" at="32,65,33,0" concept="9" />
+      <node id="1993559260841588906" at="33,0,34,25" concept="1" />
+      <node id="1993559260844696262" at="37,22,38,26" concept="8" />
+      <node id="1993559260844653691" at="40,29,41,24" concept="1" />
+      <node id="1993559260844658848" at="42,7,43,0" concept="9" />
+      <node id="1993559260844659625" at="43,0,44,19" concept="1" />
+      <node id="1993559260844668759" at="45,28,46,24" concept="1" />
+      <node id="1993559260844685704" at="46,24,47,26" concept="1" />
+      <node id="1993559260844680794" at="47,26,48,28" concept="1" />
+      <node id="1993559260844676527" at="48,28,49,51" concept="1" />
+      <node id="1993559260844635728" at="51,5,52,0" concept="9" />
+      <node id="4271426636304008836" at="52,0,53,18" concept="1" />
+      <node id="362892448127498155" at="53,18,54,0" concept="9" />
+      <node id="7254176059807893223" at="54,0,55,34" concept="1" />
+      <node id="39352413657847644" at="58,28,59,33" concept="1" />
+      <node id="4271426636304008866" at="63,53,64,18" concept="1" />
+      <node id="4271426636304008785" at="67,0,68,0" concept="5" trace="setup#(Ljetbrains/mps/samples/Physics/java/runtime/Renderer;)V" />
+      <node id="7254176059807890438" at="68,0,69,0" concept="5" trace="render#(Lprocessing/core/PApplet;Lprocessing/core/PGraphics;)V" />
+      <node id="39352413657845660" at="69,0,70,0" concept="5" trace="keyPressed#(I)V" />
+      <node id="4271426636304008895" at="74,42,75,33" concept="1" />
+      <node id="1993559260843582189" at="70,0,72,0" concept="5" trace="frameResized#(Lprocessing/core/PApplet;II)V" />
       <node id="4271426636304008802" at="15,0,18,0" concept="0" trace="Renderer#()V" />
-      <node id="1993559260844649563" at="38,53,41,7" concept="4" />
-      <node id="4271426636304008862" at="62,0,65,0" concept="11" trace="afterInit#(Ljetbrains/mps/samples/Physics/java/runtime/Renderer/RendererCallback;)V" />
-      <node id="4271426636304008890" at="73,0,76,0" concept="11" trace="main#([Ljava/lang/String;)V" />
-      <node id="39352413657832157" at="56,0,60,0" concept="5" trace="keyPressed#()V" />
-      <node id="4271426636304008816" at="18,0,24,0" concept="5" trace="settings#()V" />
-      <node id="1993559260844659020" at="43,19,49,7" concept="4" />
-      <node id="4271426636304008826" at="24,0,35,0" concept="5" trace="setup#()V" />
-      <node id="1993559260844636079" at="37,26,50,5" concept="4" />
-      <node id="4271426636304008833" at="35,0,56,0" concept="5" trace="draw#()V" />
-      <scope id="1993559260843582196" at="69,58,69,58" />
+      <node id="1993559260844649563" at="39,53,42,7" concept="4" />
+      <node id="4271426636304008862" at="63,0,66,0" concept="11" trace="afterInit#(Ljetbrains/mps/samples/Physics/java/runtime/Renderer/RendererCallback;)V" />
+      <node id="4271426636304008890" at="74,0,77,0" concept="11" trace="main#([Ljava/lang/String;)V" />
+      <node id="39352413657832157" at="57,0,61,0" concept="5" trace="keyPressed#()V" />
+      <node id="1993559260844659020" at="44,19,50,7" concept="4" />
+      <node id="4271426636304008816" at="18,0,25,0" concept="5" trace="settings#()V" />
+      <node id="4271426636304008826" at="25,0,36,0" concept="5" trace="setup#()V" />
+      <node id="1993559260844636079" at="38,26,51,5" concept="4" />
+      <node id="4271426636304008833" at="36,0,57,0" concept="5" trace="draw#()V" />
+      <scope id="1993559260843582196" at="70,58,70,58" />
       <scope id="4271426636304008804" at="15,21,16,12" />
-      <scope id="1993559260844649565" at="39,29,40,24" />
-      <scope id="39352413657832163" at="57,28,58,33" />
-      <scope id="4271426636304008865" at="62,53,63,18" />
-      <scope id="4271426636304008785" at="66,0,67,0">
+      <scope id="1993559260844649565" at="40,29,41,24" />
+      <scope id="39352413657832163" at="58,28,59,33" />
+      <scope id="4271426636304008865" at="63,53,64,18" />
+      <scope id="4271426636304008785" at="67,0,68,0">
         <var name="renderer" id="4271426636304008787" />
       </scope>
-      <scope id="7254176059807890438" at="67,0,68,0">
+      <scope id="7254176059807890438" at="68,0,69,0">
         <var name="applet" id="1993559260838981430" />
         <var name="context" id="7254176059807890854" />
       </scope>
-      <scope id="39352413657845660" at="68,0,69,0">
+      <scope id="39352413657845660" at="69,0,70,0">
         <var name="code" id="39352413657846178" />
       </scope>
-      <scope id="4271426636304008894" at="73,42,74,33" />
-      <scope id="1993559260843582189" at="69,0,71,0">
+      <scope id="4271426636304008894" at="74,42,75,33" />
+      <scope id="1993559260843582189" at="70,0,72,0">
         <var name="app" id="1993559260843593409" />
         <var name="h" id="1993559260843582194" />
         <var name="w" id="1993559260843582192" />
       </scope>
       <scope id="4271426636304008802" at="15,0,18,0" />
-      <scope id="4271426636304008818" at="19,26,22,21" />
-      <scope id="4271426636304008862" at="62,0,65,0">
+      <scope id="4271426636304008862" at="63,0,66,0">
         <var name="cb" id="4271426636304008863" />
       </scope>
-      <scope id="4271426636304008890" at="73,0,76,0">
+      <scope id="4271426636304008890" at="74,0,77,0">
         <var name="args" id="4271426636304008891" />
       </scope>
-      <scope id="1993559260844659022" at="44,28,48,51" />
-      <scope id="39352413657832157" at="56,0,60,0" />
-      <scope id="4271426636304008816" at="18,0,24,0" />
-      <scope id="4271426636304008828" at="25,23,33,25" />
-      <scope id="4271426636304008826" at="24,0,35,0" />
-      <scope id="1993559260844636081" at="38,53,49,7" />
-      <scope id="4271426636304008835" at="36,22,54,34" />
-      <scope id="4271426636304008833" at="35,0,56,0" />
-      <unit id="4271426636304008783" at="65,0,73,0" name="jetbrains.mps.samples.Physics.java.runtime.Renderer$RendererCallback" />
-      <unit id="4271426636304008781" at="8,0,77,0" name="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
+      <scope id="4271426636304008818" at="19,26,23,21" />
+      <scope id="1993559260844659022" at="45,28,49,51" />
+      <scope id="39352413657832157" at="57,0,61,0" />
+      <scope id="4271426636304008816" at="18,0,25,0" />
+      <scope id="4271426636304008828" at="26,23,34,25" />
+      <scope id="4271426636304008826" at="25,0,36,0" />
+      <scope id="1993559260844636081" at="39,53,50,7" />
+      <scope id="4271426636304008835" at="37,22,55,34" />
+      <scope id="4271426636304008833" at="36,0,57,0" />
+      <unit id="4271426636304008783" at="66,0,74,0" name="jetbrains.mps.samples.Physics.java.runtime.Renderer$RendererCallback" />
+      <unit id="4271426636304008781" at="8,0,78,0" name="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     </file>
   </root>
   <root nodeRef="r:7a9b0b84-8d52-4661-8dd6-1e603f6ac398(jetbrains.mps.samples.Physics.java.runtime)/4271426636304009361">

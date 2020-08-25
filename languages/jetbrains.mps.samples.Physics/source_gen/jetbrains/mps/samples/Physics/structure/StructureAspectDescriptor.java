@@ -1261,7 +1261,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForTraceExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics", "TraceExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6ff53cf971434ccdL);
-    b.class_(false, false, false);
+    b.class_(false, true, false);
     b.super_("jetbrains.mps.samples.Physics.structure.StyleSpecificExpression", 0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7eedde85L);
     b.origin("r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)/8067421349548870861");
     b.version(2);

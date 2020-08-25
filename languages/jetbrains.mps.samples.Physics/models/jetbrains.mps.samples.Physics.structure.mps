@@ -1689,6 +1689,7 @@
     <property role="EcuMT" value="8067421349548870861" />
     <property role="3GE5qa" value="styles.trace" />
     <property role="TrG5h" value="TraceExpression" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="1AxJyXYVtU5" resolve="StyleSpecificExpression" />
   </node>
 </model>

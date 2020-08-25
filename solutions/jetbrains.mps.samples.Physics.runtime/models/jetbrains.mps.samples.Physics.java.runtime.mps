@@ -110,6 +110,9 @@
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
+      <concept id="1111509017652" name="jetbrains.mps.baseLanguage.structure.FloatingPointConstant" flags="nn" index="3b6qkQ">
+        <property id="1113006610751" name="value" index="$nhwW" />
+      </concept>
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
         <child id="1068580123133" name="returnType" index="3clF45" />
         <child id="1068580123134" name="parameter" index="3clF46" />
@@ -1060,14 +1063,41 @@
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
       <node concept="3clFbS" id="3H79Ykd2GpM" role="3clF47">
-        <node concept="3clFbF" id="1nCAtVyIjyq" role="3cqZAp">
-          <node concept="1rXfSq" id="1nCAtVyIjyo" role="3clFbG">
-            <ref role="37wK5l" to="r7oa:~PApplet.fullScreen(java.lang.String)" resolve="fullScreen" />
-            <node concept="37vLTw" id="1nCAtVyIk3R" role="37wK5m">
+        <node concept="3clFbF" id="1nCAtVzOgIm" role="3cqZAp">
+          <node concept="1rXfSq" id="1nCAtVzOgIk" role="3clFbG">
+            <ref role="37wK5l" to="r7oa:~PApplet.size(int,int,java.lang.String)" resolve="size" />
+            <node concept="10QFUN" id="1nCAtVzOkao" role="37wK5m">
+              <node concept="10Oyi0" id="1nCAtVzOkmp" role="10QFUM" />
+              <node concept="1eOMI4" id="1nCAtVzOjqR" role="10QFUP">
+                <node concept="17qRlL" id="1nCAtVzOhPI" role="1eOMHV">
+                  <node concept="3b6qkQ" id="1nCAtVzOhQl" role="3uHU7w">
+                    <property role="$nhwW" value="0.8" />
+                  </node>
+                  <node concept="37vLTw" id="1nCAtVzOh14" role="3uHU7B">
+                    <ref role="3cqZAo" to="r7oa:~PApplet.displayWidth" resolve="displayWidth" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="10QFUN" id="1nCAtVzOkyw" role="37wK5m">
+              <node concept="10Oyi0" id="1nCAtVzOkLj" role="10QFUM" />
+              <node concept="1eOMI4" id="1nCAtVzOmj8" role="10QFUP">
+                <node concept="17qRlL" id="1nCAtVzOiTY" role="1eOMHV">
+                  <node concept="37vLTw" id="1nCAtVzOh9p" role="3uHU7B">
+                    <ref role="3cqZAo" to="r7oa:~PApplet.displayHeight" resolve="displayHeight" />
+                  </node>
+                  <node concept="3b6qkQ" id="1nCAtVzOlLm" role="3uHU7w">
+                    <property role="$nhwW" value="0.8" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="37vLTw" id="1nCAtVzOhnO" role="37wK5m">
               <ref role="3cqZAo" to="r7oa:~PConstants.P3D" resolve="P3D" />
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="1nCAtVzOgaM" role="3cqZAp" />
         <node concept="3clFbF" id="1IEyTntlqnW" role="3cqZAp">
           <node concept="37vLTI" id="1IEyTntlqZg" role="3clFbG">
             <node concept="3cmrfG" id="1IEyTntlr69" role="37vLTx">
