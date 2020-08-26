@@ -5,6 +5,9 @@ package jetbrains.mps.samples.Physics.examples;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import processing.core.PGraphics;
 
 public class TorqueSim1AlternativeView0 extends TorqueSimSimulation {
@@ -15,6 +18,7 @@ public class TorqueSim1AlternativeView0 extends TorqueSimSimulation {
 
     // Override properties 
     scope.SampleBox.setMass(AH.mul(((Number) new BigInteger("600")), ((Number) new BigInteger("1"))));
+    scope.SampleBox.getPropertiesBuilder().set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), null));
   }
 
 

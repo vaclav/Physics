@@ -169,7 +169,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
     protected String getNoTargetText() {
-      return "<no parent>";
+      return "BaseObject";
     }
   }
   private EditorCell createComponent_0() {

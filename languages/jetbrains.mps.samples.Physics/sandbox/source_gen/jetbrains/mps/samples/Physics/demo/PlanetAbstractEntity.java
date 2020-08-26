@@ -8,6 +8,9 @@ import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
+import jetbrains.mps.samples.Physics.forces.GravitationForce;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 
 public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
@@ -32,7 +35,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
 
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        cached = GravityForce.get(world, scope, currentEntity, time);
+        cached = GravitationForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("9")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
 
         return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
       }

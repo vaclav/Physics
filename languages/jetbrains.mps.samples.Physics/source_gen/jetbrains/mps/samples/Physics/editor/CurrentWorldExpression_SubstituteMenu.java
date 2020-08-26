@@ -16,9 +16,10 @@ import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.lang.editor.menus.ParameterizedMenuPart;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.annotations.Nullable;
-import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.samples.Physics.behavior.IProvideCurrentWorld__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.internal.collections.runtime.Sequence;
+import java.util.Collections;
 import jetbrains.mps.lang.editor.menus.substitute.SingleItemSubstituteMenuPart;
 import org.apache.log4j.Logger;
 import jetbrains.mps.lang.editor.menus.substitute.DefaultSubstituteMenuItem;
@@ -88,7 +89,13 @@ public class CurrentWorldExpression_SubstituteMenu extends SubstituteMenuBase {
     @Nullable
     @Override
     protected Iterable<? extends SNode> getParameters(SubstituteMenuContext _context) {
-      return Sequence.<SNode>singleton(IProvideCurrentWorld__BehaviorDescriptor.getCurrentWorldDefinition_id2bZvtzzMfxi.invoke(SNodeOperations.getNodeAncestor(_context.getParentNode(), CONCEPTS.IProvideCurrentWorld$2_, true, false)));
+      SNode currentWorldDefinition = IProvideCurrentWorld__BehaviorDescriptor.getCurrentWorldDefinition_id2bZvtzzMfxi.invoke(SNodeOperations.getNodeAncestor(_context.getParentNode(), CONCEPTS.IProvideCurrentWorld$2_, true, false));
+
+      if ((currentWorldDefinition != null)) {
+        return Sequence.<SNode>singleton(currentWorldDefinition);
+      } else {
+        return Sequence.fromIterable(Collections.<SNode>emptyList());
+      }
     }
     private class SMP_Action_8cz20z_a1 extends SingleItemSubstituteMenuPart {
       private final SNode myParameterObject;

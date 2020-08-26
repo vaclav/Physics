@@ -92,7 +92,8 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     public void execute(final SNode node, final EditorContext editorContext) {
       InternalVector current = (InternalVector) IETS3ExprEvalHelper.evaluate(node);
       InternalVector relativeTarget = (InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(myParameter, LINKS.position$DoV0));
-      SNodeOperations.replaceWithAnother(node, createRelativeVector_d9qn55_a0a2a0(CoordinateExpressionConverters.rawToCartesian(current.minus(relativeTarget), null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(node))), myParameter));
+
+      SNodeOperations.replaceWithAnother(node, createRelativeVector_d9qn55_a0a3a0(CoordinateExpressionConverters.rawToCartesian(current.minus(relativeTarget), null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(node))), myParameter));
     }
     @Override
     public IntentionDescriptor getDescriptor() {
@@ -102,7 +103,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
       return myParameter;
     }
   }
-  private static SNode createRelativeVector_d9qn55_a0a2a0(SNode p0, SNode p1) {
+  private static SNode createRelativeVector_d9qn55_a0a3a0(SNode p0, SNode p1) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RelativeVector$c7);
     n0.forChild(LINKS.coordinates$l1nt).initNode(p0, CONCEPTS.AbsoluteCoordinates$d5, true);
     {

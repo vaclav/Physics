@@ -74,7 +74,7 @@ public class AbstractForceCall_SubstituteMenu extends SubstituteMenuBase {
     @Nullable
     @Override
     protected Iterable<? extends SNode> getParameters(SubstituteMenuContext _context) {
-      return SModelOperations.nodes(_context.getModel(), CONCEPTS.AbstractForce$Pj);
+      return SModelOperations.nodesIncludingImported(_context.getModel(), CONCEPTS.AbstractForce$Pj);
     }
     private class SMP_Action_v5trh4_a0 extends SingleItemSubstituteMenuPart {
       private final SNode myParameterObject;

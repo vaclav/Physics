@@ -245,7 +245,7 @@
     </language>
   </registry>
   <node concept="1M2fIO" id="6POFxU8kKRb">
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition" />
     <ref role="1M2myG" to="9tcj:6HZo5MNbVDr" resolve="ObjectReferenceExpression" />
     <node concept="1N5Pfh" id="6POFxU8kKRZ" role="1Mr941">
       <ref role="1N5Vy1" to="9tcj:6HZo5MNbVDs" resolve="target" />
@@ -905,20 +905,6 @@
   <node concept="1M2fIO" id="MHm3qvaEyS">
     <property role="3GE5qa" value="styles.texture" />
     <ref role="1M2myG" to="9tcj:MHm3qvaDZW" resolve="ColorTexture" />
-    <node concept="9SLcT" id="MHm3qvea3U" role="9SGkU">
-      <node concept="3clFbS" id="MHm3qvea3V" role="2VODD2">
-        <node concept="3clFbF" id="MHm3qvea4h" role="3cqZAp">
-          <node concept="2OqwBi" id="MHm3qvaFQ$" role="3clFbG">
-            <node concept="2DD5aU" id="MHm3qvaFBn" role="2Oq$k0" />
-            <node concept="2Zo12i" id="MHm3qvaG6s" role="2OqNvi">
-              <node concept="chp4Y" id="MHm3qvaGhx" role="2Zo12j">
-                <ref role="cht4Q" to="9tcj:MHm3qvaE2V" resolve="ColorExpression" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
   </node>
   <node concept="1M2fIO" id="5claIBnrbae">
     <property role="3GE5qa" value="physical.expr.context" />

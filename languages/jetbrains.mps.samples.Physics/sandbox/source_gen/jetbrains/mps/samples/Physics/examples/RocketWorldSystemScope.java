@@ -23,6 +23,8 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.forces.SimpleCollision
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
+import jetbrains.mps.samples.Physics.forces.RealGravitationForce;
+import jetbrains.mps.samples.Physics.forces.AirResistanceForce;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ImageTexture;
 
@@ -206,22 +208,22 @@ public class RocketWorldSystemScope extends SystemScope {
           return 10;
         }
       }, /* 
-       * Actual boost
+       * Actual thrust
        */
       /* 
-       * Actual boost
+       * Actual thrust
        */
       /* 
-       * Actual boost
+       * Actual thrust
        */
       /* 
-       * Actual boost
+       * Actual thrust
        */
       /* 
-       * Actual boost
+       * Actual thrust
        */
       /* 
-       * Actual boost
+       * Actual thrust
        */
       new Force<RocketWorldSystemScope>() {
 

@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler;
+import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.InfiniteTraceHandler;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
@@ -65,7 +65,7 @@ public class FallingBallWorldSystemScope extends SystemScope {
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigDecimal("90.0").setScale(1, RoundingMode.DOWN))));
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("7")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.TRACE, new FiniteTraceHandler(new Color(255, 0, 0)));
+      propertiesBuilder.set(PropKey.TRACE, new InfiniteTraceHandler(new Color(255, 0, 0)));
       this.getForces().addAll(Arrays.asList(new Force<FallingBallWorldSystemScope>() {
         private Force cached;
 

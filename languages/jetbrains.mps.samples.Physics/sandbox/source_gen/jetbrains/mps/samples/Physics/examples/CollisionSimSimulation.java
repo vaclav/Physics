@@ -51,7 +51,7 @@ public class CollisionSimSimulation extends Simulation {
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new CollisionSimSimulation(), new CollisionSim1AlternativeView0()));
+    Renderer.afterInit(new CompositeRendererCallback(new CollisionSimSimulation()));
     Renderer.main(args);
   }
 }

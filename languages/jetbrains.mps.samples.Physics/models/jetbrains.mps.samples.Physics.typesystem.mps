@@ -390,7 +390,7 @@
   </node>
   <node concept="1YbPZF" id="6kwOTMl0tTe">
     <property role="TrG5h" value="typeof_ObjectDefinition" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition" />
     <node concept="3clFbS" id="6kwOTMl0tTf" role="18ibNy">
       <node concept="1Z5TYs" id="6kwOTMl0u58" role="3cqZAp">
         <node concept="mw_s8" id="6kwOTMl0u5b" role="1ZfhK$">
@@ -487,7 +487,7 @@
   </node>
   <node concept="1YbPZF" id="6kwOTMl0udw">
     <property role="TrG5h" value="typeof_WorldDefinition" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition.world" />
     <node concept="3clFbS" id="6kwOTMl0udx" role="18ibNy">
       <node concept="1Z5TYs" id="6kwOTMl0ukg" role="3cqZAp">
         <node concept="mw_s8" id="1d1Q7eb9J5h" role="1ZfhKB">
@@ -513,7 +513,7 @@
   </node>
   <node concept="1YbPZF" id="6kwOTMl0usC">
     <property role="TrG5h" value="typeof_ObjectReference" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition" />
     <node concept="3clFbS" id="6kwOTMl0usD" role="18ibNy">
       <node concept="nvevp" id="1d1Q7eb9H4N" role="3cqZAp">
         <node concept="3clFbS" id="1d1Q7eb9H4P" role="nvhr_">
@@ -2959,7 +2959,7 @@
   </node>
   <node concept="1YbPZF" id="7zgzoeTziAx">
     <property role="TrG5h" value="typeof_AbstractObjectDefinition" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition" />
     <node concept="3clFbS" id="7zgzoeTziAy" role="18ibNy">
       <node concept="3clFbF" id="7zgzoeTziAD" role="3cqZAp">
         <node concept="2OqwBi" id="7zgzoeTzkL4" role="3clFbG">
@@ -4425,6 +4425,99 @@
     <node concept="1YaCAy" id="6ZPff_LgOBR" role="1YuTPh">
       <property role="TrG5h" value="traceExpression" />
       <ref role="1YaFvo" to="9tcj:6ZPff_LgONd" resolve="TraceExpression" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="6af0XbH1gR_">
+    <property role="TrG5h" value="typeof_ColorTexture" />
+    <property role="3GE5qa" value="styles.texture" />
+    <node concept="3clFbS" id="6af0XbH1gRA" role="18ibNy">
+      <node concept="nvevp" id="6af0XbH1gRG" role="3cqZAp">
+        <node concept="3clFbS" id="6af0XbH1gRH" role="nvhr_">
+          <node concept="1ZobV4" id="6af0XbH1hve" role="3cqZAp">
+            <property role="3wDh2S" value="true" />
+            <node concept="mw_s8" id="6af0XbH1hvm" role="1ZfhK$">
+              <node concept="2X3wrD" id="6af0XbH1hvk" role="mwGJk">
+                <ref role="2X3Bk0" node="6af0XbH1gRJ" resolve="strokeType" />
+              </node>
+            </node>
+            <node concept="mw_s8" id="6af0XbH1hvz" role="1ZfhKB">
+              <node concept="2pJPEk" id="6af0XbH1hvv" role="mwGJk">
+                <node concept="2pJPED" id="6af0XbH1hvI" role="2pJPEn">
+                  <ref role="2pJxaS" to="9tcj:MHm3qvb7YK" resolve="ColorType" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="6af0XbH1iiH" role="1ZmcU8">
+              <node concept="1YBJjd" id="6af0XbH1i4e" role="2Oq$k0">
+                <ref role="1YBMHb" node="6af0XbH1gRC" resolve="colorTexture" />
+              </node>
+              <node concept="3TrEf2" id="6af0XbH1iGf" role="2OqNvi">
+                <ref role="3Tt5mk" to="9tcj:MHm3qvaEb4" resolve="stroke" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1Z2H0r" id="6af0XbH1gSu" role="nvjzm">
+          <node concept="2OqwBi" id="6af0XbH1h61" role="1Z2MuG">
+            <node concept="1YBJjd" id="6af0XbH1gSU" role="2Oq$k0">
+              <ref role="1YBMHb" node="6af0XbH1gRC" resolve="colorTexture" />
+            </node>
+            <node concept="3TrEf2" id="6af0XbH1hZi" role="2OqNvi">
+              <ref role="3Tt5mk" to="9tcj:MHm3qvaEb4" resolve="stroke" />
+            </node>
+          </node>
+        </node>
+        <node concept="2X1qdy" id="6af0XbH1gRJ" role="2X0Ygz">
+          <property role="TrG5h" value="strokeType" />
+          <node concept="2jxLKc" id="6af0XbH1gRK" role="1tU5fm" />
+        </node>
+      </node>
+      <node concept="nvevp" id="6af0XbH1hwV" role="3cqZAp">
+        <node concept="3clFbS" id="6af0XbH1hwW" role="nvhr_">
+          <node concept="1ZobV4" id="6af0XbH1hwX" role="3cqZAp">
+            <property role="3wDh2S" value="true" />
+            <node concept="mw_s8" id="6af0XbH1hwY" role="1ZfhK$">
+              <node concept="2X3wrD" id="6af0XbH1hwZ" role="mwGJk">
+                <ref role="2X3Bk0" node="6af0XbH1hx7" resolve="colorType" />
+              </node>
+            </node>
+            <node concept="mw_s8" id="6af0XbH1hx0" role="1ZfhKB">
+              <node concept="2pJPEk" id="6af0XbH1hx1" role="mwGJk">
+                <node concept="2pJPED" id="6af0XbH1hx2" role="2pJPEn">
+                  <ref role="2pJxaS" to="9tcj:MHm3qvb7YK" resolve="ColorType" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="6af0XbH1iUY" role="1ZmcU8">
+              <node concept="1YBJjd" id="6af0XbH1iJ1" role="2Oq$k0">
+                <ref role="1YBMHb" node="6af0XbH1gRC" resolve="colorTexture" />
+              </node>
+              <node concept="3TrEf2" id="6af0XbH1jhB" role="2OqNvi">
+                <ref role="3Tt5mk" to="9tcj:MHm3qvaE9L" resolve="color" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1Z2H0r" id="6af0XbH1hx3" role="nvjzm">
+          <node concept="2OqwBi" id="6af0XbH1hx4" role="1Z2MuG">
+            <node concept="1YBJjd" id="6af0XbH1hx5" role="2Oq$k0">
+              <ref role="1YBMHb" node="6af0XbH1gRC" resolve="colorTexture" />
+            </node>
+            <node concept="3TrEf2" id="6af0XbH1hx6" role="2OqNvi">
+              <ref role="3Tt5mk" to="9tcj:MHm3qvaE9L" resolve="color" />
+            </node>
+          </node>
+        </node>
+        <node concept="2X1qdy" id="6af0XbH1hx7" role="2X0Ygz">
+          <property role="TrG5h" value="colorType" />
+          <node concept="2jxLKc" id="6af0XbH1hx8" role="1tU5fm" />
+        </node>
+      </node>
+      <node concept="3clFbH" id="6af0XbH1hwF" role="3cqZAp" />
+    </node>
+    <node concept="1YaCAy" id="6af0XbH1gRC" role="1YuTPh">
+      <property role="TrG5h" value="colorTexture" />
+      <ref role="1YaFvo" to="9tcj:MHm3qvaDZW" resolve="ColorTexture" />
     </node>
   </node>
 </model>

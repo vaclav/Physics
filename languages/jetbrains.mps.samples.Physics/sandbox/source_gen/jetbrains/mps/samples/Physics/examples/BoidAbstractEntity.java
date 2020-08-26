@@ -14,6 +14,7 @@ import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
+import jetbrains.mps.samples.Physics.forces.InteractionForceForce;
 import java.util.function.Function;
 import org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;

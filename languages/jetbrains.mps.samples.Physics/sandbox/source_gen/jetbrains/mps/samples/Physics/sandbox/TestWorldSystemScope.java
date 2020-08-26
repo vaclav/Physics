@@ -21,6 +21,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
+import jetbrains.mps.samples.Physics.forces.GravitationForce;
 
 public class TestWorldSystemScope extends SystemScope {
   public final World2SystemScope TheOtherWorld;
@@ -123,7 +124,7 @@ public class TestWorldSystemScope extends SystemScope {
 
         @Override
         public DVector3C linearForce(World world, TestWorldSystemScope scope, PhysicalEntity currentEntity, double time) {
-          cached = GravityForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("4")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
+          cached = GravitationForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("4")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
 
           return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
         }

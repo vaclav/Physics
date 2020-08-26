@@ -10,16 +10,24 @@ import jetbrains.mps.openapi.intentions.Kind;
 import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.typechecking.TypecheckingFacade;
+import com.mbeddr.mpsutil.interpreter.behavior.IInterpreterWrapperType__BehaviorDescriptor;
 import java.util.Collections;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import java.math.BigDecimal;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
-import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class ResolveNumericExpression_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
@@ -39,7 +47,16 @@ public final class ResolveNumericExpression_Intention extends AbstractIntentionD
     return true;
   }
   private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-    return SNodeOperations.isInstanceOf(TypecheckingFacade.getFromContext().getTypeOf(node), CONCEPTS.NumberType$2D);
+    if (ListSequence.fromList(SNodeOperations.getNodeDescendants(node, CONCEPTS.IRuntimeContext$$I, false, new SAbstractConcept[]{})).isNotEmpty()) {
+      return false;
+    }
+    {
+      final SNode wrapper = TypecheckingFacade.getFromContext().getTypeOf(node);
+      if (SNodeOperations.isInstanceOf(wrapper, CONCEPTS.IInterpreterWrapperType$9P)) {
+        return TypecheckingFacade.getFromContext().isSubtype(IInterpreterWrapperType__BehaviorDescriptor.wrappedType_id6bG6MAFRDvi.invoke(wrapper), createRealType_z6py18_b0a0a1a0());
+      }
+    }
+    return TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(node), createRealType_z6py18_b0a2a0());
   }
   @Override
   public boolean isSurroundWith() {
@@ -61,22 +78,70 @@ public final class ResolveNumericExpression_Intention extends AbstractIntentionD
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       BigDecimal value = (BigDecimal) IETS3ExprEvalHelper.evaluate(node);
-      SNodeOperations.replaceWithAnother(node, createNumberLiteral_z6py18_a0a1a0(value.toString()));
+      SNode replacement = createNumberLiteral_z6py18_a0b0a(value.toString());
+
+      {
+        final SNode dimType = TypecheckingFacade.getFromContext().getTypeOf(node);
+        if (SNodeOperations.isInstanceOf(dimType, CONCEPTS.DimensionType$yz)) {
+          replacement = createUnitExpression_z6py18_a0a0d0a(replacement, ListSequence.fromList(SLinkOperations.getChildren(dimType, LINKS.units$o6Ow)).select(new ISelector<SNode, SNode>() {
+            public SNode select(SNode it) {
+              return createUnitReference_z6py18_a0a0a0a1a0a0a3a0(SLinkOperations.getTarget(it, LINKS.exponent$2Bc0), SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$2BcY), LINKS.default$rDru));
+            }
+          }));
+        }
+      }
+
+      SNodeOperations.replaceWithAnother(node, replacement);
     }
     @Override
     public IntentionDescriptor getDescriptor() {
       return ResolveNumericExpression_Intention.this;
     }
   }
-  private static SNode createNumberLiteral_z6py18_a0a1a0(String p0) {
+  private static SNode createRealType_z6py18_b0a0a1a0() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    return n0.getResult();
+  }
+  private static SNode createRealType_z6py18_b0a2a0() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    return n0.getResult();
+  }
+  private static SNode createNumberLiteral_z6py18_a0b0a(String p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);
     n0.setProperty(PROPS.value$nZyY, p0);
     return n0.getResult();
   }
+  private static SNode createUnitExpression_z6py18_a0a0d0a(SNode p0, Iterable<? extends SNode> p1) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitExpression$Bl);
+    n0.forChild(LINKS.content$Gf5w).initNode(p0, CONCEPTS.Expression$Wr, true);
+    n0.forChild(LINKS.units$o6Ow).initNodeList(p1, CONCEPTS.UnitReference$c4);
+    return n0.getResult();
+  }
+  private static SNode createUnitReference_z6py18_a0a0a0a1a0a0a3a0(SNode p0, SNode p1) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitReference$c4);
+    n0.forChild(LINKS.exponent$2Bc0).initNode(p0, CONCEPTS.Exponent$nW, true);
+    n0.setReferenceTarget(LINKS.unit$2BcY, p1);
+    return n0.getResult();
+  }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumberType$2D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
+    /*package*/ static final SInterfaceConcept IRuntimeContext$$I = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d7a4413cL, "jetbrains.mps.samples.Physics.structure.IRuntimeContext");
+    /*package*/ static final SInterfaceConcept IInterpreterWrapperType$9P = MetaAdapterFactory.getInterfaceConcept(0x47f075a6558e4640L, 0xa6067ce0236c8023L, 0x62ec1b29abde62acL, "com.mbeddr.mpsutil.interpreter.structure.IInterpreterWrapperType");
+    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
     /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
+    /*package*/ static final SConcept UnitExpression$Bl = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression");
+    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
+    /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
+    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SContainmentLink default$rDru = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
+    /*package*/ static final SContainmentLink content$Gf5w = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
   }
 
   private static final class PROPS {

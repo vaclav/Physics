@@ -13,6 +13,9 @@ import jetbrains.mps.lang.editor.menus.substitute.ConstraintsFilteringSubstitute
 import jetbrains.mps.lang.editor.menus.substitute.SimpleConceptSubstituteMenuPart;
 import jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase;
 import jetbrains.mps.smodel.SNodePointer;
+import jetbrains.mps.lang.editor.menus.GroupMenuPart;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import java.util.Arrays;
 import jetbrains.mps.lang.editor.menus.substitute.WrapperSubstituteMenuPart;
 import jetbrains.mps.editor.runtime.menus.SubstituteItemProxy;
 import jetbrains.mps.lang.editor.menus.substitute.SubstituteMenuItemWrapper;
@@ -55,7 +58,7 @@ public class ColorTexture_SubstituteMenu extends SubstituteMenuBase {
         }
       }
     }, CONCEPTS.ColorTexture$j6));
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Wrap_gs2hog_b(), CONCEPTS.ColorTexture$j6));
+    result.add(new SMP_Group_gs2hog_b());
     return result;
   }
 
@@ -72,12 +75,16 @@ public class ColorTexture_SubstituteMenu extends SubstituteMenuBase {
   }
 
 
-  private class SMP_Wrap_gs2hog_b extends WrapperSubstituteMenuPart {
+  public class SMP_Group_gs2hog_b extends GroupMenuPart<SubstituteMenuItem, SubstituteMenuContext> {
+    @Override
+    protected boolean isApplicable(SubstituteMenuContext _context) {
+      return (SNodeOperations.getNodeAncestor(_context.getParentNode(), CONCEPTS.ColorTexture$j6, true, false) == null);
+    }
     @NotNull
     @Override
-    public List<SubstituteMenuItem> createItems(SubstituteMenuContext context) {
+    public List<SubstituteMenuItem> createItems(@NotNull SubstituteMenuContext context) {
       context.getEditorMenuTrace().pushTraceInfo();
-      context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("wrap " + "default substitute menu for " + "DefinedColorReference", new SNodePointer("r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)", "913483291048275715")));
+      context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("substitute menu group", new SNodePointer("r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)", "7101899341842230443")));
       try {
         return super.createItems(context);
       } finally {
@@ -85,53 +92,71 @@ public class ColorTexture_SubstituteMenu extends SubstituteMenuBase {
       }
     }
 
-    @NotNull
     @Override
-    protected SubstituteMenuItem wrapItem(final SubstituteMenuItem item, final SubstituteMenuContext _context) {
-      final SubstituteItemProxy wrappedItem = new SubstituteItemProxy(item);
-      return new SubstituteMenuItemWrapper(item) {
-        private SNode myCreatedNode;
+    protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts() {
+      return Arrays.<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>asList(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Wrap_gs2hog_a1(), CONCEPTS.ColorTexture$j6));
+    }
+    private class SMP_Wrap_gs2hog_a1 extends WrapperSubstituteMenuPart {
+      @NotNull
+      @Override
+      public List<SubstituteMenuItem> createItems(SubstituteMenuContext context) {
+        context.getEditorMenuTrace().pushTraceInfo();
+        context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("wrap " + "default substitute menu for " + "DefinedColorReference", new SNodePointer("r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)", "913483291048275715")));
+        try {
+          return super.createItems(context);
+        } finally {
+          context.getEditorMenuTrace().popTraceInfo();
+        }
+      }
 
-        @Nullable
-        @Override
-        public SAbstractConcept getOutputConcept() {
-          return CONCEPTS.ColorTexture$j6;
-        }
-        @Nullable
-        @Override
-        public SNode createNode(@NotNull String pattern) {
-          SNode nodeToWrap = super.createNode(pattern);
-          myCreatedNode = nodeToWrap;
-          return createColorTexture_gs2hog_a0a0b(nodeToWrap);
-        }
-        @Override
-        public void select(@NotNull SNode createdNode, @NotNull String pattern) {
-          super.select(myCreatedNode, pattern);
-        }
+      @NotNull
+      @Override
+      protected SubstituteMenuItem wrapItem(final SubstituteMenuItem item, final SubstituteMenuContext _context) {
+        final SubstituteItemProxy wrappedItem = new SubstituteItemProxy(item);
+        return new SubstituteMenuItemWrapper(item) {
+          private SNode myCreatedNode;
 
-        public void customize(String pattern, EditorMenuItemStyle style) {
-          super.customize(pattern, style);
-          SubstituteMenuContextToEditorMenuItemCreatingCustomizationContext creatingContext = new SubstituteMenuContextToEditorMenuItemCreatingCustomizationContext(_context, getOutputConcept());
-          SubstituteMenuContextToEditorMenuItemModifyingCustomizationContext modifyingContext = new SubstituteMenuContextToEditorMenuItemModifyingCustomizationContext(_context);
-          EditorMenuItemCompositeCustomizationContext compositeContext = new EditorMenuItemCompositeCustomizationContext(modifyingContext, creatingContext, new CompletionMenuItemCustomizationContext(new CompletionItemInformation(null, getOutputConcept(), getMatchingText(pattern), getDescriptionText(pattern))));
-          for (EditorMenuItemCustomizer customizer : CollectionSequence.fromCollection(_context.getCustomizers())) {
-            customizer.customize(style, compositeContext);
+          @Nullable
+          @Override
+          public SAbstractConcept getOutputConcept() {
+            return CONCEPTS.ColorTexture$j6;
           }
-        }
-      };
-    }
-    @Nullable
-    @Override
-    protected SubstituteMenuLookup getLookup(SubstituteMenuContext _context) {
-      final EditorContext editorContext = _context.getEditorContext();
-      SAbstractConcept conceptToFindMenuFor = getConceptToFindMenuFor(_context);
-      return new DefaultSubstituteMenuLookup(LanguageRegistry.getInstance(editorContext.getRepository()), conceptToFindMenuFor);
-    }
-    private SAbstractConcept getConceptToFindMenuFor(SubstituteMenuContext _context) {
-      return CONCEPTS.DefinedColorReference$JN;
+          @Nullable
+          @Override
+          public SNode createNode(@NotNull String pattern) {
+            SNode nodeToWrap = super.createNode(pattern);
+            myCreatedNode = nodeToWrap;
+            return createColorTexture_gs2hog_a0a0a1(nodeToWrap);
+          }
+          @Override
+          public void select(@NotNull SNode createdNode, @NotNull String pattern) {
+            super.select(myCreatedNode, pattern);
+          }
+
+          public void customize(String pattern, EditorMenuItemStyle style) {
+            super.customize(pattern, style);
+            SubstituteMenuContextToEditorMenuItemCreatingCustomizationContext creatingContext = new SubstituteMenuContextToEditorMenuItemCreatingCustomizationContext(_context, getOutputConcept());
+            SubstituteMenuContextToEditorMenuItemModifyingCustomizationContext modifyingContext = new SubstituteMenuContextToEditorMenuItemModifyingCustomizationContext(_context);
+            EditorMenuItemCompositeCustomizationContext compositeContext = new EditorMenuItemCompositeCustomizationContext(modifyingContext, creatingContext, new CompletionMenuItemCustomizationContext(new CompletionItemInformation(null, getOutputConcept(), getMatchingText(pattern), getDescriptionText(pattern))));
+            for (EditorMenuItemCustomizer customizer : CollectionSequence.fromCollection(_context.getCustomizers())) {
+              customizer.customize(style, compositeContext);
+            }
+          }
+        };
+      }
+      @Nullable
+      @Override
+      protected SubstituteMenuLookup getLookup(SubstituteMenuContext _context) {
+        final EditorContext editorContext = _context.getEditorContext();
+        SAbstractConcept conceptToFindMenuFor = getConceptToFindMenuFor(_context);
+        return new DefaultSubstituteMenuLookup(LanguageRegistry.getInstance(editorContext.getRepository()), conceptToFindMenuFor);
+      }
+      private SAbstractConcept getConceptToFindMenuFor(SubstituteMenuContext _context) {
+        return CONCEPTS.DefinedColorReference$JN;
+      }
     }
   }
-  private static SNode createColorTexture_gs2hog_a0a0b(SNode p0) {
+  private static SNode createColorTexture_gs2hog_a0a0a1(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ColorTexture$j6);
     n0.forChild(LINKS.color$jU1a).initNode(p0, CONCEPTS.Expression$Wr, true);
     return n0.getResult();

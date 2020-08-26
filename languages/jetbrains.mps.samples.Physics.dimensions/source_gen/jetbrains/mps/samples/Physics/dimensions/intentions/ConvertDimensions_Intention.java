@@ -13,19 +13,24 @@ import jetbrains.mps.openapi.intentions.IntentionExecutable;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
+import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
+import java.util.Map;
+import org.nevec.rjm.Rational;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.ITranslator2;
 import jetbrains.mps.samples.Physics.dimensions.behavior.IUseSpecificDimensions__BehaviorDescriptor;
+import jetbrains.mps.internal.collections.runtime.IVisitor;
+import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper;
+import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
+import jetbrains.mps.typechecking.TypecheckingFacade;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.openapi.intentions.ParameterizedIntentionExecutable;
 import jetbrains.mps.samples.Physics.dimensions.behavior.IUnitReferenceLike__BehaviorDescriptor;
-import java.util.Map;
-import org.nevec.rjm.Rational;
-import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
-import jetbrains.mps.typechecking.TypecheckingFacade;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.samples.Physics.dimensions.behavior.DimensionMapsHelper;
+import jetbrains.mps.internal.collections.runtime.MapSequence;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
@@ -54,37 +59,67 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
   }
   public Collection<IntentionExecutable> instances(final SNode node, final EditorContext context) {
     List<IntentionExecutable> list = ListSequence.fromList(new ArrayList<IntentionExecutable>());
-    List<List<SNode>> paramList = parameter(node, context);
+    List<Tuples._2<List<SNode>, Map<SNode, Rational>>> paramList = parameter(node, context);
     if (paramList != null) {
-      for (List<SNode> param : paramList) {
+      for (Tuples._2<List<SNode>, Map<SNode, Rational>> param : paramList) {
         ListSequence.fromList(list).addElement(new IntentionImplementation(param));
       }
     }
     return list;
   }
-  private List<List<SNode>> parameter(final SNode node, final EditorContext editorContext) {
-    return Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getNodeAncestors(node, null, false), CONCEPTS.IUseSpecificDimensions$IZ)).translate(new ITranslator2<SNode, List<SNode>>() {
+  private List<Tuples._2<List<SNode>, Map<SNode, Rational>>> parameter(final SNode node, final EditorContext editorContext) {
+    final List<Tuples._2<List<SNode>, Map<SNode, Rational>>> references = ListSequence.fromList(new ArrayList<Tuples._2<List<SNode>, Map<SNode, Rational>>>());
+
+    // Fetch ancestors requirements 
+    Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getNodeAncestors(node, null, false), CONCEPTS.IUseSpecificDimensions$IZ)).translate(new ITranslator2<SNode, List<SNode>>() {
       public Iterable<List<SNode>> translate(SNode it) {
         return (Iterable<List<SNode>>) IUseSpecificDimensions__BehaviorDescriptor.getRequiredDimensions_id270Q2mETulL.invoke(it);
       }
-    }).toListSequence();
+    }).visitAll(new IVisitor<List<SNode>>() {
+      public void visit(List<SNode> current) {
+        // If the dimension is not already on the list 
+        final Map<SNode, Rational> reduced = UnitReduceHelper.reduceUnits(current);
+        if (ListSequence.fromList(references).all(new IWhereFilter<Tuples._2<List<SNode>, Map<SNode, Rational>>>() {
+          public boolean accept(Tuples._2<List<SNode>, Map<SNode, Rational>> it) {
+            return !(DimensionMapsHelper.matches(reduced, it._1()));
+          }
+        })) {
+          ListSequence.fromList(references).addElement(MultiTuple.<List<SNode>,Map<SNode, Rational>>from(current, reduced));
+        }
+      }
+    });
+
+    {
+      final SNode dimType = TypecheckingFacade.getFromContext().getTypeOf(node);
+      if (SNodeOperations.isInstanceOf(dimType, CONCEPTS.DimensionType$yz)) {
+        final Map<SNode, Rational> sourceUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(dimType, LINKS.units$o6Ow));
+
+        return ListSequence.fromList(references).where(new IWhereFilter<Tuples._2<List<SNode>, Map<SNode, Rational>>>() {
+          public boolean accept(Tuples._2<List<SNode>, Map<SNode, Rational>> it) {
+            return !(DimensionMapsHelper.matches(sourceUnits, it._1()));
+          }
+        }).toListSequence();
+      }
+    }
+
+    return references;
   }
   /*package*/ final class IntentionImplementation extends AbstractIntentionExecutable implements ParameterizedIntentionExecutable {
-    private List<SNode> myParameter;
-    public IntentionImplementation(List<SNode> parameter) {
+    private Tuples._2<List<SNode>, Map<SNode, Rational>> myParameter;
+    public IntentionImplementation(Tuples._2<List<SNode>, Map<SNode, Rational>> parameter) {
       myParameter = parameter;
     }
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
-      return "Add Conversion Value to " + IUnitReferenceLike__BehaviorDescriptor.listToString_id3L71doTUROP.invoke(SNodeOperations.asSConcept(CONCEPTS.IUnitReferenceLike$XC), myParameter);
+      return "Add Conversion Ratio to " + IUnitReferenceLike__BehaviorDescriptor.listToString_id3L71doTUROP.invoke(SNodeOperations.asSConcept(CONCEPTS.IUnitReferenceLike$XC), myParameter._0());
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
-      Map<SNode, Rational> targetUnits = UnitReduceHelper.reduceUnits(myParameter);
+      Map<SNode, Rational> targetUnits = myParameter._1();
 
       // If the type of the node is already dimensioned 
       {
-        final SNode sourceDimensions = TypecheckingFacade.getFromContext().getInferredType(node);
+        final SNode sourceDimensions = TypecheckingFacade.getFromContext().getTypeOf(node);
         if (SNodeOperations.isInstanceOf(sourceDimensions, CONCEPTS.DimensionType$yz)) {
           Map<SNode, Rational> sourceUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(sourceDimensions, LINKS.units$o6Ow));
 
@@ -93,17 +128,21 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
         }
       }
 
+      if (MapSequence.fromMap(targetUnits).isEmpty()) {
+        return;
+      }
+
       // Convert dimensions back to default units 
       Iterable<SNode> expressionUnits = Sequence.fromIterable(DimensionMapsHelper.mapToReferences(targetUnits)).select(new ISelector<SNode, SNode>() {
         public SNode select(SNode it) {
-          return createUnitReference_6tizts_a0a0a0a6a0(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$2BcY), LINKS.default$rDru), SLinkOperations.getTarget(it, LINKS.exponent$2Bc0));
+          return createUnitReference_6tizts_a0a0a0a8a0(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$2BcY), LINKS.default$rDru), SLinkOperations.getTarget(it, LINKS.exponent$2Bc0));
         }
       });
 
-      SNode literal = createNumberLiteral_6tizts_a0i0a();
+      SNode literal = createNumberLiteral_6tizts_a0k0a();
 
       // Wrap expression with the converter 
-      SNodeOperations.replaceWithAnother(node, createMulExpression_6tizts_a0a11a0(SNodeOperations.copyNode(node), literal, expressionUnits));
+      SNodeOperations.replaceWithAnother(node, createMulExpression_6tizts_a0a31a0(SNodeOperations.copyNode(node), literal, expressionUnits));
 
       editorContext.select(literal);
     }
@@ -115,18 +154,18 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
       return myParameter;
     }
   }
-  private static SNode createUnitReference_6tizts_a0a0a0a6a0(SNode p0, SNode p1) {
+  private static SNode createUnitReference_6tizts_a0a0a0a8a0(SNode p0, SNode p1) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitReference$c4);
     n0.setReferenceTarget(LINKS.unit$2BcY, p0);
     n0.forChild(LINKS.exponent$2Bc0).initNode(p1, CONCEPTS.Exponent$nW, true);
     return n0.getResult();
   }
-  private static SNode createNumberLiteral_6tizts_a0i0a() {
+  private static SNode createNumberLiteral_6tizts_a0k0a() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);
     n0.setProperty(PROPS.value$nZyY, "1");
     return n0.getResult();
   }
-  private static SNode createMulExpression_6tizts_a0a11a0(SNode p0, SNode p1, Iterable<? extends SNode> p2) {
+  private static SNode createMulExpression_6tizts_a0a31a0(SNode p0, SNode p1, Iterable<? extends SNode> p2) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.MulExpression$_u);
     n0.forChild(LINKS.left$gQj0).initNode(p0, CONCEPTS.Expression$Wr, true);
     {
@@ -139,8 +178,8 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
 
   private static final class CONCEPTS {
     /*package*/ static final SInterfaceConcept IUseSpecificDimensions$IZ = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x21c0d825aae5e565L, "jetbrains.mps.samples.Physics.dimensions.structure.IUseSpecificDimensions");
-    /*package*/ static final SInterfaceConcept IUnitReferenceLike$XC = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, "jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike");
     /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SInterfaceConcept IUnitReferenceLike$XC = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, "jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike");
     /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
     /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
     /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");

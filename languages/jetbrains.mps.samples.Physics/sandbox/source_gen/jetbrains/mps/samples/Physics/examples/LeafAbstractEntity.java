@@ -12,6 +12,7 @@ import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
+import jetbrains.mps.samples.Physics.forces.GravitationForce;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 
 public abstract class LeafAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {

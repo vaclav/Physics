@@ -80,7 +80,7 @@
     <property role="TrG5h" value="WorldDefinition" />
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="world" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition.world" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3Nk1IDHWOdX" role="1TKVEi">
       <property role="IQ2ns" value="4383135941275108221" />
@@ -116,7 +116,7 @@
     <property role="EcuMT" value="7746015835359514435" />
     <property role="TrG5h" value="ObjectDefinition" />
     <property role="34LRSv" value="object" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition" />
     <ref role="1TJDcQ" node="1h1l5SEmLT3" resolve="AbstractObjectDefinition" />
     <node concept="PrWs8" id="3Nk1IDHVTYG" role="PzmwI">
       <ref role="PrY4T" node="3Nk1IDHVTY$" resolve="IObjectDefinition" />
@@ -191,7 +191,7 @@
   </node>
   <node concept="1TIwiD" id="6HZo5MNbVDr">
     <property role="EcuMT" value="7746015835360049755" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition" />
     <property role="TrG5h" value="ObjectReferenceExpression" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyj" id="6HZo5MNbVDs" role="1TKVEi">
@@ -321,7 +321,7 @@
   </node>
   <node concept="1TIwiD" id="1h1l5SEmLT3">
     <property role="EcuMT" value="1459540517659024963" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition" />
     <property role="TrG5h" value="AbstractObjectDefinition" />
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="abstract object" />
@@ -362,7 +362,7 @@
   <node concept="1TIwiD" id="1h1l5SEmLT4">
     <property role="EcuMT" value="1459540517659024964" />
     <property role="TrG5h" value="AbstractObjectReference" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1h1l5SEmLT5" role="1TKVEi">
       <property role="IQ2ns" value="1459540517659024965" />
@@ -392,7 +392,7 @@
   </node>
   <node concept="1TIwiD" id="nlMVtogWxw">
     <property role="EcuMT" value="420466128549300320" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition.world" />
     <property role="TrG5h" value="WorldReference" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="nlMVtogWxx" role="1TKVEi">
@@ -410,6 +410,9 @@
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="PrWs8" id="270Q2mEVjkF" role="PzmwI">
       <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
+    </node>
+    <node concept="PrWs8" id="6af0XbHg_Ic" role="PzmwI">
+      <ref role="PrY4T" node="6af0XbHgy1S" resolve="IUseCommonDimensions" />
     </node>
     <node concept="1QGGSu" id="6ZPff_KB0Vd" role="rwd14">
       <property role="1iqoE4" value="${module}/icons/vector.png" />
@@ -479,10 +482,13 @@
   </node>
   <node concept="PlHQZ" id="3Nk1IDHVTY$">
     <property role="EcuMT" value="4383135941274869668" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition" />
     <property role="TrG5h" value="IObjectDefinition" />
     <node concept="PrWs8" id="3Nk1IDHVZCX" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="6af0XbHg_Ij" role="PrDN$">
+      <ref role="PrY4T" node="6af0XbHgy1S" resolve="IUseCommonDimensions" />
     </node>
     <node concept="t5JxF" id="3Nk1IDHXop7" role="lGtFl">
       <property role="t5JxN" value="Represent an object or group of object that is implemented (non abstract object) such as usual object or world" />
@@ -490,7 +496,7 @@
   </node>
   <node concept="1TIwiD" id="3Nk1IDHWOew">
     <property role="EcuMT" value="4383135941275108256" />
-    <property role="3GE5qa" value="physical" />
+    <property role="3GE5qa" value="physical.definition.world" />
     <property role="TrG5h" value="WorldInclusion" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3Nk1IDHWOex" role="1TKVEi">
@@ -1552,7 +1558,8 @@
     <property role="3GE5qa" value="styles.texture.color" />
     <property role="TrG5h" value="ColorType" />
     <property role="R4oN_" value="internal color type" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <property role="34LRSv" value="color" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSlaok" resolve="Type" />
   </node>
   <node concept="PlHQZ" id="3Vp3qmazjJs">
     <property role="EcuMT" value="4528665904943021020" />
@@ -1691,6 +1698,14 @@
     <property role="TrG5h" value="TraceExpression" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="1AxJyXYVtU5" resolve="StyleSpecificExpression" />
+  </node>
+  <node concept="PlHQZ" id="6af0XbHgy1S">
+    <property role="EcuMT" value="7101899341845110904" />
+    <property role="3GE5qa" value="physical" />
+    <property role="TrG5h" value="IUseCommonDimensions" />
+    <node concept="PrWs8" id="6af0XbHgy1T" role="PrDN$">
+      <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
+    </node>
   </node>
 </model>
 
