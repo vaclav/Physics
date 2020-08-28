@@ -28,12 +28,12 @@ public class typeof_AbstractForceCall_InferenceRule extends AbstractInferenceRul
     }
 
     {
-      final SNode pointType = typeCheckingContext.typeOf(SLinkOperations.getTarget(abstractForceCall, LINKS.applicationPoint$86Ou), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "4528665904943013515", true);
+      final SNode pointType = typeCheckingContext.typeOf(SLinkOperations.getTarget(abstractForceCall, LINKS.applicationPoint$UQI5), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "4528665904943013515", true);
       typeCheckingContext.whenConcrete(pointType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(abstractForceCall, LINKS.applicationPoint$86Ou);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(abstractForceCall, LINKS.applicationPoint$UQI5);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "4528665904943016099", 0, null);
               typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(pointType), (SNode) _quotation_createNode_2jfho7_a1a0c0a0a0a0a1a0b0c0b(), true, true, _info_12389875345);
             }
@@ -43,7 +43,7 @@ public class typeof_AbstractForceCall_InferenceRule extends AbstractInferenceRul
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.AbstractForceCall$Wc;
+    return CONCEPTS.AbstractForceCall$fJ;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -52,7 +52,7 @@ public class typeof_AbstractForceCall_InferenceRule extends AbstractInferenceRul
     return false;
   }
   private static SNode createForceType_2jfho7_a1a0c0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ForceType$fg);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ForceType$TQ);
     return n0.getResult();
   }
   private static SNode _quotation_createNode_2jfho7_a1a0c0a0a0a0a1a0b0c0b() {
@@ -73,11 +73,11 @@ public class typeof_AbstractForceCall_InferenceRule extends AbstractInferenceRul
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink applicationPoint$86Ou = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bdfL, "applicationPoint");
+    /*package*/ static final SContainmentLink applicationPoint$UQI5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bdfL, "applicationPoint");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractForceCall$Wc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
-    /*package*/ static final SConcept ForceType$fg = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1be152c15029f679L, "jetbrains.mps.samples.Physics.types.structure.ForceType");
+    /*package*/ static final SConcept AbstractForceCall$fJ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
+    /*package*/ static final SConcept ForceType$TQ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1be152c15029f679L, "jetbrains.mps.samples.Physics.types.structure.ForceType");
   }
 }

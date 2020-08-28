@@ -22,11 +22,11 @@ public class typeof_WorldNestedObjectTarget_InferenceRule extends AbstractInfere
     {
       SNode _nodeToCheck_1029348928467 = worldNestedObjectTarget;
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7547499172383455479", 0, null);
-      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7547499172383453122", true), (SNode) typeCheckingContext.typeOf(ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(worldNestedObjectTarget, LINKS.target$g02E)), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7547499172383455495", true), _info_12389875345);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7547499172383453122", true), (SNode) typeCheckingContext.typeOf(ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(worldNestedObjectTarget, LINKS.target$J$_T)), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7547499172383455495", true), _info_12389875345);
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.WorldNestedObjectTarget$p3;
+    return CONCEPTS.WorldNestedObjectTarget$GA;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -36,10 +36,10 @@ public class typeof_WorldNestedObjectTarget_InferenceRule extends AbstractInfere
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$g02E = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, 0x22ff7dd8e38793cbL, "target");
+    /*package*/ static final SReferenceLink target$J$_T = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, 0x22ff7dd8e38793cbL, "target");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept WorldNestedObjectTarget$p3 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, "jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget");
+    /*package*/ static final SConcept WorldNestedObjectTarget$GA = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, "jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget");
   }
 }

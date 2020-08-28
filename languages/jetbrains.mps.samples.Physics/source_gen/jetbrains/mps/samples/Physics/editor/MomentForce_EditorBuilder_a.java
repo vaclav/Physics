@@ -63,7 +63,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private boolean nodeCondition_lfmn68_a2a() {
-    return SPropertyOperations.getBoolean(myNode, PROPS.isMomentRelative$rXiD);
+    return SPropertyOperations.getBoolean(myNode, PROPS.isMomentRelative$yflq);
   }
   private EditorCell createComponent_0() {
     EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.lang.core.editor.alias");
@@ -78,7 +78,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     Style style = new StyleImpl();
     new AttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.MomentForce$kK, "jetbrains.mps.samples.Physics.editor.Relative_Moment_Transform"));
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.MomentForce$Cj, "jetbrains.mps.samples.Physics.editor.Relative_Moment_Transform"));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
@@ -95,7 +95,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new momentSingleRoleHandler_lfmn68_d0(myNode, LINKS.moment$q6Qs, getEditorContext());
+    SingleRoleCellProvider provider = new momentSingleRoleHandler_lfmn68_d0(myNode, LINKS.moment$CRF7, getEditorContext());
     return provider.createCell();
   }
   private static class momentSingleRoleHandler_lfmn68_d0 extends SingleRoleCellProvider {
@@ -115,8 +115,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.moment$q6Qs, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.moment$q6Qs, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.moment$CRF7, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.moment$CRF7, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -128,13 +128,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.moment$q6Qs);
+        editorCell.setSRole(LINKS.moment$CRF7);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.moment$q6Qs));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.moment$CRF7));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_moment");
@@ -151,14 +151,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isMomentRelative$rXiD = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
+    /*package*/ static final SProperty isMomentRelative$yflq = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept MomentForce$kK = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, "jetbrains.mps.samples.Physics.structure.MomentForce");
+    /*package*/ static final SConcept MomentForce$Cj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, "jetbrains.mps.samples.Physics.structure.MomentForce");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink moment$q6Qs = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906af9f596L, "moment");
+    /*package*/ static final SContainmentLink moment$CRF7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906af9f596L, "moment");
   }
 }

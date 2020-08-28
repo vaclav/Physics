@@ -22,7 +22,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 public class StyleDefinition_Constraints extends BaseConstraintsDescriptor {
   public StyleDefinition_Constraints() {
-    super(CONCEPTS.StyleDefinition$Xd);
+    super(CONCEPTS.StyleDefinition$gK);
   }
 
   @Override
@@ -41,11 +41,11 @@ public class StyleDefinition_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAParent(SNode node, SNode childNode, SAbstractConcept childConcept, SContainmentLink link) {
-    if (Objects.equals(link, LINKS.value$4y25)) {
+    if (Objects.equals(link, LINKS.value$c2jY)) {
       // If the key specify specific child node types 
       {
-        final SNode specificUser = SLinkOperations.getTarget(node, LINKS.key$4rdb);
-        if (SNodeOperations.isInstanceOf(specificUser, CONCEPTS.IUseSpecificExpressions$uL)) {
+        final SNode specificUser = SLinkOperations.getTarget(node, LINKS.key$8IFS);
+        if (SNodeOperations.isInstanceOf(specificUser, CONCEPTS.IUseSpecificExpressions$Mk)) {
           SAbstractConcept specificConcept = IUseSpecificExpressions__BehaviorDescriptor.getSpecificExpressionConcept_id1AxJyXYWKCb.invoke(specificUser);
 
           // Take that into account 
@@ -60,12 +60,12 @@ public class StyleDefinition_Constraints extends BaseConstraintsDescriptor {
   private static final SNodePointer canBeParentBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "1846966433401209155");
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept StyleDefinition$Xd = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, "jetbrains.mps.samples.Physics.structure.StyleDefinition");
-    /*package*/ static final SInterfaceConcept IUseSpecificExpressions$uL = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7ef2e456L, "jetbrains.mps.samples.Physics.structure.IUseSpecificExpressions");
+    /*package*/ static final SConcept StyleDefinition$gK = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, "jetbrains.mps.samples.Physics.structure.StyleDefinition");
+    /*package*/ static final SInterfaceConcept IUseSpecificExpressions$Mk = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7ef2e456L, "jetbrains.mps.samples.Physics.structure.IUseSpecificExpressions");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink key$4rdb = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c4124fL, "key");
-    /*package*/ static final SContainmentLink value$4y25 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c412a2L, "value");
+    /*package*/ static final SContainmentLink key$8IFS = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c4124fL, "key");
+    /*package*/ static final SContainmentLink value$c2jY = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c412a2L, "value");
   }
 }

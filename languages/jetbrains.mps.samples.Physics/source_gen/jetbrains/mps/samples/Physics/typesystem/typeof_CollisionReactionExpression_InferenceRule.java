@@ -24,7 +24,7 @@ public class typeof_CollisionReactionExpression_InferenceRule extends AbstractIn
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.CollisionReactionExpression$mt;
+    return CONCEPTS.CollisionReactionExpression$E0;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -33,12 +33,12 @@ public class typeof_CollisionReactionExpression_InferenceRule extends AbstractIn
     return false;
   }
   private static SNode createCollisionStyleKey_a0c3p9_a1a0c0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CollisionStyleKey$dV);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CollisionStyleKey$xu);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CollisionReactionExpression$mt = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbffL, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression");
-    /*package*/ static final SConcept CollisionStyleKey$dV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL, "jetbrains.mps.samples.Physics.structure.CollisionStyleKey");
+    /*package*/ static final SConcept CollisionReactionExpression$E0 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbffL, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression");
+    /*package*/ static final SConcept CollisionStyleKey$xu = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL, "jetbrains.mps.samples.Physics.structure.CollisionStyleKey");
   }
 }

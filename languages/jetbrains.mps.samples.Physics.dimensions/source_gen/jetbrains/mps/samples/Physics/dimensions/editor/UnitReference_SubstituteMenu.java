@@ -28,7 +28,7 @@ public class UnitReference_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_p5utdk_a(), CONCEPTS.UnitReference$c4));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_p5utdk_a(), CONCEPTS.UnitReference$Mo));
     return result;
   }
 
@@ -49,7 +49,7 @@ public class UnitReference_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_p5utdk_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) CONCEPTS.UnitReference$c4, LINKS.unit$2BcY);
+      super((SAbstractConcept) CONCEPTS.UnitReference$Mo, LINKS.unit$5Sm);
     }
     @NotNull
     @Override
@@ -81,7 +81,7 @@ public class UnitReference_SubstituteMenu extends SubstituteMenuBase {
       }
       @Override
       public String getDescriptionText(String pattern) {
-        return SPropertyOperations.getString(referencedNode, PROPS.description$Lld3);
+        return SPropertyOperations.getString(referencedNode, PROPS.description$CnUL);
       }
 
       @Override
@@ -92,14 +92,14 @@ public class UnitReference_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
+    /*package*/ static final SConcept UnitReference$Mo = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SReferenceLink unit$5Sm = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty description$Lld3 = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d40ceL, 0x73b48a125b0d3d88L, "description");
+    /*package*/ static final SProperty description$CnUL = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d40ceL, 0x73b48a125b0d3d88L, "description");
   }
 }

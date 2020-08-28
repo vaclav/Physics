@@ -18,7 +18,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class AbstractForceCallParameter_Constraints extends BaseConstraintsDescriptor {
   public AbstractForceCallParameter_Constraints() {
-    super(CONCEPTS.AbstractForceCallParameter$Xs);
+    super(CONCEPTS.AbstractForceCallParameter$gZ);
   }
 
   @Override
@@ -37,12 +37,12 @@ public class AbstractForceCallParameter_Constraints extends BaseConstraintsDescr
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.AbstractForceCall$Wc);
+    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.AbstractForceCall$fJ);
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "974138438729125175");
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractForceCallParameter$Xs = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter");
-    /*package*/ static final SConcept AbstractForceCall$Wc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
+    /*package*/ static final SConcept AbstractForceCallParameter$gZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter");
+    /*package*/ static final SConcept AbstractForceCall$fJ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
   }
 }

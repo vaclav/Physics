@@ -42,7 +42,7 @@ public final class StaticForce__BehaviorDescriptor extends BaseBHDescriptor {
     return true;
   }
   /*package*/ static SNode getCachedValueExpression_id4$vyCQBisaz(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.linearForce$Wp95);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.linearForce$fIGY);
   }
   /*package*/ static SNode getCacheType_id4$vyCQBisbm(@NotNull SNode __thisNode__) {
     return _quotation_createNode_j9nyyi_a0a2();
@@ -119,17 +119,17 @@ public final class StaticForce__BehaviorDescriptor extends BaseBHDescriptor {
     return quotedNode_1;
   }
   private static SNode createCachedObjectExpression_j9nyyi_a0a3(SNode p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CachedObjectExpression$O4);
-    n0.setReferenceTarget(LINKS.cacheOf$q$Y0, p0);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CachedObjectExpression$7B);
+    n0.setReferenceTarget(LINKS.cacheOf$Rtlz, p0);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink linearForce$Wp95 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
-    /*package*/ static final SReferenceLink cacheOf$q$Y0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, 0x491f8a8da78a723cL, "cacheOf");
+    /*package*/ static final SContainmentLink linearForce$fIGY = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
+    /*package*/ static final SReferenceLink cacheOf$Rtlz = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, 0x491f8a8da78a723cL, "cacheOf");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CachedObjectExpression$O4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, "jetbrains.mps.samples.Physics.structure.CachedObjectExpression");
+    /*package*/ static final SConcept CachedObjectExpression$7B = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, "jetbrains.mps.samples.Physics.structure.CachedObjectExpression");
   }
 }

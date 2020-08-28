@@ -32,7 +32,7 @@ public final class FractionalExponent__BehaviorDescriptor extends BaseBHDescript
   }
 
   /*package*/ static Rational rawValue_id3yBD53Ww3_k(@NotNull SNode __thisNode__) {
-    return new Rational(SPropertyOperations.getInteger(__thisNode__, PROPS.numer$RN1x), SPropertyOperations.getInteger(__thisNode__, PROPS.denom$RN2v));
+    return new Rational(SPropertyOperations.getInteger(__thisNode__, PROPS.numer$KOlj), SPropertyOperations.getInteger(__thisNode__, PROPS.denom$KONl));
   }
 
   /*package*/ FractionalExponent__BehaviorDescriptor() {
@@ -82,7 +82,7 @@ public final class FractionalExponent__BehaviorDescriptor extends BaseBHDescript
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty numer$RN1x = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc5L, "numer");
-    /*package*/ static final SProperty denom$RN2v = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc7L, "denom");
+    /*package*/ static final SProperty numer$KOlj = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc5L, "numer");
+    /*package*/ static final SProperty denom$KONl = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc7L, "denom");
   }
 }

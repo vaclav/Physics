@@ -3,6 +3,7 @@
   <persistence version="9" />
   <attribute name="checkpoint" value="DescriptorClasses" />
   <attribute name="generation-plan" value="AspectCPS" />
+  <attribute name="user-objects" value="true" />
   <languages />
   <imports>
     <import index="gp4" ref="r:a0b99e38-bba7-457f-9d37-80dcbded9213(jetbrains.mps.samples.Physics.genbase.typesystem)" />

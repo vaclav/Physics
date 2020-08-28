@@ -22,12 +22,12 @@ public class typeof_IForceWithLinearForce_InferenceRule extends AbstractInferenc
   }
   public void applyRule(final SNode iForceWithLinearForce, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode forceType = typeCheckingContext.typeOf(SLinkOperations.getTarget(iForceWithLinearForce, LINKS.linearForce$Wp95), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "998543371832878729", true);
+      final SNode forceType = typeCheckingContext.typeOf(SLinkOperations.getTarget(iForceWithLinearForce, LINKS.linearForce$fIGY), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "998543371832878729", true);
       typeCheckingContext.whenConcrete(forceType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(iForceWithLinearForce, LINKS.linearForce$Wp95);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(iForceWithLinearForce, LINKS.linearForce$fIGY);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "a force content should be expressed as with components of dimension mass * length * time^-2", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "998543371832881027", 0, null);
               typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(forceType), (SNode) _quotation_createNode_cnxg8z_a1a0c0a0a0a0a1a0b0a0b(), true, true, _info_12389875345);
             }
@@ -37,7 +37,7 @@ public class typeof_IForceWithLinearForce_InferenceRule extends AbstractInferenc
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.IForceWithLinearForce$3f;
+    return CONCEPTS.IForceWithLinearForce$mM;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -63,10 +63,10 @@ public class typeof_IForceWithLinearForce_InferenceRule extends AbstractInferenc
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink linearForce$Wp95 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
+    /*package*/ static final SContainmentLink linearForce$fIGY = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IForceWithLinearForce$3f = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, "jetbrains.mps.samples.Physics.structure.IForceWithLinearForce");
+    /*package*/ static final SInterfaceConcept IForceWithLinearForce$mM = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, "jetbrains.mps.samples.Physics.structure.IForceWithLinearForce");
   }
 }

@@ -109,8 +109,8 @@ public class IntegerExponent_TransformationMenu extends TransformationMenuBase {
 
       @Override
       public void execute(@NotNull String pattern) {
-        SNode frac = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.FractionalExponent$UK);
-        SPropertyOperations.assign(frac, PROPS.numer$RN1x, SPropertyOperations.getInteger(_context.getNode(), PROPS.value$FcCi));
+        SNode frac = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.FractionalExponent$x4);
+        SPropertyOperations.assign(frac, PROPS.numer$KOlj, SPropertyOperations.getInteger(_context.getNode(), PROPS.value$Ee72));
 
         SelectionUtil.selectCell(_context.getEditorContext(), frac, SelectionManager.LAST_EDITABLE_CELL);
       }
@@ -172,8 +172,8 @@ public class IntegerExponent_TransformationMenu extends TransformationMenuBase {
 
       @Override
       public void execute(@NotNull String pattern) {
-        SNode frac = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.FractionalExponent$UK);
-        SPropertyOperations.assign(frac, PROPS.denom$RN2v, SPropertyOperations.getInteger(_context.getNode(), PROPS.value$FcCi));
+        SNode frac = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.FractionalExponent$x4);
+        SPropertyOperations.assign(frac, PROPS.denom$KONl, SPropertyOperations.getInteger(_context.getNode(), PROPS.value$Ee72));
         SelectionUtil.selectCell(_context.getEditorContext(), frac, SelectionManager.FIRST_EDITABLE_CELL);
       }
 
@@ -198,12 +198,12 @@ public class IntegerExponent_TransformationMenu extends TransformationMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept FractionalExponent$UK = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, "jetbrains.mps.samples.Physics.dimensions.structure.FractionalExponent");
+    /*package*/ static final SConcept FractionalExponent$x4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, "jetbrains.mps.samples.Physics.dimensions.structure.FractionalExponent");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty numer$RN1x = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc5L, "numer");
-    /*package*/ static final SProperty value$FcCi = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x2a3b6653358e9e8L, "value");
-    /*package*/ static final SProperty denom$RN2v = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc7L, "denom");
+    /*package*/ static final SProperty numer$KOlj = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc5L, "numer");
+    /*package*/ static final SProperty value$Ee72 = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x2a3b6653358e9e8L, "value");
+    /*package*/ static final SProperty denom$KONl = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc7L, "denom");
   }
 }

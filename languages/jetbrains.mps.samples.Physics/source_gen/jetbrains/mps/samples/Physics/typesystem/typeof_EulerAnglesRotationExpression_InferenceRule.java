@@ -21,15 +21,15 @@ public class typeof_EulerAnglesRotationExpression_InferenceRule extends Abstract
   }
   public void applyRule(final SNode self, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode yawType = typeCheckingContext.typeOf(SLinkOperations.getTarget(self, LINKS.alpha$XgMY), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660268762", true);
+      final SNode yawType = typeCheckingContext.typeOf(SLinkOperations.getTarget(self, LINKS.alpha$EFZ_), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660268762", true);
       typeCheckingContext.whenConcrete(yawType, new Runnable() {
         public void run() {
           {
-            final SNode pitchType = typeCheckingContext.typeOf(SLinkOperations.getTarget(self, LINKS.beta$XgM0), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660268756", true);
+            final SNode pitchType = typeCheckingContext.typeOf(SLinkOperations.getTarget(self, LINKS.beta$EFxz), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660268756", true);
             typeCheckingContext.whenConcrete(pitchType, new Runnable() {
               public void run() {
                 {
-                  final SNode rollType = typeCheckingContext.typeOf(SLinkOperations.getTarget(self, LINKS.gamma$Xh3s), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660268750", true);
+                  final SNode rollType = typeCheckingContext.typeOf(SLinkOperations.getTarget(self, LINKS.gamma$ENY7), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660268750", true);
                   typeCheckingContext.whenConcrete(rollType, new Runnable() {
                     public void run() {
                       {
@@ -59,7 +59,7 @@ public class typeof_EulerAnglesRotationExpression_InferenceRule extends Abstract
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.EulerAnglesRotationExpression$gs;
+    return CONCEPTS.EulerAnglesRotationExpression$zZ;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -68,21 +68,21 @@ public class typeof_EulerAnglesRotationExpression_InferenceRule extends Abstract
     return false;
   }
   private static SNode createRotationType_huyqur_a1a0c0d0a0a1a0b0a0a0a1a0b0a0a0a1a0b0a0b(SNode p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RotationType$YX);
-    n0.forChild(LINKS.nestedType$w52B).initNode(p0, CONCEPTS.Type$fA, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RotationType$Dz);
+    n0.forChild(LINKS.nestedType$uIVv).initNode(p0, CONCEPTS.Type$WK, true);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink alpha$XgMY = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L, 0x4dcb9d0527c4004aL, "alpha");
-    /*package*/ static final SContainmentLink beta$XgM0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L, 0x4dcb9d0527c40048L, "beta");
-    /*package*/ static final SContainmentLink gamma$Xh3s = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L, 0x4dcb9d0527c40057L, "gamma");
-    /*package*/ static final SContainmentLink nestedType$w52B = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L, 0x777af24c0465feb3L, "nestedType");
+    /*package*/ static final SContainmentLink alpha$EFZ_ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L, 0x4dcb9d0527c4004aL, "alpha");
+    /*package*/ static final SContainmentLink beta$EFxz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L, 0x4dcb9d0527c40048L, "beta");
+    /*package*/ static final SContainmentLink gamma$ENY7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L, 0x4dcb9d0527c40057L, "gamma");
+    /*package*/ static final SContainmentLink nestedType$uIVv = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L, 0x777af24c0465feb3L, "nestedType");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept EulerAnglesRotationExpression$gs = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L, "jetbrains.mps.samples.Physics.structure.EulerAnglesRotationExpression");
-    /*package*/ static final SConcept RotationType$YX = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L, "jetbrains.mps.samples.Physics.types.structure.RotationType");
-    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept EulerAnglesRotationExpression$zZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c40047L, "jetbrains.mps.samples.Physics.structure.EulerAnglesRotationExpression");
+    /*package*/ static final SConcept RotationType$Dz = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L, "jetbrains.mps.samples.Physics.types.structure.RotationType");
+    /*package*/ static final SConcept Type$WK = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
   }
 }

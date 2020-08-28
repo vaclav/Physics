@@ -22,7 +22,7 @@ public class Relative_LinearForce_Remove {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        SPropertyOperations.assign(node, PROPS.isLinearForceRelative$HMCw, false);
+        SPropertyOperations.assign(node, PROPS.isLinearForceRelative$b4V3, false);
       }
 
     };
@@ -70,6 +70,6 @@ public class Relative_LinearForce_Remove {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isLinearForceRelative$HMCw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b38efc0L, "isLinearForceRelative");
+    /*package*/ static final SProperty isLinearForceRelative$b4V3 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b38efc0L, "isLinearForceRelative");
   }
 }

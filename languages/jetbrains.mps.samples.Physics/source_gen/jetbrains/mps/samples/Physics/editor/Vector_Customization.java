@@ -31,7 +31,7 @@ public class Vector_Customization implements EditorMenuItemCustomizer {
   private static class Vector_CustomizationSpecific implements EditorMenuItemCustomizer {
 
     public boolean matches(EditorMenuItemCustomizationContext context) {
-      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.VectorExpression$HV).matchesContext(context) && getCompletionItemInformation(context) != null;
+      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.VectorExpression$1u).matchesContext(context) && getCompletionItemInformation(context) != null;
     }
 
 
@@ -53,7 +53,7 @@ public class Vector_Customization implements EditorMenuItemCustomizer {
       customize_(getParentNode(context), getChild(context), getLink(context), style, getCompletionItemInformation(context));
     }
     private void customize_(SNode parentNode, SNode currentChild, SContainmentLink containmentLink, EditorMenuItemStyle style, CompletionItemInformation itemInformation) {
-      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.AbsoluteCoordinates$d5, true, false) == null)) {
+      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.AbsoluteCoordinates$wC, true, false) == null)) {
         style.setPriority(2.0);
       }
     }
@@ -61,7 +61,7 @@ public class Vector_Customization implements EditorMenuItemCustomizer {
 
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept VectorExpression$HV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.VectorExpression");
-    /*package*/ static final SConcept AbsoluteCoordinates$d5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL, "jetbrains.mps.samples.Physics.structure.AbsoluteCoordinates");
+    /*package*/ static final SConcept VectorExpression$1u = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.VectorExpression");
+    /*package*/ static final SConcept AbsoluteCoordinates$wC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL, "jetbrains.mps.samples.Physics.structure.AbsoluteCoordinates");
   }
 }

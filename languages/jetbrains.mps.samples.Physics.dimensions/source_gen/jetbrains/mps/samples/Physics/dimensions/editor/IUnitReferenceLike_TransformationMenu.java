@@ -167,7 +167,7 @@ public class IUnitReferenceLike_TransformationMenu extends TransformationMenuBas
 
       @Override
       public void execute(@NotNull String pattern) {
-        SLinkOperations.setTarget(_context.getNode(), LINKS.exponent$2Bc0, createIntegerExponent_n4sfk9_a0a0a1a());
+        SLinkOperations.setTarget(_context.getNode(), LINKS.exponent$5qk, createIntegerExponent_n4sfk9_a0a0a1a());
       }
 
 
@@ -190,15 +190,15 @@ public class IUnitReferenceLike_TransformationMenu extends TransformationMenuBas
 
   }
   private static SNode createIntegerExponent_n4sfk9_a0a0a1a() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.IntegerExponent$mI);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.IntegerExponent$X2);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
+    /*package*/ static final SContainmentLink exponent$5qk = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept IntegerExponent$mI = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, "jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent");
+    /*package*/ static final SConcept IntegerExponent$X2 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, "jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent");
   }
 }

@@ -47,24 +47,24 @@ public final class CompositeDimension__BehaviorDescriptor extends BaseBHDescript
   /*package*/ static Map<SNode, Rational> getRawTypes_id3yBD53WvLzq(@NotNull SNode __thisNode__) {
     final Map<SNode, Rational> exponents = MapSequence.fromMap(new HashMap<SNode, Rational>());
 
-    ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow)).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.units$qq1O)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode parentUnit) {
         Rational parentPower = IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(parentUnit);
 
         // Add parent units multiplied by the exponent 
-        DimensionMapsHelper.multiplyAndMergeInto(Dimension__BehaviorDescriptor.getRawTypes_id3yBD53WvLzq.invoke(SLinkOperations.getTarget(parentUnit, LINKS.unit$2BcY)), parentPower, exponents);
+        DimensionMapsHelper.multiplyAndMergeInto(Dimension__BehaviorDescriptor.getRawTypes_id3yBD53WvLzq.invoke(SLinkOperations.getTarget(parentUnit, LINKS.unit$5Sm)), parentPower, exponents);
       }
     });
 
     return exponents;
   }
   /*package*/ static String getSelfString_id1fq3tlLwQff(@NotNull SNode __thisNode__) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, LINKS.default$rDru), PROPS.name$tAp1);
+    return SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, LINKS.default$8aTQ), PROPS.name$MnvL);
   }
   /*package*/ static String getTargetString_id1fq3tlLwQga(@NotNull SNode __thisNode__) {
-    Iterable<String> seq = ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow)).select(new ISelector<SNode, String>() {
+    Iterable<String> seq = ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.units$qq1O)).select(new ISelector<SNode, String>() {
       public String select(SNode it) {
-        return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$2BcY), LINKS.default$rDru), PROPS.name$tAp1) + (((SLinkOperations.getTarget(it, LINKS.exponent$2Bc0) == null) ? "" : "^" + IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it)));
+        return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$5Sm), LINKS.default$8aTQ), PROPS.name$MnvL) + (((SLinkOperations.getTarget(it, LINKS.exponent$5qk) == null) ? "" : "^" + IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it)));
       }
     });
 
@@ -126,13 +126,13 @@ public final class CompositeDimension__BehaviorDescriptor extends BaseBHDescript
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
-    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
-    /*package*/ static final SContainmentLink default$rDru = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
-    /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SReferenceLink unit$5Sm = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SContainmentLink default$8aTQ = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
+    /*package*/ static final SContainmentLink exponent$5qk = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 }

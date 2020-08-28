@@ -37,9 +37,9 @@ public final class AbstractForceCallParameter__BehaviorDescriptor extends BaseBH
 
   /*package*/ static Iterable<List<SNode>> getRequiredDimensions_id270Q2mETulL(@NotNull SNode __thisNode__) {
     {
-      final SNode dimensionType = SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.argument$kXZ1), LINKS.type$G1QY);
-      if (SNodeOperations.isInstanceOf(dimensionType, CONCEPTS.DimensionType$yz)) {
-        return Sequence.<List<SNode>>singleton(SLinkOperations.getChildren(dimensionType, LINKS.units$o6Ow));
+      final SNode dimensionType = SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.argument$9$P2), LINKS.type$8xXf);
+      if (SNodeOperations.isInstanceOf(dimensionType, CONCEPTS.DimensionType$8R)) {
+        return Sequence.<List<SNode>>singleton(SLinkOperations.getChildren(dimensionType, LINKS.units$qq1O));
       }
     }
     return Sequence.fromIterable(Collections.emptyList());
@@ -92,12 +92,12 @@ public final class AbstractForceCallParameter__BehaviorDescriptor extends BaseBH
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink argument$kXZ1 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
-    /*package*/ static final SContainmentLink type$G1QY = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba520709L, 0x68d69d36ba52070cL, "type");
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SReferenceLink argument$9$P2 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
+    /*package*/ static final SContainmentLink type$8xXf = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba520709L, 0x68d69d36ba52070cL, "type");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
   }
 }

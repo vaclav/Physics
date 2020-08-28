@@ -101,12 +101,12 @@ public class Relative_LinearForce_Transform extends TransformationMenuBase {
 
       @Override
       public void execute(@NotNull String pattern) {
-        SPropertyOperations.assign(_context.getNode(), PROPS.isLinearForceRelative$HMCw, true);
+        SPropertyOperations.assign(_context.getNode(), PROPS.isLinearForceRelative$b4V3, true);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isLinearForceRelative$HMCw));
+        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isLinearForceRelative$b4V3));
       }
 
 
@@ -129,6 +129,6 @@ public class Relative_LinearForce_Transform extends TransformationMenuBase {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isLinearForceRelative$HMCw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b38efc0L, "isLinearForceRelative");
+    /*package*/ static final SProperty isLinearForceRelative$b4V3 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b38efc0L, "isLinearForceRelative");
   }
 }

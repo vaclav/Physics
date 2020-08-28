@@ -43,27 +43,27 @@ public final class WorldNestedObjectTarget__BehaviorDescriptor extends BaseBHDes
   }
 
   /*package*/ static String renderReadable_id6kR0qIbI2yi(@NotNull SNode __thisNode__) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, LINKS.target$g02E), PROPS.name$tAp1);
+    return SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, LINKS.target$J$_T), PROPS.name$MnvL);
   }
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
-    if (SConceptOperations.isExactly(SNodeOperations.asSConcept(kind), CONCEPTS.ILocalized$9a)) {
-      return ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke(IMayTargetWorld__BehaviorDescriptor.getWorldTarget_id2bZvtzzMbSH.invoke(SNodeOperations.as(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(__thisNode__), CONCEPTS.IMayTargetWorld$d)), kind, child);
+    if (SConceptOperations.isExactly(SNodeOperations.asSConcept(kind), CONCEPTS.ILocalized$sH)) {
+      return ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke(IMayTargetWorld__BehaviorDescriptor.getWorldTarget_id2bZvtzzMbSH.invoke(SNodeOperations.as(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(__thisNode__), CONCEPTS.IMayTargetWorld$jK)), kind, child);
     }
-    return ((Scope) ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke0(__thisNode__, CONCEPTS.ScopeProvider$M8, kind, child));
+    return ((Scope) ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke0(__thisNode__, CONCEPTS.ScopeProvider$aq, kind, child));
   }
   /*package*/ static SNode getWorldTarget_id2bZvtzzMbSH(@NotNull SNode __thisNode__) {
-    SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.target$g02E));
+    SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.target$J$_T));
 
     {
       final SNode world = definition;
-      if (SNodeOperations.isInstanceOf(world, CONCEPTS.WorldDefinition$Xn)) {
+      if (SNodeOperations.isInstanceOf(world, CONCEPTS.WorldDefinition$gU)) {
         return world;
       }
     }
     return null;
   }
   /*package*/ static SNode getLocalizedObjectTarget_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.target$g02E);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.target$J$_T);
   }
 
   /*package*/ WorldNestedObjectTarget__BehaviorDescriptor() {
@@ -119,17 +119,17 @@ public final class WorldNestedObjectTarget__BehaviorDescriptor extends BaseBHDes
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$g02E = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, 0x22ff7dd8e38793cbL, "target");
+    /*package*/ static final SReferenceLink target$J$_T = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, 0x22ff7dd8e38793cbL, "target");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IMayTargetWorld$d = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L, "jetbrains.mps.samples.Physics.structure.IMayTargetWorld");
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
-    /*package*/ static final SInterfaceConcept ScopeProvider$M8 = MetaAdapterFactory.getInterfaceConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L, "jetbrains.mps.lang.core.structure.ScopeProvider");
-    /*package*/ static final SConcept WorldDefinition$Xn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
+    /*package*/ static final SInterfaceConcept IMayTargetWorld$jK = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L, "jetbrains.mps.samples.Physics.structure.IMayTargetWorld");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SInterfaceConcept ScopeProvider$aq = MetaAdapterFactory.getInterfaceConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L, "jetbrains.mps.lang.core.structure.ScopeProvider");
+    /*package*/ static final SConcept WorldDefinition$gU = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
   }
 }

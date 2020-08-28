@@ -24,12 +24,12 @@ public class check_OverrideRule_targetIsOverridable_NonTypesystemRule extends Ab
     if ((OverrideRule__BehaviorDescriptor.getTarget_id2AM6gIjLTgY.invoke(overrideRule) == null)) {
       {
         final MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(overrideRule, LINKS.target$_Vc0), "the given expression cannot be overridden", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3004491438924285243", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(overrideRule, LINKS.target$ne7z), "the given expression cannot be overridden", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3004491438924285243", null, errorTarget);
       }
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.OverrideRule$lC;
+    return CONCEPTS.OverrideRule$Db;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -39,10 +39,10 @@ public class check_OverrideRule_targetIsOverridable_NonTypesystemRule extends Ab
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink target$_Vc0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9feeL, "target");
+    /*package*/ static final SContainmentLink target$ne7z = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9feeL, "target");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept OverrideRule$lC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
+    /*package*/ static final SConcept OverrideRule$Db = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
   }
 }

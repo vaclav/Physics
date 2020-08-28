@@ -34,7 +34,7 @@ public class VectorComponentTarget_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_rtr7ue_a(), CONCEPTS.VectorComponentTarget$ME));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_rtr7ue_a(), CONCEPTS.VectorComponentTarget$6d));
     return result;
   }
 
@@ -106,7 +106,7 @@ public class VectorComponentTarget_SubstituteMenu extends SubstituteMenuBase {
         private final SubstituteMenuContext _context;
         private EditorMenuTraceInfo myTraceInfo;
         public Item(SubstituteMenuContext context) {
-          super(CONCEPTS.VectorComponentTarget$ME, context);
+          super(CONCEPTS.VectorComponentTarget$6d, context);
           _context = context;
         }
 
@@ -118,7 +118,7 @@ public class VectorComponentTarget_SubstituteMenu extends SubstituteMenuBase {
         @Override
         public SNode createNode(@NotNull String pattern) {
           SNode node = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, "jetbrains.mps.samples.Physics.structure.VectorComponentTarget"));
-          SPropertyOperations.assignEnum(node, PROPS.component$_d4D, myParameterObject);
+          SPropertyOperations.assignEnum(node, PROPS.component$Szq, myParameterObject);
           return node;
         }
 
@@ -128,7 +128,7 @@ public class VectorComponentTarget_SubstituteMenu extends SubstituteMenuBase {
         }
         @NotNull
         protected CompletionItemInformation createInformation(String pattern) {
-          return new CompletionItemInformation(myParameterObject, CONCEPTS.VectorComponentTarget$ME, getMatchingText(pattern), getDescriptionText(pattern));
+          return new CompletionItemInformation(myParameterObject, CONCEPTS.VectorComponentTarget$6d, getMatchingText(pattern), getDescriptionText(pattern));
         }
         @Nullable
         @Override
@@ -151,10 +151,10 @@ public class VectorComponentTarget_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept VectorComponentTarget$ME = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, "jetbrains.mps.samples.Physics.structure.VectorComponentTarget");
+    /*package*/ static final SConcept VectorComponentTarget$6d = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, "jetbrains.mps.samples.Physics.structure.VectorComponentTarget");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty component$_d4D = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
+    /*package*/ static final SProperty component$Szq = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
   }
 }

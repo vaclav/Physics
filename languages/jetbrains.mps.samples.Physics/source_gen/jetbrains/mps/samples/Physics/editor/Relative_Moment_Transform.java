@@ -101,12 +101,12 @@ public class Relative_Moment_Transform extends TransformationMenuBase {
 
       @Override
       public void execute(@NotNull String pattern) {
-        SPropertyOperations.assign(_context.getNode(), PROPS.isMomentRelative$rXiD, true);
+        SPropertyOperations.assign(_context.getNode(), PROPS.isMomentRelative$yflq, true);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isMomentRelative$rXiD));
+        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isMomentRelative$yflq));
       }
 
 
@@ -129,6 +129,6 @@ public class Relative_Moment_Transform extends TransformationMenuBase {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isMomentRelative$rXiD = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
+    /*package*/ static final SProperty isMomentRelative$yflq = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
   }
 }

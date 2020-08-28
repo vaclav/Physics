@@ -39,20 +39,20 @@ public final class ObjectAngularVelocityTarget__BehaviorDescriptor extends BaseB
     return "angular velocity";
   }
   /*package*/ static SNode getTargetCoordinates_idGdoRjGvovH(@NotNull SNode __thisNode__, SNode object) {
-    return SLinkOperations.getTarget(SNodeOperations.as(object, CONCEPTS.ObjectDefinition$YO), LINKS.rotationSpeed$YVgC);
+    return SLinkOperations.getTarget(SNodeOperations.as(object, CONCEPTS.ObjectDefinition$in), LINKS.rotationSpeed$ugmV);
   }
   /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
     {
       final SNode dotTarget = IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__);
-      if (SNodeOperations.isInstanceOf(dotTarget, CONCEPTS.ObjectDefinition$YO)) {
+      if (SNodeOperations.isInstanceOf(dotTarget, CONCEPTS.ObjectDefinition$in)) {
         SNode object = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, dotTarget);
 
         if ((object == null)) {
-          SLinkOperations.setTarget(dotTarget, LINKS.rotationSpeed$YVgC, createTargetableObjectExpression_paku00_a0a0c0a0c(content));
-          return SLinkOperations.getTarget(SLinkOperations.getTarget(dotTarget, LINKS.velocity$DoVv), LINKS.expression$87ts);
+          SLinkOperations.setTarget(dotTarget, LINKS.rotationSpeed$ugmV, createTargetableObjectExpression_paku00_a0a0c0a0c(content));
+          return SLinkOperations.getTarget(SLinkOperations.getTarget(dotTarget, LINKS.velocity$2C7$), LINKS.expression$Va$7);
         } else {
-          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(object, LINKS.expression$87ts), content);
-          return SLinkOperations.getTarget(object, LINKS.expression$87ts);
+          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(object, LINKS.expression$Va$7), content);
+          return SLinkOperations.getTarget(object, LINKS.expression$Va$7);
         }
       }
     }
@@ -110,20 +110,20 @@ public final class ObjectAngularVelocityTarget__BehaviorDescriptor extends BaseB
     return CONCEPT;
   }
   private static SNode createTargetableObjectExpression_paku00_a0a0c0a0c(SNode p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TargetableObjectExpression$cD);
-    n0.forChild(LINKS.expression$87ts).initNode(p0, CONCEPTS.Expression$Wr, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TargetableObjectExpression$wc);
+    n0.forChild(LINKS.expression$Va$7).initNode(p0, CONCEPTS.Expression$D_, true);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
-    /*package*/ static final SConcept TargetableObjectExpression$cD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableObjectExpression");
-    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept ObjectDefinition$in = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
+    /*package*/ static final SConcept TargetableObjectExpression$wc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableObjectExpression");
+    /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink rotationSpeed$YVgC = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x4dcb9d0527c44d06L, "rotationSpeed");
-    /*package*/ static final SContainmentLink velocity$DoVv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
-    /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
+    /*package*/ static final SContainmentLink rotationSpeed$ugmV = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x4dcb9d0527c44d06L, "rotationSpeed");
+    /*package*/ static final SContainmentLink velocity$2C7$ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
+    /*package*/ static final SContainmentLink expression$Va$7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
   }
 }

@@ -29,14 +29,14 @@ public class typeof_ObjectDefinition_InferenceRule extends AbstractInferenceRule
 
     if (!(typeCheckingContext.isSingleTypeComputation())) {
       {
-        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(objectDefinition, LINKS.mass$9nTx);
+        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(objectDefinition, LINKS.mass$y8ay);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "911298080278399153", 0, null);
         typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "911298080278399156", true), (SNode) _quotation_createNode_7a45zf_a1a0c0a0c0b(), true, true, _info_12389875345);
       }
     }
 
     {
-      final SNode rotationSpeedType = typeCheckingContext.typeOf(SLinkOperations.getTarget(objectDefinition, LINKS.rotationSpeed$YVgC), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660803348", true);
+      final SNode rotationSpeedType = typeCheckingContext.typeOf(SLinkOperations.getTarget(objectDefinition, LINKS.rotationSpeed$ugmV), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660803348", true);
       typeCheckingContext.whenConcrete(rotationSpeedType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
@@ -51,7 +51,7 @@ public class typeof_ObjectDefinition_InferenceRule extends AbstractInferenceRule
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ObjectDefinition$YO;
+    return CONCEPTS.ObjectDefinition$in;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -60,7 +60,7 @@ public class typeof_ObjectDefinition_InferenceRule extends AbstractInferenceRule
     return false;
   }
   private static SNode createObjectType_7a45zf_a1a0c0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ObjectType$sZ);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ObjectType$7_);
     return n0.getResult();
   }
   private static SNode _quotation_createNode_7a45zf_a1a0c0a0c0b() {
@@ -102,12 +102,12 @@ public class typeof_ObjectDefinition_InferenceRule extends AbstractInferenceRule
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink mass$9nTx = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x1be152c1502448ffL, "mass");
-    /*package*/ static final SContainmentLink rotationSpeed$YVgC = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x4dcb9d0527c44d06L, "rotationSpeed");
+    /*package*/ static final SContainmentLink mass$y8ay = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x1be152c1502448ffL, "mass");
+    /*package*/ static final SContainmentLink rotationSpeed$ugmV = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x4dcb9d0527c44d06L, "rotationSpeed");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
-    /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
+    /*package*/ static final SConcept ObjectDefinition$in = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
+    /*package*/ static final SConcept ObjectType$7_ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
   }
 }

@@ -21,7 +21,7 @@ public class typeof_RelativeCoordinates_InferenceRule extends AbstractInferenceR
   }
   public void applyRule(final SNode relativeCoordinates, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode coordsType = typeCheckingContext.typeOf(SLinkOperations.getTarget(relativeCoordinates, LINKS.coordinates$l1nt), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "998543371830523857", true);
+      final SNode coordsType = typeCheckingContext.typeOf(SLinkOperations.getTarget(relativeCoordinates, LINKS.coordinates$bdEA), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "998543371830523857", true);
       typeCheckingContext.whenConcrete(coordsType, new Runnable() {
         public void run() {
           {
@@ -34,7 +34,7 @@ public class typeof_RelativeCoordinates_InferenceRule extends AbstractInferenceR
     }
 
     {
-      final SNode relativeTargetType = typeCheckingContext.typeOf(SLinkOperations.getTarget(relativeCoordinates, LINKS.relativeFrom$gwcw), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2315070452019889310", true);
+      final SNode relativeTargetType = typeCheckingContext.typeOf(SLinkOperations.getTarget(relativeCoordinates, LINKS.relativeFrom$Z9n3), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2315070452019889310", true);
       typeCheckingContext.whenConcrete(relativeTargetType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
@@ -49,7 +49,7 @@ public class typeof_RelativeCoordinates_InferenceRule extends AbstractInferenceR
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.RelativeVector$c7;
+    return CONCEPTS.RelativeVector$vE;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -65,11 +65,11 @@ public class typeof_RelativeCoordinates_InferenceRule extends AbstractInferenceR
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
-    /*package*/ static final SContainmentLink relativeFrom$gwcw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
+    /*package*/ static final SContainmentLink coordinates$bdEA = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
+    /*package*/ static final SContainmentLink relativeFrom$Z9n3 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept RelativeVector$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
+    /*package*/ static final SConcept RelativeVector$vE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
   }
 }

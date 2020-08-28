@@ -36,10 +36,10 @@ public final class DerivedUnit__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static String getSelfString_id1fq3tlLwQff(@NotNull SNode __thisNode__) {
-    return SPropertyOperations.getString(__thisNode__, PROPS.name$tAp1);
+    return SPropertyOperations.getString(__thisNode__, PROPS.name$MnvL);
   }
   /*package*/ static String getTargetString_id1fq3tlLwQga(@NotNull SNode __thisNode__) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.Dimension$7F, false, false), LINKS.default$rDru), PROPS.name$tAp1);
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.Dimension$HZ, false, false), LINKS.default$8aTQ), PROPS.name$MnvL);
   }
 
   /*package*/ DerivedUnit__BehaviorDescriptor() {
@@ -91,14 +91,14 @@ public final class DerivedUnit__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Dimension$7F = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
+    /*package*/ static final SConcept Dimension$HZ = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink default$rDru = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
+    /*package*/ static final SContainmentLink default$8aTQ = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
   }
 }

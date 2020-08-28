@@ -24,7 +24,7 @@ public class typeof_Texture_InferenceRule extends AbstractInferenceRule_Runtime 
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.TextureExpression$Jk;
+    return CONCEPTS.TextureExpression$2R;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -33,12 +33,12 @@ public class typeof_Texture_InferenceRule extends AbstractInferenceRule_Runtime 
     return false;
   }
   private static SNode createTextureStyleKey_xmjslt_a1a0c0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TextureStyleKey$PE);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TextureStyleKey$9d);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept TextureExpression$Jk = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L, "jetbrains.mps.samples.Physics.structure.TextureExpression");
-    /*package*/ static final SConcept TextureStyleKey$PE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774b3a0L, "jetbrains.mps.samples.Physics.structure.TextureStyleKey");
+    /*package*/ static final SConcept TextureExpression$2R = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L, "jetbrains.mps.samples.Physics.structure.TextureExpression");
+    /*package*/ static final SConcept TextureStyleKey$9d = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774b3a0L, "jetbrains.mps.samples.Physics.structure.TextureStyleKey");
   }
 }

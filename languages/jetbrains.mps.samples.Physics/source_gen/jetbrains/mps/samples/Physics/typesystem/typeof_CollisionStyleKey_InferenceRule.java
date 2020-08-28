@@ -23,7 +23,7 @@ public class typeof_CollisionStyleKey_InferenceRule extends AbstractInferenceRul
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.CollisionStyleKey$dV;
+    return CONCEPTS.CollisionStyleKey$xu;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -33,6 +33,6 @@ public class typeof_CollisionStyleKey_InferenceRule extends AbstractInferenceRul
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CollisionStyleKey$dV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL, "jetbrains.mps.samples.Physics.structure.CollisionStyleKey");
+    /*package*/ static final SConcept CollisionStyleKey$xu = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL, "jetbrains.mps.samples.Physics.structure.CollisionStyleKey");
   }
 }

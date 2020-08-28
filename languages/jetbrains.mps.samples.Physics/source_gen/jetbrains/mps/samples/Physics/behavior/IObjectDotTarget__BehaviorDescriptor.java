@@ -31,7 +31,7 @@ public final class IObjectDotTarget__BehaviorDescriptor extends BaseBHDescriptor
   }
 
   /*package*/ static SNode getLocalizedObjectTarget_id4eAl$41wire(@NotNull SNode __thisNode__) {
-    return (SNode) ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$lA));
+    return (SNode) ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$D9));
   }
 
   /*package*/ IObjectDotTarget__BehaviorDescriptor() {
@@ -81,6 +81,6 @@ public final class IObjectDotTarget__BehaviorDescriptor extends BaseBHDescriptor
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ITargetObject$lA = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
+    /*package*/ static final SInterfaceConcept ITargetObject$D9 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
   }
 }

@@ -22,12 +22,12 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 public class ObjectReferenceExpression_Constraints extends BaseConstraintsDescriptor {
   public ObjectReferenceExpression_Constraints() {
-    super(CONCEPTS.ObjectReferenceExpression$qq);
+    super(CONCEPTS.ObjectReferenceExpression$HX);
   }
 
   @Override
   protected Map<SReferenceLink, ReferenceConstraintsDescriptor> getSpecifiedReferences() {
-    BaseReferenceConstraintsDescriptor d0 = new BaseReferenceConstraintsDescriptor(LINKS.target$EWj0, this) {
+    BaseReferenceConstraintsDescriptor d0 = new BaseReferenceConstraintsDescriptor(LINKS.target$MKwz, this) {
       @Override
       public boolean hasOwnScopeProvider() {
         return true;
@@ -42,7 +42,7 @@ public class ObjectReferenceExpression_Constraints extends BaseConstraintsDescri
           }
           @Override
           public Scope createScope(final ReferenceConstraintsContext _context) {
-            Scope scope = Scope.getScope(_context.getContextNode(), _context.getContainmentLink(), _context.getPosition(), CONCEPTS.ILocalized$9a);
+            Scope scope = Scope.getScope(_context.getContextNode(), _context.getContainmentLink(), _context.getPosition(), CONCEPTS.ILocalized$sH);
             return (scope == null ? new EmptyScope() : scope);
           }
         };
@@ -55,11 +55,11 @@ public class ObjectReferenceExpression_Constraints extends BaseConstraintsDescri
   private static final SNodePointer breakingNode_7dh9p9_a0a0a0a0a1a0a0a0c = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "7887120293591977522");
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectReferenceExpression$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SConcept ObjectReferenceExpression$HX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
+    /*package*/ static final SReferenceLink target$MKwz = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
   }
 }

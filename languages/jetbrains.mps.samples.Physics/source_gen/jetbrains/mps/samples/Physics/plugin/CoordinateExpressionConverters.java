@@ -44,9 +44,9 @@ public class CoordinateExpressionConverters {
    */
   public static SNode rawToCartesian(VectorLike rawSource, SNode instance, Iterable<SNode> units) {
     SNode result = ((instance != null) ? instance : SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates")));
-    SLinkOperations.setTarget(result, LINKS.dx$VpuT, distanceOf(rawSource.getX(), units));
-    SLinkOperations.setTarget(result, LINKS.dy$VWrJ, distanceOf(rawSource.getY(), units));
-    SLinkOperations.setTarget(result, LINKS.dz$VWBn, distanceOf(rawSource.getZ(), units));
+    SLinkOperations.setTarget(result, LINKS.dx$KTha, distanceOf(rawSource.getX(), units));
+    SLinkOperations.setTarget(result, LINKS.dy$1OJk, distanceOf(rawSource.getY(), units));
+    SLinkOperations.setTarget(result, LINKS.dz$1UnG, distanceOf(rawSource.getZ(), units));
     return result;
   }
 
@@ -60,9 +60,9 @@ public class CoordinateExpressionConverters {
    */
   public static SNode rawToSpherical(VectorLike rawSource, SNode instance, Iterable<SNode> units) {
     SNode result = ((instance != null) ? instance : SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, "jetbrains.mps.samples.Physics.structure.SphericalCoordinates")));
-    SLinkOperations.setTarget(result, LINKS.distance$xDc5, distanceOf(rawSource.length(), units));
-    SLinkOperations.setTarget(result, LINKS.phi$xD9b, piRelativeOf(rawSource.getAzimutalAngle()));
-    SLinkOperations.setTarget(result, LINKS.theta$xDa9, piRelativeOf(rawSource.getPolarAngle()));
+    SLinkOperations.setTarget(result, LINKS.distance$iw9Y, distanceOf(rawSource.length(), units));
+    SLinkOperations.setTarget(result, LINKS.phi$iuJS, piRelativeOf(rawSource.getAzimutalAngle()));
+    SLinkOperations.setTarget(result, LINKS.theta$ivdU, piRelativeOf(rawSource.getPolarAngle()));
     return result;
   }
 
@@ -77,9 +77,9 @@ public class CoordinateExpressionConverters {
     SNode result = ((instance != null) ? instance : SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, "jetbrains.mps.samples.Physics.structure.CylindricalCoordinates")));
 
     double axialDistanceSq = rawSource.getX().pow(2).add(rawSource.getY().pow(2)).doubleValue();
-    SLinkOperations.setTarget(result, LINKS.axialDistance$ip5F, distanceOf(Math.sqrt(axialDistanceSq), units));
-    SLinkOperations.setTarget(result, LINKS.phi$ip6D, piRelativeOf(rawSource.getAzimutalAngle()));
-    SLinkOperations.setTarget(result, LINKS.height$ip86, distanceOf(rawSource.getZ(), units));
+    SLinkOperations.setTarget(result, LINKS.axialDistance$TH3o, distanceOf(Math.sqrt(axialDistanceSq), units));
+    SLinkOperations.setTarget(result, LINKS.phi$THxq, piRelativeOf(rawSource.getAzimutalAngle()));
+    SLinkOperations.setTarget(result, LINKS.height$TIet, distanceOf(rawSource.getZ(), units));
     return result;
   }
 
@@ -96,12 +96,12 @@ public class CoordinateExpressionConverters {
     return createUnitExpression_xupmzl_a2a21(value.toString(), units);
   }
   private static SNode createMulExpression_xupmzl_a1a01(String p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.MulExpression$_u);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.MulExpression$iC);
     {
-      SNodeBuilder n1 = n0.forChild(LINKS.left$gQj0).init(CONCEPTS.NumberLiteral$yW);
-      n1.setProperty(PROPS.value$nZyY, p0);
+      SNodeBuilder n1 = n0.forChild(LINKS.left$zxUa).init(CONCEPTS.NumberLiteral$wE);
+      n1.setProperty(PROPS.value$iWTK, p0);
     }
-    n0.forChild(LINKS.right$gQu9).initNode(p1, CONCEPTS.Expression$Wr, true);
+    n0.forChild(LINKS.right$zBjx).initNode(p1, CONCEPTS.Expression$D_, true);
     return n0.getResult();
   }
   private static SNode _quotation_createNode_xupmzl_a0b0a1a01() {
@@ -118,45 +118,45 @@ public class CoordinateExpressionConverters {
     return quotedNode_1;
   }
   private static SNode createNumberLiteral_xupmzl_a0a0a21(String p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);
-    n0.setProperty(PROPS.value$nZyY, p0);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$wE);
+    n0.setProperty(PROPS.value$iWTK, p0);
     return n0.getResult();
   }
   private static SNode createUnitExpression_xupmzl_a2a21(String p0, Iterable<? extends SNode> p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitExpression$Bl);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitExpression$dD);
     {
-      SNodeBuilder n1 = n0.forChild(LINKS.content$Gf5w).init(CONCEPTS.NumberLiteral$yW);
-      n1.setProperty(PROPS.value$nZyY, p0);
+      SNodeBuilder n1 = n0.forChild(LINKS.content$aqgO).init(CONCEPTS.NumberLiteral$wE);
+      n1.setProperty(PROPS.value$iWTK, p0);
     }
-    n0.forChild(LINKS.units$o6Ow).initNodeList(p1, CONCEPTS.UnitReference$c4);
+    n0.forChild(LINKS.units$qq1O).initNodeList(p1, CONCEPTS.UnitReference$Mo);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink dx$VpuT = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a580637L, "dx");
-    /*package*/ static final SContainmentLink dy$VWrJ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807eeL, "dy");
-    /*package*/ static final SContainmentLink dz$VWBn = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807f1L, "dz");
-    /*package*/ static final SContainmentLink distance$xDc5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
-    /*package*/ static final SContainmentLink phi$xD9b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2576L, "phi");
-    /*package*/ static final SContainmentLink theta$xDa9 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2578L, "theta");
-    /*package*/ static final SContainmentLink axialDistance$ip5F = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996952L, "axialDistance");
-    /*package*/ static final SContainmentLink phi$ip6D = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996954L, "phi");
-    /*package*/ static final SContainmentLink height$ip86 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996957L, "height");
-    /*package*/ static final SContainmentLink left$gQj0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c16L, "left");
-    /*package*/ static final SContainmentLink right$gQu9 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c18L, "right");
-    /*package*/ static final SContainmentLink content$Gf5w = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink dx$KTha = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a580637L, "dx");
+    /*package*/ static final SContainmentLink dy$1OJk = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807eeL, "dy");
+    /*package*/ static final SContainmentLink dz$1UnG = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807f1L, "dz");
+    /*package*/ static final SContainmentLink distance$iw9Y = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
+    /*package*/ static final SContainmentLink phi$iuJS = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2576L, "phi");
+    /*package*/ static final SContainmentLink theta$ivdU = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2578L, "theta");
+    /*package*/ static final SContainmentLink axialDistance$TH3o = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996952L, "axialDistance");
+    /*package*/ static final SContainmentLink phi$THxq = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996954L, "phi");
+    /*package*/ static final SContainmentLink height$TIet = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996957L, "height");
+    /*package*/ static final SContainmentLink left$zxUa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c16L, "left");
+    /*package*/ static final SContainmentLink right$zBjx = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c18L, "right");
+    /*package*/ static final SContainmentLink content$aqgO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept MulExpression$_u = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
-    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
-    /*package*/ static final SConcept UnitExpression$Bl = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression");
-    /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
+    /*package*/ static final SConcept MulExpression$iC = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
+    /*package*/ static final SConcept NumberLiteral$wE = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
+    /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept UnitExpression$dD = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression");
+    /*package*/ static final SConcept UnitReference$Mo = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
+    /*package*/ static final SProperty value$iWTK = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 }

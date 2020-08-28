@@ -32,7 +32,7 @@ public final class Simulation__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static SNode getCurrentWorldDefinition_id2bZvtzzMfxi(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.world$qRPN), LINKS.target$12L0);
+    return SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.world$Ang), LINKS.target$vT2z);
   }
 
   /*package*/ Simulation__BehaviorDescriptor() {
@@ -82,7 +82,7 @@ public final class Simulation__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink world$qRPN = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x3cd406ea6def9f02L, "world");
-    /*package*/ static final SReferenceLink target$12L0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
+    /*package*/ static final SContainmentLink world$Ang = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x3cd406ea6def9f02L, "world");
+    /*package*/ static final SReferenceLink target$vT2z = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
   }
 }

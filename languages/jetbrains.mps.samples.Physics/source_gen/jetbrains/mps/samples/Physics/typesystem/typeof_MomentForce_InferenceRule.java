@@ -22,12 +22,12 @@ public class typeof_MomentForce_InferenceRule extends AbstractInferenceRule_Runt
   }
   public void applyRule(final SNode momentForce, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode momentType = typeCheckingContext.typeOf(SLinkOperations.getTarget(momentForce, LINKS.moment$q6Qs), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2805552972611218812", true);
+      final SNode momentType = typeCheckingContext.typeOf(SLinkOperations.getTarget(momentForce, LINKS.moment$CRF7), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2805552972611218812", true);
       typeCheckingContext.whenConcrete(momentType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(momentForce, LINKS.moment$q6Qs);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(momentForce, LINKS.moment$CRF7);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2805552972611221929", 0, null);
               typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(momentType), (SNode) _quotation_createNode_iluf3d_a1a0c0a0a0a0a1a0b0a0b(), true, true, _info_12389875345);
             }
@@ -37,7 +37,7 @@ public class typeof_MomentForce_InferenceRule extends AbstractInferenceRule_Runt
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.MomentForce$kK;
+    return CONCEPTS.MomentForce$Cj;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -67,10 +67,10 @@ public class typeof_MomentForce_InferenceRule extends AbstractInferenceRule_Runt
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink moment$q6Qs = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906af9f596L, "moment");
+    /*package*/ static final SContainmentLink moment$CRF7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906af9f596L, "moment");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept MomentForce$kK = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, "jetbrains.mps.samples.Physics.structure.MomentForce");
+    /*package*/ static final SConcept MomentForce$Cj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, "jetbrains.mps.samples.Physics.structure.MomentForce");
   }
 }

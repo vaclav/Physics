@@ -20,14 +20,14 @@ public class typeof_AbstractForceCallParameter_InferenceRule extends AbstractInf
   }
   public void applyRule(final SNode abstractForceCallParameter, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode valueType = typeCheckingContext.typeOf(SLinkOperations.getTarget(abstractForceCallParameter, LINKS.value$59jW), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2432181455075751872", true);
+      final SNode valueType = typeCheckingContext.typeOf(SLinkOperations.getTarget(abstractForceCallParameter, LINKS.value$v3XB), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2432181455075751872", true);
       typeCheckingContext.whenConcrete(valueType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(abstractForceCallParameter, LINKS.value$59jW);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(abstractForceCallParameter, LINKS.value$v3XB);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2432181455075752143", 0, null);
-              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(valueType), (SNode) SLinkOperations.getTarget(SLinkOperations.getTarget(abstractForceCallParameter, LINKS.argument$kXZ1), LINKS.type$G1QY), true, true, _info_12389875345);
+              typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(valueType), (SNode) SLinkOperations.getTarget(SLinkOperations.getTarget(abstractForceCallParameter, LINKS.argument$9$P2), LINKS.type$8xXf), true, true, _info_12389875345);
             }
           }
         }
@@ -35,7 +35,7 @@ public class typeof_AbstractForceCallParameter_InferenceRule extends AbstractInf
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.AbstractForceCallParameter$Xs;
+    return CONCEPTS.AbstractForceCallParameter$gZ;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -45,12 +45,12 @@ public class typeof_AbstractForceCallParameter_InferenceRule extends AbstractInf
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink value$59jW = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb2832d0cL, "value");
-    /*package*/ static final SReferenceLink argument$kXZ1 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
-    /*package*/ static final SContainmentLink type$G1QY = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba520709L, 0x68d69d36ba52070cL, "type");
+    /*package*/ static final SContainmentLink value$v3XB = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb2832d0cL, "value");
+    /*package*/ static final SReferenceLink argument$9$P2 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
+    /*package*/ static final SContainmentLink type$8xXf = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba520709L, 0x68d69d36ba52070cL, "type");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractForceCallParameter$Xs = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter");
+    /*package*/ static final SConcept AbstractForceCallParameter$gZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter");
   }
 }

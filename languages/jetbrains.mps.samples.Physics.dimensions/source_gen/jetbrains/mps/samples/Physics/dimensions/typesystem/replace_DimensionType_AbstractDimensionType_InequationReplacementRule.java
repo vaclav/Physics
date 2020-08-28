@@ -18,7 +18,7 @@ public class replace_DimensionType_AbstractDimensionType_InequationReplacementRu
   public replace_DimensionType_AbstractDimensionType_InequationReplacementRule() {
   }
   public boolean isApplicableCustom(SNode subtype, SNode supertype, IsApplicable2Status status) {
-    return SConceptOperations.isExactly(SNodeOperations.asSConcept(SNodeOperations.getConcept(supertype)), CONCEPTS.AbstractDimensionType$C7);
+    return SConceptOperations.isExactly(SNodeOperations.asSConcept(SNodeOperations.getConcept(supertype)), CONCEPTS.AbstractDimensionType$er);
   }
   public void processInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, final TypeCheckingContext typeCheckingContext, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
     // this is always true 
@@ -39,14 +39,14 @@ public class replace_DimensionType_AbstractDimensionType_InequationReplacementRu
   }
 
   public SAbstractConcept getApplicableSubtypeConcept() {
-    return CONCEPTS.DimensionType$yz;
+    return CONCEPTS.DimensionType$8R;
   }
   public SAbstractConcept getApplicableSupertypeConcept() {
-    return CONCEPTS.AbstractDimensionType$C7;
+    return CONCEPTS.AbstractDimensionType$er;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractDimensionType$C7 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x300307d5d92dba32L, "jetbrains.mps.samples.Physics.dimensions.structure.AbstractDimensionType");
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept AbstractDimensionType$er = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x300307d5d92dba32L, "jetbrains.mps.samples.Physics.dimensions.structure.AbstractDimensionType");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
   }
 }

@@ -19,7 +19,7 @@ public class WorldIsObject_SubtypingRule extends SubtypingRule_Runtime implement
     return createObjectType_64sp53_a0a1();
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.WorldType$tu;
+    return CONCEPTS.WorldType$84;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -31,12 +31,12 @@ public class WorldIsObject_SubtypingRule extends SubtypingRule_Runtime implement
     return true;
   }
   private static SNode createObjectType_64sp53_a0a1() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ObjectType$sZ);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ObjectType$7_);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept WorldType$tu = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L, "jetbrains.mps.samples.Physics.types.structure.WorldType");
-    /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
+    /*package*/ static final SConcept WorldType$84 = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L, "jetbrains.mps.samples.Physics.types.structure.WorldType");
+    /*package*/ static final SConcept ObjectType$7_ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
   }
 }

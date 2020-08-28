@@ -31,13 +31,13 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       InferenceRule_Runtime inferenceRule = new typeof_NRootExpression_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
-    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.NRootExpression$sH));
-    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.PowerExpression$Cd));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.NRootExpression$WQ));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.PowerExpression$l7));
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
           this.myOperandType = createRealType_3ist9o_a0a0a0a0a0a0a3a0();
-          this.myOperationConcept = CONCEPTS.ExpExpression$7t;
+          this.myOperationConcept = CONCEPTS.ExpExpression$BA;
           this.myTypeIsExact = false;
           this.myIsStrong = false;
           this.myRuleModelId = "r:eaef0861-3ed4-4442-afee-c90aaa3cdaec(jetbrains.mps.samples.Physics.iets3.ext.math.typesystem)";
@@ -47,7 +47,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
           return createRealType_3ist9o_a0a1a0a0a0a0d0a();
         }
         public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
-          return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA));
+          return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$WK));
         }
         @Override
         public void reportConflict(IRuleConflictWarningProducer producer) {
@@ -72,16 +72,16 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
       {
         final SNode expression = rightOperandType;
-        if (SNodeOperations.isInstanceOf(expression, CONCEPTS.NumberType$2D)) {
+        if (SNodeOperations.isInstanceOf(expression, CONCEPTS.NumberType$n)) {
           {
             final SNode exponent = leftOperandType;
-            if (SNodeOperations.isInstanceOf(exponent, CONCEPTS.NumberType$2D)) {
+            if (SNodeOperations.isInstanceOf(exponent, CONCEPTS.NumberType$n)) {
               // We expect the exponent to be constant (float string) 
-              BigDecimal expDec = BigDecimal.ONE.divide(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(exponent, LINKS.range$WgV$), PROPS.min$Va2)), MathContext.DECIMAL128);
+              BigDecimal expDec = BigDecimal.ONE.divide(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(exponent, LINKS.range$RnOa), PROPS.min$7OOG)), MathContext.DECIMAL128);
 
               // Then we compute the min/max value 
-              BigDecimal minRoot = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(expression, LINKS.range$WgV$), PROPS.min$Va2)), expDec);
-              BigDecimal maxRoot = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(expression, LINKS.range$WgV$), PROPS.max$Vax)), expDec);
+              BigDecimal minRoot = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(expression, LINKS.range$RnOa), PROPS.min$7OOG)), expDec);
+              BigDecimal maxRoot = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(expression, LINKS.range$RnOa), PROPS.max$7P3H)), expDec);
 
               // Resulting number is computed 
               return createNumberType_3ist9o_a8a0a0a1b(minRoot.min(maxRoot).toString(), minRoot.max(maxRoot).toString());
@@ -94,31 +94,31 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return createRealType_3ist9o_a3a1b();
     }
     public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
-      return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA)) && (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$fA));
+      return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$WK)) && (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$WK));
     }
     @Override
     public void reportConflict(IRuleConflictWarningProducer producer) {
       producer.produceWarning(myRuleModelId, myRuleNodeId);
     }
     private static SNode createRealType_3ist9o_a0a0a1() {
-      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
       return n0.getResult();
     }
     private static SNode createRealType_3ist9o_a0b0a1() {
-      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
       return n0.getResult();
     }
     private static SNode createNumberType_3ist9o_a8a0a0a1b(String p0, String p1) {
-      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberType$2D);
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberType$n);
       {
-        SNodeBuilder n1 = n0.forChild(LINKS.range$WgV$).init(CONCEPTS.NumberRangeSpec$5D);
-        n1.setProperty(PROPS.min$Va2, p0);
-        n1.setProperty(PROPS.max$Vax, p1);
+        SNodeBuilder n1 = n0.forChild(LINKS.range$RnOa).init(CONCEPTS.NumberRangeSpec$3n);
+        n1.setProperty(PROPS.min$7OOG, p0);
+        n1.setProperty(PROPS.max$7P3H, p1);
       }
       return n0.getResult();
     }
     private static SNode createRealType_3ist9o_a3a1b() {
-      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
       return n0.getResult();
     }
   }
@@ -139,51 +139,51 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     }
     public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
       // Integer type already handled somewhere else 
-      return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$fA)) && (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$fA)) && !(TypecheckingFacade.getFromContext().isSubtype(rightOperandType, createIntegerType_3ist9o_b0a0a1a2c()));
+      return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$WK)) && (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$WK)) && !(TypecheckingFacade.getFromContext().isSubtype(rightOperandType, createIntegerType_3ist9o_b0a0a1a2c()));
     }
     @Override
     public void reportConflict(IRuleConflictWarningProducer producer) {
       producer.produceWarning(myRuleModelId, myRuleNodeId);
     }
     private static SNode createRealType_3ist9o_a0a0a2() {
-      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
       return n0.getResult();
     }
     private static SNode createRealType_3ist9o_a0b0a2() {
-      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
       return n0.getResult();
     }
     private static SNode createIntegerType_3ist9o_b0a0a1a2c() {
-      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.IntegerType$oi);
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.IntegerType$m0);
       return n0.getResult();
     }
   }
   private static SNode createRealType_3ist9o_a0a0a0a0a0a0a3a0() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
     return n0.getResult();
   }
   private static SNode createRealType_3ist9o_a0a1a0a0a0a0d0a() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NRootExpression$sH = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.NRootExpression");
-    /*package*/ static final SConcept PowerExpression$Cd = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c6144L, "org.iets3.core.expr.math.structure.PowerExpression");
-    /*package*/ static final SConcept ExpExpression$7t = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x7ee2c0df37c860b9L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.ExpExpression");
-    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
-    /*package*/ static final SConcept NumberType$2D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
-    /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
-    /*package*/ static final SConcept NumberRangeSpec$5D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, "org.iets3.core.expr.simpleTypes.structure.NumberRangeSpec");
-    /*package*/ static final SConcept IntegerType$oi = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6d9L, "org.iets3.core.expr.simpleTypes.structure.IntegerType");
+    /*package*/ static final SConcept NRootExpression$WQ = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.NRootExpression");
+    /*package*/ static final SConcept PowerExpression$l7 = MetaAdapterFactory.getConcept(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, 0x449e19d04e9c6144L, "org.iets3.core.expr.math.structure.PowerExpression");
+    /*package*/ static final SConcept ExpExpression$BA = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x7ee2c0df37c860b9L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.ExpExpression");
+    /*package*/ static final SConcept Type$WK = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept NumberType$n = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
+    /*package*/ static final SConcept RealType$36 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
+    /*package*/ static final SConcept NumberRangeSpec$3n = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, "org.iets3.core.expr.simpleTypes.structure.NumberRangeSpec");
+    /*package*/ static final SConcept IntegerType$m0 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6d9L, "org.iets3.core.expr.simpleTypes.structure.IntegerType");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink range$WgV$ = MetaAdapterFactory.getContainmentLink(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, 0x127541598201af78L, "range");
+    /*package*/ static final SContainmentLink range$RnOa = MetaAdapterFactory.getContainmentLink(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, 0x127541598201af78L, "range");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty min$Va2 = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af6fL, "min");
-    /*package*/ static final SProperty max$Vax = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af70L, "max");
+    /*package*/ static final SProperty min$7OOG = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af6fL, "min");
+    /*package*/ static final SProperty max$7P3H = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af70L, "max");
   }
 }

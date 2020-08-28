@@ -29,14 +29,14 @@ public class QueriesGenerated extends QueryProviderBase {
     super(1);
   }
   public static boolean rule_Condition_1_0(final BaseMappingRuleContext _context) {
-    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.UseUnitExpressionAs$IL);
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.target$u23F), CONCEPTS.UseUnitExpressionAs$l5);
   }
   public static SNode insertMacro_Query_1_0(final InsertMacroContext _context) {
-    return UnitConversionUtil.compositeExpressionToBase(SLinkOperations.getTarget(_context.getNode(), LINKS.content$Gf5w), SLinkOperations.getChildren(_context.getNode(), LINKS.units$o6Ow), true);
+    return UnitConversionUtil.compositeExpressionToBase(SLinkOperations.getTarget(_context.getNode(), LINKS.content$aqgO), SLinkOperations.getChildren(_context.getNode(), LINKS.units$qq1O), true);
   }
   public static SNode insertMacro_Query_1_1(final InsertMacroContext _context) {
-    SNode target = SNodeOperations.as(SLinkOperations.getTarget(_context.getNode(), LINKS.target$NL8Z), CONCEPTS.UseUnitExpressionAs$IL);
-    return UnitConversionUtil.compositeExpressionToBase(SLinkOperations.getTarget(_context.getNode(), LINKS.expr$xFwa), SLinkOperations.getChildren(target, LINKS.units$o6Ow), false);
+    SNode target = SNodeOperations.as(SLinkOperations.getTarget(_context.getNode(), LINKS.target$u23F), CONCEPTS.UseUnitExpressionAs$l5);
+    return UnitConversionUtil.compositeExpressionToBase(SLinkOperations.getTarget(_context.getNode(), LINKS.expr$Hji0), SLinkOperations.getChildren(target, LINKS.units$qq1O), false);
   }
   private final Map<String, ReductionRuleCondition> rrcMethods = new HashMap<String, ReductionRuleCondition>();
   {
@@ -100,13 +100,13 @@ public class QueriesGenerated extends QueryProviderBase {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink target$NL8Z = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
-    /*package*/ static final SContainmentLink content$Gf5w = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
-    /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
+    /*package*/ static final SContainmentLink target$u23F = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
+    /*package*/ static final SContainmentLink content$aqgO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink expr$Hji0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept UseUnitExpressionAs$IL = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x4ccf67b099145cc6L, "jetbrains.mps.samples.Physics.dimensions.structure.UseUnitExpressionAs");
+    /*package*/ static final SConcept UseUnitExpressionAs$l5 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x4ccf67b099145cc6L, "jetbrains.mps.samples.Physics.dimensions.structure.UseUnitExpressionAs");
   }
 }

@@ -38,13 +38,13 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.setCellId("Constant_jkycxx_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
-    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.TraceExpression$54));
+    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.TraceExpression$oB));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept TraceExpression$54 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6ff53cf971434ccdL, "jetbrains.mps.samples.Physics.structure.TraceExpression");
+    /*package*/ static final SConcept TraceExpression$oB = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6ff53cf971434ccdL, "jetbrains.mps.samples.Physics.structure.TraceExpression");
   }
 }

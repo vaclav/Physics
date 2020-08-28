@@ -36,11 +36,11 @@
       <node id="632920307791891805" at="48,62,49,75" concept="4" />
       <node id="632920307791891805" at="49,75,50,46" concept="1" />
       <node id="632920307791891805" at="50,46,51,28" concept="5" />
-      <node id="1159415042434515255" at="56,0,57,0" concept="8" trace="simulationSpeed$m7cv" />
-      <node id="1159415042434515255" at="57,0,58,0" concept="8" trace="restitutionPercent$1OL1" />
-      <node id="1159415042434515255" at="61,0,62,0" concept="8" trace="ElasticCollisionReaction$lY" />
-      <node id="1159415042434515255" at="62,0,63,0" concept="8" trace="NumberLiteral$yW" />
-      <node id="1159415042434515255" at="66,0,67,0" concept="8" trace="value$nZyY" />
+      <node id="1159415042434515255" at="56,0,57,0" concept="8" trace="simulationSpeed$H2m$" />
+      <node id="1159415042434515255" at="57,0,58,0" concept="8" trace="restitutionPercent$S732" />
+      <node id="1159415042434515255" at="61,0,62,0" concept="8" trace="ElasticCollisionReaction$Dx" />
+      <node id="1159415042434515255" at="62,0,63,0" concept="8" trace="NumberLiteral$wE" />
+      <node id="1159415042434515255" at="66,0,67,0" concept="8" trace="value$iWTK" />
       <node id="7471572540824262513" at="20,0,23,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
       <node id="632920307791893862" at="42,41,45,9" concept="2" />
       <node id="632920307791891805" at="48,0,53,0" concept="9" trace="createNumberLiteral_fpwm7x_a0a0a1#()Lorg/jetbrains/mps/openapi/model/SNode;" />
@@ -100,17 +100,17 @@
       <node id="2805552972616080632" at="50,7,51,39" concept="4" />
       <node id="2805552972616082310" at="52,85,53,153" concept="1" />
       <node id="8067421349543645845" at="59,91,60,77" concept="1" />
-      <node id="4809107873070310008" at="65,0,66,0" concept="8" trace="argument$kXZ1" />
-      <node id="4809107873070310008" at="66,0,67,0" concept="8" trace="value$59jW" />
-      <node id="4809107873070310008" at="67,0,68,0" concept="8" trace="applicationPoint$86Ou" />
-      <node id="4809107873070310008" at="68,0,69,0" concept="8" trace="linearForce$Wp95" />
-      <node id="4809107873070310008" at="72,0,73,0" concept="8" trace="AbstractForceCall$Wc" />
-      <node id="4809107873070310008" at="73,0,74,0" concept="8" trace="AbstractForceCallParameter$Xs" />
-      <node id="4809107873070310008" at="74,0,75,0" concept="8" trace="IForceWithApplicationPoint$_T" />
-      <node id="4809107873070310008" at="75,0,76,0" concept="8" trace="IForceWithLinearForce$3f" />
-      <node id="4809107873070310008" at="79,0,80,0" concept="8" trace="isPointRelative$86Nw" />
-      <node id="4809107873070310008" at="80,0,81,0" concept="8" trace="isLinearForceRelative$HMCw" />
-      <node id="4809107873070310008" at="81,0,82,0" concept="8" trace="isMomentRelative$rXiD" />
+      <node id="4809107873070310008" at="65,0,66,0" concept="8" trace="argument$9$P2" />
+      <node id="4809107873070310008" at="66,0,67,0" concept="8" trace="value$v3XB" />
+      <node id="4809107873070310008" at="67,0,68,0" concept="8" trace="applicationPoint$UQI5" />
+      <node id="4809107873070310008" at="68,0,69,0" concept="8" trace="linearForce$fIGY" />
+      <node id="4809107873070310008" at="72,0,73,0" concept="8" trace="AbstractForceCall$fJ" />
+      <node id="4809107873070310008" at="73,0,74,0" concept="8" trace="AbstractForceCallParameter$gZ" />
+      <node id="4809107873070310008" at="74,0,75,0" concept="8" trace="IForceWithApplicationPoint$Ts" />
+      <node id="4809107873070310008" at="75,0,76,0" concept="8" trace="IForceWithLinearForce$mM" />
+      <node id="4809107873070310008" at="79,0,80,0" concept="8" trace="isPointRelative$UQg3" />
+      <node id="4809107873070310008" at="80,0,81,0" concept="8" trace="isLinearForceRelative$b4V3" />
+      <node id="4809107873070310008" at="81,0,82,0" concept="8" trace="isMomentRelative$yflq" />
       <node id="4809107873070189239" at="26,43,29,9" concept="2" />
       <node id="2805552972616080632" at="51,39,54,9" concept="2" />
       <node id="8067421349543645741" at="59,0,62,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
@@ -268,18 +268,18 @@
       <node id="7471572540824288373" at="165,254,166,475" concept="1" />
       <node id="7471572540824288373" at="166,475,167,174" concept="1" />
       <node id="7471572540824288373" at="167,174,168,26" concept="5" />
-      <node id="7746015835359887683" at="173,0,174,0" concept="8" trace="axialDistance$ip5F" />
-      <node id="7746015835359887683" at="174,0,175,0" concept="8" trace="height$ip86" />
-      <node id="7746015835359887683" at="175,0,176,0" concept="8" trace="phi$ip6D" />
-      <node id="7746015835359887683" at="176,0,177,0" concept="8" trace="dz$VWBn" />
-      <node id="7746015835359887683" at="177,0,178,0" concept="8" trace="dx$VpuT" />
-      <node id="7746015835359887683" at="178,0,179,0" concept="8" trace="dy$VWrJ" />
-      <node id="7746015835359887683" at="179,0,180,0" concept="8" trace="distance$xDc5" />
-      <node id="7746015835359887683" at="180,0,181,0" concept="8" trace="theta$xDa9" />
-      <node id="7746015835359887683" at="181,0,182,0" concept="8" trace="phi$xD9b" />
-      <node id="7746015835359887683" at="185,0,186,0" concept="8" trace="VectorExpression$HV" />
-      <node id="7746015835359887683" at="186,0,187,0" concept="8" trace="CartesianCoordinates$U8" />
-      <node id="7746015835359887683" at="187,0,188,0" concept="8" trace="CylindricalCoordinates$9D" />
+      <node id="7746015835359887683" at="173,0,174,0" concept="8" trace="axialDistance$TH3o" />
+      <node id="7746015835359887683" at="174,0,175,0" concept="8" trace="height$TIet" />
+      <node id="7746015835359887683" at="175,0,176,0" concept="8" trace="phi$THxq" />
+      <node id="7746015835359887683" at="176,0,177,0" concept="8" trace="dz$1UnG" />
+      <node id="7746015835359887683" at="177,0,178,0" concept="8" trace="dx$KTha" />
+      <node id="7746015835359887683" at="178,0,179,0" concept="8" trace="dy$1OJk" />
+      <node id="7746015835359887683" at="179,0,180,0" concept="8" trace="distance$iw9Y" />
+      <node id="7746015835359887683" at="180,0,181,0" concept="8" trace="theta$ivdU" />
+      <node id="7746015835359887683" at="181,0,182,0" concept="8" trace="phi$iuJS" />
+      <node id="7746015835359887683" at="185,0,186,0" concept="8" trace="VectorExpression$1u" />
+      <node id="7746015835359887683" at="186,0,187,0" concept="8" trace="CartesianCoordinates$dF" />
+      <node id="7746015835359887683" at="187,0,188,0" concept="8" trace="CylindricalCoordinates$tc" />
       <node id="4809107873070297412" at="39,39,42,9" concept="2" />
       <node id="4809107873070305261" at="83,37,86,9" concept="2" />
       <node id="4809107873070306637" at="129,37,132,9" concept="2" />

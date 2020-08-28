@@ -34,7 +34,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 public class WorldNestedObjectTarget_Constraints extends BaseConstraintsDescriptor {
   public WorldNestedObjectTarget_Constraints() {
-    super(CONCEPTS.WorldNestedObjectTarget$p3);
+    super(CONCEPTS.WorldNestedObjectTarget$GA);
   }
 
   @Override
@@ -54,7 +54,7 @@ public class WorldNestedObjectTarget_Constraints extends BaseConstraintsDescript
   }
   @Override
   protected Map<SReferenceLink, ReferenceConstraintsDescriptor> getSpecifiedReferences() {
-    BaseReferenceConstraintsDescriptor d0 = new BaseReferenceConstraintsDescriptor(LINKS.target$g02E, this) {
+    BaseReferenceConstraintsDescriptor d0 = new BaseReferenceConstraintsDescriptor(LINKS.target$J$_T, this) {
       @Override
       public boolean hasOwnScopeProvider() {
         return true;
@@ -72,32 +72,32 @@ public class WorldNestedObjectTarget_Constraints extends BaseConstraintsDescript
             SNode leftExpression = null;
             {
               final SNode nestedObject = _context.getContextNode();
-              if (SNodeOperations.isInstanceOf(nestedObject, CONCEPTS.WorldNestedObjectTarget$p3)) {
+              if (SNodeOperations.isInstanceOf(nestedObject, CONCEPTS.WorldNestedObjectTarget$GA)) {
                 leftExpression = IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(nestedObject);
               }
             }
             {
               final SNode expr = _context.getContextNode();
-              if (SNodeOperations.isInstanceOf(expr, CONCEPTS.DotExpression$Af)) {
-                leftExpression = SLinkOperations.getTarget(expr, LINKS.expr$xFwa);
+              if (SNodeOperations.isInstanceOf(expr, CONCEPTS.DotExpression$jp)) {
+                leftExpression = SLinkOperations.getTarget(expr, LINKS.expr$Hji0);
               }
             }
 
             SNode target = null;
             {
               final SNode tgt = leftExpression;
-              if (SNodeOperations.isInstanceOf(tgt, CONCEPTS.IMayTargetWorld$d)) {
+              if (SNodeOperations.isInstanceOf(tgt, CONCEPTS.IMayTargetWorld$jK)) {
                 target = tgt;
               }
             }
             {
               final SNode dot = leftExpression;
-              if (SNodeOperations.isInstanceOf(dot, CONCEPTS.DotExpression$Af)) {
-                target = SNodeOperations.as(SLinkOperations.getTarget(dot, LINKS.target$NL8Z), CONCEPTS.IMayTargetWorld$d);
+              if (SNodeOperations.isInstanceOf(dot, CONCEPTS.DotExpression$jp)) {
+                target = SNodeOperations.as(SLinkOperations.getTarget(dot, LINKS.target$u23F), CONCEPTS.IMayTargetWorld$jK);
               }
             }
 
-            return ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke(IMayTargetWorld__BehaviorDescriptor.getWorldTarget_id2bZvtzzMbSH.invoke(target), CONCEPTS.ILocalized$9a, _context.getContextNode());
+            return ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke(IMayTargetWorld__BehaviorDescriptor.getWorldTarget_id2bZvtzzMbSH.invoke(target), CONCEPTS.ILocalized$sH, _context.getContextNode());
           }
         };
       }
@@ -107,22 +107,22 @@ public class WorldNestedObjectTarget_Constraints extends BaseConstraintsDescript
     return references;
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return (boolean) DotExpression__BehaviorDescriptor.expectType_id5WNmJ7DokMG.invoke(SNodeOperations.cast(parentNode, CONCEPTS.DotExpression$Af), CONCEPTS.WorldType$tu, ((boolean) true));
+    return (boolean) DotExpression__BehaviorDescriptor.expectType_id5WNmJ7DokMG.invoke(SNodeOperations.cast(parentNode, CONCEPTS.DotExpression$jp), CONCEPTS.WorldType$84, ((boolean) true));
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "2521872686834526736");
   private static final SNodePointer breakingNode_gnkd94_a0a0a0a0a1a0a0a0d = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "7547499172385372910");
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept WorldNestedObjectTarget$p3 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, "jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget");
-    /*package*/ static final SConcept DotExpression$Af = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
-    /*package*/ static final SInterfaceConcept IMayTargetWorld$d = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L, "jetbrains.mps.samples.Physics.structure.IMayTargetWorld");
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
-    /*package*/ static final SConcept WorldType$tu = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L, "jetbrains.mps.samples.Physics.types.structure.WorldType");
+    /*package*/ static final SConcept WorldNestedObjectTarget$GA = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, "jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget");
+    /*package*/ static final SConcept DotExpression$jp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
+    /*package*/ static final SInterfaceConcept IMayTargetWorld$jK = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L, "jetbrains.mps.samples.Physics.structure.IMayTargetWorld");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SConcept WorldType$84 = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L, "jetbrains.mps.samples.Physics.types.structure.WorldType");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$g02E = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, 0x22ff7dd8e38793cbL, "target");
-    /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
-    /*package*/ static final SContainmentLink target$NL8Z = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
+    /*package*/ static final SReferenceLink target$J$_T = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, 0x22ff7dd8e38793cbL, "target");
+    /*package*/ static final SContainmentLink expr$Hji0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
+    /*package*/ static final SContainmentLink target$u23F = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
   }
 }

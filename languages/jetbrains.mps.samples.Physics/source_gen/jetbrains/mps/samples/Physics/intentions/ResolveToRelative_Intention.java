@@ -52,7 +52,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     return true;
   }
   private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-    return SNodeOperations.isInstanceOf(TypecheckingFacade.getFromContext().getTypeOf(node), CONCEPTS.VectorType$Wj) && !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), CONCEPTS.Expression$Wr));
+    return SNodeOperations.isInstanceOf(TypecheckingFacade.getFromContext().getTypeOf(node), CONCEPTS.VectorType$AT) && !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), CONCEPTS.Expression$D_));
   }
   @Override
   public boolean isSurroundWith() {
@@ -69,11 +69,11 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     return list;
   }
   private List<SNode> parameter(final SNode node, final EditorContext editorContext) {
-    final SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false);
-    final SNode relativeTarget = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(SNodeOperations.as(SLinkOperations.getTarget(SNodeOperations.as(node, CONCEPTS.RelativeVector$c7), LINKS.relativeFrom$gwcw), CONCEPTS.ObjectReferenceExpression$qq), LINKS.target$EWj0));
+    final SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$sH, false, false);
+    final SNode relativeTarget = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(SNodeOperations.as(SLinkOperations.getTarget(SNodeOperations.as(node, CONCEPTS.RelativeVector$vE), LINKS.relativeFrom$Z9n3), CONCEPTS.ObjectReferenceExpression$HX), LINKS.target$MKwz));
 
     // Get all available objects in scope except the current one and the one already used as relative (if any) 
-    return Sequence.fromIterable(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(SNodeOperations.getNodeAncestor(node, CONCEPTS.WorldDefinition$Xn, false, false))).where(new IWhereFilter<SNode>() {
+    return Sequence.fromIterable(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(SNodeOperations.getNodeAncestor(node, CONCEPTS.WorldDefinition$gU, false, false))).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return it != ancestor && relativeTarget != ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(it);
       }
@@ -86,12 +86,12 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     }
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
-      return "Resolve and Make Relative to " + SPropertyOperations.getString(ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(myParameter), PROPS.name$tAp1);
+      return "Resolve and Make Relative to " + SPropertyOperations.getString(ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(myParameter), PROPS.name$MnvL);
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       InternalVector current = (InternalVector) IETS3ExprEvalHelper.evaluate(node);
-      InternalVector relativeTarget = (InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(myParameter, LINKS.position$DoV0));
+      InternalVector relativeTarget = (InternalVector) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(myParameter, LINKS.position$2BSz));
 
       SNodeOperations.replaceWithAnother(node, createRelativeVector_d9qn55_a0a3a0(CoordinateExpressionConverters.rawToCartesian(current.minus(relativeTarget), null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(node))), myParameter));
     }
@@ -104,33 +104,33 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     }
   }
   private static SNode createRelativeVector_d9qn55_a0a3a0(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RelativeVector$c7);
-    n0.forChild(LINKS.coordinates$l1nt).initNode(p0, CONCEPTS.AbsoluteCoordinates$d5, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RelativeVector$vE);
+    n0.forChild(LINKS.coordinates$bdEA).initNode(p0, CONCEPTS.AbsoluteCoordinates$wC, true);
     {
-      SNodeBuilder n1 = n0.forChild(LINKS.relativeFrom$gwcw).init(CONCEPTS.ObjectReferenceExpression$qq);
-      n1.setReferenceTarget(LINKS.target$EWj0, p1);
+      SNodeBuilder n1 = n0.forChild(LINKS.relativeFrom$Z9n3).init(CONCEPTS.ObjectReferenceExpression$HX);
+      n1.setReferenceTarget(LINKS.target$MKwz, p1);
     }
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
-    /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
-    /*package*/ static final SConcept RelativeVector$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
-    /*package*/ static final SConcept ObjectReferenceExpression$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
-    /*package*/ static final SConcept WorldDefinition$Xn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
-    /*package*/ static final SConcept AbsoluteCoordinates$d5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL, "jetbrains.mps.samples.Physics.structure.AbsoluteCoordinates");
+    /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept VectorType$AT = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SConcept RelativeVector$vE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
+    /*package*/ static final SConcept ObjectReferenceExpression$HX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
+    /*package*/ static final SConcept WorldDefinition$gU = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
+    /*package*/ static final SConcept AbsoluteCoordinates$wC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL, "jetbrains.mps.samples.Physics.structure.AbsoluteCoordinates");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink relativeFrom$gwcw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
-    /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
-    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
-    /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
+    /*package*/ static final SContainmentLink relativeFrom$Z9n3 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
+    /*package*/ static final SReferenceLink target$MKwz = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
+    /*package*/ static final SContainmentLink position$2BSz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
+    /*package*/ static final SContainmentLink coordinates$bdEA = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 }

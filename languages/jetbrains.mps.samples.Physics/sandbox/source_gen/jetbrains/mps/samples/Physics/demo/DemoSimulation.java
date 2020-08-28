@@ -4,6 +4,8 @@ package jetbrains.mps.samples.Physics.demo;
 
 import jetbrains.mps.samples.Physics.java.runtime.Simulation;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
@@ -17,7 +19,7 @@ public class DemoSimulation extends Simulation {
   protected SunDemoSystemScope scope;
 
   public DemoSimulation() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).doubleValue(), 1);
+    super(AH.mul(((Number) new BigDecimal(".5").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))).doubleValue(), 1);
   }
 
   @Override

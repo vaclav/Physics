@@ -80,6 +80,11 @@
         <child id="6184070858913522343" name="cameraPosition" index="IG9$9" />
         <child id="6184070858913522400" name="cameraFocus" index="IG9_e" />
       </concept>
+      <concept id="4528665904943021020" name="jetbrains.mps.samples.Physics.structure.IForceWithApplicationPoint" flags="ng" index="2Ol3pT">
+        <property id="4528665904943021021" name="isPointRelative" index="2Ol3pS" />
+        <child id="4528665904943021023" name="applicationPoint" index="2Ol3pU" />
+      </concept>
+      <concept id="1459540517658822194" name="jetbrains.mps.samples.Physics.structure.StaticForce" flags="ng" index="Y6l9G" />
       <concept id="1459540517659024964" name="jetbrains.mps.samples.Physics.structure.AbstractObjectReference" flags="ng" index="Y6$Cq">
         <reference id="1459540517659024965" name="target" index="Y6$Cr" />
       </concept>
@@ -100,6 +105,9 @@
         <reference id="2521872686834488267" name="target" index="31ueSj" />
       </concept>
       <concept id="362892448124441676" name="jetbrains.mps.samples.Physics.structure.EmitLightStyleKey" flags="ng" index="13a5ie" />
+      <concept id="2805552972614397887" name="jetbrains.mps.samples.Physics.structure.IForceWithLinearForce" flags="ng" index="1dPVKJ">
+        <child id="2805552972616057453" name="linearForce" index="1dJh7X" />
+      </concept>
       <concept id="4383135941275108256" name="jetbrains.mps.samples.Physics.structure.WorldInclusion" flags="ng" index="1h9Ola">
         <child id="4383135941275108257" name="world" index="1h9Olb" />
       </concept>
@@ -168,7 +176,7 @@
     </node>
     <node concept="1N951E" id="1nCAtVzuwFc" role="2aZKB5">
       <node concept="30bXRB" id="1nCAtVzuwFd" role="1N951F">
-        <property role="30bXRw" value="1" />
+        <property role="30bXRw" value=".5" />
       </node>
       <node concept="CIsvn" id="1nCAtVzuwFe" role="1N7es9">
         <ref role="1N7KNK" to="nas6:1fq3tlL$kMj" resolve="s" />
@@ -289,7 +297,7 @@
             </node>
             <node concept="1N951E" id="1nCAtVzG6nF" role="30dEsF">
               <node concept="30bXRB" id="1nCAtVzG6fT" role="1N951F">
-                <property role="30bXRw" value="60" />
+                <property role="30bXRw" value="360" />
               </node>
               <node concept="CIsvn" id="1nCAtVzG6nE" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:4E4GfvfnoGm" resolve="deg" />
@@ -421,6 +429,41 @@
                 <property role="LYPYd" value="3" />
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="Y6l9G" id="1CuNlz_VR9" role="Y6$Cn">
+      <property role="2Ol3pS" value="true" />
+      <node concept="v6hs8" id="1CuNlz_VRh" role="1dJh7X">
+        <node concept="30bXRB" id="1CuNlz_VRi" role="Y6leK">
+          <property role="30bXRw" value="0" />
+        </node>
+        <node concept="30bXRB" id="1CuNlz_VRj" role="Y6leJ">
+          <property role="30bXRw" value="0" />
+        </node>
+        <node concept="1N951E" id="1CuNlz_VRk" role="Y6l9D">
+          <node concept="30bXRB" id="1CuNlz_VRl" role="1N951F">
+            <property role="30bXRw" value="5" />
+          </node>
+          <node concept="CIsvn" id="1CuNlz_VRm" role="1N7es9">
+            <ref role="1N7KNK" to="nas6:RryuvUUPyw" resolve="N" />
+          </node>
+        </node>
+      </node>
+      <node concept="v6hs8" id="1CuNlz_Wdc" role="2Ol3pU">
+        <node concept="30bXRB" id="1CuNlz_Wde" role="Y6leK">
+          <property role="30bXRw" value="0" />
+        </node>
+        <node concept="30bXRB" id="1CuNlz_Wdf" role="Y6leJ">
+          <property role="30bXRw" value="0" />
+        </node>
+        <node concept="1N951E" id="1CuNlz_WmM" role="Y6l9D">
+          <node concept="30bXRB" id="1CuNlz_Wl8" role="1N951F">
+            <property role="30bXRw" value="1" />
+          </node>
+          <node concept="CIsvn" id="1CuNlz_WmL" role="1N7es9">
+            <ref role="1N7KNK" to="nas6:7tUW$K4o9N6" resolve="m" />
           </node>
         </node>
       </node>

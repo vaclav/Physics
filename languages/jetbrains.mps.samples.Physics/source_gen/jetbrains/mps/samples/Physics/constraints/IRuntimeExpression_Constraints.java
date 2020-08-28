@@ -18,7 +18,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class IRuntimeExpression_Constraints extends BaseConstraintsDescriptor {
   public IRuntimeExpression_Constraints() {
-    super(CONCEPTS.IRuntimeExpression$Bb);
+    super(CONCEPTS.IRuntimeExpression$UI);
   }
 
   @Override
@@ -37,12 +37,12 @@ public class IRuntimeExpression_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return (SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.IRuntimeContext$$I, true, false) != null);
+    return (SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.IRuntimeContext$Sh, true, false) != null);
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "5986738463492555081");
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IRuntimeExpression$Bb = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d7a4015aL, "jetbrains.mps.samples.Physics.structure.IRuntimeExpression");
-    /*package*/ static final SInterfaceConcept IRuntimeContext$$I = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d7a4413cL, "jetbrains.mps.samples.Physics.structure.IRuntimeContext");
+    /*package*/ static final SInterfaceConcept IRuntimeExpression$UI = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d7a4015aL, "jetbrains.mps.samples.Physics.structure.IRuntimeExpression");
+    /*package*/ static final SInterfaceConcept IRuntimeContext$Sh = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d7a4413cL, "jetbrains.mps.samples.Physics.structure.IRuntimeContext");
   }
 }

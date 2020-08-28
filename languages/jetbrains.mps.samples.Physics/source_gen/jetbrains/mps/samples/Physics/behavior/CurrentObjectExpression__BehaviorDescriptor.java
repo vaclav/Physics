@@ -32,7 +32,7 @@ public final class CurrentObjectExpression__BehaviorDescriptor extends BaseBHDes
   }
 
   /*package*/ static SNode getLocalizedObjectTarget_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
-    return SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$9a, false, false);
+    return SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$sH, false, false);
   }
   /*package*/ static String renderReadable_id4Y0vh0cfqjE(@NotNull SNode __thisNode__) {
     return "self";
@@ -87,6 +87,6 @@ public final class CurrentObjectExpression__BehaviorDescriptor extends BaseBHDes
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
   }
 }

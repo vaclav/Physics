@@ -17,7 +17,7 @@ public class check_UseUnitExpressionAs_NonTypesystemRule extends AbstractNonType
   public void applyRule(final SNode useUnitExpressionAs, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.UseUnitExpressionAs$IL;
+    return CONCEPTS.UseUnitExpressionAs$l5;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -27,6 +27,6 @@ public class check_UseUnitExpressionAs_NonTypesystemRule extends AbstractNonType
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept UseUnitExpressionAs$IL = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x4ccf67b099145cc6L, "jetbrains.mps.samples.Physics.dimensions.structure.UseUnitExpressionAs");
+    /*package*/ static final SConcept UseUnitExpressionAs$l5 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x4ccf67b099145cc6L, "jetbrains.mps.samples.Physics.dimensions.structure.UseUnitExpressionAs");
   }
 }

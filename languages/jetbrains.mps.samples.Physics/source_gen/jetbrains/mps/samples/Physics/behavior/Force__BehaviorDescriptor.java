@@ -40,7 +40,7 @@ public final class Force__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static Iterable<List<SNode>> getRequiredDimensions_id270Q2mETulL(@NotNull SNode __thisNode__) {
-    return Sequence.<List<SNode>>singleton(SLinkOperations.getChildren((_quotation_createNode_xr2do3_a0a0a0a3()), LINKS.units$o6Ow));
+    return Sequence.<List<SNode>>singleton(SLinkOperations.getChildren((_quotation_createNode_xr2do3_a0a0a0a3()), LINKS.units$qq1O));
   }
   /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
     return ForceMode.DEFAULT;
@@ -108,6 +108,6 @@ public final class Force__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
   }
 }

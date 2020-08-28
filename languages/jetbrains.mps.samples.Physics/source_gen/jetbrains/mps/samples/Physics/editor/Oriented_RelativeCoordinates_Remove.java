@@ -22,7 +22,7 @@ public class Oriented_RelativeCoordinates_Remove {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        SPropertyOperations.assign(node, PROPS.isOriented$Afmy, false);
+        SPropertyOperations.assign(node, PROPS.isOriented$wZe1, false);
       }
 
     };
@@ -33,7 +33,7 @@ public class Oriented_RelativeCoordinates_Remove {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        SPropertyOperations.assign(node, PROPS.isOriented$Afmy, false);
+        SPropertyOperations.assign(node, PROPS.isOriented$wZe1, false);
       }
 
     };
@@ -85,6 +85,6 @@ public class Oriented_RelativeCoordinates_Remove {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isOriented$Afmy = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x89beb47905fe8dbL, "isOriented");
+    /*package*/ static final SProperty isOriented$wZe1 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x89beb47905fe8dbL, "isOriented");
   }
 }

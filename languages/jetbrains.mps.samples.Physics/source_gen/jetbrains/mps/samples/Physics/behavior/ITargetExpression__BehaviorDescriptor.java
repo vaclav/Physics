@@ -35,15 +35,15 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
   }
 
   /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
-    SNode localized = ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$lA));
+    SNode localized = ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$D9));
 
     // Default behavior, expect targetable expression to be instanciated (!) 
     SNode targetCoordinates = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized);
-    SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(targetCoordinates, LINKS.expression$87ts), SNodeOperations.copyNode(content));
-    return SLinkOperations.getTarget(targetCoordinates, LINKS.expression$87ts);
+    SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(targetCoordinates, LINKS.expression$Va$7), SNodeOperations.copyNode(content));
+    return SLinkOperations.getTarget(targetCoordinates, LINKS.expression$Va$7);
   }
   /*package*/ static SNode getNodeTarget_id6ZPff_L2lbX(@NotNull SNode __thisNode__) {
-    SNode localized = ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$lA));
+    SNode localized = ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$D9));
 
     // Get the target coordinates or the  
     SNode targetCoordinates = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized);
@@ -103,10 +103,10 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ITargetObject$lA = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
+    /*package*/ static final SInterfaceConcept ITargetObject$D9 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
+    /*package*/ static final SContainmentLink expression$Va$7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
   }
 }

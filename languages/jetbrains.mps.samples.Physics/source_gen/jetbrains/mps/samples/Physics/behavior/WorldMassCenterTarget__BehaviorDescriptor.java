@@ -37,7 +37,7 @@ public final class WorldMassCenterTarget__BehaviorDescriptor extends BaseBHDescr
   /*package*/ static SNode getTargetCoordinates_idGdoRjGvovH(@NotNull SNode __thisNode__, SNode object) {
     // The center of mass will require the offset of the world in the current world in order 
     // to be resolved 
-    return SLinkOperations.getTarget(object, LINKS.position$DoV0);
+    return SLinkOperations.getTarget(object, LINKS.position$2BSz);
   }
 
   /*package*/ WorldMassCenterTarget__BehaviorDescriptor() {
@@ -89,6 +89,6 @@ public final class WorldMassCenterTarget__BehaviorDescriptor extends BaseBHDescr
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
+    /*package*/ static final SContainmentLink position$2BSz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
   }
 }

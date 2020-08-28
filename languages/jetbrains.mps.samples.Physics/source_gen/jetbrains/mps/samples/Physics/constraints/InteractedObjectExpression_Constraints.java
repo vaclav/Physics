@@ -19,7 +19,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class InteractedObjectExpression_Constraints extends BaseConstraintsDescriptor {
   public InteractedObjectExpression_Constraints() {
-    super(CONCEPTS.InteractedObjectExpression$7s);
+    super(CONCEPTS.InteractedObjectExpression$qZ);
   }
 
   @Override
@@ -38,12 +38,12 @@ public class InteractedObjectExpression_Constraints extends BaseConstraintsDescr
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.InteractionForce$dQ) || Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getNodeAncestors(parentNode, null, false), CONCEPTS.InteractionForce$dQ)).isNotEmpty();
+    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.InteractionForce$xp) || Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getNodeAncestors(parentNode, null, false), CONCEPTS.InteractionForce$xp)).isNotEmpty();
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "232455383964029236");
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept InteractedObjectExpression$7s = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d9124L, "jetbrains.mps.samples.Physics.structure.InteractedObjectExpression");
-    /*package*/ static final SConcept InteractionForce$dQ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d56baL, "jetbrains.mps.samples.Physics.structure.InteractionForce");
+    /*package*/ static final SConcept InteractedObjectExpression$qZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d9124L, "jetbrains.mps.samples.Physics.structure.InteractedObjectExpression");
+    /*package*/ static final SConcept InteractionForce$xp = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab4d56baL, "jetbrains.mps.samples.Physics.structure.InteractionForce");
   }
 }

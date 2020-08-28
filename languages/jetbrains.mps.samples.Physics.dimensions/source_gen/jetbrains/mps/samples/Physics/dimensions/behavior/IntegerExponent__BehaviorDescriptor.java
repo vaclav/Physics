@@ -32,7 +32,7 @@ public final class IntegerExponent__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   /*package*/ static Rational rawValue_id3yBD53Ww3_k(@NotNull SNode __thisNode__) {
-    return new Rational(SPropertyOperations.getInteger(__thisNode__, PROPS.value$FcCi));
+    return new Rational(SPropertyOperations.getInteger(__thisNode__, PROPS.value$Ee72));
   }
 
   /*package*/ IntegerExponent__BehaviorDescriptor() {
@@ -82,6 +82,6 @@ public final class IntegerExponent__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty value$FcCi = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x2a3b6653358e9e8L, "value");
+    /*package*/ static final SProperty value$Ee72 = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x2a3b6653358e9e8L, "value");
   }
 }

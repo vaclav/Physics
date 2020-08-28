@@ -27,14 +27,14 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
   public void applyRule(final SNode simulation, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     if (!(typeCheckingContext.isSingleTypeComputation())) {
       {
-        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(simulation, LINKS.cameraFocus$oVJH);
+        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(simulation, LINKS.cameraFocus$4vqm);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "362892448123675044", 0, null);
         typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "362892448123672608", true), (SNode) createDirectionType_63q4hh_a1a0c0a0a0b(), true, true, _info_12389875345);
       }
     }
     if (!(typeCheckingContext.isSingleTypeComputation())) {
       {
-        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(simulation, LINKS.cameraPosition$oPrJ);
+        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(simulation, LINKS.cameraPosition$1rJk);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7471572540824260993", 0, null);
         typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "7471572540824260998", true), (SNode) createDirectionType_63q4hh_a1a0c0a0b0b(), true, true, _info_12389875345);
       }
@@ -42,14 +42,14 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
 
     if (!(typeCheckingContext.isSingleTypeComputation())) {
       {
-        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(simulation, LINKS.simulationSpeed$m7cv);
+        SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(simulation, LINKS.simulationSpeed$H2m$);
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2432181455078546504", 0, null);
         typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "2432181455078544054", true), (SNode) _quotation_createNode_63q4hh_a1a0c0a0d0b(), true, true, _info_12389875345);
       }
     }
 
     {
-      final SNode scaleType = typeCheckingContext.typeOf(SLinkOperations.getTarget(simulation, LINKS.simulationScale$eVy5), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1993559260849747191", true);
+      final SNode scaleType = typeCheckingContext.typeOf(SLinkOperations.getTarget(simulation, LINKS.simulationScale$eoNY), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1993559260849747191", true);
       typeCheckingContext.whenConcrete(scaleType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
@@ -62,7 +62,7 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
           if (NumberTypeHelper.isBaseTypeZero(typeCheckingContext.getExpandedNode(scaleType))) {
             {
               final MessageTarget errorTarget = new NodeMessageTarget();
-              IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(simulation, LINKS.simulationScale$eVy5), "simulation scale cannot be zero", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1993559260854602360", null, errorTarget);
+              IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(simulation, LINKS.simulationScale$eoNY), "simulation scale cannot be zero", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1993559260854602360", null, errorTarget);
             }
           }
         }
@@ -70,7 +70,7 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.Simulation$oX;
+    return CONCEPTS.Simulation$Gw;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -79,11 +79,11 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
     return false;
   }
   private static SNode createDirectionType_63q4hh_a1a0c0a0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$al);
     return n0.getResult();
   }
   private static SNode createDirectionType_63q4hh_a1a0c0a0b0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$al);
     return n0.getResult();
   }
   private static SNode _quotation_createNode_63q4hh_a1a0c0a0d0b() {
@@ -114,14 +114,14 @@ public class typeof_Simulation_InferenceRule extends AbstractInferenceRule_Runti
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink cameraFocus$oVJH = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x55d23bae7b62a2e0L, "cameraFocus");
-    /*package*/ static final SContainmentLink cameraPosition$oPrJ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x55d23bae7b62a2a7L, "cameraPosition");
-    /*package*/ static final SContainmentLink simulationSpeed$m7cv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x21c0d825ab3fd1e0L, "simulationSpeed");
-    /*package*/ static final SContainmentLink simulationScale$eVy5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x1baa8b95dda3ac89L, "simulationScale");
+    /*package*/ static final SContainmentLink cameraFocus$4vqm = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x55d23bae7b62a2e0L, "cameraFocus");
+    /*package*/ static final SContainmentLink cameraPosition$1rJk = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x55d23bae7b62a2a7L, "cameraPosition");
+    /*package*/ static final SContainmentLink simulationSpeed$H2m$ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x21c0d825ab3fd1e0L, "simulationSpeed");
+    /*package*/ static final SContainmentLink simulationScale$eoNY = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x1baa8b95dda3ac89L, "simulationScale");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Simulation$oX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, "jetbrains.mps.samples.Physics.structure.Simulation");
-    /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
+    /*package*/ static final SConcept Simulation$Gw = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, "jetbrains.mps.samples.Physics.structure.Simulation");
+    /*package*/ static final SConcept DirectionType$al = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
   }
 }

@@ -19,7 +19,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 public class CurrentWorldExpression_Constraints extends BaseConstraintsDescriptor {
   public CurrentWorldExpression_Constraints() {
-    super(CONCEPTS.CurrentWorldExpression$l8);
+    super(CONCEPTS.CurrentWorldExpression$CF);
   }
 
   @Override
@@ -38,12 +38,12 @@ public class CurrentWorldExpression_Constraints extends BaseConstraintsDescripto
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return (SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.ICurrentWorldContext$KE, true, false) != null);
+    return (SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.ICurrentWorldContext$4d, true, false) != null);
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "5986738463490582800");
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CurrentWorldExpression$l8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
-    /*package*/ static final SInterfaceConcept ICurrentWorldContext$KE = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d786290aL, "jetbrains.mps.samples.Physics.structure.ICurrentWorldContext");
+    /*package*/ static final SConcept CurrentWorldExpression$CF = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
+    /*package*/ static final SInterfaceConcept ICurrentWorldContext$4d = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d786290aL, "jetbrains.mps.samples.Physics.structure.ICurrentWorldContext");
   }
 }

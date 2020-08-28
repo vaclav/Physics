@@ -44,7 +44,7 @@ public class ColorTexture_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SimpleConceptSubstituteMenuPart(CONCEPTS.ColorTexture$j6) {
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SimpleConceptSubstituteMenuPart(CONCEPTS.ColorTexture$AD) {
 
       @NotNull
       @Override
@@ -57,7 +57,7 @@ public class ColorTexture_SubstituteMenu extends SubstituteMenuBase {
           context.getEditorMenuTrace().popTraceInfo();
         }
       }
-    }, CONCEPTS.ColorTexture$j6));
+    }, CONCEPTS.ColorTexture$AD));
     result.add(new SMP_Group_gs2hog_b());
     return result;
   }
@@ -78,7 +78,7 @@ public class ColorTexture_SubstituteMenu extends SubstituteMenuBase {
   public class SMP_Group_gs2hog_b extends GroupMenuPart<SubstituteMenuItem, SubstituteMenuContext> {
     @Override
     protected boolean isApplicable(SubstituteMenuContext _context) {
-      return (SNodeOperations.getNodeAncestor(_context.getParentNode(), CONCEPTS.ColorTexture$j6, true, false) == null);
+      return (SNodeOperations.getNodeAncestor(_context.getParentNode(), CONCEPTS.ColorTexture$AD, true, false) == null);
     }
     @NotNull
     @Override
@@ -94,7 +94,7 @@ public class ColorTexture_SubstituteMenu extends SubstituteMenuBase {
 
     @Override
     protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts() {
-      return Arrays.<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>asList(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Wrap_gs2hog_a1(), CONCEPTS.ColorTexture$j6));
+      return Arrays.<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>asList(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Wrap_gs2hog_a1(), CONCEPTS.ColorTexture$AD));
     }
     private class SMP_Wrap_gs2hog_a1 extends WrapperSubstituteMenuPart {
       @NotNull
@@ -119,7 +119,7 @@ public class ColorTexture_SubstituteMenu extends SubstituteMenuBase {
           @Nullable
           @Override
           public SAbstractConcept getOutputConcept() {
-            return CONCEPTS.ColorTexture$j6;
+            return CONCEPTS.ColorTexture$AD;
           }
           @Nullable
           @Override
@@ -152,23 +152,23 @@ public class ColorTexture_SubstituteMenu extends SubstituteMenuBase {
         return new DefaultSubstituteMenuLookup(LanguageRegistry.getInstance(editorContext.getRepository()), conceptToFindMenuFor);
       }
       private SAbstractConcept getConceptToFindMenuFor(SubstituteMenuContext _context) {
-        return CONCEPTS.DefinedColorReference$JN;
+        return CONCEPTS.DefinedColorReference$3m;
       }
     }
   }
   private static SNode createColorTexture_gs2hog_a0a0a1(SNode p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ColorTexture$j6);
-    n0.forChild(LINKS.color$jU1a).initNode(p0, CONCEPTS.Expression$Wr, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ColorTexture$AD);
+    n0.forChild(LINKS.color$CDRp).initNode(p0, CONCEPTS.Expression$D_, true);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ColorTexture$j6 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2a9ffcL, "jetbrains.mps.samples.Physics.structure.ColorTexture");
-    /*package*/ static final SConcept DefinedColorReference$JN = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, "jetbrains.mps.samples.Physics.structure.DefinedColorReference");
-    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept ColorTexture$AD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2a9ffcL, "jetbrains.mps.samples.Physics.structure.ColorTexture");
+    /*package*/ static final SConcept DefinedColorReference$3m = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, "jetbrains.mps.samples.Physics.structure.DefinedColorReference");
+    /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink color$jU1a = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2a9ffcL, 0xcad58369f2aa271L, "color");
+    /*package*/ static final SContainmentLink color$CDRp = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2a9ffcL, 0xcad58369f2aa271L, "color");
   }
 }

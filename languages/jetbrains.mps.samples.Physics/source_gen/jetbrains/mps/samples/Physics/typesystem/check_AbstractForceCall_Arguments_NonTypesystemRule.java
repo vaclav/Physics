@@ -26,29 +26,29 @@ public class check_AbstractForceCall_Arguments_NonTypesystemRule extends Abstrac
   public check_AbstractForceCall_Arguments_NonTypesystemRule() {
   }
   public void applyRule(final SNode abstractForceCall, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(abstractForceCall, LINKS.force$tsf5), LINKS.args$G1Ow)).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(abstractForceCall, LINKS.force$geAY), LINKS.args$8wKH)).visitAll(new IVisitor<SNode>() {
       public void visit(final SNode it) {
-        int size = ListSequence.fromList(SLinkOperations.getChildren(abstractForceCall, LINKS.parameterValues$tsg3)).where(new IWhereFilter<SNode>() {
+        int size = ListSequence.fromList(SLinkOperations.getChildren(abstractForceCall, LINKS.parameterValues$gf50)).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode val) {
-            return SLinkOperations.getTarget(val, LINKS.argument$kXZ1) == it;
+            return SLinkOperations.getTarget(val, LINKS.argument$9$P2) == it;
           }
         }).count();
         if (size == 0) {
           {
             final MessageTarget errorTarget = new NodeMessageTarget();
-            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(abstractForceCall, "missing argument value for " + SPropertyOperations.getString(it, PROPS.name$tAp1), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "8067421349533107919", null, errorTarget);
+            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(abstractForceCall, "missing argument value for " + SPropertyOperations.getString(it, PROPS.name$MnvL), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "8067421349533107919", null, errorTarget);
           }
         } else if (size > 1) {
           {
             final MessageTarget errorTarget = new NodeMessageTarget();
-            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(abstractForceCall, "duplicate entry for " + SPropertyOperations.getString(it, PROPS.name$tAp1), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "8067421349533141414", null, errorTarget);
+            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(abstractForceCall, "duplicate entry for " + SPropertyOperations.getString(it, PROPS.name$MnvL), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "8067421349533141414", null, errorTarget);
           }
         }
       }
     });
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.AbstractForceCall$Wc;
+    return CONCEPTS.AbstractForceCall$fJ;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -58,17 +58,17 @@ public class check_AbstractForceCall_Arguments_NonTypesystemRule extends Abstrac
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink force$tsf5 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, 0x3126c7c72473eb96L, "force");
-    /*package*/ static final SContainmentLink args$G1Ow = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba520706L, 0x68d69d36ba520707L, "args");
-    /*package*/ static final SContainmentLink parameterValues$tsg3 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, 0x3126c7c72473eb98L, "parameterValues");
-    /*package*/ static final SReferenceLink argument$kXZ1 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
+    /*package*/ static final SReferenceLink force$geAY = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, 0x3126c7c72473eb96L, "force");
+    /*package*/ static final SContainmentLink args$8wKH = MetaAdapterFactory.getContainmentLink(0x9464fa065ab9409bL, 0x927464ab29588457L, 0x68d69d36ba520706L, 0x68d69d36ba520707L, "args");
+    /*package*/ static final SContainmentLink parameterValues$gf50 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, 0x3126c7c72473eb98L, "parameterValues");
+    /*package*/ static final SReferenceLink argument$9$P2 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractForceCall$Wc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
+    /*package*/ static final SConcept AbstractForceCall$fJ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
   }
 }

@@ -38,19 +38,19 @@ public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static SNode apply_id2AM6gIjLTgr(@NotNull SNode __thisNode__) {
-    return (SNode) ICanBeOverridden__BehaviorDescriptor.overrideWith_id38SdPTRbTXB.invoke(OverrideRule__BehaviorDescriptor.getTarget_id2AM6gIjLTgY.invoke(__thisNode__), SLinkOperations.getTarget(__thisNode__, LINKS.newValue$_Vn9));
+    return (SNode) ICanBeOverridden__BehaviorDescriptor.overrideWith_id38SdPTRbTXB.invoke(OverrideRule__BehaviorDescriptor.getTarget_id2AM6gIjLTgY.invoke(__thisNode__), SLinkOperations.getTarget(__thisNode__, LINKS.newValue$njwU));
   }
   /*package*/ static SNode getTarget_id2AM6gIjLTgY(@NotNull SNode __thisNode__) {
     // Resolve dot expression target (while may not be useful) 
-    SNode current = SLinkOperations.getTarget(__thisNode__, LINKS.target$_Vc0);
-    while (SNodeOperations.isInstanceOf(current, CONCEPTS.DotExpression$Af)) {
-      current = SLinkOperations.getTarget(SNodeOperations.cast(current, CONCEPTS.DotExpression$Af), LINKS.target$NL8Z);
+    SNode current = SLinkOperations.getTarget(__thisNode__, LINKS.target$ne7z);
+    while (SNodeOperations.isInstanceOf(current, CONCEPTS.DotExpression$jp)) {
+      current = SLinkOperations.getTarget(SNodeOperations.cast(current, CONCEPTS.DotExpression$jp), LINKS.target$u23F);
     }
 
     // Return overridden node 
     {
       final SNode override = current;
-      if (SNodeOperations.isInstanceOf(override, CONCEPTS.ICanBeOverridden$E3)) {
+      if (SNodeOperations.isInstanceOf(override, CONCEPTS.ICanBeOverridden$XA)) {
         return override;
       }
     }
@@ -58,7 +58,7 @@ public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
     return null;
   }
   /*package*/ static IconResource getSideIcon_id6TtJ6IUjtJX(@NotNull SNode __thisNode__) {
-    return ((IconResource) BaseConcept__BehaviorDescriptor.getSideIcon_id6TtJ6IUjtJX.invokeSuper(__thisNode__, CONCEPTS.OverrideRule$lC));
+    return ((IconResource) BaseConcept__BehaviorDescriptor.getSideIcon_id6TtJ6IUjtJX.invokeSuper(__thisNode__, CONCEPTS.OverrideRule$Db));
   }
 
   /*package*/ OverrideRule__BehaviorDescriptor() {
@@ -112,14 +112,14 @@ public final class OverrideRule__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink newValue$_Vn9 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9ff0L, "newValue");
-    /*package*/ static final SContainmentLink target$_Vc0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9feeL, "target");
-    /*package*/ static final SContainmentLink target$NL8Z = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
+    /*package*/ static final SContainmentLink newValue$njwU = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9ff0L, "newValue");
+    /*package*/ static final SContainmentLink target$ne7z = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9feeL, "target");
+    /*package*/ static final SContainmentLink target$u23F = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DotExpression$Af = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
-    /*package*/ static final SInterfaceConcept ICanBeOverridden$E3 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9f4dL, "jetbrains.mps.samples.Physics.structure.ICanBeOverridden");
-    /*package*/ static final SConcept OverrideRule$lC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
+    /*package*/ static final SConcept DotExpression$jp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
+    /*package*/ static final SInterfaceConcept ICanBeOverridden$XA = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9f4dL, "jetbrains.mps.samples.Physics.structure.ICanBeOverridden");
+    /*package*/ static final SConcept OverrideRule$Db = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
   }
 }

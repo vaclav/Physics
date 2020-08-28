@@ -35,11 +35,11 @@ public final class DirectionalCoordinates__BehaviorDescriptor extends BaseBHDesc
   }
 
   /*package*/ static boolean hasLocalizedReference_id3Vp3qmbplYw(@NotNull SNode __thisNode__) {
-    return (SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$9a, false, false) != null);
+    return (SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$sH, false, false) != null);
   }
   /*package*/ static boolean isPartOfPositionDefinition_id3Vp3qmbrxhw(@NotNull SNode __thisNode__) {
-    SNode ancestor = SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$9a, false, false);
-    return ListSequence.fromList(SNodeOperations.getNodeAncestors(__thisNode__, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0));
+    SNode ancestor = SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$sH, false, false);
+    return ListSequence.fromList(SNodeOperations.getNodeAncestors(__thisNode__, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$2BSz));
   }
 
   /*package*/ DirectionalCoordinates__BehaviorDescriptor() {
@@ -91,10 +91,10 @@ public final class DirectionalCoordinates__BehaviorDescriptor extends BaseBHDesc
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
+    /*package*/ static final SContainmentLink position$2BSz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
   }
 }

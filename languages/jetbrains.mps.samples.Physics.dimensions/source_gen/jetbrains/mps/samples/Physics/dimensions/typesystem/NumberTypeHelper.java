@@ -26,10 +26,10 @@ public class NumberTypeHelper {
   public static boolean isZero(SNode type) {
     {
       final SNode number = type;
-      if (SNodeOperations.isInstanceOf(number, CONCEPTS.NumberType$2D)) {
-        if ((SLinkOperations.getTarget(number, LINKS.range$WgV$) != null)) {
-          BigDecimal min = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(number, LINKS.range$WgV$), PROPS.min$Va2));
-          BigDecimal max = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(number, LINKS.range$WgV$), PROPS.max$Vax));
+      if (SNodeOperations.isInstanceOf(number, CONCEPTS.NumberType$n)) {
+        if ((SLinkOperations.getTarget(number, LINKS.range$RnOa) != null)) {
+          BigDecimal min = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(number, LINKS.range$RnOa), PROPS.min$7OOG));
+          BigDecimal max = new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(number, LINKS.range$RnOa), PROPS.max$7P3H));
 
           return min.compareTo(max) == 0 && min.compareTo(BigDecimal.ZERO) == 0;
         }
@@ -47,8 +47,8 @@ public class NumberTypeHelper {
   public static boolean isBaseTypeZero(SNode type) {
     {
       final SNode dim = type;
-      if (SNodeOperations.isInstanceOf(dim, CONCEPTS.DimensionType$yz)) {
-        return isZero(SLinkOperations.getTarget(dim, LINKS.baseType$fHYw));
+      if (SNodeOperations.isInstanceOf(dim, CONCEPTS.DimensionType$8R)) {
+        return isZero(SLinkOperations.getTarget(dim, LINKS.baseType$mnRO));
       }
     }
     return isZero(type);
@@ -68,7 +68,7 @@ public class NumberTypeHelper {
         return isZero(it);
       }
     }) && Sequence.fromIterable(types).count() > 0)) {
-      return SNodeOperations.as(Sequence.fromIterable(types).first(), CONCEPTS.Type$fA);
+      return SNodeOperations.as(Sequence.fromIterable(types).first(), CONCEPTS.Type$WK);
     } else {
       return createRealType_nobf8o_a0a0a0g();
     }
@@ -86,12 +86,12 @@ public class NumberTypeHelper {
       public SNode select(SNode it) {
         {
           final SNode dimension = it;
-          if (SNodeOperations.isInstanceOf(dimension, CONCEPTS.DimensionType$yz)) {
+          if (SNodeOperations.isInstanceOf(dimension, CONCEPTS.DimensionType$8R)) {
             // Take the first one, no compatibility checking between dimension is done 
             if (units.value == null) {
-              units.value = UnitReduceHelper.reduceUnitsToReferences(SLinkOperations.getChildren(dimension, LINKS.units$o6Ow));
+              units.value = UnitReduceHelper.reduceUnitsToReferences(SLinkOperations.getChildren(dimension, LINKS.units$qq1O));
             }
-            return SLinkOperations.getTarget(dimension, LINKS.baseType$fHYw);
+            return SLinkOperations.getTarget(dimension, LINKS.baseType$mnRO);
           }
         }
 
@@ -105,32 +105,32 @@ public class NumberTypeHelper {
     return (units.value != null ? createDimensionType_nobf8o_a0i0j(baseType, units.value) : baseType);
   }
   private static SNode createRealType_nobf8o_a0a0a0g() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
     return n0.getResult();
   }
   private static SNode createDimensionType_nobf8o_a0i0j(SNode p0, Iterable<? extends SNode> p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$yz);
-    n0.forChild(LINKS.baseType$fHYw).initNode(p0, CONCEPTS.Type$fA, true);
-    n0.forChild(LINKS.units$o6Ow).initNodeList(p1, CONCEPTS.DimensionReference$wa);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionType$8R);
+    n0.forChild(LINKS.baseType$mnRO).initNode(p0, CONCEPTS.Type$WK, true);
+    n0.forChild(LINKS.units$qq1O).initNodeList(p1, CONCEPTS.DimensionReference$6u);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumberType$2D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
-    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
-    /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
-    /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
+    /*package*/ static final SConcept NumberType$n = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept Type$WK = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept RealType$36 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
+    /*package*/ static final SConcept DimensionReference$6u = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink range$WgV$ = MetaAdapterFactory.getContainmentLink(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, 0x127541598201af78L, "range");
-    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink range$RnOa = MetaAdapterFactory.getContainmentLink(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, 0x127541598201af78L, "range");
+    /*package*/ static final SContainmentLink baseType$mnRO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty min$Va2 = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af6fL, "min");
-    /*package*/ static final SProperty max$Vax = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af70L, "max");
+    /*package*/ static final SProperty min$7OOG = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af6fL, "min");
+    /*package*/ static final SProperty max$7P3H = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x127541598201af65L, 0x127541598201af70L, "max");
   }
 }

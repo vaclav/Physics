@@ -28,10 +28,10 @@ public class FindUsagesDescriptor extends BaseFindUsagesDescriptor {
 
   @Override
   public void init(FinderRegistry reg) {
-    reg.add(CONCEPTS.OverrideRule$lC, 0, "FindOverridenValue");
+    reg.add(CONCEPTS.OverrideRule$Db, 0, "FindOverridenValue");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept OverrideRule$lC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
+    /*package*/ static final SConcept OverrideRule$Db = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
   }
 }

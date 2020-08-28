@@ -31,7 +31,7 @@ public final class IUnit__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static SNode getDimension_id3G2R3fdY2Qo(@NotNull SNode __thisNode__) {
-    return SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.Dimension$7F, false, false);
+    return SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.Dimension$HZ, false, false);
   }
 
   /*package*/ IUnit__BehaviorDescriptor() {
@@ -81,6 +81,6 @@ public final class IUnit__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Dimension$7F = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
+    /*package*/ static final SConcept Dimension$HZ = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
   }
 }

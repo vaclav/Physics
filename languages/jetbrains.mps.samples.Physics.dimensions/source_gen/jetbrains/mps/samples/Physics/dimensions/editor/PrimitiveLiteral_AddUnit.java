@@ -77,7 +77,7 @@ public class PrimitiveLiteral_AddUnit extends TransformationMenuBase {
   public class TMP_Group_tv04dj_a0 extends GroupMenuPart<TransformationMenuItem, TransformationMenuContext> {
     @Override
     protected boolean isApplicable(TransformationMenuContext _context) {
-      return (SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.UnitExpression$Bl, true, false) == null);
+      return (SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.UnitExpression$dD, true, false) == null);
     }
 
     @NotNull
@@ -116,7 +116,7 @@ public class PrimitiveLiteral_AddUnit extends TransformationMenuBase {
         return new DefaultSubstituteMenuLookup(LanguageRegistry.getInstance(editorContext.getRepository()), conceptToFindMenuFor);
       }
       private SAbstractConcept getConceptToFindMenuFor(TransformationMenuContext _context) {
-        return CONCEPTS.UnitReference$c4;
+        return CONCEPTS.UnitReference$Mo;
       }
 
 
@@ -136,9 +136,9 @@ public class PrimitiveLiteral_AddUnit extends TransformationMenuBase {
         @Override
         public void execute(@NotNull String pattern) {
           SNode createdNode = getSubstituteItem().createNode(pattern);
-          SNode unit = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.UnitExpression$Bl);
-          SLinkOperations.setTarget(unit, LINKS.content$Gf5w, _context.getNode());
-          ListSequence.fromList(SLinkOperations.getChildren(unit, LINKS.units$o6Ow)).addElement(createdNode);
+          SNode unit = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.UnitExpression$dD);
+          SLinkOperations.setTarget(unit, LINKS.content$aqgO, _context.getNode());
+          ListSequence.fromList(SLinkOperations.getChildren(unit, LINKS.units$qq1O)).addElement(createdNode);
         }
 
         @Override
@@ -166,12 +166,12 @@ public class PrimitiveLiteral_AddUnit extends TransformationMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept UnitExpression$Bl = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression");
-    /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
+    /*package*/ static final SConcept UnitExpression$dD = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression");
+    /*package*/ static final SConcept UnitReference$Mo = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink content$Gf5w = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink content$aqgO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
   }
 }

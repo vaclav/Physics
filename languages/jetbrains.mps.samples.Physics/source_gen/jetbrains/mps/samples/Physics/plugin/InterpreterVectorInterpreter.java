@@ -45,14 +45,14 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
   }
 
   protected void populateEvaluators(List<? extends IEvaluator> evaluators) {
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorComponentTarget$ME, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1808378526641750554", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorComponentTarget$6d, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1808378526641750554", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           VectorLike vector = (VectorLike) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
-          switch (enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c.indexNullable(SPropertyOperations.getEnum(node, PROPS.component$_d4D))) {
+          switch (enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c.indexNullable(SPropertyOperations.getEnum(node, PROPS.component$Szq))) {
             case 0:
               return vector.length();
             case 1:
@@ -90,13 +90,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.CartesianCoordinates$U8, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1808378526640841301", true, new TypedChildConstraintImpl(LINKS.dx$VpuT, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o))), new TypedChildConstraintImpl(LINKS.dy$VWrJ, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o))), new TypedChildConstraintImpl(LINKS.dz$VWBn, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.CartesianCoordinates$dF, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1808378526640841301", true, new TypedChildConstraintImpl(LINKS.dx$KTha, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36))), new TypedChildConstraintImpl(LINKS.dy$1OJk, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36))), new TypedChildConstraintImpl(LINKS.dz$1UnG, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return new InternalVector(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.dx$VpuT), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.dy$VWrJ), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.dz$VWBn), context, coverage, trace, false), BigDecimal.class)));
+          return new InternalVector(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.dx$KTha), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.dy$1OJk), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.dz$1UnG), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -119,13 +119,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.SphericalCoordinates$W4, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/796402062952120627", true, new TypedChildConstraintImpl(LINKS.distance$xDc5, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o))), new TypedChildConstraintImpl(LINKS.phi$xD9b, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o))), new TypedChildConstraintImpl(LINKS.theta$xDa9, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.SphericalCoordinates$fB, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/796402062952120627", true, new TypedChildConstraintImpl(LINKS.distance$iw9Y, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36))), new TypedChildConstraintImpl(LINKS.phi$iuJS, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36))), new TypedChildConstraintImpl(LINKS.theta$ivdU, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return InternalVector.fromSpherical(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.distance$xDc5), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.theta$xDa9), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.phi$xD9b), context, coverage, trace, false), BigDecimal.class)));
+          return InternalVector.fromSpherical(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.distance$iw9Y), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.theta$ivdU), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.phi$iuJS), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -148,13 +148,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.CylindricalCoordinates$9D, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/796402062952143915", true, new TypedChildConstraintImpl(LINKS.axialDistance$ip5F, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o))), new TypedChildConstraintImpl(LINKS.height$ip86, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o))), new TypedChildConstraintImpl(LINKS.phi$ip6D, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.CylindricalCoordinates$tc, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/796402062952143915", true, new TypedChildConstraintImpl(LINKS.axialDistance$TH3o, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36))), new TypedChildConstraintImpl(LINKS.height$TIet, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36))), new TypedChildConstraintImpl(LINKS.phi$THxq, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return InternalVector.fromCylindrical(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.axialDistance$ip5F), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.phi$ip6D), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.height$ip86), context, coverage, trace, false), BigDecimal.class)));
+          return InternalVector.fromCylindrical(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.axialDistance$TH3o), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.phi$THxq), context, coverage, trace, false), BigDecimal.class)), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.height$TIet), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -177,14 +177,14 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.RelativeVector$c7, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1481770243885208091", true, new TypedChildConstraintImpl(LINKS.coordinates$l1nt, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.AbstractVectorType$6J))), new TypedChildConstraintImpl(LINKS.relativeFrom$gwcw, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$vJ)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.RelativeVector$vE, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1481770243885208091", true, new TypedChildConstraintImpl(LINKS.coordinates$bdEA, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.AbstractVectorType$Ll))), new TypedChildConstraintImpl(LINKS.relativeFrom$Z9n3, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$al)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          VectorLike relativeSource = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.relativeFrom$gwcw), context, coverage, trace, false), VectorLike.class));
-          VectorLike offset = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.coordinates$l1nt), context, coverage, trace, false), VectorLike.class));
+          VectorLike relativeSource = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.relativeFrom$Z9n3), context, coverage, trace, false), VectorLike.class));
+          VectorLike offset = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.coordinates$bdEA), context, coverage, trace, false), VectorLike.class));
           return relativeSource.add(offset);
         } catch (StopAndReturnException stop) {
           return stop.value();
@@ -208,32 +208,32 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.DirectionalCoordinates$pa, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1481770243885528261", true, new TypedChildConstraintImpl(LINKS.direction$2h5b, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$vJ))), new TypedChildConstraintImpl(LINKS.length$2h69, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.DirectionalCoordinates$GH, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1481770243885528261", true, new TypedChildConstraintImpl(LINKS.direction$5ONS, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$al))), new TypedChildConstraintImpl(LINKS.length$5PhU, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          VectorLike directionPoint = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.direction$2h5b), context, coverage, trace, false), VectorLike.class));
+          VectorLike directionPoint = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.direction$5ONS), context, coverage, trace, false), VectorLike.class));
 
           VectorLike sourcePoint;
-          if ((SLinkOperations.getTarget(node, LINKS.source$L$qG) != null)) {
-            sourcePoint = ((VectorLike) ((Object) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.source$L$qG), context, coverage, trace, false), Object.class)));
+          if ((SLinkOperations.getTarget(node, LINKS.source$ceR) != null)) {
+            sourcePoint = ((VectorLike) ((Object) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.source$ceR), context, coverage, trace, false), Object.class)));
           } else {
-            SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false);
+            SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$sH, false, false);
 
             // No localized ancestor or we try to define position in the current expression 
-            if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(node, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0))) {
+            if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(node, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$2BSz))) {
               // -> world origin 
               sourcePoint = InternalVector.ZERO;
             } else {
               // -> ancestor position 
-              sourcePoint = ((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.position$DoV0), context, coverage, trace, false));
+              sourcePoint = ((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.position$2BSz), context, coverage, trace, false));
             }
           }
 
 
-          return directionPoint.minus(sourcePoint).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.length$2h69), context, coverage, trace, false), BigDecimal.class)));
+          return directionPoint.minus(sourcePoint).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.length$5PhU), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -256,13 +256,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.TargetableObjectExpression$cD, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/796402062955124276", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.TargetableObjectExpression$wc, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/796402062955124276", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((Object) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.expression$87ts), context, coverage, trace, false), Object.class));
+          return ((Object) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.expression$Va$7), context, coverage, trace, false), Object.class));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -285,15 +285,15 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectReferenceExpression$qq, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1481770243885576084", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectReferenceExpression$HX, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/1481770243885576084", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          SNode localized = SLinkOperations.getTarget(node, LINKS.target$EWj0);
+          SNode localized = SLinkOperations.getTarget(node, LINKS.target$MKwz);
 
-          return InternalEntity.from((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.position$DoV0), context, coverage, trace, false), localized);
+          return InternalEntity.from((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.position$2BSz), context, coverage, trace, false), localized);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -316,15 +316,15 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.WorldNestedObjectTarget$p3, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/7547499172391892998", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.WorldNestedObjectTarget$GA, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/7547499172391892998", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          SNode localized = SLinkOperations.getTarget(node, LINKS.target$g02E);
+          SNode localized = SLinkOperations.getTarget(node, LINKS.target$J$_T);
 
-          return InternalEntity.from((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.position$DoV0), context, coverage, trace, false), localized);
+          return InternalEntity.from((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(localized, LINKS.position$2BSz), context, coverage, trace, false), localized);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -347,14 +347,14 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectDistanceWithTarget$OH, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458197367", true, new TypedChildConstraintImpl(LINKS.target$oizF, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.ObjectType$sZ)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectDistanceWithTarget$8g, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458197367", true, new TypedChildConstraintImpl(LINKS.target$Ky_o, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.ObjectType$7_)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           InternalEntity source = (InternalEntity) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
-          InternalEntity target = ((InternalEntity) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.target$oizF), context, coverage, trace, false), InternalEntity.class));
+          InternalEntity target = ((InternalEntity) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.target$Ky_o), context, coverage, trace, false), InternalEntity.class));
 
           return target.minus(source).length();
         } catch (StopAndReturnException stop) {
@@ -379,7 +379,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectMassTarget$_T, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458200860", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectMassTarget$Ts, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458200860", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -409,7 +409,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectVelocityTarget$a7, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/5352272594417216021", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectVelocityTarget$tE, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/5352272594417216021", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -439,13 +439,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorResizeTarget$Am, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902464277648", true, new TypedChildConstraintImpl(LINKS.newLength$Gnlv, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.AbstractDimensionType$C7)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorResizeTarget$TT, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902464277648", true, new TypedChildConstraintImpl(LINKS.newLength$uQH$, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.AbstractDimensionType$er)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((VectorLike) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node))).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.newLength$Gnlv), context, coverage, trace, false), BigDecimal.class)));
+          return ((VectorLike) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node))).resize(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.newLength$uQH$), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -468,7 +468,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectPositionTarget$we, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458203654", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectPositionTarget$NL, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458203654", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -497,7 +497,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorOppositeTarget$Ac, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458205390", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.VectorOppositeTarget$TJ, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458205390", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -526,7 +526,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.WorldMassCenterTarget$Mg, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458208192", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.WorldMassCenterTarget$5N, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458208192", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -555,15 +555,15 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.CurrentObjectExpression$eH, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902459101914", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.CurrentObjectExpression$yg, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902459101914", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          SNode sourcePoint = (SNode) context.getRootInterpreter().evaluate(SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$9a, false, false), context, coverage, trace, false);
+          SNode sourcePoint = (SNode) context.getRootInterpreter().evaluate(SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$sH, false, false), context, coverage, trace, false);
 
-          return InternalEntity.from((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(sourcePoint, LINKS.position$DoV0), context, coverage, trace, false), sourcePoint);
+          return InternalEntity.from((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(sourcePoint, LINKS.position$2BSz), context, coverage, trace, false), sourcePoint);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -586,7 +586,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.CurrentWorldExpression$l8, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/2521872686839337234", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.CurrentWorldExpression$CF, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/2521872686839337234", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
@@ -615,13 +615,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.PlusExpression$Dn, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458997009", true, new TypedChildConstraintImpl(LINKS.left$gQj0, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$vJ))), new TypedChildConstraintImpl(LINKS.right$gQu9, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$vJ)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.PlusExpression$mx, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458997009", true, new TypedChildConstraintImpl(LINKS.left$zxUa, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$al))), new TypedChildConstraintImpl(LINKS.right$zBjx, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$al)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), VectorLike.class)).add(((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), VectorLike.class)));
+          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$zxUa), context, coverage, trace, false), VectorLike.class)).add(((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$zBjx), context, coverage, trace, false), VectorLike.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -644,13 +644,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.MulExpression$_u, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902459020093", true, new TypedChildConstraintImpl(LINKS.left$gQj0, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$vJ))), new TypedChildConstraintImpl(LINKS.right$gQu9, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.MulExpression$iC, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902459020093", true, new TypedChildConstraintImpl(LINKS.left$zxUa, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$al))), new TypedChildConstraintImpl(LINKS.right$zBjx, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), VectorLike.class)).mul(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), BigDecimal.class)));
+          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$zxUa), context, coverage, trace, false), VectorLike.class)).mul(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$zBjx), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -673,13 +673,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.MulExpression$_u, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902459042562", true, new TypedChildConstraintImpl(LINKS.left$gQj0, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o))), new TypedChildConstraintImpl(LINKS.right$gQu9, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$vJ)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.MulExpression$iC, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902459042562", true, new TypedChildConstraintImpl(LINKS.left$zxUa, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36))), new TypedChildConstraintImpl(LINKS.right$zBjx, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$al)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), VectorLike.class)).mul(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), BigDecimal.class)));
+          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$zBjx), context, coverage, trace, false), VectorLike.class)).mul(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$zxUa), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -702,13 +702,13 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.DivExpression$Li, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902459064821", true, new TypedChildConstraintImpl(LINKS.left$gQj0, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$vJ))), new TypedChildConstraintImpl(LINKS.right$gQu9, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.DivExpression$us, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902459064821", true, new TypedChildConstraintImpl(LINKS.left$zxUa, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$al))), new TypedChildConstraintImpl(LINKS.right$zBjx, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$gQj0), context, coverage, trace, false), VectorLike.class)).mul(BigDecimal.ONE.divide(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$gQu9), context, coverage, trace, false), BigDecimal.class))));
+          return ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$zxUa), context, coverage, trace, false), VectorLike.class)).mul(BigDecimal.ONE.divide(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$zBjx), context, coverage, trace, false), BigDecimal.class))));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -731,14 +731,14 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return false;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectStyleDotTarget$3E, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/6088688976853612123", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectStyleDotTarget$nd, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/6088688976853612123", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           InternalObject object = (InternalObject) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
-          return context.getRootInterpreter().evaluate(AbstractObjectDefinition__BehaviorDescriptor.getStyleValueForKey_id5hZn_PXc5xY.invoke(object.node, SLinkOperations.getTarget(node, LINKS.styleKey$ANGW)), context, coverage, trace, false);
+          return context.getRootInterpreter().evaluate(AbstractObjectDefinition__BehaviorDescriptor.getStyleValueForKey_id5hZn_PXc5xY.invoke(object.node, SLinkOperations.getTarget(node, LINKS.styleKey$MA4B)), context, coverage, trace, false);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -777,63 +777,63 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
   private static final EnumerationLiteralsIndex enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, 0x6520d39c9504b3f4L, 0x6520d39c9504b3d9L, 0x6520d39c9504b3daL, 0x6520d39c9504b3ddL, 0x6520d39c9504b3eeL, 0x6520d39c9504b3e9L);
 
   private static final class PROPS {
-    /*package*/ static final SProperty component$_d4D = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
+    /*package*/ static final SProperty component$Szq = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept VectorComponentTarget$ME = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, "jetbrains.mps.samples.Physics.structure.VectorComponentTarget");
-    /*package*/ static final SConcept CartesianCoordinates$U8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates");
-    /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
-    /*package*/ static final SConcept SphericalCoordinates$W4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, "jetbrains.mps.samples.Physics.structure.SphericalCoordinates");
-    /*package*/ static final SConcept CylindricalCoordinates$9D = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, "jetbrains.mps.samples.Physics.structure.CylindricalCoordinates");
-    /*package*/ static final SConcept RelativeVector$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
-    /*package*/ static final SConcept AbstractVectorType$6J = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L, "jetbrains.mps.samples.Physics.types.structure.AbstractVectorType");
-    /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
-    /*package*/ static final SConcept DirectionalCoordinates$pa = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, "jetbrains.mps.samples.Physics.structure.DirectionalCoordinates");
-    /*package*/ static final SConcept TargetableObjectExpression$cD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableObjectExpression");
-    /*package*/ static final SConcept ObjectReferenceExpression$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
-    /*package*/ static final SConcept WorldNestedObjectTarget$p3 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, "jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget");
-    /*package*/ static final SConcept ObjectDistanceWithTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget");
-    /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
-    /*package*/ static final SConcept ObjectMassTarget$_T = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
-    /*package*/ static final SConcept ObjectVelocityTarget$a7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4a4717912b4b2f7eL, "jetbrains.mps.samples.Physics.structure.ObjectVelocityTarget");
-    /*package*/ static final SConcept VectorResizeTarget$Am = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, "jetbrains.mps.samples.Physics.structure.VectorResizeTarget");
-    /*package*/ static final SConcept AbstractDimensionType$C7 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x300307d5d92dba32L, "jetbrains.mps.samples.Physics.dimensions.structure.AbstractDimensionType");
-    /*package*/ static final SConcept ObjectPositionTarget$we = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a71bL, "jetbrains.mps.samples.Physics.structure.ObjectPositionTarget");
-    /*package*/ static final SConcept VectorOppositeTarget$Ac = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL, "jetbrains.mps.samples.Physics.structure.VectorOppositeTarget");
-    /*package*/ static final SConcept WorldMassCenterTarget$Mg = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a750L, "jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget");
-    /*package*/ static final SConcept CurrentObjectExpression$eH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L, "jetbrains.mps.samples.Physics.structure.CurrentObjectExpression");
-    /*package*/ static final SConcept CurrentWorldExpression$l8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
-    /*package*/ static final SConcept PlusExpression$Dn = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
-    /*package*/ static final SConcept MulExpression$_u = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
-    /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
-    /*package*/ static final SConcept ObjectStyleDotTarget$3E = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, "jetbrains.mps.samples.Physics.structure.ObjectStyleDotTarget");
+    /*package*/ static final SConcept VectorComponentTarget$6d = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, "jetbrains.mps.samples.Physics.structure.VectorComponentTarget");
+    /*package*/ static final SConcept CartesianCoordinates$dF = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates");
+    /*package*/ static final SConcept RealType$36 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
+    /*package*/ static final SConcept SphericalCoordinates$fB = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, "jetbrains.mps.samples.Physics.structure.SphericalCoordinates");
+    /*package*/ static final SConcept CylindricalCoordinates$tc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, "jetbrains.mps.samples.Physics.structure.CylindricalCoordinates");
+    /*package*/ static final SConcept RelativeVector$vE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
+    /*package*/ static final SConcept AbstractVectorType$Ll = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L, "jetbrains.mps.samples.Physics.types.structure.AbstractVectorType");
+    /*package*/ static final SConcept DirectionType$al = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SConcept DirectionalCoordinates$GH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, "jetbrains.mps.samples.Physics.structure.DirectionalCoordinates");
+    /*package*/ static final SConcept TargetableObjectExpression$wc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableObjectExpression");
+    /*package*/ static final SConcept ObjectReferenceExpression$HX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
+    /*package*/ static final SConcept WorldNestedObjectTarget$GA = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, "jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget");
+    /*package*/ static final SConcept ObjectDistanceWithTarget$8g = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget");
+    /*package*/ static final SConcept ObjectType$7_ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
+    /*package*/ static final SConcept ObjectMassTarget$Ts = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
+    /*package*/ static final SConcept ObjectVelocityTarget$tE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4a4717912b4b2f7eL, "jetbrains.mps.samples.Physics.structure.ObjectVelocityTarget");
+    /*package*/ static final SConcept VectorResizeTarget$TT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, "jetbrains.mps.samples.Physics.structure.VectorResizeTarget");
+    /*package*/ static final SConcept AbstractDimensionType$er = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x300307d5d92dba32L, "jetbrains.mps.samples.Physics.dimensions.structure.AbstractDimensionType");
+    /*package*/ static final SConcept ObjectPositionTarget$NL = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a71bL, "jetbrains.mps.samples.Physics.structure.ObjectPositionTarget");
+    /*package*/ static final SConcept VectorOppositeTarget$TJ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab6a0bccL, "jetbrains.mps.samples.Physics.structure.VectorOppositeTarget");
+    /*package*/ static final SConcept WorldMassCenterTarget$5N = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a750L, "jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget");
+    /*package*/ static final SConcept CurrentObjectExpression$yg = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L, "jetbrains.mps.samples.Physics.structure.CurrentObjectExpression");
+    /*package*/ static final SConcept CurrentWorldExpression$CF = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
+    /*package*/ static final SConcept PlusExpression$mx = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
+    /*package*/ static final SConcept MulExpression$iC = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
+    /*package*/ static final SConcept DivExpression$us = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
+    /*package*/ static final SConcept ObjectStyleDotTarget$nd = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, "jetbrains.mps.samples.Physics.structure.ObjectStyleDotTarget");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink dx$VpuT = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a580637L, "dx");
-    /*package*/ static final SContainmentLink dy$VWrJ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807eeL, "dy");
-    /*package*/ static final SContainmentLink dz$VWBn = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807f1L, "dz");
-    /*package*/ static final SContainmentLink distance$xDc5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
-    /*package*/ static final SContainmentLink theta$xDa9 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2578L, "theta");
-    /*package*/ static final SContainmentLink phi$xD9b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2576L, "phi");
-    /*package*/ static final SContainmentLink axialDistance$ip5F = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996952L, "axialDistance");
-    /*package*/ static final SContainmentLink phi$ip6D = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996954L, "phi");
-    /*package*/ static final SContainmentLink height$ip86 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996957L, "height");
-    /*package*/ static final SContainmentLink relativeFrom$gwcw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
-    /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
-    /*package*/ static final SContainmentLink direction$2h5b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4472L, "direction");
-    /*package*/ static final SContainmentLink source$L$qG = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x3ed90da58b6e2fb6L, "source");
-    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
-    /*package*/ static final SContainmentLink length$2h69 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4474L, "length");
-    /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
-    /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
-    /*package*/ static final SReferenceLink target$g02E = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, 0x22ff7dd8e38793cbL, "target");
-    /*package*/ static final SContainmentLink target$oizF = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, 0x339d8f0ab560d04L, "target");
-    /*package*/ static final SContainmentLink newLength$Gnlv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, 0x306daaa2cbe24f96L, "newLength");
-    /*package*/ static final SContainmentLink left$gQj0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c16L, "left");
-    /*package*/ static final SContainmentLink right$gQu9 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c18L, "right");
-    /*package*/ static final SContainmentLink styleKey$ANGW = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, 0x29b2190b93c8e280L, "styleKey");
+    /*package*/ static final SContainmentLink dx$KTha = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a580637L, "dx");
+    /*package*/ static final SContainmentLink dy$1OJk = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807eeL, "dy");
+    /*package*/ static final SContainmentLink dz$1UnG = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807f1L, "dz");
+    /*package*/ static final SContainmentLink distance$iw9Y = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
+    /*package*/ static final SContainmentLink theta$ivdU = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2578L, "theta");
+    /*package*/ static final SContainmentLink phi$iuJS = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2576L, "phi");
+    /*package*/ static final SContainmentLink axialDistance$TH3o = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996952L, "axialDistance");
+    /*package*/ static final SContainmentLink phi$THxq = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996954L, "phi");
+    /*package*/ static final SContainmentLink height$TIet = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996957L, "height");
+    /*package*/ static final SContainmentLink relativeFrom$Z9n3 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
+    /*package*/ static final SContainmentLink coordinates$bdEA = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
+    /*package*/ static final SContainmentLink direction$5ONS = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4472L, "direction");
+    /*package*/ static final SContainmentLink source$ceR = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x3ed90da58b6e2fb6L, "source");
+    /*package*/ static final SContainmentLink position$2BSz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
+    /*package*/ static final SContainmentLink length$5PhU = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, 0x6d74ae1e883a4474L, "length");
+    /*package*/ static final SContainmentLink expression$Va$7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
+    /*package*/ static final SReferenceLink target$MKwz = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
+    /*package*/ static final SReferenceLink target$J$_T = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, 0x22ff7dd8e38793cbL, "target");
+    /*package*/ static final SContainmentLink target$Ky_o = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, 0x339d8f0ab560d04L, "target");
+    /*package*/ static final SContainmentLink newLength$uQH$ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, 0x306daaa2cbe24f96L, "newLength");
+    /*package*/ static final SContainmentLink left$zxUa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c16L, "left");
+    /*package*/ static final SContainmentLink right$zBjx = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c18L, "right");
+    /*package*/ static final SContainmentLink styleKey$MA4B = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, 0x29b2190b93c8e280L, "styleKey");
   }
 }

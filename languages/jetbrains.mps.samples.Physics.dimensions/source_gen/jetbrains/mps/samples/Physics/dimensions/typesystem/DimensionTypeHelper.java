@@ -30,11 +30,11 @@ import org.jetbrains.mps.openapi.language.SProperty;
 
 public class DimensionTypeHelper {
   public static boolean isDimension(SNode node) {
-    return SNodeOperations.isInstanceOf(node, CONCEPTS.DimensionType$yz) && Type__BehaviorDescriptor.getCapabilityRequirement_id7McqtXGyz8c.invoke(SNodeOperations.cast(node, CONCEPTS.Type$fA)) instanceof UnitHandlingCapablity;
+    return SNodeOperations.isInstanceOf(node, CONCEPTS.DimensionType$8R) && Type__BehaviorDescriptor.getCapabilityRequirement_id7McqtXGyz8c.invoke(SNodeOperations.cast(node, CONCEPTS.Type$WK)) instanceof UnitHandlingCapablity;
   }
 
   public static boolean isRegularType(SNode node) {
-    return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.as(node, CONCEPTS.Type$fA));
+    return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.as(node, CONCEPTS.Type$WK));
   }
 
   public static boolean bothAreDimensions(SNode one, SNode two) {
@@ -54,8 +54,8 @@ public class DimensionTypeHelper {
   }
 
   public static boolean areCompatible(SNode left, SNode right) {
-    Map<SNode, Rational> leftUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(left, LINKS.units$o6Ow));
-    Map<SNode, Rational> rightUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(right, LINKS.units$o6Ow));
+    Map<SNode, Rational> leftUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(left, LINKS.units$qq1O));
+    Map<SNode, Rational> rightUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(right, LINKS.units$qq1O));
 
     return DimensionMapsHelper.matches(leftUnits, rightUnits);
   }
@@ -94,8 +94,8 @@ public class DimensionTypeHelper {
     BigDecimal ratio = BigDecimal.ONE;
 
     {
-      final SNode derived = SLinkOperations.getTarget(unit, LINKS.unit$2BcY);
-      if (SNodeOperations.isInstanceOf(derived, CONCEPTS.DerivedUnit$zb)) {
+      final SNode derived = SLinkOperations.getTarget(unit, LINKS.unit$5Sm);
+      if (SNodeOperations.isInstanceOf(derived, CONCEPTS.DerivedUnit$9v)) {
         ratio = simpleConverterRatio(derived, IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(unit), targetToBase).multiply(ratio);
       }
     }
@@ -103,7 +103,7 @@ public class DimensionTypeHelper {
     // If the dimension is a composite one 
     {
       final SNode composite = UnitReference__BehaviorDescriptor.getDimension_ideHVwIHgU5$.invoke(unit);
-      if (SNodeOperations.isInstanceOf(composite, CONCEPTS.CompositeDimension$ZV)) {
+      if (SNodeOperations.isInstanceOf(composite, CONCEPTS.CompositeDimension$Af)) {
         BigDecimal decompositionRatio = decomposeRatio(composite);
         ratio = ratio.multiply((targetToBase ? BigDecimal.ONE.divide(decompositionRatio, MathContext.DECIMAL128) : decompositionRatio));
       }
@@ -117,10 +117,10 @@ public class DimensionTypeHelper {
    * Conversion ratio issued from a converter (composite dimension, derived unit...)
    */
   public static BigDecimal simpleConverterRatio(SNode targetUnit, Rational exponent, boolean targetToBase) {
-    BigDecimal pow = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(targetUnit, PROPS.factor$Z2DZ)), exponent.BigDecimalValue(MathContext.DECIMAL32));
+    BigDecimal pow = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(targetUnit, PROPS.factor$hoVP)), exponent.BigDecimalValue(MathContext.DECIMAL32));
 
     // Target unit on the left of the converter (or reversed) 
-    if (SPropertyOperations.getBoolean(targetUnit, PROPS.selfLeft$Z2EX) == targetToBase) {
+    if (SPropertyOperations.getBoolean(targetUnit, PROPS.selfLeft$hppR) == targetToBase) {
       return pow;
     } else {
       return BigDecimal.ONE.divide(pow, MathContext.DECIMAL128);
@@ -132,15 +132,15 @@ public class DimensionTypeHelper {
    * Conversion ratio when decomposing a dimension
    */
   public static BigDecimal decomposeRatio(SNode composite) {
-    final Wrappers._T<BigDecimal> result = new Wrappers._T<BigDecimal>(new BigDecimal(SPropertyOperations.getString(composite, PROPS.factor$Z2DZ)));
-    result.value = (SPropertyOperations.getBoolean(composite, PROPS.selfLeft$Z2EX) ? BigDecimal.ONE.divide(result.value, MathContext.DECIMAL128) : result.value);
+    final Wrappers._T<BigDecimal> result = new Wrappers._T<BigDecimal>(new BigDecimal(SPropertyOperations.getString(composite, PROPS.factor$hoVP)));
+    result.value = (SPropertyOperations.getBoolean(composite, PROPS.selfLeft$hppR) ? BigDecimal.ONE.divide(result.value, MathContext.DECIMAL128) : result.value);
 
     // If the unit contains composite parent, apply their conversion ratio too 
-    ListSequence.fromList(SLinkOperations.getChildren(composite, LINKS.units$o6Ow)).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(SLinkOperations.getChildren(composite, LINKS.units$qq1O)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         {
           final SNode parent = it;
-          if (SNodeOperations.isInstanceOf(parent, CONCEPTS.CompositeDimension$ZV)) {
+          if (SNodeOperations.isInstanceOf(parent, CONCEPTS.CompositeDimension$Af)) {
             result.value = result.value.multiply(decomposeRatio(parent));
           }
         }
@@ -152,19 +152,19 @@ public class DimensionTypeHelper {
 
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
-    /*package*/ static final SConcept DerivedUnit$zb = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca800848L, "jetbrains.mps.samples.Physics.dimensions.structure.DerivedUnit");
-    /*package*/ static final SConcept CompositeDimension$ZV = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x38a7a450fc780041L, "jetbrains.mps.samples.Physics.dimensions.structure.CompositeDimension");
+    /*package*/ static final SConcept Type$WK = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept DerivedUnit$9v = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca800848L, "jetbrains.mps.samples.Physics.dimensions.structure.DerivedUnit");
+    /*package*/ static final SConcept CompositeDimension$Af = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x38a7a450fc780041L, "jetbrains.mps.samples.Physics.dimensions.structure.CompositeDimension");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
-    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SReferenceLink unit$5Sm = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty factor$Z2DZ = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835ca8L, "factor");
-    /*package*/ static final SProperty selfLeft$Z2EX = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835caaL, "selfLeft");
+    /*package*/ static final SProperty factor$hoVP = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835ca8L, "factor");
+    /*package*/ static final SProperty selfLeft$hppR = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835caaL, "selfLeft");
   }
 }

@@ -79,7 +79,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
   private EditorCell createReadOnlyModelAccessor_0() {
     EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new ModelAccessor.ReadOnly() {
       public String getText() {
-        return (SPropertyOperations.getBoolean(myNode, PROPS.selfLeft$Z2EX) ? ISimpleConverter__BehaviorDescriptor.getSelfString_id1fq3tlLwQff.invoke(myNode) : ISimpleConverter__BehaviorDescriptor.getTargetString_id1fq3tlLwQga.invoke(myNode));
+        return (SPropertyOperations.getBoolean(myNode, PROPS.selfLeft$hppR) ? ISimpleConverter__BehaviorDescriptor.getSelfString_id1fq3tlLwQff.invoke(myNode) : ISimpleConverter__BehaviorDescriptor.getTargetString_id1fq3tlLwQga.invoke(myNode));
       }
     }, myNode);
     editorCell.setAction(CellActionType.DELETE, EmptyCellAction.getInstance());
@@ -99,14 +99,14 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
   private EditorCell createProperty_0() {
     getCellFactory().pushCellContext();
     try {
-      final SProperty property = PROPS.factor$Z2DZ;
+      final SProperty property = PROPS.factor$hoVP;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
       editorCell.setDefaultText("<no factor>");
       editorCell.setCellId("C_property_factor");
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
-      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(AttributeOperations.getAttributeList(myNode, new IAttributeDescriptor.AllAttributes()), CONCEPTS.PropertyAttribute$jT);
+      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(AttributeOperations.getAttributeList(myNode, new IAttributeDescriptor.AllAttributes()), CONCEPTS.PropertyAttribute$Gb);
       Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
@@ -124,7 +124,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
   private EditorCell createReadOnlyModelAccessor_1() {
     EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new ModelAccessor.ReadOnly() {
       public String getText() {
-        return (SPropertyOperations.getBoolean(myNode, PROPS.selfLeft$Z2EX) ? ISimpleConverter__BehaviorDescriptor.getTargetString_id1fq3tlLwQga.invoke(myNode) : ISimpleConverter__BehaviorDescriptor.getSelfString_id1fq3tlLwQff.invoke(myNode));
+        return (SPropertyOperations.getBoolean(myNode, PROPS.selfLeft$hppR) ? ISimpleConverter__BehaviorDescriptor.getTargetString_id1fq3tlLwQga.invoke(myNode) : ISimpleConverter__BehaviorDescriptor.getSelfString_id1fq3tlLwQff.invoke(myNode));
       }
     }, myNode);
     editorCell.setAction(CellActionType.DELETE, EmptyCellAction.getInstance());
@@ -141,18 +141,18 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.ISimpleConverter$$d));
+    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.ISimpleConverter$ax));
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty selfLeft$Z2EX = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835caaL, "selfLeft");
-    /*package*/ static final SProperty factor$Z2DZ = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835ca8L, "factor");
+    /*package*/ static final SProperty selfLeft$hppR = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835caaL, "selfLeft");
+    /*package*/ static final SProperty factor$hoVP = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835ca8L, "factor");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept PropertyAttribute$jT = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SInterfaceConcept ISimpleConverter$$d = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, "jetbrains.mps.samples.Physics.dimensions.structure.ISimpleConverter");
+    /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
+    /*package*/ static final SInterfaceConcept ISimpleConverter$ax = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, "jetbrains.mps.samples.Physics.dimensions.structure.ISimpleConverter");
   }
 }

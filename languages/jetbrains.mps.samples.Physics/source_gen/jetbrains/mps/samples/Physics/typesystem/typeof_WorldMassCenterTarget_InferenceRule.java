@@ -26,7 +26,7 @@ public class typeof_WorldMassCenterTarget_InferenceRule extends AbstractInferenc
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.WorldMassCenterTarget$Mg;
+    return CONCEPTS.WorldMassCenterTarget$5N;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -52,6 +52,6 @@ public class typeof_WorldMassCenterTarget_InferenceRule extends AbstractInferenc
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept WorldMassCenterTarget$Mg = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a750L, "jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget");
+    /*package*/ static final SConcept WorldMassCenterTarget$5N = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a750L, "jetbrains.mps.samples.Physics.structure.WorldMassCenterTarget");
   }
 }

@@ -21,14 +21,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public class CoordinatesFactories {
   public static class NodeFactory_4809107873070200372 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SLinkOperations.setTarget(newNode, LINKS.axialDistance$ip5F, _quotation_createNode_gnt87a_a0a0a0());
-      SLinkOperations.setTarget(newNode, LINKS.height$ip86, _quotation_createNode_gnt87a_a0b0a0());
-      SLinkOperations.setTarget(newNode, LINKS.phi$ip6D, _quotation_createNode_gnt87a_a0c0a0());
+      SLinkOperations.setTarget(newNode, LINKS.axialDistance$TH3o, _quotation_createNode_gnt87a_a0a0a0());
+      SLinkOperations.setTarget(newNode, LINKS.height$TIet, _quotation_createNode_gnt87a_a0b0a0());
+      SLinkOperations.setTarget(newNode, LINKS.phi$THxq, _quotation_createNode_gnt87a_a0c0a0());
 
       //  Convert coordinates 
       {
         final SNode coords = sampleNode;
-        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.VectorExpression$HV)) {
+        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.VectorExpression$1u)) {
           VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
           CoordinateExpressionConverters.rawToCylindrical(vector, newNode, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(coords)));
         }
@@ -37,8 +37,8 @@ public class CoordinatesFactories {
       //  Keep z expression as it was matching perfectly 
       {
         final SNode carts = sampleNode;
-        if (SNodeOperations.isInstanceOf(carts, CONCEPTS.CartesianCoordinates$U8)) {
-          SLinkOperations.setTarget(newNode, LINKS.height$ip86, SNodeOperations.copyNode(SLinkOperations.getTarget(carts, LINKS.dz$VWBn)));
+        if (SNodeOperations.isInstanceOf(carts, CONCEPTS.CartesianCoordinates$dF)) {
+          SLinkOperations.setTarget(newNode, LINKS.height$TIet, SNodeOperations.copyNode(SLinkOperations.getTarget(carts, LINKS.dz$1UnG)));
         }
       }
     }
@@ -66,13 +66,13 @@ public class CoordinatesFactories {
   }
   public static class NodeFactory_4809107873070296905 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SLinkOperations.setTarget(newNode, LINKS.dx$VpuT, _quotation_createNode_gnt87a_a0a0a1());
-      SLinkOperations.setTarget(newNode, LINKS.dy$VWrJ, _quotation_createNode_gnt87a_a0b0a1());
-      SLinkOperations.setTarget(newNode, LINKS.dz$VWBn, _quotation_createNode_gnt87a_a0c0a1());
+      SLinkOperations.setTarget(newNode, LINKS.dx$KTha, _quotation_createNode_gnt87a_a0a0a1());
+      SLinkOperations.setTarget(newNode, LINKS.dy$1OJk, _quotation_createNode_gnt87a_a0b0a1());
+      SLinkOperations.setTarget(newNode, LINKS.dz$1UnG, _quotation_createNode_gnt87a_a0c0a1());
 
       {
         final SNode coords = sampleNode;
-        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.VectorExpression$HV)) {
+        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.VectorExpression$1u)) {
           VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
           CoordinateExpressionConverters.rawToCartesian(vector, newNode, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(coords)));
         }
@@ -81,8 +81,8 @@ public class CoordinatesFactories {
       //  Keep z expression as it was matching perfectly 
       {
         final SNode cyl = sampleNode;
-        if (SNodeOperations.isInstanceOf(cyl, CONCEPTS.CylindricalCoordinates$9D)) {
-          SLinkOperations.setTarget(newNode, LINKS.dz$VWBn, SNodeOperations.copyNode(SLinkOperations.getTarget(cyl, LINKS.height$ip86)));
+        if (SNodeOperations.isInstanceOf(cyl, CONCEPTS.CylindricalCoordinates$tc)) {
+          SLinkOperations.setTarget(newNode, LINKS.dz$1UnG, SNodeOperations.copyNode(SLinkOperations.getTarget(cyl, LINKS.height$TIet)));
         }
       }
 
@@ -111,14 +111,14 @@ public class CoordinatesFactories {
   }
   public static class NodeFactory_4809107873070306457 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SLinkOperations.setTarget(newNode, LINKS.distance$xDc5, _quotation_createNode_gnt87a_a0a0a2());
-      SLinkOperations.setTarget(newNode, LINKS.theta$xDa9, _quotation_createNode_gnt87a_a0b0a2());
-      SLinkOperations.setTarget(newNode, LINKS.phi$xD9b, _quotation_createNode_gnt87a_a0c0a2());
+      SLinkOperations.setTarget(newNode, LINKS.distance$iw9Y, _quotation_createNode_gnt87a_a0a0a2());
+      SLinkOperations.setTarget(newNode, LINKS.theta$ivdU, _quotation_createNode_gnt87a_a0b0a2());
+      SLinkOperations.setTarget(newNode, LINKS.phi$iuJS, _quotation_createNode_gnt87a_a0c0a2());
 
 
       {
         final SNode coords = sampleNode;
-        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.VectorExpression$HV)) {
+        if (SNodeOperations.isInstanceOf(coords, CONCEPTS.VectorExpression$1u)) {
           VectorLike vector = CoordinateExpressionConverters.anyToRaw(coords);
           CoordinateExpressionConverters.rawToSpherical(vector, newNode, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(coords)));
         }
@@ -127,8 +127,8 @@ public class CoordinatesFactories {
       //  Keep phi expression as it was matching perfectly 
       {
         final SNode cyl = sampleNode;
-        if (SNodeOperations.isInstanceOf(cyl, CONCEPTS.CylindricalCoordinates$9D)) {
-          SLinkOperations.setTarget(newNode, LINKS.phi$xD9b, SNodeOperations.copyNode(SLinkOperations.getTarget(cyl, LINKS.phi$ip6D)));
+        if (SNodeOperations.isInstanceOf(cyl, CONCEPTS.CylindricalCoordinates$tc)) {
+          SLinkOperations.setTarget(newNode, LINKS.phi$iuJS, SNodeOperations.copyNode(SLinkOperations.getTarget(cyl, LINKS.phi$THxq)));
         }
       }
     }
@@ -170,20 +170,20 @@ public class CoordinatesFactories {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink axialDistance$ip5F = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996952L, "axialDistance");
-    /*package*/ static final SContainmentLink height$ip86 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996957L, "height");
-    /*package*/ static final SContainmentLink phi$ip6D = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996954L, "phi");
-    /*package*/ static final SContainmentLink dz$VWBn = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807f1L, "dz");
-    /*package*/ static final SContainmentLink dx$VpuT = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a580637L, "dx");
-    /*package*/ static final SContainmentLink dy$VWrJ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807eeL, "dy");
-    /*package*/ static final SContainmentLink distance$xDc5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
-    /*package*/ static final SContainmentLink theta$xDa9 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2578L, "theta");
-    /*package*/ static final SContainmentLink phi$xD9b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2576L, "phi");
+    /*package*/ static final SContainmentLink axialDistance$TH3o = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996952L, "axialDistance");
+    /*package*/ static final SContainmentLink height$TIet = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996957L, "height");
+    /*package*/ static final SContainmentLink phi$THxq = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, 0xb0d6374ec996954L, "phi");
+    /*package*/ static final SContainmentLink dz$1UnG = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807f1L, "dz");
+    /*package*/ static final SContainmentLink dx$KTha = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a580637L, "dx");
+    /*package*/ static final SContainmentLink dy$1OJk = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, 0x1441545e2a5807eeL, "dy");
+    /*package*/ static final SContainmentLink distance$iw9Y = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
+    /*package*/ static final SContainmentLink theta$ivdU = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2578L, "theta");
+    /*package*/ static final SContainmentLink phi$iuJS = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2576L, "phi");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept VectorExpression$HV = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.VectorExpression");
-    /*package*/ static final SConcept CartesianCoordinates$U8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates");
-    /*package*/ static final SConcept CylindricalCoordinates$9D = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, "jetbrains.mps.samples.Physics.structure.CylindricalCoordinates");
+    /*package*/ static final SConcept VectorExpression$1u = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a1443864979L, "jetbrains.mps.samples.Physics.structure.VectorExpression");
+    /*package*/ static final SConcept CartesianCoordinates$dF = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8bL, "jetbrains.mps.samples.Physics.structure.CartesianCoordinates");
+    /*package*/ static final SConcept CylindricalCoordinates$tc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec996951L, "jetbrains.mps.samples.Physics.structure.CylindricalCoordinates");
   }
 }

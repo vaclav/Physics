@@ -60,7 +60,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     return editorCell;
   }
   private boolean nodeCondition_hg8deu_a1a() {
-    return SPropertyOperations.getBoolean(myNode, PROPS.isPointRelative$86Nw);
+    return SPropertyOperations.getBoolean(myNode, PROPS.isPointRelative$UQg3);
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "applied at");
@@ -68,7 +68,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     Style style = new StyleImpl();
     new AttributeLabelStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
-    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.IForceWithApplicationPoint$_T, "jetbrains.mps.samples.Physics.editor.Relative_ApplicationPoint_Transform"));
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.IForceWithApplicationPoint$Ts, "jetbrains.mps.samples.Physics.editor.Relative_ApplicationPoint_Transform"));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
@@ -85,7 +85,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new applicationPointSingleRoleHandler_hg8deu_c0(myNode, LINKS.applicationPoint$86Ou, getEditorContext());
+    SingleRoleCellProvider provider = new applicationPointSingleRoleHandler_hg8deu_c0(myNode, LINKS.applicationPoint$UQI5, getEditorContext());
     return provider.createCell();
   }
   private static class applicationPointSingleRoleHandler_hg8deu_c0 extends SingleRoleCellProvider {
@@ -105,8 +105,8 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.applicationPoint$86Ou, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.applicationPoint$86Ou, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.applicationPoint$UQI5, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.applicationPoint$UQI5, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -118,13 +118,13 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.applicationPoint$86Ou);
+        editorCell.setSRole(LINKS.applicationPoint$UQI5);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.applicationPoint$86Ou));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.applicationPoint$UQI5));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_applicationPoint");
@@ -141,14 +141,14 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isPointRelative$86Nw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bddL, "isPointRelative");
+    /*package*/ static final SProperty isPointRelative$UQg3 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bddL, "isPointRelative");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IForceWithApplicationPoint$_T = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, "jetbrains.mps.samples.Physics.structure.IForceWithApplicationPoint");
+    /*package*/ static final SInterfaceConcept IForceWithApplicationPoint$Ts = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, "jetbrains.mps.samples.Physics.structure.IForceWithApplicationPoint");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink applicationPoint$86Ou = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bdfL, "applicationPoint");
+    /*package*/ static final SContainmentLink applicationPoint$UQI5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bdfL, "applicationPoint");
   }
 }

@@ -24,7 +24,7 @@ public class typeof_Force_InferenceRule extends AbstractInferenceRule_Runtime im
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.Force$pC;
+    return CONCEPTS.Force$Hb;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -33,12 +33,12 @@ public class typeof_Force_InferenceRule extends AbstractInferenceRule_Runtime im
     return false;
   }
   private static SNode createForceType_h28vqx_a1a0c0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ForceType$fg);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ForceType$TQ);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Force$pC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
-    /*package*/ static final SConcept ForceType$fg = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1be152c15029f679L, "jetbrains.mps.samples.Physics.types.structure.ForceType");
+    /*package*/ static final SConcept Force$Hb = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
+    /*package*/ static final SConcept ForceType$TQ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1be152c15029f679L, "jetbrains.mps.samples.Physics.types.structure.ForceType");
   }
 }

@@ -5,3 +5,5 @@ The jar file was obtained by running "make" inside the anc folder of the library
 Author page : http://arxiv.org/abs/0908.3030v3
 
 Some description : https://stackoverflow.com/questions/16441769/javas-bigdecimal-powerbigdecimal-exponent-is-there-a-java-library-that-does
+
+License : https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html

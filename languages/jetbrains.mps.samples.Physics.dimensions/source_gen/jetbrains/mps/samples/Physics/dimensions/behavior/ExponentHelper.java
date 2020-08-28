@@ -14,25 +14,25 @@ public class ExponentHelper {
     return (rat.isInteger() ? createIntegerExponent_6af3ji_a0a0a(rat.numer().intValue()) : createFractionalExponent_6af3ji_a0a0a(rat.numer().intValue(), rat.denom().intValue()));
   }
   private static SNode createIntegerExponent_6af3ji_a0a0a(int p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.IntegerExponent$mI);
-    n0.setProperty(PROPS.value$FcCi, "" + (p0));
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.IntegerExponent$X2);
+    n0.setProperty(PROPS.value$Ee72, "" + (p0));
     return n0.getResult();
   }
   private static SNode createFractionalExponent_6af3ji_a0a0a(int p0, int p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.FractionalExponent$UK);
-    n0.setProperty(PROPS.numer$RN1x, "" + (p0));
-    n0.setProperty(PROPS.denom$RN2v, "" + (p1));
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.FractionalExponent$x4);
+    n0.setProperty(PROPS.numer$KOlj, "" + (p0));
+    n0.setProperty(PROPS.denom$KONl, "" + (p1));
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept IntegerExponent$mI = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, "jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent");
-    /*package*/ static final SConcept FractionalExponent$UK = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, "jetbrains.mps.samples.Physics.dimensions.structure.FractionalExponent");
+    /*package*/ static final SConcept IntegerExponent$X2 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, "jetbrains.mps.samples.Physics.dimensions.structure.IntegerExponent");
+    /*package*/ static final SConcept FractionalExponent$x4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, "jetbrains.mps.samples.Physics.dimensions.structure.FractionalExponent");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty value$FcCi = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x2a3b6653358e9e8L, "value");
-    /*package*/ static final SProperty numer$RN1x = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc5L, "numer");
-    /*package*/ static final SProperty denom$RN2v = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc7L, "denom");
+    /*package*/ static final SProperty value$Ee72 = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L, 0x2a3b6653358e9e8L, "value");
+    /*package*/ static final SProperty numer$KOlj = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc5L, "numer");
+    /*package*/ static final SProperty denom$KONl = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L, 0x2a3b6653359ddc7L, "denom");
   }
 }

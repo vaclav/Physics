@@ -24,7 +24,7 @@ public class typeof_TraceStyleKey_InferenceRule extends AbstractInferenceRule_Ru
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.TraceStyleKey$P4;
+    return CONCEPTS.TraceStyleKey$8B;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -33,11 +33,11 @@ public class typeof_TraceStyleKey_InferenceRule extends AbstractInferenceRule_Ru
     return false;
   }
   private static SNode createTraceStyleKey_1y3dv1_a1a0c0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TraceStyleKey$P4);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TraceStyleKey$8B);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept TraceStyleKey$P4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7ee8f855L, "jetbrains.mps.samples.Physics.structure.TraceStyleKey");
+    /*package*/ static final SConcept TraceStyleKey$8B = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x19a1be2f7ee8f855L, "jetbrains.mps.samples.Physics.structure.TraceStyleKey");
   }
 }

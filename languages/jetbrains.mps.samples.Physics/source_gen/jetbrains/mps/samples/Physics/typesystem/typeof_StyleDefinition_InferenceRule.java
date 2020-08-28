@@ -19,11 +19,11 @@ public class typeof_StyleDefinition_InferenceRule extends AbstractInferenceRule_
   }
   public void applyRule(final SNode styleDefinition, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode keyType = typeCheckingContext.typeOf(SLinkOperations.getTarget(styleDefinition, LINKS.key$4rdb), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3106918138153104784", true);
+      final SNode keyType = typeCheckingContext.typeOf(SLinkOperations.getTarget(styleDefinition, LINKS.key$8IFS), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3106918138153104784", true);
       typeCheckingContext.whenConcrete(keyType, new Runnable() {
         public void run() {
           {
-            final SNode valueType = typeCheckingContext.typeOf(SLinkOperations.getTarget(styleDefinition, LINKS.value$4y25), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3106918138153105094", true);
+            final SNode valueType = typeCheckingContext.typeOf(SLinkOperations.getTarget(styleDefinition, LINKS.value$c2jY), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3106918138153105094", true);
             typeCheckingContext.whenConcrete(valueType, new Runnable() {
               public void run() {
                 if (!(typeCheckingContext.isSingleTypeComputation())) {
@@ -41,7 +41,7 @@ public class typeof_StyleDefinition_InferenceRule extends AbstractInferenceRule_
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.StyleDefinition$Xd;
+    return CONCEPTS.StyleDefinition$gK;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -51,11 +51,11 @@ public class typeof_StyleDefinition_InferenceRule extends AbstractInferenceRule_
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink key$4rdb = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c4124fL, "key");
-    /*package*/ static final SContainmentLink value$4y25 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c412a2L, "value");
+    /*package*/ static final SContainmentLink key$8IFS = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c4124fL, "key");
+    /*package*/ static final SContainmentLink value$c2jY = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c412a2L, "value");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept StyleDefinition$Xd = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, "jetbrains.mps.samples.Physics.structure.StyleDefinition");
+    /*package*/ static final SConcept StyleDefinition$gK = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, "jetbrains.mps.samples.Physics.structure.StyleDefinition");
   }
 }

@@ -24,7 +24,7 @@ public class typeof_ShapeStyleExpression_InferenceRule extends AbstractInference
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ShapeStyleExpression$kL;
+    return CONCEPTS.ShapeStyleExpression$Ck;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -33,12 +33,12 @@ public class typeof_ShapeStyleExpression_InferenceRule extends AbstractInference
     return false;
   }
   private static SNode createShapeStyleKey_q9ww8m_a1a0c0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ShapeStyleKey$aa);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ShapeStyleKey$tH);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ShapeStyleExpression$kL = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2ddf664L, "jetbrains.mps.samples.Physics.structure.ShapeStyleExpression");
-    /*package*/ static final SConcept ShapeStyleKey$aa = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a67aL, "jetbrains.mps.samples.Physics.structure.ShapeStyleKey");
+    /*package*/ static final SConcept ShapeStyleExpression$Ck = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2ddf664L, "jetbrains.mps.samples.Physics.structure.ShapeStyleExpression");
+    /*package*/ static final SConcept ShapeStyleKey$tH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a67aL, "jetbrains.mps.samples.Physics.structure.ShapeStyleKey");
   }
 }

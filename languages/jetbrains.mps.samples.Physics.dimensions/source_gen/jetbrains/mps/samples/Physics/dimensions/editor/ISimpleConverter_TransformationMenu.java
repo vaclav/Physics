@@ -92,7 +92,7 @@ public class ISimpleConverter_TransformationMenu extends TransformationMenuBase 
 
       @Override
       public void execute(@NotNull String pattern) {
-        SPropertyOperations.assign(_context.getNode(), PROPS.selfLeft$Z2EX, !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.selfLeft$Z2EX)));
+        SPropertyOperations.assign(_context.getNode(), PROPS.selfLeft$hppR, !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.selfLeft$hppR)));
       }
 
 
@@ -108,6 +108,6 @@ public class ISimpleConverter_TransformationMenu extends TransformationMenuBase 
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty selfLeft$Z2EX = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835caaL, "selfLeft");
+    /*package*/ static final SProperty selfLeft$hppR = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835caaL, "selfLeft");
   }
 }

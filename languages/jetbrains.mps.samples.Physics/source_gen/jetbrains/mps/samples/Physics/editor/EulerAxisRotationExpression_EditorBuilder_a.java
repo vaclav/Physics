@@ -174,7 +174,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new axisSingleRoleHandler_ar3zdy_b0a0(myNode, LINKS.axis$r4At, getEditorContext());
+    SingleRoleCellProvider provider = new axisSingleRoleHandler_ar3zdy_b0a0(myNode, LINKS.axis$6LVA, getEditorContext());
     return provider.createCell();
   }
   private static class axisSingleRoleHandler_ar3zdy_b0a0 extends SingleRoleCellProvider {
@@ -194,8 +194,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.axis$r4At, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.axis$r4At, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.axis$6LVA, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.axis$6LVA, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -207,7 +207,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.axis$r4At);
+        editorCell.setSRole(LINKS.axis$6LVA);
       }
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
@@ -216,7 +216,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.axis$r4At));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.axis$6LVA));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_axis");
@@ -241,7 +241,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new angleSingleRoleHandler_ar3zdy_d0a0(myNode, LINKS.angle$r4CS, getEditorContext());
+    SingleRoleCellProvider provider = new angleSingleRoleHandler_ar3zdy_d0a0(myNode, LINKS.angle$6N6F, getEditorContext());
     return provider.createCell();
   }
   private static class angleSingleRoleHandler_ar3zdy_d0a0 extends SingleRoleCellProvider {
@@ -261,8 +261,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.angle$r4CS, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.angle$r4CS, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.angle$6N6F, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.angle$6N6F, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -274,13 +274,13 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.angle$r4CS);
+        editorCell.setSRole(LINKS.angle$6N6F);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.angle$r4CS));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.angle$6N6F));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_angle");
@@ -297,7 +297,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink axis$r4At = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c232f1L, 0x4dcb9d0527c2499aL, "axis");
-    /*package*/ static final SContainmentLink angle$r4CS = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c232f1L, 0x4dcb9d0527c2499fL, "angle");
+    /*package*/ static final SContainmentLink axis$6LVA = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c232f1L, 0x4dcb9d0527c2499aL, "axis");
+    /*package*/ static final SContainmentLink angle$6N6F = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dcb9d0527c232f1L, 0x4dcb9d0527c2499fL, "angle");
   }
 }

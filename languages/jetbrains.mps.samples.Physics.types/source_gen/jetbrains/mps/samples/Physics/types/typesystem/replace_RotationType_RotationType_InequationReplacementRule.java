@@ -23,12 +23,12 @@ public class replace_RotationType_RotationType_InequationReplacementRule extends
       SNode _nodeToCheck_1029348928467 = equationInfo.getNodeWithError();
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)", "913483291044399148", 0, null);
       _info_12389875345.getOuterRulesIdFromInfo(equationInfo);
-      typeCheckingContext.createLessThanInequality((SNode) SLinkOperations.getTarget(subtype, LINKS.nestedType$w52B), (SNode) SLinkOperations.getTarget(supertype, LINKS.nestedType$w52B), false, true, _info_12389875345);
+      typeCheckingContext.createLessThanInequality((SNode) SLinkOperations.getTarget(subtype, LINKS.nestedType$uIVv), (SNode) SLinkOperations.getTarget(supertype, LINKS.nestedType$uIVv), false, true, _info_12389875345);
     }
   }
   public boolean checkInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
     boolean result_14532009 = true;
-    result_14532009 = result_14532009 && TypecheckingFacade.getFromContext().isSubtype((SNode) SLinkOperations.getTarget(subtype, LINKS.nestedType$w52B), (SNode) SLinkOperations.getTarget(supertype, LINKS.nestedType$w52B));
+    result_14532009 = result_14532009 && TypecheckingFacade.getFromContext().isSubtype((SNode) SLinkOperations.getTarget(subtype, LINKS.nestedType$uIVv), (SNode) SLinkOperations.getTarget(supertype, LINKS.nestedType$uIVv));
     return result_14532009;
   }
   public boolean isWeak() {
@@ -42,17 +42,17 @@ public class replace_RotationType_RotationType_InequationReplacementRule extends
   }
 
   public SAbstractConcept getApplicableSubtypeConcept() {
-    return CONCEPTS.RotationType$YX;
+    return CONCEPTS.RotationType$Dz;
   }
   public SAbstractConcept getApplicableSupertypeConcept() {
-    return CONCEPTS.RotationType$YX;
+    return CONCEPTS.RotationType$Dz;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink nestedType$w52B = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L, 0x777af24c0465feb3L, "nestedType");
+    /*package*/ static final SContainmentLink nestedType$uIVv = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L, 0x777af24c0465feb3L, "nestedType");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept RotationType$YX = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L, "jetbrains.mps.samples.Physics.types.structure.RotationType");
+    /*package*/ static final SConcept RotationType$Dz = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L, "jetbrains.mps.samples.Physics.types.structure.RotationType");
   }
 }

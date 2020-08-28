@@ -34,14 +34,14 @@ public final class ObjectReferenceExpression__BehaviorDescriptor extends BaseBHD
   }
 
   /*package*/ static SNode getLocalizedObjectTarget_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.target$EWj0);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.target$MKwz);
   }
   /*package*/ static SNode getWorldTarget_id2bZvtzzMbSH(@NotNull SNode __thisNode__) {
-    SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.target$EWj0));
+    SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.target$MKwz));
 
     {
       final SNode world = definition;
-      if (SNodeOperations.isInstanceOf(world, CONCEPTS.WorldDefinition$Xn)) {
+      if (SNodeOperations.isInstanceOf(world, CONCEPTS.WorldDefinition$gU)) {
         return world;
       }
     }
@@ -97,10 +97,10 @@ public final class ObjectReferenceExpression__BehaviorDescriptor extends BaseBHD
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
+    /*package*/ static final SReferenceLink target$MKwz = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept WorldDefinition$Xn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
+    /*package*/ static final SConcept WorldDefinition$gU = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
   }
 }

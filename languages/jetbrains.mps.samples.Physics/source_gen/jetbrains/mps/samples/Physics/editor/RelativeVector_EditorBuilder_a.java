@@ -54,7 +54,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
     editorCell.setCellId("Collection_crwxfi_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
-    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.RelativeVector$c7, "jetbrains.mps.samples.Physics.editor.Oriented_RelativeCoordinates_Transform"));
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.RelativeVector$vE, "jetbrains.mps.samples.Physics.editor.Oriented_RelativeCoordinates_Transform"));
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     editorCell.addEditorCell(createRefNode_0());
     editorCell.addEditorCell(createConstant_0());
@@ -66,10 +66,10 @@ import org.jetbrains.mps.openapi.language.SProperty;
     return editorCell;
   }
   private boolean nodeCondition_crwxfi_a2a() {
-    return SPropertyOperations.getBoolean(myNode, PROPS.isOriented$Afmy);
+    return SPropertyOperations.getBoolean(myNode, PROPS.isOriented$wZe1);
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new coordinatesSingleRoleHandler_crwxfi_a0(myNode, LINKS.coordinates$l1nt, getEditorContext());
+    SingleRoleCellProvider provider = new coordinatesSingleRoleHandler_crwxfi_a0(myNode, LINKS.coordinates$bdEA, getEditorContext());
     return provider.createCell();
   }
   private static class coordinatesSingleRoleHandler_crwxfi_a0 extends SingleRoleCellProvider {
@@ -89,8 +89,8 @@ import org.jetbrains.mps.openapi.language.SProperty;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.coordinates$l1nt, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.coordinates$l1nt, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.coordinates$bdEA, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.coordinates$bdEA, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -102,13 +102,13 @@ import org.jetbrains.mps.openapi.language.SProperty;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.coordinates$l1nt);
+        editorCell.setSRole(LINKS.coordinates$bdEA);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.coordinates$l1nt));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.coordinates$bdEA));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_coordinates");
@@ -131,7 +131,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
     style.set(StyleAttributes.EDITABLE, false);
     editorCell.getStyle().putAll(style);
     RelativeCoordinates_Remove.setCellActions(editorCell, myNode, getEditorContext());
-    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.RelativeVector$c7, "jetbrains.mps.samples.Physics.editor.Oriented_RelativeCoordinates_Transform"));
+    editorCell.setTransformationMenuLookup(new NamedTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.RelativeVector$vE, "jetbrains.mps.samples.Physics.editor.Oriented_RelativeCoordinates_Transform"));
     editorCell.setDefaultText("");
     editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     return editorCell;
@@ -148,7 +148,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
     return editorCell;
   }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new relativeFromSingleRoleHandler_crwxfi_d0(myNode, LINKS.relativeFrom$gwcw, getEditorContext());
+    SingleRoleCellProvider provider = new relativeFromSingleRoleHandler_crwxfi_d0(myNode, LINKS.relativeFrom$Z9n3, getEditorContext());
     return provider.createCell();
   }
   private static class relativeFromSingleRoleHandler_crwxfi_d0 extends SingleRoleCellProvider {
@@ -168,8 +168,8 @@ import org.jetbrains.mps.openapi.language.SProperty;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.relativeFrom$gwcw, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.relativeFrom$gwcw, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.relativeFrom$Z9n3, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.relativeFrom$Z9n3, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -181,13 +181,13 @@ import org.jetbrains.mps.openapi.language.SProperty;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.relativeFrom$gwcw);
+        editorCell.setSRole(LINKS.relativeFrom$Z9n3);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.relativeFrom$gwcw));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.relativeFrom$Z9n3));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_relativeFrom");
@@ -212,15 +212,15 @@ import org.jetbrains.mps.openapi.language.SProperty;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept RelativeVector$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
+    /*package*/ static final SConcept RelativeVector$vE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isOriented$Afmy = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x89beb47905fe8dbL, "isOriented");
+    /*package*/ static final SProperty isOriented$wZe1 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x89beb47905fe8dbL, "isOriented");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
-    /*package*/ static final SContainmentLink relativeFrom$gwcw = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
+    /*package*/ static final SContainmentLink coordinates$bdEA = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
+    /*package*/ static final SContainmentLink relativeFrom$Z9n3 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x584bed834752fa6cL, "relativeFrom");
   }
 }

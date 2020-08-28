@@ -90,7 +90,7 @@
       <node id="1481770243885540083" at="216,68,217,205" concept="7" />
       <node id="4528665904957742626" at="217,205,218,0" concept="10" />
       <node id="3489632902462116020" at="218,0,219,33" concept="7" />
-      <node id="4528665904958523824" at="220,77,221,197" concept="3" />
+      <node id="4528665904958523824" at="220,76,221,196" concept="3" />
       <node id="3489632902462090319" at="222,18,223,105" concept="7" />
       <node id="4528665904958549332" at="223,105,224,0" concept="10" />
       <node id="1139474844807071070" at="224,0,225,92" concept="9" />
@@ -293,58 +293,58 @@
       <node id="1387628150976486366" at="773,274,774,265" concept="3" />
       <node id="5369611234110049828" at="774,265,775,271" concept="3" />
       <node id="1808378526640697902" at="777,0,778,0" concept="11" trace="enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c" />
-      <node id="1808378526640697902" at="780,0,781,0" concept="11" trace="component$_d4D" />
-      <node id="1808378526640697902" at="784,0,785,0" concept="11" trace="VectorComponentTarget$ME" />
-      <node id="1808378526640697902" at="785,0,786,0" concept="11" trace="CartesianCoordinates$U8" />
-      <node id="1808378526640697902" at="786,0,787,0" concept="11" trace="RealType$5o" />
-      <node id="1808378526640697902" at="787,0,788,0" concept="11" trace="SphericalCoordinates$W4" />
-      <node id="1808378526640697902" at="788,0,789,0" concept="11" trace="CylindricalCoordinates$9D" />
-      <node id="1808378526640697902" at="789,0,790,0" concept="11" trace="RelativeVector$c7" />
-      <node id="1808378526640697902" at="790,0,791,0" concept="11" trace="AbstractVectorType$6J" />
-      <node id="1808378526640697902" at="791,0,792,0" concept="11" trace="DirectionType$vJ" />
-      <node id="1808378526640697902" at="792,0,793,0" concept="11" trace="ILocalized$9a" />
-      <node id="1808378526640697902" at="793,0,794,0" concept="11" trace="DirectionalCoordinates$pa" />
-      <node id="1808378526640697902" at="794,0,795,0" concept="11" trace="TargetableObjectExpression$cD" />
-      <node id="1808378526640697902" at="795,0,796,0" concept="11" trace="ObjectReferenceExpression$qq" />
-      <node id="1808378526640697902" at="796,0,797,0" concept="11" trace="WorldNestedObjectTarget$p3" />
-      <node id="1808378526640697902" at="797,0,798,0" concept="11" trace="ObjectDistanceWithTarget$OH" />
-      <node id="1808378526640697902" at="798,0,799,0" concept="11" trace="ObjectType$sZ" />
-      <node id="1808378526640697902" at="799,0,800,0" concept="11" trace="ObjectMassTarget$_T" />
-      <node id="1808378526640697902" at="800,0,801,0" concept="11" trace="ObjectVelocityTarget$a7" />
-      <node id="1808378526640697902" at="801,0,802,0" concept="11" trace="VectorResizeTarget$Am" />
-      <node id="1808378526640697902" at="802,0,803,0" concept="11" trace="AbstractDimensionType$C7" />
-      <node id="1808378526640697902" at="803,0,804,0" concept="11" trace="ObjectPositionTarget$we" />
-      <node id="1808378526640697902" at="804,0,805,0" concept="11" trace="VectorOppositeTarget$Ac" />
-      <node id="1808378526640697902" at="805,0,806,0" concept="11" trace="WorldMassCenterTarget$Mg" />
-      <node id="1808378526640697902" at="806,0,807,0" concept="11" trace="CurrentObjectExpression$eH" />
-      <node id="1808378526640697902" at="807,0,808,0" concept="11" trace="CurrentWorldExpression$l8" />
-      <node id="1808378526640697902" at="808,0,809,0" concept="11" trace="PlusExpression$Dn" />
-      <node id="1808378526640697902" at="809,0,810,0" concept="11" trace="MulExpression$_u" />
-      <node id="1808378526640697902" at="810,0,811,0" concept="11" trace="DivExpression$Li" />
-      <node id="1808378526640697902" at="811,0,812,0" concept="11" trace="ObjectStyleDotTarget$3E" />
-      <node id="1808378526640697902" at="815,0,816,0" concept="11" trace="dx$VpuT" />
-      <node id="1808378526640697902" at="816,0,817,0" concept="11" trace="dy$VWrJ" />
-      <node id="1808378526640697902" at="817,0,818,0" concept="11" trace="dz$VWBn" />
-      <node id="1808378526640697902" at="818,0,819,0" concept="11" trace="distance$xDc5" />
-      <node id="1808378526640697902" at="819,0,820,0" concept="11" trace="theta$xDa9" />
-      <node id="1808378526640697902" at="820,0,821,0" concept="11" trace="phi$xD9b" />
-      <node id="1808378526640697902" at="821,0,822,0" concept="11" trace="axialDistance$ip5F" />
-      <node id="1808378526640697902" at="822,0,823,0" concept="11" trace="phi$ip6D" />
-      <node id="1808378526640697902" at="823,0,824,0" concept="11" trace="height$ip86" />
-      <node id="1808378526640697902" at="824,0,825,0" concept="11" trace="relativeFrom$gwcw" />
-      <node id="1808378526640697902" at="825,0,826,0" concept="11" trace="coordinates$l1nt" />
-      <node id="1808378526640697902" at="826,0,827,0" concept="11" trace="direction$2h5b" />
-      <node id="1808378526640697902" at="827,0,828,0" concept="11" trace="source$L$qG" />
-      <node id="1808378526640697902" at="828,0,829,0" concept="11" trace="position$DoV0" />
-      <node id="1808378526640697902" at="829,0,830,0" concept="11" trace="length$2h69" />
-      <node id="1808378526640697902" at="830,0,831,0" concept="11" trace="expression$87ts" />
-      <node id="1808378526640697902" at="831,0,832,0" concept="11" trace="target$EWj0" />
-      <node id="1808378526640697902" at="832,0,833,0" concept="11" trace="target$g02E" />
-      <node id="1808378526640697902" at="833,0,834,0" concept="11" trace="target$oizF" />
-      <node id="1808378526640697902" at="834,0,835,0" concept="11" trace="newLength$Gnlv" />
-      <node id="1808378526640697902" at="835,0,836,0" concept="11" trace="left$gQj0" />
-      <node id="1808378526640697902" at="836,0,837,0" concept="11" trace="right$gQu9" />
-      <node id="1808378526640697902" at="837,0,838,0" concept="11" trace="styleKey$ANGW" />
+      <node id="1808378526640697902" at="780,0,781,0" concept="11" trace="component$Szq" />
+      <node id="1808378526640697902" at="784,0,785,0" concept="11" trace="VectorComponentTarget$6d" />
+      <node id="1808378526640697902" at="785,0,786,0" concept="11" trace="CartesianCoordinates$dF" />
+      <node id="1808378526640697902" at="786,0,787,0" concept="11" trace="RealType$36" />
+      <node id="1808378526640697902" at="787,0,788,0" concept="11" trace="SphericalCoordinates$fB" />
+      <node id="1808378526640697902" at="788,0,789,0" concept="11" trace="CylindricalCoordinates$tc" />
+      <node id="1808378526640697902" at="789,0,790,0" concept="11" trace="RelativeVector$vE" />
+      <node id="1808378526640697902" at="790,0,791,0" concept="11" trace="AbstractVectorType$Ll" />
+      <node id="1808378526640697902" at="791,0,792,0" concept="11" trace="DirectionType$al" />
+      <node id="1808378526640697902" at="792,0,793,0" concept="11" trace="ILocalized$sH" />
+      <node id="1808378526640697902" at="793,0,794,0" concept="11" trace="DirectionalCoordinates$GH" />
+      <node id="1808378526640697902" at="794,0,795,0" concept="11" trace="TargetableObjectExpression$wc" />
+      <node id="1808378526640697902" at="795,0,796,0" concept="11" trace="ObjectReferenceExpression$HX" />
+      <node id="1808378526640697902" at="796,0,797,0" concept="11" trace="WorldNestedObjectTarget$GA" />
+      <node id="1808378526640697902" at="797,0,798,0" concept="11" trace="ObjectDistanceWithTarget$8g" />
+      <node id="1808378526640697902" at="798,0,799,0" concept="11" trace="ObjectType$7_" />
+      <node id="1808378526640697902" at="799,0,800,0" concept="11" trace="ObjectMassTarget$Ts" />
+      <node id="1808378526640697902" at="800,0,801,0" concept="11" trace="ObjectVelocityTarget$tE" />
+      <node id="1808378526640697902" at="801,0,802,0" concept="11" trace="VectorResizeTarget$TT" />
+      <node id="1808378526640697902" at="802,0,803,0" concept="11" trace="AbstractDimensionType$er" />
+      <node id="1808378526640697902" at="803,0,804,0" concept="11" trace="ObjectPositionTarget$NL" />
+      <node id="1808378526640697902" at="804,0,805,0" concept="11" trace="VectorOppositeTarget$TJ" />
+      <node id="1808378526640697902" at="805,0,806,0" concept="11" trace="WorldMassCenterTarget$5N" />
+      <node id="1808378526640697902" at="806,0,807,0" concept="11" trace="CurrentObjectExpression$yg" />
+      <node id="1808378526640697902" at="807,0,808,0" concept="11" trace="CurrentWorldExpression$CF" />
+      <node id="1808378526640697902" at="808,0,809,0" concept="11" trace="PlusExpression$mx" />
+      <node id="1808378526640697902" at="809,0,810,0" concept="11" trace="MulExpression$iC" />
+      <node id="1808378526640697902" at="810,0,811,0" concept="11" trace="DivExpression$us" />
+      <node id="1808378526640697902" at="811,0,812,0" concept="11" trace="ObjectStyleDotTarget$nd" />
+      <node id="1808378526640697902" at="815,0,816,0" concept="11" trace="dx$KTha" />
+      <node id="1808378526640697902" at="816,0,817,0" concept="11" trace="dy$1OJk" />
+      <node id="1808378526640697902" at="817,0,818,0" concept="11" trace="dz$1UnG" />
+      <node id="1808378526640697902" at="818,0,819,0" concept="11" trace="distance$iw9Y" />
+      <node id="1808378526640697902" at="819,0,820,0" concept="11" trace="theta$ivdU" />
+      <node id="1808378526640697902" at="820,0,821,0" concept="11" trace="phi$iuJS" />
+      <node id="1808378526640697902" at="821,0,822,0" concept="11" trace="axialDistance$TH3o" />
+      <node id="1808378526640697902" at="822,0,823,0" concept="11" trace="phi$THxq" />
+      <node id="1808378526640697902" at="823,0,824,0" concept="11" trace="height$TIet" />
+      <node id="1808378526640697902" at="824,0,825,0" concept="11" trace="relativeFrom$Z9n3" />
+      <node id="1808378526640697902" at="825,0,826,0" concept="11" trace="coordinates$bdEA" />
+      <node id="1808378526640697902" at="826,0,827,0" concept="11" trace="direction$5ONS" />
+      <node id="1808378526640697902" at="827,0,828,0" concept="11" trace="source$ceR" />
+      <node id="1808378526640697902" at="828,0,829,0" concept="11" trace="position$2BSz" />
+      <node id="1808378526640697902" at="829,0,830,0" concept="11" trace="length$5PhU" />
+      <node id="1808378526640697902" at="830,0,831,0" concept="11" trace="expression$Va$7" />
+      <node id="1808378526640697902" at="831,0,832,0" concept="11" trace="target$MKwz" />
+      <node id="1808378526640697902" at="832,0,833,0" concept="11" trace="target$J$_T" />
+      <node id="1808378526640697902" at="833,0,834,0" concept="11" trace="target$Ky_o" />
+      <node id="1808378526640697902" at="834,0,835,0" concept="11" trace="newLength$uQH$" />
+      <node id="1808378526640697902" at="835,0,836,0" concept="11" trace="left$zxUa" />
+      <node id="1808378526640697902" at="836,0,837,0" concept="11" trace="right$zBjx" />
+      <node id="1808378526640697902" at="837,0,838,0" concept="11" trace="styleKey$MA4B" />
       <node id="1808378526640697902" at="767,0,769,0" concept="6" trace="populateTypeMappers#(Ljava/util/List;)V" />
       <node id="1808378526640697902" at="43,0,46,0" concept="2" trace="InterpreterVectorInterpreter#()V" />
       <node id="1808378526641750554" at="79,0,82,0" concept="6" trace="getInfo#()Lcom/mbeddr/mpsutil/interpreter/rt/EvaluatorInfo;" />
@@ -531,7 +531,7 @@
       <scope id="1481770243885208091" at="197,38,198,51" />
       <scope id="1481770243885208091" at="202,32,203,32" />
       <scope id="1481770243885208091" at="207,42,208,21" />
-      <scope id="4528665904958509168" at="220,77,221,197" />
+      <scope id="4528665904958509168" at="220,76,221,196" />
       <scope id="1481770243885528261" at="237,47,238,30" />
       <scope id="1481770243885528261" at="239,49,240,19" />
       <scope id="1481770243885528261" at="241,39,242,128" />
@@ -1206,12 +1206,12 @@
       <node id="2521872686839399748" at="44,5,45,83" concept="7" />
       <node id="2521872686839399748" at="45,83,46,44" concept="3" />
       <node id="2521872686839399748" at="47,5,48,26" concept="8" />
-      <node id="2521872686839391789" at="52,0,53,0" concept="11" trace="CartesianCoordinates$U8" />
-      <node id="2521872686839391789" at="53,0,54,0" concept="11" trace="NumberLiteral$yW" />
-      <node id="2521872686839391789" at="57,0,58,0" concept="11" trace="dx$VpuT" />
-      <node id="2521872686839391789" at="58,0,59,0" concept="11" trace="dy$VWrJ" />
-      <node id="2521872686839391789" at="59,0,60,0" concept="11" trace="dz$VWBn" />
-      <node id="2521872686839391789" at="63,0,64,0" concept="11" trace="value$nZyY" />
+      <node id="2521872686839391789" at="52,0,53,0" concept="11" trace="CartesianCoordinates$dF" />
+      <node id="2521872686839391789" at="53,0,54,0" concept="11" trace="NumberLiteral$wE" />
+      <node id="2521872686839391789" at="57,0,58,0" concept="11" trace="dx$KTha" />
+      <node id="2521872686839391789" at="58,0,59,0" concept="11" trace="dy$1OJk" />
+      <node id="2521872686839391789" at="59,0,60,0" concept="11" trace="dz$1UnG" />
+      <node id="2521872686839391789" at="63,0,64,0" concept="11" trace="value$iWTK" />
       <node id="2521872686839464135" at="25,0,29,0" concept="6" trace="getDefinition#()Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="2521872686839394329" at="30,0,34,0" concept="6" trace="getVelocity#()Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="2521872686839399748" at="35,80,39,5" concept="1" />
@@ -1261,10 +1261,10 @@
       <node id="3489632902458395204" at="44,5,45,37" concept="7" />
       <node id="3489632902458395881" at="46,79,47,60" concept="8" />
       <node id="3489632902458356580" at="49,5,50,16" concept="8" />
-      <node id="3489632902458211320" at="54,0,55,0" concept="11" trace="velocity$DoVv" />
-      <node id="3489632902458211320" at="55,0,56,0" concept="11" trace="expression$87ts" />
-      <node id="3489632902458211320" at="59,0,60,0" concept="11" trace="WorldInclusion$vO" />
-      <node id="3489632902458211320" at="60,0,61,0" concept="11" trace="ObjectDefinition$YO" />
+      <node id="3489632902458211320" at="54,0,55,0" concept="11" trace="velocity$2C7$" />
+      <node id="3489632902458211320" at="55,0,56,0" concept="11" trace="expression$Va$7" />
+      <node id="3489632902458211320" at="59,0,60,0" concept="11" trace="WorldInclusion$Nn" />
+      <node id="3489632902458211320" at="60,0,61,0" concept="11" trace="ObjectDefinition$in" />
       <node id="3489632902458244667" at="22,0,25,0" concept="6" trace="getNode#()null" />
       <node id="3489632902458246846" at="26,0,29,0" concept="6" trace="getPosition#()Ljetbrains/mps/samples/Physics/java/common/vectors/InternalVector;" />
       <node id="3489632902458596007" at="30,0,33,0" concept="6" trace="getVelocity#()Lorg/jetbrains/mps/openapi/model/SNode;" />
@@ -1351,24 +1351,24 @@
       <node id="3489632902465613530" at="101,97,102,51" concept="3" />
       <node id="3489632902465613530" at="103,5,104,70" concept="3" />
       <node id="3489632902465613530" at="104,70,105,26" concept="8" />
-      <node id="3489632902458330157" at="109,0,110,0" concept="11" trace="world$ZN60" />
-      <node id="3489632902458330157" at="110,0,111,0" concept="11" trace="target$12L0" />
-      <node id="3489632902458330157" at="111,0,112,0" concept="11" trace="position$DoV0" />
-      <node id="3489632902458330157" at="112,0,113,0" concept="11" trace="expression$87ts" />
-      <node id="3489632902458330157" at="113,0,114,0" concept="11" trace="left$gQj0" />
-      <node id="3489632902458330157" at="114,0,115,0" concept="11" trace="right$gQu9" />
-      <node id="3489632902458330157" at="115,0,116,0" concept="11" trace="expr$xFwa" />
-      <node id="3489632902458330157" at="116,0,117,0" concept="11" trace="target$EWj0" />
-      <node id="3489632902458330157" at="117,0,118,0" concept="11" trace="target$NL8Z" />
-      <node id="3489632902458330157" at="121,0,122,0" concept="11" trace="NumberLiteral$yW" />
-      <node id="3489632902458330157" at="122,0,123,0" concept="11" trace="MulExpression$_u" />
-      <node id="3489632902458330157" at="123,0,124,0" concept="11" trace="Expression$Wr" />
-      <node id="3489632902458330157" at="124,0,125,0" concept="11" trace="PlusExpression$Dn" />
-      <node id="3489632902458330157" at="125,0,126,0" concept="11" trace="DivExpression$Li" />
-      <node id="3489632902458330157" at="126,0,127,0" concept="11" trace="DotExpression$Af" />
-      <node id="3489632902458330157" at="127,0,128,0" concept="11" trace="ObjectReferenceExpression$qq" />
-      <node id="3489632902458330157" at="128,0,129,0" concept="11" trace="ObjectMassTarget$_T" />
-      <node id="3489632902458330157" at="132,0,133,0" concept="11" trace="value$nZyY" />
+      <node id="3489632902458330157" at="109,0,110,0" concept="11" trace="world$Tjdz" />
+      <node id="3489632902458330157" at="110,0,111,0" concept="11" trace="target$vT2z" />
+      <node id="3489632902458330157" at="111,0,112,0" concept="11" trace="position$2BSz" />
+      <node id="3489632902458330157" at="112,0,113,0" concept="11" trace="expression$Va$7" />
+      <node id="3489632902458330157" at="113,0,114,0" concept="11" trace="left$zxUa" />
+      <node id="3489632902458330157" at="114,0,115,0" concept="11" trace="right$zBjx" />
+      <node id="3489632902458330157" at="115,0,116,0" concept="11" trace="expr$Hji0" />
+      <node id="3489632902458330157" at="116,0,117,0" concept="11" trace="target$MKwz" />
+      <node id="3489632902458330157" at="117,0,118,0" concept="11" trace="target$u23F" />
+      <node id="3489632902458330157" at="121,0,122,0" concept="11" trace="NumberLiteral$wE" />
+      <node id="3489632902458330157" at="122,0,123,0" concept="11" trace="MulExpression$iC" />
+      <node id="3489632902458330157" at="123,0,124,0" concept="11" trace="Expression$D_" />
+      <node id="3489632902458330157" at="124,0,125,0" concept="11" trace="PlusExpression$mx" />
+      <node id="3489632902458330157" at="125,0,126,0" concept="11" trace="DivExpression$us" />
+      <node id="3489632902458330157" at="126,0,127,0" concept="11" trace="DotExpression$jp" />
+      <node id="3489632902458330157" at="127,0,128,0" concept="11" trace="ObjectReferenceExpression$HX" />
+      <node id="3489632902458330157" at="128,0,129,0" concept="11" trace="ObjectMassTarget$Ts" />
+      <node id="3489632902458330157" at="132,0,133,0" concept="11" trace="value$iWTK" />
       <node id="3489632902458335301" at="20,0,23,0" concept="2" trace="InternalWorld#(Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="2521872686839428700" at="24,0,27,0" concept="6" trace="getDefinition#()Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="3489632902458813461" at="30,0,33,5" concept="5" />
@@ -1477,8 +1477,8 @@
     <file name="InternalObject.java">
       <node id="3489632902458335738" at="14,60,15,28" concept="13" />
       <node id="3489632902458398546" at="19,26,20,115" concept="8" />
-      <node id="3489632902458335730" at="24,0,25,0" concept="11" trace="mass$9nTx" />
-      <node id="3489632902458335730" at="25,0,26,0" concept="11" trace="expression$87ts" />
+      <node id="3489632902458335730" at="24,0,25,0" concept="11" trace="mass$y8ay" />
+      <node id="3489632902458335730" at="25,0,26,0" concept="11" trace="expression$Va$7" />
       <node id="3489632902458335734" at="14,0,17,0" concept="2" trace="InternalObject#(Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="3489632902458398090" at="18,0,22,0" concept="6" trace="getMass#()Lorg/jetbrains/mps/openapi/model/SNode;" />
       <scope id="3489632902458335737" at="14,60,15,28" />
@@ -1545,25 +1545,25 @@
       <node id="2315070452018376968" at="128,88,129,43" concept="3" />
       <node id="2315070452018376968" at="130,5,131,78" concept="3" />
       <node id="2315070452018376968" at="131,78,132,26" concept="8" />
-      <node id="3489632902464958620" at="136,0,137,0" concept="11" trace="dx$VpuT" />
-      <node id="3489632902464958620" at="137,0,138,0" concept="11" trace="dy$VWrJ" />
-      <node id="3489632902464958620" at="138,0,139,0" concept="11" trace="dz$VWBn" />
-      <node id="3489632902464958620" at="139,0,140,0" concept="11" trace="distance$xDc5" />
-      <node id="3489632902464958620" at="140,0,141,0" concept="11" trace="phi$xD9b" />
-      <node id="3489632902464958620" at="141,0,142,0" concept="11" trace="theta$xDa9" />
-      <node id="3489632902464958620" at="142,0,143,0" concept="11" trace="axialDistance$ip5F" />
-      <node id="3489632902464958620" at="143,0,144,0" concept="11" trace="phi$ip6D" />
-      <node id="3489632902464958620" at="144,0,145,0" concept="11" trace="height$ip86" />
-      <node id="3489632902464958620" at="145,0,146,0" concept="11" trace="left$gQj0" />
-      <node id="3489632902464958620" at="146,0,147,0" concept="11" trace="right$gQu9" />
-      <node id="3489632902464958620" at="147,0,148,0" concept="11" trace="content$Gf5w" />
-      <node id="3489632902464958620" at="148,0,149,0" concept="11" trace="units$o6Ow" />
-      <node id="3489632902464958620" at="152,0,153,0" concept="11" trace="MulExpression$_u" />
-      <node id="3489632902464958620" at="153,0,154,0" concept="11" trace="NumberLiteral$yW" />
-      <node id="3489632902464958620" at="154,0,155,0" concept="11" trace="Expression$Wr" />
-      <node id="3489632902464958620" at="155,0,156,0" concept="11" trace="UnitExpression$Bl" />
-      <node id="3489632902464958620" at="156,0,157,0" concept="11" trace="UnitReference$c4" />
-      <node id="3489632902464958620" at="160,0,161,0" concept="11" trace="value$nZyY" />
+      <node id="3489632902464958620" at="136,0,137,0" concept="11" trace="dx$KTha" />
+      <node id="3489632902464958620" at="137,0,138,0" concept="11" trace="dy$1OJk" />
+      <node id="3489632902464958620" at="138,0,139,0" concept="11" trace="dz$1UnG" />
+      <node id="3489632902464958620" at="139,0,140,0" concept="11" trace="distance$iw9Y" />
+      <node id="3489632902464958620" at="140,0,141,0" concept="11" trace="phi$iuJS" />
+      <node id="3489632902464958620" at="141,0,142,0" concept="11" trace="theta$ivdU" />
+      <node id="3489632902464958620" at="142,0,143,0" concept="11" trace="axialDistance$TH3o" />
+      <node id="3489632902464958620" at="143,0,144,0" concept="11" trace="phi$THxq" />
+      <node id="3489632902464958620" at="144,0,145,0" concept="11" trace="height$TIet" />
+      <node id="3489632902464958620" at="145,0,146,0" concept="11" trace="left$zxUa" />
+      <node id="3489632902464958620" at="146,0,147,0" concept="11" trace="right$zBjx" />
+      <node id="3489632902464958620" at="147,0,148,0" concept="11" trace="content$aqgO" />
+      <node id="3489632902464958620" at="148,0,149,0" concept="11" trace="units$qq1O" />
+      <node id="3489632902464958620" at="152,0,153,0" concept="11" trace="MulExpression$iC" />
+      <node id="3489632902464958620" at="153,0,154,0" concept="11" trace="NumberLiteral$wE" />
+      <node id="3489632902464958620" at="154,0,155,0" concept="11" trace="Expression$D_" />
+      <node id="3489632902464958620" at="155,0,156,0" concept="11" trace="UnitExpression$dD" />
+      <node id="3489632902464958620" at="156,0,157,0" concept="11" trace="UnitReference$Mo" />
+      <node id="3489632902464958620" at="160,0,161,0" concept="11" trace="value$iWTK" />
       <node id="2315070452018428916" at="91,72,94,5" concept="5" />
       <node id="4809107873074137231" at="86,0,90,0" concept="12" trace="piRelativeOf#(Ljava/lang/Number;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="4809107873074157085" at="99,73,103,5" concept="1" />
@@ -1684,16 +1684,16 @@
       <node id="794591792979816086" at="64,77,65,73" concept="7" />
       <node id="794591792979816086" at="65,73,66,41" concept="3" />
       <node id="794591792979816086" at="66,41,67,26" concept="8" />
-      <node id="7976234883188882715" at="71,0,72,0" concept="11" trace="position$DoV0" />
-      <node id="7976234883188882715" at="72,0,73,0" concept="11" trace="expression$87ts" />
-      <node id="7976234883188882715" at="73,0,74,0" concept="11" trace="velocity$DoVv" />
-      <node id="7976234883188882715" at="74,0,75,0" concept="11" trace="world$ZN60" />
-      <node id="7976234883188882715" at="75,0,76,0" concept="11" trace="target$12L0" />
-      <node id="7976234883188882715" at="76,0,77,0" concept="11" trace="mass$9nTx" />
-      <node id="7976234883188882715" at="80,0,81,0" concept="11" trace="WorldInclusion$vO" />
-      <node id="7976234883188882715" at="81,0,82,0" concept="11" trace="ObjectDefinition$YO" />
-      <node id="7976234883188882715" at="82,0,83,0" concept="11" trace="NumberLiteral$yW" />
-      <node id="7976234883188882715" at="86,0,87,0" concept="11" trace="value$nZyY" />
+      <node id="7976234883188882715" at="71,0,72,0" concept="11" trace="position$2BSz" />
+      <node id="7976234883188882715" at="72,0,73,0" concept="11" trace="expression$Va$7" />
+      <node id="7976234883188882715" at="73,0,74,0" concept="11" trace="velocity$2C7$" />
+      <node id="7976234883188882715" at="74,0,75,0" concept="11" trace="world$Tjdz" />
+      <node id="7976234883188882715" at="75,0,76,0" concept="11" trace="target$vT2z" />
+      <node id="7976234883188882715" at="76,0,77,0" concept="11" trace="mass$y8ay" />
+      <node id="7976234883188882715" at="80,0,81,0" concept="11" trace="WorldInclusion$Nn" />
+      <node id="7976234883188882715" at="81,0,82,0" concept="11" trace="ObjectDefinition$in" />
+      <node id="7976234883188882715" at="82,0,83,0" concept="11" trace="NumberLiteral$wE" />
+      <node id="7976234883188882715" at="86,0,87,0" concept="11" trace="value$iWTK" />
       <node id="3489632902467520205" at="47,35,50,11" concept="5" />
       <node id="3489632902467671819" at="55,38,58,11" concept="5" />
       <node id="3489632902468331388" at="38,26,43,9" concept="5" />

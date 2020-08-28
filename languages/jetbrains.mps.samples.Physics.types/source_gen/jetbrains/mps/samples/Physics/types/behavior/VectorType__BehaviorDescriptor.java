@@ -36,10 +36,10 @@ public final class VectorType__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static SNode getComponentType_id1d1Q7eb5sml(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.componentType$gTxy);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.componentType$89U4);
   }
   /*package*/ static String getDetailedPresentation_id22G2W3WJ92t(@NotNull SNode __thisNode__) {
-    return "vector<" + BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.componentType$gTxy)) + ">";
+    return "vector<" + BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.componentType$89U4)) + ">";
   }
   /*package*/ static ICapabilityRequirement getCapabilityRequirement_id7McqtXGyz8c(@NotNull SNode __thisNode__) {
     return VectorHandlingCapablity.INSTANCE;
@@ -96,6 +96,6 @@ public final class VectorType__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink componentType$gTxy = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
+    /*package*/ static final SContainmentLink componentType$89U4 = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
   }
 }

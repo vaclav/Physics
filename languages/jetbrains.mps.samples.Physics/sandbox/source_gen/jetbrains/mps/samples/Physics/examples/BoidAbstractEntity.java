@@ -39,12 +39,13 @@ public abstract class BoidAbstractEntity<T extends SystemScope> extends BaseObje
     BoidAbstractEntity currentEntity = this;
 
     // Apply styles 
-    propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 165, 0), null));
+    propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 165, 0), new Color(0, 0, 255)));
     propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
     propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
     propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
     propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
-    propertiesBuilder.set(PropKey.SHAPE, "box");
+    propertiesBuilder.set(PropKey.SHAPE, "sphere");
 
     // Forces 
     this.getForces().addAll(Arrays.asList(new Force<SystemScope>() {

@@ -26,7 +26,7 @@ public class typeof_ForceApplicationPointTarget_InferenceRule extends AbstractIn
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ForceApplicationPointTarget$GC;
+    return CONCEPTS.ForceApplicationPointTarget$b;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -52,6 +52,6 @@ public class typeof_ForceApplicationPointTarget_InferenceRule extends AbstractIn
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ForceApplicationPointTarget$GC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98a8e76L, "jetbrains.mps.samples.Physics.structure.ForceApplicationPointTarget");
+    /*package*/ static final SConcept ForceApplicationPointTarget$b = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x78d08d83b98a8e76L, "jetbrains.mps.samples.Physics.structure.ForceApplicationPointTarget");
   }
 }

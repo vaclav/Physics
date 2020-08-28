@@ -30,20 +30,20 @@
       <node id="6088688976854389783" at="58,60,59,73" concept="3" />
       <node id="6088688976854389783" at="59,73,60,42" concept="1" />
       <node id="6088688976854389783" at="60,42,61,26" concept="4" />
-      <node id="6373109377733735758" at="63,58,64,72" concept="3" />
-      <node id="6373109377733735758" at="64,72,65,26" concept="4" />
+      <node id="6373109377733735758" at="63,58,64,71" concept="3" />
+      <node id="6373109377733735758" at="64,71,65,26" concept="4" />
       <node id="6373109377733736607" at="67,54,68,68" concept="3" />
       <node id="6373109377733736607" at="68,68,69,26" concept="4" />
       <node id="6373109377733797966" at="71,56,72,70" concept="3" />
       <node id="6373109377733797966" at="72,70,73,26" concept="4" />
-      <node id="6088688976854387571" at="77,0,78,0" concept="6" trace="IInterpreterWrapperType$9P" />
-      <node id="6088688976854387571" at="78,0,79,0" concept="6" trace="NumberLiteral$yW" />
-      <node id="6088688976854387571" at="79,0,80,0" concept="6" trace="RationalType$jt" />
-      <node id="6088688976854387571" at="80,0,81,0" concept="6" trace="RealType$5o" />
-      <node id="6088688976854387571" at="81,0,82,0" concept="6" trace="StringType$Dl" />
-      <node id="6088688976854387571" at="85,0,86,0" concept="6" trace="left$gQj0" />
-      <node id="6088688976854387571" at="86,0,87,0" concept="6" trace="right$gQu9" />
-      <node id="6088688976854387571" at="90,0,91,0" concept="6" trace="value$nZyY" />
+      <node id="6088688976854387571" at="77,0,78,0" concept="6" trace="IInterpreterWrapperType$KD" />
+      <node id="6088688976854387571" at="78,0,79,0" concept="6" trace="NumberLiteral$wE" />
+      <node id="6088688976854387571" at="79,0,80,0" concept="6" trace="RationalType$n" />
+      <node id="6088688976854387571" at="80,0,81,0" concept="6" trace="RealType$36" />
+      <node id="6088688976854387571" at="81,0,82,0" concept="6" trace="StringType$B3" />
+      <node id="6088688976854387571" at="85,0,86,0" concept="6" trace="left$zxUa" />
+      <node id="6088688976854387571" at="86,0,87,0" concept="6" trace="right$zBjx" />
+      <node id="6088688976854387571" at="90,0,91,0" concept="6" trace="value$iWTK" />
       <node id="6373109377733775813" at="54,10,56,5" concept="0" />
       <node id="6088688976854387787" at="18,46,21,5" concept="2" />
       <node id="6373109377733731373" at="26,0,29,0" concept="7" trace="isSubtypeIncludingWrapped#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Z" />

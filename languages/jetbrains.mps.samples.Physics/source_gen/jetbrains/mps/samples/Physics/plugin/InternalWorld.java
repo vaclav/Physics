@@ -22,7 +22,7 @@ public class InternalWorld extends InternalEntity<SNode> {
   }
 
   public SNode getDefinition() {
-    return SLinkOperations.getTarget(SLinkOperations.getTarget(node, LINKS.world$ZN60), LINKS.target$12L0);
+    return SLinkOperations.getTarget(SLinkOperations.getTarget(node, LINKS.world$Tjdz), LINKS.target$vT2z);
   }
 
   public SNode getMassCenter() {
@@ -32,12 +32,12 @@ public class InternalWorld extends InternalEntity<SNode> {
       return createNumberLiteral_lndn4q_a0a2a4();
     }
 
-    SNode firstMass = createMulExpression_lndn4q_a0e0e(massExpressionOf(Sequence.fromIterable(scope).first()), SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(Sequence.fromIterable(scope).first(), LINKS.position$DoV0), LINKS.expression$87ts)));
+    SNode firstMass = createMulExpression_lndn4q_a0e0e(massExpressionOf(Sequence.fromIterable(scope).first()), SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(Sequence.fromIterable(scope).first(), LINKS.position$2BSz), LINKS.expression$Va$7)));
 
     // Sum all mass multiplied by the position of sub elements 
     SNode sum = Sequence.fromIterable(scope).skip(1).foldLeft(firstMass, new ILeftCombinator<SNode, SNode>() {
       public SNode combine(SNode s, SNode it) {
-        return createPlusExpression_lndn4q_a0a0a0a7a4(s, massExpressionOf(it), SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$DoV0), LINKS.expression$87ts)));
+        return createPlusExpression_lndn4q_a0a0a0a7a4(s, massExpressionOf(it), SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$2BSz), LINKS.expression$Va$7)));
       }
     });
 
@@ -63,72 +63,72 @@ public class InternalWorld extends InternalEntity<SNode> {
     return createDotExpression_lndn4q_a0a9(object);
   }
   private static SNode createNumberLiteral_lndn4q_a0a2a4() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);
-    n0.setProperty(PROPS.value$nZyY, "0");
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$wE);
+    n0.setProperty(PROPS.value$iWTK, "0");
     return n0.getResult();
   }
   private static SNode createMulExpression_lndn4q_a0e0e(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.MulExpression$_u);
-    n0.forChild(LINKS.left$gQj0).initNode(p0, CONCEPTS.Expression$Wr, true);
-    n0.forChild(LINKS.right$gQu9).initNode(p1, CONCEPTS.Expression$Wr, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.MulExpression$iC);
+    n0.forChild(LINKS.left$zxUa).initNode(p0, CONCEPTS.Expression$D_, true);
+    n0.forChild(LINKS.right$zBjx).initNode(p1, CONCEPTS.Expression$D_, true);
     return n0.getResult();
   }
   private static SNode createPlusExpression_lndn4q_a0a0a0a7a4(SNode p0, SNode p1, SNode p2) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.PlusExpression$Dn);
-    n0.forChild(LINKS.left$gQj0).initNode(p0, CONCEPTS.Expression$Wr, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.PlusExpression$mx);
+    n0.forChild(LINKS.left$zxUa).initNode(p0, CONCEPTS.Expression$D_, true);
     {
-      SNodeBuilder n1 = n0.forChild(LINKS.right$gQu9).init(CONCEPTS.MulExpression$_u);
-      n1.forChild(LINKS.left$gQj0).initNode(p1, CONCEPTS.Expression$Wr, true);
-      n1.forChild(LINKS.right$gQu9).initNode(p2, CONCEPTS.Expression$Wr, true);
+      SNodeBuilder n1 = n0.forChild(LINKS.right$zBjx).init(CONCEPTS.MulExpression$iC);
+      n1.forChild(LINKS.left$zxUa).initNode(p1, CONCEPTS.Expression$D_, true);
+      n1.forChild(LINKS.right$zBjx).initNode(p2, CONCEPTS.Expression$D_, true);
     }
     return n0.getResult();
   }
   private static SNode createDivExpression_lndn4q_a01a4(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DivExpression$Li);
-    n0.forChild(LINKS.left$gQj0).initNode(p0, CONCEPTS.Expression$Wr, true);
-    n0.forChild(LINKS.right$gQu9).initNode(p1, CONCEPTS.Expression$Wr, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DivExpression$us);
+    n0.forChild(LINKS.left$zxUa).initNode(p0, CONCEPTS.Expression$D_, true);
+    n0.forChild(LINKS.right$zBjx).initNode(p1, CONCEPTS.Expression$D_, true);
     return n0.getResult();
   }
   private static SNode createPlusExpression_lndn4q_a0a0a0e0g(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.PlusExpression$Dn);
-    n0.forChild(LINKS.left$gQj0).initNode(p0, CONCEPTS.Expression$Wr, true);
-    n0.forChild(LINKS.right$gQu9).initNode(p1, CONCEPTS.Expression$Wr, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.PlusExpression$mx);
+    n0.forChild(LINKS.left$zxUa).initNode(p0, CONCEPTS.Expression$D_, true);
+    n0.forChild(LINKS.right$zBjx).initNode(p1, CONCEPTS.Expression$D_, true);
     return n0.getResult();
   }
   private static SNode createDotExpression_lndn4q_a0a9(SNode p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DotExpression$Af);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DotExpression$jp);
     {
-      SNodeBuilder n1 = n0.forChild(LINKS.expr$xFwa).init(CONCEPTS.ObjectReferenceExpression$qq);
-      n1.setReferenceTarget(LINKS.target$EWj0, p0);
+      SNodeBuilder n1 = n0.forChild(LINKS.expr$Hji0).init(CONCEPTS.ObjectReferenceExpression$HX);
+      n1.setReferenceTarget(LINKS.target$MKwz, p0);
     }
-    n0.forChild(LINKS.target$NL8Z).init(CONCEPTS.ObjectMassTarget$_T);
+    n0.forChild(LINKS.target$u23F).init(CONCEPTS.ObjectMassTarget$Ts);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink world$ZN60 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
-    /*package*/ static final SReferenceLink target$12L0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
-    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
-    /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
-    /*package*/ static final SContainmentLink left$gQj0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c16L, "left");
-    /*package*/ static final SContainmentLink right$gQu9 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c18L, "right");
-    /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
-    /*package*/ static final SReferenceLink target$EWj0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
-    /*package*/ static final SContainmentLink target$NL8Z = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
+    /*package*/ static final SContainmentLink world$Tjdz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
+    /*package*/ static final SReferenceLink target$vT2z = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
+    /*package*/ static final SContainmentLink position$2BSz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
+    /*package*/ static final SContainmentLink expression$Va$7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
+    /*package*/ static final SContainmentLink left$zxUa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c16L, "left");
+    /*package*/ static final SContainmentLink right$zBjx = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, 0x46ff3b3d86c99c18L, "right");
+    /*package*/ static final SContainmentLink expr$Hji0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
+    /*package*/ static final SReferenceLink target$MKwz = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, 0x6b7f605cb32fba5cL, "target");
+    /*package*/ static final SContainmentLink target$u23F = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
-    /*package*/ static final SConcept MulExpression$_u = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
-    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
-    /*package*/ static final SConcept PlusExpression$Dn = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
-    /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
-    /*package*/ static final SConcept DotExpression$Af = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
-    /*package*/ static final SConcept ObjectReferenceExpression$qq = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
-    /*package*/ static final SConcept ObjectMassTarget$_T = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
+    /*package*/ static final SConcept NumberLiteral$wE = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
+    /*package*/ static final SConcept MulExpression$iC = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
+    /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept PlusExpression$mx = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
+    /*package*/ static final SConcept DivExpression$us = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
+    /*package*/ static final SConcept DotExpression$jp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
+    /*package*/ static final SConcept ObjectReferenceExpression$HX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
+    /*package*/ static final SConcept ObjectMassTarget$Ts = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
+    /*package*/ static final SProperty value$iWTK = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 }

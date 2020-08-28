@@ -29,7 +29,7 @@ public class replace_DimensionType_DimensionType_InequationReplacementRule exten
         SNode _nodeToCheck_1029348928467 = equationInfo.getNodeWithError();
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "3675770290331684097", 0, null);
         _info_12389875345.getOuterRulesIdFromInfo(equationInfo);
-        typeCheckingContext.createLessThanInequality((SNode) SLinkOperations.getTarget(subtype, LINKS.baseType$fHYw), (SNode) SLinkOperations.getTarget(supertype, LINKS.baseType$fHYw), true, true, _info_12389875345);
+        typeCheckingContext.createLessThanInequality((SNode) SLinkOperations.getTarget(subtype, LINKS.baseType$mnRO), (SNode) SLinkOperations.getTarget(supertype, LINKS.baseType$mnRO), true, true, _info_12389875345);
       }
     }
 
@@ -43,7 +43,7 @@ public class replace_DimensionType_DimensionType_InequationReplacementRule exten
   }
   public boolean checkInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
     boolean result_14532009 = true;
-    result_14532009 = result_14532009 && TypecheckingFacade.getFromContext().isSubtype((SNode) SLinkOperations.getTarget(subtype, LINKS.baseType$fHYw), (SNode) SLinkOperations.getTarget(supertype, LINKS.baseType$fHYw));
+    result_14532009 = result_14532009 && TypecheckingFacade.getFromContext().isSubtype((SNode) SLinkOperations.getTarget(subtype, LINKS.baseType$mnRO), (SNode) SLinkOperations.getTarget(supertype, LINKS.baseType$mnRO));
 
     if (!(DimensionTypeHelper.areCompatible(subtype, supertype))) {
       result_14532009 = false;
@@ -61,17 +61,17 @@ public class replace_DimensionType_DimensionType_InequationReplacementRule exten
   }
 
   public SAbstractConcept getApplicableSubtypeConcept() {
-    return CONCEPTS.DimensionType$yz;
+    return CONCEPTS.DimensionType$8R;
   }
   public SAbstractConcept getApplicableSupertypeConcept() {
-    return CONCEPTS.DimensionType$yz;
+    return CONCEPTS.DimensionType$8R;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
+    /*package*/ static final SContainmentLink baseType$mnRO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
   }
 }

@@ -28,7 +28,7 @@ public class WorldReference_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_ulidr3_a(), CONCEPTS.WorldReference$Fu));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_ulidr3_a(), CONCEPTS.WorldReference$Z1));
     result.add(new SMP_Subconcepts_ulidr3_b());
     return result;
   }
@@ -50,7 +50,7 @@ public class WorldReference_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_ulidr3_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) CONCEPTS.WorldReference$Fu, LINKS.target$12L0);
+      super((SAbstractConcept) CONCEPTS.WorldReference$Z1, LINKS.target$vT2z);
     }
     @NotNull
     @Override
@@ -67,7 +67,7 @@ public class WorldReference_SubstituteMenu extends SubstituteMenuBase {
   }
   public class SMP_Subconcepts_ulidr3_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.WorldReference$Fu);
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.WorldReference$Z1);
     }
     @NotNull
     @Override
@@ -88,10 +88,10 @@ public class WorldReference_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept WorldReference$Fu = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, "jetbrains.mps.samples.Physics.structure.WorldReference");
+    /*package*/ static final SConcept WorldReference$Z1 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, "jetbrains.mps.samples.Physics.structure.WorldReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$12L0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
+    /*package*/ static final SReferenceLink target$vT2z = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
   }
 }

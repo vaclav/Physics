@@ -28,7 +28,7 @@ public class AbstractObjectReference_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_irsjcn_a(), CONCEPTS.AbstractObjectReference$1j));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_irsjcn_a(), CONCEPTS.AbstractObjectReference$kQ));
     result.add(new SMP_Subconcepts_irsjcn_b());
     return result;
   }
@@ -50,7 +50,7 @@ public class AbstractObjectReference_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_irsjcn_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) CONCEPTS.AbstractObjectReference$1j, LINKS.target$OiAw);
+      super((SAbstractConcept) CONCEPTS.AbstractObjectReference$kQ, LINKS.target$kzX3);
     }
     @NotNull
     @Override
@@ -67,7 +67,7 @@ public class AbstractObjectReference_SubstituteMenu extends SubstituteMenuBase {
   }
   public class SMP_Subconcepts_irsjcn_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.AbstractObjectReference$1j);
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.AbstractObjectReference$kQ);
     }
     @NotNull
     @Override
@@ -88,10 +88,10 @@ public class AbstractObjectReference_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractObjectReference$1j = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, "jetbrains.mps.samples.Physics.structure.AbstractObjectReference");
+    /*package*/ static final SConcept AbstractObjectReference$kQ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, "jetbrains.mps.samples.Physics.structure.AbstractObjectReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$OiAw = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, 0x1441545e2a5b1e45L, "target");
+    /*package*/ static final SReferenceLink target$kzX3 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e44L, 0x1441545e2a5b1e45L, "target");
   }
 }

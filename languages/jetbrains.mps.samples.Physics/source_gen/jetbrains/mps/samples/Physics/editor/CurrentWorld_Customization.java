@@ -32,7 +32,7 @@ public class CurrentWorld_Customization implements EditorMenuItemCustomizer {
   private static class CurrentWorld_CustomizationSpecific implements EditorMenuItemCustomizer {
 
     public boolean matches(EditorMenuItemCustomizationContext context) {
-      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.CurrentWorldExpression$l8).matchesContext(context) && getCompletionItemInformation(context) != null;
+      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.CurrentWorldExpression$CF).matchesContext(context) && getCompletionItemInformation(context) != null;
     }
 
 
@@ -54,7 +54,7 @@ public class CurrentWorld_Customization implements EditorMenuItemCustomizer {
       customize_(getParentNode(context), getChild(context), getLink(context), style, getCompletionItemInformation(context));
     }
     private void customize_(SNode parentNode, SNode currentChild, SContainmentLink containmentLink, EditorMenuItemStyle style, CompletionItemInformation itemInformation) {
-      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.ICurrentWorldContext$KE, true, false) != null)) {
+      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.ICurrentWorldContext$4d, true, false) != null)) {
         style.setPriority(2.1);
       }
     }
@@ -62,7 +62,7 @@ public class CurrentWorld_Customization implements EditorMenuItemCustomizer {
 
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CurrentWorldExpression$l8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
-    /*package*/ static final SInterfaceConcept ICurrentWorldContext$KE = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d786290aL, "jetbrains.mps.samples.Physics.structure.ICurrentWorldContext");
+    /*package*/ static final SConcept CurrentWorldExpression$CF = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
+    /*package*/ static final SInterfaceConcept ICurrentWorldContext$4d = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d786290aL, "jetbrains.mps.samples.Physics.structure.ICurrentWorldContext");
   }
 }

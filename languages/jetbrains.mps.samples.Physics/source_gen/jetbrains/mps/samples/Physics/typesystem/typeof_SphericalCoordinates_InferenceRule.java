@@ -23,12 +23,12 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
   }
   public void applyRule(final SNode coords, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode theta = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.theta$xDa9), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050934", true);
+      final SNode theta = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.theta$ivdU), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050934", true);
       typeCheckingContext.whenConcrete(theta, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.theta$xDa9);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.theta$ivdU);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050907", 0, null);
               typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(theta), (SNode) _quotation_createNode_fzfda9_a1a0c0a0a0a0a1a0b0a0b(), true, true, _info_12389875345);
             }
@@ -37,12 +37,12 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
       }, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050884", false, false);
     }
     {
-      final SNode phi = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.phi$xD9b), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050928", true);
+      final SNode phi = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.phi$iuJS), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050928", true);
       typeCheckingContext.whenConcrete(phi, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.phi$xD9b);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(coords, LINKS.phi$iuJS);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3675770290330332500", 0, null);
               typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(phi), (SNode) _quotation_createNode_fzfda9_a1a0c0a0a0a0a1a0b0b0b(), true, true, _info_12389875345);
             }
@@ -52,7 +52,7 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
     }
 
     {
-      final SNode distance = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.distance$xDc5), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050940", true);
+      final SNode distance = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.distance$iw9Y), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973050940", true);
       typeCheckingContext.whenConcrete(distance, new Runnable() {
         public void run() {
           {
@@ -66,7 +66,7 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
 
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.SphericalCoordinates$W4;
+    return CONCEPTS.SphericalCoordinates$fB;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -101,21 +101,21 @@ public class typeof_SphericalCoordinates_InferenceRule extends AbstractInference
     return quotedNode_1;
   }
   private static SNode createVectorType_fzfda9_a1a0c0a0a0a1a0b0d0b(SNode p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$Wj);
-    n0.forChild(LINKS.componentType$gTxy).initNode(p0, CONCEPTS.Type$fA, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$AT);
+    n0.forChild(LINKS.componentType$89U4).initNode(p0, CONCEPTS.Type$WK, true);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink theta$xDa9 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2578L, "theta");
-    /*package*/ static final SContainmentLink phi$xD9b = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2576L, "phi");
-    /*package*/ static final SContainmentLink distance$xDc5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
-    /*package*/ static final SContainmentLink componentType$gTxy = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
+    /*package*/ static final SContainmentLink theta$ivdU = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2578L, "theta");
+    /*package*/ static final SContainmentLink phi$iuJS = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af2576L, "phi");
+    /*package*/ static final SContainmentLink distance$iw9Y = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, 0x629c7a5121af257cL, "distance");
+    /*package*/ static final SContainmentLink componentType$89U4 = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept SphericalCoordinates$W4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, "jetbrains.mps.samples.Physics.structure.SphericalCoordinates");
-    /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
-    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept SphericalCoordinates$fB = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa8fL, "jetbrains.mps.samples.Physics.structure.SphericalCoordinates");
+    /*package*/ static final SConcept VectorType$AT = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
+    /*package*/ static final SConcept Type$WK = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
   }
 }

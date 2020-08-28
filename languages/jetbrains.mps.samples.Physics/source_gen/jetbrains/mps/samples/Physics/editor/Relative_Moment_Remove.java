@@ -22,7 +22,7 @@ public class Relative_Moment_Remove {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        SPropertyOperations.assign(node, PROPS.isMomentRelative$rXiD, false);
+        SPropertyOperations.assign(node, PROPS.isMomentRelative$yflq, false);
       }
 
     };
@@ -70,6 +70,6 @@ public class Relative_Moment_Remove {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isMomentRelative$rXiD = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
+    /*package*/ static final SProperty isMomentRelative$yflq = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
   }
 }

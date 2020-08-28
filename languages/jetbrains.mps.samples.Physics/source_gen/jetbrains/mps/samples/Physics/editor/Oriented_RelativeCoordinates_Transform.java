@@ -101,12 +101,12 @@ public class Oriented_RelativeCoordinates_Transform extends TransformationMenuBa
 
       @Override
       public void execute(@NotNull String pattern) {
-        SPropertyOperations.assign(_context.getNode(), PROPS.isOriented$Afmy, true);
+        SPropertyOperations.assign(_context.getNode(), PROPS.isOriented$wZe1, true);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isOriented$Afmy));
+        return !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isOriented$wZe1));
       }
 
 
@@ -129,6 +129,6 @@ public class Oriented_RelativeCoordinates_Transform extends TransformationMenuBa
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isOriented$Afmy = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x89beb47905fe8dbL, "isOriented");
+    /*package*/ static final SProperty isOriented$wZe1 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x89beb47905fe8dbL, "isOriented");
   }
 }

@@ -39,8 +39,8 @@ public final class ObjectMassTarget__BehaviorDescriptor extends BaseBHDescriptor
   /*package*/ static SNode getTargetCoordinates_idGdoRjGvovH(@NotNull SNode __thisNode__, SNode object) {
     {
       final SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(object);
-      if (SNodeOperations.isInstanceOf(definition, CONCEPTS.ObjectDefinition$YO)) {
-        return SLinkOperations.getTarget(definition, LINKS.mass$9nTx);
+      if (SNodeOperations.isInstanceOf(definition, CONCEPTS.ObjectDefinition$in)) {
+        return SLinkOperations.getTarget(definition, LINKS.mass$y8ay);
       }
     }
     return null;
@@ -95,10 +95,10 @@ public final class ObjectMassTarget__BehaviorDescriptor extends BaseBHDescriptor
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
+    /*package*/ static final SConcept ObjectDefinition$in = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink mass$9nTx = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x1be152c1502448ffL, "mass");
+    /*package*/ static final SContainmentLink mass$y8ay = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x1be152c1502448ffL, "mass");
   }
 }

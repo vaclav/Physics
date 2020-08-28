@@ -18,12 +18,12 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class CustomColor_Constraints extends BaseConstraintsDescriptor {
   public CustomColor_Constraints() {
-    super(CONCEPTS.CustomColor$o$);
+    super(CONCEPTS.CustomColor$G7);
   }
 
   public static class Blue_Property extends BasePropertyConstraintsDescriptor {
     public Blue_Property(ConstraintsDescriptor container) {
-      super(PROPS.blue$EJW, container);
+      super(PROPS.blue$kgxB, container);
     }
     @Override
     public boolean hasOwnValidator() {
@@ -44,7 +44,7 @@ public class CustomColor_Constraints extends BaseConstraintsDescriptor {
   }
   public static class Green_Property extends BasePropertyConstraintsDescriptor {
     public Green_Property(ConstraintsDescriptor container) {
-      super(PROPS.green$ELp, container);
+      super(PROPS.green$kheE, container);
     }
     @Override
     public boolean hasOwnValidator() {
@@ -65,7 +65,7 @@ public class CustomColor_Constraints extends BaseConstraintsDescriptor {
   }
   public static class Red_Property extends BasePropertyConstraintsDescriptor {
     public Red_Property(ConstraintsDescriptor container) {
-      super(PROPS.red$EIY, container);
+      super(PROPS.red$kg3_, container);
     }
     @Override
     public boolean hasOwnValidator() {
@@ -87,19 +87,19 @@ public class CustomColor_Constraints extends BaseConstraintsDescriptor {
   @Override
   protected Map<SProperty, PropertyConstraintsDescriptor> getSpecifiedProperties() {
     Map<SProperty, PropertyConstraintsDescriptor> properties = new HashMap<SProperty, PropertyConstraintsDescriptor>();
-    properties.put(PROPS.blue$EJW, new Blue_Property(this));
-    properties.put(PROPS.green$ELp, new Green_Property(this));
-    properties.put(PROPS.red$EIY, new Red_Property(this));
+    properties.put(PROPS.blue$kgxB, new Blue_Property(this));
+    properties.put(PROPS.green$kheE, new Green_Property(this));
+    properties.put(PROPS.red$kg3_, new Red_Property(this));
     return properties;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CustomColor$o$ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, "jetbrains.mps.samples.Physics.structure.CustomColor");
+    /*package*/ static final SConcept CustomColor$G7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, "jetbrains.mps.samples.Physics.structure.CustomColor");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty blue$EJW = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, 0x14f63a14438863e6L, "blue");
-    /*package*/ static final SProperty green$ELp = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, 0x14f63a14438863e9L, "green");
-    /*package*/ static final SProperty red$EIY = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, 0x14f63a14438863e4L, "red");
+    /*package*/ static final SProperty blue$kgxB = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, 0x14f63a14438863e6L, "blue");
+    /*package*/ static final SProperty green$kheE = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, 0x14f63a14438863e9L, "green");
+    /*package*/ static final SProperty red$kg3_ = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438863e1L, 0x14f63a14438863e4L, "red");
   }
 }

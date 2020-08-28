@@ -31,7 +31,7 @@ public final class CurrentWorldExpression__BehaviorDescriptor extends BaseBHDesc
   }
 
   /*package*/ static SNode getWorldTarget_id2bZvtzzMbSH(@NotNull SNode __thisNode__) {
-    return IProvideCurrentWorld__BehaviorDescriptor.getCurrentWorldDefinition_id2bZvtzzMfxi.invoke(SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.IProvideCurrentWorld$2_, false, false));
+    return IProvideCurrentWorld__BehaviorDescriptor.getCurrentWorldDefinition_id2bZvtzzMfxi.invoke(SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.IProvideCurrentWorld$m8, false, false));
   }
 
   /*package*/ CurrentWorldExpression__BehaviorDescriptor() {
@@ -81,6 +81,6 @@ public final class CurrentWorldExpression__BehaviorDescriptor extends BaseBHDesc
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IProvideCurrentWorld$2_ = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8f846L, "jetbrains.mps.samples.Physics.structure.IProvideCurrentWorld");
+    /*package*/ static final SInterfaceConcept IProvideCurrentWorld$m8 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8f846L, "jetbrains.mps.samples.Physics.structure.IProvideCurrentWorld");
   }
 }

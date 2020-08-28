@@ -44,24 +44,24 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
   /*package*/ static Iterable<SNode> getDependenciesRelevantForCycleDetection_id59HbAIOYveX(@NotNull SNode __thisNode__) {
 
     //  Detect dependencies from DotExpressions (either target or source not) 
-    Iterable<SNode> dotTargets = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.DotExpression$Af, false, new SAbstractConcept[]{})).select(new ISelector<SNode, SNode>() {
+    Iterable<SNode> dotTargets = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.DotExpression$jp, false, new SAbstractConcept[]{})).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
         // If the source targets an object 
         {
-          final SNode object = SLinkOperations.getTarget(it, LINKS.expr$xFwa);
-          if (SNodeOperations.isInstanceOf(object, CONCEPTS.ITargetObject$lA)) {
+          final SNode object = SLinkOperations.getTarget(it, LINKS.expr$Hji0);
+          if (SNodeOperations.isInstanceOf(object, CONCEPTS.ITargetObject$D9)) {
 
             // And the target target specific coordinates 
             {
-              final SNode target = SLinkOperations.getTarget(it, LINKS.target$NL8Z);
-              if (SNodeOperations.isInstanceOf(target, CONCEPTS.ITargetExpression$__)) {
+              final SNode target = SLinkOperations.getTarget(it, LINKS.target$u23F);
+              if (SNodeOperations.isInstanceOf(target, CONCEPTS.ITargetExpression$T8)) {
                 // Use those 
                 return ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(target, ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(object));
               }
             }
 
             // Otherwise the object probably refer to it's positions 
-            return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(object), LINKS.position$DoV0);
+            return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(object), LINKS.position$2BSz);
           }
         }
 
@@ -74,9 +74,9 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
     });
 
     // Detect dependencies outside dot expressions (standalone object targets) 
-    Iterable<SNode> nonDotTargets = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.ITargetObject$lA, false, new SAbstractConcept[]{CONCEPTS.DotExpression$Af})).select(new ISelector<SNode, SNode>() {
+    Iterable<SNode> nonDotTargets = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.ITargetObject$D9, false, new SAbstractConcept[]{CONCEPTS.DotExpression$jp})).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
-        return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(it), LINKS.position$DoV0);
+        return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(it), LINKS.position$2BSz);
       }
     });
 
@@ -84,9 +84,9 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
   }
   /*package*/ static Set<SNode> traceBackElementInCycle_id17fjvcLF7UR(@NotNull SNode __thisNode__, final SNode dependency) {
     Set<SNode> set = SetSequence.fromSet(new HashSet<SNode>());
-    SetSequence.fromSet(set).addSequence(ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.ITargetObject$lA, false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
+    SetSequence.fromSet(set).addSequence(ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.ITargetObject$D9, false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(it) == SNodeOperations.cast(SNodeOperations.getParent(dependency), CONCEPTS.ILocalized$9a);
+        return ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(it) == SNodeOperations.cast(SNodeOperations.getParent(dependency), CONCEPTS.ILocalized$sH);
       }
     }));
     return set;
@@ -141,15 +141,15 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DotExpression$Af = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
-    /*package*/ static final SInterfaceConcept ITargetObject$lA = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
-    /*package*/ static final SInterfaceConcept ITargetExpression$__ = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7d87e1L, "jetbrains.mps.samples.Physics.structure.ITargetExpression");
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SConcept DotExpression$jp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
+    /*package*/ static final SInterfaceConcept ITargetObject$D9 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
+    /*package*/ static final SInterfaceConcept ITargetExpression$T8 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7d87e1L, "jetbrains.mps.samples.Physics.structure.ITargetExpression");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
-    /*package*/ static final SContainmentLink target$NL8Z = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
-    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
+    /*package*/ static final SContainmentLink expr$Hji0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
+    /*package*/ static final SContainmentLink target$u23F = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
+    /*package*/ static final SContainmentLink position$2BSz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
   }
 }

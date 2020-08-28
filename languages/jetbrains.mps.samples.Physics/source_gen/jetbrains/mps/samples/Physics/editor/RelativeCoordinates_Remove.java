@@ -25,8 +25,8 @@ public class RelativeCoordinates_Remove {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        SNodeOperations.replaceWithAnother(node, SLinkOperations.getTarget(node, LINKS.coordinates$l1nt));
-        SelectionUtil.selectCell(editorContext, SLinkOperations.getTarget(node, LINKS.coordinates$l1nt), SelectionManager.FIRST_ERROR_CELL + "|" + SelectionManager.FOCUS_POLICY_CELL + "|" + SelectionManager.FIRST_EDITABLE_CELL + "|" + SelectionManager.FIRST_CELL);
+        SNodeOperations.replaceWithAnother(node, SLinkOperations.getTarget(node, LINKS.coordinates$bdEA));
+        SelectionUtil.selectCell(editorContext, SLinkOperations.getTarget(node, LINKS.coordinates$bdEA), SelectionManager.FIRST_ERROR_CELL + "|" + SelectionManager.FOCUS_POLICY_CELL + "|" + SelectionManager.FIRST_EDITABLE_CELL + "|" + SelectionManager.FIRST_CELL);
       }
 
     };
@@ -37,8 +37,8 @@ public class RelativeCoordinates_Remove {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        SNodeOperations.replaceWithAnother(node, SLinkOperations.getTarget(node, LINKS.coordinates$l1nt));
-        SelectionUtil.selectCell(editorContext, SLinkOperations.getTarget(node, LINKS.coordinates$l1nt), SelectionManager.FIRST_ERROR_CELL + "|" + SelectionManager.FOCUS_POLICY_CELL + "|" + SelectionManager.FIRST_EDITABLE_CELL + "|" + SelectionManager.FIRST_CELL);
+        SNodeOperations.replaceWithAnother(node, SLinkOperations.getTarget(node, LINKS.coordinates$bdEA));
+        SelectionUtil.selectCell(editorContext, SLinkOperations.getTarget(node, LINKS.coordinates$bdEA), SelectionManager.FIRST_ERROR_CELL + "|" + SelectionManager.FOCUS_POLICY_CELL + "|" + SelectionManager.FIRST_EDITABLE_CELL + "|" + SelectionManager.FIRST_CELL);
       }
 
     };
@@ -90,6 +90,6 @@ public class RelativeCoordinates_Remove {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
+    /*package*/ static final SContainmentLink coordinates$bdEA = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
   }
 }

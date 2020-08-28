@@ -39,7 +39,7 @@ public class AbstractForceCallParameter_SubstituteMenu extends SubstituteMenuBas
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_xwvjjv_a(), CONCEPTS.AbstractForceCallParameter$Xs));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_xwvjjv_a(), CONCEPTS.AbstractForceCallParameter$gZ));
     return result;
   }
 
@@ -76,7 +76,7 @@ public class AbstractForceCallParameter_SubstituteMenu extends SubstituteMenuBas
     @Nullable
     @Override
     protected Iterable<? extends SNode> getParameters(SubstituteMenuContext _context) {
-      return (Iterable<SNode>) AbstractForceCall__BehaviorDescriptor.remainingArguments_idQ4PrYMwPsY.invoke(SNodeOperations.cast(_context.getParentNode(), CONCEPTS.AbstractForceCall$Wc));
+      return (Iterable<SNode>) AbstractForceCall__BehaviorDescriptor.remainingArguments_idQ4PrYMwPsY.invoke(SNodeOperations.cast(_context.getParentNode(), CONCEPTS.AbstractForceCall$fJ));
     }
     private class SMP_Action_xwvjjv_a0 extends SingleItemSubstituteMenuPart {
       private final SNode myParameterObject;
@@ -111,7 +111,7 @@ public class AbstractForceCallParameter_SubstituteMenu extends SubstituteMenuBas
         private final SubstituteMenuContext _context;
         private EditorMenuTraceInfo myTraceInfo;
         public Item(SubstituteMenuContext context) {
-          super(CONCEPTS.AbstractForceCallParameter$Xs, context);
+          super(CONCEPTS.AbstractForceCallParameter$gZ, context);
           _context = context;
         }
 
@@ -123,8 +123,8 @@ public class AbstractForceCallParameter_SubstituteMenu extends SubstituteMenuBas
         @Override
         public SNode createNode(@NotNull String pattern) {
           SNode node = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter"));
-          SLinkOperations.setTarget(node, LINKS.argument$kXZ1, myParameterObject);
-          SLinkOperations.setTarget(node, LINKS.value$59jW, SNodeOperations.copyNode(SLinkOperations.getTarget(_context.getCurrentTargetNode(), LINKS.value$59jW)));
+          SLinkOperations.setTarget(node, LINKS.argument$9$P2, myParameterObject);
+          SLinkOperations.setTarget(node, LINKS.value$v3XB, SNodeOperations.copyNode(SLinkOperations.getTarget(_context.getCurrentTargetNode(), LINKS.value$v3XB)));
           SelectionUtil.selectCell(_context.getEditorContext(), node, SelectionManager.FIRST_EDITABLE_CELL);
           return node;
         }
@@ -135,7 +135,7 @@ public class AbstractForceCallParameter_SubstituteMenu extends SubstituteMenuBas
         }
         @NotNull
         protected CompletionItemInformation createInformation(String pattern) {
-          return new CompletionItemInformation(myParameterObject, CONCEPTS.AbstractForceCallParameter$Xs, getMatchingText(pattern), getDescriptionText(pattern));
+          return new CompletionItemInformation(myParameterObject, CONCEPTS.AbstractForceCallParameter$gZ, getMatchingText(pattern), getDescriptionText(pattern));
         }
         @Nullable
         @Override
@@ -167,12 +167,12 @@ public class AbstractForceCallParameter_SubstituteMenu extends SubstituteMenuBas
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractForceCallParameter$Xs = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter");
-    /*package*/ static final SConcept AbstractForceCall$Wc = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
+    /*package*/ static final SConcept AbstractForceCallParameter$gZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter");
+    /*package*/ static final SConcept AbstractForceCall$fJ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink argument$kXZ1 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
-    /*package*/ static final SContainmentLink value$59jW = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb2832d0cL, "value");
+    /*package*/ static final SReferenceLink argument$9$P2 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb280d74aL, "argument");
+    /*package*/ static final SContainmentLink value$v3XB = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, 0xd84d5bfb2832d0cL, "value");
   }
 }

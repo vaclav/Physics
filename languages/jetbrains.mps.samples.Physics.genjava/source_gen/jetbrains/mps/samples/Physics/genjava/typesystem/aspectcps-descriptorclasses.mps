@@ -3,6 +3,7 @@
   <persistence version="9" />
   <attribute name="checkpoint" value="DescriptorClasses" />
   <attribute name="generation-plan" value="AspectCPS" />
+  <attribute name="user-objects" value="true" />
   <languages />
   <imports>
     <import index="a1vl" ref="r:6d5bcec3-2bd8-4ca1-a404-34385a0ba85b(jetbrains.mps.samples.Physics.genjava.typesystem)" />

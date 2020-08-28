@@ -34,7 +34,7 @@ public class ShapeStyleExpression_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_dk7fjs_a(), CONCEPTS.ShapeStyleExpression$kL));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_dk7fjs_a(), CONCEPTS.ShapeStyleExpression$Ck));
     return result;
   }
 
@@ -106,7 +106,7 @@ public class ShapeStyleExpression_SubstituteMenu extends SubstituteMenuBase {
         private final SubstituteMenuContext _context;
         private EditorMenuTraceInfo myTraceInfo;
         public Item(SubstituteMenuContext context) {
-          super(CONCEPTS.ShapeStyleExpression$kL, context);
+          super(CONCEPTS.ShapeStyleExpression$Ck, context);
           _context = context;
         }
 
@@ -126,7 +126,7 @@ public class ShapeStyleExpression_SubstituteMenu extends SubstituteMenuBase {
         }
         @NotNull
         protected CompletionItemInformation createInformation(String pattern) {
-          return new CompletionItemInformation(myParameterObject, CONCEPTS.ShapeStyleExpression$kL, getMatchingText(pattern), getDescriptionText(pattern));
+          return new CompletionItemInformation(myParameterObject, CONCEPTS.ShapeStyleExpression$Ck, getMatchingText(pattern), getDescriptionText(pattern));
         }
         @Nullable
         @Override
@@ -148,16 +148,16 @@ public class ShapeStyleExpression_SubstituteMenu extends SubstituteMenuBase {
 
   }
   private static SNode createShapeStyleExpression_dk7fjs_a0a0a0(SEnumerationLiteral p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ShapeStyleExpression$kL);
-    n0.setProperty(PROPS.shape$2xnw, SPropertyOperations.serializeEnummember(p0));
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ShapeStyleExpression$Ck);
+    n0.setProperty(PROPS.shape$dHG3, SPropertyOperations.serializeEnummember(p0));
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ShapeStyleExpression$kL = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2ddf664L, "jetbrains.mps.samples.Physics.structure.ShapeStyleExpression");
+    /*package*/ static final SConcept ShapeStyleExpression$Ck = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2ddf664L, "jetbrains.mps.samples.Physics.structure.ShapeStyleExpression");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty shape$2xnw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2ddf664L, 0x2b1dfd95e2ddf665L, "shape");
+    /*package*/ static final SProperty shape$dHG3 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2ddf664L, 0x2b1dfd95e2ddf665L, "shape");
   }
 }

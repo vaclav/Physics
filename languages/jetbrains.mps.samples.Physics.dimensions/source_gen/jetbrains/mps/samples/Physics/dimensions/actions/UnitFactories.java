@@ -18,12 +18,12 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public class UnitFactories {
   public static class NodeFactory_1430471042026629211 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SPropertyOperations.assign(newNode, PROPS.factor$Z2DZ, "1");
+      SPropertyOperations.assign(newNode, PROPS.factor$hoVP, "1");
 
       {
         final SNode unit = sampleNode;
-        if (SNodeOperations.isInstanceOf(unit, CONCEPTS.ISimpleConverter$$d)) {
-          SPropertyOperations.assign(newNode, PROPS.factor$Z2DZ, SPropertyOperations.getString(unit, PROPS.factor$Z2DZ));
+        if (SNodeOperations.isInstanceOf(unit, CONCEPTS.ISimpleConverter$ax)) {
+          SPropertyOperations.assign(newNode, PROPS.factor$hoVP, SPropertyOperations.getString(unit, PROPS.factor$hoVP));
         }
       }
     }
@@ -32,27 +32,27 @@ public class UnitFactories {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
       {
         final SNode dim = sampleNode;
-        if (SNodeOperations.isInstanceOf(dim, CONCEPTS.Dimension$7F)) {
-          SLinkOperations.setTarget(newNode, LINKS.default$rDru, SLinkOperations.getTarget(dim, LINKS.default$rDru));
-          ListSequence.fromList(SLinkOperations.getChildren(newNode, LINKS.units$rDqw)).addSequence(ListSequence.fromList(SLinkOperations.getChildren(dim, LINKS.units$rDqw)));
-          SPropertyOperations.assign(newNode, PROPS.name$tAp1, SPropertyOperations.getString(dim, PROPS.name$tAp1));
+        if (SNodeOperations.isInstanceOf(dim, CONCEPTS.Dimension$HZ)) {
+          SLinkOperations.setTarget(newNode, LINKS.default$8aTQ, SLinkOperations.getTarget(dim, LINKS.default$8aTQ));
+          ListSequence.fromList(SLinkOperations.getChildren(newNode, LINKS.units$8arO)).addSequence(ListSequence.fromList(SLinkOperations.getChildren(dim, LINKS.units$8arO)));
+          SPropertyOperations.assign(newNode, PROPS.name$MnvL, SPropertyOperations.getString(dim, PROPS.name$MnvL));
         }
       }
     }
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty factor$Z2DZ = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835ca8L, "factor");
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty factor$hoVP = MetaAdapterFactory.getProperty(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, 0x13da0dd571835ca8L, "factor");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ISimpleConverter$$d = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, "jetbrains.mps.samples.Physics.dimensions.structure.ISimpleConverter");
-    /*package*/ static final SConcept Dimension$7F = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
+    /*package*/ static final SInterfaceConcept ISimpleConverter$ax = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L, "jetbrains.mps.samples.Physics.dimensions.structure.ISimpleConverter");
+    /*package*/ static final SConcept Dimension$HZ = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink default$rDru = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
-    /*package*/ static final SContainmentLink units$rDqw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095aL, "units");
+    /*package*/ static final SContainmentLink default$8aTQ = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
+    /*package*/ static final SContainmentLink units$8arO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095aL, "units");
   }
 }

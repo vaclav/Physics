@@ -24,7 +24,7 @@ public class typeof_CurrentWorldExpression_InferenceRule extends AbstractInferen
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.CurrentWorldExpression$l8;
+    return CONCEPTS.CurrentWorldExpression$CF;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -33,12 +33,12 @@ public class typeof_CurrentWorldExpression_InferenceRule extends AbstractInferen
     return false;
   }
   private static SNode createWorldType_lhtsvu_a1a0c0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.WorldType$tu);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.WorldType$84);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CurrentWorldExpression$l8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
-    /*package*/ static final SConcept WorldType$tu = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L, "jetbrains.mps.samples.Physics.types.structure.WorldType");
+    /*package*/ static final SConcept CurrentWorldExpression$CF = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
+    /*package*/ static final SConcept WorldType$84 = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L, "jetbrains.mps.samples.Physics.types.structure.WorldType");
   }
 }

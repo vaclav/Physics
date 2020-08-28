@@ -30,7 +30,7 @@ public final class ShapeStyleKey__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static SAbstractConcept getSpecificExpressionConcept_id1AxJyXYWKCb(@NotNull SNode __thisNode__) {
-    return CONCEPTS.ShapeStyleExpression$kL;
+    return CONCEPTS.ShapeStyleExpression$Ck;
   }
 
   /*package*/ ShapeStyleKey__BehaviorDescriptor() {
@@ -80,6 +80,6 @@ public final class ShapeStyleKey__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ShapeStyleExpression$kL = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2ddf664L, "jetbrains.mps.samples.Physics.structure.ShapeStyleExpression");
+    /*package*/ static final SConcept ShapeStyleExpression$Ck = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2ddf664L, "jetbrains.mps.samples.Physics.structure.ShapeStyleExpression");
   }
 }

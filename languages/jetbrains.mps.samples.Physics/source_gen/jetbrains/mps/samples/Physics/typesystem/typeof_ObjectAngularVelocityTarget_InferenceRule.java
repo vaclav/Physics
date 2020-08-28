@@ -26,7 +26,7 @@ public class typeof_ObjectAngularVelocityTarget_InferenceRule extends AbstractIn
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ObjectAngularVelocityTarget$RX;
+    return CONCEPTS.ObjectAngularVelocityTarget$bw;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -60,6 +60,6 @@ public class typeof_ObjectAngularVelocityTarget_InferenceRule extends AbstractIn
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectAngularVelocityTarget$RX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b115c9bL, "jetbrains.mps.samples.Physics.structure.ObjectAngularVelocityTarget");
+    /*package*/ static final SConcept ObjectAngularVelocityTarget$bw = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b115c9bL, "jetbrains.mps.samples.Physics.structure.ObjectAngularVelocityTarget");
   }
 }

@@ -26,7 +26,7 @@ public class typeof_NumericStyle_InferenceRule extends AbstractInferenceRule_Run
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.NumericDistanceStyleKey$W9;
+    return CONCEPTS.NumericDistanceStyleKey$fG;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -49,6 +49,6 @@ public class typeof_NumericStyle_InferenceRule extends AbstractInferenceRule_Run
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumericDistanceStyleKey$W9 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d6977a709aL, "jetbrains.mps.samples.Physics.structure.NumericDistanceStyleKey");
+    /*package*/ static final SConcept NumericDistanceStyleKey$fG = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d6977a709aL, "jetbrains.mps.samples.Physics.structure.NumericDistanceStyleKey");
   }
 }

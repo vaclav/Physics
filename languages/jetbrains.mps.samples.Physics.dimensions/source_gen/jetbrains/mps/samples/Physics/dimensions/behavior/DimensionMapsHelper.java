@@ -41,7 +41,7 @@ public class DimensionMapsHelper {
   public static String mapToString(Map<SNode, Rational> map) {
     Iterable<String> seq = MapSequence.fromMap(map).select(new ISelector<IMapping<SNode, Rational>, String>() {
       public String select(IMapping<SNode, Rational> it) {
-        return SPropertyOperations.getString(it.key(), PROPS.name$tAp1) + "^" + it.value().toString();
+        return SPropertyOperations.getString(it.key(), PROPS.name$MnvL) + "^" + it.value().toString();
       }
     });
     return Sequence.fromIterable(seq).skip(1).foldLeft(Sequence.fromIterable(seq).first(), new ILeftCombinator<String, String>() {
@@ -73,7 +73,7 @@ public class DimensionMapsHelper {
    */
   public static Map<SNode, Rational> combine(Map<SNode, Rational> left, Map<SNode, Rational> right, SNode operation) throws UnitComputationException {
 
-    if (SNodeOperations.isInstanceOf(operation, CONCEPTS.PlusExpression$Dn) || SNodeOperations.isInstanceOf(operation, CONCEPTS.MinusExpression$pp)) {
+    if (SNodeOperations.isInstanceOf(operation, CONCEPTS.PlusExpression$mx) || SNodeOperations.isInstanceOf(operation, CONCEPTS.MinusExpression$6z)) {
       if (matches(left, right)) {
         return left;
       } else {
@@ -81,17 +81,17 @@ public class DimensionMapsHelper {
       }
     }
 
-    if (SNodeOperations.isInstanceOf(operation, CONCEPTS.MulExpression$_u)) {
+    if (SNodeOperations.isInstanceOf(operation, CONCEPTS.MulExpression$iC)) {
       DimensionMapsHelper.multiplyAndMergeInto(left, new Rational(1), right);
       return right;
     }
 
-    if (SNodeOperations.isInstanceOf(operation, CONCEPTS.DivExpression$Li)) {
+    if (SNodeOperations.isInstanceOf(operation, CONCEPTS.DivExpression$us)) {
       DimensionMapsHelper.multiplyAndMergeInto(right, new Rational(-1), left);
       return left;
     }
 
-    if (SNodeOperations.isInstanceOf(operation, CONCEPTS.BinaryComparisonExpression$qp) && !(matches(left, right))) {
+    if (SNodeOperations.isInstanceOf(operation, CONCEPTS.BinaryComparisonExpression$7z) && !(matches(left, right))) {
       throw new UnitComputationException("Unmatched units: " + mapToString(left) + " and " + mapToString(right));
     }
 
@@ -126,28 +126,28 @@ public class DimensionMapsHelper {
   }
 
   private static SNode createDimensionReference_6b7pfp_a0a0a0a0h(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionReference$wa);
-    n0.setReferenceTarget(LINKS.unit$2BcY, p0);
-    n0.forChild(LINKS.exponent$2Bc0).initNode(p1, CONCEPTS.Exponent$nW, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionReference$6u);
+    n0.setReferenceTarget(LINKS.unit$5Sm, p0);
+    n0.forChild(LINKS.exponent$5qk).initNode(p1, CONCEPTS.Exponent$Yg, true);
     return n0.getResult();
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept PlusExpression$Dn = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
-    /*package*/ static final SConcept MinusExpression$pp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac5a5L, "org.iets3.core.expr.base.structure.MinusExpression");
-    /*package*/ static final SConcept MulExpression$_u = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
-    /*package*/ static final SConcept DivExpression$Li = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
-    /*package*/ static final SConcept BinaryComparisonExpression$qp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cb4f93L, "org.iets3.core.expr.base.structure.BinaryComparisonExpression");
-    /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
-    /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
+    /*package*/ static final SConcept PlusExpression$mx = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a4f2L, "org.iets3.core.expr.base.structure.PlusExpression");
+    /*package*/ static final SConcept MinusExpression$6z = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac5a5L, "org.iets3.core.expr.base.structure.MinusExpression");
+    /*package*/ static final SConcept MulExpression$iC = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c9a56fL, "org.iets3.core.expr.base.structure.MulExpression");
+    /*package*/ static final SConcept DivExpression$us = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cac63bL, "org.iets3.core.expr.base.structure.DivExpression");
+    /*package*/ static final SConcept BinaryComparisonExpression$7z = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cb4f93L, "org.iets3.core.expr.base.structure.BinaryComparisonExpression");
+    /*package*/ static final SConcept DimensionReference$6u = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
+    /*package*/ static final SConcept Exponent$Yg = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
-    /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
+    /*package*/ static final SReferenceLink unit$5Sm = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SContainmentLink exponent$5qk = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
   }
 }

@@ -52,36 +52,36 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
     return UnitHandlingCapablity.INSTANCE;
   }
   /*package*/ static String getDetailedPresentation_id22G2W3WJ92t(@NotNull SNode __thisNode__) {
-    return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.baseType$fHYw)) + "[" + IUnitReferenceLike__BehaviorDescriptor.listToString_id3L71doTUROP.invoke(SNodeOperations.asSConcept(CONCEPTS.IUnitReferenceLike$XC), SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow)) + "]";
+    return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.baseType$mnRO)) + "[" + IUnitReferenceLike__BehaviorDescriptor.listToString_id3L71doTUROP.invoke(SNodeOperations.asSConcept(CONCEPTS.IUnitReferenceLike$zW), SLinkOperations.getChildren(__thisNode__, LINKS.units$qq1O)) + "]";
   }
   /*package*/ static Iterable<SNode> getRawUnits_id20wM4XMzAC4(@NotNull SNode __thisNode__) {
-    return Sequence.fromIterable(UnitReduceHelper.reduceUnitsToReferences(SLinkOperations.getChildren(__thisNode__, LINKS.units$o6Ow))).select(new ISelector<SNode, SNode>() {
+    return Sequence.fromIterable(UnitReduceHelper.reduceUnitsToReferences(SLinkOperations.getChildren(__thisNode__, LINKS.units$qq1O))).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
-        return createUnitReference_oyoavs_a0a0a0a0c(SLinkOperations.getTarget(it, LINKS.exponent$2Bc0), SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$2BcY), LINKS.default$rDru));
+        return createUnitReference_oyoavs_a0a0a0a0c(SLinkOperations.getTarget(it, LINKS.exponent$5qk), SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$5Sm), LINKS.default$8aTQ));
       }
     });
   }
   /*package*/ static SNode wrappedType_id6bG6MAFRDvi(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.baseType$fHYw);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.baseType$mnRO);
   }
   /*package*/ static SNode reWrap_id6bG6MAG4Mv3(@NotNull SNode __thisNode__, SNode newBaseType, SNode originalWrapper) {
     SNode copy = SNodeOperations.copyNode(__thisNode__);
-    SLinkOperations.setTarget(copy, LINKS.baseType$fHYw, SNodeOperations.cast(newBaseType, CONCEPTS.Type$fA));
+    SLinkOperations.setTarget(copy, LINKS.baseType$mnRO, SNodeOperations.cast(newBaseType, CONCEPTS.Type$WK));
     return copy;
   }
   /*package*/ static List<SNode> getTypeParameters_idKoRsm$Us0E(@NotNull SNode __thisNode__) {
-    return Sequence.fromIterable(Sequence.<SNode>singleton(SLinkOperations.getTarget(__thisNode__, LINKS.baseType$fHYw))).toListSequence();
+    return Sequence.fromIterable(Sequence.<SNode>singleton(SLinkOperations.getTarget(__thisNode__, LINKS.baseType$mnRO))).toListSequence();
   }
   /*package*/ static void ensureParameterizedTypeComparability_id7KDVkAErfTB(@NotNull SNode __thisNode__, SNode otherType, _FunctionTypes._return_P2_E0<? extends Boolean, ? super SNode, ? super SNode> isPrimitiveTypeComparableTo, _FunctionTypes._void_P2_E0<? super SNode, ? super SNode> createError) {
     {
       final SNode dimType = otherType;
-      if (SNodeOperations.isInstanceOf(dimType, CONCEPTS.DimensionType$yz)) {
+      if (SNodeOperations.isInstanceOf(dimType, CONCEPTS.DimensionType$8R)) {
         if (!(DimensionTypeHelper.areCompatible(__thisNode__, dimType))) {
           createError.invoke(__thisNode__, otherType);
         }
       }
     }
-    IParameterizedTypeSupportsEquals__BehaviorDescriptor.ensureParameterizedTypeComparability_id7KDVkAErfTB.invoke0(__thisNode__, CONCEPTS.IParameterizedTypeSupportsEquals$PK, otherType, isPrimitiveTypeComparableTo, createError);
+    IParameterizedTypeSupportsEquals__BehaviorDescriptor.ensureParameterizedTypeComparability_id7KDVkAErfTB.invoke0(__thisNode__, CONCEPTS.IParameterizedTypeSupportsEquals$yU, otherType, isPrimitiveTypeComparableTo, createError);
   }
 
   /*package*/ DimensionType__BehaviorDescriptor() {
@@ -143,26 +143,26 @@ public final class DimensionType__BehaviorDescriptor extends BaseBHDescriptor {
     return CONCEPT;
   }
   private static SNode createUnitReference_oyoavs_a0a0a0a0c(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitReference$c4);
-    n0.forChild(LINKS.exponent$2Bc0).initNode(p0, CONCEPTS.Exponent$nW, true);
-    n0.setReferenceTarget(LINKS.unit$2BcY, p1);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitReference$Mo);
+    n0.forChild(LINKS.exponent$5qk).initNode(p0, CONCEPTS.Exponent$Yg, true);
+    n0.setReferenceTarget(LINKS.unit$5Sm, p1);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
-    /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
-    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
-    /*package*/ static final SContainmentLink default$rDru = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
+    /*package*/ static final SContainmentLink baseType$mnRO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink exponent$5qk = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
+    /*package*/ static final SReferenceLink unit$5Sm = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SContainmentLink default$8aTQ = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IUnitReferenceLike$XC = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, "jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike");
-    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
-    /*package*/ static final SInterfaceConcept IParameterizedTypeSupportsEquals$PK = MetaAdapterFactory.getInterfaceConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7c29ed49aa581218L, "org.iets3.core.expr.base.structure.IParameterizedTypeSupportsEquals");
-    /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
-    /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
+    /*package*/ static final SInterfaceConcept IUnitReferenceLike$zW = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, "jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike");
+    /*package*/ static final SConcept Type$WK = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SInterfaceConcept IParameterizedTypeSupportsEquals$yU = MetaAdapterFactory.getInterfaceConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7c29ed49aa581218L, "org.iets3.core.expr.base.structure.IParameterizedTypeSupportsEquals");
+    /*package*/ static final SConcept UnitReference$Mo = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
+    /*package*/ static final SConcept Exponent$Yg = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
   }
 }

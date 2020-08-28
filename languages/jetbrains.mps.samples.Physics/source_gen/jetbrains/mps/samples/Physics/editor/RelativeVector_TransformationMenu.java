@@ -87,12 +87,12 @@ public class RelativeVector_TransformationMenu extends TransformationMenuBase {
       @Nullable
       @Override
       public String getLabelText(String pattern) {
-        return (SPropertyOperations.getBoolean(_context.getNode(), PROPS.isOriented$Afmy) ? "Use global orientation" : "Use object orientation");
+        return (SPropertyOperations.getBoolean(_context.getNode(), PROPS.isOriented$wZe1) ? "Use global orientation" : "Use object orientation");
       }
 
       @Override
       public void execute(@NotNull String pattern) {
-        SPropertyOperations.assign(_context.getNode(), PROPS.isOriented$Afmy, !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isOriented$Afmy)));
+        SPropertyOperations.assign(_context.getNode(), PROPS.isOriented$wZe1, !(SPropertyOperations.getBoolean(_context.getNode(), PROPS.isOriented$wZe1)));
       }
 
 
@@ -108,6 +108,6 @@ public class RelativeVector_TransformationMenu extends TransformationMenuBase {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isOriented$Afmy = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x89beb47905fe8dbL, "isOriented");
+    /*package*/ static final SProperty isOriented$wZe1 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x89beb47905fe8dbL, "isOriented");
   }
 }

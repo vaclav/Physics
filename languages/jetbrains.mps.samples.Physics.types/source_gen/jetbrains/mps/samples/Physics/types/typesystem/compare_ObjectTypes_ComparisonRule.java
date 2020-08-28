@@ -27,13 +27,13 @@ public class compare_ObjectTypes_ComparisonRule extends ComparisonRule_Runtime {
   }
 
   public SAbstractConcept getApplicableConcept1() {
-    return CONCEPTS.ObjectType$sZ;
+    return CONCEPTS.ObjectType$7_;
   }
   public SAbstractConcept getApplicableConcept2() {
-    return CONCEPTS.ObjectType$sZ;
+    return CONCEPTS.ObjectType$7_;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
+    /*package*/ static final SConcept ObjectType$7_ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
   }
 }

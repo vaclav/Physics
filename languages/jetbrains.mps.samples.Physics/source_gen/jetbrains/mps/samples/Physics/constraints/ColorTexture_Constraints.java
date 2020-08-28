@@ -8,10 +8,10 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class ColorTexture_Constraints extends BaseConstraintsDescriptor {
   public ColorTexture_Constraints() {
-    super(CONCEPTS.ColorTexture$j6);
+    super(CONCEPTS.ColorTexture$AD);
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ColorTexture$j6 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2a9ffcL, "jetbrains.mps.samples.Physics.structure.ColorTexture");
+    /*package*/ static final SConcept ColorTexture$AD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2a9ffcL, "jetbrains.mps.samples.Physics.structure.ColorTexture");
   }
 }

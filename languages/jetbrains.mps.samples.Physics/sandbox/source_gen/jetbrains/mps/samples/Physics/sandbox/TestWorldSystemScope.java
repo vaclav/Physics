@@ -9,10 +9,10 @@ import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import org.ode4j.math.DMatrix3C;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import java.math.BigInteger;
-import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.math.BigInteger;
+import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import org.nevec.rjm.BigDecimalMath;
 import java.math.MathContext;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
@@ -38,7 +38,7 @@ public class TestWorldSystemScope extends SystemScope {
     Something3 = withEntity(new Something5PhysicalEntity(world, "Something4", scope));
     Hey = withEntity(new Hey2PhysicalEntity(world, "Hey1", scope));
     Ho = withEntity(new Ho2PhysicalEntity(world, "Ho1", scope));
-    TheOtherWorld = withEntity(new World2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
+    TheOtherWorld = withEntity(new World2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("1.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.9999999999999998").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
 
     // Initialize them 
     Something3.init(this, world);

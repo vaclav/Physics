@@ -35,10 +35,10 @@ public final class UnitReference__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static SNode getDimension_ideHVwIHgU5$(@NotNull SNode __thisNode__) {
-    return IUnit__BehaviorDescriptor.getDimension_id3G2R3fdY2Qo.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.unit$2BcY));
+    return IUnit__BehaviorDescriptor.getDimension_id3G2R3fdY2Qo.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.unit$5Sm));
   }
   /*package*/ static SNode toDimensionReference_id4NfpV2pfAzN(@NotNull SNode __thisNode__) {
-    return createDimensionReference_pr81xx_a0a1(SLinkOperations.getTarget(__thisNode__, LINKS.exponent$2Bc0), UnitReference__BehaviorDescriptor.getDimension_ideHVwIHgU5$.invoke(__thisNode__));
+    return createDimensionReference_pr81xx_a0a1(SLinkOperations.getTarget(__thisNode__, LINKS.exponent$5qk), UnitReference__BehaviorDescriptor.getDimension_ideHVwIHgU5$.invoke(__thisNode__));
   }
 
   /*package*/ UnitReference__BehaviorDescriptor() {
@@ -89,19 +89,19 @@ public final class UnitReference__BehaviorDescriptor extends BaseBHDescriptor {
     return CONCEPT;
   }
   private static SNode createDimensionReference_pr81xx_a0a1(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionReference$wa);
-    n0.forChild(LINKS.exponent$2Bc0).initNode(p0, CONCEPTS.Exponent$nW, true);
-    n0.setReferenceTarget(LINKS.unit$2BcY, p1);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionReference$6u);
+    n0.forChild(LINKS.exponent$5qk).initNode(p0, CONCEPTS.Exponent$Yg, true);
+    n0.setReferenceTarget(LINKS.unit$5Sm, p1);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
-    /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
+    /*package*/ static final SReferenceLink unit$5Sm = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SContainmentLink exponent$5qk = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DimensionReference$wa = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
-    /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
+    /*package*/ static final SConcept DimensionReference$6u = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionReference");
+    /*package*/ static final SConcept Exponent$Yg = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
   }
 }

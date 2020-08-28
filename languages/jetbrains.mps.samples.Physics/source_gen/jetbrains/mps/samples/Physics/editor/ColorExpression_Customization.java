@@ -31,7 +31,7 @@ public class ColorExpression_Customization implements EditorMenuItemCustomizer {
   private static class ColorExpression_CustomizationSpecific implements EditorMenuItemCustomizer {
 
     public boolean matches(EditorMenuItemCustomizationContext context) {
-      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.ColorExpression$Gd).matchesContext(context) && getCompletionItemInformation(context) != null;
+      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.ColorExpression$ZK).matchesContext(context) && getCompletionItemInformation(context) != null;
     }
 
 
@@ -54,7 +54,7 @@ public class ColorExpression_Customization implements EditorMenuItemCustomizer {
     }
     private void customize_(SNode parentNode, SNode currentChild, SContainmentLink containmentLink, EditorMenuItemStyle style, CompletionItemInformation itemInformation) {
       style.setPriority(1.5);
-      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.ColorTexture$j6, true, false) != null)) {
+      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.ColorTexture$AD, true, false) != null)) {
         style.setPriority(3.0);
       }
     }
@@ -62,7 +62,7 @@ public class ColorExpression_Customization implements EditorMenuItemCustomizer {
 
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ColorExpression$Gd = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2aa0bbL, "jetbrains.mps.samples.Physics.structure.ColorExpression");
-    /*package*/ static final SConcept ColorTexture$j6 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2a9ffcL, "jetbrains.mps.samples.Physics.structure.ColorTexture");
+    /*package*/ static final SConcept ColorExpression$ZK = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2aa0bbL, "jetbrains.mps.samples.Physics.structure.ColorExpression");
+    /*package*/ static final SConcept ColorTexture$AD = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2a9ffcL, "jetbrains.mps.samples.Physics.structure.ColorTexture");
   }
 }

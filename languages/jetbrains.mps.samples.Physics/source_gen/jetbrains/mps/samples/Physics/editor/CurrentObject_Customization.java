@@ -32,7 +32,7 @@ public class CurrentObject_Customization implements EditorMenuItemCustomizer {
   private static class CurrentObject_CustomizationSpecific implements EditorMenuItemCustomizer {
 
     public boolean matches(EditorMenuItemCustomizationContext context) {
-      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.CurrentObjectExpression$eH).matchesContext(context) && getCompletionItemInformation(context) != null;
+      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.CurrentObjectExpression$yg).matchesContext(context) && getCompletionItemInformation(context) != null;
     }
 
 
@@ -54,7 +54,7 @@ public class CurrentObject_Customization implements EditorMenuItemCustomizer {
       customize_(getParentNode(context), getChild(context), getLink(context), style, getCompletionItemInformation(context));
     }
     private void customize_(SNode parentNode, SNode currentChild, SContainmentLink containmentLink, EditorMenuItemStyle style, CompletionItemInformation itemInformation) {
-      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.ICurrentObjectContext$rc, true, false) != null)) {
+      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.ICurrentObjectContext$IJ, true, false) != null)) {
         style.setPriority(2.1);
       }
     }
@@ -62,7 +62,7 @@ public class CurrentObject_Customization implements EditorMenuItemCustomizer {
 
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CurrentObjectExpression$eH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L, "jetbrains.mps.samples.Physics.structure.CurrentObjectExpression");
-    /*package*/ static final SInterfaceConcept ICurrentObjectContext$rc = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d76cb28bL, "jetbrains.mps.samples.Physics.structure.ICurrentObjectContext");
+    /*package*/ static final SConcept CurrentObjectExpression$yg = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab547716L, "jetbrains.mps.samples.Physics.structure.CurrentObjectExpression");
+    /*package*/ static final SInterfaceConcept ICurrentObjectContext$IJ = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d76cb28bL, "jetbrains.mps.samples.Physics.structure.ICurrentObjectContext");
   }
 }

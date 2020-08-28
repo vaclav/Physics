@@ -70,7 +70,7 @@ public class AbsoluteCoordinates_TransformationMenu extends TransformationMenuBa
   protected List<MenuPart<TransformationMenuItem, TransformationMenuContext>> getParts(TransformationMenuContext _context) {
     List<MenuPart<TransformationMenuItem, TransformationMenuContext>> result = new ArrayList<MenuPart<TransformationMenuItem, TransformationMenuContext>>();
     if (ListSequence.fromListAndArray(new ArrayList<String>(), MenuLocations.RIGHT_SIDE_TRANSFORM).contains(_context.getMenuLocation())) {
-      result.add(new DefaultConceptMenusTransformationMenuPart(SModelUtil.getDirectSuperConcepts(CONCEPTS.AbsoluteCoordinates$d5)) {
+      result.add(new DefaultConceptMenusTransformationMenuPart(SModelUtil.getDirectSuperConcepts(CONCEPTS.AbsoluteCoordinates$wC)) {
         @NotNull
         @Override
         public List<TransformationMenuItem> createItems(@NotNull TransformationMenuContext context) {
@@ -87,7 +87,7 @@ public class AbsoluteCoordinates_TransformationMenu extends TransformationMenuBa
       result.add(new TMP_Action_bx95pt_b0());
     }
     if (ListSequence.fromListAndArray(new ArrayList<String>(), MenuLocations.LEFT_SIDE_TRANSFORM).contains(_context.getMenuLocation())) {
-      result.add(new DefaultConceptMenusTransformationMenuPart(SModelUtil.getDirectSuperConcepts(CONCEPTS.AbsoluteCoordinates$d5)) {
+      result.add(new DefaultConceptMenusTransformationMenuPart(SModelUtil.getDirectSuperConcepts(CONCEPTS.AbsoluteCoordinates$wC)) {
         @NotNull
         @Override
         public List<TransformationMenuItem> createItems(@NotNull TransformationMenuContext context) {
@@ -144,14 +144,14 @@ public class AbsoluteCoordinates_TransformationMenu extends TransformationMenuBa
 
       @Override
       public void execute(@NotNull String pattern) {
-        SNode relative = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.RelativeVector$c7);
-        SLinkOperations.setTarget(relative, LINKS.coordinates$l1nt, _context.getNode());
+        SNode relative = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.RelativeVector$vE);
+        SLinkOperations.setTarget(relative, LINKS.coordinates$bdEA, _context.getNode());
         SelectionUtil.selectCell(_context.getEditorContext(), relative, SelectionManager.LAST_EDITABLE_CELL);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(_context.getNode()), CONCEPTS.RelativeVector$c7));
+        return !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(_context.getNode()), CONCEPTS.RelativeVector$vE));
       }
 
 
@@ -194,16 +194,16 @@ public class AbsoluteCoordinates_TransformationMenu extends TransformationMenuBa
       return new DefaultSubstituteMenuLookup(LanguageRegistry.getInstance(editorContext.getRepository()), conceptToFindMenuFor);
     }
     private SAbstractConcept getConceptToFindMenuFor(TransformationMenuContext _context) {
-      return CONCEPTS.AbsoluteCoordinates$d5;
+      return CONCEPTS.AbsoluteCoordinates$wC;
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbsoluteCoordinates$d5 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL, "jetbrains.mps.samples.Physics.structure.AbsoluteCoordinates");
-    /*package*/ static final SConcept RelativeVector$c7 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
+    /*package*/ static final SConcept AbsoluteCoordinates$wC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6dL, "jetbrains.mps.samples.Physics.structure.AbsoluteCoordinates");
+    /*package*/ static final SConcept RelativeVector$vE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, "jetbrains.mps.samples.Physics.structure.RelativeVector");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink coordinates$l1nt = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
+    /*package*/ static final SContainmentLink coordinates$bdEA = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x584bed834752fa6bL, 0x1918a6b053ddd35aL, "coordinates");
   }
 }

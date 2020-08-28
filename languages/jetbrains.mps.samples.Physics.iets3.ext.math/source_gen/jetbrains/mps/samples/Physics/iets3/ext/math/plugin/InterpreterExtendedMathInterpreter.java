@@ -37,13 +37,13 @@ public class InterpreterExtendedMathInterpreter extends InterpreterBase {
   }
 
   protected void populateEvaluators(List<? extends IEvaluator> evaluators) {
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.NRootExpression$sH, "r:2c20269f-57e4-41ef-a202-e8ce4699d3fc(jetbrains.mps.samples.Physics.iets3.ext.math.plugin)/6539217963580481902", true, new TypedChildConstraintImpl(LINKS.expression$tVRI, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$5o)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.NRootExpression$WQ, "r:2c20269f-57e4-41ef-a202-e8ce4699d3fc(jetbrains.mps.samples.Physics.iets3.ext.math.plugin)/6539217963580481902", true, new TypedChildConstraintImpl(LINKS.expression$kXvr, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.RealType$36)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return BigDecimalMath.pow(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.expression$tVRI), context, coverage, trace, false), BigDecimal.class)), BigDecimal.ONE.divide(new BigDecimal(SPropertyOperations.getString(node, PROPS.exponent$9cvW)), MathContext.DECIMAL32));
+          return BigDecimalMath.pow(((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.expression$kXvr), context, coverage, trace, false), BigDecimal.class)), BigDecimal.ONE.divide(new BigDecimal(SPropertyOperations.getString(node, PROPS.exponent$i0Yd)), MathContext.DECIMAL32));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -79,15 +79,15 @@ public class InterpreterExtendedMathInterpreter extends InterpreterBase {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink expression$tVRI = MetaAdapterFactory.getContainmentLink(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x5abff81774111c3aL, "expression");
+    /*package*/ static final SContainmentLink expression$kXvr = MetaAdapterFactory.getContainmentLink(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x5abff81774111c3aL, "expression");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty exponent$9cvW = MetaAdapterFactory.getProperty(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x4a2d0770b38f4fa2L, "exponent");
+    /*package*/ static final SProperty exponent$i0Yd = MetaAdapterFactory.getProperty(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x4a2d0770b38f4fa2L, "exponent");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NRootExpression$sH = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.NRootExpression");
-    /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
+    /*package*/ static final SConcept NRootExpression$WQ = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.NRootExpression");
+    /*package*/ static final SConcept RealType$36 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
   }
 }

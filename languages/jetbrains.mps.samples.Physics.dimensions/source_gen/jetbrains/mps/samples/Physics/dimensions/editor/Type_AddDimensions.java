@@ -109,14 +109,14 @@ public class Type_AddDimensions extends TransformationMenuBase {
 
       @Override
       public void execute(@NotNull String pattern) {
-        SNode newType = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.DimensionType$yz);
-        SLinkOperations.setTarget(newType, LINKS.baseType$fHYw, _context.getNode());
+        SNode newType = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.DimensionType$8R);
+        SLinkOperations.setTarget(newType, LINKS.baseType$mnRO, _context.getNode());
         SelectionUtil.selectCell(_context.getEditorContext(), newType, SelectionManager.LAST_EDITABLE_CELL);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return (SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.DimensionType$yz, false, false) == null);
+        return (SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.DimensionType$8R, false, false) == null);
       }
 
 
@@ -139,10 +139,10 @@ public class Type_AddDimensions extends TransformationMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink baseType$fHYw = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
+    /*package*/ static final SContainmentLink baseType$mnRO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, 0x777af24c04609bcbL, "baseType");
   }
 }

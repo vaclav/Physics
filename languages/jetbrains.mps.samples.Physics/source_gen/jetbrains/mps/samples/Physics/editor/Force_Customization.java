@@ -32,7 +32,7 @@ public class Force_Customization implements EditorMenuItemCustomizer {
   private static class Force_CustomizationSpecific implements EditorMenuItemCustomizer {
 
     public boolean matches(EditorMenuItemCustomizationContext context) {
-      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.Force$pC).matchesContext(context) && getCompletionItemInformation(context) != null;
+      return new EditorMenuItemCreatingConceptContextMatcher(CONCEPTS.Force$Hb).matchesContext(context) && getCompletionItemInformation(context) != null;
     }
 
 
@@ -54,9 +54,9 @@ public class Force_Customization implements EditorMenuItemCustomizer {
       customize_(getParentNode(context), getChild(context), getLink(context), style, getCompletionItemInformation(context));
     }
     private void customize_(SNode parentNode, SNode currentChild, SContainmentLink containmentLink, EditorMenuItemStyle style, CompletionItemInformation itemInformation) {
-      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.AbstractForce$Pj, true, false) != null) || Objects.equals(containmentLink, LINKS.forces$OiCr)) {
+      if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.AbstractForce$8Q, true, false) != null) || Objects.equals(containmentLink, LINKS.forces$k$SC)) {
         int priority = 1;
-        if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.Force$pC, false, false) == null)) {
+        if ((SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.Force$Hb, false, false) == null)) {
           priority += 2;
         }
         style.setPriority(priority);
@@ -66,11 +66,11 @@ public class Force_Customization implements EditorMenuItemCustomizer {
 
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Force$pC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
-    /*package*/ static final SConcept AbstractForce$Pj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, "jetbrains.mps.samples.Physics.structure.AbstractForce");
+    /*package*/ static final SConcept Force$Hb = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
+    /*package*/ static final SConcept AbstractForce$8Q = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, "jetbrains.mps.samples.Physics.structure.AbstractForce");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink forces$OiCr = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e49L, "forces");
+    /*package*/ static final SContainmentLink forces$k$SC = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e49L, "forces");
   }
 }

@@ -75,7 +75,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new cameraPositionSingleRoleHandler_zec6bn_b0(myNode, LINKS.cameraPosition$oPrJ, getEditorContext());
+    SingleRoleCellProvider provider = new cameraPositionSingleRoleHandler_zec6bn_b0(myNode, LINKS.cameraPosition$1rJk, getEditorContext());
     return provider.createCell();
   }
   private static class cameraPositionSingleRoleHandler_zec6bn_b0 extends SingleRoleCellProvider {
@@ -95,8 +95,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.cameraPosition$oPrJ, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.cameraPosition$oPrJ, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.cameraPosition$1rJk, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.cameraPosition$1rJk, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -108,7 +108,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.cameraPosition$oPrJ);
+        editorCell.setSRole(LINKS.cameraPosition$1rJk);
       }
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
@@ -117,7 +117,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.cameraPosition$oPrJ));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.cameraPosition$1rJk));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_cameraPosition");
@@ -142,7 +142,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new cameraFocusSingleRoleHandler_zec6bn_d0(myNode, LINKS.cameraFocus$oVJH, getEditorContext());
+    SingleRoleCellProvider provider = new cameraFocusSingleRoleHandler_zec6bn_d0(myNode, LINKS.cameraFocus$4vqm, getEditorContext());
     return provider.createCell();
   }
   private static class cameraFocusSingleRoleHandler_zec6bn_d0 extends SingleRoleCellProvider {
@@ -162,8 +162,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.cameraFocus$oVJH, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.cameraFocus$oVJH, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.cameraFocus$4vqm, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.cameraFocus$4vqm, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -175,7 +175,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.cameraFocus$oVJH);
+        editorCell.setSRole(LINKS.cameraFocus$4vqm);
       }
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
@@ -184,7 +184,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.cameraFocus$oVJH));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.cameraFocus$4vqm));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_cameraFocus");
@@ -218,7 +218,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private boolean _StyleParameter_QueryFunction_zec6bn_a0f0() {
-    return ListSequence.fromList(SLinkOperations.getChildren(getNode(), LINKS.overrideRules$taI3)).isNotEmpty();
+    return ListSequence.fromList(SLinkOperations.getChildren(getNode(), LINKS.overrideRules$7JB0)).isNotEmpty();
   }
   private EditorCell createRefNodeList_0() {
     AbstractCellListHandler handler = new overrideRulesListHandler_zec6bn_g0(myNode, getEditorContext());
@@ -245,10 +245,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.overrideRules$taI3;
+      return LINKS.overrideRules$7JB0;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.OverrideRule$lC;
+      return CONCEPTS.OverrideRule$Db;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -258,7 +258,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(overrideRulesListHandler_zec6bn_g0.this.getNode(), LINKS.overrideRules$taI3));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(overrideRulesListHandler_zec6bn_g0.this.getNode(), LINKS.overrideRules$7JB0));
       try {
         EditorCell emptyCell = null;
         emptyCell = createConstant_4();
@@ -314,7 +314,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private boolean _StyleParameter_QueryFunction_zec6bn_a0h0() {
-    return ListSequence.fromList(SLinkOperations.getChildren(getNode(), LINKS.metrics$x8yH)).isNotEmpty();
+    return ListSequence.fromList(SLinkOperations.getChildren(getNode(), LINKS.metrics$2G7m)).isNotEmpty();
   }
   private EditorCell createRefNodeList_1() {
     AbstractCellListHandler handler = new metricsListHandler_zec6bn_i0(myNode, getEditorContext());
@@ -341,10 +341,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.metrics$x8yH;
+      return LINKS.metrics$2G7m;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.DisplayedMetric$2E;
+      return CONCEPTS.DisplayedMetric$md;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -354,7 +354,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(metricsListHandler_zec6bn_i0.this.getNode(), LINKS.metrics$x8yH));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(metricsListHandler_zec6bn_i0.this.getNode(), LINKS.metrics$2G7m));
       try {
         EditorCell emptyCell = null;
         emptyCell = createConstant_6();
@@ -402,14 +402,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink cameraPosition$oPrJ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x55d23bae7b62a2a7L, "cameraPosition");
-    /*package*/ static final SContainmentLink cameraFocus$oVJH = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x55d23bae7b62a2e0L, "cameraFocus");
-    /*package*/ static final SContainmentLink overrideRules$taI3 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x3238375e772fa01bL, "overrideRules");
-    /*package*/ static final SContainmentLink metrics$x8yH = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x3c4704d6394ad6e3L, "metrics");
+    /*package*/ static final SContainmentLink cameraPosition$1rJk = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x55d23bae7b62a2a7L, "cameraPosition");
+    /*package*/ static final SContainmentLink cameraFocus$4vqm = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x55d23bae7b62a2e0L, "cameraFocus");
+    /*package*/ static final SContainmentLink overrideRules$7JB0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x3238375e772fa01bL, "overrideRules");
+    /*package*/ static final SContainmentLink metrics$2G7m = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5820d9a6fbf7a539L, 0x3c4704d6394ad6e3L, "metrics");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept OverrideRule$lC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
-    /*package*/ static final SConcept DisplayedMetric$2E = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3c4704d6394ad30bL, "jetbrains.mps.samples.Physics.structure.DisplayedMetric");
+    /*package*/ static final SConcept OverrideRule$Db = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
+    /*package*/ static final SConcept DisplayedMetric$md = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3c4704d6394ad30bL, "jetbrains.mps.samples.Physics.structure.DisplayedMetric");
   }
 }

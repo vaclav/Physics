@@ -37,14 +37,14 @@ public class replace_ZeroValue_DimensionType_InequationReplacementRule extends A
   }
 
   public SAbstractConcept getApplicableSubtypeConcept() {
-    return CONCEPTS.NumberType$2D;
+    return CONCEPTS.NumberType$n;
   }
   public SAbstractConcept getApplicableSupertypeConcept() {
-    return CONCEPTS.DimensionType$yz;
+    return CONCEPTS.DimensionType$8R;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumberType$2D = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept NumberType$n = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x7211e50064d40ea8L, "org.iets3.core.expr.simpleTypes.structure.NumberType");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
   }
 }

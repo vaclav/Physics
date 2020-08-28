@@ -14,14 +14,14 @@ public class DotExpressionHelper {
   public static SNode getContextTarget(SNode source) {
     {
       final SNode parent = SNodeOperations.getParent(source);
-      if (SNodeOperations.isInstanceOf(parent, CONCEPTS.DotExpression$Af)) {
+      if (SNodeOperations.isInstanceOf(parent, CONCEPTS.DotExpression$jp)) {
         {
-          final SNode context = SLinkOperations.getTarget(parent, LINKS.expr$xFwa);
-          if (SNodeOperations.isInstanceOf(context, CONCEPTS.DotExpression$Af)) {
-            return SLinkOperations.getTarget(context, LINKS.target$NL8Z);
+          final SNode context = SLinkOperations.getTarget(parent, LINKS.expr$Hji0);
+          if (SNodeOperations.isInstanceOf(context, CONCEPTS.DotExpression$jp)) {
+            return SLinkOperations.getTarget(context, LINKS.target$u23F);
           }
         }
-        return SLinkOperations.getTarget(parent, LINKS.expr$xFwa);
+        return SLinkOperations.getTarget(parent, LINKS.expr$Hji0);
       }
     }
     return null;
@@ -37,14 +37,14 @@ public class DotExpressionHelper {
   public static boolean hasParentContextTargetOf(SNode parentNode, SAbstractConcept concept) {
     {
       final SNode parentDot = parentNode;
-      if (SNodeOperations.isInstanceOf(parentDot, CONCEPTS.DotExpression$Af)) {
+      if (SNodeOperations.isInstanceOf(parentDot, CONCEPTS.DotExpression$jp)) {
         {
-          final SNode context = SLinkOperations.getTarget(parentDot, LINKS.expr$xFwa);
-          if (SNodeOperations.isInstanceOf(context, CONCEPTS.DotExpression$Af)) {
-            return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(context, LINKS.target$NL8Z), SNodeOperations.asSConcept(concept));
+          final SNode context = SLinkOperations.getTarget(parentDot, LINKS.expr$Hji0);
+          if (SNodeOperations.isInstanceOf(context, CONCEPTS.DotExpression$jp)) {
+            return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(context, LINKS.target$u23F), SNodeOperations.asSConcept(concept));
           }
         }
-        return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(parentDot, LINKS.expr$xFwa), SNodeOperations.asSConcept(concept));
+        return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(parentDot, LINKS.expr$Hji0), SNodeOperations.asSConcept(concept));
       }
     }
 
@@ -52,11 +52,11 @@ public class DotExpressionHelper {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DotExpression$Af = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
+    /*package*/ static final SConcept DotExpression$jp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink expr$xFwa = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
-    /*package*/ static final SContainmentLink target$NL8Z = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
+    /*package*/ static final SContainmentLink expr$Hji0 = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L, 0x46ff3b3d86cd0f6bL, "expr");
+    /*package*/ static final SContainmentLink target$u23F = MetaAdapterFactory.getContainmentLink(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, 0x7cef88020a0f424bL, "target");
   }
 }

@@ -43,11 +43,11 @@ public final class MomentForce__BehaviorDescriptor extends BaseBHDescriptor {
     return null;
   }
   /*package*/ static SNode getMomentExpression_id2rJkT1EYuGl(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.moment$q6Qs);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.moment$CRF7);
   }
   /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
     int mode = ForceMode.SKIP_LINEAR_FORCE;
-    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isMomentRelative$rXiD) ? ForceMode.TORQUE_RELATIVE : 0);
+    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isMomentRelative$yflq) ? ForceMode.TORQUE_RELATIVE : 0);
     return mode;
   }
 
@@ -104,10 +104,10 @@ public final class MomentForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink moment$q6Qs = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906af9f596L, "moment");
+    /*package*/ static final SContainmentLink moment$CRF7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906af9f596L, "moment");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isMomentRelative$rXiD = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
+    /*package*/ static final SProperty isMomentRelative$yflq = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, 0x26ef53906b380782L, "isMomentRelative");
   }
 }

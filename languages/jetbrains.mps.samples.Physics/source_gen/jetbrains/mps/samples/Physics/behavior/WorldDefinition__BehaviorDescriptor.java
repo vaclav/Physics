@@ -53,35 +53,35 @@ public final class WorldDefinition__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   /*package*/ static Iterable<SNode> getNestedDefinitions_id31HEEbbzg2E(@NotNull SNode __thisNode__) {
-    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.objects$ZjAV)).concat(Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.collect(SLinkOperations.getChildren(__thisNode__, LINKS.includes$hLn0), LINKS.world$ZN60), LINKS.target$12L0)));
+    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.objects$E3a8)).concat(Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.collect(SLinkOperations.getChildren(__thisNode__, LINKS.includes$Atsz), LINKS.world$Tjdz), LINKS.target$vT2z)));
   }
   /*package*/ static Iterable<SNode> getLocalizedObjects_id31HEEbbX5J7(@NotNull SNode __thisNode__) {
-    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.objects$ZjAV)).concat(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.includes$hLn0)));
+    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.objects$E3a8)).concat(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.includes$Atsz)));
   }
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
-    if (SConceptOperations.isExactly(SNodeOperations.asSConcept(kind), CONCEPTS.ILocalized$9a)) {
+    if (SConceptOperations.isExactly(SNodeOperations.asSConcept(kind), CONCEPTS.ILocalized$sH)) {
       return ListScope.forNamedElements(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(__thisNode__));
     }
-    return ((Scope) ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke0(__thisNode__, CONCEPTS.ScopeProvider$M8, kind, child));
+    return ((Scope) ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke0(__thisNode__, CONCEPTS.ScopeProvider$aq, kind, child));
   }
   /*package*/ static SNode findLocalizedImplementation_id1igjyYxxAPt(@NotNull final SNode __thisNode__, SNode relativeFrom) {
-    return Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getChildren(SNodeOperations.getNodeAncestor(relativeFrom, CONCEPTS.WorldDefinition$Xn, false, false)), CONCEPTS.WorldInclusion$vO)).findFirst(new IWhereFilter<SNode>() {
+    return Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getChildren(SNodeOperations.getNodeAncestor(relativeFrom, CONCEPTS.WorldDefinition$gU, false, false)), CONCEPTS.WorldInclusion$Nn)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return Objects.equals(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.world$ZN60), LINKS.target$12L0), __thisNode__);
+        return Objects.equals(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.world$Tjdz), LINKS.target$vT2z), __thisNode__);
       }
     });
   }
   /*package*/ static Iterable<SNode> getDependenciesRelevantForCycleDetection_id59HbAIOYveX(@NotNull SNode __thisNode__) {
-    return ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.WorldInclusion$vO, false, new SAbstractConcept[]{})).select(new ISelector<SNode, SNode>() {
+    return ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.WorldInclusion$Nn, false, new SAbstractConcept[]{})).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
-        return SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.world$ZN60), LINKS.target$12L0);
+        return SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.world$Tjdz), LINKS.target$vT2z);
       }
     });
   }
   /*package*/ static Set<SNode> traceBackElementInCycle_id17fjvcLF7UR(@NotNull SNode __thisNode__, final SNode dependency) {
-    Iterable<SNode> cyclicIncludes = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.WorldInclusion$vO, false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
+    Iterable<SNode> cyclicIncludes = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.WorldInclusion$Nn, false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.world$ZN60), LINKS.target$12L0) == dependency;
+        return SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.world$Tjdz), LINKS.target$vT2z) == dependency;
       }
     });
 
@@ -152,16 +152,16 @@ public final class WorldDefinition__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink objects$ZjAV = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, 0x6b7f605cb3278f46L, "objects");
-    /*package*/ static final SContainmentLink includes$hLn0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, 0x3cd406ea6df3437dL, "includes");
-    /*package*/ static final SContainmentLink world$ZN60 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
-    /*package*/ static final SReferenceLink target$12L0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
+    /*package*/ static final SContainmentLink objects$E3a8 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, 0x6b7f605cb3278f46L, "objects");
+    /*package*/ static final SContainmentLink includes$Atsz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, 0x3cd406ea6df3437dL, "includes");
+    /*package*/ static final SContainmentLink world$Tjdz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
+    /*package*/ static final SReferenceLink target$vT2z = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
-    /*package*/ static final SInterfaceConcept ScopeProvider$M8 = MetaAdapterFactory.getInterfaceConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L, "jetbrains.mps.lang.core.structure.ScopeProvider");
-    /*package*/ static final SConcept WorldDefinition$Xn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
-    /*package*/ static final SConcept WorldInclusion$vO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, "jetbrains.mps.samples.Physics.structure.WorldInclusion");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SInterfaceConcept ScopeProvider$aq = MetaAdapterFactory.getInterfaceConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L, "jetbrains.mps.lang.core.structure.ScopeProvider");
+    /*package*/ static final SConcept WorldDefinition$gU = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
+    /*package*/ static final SConcept WorldInclusion$Nn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, "jetbrains.mps.samples.Physics.structure.WorldInclusion");
   }
 }

@@ -29,7 +29,7 @@ public class FindOverridenValue_Finder extends GeneratedFinder {
   }
   @Override
   public SAbstractConcept getSConcept() {
-    return CONCEPTS.OverrideRule$lC;
+    return CONCEPTS.OverrideRule$Db;
   }
 
   @Override
@@ -57,6 +57,6 @@ public class FindOverridenValue_Finder extends GeneratedFinder {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept OverrideRule$lC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
+    /*package*/ static final SConcept OverrideRule$Db = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
   }
 }

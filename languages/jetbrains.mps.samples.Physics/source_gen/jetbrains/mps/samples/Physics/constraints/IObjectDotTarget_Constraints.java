@@ -20,7 +20,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
 public class IObjectDotTarget_Constraints extends BaseConstraintsDescriptor {
   public IObjectDotTarget_Constraints() {
-    super(CONCEPTS.IObjectDotTarget$Ky);
+    super(CONCEPTS.IObjectDotTarget$45);
   }
 
   @Override
@@ -39,13 +39,13 @@ public class IObjectDotTarget_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return (boolean) DotExpression__BehaviorDescriptor.expectType_id5WNmJ7DokMG.invoke(SNodeOperations.cast(parentNode, CONCEPTS.DotExpression$Af), CONCEPTS.ObjectType$sZ, ((boolean) true));
+    return (boolean) DotExpression__BehaviorDescriptor.expectType_id5WNmJ7DokMG.invoke(SNodeOperations.cast(parentNode, CONCEPTS.DotExpression$jp), CONCEPTS.ObjectType$7_, ((boolean) true));
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "4874678483873239686");
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IObjectDotTarget$Ky = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x43a656410180f6c1L, "jetbrains.mps.samples.Physics.structure.IObjectDotTarget");
-    /*package*/ static final SConcept DotExpression$Af = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
-    /*package*/ static final SConcept ObjectType$sZ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
+    /*package*/ static final SInterfaceConcept IObjectDotTarget$45 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x43a656410180f6c1L, "jetbrains.mps.samples.Physics.structure.IObjectDotTarget");
+    /*package*/ static final SConcept DotExpression$jp = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7cef88020a0f4249L, "org.iets3.core.expr.base.structure.DotExpression");
+    /*package*/ static final SConcept ObjectType$7_ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
   }
 }

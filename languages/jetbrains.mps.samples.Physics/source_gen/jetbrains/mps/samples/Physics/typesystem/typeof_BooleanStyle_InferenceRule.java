@@ -25,7 +25,7 @@ public class typeof_BooleanStyle_InferenceRule extends AbstractInferenceRule_Run
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.BooleanStyleKey$tZ;
+    return CONCEPTS.BooleanStyleKey$Ly;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -41,6 +41,6 @@ public class typeof_BooleanStyle_InferenceRule extends AbstractInferenceRule_Run
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept BooleanStyleKey$tZ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x50940c24621193eL, "jetbrains.mps.samples.Physics.structure.BooleanStyleKey");
+    /*package*/ static final SConcept BooleanStyleKey$Ly = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x50940c24621193eL, "jetbrains.mps.samples.Physics.structure.BooleanStyleKey");
   }
 }

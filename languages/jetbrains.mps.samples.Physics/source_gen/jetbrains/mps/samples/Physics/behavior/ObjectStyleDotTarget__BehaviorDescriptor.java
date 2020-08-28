@@ -39,18 +39,18 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
   }
 
   /*package*/ static String renderReadable_id6kR0qIbI2yi(@NotNull SNode __thisNode__) {
-    return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$ANGW));
+    return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$MA4B));
   }
   /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull final SNode __thisNode__, final SNode content) {
     SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__));
 
     {
       final SNode object = definition;
-      if (SNodeOperations.isInstanceOf(object, CONCEPTS.ObjectDefinition$YO)) {
-        SNode found = ListSequence.fromList(SLinkOperations.getChildren(object, LINKS.styles$W8dv)).findFirst(new IWhereFilter<SNode>() {
+      if (SNodeOperations.isInstanceOf(object, CONCEPTS.ObjectDefinition$in)) {
+        SNode found = ListSequence.fromList(SLinkOperations.getChildren(object, LINKS.styles$7xP$)).findFirst(new IWhereFilter<SNode>() {
           public boolean accept(SNode it) {
-            if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.key$4rdb), SNodeOperations.asSConcept(SNodeOperations.getConcept(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$ANGW))))) {
-              SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(it, LINKS.value$4y25), content);
+            if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.key$8IFS), SNodeOperations.asSConcept(SNodeOperations.getConcept(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$MA4B))))) {
+              SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(it, LINKS.value$c2jY), content);
               return true;
             }
             return false;
@@ -58,8 +58,8 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
         });
 
         if ((found == null)) {
-          SNode node = createStyleDefinition_4ptfyc_a0a0c0c0b(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$ANGW), content);
-          ListSequence.fromList(SLinkOperations.getChildren(object, LINKS.styles$W8dv)).addElement(node);
+          SNode node = createStyleDefinition_4ptfyc_a0a0c0c0b(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$MA4B), content);
+          ListSequence.fromList(SLinkOperations.getChildren(object, LINKS.styles$7xP$)).addElement(node);
           return node;
         }
         return found;
@@ -73,8 +73,8 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
 
     {
       final SNode object = definition;
-      if (SNodeOperations.isInstanceOf(object, CONCEPTS.ObjectDefinition$YO)) {
-        return AbstractObjectDefinition__BehaviorDescriptor.getStyleValueForKey_id5hZn_PXc5xY.invoke(object, SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$ANGW));
+      if (SNodeOperations.isInstanceOf(object, CONCEPTS.ObjectDefinition$in)) {
+        return AbstractObjectDefinition__BehaviorDescriptor.getStyleValueForKey_id5hZn_PXc5xY.invoke(object, SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$MA4B));
       }
     }
 
@@ -131,23 +131,23 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
     return CONCEPT;
   }
   private static SNode createStyleDefinition_4ptfyc_a0a0c0c0b(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.StyleDefinition$Xd);
-    n0.forChild(LINKS.key$4rdb).initNode(p0, CONCEPTS.StyleKey$l_, true);
-    n0.forChild(LINKS.value$4y25).initNode(p1, CONCEPTS.Expression$Wr, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.StyleDefinition$gK);
+    n0.forChild(LINKS.key$8IFS).initNode(p0, CONCEPTS.StyleKey$D8, true);
+    n0.forChild(LINKS.value$c2jY).initNode(p1, CONCEPTS.Expression$D_, true);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink styleKey$ANGW = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, 0x29b2190b93c8e280L, "styleKey");
-    /*package*/ static final SContainmentLink styles$W8dv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x101711d69793d8a9L, "styles");
-    /*package*/ static final SContainmentLink key$4rdb = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c4124fL, "key");
-    /*package*/ static final SContainmentLink value$4y25 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c412a2L, "value");
+    /*package*/ static final SContainmentLink styleKey$MA4B = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, 0x29b2190b93c8e280L, "styleKey");
+    /*package*/ static final SContainmentLink styles$7xP$ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x101711d69793d8a9L, "styles");
+    /*package*/ static final SContainmentLink key$8IFS = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c4124fL, "key");
+    /*package*/ static final SContainmentLink value$c2jY = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, 0x2b1dfd95e2c412a2L, "value");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
-    /*package*/ static final SConcept StyleDefinition$Xd = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, "jetbrains.mps.samples.Physics.structure.StyleDefinition");
-    /*package*/ static final SConcept StyleKey$l_ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2c40d23L, "jetbrains.mps.samples.Physics.structure.StyleKey");
-    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept ObjectDefinition$in = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
+    /*package*/ static final SConcept StyleDefinition$gK = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a425L, "jetbrains.mps.samples.Physics.structure.StyleDefinition");
+    /*package*/ static final SConcept StyleKey$D8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2c40d23L, "jetbrains.mps.samples.Physics.structure.StyleKey");
+    /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
   }
 }

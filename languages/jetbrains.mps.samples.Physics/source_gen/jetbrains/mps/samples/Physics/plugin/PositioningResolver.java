@@ -32,29 +32,29 @@ public class PositioningResolver {
     Sequence.fromIterable(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(world)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         //  Compute position 
-        VectorLike locationComputed = ((VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$DoV0), LINKS.expression$87ts)));
-        SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$DoV0), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(locationComputed, null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(it, LINKS.position$DoV0)))));
+        VectorLike locationComputed = ((VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$2BSz), LINKS.expression$Va$7)));
+        SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$2BSz), LINKS.expression$Va$7), CoordinateExpressionConverters.rawToCartesian(locationComputed, null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(it, LINKS.position$2BSz)))));
 
         //  Compute speed 
-        if ((SLinkOperations.getTarget(it, LINKS.velocity$DoVv) != null)) {
-          VectorLike velocityComputed = (VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.expression$87ts));
+        if ((SLinkOperations.getTarget(it, LINKS.velocity$2C7$) != null)) {
+          VectorLike velocityComputed = (VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$2C7$), LINKS.expression$Va$7));
 
-          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$DoVv), LINKS.expression$87ts), CoordinateExpressionConverters.rawToCartesian(velocityComputed, null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(it, LINKS.velocity$DoVv)))));
+          SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$2C7$), LINKS.expression$Va$7), CoordinateExpressionConverters.rawToCartesian(velocityComputed, null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(it, LINKS.velocity$2C7$)))));
         }
 
         // Compute nested worlds 
         {
           final SNode include = it;
-          if (SNodeOperations.isInstanceOf(include, CONCEPTS.WorldInclusion$vO)) {
-            resolveAll(SLinkOperations.getTarget(SLinkOperations.getTarget(include, LINKS.world$ZN60), LINKS.target$12L0));
+          if (SNodeOperations.isInstanceOf(include, CONCEPTS.WorldInclusion$Nn)) {
+            resolveAll(SLinkOperations.getTarget(SLinkOperations.getTarget(include, LINKS.world$Tjdz), LINKS.target$vT2z));
           }
         }
 
         // Compute mass 
         {
           final SNode definition = it;
-          if (SNodeOperations.isInstanceOf(definition, CONCEPTS.ObjectDefinition$YO)) {
-            SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(definition, LINKS.mass$9nTx), LINKS.expression$87ts), createNumberLiteral_y7gfbj_a0a0a11a0a0a0a(IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(definition, LINKS.mass$9nTx), LINKS.expression$87ts)).toString()));
+          if (SNodeOperations.isInstanceOf(definition, CONCEPTS.ObjectDefinition$in)) {
+            SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(definition, LINKS.mass$y8ay), LINKS.expression$Va$7), createNumberLiteral_y7gfbj_a0a0a11a0a0a0a(IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(definition, LINKS.mass$y8ay), LINKS.expression$Va$7)).toString()));
           }
         }
       }
@@ -62,27 +62,27 @@ public class PositioningResolver {
   }
 
   private static SNode createNumberLiteral_y7gfbj_a0a0a11a0a0a0a(String p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);
-    n0.setProperty(PROPS.value$nZyY, p0);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$wE);
+    n0.setProperty(PROPS.value$iWTK, p0);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
-    /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
-    /*package*/ static final SContainmentLink velocity$DoVv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
-    /*package*/ static final SContainmentLink world$ZN60 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
-    /*package*/ static final SReferenceLink target$12L0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
-    /*package*/ static final SContainmentLink mass$9nTx = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x1be152c1502448ffL, "mass");
+    /*package*/ static final SContainmentLink position$2BSz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
+    /*package*/ static final SContainmentLink expression$Va$7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
+    /*package*/ static final SContainmentLink velocity$2C7$ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
+    /*package*/ static final SContainmentLink world$Tjdz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, 0x3cd406ea6df343a1L, "world");
+    /*package*/ static final SReferenceLink target$vT2z = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5d5cbb75843c860L, 0x5d5cbb75843c861L, "target");
+    /*package*/ static final SContainmentLink mass$y8ay = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x1be152c1502448ffL, "mass");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept WorldInclusion$vO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, "jetbrains.mps.samples.Physics.structure.WorldInclusion");
-    /*package*/ static final SConcept ObjectDefinition$YO = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
+    /*package*/ static final SConcept WorldInclusion$Nn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, "jetbrains.mps.samples.Physics.structure.WorldInclusion");
+    /*package*/ static final SConcept ObjectDefinition$in = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, "jetbrains.mps.samples.Physics.structure.ObjectDefinition");
+    /*package*/ static final SConcept NumberLiteral$wE = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
+    /*package*/ static final SProperty value$iWTK = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 }

@@ -24,10 +24,10 @@ public class typeof_NRootExpression_InferenceRule extends AbstractInferenceRule_
   }
   public void applyRule(final SNode nRootExpression, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode sqrtExpressionInnerType = typeCheckingContext.typeOf(SLinkOperations.getTarget(nRootExpression, LINKS.expression$tVRI), "r:eaef0861-3ed4-4442-afee-c90aaa3cdaec(jetbrains.mps.samples.Physics.iets3.ext.math.typesystem)", "3773364508684486821", true);
+      final SNode sqrtExpressionInnerType = typeCheckingContext.typeOf(SLinkOperations.getTarget(nRootExpression, LINKS.expression$kXvr), "r:eaef0861-3ed4-4442-afee-c90aaa3cdaec(jetbrains.mps.samples.Physics.iets3.ext.math.typesystem)", "3773364508684486821", true);
       typeCheckingContext.whenConcrete(sqrtExpressionInnerType, new Runnable() {
         public void run() {
-          SNode exponentType = PTF.createRealType(SPropertyOperations.getString(nRootExpression, PROPS.exponent$9cvW));
+          SNode exponentType = PTF.createRealType(SPropertyOperations.getString(nRootExpression, PROPS.exponent$i0Yd));
 
           {
             SNode _nodeToCheck_1029348928467 = nRootExpression;
@@ -44,7 +44,7 @@ public class typeof_NRootExpression_InferenceRule extends AbstractInferenceRule_
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.NRootExpression$sH;
+    return CONCEPTS.NRootExpression$WQ;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -54,14 +54,14 @@ public class typeof_NRootExpression_InferenceRule extends AbstractInferenceRule_
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink expression$tVRI = MetaAdapterFactory.getContainmentLink(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x5abff81774111c3aL, "expression");
+    /*package*/ static final SContainmentLink expression$kXvr = MetaAdapterFactory.getContainmentLink(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x5abff81774111c3aL, "expression");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty exponent$9cvW = MetaAdapterFactory.getProperty(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x4a2d0770b38f4fa2L, "exponent");
+    /*package*/ static final SProperty exponent$i0Yd = MetaAdapterFactory.getProperty(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, 0x4a2d0770b38f4fa2L, "exponent");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NRootExpression$sH = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.NRootExpression");
+    /*package*/ static final SConcept NRootExpression$WQ = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.NRootExpression");
   }
 }

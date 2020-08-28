@@ -19,7 +19,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
 public class IUnit_Constraints extends BaseConstraintsDescriptor {
   public IUnit_Constraints() {
-    super(CONCEPTS.IUnit$Ec);
+    super(CONCEPTS.IUnit$gw);
   }
 
   @Override
@@ -38,12 +38,12 @@ public class IUnit_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.Dimension$7F);
+    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.Dimension$HZ);
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:e874131b-1e6d-4f17-b0bc-ba705a6c7173(jetbrains.mps.samples.Physics.dimensions.constraints)", "265129687003582901");
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IUnit$Ec = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d40ceL, "jetbrains.mps.samples.Physics.dimensions.structure.IUnit");
-    /*package*/ static final SConcept Dimension$7F = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
+    /*package*/ static final SInterfaceConcept IUnit$gw = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d40ceL, "jetbrains.mps.samples.Physics.dimensions.structure.IUnit");
+    /*package*/ static final SConcept Dimension$HZ = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
   }
 }

@@ -35,7 +35,7 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SimpleConceptSubstituteMenuPart(CONCEPTS.ElasticCollisionReaction$lY) {
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SimpleConceptSubstituteMenuPart(CONCEPTS.ElasticCollisionReaction$Dx) {
 
       @NotNull
       @Override
@@ -48,8 +48,8 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
           context.getEditorMenuTrace().popTraceInfo();
         }
       }
-    }, CONCEPTS.ElasticCollisionReaction$lY));
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_4hk85u_b(), CONCEPTS.CollisionReactionExpression$mt));
+    }, CONCEPTS.ElasticCollisionReaction$Dx));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_4hk85u_b(), CONCEPTS.CollisionReactionExpression$E0));
     return result;
   }
 
@@ -121,7 +121,7 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
         private final SubstituteMenuContext _context;
         private EditorMenuTraceInfo myTraceInfo;
         public Item(SubstituteMenuContext context) {
-          super(CONCEPTS.CollisionReactionExpression$mt, context);
+          super(CONCEPTS.CollisionReactionExpression$E0, context);
           _context = context;
         }
 
@@ -133,7 +133,7 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
         @Override
         public SNode createNode(@NotNull String pattern) {
           SNode collision = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2d94529L, "jetbrains.mps.samples.Physics.structure.SimpleCollisionReactionExpression"));
-          SPropertyOperations.assignEnum(collision, PROPS.reaction$_ldw, myParameterObject);
+          SPropertyOperations.assignEnum(collision, PROPS.reaction$4OQ3, myParameterObject);
           return collision;
         }
 
@@ -143,7 +143,7 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
         }
         @NotNull
         protected CompletionItemInformation createInformation(String pattern) {
-          return new CompletionItemInformation(myParameterObject, CONCEPTS.CollisionReactionExpression$mt, getMatchingText(pattern), getDescriptionText(pattern));
+          return new CompletionItemInformation(myParameterObject, CONCEPTS.CollisionReactionExpression$E0, getMatchingText(pattern), getDescriptionText(pattern));
         }
         @Nullable
         @Override
@@ -166,11 +166,11 @@ public class CollisionReactionExpression_SubstituteMenu extends SubstituteMenuBa
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ElasticCollisionReaction$lY = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, "jetbrains.mps.samples.Physics.structure.ElasticCollisionReaction");
-    /*package*/ static final SConcept CollisionReactionExpression$mt = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbffL, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression");
+    /*package*/ static final SConcept ElasticCollisionReaction$Dx = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, "jetbrains.mps.samples.Physics.structure.ElasticCollisionReaction");
+    /*package*/ static final SConcept CollisionReactionExpression$E0 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbffL, "jetbrains.mps.samples.Physics.structure.CollisionReactionExpression");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty reaction$_ldw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2d94529L, 0x2b1dfd95e2d9452aL, "reaction");
+    /*package*/ static final SProperty reaction$4OQ3 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2d94529L, 0x2b1dfd95e2d9452aL, "reaction");
   }
 }

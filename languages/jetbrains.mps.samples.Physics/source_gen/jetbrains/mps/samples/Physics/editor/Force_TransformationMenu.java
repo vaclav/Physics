@@ -106,14 +106,14 @@ public class Force_TransformationMenu extends TransformationMenuBase {
 
       @Override
       public void execute(@NotNull String pattern) {
-        SNode force = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.ConditionalForce$qj);
-        SLinkOperations.setTarget(force, LINKS.nested$$QTy, _context.getNode());
+        SNode force = SNodeOperations.replaceWithNewChild(_context.getNode(), CONCEPTS.ConditionalForce$HQ);
+        SLinkOperations.setTarget(force, LINKS.nested$Q9b1, _context.getNode());
         SelectionUtil.selectCell(_context.getEditorContext(), force, SelectionManager.LAST_EDITABLE_CELL);
       }
 
       @Override
       public boolean canExecute(@NotNull String pattern) {
-        return !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(_context.getNode()), CONCEPTS.ConditionalForce$qj));
+        return !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(_context.getNode()), CONCEPTS.ConditionalForce$HQ));
       }
 
 
@@ -136,10 +136,10 @@ public class Force_TransformationMenu extends TransformationMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ConditionalForce$qj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL, "jetbrains.mps.samples.Physics.structure.ConditionalForce");
+    /*package*/ static final SConcept ConditionalForce$HQ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL, "jetbrains.mps.samples.Physics.structure.ConditionalForce");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink nested$$QTy = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL, 0x491f8a8da749c41dL, "nested");
+    /*package*/ static final SContainmentLink nested$Q9b1 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL, 0x491f8a8da749c41dL, "nested");
   }
 }

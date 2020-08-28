@@ -32,7 +32,7 @@ public final class VectorResizeTarget__BehaviorDescriptor extends BaseBHDescript
   }
 
   /*package*/ static String renderReadable_id6kR0qIbI2yi(@NotNull SNode __thisNode__) {
-    return "resize to (" + Expression__BehaviorDescriptor.renderReadable_id4Y0vh0cfqjE.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.newLength$Gnlv)) + ")";
+    return "resize to (" + Expression__BehaviorDescriptor.renderReadable_id4Y0vh0cfqjE.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.newLength$uQH$)) + ")";
   }
 
   /*package*/ VectorResizeTarget__BehaviorDescriptor() {
@@ -82,6 +82,6 @@ public final class VectorResizeTarget__BehaviorDescriptor extends BaseBHDescript
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink newLength$Gnlv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, 0x306daaa2cbe24f96L, "newLength");
+    /*package*/ static final SContainmentLink newLength$uQH$ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, 0x306daaa2cbe24f96L, "newLength");
   }
 }

@@ -30,7 +30,7 @@ public final class TraceStyleKey__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static SAbstractConcept getSpecificExpressionConcept_id1AxJyXYWKCb(@NotNull SNode __thisNode__) {
-    return CONCEPTS.TraceExpression$54;
+    return CONCEPTS.TraceExpression$oB;
   }
 
   /*package*/ TraceStyleKey__BehaviorDescriptor() {
@@ -80,6 +80,6 @@ public final class TraceStyleKey__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept TraceExpression$54 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6ff53cf971434ccdL, "jetbrains.mps.samples.Physics.structure.TraceExpression");
+    /*package*/ static final SConcept TraceExpression$oB = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6ff53cf971434ccdL, "jetbrains.mps.samples.Physics.structure.TraceExpression");
   }
 }

@@ -26,7 +26,7 @@ public class typeof_ObjectPositionTarget_InferenceRule extends AbstractInference
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ObjectPositionTarget$we;
+    return CONCEPTS.ObjectPositionTarget$NL;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -52,6 +52,6 @@ public class typeof_ObjectPositionTarget_InferenceRule extends AbstractInference
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectPositionTarget$we = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a71bL, "jetbrains.mps.samples.Physics.structure.ObjectPositionTarget");
+    /*package*/ static final SConcept ObjectPositionTarget$NL = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504a71bL, "jetbrains.mps.samples.Physics.structure.ObjectPositionTarget");
   }
 }

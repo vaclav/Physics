@@ -13,7 +13,7 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class VectorTypeHelper {
   public static boolean isVector(SNode type) {
-    return SNodeOperations.isInstanceOf(type, CONCEPTS.VectorType$Wj) && Type__BehaviorDescriptor.getCapabilityRequirement_id7McqtXGyz8c.invoke(SNodeOperations.as(type, CONCEPTS.Type$fA)) instanceof VectorHandlingCapablity;
+    return SNodeOperations.isInstanceOf(type, CONCEPTS.VectorType$AT) && Type__BehaviorDescriptor.getCapabilityRequirement_id7McqtXGyz8c.invoke(SNodeOperations.as(type, CONCEPTS.Type$WK)) instanceof VectorHandlingCapablity;
   }
   public static boolean bothAreVector(SNode left, SNode right) {
     return isVector(left) && isVector(right);
@@ -24,10 +24,10 @@ public class VectorTypeHelper {
   public static Iterable<SNode> getVectorTypeUnits(SNode type) {
     {
       final SNode vector = type;
-      if (SNodeOperations.isInstanceOf(vector, CONCEPTS.VectorType$Wj)) {
+      if (SNodeOperations.isInstanceOf(vector, CONCEPTS.VectorType$AT)) {
         {
-          final SNode dim = SLinkOperations.getTarget(vector, LINKS.componentType$gTxy);
-          if (SNodeOperations.isInstanceOf(dim, CONCEPTS.DimensionType$yz)) {
+          final SNode dim = SLinkOperations.getTarget(vector, LINKS.componentType$89U4);
+          if (SNodeOperations.isInstanceOf(dim, CONCEPTS.DimensionType$8R)) {
             return DimensionType__BehaviorDescriptor.getRawUnits_id20wM4XMzAC4.invoke(dim);
           }
         }
@@ -37,12 +37,12 @@ public class VectorTypeHelper {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
-    /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept Type$WK = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept VectorType$AT = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink componentType$gTxy = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
+    /*package*/ static final SContainmentLink componentType$89U4 = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
   }
 }

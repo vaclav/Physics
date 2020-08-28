@@ -24,7 +24,7 @@ public class typeof_ColorExpression_InferenceRule extends AbstractInferenceRule_
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ColorExpression$Gd;
+    return CONCEPTS.ColorExpression$ZK;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -33,12 +33,12 @@ public class typeof_ColorExpression_InferenceRule extends AbstractInferenceRule_
     return false;
   }
   private static SNode createColorType_du3fw1_a1a0c0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ColorType$_K);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ColorType$Tj);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ColorExpression$Gd = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2aa0bbL, "jetbrains.mps.samples.Physics.structure.ColorExpression");
-    /*package*/ static final SConcept ColorType$_K = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2c7fb0L, "jetbrains.mps.samples.Physics.structure.ColorType");
+    /*package*/ static final SConcept ColorExpression$ZK = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2aa0bbL, "jetbrains.mps.samples.Physics.structure.ColorExpression");
+    /*package*/ static final SConcept ColorType$Tj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xcad58369f2c7fb0L, "jetbrains.mps.samples.Physics.structure.ColorType");
   }
 }

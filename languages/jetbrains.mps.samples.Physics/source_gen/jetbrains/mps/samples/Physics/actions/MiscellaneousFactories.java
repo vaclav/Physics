@@ -18,7 +18,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public class MiscellaneousFactories {
   public static class NodeFactory_7471572540824262513 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SLinkOperations.setTarget(newNode, LINKS.simulationSpeed$m7cv, _quotation_createNode_fpwm7x_a0a0a0());
+      SLinkOperations.setTarget(newNode, LINKS.simulationSpeed$H2m$, _quotation_createNode_fpwm7x_a0a0a0());
     }
     private static SNode _quotation_createNode_fpwm7x_a0a0a0() {
       PersistenceFacade facade = PersistenceFacade.getInstance();
@@ -37,32 +37,32 @@ public class MiscellaneousFactories {
   }
   public static class NodeFactory_632920307791887924 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SLinkOperations.setTarget(newNode, LINKS.restitutionPercent$1OL1, createNumberLiteral_fpwm7x_a0a0a1());
+      SLinkOperations.setTarget(newNode, LINKS.restitutionPercent$S732, createNumberLiteral_fpwm7x_a0a0a1());
       {
         final SNode elastic = sampleNode;
-        if (SNodeOperations.isInstanceOf(elastic, CONCEPTS.ElasticCollisionReaction$lY)) {
-          SLinkOperations.setTarget(newNode, LINKS.restitutionPercent$1OL1, SNodeOperations.copyNode(SLinkOperations.getTarget(elastic, LINKS.restitutionPercent$1OL1)));
+        if (SNodeOperations.isInstanceOf(elastic, CONCEPTS.ElasticCollisionReaction$Dx)) {
+          SLinkOperations.setTarget(newNode, LINKS.restitutionPercent$S732, SNodeOperations.copyNode(SLinkOperations.getTarget(elastic, LINKS.restitutionPercent$S732)));
         }
       }
     }
     private static SNode createNumberLiteral_fpwm7x_a0a0a1() {
-      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);
-      n0.setProperty(PROPS.value$nZyY, "100");
+      SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$wE);
+      n0.setProperty(PROPS.value$iWTK, "100");
       return n0.getResult();
     }
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink simulationSpeed$m7cv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x21c0d825ab3fd1e0L, "simulationSpeed");
-    /*package*/ static final SContainmentLink restitutionPercent$1OL1 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, 0x5b463016ba87dce5L, "restitutionPercent");
+    /*package*/ static final SContainmentLink simulationSpeed$H2m$ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, 0x21c0d825ab3fd1e0L, "simulationSpeed");
+    /*package*/ static final SContainmentLink restitutionPercent$S732 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, 0x5b463016ba87dce5L, "restitutionPercent");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ElasticCollisionReaction$lY = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, "jetbrains.mps.samples.Physics.structure.ElasticCollisionReaction");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
+    /*package*/ static final SConcept ElasticCollisionReaction$Dx = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x5b463016ba87dbfeL, "jetbrains.mps.samples.Physics.structure.ElasticCollisionReaction");
+    /*package*/ static final SConcept NumberLiteral$wE = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
+    /*package*/ static final SProperty value$iWTK = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 }

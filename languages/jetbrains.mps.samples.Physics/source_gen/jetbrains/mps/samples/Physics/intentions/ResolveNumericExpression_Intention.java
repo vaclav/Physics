@@ -47,12 +47,12 @@ public final class ResolveNumericExpression_Intention extends AbstractIntentionD
     return true;
   }
   private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-    if (ListSequence.fromList(SNodeOperations.getNodeDescendants(node, CONCEPTS.IRuntimeContext$$I, false, new SAbstractConcept[]{})).isNotEmpty()) {
+    if (ListSequence.fromList(SNodeOperations.getNodeDescendants(node, CONCEPTS.IRuntimeContext$Sh, false, new SAbstractConcept[]{})).isNotEmpty()) {
       return false;
     }
     {
       final SNode wrapper = TypecheckingFacade.getFromContext().getTypeOf(node);
-      if (SNodeOperations.isInstanceOf(wrapper, CONCEPTS.IInterpreterWrapperType$9P)) {
+      if (SNodeOperations.isInstanceOf(wrapper, CONCEPTS.IInterpreterWrapperType$KD)) {
         return TypecheckingFacade.getFromContext().isSubtype(IInterpreterWrapperType__BehaviorDescriptor.wrappedType_id6bG6MAFRDvi.invoke(wrapper), createRealType_z6py18_b0a0a1a0());
       }
     }
@@ -82,10 +82,10 @@ public final class ResolveNumericExpression_Intention extends AbstractIntentionD
 
       {
         final SNode dimType = TypecheckingFacade.getFromContext().getTypeOf(node);
-        if (SNodeOperations.isInstanceOf(dimType, CONCEPTS.DimensionType$yz)) {
-          replacement = createUnitExpression_z6py18_a0a0d0a(replacement, ListSequence.fromList(SLinkOperations.getChildren(dimType, LINKS.units$o6Ow)).select(new ISelector<SNode, SNode>() {
+        if (SNodeOperations.isInstanceOf(dimType, CONCEPTS.DimensionType$8R)) {
+          replacement = createUnitExpression_z6py18_a0a0d0a(replacement, ListSequence.fromList(SLinkOperations.getChildren(dimType, LINKS.units$qq1O)).select(new ISelector<SNode, SNode>() {
             public SNode select(SNode it) {
-              return createUnitReference_z6py18_a0a0a0a1a0a0a3a0(SLinkOperations.getTarget(it, LINKS.exponent$2Bc0), SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$2BcY), LINKS.default$rDru));
+              return createUnitReference_z6py18_a0a0a0a1a0a0a3a0(SLinkOperations.getTarget(it, LINKS.exponent$5qk), SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$5Sm), LINKS.default$8aTQ));
             }
           }));
         }
@@ -99,52 +99,52 @@ public final class ResolveNumericExpression_Intention extends AbstractIntentionD
     }
   }
   private static SNode createRealType_z6py18_b0a0a1a0() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
     return n0.getResult();
   }
   private static SNode createRealType_z6py18_b0a2a0() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$5o);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
     return n0.getResult();
   }
   private static SNode createNumberLiteral_z6py18_a0b0a(String p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$yW);
-    n0.setProperty(PROPS.value$nZyY, p0);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$wE);
+    n0.setProperty(PROPS.value$iWTK, p0);
     return n0.getResult();
   }
   private static SNode createUnitExpression_z6py18_a0a0d0a(SNode p0, Iterable<? extends SNode> p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitExpression$Bl);
-    n0.forChild(LINKS.content$Gf5w).initNode(p0, CONCEPTS.Expression$Wr, true);
-    n0.forChild(LINKS.units$o6Ow).initNodeList(p1, CONCEPTS.UnitReference$c4);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitExpression$dD);
+    n0.forChild(LINKS.content$aqgO).initNode(p0, CONCEPTS.Expression$D_, true);
+    n0.forChild(LINKS.units$qq1O).initNodeList(p1, CONCEPTS.UnitReference$Mo);
     return n0.getResult();
   }
   private static SNode createUnitReference_z6py18_a0a0a0a1a0a0a3a0(SNode p0, SNode p1) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitReference$c4);
-    n0.forChild(LINKS.exponent$2Bc0).initNode(p0, CONCEPTS.Exponent$nW, true);
-    n0.setReferenceTarget(LINKS.unit$2BcY, p1);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.UnitReference$Mo);
+    n0.forChild(LINKS.exponent$5qk).initNode(p0, CONCEPTS.Exponent$Yg, true);
+    n0.setReferenceTarget(LINKS.unit$5Sm, p1);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IRuntimeContext$$I = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d7a4413cL, "jetbrains.mps.samples.Physics.structure.IRuntimeContext");
-    /*package*/ static final SInterfaceConcept IInterpreterWrapperType$9P = MetaAdapterFactory.getInterfaceConcept(0x47f075a6558e4640L, 0xa6067ce0236c8023L, 0x62ec1b29abde62acL, "com.mbeddr.mpsutil.interpreter.structure.IInterpreterWrapperType");
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
-    /*package*/ static final SConcept RealType$5o = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
-    /*package*/ static final SConcept NumberLiteral$yW = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
-    /*package*/ static final SConcept UnitExpression$Bl = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression");
-    /*package*/ static final SConcept Expression$Wr = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
-    /*package*/ static final SConcept UnitReference$c4 = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
-    /*package*/ static final SConcept Exponent$nW = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
+    /*package*/ static final SInterfaceConcept IRuntimeContext$Sh = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d7a4413cL, "jetbrains.mps.samples.Physics.structure.IRuntimeContext");
+    /*package*/ static final SInterfaceConcept IInterpreterWrapperType$KD = MetaAdapterFactory.getInterfaceConcept(0x47f075a6558e4640L, 0xa6067ce0236c8023L, 0x62ec1b29abde62acL, "com.mbeddr.mpsutil.interpreter.structure.IInterpreterWrapperType");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept RealType$36 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
+    /*package*/ static final SConcept NumberLiteral$wE = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
+    /*package*/ static final SConcept UnitExpression$dD = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression");
+    /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept UnitReference$Mo = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
+    /*package*/ static final SConcept Exponent$Yg = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink units$o6Ow = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
-    /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
-    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
-    /*package*/ static final SContainmentLink default$rDru = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
-    /*package*/ static final SContainmentLink content$Gf5w = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
+    /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink exponent$5qk = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
+    /*package*/ static final SReferenceLink unit$5Sm = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SContainmentLink default$8aTQ = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, 0x1abd11603f7e095cL, "default");
+    /*package*/ static final SContainmentLink content$aqgO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty value$nZyY = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
+    /*package*/ static final SProperty value$iWTK = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, 0x46ff3b3d86d0e6ddL, "value");
   }
 }

@@ -40,12 +40,12 @@ public final class IUnitReferenceLike__BehaviorDescriptor extends BaseBHDescript
   }
 
   /*package*/ static Rational getRawExponent_id3031Xnpas0C(@NotNull SNode __thisNode__) {
-    return ((SLinkOperations.getTarget(__thisNode__, LINKS.exponent$2Bc0) == null) ? new Rational(1) : Exponent__BehaviorDescriptor.rawValue_id3yBD53Ww3_k.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.exponent$2Bc0)));
+    return ((SLinkOperations.getTarget(__thisNode__, LINKS.exponent$5qk) == null) ? new Rational(1) : Exponent__BehaviorDescriptor.rawValue_id3yBD53Ww3_k.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.exponent$5qk)));
   }
   /*package*/ static String listToString_id3L71doTUROP(@NotNull SAbstractConcept __thisConcept__, List<SNode> units) {
     Iterable<String> seq = ListSequence.fromList(units).select(new ISelector<SNode, String>() {
       public String select(SNode it) {
-        return SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.unit$2BcY), PROPS.name$tAp1) + (((SLinkOperations.getTarget(it, LINKS.exponent$2Bc0) == null) ? "" : "^" + IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it)));
+        return SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.unit$5Sm), PROPS.name$MnvL) + (((SLinkOperations.getTarget(it, LINKS.exponent$5qk) == null) ? "" : "^" + IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it)));
       }
     });
     return Sequence.fromIterable(seq).skip(1).foldLeft(Sequence.fromIterable(seq).first(), new ILeftCombinator<String, String>() {
@@ -104,11 +104,11 @@ public final class IUnitReferenceLike__BehaviorDescriptor extends BaseBHDescript
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink exponent$2Bc0 = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
-    /*package*/ static final SReferenceLink unit$2BcY = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
+    /*package*/ static final SContainmentLink exponent$5qk = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febaL, "exponent");
+    /*package*/ static final SReferenceLink unit$5Sm = MetaAdapterFactory.getReferenceLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, 0x777af24c0465febcL, "unit");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 }

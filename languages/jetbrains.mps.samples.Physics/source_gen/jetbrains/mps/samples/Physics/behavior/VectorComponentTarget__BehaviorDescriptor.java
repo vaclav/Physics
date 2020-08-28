@@ -31,7 +31,7 @@ public final class VectorComponentTarget__BehaviorDescriptor extends BaseBHDescr
   }
 
   /*package*/ static String renderReadable_id6kR0qIbI2yi(@NotNull SNode __thisNode__) {
-    return SPropertyOperations.getEnum(__thisNode__, PROPS.component$_d4D).getPresentation();
+    return SPropertyOperations.getEnum(__thisNode__, PROPS.component$Szq).getPresentation();
   }
 
   /*package*/ VectorComponentTarget__BehaviorDescriptor() {
@@ -81,6 +81,6 @@ public final class VectorComponentTarget__BehaviorDescriptor extends BaseBHDescr
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty component$_d4D = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
+    /*package*/ static final SProperty component$Szq = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
   }
 }

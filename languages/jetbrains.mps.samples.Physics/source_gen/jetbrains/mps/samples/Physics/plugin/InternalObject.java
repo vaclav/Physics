@@ -17,11 +17,11 @@ public class InternalObject extends InternalEntity<SNode> {
 
   @Override
   public SNode getMass() {
-    return SLinkOperations.getTarget(SLinkOperations.getTarget(this.node, LINKS.mass$9nTx), LINKS.expression$87ts);
+    return SLinkOperations.getTarget(SLinkOperations.getTarget(this.node, LINKS.mass$y8ay), LINKS.expression$Va$7);
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink mass$9nTx = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x1be152c1502448ffL, "mass");
-    /*package*/ static final SContainmentLink expression$87ts = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
+    /*package*/ static final SContainmentLink mass$y8ay = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f43L, 0x1be152c1502448ffL, "mass");
+    /*package*/ static final SContainmentLink expression$Va$7 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, 0xb0d6374ec7f7393L, "expression");
   }
 }

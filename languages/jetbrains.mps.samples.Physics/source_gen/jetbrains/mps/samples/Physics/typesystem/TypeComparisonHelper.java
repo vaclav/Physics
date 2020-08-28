@@ -31,8 +31,8 @@ public class TypeComparisonHelper {
    */
   @InferenceMethod
   public static void assertComparable(final TypeCheckingContext typeCheckingContext, SNode left, SNode right, final String leftName, final String rightName, final _FunctionTypes._void_P1_E0<? super String> errorStringCallback) {
-    final SNode leftType = SNodeOperations.as(left, CONCEPTS.Type$fA);
-    final SNode rightType = SNodeOperations.as(right, CONCEPTS.Type$fA);
+    final SNode leftType = SNodeOperations.as(left, CONCEPTS.Type$WK);
+    final SNode rightType = SNodeOperations.as(right, CONCEPTS.Type$WK);
 
     //  Allow 0 as exception for numeric types 
     if (NumberTypeHelper.isBaseTypeZero(leftType)) {
@@ -62,12 +62,12 @@ public class TypeComparisonHelper {
   }
 
   private static SNode createRuntimeErrorType_u2iiiw_b0a0a3a2a7a1() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RuntimeErrorType$Lm);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RuntimeErrorType$3c);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Type$fA = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
-    /*package*/ static final SConcept RuntimeErrorType$Lm = MetaAdapterFactory.getConcept(0x7a5dda6291404668L, 0xab76d5ed1746f2b2L, 0x113f84956f9L, "jetbrains.mps.lang.typesystem.structure.RuntimeErrorType");
+    /*package*/ static final SConcept Type$WK = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L, "org.iets3.core.expr.base.structure.Type");
+    /*package*/ static final SConcept RuntimeErrorType$3c = MetaAdapterFactory.getConcept(0x7a5dda6291404668L, 0xab76d5ed1746f2b2L, 0x113f84956f9L, "jetbrains.mps.lang.typesystem.structure.RuntimeErrorType");
   }
 }

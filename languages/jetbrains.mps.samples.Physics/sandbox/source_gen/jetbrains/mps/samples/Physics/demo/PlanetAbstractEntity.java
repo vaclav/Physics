@@ -12,6 +12,8 @@ import jetbrains.mps.samples.Physics.forces.GravitationForce;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 
 public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseObjectAbstractEntity<T> {
 
@@ -48,6 +50,32 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         return VectorHelper.toDVector3C(cached.applicationPoint(world, scope, currentEntity, time));
+      }
+
+      @Override
+      public int forceMode() {
+        return 16;
+      }
+    }, new Force<SystemScope>() {
+      private VectorLike cached;
+
+      @Override
+      public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        if (cached == null) {
+          cached = new InternalVector(AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
+        }
+
+        return VectorHelper.toDVector3C(cached);
+      }
+
+      @Override
+      public DVector3C moment(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        return null;
+      }
+
+      @Override
+      public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
+        return VectorHelper.toDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))));
       }
 
       @Override

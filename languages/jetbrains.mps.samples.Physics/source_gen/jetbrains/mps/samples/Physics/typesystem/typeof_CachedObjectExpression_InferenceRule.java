@@ -20,7 +20,7 @@ public class typeof_CachedObjectExpression_InferenceRule extends AbstractInferen
   }
   public void applyRule(final SNode cachedObjectExpression, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode cacheType = typeCheckingContext.typeOf(IForceWithCache__BehaviorDescriptor.getCacheType_id4$vyCQBisbm.invoke(SLinkOperations.getTarget(cachedObjectExpression, LINKS.cacheOf$q$Y0)), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5269082430052662049", true);
+      final SNode cacheType = typeCheckingContext.typeOf(IForceWithCache__BehaviorDescriptor.getCacheType_id4$vyCQBisbm.invoke(SLinkOperations.getTarget(cachedObjectExpression, LINKS.cacheOf$Rtlz)), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5269082430052662049", true);
       typeCheckingContext.whenConcrete(cacheType, new Runnable() {
         public void run() {
           {
@@ -33,7 +33,7 @@ public class typeof_CachedObjectExpression_InferenceRule extends AbstractInferen
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.CachedObjectExpression$O4;
+    return CONCEPTS.CachedObjectExpression$7B;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -43,10 +43,10 @@ public class typeof_CachedObjectExpression_InferenceRule extends AbstractInferen
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink cacheOf$q$Y0 = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, 0x491f8a8da78a723cL, "cacheOf");
+    /*package*/ static final SReferenceLink cacheOf$Rtlz = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, 0x491f8a8da78a723cL, "cacheOf");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CachedObjectExpression$O4 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, "jetbrains.mps.samples.Physics.structure.CachedObjectExpression");
+    /*package*/ static final SConcept CachedObjectExpression$7B = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da78a723bL, "jetbrains.mps.samples.Physics.structure.CachedObjectExpression");
   }
 }

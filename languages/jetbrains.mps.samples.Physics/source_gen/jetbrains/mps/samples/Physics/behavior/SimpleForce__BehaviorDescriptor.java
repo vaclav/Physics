@@ -41,15 +41,15 @@ public final class SimpleForce__BehaviorDescriptor extends BaseBHDescriptor {
     return false;
   }
   /*package*/ static int getForceMode_id4$vyCQBiMP2(@NotNull SNode __thisNode__) {
-    int mode = (SPropertyOperations.getBoolean(__thisNode__, PROPS.isLinearForceRelative$HMCw) ? ForceMode.LINEAR_FORCE_RELATIVE : 0);
-    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isPointRelative$86Nw) ? ForceMode.APPLICATION_POINT_RELATIVE : 0);
+    int mode = (SPropertyOperations.getBoolean(__thisNode__, PROPS.isLinearForceRelative$b4V3) ? ForceMode.LINEAR_FORCE_RELATIVE : 0);
+    mode |= (SPropertyOperations.getBoolean(__thisNode__, PROPS.isPointRelative$UQg3) ? ForceMode.APPLICATION_POINT_RELATIVE : 0);
     return mode;
   }
   /*package*/ static SNode getApplicationPointExpression_id4$vyCQBi$go(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.applicationPoint$86Ou);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.applicationPoint$UQI5);
   }
   /*package*/ static SNode getLinearForceExpression_id4$vyCQBi$gg(@NotNull SNode __thisNode__) {
-    return SLinkOperations.getTarget(__thisNode__, LINKS.linearForce$Wp95);
+    return SLinkOperations.getTarget(__thisNode__, LINKS.linearForce$fIGY);
   }
   /*package*/ static SNode getMomentExpression_id2rJkT1EYuGl(@NotNull SNode __thisNode__) {
     return null;
@@ -110,12 +110,12 @@ public final class SimpleForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isLinearForceRelative$HMCw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b38efc0L, "isLinearForceRelative");
-    /*package*/ static final SProperty isPointRelative$86Nw = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bddL, "isPointRelative");
+    /*package*/ static final SProperty isLinearForceRelative$b4V3 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b38efc0L, "isLinearForceRelative");
+    /*package*/ static final SProperty isPointRelative$UQg3 = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bddL, "isPointRelative");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink applicationPoint$86Ou = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bdfL, "applicationPoint");
-    /*package*/ static final SContainmentLink linearForce$Wp95 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
+    /*package*/ static final SContainmentLink applicationPoint$UQI5 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3ed90da58a8d3bdcL, 0x3ed90da58a8d3bdfL, "applicationPoint");
+    /*package*/ static final SContainmentLink linearForce$fIGY = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x26ef53906b38efbfL, 0x26ef53906b52426dL, "linearForce");
   }
 }

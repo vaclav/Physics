@@ -44,7 +44,7 @@ public class DirectionType_SubstituteMenu extends SubstituteMenuBase {
 
   public class SMP_Subconcepts_bu55z3_a extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.DirectionType$vJ);
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.DirectionType$al);
     }
     @NotNull
     @Override
@@ -65,6 +65,6 @@ public class DirectionType_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
+    /*package*/ static final SConcept DirectionType$al = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
   }
 }

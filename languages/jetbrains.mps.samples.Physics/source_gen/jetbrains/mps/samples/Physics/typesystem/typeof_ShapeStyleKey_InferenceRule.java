@@ -23,7 +23,7 @@ public class typeof_ShapeStyleKey_InferenceRule extends AbstractInferenceRule_Ru
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ShapeStyleKey$aa;
+    return CONCEPTS.ShapeStyleKey$tH;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -33,6 +33,6 @@ public class typeof_ShapeStyleKey_InferenceRule extends AbstractInferenceRule_Ru
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ShapeStyleKey$aa = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a67aL, "jetbrains.mps.samples.Physics.structure.ShapeStyleKey");
+    /*package*/ static final SConcept ShapeStyleKey$tH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x101711d69774a67aL, "jetbrains.mps.samples.Physics.structure.ShapeStyleKey");
   }
 }

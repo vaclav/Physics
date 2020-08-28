@@ -38,7 +38,7 @@ public class CurrentWorldExpression_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SimpleConceptSubstituteMenuPart(CONCEPTS.CurrentWorldExpression$l8) {
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SimpleConceptSubstituteMenuPart(CONCEPTS.CurrentWorldExpression$CF) {
 
       @NotNull
       @Override
@@ -51,8 +51,8 @@ public class CurrentWorldExpression_SubstituteMenu extends SubstituteMenuBase {
           context.getEditorMenuTrace().popTraceInfo();
         }
       }
-    }, CONCEPTS.CurrentWorldExpression$l8));
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_8cz20z_b(), CONCEPTS.CurrentWorldExpression$l8));
+    }, CONCEPTS.CurrentWorldExpression$CF));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Param_8cz20z_b(), CONCEPTS.CurrentWorldExpression$CF));
     return result;
   }
 
@@ -89,7 +89,7 @@ public class CurrentWorldExpression_SubstituteMenu extends SubstituteMenuBase {
     @Nullable
     @Override
     protected Iterable<? extends SNode> getParameters(SubstituteMenuContext _context) {
-      SNode currentWorldDefinition = IProvideCurrentWorld__BehaviorDescriptor.getCurrentWorldDefinition_id2bZvtzzMfxi.invoke(SNodeOperations.getNodeAncestor(_context.getParentNode(), CONCEPTS.IProvideCurrentWorld$2_, true, false));
+      SNode currentWorldDefinition = IProvideCurrentWorld__BehaviorDescriptor.getCurrentWorldDefinition_id2bZvtzzMfxi.invoke(SNodeOperations.getNodeAncestor(_context.getParentNode(), CONCEPTS.IProvideCurrentWorld$m8, true, false));
 
       if ((currentWorldDefinition != null)) {
         return Sequence.<SNode>singleton(currentWorldDefinition);
@@ -130,7 +130,7 @@ public class CurrentWorldExpression_SubstituteMenu extends SubstituteMenuBase {
         private final SubstituteMenuContext _context;
         private EditorMenuTraceInfo myTraceInfo;
         public Item(SubstituteMenuContext context) {
-          super(CONCEPTS.CurrentWorldExpression$l8, context);
+          super(CONCEPTS.CurrentWorldExpression$CF, context);
           _context = context;
         }
 
@@ -150,7 +150,7 @@ public class CurrentWorldExpression_SubstituteMenu extends SubstituteMenuBase {
         }
         @NotNull
         protected CompletionItemInformation createInformation(String pattern) {
-          return new CompletionItemInformation(myParameterObject, CONCEPTS.CurrentWorldExpression$l8, getMatchingText(pattern), getDescriptionText(pattern));
+          return new CompletionItemInformation(myParameterObject, CONCEPTS.CurrentWorldExpression$CF, getMatchingText(pattern), getDescriptionText(pattern));
         }
         @Nullable
         @Override
@@ -181,12 +181,12 @@ public class CurrentWorldExpression_SubstituteMenu extends SubstituteMenuBase {
 
   }
   private static SNode createCurrentWorldExpression_8cz20z_a0a0a1() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CurrentWorldExpression$l8);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CurrentWorldExpression$CF);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CurrentWorldExpression$l8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
-    /*package*/ static final SInterfaceConcept IProvideCurrentWorld$2_ = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8f846L, "jetbrains.mps.samples.Physics.structure.IProvideCurrentWorld");
+    /*package*/ static final SConcept CurrentWorldExpression$CF = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3ba6db5L, "jetbrains.mps.samples.Physics.structure.CurrentWorldExpression");
+    /*package*/ static final SInterfaceConcept IProvideCurrentWorld$m8 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8f846L, "jetbrains.mps.samples.Physics.structure.IProvideCurrentWorld");
   }
 }

@@ -22,12 +22,12 @@ public class typeof_ILocalized_InferenceRule extends AbstractInferenceRule_Runti
   }
   public void applyRule(final SNode iLocalized, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode positionType = typeCheckingContext.typeOf(SLinkOperations.getTarget(iLocalized, LINKS.position$DoV0), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150974250514", true);
+      final SNode positionType = typeCheckingContext.typeOf(SLinkOperations.getTarget(iLocalized, LINKS.position$2BSz), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150974250514", true);
       typeCheckingContext.whenConcrete(positionType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(iLocalized, LINKS.position$DoV0);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(iLocalized, LINKS.position$2BSz);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "position should be defined as a vector of real distances", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "911298080278406900", 0, null);
               typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(positionType), (SNode) _quotation_createNode_jxrkm3_a1a0c0a0a0a0a1a0b0a0b(), true, true, _info_12389875345);
             }
@@ -37,12 +37,12 @@ public class typeof_ILocalized_InferenceRule extends AbstractInferenceRule_Runti
     }
 
     {
-      final SNode velocityType = typeCheckingContext.typeOf(SLinkOperations.getTarget(iLocalized, LINKS.velocity$DoVv), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150974249942", true);
+      final SNode velocityType = typeCheckingContext.typeOf(SLinkOperations.getTarget(iLocalized, LINKS.velocity$2C7$), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150974249942", true);
       typeCheckingContext.whenConcrete(velocityType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(iLocalized, LINKS.velocity$DoVv);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(iLocalized, LINKS.velocity$2C7$);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, "velocity should be defined as a vector of real speed", "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150974250318", 0, null);
               typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(velocityType), (SNode) _quotation_createNode_jxrkm3_a1a0c0a0a0a0a1a0b0c0b(), true, true, _info_12389875345);
             }
@@ -52,12 +52,12 @@ public class typeof_ILocalized_InferenceRule extends AbstractInferenceRule_Runti
     }
 
     {
-      final SNode rotationType = typeCheckingContext.typeOf(SLinkOperations.getTarget(iLocalized, LINKS.rotation$Wt3h), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660794680", true);
+      final SNode rotationType = typeCheckingContext.typeOf(SLinkOperations.getTarget(iLocalized, LINKS.rotation$hBSM), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660794680", true);
       typeCheckingContext.whenConcrete(rotationType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
             {
-              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(iLocalized, LINKS.rotation$Wt3h);
+              SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(iLocalized, LINKS.rotation$hBSM);
               EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660796684", 0, null);
               typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(rotationType), (SNode) _quotation_createNode_jxrkm3_a1a0c0a0a0a0a1a0b0e0b(), true, true, _info_12389875345);
             }
@@ -67,7 +67,7 @@ public class typeof_ILocalized_InferenceRule extends AbstractInferenceRule_Runti
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ILocalized$9a;
+    return CONCEPTS.ILocalized$sH;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -125,12 +125,12 @@ public class typeof_ILocalized_InferenceRule extends AbstractInferenceRule_Runti
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink position$DoV0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
-    /*package*/ static final SContainmentLink velocity$DoVv = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
-    /*package*/ static final SContainmentLink rotation$Wt3h = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x4dcb9d0527cc0319L, "rotation");
+    /*package*/ static final SContainmentLink position$2BSz = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe06L, "position");
+    /*package*/ static final SContainmentLink velocity$2C7$ = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x3cd406ea6df3fe07L, "velocity");
+    /*package*/ static final SContainmentLink rotation$hBSM = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, 0x4dcb9d0527cc0319L, "rotation");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ILocalized$9a = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
   }
 }

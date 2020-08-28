@@ -36,20 +36,20 @@ public final class AbstractForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static String renderReadable_id4Y0vh0cfqjE(@NotNull SNode __thisNode__) {
-    return SPropertyOperations.getString(__thisNode__, PROPS.name$tAp1);
+    return SPropertyOperations.getString(__thisNode__, PROPS.name$MnvL);
   }
   /*package*/ static SNode getCurrentObject_id2_PGqGCjHbe(@NotNull SNode __thisNode__) {
     return null;
   }
   /*package*/ static String getDetailedPresentation_id22G2W3WJ92t(@NotNull SNode __thisNode__) {
-    BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invokeSuper(__thisNode__, CONCEPTS.AbstractForce$Pj);
-    if (isNotEmptyString(SPropertyOperations.getString(__thisNode__, PROPS.description$ByyT))) {
-      return SPropertyOperations.getString(__thisNode__, PROPS.description$ByyT);
+    BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invokeSuper(__thisNode__, CONCEPTS.AbstractForce$8Q);
+    if (isNotEmptyString(SPropertyOperations.getString(__thisNode__, PROPS.description$9ida))) {
+      return SPropertyOperations.getString(__thisNode__, PROPS.description$9ida);
     }
-    return ((String) BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invokeSuper(__thisNode__, CONCEPTS.AbstractForce$Pj));
+    return ((String) BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invokeSuper(__thisNode__, CONCEPTS.AbstractForce$8Q));
   }
   /*package*/ static String getFqName_idhEwIO9y(@NotNull SNode __thisNode__) {
-    return SPropertyOperations.getString(__thisNode__, PROPS.description$ByyT);
+    return SPropertyOperations.getString(__thisNode__, PROPS.description$9ida);
   }
 
   /*package*/ AbstractForce__BehaviorDescriptor() {
@@ -108,11 +108,11 @@ public final class AbstractForce__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty description$ByyT = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, 0x6ff53cf970bd1386L, "description");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty description$9ida = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, 0x6ff53cf970bd1386L, "description");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractForce$Pj = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, "jetbrains.mps.samples.Physics.structure.AbstractForce");
+    /*package*/ static final SConcept AbstractForce$8Q = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, "jetbrains.mps.samples.Physics.structure.AbstractForce");
   }
 }

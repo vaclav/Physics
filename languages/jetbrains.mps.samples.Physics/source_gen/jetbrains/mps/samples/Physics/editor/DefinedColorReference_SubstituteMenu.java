@@ -28,7 +28,7 @@ public class DefinedColorReference_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_zdwelf_a(), CONCEPTS.DefinedColorReference$JN));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_zdwelf_a(), CONCEPTS.DefinedColorReference$3m));
     result.add(new SMP_Subconcepts_zdwelf_b());
     return result;
   }
@@ -50,7 +50,7 @@ public class DefinedColorReference_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_zdwelf_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) CONCEPTS.DefinedColorReference$JN, LINKS.color$x_mI);
+      super((SAbstractConcept) CONCEPTS.DefinedColorReference$3m, LINKS.color$gDjP);
     }
     @NotNull
     @Override
@@ -67,7 +67,7 @@ public class DefinedColorReference_SubstituteMenu extends SubstituteMenuBase {
   }
   public class SMP_Subconcepts_zdwelf_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.DefinedColorReference$JN);
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.DefinedColorReference$3m);
     }
     @NotNull
     @Override
@@ -88,10 +88,10 @@ public class DefinedColorReference_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DefinedColorReference$JN = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, "jetbrains.mps.samples.Physics.structure.DefinedColorReference");
+    /*package*/ static final SConcept DefinedColorReference$3m = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, "jetbrains.mps.samples.Physics.structure.DefinedColorReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink color$x_mI = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, 0xb06f5069ab75031L, "color");
+    /*package*/ static final SReferenceLink color$gDjP = MetaAdapterFactory.getReferenceLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e65L, 0xb06f5069ab75031L, "color");
   }
 }

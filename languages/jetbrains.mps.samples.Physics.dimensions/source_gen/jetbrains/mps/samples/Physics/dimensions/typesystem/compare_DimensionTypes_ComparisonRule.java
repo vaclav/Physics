@@ -27,13 +27,13 @@ public class compare_DimensionTypes_ComparisonRule extends ComparisonRule_Runtim
   }
 
   public SAbstractConcept getApplicableConcept1() {
-    return CONCEPTS.DimensionType$yz;
+    return CONCEPTS.DimensionType$8R;
   }
   public SAbstractConcept getApplicableConcept2() {
-    return CONCEPTS.DimensionType$yz;
+    return CONCEPTS.DimensionType$8R;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept DimensionType$yz = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
   }
 }

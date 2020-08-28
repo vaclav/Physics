@@ -30,7 +30,7 @@ public final class TextureStyleKey__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   /*package*/ static SAbstractConcept getSpecificExpressionConcept_id1AxJyXYWKCb(@NotNull SNode __thisNode__) {
-    return CONCEPTS.TextureExpression$Jk;
+    return CONCEPTS.TextureExpression$2R;
   }
 
   /*package*/ TextureStyleKey__BehaviorDescriptor() {
@@ -80,6 +80,6 @@ public final class TextureStyleKey__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept TextureExpression$Jk = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L, "jetbrains.mps.samples.Physics.structure.TextureExpression");
+    /*package*/ static final SConcept TextureExpression$2R = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e64L, "jetbrains.mps.samples.Physics.structure.TextureExpression");
   }
 }

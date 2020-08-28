@@ -19,11 +19,11 @@ public class typeof_OverrideRule_InferenceRule extends AbstractInferenceRule_Run
   }
   public void applyRule(final SNode overrideRule, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode targetType = typeCheckingContext.typeOf(SLinkOperations.getTarget(overrideRule, LINKS.target$_Vc0), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3004491438924289742", true);
+      final SNode targetType = typeCheckingContext.typeOf(SLinkOperations.getTarget(overrideRule, LINKS.target$ne7z), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3004491438924289742", true);
       typeCheckingContext.whenConcrete(targetType, new Runnable() {
         public void run() {
           {
-            final SNode replaceType = typeCheckingContext.typeOf(SLinkOperations.getTarget(overrideRule, LINKS.newValue$_Vn9), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3004491438924291210", true);
+            final SNode replaceType = typeCheckingContext.typeOf(SLinkOperations.getTarget(overrideRule, LINKS.newValue$njwU), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "3004491438924291210", true);
             typeCheckingContext.whenConcrete(replaceType, new Runnable() {
               public void run() {
                 if (!(typeCheckingContext.isSingleTypeComputation())) {
@@ -41,7 +41,7 @@ public class typeof_OverrideRule_InferenceRule extends AbstractInferenceRule_Run
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.OverrideRule$lC;
+    return CONCEPTS.OverrideRule$Db;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -51,11 +51,11 @@ public class typeof_OverrideRule_InferenceRule extends AbstractInferenceRule_Run
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink target$_Vc0 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9feeL, "target");
-    /*package*/ static final SContainmentLink newValue$_Vn9 = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9ff0L, "newValue");
+    /*package*/ static final SContainmentLink target$ne7z = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9feeL, "target");
+    /*package*/ static final SContainmentLink newValue$njwU = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, 0x3238375e772f9ff0L, "newValue");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept OverrideRule$lC = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
+    /*package*/ static final SConcept OverrideRule$Db = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3238375e772f9fedL, "jetbrains.mps.samples.Physics.structure.OverrideRule");
   }
 }

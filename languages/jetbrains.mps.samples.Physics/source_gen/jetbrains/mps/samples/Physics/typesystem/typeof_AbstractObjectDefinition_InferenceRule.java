@@ -21,7 +21,7 @@ public class typeof_AbstractObjectDefinition_InferenceRule extends AbstractInfer
   public typeof_AbstractObjectDefinition_InferenceRule() {
   }
   public void applyRule(final SNode abstractObjectDefinition, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    ListSequence.fromList(SLinkOperations.getChildren(abstractObjectDefinition, LINKS.forces$OiCr)).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(SLinkOperations.getChildren(abstractObjectDefinition, LINKS.forces$k$SC)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         if (!(typeCheckingContext.isSingleTypeComputation())) {
           {
@@ -34,7 +34,7 @@ public class typeof_AbstractObjectDefinition_InferenceRule extends AbstractInfer
     });
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.AbstractObjectDefinition$O;
+    return CONCEPTS.AbstractObjectDefinition$kn;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -43,16 +43,16 @@ public class typeof_AbstractObjectDefinition_InferenceRule extends AbstractInfer
     return false;
   }
   private static SNode createForceType_fxa46k_a1a0c0a0a0a0a0a1() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ForceType$fg);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ForceType$TQ);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink forces$OiCr = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e49L, "forces");
+    /*package*/ static final SContainmentLink forces$k$SC = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, 0x1441545e2a5b1e49L, "forces");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractObjectDefinition$O = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, "jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition");
-    /*package*/ static final SConcept ForceType$fg = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1be152c15029f679L, "jetbrains.mps.samples.Physics.types.structure.ForceType");
+    /*package*/ static final SConcept AbstractObjectDefinition$kn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, "jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition");
+    /*package*/ static final SConcept ForceType$TQ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1be152c15029f679L, "jetbrains.mps.samples.Physics.types.structure.ForceType");
   }
 }

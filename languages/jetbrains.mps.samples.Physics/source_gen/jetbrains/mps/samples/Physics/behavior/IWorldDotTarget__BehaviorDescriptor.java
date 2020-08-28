@@ -32,7 +32,7 @@ public final class IWorldDotTarget__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   /*package*/ static SNode getWorldTarget_id4eAl$41wkSU(@NotNull SNode __thisNode__) {
-    return (SNode) IMayTargetWorld__BehaviorDescriptor.getWorldTarget_id2bZvtzzMbSH.invoke(SNodeOperations.as(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(__thisNode__), CONCEPTS.IMayTargetWorld$d));
+    return (SNode) IMayTargetWorld__BehaviorDescriptor.getWorldTarget_id2bZvtzzMbSH.invoke(SNodeOperations.as(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(__thisNode__), CONCEPTS.IMayTargetWorld$jK));
   }
 
   /*package*/ IWorldDotTarget__BehaviorDescriptor() {
@@ -82,6 +82,6 @@ public final class IWorldDotTarget__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IMayTargetWorld$d = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L, "jetbrains.mps.samples.Physics.structure.IMayTargetWorld");
+    /*package*/ static final SInterfaceConcept IMayTargetWorld$jK = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3c8bd76L, "jetbrains.mps.samples.Physics.structure.IMayTargetWorld");
   }
 }

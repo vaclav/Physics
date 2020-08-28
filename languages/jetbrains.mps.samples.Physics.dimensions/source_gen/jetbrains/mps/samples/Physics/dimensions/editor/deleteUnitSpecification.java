@@ -23,8 +23,8 @@ public class deleteUnitSpecification {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        if ((SLinkOperations.getTarget(node, LINKS.content$Gf5w) != null)) {
-          SNodeOperations.replaceWithAnother(node, SLinkOperations.getTarget(node, LINKS.content$Gf5w));
+        if ((SLinkOperations.getTarget(node, LINKS.content$aqgO) != null)) {
+          SNodeOperations.replaceWithAnother(node, SLinkOperations.getTarget(node, LINKS.content$aqgO));
         }
       }
 
@@ -36,8 +36,8 @@ public class deleteUnitSpecification {
         this.execute_internal(editorContext, node);
       }
       public void execute_internal(EditorContext editorContext, SNode node) {
-        if ((SLinkOperations.getTarget(node, LINKS.content$Gf5w) != null)) {
-          SNodeOperations.replaceWithAnother(node, SLinkOperations.getTarget(node, LINKS.content$Gf5w));
+        if ((SLinkOperations.getTarget(node, LINKS.content$aqgO) != null)) {
+          SNodeOperations.replaceWithAnother(node, SLinkOperations.getTarget(node, LINKS.content$aqgO));
         }
       }
 
@@ -90,6 +90,6 @@ public class deleteUnitSpecification {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink content$Gf5w = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
+    /*package*/ static final SContainmentLink content$aqgO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
   }
 }

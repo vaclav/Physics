@@ -26,7 +26,7 @@ public class typeof_VectorComponentTarget_InferenceRule extends AbstractInferenc
   }
   public void applyRule(final SNode vectorComponentTarget, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     // Either angle 
-    if (SEnumOperations.isMember(SPropertyOperations.getEnum(vectorComponentTarget, PROPS.component$_d4D), 0x6520d39c9504b3e9L) || SEnumOperations.isMember(SPropertyOperations.getEnum(vectorComponentTarget, PROPS.component$_d4D), 0x6520d39c9504b3eeL)) {
+    if (SEnumOperations.isMember(SPropertyOperations.getEnum(vectorComponentTarget, PROPS.component$Szq), 0x6520d39c9504b3e9L) || SEnumOperations.isMember(SPropertyOperations.getEnum(vectorComponentTarget, PROPS.component$Szq), 0x6520d39c9504b3eeL)) {
       {
         SNode _nodeToCheck_1029348928467 = vectorComponentTarget;
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973091646", 0, null);
@@ -40,7 +40,7 @@ public class typeof_VectorComponentTarget_InferenceRule extends AbstractInferenc
           public void run() {
             {
               final SNode vectorType = typeCheckingContext.getExpandedNode(contextType);
-              if (SNodeOperations.isInstanceOf(vectorType, CONCEPTS.VectorType$Wj)) {
+              if (SNodeOperations.isInstanceOf(vectorType, CONCEPTS.VectorType$AT)) {
                 {
                   SNode _nodeToCheck_1029348928467 = vectorComponentTarget;
                   EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973078456", 0, null);
@@ -54,7 +54,7 @@ public class typeof_VectorComponentTarget_InferenceRule extends AbstractInferenc
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.VectorComponentTarget$ME;
+    return CONCEPTS.VectorComponentTarget$6d;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -77,11 +77,11 @@ public class typeof_VectorComponentTarget_InferenceRule extends AbstractInferenc
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty component$_d4D = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
+    /*package*/ static final SProperty component$Szq = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
-    /*package*/ static final SConcept VectorComponentTarget$ME = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, "jetbrains.mps.samples.Physics.structure.VectorComponentTarget");
+    /*package*/ static final SConcept VectorType$AT = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
+    /*package*/ static final SConcept VectorComponentTarget$6d = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, "jetbrains.mps.samples.Physics.structure.VectorComponentTarget");
   }
 }

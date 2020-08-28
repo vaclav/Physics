@@ -40,7 +40,7 @@ public class ObjectStyleDotTarget_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Wrap_j6j6x4_a(), CONCEPTS.ObjectStyleDotTarget$3E));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_Wrap_j6j6x4_a(), CONCEPTS.ObjectStyleDotTarget$nd));
     return result;
   }
 
@@ -80,7 +80,7 @@ public class ObjectStyleDotTarget_SubstituteMenu extends SubstituteMenuBase {
         @Nullable
         @Override
         public SAbstractConcept getOutputConcept() {
-          return CONCEPTS.ObjectStyleDotTarget$3E;
+          return CONCEPTS.ObjectStyleDotTarget$nd;
         }
         @Nullable
         @Override
@@ -113,21 +113,21 @@ public class ObjectStyleDotTarget_SubstituteMenu extends SubstituteMenuBase {
       return new DefaultSubstituteMenuLookup(LanguageRegistry.getInstance(editorContext.getRepository()), conceptToFindMenuFor);
     }
     private SAbstractConcept getConceptToFindMenuFor(SubstituteMenuContext _context) {
-      return CONCEPTS.StyleKey$l_;
+      return CONCEPTS.StyleKey$D8;
     }
   }
   private static SNode createObjectStyleDotTarget_j6j6x4_a0a0a(SNode p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ObjectStyleDotTarget$3E);
-    n0.forChild(LINKS.styleKey$ANGW).initNode(p0, CONCEPTS.StyleKey$l_, true);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ObjectStyleDotTarget$nd);
+    n0.forChild(LINKS.styleKey$MA4B).initNode(p0, CONCEPTS.StyleKey$D8, true);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectStyleDotTarget$3E = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, "jetbrains.mps.samples.Physics.structure.ObjectStyleDotTarget");
-    /*package*/ static final SConcept StyleKey$l_ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2c40d23L, "jetbrains.mps.samples.Physics.structure.StyleKey");
+    /*package*/ static final SConcept ObjectStyleDotTarget$nd = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, "jetbrains.mps.samples.Physics.structure.ObjectStyleDotTarget");
+    /*package*/ static final SConcept StyleKey$D8 = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x2b1dfd95e2c40d23L, "jetbrains.mps.samples.Physics.structure.StyleKey");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink styleKey$ANGW = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, 0x29b2190b93c8e280L, "styleKey");
+    /*package*/ static final SContainmentLink styleKey$MA4B = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x29b2190b93c8e27bL, 0x29b2190b93c8e280L, "styleKey");
   }
 }

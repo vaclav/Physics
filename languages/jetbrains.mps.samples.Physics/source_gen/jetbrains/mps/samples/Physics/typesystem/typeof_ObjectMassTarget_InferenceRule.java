@@ -26,7 +26,7 @@ public class typeof_ObjectMassTarget_InferenceRule extends AbstractInferenceRule
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ObjectMassTarget$_T;
+    return CONCEPTS.ObjectMassTarget$Ts;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -49,6 +49,6 @@ public class typeof_ObjectMassTarget_InferenceRule extends AbstractInferenceRule
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectMassTarget$_T = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
+    /*package*/ static final SConcept ObjectMassTarget$Ts = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
   }
 }

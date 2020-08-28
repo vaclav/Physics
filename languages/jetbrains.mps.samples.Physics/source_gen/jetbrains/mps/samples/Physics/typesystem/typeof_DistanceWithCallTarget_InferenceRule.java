@@ -22,7 +22,7 @@ public class typeof_DistanceWithCallTarget_InferenceRule extends AbstractInferen
   }
   public void applyRule(final SNode distanceWithCallTarget, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode targetType = typeCheckingContext.typeOf(SLinkOperations.getTarget(distanceWithCallTarget, LINKS.target$oizF), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973110570", true);
+      final SNode targetType = typeCheckingContext.typeOf(SLinkOperations.getTarget(distanceWithCallTarget, LINKS.target$Ky_o), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973110570", true);
       typeCheckingContext.whenConcrete(targetType, new Runnable() {
         public void run() {
           if (!(typeCheckingContext.isSingleTypeComputation())) {
@@ -43,7 +43,7 @@ public class typeof_DistanceWithCallTarget_InferenceRule extends AbstractInferen
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.ObjectDistanceWithTarget$OH;
+    return CONCEPTS.ObjectDistanceWithTarget$8g;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -52,7 +52,7 @@ public class typeof_DistanceWithCallTarget_InferenceRule extends AbstractInferen
     return false;
   }
   private static SNode createDirectionType_3ko4l3_a1a0c0a0a0a0a1a0b0a0b() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$al);
     return n0.getResult();
   }
   private static SNode _quotation_createNode_3ko4l3_a1a0c0c0b() {
@@ -70,11 +70,11 @@ public class typeof_DistanceWithCallTarget_InferenceRule extends AbstractInferen
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink target$oizF = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, 0x339d8f0ab560d04L, "target");
+    /*package*/ static final SContainmentLink target$Ky_o = MetaAdapterFactory.getContainmentLink(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, 0x339d8f0ab560d04L, "target");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ObjectDistanceWithTarget$OH = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget");
-    /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
+    /*package*/ static final SConcept ObjectDistanceWithTarget$8g = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget");
+    /*package*/ static final SConcept DirectionType$al = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
   }
 }

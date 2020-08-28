@@ -23,12 +23,12 @@ public class replace_VectorType_VectorType_InequationReplacementRule extends Abs
       SNode _nodeToCheck_1029348928467 = equationInfo.getNodeWithError();
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:86d4d2b7-921b-4129-84f6-d964405b2398(jetbrains.mps.samples.Physics.types.typesystem)", "5344936513382954281", 0, null);
       _info_12389875345.getOuterRulesIdFromInfo(equationInfo);
-      typeCheckingContext.createLessThanInequality((SNode) SLinkOperations.getTarget(subtype, LINKS.componentType$gTxy), (SNode) SLinkOperations.getTarget(supertype, LINKS.componentType$gTxy), false, true, _info_12389875345);
+      typeCheckingContext.createLessThanInequality((SNode) SLinkOperations.getTarget(subtype, LINKS.componentType$89U4), (SNode) SLinkOperations.getTarget(supertype, LINKS.componentType$89U4), false, true, _info_12389875345);
     }
   }
   public boolean checkInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
     boolean result_14532009 = true;
-    result_14532009 = result_14532009 && TypecheckingFacade.getFromContext().isSubtype((SNode) SLinkOperations.getTarget(subtype, LINKS.componentType$gTxy), (SNode) SLinkOperations.getTarget(supertype, LINKS.componentType$gTxy));
+    result_14532009 = result_14532009 && TypecheckingFacade.getFromContext().isSubtype((SNode) SLinkOperations.getTarget(subtype, LINKS.componentType$89U4), (SNode) SLinkOperations.getTarget(supertype, LINKS.componentType$89U4));
     return result_14532009;
   }
   public boolean isWeak() {
@@ -42,17 +42,17 @@ public class replace_VectorType_VectorType_InequationReplacementRule extends Abs
   }
 
   public SAbstractConcept getApplicableSubtypeConcept() {
-    return CONCEPTS.VectorType$Wj;
+    return CONCEPTS.VectorType$AT;
   }
   public SAbstractConcept getApplicableSupertypeConcept() {
-    return CONCEPTS.VectorType$Wj;
+    return CONCEPTS.VectorType$AT;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink componentType$gTxy = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
+    /*package*/ static final SContainmentLink componentType$89U4 = MetaAdapterFactory.getContainmentLink(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, 0x1341d8738b13c81dL, "componentType");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept VectorType$Wj = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
+    /*package*/ static final SConcept VectorType$AT = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
   }
 }

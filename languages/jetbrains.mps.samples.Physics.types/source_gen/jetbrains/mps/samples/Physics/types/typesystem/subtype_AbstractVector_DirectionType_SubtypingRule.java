@@ -19,7 +19,7 @@ public class subtype_AbstractVector_DirectionType_SubtypingRule extends Subtypin
     return createDirectionType_mhsi4c_a0a1();
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.AbstractVectorType$6J;
+    return CONCEPTS.AbstractVectorType$Ll;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -31,12 +31,12 @@ public class subtype_AbstractVector_DirectionType_SubtypingRule extends Subtypin
     return true;
   }
   private static SNode createDirectionType_mhsi4c_a0a1() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$vJ);
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$al);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AbstractVectorType$6J = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L, "jetbrains.mps.samples.Physics.types.structure.AbstractVectorType");
-    /*package*/ static final SConcept DirectionType$vJ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
+    /*package*/ static final SConcept AbstractVectorType$Ll = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L, "jetbrains.mps.samples.Physics.types.structure.AbstractVectorType");
+    /*package*/ static final SConcept DirectionType$al = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
   }
 }
