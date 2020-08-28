@@ -10,8 +10,6 @@ import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import processing.core.PGraphics;
-import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer;
-import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
 import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
@@ -50,7 +48,6 @@ public class RotationAndCollisionSimSimulation extends Simulation {
 
   @Override
   protected void renderMetrics(PGraphics ctx) {
-    this.metricsRenderer.renderMetric(ctx, "Error", MetricsRenderer.anyToString(AH.mul(((Number) new BigInteger("5")), BigDecimal.valueOf(world.getTime()))) + " s");
   }
 
   public static void main(String[] args) {

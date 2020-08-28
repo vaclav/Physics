@@ -14,6 +14,7 @@
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
     <import index="3673" ref="r:78633c85-d020-485e-aaa3-59e2daa3b826(com.mbeddr.mpsutil.interpreter.structure)" />
+    <import index="9tcj" ref="r:536344e4-f692-450c-bc6e-ea4e11701e75(jetbrains.mps.samples.Physics.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -105,6 +106,10 @@
       </concept>
     </language>
     <language id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation">
+      <concept id="5455284157994012186" name="jetbrains.mps.lang.quotation.structure.NodeBuilderInitLink" flags="ng" index="2pIpSj">
+        <reference id="5455284157994012188" name="link" index="2pIpSl" />
+        <child id="1595412875168045827" name="initValue" index="28nt2d" />
+      </concept>
       <concept id="5455284157993911077" name="jetbrains.mps.lang.quotation.structure.NodeBuilderInitProperty" flags="ng" index="2pJxcG">
         <reference id="5455284157993911078" name="property" index="2pJxcJ" />
         <child id="1595412875168045201" name="initValue" index="28ntcv" />
@@ -469,6 +474,68 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="5hZn_PXfwHO" role="1B3o_S" />
+  </node>
+  <node concept="312cEu" id="19Axi8T0YLj">
+    <property role="TrG5h" value="VectorGenerationHelper" />
+    <node concept="3Tm1VV" id="19Axi8T0YLk" role="1B3o_S" />
+    <node concept="2YIFZL" id="19Axi8T0YMU" role="jymVt">
+      <property role="TrG5h" value="emptyVector" />
+      <node concept="3clFbS" id="19Axi8T0YMX" role="3clF47">
+        <node concept="3cpWs6" id="19Axi8T0YNs" role="3cqZAp">
+          <node concept="2pJPEk" id="19Axi8T0YOn" role="3cqZAk">
+            <node concept="2pJPED" id="19Axi8T0YQt" role="2pJPEn">
+              <ref role="2pJxaS" to="9tcj:5xbVod7kJEb" resolve="CartesianCoordinates" />
+              <node concept="2pIpSj" id="19Axi8T0ZSg" role="2pJxcM">
+                <ref role="2pIpSl" to="9tcj:1h1l5SEm0oR" resolve="dx" />
+                <node concept="2pJPED" id="19Axi8T0ZSh" role="28nt2d">
+                  <ref role="2pJxaS" to="5qo5:4rZeNQ6Oerq" resolve="NumberLiteral" />
+                  <node concept="2pJxcG" id="19Axi8T0ZSi" role="2pJxcM">
+                    <ref role="2pJxcJ" to="5qo5:4rZeNQ6Oert" resolve="value" />
+                    <node concept="WxPPo" id="19Axi8T0ZSj" role="28ntcv">
+                      <node concept="Xl_RD" id="19Axi8T0ZSk" role="WxPPp">
+                        <property role="Xl_RC" value="0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2pIpSj" id="19Axi8T0YSS" role="2pJxcM">
+                <ref role="2pIpSl" to="9tcj:1h1l5SEm0vI" resolve="dy" />
+                <node concept="2pJPED" id="19Axi8T0YTp" role="28nt2d">
+                  <ref role="2pJxaS" to="5qo5:4rZeNQ6Oerq" resolve="NumberLiteral" />
+                  <node concept="2pJxcG" id="19Axi8T0YTB" role="2pJxcM">
+                    <ref role="2pJxcJ" to="5qo5:4rZeNQ6Oert" resolve="value" />
+                    <node concept="WxPPo" id="19Axi8T0YUa" role="28ntcv">
+                      <node concept="Xl_RD" id="19Axi8T0ZAo" role="WxPPp">
+                        <property role="Xl_RC" value="0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2pIpSj" id="19Axi8T100j" role="2pJxcM">
+                <ref role="2pIpSl" to="9tcj:1h1l5SEm0vL" resolve="dz" />
+                <node concept="2pJPED" id="19Axi8T100k" role="28nt2d">
+                  <ref role="2pJxaS" to="5qo5:4rZeNQ6Oerq" resolve="NumberLiteral" />
+                  <node concept="2pJxcG" id="19Axi8T100l" role="2pJxcM">
+                    <ref role="2pJxcJ" to="5qo5:4rZeNQ6Oert" resolve="value" />
+                    <node concept="WxPPo" id="19Axi8T100m" role="28ntcv">
+                      <node concept="Xl_RD" id="19Axi8T100n" role="WxPPp">
+                        <property role="Xl_RC" value="0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="19Axi8T0YMn" role="1B3o_S" />
+      <node concept="3Tqbb2" id="19Axi8T0YMA" role="3clF45">
+        <ref role="ehGHo" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      </node>
+    </node>
   </node>
 </model>
 

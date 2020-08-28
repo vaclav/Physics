@@ -329,7 +329,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new ModelAccessor.ReadOnly() {
         public String getText() {
           SNode ancestor = SNodeOperations.getNodeAncestor(myNode, CONCEPTS.ILocalized$sH, false, false);
-          return ((boolean) DirectionalCoordinates__BehaviorDescriptor.isPartOfPositionDefinition_id3Vp3qmbrxhw.invoke(myNode) ? "[0, 0, 0]" : ((ancestor == null) ? "self" : SPropertyOperations.getString(ancestor, PROPS.name$MnvL)));
+          return (((boolean) DirectionalCoordinates__BehaviorDescriptor.isPartOfPositionDefinition_id3Vp3qmbrxhw.invoke(myNode) || !((boolean) DirectionalCoordinates__BehaviorDescriptor.hasCurrentObjectContext_id19Axi8T0SGm.invoke(myNode))) ? "[0, 0, 0]" : ((ancestor == null) ? "self" : SPropertyOperations.getString(ancestor, PROPS.name$MnvL)));
         }
       }, myNode);
       editorCell.setAction(CellActionType.DELETE, EmptyCellAction.getInstance());

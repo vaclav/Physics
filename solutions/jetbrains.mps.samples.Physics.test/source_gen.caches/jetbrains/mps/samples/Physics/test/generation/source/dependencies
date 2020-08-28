@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.test.generation.source.BaseObjectAbstractEntity">
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.MathContext" />
+    <classNode dependClassName="java.math.RoundingMode" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.ElasticCollisionReaction" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.nevec.rjm.BigDecimalMath" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.test.generation.source.TestSimSimulation">
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.test.generation.source.TestSystemScope" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.ode4j.math.DMatrix3" />
+    <classNode dependClassName="processing.core.PGraphics" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.test.generation.source.TestSystemScope">
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.RoundingMode" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.test.generation.source.BaseObjectAbstractEntity" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.ode4j.math.DMatrix3C" />
+    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
+  </dependency>
+</dependenciesRoot>
+

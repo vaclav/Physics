@@ -23,6 +23,8 @@ import jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext;
 import jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor;
 import java.math.BigDecimal;
 import jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper;
+import jetbrains.mps.samples.Physics.behavior.DirectionalCoordinates__BehaviorDescriptor;
+import jetbrains.mps.samples.Physics.genjava.behavior.VectorGenerationHelper;
 import jetbrains.mps.samples.Physics.behavior.IForceWithCache__BehaviorDescriptor;
 import jetbrains.mps.generator.template.TemplateArgumentContext;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
@@ -466,10 +468,16 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.direction$5ONS);
   }
   public static SNode sourceNodeQuery_3_12(final SourceSubstituteMacroNodeContext _context) {
+    // If a source is defined 
     if ((SLinkOperations.getTarget(_context.getNode(), LINKS.source$ceR) != null)) {
       return SLinkOperations.getTarget(_context.getNode(), LINKS.source$ceR);
+    }
+
+    // Otherwise use either an empty vector or current object 
+    if ((boolean) DirectionalCoordinates__BehaviorDescriptor.isPartOfPositionDefinition_id3Vp3qmbrxhw.invoke(_context.getNode()) || !((boolean) DirectionalCoordinates__BehaviorDescriptor.hasCurrentObjectContext_id19Axi8T0SGm.invoke(_context.getNode()))) {
+      return VectorGenerationHelper.emptyVector();
     } else {
-      return createCurrentObjectExpression_x583g4_a0a0a0df();
+      return createCurrentObjectExpression_x583g4_a0a0e0df();
     }
   }
   public static SNode sourceNodeQuery_3_13(final SourceSubstituteMacroNodeContext _context) {
@@ -2018,7 +2026,7 @@ public class QueriesGenerated extends QueryProviderBase {
     n0.setProperty(PROPS.value$iWTK, p0);
     return n0.getResult();
   }
-  private static SNode createCurrentObjectExpression_x583g4_a0a0a0df() {
+  private static SNode createCurrentObjectExpression_x583g4_a0a0e0df() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.CurrentObjectExpression$yg);
     return n0.getResult();
   }

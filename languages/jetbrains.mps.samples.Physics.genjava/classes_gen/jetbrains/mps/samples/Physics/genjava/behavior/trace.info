@@ -13,6 +13,49 @@
       <unit at="11,0,22,0" name="jetbrains.mps.samples.Physics.genjava.behavior.BehaviorAspectDescriptor" />
     </file>
   </root>
+  <root nodeRef="r:e3f953af-78f9-46f1-9f68-de224a3dec61(jetbrains.mps.samples.Physics.genjava.behavior)/1325893522339130451">
+    <file name="VectorGenerationHelper.java">
+      <node id="1325893522339130588" at="13,37,14,52" concept="4" />
+      <node id="1325893522339130647" at="16,65,17,80" concept="3" />
+      <node id="1325893522339130647" at="18,5,19,83" concept="3" />
+      <node id="1325893522339130647" at="19,83,20,44" concept="1" />
+      <node id="1325893522339130647" at="22,5,23,83" concept="3" />
+      <node id="1325893522339130647" at="23,83,24,44" concept="1" />
+      <node id="1325893522339130647" at="26,5,27,83" concept="3" />
+      <node id="1325893522339130647" at="27,83,28,44" concept="1" />
+      <node id="1325893522339130647" at="29,5,30,26" concept="4" />
+      <node id="1325893522339130451" at="34,0,35,0" concept="6" trace="CartesianCoordinates$dF" />
+      <node id="1325893522339130451" at="35,0,36,0" concept="6" trace="NumberLiteral$wE" />
+      <node id="1325893522339130451" at="39,0,40,0" concept="6" trace="dx$KTha" />
+      <node id="1325893522339130451" at="40,0,41,0" concept="6" trace="dy$1OJk" />
+      <node id="1325893522339130451" at="41,0,42,0" concept="6" trace="dz$1UnG" />
+      <node id="1325893522339130451" at="45,0,46,0" concept="6" trace="value$iWTK" />
+      <node id="1325893522339130554" at="13,0,16,0" concept="7" trace="emptyVector#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1325893522339130647" at="17,80,21,5" concept="0" />
+      <node id="1325893522339130647" at="21,5,25,5" concept="0" />
+      <node id="1325893522339130647" at="25,5,29,5" concept="0" />
+      <node id="1325893522339130647" at="16,0,32,0" concept="7" trace="createCartesianCoordinates_uu2y44_a0a0#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <scope id="1325893522339130557" at="13,37,14,52" />
+      <scope id="1325893522339130647" at="18,5,20,44">
+        <var name="n1" id="1325893522339130647" />
+      </scope>
+      <scope id="1325893522339130647" at="22,5,24,44">
+        <var name="n2" id="1325893522339130647" />
+      </scope>
+      <scope id="1325893522339130647" at="26,5,28,44">
+        <var name="n3" id="1325893522339130647" />
+      </scope>
+      <scope id="1325893522339130554" at="13,0,16,0" />
+      <scope id="1325893522339130647" at="16,65,30,26">
+        <var name="n0" id="1325893522339130647" />
+      </scope>
+      <scope id="1325893522339130647" at="16,0,32,0" />
+      <unit id="1325893522339130451" at="44,0,47,0" name="jetbrains.mps.samples.Physics.genjava.behavior.VectorGenerationHelper$PROPS" />
+      <unit id="1325893522339130451" at="33,0,37,0" name="jetbrains.mps.samples.Physics.genjava.behavior.VectorGenerationHelper$CONCEPTS" />
+      <unit id="1325893522339130451" at="38,0,43,0" name="jetbrains.mps.samples.Physics.genjava.behavior.VectorGenerationHelper$LINKS" />
+      <unit id="1325893522339130451" at="12,0,48,0" name="jetbrains.mps.samples.Physics.genjava.behavior.VectorGenerationHelper" />
+    </file>
+  </root>
   <root nodeRef="r:e3f953af-78f9-46f1-9f68-de224a3dec61(jetbrains.mps.samples.Physics.genjava.behavior)/6088688976854387571">
     <file name="NumberGenerationHelper.java">
       <node id="6088688976854389717" at="19,25,20,49" concept="4" />

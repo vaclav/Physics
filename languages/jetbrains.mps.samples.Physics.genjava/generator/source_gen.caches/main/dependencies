@@ -37,12 +37,14 @@
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.DirectionalCoordinates__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.Force__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.IForceWithCache__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.OverrideRule__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.behavior.IUnitReferenceLike__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.genjava.behavior.NumberGenerationHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.genjava.behavior.VectorGenerationHelper" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
     <classNode dependClassName="jetbrains.mps.typechecking.TypecheckingFacade" />

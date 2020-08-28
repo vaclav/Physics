@@ -28,8 +28,9 @@ public final class DirectionalCoordinates__BehaviorDescriptor extends BaseBHDesc
 
   public static final SMethod<Boolean> hasLocalizedReference_id3Vp3qmbplYw = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasLocalizedReference").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3Vp3qmbplYw").build();
   public static final SMethod<Boolean> isPartOfPositionDefinition_id3Vp3qmbrxhw = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isPartOfPositionDefinition").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3Vp3qmbrxhw").build();
+  public static final SMethod<Boolean> hasCurrentObjectContext_id19Axi8T0SGm = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasCurrentObjectContext").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("19Axi8T0SGm").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(hasLocalizedReference_id3Vp3qmbplYw, isPartOfPositionDefinition_id3Vp3qmbrxhw);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(hasLocalizedReference_id3Vp3qmbplYw, isPartOfPositionDefinition_id3Vp3qmbrxhw, hasCurrentObjectContext_id19Axi8T0SGm);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -40,6 +41,9 @@ public final class DirectionalCoordinates__BehaviorDescriptor extends BaseBHDesc
   /*package*/ static boolean isPartOfPositionDefinition_id3Vp3qmbrxhw(@NotNull SNode __thisNode__) {
     SNode ancestor = SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ILocalized$sH, false, false);
     return ListSequence.fromList(SNodeOperations.getNodeAncestors(__thisNode__, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$2BSz));
+  }
+  /*package*/ static boolean hasCurrentObjectContext_id19Axi8T0SGm(@NotNull SNode __thisNode__) {
+    return (SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.ICurrentObjectContext$IJ, true, false) != null);
   }
 
   /*package*/ DirectionalCoordinates__BehaviorDescriptor() {
@@ -61,6 +65,8 @@ public final class DirectionalCoordinates__BehaviorDescriptor extends BaseBHDesc
         return (T) ((Boolean) hasLocalizedReference_id3Vp3qmbplYw(node));
       case 1:
         return (T) ((Boolean) isPartOfPositionDefinition_id3Vp3qmbrxhw(node));
+      case 2:
+        return (T) ((Boolean) hasCurrentObjectContext_id19Axi8T0SGm(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -92,6 +98,7 @@ public final class DirectionalCoordinates__BehaviorDescriptor extends BaseBHDesc
 
   private static final class CONCEPTS {
     /*package*/ static final SInterfaceConcept ILocalized$sH = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df3fe05L, "jetbrains.mps.samples.Physics.structure.ILocalized");
+    /*package*/ static final SInterfaceConcept ICurrentObjectContext$IJ = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d76cb28bL, "jetbrains.mps.samples.Physics.structure.ICurrentObjectContext");
   }
 
   private static final class LINKS {

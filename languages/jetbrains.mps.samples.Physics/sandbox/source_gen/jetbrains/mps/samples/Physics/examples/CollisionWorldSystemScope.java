@@ -11,13 +11,13 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.SimpleCollisionReaction;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import java.util.Arrays;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ElasticCollisionReaction;
 
 public class CollisionWorldSystemScope extends SystemScope {
@@ -57,7 +57,7 @@ public class CollisionWorldSystemScope extends SystemScope {
 
       // Set static properties of A 
       this.setMass(((Number) new BigInteger("200")));
-      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("-400.3").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("-400")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of A 

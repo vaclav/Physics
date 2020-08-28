@@ -1423,10 +1423,22 @@
                             </node>
                           </node>
                         </node>
-                        <node concept="2OqwBi" id="3Vp3qmbr$lA" role="3K4Cdx">
-                          <node concept="pncrf" id="3Vp3qmbr$4l" role="2Oq$k0" />
-                          <node concept="2qgKlT" id="3Vp3qmbr$LT" role="2OqNvi">
-                            <ref role="37wK5l" to="rf09:3Vp3qmbrxhw" resolve="isPartOfPositionDefinition" />
+                        <node concept="1eOMI4" id="19Axi8T0WrA" role="3K4Cdx">
+                          <node concept="22lmx$" id="19Axi8T0Utj" role="1eOMHV">
+                            <node concept="3fqX7Q" id="19Axi8T0UHg" role="3uHU7w">
+                              <node concept="2OqwBi" id="19Axi8T0V5k" role="3fr31v">
+                                <node concept="pncrf" id="19Axi8T0UJ7" role="2Oq$k0" />
+                                <node concept="2qgKlT" id="19Axi8T0VJC" role="2OqNvi">
+                                  <ref role="37wK5l" to="rf09:19Axi8T0SGm" resolve="hasCurrentObjectContext" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="2OqwBi" id="3Vp3qmbr$lA" role="3uHU7B">
+                              <node concept="pncrf" id="3Vp3qmbr$4l" role="2Oq$k0" />
+                              <node concept="2qgKlT" id="3Vp3qmbr$LT" role="2OqNvi">
+                                <ref role="37wK5l" to="rf09:3Vp3qmbrxhw" resolve="isPartOfPositionDefinition" />
+                              </node>
+                            </node>
                           </node>
                         </node>
                       </node>

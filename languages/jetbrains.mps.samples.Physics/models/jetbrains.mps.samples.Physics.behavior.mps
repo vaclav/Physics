@@ -311,6 +311,7 @@
       <concept id="6870613620390542976" name="jetbrains.mps.lang.smodel.structure.ConceptAliasOperation" flags="ng" index="3n3YKJ" />
       <concept id="1171999116870" name="jetbrains.mps.lang.smodel.structure.Node_IsNullOperation" flags="nn" index="3w_OXm" />
       <concept id="1172008320231" name="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" flags="nn" index="3x8VRR" />
+      <concept id="1144100932627" name="jetbrains.mps.lang.smodel.structure.OperationParm_Inclusion" flags="ng" index="1xIGOp" />
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
       </concept>
@@ -5503,6 +5504,29 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="19Axi8T0SGm" role="13h7CS">
+      <property role="TrG5h" value="hasCurrentObjectContext" />
+      <node concept="3Tm1VV" id="19Axi8T0SGn" role="1B3o_S" />
+      <node concept="10P_77" id="19Axi8T0SIL" role="3clF45" />
+      <node concept="3clFbS" id="19Axi8T0SGp" role="3clF47">
+        <node concept="3cpWs6" id="19Axi8T0SJQ" role="3cqZAp">
+          <node concept="2OqwBi" id="19Axi8T0TEO" role="3cqZAk">
+            <node concept="2OqwBi" id="19Axi8T0T3x" role="2Oq$k0">
+              <node concept="13iPFW" id="19Axi8T0SJV" role="2Oq$k0" />
+              <node concept="2Xjw5R" id="19Axi8T0Ttb" role="2OqNvi">
+                <node concept="1xMEDy" id="19Axi8T0Ttd" role="1xVPHs">
+                  <node concept="chp4Y" id="19Axi8T0Tvy" role="ri$Ld">
+                    <ref role="cht4Q" to="9tcj:5claIBnrbab" resolve="ICurrentObjectContext" />
+                  </node>
+                </node>
+                <node concept="1xIGOp" id="19Axi8T0TyM" role="1xVPHs" />
+              </node>
+            </node>
+            <node concept="3x8VRR" id="19Axi8T0TQF" role="2OqNvi" />
           </node>
         </node>
       </node>
