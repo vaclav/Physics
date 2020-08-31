@@ -53,7 +53,7 @@ You then need to make MPS see the artifacts generated, for this there is two sol
 The project requires the path variable `jetbrains.mps.samples.Physics.home` to be set to function properly, which should point to the folder of this repository.
 
 ## Documentation
-You can find some detailed documentation on how to use or improve the language on the [wiki page of this repository](./wiki).
+You can find some detailed documentation on how to use or improve the language on the [wiki page of this repository](https://github.com/vaclav/Physics/wiki).
 
 ## Contribute
 
