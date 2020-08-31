@@ -43,7 +43,7 @@ public final class ObjectAngularVelocityTarget__BehaviorDescriptor extends BaseB
   }
   /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
     {
-      final SNode dotTarget = IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__);
+      final SNode dotTarget = ILocalizedDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__);
       if (SNodeOperations.isInstanceOf(dotTarget, CONCEPTS.ObjectDefinition$in)) {
         SNode object = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, dotTarget);
 

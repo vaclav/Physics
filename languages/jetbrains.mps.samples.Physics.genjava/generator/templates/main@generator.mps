@@ -1668,34 +1668,6 @@
         </node>
       </node>
     </node>
-    <node concept="3aamgX" id="31HEEbciiXE" role="3aUrZf">
-      <ref role="30HIoZ" to="9tcj:cTQf2Fjp4$" resolve="InteractedObjectExpression" />
-      <node concept="1Koe21" id="6giFUYY5piw" role="1lVwrX">
-        <node concept="9aQIb" id="6giFUYY5pix" role="1Koe22">
-          <node concept="3clFbS" id="6giFUYY5piy" role="9aQI4">
-            <node concept="3cpWs8" id="6giFUYY5piz" role="3cqZAp">
-              <node concept="3cpWsn" id="6giFUYY5pi$" role="3cpWs9">
-                <property role="TrG5h" value="otherObject" />
-                <node concept="3uibUv" id="6giFUYY5pi_" role="1tU5fm">
-                  <ref role="3uigEE" to="jyp0:3H79Ykd2GyN" resolve="PhysicalEntity" />
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="6giFUYY5piA" role="3cqZAp">
-              <node concept="2OqwBi" id="6giFUYY5piB" role="3clFbG">
-                <node concept="37vLTw" id="6giFUYY5piC" role="2Oq$k0">
-                  <ref role="3cqZAo" node="6giFUYY5pi$" resolve="otherObject" />
-                  <node concept="raruj" id="6giFUYY5piD" role="lGtFl" />
-                </node>
-                <node concept="liA8E" id="6giFUYY5piE" role="2OqNvi">
-                  <ref role="37wK5l" to="jyp0:31HEEbckoNF" resolve="getX" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="3aamgX" id="31HEEbcju$S" role="3aUrZf">
       <ref role="30HIoZ" to="9tcj:6HZo5MNbVDr" resolve="ObjectReferenceExpression" />
       <node concept="1Koe21" id="31HEEbckKPB" role="1lVwrX">

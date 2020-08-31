@@ -668,25 +668,6 @@
       <property role="TrG5h" value="length" />
     </node>
   </node>
-  <node concept="1TIwiD" id="cTQf2FjlqU">
-    <property role="EcuMT" value="232455383964014266" />
-    <property role="3GE5qa" value="physical.force.simple.interaction" />
-    <property role="TrG5h" value="InteractionForce" />
-    <property role="R4oN_" value="force applied to the object for each other object" />
-    <property role="34LRSv" value="interaction force" />
-    <ref role="1TJDcQ" node="7zgzoeTzo_w" resolve="SimpleForce" />
-  </node>
-  <node concept="1TIwiD" id="cTQf2Fjp4$">
-    <property role="EcuMT" value="232455383964029220" />
-    <property role="3GE5qa" value="physical.force.simple.interaction" />
-    <property role="TrG5h" value="InteractedObjectExpression" />
-    <property role="34LRSv" value="other object" />
-    <property role="R4oN_" value="object interacted with" />
-    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    <node concept="PrWs8" id="1pEOKrtw_41" role="PzmwI">
-      <ref role="PrY4T" node="GdoRjGrjZN" resolve="ITargetObject" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="cTQf2Fl7sm">
     <property role="EcuMT" value="232455383964481302" />
     <property role="3GE5qa" value="physical.expr.context" />
@@ -768,6 +749,9 @@
     <property role="TrG5h" value="ITargetObject" />
     <node concept="t5JxF" id="5claIBnD05h" role="lGtFl">
       <property role="t5JxN" value="Node that targets an existing object" />
+    </node>
+    <node concept="PrWs8" id="5evA4sVXKYw" role="PrDN$">
+      <ref role="PrY4T" node="5evA4sVXKXO" resolve="ITargetLocalized" />
     </node>
   </node>
   <node concept="PlHQZ" id="GdoRjGvovx">
@@ -1092,6 +1076,9 @@
     <property role="TrG5h" value="IObjectDotTarget" />
     <node concept="PrWs8" id="4eAl$41wfr2" role="PrDN$">
       <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
+    <node concept="PrWs8" id="5evA4sVXK5j" role="PrDN$">
+      <ref role="PrY4T" node="5evA4sVqrGG" resolve="ILocalizedDotTarget" />
     </node>
   </node>
   <node concept="PlHQZ" id="4eAl$41wk4P">
@@ -1714,6 +1701,11 @@
     <node concept="1QGGSu" id="6ZPff_KFbxi" role="rwd14">
       <property role="1iqoE4" value="${module}/icons/vector.png" />
     </node>
+  </node>
+  <node concept="PlHQZ" id="5evA4sVXKXO">
+    <property role="EcuMT" value="6025702258161160052" />
+    <property role="3GE5qa" value="physical.expr.context" />
+    <property role="TrG5h" value="ITargetLocalized" />
   </node>
 </model>
 

@@ -56,12 +56,12 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
               final SNode target = SLinkOperations.getTarget(it, LINKS.target$u23F);
               if (SNodeOperations.isInstanceOf(target, CONCEPTS.ITargetExpression$T8)) {
                 // Use those 
-                return ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(target, ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(object));
+                return ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(target, ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(object));
               }
             }
 
             // Otherwise the object probably refer to it's positions 
-            return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(object), LINKS.position$2BSz);
+            return SLinkOperations.getTarget(ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(object), LINKS.position$2BSz);
           }
         }
 
@@ -76,7 +76,7 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
     // Detect dependencies outside dot expressions (standalone object targets) 
     Iterable<SNode> nonDotTargets = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.ITargetObject$D9, false, new SAbstractConcept[]{CONCEPTS.DotExpression$jp})).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
-        return SLinkOperations.getTarget(ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(it), LINKS.position$2BSz);
+        return SLinkOperations.getTarget(ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(it), LINKS.position$2BSz);
       }
     });
 
@@ -86,7 +86,7 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
     Set<SNode> set = SetSequence.fromSet(new HashSet<SNode>());
     SetSequence.fromSet(set).addSequence(ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.ITargetObject$D9, false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(it) == SNodeOperations.cast(SNodeOperations.getParent(dependency), CONCEPTS.ILocalized$sH);
+        return ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(it) == SNodeOperations.cast(SNodeOperations.getParent(dependency), CONCEPTS.ILocalized$sH);
       }
     }));
     return set;

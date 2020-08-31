@@ -42,7 +42,7 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
     return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.styleKey$MA4B));
   }
   /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull final SNode __thisNode__, final SNode content) {
-    SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__));
+    SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(ILocalizedDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__));
 
     {
       final SNode object = definition;
@@ -69,7 +69,7 @@ public final class ObjectStyleDotTarget__BehaviorDescriptor extends BaseBHDescri
     return null;
   }
   /*package*/ static SNode getNodeTarget_id6ZPff_L2lbX(@NotNull SNode __thisNode__) {
-    SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__));
+    SNode definition = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(ILocalizedDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__));
 
     {
       final SNode object = definition;

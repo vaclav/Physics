@@ -25,15 +25,15 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class ObjectReferenceExpression__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
 
-  public static final SMethod<SNode> getLocalizedObjectTarget_idGdoRjGrk0_ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGrk0_").build();
+  public static final SMethod<SNode> getLocalizedObjectTarget_id5evA4sVXKYg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLocalizedObjectTarget").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5evA4sVXKYg").build();
   public static final SMethod<SNode> getWorldTarget_id2bZvtzzMbSH = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getWorldTarget").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2bZvtzzMbSH").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLocalizedObjectTarget_idGdoRjGrk0_, getWorldTarget_id2bZvtzzMbSH);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLocalizedObjectTarget_id5evA4sVXKYg, getWorldTarget_id2bZvtzzMbSH);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static SNode getLocalizedObjectTarget_idGdoRjGrk0_(@NotNull SNode __thisNode__) {
+  /*package*/ static SNode getLocalizedObjectTarget_id5evA4sVXKYg(@NotNull SNode __thisNode__) {
     return SLinkOperations.getTarget(__thisNode__, LINKS.target$MKwz);
   }
   /*package*/ static SNode getWorldTarget_id2bZvtzzMbSH(@NotNull SNode __thisNode__) {
@@ -64,7 +64,7 @@ public final class ObjectReferenceExpression__BehaviorDescriptor extends BaseBHD
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((SNode) getLocalizedObjectTarget_idGdoRjGrk0_(node));
+        return (T) ((SNode) getLocalizedObjectTarget_id5evA4sVXKYg(node));
       case 1:
         return (T) ((SNode) getWorldTarget_id2bZvtzzMbSH(node));
       default:

@@ -345,10 +345,10 @@
       </concept>
     </language>
     <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
-      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="nn" index="3oM_SD">
         <property id="155656958578482949" name="value" index="3oM_SC" />
       </concept>
-      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="nn" index="1PaTwC">
         <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
@@ -968,32 +968,6 @@
     <node concept="1YaCAy" id="6kwOTMl2yrc" role="1YuTPh">
       <property role="TrG5h" value="coords" />
       <ref role="1YaFvo" to="9tcj:6POFxU8e$hL" resolve="DirectionalCoordinates" />
-    </node>
-  </node>
-  <node concept="1YbPZF" id="cTQf2FkHOe">
-    <property role="TrG5h" value="typeof_InteractedObjectExpression" />
-    <property role="3GE5qa" value="physical.force.simple.interaction" />
-    <node concept="3clFbS" id="cTQf2FkHOf" role="18ibNy">
-      <node concept="1Z5TYs" id="cTQf2FkHZb" role="3cqZAp">
-        <node concept="mw_s8" id="cTQf2FkHZe" role="1ZfhK$">
-          <node concept="1Z2H0r" id="cTQf2FkHOl" role="mwGJk">
-            <node concept="1YBJjd" id="cTQf2FkHQd" role="1Z2MuG">
-              <ref role="1YBMHb" node="cTQf2FkHOh" resolve="interactedObjectExpression" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="6asu_4xHbh4" role="1ZfhKB">
-          <node concept="2pJPEk" id="6asu_4xHbh5" role="mwGJk">
-            <node concept="2pJPED" id="6asu_4xHbh6" role="2pJPEn">
-              <ref role="2pJxaS" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="cTQf2FkHOh" role="1YuTPh">
-      <property role="TrG5h" value="interactedObjectExpression" />
-      <ref role="1YaFvo" to="9tcj:cTQf2Fjp4$" resolve="InteractedObjectExpression" />
     </node>
   </node>
   <node concept="1YbPZF" id="cTQf2Fl7sM">

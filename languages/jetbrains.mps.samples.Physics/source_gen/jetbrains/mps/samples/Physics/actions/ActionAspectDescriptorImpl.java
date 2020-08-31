@@ -16,6 +16,8 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
   public Collection<NodeFactory> getFactories(SAbstractConcept concept) {
     if (LANGUAGE_FQ_NAME.equals(concept.getLanguage().getQualifiedName())) {
       switch (concept.getName()) {
+        case "AbstractForce":
+          return Collections.<NodeFactory>singletonList(new ForceFactories.NodeFactory_6025702258158506869());
         case "AbstractForceCallParameter":
           return Collections.<NodeFactory>singletonList(new ForceFactories.NodeFactory_4809107873068929002());
         case "CartesianCoordinates":

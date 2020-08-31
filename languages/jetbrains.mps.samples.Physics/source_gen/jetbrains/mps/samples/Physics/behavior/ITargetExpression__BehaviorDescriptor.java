@@ -35,7 +35,7 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
   }
 
   /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
-    SNode localized = ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$D9));
+    SNode localized = ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetLocalized$4J));
 
     // Default behavior, expect targetable expression to be instanciated (!) 
     SNode targetCoordinates = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized);
@@ -43,7 +43,7 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
     return SLinkOperations.getTarget(targetCoordinates, LINKS.expression$Va$7);
   }
   /*package*/ static SNode getNodeTarget_id6ZPff_L2lbX(@NotNull SNode __thisNode__) {
-    SNode localized = ITargetObject__BehaviorDescriptor.getLocalizedObjectTarget_idGdoRjGrk0_.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetObject$D9));
+    SNode localized = ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetLocalized$4J));
 
     // Get the target coordinates or the  
     SNode targetCoordinates = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized);
@@ -103,7 +103,7 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept ITargetObject$D9 = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec6d3ff3L, "jetbrains.mps.samples.Physics.structure.ITargetObject");
+    /*package*/ static final SInterfaceConcept ITargetLocalized$4J = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x539f98473bf70f74L, "jetbrains.mps.samples.Physics.structure.ITargetLocalized");
   }
 
   private static final class LINKS {

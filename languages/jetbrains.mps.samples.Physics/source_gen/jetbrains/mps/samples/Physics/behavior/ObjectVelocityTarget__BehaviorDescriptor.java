@@ -42,7 +42,7 @@ public final class ObjectVelocityTarget__BehaviorDescriptor extends BaseBHDescri
     return SLinkOperations.getTarget(object, LINKS.velocity$2C7$);
   }
   /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
-    SNode dotTarget = IObjectDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__);
+    SNode dotTarget = ILocalizedDotTarget__BehaviorDescriptor.getLocalizedObjectTarget_id4eAl$41wire.invoke(__thisNode__);
     SNode object = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, dotTarget);
 
     if ((object == null)) {
