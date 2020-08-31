@@ -347,14 +347,14 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectDistanceWithTarget$8g, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458197367", true, new TypedChildConstraintImpl(LINKS.target$Ky_o, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.ObjectType$7_)))) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ObjectDistanceWithTarget$8g, "r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)/3489632902458197367", true, new TypedChildConstraintImpl(LINKS.target$Ky_o, SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(CONCEPTS.DirectionType$al)))) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           InternalEntity source = (InternalEntity) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
-          InternalEntity target = ((InternalEntity) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.target$Ky_o), context, coverage, trace, false), InternalEntity.class));
+          VectorLike target = ((VectorLike) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.target$Ky_o), context, coverage, trace, false), VectorLike.class));
 
           return target.minus(source).length();
         } catch (StopAndReturnException stop) {
@@ -362,7 +362,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
         } catch (InterpreterEscapeException ex) {
           throw ex;
         } catch (RuntimeException ex) {
-          throw new InterpreterRuntimeException("distance with(target[object])", node, ex, trace);
+          throw new InterpreterRuntimeException("distance with(target[direction])", node, ex, trace);
         }
       }
       public EvaluatorInfo getInfo() {
@@ -795,7 +795,6 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
     /*package*/ static final SConcept ObjectReferenceExpression$HX = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba5bL, "jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression");
     /*package*/ static final SConcept WorldNestedObjectTarget$GA = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, "jetbrains.mps.samples.Physics.structure.WorldNestedObjectTarget");
     /*package*/ static final SConcept ObjectDistanceWithTarget$8g = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x339d8f0ab560d03L, "jetbrains.mps.samples.Physics.structure.ObjectDistanceWithTarget");
-    /*package*/ static final SConcept ObjectType$7_ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
     /*package*/ static final SConcept ObjectMassTarget$Ts = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c95047fcaL, "jetbrains.mps.samples.Physics.structure.ObjectMassTarget");
     /*package*/ static final SConcept ObjectVelocityTarget$tE = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4a4717912b4b2f7eL, "jetbrains.mps.samples.Physics.structure.ObjectVelocityTarget");
     /*package*/ static final SConcept VectorResizeTarget$TT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x306daaa2cbe24f94L, "jetbrains.mps.samples.Physics.structure.VectorResizeTarget");

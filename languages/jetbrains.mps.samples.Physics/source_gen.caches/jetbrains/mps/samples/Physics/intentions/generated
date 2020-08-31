@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="bud4tgfuqqzookqwq33o77tnq8vctns">
+<product version="3" modelHash="93bfm6iu9i0k8zgzv71064g10g1lsm3">
   <files names="ApplyOverrideRule_Intention.java:IntentionsDescriptor.java:ResolveNumericExpression_Intention.java:ResolveToCartesian_Intention.java:ResolveToCylindrical_Intention.java:ResolveToRelative_Intention.java:ResolveToSpherical_Intention.java" />
 </product>
 

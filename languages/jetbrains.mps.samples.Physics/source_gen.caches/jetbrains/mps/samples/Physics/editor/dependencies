@@ -1152,6 +1152,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.Force_Customization" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.Force_TransformationMenu" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.IForceDotTarget_Editor" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ILocalizedDotTarget_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.IObjectDotTarget_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.InteractedObjectExpression_Editor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.InteractionForce_Editor" />
@@ -1466,6 +1467,22 @@
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.editor.PhysicsStyles_StyleSheet.KeyWordStyleClass" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.ILocalizedDotTarget_Editor">
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.editor.ILocalizedDotTarget_EditorBuilder_a" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.editor.ILocalizedDotTarget_EditorBuilder_a">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.cells.BigCellUtil" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />

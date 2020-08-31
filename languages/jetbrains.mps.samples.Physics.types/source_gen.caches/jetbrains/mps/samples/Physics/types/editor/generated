@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-er5k7qepl218yfvh4dq6s5s3i66yr9n">
-  <files names="DirectionType_Editor.java:DirectionType_EditorBuilder_a.java:DirectionType_SubstituteMenu.java:EditorAspectDescriptorImpl.java:ForceType_Editor.java:ForceType_EditorBuilder_a.java:RotationType_Editor.java:RotationType_EditorBuilder_a.java:VectorType_Editor.java:VectorType_EditorBuilder_a.java:WorldType_Editor.java:WorldType_EditorBuilder_a.java" />
+<product version="3" modelHash="-4h41x18ezfxdtodo610mbhuzjdk2ddn">
+  <files names="DirectionType_Editor.java:DirectionType_EditorBuilder_a.java:DirectionType_SubstituteMenu.java:EditorAspectDescriptorImpl.java:ForceType_Editor.java:ForceType_EditorBuilder_a.java:LocalizedType_Editor.java:LocalizedType_EditorBuilder_a.java:RotationType_Editor.java:RotationType_EditorBuilder_a.java:VectorType_Editor.java:VectorType_EditorBuilder_a.java:WorldType_Editor.java:WorldType_EditorBuilder_a.java" />
 </product>
 

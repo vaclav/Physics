@@ -14,6 +14,7 @@ public class compare_ObjectTypes_ComparisonRule extends ComparisonRule_Runtime {
   public compare_ObjectTypes_ComparisonRule() {
   }
   public boolean areComparable(SNode node1, SNode node2, IsApplicable2Status status) {
+    // Always comparable 
     return true;
   }
   public boolean isWeak() {

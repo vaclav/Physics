@@ -107,6 +107,9 @@
       <concept id="5497648299878491908" name="jetbrains.mps.baseLanguage.structure.BaseVariableReference" flags="nn" index="1M0zk4">
         <reference id="5497648299878491909" name="baseVariableDeclaration" index="1M0zk5" />
       </concept>
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="8356039341262087992" name="line" index="1aUNEU" />
+      </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
@@ -222,6 +225,14 @@
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="nn" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="nn" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
+      </concept>
+    </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="1151689724996" name="jetbrains.mps.baseLanguage.collections.structure.SequenceType" flags="in" index="A3Dl8">
         <child id="1151689745422" name="elementType" index="A3Ik2" />
@@ -229,7 +240,7 @@
     </language>
   </registry>
   <node concept="2sgARr" id="cTQf2FonXH">
-    <property role="TrG5h" value="ObjectIsDirection" />
+    <property role="TrG5h" value="subtype_Localized_Direction" />
     <node concept="3clFbS" id="cTQf2FonXI" role="2sgrp5">
       <node concept="3clFbF" id="6asu_4xHbiF" role="3cqZAp">
         <node concept="2pJPEk" id="6asu_4xHbiD" role="3clFbG">
@@ -240,8 +251,8 @@
       </node>
     </node>
     <node concept="1YaCAy" id="cTQf2FonXK" role="1YuTPh">
-      <property role="TrG5h" value="objectType" />
-      <ref role="1YaFvo" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
+      <property role="TrG5h" value="localizedType" />
+      <ref role="1YaFvo" to="z99z:5evA4sVq9rE" resolve="LocalizedType" />
     </node>
   </node>
   <node concept="2sgARr" id="cTQf2Frr8A">
@@ -259,22 +270,6 @@
     <node concept="1YaCAy" id="cTQf2Frr8D" role="1YuTPh">
       <property role="TrG5h" value="vectorType" />
       <ref role="1YaFvo" to="z99z:6kwOTMl1aFZ" resolve="VectorType" />
-    </node>
-  </node>
-  <node concept="2sgARr" id="cTQf2FpdiP">
-    <property role="TrG5h" value="WorldIsObject" />
-    <node concept="3clFbS" id="cTQf2FpdiQ" role="2sgrp5">
-      <node concept="3clFbF" id="cTQf2Fpdj6" role="3cqZAp">
-        <node concept="2pJPEk" id="6asu_4xHbx9" role="3clFbG">
-          <node concept="2pJPED" id="6asu_4xHbzR" role="2pJPEn">
-            <ref role="2pJxaS" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="cTQf2FpdiS" role="1YuTPh">
-      <property role="TrG5h" value="worldType" />
-      <ref role="1YaFvo" to="z99z:6kwOTMl0tT7" resolve="WorldType" />
     </node>
   </node>
   <node concept="2sgARr" id="B395drkr5h">
@@ -857,6 +852,16 @@
       <ref role="1YaFvo" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
     </node>
     <node concept="3clFbS" id="6hOouYLHOIa" role="2sgrp5">
+      <node concept="3SKdUt" id="5evA4sVqaN0" role="3cqZAp">
+        <node concept="1PaTwC" id="5evA4sVqaN1" role="1aUNEU">
+          <node concept="3oM_SD" id="5evA4sVqaN2" role="1PaTwD">
+            <property role="3oM_SC" value="Always" />
+          </node>
+          <node concept="3oM_SD" id="5evA4sVqaN$" role="1PaTwD">
+            <property role="3oM_SC" value="comparable" />
+          </node>
+        </node>
+      </node>
       <node concept="3clFbF" id="6hOouYLHOKQ" role="3cqZAp">
         <node concept="3clFbT" id="6hOouYLHOKP" role="3clFbG">
           <property role="3clFbU" value="true" />
@@ -869,7 +874,7 @@
     </node>
   </node>
   <node concept="3hdX5o" id="7zgzoeTO5om">
-    <property role="TrG5h" value="InternalTypesEquality" />
+    <property role="TrG5h" value="Direction_BinaryEqualityOpRules" />
     <node concept="3ciAk0" id="7zgzoeTO5Hv" role="3he0YX">
       <node concept="2pJPEk" id="7zgzoeTO5Hw" role="3ciSkW">
         <node concept="2pJPED" id="7zgzoeTO5Kj" role="2pJPEn">
@@ -931,6 +936,38 @@
     <node concept="1YaCAy" id="MHm3quXcwP" role="1YuTPh">
       <property role="TrG5h" value="subType" />
       <ref role="1YaFvo" to="z99z:4RbBgkBKyyA" resolve="RotationType" />
+    </node>
+  </node>
+  <node concept="2sgARr" id="5evA4sVqa0S">
+    <property role="TrG5h" value="subtype_World_Localized" />
+    <node concept="3clFbS" id="5evA4sVqa0T" role="2sgrp5">
+      <node concept="3clFbF" id="5evA4sVqa2p" role="3cqZAp">
+        <node concept="2pJPEk" id="5evA4sVqa2n" role="3clFbG">
+          <node concept="2pJPED" id="5evA4sVqaDA" role="2pJPEn">
+            <ref role="2pJxaS" to="z99z:5evA4sVq9rE" resolve="LocalizedType" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="5evA4sVqa1N" role="1YuTPh">
+      <property role="TrG5h" value="worldType" />
+      <ref role="1YaFvo" to="z99z:6kwOTMl0tT7" resolve="WorldType" />
+    </node>
+  </node>
+  <node concept="2sgARr" id="5evA4sVqaGj">
+    <property role="TrG5h" value="subtype_Object_Localized" />
+    <node concept="3clFbS" id="5evA4sVqaGk" role="2sgrp5">
+      <node concept="3clFbF" id="5evA4sVqaGl" role="3cqZAp">
+        <node concept="2pJPEk" id="5evA4sVqaGm" role="3clFbG">
+          <node concept="2pJPED" id="5evA4sVqaGn" role="2pJPEn">
+            <ref role="2pJxaS" to="z99z:5evA4sVq9rE" resolve="LocalizedType" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="5evA4sVqaGo" role="1YuTPh">
+      <property role="TrG5h" value="objectType" />
+      <ref role="1YaFvo" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
     </node>
   </node>
 </model>

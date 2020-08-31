@@ -389,10 +389,10 @@
       </concept>
     </language>
     <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
-      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="nn" index="3oM_SD">
         <property id="155656958578482949" name="value" index="3oM_SC" />
       </concept>
-      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="nn" index="1PaTwC">
         <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
@@ -1581,6 +1581,14 @@
         <ref role="rxSuV" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
       </node>
     </node>
+    <node concept="rvkaK" id="5evA4sVsc1C" role="qq9xK">
+      <node concept="3uibUv" id="5evA4sVseXL" role="r5wI3">
+        <ref role="3uigEE" node="31HEEbbynJS" resolve="InternalEntity" />
+      </node>
+      <node concept="rxStX" id="5evA4sVsdR7" role="rai9p">
+        <ref role="rxSuV" to="z99z:5evA4sVq9rE" resolve="LocalizedType" />
+      </node>
+    </node>
     <node concept="rvkaK" id="1$oDF1jRfpy" role="qq9xK">
       <node concept="3uibUv" id="G6XgqqmZtd" role="r5wI3">
         <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
@@ -2291,8 +2299,8 @@
             <node concept="3cpWs8" id="31HEEbbyXEq" role="3cqZAp">
               <node concept="3cpWsn" id="31HEEbbyXEr" role="3cpWs9">
                 <property role="TrG5h" value="target" />
-                <node concept="3uibUv" id="31HEEbbyXEs" role="1tU5fm">
-                  <ref role="3uigEE" node="31HEEbbynJS" resolve="InternalEntity" />
+                <node concept="3uibUv" id="5evA4sVF5GD" role="1tU5fm">
+                  <ref role="3uigEE" to="mizj:G6XgqqggA$" resolve="VectorLike" />
                 </node>
                 <node concept="rqRoa" id="31HEEbbyXLj" role="33vP2m">
                   <ref role="rqRob" to="9tcj:cTQf2FlwO4" resolve="target" />
@@ -2324,7 +2332,7 @@
       <node concept="qpFDx" id="31HEEbbykA6" role="3vbI0w">
         <ref role="qpFD$" to="9tcj:cTQf2FlwO4" resolve="target" />
         <node concept="rxStX" id="31HEEbbykAc" role="rajlz">
-          <ref role="rxSuV" to="z99z:6kwOTMl0tT6" resolve="ObjectType" />
+          <ref role="rxSuV" to="z99z:6kwOTMl2xh8" resolve="DirectionType" />
         </node>
       </node>
     </node>

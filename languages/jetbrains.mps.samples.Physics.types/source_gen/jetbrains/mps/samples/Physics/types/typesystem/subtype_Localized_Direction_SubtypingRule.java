@@ -12,14 +12,14 @@ import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class WorldIsObject_SubtypingRule extends SubtypingRule_Runtime implements ISubtypingRule_Runtime {
-  public WorldIsObject_SubtypingRule() {
+public class subtype_Localized_Direction_SubtypingRule extends SubtypingRule_Runtime implements ISubtypingRule_Runtime {
+  public subtype_Localized_Direction_SubtypingRule() {
   }
-  public SNode getSubOrSuperType(SNode worldType, TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    return createObjectType_64sp53_a0a1();
+  public SNode getSubOrSuperType(SNode localizedType, TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    return createDirectionType_wcofed_a0a1();
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.WorldType$84;
+    return CONCEPTS.LocalizedType$o2;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -30,13 +30,13 @@ public class WorldIsObject_SubtypingRule extends SubtypingRule_Runtime implement
   public boolean surelyKeepsConcept() {
     return true;
   }
-  private static SNode createObjectType_64sp53_a0a1() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.ObjectType$7_);
+  private static SNode createDirectionType_wcofed_a0a1() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DirectionType$al);
     return n0.getResult();
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept WorldType$84 = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L, "jetbrains.mps.samples.Physics.types.structure.WorldType");
-    /*package*/ static final SConcept ObjectType$7_ = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L, "jetbrains.mps.samples.Physics.types.structure.ObjectType");
+    /*package*/ static final SConcept LocalizedType$o2 = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x539f98473b6896eaL, "jetbrains.mps.samples.Physics.types.structure.LocalizedType");
+    /*package*/ static final SConcept DirectionType$al = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L, "jetbrains.mps.samples.Physics.types.structure.DirectionType");
   }
 }

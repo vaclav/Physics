@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AbstractVectorType;
   private ConceptPresentation props_DirectionType;
   private ConceptPresentation props_ForceType;
+  private ConceptPresentation props_LocalizedType;
   private ConceptPresentation props_ObjectType;
   private ConceptPresentation props_RotationType;
   private ConceptPresentation props_VectorType;
@@ -44,6 +45,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ForceType = cpb.create();
         }
         return props_ForceType;
+      case LanguageConceptSwitch.LocalizedType:
+        if (props_LocalizedType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("type that refer to a localized entity as the initial state, such as objects and worlds");
+          cpb.rawPresentation("localized");
+          props_LocalizedType = cpb.create();
+        }
+        return props_LocalizedType;
       case LanguageConceptSwitch.ObjectType:
         if (props_ObjectType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -4194,5 +4194,12 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="5evA4sVqsJC">
+    <property role="3GE5qa" value="physical.expr.dot.localized" />
+    <ref role="1XX52x" to="9tcj:5evA4sVqrGG" resolve="ILocalizedDotTarget" />
+    <node concept="PMmxH" id="5evA4sVqsJH" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+    </node>
+  </node>
 </model>
 

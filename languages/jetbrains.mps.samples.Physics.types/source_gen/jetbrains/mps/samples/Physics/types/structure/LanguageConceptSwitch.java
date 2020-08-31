@@ -12,16 +12,18 @@ public final class LanguageConceptSwitch {
   public static final int AbstractVectorType = 0;
   public static final int DirectionType = 1;
   public static final int ForceType = 2;
-  public static final int ObjectType = 3;
-  public static final int RotationType = 4;
-  public static final int VectorType = 5;
-  public static final int WorldType = 6;
+  public static final int LocalizedType = 3;
+  public static final int ObjectType = 4;
+  public static final int RotationType = 5;
+  public static final int VectorType = 6;
+  public static final int WorldType = 7;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL);
     builder.put(0x1341d8738b15c587L, AbstractVectorType);
     builder.put(0x6520d39c950a1448L, DirectionType);
     builder.put(0x1be152c15029f679L, ForceType);
+    builder.put(0x539f98473b6896eaL, LocalizedType);
     builder.put(0x6520d39c9501de46L, ObjectType);
     builder.put(0x4dcb9d0527c228a6L, RotationType);
     builder.put(0x6520d39c9504aaffL, VectorType);

@@ -23,19 +23,23 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
     {
-      SubtypingRule_Runtime subtypingRule = new ObjectIsDirection_SubtypingRule();
-      this.mySubtypingRules.add(subtypingRule);
-    }
-    {
-      SubtypingRule_Runtime subtypingRule = new WorldIsObject_SubtypingRule();
-      this.mySubtypingRules.add(subtypingRule);
-    }
-    {
       SubtypingRule_Runtime subtypingRule = new subtype_AbstractVector_DirectionType_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
     }
     {
+      SubtypingRule_Runtime subtypingRule = new subtype_Localized_Direction_SubtypingRule();
+      this.mySubtypingRules.add(subtypingRule);
+    }
+    {
+      SubtypingRule_Runtime subtypingRule = new subtype_Object_Localized_SubtypingRule();
+      this.mySubtypingRules.add(subtypingRule);
+    }
+    {
       SubtypingRule_Runtime subtypingRule = new subtype_VectorType_AbstractVectorType_SubtypingRule();
+      this.mySubtypingRules.add(subtypingRule);
+    }
+    {
+      SubtypingRule_Runtime subtypingRule = new subtype_World_Localized_SubtypingRule();
       this.mySubtypingRules.add(subtypingRule);
     }
     {
@@ -57,7 +61,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a01a0();
+          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a11a0();
           this.myOperationConcept = CONCEPTS.MulExpression$iC;
           this.myTypeIsExact = false;
           this.myIsStrong = false;
@@ -70,7 +74,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
 
           SNode operationType = TypeChecker.getInstance().getRulesManager().getOperationType(operation, SLinkOperations.getTarget(vectorType, LINKS.componentType$89U4), otherType);
 
-          return createVectorType_3ist9o_a5a1a0a0a0a0k0a(SNodeOperations.as(operationType, CONCEPTS.Type$WK));
+          return createVectorType_3ist9o_a5a1a0a0a0a0l0a(SNodeOperations.as(operationType, CONCEPTS.Type$WK));
         }
         public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
           return VectorTypeHelper.oneIsVector(leftOperandType, rightOperandType);
@@ -85,7 +89,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a11a0();
+          this.myOperandType = createAbstractVectorType_3ist9o_a0a0a0a0a0a0a21a0();
           this.myOperationConcept = CONCEPTS.DivExpression$us;
           this.myTypeIsExact = false;
           this.myIsStrong = false;
@@ -95,7 +99,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
         public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
           SNode operationType = TypeChecker.getInstance().getRulesManager().getOperationType(operation, SLinkOperations.getTarget(SNodeOperations.as(leftOperandType, CONCEPTS.VectorType$AT), LINKS.componentType$89U4), rightOperandType);
 
-          return createVectorType_3ist9o_a2a1a0a0a0a0l0a(SNodeOperations.as(operationType, CONCEPTS.Type$WK));
+          return createVectorType_3ist9o_a2a1a0a0a0a0m0a(SNodeOperations.as(operationType, CONCEPTS.Type$WK));
         }
         public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
           return VectorTypeHelper.isVector(leftOperandType);
@@ -220,20 +224,20 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return n0.getResult();
     }
   }
-  private static SNode createAbstractVectorType_3ist9o_a0a0a0a0a0a0a01a0() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$Ll);
-    return n0.getResult();
-  }
-  private static SNode createVectorType_3ist9o_a5a1a0a0a0a0k0a(SNode p0) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$AT);
-    n0.forChild(LINKS.componentType$89U4).initNode(p0, CONCEPTS.Type$WK, true);
-    return n0.getResult();
-  }
   private static SNode createAbstractVectorType_3ist9o_a0a0a0a0a0a0a11a0() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$Ll);
     return n0.getResult();
   }
-  private static SNode createVectorType_3ist9o_a2a1a0a0a0a0l0a(SNode p0) {
+  private static SNode createVectorType_3ist9o_a5a1a0a0a0a0l0a(SNode p0) {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$AT);
+    n0.forChild(LINKS.componentType$89U4).initNode(p0, CONCEPTS.Type$WK, true);
+    return n0.getResult();
+  }
+  private static SNode createAbstractVectorType_3ist9o_a0a0a0a0a0a0a21a0() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.AbstractVectorType$Ll);
+    return n0.getResult();
+  }
+  private static SNode createVectorType_3ist9o_a2a1a0a0a0a0m0a(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.VectorType$AT);
     n0.forChild(LINKS.componentType$89U4).initNode(p0, CONCEPTS.Type$WK, true);
     return n0.getResult();

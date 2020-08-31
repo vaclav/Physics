@@ -15,6 +15,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAbstractVectorType = createDescriptorForAbstractVectorType();
   /*package*/ final ConceptDescriptor myConceptDirectionType = createDescriptorForDirectionType();
   /*package*/ final ConceptDescriptor myConceptForceType = createDescriptorForForceType();
+  /*package*/ final ConceptDescriptor myConceptLocalizedType = createDescriptorForLocalizedType();
   /*package*/ final ConceptDescriptor myConceptObjectType = createDescriptorForObjectType();
   /*package*/ final ConceptDescriptor myConceptRotationType = createDescriptorForRotationType();
   /*package*/ final ConceptDescriptor myConceptVectorType = createDescriptorForVectorType();
@@ -34,7 +35,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractVectorType, myConceptDirectionType, myConceptForceType, myConceptObjectType, myConceptRotationType, myConceptVectorType, myConceptWorldType);
+    return Arrays.asList(myConceptAbstractVectorType, myConceptDirectionType, myConceptForceType, myConceptLocalizedType, myConceptObjectType, myConceptRotationType, myConceptVectorType, myConceptWorldType);
   }
 
   @Override
@@ -47,6 +48,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDirectionType;
       case LanguageConceptSwitch.ForceType:
         return myConceptForceType;
+      case LanguageConceptSwitch.LocalizedType:
+        return myConceptLocalizedType;
       case LanguageConceptSwitch.ObjectType:
         return myConceptObjectType;
       case LanguageConceptSwitch.RotationType:
@@ -92,10 +95,19 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("force");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForLocalizedType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "LocalizedType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x539f98473b6896eaL);
+    b.class_(false, false, false);
+    b.super_("jetbrains.mps.samples.Physics.types.structure.DirectionType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
+    b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/6025702258151823082");
+    b.version(2);
+    b.alias("localized");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForObjectType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "ObjectType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.types.structure.DirectionType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
+    b.super_("jetbrains.mps.samples.Physics.types.structure.LocalizedType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x539f98473b6896eaL);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553749062");
     b.version(2);
     b.alias("object");
@@ -124,7 +136,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForWorldType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "WorldType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.types.structure.ObjectType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L);
+    b.super_("jetbrains.mps.samples.Physics.types.structure.LocalizedType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x539f98473b6896eaL);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553749063");
     b.version(2);
     b.alias("world");

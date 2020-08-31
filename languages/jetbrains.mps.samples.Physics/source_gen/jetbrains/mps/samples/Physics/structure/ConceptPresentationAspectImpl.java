@@ -56,6 +56,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IForceWithCache;
   private ConceptPresentation props_IForceWithLinearForce;
   private ConceptPresentation props_ILocalized;
+  private ConceptPresentation props_ILocalizedDotTarget;
   private ConceptPresentation props_IMayTargetWorld;
   private ConceptPresentation props_IObjectDefinition;
   private ConceptPresentation props_IObjectDotTarget;
@@ -130,7 +131,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractForce == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a1b0de);
           props_AbstractForce = cpb.create();
         }
         return props_AbstractForce;
@@ -153,7 +154,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractObjectDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a4b0de);
           props_AbstractObjectDefinition = cpb.create();
         }
         return props_AbstractObjectDefinition;
@@ -175,7 +176,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("target all objects within the simulation");
           cpb.rawPresentation("allObjects");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a7b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a7b0de);
           props_AllObjectsExpression = cpb.create();
         }
         return props_AllObjectsExpression;
@@ -277,7 +278,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("expression that targets the current object in a generic way");
           cpb.rawPresentation("self");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a12b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a12b0de);
           props_CurrentObjectExpression = cpb.create();
         }
         return props_CurrentObjectExpression;
@@ -286,7 +287,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("expression that targets the current world in a generic way");
           cpb.rawPresentation("current world");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a22b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a22b0de);
           props_CurrentWorldExpression = cpb.create();
         }
         return props_CurrentWorldExpression;
@@ -383,7 +384,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Force == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("may the force be with you");
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a53b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a53b0de);
           props_Force = cpb.create();
         }
         return props_Force;
@@ -392,7 +393,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("force application point");
           cpb.rawPresentation("application point");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a63b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a63b0de);
           props_ForceApplicationPointTarget = cpb.create();
         }
         return props_ForceApplicationPointTarget;
@@ -401,7 +402,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("components of a linear force");
           cpb.rawPresentation("components");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a73b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a73b0de);
           props_ForceComponentsTarget = cpb.create();
         }
         return props_ForceComponentsTarget;
@@ -410,7 +411,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("moment of a force not induced by linear force");
           cpb.rawPresentation("moment");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a83b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a83b0de);
           props_ForceMomentTarget = cpb.create();
         }
         return props_ForceMomentTarget;
@@ -462,6 +463,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ILocalized = cpb.create();
         }
         return props_ILocalized;
+      case LanguageConceptSwitch.ILocalizedDotTarget:
+        if (props_ILocalizedDotTarget == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ILocalizedDotTarget = cpb.create();
+        }
+        return props_ILocalizedDotTarget;
       case LanguageConceptSwitch.IMayTargetWorld:
         if (props_IMayTargetWorld == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -576,7 +583,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("object angular velocity");
           cpb.rawPresentation("angular velocity");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a46b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a56b0de);
           props_ObjectAngularVelocityTarget = cpb.create();
         }
         return props_ObjectAngularVelocityTarget;
@@ -608,7 +615,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("position of the object");
           cpb.rawPresentation("position");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a86b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a96b0de);
           props_ObjectPositionTarget = cpb.create();
         }
         return props_ObjectPositionTarget;
@@ -631,7 +638,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("velocity of the object");
           cpb.rawPresentation("velocity");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a17b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a27b0de);
           props_ObjectVelocityTarget = cpb.create();
         }
         return props_ObjectVelocityTarget;
@@ -711,7 +718,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Simulation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a28b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a38b0de);
           props_Simulation = cpb.create();
         }
         return props_Simulation;
@@ -817,7 +824,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.VectorExpression:
         if (props_VectorExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.icon(IconContainer.RESOURCE_a0a1a0a79b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a1a0a89b0de);
           props_VectorExpression = cpb.create();
         }
         return props_VectorExpression;
@@ -826,7 +833,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("opposite vector");
           cpb.rawPresentation("opposite");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a89b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a99b0de);
           props_VectorOppositeTarget = cpb.create();
         }
         return props_VectorOppositeTarget;
@@ -835,7 +842,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("same vector with a new length");
           cpb.rawPresentation("resize to");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a99b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a001b0de);
           props_VectorResizeTarget = cpb.create();
         }
         return props_VectorResizeTarget;
@@ -843,7 +850,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_WorldDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          cpb.icon(IconContainer.RESOURCE_a0a2a0a001b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a2a0a101b0de);
           props_WorldDefinition = cpb.create();
         }
         return props_WorldDefinition;
@@ -859,7 +866,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("center of mass of the given world");
           cpb.rawPresentation("mass center");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a201b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a301b0de);
           props_WorldMassCenterTarget = cpb.create();
         }
         return props_WorldMassCenterTarget;
@@ -868,7 +875,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("allow to access an object inside a world definition");
           cpb.presentationByReference(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x22ff7dd8e3878c9cL, 0x22ff7dd8e38793cbL, "target", "", "");
-          cpb.icon(IconContainer.RESOURCE_a0a3a0a301b0ce);
+          cpb.icon(IconContainer.RESOURCE_a0a3a0a401b0de);
           props_WorldNestedObjectTarget = cpb.create();
         }
         return props_WorldNestedObjectTarget;

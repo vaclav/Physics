@@ -31,7 +31,7 @@
       <unit at="26,0,98,0" name="jetbrains.mps.samples.Physics.editor.DefinedColorReference_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="21,0,286,0" name="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
+      <unit at="21,0,288,0" name="jetbrains.mps.samples.Physics.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="ObjectReferenceExpression_SubstituteMenu.java">
       <unit at="90,0,93,0" name="jetbrains.mps.samples.Physics.editor.ObjectReferenceExpression_SubstituteMenu$CONCEPTS" />
@@ -3696,8 +3696,8 @@
   </root>
   <root nodeRef="r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)/2805552972616868874">
     <file name="EditorAspectDescriptorImpl.java">
-      <node id="2805552972616868874" at="215,82,216,94" concept="8" />
-      <scope id="2805552972616868874" at="215,82,216,94" />
+      <node id="2805552972616868874" at="217,82,218,94" concept="8" />
+      <scope id="2805552972616868874" at="217,82,218,94" />
     </file>
     <file name="Relative_Moment_Transform.java">
       <node id="2805552972616868874" at="38,0,39,0" concept="3" trace="myLocations" />
@@ -8333,10 +8333,55 @@
       <unit id="5605746806660268135" at="44,0,403,0" name="jetbrains.mps.samples.Physics.editor.EulerAnglesRotationExpression_EditorBuilder_a" />
     </file>
   </root>
+  <root nodeRef="r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)/6025702258151902184">
+    <file name="ILocalizedDotTarget_Editor.java">
+      <node id="6025702258151902184" at="11,79,12,85" concept="8" />
+      <node id="6025702258151902184" at="11,0,14,0" concept="6" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="6025702258151902184" at="11,79,12,85" />
+      <scope id="6025702258151902184" at="11,0,14,0">
+        <var name="editorContext" id="6025702258151902184" />
+        <var name="node" id="6025702258151902184" />
+      </scope>
+      <unit id="6025702258151902184" at="10,0,15,0" name="jetbrains.mps.samples.Physics.editor.ILocalizedDotTarget_Editor" />
+    </file>
+    <file name="ILocalizedDotTarget_EditorBuilder_a.java">
+      <node id="6025702258151902184" at="16,99,17,19" concept="13" />
+      <node id="6025702258151902184" at="17,19,18,18" concept="2" />
+      <node id="6025702258151902184" at="23,26,24,18" concept="8" />
+      <node id="6025702258151902184" at="27,39,28,31" concept="8" />
+      <node id="6025702258151902189" at="31,42,32,119" concept="7" />
+      <node id="6025702258151902189" at="32,119,33,72" concept="7" />
+      <node id="6025702258151902189" at="34,26,35,27" concept="2" />
+      <node id="6025702258151902189" at="35,27,36,30" concept="2" />
+      <node id="6025702258151902189" at="37,5,38,22" concept="8" />
+      <node id="6025702258151902184" at="13,0,15,0" concept="3" trace="myNode" />
+      <node id="6025702258151902184" at="27,0,30,0" concept="6" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="6025702258151902184" at="16,0,20,0" concept="1" trace="ILocalizedDotTarget_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="6025702258151902189" at="33,72,37,5" concept="5" />
+      <node id="6025702258151902184" at="21,0,26,0" concept="6" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="6025702258151902189" at="31,0,40,0" concept="6" trace="createComponent_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="6025702258151902184" at="23,26,24,18" />
+      <scope id="6025702258151902184" at="27,39,28,31" />
+      <scope id="6025702258151902184" at="16,99,18,18" />
+      <scope id="6025702258151902189" at="34,26,36,30" />
+      <scope id="6025702258151902184" at="27,0,30,0" />
+      <scope id="6025702258151902184" at="16,0,20,0">
+        <var name="context" id="6025702258151902184" />
+        <var name="node" id="6025702258151902184" />
+      </scope>
+      <scope id="6025702258151902184" at="21,0,26,0" />
+      <scope id="6025702258151902189" at="31,42,38,22">
+        <var name="bigCell" id="6025702258151902189" />
+        <var name="editorCell" id="6025702258151902189" />
+      </scope>
+      <scope id="6025702258151902189" at="31,0,40,0" />
+      <unit id="6025702258151902184" at="12,0,41,0" name="jetbrains.mps.samples.Physics.editor.ILocalizedDotTarget_EditorBuilder_a" />
+    </file>
+  </root>
   <root nodeRef="r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)/620348066290994671">
     <file name="EditorAspectDescriptorImpl.java">
-      <node id="620348066290994671" at="224,95,225,107" concept="8" />
-      <scope id="620348066290994671" at="224,95,225,107" />
+      <node id="620348066290994671" at="226,95,227,107" concept="8" />
+      <scope id="620348066290994671" at="226,95,227,107" />
     </file>
     <file name="Oriented_RelativeCoordinates_Transform.java">
       <node id="620348066290994671" at="38,0,39,0" concept="3" trace="myLocations" />
@@ -11220,8 +11265,8 @@
   </root>
   <root nodeRef="r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)/7615900657267552692">
     <file name="EditorAspectDescriptorImpl.java">
-      <node id="7615900657267552692" at="197,92,198,104" concept="8" />
-      <scope id="7615900657267552692" at="197,92,198,104" />
+      <node id="7615900657267552692" at="199,92,200,104" concept="8" />
+      <scope id="7615900657267552692" at="199,92,200,104" />
     </file>
     <file name="Relative_ApplicationPoint_Transform.java">
       <node id="7615900657267552692" at="38,0,39,0" concept="3" trace="myLocations" />
@@ -11346,8 +11391,8 @@
   </root>
   <root nodeRef="r:e15a2fbd-c226-4426-974c-685091c15a41(jetbrains.mps.samples.Physics.editor)/7615900657267563297">
     <file name="EditorAspectDescriptorImpl.java">
-      <node id="7615900657267563297" at="206,87,207,99" concept="8" />
-      <scope id="7615900657267563297" at="206,87,207,99" />
+      <node id="7615900657267563297" at="208,87,209,99" concept="8" />
+      <scope id="7615900657267563297" at="208,87,209,99" />
     </file>
     <file name="Relative_LinearForce_Transform.java">
       <node id="7615900657267563297" at="38,0,39,0" concept="3" trace="myLocations" />

@@ -611,36 +611,6 @@
       <property role="1iqoE4" value="${module}/icons/force.png" />
     </node>
   </node>
-  <node concept="1TIwiD" id="6kwOTMl17Za">
-    <property role="EcuMT" value="7287056866553921482" />
-    <property role="3GE5qa" value="physical.expr.dot.object" />
-    <property role="TrG5h" value="ObjectMassTarget" />
-    <property role="34LRSv" value="mass" />
-    <property role="R4oN_" value="mass of an object" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="M__cqnvmu4" role="PzmwI">
-      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
-    </node>
-    <node concept="PrWs8" id="2AM6gIjV3vd" role="PzmwI">
-      <ref role="PrY4T" node="4eAl$41wfr1" resolve="IObjectDotTarget" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="6kwOTMl1asr">
-    <property role="EcuMT" value="7287056866553931547" />
-    <property role="3GE5qa" value="physical.expr.dot.object" />
-    <property role="TrG5h" value="ObjectPositionTarget" />
-    <property role="34LRSv" value="position" />
-    <property role="R4oN_" value="position of the object" />
-    <node concept="PrWs8" id="GdoRjGwdQj" role="PzmwI">
-      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
-    </node>
-    <node concept="PrWs8" id="1AxJyXYPdlH" role="PzmwI">
-      <ref role="PrY4T" node="4eAl$41wfr1" resolve="IObjectDotTarget" />
-    </node>
-    <node concept="1QGGSu" id="6ZPff_KFbxg" role="rwd14">
-      <property role="1iqoE4" value="${module}/icons/vector.png" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="6kwOTMl1atg">
     <property role="EcuMT" value="7287056866553931600" />
     <property role="3GE5qa" value="physical.expr.dot.world" />
@@ -731,23 +701,6 @@
       <property role="1iqoE4" value="${module}/icons/object.png" />
     </node>
   </node>
-  <node concept="1TIwiD" id="cTQf2FlwO3">
-    <property role="EcuMT" value="232455383964585219" />
-    <property role="3GE5qa" value="physical.expr.dot.object" />
-    <property role="TrG5h" value="ObjectDistanceWithTarget" />
-    <property role="R4oN_" value="compute distance between two objects" />
-    <property role="34LRSv" value="distance with" />
-    <node concept="1TJgyj" id="cTQf2FlwO4" role="1TKVEi">
-      <property role="IQ2ns" value="232455383964585220" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="target" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
-    </node>
-    <node concept="PrWs8" id="1AxJyXYPa1F" role="PzmwI">
-      <ref role="PrY4T" node="4eAl$41wfr1" resolve="IObjectDotTarget" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="cTQf2FqwJc">
     <property role="EcuMT" value="232455383965895628" />
     <property role="3GE5qa" value="physical.expr.dot.vector" />
@@ -785,22 +738,6 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="31HEEbbS_kF" role="PzmwI">
       <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="4D75T4FiMXY">
-    <property role="EcuMT" value="5352272594417168254" />
-    <property role="3GE5qa" value="physical.expr.dot.object" />
-    <property role="TrG5h" value="ObjectVelocityTarget" />
-    <property role="34LRSv" value="velocity" />
-    <property role="R4oN_" value="velocity of the object" />
-    <node concept="PrWs8" id="GdoRjGwekN" role="PzmwI">
-      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
-    </node>
-    <node concept="PrWs8" id="1AxJyXYPdlO" role="PzmwI">
-      <ref role="PrY4T" node="4eAl$41wfr1" resolve="IObjectDotTarget" />
-    </node>
-    <node concept="1QGGSu" id="6ZPff_KFbxi" role="rwd14">
-      <property role="1iqoE4" value="${module}/icons/vector.png" />
     </node>
   </node>
   <node concept="1TIwiD" id="Q4PrYMwcs1">
@@ -1705,6 +1642,77 @@
     <property role="TrG5h" value="IUseCommonDimensions" />
     <node concept="PrWs8" id="6af0XbHgy1T" role="PrDN$">
       <ref role="PrY4T" to="onwr:270Q2mETul_" resolve="IUseSpecificDimensions" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5evA4sVqrGG">
+    <property role="EcuMT" value="6025702258151897900" />
+    <property role="3GE5qa" value="physical.expr.dot.localized" />
+    <property role="TrG5h" value="ILocalizedDotTarget" />
+    <node concept="PrWs8" id="5evA4sVqrGH" role="PrDN$">
+      <ref role="PrY4T" to="hm2y:7NJy08a3O9a" resolve="IDotTarget" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="cTQf2FlwO3">
+    <property role="EcuMT" value="232455383964585219" />
+    <property role="3GE5qa" value="physical.expr.dot.localized" />
+    <property role="TrG5h" value="ObjectDistanceWithTarget" />
+    <property role="R4oN_" value="compute distance between two objects" />
+    <property role="34LRSv" value="distance with" />
+    <node concept="1TJgyj" id="cTQf2FlwO4" role="1TKVEi">
+      <property role="IQ2ns" value="232455383964585220" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="PrWs8" id="5evA4sVqsJe" role="PzmwI">
+      <ref role="PrY4T" node="5evA4sVqrGG" resolve="ILocalizedDotTarget" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl17Za">
+    <property role="EcuMT" value="7287056866553921482" />
+    <property role="3GE5qa" value="physical.expr.dot.localized" />
+    <property role="TrG5h" value="ObjectMassTarget" />
+    <property role="34LRSv" value="mass" />
+    <property role="R4oN_" value="mass of an object" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="M__cqnvmu4" role="PzmwI">
+      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
+    </node>
+    <node concept="PrWs8" id="5evA4sVqsJh" role="PzmwI">
+      <ref role="PrY4T" node="5evA4sVqrGG" resolve="ILocalizedDotTarget" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6kwOTMl1asr">
+    <property role="EcuMT" value="7287056866553931547" />
+    <property role="3GE5qa" value="physical.expr.dot.localized" />
+    <property role="TrG5h" value="ObjectPositionTarget" />
+    <property role="34LRSv" value="position" />
+    <property role="R4oN_" value="position of the object" />
+    <node concept="PrWs8" id="GdoRjGwdQj" role="PzmwI">
+      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
+    </node>
+    <node concept="PrWs8" id="5evA4sVqsJp" role="PzmwI">
+      <ref role="PrY4T" node="5evA4sVqrGG" resolve="ILocalizedDotTarget" />
+    </node>
+    <node concept="1QGGSu" id="6ZPff_KFbxg" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/vector.png" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4D75T4FiMXY">
+    <property role="EcuMT" value="5352272594417168254" />
+    <property role="3GE5qa" value="physical.expr.dot.localized" />
+    <property role="TrG5h" value="ObjectVelocityTarget" />
+    <property role="34LRSv" value="velocity" />
+    <property role="R4oN_" value="velocity of the object" />
+    <node concept="PrWs8" id="GdoRjGwekN" role="PzmwI">
+      <ref role="PrY4T" node="GdoRjGvovx" resolve="ITargetExpression" />
+    </node>
+    <node concept="PrWs8" id="5evA4sVqsJt" role="PzmwI">
+      <ref role="PrY4T" node="5evA4sVqrGG" resolve="ILocalizedDotTarget" />
+    </node>
+    <node concept="1QGGSu" id="6ZPff_KFbxi" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/vector.png" />
     </node>
   </node>
 </model>

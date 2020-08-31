@@ -221,22 +221,15 @@
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
-      </concept>
     </language>
     <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
-      <concept id="3133179214568824809" name="jetbrains.mps.lang.text.structure.NodeWrapperElement" flags="ng" index="tu5oc">
+      <concept id="3133179214568824809" name="jetbrains.mps.lang.text.structure.NodeWrapperElement" flags="nn" index="tu5oc">
         <child id="3133179214568824810" name="node" index="tu5of" />
       </concept>
-      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="nn" index="3oM_SD">
         <property id="155656958578482949" name="value" index="3oM_SC" />
       </concept>
-      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="nn" index="1PaTwC">
         <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
@@ -610,20 +603,6 @@
             </node>
           </node>
         </node>
-        <node concept="1X3_iC" id="yrUOuh8d3k" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="2AM6gIjXXhT" role="8Wnug">
-            <node concept="2YIFZM" id="2AM6gIjXWNR" role="3clFbG">
-              <ref role="37wK5l" to="rf09:2AM6gIjXTtY" resolve="hasParentContextTargetOf" />
-              <ref role="1Pybhc" to="rf09:2AM6gIjWzyR" resolve="DotExpressionHelper" />
-              <node concept="nLn13" id="2AM6gIjXWVj" role="37wK5m" />
-              <node concept="35c_gC" id="2AM6gIjXWZg" role="37wK5m">
-                <ref role="35c_gD" to="9tcj:GdoRjGrjZN" resolve="ITargetObject" />
-              </node>
-            </node>
-          </node>
-        </node>
       </node>
     </node>
   </node>
@@ -973,6 +952,33 @@
               </node>
             </node>
             <node concept="3x8VRR" id="5claIBnD4Ub" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="5evA4sVqs3O">
+    <property role="3GE5qa" value="physical.expr.dot.localized" />
+    <ref role="1M2myG" to="9tcj:5evA4sVqrGG" resolve="ILocalizedDotTarget" />
+    <node concept="9S07l" id="5evA4sVqshv" role="9Vyp8">
+      <node concept="3clFbS" id="5evA4sVqshw" role="2VODD2">
+        <node concept="3clFbF" id="5evA4sVqshQ" role="3cqZAp">
+          <node concept="2OqwBi" id="5evA4sVqshS" role="3clFbG">
+            <node concept="1PxgMI" id="5evA4sVqshT" role="2Oq$k0">
+              <node concept="chp4Y" id="5evA4sVqshU" role="3oSUPX">
+                <ref role="cht4Q" to="hm2y:7NJy08a3O99" resolve="DotExpression" />
+              </node>
+              <node concept="nLn13" id="5evA4sVqshV" role="1m5AlR" />
+            </node>
+            <node concept="2qgKlT" id="5evA4sVqshW" role="2OqNvi">
+              <ref role="37wK5l" to="pbu6:5WNmJ7DokMG" resolve="expectType" />
+              <node concept="35c_gC" id="5evA4sVqshX" role="37wK5m">
+                <ref role="35c_gD" to="z99z:5evA4sVq9rE" resolve="LocalizedType" />
+              </node>
+              <node concept="3clFbT" id="5evA4sVqshY" role="37wK5m">
+                <property role="3clFbU" value="true" />
+              </node>
+            </node>
           </node>
         </node>
       </node>

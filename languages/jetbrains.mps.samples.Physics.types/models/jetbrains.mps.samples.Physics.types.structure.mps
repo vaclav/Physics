@@ -55,7 +55,7 @@
     <property role="TrG5h" value="ObjectType" />
     <property role="R4oN_" value="type of a physical object" />
     <property role="34LRSv" value="object" />
-    <ref role="1TJDcQ" node="6kwOTMl2xh8" resolve="DirectionType" />
+    <ref role="1TJDcQ" node="5evA4sVq9rE" resolve="LocalizedType" />
   </node>
   <node concept="1TIwiD" id="6kwOTMl1aFZ">
     <property role="EcuMT" value="7287056866553932543" />
@@ -76,7 +76,7 @@
     <property role="TrG5h" value="WorldType" />
     <property role="R4oN_" value="type of a world" />
     <property role="34LRSv" value="world" />
-    <ref role="1TJDcQ" node="6kwOTMl0tT6" resolve="ObjectType" />
+    <ref role="1TJDcQ" node="5evA4sVq9rE" resolve="LocalizedType" />
   </node>
   <node concept="1TIwiD" id="1d1Q7eb5sm7">
     <property role="EcuMT" value="1387628150973121927" />
@@ -101,6 +101,13 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSlaok" resolve="Type" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="5evA4sVq9rE">
+    <property role="EcuMT" value="6025702258151823082" />
+    <property role="TrG5h" value="LocalizedType" />
+    <property role="34LRSv" value="localized" />
+    <property role="R4oN_" value="type that refer to a localized entity as the initial state, such as objects and worlds" />
+    <ref role="1TJDcQ" node="6kwOTMl2xh8" resolve="DirectionType" />
   </node>
 </model>
 

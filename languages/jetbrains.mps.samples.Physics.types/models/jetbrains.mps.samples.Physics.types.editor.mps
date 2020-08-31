@@ -131,5 +131,11 @@
       <property role="3F0ifm" value="force" />
     </node>
   </node>
+  <node concept="24kQdi" id="5evA4sVqa0L">
+    <ref role="1XX52x" to="z99z:5evA4sVq9rE" resolve="LocalizedType" />
+    <node concept="PMmxH" id="5evA4sVqa0Q" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+    </node>
+  </node>
 </model>
 
