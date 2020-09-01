@@ -86,7 +86,7 @@
   <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/1808378526640369171">
     <file name="TestWorldSystemScope.java">
       <node id="3489632902470225227" at="27,0,28,0" concept="2" trace="TheOtherWorld" />
-      <node id="1808378526640369199" at="28,0,29,0" concept="2" trace="Something3" />
+      <node id="1808378526640369199" at="28,0,29,0" concept="2" trace="Something" />
       <node id="3489632902464568441" at="29,0,30,0" concept="2" trace="Hey" />
       <node id="3489632902464568871" at="30,0,31,0" concept="2" trace="Ho" />
       <node id="1808378526640369171" at="32,106,33,40" concept="10" />
@@ -94,14 +94,14 @@
       <node id="1808378526640369171" at="34,58,35,44" concept="5" />
       <node id="1808378526640369171" at="35,44,36,0" concept="8" />
       <node id="1808378526640369171" at="36,0,37,28" concept="7" />
-      <node id="1808378526640369199" at="37,28,38,86" concept="1" />
-      <node id="3489632902464568441" at="38,86,39,67" concept="1" />
+      <node id="1808378526640369199" at="37,28,38,85" concept="1" />
+      <node id="3489632902464568441" at="38,85,39,67" concept="1" />
       <node id="3489632902464568871" at="39,67,40,64" concept="1" />
       <node id="3489632902470225227" at="40,64,41,522" concept="1" />
       <node id="1808378526640369171" at="41,522,42,0" concept="8" />
       <node id="1808378526640369171" at="42,0,43,23" concept="7" />
-      <node id="1808378526640369199" at="43,23,44,33" concept="1" />
-      <node id="3489632902464568441" at="44,33,45,26" concept="1" />
+      <node id="1808378526640369199" at="43,23,44,32" concept="1" />
+      <node id="3489632902464568441" at="44,32,45,26" concept="1" />
       <node id="3489632902464568871" at="45,26,46,25" concept="1" />
       <node id="1808378526640369199" at="51,91,52,32" concept="10" />
       <node id="1808378526640369199" at="56,75,57,39" concept="7" />
@@ -181,10 +181,10 @@
       <node id="3106918138152823149" at="219,53,220,95" concept="1" />
       <node id="3106918138152053185" at="220,95,221,125" concept="1" />
       <node id="3489632902464568871" at="221,125,222,47" concept="1" />
-      <node id="1808378526640369199" at="51,0,54,0" concept="0" trace="Something5PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/TestWorldSystemScope;)V" />
+      <node id="1808378526640369199" at="51,0,54,0" concept="0" trace="Something4PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/TestWorldSystemScope;)V" />
       <node id="1808378526640369387" at="78,122,81,11" concept="3" />
       <node id="3489632902464568441" at="175,0,178,0" concept="0" trace="Hey2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/TestWorldSystemScope;)V" />
-      <node id="3489632902464568871" at="201,0,204,0" concept="0" trace="Ho2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/TestWorldSystemScope;)V" />
+      <node id="3489632902464568871" at="201,0,204,0" concept="0" trace="Ho5PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/TestWorldSystemScope;)V" />
       <node id="1808378526640369387" at="86,0,90,0" concept="4" trace="moment#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/sandbox/TestWorldSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <node id="1808378526640369387" at="91,0,95,0" concept="4" trace="applicationPoint#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/sandbox/TestWorldSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <node id="1808378526640369387" at="96,0,100,0" concept="4" trace="forceMode#()I" />
@@ -347,13 +347,13 @@
         <var name="scope" id="1808378526640369199" />
         <var name="world" id="1808378526640369199" />
       </scope>
-      <unit id="3489632902474794779" at="100,13,122,7" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something5PhysicalEntity$2" />
-      <unit id="4809107873070183707" at="122,13,146,7" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something5PhysicalEntity$3" />
-      <unit id="4809107873076584076" at="146,13,170,7" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something5PhysicalEntity$4" />
-      <unit id="1808378526640369387" at="74,48,100,7" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something5PhysicalEntity$1" />
+      <unit id="3489632902474794779" at="100,13,122,7" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something4PhysicalEntity$2" />
+      <unit id="4809107873070183707" at="122,13,146,7" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something4PhysicalEntity$3" />
+      <unit id="4809107873076584076" at="146,13,170,7" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something4PhysicalEntity$4" />
+      <unit id="1808378526640369387" at="74,48,100,7" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something4PhysicalEntity$1" />
       <unit id="3489632902464568441" at="173,0,199,0" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Hey2PhysicalEntity" />
-      <unit id="3489632902464568871" at="199,0,225,0" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Ho2PhysicalEntity" />
-      <unit id="1808378526640369199" at="49,0,173,0" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something5PhysicalEntity" />
+      <unit id="3489632902464568871" at="199,0,225,0" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Ho5PhysicalEntity" />
+      <unit id="1808378526640369199" at="49,0,173,0" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope$Something4PhysicalEntity" />
       <unit id="1808378526640369171" at="26,0,227,0" name="jetbrains.mps.samples.Physics.sandbox.TestWorldSystemScope" />
     </file>
   </root>
@@ -468,7 +468,7 @@
   </root>
   <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/3489632902470379103">
     <file name="World2SystemScope.java">
-      <node id="3489632902470379113" at="24,0,25,0" concept="2" trace="Ho3" />
+      <node id="3489632902470379113" at="24,0,25,0" concept="2" trace="Ho2" />
       <node id="8821912306508288076" at="25,0,26,0" concept="2" trace="Ha" />
       <node id="3489632902470379103" at="27,103,28,40" concept="10" />
       <node id="3489632902470379103" at="28,40,29,58" concept="7" />
@@ -523,7 +523,7 @@
       <node id="8821912306508360828" at="121,114,122,22" concept="6" />
       <node id="8821912306508360828" at="126,124,127,22" concept="6" />
       <node id="8821912306508360828" at="131,32,132,19" concept="6" />
-      <node id="3489632902470379113" at="43,0,46,0" concept="0" trace="Ho5PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/World2SystemScope;)V" />
+      <node id="3489632902470379113" at="43,0,46,0" concept="0" trace="Ho4PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/World2SystemScope;)V" />
       <node id="8821912306508288076" at="91,0,94,0" concept="0" trace="Ha2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/World2SystemScope;)V" />
       <node id="8821912306508360644" at="72,0,76,0" concept="4" trace="moment#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/sandbox/World2SystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <node id="8821912306508360644" at="77,0,81,0" concept="4" trace="applicationPoint#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/sandbox/World2SystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
@@ -619,9 +619,9 @@
         <var name="scope" id="8821912306508288076" />
         <var name="world" id="8821912306508288076" />
       </scope>
-      <unit id="8821912306508360644" at="64,48,86,7" name="jetbrains.mps.samples.Physics.sandbox.World2SystemScope$Ho5PhysicalEntity$1" />
+      <unit id="8821912306508360644" at="64,48,86,7" name="jetbrains.mps.samples.Physics.sandbox.World2SystemScope$Ho4PhysicalEntity$1" />
       <unit id="8821912306508360828" at="112,48,134,7" name="jetbrains.mps.samples.Physics.sandbox.World2SystemScope$Ha2PhysicalEntity$1" />
-      <unit id="3489632902470379113" at="41,0,89,0" name="jetbrains.mps.samples.Physics.sandbox.World2SystemScope$Ho5PhysicalEntity" />
+      <unit id="3489632902470379113" at="41,0,89,0" name="jetbrains.mps.samples.Physics.sandbox.World2SystemScope$Ho4PhysicalEntity" />
       <unit id="8821912306508288076" at="89,0,137,0" name="jetbrains.mps.samples.Physics.sandbox.World2SystemScope$Ha2PhysicalEntity" />
       <unit id="3489632902470379103" at="23,0,139,0" name="jetbrains.mps.samples.Physics.sandbox.World2SystemScope" />
     </file>
@@ -630,7 +630,7 @@
     <file name="MilkyWaySystemScope.java">
       <node id="4383135941275256240" at="21,0,22,0" concept="2" trace="SolarSystem1" />
       <node id="4383135941275108213" at="22,0,23,0" concept="2" trace="FloatingDog" />
-      <node id="7887120293590610369" at="23,0,24,0" concept="2" trace="Something" />
+      <node id="7887120293590610369" at="23,0,24,0" concept="2" trace="Something1" />
       <node id="796402062950314028" at="24,0,25,0" concept="2" trace="A" />
       <node id="4383135941275108212" at="26,105,27,40" concept="10" />
       <node id="4383135941275108212" at="27,40,28,58" concept="7" />
@@ -638,14 +638,14 @@
       <node id="4383135941275108212" at="29,43,30,0" concept="8" />
       <node id="4383135941275108212" at="30,0,31,28" concept="7" />
       <node id="4383135941275108213" at="31,28,32,91" concept="1" />
-      <node id="7887120293590610369" at="32,91,33,85" concept="1" />
-      <node id="796402062950314028" at="33,85,34,61" concept="1" />
+      <node id="7887120293590610369" at="32,91,33,86" concept="1" />
+      <node id="796402062950314028" at="33,86,34,61" concept="1" />
       <node id="4383135941275256240" at="34,61,35,509" concept="1" />
       <node id="4383135941275108212" at="35,509,36,0" concept="8" />
       <node id="4383135941275108212" at="36,0,37,23" concept="7" />
       <node id="4383135941275108213" at="37,23,38,34" concept="1" />
-      <node id="7887120293590610369" at="38,34,39,32" concept="1" />
-      <node id="796402062950314028" at="39,32,40,24" concept="1" />
+      <node id="7887120293590610369" at="38,34,39,33" concept="1" />
+      <node id="796402062950314028" at="39,33,40,24" concept="1" />
       <node id="4383135941275108213" at="45,92,46,32" concept="10" />
       <node id="4383135941275108213" at="50,74,51,39" concept="7" />
       <node id="4383135941275108213" at="51,39,52,54" concept="5" />
@@ -695,7 +695,7 @@
       <node id="796402062950314028" at="131,0,132,37" concept="7" />
       <node id="796402062950314028" at="132,37,133,47" concept="1" />
       <node id="4383135941275108213" at="45,0,48,0" concept="0" trace="FloatingDog2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/MilkyWaySystemScope;)V" />
-      <node id="7887120293590610369" at="92,0,95,0" concept="0" trace="Something2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/MilkyWaySystemScope;)V" />
+      <node id="7887120293590610369" at="92,0,95,0" concept="0" trace="Something5PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/MilkyWaySystemScope;)V" />
       <node id="796402062950314028" at="115,0,118,0" concept="0" trace="A2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/sandbox/MilkyWaySystemScope;)V" />
       <node id="7287056866553191569" at="73,0,77,0" concept="4" trace="moment#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/sandbox/MilkyWaySystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <node id="7287056866553191569" at="78,0,82,0" concept="4" trace="applicationPoint#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/sandbox/MilkyWaySystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
@@ -777,7 +777,7 @@
         <var name="scope" id="4383135941275108213" />
         <var name="world" id="4383135941275108213" />
       </scope>
-      <unit id="7887120293590610369" at="90,0,113,0" name="jetbrains.mps.samples.Physics.sandbox.MilkyWaySystemScope$Something2PhysicalEntity" />
+      <unit id="7887120293590610369" at="90,0,113,0" name="jetbrains.mps.samples.Physics.sandbox.MilkyWaySystemScope$Something5PhysicalEntity" />
       <unit id="796402062950314028" at="113,0,136,0" name="jetbrains.mps.samples.Physics.sandbox.MilkyWaySystemScope$A2PhysicalEntity" />
       <unit id="7287056866553191569" at="63,48,87,7" name="jetbrains.mps.samples.Physics.sandbox.MilkyWaySystemScope$FloatingDog2PhysicalEntity$1" />
       <unit id="4383135941275108213" at="43,0,90,0" name="jetbrains.mps.samples.Physics.sandbox.MilkyWaySystemScope$FloatingDog2PhysicalEntity" />

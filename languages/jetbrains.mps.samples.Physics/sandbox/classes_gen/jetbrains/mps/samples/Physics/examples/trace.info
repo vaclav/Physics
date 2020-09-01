@@ -1803,7 +1803,7 @@
       <node id="6610288360173834594" at="62,37,63,95" concept="2" />
       <node id="6610288360173834598" at="63,95,64,124" concept="2" />
       <node id="6610288360173834581" at="64,124,65,47" concept="2" />
-      <node id="6610288360173834581" at="45,0,48,0" concept="1" trace="O2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/TreeRootSystemScope;)V" />
+      <node id="6610288360173834581" at="45,0,48,0" concept="1" trace="O4PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/TreeRootSystemScope;)V" />
       <node id="6610288360171822715" at="28,0,42,0" concept="1" trace="TreeRootSystemScope#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Lorg/ode4j/math/DMatrix3C;)V" />
       <node id="6610288360173834581" at="49,0,67,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/examples/TreeRootSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
       <scope id="6610288360173834581" at="45,82,46,32" />
@@ -1828,7 +1828,7 @@
         <var name="scope" id="6610288360173834581" />
         <var name="world" id="6610288360173834581" />
       </scope>
-      <unit id="6610288360173834581" at="43,0,68,0" name="jetbrains.mps.samples.Physics.examples.TreeRootSystemScope$O2PhysicalEntity" />
+      <unit id="6610288360173834581" at="43,0,68,0" name="jetbrains.mps.samples.Physics.examples.TreeRootSystemScope$O4PhysicalEntity" />
       <unit id="6610288360171822715" at="22,0,70,0" name="jetbrains.mps.samples.Physics.examples.TreeRootSystemScope" />
     </file>
   </root>
@@ -1837,7 +1837,7 @@
       <node id="6610288360172876396" at="23,0,24,0" concept="3" trace="One1" />
       <node id="6610288360172876419" at="24,0,25,0" concept="3" trace="Two1" />
       <node id="6610288360172876433" at="25,0,26,0" concept="3" trace="Three1" />
-      <node id="6610288360173834031" at="26,0,27,0" concept="3" trace="O3" />
+      <node id="6610288360173834031" at="26,0,27,0" concept="3" trace="O2" />
       <node id="6610288360171822731" at="28,103,29,40" concept="11" />
       <node id="6610288360171822731" at="29,40,30,58" concept="8" />
       <node id="6610288360171822731" at="30,58,31,41" concept="6" />
@@ -1866,7 +1866,7 @@
       <node id="6610288360173834044" at="62,37,63,94" concept="2" />
       <node id="6610288360173834048" at="63,94,64,124" concept="2" />
       <node id="6610288360173834031" at="64,124,65,47" concept="2" />
-      <node id="6610288360173834031" at="45,0,48,0" concept="1" trace="O5PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/TreeN2SystemScope;)V" />
+      <node id="6610288360173834031" at="45,0,48,0" concept="1" trace="O8PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/TreeN2SystemScope;)V" />
       <node id="6610288360171822731" at="28,0,42,0" concept="1" trace="TreeN2SystemScope#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Lorg/ode4j/math/DMatrix3C;)V" />
       <node id="6610288360173834031" at="49,0,67,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/examples/TreeN2SystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
       <scope id="6610288360173834031" at="45,80,46,32" />
@@ -1891,7 +1891,7 @@
         <var name="scope" id="6610288360173834031" />
         <var name="world" id="6610288360173834031" />
       </scope>
-      <unit id="6610288360173834031" at="43,0,68,0" name="jetbrains.mps.samples.Physics.examples.TreeN2SystemScope$O5PhysicalEntity" />
+      <unit id="6610288360173834031" at="43,0,68,0" name="jetbrains.mps.samples.Physics.examples.TreeN2SystemScope$O8PhysicalEntity" />
       <unit id="6610288360171822731" at="22,0,70,0" name="jetbrains.mps.samples.Physics.examples.TreeN2SystemScope" />
     </file>
   </root>
@@ -1900,7 +1900,7 @@
       <node id="6610288360172871621" at="23,0,24,0" concept="3" trace="One2" />
       <node id="6610288360172871644" at="24,0,25,0" concept="3" trace="Two2" />
       <node id="6610288360172871658" at="25,0,26,0" concept="3" trace="Three2" />
-      <node id="6610288360173833481" at="26,0,27,0" concept="3" trace="O6" />
+      <node id="6610288360173833481" at="26,0,27,0" concept="3" trace="O5" />
       <node id="6610288360171822741" at="28,103,29,40" concept="11" />
       <node id="6610288360171822741" at="29,40,30,58" concept="8" />
       <node id="6610288360171822741" at="30,58,31,41" concept="6" />
@@ -1929,7 +1929,7 @@
       <node id="6610288360173833494" at="62,37,63,94" concept="2" />
       <node id="6610288360173833498" at="63,94,64,124" concept="2" />
       <node id="6610288360173833481" at="64,124,65,47" concept="2" />
-      <node id="6610288360173833481" at="45,0,48,0" concept="1" trace="O8PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/TreeN1SystemScope;)V" />
+      <node id="6610288360173833481" at="45,0,48,0" concept="1" trace="O7PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/TreeN1SystemScope;)V" />
       <node id="6610288360171822741" at="28,0,42,0" concept="1" trace="TreeN1SystemScope#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Lorg/ode4j/math/DMatrix3C;)V" />
       <node id="6610288360173833481" at="49,0,67,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/examples/TreeN1SystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
       <scope id="6610288360173833481" at="45,80,46,32" />
@@ -1954,7 +1954,7 @@
         <var name="scope" id="6610288360173833481" />
         <var name="world" id="6610288360173833481" />
       </scope>
-      <unit id="6610288360173833481" at="43,0,68,0" name="jetbrains.mps.samples.Physics.examples.TreeN1SystemScope$O8PhysicalEntity" />
+      <unit id="6610288360173833481" at="43,0,68,0" name="jetbrains.mps.samples.Physics.examples.TreeN1SystemScope$O7PhysicalEntity" />
       <unit id="6610288360171822741" at="22,0,70,0" name="jetbrains.mps.samples.Physics.examples.TreeN1SystemScope" />
     </file>
   </root>
@@ -2140,7 +2140,7 @@
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/8122475127067978204">
     <file name="EarthSystemSystemScope.java">
-      <node id="8122475127067978223" at="22,0,23,0" concept="3" trace="Earth3" />
+      <node id="8122475127067978223" at="22,0,23,0" concept="3" trace="Earth2" />
       <node id="1159415042430233529" at="23,0,24,0" concept="3" trace="Moon" />
       <node id="8122475127067978204" at="25,108,26,40" concept="11" />
       <node id="8122475127067978204" at="26,40,27,58" concept="8" />
@@ -2185,7 +2185,7 @@
       <node id="3106918138152823112" at="83,37,84,95" concept="2" />
       <node id="3106918138152053162" at="84,95,85,196" concept="2" />
       <node id="1159415042430233529" at="85,196,86,47" concept="2" />
-      <node id="8122475127067978223" at="41,0,44,0" concept="1" trace="Earth5PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/EarthSystemSystemScope;)V" />
+      <node id="8122475127067978223" at="41,0,44,0" concept="1" trace="Earth4PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/EarthSystemSystemScope;)V" />
       <node id="1159415042430233529" at="66,0,69,0" concept="1" trace="Moon2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/EarthSystemSystemScope;)V" />
       <node id="8122475127067978204" at="25,0,38,0" concept="1" trace="EarthSystemSystemScope#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Lorg/ode4j/math/DMatrix3C;)V" />
       <node id="8122475127067978223" at="45,0,63,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/examples/EarthSystemSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
@@ -2225,7 +2225,7 @@
         <var name="scope" id="1159415042430233529" />
         <var name="world" id="1159415042430233529" />
       </scope>
-      <unit id="8122475127067978223" at="39,0,64,0" name="jetbrains.mps.samples.Physics.examples.EarthSystemSystemScope$Earth5PhysicalEntity" />
+      <unit id="8122475127067978223" at="39,0,64,0" name="jetbrains.mps.samples.Physics.examples.EarthSystemSystemScope$Earth4PhysicalEntity" />
       <unit id="1159415042430233529" at="64,0,89,0" name="jetbrains.mps.samples.Physics.examples.EarthSystemSystemScope$Moon2PhysicalEntity" />
       <unit id="8122475127067978204" at="21,0,91,0" name="jetbrains.mps.samples.Physics.examples.EarthSystemSystemScope" />
     </file>
@@ -2391,7 +2391,7 @@
       <node id="2805552972622476953" at="181,20,183,15" concept="0" />
       <node id="2805552972622476953" at="194,20,196,15" concept="0" />
       <node id="9143082258460434530" at="51,0,54,0" concept="1" trace="RocketEuropaS452G2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/RocketWorldSystemScope;)V" />
-      <node id="9143082258460434571" at="255,0,258,0" concept="1" trace="Earth2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/RocketWorldSystemScope;)V" />
+      <node id="9143082258460434571" at="255,0,258,0" concept="1" trace="Earth5PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/RocketWorldSystemScope;)V" />
       <node id="8868524360821389290" at="86,0,90,0" concept="5" trace="moment#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/examples/RocketWorldSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <node id="8868524360821389290" at="91,0,95,0" concept="5" trace="applicationPoint#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/examples/RocketWorldSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <node id="8868524360821389290" at="96,0,100,0" concept="5" trace="forceMode#()I" />
@@ -2612,7 +2612,7 @@
       <unit id="2805552972620519324" at="152,25,174,13" name="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope$RocketEuropaS452G2PhysicalEntity$3$1" />
       <unit id="9143082258462489475" at="228,10,250,7" name="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope$RocketEuropaS452G2PhysicalEntity$4" />
       <unit id="8868524360821389290" at="76,48,100,7" name="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope$RocketEuropaS452G2PhysicalEntity$1" />
-      <unit id="9143082258460434571" at="253,0,281,0" name="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope$Earth2PhysicalEntity" />
+      <unit id="9143082258460434571" at="253,0,281,0" name="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope$Earth5PhysicalEntity" />
       <unit id="8659481891663395812" at="100,13,146,7" name="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope$RocketEuropaS452G2PhysicalEntity$2" />
       <unit id="2805552972622476953" at="146,13,210,7" name="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope$RocketEuropaS452G2PhysicalEntity$3" />
       <unit id="9143082258460434530" at="49,0,253,0" name="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope$RocketEuropaS452G2PhysicalEntity" />

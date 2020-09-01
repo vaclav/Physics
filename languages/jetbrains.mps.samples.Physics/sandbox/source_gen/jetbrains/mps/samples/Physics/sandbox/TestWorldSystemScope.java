@@ -25,7 +25,7 @@ import jetbrains.mps.samples.Physics.forces.GravitationForce;
 
 public class TestWorldSystemScope extends SystemScope {
   public final World2SystemScope TheOtherWorld;
-  public final PhysicalEntity Something3;
+  public final PhysicalEntity Something;
   public final PhysicalEntity Hey;
   public final PhysicalEntity Ho;
 
@@ -35,27 +35,27 @@ public class TestWorldSystemScope extends SystemScope {
     final TestWorldSystemScope scope = this;
 
     //  Instanciate objects 
-    Something3 = withEntity(new Something5PhysicalEntity(world, "Something4", scope));
+    Something = withEntity(new Something4PhysicalEntity(world, "Something2", scope));
     Hey = withEntity(new Hey2PhysicalEntity(world, "Hey1", scope));
-    Ho = withEntity(new Ho2PhysicalEntity(world, "Ho1", scope));
+    Ho = withEntity(new Ho5PhysicalEntity(world, "Ho1", scope));
     TheOtherWorld = withEntity(new World2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("1.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.9999999999999998").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
 
     // Initialize them 
-    Something3.init(this, world);
+    Something.init(this, world);
     Hey.init(this, world);
     Ho.init(this, world);
   }
 
-  public static class Something5PhysicalEntity extends ObjectSupertypeAbstractEntity<TestWorldSystemScope> {
+  public static class Something4PhysicalEntity extends ObjectSupertypeAbstractEntity<TestWorldSystemScope> {
 
-    public Something5PhysicalEntity(World world, String name, TestWorldSystemScope scope) {
+    public Something4PhysicalEntity(World world, String name, TestWorldSystemScope scope) {
       super(world, name, scope);
     }
 
     @Override
     public void init(final TestWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
-      Something5PhysicalEntity currentEntity = this;
+      Something4PhysicalEntity currentEntity = this;
 
       // Set static properties of Something 
       this.setMass(AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))));
@@ -196,16 +196,16 @@ public class TestWorldSystemScope extends SystemScope {
       this.getForces().addAll(Arrays.asList());
     }
   }
-  public static class Ho2PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
+  public static class Ho5PhysicalEntity extends BaseObjectAbstractEntity<TestWorldSystemScope> {
 
-    public Ho2PhysicalEntity(World world, String name, TestWorldSystemScope scope) {
+    public Ho5PhysicalEntity(World world, String name, TestWorldSystemScope scope) {
       super(world, name, scope);
     }
 
     @Override
     public void init(final TestWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
-      Ho2PhysicalEntity currentEntity = this;
+      Ho5PhysicalEntity currentEntity = this;
 
       // Set static properties of Ho 
       this.setMass(AH.mul(((Number) new BigInteger("120")), ((Number) new BigInteger("1"))));

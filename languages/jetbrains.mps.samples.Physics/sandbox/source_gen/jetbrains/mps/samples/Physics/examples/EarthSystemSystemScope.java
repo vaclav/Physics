@@ -19,7 +19,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import java.util.Arrays;
 
 public class EarthSystemSystemScope extends SystemScope {
-  public final PhysicalEntity Earth3;
+  public final PhysicalEntity Earth2;
   public final PhysicalEntity Moon;
 
   public EarthSystemSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
@@ -28,24 +28,24 @@ public class EarthSystemSystemScope extends SystemScope {
     final EarthSystemSystemScope scope = this;
 
     //  Instanciate objects 
-    Earth3 = withEntity(new Earth5PhysicalEntity(world, "Earth4", scope));
+    Earth2 = withEntity(new Earth4PhysicalEntity(world, "Earth3", scope));
     Moon = withEntity(new Moon2PhysicalEntity(world, "Moon1", scope));
 
     // Initialize them 
-    Earth3.init(this, world);
+    Earth2.init(this, world);
     Moon.init(this, world);
   }
 
-  public static class Earth5PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
+  public static class Earth4PhysicalEntity extends PlanetAbstractEntity<EarthSystemSystemScope> {
 
-    public Earth5PhysicalEntity(World world, String name, EarthSystemSystemScope scope) {
+    public Earth4PhysicalEntity(World world, String name, EarthSystemSystemScope scope) {
       super(world, name, scope);
     }
 
     @Override
     public void init(final EarthSystemSystemScope scope, final World world) {
       // Escape this for nested forces 
-      Earth5PhysicalEntity currentEntity = this;
+      Earth4PhysicalEntity currentEntity = this;
 
       // Set static properties of Earth 
       this.setMass(((Number) new BigDecimal("5.972E+24").setScale(7, RoundingMode.DOWN)));

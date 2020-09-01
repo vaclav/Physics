@@ -23,7 +23,7 @@ public class TreeN2SystemScope extends SystemScope {
   public final TreeLeafSystemScope One1;
   public final TreeLeafSystemScope Two1;
   public final TreeLeafSystemScope Three1;
-  public final PhysicalEntity O3;
+  public final PhysicalEntity O2;
 
   public TreeN2SystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
@@ -31,25 +31,25 @@ public class TreeN2SystemScope extends SystemScope {
     final TreeN2SystemScope scope = this;
 
     //  Instanciate objects 
-    O3 = withEntity(new O5PhysicalEntity(world, "O4", scope));
+    O2 = withEntity(new O8PhysicalEntity(world, "O3", scope));
     One1 = withEntity(new TreeLeafSystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("34.202002603943946").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("93.96926634745965").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.axisAngleToMatrix(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))), AH.mul(((Number) new BigInteger("20")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN)))))));
     Two1 = withEntity(new TreeLeafSystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("100.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
     Three1 = withEntity(new TreeLeafSystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("-34.202002603943946").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("93.96926634745965").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.axisAngleToMatrix(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))), AH.mul(((BigInteger) ((Number) new BigInteger("20"))).negate(), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN)))))));
 
     // Initialize them 
-    O3.init(this, world);
+    O2.init(this, world);
   }
 
-  public static class O5PhysicalEntity extends LeafAbstractEntity<TreeN2SystemScope> {
+  public static class O8PhysicalEntity extends LeafAbstractEntity<TreeN2SystemScope> {
 
-    public O5PhysicalEntity(World world, String name, TreeN2SystemScope scope) {
+    public O8PhysicalEntity(World world, String name, TreeN2SystemScope scope) {
       super(world, name, scope);
     }
 
     @Override
     public void init(final TreeN2SystemScope scope, final World world) {
       // Escape this for nested forces 
-      O5PhysicalEntity currentEntity = this;
+      O8PhysicalEntity currentEntity = this;
 
       // Set static properties of O 
       this.setMass(((Number) new BigInteger("50")));

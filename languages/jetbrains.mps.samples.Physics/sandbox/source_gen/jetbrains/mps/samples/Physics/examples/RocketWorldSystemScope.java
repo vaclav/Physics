@@ -39,7 +39,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
     //  Instanciate objects 
     RocketEuropaS452G = withEntity(new RocketEuropaS452G2PhysicalEntity(world, "RocketEuropaS452G1", scope));
-    Earth = withEntity(new Earth2PhysicalEntity(world, "Earth1", scope));
+    Earth = withEntity(new Earth5PhysicalEntity(world, "Earth1", scope));
 
     // Initialize them 
     RocketEuropaS452G.init(this, world);
@@ -250,16 +250,16 @@ public class RocketWorldSystemScope extends SystemScope {
       }));
     }
   }
-  public static class Earth2PhysicalEntity extends BaseObjectAbstractEntity<RocketWorldSystemScope> {
+  public static class Earth5PhysicalEntity extends BaseObjectAbstractEntity<RocketWorldSystemScope> {
 
-    public Earth2PhysicalEntity(World world, String name, RocketWorldSystemScope scope) {
+    public Earth5PhysicalEntity(World world, String name, RocketWorldSystemScope scope) {
       super(world, name, scope);
     }
 
     @Override
     public void init(final RocketWorldSystemScope scope, final World world) {
       // Escape this for nested forces 
-      Earth2PhysicalEntity currentEntity = this;
+      Earth5PhysicalEntity currentEntity = this;
 
       // Set static properties of Earth 
       this.setMass(((Number) new BigDecimal("5.972E+24").setScale(7, RoundingMode.DOWN)));

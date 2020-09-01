@@ -20,7 +20,7 @@ import org.ode4j.math.DVector3C;
 public class MilkyWaySystemScope extends SystemScope {
   public final SolarSystemSystemScope SolarSystem1;
   public final PhysicalEntity FloatingDog;
-  public final PhysicalEntity Something;
+  public final PhysicalEntity Something1;
   public final PhysicalEntity A;
 
   public MilkyWaySystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
@@ -30,13 +30,13 @@ public class MilkyWaySystemScope extends SystemScope {
 
     //  Instanciate objects 
     FloatingDog = withEntity(new FloatingDog2PhysicalEntity(world, "FloatingDog1", scope));
-    Something = withEntity(new Something2PhysicalEntity(world, "Something1", scope));
+    Something1 = withEntity(new Something5PhysicalEntity(world, "Something3", scope));
     A = withEntity(new A2PhysicalEntity(world, "A1", scope));
     SolarSystem1 = withEntity(new SolarSystemSystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
 
     // Initialize them 
     FloatingDog.init(this, world);
-    Something.init(this, world);
+    Something1.init(this, world);
     A.init(this, world);
   }
 
@@ -87,16 +87,16 @@ public class MilkyWaySystemScope extends SystemScope {
       }));
     }
   }
-  public static class Something2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
+  public static class Something5PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
 
-    public Something2PhysicalEntity(World world, String name, MilkyWaySystemScope scope) {
+    public Something5PhysicalEntity(World world, String name, MilkyWaySystemScope scope) {
       super(world, name, scope);
     }
 
     @Override
     public void init(final MilkyWaySystemScope scope, final World world) {
       // Escape this for nested forces 
-      Something2PhysicalEntity currentEntity = this;
+      Something5PhysicalEntity currentEntity = this;
 
       // Set static properties of Something 
       this.setMass(((Number) new BigInteger("30")));
