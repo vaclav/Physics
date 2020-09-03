@@ -58,3 +58,7 @@ You can find some detailed documentation on how to use or improve the language o
 ## Contribute
 
 A list of features to add or issues to fix is located in the [TODO.md](./TODO.md) file. You may also check the github issues of this repository.
+
+## Authors
+
+This project was realised by [Clément de La Bourdonnaye](https://github.com/banilaste) with the help of [Vaclav Pech](https://github.com/vaclav). For any questions on the language, you can send an email to [cle.bourdonnaye@gmail.com](mailto:cle.bourdonnaye@gmail.com).
