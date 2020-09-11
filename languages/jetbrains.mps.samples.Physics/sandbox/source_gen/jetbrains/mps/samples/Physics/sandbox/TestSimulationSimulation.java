@@ -20,7 +20,7 @@ public class TestSimulationSimulation extends Simulation {
   protected MilkyWaySystemScope scope;
 
   public TestSimulationSimulation() {
-    super(AH.mul(((Number) new BigInteger("6")), ((Number) new BigInteger("1"))).doubleValue(), 1);
+    super(((Number) (AH.mul(((Number) new BigInteger("6")), ((Number) new BigInteger("1"))))).doubleValue(), 1);
   }
 
   @Override

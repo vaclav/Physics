@@ -17,7 +17,7 @@ public class RotationTreeSimSimulation extends Simulation {
   protected TreeRootSystemScope scope;
 
   public RotationTreeSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))).doubleValue(), 1);
+    super(((Number) (AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))))).doubleValue(), 1);
   }
 
   @Override
@@ -36,7 +36,7 @@ public class RotationTreeSimSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return new InternalVector(((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("400")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")));
+    return new InternalVector(((Number) new BigInteger("0")), ((Number) (AH.mul(((Number) new BigInteger("400")), ((Number) new BigInteger("1"))))), ((Number) new BigInteger("0")));
   }
 
   @Override

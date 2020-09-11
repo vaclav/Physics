@@ -40,7 +40,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
 
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        cached = GravitationForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))));
+        cached = GravitationForce.get(world, scope, currentEntity, time, ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
 
         return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
       }

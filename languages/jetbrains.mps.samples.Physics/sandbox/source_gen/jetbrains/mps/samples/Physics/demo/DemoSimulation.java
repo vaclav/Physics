@@ -19,7 +19,7 @@ public class DemoSimulation extends Simulation {
   protected SunDemoSystemScope scope;
 
   public DemoSimulation() {
-    super(AH.mul(((Number) new BigDecimal(".5").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))).doubleValue(), 1);
+    super(((Number) (AH.mul(((Number) new BigDecimal(".5").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))).doubleValue(), 1);
   }
 
   @Override
@@ -38,7 +38,7 @@ public class DemoSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.Sun.getPosition().add(new InternalVector(AH.mul(((BigInteger) ((Number) new BigInteger("90"))).negate(), ((Number) new BigInteger("1"))), AH.mul(((BigInteger) ((Number) new BigInteger("60"))).negate(), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))));
+    return scope.Sun.getPosition().add(new InternalVector(((Number) (AH.mul(((BigInteger) ((Number) new BigInteger("90"))).negate(), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((BigInteger) ((Number) new BigInteger("60"))).negate(), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
   }
 
   @Override

@@ -14,7 +14,7 @@ import java.math.BigInteger;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 
 public class FrictionForce {
-  public static Force get(World world, SystemScope scope, PhysicalEntity currentEntity, double time, final Number ratio) {
+  public static Force get(World world, SystemScope scope, PhysicalEntity currentEntity, double time, Number ratio) {
     Force force = new _FunctionTypes._return_P0_E0<Force<SystemScope>>() {
       public Force<SystemScope> invoke() {
 
@@ -23,7 +23,7 @@ public class FrictionForce {
           @Override
           public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
 
-            return VectorHelper.toDVector3C(currentEntity.getVelocity().mul(-1).minus(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
+            return VectorHelper.toDVector3C(currentEntity.getVelocity().mul(-1).minus(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).resize(AH.mul(AH.mul(currentEntity.getVelocity().length(), ratio), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))))));
           }
 
           @Override

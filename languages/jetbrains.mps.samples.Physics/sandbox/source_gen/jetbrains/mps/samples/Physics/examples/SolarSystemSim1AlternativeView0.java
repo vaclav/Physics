@@ -21,14 +21,14 @@ public class SolarSystemSim1AlternativeView0 extends SolarSystemSimSimulation {
     super.initScope(world);
 
     // Override properties 
-    scope.EarthNested.Earth2.getPropertiesBuilder().set(PropKey.TRACE, new FiniteTraceHandler(new Color(0, 0, 255)));
+    scope.EarthNested.Earth3.getPropertiesBuilder().set(PropKey.TRACE, new FiniteTraceHandler(new Color(0, 0, 255)));
   }
 
   @Override
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return new InternalVector(AH.mul(((Number) new BigDecimal("300.e6").setScale(2, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
+    return new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("300.e6").setScale(2, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
   }
 
   @Override

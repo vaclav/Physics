@@ -17,7 +17,7 @@ public class BoidSimSimulation extends Simulation {
   protected BoidGroupSystemScope scope;
 
   public BoidSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))).doubleValue(), 1);
+    super(((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))).doubleValue(), 1);
   }
 
   @Override
@@ -36,7 +36,7 @@ public class BoidSimSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.getPosition().add(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1")))));
+    return scope.getPosition().add(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) (AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1")))))));
   }
 
   @Override

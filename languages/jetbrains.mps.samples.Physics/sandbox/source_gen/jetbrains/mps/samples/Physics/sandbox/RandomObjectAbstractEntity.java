@@ -28,9 +28,9 @@ public abstract class RandomObjectAbstractEntity<T extends SystemScope> extends 
     // Apply styles 
     propertiesBuilder.set(PropKey.SHAPE, "box");
     propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
-    propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
-    propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
-    propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.BOX_X, ((Number) (AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))))));
+    propertiesBuilder.set(PropKey.BOX_Y, ((Number) (AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))))));
+    propertiesBuilder.set(PropKey.BOX_Z, ((Number) (AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))))));
 
     // Forces 
     this.getForces().addAll(Arrays.asList());

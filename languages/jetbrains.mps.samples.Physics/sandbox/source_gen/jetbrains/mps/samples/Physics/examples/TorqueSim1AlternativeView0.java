@@ -17,7 +17,7 @@ public class TorqueSim1AlternativeView0 extends TorqueSimSimulation {
     super.initScope(world);
 
     // Override properties 
-    scope.SampleBox.setMass(AH.mul(((Number) new BigInteger("600")), ((Number) new BigInteger("1"))));
+    scope.SampleBox.setMass(((Number) (AH.mul(((Number) new BigInteger("600")), ((Number) new BigInteger("1"))))));
     scope.SampleBox.getPropertiesBuilder().set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), null));
   }
 

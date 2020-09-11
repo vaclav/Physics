@@ -10,9 +10,6 @@
   </imports>
   <registry>
     <language id="7ab1a6fa-0a11-4b95-9e48-75f363d6cb00" name="jetbrains.mps.lang.generator.plan">
-      <concept id="3705377275350227759" name="jetbrains.mps.lang.generator.plan.structure.IncludePlan" flags="ng" index="NozSJ">
-        <reference id="3705377275350227762" name="plan" index="NozSM" />
-      </concept>
       <concept id="1820634577908471803" name="jetbrains.mps.lang.generator.plan.structure.Plan" flags="ng" index="2VgMpV">
         <child id="1820634577908471815" name="steps" index="2VgMA7" />
       </concept>
@@ -43,11 +40,43 @@
         <property role="2V$B1T" value="61cc869c-376a-409d-b749-694ad057266b" />
         <property role="2V$B1Q" value="jetbrains.mps.samples.Physics.genbase" />
       </node>
+      <node concept="2V$Bhx" id="4voYOerBvNB" role="1t_9vn">
+        <property role="2V$B1T" value="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" />
+        <property role="2V$B1Q" value="jetbrains.mps.samples.Physics.dimensions" />
+      </node>
     </node>
     <node concept="2VgMA2" id="6uKmUf9Uaol" role="2VgMA7">
       <node concept="2V$Bhx" id="6uKmUf9UaoA" role="1t_9vn">
         <property role="2V$B1T" value="25646cd1-304a-482d-bf04-f6e37e1e5a87" />
         <property role="2V$B1Q" value="jetbrains.mps.samples.Physics.genjava" />
+      </node>
+      <node concept="2V$Bhx" id="DHMrP91qoA" role="1t_9vn">
+        <property role="2V$B1T" value="30254c5b-f87e-4bb3-a60a-77a7ec6ed411" />
+        <property role="2V$B1Q" value="org.iets3.core.expr.genjava.base" />
+      </node>
+      <node concept="2V$Bhx" id="DHMrP91qoE" role="1t_9vn">
+        <property role="2V$B1T" value="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" />
+        <property role="2V$B1Q" value="org.iets3.core.expr.genjava.simpleTypes" />
+      </node>
+      <node concept="2V$Bhx" id="lH$PuhTIAz" role="1t_9vn">
+        <property role="2V$B1T" value="f2abf2a6-552e-4906-ab58-930f9a79aff4" />
+        <property role="2V$B1Q" value="org.iets3.core.expr.genjava.contracts" />
+      </node>
+      <node concept="2V$Bhx" id="2784oc$jW14" role="1t_9vn">
+        <property role="2V$B1T" value="e20f6002-fdcc-4f52-aa1a-8dcd898993a0" />
+        <property role="2V$B1Q" value="jetbrains.mps.samples.Physics.dimensions.gentype" />
+      </node>
+      <node concept="2V$Bhx" id="6ii4I_AaKi7" role="1t_9vn">
+        <property role="2V$B1T" value="fd392034-7849-419d-9071-12563d152375" />
+        <property role="2V$B1Q" value="jetbrains.mps.baseLanguage.closures" />
+      </node>
+      <node concept="2V$Bhx" id="4bh_m841Xu2" role="1t_9vn">
+        <property role="2V$B1T" value="83888646-71ce-4f1c-9c53-c54016f6ad4f" />
+        <property role="2V$B1Q" value="jetbrains.mps.baseLanguage.collections" />
+      </node>
+      <node concept="2V$Bhx" id="1URTIF$uG6y" role="1t_9vn">
+        <property role="2V$B1T" value="f61473f9-130f-42f6-b98d-6c438812c2f6" />
+        <property role="2V$B1Q" value="jetbrains.mps.baseLanguage.unitTest" />
       </node>
     </node>
     <node concept="2VgMA1" id="5EZY1tNvF2o" role="2VgMA7">
@@ -55,10 +84,19 @@
         <property role="TrG5h" value="sync_external_objects" />
       </node>
     </node>
-    <node concept="NozSJ" id="1$oDF1j$MBT" role="2VgMA7">
-      <ref role="NozSM" to="g6e4:6FvSwHlc883" resolve="Java_genplan" />
-    </node>
     <node concept="2VgMA2" id="QNYPlnZohT" role="2VgMA7">
+      <node concept="2V$Bhx" id="5lvqJYkqo2b" role="1t_9vn">
+        <property role="2V$B1T" value="fd392034-7849-419d-9071-12563d152375" />
+        <property role="2V$B1Q" value="jetbrains.mps.baseLanguage.closures" />
+      </node>
+      <node concept="2V$Bhx" id="5lvqJYkqo29" role="1t_9vn">
+        <property role="2V$B1T" value="83888646-71ce-4f1c-9c53-c54016f6ad4f" />
+        <property role="2V$B1Q" value="jetbrains.mps.baseLanguage.collections" />
+      </node>
+      <node concept="2V$Bhx" id="5lvqJYkqo27" role="1t_9vn">
+        <property role="2V$B1T" value="f61473f9-130f-42f6-b98d-6c438812c2f6" />
+        <property role="2V$B1Q" value="jetbrains.mps.baseLanguage.unitTest" />
+      </node>
       <node concept="2V$Bhx" id="QNYPlnZoit" role="1t_9vn">
         <property role="2V$B1T" value="df345b11-b8c7-4213-ac66-48d2a9b75d88" />
         <property role="2V$B1Q" value="jetbrains.mps.baseLanguageInternal" />

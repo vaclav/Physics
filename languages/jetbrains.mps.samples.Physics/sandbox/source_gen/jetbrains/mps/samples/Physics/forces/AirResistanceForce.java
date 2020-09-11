@@ -20,7 +20,7 @@ public class AirResistanceForce {
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
 
-        return VectorHelper.toDVector3C((currentEntity.getVelocity().mul(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))).mul(-1).resize(AH.mul(AH.mul(AH.mul(AH.mul(((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN)), dragCoef), airDensity), area), BigDecimal.valueOf(Math.pow(currentEntity.getVelocity().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue())))));
+        return VectorHelper.toDVector3C((currentEntity.getVelocity().mul(((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))))).mul(-1).resize(AH.mul(AH.mul(AH.mul(AH.mul(((Number) new BigDecimal("0.5").setScale(1, RoundingMode.DOWN)), dragCoef), airDensity), area), BigDecimal.valueOf(Math.pow(currentEntity.getVelocity().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue())))));
       }
 
       @Override

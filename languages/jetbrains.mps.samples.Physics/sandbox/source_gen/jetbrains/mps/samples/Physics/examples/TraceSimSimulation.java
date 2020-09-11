@@ -17,7 +17,7 @@ public class TraceSimSimulation extends Simulation {
   protected TracedObjectsSystemScope scope;
 
   public TraceSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("80")), ((Number) new BigInteger("1"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))).floatValue());
+    super(((Number) (AH.mul(((Number) new BigInteger("80")), ((Number) new BigInteger("1"))))).doubleValue(), 1 / ((Number) (AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))))).floatValue());
   }
 
   @Override

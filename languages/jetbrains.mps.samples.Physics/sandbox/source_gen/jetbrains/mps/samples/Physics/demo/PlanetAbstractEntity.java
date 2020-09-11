@@ -37,7 +37,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
 
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        cached = GravitationForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("9")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
+        cached = GravitationForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("9")), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))));
 
         return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
       }
@@ -62,7 +62,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         if (cached == null) {
-          cached = new InternalVector(AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
+          cached = new InternalVector(((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
         }
 
         return VectorHelper.toDVector3C(cached);
@@ -75,7 +75,7 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
 
       @Override
       public DVector3C applicationPoint(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        return VectorHelper.toDVector3C(new InternalVector(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))));
+        return VectorHelper.toDVector3C(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))));
       }
 
       @Override

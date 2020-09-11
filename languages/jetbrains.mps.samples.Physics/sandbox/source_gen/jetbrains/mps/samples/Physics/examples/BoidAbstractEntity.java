@@ -40,10 +40,10 @@ public abstract class BoidAbstractEntity<T extends SystemScope> extends BaseObje
 
     // Apply styles 
     propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 165, 0), new Color(0, 0, 255)));
-    propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
-    propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
-    propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
-    propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.BOX_X, ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))));
+    propertiesBuilder.set(PropKey.BOX_Y, ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))));
+    propertiesBuilder.set(PropKey.BOX_Z, ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))));
+    propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))));
     propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
     propertiesBuilder.set(PropKey.SHAPE, "sphere");
 
@@ -58,19 +58,19 @@ public abstract class BoidAbstractEntity<T extends SystemScope> extends BaseObje
             PhysicalEntity otherObject = (PhysicalEntity) param.parameters.get(0);
             return new _FunctionTypes._return_P0_E0<VectorLike>() {
               public VectorLike invoke() {
-                final Number distance = currentEntity.minus(otherObject).length();
-                final VectorLike selfToOther = otherObject.minus(currentEntity).resize(AH.sub(distance, AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1")))));
+                Number distance = currentEntity.minus(otherObject).length();
+                VectorLike selfToOther = otherObject.minus(currentEntity).resize(AH.sub(distance, ((Number) (AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1")))))));
                 VectorLike direc = new _FunctionTypes._return_P0_E0<VectorLike>() {
                   public VectorLike invoke() {
-                    if (AH.isGreater(distance, AH.mul(((Number) new BigInteger("125")), ((Number) new BigInteger("1")))) || AH.isLess(distance, AH.mul(((Number) new BigInteger("75")), ((Number) new BigInteger("1"))))) {
-                      return selfToOther.mul(((Number) new BigInteger("10"))).mul(BigDecimal.ONE.divide(BigDecimalHelper.of(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), MathContext.DECIMAL32));
+                    if (AH.isGreater(distance, ((Number) (AH.mul(((Number) new BigInteger("125")), ((Number) new BigInteger("1")))))) || AH.isLess(distance, ((Number) (AH.mul(((Number) new BigInteger("75")), ((Number) new BigInteger("1"))))))) {
+                      return selfToOther.mul(((Number) new BigInteger("10"))).mul(BigDecimal.ONE.divide(BigDecimalHelper.of(((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))), MathContext.DECIMAL32));
                     } else {
-                      return (otherObject.getVelocity()).resize(AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
+                      return (otherObject.getVelocity()).resize(((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))));
                     }
                   }
                 }.invoke();
 
-                return direc.mul(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))));
+                return direc.mul(((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
               }
             }.invoke();
           }

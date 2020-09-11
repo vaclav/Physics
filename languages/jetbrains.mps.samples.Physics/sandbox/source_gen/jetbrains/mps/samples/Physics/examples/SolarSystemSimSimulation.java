@@ -19,7 +19,7 @@ public class SolarSystemSimSimulation extends Simulation {
   protected SolarSystemSystemScope scope;
 
   public SolarSystemSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("86396"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("1000")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))).floatValue());
+    super(((Number) (AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("86396"))))).doubleValue(), 1 / ((Number) (AH.mul(((Number) new BigInteger("1000")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))))).floatValue());
   }
 
   @Override
@@ -38,14 +38,14 @@ public class SolarSystemSimSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.EarthNested.Earth2.getPosition().add(new InternalVector(AH.mul(((Number) new BigInteger("190000")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).add(scope.EarthNested.Earth2.getPosition().minus(scope.Sun.getPosition()).resize(AH.mul(((Number) new BigInteger("744000")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN)))));
+    return scope.EarthNested.Earth3.getPosition().add(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("190000")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).add(scope.EarthNested.Earth3.getPosition().minus(scope.Sun.getPosition()).resize(((Number) (AH.mul(((Number) new BigInteger("744000")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN)))))));
   }
 
   @Override
   public VectorLike getCameraFocus(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.EarthNested.Earth2;
+    return scope.EarthNested.Earth3;
   }
 
   @Override

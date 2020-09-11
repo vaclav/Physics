@@ -20,7 +20,7 @@ import org.ode4j.math.DVector3C;
 public class MilkyWaySystemScope extends SystemScope {
   public final SolarSystemSystemScope SolarSystem1;
   public final PhysicalEntity FloatingDog;
-  public final PhysicalEntity Something1;
+  public final PhysicalEntity Something;
   public final PhysicalEntity A;
 
   public MilkyWaySystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
@@ -30,13 +30,13 @@ public class MilkyWaySystemScope extends SystemScope {
 
     //  Instanciate objects 
     FloatingDog = withEntity(new FloatingDog2PhysicalEntity(world, "FloatingDog1", scope));
-    Something1 = withEntity(new Something5PhysicalEntity(world, "Something3", scope));
+    Something = withEntity(new Something2PhysicalEntity(world, "Something1", scope));
     A = withEntity(new A2PhysicalEntity(world, "A1", scope));
-    SolarSystem1 = withEntity(new SolarSystemSystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
+    SolarSystem1 = withEntity(new SolarSystemSystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
 
     // Initialize them 
     FloatingDog.init(this, world);
-    Something1.init(this, world);
+    Something.init(this, world);
     A.init(this, world);
   }
 
@@ -53,7 +53,7 @@ public class MilkyWaySystemScope extends SystemScope {
 
       // Set static properties of Floating dog 
       this.setMass(((Number) new BigInteger("30")));
-      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("8.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("50004.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("10.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("8.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("50004.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("10.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Floating dog 
@@ -87,20 +87,20 @@ public class MilkyWaySystemScope extends SystemScope {
       }));
     }
   }
-  public static class Something5PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
+  public static class Something2PhysicalEntity extends RandomObjectAbstractEntity<MilkyWaySystemScope> {
 
-    public Something5PhysicalEntity(World world, String name, MilkyWaySystemScope scope) {
+    public Something2PhysicalEntity(World world, String name, MilkyWaySystemScope scope) {
       super(world, name, scope);
     }
 
     @Override
     public void init(final MilkyWaySystemScope scope, final World world) {
       // Escape this for nested forces 
-      Something5PhysicalEntity currentEntity = this;
+      Something2PhysicalEntity currentEntity = this;
 
       // Set static properties of Something 
       this.setMass(((Number) new BigInteger("30")));
-      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("0.008099351758686229689152452006379259").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("44.99999837126069715293084237640952").setScale(32, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.008999279731873589543422694659709127").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.008099351758686229689152452006379259").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("44.99999837126069715293084237640952").setScale(32, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.008999279731873589543422694659709127").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of Something 
@@ -123,7 +123,7 @@ public class MilkyWaySystemScope extends SystemScope {
 
       // Set static properties of A 
       this.setMass(((Number) new BigInteger("30")));
-      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of A 

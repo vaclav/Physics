@@ -14,7 +14,7 @@ public class RotationAndCollisionSim1AlternativeView0 extends RotationAndCollisi
     super.initScope(world);
 
     // Override properties 
-    scope.MovingBlock.setVelocity(scope.StaticBlock.minus(scope.MovingBlock).resize(AH.add(AH.add(AH.div(AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))));
+    scope.MovingBlock.setVelocity(scope.StaticBlock.minus(scope.MovingBlock).resize(AH.add(AH.add(AH.div(((Number) (AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1")))))), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))))));
   }
 
 

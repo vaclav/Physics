@@ -50,7 +50,7 @@ public class RotationAndCollisionSystemScope extends SystemScope {
       // Set static properties of MovingBlock 
       this.setMass(((Number) new BigInteger("5000")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
 
       //  Forces and visual of the parent objects of MovingBlock 
       super.init(scope, world);
@@ -58,9 +58,9 @@ public class RotationAndCollisionSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "box");
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigInteger("2"))));
-      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_X, ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))));
+      propertiesBuilder.set(PropKey.BOX_Y, ((Number) (AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))))));
+      propertiesBuilder.set(PropKey.BOX_Z, ((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))));
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -77,14 +77,14 @@ public class RotationAndCollisionSystemScope extends SystemScope {
 
       // Set static properties of StaticSphere 
       this.setMass(((Number) new BigInteger("5000")));
-      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of StaticSphere 
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("15")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("15")), ((Number) new BigInteger("1"))))));
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigInteger("90"))));
       this.getForces().addAll(Arrays.asList());
     }
@@ -102,7 +102,7 @@ public class RotationAndCollisionSystemScope extends SystemScope {
 
       // Set static properties of StaticBlock 
       this.setMass(((Number) new BigInteger("500000")));
-      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigInteger("130")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("130")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
       //  Forces and visual of the parent objects of StaticBlock 
@@ -111,9 +111,9 @@ public class RotationAndCollisionSystemScope extends SystemScope {
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.SHAPE, "box");
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigInteger("5"))));
-      propertiesBuilder.set(PropKey.BOX_X, AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Y, AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))));
-      propertiesBuilder.set(PropKey.BOX_Z, AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.BOX_X, ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))));
+      propertiesBuilder.set(PropKey.BOX_Y, ((Number) (AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))))));
+      propertiesBuilder.set(PropKey.BOX_Z, ((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))));
       this.getForces().addAll(Arrays.asList());
     }
   }

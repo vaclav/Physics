@@ -1449,7 +1449,7 @@
     <property role="3GE5qa" value="styles.collision" />
     <property role="TrG5h" value="CollisionReactionExpression" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <ref role="1TJDcQ" node="1AxJyXYVtU5" resolve="StyleSpecificExpression" />
   </node>
   <node concept="1TIwiD" id="MHm3qvaDZW">
     <property role="EcuMT" value="913483291047927804" />

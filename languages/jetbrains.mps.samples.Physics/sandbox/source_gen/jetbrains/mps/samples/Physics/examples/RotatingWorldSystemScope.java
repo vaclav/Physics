@@ -24,7 +24,7 @@ public class RotatingWorldSystemScope extends SystemScope {
     final RotatingWorldSystemScope scope = this;
 
     //  Instanciate objects 
-    CollisionWorld1 = withEntity(new CollisionWorldSystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.eulerAnglesToMatrix(((BigDecimal) AH.mul(AH.div(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("4"))), ((Number) new BigInteger("1")))).negate(), ((Number) new BigInteger("0")), AH.mul(AH.div(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("2"))), ((Number) new BigInteger("1")))))));
+    CollisionWorld1 = withEntity(new CollisionWorldSystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.eulerAnglesToMatrix(((BigDecimal) ((Number) (AH.mul(AH.div(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("4"))), ((Number) new BigInteger("1")))))).negate(), ((Number) new BigInteger("0")), ((Number) (AH.mul(AH.div(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("2"))), ((Number) new BigInteger("1")))))))));
 
     // Initialize them 
   }

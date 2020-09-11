@@ -19,7 +19,7 @@ public class TorqueSimSimulation extends Simulation {
   protected TorqueSystemScope scope;
 
   public TorqueSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))).doubleValue(), 1);
+    super(((Number) (AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))))).doubleValue(), 1);
   }
 
   @Override
@@ -38,7 +38,7 @@ public class TorqueSimSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return new InternalVector(AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))), ((Number) new BigInteger("0")), AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))));
+    return new InternalVector(((Number) (AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))))), ((Number) new BigInteger("0")), ((Number) (AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))))));
   }
 
   @Override

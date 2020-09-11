@@ -23,7 +23,7 @@ public class TreeN1SystemScope extends SystemScope {
   public final TreeN2SystemScope One2;
   public final TreeN2SystemScope Two2;
   public final TreeN2SystemScope Three2;
-  public final PhysicalEntity O5;
+  public final PhysicalEntity O6;
 
   public TreeN1SystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
@@ -31,25 +31,25 @@ public class TreeN1SystemScope extends SystemScope {
     final TreeN1SystemScope scope = this;
 
     //  Instanciate objects 
-    O5 = withEntity(new O7PhysicalEntity(world, "O6", scope));
-    One2 = withEntity(new TreeN2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("49.99998378626345").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("86.60254973944701").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.axisAngleToMatrix(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))), AH.mul(((Number) new BigInteger("30")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN)))))));
-    Two2 = withEntity(new TreeN2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("100.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
-    Three2 = withEntity(new TreeN2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(AH.mul(((Number) new BigDecimal("-49.99998378626345").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))), AH.mul(((Number) new BigDecimal("86.60254973944701").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.axisAngleToMatrix(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))), AH.mul(((Number) new BigInteger("-30")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN)))))));
+    O6 = withEntity(new O8PhysicalEntity(world, "O7", scope));
+    One2 = withEntity(new TreeN2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("49.99998378626345").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("86.60254973944701").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.axisAngleToMatrix(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))), ((Number) (AH.mul(((Number) new BigInteger("30")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN)))))))));
+    Two2 = withEntity(new TreeN2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("100.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
+    Three2 = withEntity(new TreeN2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("-49.99998378626345").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("86.60254973944701").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.axisAngleToMatrix(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))), ((Number) (AH.mul(((Number) new BigInteger("-30")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN)))))))));
 
     // Initialize them 
-    O5.init(this, world);
+    O6.init(this, world);
   }
 
-  public static class O7PhysicalEntity extends LeafAbstractEntity<TreeN1SystemScope> {
+  public static class O8PhysicalEntity extends LeafAbstractEntity<TreeN1SystemScope> {
 
-    public O7PhysicalEntity(World world, String name, TreeN1SystemScope scope) {
+    public O8PhysicalEntity(World world, String name, TreeN1SystemScope scope) {
       super(world, name, scope);
     }
 
     @Override
     public void init(final TreeN1SystemScope scope, final World world) {
       // Escape this for nested forces 
-      O7PhysicalEntity currentEntity = this;
+      O8PhysicalEntity currentEntity = this;
 
       // Set static properties of O 
       this.setMass(((Number) new BigInteger("50")));
@@ -61,7 +61,7 @@ public class TreeN1SystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(120, 190, 90), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))))));
       this.getForces().addAll(Arrays.asList());
     }
   }

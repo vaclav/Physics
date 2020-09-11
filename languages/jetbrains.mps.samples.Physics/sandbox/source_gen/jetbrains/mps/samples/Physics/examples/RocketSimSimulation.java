@@ -19,7 +19,7 @@ public class RocketSimSimulation extends Simulation {
   protected RocketWorldSystemScope scope;
 
   public RocketSimSimulation() {
-    super(AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("60"))).doubleValue(), 1 / AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))).floatValue());
+    super(((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("60"))))).doubleValue(), 1 / ((Number) (AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))))).floatValue());
   }
 
   @Override
@@ -38,7 +38,7 @@ public class RocketSimSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.RocketEuropaS452G.getPosition().add((scope.RocketEuropaS452G.getPosition().add(scope.Earth.getPosition())).resize(AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))));
+    return scope.RocketEuropaS452G.getPosition().add((scope.RocketEuropaS452G.getPosition().add(scope.Earth.getPosition())).resize(((Number) (AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))))));
   }
 
   @Override

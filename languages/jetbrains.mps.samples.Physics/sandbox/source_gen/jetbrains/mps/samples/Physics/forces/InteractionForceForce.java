@@ -19,11 +19,11 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class InteractionForceForce {
-  public static Force get(World world, SystemScope scope, PhysicalEntity currentEntity, double time, final Function<ParameterSetWrapper, VectorLike> map) {
+  public static Force get(World world, SystemScope scope, PhysicalEntity currentEntity, double time, Function<ParameterSetWrapper, VectorLike> map) {
     Force force = new Force<SystemScope>() {
 
       @Override
-      public DVector3C linearForce(final World world, SystemScope scope, final PhysicalEntity currentEntity, double time) {
+      public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
 
         return VectorHelper.toDVector3C(new _FunctionTypes._return_P0_E0<VectorLike>() {
           public VectorLike invoke() {

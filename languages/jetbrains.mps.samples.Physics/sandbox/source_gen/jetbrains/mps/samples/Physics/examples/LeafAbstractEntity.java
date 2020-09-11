@@ -31,7 +31,7 @@ public abstract class LeafAbstractEntity<T extends SystemScope> extends BaseObje
 
     // Apply styles 
     propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigInteger("100"))));
-    propertiesBuilder.set(PropKey.SPHERE_RADIUS, AH.mul(((Number) new BigInteger("7")), ((Number) new BigInteger("1"))));
+    propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("7")), ((Number) new BigInteger("1"))))));
 
     // Forces 
     this.getForces().addAll(Arrays.asList(new Force<SystemScope>() {
@@ -39,7 +39,7 @@ public abstract class LeafAbstractEntity<T extends SystemScope> extends BaseObje
 
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
-        cached = GravitationForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("10")), AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))));
+        cached = GravitationForce.get(world, scope, currentEntity, time, AH.mul(((Number) new BigInteger("10")), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))));
 
         return VectorHelper.toDVector3C(cached.linearForce(world, scope, currentEntity, time));
       }
