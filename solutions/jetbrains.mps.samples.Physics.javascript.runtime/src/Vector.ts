@@ -92,7 +92,7 @@ export class Vector extends VectorLike {
 
 	public values: Float32Array;
 
-	constructor(x: number, y: number, z: number) {
+	constructor(x: number = 0, y: number = 0, z: number = 0) {
 		super();
 		
 		this.values = new Float32Array([x, y, z]);

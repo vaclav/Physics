@@ -1,8 +1,7 @@
 import World from "../World";
 import Fixture from "./Fixture";
 import Texture from "./Texture";
-import odejs from "odejs";
-import * as p5 from "p5";
+import p5 from "p5";
 
 export default class SphereFixture extends Fixture {
 
@@ -16,8 +15,8 @@ export default class SphereFixture extends Fixture {
     graphics.sphere(this.radius * scale)
   }
   
-  protected buildMass(massValue: number): odejs.Mass {
-    const mass: odejs.Mass = new odejs.Mass();
+  protected buildMass(massValue: number): ODE.Mass {
+    const mass: ODE.Mass = new ODE.Mass();
     mass.setSphere(massValue / this.getVolume(), this.radius);
     return mass;
   }
@@ -28,7 +27,7 @@ export default class SphereFixture extends Fixture {
     this.radius = Math.pow(volume * 3 / (Math.PI * 4), 0.3333);
   }
   
-  public buildGeometry(): odejs.DGeom {
+  public buildGeometry(): ODE.DGeom {
     return this.world.space.createSphere(this.radius);
   }
   

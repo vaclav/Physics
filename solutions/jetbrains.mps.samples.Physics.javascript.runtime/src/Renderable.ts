@@ -1,4 +1,4 @@
-import * as p5 from "p5";
+import p5 from "p5";
 
 export default interface Renderable {
   setup(app: p5, scale: number): void;

@@ -1,5 +1,5 @@
-import * as p5 from "p5";
-import { RenderableMetric } from "./MetricsRenderer";
+import p5 from "p5";
+import { RenderableMetric } from "../MetricsRenderer";
 
 export default class InternalColor implements RenderableMetric {
   public r: number;
@@ -37,10 +37,10 @@ export default class InternalColor implements RenderableMetric {
     return new InternalColor((left.r * leftRatio + right.r * rev), (left.g * leftRatio + right.g * rev), (left.b * leftRatio + right.b * rev));
   }
   
-  public render(context: p5.Graphics, topY: number, lineHeight: number): number {
-    context.noStroke();
-    context.fill(this.r, this.g, this.b);
-    context.rect(0, topY, lineHeight, lineHeight - 3);
-    return 0;
+  public updateMetric(element: HTMLSpanElement) {
+    element.style.backgroundColor = `rgb(${this.r}, ${this.g}, ${this.b})`;
+    element.style.display = "inline-block";
+    element.style.width = "1.5em";
+    element.style.height = "1.5em";
   }
 }

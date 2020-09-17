@@ -1,4 +1,4 @@
-import * as p5 from "p5";
+import p5 from "p5";
 import InternalColor from "./Color";
 
 export default abstract class TraceHandler {

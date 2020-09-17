@@ -1,4 +1,4 @@
-import * as p5 from "p5";
+import p5 from "p5";
 import { RendererCallback } from "./Renderer";
 import { Simulation } from "./Simulation";
 
@@ -37,10 +37,10 @@ export default class CompositeRendererCallback implements RendererCallback {
   }
 
 
-  public render(applet: p5, context: p5.Graphics, glContext: WebGLRenderingContextBase): void {
+  public render(applet: p5, context: p5.Graphics): void {
     this.simulations.forEach((it, i) => {
       //this.graphics[i].beginDraw();
-      it.render(applet, this.graphics[i], glContext);
+      it.render(applet, this.graphics[i]);
       //this.graphics[i].endDraw();
     });
 

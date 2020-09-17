@@ -1,16 +1,17 @@
 import Renderable from "../Renderable";
 import PhysicalEntity from "./PhysicalEntity";
-import * as p5 from "p5";
-import odejs, { DGeom, DSpace } from "odejs";
+import p5 from "p5";
 import CollisionReaction, { hasPriority } from "./forces/CollisionReaction";
 
+declare var ODE: any;
+
 export default class World implements Renderable {
-  public readonly world: odejs.World;
-  public readonly space: odejs.DSpace;
+  public readonly world: ODE.World;
+  public readonly space: ODE.DSpace;
   private entities: Array<PhysicalEntity<any>> = new Array();
 
-  public readonly jointGroup: odejs.Joint.Group;
-  private readonly reverseEntities: Map<odejs.DBody, PhysicalEntity<any>> = new Map();
+  public readonly jointGroup: ODE.Joint.Group;
+  private readonly reverseEntities: Map<ODE.DBody, PhysicalEntity<any>> = new Map();
 
   public paused: boolean;
   public time: number;
@@ -24,9 +25,9 @@ export default class World implements Renderable {
     this.timeStep = secondDuration / 60;
     this.time = 0;
     this.paused = false;
-    this.world = new odejs.World();
-    this.space = new odejs.Space.Hash();
-    this.jointGroup = new odejs.Joint.Group(10000);
+    this.world = new ODE.World();
+    this.space = new ODE.Space.Hash();
+    this.jointGroup = new ODE.Joint.Group(10000);
   }
 
   /**
@@ -37,10 +38,10 @@ export default class World implements Renderable {
       return;
     }
 
-    this.space.collide((g1: DGeom, g2: DGeom) => {
+    this.space.collide((g1: ODE.DGeom, g2: ODE.DGeom) => {
       var b1 = g1.getBody();
       var b2 = g2.getBody();
-      if (b1 && b2 && odejs.Body.areConnected(b1, b2)) {
+      if (b1 && b2 && ODE.Body.areConnected(b1, b2)) {
         return;
       }
 
@@ -49,8 +50,8 @@ export default class World implements Renderable {
 
       const first: PhysicalEntity<any> = (hasPriority(e1, e2) ? e1 : e2);
       const second: PhysicalEntity<any> = (first == e1 ? e2 : e1);
-      const firstGeom: DGeom = (first == e1 ? g1 : g2);
-      const secondGeom: DGeom = (firstGeom == g1 ? g2 : g1);
+      const firstGeom: ODE.DGeom = (first == e1 ? g1 : g2);
+      const secondGeom: ODE.DGeom = (firstGeom == g1 ? g2 : g1);
 
       // React with the reaction with highest priority first 
       const firstReaction: CollisionReaction = first.properties.collisionReaction;

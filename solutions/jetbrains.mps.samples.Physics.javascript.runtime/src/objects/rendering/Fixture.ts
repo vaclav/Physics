@@ -1,11 +1,10 @@
-import { DBody, DGeom } from "odejs";
-import * as p5 from "p5";
+import p5 from "p5";
 import Renderable from "../../Renderable";
 import World from "../World";
 import Texture from "./Texture";
 
 export default abstract class Fixture implements Renderable {
-  public geometry: DGeom | undefined;
+  public geometry: ODE.DGeom | undefined;
   public emitLight: boolean = false;
 
   private appletCache: p5 | null = null;
@@ -29,30 +28,30 @@ export default abstract class Fixture implements Renderable {
   }
 
 
-  public bindToBody(body: DBody, massValue: number): void {
+  public bindToBody(body: ODE.DBody, massValue: number): void {
     // Build and apply mass 
     const mass = this.buildMass(massValue);
     body.setMass(mass);
     // Set the body of this fixture geometry 
     this.geometry = this.buildGeometry();
-    this.geometry.setBody(body);
+    this.geometry?.setBody(body);
   }
 
   /**
    * Construct mass adequate to fixture implementation
    * @return mass with appropriate representation
    */
-  protected abstract buildMass(massValue: number): odejs.Mass;
+  protected abstract buildMass(massValue: number): ODE.Mass;
   public abstract getVolume(): number;
   protected abstract setVolume(volume: number): void;
-  public abstract buildGeometry(): DGeom;
+  public abstract buildGeometry(): ODE.DGeom;
 
   /**
    * Take the given fixture and merge its content numbero this fixture
    */
   public mergeWith(fixture: Fixture): void {
-    const body: DBody = this.geometry!.getBody();
-    const otherBody: DBody = fixture.geometry!.getBody();
+    const body: ODE.DBody = this.geometry!.getBody();
+    const otherBody: ODE.DBody = fixture.geometry!.getBody();
 
     // Keep previous mass 
     const thisMass: number = body.getMass().getMass();

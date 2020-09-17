@@ -1,5 +1,5 @@
 import Texture from "./Texture";
-import * as p5 from "p5";
+import p5 from "p5";
 
 export default class ImageTexture implements Texture {
   private loadedImage: p5.Image | null;

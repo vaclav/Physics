@@ -1,5 +1,4 @@
 import { Vector, VectorLike } from "./Vector";
-import * as ODE from "odejs";
 
 export namespace VectorHelper {
   export function toFloat32Array(vec: any): Float32Array {

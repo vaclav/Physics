@@ -5,17 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "odetypes": "mkdir \"node_modules/@types/odejs\" && copyfiles index.d.ts \"node_modules/@types/odejs/\""
+    "start": "http-server -c-1 ./ -o",
+    "build": "rollup -c && copyfiles -u 1 example/index.html build/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "odejs": "^1.1.0",
-    "p5": "^1.1.9",
-    "typescript": "^4.0.2"
+    "p5": "^1.1.9"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
     "@types/p5": "^0.9.1",
-    "copyfiles": "^2.3.0"
+    "copyfiles": "^2.3.0",
+    "http-server": "^0.12.3",
+    "rollup": "^2.27.0",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2"
   }
 }

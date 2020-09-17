@@ -3,14 +3,14 @@
 import { Vector, VectorLike } from "../Vector";
 import { VectorHelper } from "../VectorHelper";
 import EntityLike from "./EntityLike";
-import odejs from "odejs";
+declare var ODE: any;
 
 export default abstract class SystemScope extends VectorLike implements EntityLike {
   protected nested: Array<EntityLike> = new Array();
 
   protected computedMass: number = 0;
 
-  constructor(protected initialPosition: VectorLike, protected initialVelocity: VectorLike, protected initialRotation: odejs.Rotation) {
+  constructor(protected initialPosition: VectorLike, protected initialVelocity: VectorLike, protected initialRotation: ODE.Rotation) {
     super();
   }
 

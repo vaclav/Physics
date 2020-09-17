@@ -1,9 +1,5 @@
-
-
-import { DGeom } from "../../../odejs";
 import PhysicalEntity from "../PhysicalEntity";
 import World from "../World";
-import odejs from "odejs";
 import CollisionReaction from "./CollisionReaction";
 
 export default class ElasticCollisionReaction implements CollisionReaction {
@@ -19,8 +15,8 @@ export default class ElasticCollisionReaction implements CollisionReaction {
   }
 
 
-  public react(world: World, target: PhysicalEntity<any>, targetGeom: DGeom, otherObject: PhysicalEntity<any>, otherGeom: DGeom): void {
-    odejs.Geom.collide(targetGeom, otherGeom, 32, contact => {
+  public react(world: World, target: PhysicalEntity<any>, targetGeom: ODE.DGeom, otherObject: PhysicalEntity<any>, otherGeom: ODE.DGeom): void {
+    ODE.Geom.collide(targetGeom, otherGeom, 32, contact => {
       const otherReaction: CollisionReaction = otherObject.properties.collisionReaction;
 
       // Set bounce ratio 
@@ -31,7 +27,7 @@ export default class ElasticCollisionReaction implements CollisionReaction {
       }
 
       if (contact.surface.bounce > 0) {
-        contact.surface.mode |= odejs.Contact.Mode.Bounce;
+        contact.surface.mode |= ODE.Contact.Mode.Bounce;
       }
 
       // Attach to bodies 

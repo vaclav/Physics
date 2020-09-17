@@ -1,7 +1,7 @@
 import InternalColor from "./Color";
-import * as p5 from "p5";
+import p5 from "p5";
 import Texture from "./Texture";
-import { RenderableMetric } from "./MetricsRenderer";
+import { RenderableMetric } from "../MetricsRenderer";
 
 export default class ColorTexture  implements Texture, RenderableMetric {
   constructor(public readonly fill: InternalColor | null, public readonly stroke: InternalColor | null) {
@@ -37,19 +37,20 @@ export default class ColorTexture  implements Texture, RenderableMetric {
       return other;
     }
   }
-  
-  public render(context: p5.Graphics, topY: number, lineHeight: number): number {
-    if (this.stroke != null) {
-      context.stroke(this.stroke.toInt(context));
-    } else {
-      context.noStroke();
+
+
+  public updateMetric(element: HTMLSpanElement) {
+    element.style.display = "inline-block";
+    element.style.width = "1.5em";
+    element.style.height = "1.5em";
+
+    if (this.fill) {
+      element.style.backgroundColor = `rgb(${this.fill.r}, ${this.fill.g}, ${this.fill.b})`;
     }
-    if (this.fill != null) {
-      context.fill(this.fill.toInt(context));
-    } else {
-      context.noFill();
+
+    if (this.stroke) {
+      element.style.borderWidth = "2px";
+      element.style.borderColor = `rgb(${this.stroke.r}, ${this.stroke.g}, ${this.stroke.b})`;
     }
-    context.rect(0, topY, lineHeight, lineHeight - 3);
-    return 0;
   }
 }

@@ -1,8 +1,7 @@
 import World from "../World";
 import Fixture from "./Fixture";
-import * as p5 from "p5";
+import p5 from "p5";
 import Texture from "./Texture";
-import odejs, { DGeom } from "odejs";
 
 export default class BoxFixture extends Fixture {
 
@@ -18,7 +17,7 @@ export default class BoxFixture extends Fixture {
 
   
   protected buildMass(massValue: number) {
-    const mass: odejs.Mass = new odejs.Mass();
+    const mass: ODE.Mass = new ODE.Mass();
     mass.setBox(massValue / this.getVolume(), this.width, this.height, this.depth);
     return mass;
   }
@@ -36,7 +35,7 @@ export default class BoxFixture extends Fixture {
     this.depth = (this.depth * factor);
   }
   
-  public buildGeometry(): DGeom {
+  public buildGeometry(): ODE.DGeom {
     return this.world.space.createBox(this.width, this.height, this.depth);
   }
 }

@@ -1,6 +1,6 @@
 import InternalColor from "./Color";
 import TraceHandler from "./TraceHandler";
-import * as p5 from "p5";
+import p5 from "p5";
 
 export const MAX_CAPACITY = 600;
 

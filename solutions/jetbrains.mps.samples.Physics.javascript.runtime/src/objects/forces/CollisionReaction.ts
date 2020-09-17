@@ -1,4 +1,3 @@
-import { DGeom } from "odejs";
 import PhysicalEntity from "../PhysicalEntity";
 import World from "../World";
 
@@ -18,7 +17,7 @@ export default interface CollisionReaction {
   /**
    * Apply the reaction on objects: both, the target object refer to the object the current reaction is applied on
    */
-  react(world: World, target: PhysicalEntity<any>, targetGeom: DGeom, otherObject: PhysicalEntity<any>, otherGeom: DGeom): void;
+  react(world: World, target: PhysicalEntity<any>, targetGeom: ODE.DGeom, otherObject: PhysicalEntity<any>, otherGeom: ODE.DGeom): void;
 }
 
 export function hasPriority(self: PhysicalEntity<any>, compared: PhysicalEntity<any>) {
