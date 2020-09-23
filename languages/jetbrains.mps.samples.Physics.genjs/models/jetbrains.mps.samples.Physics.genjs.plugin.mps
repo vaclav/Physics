@@ -372,7 +372,7 @@
     <node concept="3UR2Jj" id="5SvUgSQ3DN7" role="lGtFl">
       <node concept="TZ5HA" id="5SvUgSQ3DN8" role="TZ5H$">
         <node concept="1dT_AC" id="5SvUgSQ3DN9" role="1dT_Ay">
-          <property role="1dT_AB" value="Classe used to make names for javascript generation" />
+          <property role="1dT_AB" value="Class used to make names for javascript generation" />
         </node>
       </node>
       <node concept="TZ5HA" id="5SvUgSQ3DO5" role="TZ5H$">

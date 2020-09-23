@@ -29,14 +29,8 @@ export class CachedForceMapper<T extends SystemScope, U> extends ForceMapper<T> 
 
   constructor(
     context: EntityContext<T>,
-    computeMethod: (ctx: EntityContext<T>, mapper: ForceMapper<T>) => Force<T>,
-    private cacheUpdater: (ctx: EntityContext<T>, mapper: ForceMapper<T>) => any
+    computeMethod: (ctx: EntityContext<T>, mapper: ForceMapper<T>) => Force<T>
   ) {
     super(context, computeMethod)
-  }
-
-  public compute() {
-    this.cacheUpdater(this.context, this);
-    return super.compute();
   }
 }

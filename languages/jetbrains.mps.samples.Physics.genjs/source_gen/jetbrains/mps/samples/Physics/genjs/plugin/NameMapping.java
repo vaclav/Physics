@@ -15,7 +15,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 /**
- * Classe used to make names for javascript generation
+ * Class used to make names for javascript generation
  * 
  * Mapping labels are not used in this case because of some implementation incompatibility
  *  with instance variables in ecmascript4mps (the variables, modules are not refered from
