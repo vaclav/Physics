@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev-kit name="jetbrains.mps.samples.Physics.devkit.javascript" uuid="547e676f-2a24-489d-8040-091b52e3e470">
+  <exported-language name="89da005b-492b-4e94-9b6d-b429df99e997(jetbrains.mps.samples.Physics.genjs)" />
+  <extendedDevKits>
+    <extendedDevKit>94dba95f-0505-4d04-a64d-85519150f750(jetbrains.mps.samples.Physics.devkit.base)</extendedDevKit>
+  </extendedDevKits>
+  <exported-solutions>
+    <exported-solution>4129e23c-11ff-404a-811b-44d11ae53a7a(jetbrains.mps.samples.Physics.generation)</exported-solution>
+  </exported-solutions>
+  <generation-plan model="r:0586ebfb-1462-40c0-a900-a1de5a3e141e(jetbrains.mps.samples.Physics.generation.javascript)" />
+</dev-kit>
+

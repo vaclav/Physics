@@ -2,16 +2,19 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/devkits/jetbrains.mps.samples.Physics.devkit.base/jetbrains.mps.samples.Physics.devkit.base.devkit" folder="base" />
       <modulePath path="$PROJECT_DIR$/devkits/jetbrains.mps.samples.Physics.devkit.java/jetbrains.mps.samples.Physics.devkit.java.devkit" folder="java" />
+      <modulePath path="$PROJECT_DIR$/devkits/jetbrains.mps.samples.Physics.devkit.javascript/jetbrains.mps.samples.Physics.devkit.javascript.devkit" folder="javascript" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.dimensions.gentype/jetbrains.mps.samples.Physics.dimensions.gentype.mpl" folder="base" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.dimensions/jetbrains.mps.samples.Physics.dimensions.mpl" folder="base" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.genbase/jetbrains.mps.samples.Physics.genbase.mpl" folder="base" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.genjava/jetbrains.mps.samples.Physics.genjava.mpl" folder="java" />
+      <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.genjs/jetbrains.mps.samples.Physics.genjs.mpl" folder="javascript" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.iets3.ext.math/jetbrains.mps.samples.Physics.iets3.ext.math.mpl" folder="math" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics.types/jetbrains.mps.samples.Physics.types.mpl" folder="base" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.mpl" folder="base" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/sandbox/jetbrains.mps.samples.Physics.sandbox.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.generation/jetbrains.mps.samples.Physics.generation.msd" folder="java" />
+      <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.generation/jetbrains.mps.samples.Physics.generation.msd" folder="base" />
       <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.java.common/jetbrains.mps.samples.Physics.java.common.msd" folder="base" />
       <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.runtime/jetbrains.mps.samples.Physics.java.runtime.msd" folder="java" />
       <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.test/jetbrains.mps.samples.Physics.test.msd" folder="base" />

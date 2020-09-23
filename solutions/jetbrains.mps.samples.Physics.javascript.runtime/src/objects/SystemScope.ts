@@ -2,15 +2,21 @@
 
 import { Vector, VectorLike } from "../Vector";
 import { VectorHelper } from "../VectorHelper";
+import { ScopeContext } from "./Context";
 import EntityLike from "./EntityLike";
+import World from "./World";
 declare var ODE: any;
 
-export default abstract class SystemScope extends VectorLike implements EntityLike {
+export default abstract class SystemScope extends VectorLike implements EntityLike, ScopeContext<SystemScope> {
   protected nested: Array<EntityLike> = new Array();
 
   protected computedMass: number = 0;
 
-  constructor(protected initialPosition: VectorLike, protected initialVelocity: VectorLike, protected initialRotation: ODE.Rotation) {
+  get scope() {
+    return this;
+  }
+
+  constructor(public world: World, protected initialPosition: VectorLike, protected initialVelocity: VectorLike, protected initialRotation: ODE.Rotation) {
     super();
   }
 

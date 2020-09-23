@@ -38,7 +38,7 @@ public class RocketSimSimulation extends Simulation {
   public VectorLike getCameraPosition(PGraphics graphics) {
     VectorLike currentEntity = this.scope;
 
-    return scope.RocketEuropaS452G.getPosition().add((scope.RocketEuropaS452G.getPosition().add(scope.Earth.getPosition())).resize(((Number) (AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))))));
+    return scope.RocketEuropaS452G.getPosition().add((scope.RocketEuropaS452G.getPosition().minus(scope.Earth.getPosition())).resize(((Number) (AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))))));
   }
 
   @Override

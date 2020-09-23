@@ -1,6 +1,5 @@
 import Renderable from "../Renderable";
 import { Vector, VectorLike } from "../Vector";
-import { VectorHelper } from "../VectorHelper";
 import EntityLike from "./EntityLike";
 import { PhysicalEntityProperties } from "./PhysicalEntityProperties";
 import SystemScope from "./SystemScope";
@@ -12,8 +11,10 @@ import Force from "./forces/Force";
 import { PropertiesBuilder } from "./rendering/builder/PropertiesBuilder";
 import { ForceModeApplication } from "./forces/ForceModeApplication";
 import { ForceMode } from "./forces/ForceMode";
+import { EntityContext } from "./Context";
 
-export default class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike, Renderable {
+
+export default class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike, Renderable, EntityContext<T> {
   public readonly body: ODE.DBody;
   public fixture: Fixture | undefined;
 
@@ -26,6 +27,10 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
     traceHandler: null
   };
 
+  get entity() {
+    return this;
+  }
+
   /**
    * Object containing the fixture properties
    */
@@ -36,7 +41,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
    */
   private forces: Array<Force<any>> = [];
 
-  constructor(private world: World, public name: String, private scope: T) {
+  constructor(public world: World, public name: String, public scope: T) {
     super();
 
     // Creating body 
@@ -63,10 +68,10 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
     }
 
     for (let force of this.forces) {
-      let forceLinear: Float32Array = force.linearForce(this.world, this.scope, this, time);
-      let moment: Float32Array = force.moment(this.world, this.scope, this, time);
-      let applicationPoint: Float32Array = force.applicationPoint(this.world, this.scope, this, time);
-      let mode: number = force.forceMode();
+      let forceLinear: Float32Array = force.linearForce(this);
+      let moment: Float32Array = force.moment(this);
+      let applicationPoint: Float32Array = force.applicationPoint(this);
+      let mode: number = force.forceMode;
 
       if (forceLinear == null) {
         forceLinear = new Float32Array([0, 0, 0]);
@@ -169,7 +174,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
   /**
    * Initialize the object properties
    */
-  public init(scope: T, world: World): void {
+  public init(): void {
     // To override 
   }
 

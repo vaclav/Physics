@@ -8,7 +8,7 @@ declare var ODE: any;
 export default class World implements Renderable {
   public readonly world: ODE.World;
   public readonly space: ODE.DSpace;
-  private entities: Array<PhysicalEntity<any>> = new Array();
+  public entities: Array<PhysicalEntity<any>> = new Array();
 
   public readonly jointGroup: ODE.Joint.Group;
   private readonly reverseEntities: Map<ODE.DBody, PhysicalEntity<any>> = new Map();

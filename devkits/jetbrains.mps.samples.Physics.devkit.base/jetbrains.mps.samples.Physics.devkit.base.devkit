@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev-kit name="jetbrains.mps.samples.Physics.devkit.base" uuid="94dba95f-0505-4d04-a64d-85519150f750">
+  <exported-language name="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" />
+  <exported-language name="3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)" />
+  <exported-language name="e20f6002-fdcc-4f52-aa1a-8dcd898993a0(jetbrains.mps.samples.Physics.dimensions.gentype)" />
+  <exported-language name="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.iets3.ext.math)" />
+  <exported-language name="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)" />
+  <exported-language name="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" />
+  <extendedDevKits>
+    <extendedDevKit>c4e521ab-b605-4ef9-a7c3-68075da058f0(org.iets3.core.expr.core.devkit)</extendedDevKit>
+  </extendedDevKits>
+  <exported-solutions>
+    <exported-solution>4129e23c-11ff-404a-811b-44d11ae53a7a(jetbrains.mps.samples.Physics.generation)</exported-solution>
+  </exported-solutions>
+</dev-kit>
+

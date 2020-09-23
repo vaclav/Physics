@@ -137,8 +137,8 @@ declare namespace ODE {
         setArray(mat: Array<number> | Float32Array): this
         getArray(): Float32Array;
 
-        static fromEulerAngles(phi: number, theta: number, psi: number): Rotation
-        static fromAxisAndAngle(ax: number, ay: number, az: number, angle: number): Rotation
+        fromEulerAngles(phi: number, theta: number, psi: number): Rotation
+        fromAxisAndAngle(ax: number, ay: number, az: number, angle: number): Rotation
     }
 
     export class World {

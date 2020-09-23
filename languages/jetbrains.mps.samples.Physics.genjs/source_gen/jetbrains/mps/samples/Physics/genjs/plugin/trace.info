@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root nodeRef="r:2b357836-b9c6-4168-a820-630bffb555be(jetbrains.mps.samples.Physics.genjs.plugin)/2109948216971701312">
+    <file name="NameMapping.java">
+      <node id="2109948216971701312" at="26,0,27,0" concept="6" trace="LOG" />
+      <node id="6782395811088796167" at="27,51,28,42" concept="4" />
+      <node id="6782395811088838261" at="30,49,31,94" concept="4" />
+      <node id="6782395811088840792" at="33,56,34,49" concept="4" />
+      <node id="6782395811088770435" at="38,43,39,37" concept="4" />
+      <node id="6782395811089241423" at="43,5,44,35" concept="3" />
+      <node id="6782395811089249518" at="45,79,46,130" concept="4" />
+      <node id="6782395811089252873" at="48,5,49,0" concept="5" />
+      <node id="6782395811088967447" at="49,0,50,211" concept="1" />
+      <node id="6782395811089251896" at="50,211,51,151" concept="4" />
+      <node id="2109948216971701312" at="55,0,56,0" concept="6" trace="INamedConcept$Kd" />
+      <node id="2109948216971701312" at="59,0,60,0" concept="6" trace="name$MnvL" />
+      <node id="2109948216971721904" at="27,0,30,0" concept="7" trace="variableNameOf#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6782395811088838259" at="30,0,33,0" concept="7" trace="moduleNameOf#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6782395811088840713" at="33,0,36,0" concept="7" trace="defaultExportNameOf#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6782395811088770163" at="38,0,41,0" concept="7" trace="nameOf#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6782395811089241423" at="44,35,47,7" concept="2" />
+      <node id="6782395811089241423" at="42,66,48,5" concept="0" />
+      <node id="6782395811088748117" at="42,0,53,0" concept="7" trace="prefixedNameOf#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Ljava/lang/String;" />
+      <scope id="2109948216971721907" at="27,51,28,42" />
+      <scope id="6782395811088838260" at="30,49,31,94" />
+      <scope id="6782395811088840716" at="33,56,34,49" />
+      <scope id="6782395811088770164" at="38,43,39,37" />
+      <scope id="6782395811089241427" at="45,79,46,130" />
+      <scope id="2109948216971721904" at="27,0,30,0">
+        <var name="node" id="2109948216971731316" />
+      </scope>
+      <scope id="6782395811088838259" at="30,0,33,0">
+        <var name="node" id="6782395811088838267" />
+      </scope>
+      <scope id="6782395811088840713" at="33,0,36,0">
+        <var name="node" id="6782395811088840788" />
+      </scope>
+      <scope id="6782395811088770163" at="38,0,41,0">
+        <var name="node" id="6782395811088770167" />
+      </scope>
+      <scope id="6782395811089241423" at="43,5,47,7">
+        <var name="namedNode" id="6782395811089241423" />
+      </scope>
+      <scope id="6782395811088748120" at="42,66,51,151" />
+      <scope id="6782395811088748117" at="42,0,53,0">
+        <var name="node" id="6782395811088769758" />
+        <var name="prefix" id="6782395811088769762" />
+      </scope>
+      <unit id="2109948216971701312" at="54,0,57,0" name="jetbrains.mps.samples.Physics.genjs.plugin.NameMapping$CONCEPTS" />
+      <unit id="2109948216971701312" at="58,0,61,0" name="jetbrains.mps.samples.Physics.genjs.plugin.NameMapping$PROPS" />
+      <unit id="2109948216971701312" at="25,0,62,0" name="jetbrains.mps.samples.Physics.genjs.plugin.NameMapping" />
+    </file>
+  </root>
+</debug-info>
+
