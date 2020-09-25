@@ -7,11 +7,11 @@ import World from "./World";
 import p5 from "p5";
 import Fixture from "./rendering/Fixture";
 import ElasticCollisionReaction from "./forces/ElasticCollisionReaction";
-import Force from "./forces/Force";
 import { PropertiesBuilder } from "./rendering/builder/PropertiesBuilder";
 import { ForceModeApplication } from "./forces/ForceModeApplication";
 import { ForceMode } from "./forces/ForceMode";
 import { EntityContext } from "./Context";
+import { ForceMapper } from "./forces/ForceMapper";
 
 
 export default class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike, Renderable, EntityContext<T> {
@@ -39,7 +39,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
   /**
    * Forces applied on the entity
    */
-  private forces: Array<Force<any>> = [];
+  private forces: Array<ForceMapper<any>> = [];
 
   constructor(public world: World, public name: String, public scope: T) {
     super();
@@ -68,13 +68,10 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
     }
 
     for (let force of this.forces) {
-      let forceLinear: Float32Array = force.linearForce(this);
-      let moment: Float32Array = force.moment(this);
-      let applicationPoint: Float32Array = force.applicationPoint(this);
-      let mode: number = force.forceMode;
+      let { linearForce, moment, applicationPoint, forceMode } = force.compute();
 
-      if (forceLinear == null) {
-        forceLinear = new Float32Array([0, 0, 0]);
+      if (linearForce == null) {
+        linearForce = new Float32Array([0, 0, 0]);
       }
 
       if (moment == null) {
@@ -83,10 +80,10 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
 
       if (applicationPoint == null) {
         applicationPoint = new Float32Array([0, 0, 0]);
-        mode |= ForceMode.APPLICATION_POINT_RELATIVE;
+        forceMode |= ForceMode.APPLICATION_POINT_RELATIVE;
       }
 
-      ForceModeApplication.apply(mode, this, forceLinear, moment, applicationPoint);
+      ForceModeApplication.apply(forceMode, this, linearForce, moment, applicationPoint);
     }
   }
   public applyLights(ctx: p5.Graphics, scale: number, scaledOffset: Float32Array): void {

@@ -14,6 +14,9 @@ import ColorTexture from "../src/objects/rendering/ColorTexture";
 import InternalColor from "../src/objects/rendering/Color";
 import ElasticCollisionReaction from "../src/objects/forces/ElasticCollisionReaction";
 import { SimpleCollisionReaction } from "../src/objects/forces/SimpleCollisionReaction";
+import { CachedForceMapper, ForceMapper } from "../src/objects/forces/ForceMapper";
+import FiniteTraceHandler from "../src/objects/rendering/FiniteTraceHandler";
+import InfiniteTraceHandler from "../src/objects/rendering/InfiniteTraceHandler";
 
 let Physics = {
 	VectorHelper,
@@ -27,8 +30,12 @@ let Physics = {
 	ImageTexture,
 	PhysicalEntity,
 	SystemScope,
+	FiniteTraceHandler,
+	InfiniteTraceHandler,
 	World,
 	PropKey,
+	ForceMapper,
+	CachedForceMapper,
 	makeRenderer: () =>
 		new Promise((res, rej) => {
 			new p5((p) => {

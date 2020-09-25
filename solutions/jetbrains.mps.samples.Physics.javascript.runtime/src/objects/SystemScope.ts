@@ -46,10 +46,6 @@ export default abstract class SystemScope extends VectorLike implements EntityLi
     return velocity.add(this.initialVelocity);
   }
 
-  public getInitialVelocity(): VectorLike {
-    return this.initialVelocity;
-  }
-
   
   public build(): void {
     for (let entity of this.nested) {

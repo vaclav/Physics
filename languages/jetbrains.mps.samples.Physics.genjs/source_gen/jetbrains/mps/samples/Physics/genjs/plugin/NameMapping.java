@@ -27,13 +27,6 @@ public class NameMapping {
   public static String variableNameOf(SNode node) {
     return prefixedNameOf(node, "object");
   }
-  public static String moduleNameOf(SNode node) {
-    return prefixedNameOf(node, SNodeOperations.getConcept(node).getName().replace(" ", "_"));
-  }
-  public static String defaultExportNameOf(SNode node) {
-    return prefixedNameOf(node, "defaultExport");
-  }
-
 
   public static String nameOf(SNode node) {
     return prefixedNameOf(node, "_");
@@ -43,7 +36,7 @@ public class NameMapping {
     {
       final SNode namedNode = node;
       if (SNodeOperations.isInstanceOf(namedNode, CONCEPTS.INamedConcept$Kd)) {
-        return prefix + "_" + SPropertyOperations.getString(namedNode, PROPS.name$MnvL).replace(" ", "_") + "_" + node.hashCode();
+        return prefix + "_" + SPropertyOperations.getString(namedNode, PROPS.name$MnvL).replace(" ", "_");
       }
     }
 

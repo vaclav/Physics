@@ -18,9 +18,11 @@ export default class FiniteTraceHandler extends TraceHandler {
   }
 
   protected writeAt(positions: Float32Array, cursor: number, scale: number): void {
-    this.content[cursor][0] = (positions[0] * scale);
-    this.content[cursor][1] = (positions[1] * scale);
-    this.content[cursor][2] = (positions[2] * scale);
+    this.content[cursor] = [
+      positions[0] * scale,
+      positions[1] * scale,
+      positions[2] * scale
+    ];
   }
 
   
