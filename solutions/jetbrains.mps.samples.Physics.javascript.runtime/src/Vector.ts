@@ -78,12 +78,18 @@ export abstract class VectorLike {
 
 
 	public equals(cmp: any): boolean {
+		if (this === cmp) {
+			return true
+		}
+
 		if (cmp instanceof VectorLike) {
 			return Math.abs(cmp.x() - this.x()) < ZERO_OFFSET && Math.abs(cmp.y() - this.y()) < ZERO_OFFSET && Math.abs(cmp.z() - this.z()) < ZERO_OFFSET;
 		}
-		return this === cmp;
+		
+		return false;
 	}
 
+	[Symbol.iterator]() { return [this.x(), this.y(), this.z()].values() }
 }
 
 
@@ -130,4 +136,6 @@ export class Vector extends VectorLike {
 	public static fromFloat32Array(array: Float32Array) {
 		return new Vector(array[0], array[1], array[2]);
 	}
+
+	[Symbol.iterator]() { return this.values.values(); }
 }

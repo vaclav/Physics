@@ -12,7 +12,7 @@ import { ForceModeApplication } from "./forces/ForceModeApplication";
 import { ForceMode } from "./forces/ForceMode";
 import { EntityContext } from "./Context";
 import { ForceMapper } from "./forces/ForceMapper";
-
+import { VectorHelper } from "../VectorHelper";
 
 export default class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike, Renderable, EntityContext<T> {
   public readonly body: ODE.DBody;
@@ -83,7 +83,13 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
         forceMode |= ForceMode.APPLICATION_POINT_RELATIVE;
       }
 
-      ForceModeApplication.apply(forceMode, this, linearForce, moment, applicationPoint);
+      ForceModeApplication.apply(
+        forceMode,
+        this,
+        VectorHelper.toFloat32Array(linearForce),
+        VectorHelper.toFloat32Array(moment),
+        VectorHelper.toFloat32Array(applicationPoint)
+      );
     }
   }
   public applyLights(ctx: p5.Graphics, scale: number, scaledOffset: Float32Array): void {
@@ -178,6 +184,10 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
   public build(): void {
     // Build fixture and other properties 
     this.propertiesBuilder.applyOn(this.world, this);
+  }
+
+  public equals(other: any): boolean {
+    return this === other;
   }
 
 }
