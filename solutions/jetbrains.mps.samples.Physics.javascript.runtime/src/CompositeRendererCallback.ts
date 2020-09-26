@@ -40,6 +40,7 @@ export default class CompositeRendererCallback implements RendererCallback {
   public render(applet: p5, context: p5.Graphics): void {
     this.simulations.forEach((it, i) => {
       //this.graphics[i].beginDraw();
+      this.graphics[i].clear();
       it.render(applet, this.graphics[i]);
       //this.graphics[i].endDraw();
     });

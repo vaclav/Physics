@@ -11,7 +11,7 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'Physics',
-		file: 'build/index.js'
+		file: 'build/runtime.js'
 	},
 	plugins: [
 		typescript({

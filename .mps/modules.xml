@@ -2,6 +2,7 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/devkits/jetbrains.mps.samples.Physics.devkit.all/jetbrains.mps.samples.Physics.devkit.all.devkit" folder="" />
       <modulePath path="$PROJECT_DIR$/devkits/jetbrains.mps.samples.Physics.devkit.base/jetbrains.mps.samples.Physics.devkit.base.devkit" folder="base" />
       <modulePath path="$PROJECT_DIR$/devkits/jetbrains.mps.samples.Physics.devkit.java/jetbrains.mps.samples.Physics.devkit.java.devkit" folder="java" />
       <modulePath path="$PROJECT_DIR$/devkits/jetbrains.mps.samples.Physics.devkit.javascript/jetbrains.mps.samples.Physics.devkit.javascript.devkit" folder="javascript" />

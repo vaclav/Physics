@@ -36,14 +36,14 @@ public class Generator extends TemplateModuleInterpreted2 {
   protected void fillReferencedGenerators(TemplateModuleBase.ReferencedGenerators referencedGenerators) {
     referencedGenerators.extended("0ab6f947-2451-4a3a-80a3-33b77e399874(org.iets3.core.expr.genjava.simpleTypes#8286534136182342700)");
     referencedGenerators.extended("9372d430-4226-47ef-8bc2-22f1af10ab37(org.iets3.core.expr.genjs.simpleTypes#01)");
-    referencedGenerators.employed("07f8ae53-1b21-41b9-8744-e3fe92389021(jetbrains.mps.samples.Physics.genjava#01)");
   }
 
   @Override
   public Collection<SLanguage> getTargetLanguages() {
-    SLanguage[] rv = new SLanguage[2];
+    SLanguage[] rv = new SLanguage[3];
     rv[0] = MetaAdapterFactory.getLanguage(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, "jetbrains.mps.baseLanguage");
-    rv[1] = MetaAdapterFactory.getLanguage(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, "org.mar9000.mps.ecmascript");
+    rv[1] = MetaAdapterFactory.getLanguage(0x479c7a8c02f943b5L, 0x9139d910cb22f298L, "jetbrains.mps.core.xml");
+    rv[2] = MetaAdapterFactory.getLanguage(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, "org.mar9000.mps.ecmascript");
     return Arrays.asList(rv);
   }
 

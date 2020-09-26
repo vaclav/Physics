@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0" name="org.iets3.core.expr.math" version="0" />
-    <devkit ref="dc532898-e561-4cd2-87df-c64e0f83bf04(jetbrains.mps.samples.Physics.devkit.java)" />
+    <devkit ref="d3545384-66e1-4ad1-88b3-a9a60402c2d1(jetbrains.mps.samples.Physics.devkit.all)" />
   </languages>
   <imports>
     <import index="js1j" ref="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)" />

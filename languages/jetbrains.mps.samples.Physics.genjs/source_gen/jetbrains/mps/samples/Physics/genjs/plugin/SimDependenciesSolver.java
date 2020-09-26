@@ -24,8 +24,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-public class DependenciesSolver {
-  private static final Logger LOG = LogManager.getLogger(DependenciesSolver.class);
+public class SimDependenciesSolver {
+  private static final Logger LOG = LogManager.getLogger(SimDependenciesSolver.class);
   public static List<SNode> dependenciesOf(SNode simulation) {
     Map<SNode, List<SNode>> dependencies = MapSequence.fromMap(new HashMap<SNode, List<SNode>>());
 
@@ -56,12 +56,12 @@ public class DependenciesSolver {
           ListSequence.fromList(selected).addElement(it.key());
         }
       });
-      LoggingRuntime.logMsgView(Level.INFO, selected, DependenciesSolver.class, null, null);
+      LoggingRuntime.logMsgView(Level.INFO, selected, SimDependenciesSolver.class, null, null);
       LoggingRuntime.logMsgView(Level.INFO, MapSequence.fromMap(dependencies).where(new IWhereFilter<IMapping<SNode, List<SNode>>>() {
         public boolean accept(IMapping<SNode, List<SNode>> it) {
           return !(ListSequence.fromList(selected).contains(it.key()));
         }
-      }).toListSequence().toString(), DependenciesSolver.class, null, null);
+      }).toListSequence().toString(), SimDependenciesSolver.class, null, null);
     }
 
     return selected;

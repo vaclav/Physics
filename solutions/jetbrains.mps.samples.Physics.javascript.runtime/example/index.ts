@@ -46,7 +46,6 @@ let Physics = {
 
 				p.draw = () => renderer.draw();
 				p.keyPressed = () => renderer.keyPressed();
-				p.preload = () => renderer.preload();
 				p.setup = () => renderer.setup();
 				p.windowResized = () => renderer.windowResized();
 				res(renderer);

@@ -11,9 +11,6 @@
     </facet>
   </facets>
   <sourcePath />
-  <dependencies>
-    <dependency reexport="false">72f3ce09-f244-46a5-88ca-7b98cd2dfb22(org.iets3.core.expr.genjava.core.genplan)</dependency>
-  </dependencies>
   <languageVersions>
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="11" />
     <language slang="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" version="0" />
@@ -26,7 +23,6 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="4129e23c-11ff-404a-811b-44d11ae53a7a(jetbrains.mps.samples.Physics.generation)" version="0" />
-    <module reference="72f3ce09-f244-46a5-88ca-7b98cd2dfb22(org.iets3.core.expr.genjava.core.genplan)" version="0" />
   </dependencyVersions>
 </solution>
 

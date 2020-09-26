@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:0586ebfb-1462-40c0-a900-a1de5a3e141e(jetbrains.mps.samples.Physics.generation.javascript)">
+<model ref="r:a0704b6b-f943-4f1f-bde9-32ae8f5692a6(jetbrains.mps.samples.Physics.generation.all)">
   <persistence version="9" />
   <attribute name="doNotGenerate" value="true" />
   <languages>
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
     <use id="7ab1a6fa-0a11-4b95-9e48-75f363d6cb00" name="jetbrains.mps.lang.generator.plan" version="1" />
   </languages>
-  <imports />
+  <imports>
+    <import index="gt0k" ref="r:73d025c2-c607-49cb-8e8b-ca71677a289c(jetbrains.mps.samples.Physics.generation.java)" />
+    <import index="ukfv" ref="r:0586ebfb-1462-40c0-a900-a1de5a3e141e(jetbrains.mps.samples.Physics.generation.javascript)" />
+  </imports>
   <registry>
     <language id="7ab1a6fa-0a11-4b95-9e48-75f363d6cb00" name="jetbrains.mps.lang.generator.plan">
       <concept id="3705377275350227759" name="jetbrains.mps.lang.generator.plan.structure.IncludePlan" flags="ng" index="NozSJ">
@@ -20,6 +23,9 @@
       </concept>
       <concept id="1820634577908471810" name="jetbrains.mps.lang.generator.plan.structure.Transform" flags="ng" index="2VgMA2">
         <child id="2944629966652439181" name="languages" index="1t_9vn" />
+      </concept>
+      <concept id="3167863533095527371" name="jetbrains.mps.lang.generator.plan.structure.Fork" flags="ng" index="10T23i">
+        <reference id="3167863533095527372" name="plan" index="10T23l" />
       </concept>
       <concept id="3750601816081736033" name="jetbrains.mps.lang.generator.plan.structure.InPlaceCheckpointSpec" flags="ng" index="3ps74r" />
     </language>
@@ -36,7 +42,7 @@
     </language>
   </registry>
   <node concept="2VgMpV" id="QNYPlnZohd">
-    <property role="TrG5h" value="JsPhysicsStandalone" />
+    <property role="TrG5h" value="PhysicsGenplan" />
     <node concept="2VgMA2" id="1$oDF1j$MM3" role="2VgMA7">
       <node concept="2V$Bhx" id="6MvaUakvWP0" role="1t_9vn">
         <property role="2V$B1T" value="61cc869c-376a-409d-b749-694ad057266b" />
@@ -49,37 +55,14 @@
     </node>
     <node concept="2VgMA1" id="5EZY1tNvF2o" role="2VgMA7">
       <node concept="3ps74r" id="5EZY1tNvF3h" role="3ps6aC">
-        <property role="TrG5h" value="sync_external_objects" />
+        <property role="TrG5h" value="sync_objects" />
       </node>
     </node>
-    <node concept="NozSJ" id="36QeQ7wk3$q" role="2VgMA7">
-      <ref role="NozSM" node="36QeQ7wk3zQ" resolve="JsPhysics" />
+    <node concept="10T23i" id="2QVH4jdF61O" role="2VgMA7">
+      <ref role="10T23l" to="gt0k:36QeQ7wk363" resolve="JavaPhysics" />
     </node>
-  </node>
-  <node concept="2VgMpV" id="36QeQ7wk3zQ">
-    <property role="TrG5h" value="JsPhysics" />
-    <node concept="2VgMA2" id="36QeQ7wk3$4" role="2VgMA7">
-      <node concept="2V$Bhx" id="36QeQ7wk3$5" role="1t_9vn">
-        <property role="2V$B1T" value="89da005b-492b-4e94-9b6d-b429df99e997" />
-        <property role="2V$B1Q" value="jetbrains.mps.samples.Physics.genjs" />
-      </node>
-      <node concept="2V$Bhx" id="36QeQ7wk3$6" role="1t_9vn">
-        <property role="2V$B1T" value="acbc5fbb-8801-4f62-a053-ab017db885db" />
-        <property role="2V$B1Q" value="org.iets3.core.expr.genjs.base" />
-      </node>
-      <node concept="2V$Bhx" id="36QeQ7wk3$7" role="1t_9vn">
-        <property role="2V$B1T" value="f2122111-2e69-4f81-8e65-120416de80e8" />
-        <property role="2V$B1Q" value="org.iets3.core.expr.genjs.simpleTypes" />
-      </node>
-      <node concept="2V$Bhx" id="36QeQ7wk3$8" role="1t_9vn">
-        <property role="2V$B1T" value="f0534572-e0f4-46cd-8abb-ed67e4c4a375" />
-        <property role="2V$B1Q" value="org.iets3.core.expr.genjs.toplevel" />
-      </node>
-    </node>
-    <node concept="2VgMA1" id="36QeQ7wk3$D" role="2VgMA7">
-      <node concept="3ps74r" id="36QeQ7wk3$E" role="3ps6aC">
-        <property role="TrG5h" value="sync_external_objects" />
-      </node>
+    <node concept="NozSJ" id="2QVH4jdF63j" role="2VgMA7">
+      <ref role="NozSM" to="ukfv:36QeQ7wk3zQ" resolve="JsPhysics" />
     </node>
   </node>
 </model>

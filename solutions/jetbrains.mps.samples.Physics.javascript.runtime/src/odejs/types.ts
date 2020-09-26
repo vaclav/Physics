@@ -169,7 +169,7 @@ declare namespace ODE {
         getLinearVel(): Float32Array;
         getMass(): Mass;
         getNumJoints(): number;
-        //getPointer()​: void;
+        getPointer()​: number;
         getPosition(): Float32Array;
         getQuaternion(): Quaternion;
         getRelPosPoint(px: number, py: number, pz: number): Float32Array;

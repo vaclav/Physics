@@ -2,7 +2,7 @@
 <model ref="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)">
   <persistence version="9" />
   <languages>
-    <devkit ref="dc532898-e561-4cd2-87df-c64e0f83bf04(jetbrains.mps.samples.Physics.devkit.java)" />
+    <devkit ref="d3545384-66e1-4ad1-88b3-a9a60402c2d1(jetbrains.mps.samples.Physics.devkit.all)" />
   </languages>
   <imports>
     <import index="nas6" ref="r:b5e034ba-1b8c-4043-ba59-0ea018a1490f(jetbrains.mps.samples.Physics.units)" />

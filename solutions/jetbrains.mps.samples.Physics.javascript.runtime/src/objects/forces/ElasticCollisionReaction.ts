@@ -36,11 +36,9 @@ export default class ElasticCollisionReaction implements CollisionReaction {
       // Attach only to involved bodies 
       if (otherReaction instanceof ElasticCollisionReaction) {
         joint.attach(targetGeom.getBody(), otherGeom.getBody());
-      } /*else if (otherGeom == contact.geom.g1) {
-        joint.attach(contact.geom.g2.getBody(), null);
       } else {
-        joint.attach(contact.geom.g1.getBody(), null);
-      }*/ // TODO reaction on single joint
+        joint.attach(targetGeom.getBody(), null as unknown as ODE.DBody);
+      }
 
     });
   }

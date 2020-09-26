@@ -8,27 +8,20 @@ export interface RendererCallback {
 }
 
 export default class Renderer {
-  private font: p5.Font | undefined;
-
   constructor(private p: p5, private htmlParentId: string, private callback: RendererCallback) {
   }
 
   public setup(): void {
-    let canvas = this.p.createCanvas(this.p.windowWidth, this.p.windowHeight, this.p.WEBGL);
+    let canvas = this.p.createCanvas(this.p.windowWidth, this.p.windowHeight, this.p.P2D);
     canvas.parent(this.htmlParentId);
 
-    this.p.translate(-this.p.width/2, -this.p.height/2);
-
-    this.p.textFont(this.font!);
-    this.p.background(0);
-    this.p.fill(255);
-    this.p.text("loading textures and setting up properties...", 5, 15);
+    const metricsElement = document.getElementById("metrics")!;
+    const loadingElement = document.createElement("div");
+    metricsElement.appendChild(loadingElement)
+    loadingElement.innerText = "loading textures and setting up properties...";
 
     this.callback.setup(this.p);
-  }
-
-  public preload() {
-    this.font = this.p.loadFont("../font/OpenSans-SemiBold.ttf");
+    metricsElement.removeChild(loadingElement);
   }
 
   public windowResized() {

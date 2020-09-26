@@ -11,7 +11,7 @@ export default class World implements Renderable {
   public entities: Array<PhysicalEntity<any>> = new Array();
 
   public readonly jointGroup: ODE.Joint.Group;
-  private readonly reverseEntities: Map<ODE.DBody, PhysicalEntity<any>> = new Map();
+  private readonly reverseEntities: Map<number, PhysicalEntity<any>> = new Map();
 
   public paused: boolean;
   public time: number;
@@ -45,8 +45,8 @@ export default class World implements Renderable {
         return;
       }
 
-      const e1 = this.reverseEntities.get(g1.getBody())!;
-      const e2 = this.reverseEntities.get(g2.getBody())!;
+      const e1 = this.reverseEntities.get(g1.getBody().getPointer())!;
+      const e2 = this.reverseEntities.get(g2.getBody().getPointer())!;
 
       const first: PhysicalEntity<any> = (hasPriority(e1, e2) ? e1 : e2);
       const second: PhysicalEntity<any> = (first == e1 ? e2 : e1);
@@ -100,7 +100,7 @@ export default class World implements Renderable {
 
   public addEntity(entity: PhysicalEntity<any>): void {
     this.entities.push(entity);
-    this.reverseEntities.set(entity.body, entity);
+    this.reverseEntities.set(entity.body.getPointer(), entity);
   }
 
 
