@@ -3,5 +3,20 @@
   <plan id="JavaPhysicsGenplan">
     <checkpoint id="sync_external_objects" file="javaphysicsgenplan-sync_external_objects.mps" />
   </plan>
+  <plan id="PhysicsGenplan">
+    <checkpoint id="sync_external_objects" file="physicsgenplan-sync_external_objects.mps" />
+  </plan>
+  <plan id="JavaPhysics">
+    <checkpoint id="sync_external_objects" file="javaphysics-sync_external_objects.mps" />
+  </plan>
+  <plan id="PhysicsGenplan">
+    <checkpoint id="sync_objects" file="physicsgenplan-sync_objects.mps" />
+  </plan>
+  <plan id="JsPhysicsStandalone">
+    <checkpoint id="sync_external_objects" file="jsphysicsstandalone-sync_external_objects.mps" />
+  </plan>
+  <plan id="JsPhysics">
+    <checkpoint id="sync_external_objects" file="jsphysics-sync_external_objects.mps" />
+  </plan>
 </checkpoints>
 

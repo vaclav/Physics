@@ -13,6 +13,10 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)</dependency>
+    <dependency reexport="false">9acce587-6589-4aa8-ac72-a79ca62e4d6d(jetbrains.mps.samples.Physics.sandbox@transient18)</dependency>
+    <dependency reexport="false">acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)</dependency>
+    <dependency reexport="false">89da005b-492b-4e94-9b6d-b429df99e997(jetbrains.mps.samples.Physics.genjs)</dependency>
+    <dependency reexport="false">ee05cff5-686d-48b1-b0e9-eb26126e08ef(jetbrains.mps.samples.Physics.sandbox@transient39)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:d4280a54-f6df-4383-aa41-d1b2bffa7eb1:com.mbeddr.core.base" version="5" />
@@ -58,6 +62,9 @@
     <language slang="l:d441fba0-f46b-43cd-b723-dad7b65da615:org.iets3.core.expr.tests" version="1" />
     <language slang="l:71934284-d7d1-45ee-a054-8c072591085f:org.iets3.core.expr.toplevel" version="4" />
     <language slang="l:63c1aad1-e2db-439c-a30a-02b5e0bc80f3:org.iets3.core.expr.tracing" version="0" />
+    <language slang="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" version="14" />
+    <language slang="l:8d94c08e-449e-484b-9e9e-f3e97c8df28a:org.mar9000.mps.ecmascript.bundler" version="0" />
+    <language slang="l:7c445dfe-2a01-4a0e-84bd-4d6b91c112c9:org.mar9000.mps.ecmascript.modules" version="0" />
   </languageVersions>
   <dependencyVersions>
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
@@ -93,6 +100,7 @@
     <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
     <module reference="4129e23c-11ff-404a-811b-44d11ae53a7a(jetbrains.mps.samples.Physics.generation)" version="0" />
     <module reference="e1db2df3-b87f-4fc9-80c7-dacd77b95d37(jetbrains.mps.samples.Physics.sandbox)" version="0" />
+    <module reference="9acce587-6589-4aa8-ac72-a79ca62e4d6d(jetbrains.mps.samples.Physics.sandbox@transient18)" version="0" />
     <module reference="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)" version="0" />
     <module reference="db8bd035-3f51-41d8-8fed-954c202d18be(org.iets3.analysis.base)" version="0" />
     <module reference="7b68d745-a7b8-48b9-bd9c-05c0f8725a35(org.iets3.core.base)" version="0" />
@@ -108,6 +116,7 @@
     <module reference="fde59617-0336-493b-a7ec-21148c3507f1(org.iets3.core.expr.genjava.temporal.rt)" version="0" />
     <module reference="68da6d9d-3ccf-4255-b4f7-37603cd89090(org.iets3.core.expr.genjava.tests.rt)" version="0" />
     <module reference="336cc7f4-18d3-473b-81a1-d8df1c0ad27a(org.iets3.core.expr.genjava.toplevel.rt)" version="0" />
+    <module reference="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" version="0" />
     <module reference="8ba65567-1c8a-4983-beb8-0482324d7e44(org.iets3.core.expr.lambda.interpreter)" version="0" />
     <module reference="0495221f-9fd1-41d6-bf26-b3b8aeb7eb7b(org.iets3.core.expr.lambda.plugin)" version="0" />
     <module reference="dff61827-7f11-4bfe-aeb1-6491ed8a49b2(org.iets3.core.expr.metafunction.interpreter)" version="0" />

@@ -81,6 +81,12 @@
         <property role="TrG5h" value="sync_external_objects" />
       </node>
     </node>
+    <node concept="2VgMA2" id="1muMNVjPrRc" role="2VgMA7">
+      <node concept="2V$Bhx" id="1muMNVjPrRo" role="1t_9vn">
+        <property role="2V$B1T" value="8d94c08e-449e-484b-9e9e-f3e97c8df28a" />
+        <property role="2V$B1Q" value="org.mar9000.mps.ecmascript.bundler" />
+      </node>
+    </node>
   </node>
 </model>
 
