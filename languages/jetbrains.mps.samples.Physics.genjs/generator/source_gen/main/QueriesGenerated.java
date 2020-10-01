@@ -229,7 +229,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return (int) Force__BehaviorDescriptor.getForceMode_id4$vyCQBiMP2.invoke(_context.getNode()) + "";
   }
   public static Object propertyMacro_GetValue_16_0(final PropertyMacroContext _context) {
-    return _context.createUniqueValidId(_context.getNode());
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL).replace("_", "__").replace(" ", "_");
   }
   public static Object propertyMacro_GetValue_18_0(final PropertyMacroContext _context) {
     return _context.createUniqueValidId(_context.getNode());

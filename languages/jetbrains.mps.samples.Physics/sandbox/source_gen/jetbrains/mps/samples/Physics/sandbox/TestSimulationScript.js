@@ -4,7 +4,7 @@
 */
 
 // Should include module : MilkyWay
-class TestSimulation1 extends Physics.Simulation {
+class TestSimulation extends Physics.Simulation {
   constructor() {
     super(((6 * 1)), 1);
   }
@@ -23,4 +23,4 @@ class TestSimulation1 extends Physics.Simulation {
   }
 }
 
-Physics.simulationClasses.push(TestSimulation1);
+Physics.simulationClasses.push(TestSimulation);

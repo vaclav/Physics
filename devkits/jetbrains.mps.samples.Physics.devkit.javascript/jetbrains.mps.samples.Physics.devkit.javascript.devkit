@@ -7,6 +7,6 @@
   <exported-solutions>
     <exported-solution>4129e23c-11ff-404a-811b-44d11ae53a7a(jetbrains.mps.samples.Physics.generation)</exported-solution>
   </exported-solutions>
-  <generation-plan model="r:0586ebfb-1462-40c0-a900-a1de5a3e141e(jetbrains.mps.samples.Physics.generation.javascript)" />
+  <generation-plan model="r:7a5353ee-4dca-49b5-b4e7-9e132b6ba90d(jetbrains.mps.samples.Physics.generation.javascript.standalone)" />
 </dev-kit>
 

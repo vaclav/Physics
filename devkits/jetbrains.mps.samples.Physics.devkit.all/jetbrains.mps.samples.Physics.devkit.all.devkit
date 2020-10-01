@@ -4,6 +4,6 @@
     <extendedDevKit>dc532898-e561-4cd2-87df-c64e0f83bf04(jetbrains.mps.samples.Physics.devkit.java)</extendedDevKit>
     <extendedDevKit>547e676f-2a24-489d-8040-091b52e3e470(jetbrains.mps.samples.Physics.devkit.javascript)</extendedDevKit>
   </extendedDevKits>
-  <generation-plan model="r:a0704b6b-f943-4f1f-bde9-32ae8f5692a6(jetbrains.mps.samples.Physics.generation.all)" />
+  <generation-plan model="r:7a5353ee-4dca-49b5-b4e7-9e132b6ba90d(jetbrains.mps.samples.Physics.generation.javascript.standalone)" />
 </dev-kit>
 

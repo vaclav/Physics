@@ -4,7 +4,7 @@
 */
 
 // Should include module : RocketWorld
-class RocketSim1 extends Physics.Simulation {
+class RocketSim extends Physics.Simulation {
   constructor() {
     super(((1 * 60)), ((10 * 1)));
   }
@@ -27,4 +27,4 @@ class RocketSim1 extends Physics.Simulation {
   }
 }
 
-Physics.simulationClasses.push(RocketSim1);
+Physics.simulationClasses.push(RocketSim);

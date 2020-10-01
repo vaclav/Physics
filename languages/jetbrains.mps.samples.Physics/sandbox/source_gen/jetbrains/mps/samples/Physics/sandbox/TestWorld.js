@@ -3,7 +3,7 @@
   Generated from a ECMAScript model by JetBrains MPS.
 */
 
-// Should include module : World2// Should include module : ObjectSupertype// Should include module : BaseObject// Should include module : // Should include module : XYZForce
+// Should include module : World2// Should include module : ObjectSupertype// Should include module : BaseObject// Should include module : Gravitation// Should include module : XYZForce
 class Something2 extends ObjectSupertype1 {
   init() {
     this.setMass(((20 * 1)));
@@ -35,7 +35,7 @@ class Something2 extends ObjectSupertype1 {
       };
     })), new Physics.ForceMapper(this, ((context, mapper) => {
       
-      return (this, (4 * ((1 * 1)))).compute();
+      return computeGravitation1(this, (4 * ((1 * 1)))).compute();
     })), new Physics.ForceMapper(this, ((context, mapper) => {
       
       return computeXYZForce1(this, ((4 * 1)), ((4 * 1)), ((4 * 1))).compute();

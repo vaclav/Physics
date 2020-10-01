@@ -3,8 +3,8 @@
   <persistence version="9" />
   <attribute name="checkpoint" value="sync_external_objects" />
   <attribute name="user-objects" value="true" />
-  <attribute name="prev-generation-plan" value="PhysicsGenplan" />
-  <attribute name="prev-checkpoint" value="sync_objects" />
+  <attribute name="prev-generation-plan" value="JsPhysicsStandalone" />
+  <attribute name="prev-checkpoint" value="sync_external_objects" />
   <attribute name="generation-plan" value="JsPhysics" />
   <languages />
   <imports>
@@ -5107,7 +5107,7 @@
       <uo k="s:originTrace" v="n:419" />
     </node>
     <node concept="36SGkD" id="mO" role="1dSqon">
-      <ref role="36SuZX" to="rz87:8J" />
+      <ref role="36SuZX" to="rz87:8J" resolve="Gravitation" />
       <uo k="s:originTrace" v="n:419" />
     </node>
     <node concept="1dSrUV" id="mP" role="1dSqon">
@@ -5341,7 +5341,7 @@
                                     </node>
                                   </node>
                                   <node concept="2WqeGl" id="o2" role="2dhSgj">
-                                    <ref role="2WqeGo" to="rz87:8Q" />
+                                    <ref role="2WqeGo" to="rz87:8Q" resolve="computeGravitation1" />
                                     <uo k="s:originTrace" v="n:420" />
                                   </node>
                                 </node>
@@ -8798,247 +8798,247 @@
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cb" role="2DRAPQ">
-                <property role="2DPR8u" value="    class Renderer {" />
+                <property role="2DPR8u" value="    const FRAMERATE = 40;" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cc" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(p, htmlParentId, callback) {" />
+                <property role="2DPR8u" value="    class Renderer {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cd" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.p = p;" />
+                <property role="2DPR8u" value="        constructor(p, htmlParentId, callback) {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Ce" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.htmlParentId = htmlParentId;" />
+                <property role="2DPR8u" value="            this.p = p;" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cf" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.callback = callback;" />
+                <property role="2DPR8u" value="            this.htmlParentId = htmlParentId;" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cg" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+                <property role="2DPR8u" value="            this.callback = callback;" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Ch" role="2DRAPQ">
-                <property role="2DPR8u" value="        setup() {" />
+                <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Ci" role="2DRAPQ">
-                <property role="2DPR8u" value="            let canvas = this.p.createCanvas(this.p.windowWidth, this.p.windowHeight, this.p.P2D);" />
+                <property role="2DPR8u" value="        setup() {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cj" role="2DRAPQ">
-                <property role="2DPR8u" value="            canvas.parent(this.htmlParentId);" />
+                <property role="2DPR8u" value="            let canvas = this.p.createCanvas(this.p.windowWidth, this.p.windowHeight, this.p.P2D);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Ck" role="2DRAPQ">
-                <property role="2DPR8u" value="            const metricsElement = document.getElementById(&quot;metrics&quot;);" />
+                <property role="2DPR8u" value="            canvas.parent(this.htmlParentId);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cl" role="2DRAPQ">
-                <property role="2DPR8u" value="            const loadingElement = document.createElement(&quot;div&quot;);" />
+                <property role="2DPR8u" value="            const metricsElement = document.getElementById(&quot;metrics&quot;);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cm" role="2DRAPQ">
-                <property role="2DPR8u" value="            metricsElement.appendChild(loadingElement);" />
+                <property role="2DPR8u" value="            const loadingElement = document.createElement(&quot;div&quot;);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cn" role="2DRAPQ">
-                <property role="2DPR8u" value="            loadingElement.innerText = &quot;loading textures and setting up properties...&quot;;" />
+                <property role="2DPR8u" value="            metricsElement.appendChild(loadingElement);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Co" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.callback.setup(this.p);" />
+                <property role="2DPR8u" value="            loadingElement.innerText = &quot;loading textures and setting up properties...&quot;;" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cp" role="2DRAPQ">
-                <property role="2DPR8u" value="            metricsElement.removeChild(loadingElement);" />
+                <property role="2DPR8u" value="            this.callback.setup(this.p);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cq" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+                <property role="2DPR8u" value="            metricsElement.removeChild(loadingElement);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cr" role="2DRAPQ">
-                <property role="2DPR8u" value="        windowResized() {" />
+                <property role="2DPR8u" value="            this.p.frameRate(FRAMERATE);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cs" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.p.resizeCanvas(this.p.windowWidth, this.p.windowHeight);" />
+                <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Ct" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.callback.frameResized(this.p, this.p.windowWidth, this.p.windowHeight);" />
+                <property role="2DPR8u" value="        windowResized() {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cu" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+                <property role="2DPR8u" value="            this.p.resizeCanvas(this.p.windowWidth, this.p.windowHeight);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cv" role="2DRAPQ">
-                <property role="2DPR8u" value="        draw() {" />
+                <property role="2DPR8u" value="            this.callback.frameResized(this.p, this.p.windowWidth, this.p.windowHeight);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cw" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.p.background(0);" />
+                <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cx" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.p.translate(-this.p.width / 2, -this.p.height / 2);" />
+                <property role="2DPR8u" value="        draw() {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cy" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.callback.render(this.p, this.p);" />
+                <property role="2DPR8u" value="            this.p.background(0);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Cz" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+                <property role="2DPR8u" value="            //this.p.translate(-this.p.width/2, -this.p.height/2);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="C$" role="2DRAPQ">
-                <property role="2DPR8u" value="        keyPressed() {" />
+                <property role="2DPR8u" value="            this.callback.render(this.p, this.p);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="C_" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.callback.keyPressed(this.p.keyCode);" />
+                <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CA" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+                <property role="2DPR8u" value="        keyPressed() {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CB" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
+                <property role="2DPR8u" value="            this.callback.keyPressed(this.p.keyCode);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CC" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
+                <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CD" role="2DRAPQ">
-                <property role="2DPR8u" value="    class CompositeRendererCallback {" />
+                <property role="2DPR8u" value="    }" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CE" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(...simulations) {" />
+                <property role="2DPR8u" value="" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CF" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.simulations = [];" />
+                <property role="2DPR8u" value="    class CompositeRendererCallback {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CG" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.graphics = [];" />
+                <property role="2DPR8u" value="        constructor(...simulations) {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CH" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.viewWidth = 0;" />
+                <property role="2DPR8u" value="            this.simulations = [];" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CI" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.simulations = simulations;" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CJ" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CK" role="2DRAPQ">
-                <property role="2DPR8u" value="        setup(renderer) {" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CL" role="2DRAPQ">
-                <property role="2DPR8u" value="            for (let i = 0; i &lt; this.simulations.length; i++) {" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CM" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.simulations[i].setup(renderer);" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CN" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CO" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.viewWidth = renderer.width / this.simulations.length;" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CP" role="2DRAPQ">
                 <property role="2DPR8u" value="            this.graphics = [];" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
-              <node concept="2DRAP_" id="CQ" role="2DRAPQ">
+              <node concept="2DRAP_" id="CJ" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.viewWidth = 0;" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="CK" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.simulations = simulations;" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="CL" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="CM" role="2DRAPQ">
+                <property role="2DPR8u" value="        setup(renderer) {" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="CN" role="2DRAPQ">
                 <property role="2DPR8u" value="            for (let i = 0; i &lt; this.simulations.length; i++) {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
+              <node concept="2DRAP_" id="CO" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.simulations[i].setup(renderer);" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="CP" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="CQ" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.viewWidth = renderer.width / this.simulations.length;" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
               <node concept="2DRAP_" id="CR" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.graphics[i] = renderer.createGraphics(this.viewWidth, renderer.height, renderer.WEBGL);" />
+                <property role="2DPR8u" value="            this.graphics = [];" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CS" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
+                <property role="2DPR8u" value="            for (let i = 0; i &lt; this.simulations.length; i++) {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CT" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+                <property role="2DPR8u" value="                this.graphics[i] = renderer.createGraphics(this.viewWidth, renderer.height, renderer.WEBGL);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="CU" role="2DRAPQ">
-                <property role="2DPR8u" value="        keyPressed(code) {" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CV" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Space bar " />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CW" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (code == 32) {" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CX" role="2DRAPQ">
-                <property role="2DPR8u" value="                const paused = this.simulations[0].world.paused;" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CY" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.simulations.forEach(it =&gt; it.world.paused = !paused);" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="CZ" role="2DRAPQ">
                 <property role="2DPR8u" value="            }" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
-              <node concept="2DRAP_" id="D0" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.simulations.forEach(it =&gt; it.keyPressed(code));" />
-                <uo k="s:originTrace" v="n:869" />
-              </node>
-              <node concept="2DRAP_" id="D1" role="2DRAPQ">
+              <node concept="2DRAP_" id="CV" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
+              <node concept="2DRAP_" id="CW" role="2DRAPQ">
+                <property role="2DPR8u" value="        keyPressed(code) {" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="CX" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Space bar " />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="CY" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (code == 32) {" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="CZ" role="2DRAPQ">
+                <property role="2DPR8u" value="                const paused = this.simulations[0].world.paused;" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="D0" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.simulations.forEach(it =&gt; it.world.paused = !paused);" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
+              <node concept="2DRAP_" id="D1" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:869" />
+              </node>
               <node concept="2DRAP_" id="D2" role="2DRAPQ">
-                <property role="2DPR8u" value="        render(applet, context) {" />
+                <property role="2DPR8u" value="            this.simulations.forEach(it =&gt; it.keyPressed(code));" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="D3" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.simulations.forEach((it, i) =&gt; {" />
+                <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="D4" role="2DRAPQ">
-                <property role="2DPR8u" value="                //this.graphics[i].beginDraw();" />
+                <property role="2DPR8u" value="        render(applet, context) {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="D5" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.graphics[i].clear();" />
+                <property role="2DPR8u" value="            this.simulations.forEach((it, i) =&gt; {" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="D6" role="2DRAPQ">
-                <property role="2DPR8u" value="                it.render(applet, this.graphics[i]);" />
+                <property role="2DPR8u" value="                this.graphics[i].clear();" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="D7" role="2DRAPQ">
-                <property role="2DPR8u" value="                //this.graphics[i].endDraw();" />
+                <property role="2DPR8u" value="                it.render(applet, this.graphics[i]);" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="D8" role="2DRAPQ">
@@ -9450,7 +9450,7 @@
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="EI" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.timeStep = secondDuration / 60;" />
+                <property role="2DPR8u" value="            this.timeStep = secondDuration / FRAMERATE;" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="EJ" role="2DRAPQ">
@@ -10614,7 +10614,7 @@
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Jh" role="2DRAPQ">
-                <property role="2DPR8u" value="                    joint.attach(targetGeom.getBody(), otherGeom.getBody());" />
+                <property role="2DPR8u" value="                    joint.attach(otherGeom.getBody(), targetGeom.getBody());" />
                 <uo k="s:originTrace" v="n:869" />
               </node>
               <node concept="2DRAP_" id="Ji" role="2DRAPQ">
@@ -13792,7 +13792,7 @@
         </node>
       </node>
       <node concept="1mvZK$" id="Vx" role="2DT8gC">
-        <property role="TrG5h" value="TestSimulation1" />
+        <property role="TrG5h" value="TestSimulation" />
         <uo k="s:originTrace" v="n:869" />
       </node>
       <node concept="2dhVqD" id="Vy" role="2DT8gE">
@@ -14266,7 +14266,7 @@
       <uo k="s:originTrace" v="n:897" />
     </node>
     <node concept="36SGkD" id="XJ" role="1dSqon">
-      <ref role="36SuZX" to="rz87:8J" />
+      <ref role="36SuZX" to="rz87:8J" resolve="Gravitation" />
       <uo k="s:originTrace" v="n:897" />
     </node>
     <node concept="36SGkD" id="XK" role="1dSqon">
@@ -15381,7 +15381,7 @@
                                     </node>
                                   </node>
                                   <node concept="2WqeGl" id="136" role="2dhSgj">
-                                    <ref role="2WqeGo" to="rz87:8Q" />
+                                    <ref role="2WqeGo" to="rz87:8Q" resolve="computeGravitation1" />
                                     <uo k="s:originTrace" v="n:904" />
                                   </node>
                                 </node>

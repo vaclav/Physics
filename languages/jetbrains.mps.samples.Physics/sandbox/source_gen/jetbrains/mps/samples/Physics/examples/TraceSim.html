@@ -27,6 +27,7 @@
     <script>var Physics = (function () {
     'use strict';
 
+    const FRAMERATE = 40;
     class Renderer {
         constructor(p, htmlParentId, callback) {
             this.p = p;
@@ -42,6 +43,7 @@
             loadingElement.innerText = "loading textures and setting up properties...";
             this.callback.setup(this.p);
             metricsElement.removeChild(loadingElement);
+            this.p.frameRate(FRAMERATE);
         }
         windowResized() {
             this.p.resizeCanvas(this.p.windowWidth, this.p.windowHeight);
@@ -49,7 +51,7 @@
         }
         draw() {
             this.p.background(0);
-            this.p.translate(-this.p.width / 2, -this.p.height / 2);
+            //this.p.translate(-this.p.width/2, -this.p.height/2);
             this.callback.render(this.p, this.p);
         }
         keyPressed() {
@@ -84,10 +86,8 @@
         }
         render(applet, context) {
             this.simulations.forEach((it, i) => {
-                //this.graphics[i].beginDraw();
                 this.graphics[i].clear();
                 it.render(applet, this.graphics[i]);
-                //this.graphics[i].endDraw();
             });
             this.graphics.forEach((it, i) => context.image(it, this.viewWidth * i, 0));
         }
@@ -190,7 +190,7 @@
         constructor(secondDuration) {
             this.entities = new Array();
             this.reverseEntities = new Map();
-            this.timeStep = secondDuration / 60;
+            this.timeStep = secondDuration / FRAMERATE;
             this.time = 0;
             this.paused = false;
             this.world = new ODE.World();
@@ -465,7 +465,7 @@
             this.bounceRatio = bouncePercent / 100;
         }
         react(world, target, targetGeom, otherObject, otherGeom) {
-            ODE.Geom.collide(targetGeom, otherGeom, 32, contact => {
+            ODE.Geom.collide(targetGeom, otherGeom, 8, contact => {
                 const otherReaction = otherObject.properties.collisionReaction;
                 // Set bounce ratio 
                 if (otherReaction instanceof ElasticCollisionReaction) {
@@ -1328,7 +1328,7 @@ class TracedObjects1 extends Physics.SystemScope {
 }
         
         
-class TraceSim1 extends Physics.Simulation {
+class TraceSim extends Physics.Simulation {
           constructor() {
             super(((80 * 1)), ((2 * 1)));
           }
@@ -1345,14 +1345,14 @@ class TraceSim1 extends Physics.Simulation {
             return new Physics.Vector(0, 0, 0);
           }
 }
-class TraceSim2_0 extends TraceSim1 {
+class TraceSim1_0 extends TraceSim {
           initScope(world) {
             (super["initScope"])(world);
             this.scope.object_MovingObject.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.InfiniteTraceHandler(new Physics.InternalColor(0, 255, 0)));
             this.scope.object_MovingObject2.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.InfiniteTraceHandler(new Physics.InternalColor(160, 32, 240)));
           }
 }
-class TraceSim3_1 extends TraceSim1 {
+class TraceSim2_1 extends TraceSim {
           initScope(world) {
             (super["initScope"])(world);
             this.scope.object_MovingObject.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.FiniteTraceHandler(new Physics.InternalColor(255, 255, 0)));
@@ -1360,7 +1360,7 @@ class TraceSim3_1 extends TraceSim1 {
           }
 }
         
-        Physics.simulationClasses.push(TraceSim1, TraceSim2_0, TraceSim3_1);
+        Physics.simulationClasses.push(TraceSim, TraceSim1_0, TraceSim2_1);
 </script>
     <script>ODE.readyPromise.then(Physics.makeRenderer).then(console.log);</script>
   </body>

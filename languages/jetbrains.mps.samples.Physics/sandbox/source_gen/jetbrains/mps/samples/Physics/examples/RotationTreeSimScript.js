@@ -4,7 +4,7 @@
 */
 
 // Should include module : TreeRoot
-class RotationTreeSim1 extends Physics.Simulation {
+class RotationTreeSim extends Physics.Simulation {
   constructor() {
     super(((10 * 1)), 1);
   }
@@ -25,4 +25,4 @@ class RotationTreeSim1 extends Physics.Simulation {
   }
 }
 
-Physics.simulationClasses.push(RotationTreeSim1);
+Physics.simulationClasses.push(RotationTreeSim);

@@ -5,11 +5,6 @@
       <sourceRoot location="models" />
     </modelRoot>
   </models>
-  <facets>
-    <facet type="java">
-      <classes generated="true" path="${module}/classes_gen" />
-    </facet>
-  </facets>
   <accessoryModels />
   <generators>
     <generator alias="main" namespace="jetbrains.mps.samples.Physics.dimensions#8609460045976868312" uuid="fa23285b-41c8-420e-bfd0-160dc7b04300">

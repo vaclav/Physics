@@ -4,7 +4,7 @@
 */
 
 // Should include module : SolarSystem
-class SolarSystemSim1 extends Physics.Simulation {
+class SolarSystemSim extends Physics.Simulation {
   constructor() {
     super(((10 * 86396)), ((1000 * 1.00E+3)));
   }
@@ -24,7 +24,7 @@ class SolarSystemSim1 extends Physics.Simulation {
     return this.scope.object_EarthNested.object_Earth;
   }
 }
-class SolarSystemSim2_0 extends SolarSystemSim1 {
+class SolarSystemSim1_0 extends SolarSystemSim {
   initScope(world) {
     (super["initScope"])(world);
     this.scope.object_EarthNested.object_Earth.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.FiniteTraceHandler(new Physics.InternalColor(0, 0, 255)));
@@ -39,4 +39,4 @@ class SolarSystemSim2_0 extends SolarSystemSim1 {
   }
 }
 
-Physics.simulationClasses.push(SolarSystemSim1, SolarSystemSim2_0);
+Physics.simulationClasses.push(SolarSystemSim, SolarSystemSim1_0);

@@ -3,8 +3,8 @@
   <persistence version="9" />
   <attribute name="checkpoint" value="sync_external_objects" />
   <attribute name="user-objects" value="true" />
-  <attribute name="prev-generation-plan" value="PhysicsGenplan" />
-  <attribute name="prev-checkpoint" value="sync_objects" />
+  <attribute name="prev-generation-plan" value="JsPhysicsStandalone" />
+  <attribute name="prev-checkpoint" value="sync_external_objects" />
   <attribute name="generation-plan" value="JsPhysics" />
   <languages />
   <imports>

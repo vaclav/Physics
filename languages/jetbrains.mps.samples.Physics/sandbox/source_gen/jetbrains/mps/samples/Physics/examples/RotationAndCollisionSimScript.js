@@ -4,7 +4,7 @@
 */
 
 // Should include module : RotationAndCollision
-class RotationAndCollisionSim1 extends Physics.Simulation {
+class RotationAndCollisionSim extends Physics.Simulation {
   constructor() {
     super(((15 * 1)), 1);
   }
@@ -24,11 +24,11 @@ class RotationAndCollisionSim1 extends Physics.Simulation {
     return this.scope.object_MovingBlock;
   }
 }
-class RotationAndCollisionSim2_0 extends RotationAndCollisionSim1 {
+class RotationAndCollisionSim1_0 extends RotationAndCollisionSim {
   initScope(world) {
     (super["initScope"])(world);
     this.scope.object_MovingBlock.setVelocity(this.scope.object_StaticBlock.minus(this.scope.object_MovingBlock).resize((((((100 * 1)) / ((5 * 1))) + ((1 * 1))) + ((1 * 1)))));
   }
 }
 
-Physics.simulationClasses.push(RotationAndCollisionSim1, RotationAndCollisionSim2_0);
+Physics.simulationClasses.push(RotationAndCollisionSim, RotationAndCollisionSim1_0);

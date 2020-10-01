@@ -9,9 +9,6 @@
   <imports />
   <registry>
     <language id="7ab1a6fa-0a11-4b95-9e48-75f363d6cb00" name="jetbrains.mps.lang.generator.plan">
-      <concept id="3705377275350227759" name="jetbrains.mps.lang.generator.plan.structure.IncludePlan" flags="ng" index="NozSJ">
-        <reference id="3705377275350227762" name="plan" index="NozSM" />
-      </concept>
       <concept id="1820634577908471803" name="jetbrains.mps.lang.generator.plan.structure.Plan" flags="ng" index="2VgMpV">
         <child id="1820634577908471815" name="steps" index="2VgMA7" />
       </concept>
@@ -35,27 +32,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="2VgMpV" id="QNYPlnZohd">
-    <property role="TrG5h" value="JsPhysicsStandalone" />
-    <node concept="2VgMA2" id="1$oDF1j$MM3" role="2VgMA7">
-      <node concept="2V$Bhx" id="6MvaUakvWP0" role="1t_9vn">
-        <property role="2V$B1T" value="61cc869c-376a-409d-b749-694ad057266b" />
-        <property role="2V$B1Q" value="jetbrains.mps.samples.Physics.genbase" />
-      </node>
-      <node concept="2V$Bhx" id="4voYOerBvNB" role="1t_9vn">
-        <property role="2V$B1T" value="3571bff8-cf91-4cd7-b8b7-baa06abadf7c" />
-        <property role="2V$B1Q" value="jetbrains.mps.samples.Physics.dimensions" />
-      </node>
-    </node>
-    <node concept="2VgMA1" id="5EZY1tNvF2o" role="2VgMA7">
-      <node concept="3ps74r" id="5EZY1tNvF3h" role="3ps6aC">
-        <property role="TrG5h" value="sync_external_objects" />
-      </node>
-    </node>
-    <node concept="NozSJ" id="36QeQ7wk3$q" role="2VgMA7">
-      <ref role="NozSM" node="36QeQ7wk3zQ" resolve="JsPhysics" />
-    </node>
-  </node>
   <node concept="2VgMpV" id="36QeQ7wk3zQ">
     <property role="TrG5h" value="JsPhysics" />
     <node concept="2VgMA2" id="36QeQ7wk3$4" role="2VgMA7">

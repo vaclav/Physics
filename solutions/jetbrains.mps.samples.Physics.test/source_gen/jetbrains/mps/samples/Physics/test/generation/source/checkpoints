@@ -6,5 +6,8 @@
   <plan id="JavaPhysics">
     <checkpoint id="sync_external_objects" file="javaphysics-sync_external_objects.mps" />
   </plan>
+  <plan id="JavaPhysicsStandalone">
+    <checkpoint id="sync" file="javaphysicsstandalone-sync.mps" />
+  </plan>
 </checkpoints>
 

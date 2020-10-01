@@ -27,6 +27,7 @@
     <script>var Physics = (function () {
     'use strict';
 
+    const FRAMERATE = 40;
     class Renderer {
         constructor(p, htmlParentId, callback) {
             this.p = p;
@@ -42,6 +43,7 @@
             loadingElement.innerText = "loading textures and setting up properties...";
             this.callback.setup(this.p);
             metricsElement.removeChild(loadingElement);
+            this.p.frameRate(FRAMERATE);
         }
         windowResized() {
             this.p.resizeCanvas(this.p.windowWidth, this.p.windowHeight);
@@ -49,7 +51,7 @@
         }
         draw() {
             this.p.background(0);
-            this.p.translate(-this.p.width / 2, -this.p.height / 2);
+            //this.p.translate(-this.p.width/2, -this.p.height/2);
             this.callback.render(this.p, this.p);
         }
         keyPressed() {
@@ -84,10 +86,8 @@
         }
         render(applet, context) {
             this.simulations.forEach((it, i) => {
-                //this.graphics[i].beginDraw();
                 this.graphics[i].clear();
                 it.render(applet, this.graphics[i]);
-                //this.graphics[i].endDraw();
             });
             this.graphics.forEach((it, i) => context.image(it, this.viewWidth * i, 0));
         }
@@ -190,7 +190,7 @@
         constructor(secondDuration) {
             this.entities = new Array();
             this.reverseEntities = new Map();
-            this.timeStep = secondDuration / 60;
+            this.timeStep = secondDuration / FRAMERATE;
             this.time = 0;
             this.paused = false;
             this.world = new ODE.World();
@@ -465,7 +465,7 @@
             this.bounceRatio = bouncePercent / 100;
         }
         react(world, target, targetGeom, otherObject, otherGeom) {
-            ODE.Geom.collide(targetGeom, otherGeom, 32, contact => {
+            ODE.Geom.collide(targetGeom, otherGeom, 8, contact => {
                 const otherReaction = otherObject.properties.collisionReaction;
                 // Set bounce ratio 
                 if (otherReaction instanceof ElasticCollisionReaction) {
@@ -1330,7 +1330,7 @@ class RotationAndCollision1 extends Physics.SystemScope {
 }
         
         
-class RotationAndCollisionSim1 extends Physics.Simulation {
+class RotationAndCollisionSim extends Physics.Simulation {
           constructor() {
             super(((15 * 1)), 1);
           }
@@ -1350,14 +1350,14 @@ class RotationAndCollisionSim1 extends Physics.Simulation {
             return this.scope.object_MovingBlock;
           }
 }
-class RotationAndCollisionSim2_0 extends RotationAndCollisionSim1 {
+class RotationAndCollisionSim1_0 extends RotationAndCollisionSim {
           initScope(world) {
             (super["initScope"])(world);
             this.scope.object_MovingBlock.setVelocity(this.scope.object_StaticBlock.minus(this.scope.object_MovingBlock).resize((((((100 * 1)) / ((5 * 1))) + ((1 * 1))) + ((1 * 1)))));
           }
 }
         
-        Physics.simulationClasses.push(RotationAndCollisionSim1, RotationAndCollisionSim2_0);
+        Physics.simulationClasses.push(RotationAndCollisionSim, RotationAndCollisionSim1_0);
 </script>
     <script>ODE.readyPromise.then(Physics.makeRenderer).then(console.log);</script>
   </body>

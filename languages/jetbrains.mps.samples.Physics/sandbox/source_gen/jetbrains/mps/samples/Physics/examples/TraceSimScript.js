@@ -4,7 +4,7 @@
 */
 
 // Should include module : TracedObjects
-class TraceSim1 extends Physics.Simulation {
+class TraceSim extends Physics.Simulation {
   constructor() {
     super(((80 * 1)), ((2 * 1)));
   }
@@ -21,14 +21,14 @@ class TraceSim1 extends Physics.Simulation {
     return new Physics.Vector(0, 0, 0);
   }
 }
-class TraceSim2_0 extends TraceSim1 {
+class TraceSim1_0 extends TraceSim {
   initScope(world) {
     (super["initScope"])(world);
     this.scope.object_MovingObject.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.InfiniteTraceHandler(new Physics.InternalColor(0, 255, 0)));
     this.scope.object_MovingObject2.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.InfiniteTraceHandler(new Physics.InternalColor(160, 32, 240)));
   }
 }
-class TraceSim3_1 extends TraceSim1 {
+class TraceSim2_1 extends TraceSim {
   initScope(world) {
     (super["initScope"])(world);
     this.scope.object_MovingObject.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.FiniteTraceHandler(new Physics.InternalColor(255, 255, 0)));
@@ -36,4 +36,4 @@ class TraceSim3_1 extends TraceSim1 {
   }
 }
 
-Physics.simulationClasses.push(TraceSim1, TraceSim2_0, TraceSim3_1);
+Physics.simulationClasses.push(TraceSim, TraceSim1_0, TraceSim2_1);

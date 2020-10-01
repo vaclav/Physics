@@ -4,7 +4,7 @@
 */
 
 // Should include module : FallingBallWorld
-class FallingBall1 extends Physics.Simulation {
+class FallingBall extends Physics.Simulation {
   constructor() {
     super(((5 * 1)), 1);
   }
@@ -30,11 +30,11 @@ class FallingBall1 extends Physics.Simulation {
     return new Physics.Vector(this.scope.object_Ball.getPosition().x(), (((100 * 1)) + ((40 * 1))), 0);
   }
 }
-class FallingBall2_0 extends FallingBall1 {
+class FallingBall1_0 extends FallingBall {
   initScope(world) {
     (super["initScope"])(world);
     this.scope.object_Ball.setMass(((35 * 1)));
   }
 }
 
-Physics.simulationClasses.push(FallingBall1, FallingBall2_0);
+Physics.simulationClasses.push(FallingBall, FallingBall1_0);

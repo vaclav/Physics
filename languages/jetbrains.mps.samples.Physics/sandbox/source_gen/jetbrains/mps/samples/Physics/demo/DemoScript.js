@@ -4,7 +4,7 @@
 */
 
 // Should include module : SunDemo
-class Demo1 extends Physics.Simulation {
+class Demo extends Physics.Simulation {
   constructor() {
     super(((.5 * 1)), 1);
   }
@@ -26,4 +26,4 @@ class Demo1 extends Physics.Simulation {
   }
 }
 
-Physics.simulationClasses.push(Demo1);
+Physics.simulationClasses.push(Demo);

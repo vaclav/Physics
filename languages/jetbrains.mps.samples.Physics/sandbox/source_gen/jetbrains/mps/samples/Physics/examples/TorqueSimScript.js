@@ -4,7 +4,7 @@
 */
 
 // Should include module : Torque
-class TorqueSim1 extends Physics.Simulation {
+class TorqueSim extends Physics.Simulation {
   constructor() {
     super(((30 * 1)), 1);
   }
@@ -25,7 +25,7 @@ class TorqueSim1 extends Physics.Simulation {
     return this.scope.object_SampleBox;
   }
 }
-class TorqueSim2_0 extends TorqueSim1 {
+class TorqueSim1_0 extends TorqueSim {
   initScope(world) {
     (super["initScope"])(world);
     this.scope.object_SampleBox.setMass(((600 * 1)));
@@ -33,4 +33,4 @@ class TorqueSim2_0 extends TorqueSim1 {
   }
 }
 
-Physics.simulationClasses.push(TorqueSim1, TorqueSim2_0);
+Physics.simulationClasses.push(TorqueSim, TorqueSim1_0);

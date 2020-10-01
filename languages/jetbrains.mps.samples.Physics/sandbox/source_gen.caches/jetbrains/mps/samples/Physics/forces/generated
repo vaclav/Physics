@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <product version="3" modelHash="evijeiqkpbta3efoyefezu1j51c10rq">
-  <files names="AirResistance.js:AirResistanceForce.java:BaseObject.js:BaseObjectAbstractEntity.java:Gravitation.js:GravitationForce.java:InteractionForce.js:InteractionForceForce.java:RealGravitation.js:RealGravitationForce.java" />
+  <files names="AirResistance.js:BaseObject.js:Gravitation.js:InteractionForce.js:RealGravitation.js" />
 </product>
 

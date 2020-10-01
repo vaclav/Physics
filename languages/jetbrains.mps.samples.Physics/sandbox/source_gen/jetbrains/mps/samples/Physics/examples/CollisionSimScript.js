@@ -4,7 +4,7 @@
 */
 
 // Should include module : CollisionWorld
-class CollisionSim1 extends Physics.Simulation {
+class CollisionSim extends Physics.Simulation {
   constructor() {
     super(((500 * 1)), 1);
   }
@@ -25,4 +25,4 @@ class CollisionSim1 extends Physics.Simulation {
   }
 }
 
-Physics.simulationClasses.push(CollisionSim1);
+Physics.simulationClasses.push(CollisionSim);

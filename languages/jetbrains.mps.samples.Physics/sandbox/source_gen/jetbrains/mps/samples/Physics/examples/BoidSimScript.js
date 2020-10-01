@@ -4,7 +4,7 @@
 */
 
 // Should include module : BoidGroup
-class BoidSim1 extends Physics.Simulation {
+class BoidSim extends Physics.Simulation {
   constructor() {
     super(((1 * 1)), 1);
   }
@@ -25,4 +25,4 @@ class BoidSim1 extends Physics.Simulation {
   }
 }
 
-Physics.simulationClasses.push(BoidSim1);
+Physics.simulationClasses.push(BoidSim);

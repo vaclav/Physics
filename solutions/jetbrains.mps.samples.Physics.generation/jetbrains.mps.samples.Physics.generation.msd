@@ -23,6 +23,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="4129e23c-11ff-404a-811b-44d11ae53a7a(jetbrains.mps.samples.Physics.generation)" version="0" />
+    <module reference="1b24265d-3790-491d-b330-873984c11d6e(org.mar9000.mps.ecmascript.bundler)" version="0" />
   </dependencyVersions>
 </solution>
 

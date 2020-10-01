@@ -13,6 +13,6 @@
     <extendedDevKit>da9c5738-b245-4e38-b52f-e6ee76cadd7f(org.iets3.core.expr.genjava.core.devkit)</extendedDevKit>
     <extendedDevKit>94dba95f-0505-4d04-a64d-85519150f750(jetbrains.mps.samples.Physics.devkit.base)</extendedDevKit>
   </extendedDevKits>
-  <generation-plan model="r:73d025c2-c607-49cb-8e8b-ca71677a289c(jetbrains.mps.samples.Physics.generation.java)" />
+  <generation-plan model="r:9f1f21e2-bb65-4c04-9d1e-c697568c9f2d(jetbrains.mps.samples.Physics.generation.java.standalone)" />
 </dev-kit>
 
