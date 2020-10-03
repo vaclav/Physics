@@ -55,7 +55,7 @@
     </node>
     <node concept="2VgMA1" id="5EZY1tNvF2o" role="2VgMA7">
       <node concept="3ps74r" id="5EZY1tNvF3h" role="3ps6aC">
-        <property role="TrG5h" value="sync_objects" />
+        <property role="TrG5h" value="sync_base" />
       </node>
     </node>
     <node concept="10T23i" id="2QVH4jdF61O" role="2VgMA7">

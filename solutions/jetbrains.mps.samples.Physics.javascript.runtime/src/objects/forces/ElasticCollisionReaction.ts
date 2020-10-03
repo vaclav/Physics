@@ -1,6 +1,6 @@
 import PhysicalEntity from "../PhysicalEntity";
 import World from "../World";
-import CollisionReaction from "./CollisionReaction";
+import CollisionReaction, { GeomReactionContext } from "./CollisionReaction";
 
 export default class ElasticCollisionReaction implements CollisionReaction {
   static readonly DEFAULT: ElasticCollisionReaction = new ElasticCollisionReaction(1.0);
@@ -15,13 +15,11 @@ export default class ElasticCollisionReaction implements CollisionReaction {
   }
 
 
-  public react(world: World, target: PhysicalEntity<any>, targetGeom: ODE.DGeom, otherObject: PhysicalEntity<any>, otherGeom: ODE.DGeom): void {
-    ODE.Geom.collide(targetGeom, otherGeom, 32, contact => {
-      const otherReaction: CollisionReaction = otherObject.properties.collisionReaction;
-
+  public react(world: World, first: GeomReactionContext, second: GeomReactionContext, oneFirst: boolean): void {
+    ODE.Geom.collide(first.geom, second.geom, 8, contact => {
       // Set bounce ratio 
-      if (otherReaction instanceof ElasticCollisionReaction) {
-        contact.surface.bounce = (this.bounceRatio * target.getMass() + otherReaction.bounceRatio * otherObject.getMass()) / (target.getMass() + otherObject.getMass());
+      if (second.reaction instanceof ElasticCollisionReaction) {
+        contact.surface.bounce = (this.bounceRatio * second.entity.getMass() + second.reaction.bounceRatio * second.entity.getMass()) / (first.entity.getMass() + second.entity.getMass());
       } else {
         contact.surface.bounce = this.bounceRatio;
       }
@@ -34,10 +32,10 @@ export default class ElasticCollisionReaction implements CollisionReaction {
       const joint = world.world.createContactJoint(world.jointGroup, contact);
 
       // Attach only to involved bodies 
-      if (otherReaction instanceof ElasticCollisionReaction) {
-        joint.attach(targetGeom.getBody(), otherGeom.getBody());
+      if (second.reaction instanceof ElasticCollisionReaction) {
+        joint.attach(first.geom.getBody(), second.geom.getBody());
       } else {
-        joint.attach(targetGeom.getBody(), null as unknown as ODE.DBody);
+        joint.attach(first.geom.getBody(), null as unknown as ODE.DBody);
       }
 
     });

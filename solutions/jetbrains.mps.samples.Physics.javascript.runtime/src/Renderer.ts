@@ -1,5 +1,7 @@
 import p5 from "p5";
 
+export const FRAMERATE = 40;
+
 export interface RendererCallback {
   setup(renderer: p5): void;
   render(applet: p5, context: p5.Graphics | p5): void;
@@ -22,6 +24,8 @@ export default class Renderer {
 
     this.callback.setup(this.p);
     metricsElement.removeChild(loadingElement);
+
+    this.p.frameRate(FRAMERATE);
   }
 
   public windowResized() {
@@ -31,7 +35,7 @@ export default class Renderer {
 
   public draw(): void {
     this.p.background(0);
-    this.p.translate(-this.p.width/2, -this.p.height/2);
+    //this.p.translate(-this.p.width/2, -this.p.height/2);
     
     this.callback.render(this.p, this.p);
   }

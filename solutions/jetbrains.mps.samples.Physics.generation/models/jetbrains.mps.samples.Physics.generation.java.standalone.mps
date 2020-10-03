@@ -51,7 +51,7 @@
     </node>
     <node concept="2VgMA1" id="6tieXEbN6Qf" role="2VgMA7">
       <node concept="3ps74r" id="6tieXEbN6Qs" role="3ps6aC">
-        <property role="TrG5h" value="sync" />
+        <property role="TrG5h" value="sync_base" />
       </node>
     </node>
     <node concept="NozSJ" id="36QeQ7wk3zK" role="2VgMA7">

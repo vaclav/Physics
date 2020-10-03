@@ -6,7 +6,7 @@ import commonjs from "@rollup/plugin-commonjs";
 const pkg = require('./package');
 
 export default {
-	input: 'example/index.ts',
+	input: 'src/index.ts',
 	output: {
 		sourcemap: true,
 		format: 'iife',

@@ -197,6 +197,17 @@
             this.space = new ODE.Space.Hash();
             this.jointGroup = new ODE.Joint.Group(10000);
         }
+        decompose(geom) {
+            const value = {
+                geom: geom,
+                body: geom.getBody(),
+                entity: this.reverseEntities.get(geom.getBody().getPointer()),
+            };
+            if (value.entity) {
+                value.reaction = value.entity.properties.collisionReaction;
+            }
+            return value;
+        }
         /**
          * Perform a simulation step
          */
@@ -205,28 +216,27 @@
                 return;
             }
             this.space.collide((g1, g2) => {
-                var b1 = g1.getBody();
-                var b2 = g2.getBody();
-                if (b1 && b2 && ODE.Body.areConnected(b1, b2)) {
+                var _a, _b, _c, _d;
+                const one = this.decompose(g1);
+                const two = this.decompose(g2);
+                if (one.body && two.body && ODE.Body.areConnected(one.body, two.body)) {
                     return;
                 }
-                const e1 = this.reverseEntities.get(g1.getBody().getPointer());
-                const e2 = this.reverseEntities.get(g2.getBody().getPointer());
-                const first = (hasPriority(e1, e2) ? e1 : e2);
-                const second = (first == e1 ? e2 : e1);
-                const firstGeom = (first == e1 ? g1 : g2);
-                const secondGeom = (firstGeom == g1 ? g2 : g1);
                 // React with the reaction with highest priority first 
-                const firstReaction = first.properties.collisionReaction;
-                firstReaction.react(this, first, firstGeom, second, secondGeom);
+                const oneFirst = hasPriority(one.entity, two.entity) ? true : false;
+                const first = oneFirst ? one : two;
+                (_a = first.reaction) === null || _a === void 0 ? void 0 : _a.react(this, first, oneFirst ? two : one, oneFirst);
                 // If the first reaction allow the second one to be performed as well 
-                const secondReaction = second.properties.collisionReaction;
-                // TODO check equality verification
-                if (!(firstReaction.preventDifferentReaction) && !(firstReaction === secondReaction)) {
-                    secondReaction.react(this, second, secondGeom, first, firstGeom);
+                if (!((_b = first.reaction) === null || _b === void 0 ? void 0 : _b.preventDifferentReaction) && !(one.reaction === two.reaction)) {
+                    if (first == one) {
+                        (_c = two.reaction) === null || _c === void 0 ? void 0 : _c.react(this, two, one, !oneFirst);
+                    }
+                    else {
+                        (_d = one.reaction) === null || _d === void 0 ? void 0 : _d.react(this, one, two, !oneFirst);
+                    }
                 }
                 // Pause world if required 
-                if (first.properties.pauseOnCollision || second.properties.pauseOnCollision) {
+                if (one.entity.properties.pauseOnCollision || two.entity.properties.pauseOnCollision) {
                     this.paused = true;
                 }
             });
@@ -464,12 +474,11 @@
             this.preventDifferentReaction = false;
             this.bounceRatio = bouncePercent / 100;
         }
-        react(world, target, targetGeom, otherObject, otherGeom) {
-            ODE.Geom.collide(targetGeom, otherGeom, 8, contact => {
-                const otherReaction = otherObject.properties.collisionReaction;
+        react(world, first, second, oneFirst) {
+            ODE.Geom.collide(first.geom, second.geom, 8, contact => {
                 // Set bounce ratio 
-                if (otherReaction instanceof ElasticCollisionReaction) {
-                    contact.surface.bounce = (this.bounceRatio * target.getMass() + otherReaction.bounceRatio * otherObject.getMass()) / (target.getMass() + otherObject.getMass());
+                if (second.reaction instanceof ElasticCollisionReaction) {
+                    contact.surface.bounce = (this.bounceRatio * second.entity.getMass() + second.reaction.bounceRatio * second.entity.getMass()) / (first.entity.getMass() + second.entity.getMass());
                 }
                 else {
                     contact.surface.bounce = this.bounceRatio;
@@ -480,11 +489,11 @@
                 // Attach to bodies 
                 const joint = world.world.createContactJoint(world.jointGroup, contact);
                 // Attach only to involved bodies 
-                if (otherReaction instanceof ElasticCollisionReaction) {
-                    joint.attach(targetGeom.getBody(), otherGeom.getBody());
+                if (second.reaction instanceof ElasticCollisionReaction) {
+                    joint.attach(first.geom.getBody(), second.geom.getBody());
                 }
                 else {
-                    joint.attach(targetGeom.getBody(), null);
+                    joint.attach(first.geom.getBody(), null);
                 }
             });
         }
@@ -1094,20 +1103,20 @@
     var SimpleCollisionReaction;
     (function (SimpleCollisionReaction) {
         SimpleCollisionReaction.DISAPPEAR = {
-            react: function (world, target, targetGeom, otherObject, otherGeom) {
-                target.disable();
-                if (otherObject.properties.collisionReaction == SimpleCollisionReaction.DISAPPEAR) {
-                    otherObject.disable();
+            react: function (world, first, second, oneFirst) {
+                first.entity.disable();
+                if (second.entity.properties.collisionReaction == SimpleCollisionReaction.DISAPPEAR) {
+                    second.entity.disable();
                 }
             },
             priority: -100,
             preventDifferentReaction: true
         };
         SimpleCollisionReaction.MERGE = {
-            react: function (world, target, targetGeom, otherObject, otherGeom) {
-                target.name = target.name + " + " + otherObject.name;
-                target.fixture.mergeWith(otherObject.fixture);
-                otherObject.disable();
+            react: function (world, first, second, oneFirst) {
+                first.entity.name = first.entity.name + " + " + second.entity.name;
+                first.entity.fixture.mergeWith(second.entity.fixture);
+                second.entity.disable();
             },
             priority: -300,
             preventDifferentReaction: true
@@ -1274,6 +1283,29 @@ class BaseObject1 extends Physics.PhysicalEntity {
           }
 }
         
+        function computeInteractionForce1(context, map) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return {
+                linearForce: [...[...[...context.world.entities].filter(((it => !it.equals(context.entity))))].map((map))].reduce(((seed, current) => current.add(seed)), new Physics.Vector(0, 0, 0)),
+                moment: null,
+                applicationPoint: null,
+                forceMode: 16
+              };
+            })).compute())
+          };
+        }
+// Should include module : InteractionForce        
+        function computeGravitation1(context, G) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return computeInteractionForce1(context, ((it) => it.minus(context.entity).resize(((G * it.getMass()) * context.entity.getMass()) / Math.pow(context.entity.minus(it).length(), 2)))).compute();
+            })).compute())
+          };
+        }
+// Should include module : BaseObject// Should include module : Gravitation        
 class Leaf1 extends BaseObject1 {
           init() {
             (super["init"])();
@@ -1281,11 +1313,11 @@ class Leaf1 extends BaseObject1 {
             this.propertiesBuilder.set(Physics.PropKey.SPHERE_RADIUS, ((7 * 1)));
             this.forces.push(new Physics.ForceMapper(this, ((context, mapper) => {
               
-              return (this, (10 * ((1 * 1)))).compute();
+              return computeGravitation1(this, (10 * ((1 * 1)))).compute();
             })));
           }
 }
-        
+// Should include module : Leaf        
 class EndLeaf extends Leaf1 {
           init() {
             this.setMass(50);
@@ -1307,7 +1339,7 @@ class TreeLeaf1 extends Physics.SystemScope {
           }
 }
         
-        
+// Should include module : TreeLeaf// Should include module : Leaf        
 class O2 extends Leaf1 {
           init() {
             this.setMass(50);
@@ -1335,7 +1367,7 @@ class TreeN21 extends Physics.SystemScope {
           }
 }
         
-        
+// Should include module : TreeN2// Should include module : Leaf        
 class O4 extends Leaf1 {
           init() {
             this.setMass(50);
@@ -1363,7 +1395,7 @@ class TreeN11 extends Physics.SystemScope {
           }
 }
         
-        
+// Should include module : TreeN1// Should include module : Leaf        
 class O extends Leaf1 {
           init() {
             this.setMass(50);
@@ -1391,7 +1423,7 @@ class TreeRoot1 extends Physics.SystemScope {
           }
 }
         
-        
+// Should include module : TreeRoot        
 class RotationTreeSim extends Physics.Simulation {
           constructor() {
             super(((10 * 1)), 1);
@@ -1414,7 +1446,7 @@ class RotationTreeSim extends Physics.Simulation {
 }
         
         Physics.simulationClasses.push(RotationTreeSim);
-</script>
+// Should include module : RotationTreeSimScript</script>
     <script>ODE.readyPromise.then(Physics.makeRenderer).then(console.log);</script>
   </body>
 </html>

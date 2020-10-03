@@ -3,7 +3,7 @@
   Generated from a ECMAScript model by JetBrains MPS.
 */
 
-// Should include module : BaseObject// Should include module : 
+// Should include module : BaseObject// Should include module : Gravitation
 class Leaf1 extends BaseObject1 {
   init() {
     (super["init"])();
@@ -11,7 +11,7 @@ class Leaf1 extends BaseObject1 {
     this.propertiesBuilder.set(Physics.PropKey.SPHERE_RADIUS, ((7 * 1)));
     this.forces.push(new Physics.ForceMapper(this, ((context, mapper) => {
       
-      return (this, (10 * ((1 * 1)))).compute();
+      return computeGravitation1(this, (10 * ((1 * 1)))).compute();
     })));
   }
 }

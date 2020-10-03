@@ -1,14 +1,14 @@
 import PhysicalEntity from "../PhysicalEntity";
 import World from "../World";
-import CollisionReaction from "./CollisionReaction";
+import CollisionReaction, { GeomReactionContext } from "./CollisionReaction";
 
 export namespace SimpleCollisionReaction {
   export const DISAPPEAR: CollisionReaction = {
-    react: function (world: World, target: PhysicalEntity<any>, targetGeom: ODE.DGeom, otherObject: PhysicalEntity<any>, otherGeom: ODE.DGeom): void {
-      target.disable();
+    react: function(world: World, first: GeomReactionContext, second: GeomReactionContext, oneFirst: boolean): void {
+      first.entity.disable();
 
-      if (otherObject.properties.collisionReaction == SimpleCollisionReaction.DISAPPEAR) {
-        otherObject.disable();
+      if (second.entity.properties.collisionReaction == SimpleCollisionReaction.DISAPPEAR) {
+        second.entity.disable();
       }
     },
     priority: -100,
@@ -17,10 +17,10 @@ export namespace SimpleCollisionReaction {
   };
   
   export const MERGE: CollisionReaction = {
-    react: function (world: World, target: PhysicalEntity<any>, targetGeom: ODE.DGeom, otherObject: PhysicalEntity<any>, otherGeom: ODE.DGeom): void {
-      target.name = target.name + " + " + otherObject.name;
-      target.fixture!.mergeWith(otherObject.fixture!);
-      otherObject.disable();
+    react: function(world: World, first: GeomReactionContext, second: GeomReactionContext, oneFirst: boolean): void {
+      first.entity.name = first.entity.name + " + " + second.entity.name;
+      first.entity.fixture!.mergeWith(second.entity.fixture!);
+      second.entity.disable();
     },
     priority: -300,
     preventDifferentReaction: true

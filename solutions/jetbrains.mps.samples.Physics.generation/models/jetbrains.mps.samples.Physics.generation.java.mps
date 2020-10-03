@@ -69,7 +69,7 @@
     </node>
     <node concept="2VgMA1" id="36QeQ7wk36e" role="2VgMA7">
       <node concept="3ps74r" id="36QeQ7wk36f" role="3ps6aC">
-        <property role="TrG5h" value="sync_external_objects" />
+        <property role="TrG5h" value="sync_java_objects" />
       </node>
     </node>
     <node concept="2VgMA2" id="36QeQ7wk36g" role="2VgMA7">

@@ -1,7 +1,8 @@
 import Renderable from "../Renderable";
 import PhysicalEntity from "./PhysicalEntity";
 import p5 from "p5";
-import CollisionReaction, { hasPriority } from "./forces/CollisionReaction";
+import CollisionReaction, { GeomReactionContext, hasPriority } from "./forces/CollisionReaction";
+import { FRAMERATE } from "../Renderer";
 
 declare var ODE: any;
 
@@ -22,12 +23,26 @@ export default class World implements Renderable {
    * during a second in the real world.
    */
   constructor(secondDuration: number) {
-    this.timeStep = secondDuration / 60;
+    this.timeStep = secondDuration / FRAMERATE;
     this.time = 0;
     this.paused = false;
     this.world = new ODE.World();
     this.space = new ODE.Space.Hash();
     this.jointGroup = new ODE.Joint.Group(10000);
+  }
+
+  private decompose(geom: ODE.DGeom): GeomReactionContext {
+    const value: GeomReactionContext = {
+      geom: geom,
+      body: geom.getBody(),
+      entity: this.reverseEntities.get(geom.getBody().getPointer())!,
+    }
+
+    if (value.entity) {
+      value.reaction = value.entity.properties.collisionReaction
+    }
+
+    return value;
   }
 
   /**
@@ -39,33 +54,30 @@ export default class World implements Renderable {
     }
 
     this.space.collide((g1: ODE.DGeom, g2: ODE.DGeom) => {
-      var b1 = g1.getBody();
-      var b2 = g2.getBody();
-      if (b1 && b2 && ODE.Body.areConnected(b1, b2)) {
+      const one = this.decompose(g1);
+      const two = this.decompose(g2);
+      
+      if (one.body && two.body && ODE.Body.areConnected(one.body, two.body)) {
         return;
       }
 
-      const e1 = this.reverseEntities.get(g1.getBody().getPointer())!;
-      const e2 = this.reverseEntities.get(g2.getBody().getPointer())!;
-
-      const first: PhysicalEntity<any> = (hasPriority(e1, e2) ? e1 : e2);
-      const second: PhysicalEntity<any> = (first == e1 ? e2 : e1);
-      const firstGeom: ODE.DGeom = (first == e1 ? g1 : g2);
-      const secondGeom: ODE.DGeom = (firstGeom == g1 ? g2 : g1);
-
       // React with the reaction with highest priority first 
-      const firstReaction: CollisionReaction = first.properties.collisionReaction;
-      firstReaction.react(this, first, firstGeom, second, secondGeom);
+      const oneFirst = hasPriority(one.entity, two.entity) ? true : false;
+      const first = oneFirst ? one : two;
+
+      first.reaction?.react(this, first, oneFirst ? two : one, oneFirst);
 
       // If the first reaction allow the second one to be performed as well 
-      const secondReaction: CollisionReaction = second.properties.collisionReaction;
-      // TODO check equality verification
-      if (!(firstReaction.preventDifferentReaction) && !(firstReaction === secondReaction)) {
-        secondReaction.react(this, second, secondGeom, first, firstGeom);
+      if (!(first.reaction?.preventDifferentReaction) && !(one.reaction === two.reaction)) {
+        if (first == one) {
+          two.reaction?.react(this, two, one, !oneFirst);
+        } else {
+          one.reaction?.react(this, one, two, !oneFirst);
+        }
       }
 
       // Pause world if required 
-      if (first.properties.pauseOnCollision || second.properties.pauseOnCollision) {
+      if (one.entity.properties.pauseOnCollision || two.entity.properties.pauseOnCollision) {
         this.paused = true;
       }
     });

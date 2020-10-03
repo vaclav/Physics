@@ -3,7 +3,7 @@
   Generated from a ECMAScript model by JetBrains MPS.
 */
 
-// Should include module : BaseObject// Should include module : 
+// Should include module : BaseObject// Should include module : InteractionForce
 class Boid1 extends BaseObject1 {
   init() {
     (super["init"])();
@@ -16,7 +16,7 @@ class Boid1 extends BaseObject1 {
     this.propertiesBuilder.set(Physics.PropKey.SHAPE, 'sphere');
     this.forces.push(new Physics.ForceMapper(this, ((context, mapper) => {
       
-      return (this, ((otherObject) => (() => {
+      return computeInteractionForce1(this, ((otherObject) => (() => {
         var distance = this.entity.minus(otherObject).length();
         var selfToOther = otherObject.minus(this.entity).resize((distance - ((100 * 1))));
         var direc = (distance > ((125 * 1))) || (distance < ((75 * 1))) ? selfToOther.mul(10).mul(1 / ((1 * 1))) : ((otherObject.getVelocity()).resize(((50 * 1))));

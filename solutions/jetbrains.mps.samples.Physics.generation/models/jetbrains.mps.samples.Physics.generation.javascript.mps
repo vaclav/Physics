@@ -47,14 +47,10 @@
         <property role="2V$B1T" value="f2122111-2e69-4f81-8e65-120416de80e8" />
         <property role="2V$B1Q" value="org.iets3.core.expr.genjs.simpleTypes" />
       </node>
-      <node concept="2V$Bhx" id="36QeQ7wk3$8" role="1t_9vn">
-        <property role="2V$B1T" value="f0534572-e0f4-46cd-8abb-ed67e4c4a375" />
-        <property role="2V$B1Q" value="org.iets3.core.expr.genjs.toplevel" />
-      </node>
     </node>
     <node concept="2VgMA1" id="36QeQ7wk3$D" role="2VgMA7">
       <node concept="3ps74r" id="36QeQ7wk3$E" role="3ps6aC">
-        <property role="TrG5h" value="sync_external_objects" />
+        <property role="TrG5h" value="sync_javascript_generated_objects" />
       </node>
     </node>
     <node concept="2VgMA2" id="1muMNVjPrRc" role="2VgMA7">

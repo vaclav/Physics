@@ -3,7 +3,7 @@
   Generated from a ECMAScript model by JetBrains MPS.
 */
 
-// Should include module : BaseObject// Should include module : 
+// Should include module : BaseObject// Should include module : Friction
 class Ball extends BaseObject1 {
   init() {
     this.setMass(1);
@@ -16,7 +16,7 @@ class Ball extends BaseObject1 {
     this.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.InfiniteTraceHandler(new Physics.InternalColor(255, 0, 0)));
     this.forces.push(new Physics.ForceMapper(this, ((context, mapper) => {
       
-      return (this, 0.1).compute();
+      return computeFriction1(this, 0.1).compute();
     })), new Physics.CachedForceMapper(this, ((context, mapper) => {
       if (mapper.cache === null)
         mapper.cache = new Physics.Vector(0.0, ((this.scope.object_Ball.getMass() * 9.81) * ((1 * 1))), 0);

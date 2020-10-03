@@ -3,7 +3,7 @@
   Generated from a ECMAScript model by JetBrains MPS.
 */
 
-// Should include module : BaseObject// Should include module : // Should include module : 
+// Should include module : BaseObject// Should include module : RealGravitation// Should include module : AirResistance
 class RocketEuropaS452G extends BaseObject1 {
   init() {
     this.setMass(12100);
@@ -19,10 +19,10 @@ class RocketEuropaS452G extends BaseObject1 {
     this.propertiesBuilder.set(Physics.PropKey.BOX_Z, ((5 * 1)));
     this.forces.push(new Physics.ForceMapper(this, ((context, mapper) => {
       
-      return (this).compute();
+      return computeRealGravitation1(this).compute();
     })), new Physics.ForceMapper(this, ((context, mapper) => {
       
-      return (this, 0.75, (() => {
+      return computeAirResistance1(this, 0.75, (() => {
         var distance1 = (this.entity.minus(this.scope.object_Earth).length() - this.scope.object_Earth.propertiesBuilder.get(Physics.PropKey.SHAPE));
         var positiveDistance = (distance1 < 0) ? 0 : (distance1);
         return (positiveDistance > ((24.384 * 1.00E+3))) ? 0 : (((((((24.384 * 1.00E+3)) - positiveDistance)) / ((24.384 * 1.00E+3))) * ((1.225055 * 1))));
