@@ -1266,6 +1266,20 @@
 */
 
         
+        function computeInteractionForce1(context, map) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return {
+                linearForce: [...[...[...context.world.entities].filter(((it => !it.equals(context.entity))))].map((map))].reduce(((seed, current) => current.add(seed)), new Physics.Vector(0, 0, 0)),
+                moment: null,
+                applicationPoint: null,
+                forceMode: 16
+              };
+            })).compute())
+          };
+        }
+        
 class BaseObject1 extends Physics.PhysicalEntity {
           init() {
             (super["init"])();
@@ -1279,18 +1293,6 @@ class BaseObject1 extends Physics.PhysicalEntity {
             this.propertiesBuilder.set(Physics.PropKey.COLLISION_REACT, new Physics.ElasticCollisionReaction(100.0));
             this.propertiesBuilder.set(Physics.PropKey.PAUSE_ON_COLLISION, false);
             this.propertiesBuilder.set(Physics.PropKey.TRACE, null);
-            this.forces.push();
-          }
-}
-// Should include module : BaseObject        
-class RandomObject1 extends BaseObject1 {
-          init() {
-            (super["init"])();
-            this.propertiesBuilder.set(Physics.PropKey.SHAPE, 'box');
-            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 255, 255), null));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_X, ((40 * 1)));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_Y, ((40 * 1)));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_Z, ((40 * 1)));
             this.forces.push();
           }
 }
@@ -1312,20 +1314,6 @@ class RandomObject1 extends BaseObject1 {
           };
         }
         
-        function computeInteractionForce1(context, map) {
-          return {
-            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
-              
-              return {
-                linearForce: [...[...[...context.world.entities].filter(((it => !it.equals(context.entity))))].map((map))].reduce(((seed, current) => current.add(seed)), new Physics.Vector(0, 0, 0)),
-                moment: null,
-                applicationPoint: null,
-                forceMode: 16
-              };
-            })).compute())
-          };
-        }
-// Should include module : InteractionForce        
         function computeGravitation1(context, G) {
           return {
             compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
@@ -1334,7 +1322,19 @@ class RandomObject1 extends BaseObject1 {
             })).compute())
           };
         }
-// Should include module : BaseObject// Should include module : Gravitation        
+        
+class RandomObject1 extends BaseObject1 {
+          init() {
+            (super["init"])();
+            this.propertiesBuilder.set(Physics.PropKey.SHAPE, 'box');
+            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 255, 255), null));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_X, ((40 * 1)));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_Y, ((40 * 1)));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_Z, ((40 * 1)));
+            this.forces.push();
+          }
+}
+        
 class Planet1 extends BaseObject1 {
           init() {
             (super["init"])();
@@ -1346,7 +1346,7 @@ class Planet1 extends BaseObject1 {
             })));
           }
 }
-// Should include module : Planet        
+        
 class Sun extends Planet1 {
           init() {
             this.setMass(500);
@@ -1434,7 +1434,7 @@ class SolarSystem1 extends Physics.SystemScope {
           }
 }
         
-// Should include module : SolarSystem// Should include module : RandomObject// Should include module : Friction        
+        
 class FloatingDog extends RandomObject1 {
           init() {
             this.setMass(30);
@@ -1483,7 +1483,7 @@ class MilkyWay1 extends Physics.SystemScope {
           }
 }
         
-// Should include module : MilkyWay        
+        
 class TestSimulation extends Physics.Simulation {
           constructor() {
             super(((6 * 1)), 1);
@@ -1504,7 +1504,7 @@ class TestSimulation extends Physics.Simulation {
 }
         
         Physics.simulationClasses.push(TestSimulation);
-// Should include module : TestSimulationScript</script>
+</script>
     <script>ODE.readyPromise.then(Physics.makeRenderer).then(console.log);</script>
   </body>
 </html>

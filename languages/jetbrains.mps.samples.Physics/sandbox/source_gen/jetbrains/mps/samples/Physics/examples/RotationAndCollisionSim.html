@@ -1282,7 +1282,7 @@ class BaseObject1 extends Physics.PhysicalEntity {
             this.forces.push();
           }
 }
-// Should include module : BaseObject        
+        
 class MovingBlock extends BaseObject1 {
           init() {
             this.setMass(5000);
@@ -1338,7 +1338,7 @@ class RotationAndCollision1 extends Physics.SystemScope {
           }
 }
         
-// Should include module : RotationAndCollision        
+        
 class RotationAndCollisionSim extends Physics.Simulation {
           constructor() {
             super(((15 * 1)), 1);
@@ -1367,7 +1367,7 @@ class RotationAndCollisionSim1_0 extends RotationAndCollisionSim {
 }
         
         Physics.simulationClasses.push(RotationAndCollisionSim, RotationAndCollisionSim1_0);
-// Should include module : RotationAndCollisionSimScript</script>
+</script>
     <script>ODE.readyPromise.then(Physics.makeRenderer).then(console.log);</script>
   </body>
 </html>

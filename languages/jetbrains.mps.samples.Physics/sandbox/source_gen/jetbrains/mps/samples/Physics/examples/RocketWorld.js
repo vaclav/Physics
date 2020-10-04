@@ -40,8 +40,8 @@ class RocketEuropaS452G extends BaseObject1 {
         }));
       
       return {
-        linearForce: (Physics.Vector.fromFloat32Array(.entity.body.getAngularVal()).length() < ((3 * 0.01745328627927352441191151881987859))) ? mapper.cache.linearForce() : (null),
-        moment: (Physics.Vector.fromFloat32Array(.entity.body.getAngularVal()).length() < ((3 * 0.01745328627927352441191151881987859))) ? mapper.cache.moment() : (null),
+        linearForce: (Physics.Vector.fromFloat32Array(context.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))) ? mapper.cache.linearForce(context) : (null),
+        moment: (Physics.Vector.fromFloat32Array(context.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))) ? mapper.cache.moment(context) : (null),
         applicationPoint: null,
         forceMode: 10
       };
@@ -81,13 +81,13 @@ class Earth extends BaseObject1 {
 }
 
 class RocketWorld1 extends Physics.SystemScope {
-  object_Rocket_Europa-S452G
+  object_Rocket_Europa_S452G
   object_Earth
   constructor(world, position, velocity, rotation) {
     super(world, position, velocity, rotation);
-    this.object_Rocket_Europa-S452G = this.withEntity((new RocketEuropaS452G(this.world, "RocketEuropaS452G1", this)));
+    this.object_Rocket_Europa_S452G = this.withEntity((new RocketEuropaS452G(this.world, "RocketEuropaS452G1", this)));
     this.object_Earth = this.withEntity((new Earth(this.world, "Earth1", this)));
-    this.object_Rocket_Europa-S452G.init();
+    this.object_Rocket_Europa_S452G.init();
     this.object_Earth.init();
   }
 }

@@ -36,12 +36,12 @@ public class NameMapping {
     {
       final SNode namedNode = node;
       if (SNodeOperations.isInstanceOf(namedNode, CONCEPTS.INamedConcept$Kd)) {
-        return prefix + "_" + SPropertyOperations.getString(namedNode, PROPS.name$MnvL).replace(" ", "_");
+        return prefix + "_" + SPropertyOperations.getString(namedNode, PROPS.name$MnvL).replace("_", "__").replaceAll("[^0-9a-zA-Z_$]", "_");
       }
     }
 
     LoggingRuntime.logMsgView(Level.WARN, "node with no name issued to NameMapping.nameOf : " + BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(node), NameMapping.class, null, null);
-    return prefix + "_" + BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(node).replace(" ", "_") + "_" + node.hashCode();
+    return prefix + "_" + BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(node).replace("_", "__").replace("[^0-9a-zA-Z_$]", "_") + "_" + node.hashCode();
   }
 
   private static final class CONCEPTS {

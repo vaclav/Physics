@@ -1282,7 +1282,7 @@ class BaseObject1 extends Physics.PhysicalEntity {
             this.forces.push();
           }
 }
-// Should include module : BaseObject        
+        
 class A extends BaseObject1 {
           init() {
             this.setMass(200);
@@ -1351,7 +1351,7 @@ class CollisionWorld1 extends Physics.SystemScope {
           }
 }
         
-// Should include module : CollisionWorld        
+        
 class CollisionSim extends Physics.Simulation {
           constructor() {
             super(((500 * 1)), 1);
@@ -1374,7 +1374,7 @@ class CollisionSim extends Physics.Simulation {
 }
         
         Physics.simulationClasses.push(CollisionSim);
-// Should include module : CollisionSimScript</script>
+</script>
     <script>ODE.readyPromise.then(Physics.makeRenderer).then(console.log);</script>
   </body>
 </html>

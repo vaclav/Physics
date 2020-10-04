@@ -1266,6 +1266,38 @@
 */
 
         
+        function computeInteractionForce1(context, map) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return {
+                linearForce: [...[...[...context.world.entities].filter(((it => !it.equals(context.entity))))].map((map))].reduce(((seed, current) => current.add(seed)), new Physics.Vector(0, 0, 0)),
+                moment: null,
+                applicationPoint: null,
+                forceMode: 16
+              };
+            })).compute())
+          };
+        }
+        
+        function computeGravitation1(context, G) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return computeInteractionForce1(context, ((it) => it.minus(context.entity).resize(((G * it.getMass()) * context.entity.getMass()) / Math.pow(context.entity.minus(it).length(), 2)))).compute();
+            })).compute())
+          };
+        }
+        
+        function computeRealGravitation1(context) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return computeGravitation1(context, (((6.67430 * Math.pow(10, -11)) * 1))).compute();
+            })).compute())
+          };
+        }
+        
 class BaseObject1 extends Physics.PhysicalEntity {
           init() {
             (super["init"])();
@@ -1283,38 +1315,6 @@ class BaseObject1 extends Physics.PhysicalEntity {
           }
 }
         
-        function computeInteractionForce1(context, map) {
-          return {
-            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
-              
-              return {
-                linearForce: [...[...[...context.world.entities].filter(((it => !it.equals(context.entity))))].map((map))].reduce(((seed, current) => current.add(seed)), new Physics.Vector(0, 0, 0)),
-                moment: null,
-                applicationPoint: null,
-                forceMode: 16
-              };
-            })).compute())
-          };
-        }
-// Should include module : InteractionForce        
-        function computeGravitation1(context, G) {
-          return {
-            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
-              
-              return computeInteractionForce1(context, ((it) => it.minus(context.entity).resize(((G * it.getMass()) * context.entity.getMass()) / Math.pow(context.entity.minus(it).length(), 2)))).compute();
-            })).compute())
-          };
-        }
-// Should include module : Gravitation        
-        function computeRealGravitation1(context) {
-          return {
-            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
-              
-              return computeGravitation1(context, (((6.67430 * Math.pow(10, -11)) * 1))).compute();
-            })).compute())
-          };
-        }
-// Should include module : BaseObject// Should include module : RealGravitation        
 class Planet1 extends BaseObject1 {
           init() {
             (super["init"])();
@@ -1325,7 +1325,7 @@ class Planet1 extends BaseObject1 {
             })));
           }
 }
-// Should include module : Planet        
+        
 class Earth2 extends Planet1 {
           init() {
             this.setMass(5.972E+24);
@@ -1361,7 +1361,7 @@ class EarthSystem1 extends Physics.SystemScope {
           }
 }
         
-// Should include module : EarthSystem// Should include module : BaseObject        
+        
 class Sun extends BaseObject1 {
           init() {
             this.setMass(1.989E+30);
@@ -1386,7 +1386,7 @@ class SolarSystem1 extends Physics.SystemScope {
           }
 }
         
-// Should include module : SolarSystem        
+        
 class SolarSystemSim extends Physics.Simulation {
           constructor() {
             super(((10 * 86396)), ((1000 * 1.00E+3)));
@@ -1423,7 +1423,7 @@ class SolarSystemSim1_0 extends SolarSystemSim {
 }
         
         Physics.simulationClasses.push(SolarSystemSim, SolarSystemSim1_0);
-// Should include module : SolarSystemSimScript</script>
+</script>
     <script>ODE.readyPromise.then(Physics.makeRenderer).then(console.log);</script>
   </body>
 </html>

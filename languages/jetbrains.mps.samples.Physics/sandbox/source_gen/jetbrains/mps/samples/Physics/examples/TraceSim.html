@@ -1282,7 +1282,7 @@ class BaseObject1 extends Physics.PhysicalEntity {
             this.forces.push();
           }
 }
-// Should include module : BaseObject        
+        
 class MovingObject extends BaseObject1 {
           init() {
             this.setMass(5);
@@ -1336,7 +1336,7 @@ class TracedObjects1 extends Physics.SystemScope {
           }
 }
         
-// Should include module : TracedObjects        
+        
 class TraceSim extends Physics.Simulation {
           constructor() {
             super(((80 * 1)), ((2 * 1)));
@@ -1370,7 +1370,7 @@ class TraceSim2_1 extends TraceSim {
 }
         
         Physics.simulationClasses.push(TraceSim, TraceSim1_0, TraceSim2_1);
-// Should include module : TraceSimScript</script>
+</script>
     <script>ODE.readyPromise.then(Physics.makeRenderer).then(console.log);</script>
   </body>
 </html>

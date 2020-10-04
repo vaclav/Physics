@@ -16,7 +16,7 @@ class TorqueSim extends Physics.Simulation {
     var noRotation = new ODE.Rotation();
     noRotation.setArray([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]);
     this.scope = new Torque1(world, Physics.Vector.ZERO, Physics.Vector.ZERO, noRotation);
-    this.metricsRenderer.declareMetric("Rotation speed", (() => Physics.Vector.fromFloat32Array(this.scope.object_SampleBox.body.getAngularVal()).length()));
+    this.metricsRenderer.declareMetric("Rotation speed", (() => Physics.Vector.fromFloat32Array(this.scope.object_SampleBox.body.getAngularVel()).length()));
   }
   getCameraPosition() {
     return new Physics.Vector(((30 * 1)), 0, ((60 * 1)));

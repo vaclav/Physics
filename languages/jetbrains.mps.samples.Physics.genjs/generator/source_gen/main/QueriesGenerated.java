@@ -16,8 +16,8 @@ import jetbrains.mps.generator.template.PropertyMacroContext;
 import jetbrains.mps.samples.Physics.genjs.plugin.NameMapping;
 import jetbrains.mps.samples.Physics.behavior.Force__BehaviorDescriptor;
 import jetbrains.mps.generator.template.ReferenceMacroContext;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.IfMacroContext;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext;
 import jetbrains.mps.samples.Physics.genjava.behavior.VectorGenerationHelper;
 import jetbrains.mps.samples.Physics.behavior.IForceWithCache__BehaviorDescriptor;
@@ -284,16 +284,6 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Object referenceMacro_GetReferent_4_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.cacheOf$Rtlz), "forceMapper");
-  }
-  public static Object referenceMacro_GetReferent_13_0(final ReferenceMacroContext _context) {
-    if ((SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AbstractForce$8Q, false, false) == null)) {
-      SNode forceAncestor = SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.Force$Hb, false, false);
-      if ((forceAncestor != null)) {
-        return _context.getOutputNodeByInputNodeAndMappingLabel(forceAncestor, "entityContext");
-      }
-    }
-
-    return _context.getOutputNodeByInputNodeAndMappingLabel(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.ICurrentObjectContext$IJ, false, false), "entityContext");
   }
   public static Object referenceMacro_GetReferent_14_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.force$geAY), "abstractForce");
@@ -1748,7 +1738,7 @@ public class QueriesGenerated extends QueryProviderBase {
     imcMethods.put("258579928627600032", new IfMC(i++));
     imcMethods.put("258579928627606790", new IfMC(i++));
     imcMethods.put("258579928627587065", new IfMC(i++));
-    imcMethods.put("6782395811092984528", new IfMC(i++));
+    imcMethods.put("4072913923462581015", new IfMC(i++));
     imcMethods.put("5315786637368180545", new IfMC(i++));
     imcMethods.put("258579928627532040", new IfMC(i++));
     imcMethods.put("258579928627531273", new IfMC(i++));
@@ -1886,23 +1876,22 @@ public class QueriesGenerated extends QueryProviderBase {
   {
     rtqMethods.put("5319492491019673598", new RTQ(0, ""));
     rtqMethods.put("6782395811089765927", new RTQ(1, "mapper"));
-    rtqMethods.put("6782395811092984971", new RTQ(2, "context"));
-    rtqMethods.put("2191706013853338350", new RTQ(3, "computeForceFunction"));
-    rtqMethods.put("5315786637368077198", new RTQ(4, "mapper"));
-    rtqMethods.put("5315786637368079579", new RTQ(5, "mapper"));
-    rtqMethods.put("1557905991814190708", new RTQ(6, "mapWorldDefinition"));
-    rtqMethods.put("1557905991814133273", new RTQ(7, "mapAbstractObject"));
-    rtqMethods.put("1557905991813901692", new RTQ(8, null));
-    rtqMethods.put("1557905991813901791", new RTQ(9, null));
-    rtqMethods.put("1557905991813901902", new RTQ(10, null));
-    rtqMethods.put("1557905991814306764", new RTQ(11, "mapAbstractObject"));
-    rtqMethods.put("1557905991813957094", new RTQ(12, null));
-    rtqMethods.put("1557905991814210927", new RTQ(13, "mapAbstractForce"));
-    rtqMethods.put("1557905991817980937", new RTQ(14, "mapWorldDefinition"));
-    rtqMethods.put("1557905991817981070", new RTQ(15, null));
-    rtqMethods.put("1557905991817981197", new RTQ(16, ""));
-    rtqMethods.put("1557905991817981206", new RTQ(17, ""));
-    rtqMethods.put("1557905991818005195", new RTQ(18, "mapSimulationScript"));
+    rtqMethods.put("2191706013853338350", new RTQ(2, "computeForceFunction"));
+    rtqMethods.put("5315786637368077198", new RTQ(3, "mapper"));
+    rtqMethods.put("5315786637368079579", new RTQ(4, "mapper"));
+    rtqMethods.put("1557905991814190708", new RTQ(5, "mapWorldDefinition"));
+    rtqMethods.put("1557905991814133273", new RTQ(6, "mapAbstractObject"));
+    rtqMethods.put("1557905991813901692", new RTQ(7, null));
+    rtqMethods.put("1557905991813901791", new RTQ(8, null));
+    rtqMethods.put("1557905991813901902", new RTQ(9, null));
+    rtqMethods.put("1557905991814306764", new RTQ(10, "mapAbstractObject"));
+    rtqMethods.put("1557905991813957094", new RTQ(11, null));
+    rtqMethods.put("1557905991814210927", new RTQ(12, "mapAbstractForce"));
+    rtqMethods.put("1557905991817980937", new RTQ(13, "mapWorldDefinition"));
+    rtqMethods.put("1557905991817981070", new RTQ(14, null));
+    rtqMethods.put("1557905991817981197", new RTQ(15, ""));
+    rtqMethods.put("1557905991817981206", new RTQ(16, ""));
+    rtqMethods.put("1557905991818005195", new RTQ(17, "mapSimulationScript"));
   }
   @NotNull
   @Override
@@ -1927,38 +1916,36 @@ public class QueriesGenerated extends QueryProviderBase {
         case 1:
           return QueriesGenerated.referenceMacro_GetReferent_4_0(ctx);
         case 2:
-          return QueriesGenerated.referenceMacro_GetReferent_13_0(ctx);
-        case 3:
           return QueriesGenerated.referenceMacro_GetReferent_14_0(ctx);
-        case 4:
+        case 3:
           return QueriesGenerated.referenceMacro_GetReferent_15_0(ctx);
-        case 5:
+        case 4:
           return QueriesGenerated.referenceMacro_GetReferent_15_1(ctx);
-        case 6:
+        case 5:
           return QueriesGenerated.referenceMacro_GetReferent_18_0(ctx);
-        case 7:
+        case 6:
           return QueriesGenerated.referenceMacro_GetReferent_18_1(ctx);
-        case 8:
+        case 7:
           return QueriesGenerated.referenceMacro_GetReferent_18_2(ctx);
-        case 9:
+        case 8:
           return QueriesGenerated.referenceMacro_GetReferent_18_3(ctx);
-        case 10:
+        case 9:
           return QueriesGenerated.referenceMacro_GetReferent_18_4(ctx);
-        case 11:
+        case 10:
           return QueriesGenerated.referenceMacro_GetReferent_19_0(ctx);
-        case 12:
+        case 11:
           return QueriesGenerated.referenceMacro_GetReferent_19_1(ctx);
-        case 13:
+        case 12:
           return QueriesGenerated.referenceMacro_GetReferent_21_0(ctx);
-        case 14:
+        case 13:
           return QueriesGenerated.referenceMacro_GetReferent_22_0(ctx);
-        case 15:
+        case 14:
           return QueriesGenerated.referenceMacro_GetReferent_22_1(ctx);
-        case 16:
+        case 15:
           return QueriesGenerated.referenceMacro_GetReferent_22_2(ctx);
-        case 17:
+        case 16:
           return QueriesGenerated.referenceMacro_GetReferent_22_3(ctx);
-        case 18:
+        case 17:
           return QueriesGenerated.referenceMacro_GetReferent_23_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -2225,8 +2212,6 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SInterfaceConcept IForceWithCache$_L = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da749c297L, "jetbrains.mps.samples.Physics.structure.IForceWithCache");
     /*package*/ static final SConcept Simulation$Gw = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb32fba58L, "jetbrains.mps.samples.Physics.structure.Simulation");
     /*package*/ static final SConcept Force$Hb = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a58062fL, "jetbrains.mps.samples.Physics.structure.Force");
-    /*package*/ static final SConcept AbstractForce$8Q = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3126c7c72470af86L, "jetbrains.mps.samples.Physics.structure.AbstractForce");
-    /*package*/ static final SInterfaceConcept ICurrentObjectContext$IJ = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d76cb28bL, "jetbrains.mps.samples.Physics.structure.ICurrentObjectContext");
     /*package*/ static final SConcept WorldDefinition$gU = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6b7f605cb3278f40L, "jetbrains.mps.samples.Physics.structure.WorldDefinition");
     /*package*/ static final SConcept AbstractObjectDefinition$kn = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, "jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition");
     /*package*/ static final SConcept AbstractForceCall$fJ = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");

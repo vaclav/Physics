@@ -1282,7 +1282,7 @@ class BaseObject1 extends Physics.PhysicalEntity {
             this.forces.push();
           }
 }
-// Should include module : BaseObject        
+        
 class Light extends BaseObject1 {
           init() {
             this.setMass(1);
@@ -1337,7 +1337,7 @@ class Torque1 extends Physics.SystemScope {
           }
 }
         
-// Should include module : Torque        
+        
 class TorqueSim extends Physics.Simulation {
           constructor() {
             super(((30 * 1)), 1);
@@ -1350,7 +1350,7 @@ class TorqueSim extends Physics.Simulation {
             var noRotation = new ODE.Rotation();
             noRotation.setArray([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]);
             this.scope = new Torque1(world, Physics.Vector.ZERO, Physics.Vector.ZERO, noRotation);
-            this.metricsRenderer.declareMetric("Rotation speed", (() => Physics.Vector.fromFloat32Array(this.scope.object_SampleBox.body.getAngularVal()).length()));
+            this.metricsRenderer.declareMetric("Rotation speed", (() => Physics.Vector.fromFloat32Array(this.scope.object_SampleBox.body.getAngularVel()).length()));
           }
           getCameraPosition() {
             return new Physics.Vector(((30 * 1)), 0, ((60 * 1)));
@@ -1368,7 +1368,7 @@ class TorqueSim1_0 extends TorqueSim {
 }
         
         Physics.simulationClasses.push(TorqueSim, TorqueSim1_0);
-// Should include module : TorqueSimScript</script>
+</script>
     <script>ODE.readyPromise.then(Physics.makeRenderer).then(console.log);</script>
   </body>
 </html>
