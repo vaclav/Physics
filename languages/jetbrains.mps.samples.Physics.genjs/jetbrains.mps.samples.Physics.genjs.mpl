@@ -31,10 +31,7 @@
         <dependency reexport="false">cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</dependency>
         <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
         <dependency reexport="false">9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)</dependency>
-        <dependency reexport="false">47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)</dependency>
-        <dependency reexport="false">6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)</dependency>
         <dependency reexport="false">a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)</dependency>
-        <dependency reexport="false">25646cd1-304a-482d-bf04-f6e37e1e5a87(jetbrains.mps.samples.Physics.genjava)</dependency>
         <dependency reexport="false">8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)</dependency>
         <dependency reexport="false">acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)</dependency>
         <dependency reexport="false">9372d430-4226-47ef-8bc2-22f1af10ab37(org.iets3.core.expr.genjs.simpleTypes#01)</dependency>
@@ -122,7 +119,7 @@
         <module reference="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" version="0" />
         <module reference="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" version="2" />
         <module reference="3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)" version="0" />
-        <module reference="25646cd1-304a-482d-bf04-f6e37e1e5a87(jetbrains.mps.samples.Physics.genjava)" version="0" />
+        <module reference="3e727c13-2ba6-4363-a061-4e289b490ec5(jetbrains.mps.samples.Physics.generation.util)" version="0" />
         <module reference="89da005b-492b-4e94-9b6d-b429df99e997(jetbrains.mps.samples.Physics.genjs)" version="0" />
         <module reference="30d87076-c555-4b7b-b081-3ad3fc1b6eec(jetbrains.mps.samples.Physics.genjs#7409769864398261204)" version="0" />
         <module reference="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.iets3.ext.math)" version="0" />
@@ -152,9 +149,7 @@
     <dependency reexport="false">be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)</dependency>
     <dependency reexport="true">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
     <dependency reexport="false" scope="generate-into">cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</dependency>
-    <dependency reexport="false">47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)</dependency>
     <dependency reexport="false">6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)</dependency>
-    <dependency reexport="false">6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)</dependency>
     <dependency reexport="false">acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)</dependency>
     <dependency reexport="false">a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)</dependency>
     <dependency reexport="false">d5033cee-f632-44b6-b308-89d4fbde34ff(jetbrains.mps.build.startup)</dependency>

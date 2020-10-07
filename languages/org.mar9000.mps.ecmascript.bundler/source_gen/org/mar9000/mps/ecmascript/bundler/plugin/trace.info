@@ -12,105 +12,95 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root nodeRef="r:a3c39324-54e7-4320-96eb-7d5f838b4500(org.mar9000.mps.ecmascript.bundler.plugin)/8380351187271028411">
     <file name="DependenciesSolver.java">
-      <node id="8380351187271028411" at="27,0,28,0" concept="7" trace="LOG" />
-      <node id="5315786637366621259" at="28,56,29,98" concept="3" />
-      <node id="5315786637366752688" at="29,98,30,0" concept="6" />
-      <node id="5315786637366756133" at="30,0,31,29" concept="5" />
-      <node id="8380351187271198300" at="31,29,32,44" concept="0" />
-      <node id="5315786637366750980" at="32,44,33,0" concept="6" />
-      <node id="5315786637366817662" at="33,0,34,21" concept="5" />
-      <node id="5315786637366823016" at="34,21,35,79" concept="3" />
-      <node id="2191706013851149975" at="35,79,36,0" concept="6" />
-      <node id="2191706013851143390" at="36,0,37,63" concept="5" />
-      <node id="6973537584518735403" at="37,63,38,23" concept="3" />
-      <node id="2191706013851148409" at="38,23,39,0" concept="6" />
-      <node id="2191706013849804714" at="40,159,41,19" concept="0" />
-      <node id="5315786637366904179" at="43,73,44,32" concept="5" />
-      <node id="5315786637366901572" at="46,45,47,54" concept="5" />
-      <node id="5315786637366861536" at="47,54,48,87" concept="4" />
-      <node id="5315786637366922305" at="53,60,54,36" concept="5" />
-      <node id="5315786637366883683" at="54,36,55,63" concept="0" />
-      <node id="6973537584518748561" at="57,9,58,92" concept="0" />
-      <node id="2191706013849988726" at="60,64,61,71" concept="4" />
-      <node id="5315786637366814611" at="64,5,65,0" concept="6" />
-      <node id="8380351187271209296" at="65,0,66,20" concept="4" />
-      <node id="8380351187271065258" at="70,65,71,13" concept="4" />
-      <node id="8380351187271239825" at="72,5,73,0" concept="6" />
-      <node id="5315786637366803941" at="73,0,74,76" concept="3" />
-      <node id="5315786637366652271" at="74,76,75,0" concept="6" />
-      <node id="5315786637366655526" at="77,35,78,102" concept="0" />
-      <node id="1557905991818975297" at="78,102,79,92" concept="0" />
-      <node id="5315786637366782279" at="84,99,85,74" concept="3" />
-      <node id="5315786637366782286" at="85,74,86,59" concept="0" />
-      <node id="5315786637366782292" at="86,59,87,21" concept="4" />
-      <node id="8380351187271028411" at="91,0,92,0" concept="7" trace="JSInjectModule$wX" />
-      <node id="8380351187271028411" at="95,0,96,0" concept="7" trace="module$xfZi" />
-      <node id="2191706013849987122" at="60,0,63,0" concept="2" trace="accept#(Ljetbrains/mps/internal/collections/runtime/IMapping;)Z" />
-      <node id="8380351187271058174" at="69,102,72,5" concept="1" />
-      <node id="5315786637366859963" at="46,0,50,0" concept="2" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="5315786637366882716" at="53,0,57,0" concept="2" trace="visit#(Ljetbrains/mps/internal/collections/runtime/IMapping;)V" />
-      <node id="146165670325513170" at="77,0,81,0" concept="2" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="2191706013849982818" at="58,92,63,76" concept="0" />
-      <node id="5315786637366782269" at="84,0,89,0" concept="8" trace="createDependencyOn#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/util/Map;)Ljava/util/List;" />
-      <node id="5315786637366852328" at="44,32,50,13" concept="4" />
-      <node id="146165670325472634" at="75,0,81,7" concept="0" />
-      <node id="5315786637366851202" at="43,0,52,0" concept="2" trace="accept#(Ljetbrains/mps/internal/collections/runtime/IMapping;)Z" />
-      <node id="8380351187271056751" at="69,0,83,0" concept="8" trace="fetchDependenciesOf#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/util/Map;)V" />
-      <node id="5315786637366849218" at="41,19,57,9" concept="0" />
-      <node id="5315786637366831205" at="39,0,64,5" concept="9" />
-      <node id="8380351187271037378" at="28,0,68,0" concept="8" trace="dependenciesOf#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
-      <scope id="2191706013849987123" at="60,64,61,71" />
-      <scope id="8380351187271058176" at="70,65,71,13" />
-      <scope id="5315786637366859964" at="46,45,48,87" />
-      <scope id="5315786637366882717" at="53,60,55,63" />
-      <scope id="146165670325513171" at="77,35,79,92" />
-      <scope id="2191706013849987122" at="60,0,63,0">
-        <var name="it" id="2191706013849987122" />
-      </scope>
-      <scope id="5315786637366782278" at="84,99,87,21">
+      <node id="5315786637366621259" at="23,56,24,98" concept="3" />
+      <node id="5315786637366752688" at="24,98,25,0" concept="6" />
+      <node id="5315786637366756133" at="25,0,26,29" concept="5" />
+      <node id="8380351187271198300" at="26,29,27,44" concept="0" />
+      <node id="5315786637366750980" at="27,44,28,0" concept="6" />
+      <node id="5315786637366817662" at="28,0,29,21" concept="5" />
+      <node id="5315786637366823016" at="29,21,30,79" concept="3" />
+      <node id="2191706013851149975" at="30,79,31,0" concept="6" />
+      <node id="2191706013851143390" at="31,0,32,63" concept="5" />
+      <node id="6973537584518735403" at="32,63,33,23" concept="3" />
+      <node id="2191706013851148409" at="33,23,34,0" concept="6" />
+      <node id="2191706013849804714" at="35,159,36,19" concept="0" />
+      <node id="5315786637366904179" at="38,73,39,32" concept="5" />
+      <node id="5315786637366901572" at="41,45,42,54" concept="5" />
+      <node id="5315786637366861536" at="42,54,43,87" concept="4" />
+      <node id="5315786637366922305" at="48,60,49,36" concept="5" />
+      <node id="5315786637366883683" at="49,36,50,63" concept="0" />
+      <node id="5315786637366814611" at="53,5,54,0" concept="6" />
+      <node id="8380351187271209296" at="54,0,55,20" concept="4" />
+      <node id="8380351187271065258" at="59,65,60,13" concept="4" />
+      <node id="8380351187271239825" at="61,5,62,0" concept="6" />
+      <node id="5315786637366803941" at="62,0,63,76" concept="3" />
+      <node id="5315786637366652271" at="63,76,64,0" concept="6" />
+      <node id="5315786637366655526" at="66,35,67,102" concept="0" />
+      <node id="1557905991818975297" at="67,102,68,92" concept="0" />
+      <node id="5315786637366782279" at="73,99,74,74" concept="3" />
+      <node id="5315786637366782286" at="74,74,75,59" concept="0" />
+      <node id="5315786637366782292" at="75,59,76,21" concept="4" />
+      <node id="8380351187271028411" at="80,0,81,0" concept="7" trace="JSInjectModule$wX" />
+      <node id="8380351187271028411" at="84,0,85,0" concept="7" trace="module$xfZi" />
+      <node id="8380351187271058174" at="58,102,61,5" concept="1" />
+      <node id="5315786637366859963" at="41,0,45,0" concept="2" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="5315786637366882716" at="48,0,52,0" concept="2" trace="visit#(Ljetbrains/mps/internal/collections/runtime/IMapping;)V" />
+      <node id="146165670325513170" at="66,0,70,0" concept="2" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="5315786637366782269" at="73,0,78,0" concept="8" trace="createDependencyOn#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/util/Map;)Ljava/util/List;" />
+      <node id="5315786637366852328" at="39,32,45,13" concept="4" />
+      <node id="146165670325472634" at="64,0,70,7" concept="0" />
+      <node id="5315786637366851202" at="38,0,47,0" concept="2" trace="accept#(Ljetbrains/mps/internal/collections/runtime/IMapping;)Z" />
+      <node id="8380351187271056751" at="58,0,72,0" concept="8" trace="fetchDependenciesOf#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/util/Map;)V" />
+      <node id="5315786637366849218" at="36,19,52,9" concept="0" />
+      <node id="5315786637366831205" at="34,0,53,5" concept="9" />
+      <node id="8380351187271037378" at="23,0,57,0" concept="8" trace="dependenciesOf#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
+      <scope id="8380351187271058176" at="59,65,60,13" />
+      <scope id="5315786637366859964" at="41,45,43,87" />
+      <scope id="5315786637366882717" at="48,60,50,63" />
+      <scope id="146165670325513171" at="66,35,68,92" />
+      <scope id="5315786637366782278" at="73,99,76,21">
         <var name="innerDeps" id="5315786637366782280" />
       </scope>
-      <scope id="5315786637366859963" at="46,0,50,0">
+      <scope id="5315786637366859963" at="41,0,45,0">
         <var name="it" id="5315786637366859963" />
       </scope>
-      <scope id="5315786637366882716" at="53,0,57,0">
+      <scope id="5315786637366882716" at="48,0,52,0">
         <var name="it" id="5315786637366882716" />
       </scope>
-      <scope id="146165670325513170" at="77,0,81,0">
+      <scope id="146165670325513170" at="66,0,70,0">
         <var name="it" id="146165670325513170" />
       </scope>
-      <scope id="5315786637366782269" at="84,0,89,0">
+      <scope id="5315786637366782269" at="73,0,78,0">
         <var name="dependencies" id="5315786637366782273" />
         <var name="node" id="5315786637366782271" />
       </scope>
-      <scope id="5315786637366851203" at="43,73,50,13" />
-      <scope id="5315786637366851202" at="43,0,52,0">
+      <scope id="5315786637366851203" at="38,73,45,13" />
+      <scope id="5315786637366851202" at="38,0,47,0">
         <var name="entry" id="5315786637366851202" />
       </scope>
-      <scope id="8380351187271056754" at="69,102,81,7">
+      <scope id="8380351187271056754" at="58,102,70,7">
         <var name="dependsOn" id="5315786637366803942" />
       </scope>
-      <scope id="8380351187271056751" at="69,0,83,0">
+      <scope id="8380351187271056751" at="58,0,72,0">
         <var name="dependencies" id="8380351187271057709" />
         <var name="program" id="8380351187271057440" />
       </scope>
-      <scope id="5315786637366831207" at="40,159,63,76" />
-      <scope id="8380351187271037380" at="28,56,66,20">
+      <scope id="5315786637366831207" at="35,159,52,9" />
+      <scope id="8380351187271037380" at="23,56,55,20">
         <var name="dependencies" id="5315786637366621262" />
         <var name="iterations" id="6973537584518735406" />
         <var name="selected" id="5315786637366823019" />
       </scope>
-      <scope id="8380351187271037378" at="28,0,68,0">
+      <scope id="8380351187271037378" at="23,0,57,0">
         <var name="root" id="8380351187271195823" />
       </scope>
-      <unit id="8380351187271028411" at="90,0,93,0" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$CONCEPTS" />
-      <unit id="8380351187271028411" at="94,0,97,0" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$LINKS" />
-      <unit id="2191706013849987122" at="59,88,63,7" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$3" />
-      <unit id="5315786637366859963" at="45,122,50,11" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$1$1" />
-      <unit id="5315786637366882716" at="52,22,57,7" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$2" />
-      <unit id="146165670325513170" at="76,144,81,5" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$4" />
-      <unit id="5315786637366851202" at="42,50,52,7" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$1" />
-      <unit id="8380351187271028411" at="26,0,98,0" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver" />
+      <unit id="8380351187271028411" at="79,0,82,0" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$CONCEPTS" />
+      <unit id="8380351187271028411" at="83,0,86,0" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$LINKS" />
+      <unit id="5315786637366859963" at="40,122,45,11" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$1$1" />
+      <unit id="5315786637366882716" at="47,22,52,7" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$2" />
+      <unit id="146165670325513170" at="65,144,70,5" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$3" />
+      <unit id="5315786637366851202" at="37,50,47,7" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver$1" />
+      <unit id="8380351187271028411" at="22,0,87,0" name="org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver" />
     </file>
   </root>
 </debug-info>

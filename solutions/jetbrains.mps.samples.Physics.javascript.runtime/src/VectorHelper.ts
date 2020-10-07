@@ -32,7 +32,7 @@ export namespace VectorHelper {
     for (let x = 0; x < 3; x++) {
       for (let y = 0; y < 3; y++) {
         for (let i = 0; i < 3; i++) {
-          result[x][y] += A[x + 4 * i] * B[i + 4 * y];
+          result[x + 4 * y] += A[x + 4 * i] * B[i + 4 * y];
         }
       }
     }

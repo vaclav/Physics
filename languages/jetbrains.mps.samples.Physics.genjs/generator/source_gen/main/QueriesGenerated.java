@@ -11,7 +11,7 @@ import jetbrains.mps.typechecking.TypecheckingFacade;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.samples.Physics.behavior.DirectionalCoordinates__BehaviorDescriptor;
-import jetbrains.mps.samples.Physics.genjava.behavior.NumberGenerationHelper;
+import jetbrains.mps.samples.Physics.plugin.NumberGenerationHelper;
 import jetbrains.mps.generator.template.PropertyMacroContext;
 import jetbrains.mps.samples.Physics.genjs.plugin.NameMapping;
 import jetbrains.mps.samples.Physics.behavior.Force__BehaviorDescriptor;
@@ -19,7 +19,7 @@ import jetbrains.mps.generator.template.ReferenceMacroContext;
 import jetbrains.mps.generator.template.IfMacroContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext;
-import jetbrains.mps.samples.Physics.genjava.behavior.VectorGenerationHelper;
+import jetbrains.mps.samples.Physics.plugin.VectorGenerationHelper;
 import jetbrains.mps.samples.Physics.behavior.IForceWithCache__BehaviorDescriptor;
 import jetbrains.mps.generator.template.TemplateArgumentContext;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
@@ -621,16 +621,16 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.axis$6LVA);
   }
   public static SNode sourceNodeQuery_7_4(final SourceSubstituteMacroNodeContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.angle$6N6F);
+    return NumberGenerationHelper.nodeOrZero(SLinkOperations.getTarget(_context.getNode(), LINKS.angle$6N6F));
   }
   public static SNode sourceNodeQuery_7_5(final SourceSubstituteMacroNodeContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.alpha$EFZ_);
+    return NumberGenerationHelper.nodeOrZero(SLinkOperations.getTarget(_context.getNode(), LINKS.alpha$EFZ_));
   }
   public static SNode sourceNodeQuery_7_6(final SourceSubstituteMacroNodeContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.beta$EFxz);
+    return NumberGenerationHelper.nodeOrZero(SLinkOperations.getTarget(_context.getNode(), LINKS.beta$EFxz));
   }
   public static SNode sourceNodeQuery_7_7(final SourceSubstituteMacroNodeContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.gamma$ENY7);
+    return NumberGenerationHelper.nodeOrZero(SLinkOperations.getTarget(_context.getNode(), LINKS.gamma$ENY7));
   }
   public static SNode sourceNodeQuery_9_0(final SourceSubstituteMacroNodeContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.restitutionPercent$S732);

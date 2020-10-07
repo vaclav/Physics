@@ -14,8 +14,10 @@ import org.jetbrains.mps.openapi.model.SNode;
 import com.mbeddr.mpsutil.interpreter.rt.IContext;
 import com.mbeddr.mpsutil.interpreter.rt.ICoverageAnalyzer;
 import com.mbeddr.mpsutil.interpreter.rt.ComputationTrace;
-import jetbrains.mps.samples.Physics.dimensions.behavior.UnitConversionUtil;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import jetbrains.mps.samples.Physics.dimensions.typesystem.DimensionTypeHelper;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import java.math.BigDecimal;
 import com.mbeddr.mpsutil.interpreter.rt.StopAndReturnException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterEscapeException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterRuntimeException;
@@ -41,7 +43,7 @@ public class InterpreterDimensionsInterpreter extends InterpreterBase {
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           // Convert to raw default units 
-          return context.getRootInterpreter().evaluate(UnitConversionUtil.compositeExpressionToBase(SLinkOperations.getTarget(node, LINKS.content$aqgO), SLinkOperations.getChildren(node, LINKS.units$qq1O), true), context, coverage, trace, false);
+          return AH.mul(DimensionTypeHelper.compositeConversionRatio(SLinkOperations.getChildren(node, LINKS.units$qq1O), true), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.content$aqgO), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -71,7 +73,7 @@ public class InterpreterDimensionsInterpreter extends InterpreterBase {
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           // Convert back from raw default units 
-          return context.getRootInterpreter().evaluate(UnitConversionUtil.compositeExpressionToBase(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node), SLinkOperations.getChildren(node, LINKS.units$qq1O), false), context, coverage, trace, false);
+          return AH.mul(DimensionTypeHelper.compositeConversionRatio(SLinkOperations.getChildren(node, LINKS.units$qq1O), false), ((Number) context.getRootInterpreter().evaluate(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node), context, coverage, trace, false)));
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -108,8 +110,8 @@ public class InterpreterDimensionsInterpreter extends InterpreterBase {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink content$aqgO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
     /*package*/ static final SContainmentLink units$qq1O = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L, 0x777af24c04661545L, "units");
+    /*package*/ static final SContainmentLink content$aqgO = MetaAdapterFactory.getContainmentLink(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, 0x777af24c045ea227L, "content");
   }
 
   private static final class CONCEPTS {

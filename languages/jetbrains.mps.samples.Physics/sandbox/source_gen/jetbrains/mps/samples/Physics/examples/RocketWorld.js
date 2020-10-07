@@ -9,7 +9,7 @@ class RocketEuropaS452G extends BaseObject1 {
     this.setMass(12100);
     this.body.setPosition.apply(this.body, this.scope.getAbsoluteInitialPosition(new Physics.Vector(((1154982.997142537 * 1)), ((-4498361.775686384 * 1)), ((4361259.8800782645 * 1)))).values);
     this.body.setLinearVel.apply(this.body, this.scope.initialVelocity.values);
-    this.body.setRotation(Physics.VectorHelper.addRotation(this.scope.initialRotation, Physics.RotationHelper.fromEulerAngles((((0.26 * 1)) * Math.PI), (((1.58 * 1)) * Math.PI))));
+    this.body.setRotation(Physics.VectorHelper.addRotation(this.scope.initialRotation, Physics.RotationHelper.fromEulerAngles((((0.26 * 1)) * Math.PI), (((1.58 * 1)) * Math.PI), 0)));
     (super['init'])();
     this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 0, 0), new Physics.InternalColor(0, 0, 0)));
     this.propertiesBuilder.set(Physics.PropKey.COLLISION_REACT, Physics.SimpleCollisionReaction.IGNORE);

@@ -17,9 +17,10 @@ import { SimpleCollisionReaction } from "./objects/forces/SimpleCollisionReactio
 import { CachedForceMapper, ForceMapper } from "./objects/forces/ForceMapper";
 import FiniteTraceHandler from "./objects/rendering/FiniteTraceHandler";
 import InfiniteTraceHandler from "./objects/rendering/InfiniteTraceHandler";
-
+import { RotationHelper } from "./RotationHelper";
 let Physics = {
 	VectorHelper,
+	RotationHelper,
 	VectorLike,
 	Vector,
 	InternalColor,

@@ -116,10 +116,10 @@ public class RocketWorldSystemScope extends SystemScope {
               }.invoke();
               return new _FunctionTypes._return_P0_E0<Number>() {
                 public Number invoke() {
-                  if (AH.isGreater(positiveDistance, ((Number) (AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))))))) {
+                  if (AH.isGreater(positiveDistance, ((Number) (AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(0, RoundingMode.DOWN))))))) {
                     return ((Number) new BigInteger("0"));
                   } else {
-                    return AH.mul(AH.div((AH.sub(((Number) (AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))))), positiveDistance)), ((Number) (AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN)))))), ((Number) (AH.mul(((Number) new BigDecimal("1.225055").setScale(6, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))));
+                    return AH.mul(AH.div((AH.sub(((Number) (AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(0, RoundingMode.DOWN))))), positiveDistance)), ((Number) (AH.mul(((Number) new BigDecimal("24.384").setScale(3, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(0, RoundingMode.DOWN)))))), ((Number) (AH.mul(((Number) new BigDecimal("1.225055").setScale(6, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))));
                   }
                 }
               }.invoke();
@@ -280,7 +280,7 @@ public class RocketWorldSystemScope extends SystemScope {
       Earth2PhysicalEntity currentEntity = this;
 
       // Set static properties of Earth 
-      this.setMass(((Number) new BigDecimal("5.972E+24").setScale(7, RoundingMode.DOWN)));
+      this.setMass(((Number) new BigDecimal("5.972E+24").setScale(0, RoundingMode.DOWN)));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
       this.getBody().setAngularVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), AH.div(((Number) (AH.mul(((Number) new BigInteger("360")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))))), (AH.add(AH.add(((Number) (AH.mul(((Number) new BigInteger("23")), ((Number) new BigInteger("3600"))))), ((Number) (AH.mul(((Number) new BigInteger("56")), ((Number) new BigInteger("60")))))), ((Number) (AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1")))))))), ((Number) new BigInteger("0")))));
@@ -290,7 +290,7 @@ public class RocketWorldSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1.00E+3").setScale(0, RoundingMode.DOWN))))));
       propertiesBuilder.set(PropKey.TEXTURE, new ImageTexture("https://upload.wikimedia.org/wikipedia/commons/4/4d/Whole_world_-_land_and_oceans.jpg"));
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       this.getForces().addAll(Arrays.asList());

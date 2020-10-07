@@ -44,10 +44,10 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.DirectionalCoordinates__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.Force__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.behavior.IForceWithCache__BehaviorDescriptor" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.genjava.behavior.NumberGenerationHelper" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.genjava.behavior.VectorGenerationHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.genjs.plugin.NameMapping" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.genjs.plugin.PlainTextRuntimeImporter" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.NumberGenerationHelper" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.VectorGenerationHelper" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.builder.SNodeBuilder" />
     <classNode dependClassName="jetbrains.mps.typechecking.TypecheckingFacade" />

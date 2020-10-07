@@ -61,6 +61,7 @@
         <version>1.0</version>
         <depends>jetbrains.mps.execution.configurations</depends>
         <depends>org.iets3.core.os</depends>
+        <depends>org.iets3.core.expr.genjava</depends>
         <depends>iets3.opensource.genjs</depends>
         <depends>jetbrains.mps.execution.languages</depends>
         <depends>com.intellij.modules.platform</depends>
@@ -254,6 +255,7 @@
           <module ref="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.iets3.ext.math)" kind="cl" />
           <module ref="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" kind="cl" />
           <module ref="dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)" kind="cl" />
+          <module ref="272bf1ac-d70c-4dac-96a3-976884f641b8(org.iets3.core.expr.genjava.simpleTypes.rt)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
           <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="197e2a32-ff26-4358-af5c-731ae2b35f83(org.iets3.core.expr.simpleTypes.interpreter)" kind="cl" />
@@ -410,7 +412,6 @@
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
-          <module ref="47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
@@ -423,7 +424,6 @@
           <module ref="272bf1ac-d70c-4dac-96a3-976884f641b8(org.iets3.core.expr.genjava.simpleTypes.rt)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
-          <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
@@ -489,7 +489,6 @@
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
-          <module ref="47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
@@ -501,7 +500,6 @@
           <module ref="272bf1ac-d70c-4dac-96a3-976884f641b8(org.iets3.core.expr.genjava.simpleTypes.rt)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
-          <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
@@ -584,19 +582,16 @@
           <module ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" kind="cl" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
           <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" kind="cl" />
-          <module ref="47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)" kind="cl" />
           <module ref="d5033cee-f632-44b6-b308-89d4fbde34ff(jetbrains.mps.build.startup)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
           <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
-          <module ref="25646cd1-304a-482d-bf04-f6e37e1e5a87(jetbrains.mps.samples.Physics.genjava)" kind="cl" />
           <module ref="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" kind="cl" />
           <module ref="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40(org.iets3.core.expr.genjava.simpleTypes)" kind="cl" />
           <module ref="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" kind="cl" />
           <module ref="f2122111-2e69-4f81-8e65-120416de80e8(org.iets3.core.expr.genjs.simpleTypes)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
-          <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)" kind="cl" />
         </dependencies>
         <uses>
@@ -670,11 +665,9 @@
           <module ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" kind="cl" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
           <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" kind="cl" />
-          <module ref="47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)" kind="cl" />
           <module ref="d5033cee-f632-44b6-b308-89d4fbde34ff(jetbrains.mps.build.startup)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
-          <module ref="25646cd1-304a-482d-bf04-f6e37e1e5a87(jetbrains.mps.samples.Physics.genjava)" kind="cl" />
           <module ref="89da005b-492b-4e94-9b6d-b429df99e997(jetbrains.mps.samples.Physics.genjs)" kind="cl" />
           <module ref="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" kind="cl" />
           <module ref="0ab6f947-2451-4a3a-80a3-33b77e399874(org.iets3.core.expr.genjava.simpleTypes#8286534136182342700)" kind="cl" />
@@ -682,7 +675,6 @@
           <module ref="9372d430-4226-47ef-8bc2-22f1af10ab37(org.iets3.core.expr.genjs.simpleTypes#01)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
-          <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)" kind="cl" />
         </dependencies>
         <uses>
@@ -1088,6 +1080,7 @@
           <module ref="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" kind="cl" />
           <module ref="2f7e2e35-6e74-4c43-9fa5-2465d68f5996(org.iets3.core.expr.collections)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
+          <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
           <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="197e2a32-ff26-4358-af5c-731ae2b35f83(org.iets3.core.expr.simpleTypes.interpreter)" kind="cl" />
         </dependencies>
@@ -1693,7 +1686,6 @@
           <language id="l:ddeeec5e-aa31-4c44-bc40-319cd452626e:org.iets3.core.expr.genjava.toplevel" />
           <language id="l:acbc5fbb-8801-4f62-a053-ab017db885db:org.iets3.core.expr.genjs.base" />
           <language id="l:f2122111-2e69-4f81-8e65-120416de80e8:org.iets3.core.expr.genjs.simpleTypes" />
-          <language id="l:f0534572-e0f4-46cd-8abb-ed67e4c4a375:org.iets3.core.expr.genjs.toplevel" />
           <language id="l:9464fa06-5ab9-409b-9274-64ab29588457:org.iets3.core.expr.lambda" />
           <language id="l:6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0:org.iets3.core.expr.math" />
           <language id="l:f3eafff0-30d2-46d6-9150-f0f3b880ce27:org.iets3.core.expr.path" />
@@ -1937,12 +1929,10 @@
           <module ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" kind="cl" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
           <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="cl" />
-          <module ref="bf659d6c-5638-4ea1-972b-4d492b5a91f2(jetbrains.mps.execution.configurations.implementation.plugin)" kind="cl" />
           <module ref="933a68f9-aab6-401b-b5c5-5ca7783dce5f(jetbrains.mps.execution.configurations.pluginSolution)" kind="cl" />
           <module ref="04b376d5-fc16-403b-a344-c68b30193c6a(jetbrains.mps.execution.library)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
-          <module ref="b0f8641f-bd77-4421-8425-30d9088a82f7(org.apache.commons)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
@@ -1951,7 +1941,6 @@
           <language id="l:63650c59-16c8-498a-99c8-005c7ee9515d:jetbrains.mps.lang.access" />
           <language id="l:ef7bf5ac-d06c-4342-b11d-e42104eb9343:jetbrains.mps.lang.plugin.standalone" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
-          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
         </uses>
         <classpath>
           <entry path="." />
@@ -2007,6 +1996,7 @@
         <version>1.0</version>
         <depends>jetbrains.mps.execution.configurations</depends>
         <depends>org.iets3.core.os</depends>
+        <depends>org.iets3.core.expr.genjava</depends>
         <depends>iets3.opensource.genjs</depends>
         <depends>jetbrains.mps.execution.languages</depends>
         <depends>com.intellij.modules.platform</depends>
@@ -2200,6 +2190,7 @@
           <module ref="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.iets3.ext.math)" kind="cl" />
           <module ref="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" kind="cl" />
           <module ref="dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)" kind="cl" />
+          <module ref="272bf1ac-d70c-4dac-96a3-976884f641b8(org.iets3.core.expr.genjava.simpleTypes.rt)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
           <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="197e2a32-ff26-4358-af5c-731ae2b35f83(org.iets3.core.expr.simpleTypes.interpreter)" kind="cl" />
@@ -2356,7 +2347,6 @@
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
-          <module ref="47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
@@ -2369,7 +2359,6 @@
           <module ref="272bf1ac-d70c-4dac-96a3-976884f641b8(org.iets3.core.expr.genjava.simpleTypes.rt)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
-          <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
@@ -2435,7 +2424,6 @@
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
-          <module ref="47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
@@ -2447,7 +2435,6 @@
           <module ref="272bf1ac-d70c-4dac-96a3-976884f641b8(org.iets3.core.expr.genjava.simpleTypes.rt)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
-          <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
@@ -2530,19 +2517,16 @@
           <module ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" kind="cl" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
           <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" kind="cl" />
-          <module ref="47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)" kind="cl" />
           <module ref="d5033cee-f632-44b6-b308-89d4fbde34ff(jetbrains.mps.build.startup)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
           <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
-          <module ref="25646cd1-304a-482d-bf04-f6e37e1e5a87(jetbrains.mps.samples.Physics.genjava)" kind="cl" />
           <module ref="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" kind="cl" />
           <module ref="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40(org.iets3.core.expr.genjava.simpleTypes)" kind="cl" />
           <module ref="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" kind="cl" />
           <module ref="f2122111-2e69-4f81-8e65-120416de80e8(org.iets3.core.expr.genjs.simpleTypes)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
-          <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)" kind="cl" />
         </dependencies>
         <uses>
@@ -2616,11 +2600,9 @@
           <module ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" kind="cl" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
           <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" kind="cl" />
-          <module ref="47f075a6-558e-4640-a606-7ce0236c8023(com.mbeddr.mpsutil.interpreter)" kind="cl" />
           <module ref="d5033cee-f632-44b6-b308-89d4fbde34ff(jetbrains.mps.build.startup)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
-          <module ref="25646cd1-304a-482d-bf04-f6e37e1e5a87(jetbrains.mps.samples.Physics.genjava)" kind="cl" />
           <module ref="89da005b-492b-4e94-9b6d-b429df99e997(jetbrains.mps.samples.Physics.genjs)" kind="cl" />
           <module ref="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" kind="cl" />
           <module ref="0ab6f947-2451-4a3a-80a3-33b77e399874(org.iets3.core.expr.genjava.simpleTypes#8286534136182342700)" kind="cl" />
@@ -2628,7 +2610,6 @@
           <module ref="9372d430-4226-47ef-8bc2-22f1af10ab37(org.iets3.core.expr.genjs.simpleTypes#01)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
           <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
-          <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)" kind="cl" />
         </dependencies>
         <uses>
@@ -3034,6 +3015,7 @@
           <module ref="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" kind="cl" />
           <module ref="2f7e2e35-6e74-4c43-9fa5-2465d68f5996(org.iets3.core.expr.collections)" kind="cl" />
           <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
+          <module ref="6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)" kind="cl" />
           <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="197e2a32-ff26-4358-af5c-731ae2b35f83(org.iets3.core.expr.simpleTypes.interpreter)" kind="cl" />
         </dependencies>
@@ -3639,7 +3621,6 @@
           <language id="l:ddeeec5e-aa31-4c44-bc40-319cd452626e:org.iets3.core.expr.genjava.toplevel" />
           <language id="l:acbc5fbb-8801-4f62-a053-ab017db885db:org.iets3.core.expr.genjs.base" />
           <language id="l:f2122111-2e69-4f81-8e65-120416de80e8:org.iets3.core.expr.genjs.simpleTypes" />
-          <language id="l:f0534572-e0f4-46cd-8abb-ed67e4c4a375:org.iets3.core.expr.genjs.toplevel" />
           <language id="l:9464fa06-5ab9-409b-9274-64ab29588457:org.iets3.core.expr.lambda" />
           <language id="l:6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0:org.iets3.core.expr.math" />
           <language id="l:f3eafff0-30d2-46d6-9150-f0f3b880ce27:org.iets3.core.expr.path" />
@@ -3883,12 +3864,10 @@
           <module ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" kind="cl" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
           <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="cl" />
-          <module ref="bf659d6c-5638-4ea1-972b-4d492b5a91f2(jetbrains.mps.execution.configurations.implementation.plugin)" kind="cl" />
           <module ref="933a68f9-aab6-401b-b5c5-5ca7783dce5f(jetbrains.mps.execution.configurations.pluginSolution)" kind="cl" />
           <module ref="04b376d5-fc16-403b-a344-c68b30193c6a(jetbrains.mps.execution.library)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
-          <module ref="b0f8641f-bd77-4421-8425-30d9088a82f7(org.apache.commons)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
@@ -3897,7 +3876,6 @@
           <language id="l:63650c59-16c8-498a-99c8-005c7ee9515d:jetbrains.mps.lang.access" />
           <language id="l:ef7bf5ac-d06c-4342-b11d-e42104eb9343:jetbrains.mps.lang.plugin.standalone" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
-          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
         </uses>
         <classpath>
           <entry path="." />
@@ -4007,7 +3985,6 @@
       <plugin path="${artifacts.mps}/plugins/mps-debugger-api" />
       <plugin path="${artifacts.mps}/plugins/mps-debugger-java" />
       <plugin path="${artifacts.mps}/plugins/mps-execution-api" />
-      <plugin path="${artifacts.mps}/plugins/mps-execution-configurations" />
       <plugin path="${artifacts.mps}/plugins/mps-execution-languages" />
       <plugin path="${artifacts.mps}/plugins/mps-httpsupport" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
@@ -4060,7 +4037,6 @@
       <library file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
       <library file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.core.expr.genjs.base.jar" />
       <library file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.core.expr.genjs.simpleTypes.jar" />
-      <library file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.core.expr.genjs.toplevel.jar" />
       <library file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.opensource.genjs.build.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/closures.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/collections.runtime.jar" />
@@ -4182,7 +4158,6 @@
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.java.stub.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.kernel.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.lang.makeup.jar" />
-      <library file="${artifacts.mps}/languages/util/jetbrains.mps.persistence.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.project.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.refactoring.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.runtime.jar" />
@@ -4198,31 +4173,21 @@
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.ide.build.jar" />
       <library file="${artifacts.mps}/plugins/mps-debugger-api/languages/mps-debugger-api/jetbrains.mps.debugger.api.lang.jar" />
       <library file="${artifacts.mps}/plugins/mps-debugger-api/lib/debugger-api.jar" />
-      <library file="${artifacts.mps}/plugins/mps-debugger-java/languages/mps-debugger-java/JDK-tools.jar" />
-      <library file="${artifacts.mps}/plugins/mps-debugger-java/languages/mps-debugger-java/jetbrains.mps.debugger.java.evaluation.jar" />
-      <library file="${artifacts.mps}/plugins/mps-debugger-java/lib/debugger-java.jar" />
       <library file="${artifacts.mps}/plugins/mps-execution-api/languages/mps-execution-api/jetbrains.mps.execution.common.jar" />
       <library file="${artifacts.mps}/plugins/mps-execution-api/languages/mps-execution-api/jetbrains.mps.execution.settings.jar" />
       <library file="${artifacts.mps}/plugins/mps-execution-api/lib/execution-api.jar" />
-      <library file="${artifacts.mps}/plugins/mps-execution-configurations/languages/mps-execution-configurations/jetbrains.mps.ant.execution.jar" />
-      <library file="${artifacts.mps}/plugins/mps-execution-configurations/languages/mps-execution-configurations/jetbrains.mps.baseLanguage.execution.util.jar" />
-      <library file="${artifacts.mps}/plugins/mps-execution-configurations/languages/mps-execution-configurations/jetbrains.mps.baseLanguage.unitTest.execution.jar" />
-      <library file="${artifacts.mps}/plugins/mps-execution-configurations/languages/mps-execution-configurations/jetbrains.mps.execution.configurations.implementation.plugin.jar" />
       <library file="${artifacts.mps}/plugins/mps-execution-languages/languages/mps-execution-languages/jetbrains.mps.execution.commands.jar" />
       <library file="${artifacts.mps}/plugins/mps-execution-languages/languages/mps-execution-languages/jetbrains.mps.execution.configurations.jar" />
       <library file="${artifacts.mps}/plugins/mps-execution-languages/languages/mps-execution-languages/jetbrains.mps.execution.configurations.pluginSolution.jar" />
-      <library file="${artifacts.mps}/plugins/mps-execution-languages/languages/mps-execution-languages/jetbrains.mps.execution.languages.jar" />
       <library file="${artifacts.mps}/plugins/mps-execution-languages/languages/mps-execution-languages/jetbrains.mps.execution.library.jar" />
       <library file="${artifacts.mps}/plugins/mps-execution-languages/lib/execution-languages.jar" />
       <library file="${artifacts.mps}/plugins/mps-httpsupport/languages/jetbrains.mps.ide.httpsupport.jar" />
       <library file="${artifacts.mps}/plugins/mps-httpsupport/lib/httpsupport.jar" />
       <library file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.jar" />
-      <library file="${artifacts.mps}/plugins/mps-testing/languages/gentest/jetbrains.mps.lang.test.generator.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.matcher.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.runtime.jar" />
-      <library file="${artifacts.mps}/plugins/mps-testing/lib/jetbrains.mps.lang.test.util.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.build.os/languages/iets3.build/org.iets3.opensource.build.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.expr.genjava/languages/org.iets3.core.expr.genjava/org.iets3.core.expr.genjava.base.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.expr.genjava/languages/org.iets3.core.expr.genjava/org.iets3.core.expr.genjava.base.rt.jar" />
@@ -4512,6 +4477,7 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.base.runtime.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.collections.jar" />
+        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.expr.genjava/languages/org.iets3.core.expr.genjava/org.iets3.core.expr.genjava.simpleTypes.rt.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.lambda.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.math.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
@@ -4796,7 +4762,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.jetbrains.mps.samples.Physics.genjs" depends="java.compile.jetbrains.mps.samples.Physics, java.compile.jetbrains.mps.samples.Physics.dimensions, java.compile.jetbrains.mps.samples.Physics.genjava, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math, java.compile.jetbrains.mps.samples.Physics.types, fetchDependencies">
+  <target name="java.compile.jetbrains.mps.samples.Physics.genjs" depends="java.compile.jetbrains.mps.samples.Physics, java.compile.jetbrains.mps.samples.Physics.dimensions, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math, java.compile.jetbrains.mps.samples.Physics.types, fetchDependencies">
     <mkdir dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/source_gen" />
     <mkdir dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" />
     <javac destdir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -4835,7 +4801,6 @@
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions" />
-        <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjava" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
@@ -4892,7 +4857,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.jetbrains.mps.samples.Physics.genjs#7409769864398261204" depends="java.compile.jetbrains.mps.samples.Physics, java.compile.jetbrains.mps.samples.Physics.dimensions, java.compile.jetbrains.mps.samples.Physics.genjava, java.compile.jetbrains.mps.samples.Physics.genjs, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math, java.compile.jetbrains.mps.samples.Physics.types, fetchDependencies">
+  <target name="java.compile.jetbrains.mps.samples.Physics.genjs#7409769864398261204" depends="java.compile.jetbrains.mps.samples.Physics, java.compile.jetbrains.mps.samples.Physics.dimensions, java.compile.jetbrains.mps.samples.Physics.genjs, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math, java.compile.jetbrains.mps.samples.Physics.types, fetchDependencies">
     <mkdir dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs#7409769864398261204" />
     <javac destdir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs#7409769864398261204" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -4931,7 +4896,6 @@
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions" />
-        <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjava" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" />
@@ -5409,6 +5373,7 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.base.runtime.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.collections.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.lambda.jar" />
+        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.math.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.interpreter.jar" />
@@ -6207,7 +6172,6 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
-        <fileset file="${artifacts.mps}/plugins/mps-execution-configurations/languages/mps-execution-configurations/jetbrains.mps.execution.configurations.implementation.plugin.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-execution-languages/languages/mps-execution-languages/jetbrains.mps.execution.configurations.pluginSolution.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-execution-languages/languages/mps-execution-languages/jetbrains.mps.execution.library.jar" />
         <fileset file="${artifacts.mps}/languages/util/jetbrains.mps.execution.util.jar" />
@@ -6215,7 +6179,6 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/mps-apache-commons/languages/mps-apache-commons-math/org.apache.commons.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.base.jar" />
@@ -6225,13 +6188,6 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.toplevel.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/mps-apache-commons/lib" includes="commons-math3-3.3/commons-math3-3.3.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/mps-apache-commons/lib" includes="commons-csv-1.0/commons-csv-1.0.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/mps-apache-commons/lib" includes="commons-io-2.4/commons-io-2.4.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/mps-apache-commons/lib" includes="commons-lang3-3.3.2/commons-lang3-3.3.2.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/mps-apache-commons/lib" includes="commons-primitives-1.0/commons-primitives-1.0.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/mps-apache-commons/lib" includes="miglayout/miglayout-4.0-swing.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/mps-apache-commons/lib" includes="miglayout/miglayout-4.0.jar" />
       </classpath>
     </javac>
   </target>
