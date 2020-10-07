@@ -2142,7 +2142,7 @@
                   <property role="2gteSD" value="0.000000000000000000000000000029995195653237156" />
                 </node>
                 <node concept="2gteS_" id="aQ" role="2gteVg">
-                  <property role="2gteVv" value="45" />
+                  <property role="2gteVv" value="20" />
                 </node>
               </node>
               <node concept="3AmWvR" id="aO" role="1N7es9">

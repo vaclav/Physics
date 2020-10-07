@@ -18,9 +18,12 @@ export namespace SimpleCollisionReaction {
   
   export const MERGE: CollisionReaction = {
     react: function(world: World, first: GeomReactionContext, second: GeomReactionContext, oneFirst: boolean): void {
-      first.entity.name = first.entity.name + " + " + second.entity.name;
-      first.entity.fixture!.mergeWith(second.entity.fixture!);
-      second.entity.disable();
+      // Run the method oustide of a simulation step
+      world.safeCallbacks.push(() => {
+        first.entity.name = first.entity.name + " + " + second.entity.name;
+        first.entity.fixture!.mergeWith(second.entity.fixture!, first.entity.getMass(), second.entity.getMass());
+        second.entity.disable();
+      });
     },
     priority: -300,
     preventDifferentReaction: true

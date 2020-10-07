@@ -3770,7 +3770,7 @@
                                           <ref role="37wK5l" to="xlxw:~BigDecimal.setScale(int,java.math.RoundingMode)" resolve="setScale" />
                                           <uo k="s:originTrace" v="n:290" />
                                           <node concept="3cmrfG" id="fI" role="37wK5m">
-                                            <property role="3cmrfH" value="25" />
+                                            <property role="3cmrfH" value="18" />
                                             <uo k="s:originTrace" v="n:290" />
                                           </node>
                                           <node concept="Rm8GO" id="fJ" role="37wK5m">

@@ -49,16 +49,9 @@ export default abstract class Fixture implements Renderable {
   /**
    * Take the given fixture and merge its content numbero this fixture
    */
-  public mergeWith(fixture: Fixture): void {
+  public mergeWith(fixture: Fixture, thisMass: number, otherMass: number): void {
     const body: ODE.DBody = this.geometry!.getBody();
     const otherBody: ODE.DBody = fixture.geometry!.getBody();
-
-    // Keep previous mass 
-    const thisMass: number = body.getMass().getMass();
-    const otherMass: number = otherBody.getMass().getMass();
-
-    // Destroy previous previous 
-    this.geometry!.destroy();
 
     // Set volume to the sum of both 
     const volume: number = this.getVolume() + fixture.getVolume();

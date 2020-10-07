@@ -2,7 +2,7 @@
 <debug-info version="2">
   <root nodeRef="r:68e8d9e2-25f3-454a-b9cf-bc9e94342e3f(jetbrains.mps.samples.Physics.demo)/1578680851971574475">
     <file name="Demo.html">
-      <unit id="1578680851971574475" at="1,0,1427,7" name="jetbrains.mps.samples.Physics.demo.Demo" />
+      <unit id="1578680851971574475" at="1,0,1433,7" name="jetbrains.mps.samples.Physics.demo.Demo" />
     </file>
   </root>
 </debug-info>

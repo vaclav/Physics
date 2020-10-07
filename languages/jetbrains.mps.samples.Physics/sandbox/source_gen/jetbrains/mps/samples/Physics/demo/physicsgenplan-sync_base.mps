@@ -946,7 +946,7 @@
                   <property role="2gteSD" value="-0.0000000000816545914761114" />
                 </node>
                 <node concept="2gteS_" id="4u" role="2gteVg">
-                  <property role="2gteVv" value="25" />
+                  <property role="2gteVv" value="18" />
                 </node>
               </node>
               <node concept="3AmWvR" id="4r" role="1N7es9">

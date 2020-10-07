@@ -11,6 +11,11 @@ export default class World implements Renderable {
   public readonly space: ODE.DSpace;
   public entities: Array<PhysicalEntity<any>> = new Array();
 
+  /**
+   * Callbacks used to safely modify the simulation
+   */
+  public safeCallbacks: (() => any)[] = [];
+
   public readonly jointGroup: ODE.Joint.Group;
   private readonly reverseEntities: Map<number, PhysicalEntity<any>> = new Map();
 
@@ -89,6 +94,11 @@ export default class World implements Renderable {
 
     this.world.quickStep(this.timeStep);
     this.jointGroup.empty(this.jointGroup);
+
+    if (this.safeCallbacks.length > 0) {
+      this.safeCallbacks.forEach(it => it());
+      this.safeCallbacks = [];
+    }
   }
 
 

@@ -189,6 +189,10 @@
          */
         constructor(secondDuration) {
             this.entities = new Array();
+            /**
+             * Callbacks used to safely modify the simulation
+             */
+            this.safeCallbacks = [];
             this.reverseEntities = new Map();
             this.timeStep = secondDuration / FRAMERATE;
             this.time = 0;
@@ -246,6 +250,10 @@
             }
             this.world.quickStep(this.timeStep);
             this.jointGroup.empty(this.jointGroup);
+            if (this.safeCallbacks.length > 0) {
+                this.safeCallbacks.forEach(it => it());
+                this.safeCallbacks = [];
+            }
         }
         setup(app, scale) {
             for (let entity of this.entities) {
@@ -536,14 +544,9 @@
         /**
          * Take the given fixture and merge its content numbero this fixture
          */
-        mergeWith(fixture) {
+        mergeWith(fixture, thisMass, otherMass) {
             const body = this.geometry.getBody();
             const otherBody = fixture.geometry.getBody();
-            // Keep previous mass 
-            const thisMass = body.getMass().getMass();
-            const otherMass = otherBody.getMass().getMass();
-            // Destroy previous previous 
-            this.geometry.destroy();
             // Set volume to the sum of both 
             const volume = this.getVolume() + fixture.getVolume();
             this.setVolume(volume);
@@ -830,7 +833,7 @@
          * Remove entity from the world
          */
         disable() {
-            this.fixture.geometry.dispose();
+            this.fixture.geometry.destroy();
             this.body.disable();
             this.disabled = true;
         }
@@ -900,7 +903,7 @@
         }
         getMass() {
             if (this.massCached == -1) {
-                this.massCached = this.body.getMass().getMass();
+                console.error("no mass defined for ", this.toString());
             }
             return this.massCached;
         }
@@ -963,7 +966,7 @@
             this.initialVelocity = initialVelocity;
             this.initialRotation = initialRotation;
             this.nested = new Array();
-            this.computedMass = 0;
+            this.computedMass = null;
         }
         get scope() {
             return this;
@@ -1114,9 +1117,12 @@
         };
         SimpleCollisionReaction.MERGE = {
             react: function (world, first, second, oneFirst) {
-                first.entity.name = first.entity.name + " + " + second.entity.name;
-                first.entity.fixture.mergeWith(second.entity.fixture);
-                second.entity.disable();
+                // Run the method oustide of a simulation step
+                world.safeCallbacks.push(() => {
+                    first.entity.name = first.entity.name + " + " + second.entity.name;
+                    first.entity.fixture.mergeWith(second.entity.fixture, first.entity.getMass(), second.entity.getMass());
+                    second.entity.disable();
+                });
             },
             priority: -300,
             preventDifferentReaction: true
@@ -1323,15 +1329,6 @@ class BaseObject1 extends Physics.PhysicalEntity {
           };
         }
         
-        function computeRealGravitation1(context) {
-          return {
-            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
-              
-              return computeGravitation1(context, (((6.67430 * Math.pow(10, -11)) * 1))).compute();
-            })).compute())
-          };
-        }
-        
         function computeAirResistance1(context, dragCoef, airDensity, area) {
           return {
             compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
@@ -1342,6 +1339,15 @@ class BaseObject1 extends Physics.PhysicalEntity {
                 applicationPoint: null,
                 forceMode: 16
               };
+            })).compute())
+          };
+        }
+        
+        function computeRealGravitation1(context) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return computeGravitation1(context, (((6.67430 * Math.pow(10, -11)) * 1))).compute();
             })).compute())
           };
         }
@@ -1381,11 +1387,14 @@ class RocketEuropaS452G extends BaseObject1 {
                   };
                 }));
               
+              if ((Physics.Vector.fromFloat32Array(this.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))))
+                return mapper.cache.compute();
+              
               return {
-                linearForce: (Physics.Vector.fromFloat32Array(context.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))) ? mapper.cache.linearForce(context) : (null),
-                moment: (Physics.Vector.fromFloat32Array(context.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))) ? mapper.cache.moment(context) : (null),
+                linearForce: null,
+                moment: null,
                 applicationPoint: null,
-                forceMode: 10
+                forceMode: 0
               };
             })), /* 
              * Actual thrust

@@ -1,7 +1,6 @@
 import Renderer from "./Renderer";
 import CompositeRendererCallback from "./CompositeRendererCallback";
 import p5 from "p5";
-
 import { Simulation } from "./Simulation";
 import { VectorLike, Vector } from "./Vector";
 import { VectorHelper } from "./VectorHelper";
@@ -18,6 +17,7 @@ import { CachedForceMapper, ForceMapper } from "./objects/forces/ForceMapper";
 import FiniteTraceHandler from "./objects/rendering/FiniteTraceHandler";
 import InfiniteTraceHandler from "./objects/rendering/InfiniteTraceHandler";
 import { RotationHelper } from "./RotationHelper";
+
 let Physics = {
 	VectorHelper,
 	RotationHelper,

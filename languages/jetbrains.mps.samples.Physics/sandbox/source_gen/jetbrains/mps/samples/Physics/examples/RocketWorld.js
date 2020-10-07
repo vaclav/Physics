@@ -39,11 +39,14 @@ class RocketEuropaS452G extends BaseObject1 {
           };
         }));
       
+      if ((Physics.Vector.fromFloat32Array(this.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))))
+        return mapper.cache.compute();
+      
       return {
-        linearForce: (Physics.Vector.fromFloat32Array(context.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))) ? mapper.cache.linearForce(context) : (null),
-        moment: (Physics.Vector.fromFloat32Array(context.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))) ? mapper.cache.moment(context) : (null),
+        linearForce: null,
+        moment: null,
         applicationPoint: null,
-        forceMode: 10
+        forceMode: 0
       };
     })), /* 
      * Actual thrust

@@ -10,7 +10,7 @@ declare var ODE: any;
 export default abstract class SystemScope extends VectorLike implements EntityLike, ScopeContext<SystemScope> {
   protected nested: Array<EntityLike> = new Array();
 
-  protected computedMass: number = 0;
+  protected computedMass: number | null = null;
 
   get scope() {
     return this;

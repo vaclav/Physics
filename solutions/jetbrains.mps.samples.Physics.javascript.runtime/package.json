@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -c-1 ./ -o",
-    "build": "rollup -c && copyfiles -u 1 example/index.html build/"
+    "build": "rollup -c"
   },
   "author": "",
   "license": "ISC",
@@ -19,8 +18,6 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
     "@types/p5": "^0.9.1",
-    "copyfiles": "^2.3.0",
-    "http-server": "^0.12.3",
     "rollup": "^2.27.0",
     "tslib": "^2.0.1",
     "typescript": "^4.0.2"

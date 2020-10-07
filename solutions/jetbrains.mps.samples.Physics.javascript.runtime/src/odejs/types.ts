@@ -127,8 +127,6 @@ declare namespace ODE {
 
         setBox(density: number, x: number, y: number, z: number): Mass;
         setBoxTotal(total_mass: number, x: number, y: number, z: number): Mass;
-
-        getMass(): number;
     }
 
     export class Rotation {

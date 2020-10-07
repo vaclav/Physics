@@ -2,47 +2,47 @@
 <debug-info version="2">
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/1159415042430248890">
     <file name="SolarSystemSim.html">
-      <unit id="1159415042430248890" at="1,0,1443,7" name="jetbrains.mps.samples.Physics.examples.SolarSystemSim" />
+      <unit id="1159415042430248890" at="1,0,1449,7" name="jetbrains.mps.samples.Physics.examples.SolarSystemSim" />
     </file>
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/1823176576458944749">
     <file name="BoidSim.html">
-      <unit id="1823176576458944749" at="1,0,1454,7" name="jetbrains.mps.samples.Physics.examples.BoidSim" />
+      <unit id="1823176576458944749" at="1,0,1460,7" name="jetbrains.mps.samples.Physics.examples.BoidSim" />
     </file>
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/2315070452030847102">
     <file name="TorqueSim.html">
-      <unit id="2315070452030847102" at="1,0,1385,7" name="jetbrains.mps.samples.Physics.examples.TorqueSim" />
+      <unit id="2315070452030847102" at="1,0,1391,7" name="jetbrains.mps.samples.Physics.examples.TorqueSim" />
     </file>
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/39352413652838563">
     <file name="TraceSim.html">
-      <unit id="39352413652838563" at="1,0,1387,7" name="jetbrains.mps.samples.Physics.examples.TraceSim" />
+      <unit id="39352413652838563" at="1,0,1393,7" name="jetbrains.mps.samples.Physics.examples.TraceSim" />
     </file>
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/5369611234117820601">
     <file name="FallingBall.html">
-      <unit id="5369611234117820601" at="1,0,1405,7" name="jetbrains.mps.samples.Physics.examples.FallingBall" />
+      <unit id="5369611234117820601" at="1,0,1411,7" name="jetbrains.mps.samples.Physics.examples.FallingBall" />
     </file>
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/5525108720514573595">
     <file name="CollisionSim.html">
-      <unit id="5525108720514573595" at="1,0,1397,7" name="jetbrains.mps.samples.Physics.examples.CollisionSim" />
+      <unit id="5525108720514573595" at="1,0,1403,7" name="jetbrains.mps.samples.Physics.examples.CollisionSim" />
     </file>
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/6610288360150145653">
     <file name="RotationAndCollisionSim.html">
-      <unit id="6610288360150145653" at="1,0,1390,7" name="jetbrains.mps.samples.Physics.examples.RotationAndCollisionSim" />
+      <unit id="6610288360150145653" at="1,0,1396,7" name="jetbrains.mps.samples.Physics.examples.RotationAndCollisionSim" />
     </file>
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/6610288360171822761">
     <file name="RotationTreeSim.html">
-      <unit id="6610288360171822761" at="1,0,1466,7" name="jetbrains.mps.samples.Physics.examples.RotationTreeSim" />
+      <unit id="6610288360171822761" at="1,0,1472,7" name="jetbrains.mps.samples.Physics.examples.RotationTreeSim" />
     </file>
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/9143082258462498854">
     <file name="Rocket_Sim.html">
-      <unit id="9143082258462498854" at="1,0,1450,7" name="jetbrains.mps.samples.Physics.examples.Rocket_Sim" />
+      <unit id="9143082258462498854" at="1,0,1459,7" name="jetbrains.mps.samples.Physics.examples.Rocket_Sim" />
     </file>
   </root>
 </debug-info>

@@ -53,7 +53,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
    * Remove entity from the world
    */
   public disable(): void {
-    this.fixture!.geometry!.dispose();
+    this.fixture!.geometry!.destroy();
     this.body.disable();
     this.disabled = true;
   }
@@ -150,7 +150,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
 
   public getMass(): number {
     if (this.massCached == -1) {
-      this.massCached = this.body.getMass().getMass();
+      console.error("no mass defined for ", this.toString());
     }
 
     return this.massCached;

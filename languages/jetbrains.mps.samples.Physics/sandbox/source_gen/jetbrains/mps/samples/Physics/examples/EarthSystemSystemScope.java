@@ -48,7 +48,7 @@ public class EarthSystemSystemScope extends SystemScope {
       Earth5PhysicalEntity currentEntity = this;
 
       // Set static properties of Earth 
-      this.setMass(((Number) new BigDecimal("5.972E+24").setScale(0, RoundingMode.DOWN)));
+      this.setMass(((Number) new BigDecimal("5.972E+24").setScale(7, RoundingMode.DOWN)));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
@@ -57,7 +57,7 @@ public class EarthSystemSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 0, 255), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1.00E+3").setScale(0, RoundingMode.DOWN))))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("6371")), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))))));
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -73,8 +73,8 @@ public class EarthSystemSystemScope extends SystemScope {
       Moon2PhysicalEntity currentEntity = this;
 
       // Set static properties of Moon 
-      this.setMass(((Number) new BigDecimal("7.35E+22").setScale(0, RoundingMode.DOWN)));
-      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("3.8440000E+8").setScale(0, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
+      this.setMass(((Number) new BigDecimal("7.35E+22").setScale(6, RoundingMode.DOWN)));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("3.8440000E+8").setScale(10, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("1000.0000000000000000000000000000001100").setScale(34, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
 
       //  Forces and visual of the parent objects of Moon 
@@ -82,7 +82,7 @@ public class EarthSystemSystemScope extends SystemScope {
 
       //  Styles (if any) and forces 
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
-      propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigDecimal("1737.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(0, RoundingMode.DOWN))))));
+      propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigDecimal("1737.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(5, RoundingMode.DOWN))))));
       this.getForces().addAll(Arrays.asList());
     }
   }
