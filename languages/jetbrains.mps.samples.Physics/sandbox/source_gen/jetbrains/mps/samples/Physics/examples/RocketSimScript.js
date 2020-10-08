@@ -17,7 +17,7 @@ class RocketSim extends Physics.Simulation {
     noRotation.setArray([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]);
     this.scope = new RocketWorld1(world, Physics.Vector.ZERO, Physics.Vector.ZERO, noRotation);
     this.metricsRenderer.declareMetric("Rocket speed", (() => this.scope.object_Rocket_Europa_S452G.getVelocity().length()));
-    this.metricsRenderer.declareMetric("Height", (() => (this.scope.object_Rocket_Europa_S452G.minus(this.scope.object_Earth).length() - this.scope.object_Earth.propertiesBuilder.get(Physics.PropKey.SHAPE))));
+    this.metricsRenderer.declareMetric("Height", (() => (this.scope.object_Rocket_Europa_S452G.minus(this.scope.object_Earth).length() - this.scope.object_Earth.propertiesBuilder.get(Physics.PropKey.SPHERE_RADIUS))));
   }
   getCameraPosition() {
     return this.scope.object_Rocket_Europa_S452G.getPosition().add((this.scope.object_Rocket_Europa_S452G.getPosition().minus(this.scope.object_Earth.getPosition())).resize(((300 * 1))));

@@ -1306,6 +1306,20 @@ class BaseObject1 extends Physics.PhysicalEntity {
           }
 }
         
+        function computeAirResistance1(context, dragCoef, airDensity, area) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return {
+                linearForce: (context.entity.getVelocity().mul(((1 * 1)))).mul(-1).resize(((((0.5 * dragCoef) * airDensity) * area) * Math.pow(context.entity.getVelocity().length(), 2))),
+                moment: null,
+                applicationPoint: null,
+                forceMode: 16
+              };
+            })).compute())
+          };
+        }
+        
         function computeInteractionForce1(context, map) {
           return {
             compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
@@ -1325,20 +1339,6 @@ class BaseObject1 extends Physics.PhysicalEntity {
             compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
               
               return computeInteractionForce1(context, ((it) => it.minus(context.entity).resize(((G * it.getMass()) * context.entity.getMass()) / Math.pow(context.entity.minus(it).length(), 2)))).compute();
-            })).compute())
-          };
-        }
-        
-        function computeAirResistance1(context, dragCoef, airDensity, area) {
-          return {
-            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
-              
-              return {
-                linearForce: (context.entity.getVelocity().mul(((1 * 1)))).mul(-1).resize(((((0.5 * dragCoef) * airDensity) * area) * Math.pow(context.entity.getVelocity().length(), 2))),
-                moment: null,
-                applicationPoint: null,
-                forceMode: 16
-              };
             })).compute())
           };
         }
@@ -1371,10 +1371,10 @@ class RocketEuropaS452G extends BaseObject1 {
             })), new Physics.ForceMapper(this, ((context, mapper) => {
               
               return computeAirResistance1(this, 0.75, (() => {
-                var distance1 = (this.entity.minus(this.scope.object_Earth).length() - this.scope.object_Earth.propertiesBuilder.get(Physics.PropKey.SHAPE));
+                var distance1 = (this.entity.minus(this.scope.object_Earth).length() - this.scope.object_Earth.propertiesBuilder.get(Physics.PropKey.SPHERE_RADIUS));
                 var positiveDistance = (distance1 < 0) ? 0 : (distance1);
                 return (positiveDistance > ((24.384 * 1.00E+3))) ? 0 : (((((((24.384 * 1.00E+3)) - positiveDistance)) / ((24.384 * 1.00E+3))) * ((1.225055 * 1))));
-              })(), (this.entity.propertiesBuilder.get(Physics.PropKey.SHAPE) * this.entity.propertiesBuilder.get(Physics.PropKey.SHAPE))).compute();
+              })(), (this.entity.propertiesBuilder.get(Physics.PropKey.BOX_Z) * this.entity.propertiesBuilder.get(Physics.PropKey.BOX_X))).compute();
             })), new Physics.CachedForceMapper(this, ((context, mapper) => {
               if (mapper.cache === null)
                 mapper.cache = new Physics.ForceMapper(this, ((context, mapper) => {
@@ -1386,6 +1386,7 @@ class RocketEuropaS452G extends BaseObject1 {
                     forceMode: 10
                   };
                 }));
+              
               
               if ((Physics.Vector.fromFloat32Array(this.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))))
                 return mapper.cache.compute();
@@ -1457,7 +1458,7 @@ class RocketSim extends Physics.Simulation {
             noRotation.setArray([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]);
             this.scope = new RocketWorld1(world, Physics.Vector.ZERO, Physics.Vector.ZERO, noRotation);
             this.metricsRenderer.declareMetric("Rocket speed", (() => this.scope.object_Rocket_Europa_S452G.getVelocity().length()));
-            this.metricsRenderer.declareMetric("Height", (() => (this.scope.object_Rocket_Europa_S452G.minus(this.scope.object_Earth).length() - this.scope.object_Earth.propertiesBuilder.get(Physics.PropKey.SHAPE))));
+            this.metricsRenderer.declareMetric("Height", (() => (this.scope.object_Rocket_Europa_S452G.minus(this.scope.object_Earth).length() - this.scope.object_Earth.propertiesBuilder.get(Physics.PropKey.SPHERE_RADIUS))));
           }
           getCameraPosition() {
             return this.scope.object_Rocket_Europa_S452G.getPosition().add((this.scope.object_Rocket_Europa_S452G.getPosition().minus(this.scope.object_Earth.getPosition())).resize(((300 * 1))));

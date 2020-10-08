@@ -23,10 +23,10 @@ class RocketEuropaS452G extends BaseObject1 {
     })), new Physics.ForceMapper(this, ((context, mapper) => {
       
       return computeAirResistance1(this, 0.75, (() => {
-        var distance1 = (this.entity.minus(this.scope.object_Earth).length() - this.scope.object_Earth.propertiesBuilder.get(Physics.PropKey.SHAPE));
+        var distance1 = (this.entity.minus(this.scope.object_Earth).length() - this.scope.object_Earth.propertiesBuilder.get(Physics.PropKey.SPHERE_RADIUS));
         var positiveDistance = (distance1 < 0) ? 0 : (distance1);
         return (positiveDistance > ((24.384 * 1.00E+3))) ? 0 : (((((((24.384 * 1.00E+3)) - positiveDistance)) / ((24.384 * 1.00E+3))) * ((1.225055 * 1))));
-      })(), (this.entity.propertiesBuilder.get(Physics.PropKey.SHAPE) * this.entity.propertiesBuilder.get(Physics.PropKey.SHAPE))).compute();
+      })(), (this.entity.propertiesBuilder.get(Physics.PropKey.BOX_Z) * this.entity.propertiesBuilder.get(Physics.PropKey.BOX_X))).compute();
     })), new Physics.CachedForceMapper(this, ((context, mapper) => {
       if (mapper.cache === null)
         mapper.cache = new Physics.ForceMapper(this, ((context, mapper) => {
@@ -38,6 +38,7 @@ class RocketEuropaS452G extends BaseObject1 {
             forceMode: 10
           };
         }));
+      
       
       if ((Physics.Vector.fromFloat32Array(this.entity.body.getAngularVel()).length() < ((3 * 0.01745328627927352441191151881987859))))
         return mapper.cache.compute();

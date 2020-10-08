@@ -1390,7 +1390,7 @@ class FallingBall extends Physics.Simulation {
             noRotation.setArray([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]);
             this.scope = new FallingBallWorld1(world, Physics.Vector.ZERO, Physics.Vector.ZERO, noRotation);
             this.scope.object_Ball.setMass(((3 * 1)));
-            this.metricsRenderer.declareMetric("Ball color", (() => this.scope.object_Ball.propertiesBuilder.get(Physics.PropKey.SHAPE)));
+            this.metricsRenderer.declareMetric("Ball color", (() => this.scope.object_Ball.propertiesBuilder.get(Physics.PropKey.TEXTURE)));
             this.metricsRenderer.declareMetric("Velocity", (() => this.scope.object_Ball.getVelocity().length()));
             this.metricsRenderer.declareMetric("Kinetic Energy", (() => ((1.0 / 2 * Math.pow(this.scope.object_Ball.getVelocity().length(), 2)) * this.scope.object_Ball.getMass())));
             this.metricsRenderer.declareMetric("Potention Energy", (() => ((((9.81 * 1)) * Math.abs((this.scope.object_Ball.getPosition().y() - this.scope.object_Ground.getPosition().y()))) * this.scope.object_Ball.getMass())));

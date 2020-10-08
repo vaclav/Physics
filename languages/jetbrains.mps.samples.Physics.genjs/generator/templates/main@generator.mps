@@ -2130,6 +2130,28 @@
                 </node>
                 <node concept="1sPUBX" id="9hdT1bVpuZ" role="lGtFl">
                   <ref role="v9R2y" node="10n4tqnDkv0" resolve="StyleToPropKey" />
+                  <node concept="3NFfHV" id="73MOf08aBFo" role="1sPUBK">
+                    <node concept="3clFbS" id="73MOf08aBFp" role="2VODD2">
+                      <node concept="3clFbF" id="73MOf08aEMi" role="3cqZAp">
+                        <node concept="2OqwBi" id="73MOf08aIzT" role="3clFbG">
+                          <node concept="1PxgMI" id="73MOf08aIl6" role="2Oq$k0">
+                            <node concept="chp4Y" id="73MOf08aIlo" role="3oSUPX">
+                              <ref role="cht4Q" to="9tcj:2AM6gIjMe9V" resolve="ObjectStyleDotTarget" />
+                            </node>
+                            <node concept="2OqwBi" id="73MOf08aHHX" role="1m5AlR">
+                              <node concept="30H73N" id="73MOf08aEMh" role="2Oq$k0" />
+                              <node concept="3TrEf2" id="73MOf08aIaY" role="2OqNvi">
+                                <ref role="3Tt5mk" to="hm2y:7NJy08a3O9b" resolve="target" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3TrEf2" id="73MOf08aITI" role="2OqNvi">
+                            <ref role="3Tt5mk" to="9tcj:2AM6gIjMea0" resolve="styleKey" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
                 </node>
               </node>
               <node concept="2dhVqD" id="9hdT1bVmnh" role="2dhSgj">
