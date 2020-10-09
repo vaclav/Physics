@@ -120,8 +120,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
 
     // https://en.wikipedia.org/wiki/Rotation_matrix (https://en.wikipedia.org/wiki/Rotation_matrix) 
     const rotation = this.body.getRotation().getArray();
-    (graphics.applyMatrix as any)(rotation[0], rotation[1], rotation[2], 0, rotation[4], rotation[5], rotation[6], 0, rotation[8], rotation[9], rotation[10], 0, 0, 0, 0, 1);
-
+    (graphics.applyMatrix as any)(rotation[0], rotation[4], rotation[8], 0, rotation[1], rotation[5], rotation[9], 0, rotation[2], rotation[6], rotation[10], 0, 0, 0, 0, 1);
     this.fixture?.render(graphics, scale, scaledOffset);
 
     graphics.pop();

@@ -447,7 +447,7 @@
                   <property role="2gteSD" value="0.00000000000000000000000000000000000" />
                 </node>
                 <node concept="2gteS_" id="23" role="2gteVg">
-                  <property role="2gteVv" value="35" />
+                  <property role="2gteVv" value="0" />
                 </node>
               </node>
               <node concept="3AmWvR" id="21" role="1N7es9">
@@ -545,7 +545,7 @@
                   <property role="2gteSD" value="0.000000000000000000000000000000000000000000000000000000000000000000000" />
                 </node>
                 <node concept="2gteS_" id="2C" role="2gteVg">
-                  <property role="2gteVv" value="69" />
+                  <property role="2gteVv" value="0" />
                 </node>
               </node>
               <node concept="3AmWvR" id="2_" role="1N7es9">

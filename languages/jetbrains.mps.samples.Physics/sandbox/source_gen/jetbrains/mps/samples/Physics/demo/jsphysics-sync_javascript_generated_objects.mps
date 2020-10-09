@@ -4660,7 +4660,7 @@
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="ib" role="2DRAPQ">
-                <property role="2DPR8u" value="            graphics.applyMatrix(rotation[0], rotation[1], rotation[2], 0, rotation[4], rotation[5], rotation[6], 0, rotation[8], rotation[9], rotation[10], 0, 0, 0, 0, 1);" />
+                <property role="2DPR8u" value="            graphics.applyMatrix(rotation[0], rotation[4], rotation[8], 0, rotation[1], rotation[5], rotation[9], 0, rotation[2], rotation[6], rotation[10], 0, 0, 0, 0, 1);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="ic" role="2DRAPQ">
