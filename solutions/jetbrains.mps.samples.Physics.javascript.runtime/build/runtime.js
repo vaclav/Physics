@@ -855,7 +855,7 @@ var Physics = (function () {
             graphics.translate((position[0] * scale + scaledOffset[0]), (position[1] * scale + scaledOffset[1]), (position[2] * scale + scaledOffset[2]));
             // https://en.wikipedia.org/wiki/Rotation_matrix (https://en.wikipedia.org/wiki/Rotation_matrix) 
             const rotation = this.body.getRotation().getArray();
-            graphics.applyMatrix(rotation[0], rotation[1], rotation[2], 0, rotation[4], rotation[5], rotation[6], 0, rotation[8], rotation[9], rotation[10], 0, 0, 0, 0, 1);
+            graphics.applyMatrix(rotation[0], rotation[4], rotation[8], 0, rotation[1], rotation[5], rotation[9], 0, rotation[2], rotation[6], rotation[10], 0, 0, 0, 0, 1);
             (_a = this.fixture) === null || _a === void 0 ? void 0 : _a.render(graphics, scale, scaledOffset);
             graphics.pop();
             // Display trace if any 
