@@ -133,7 +133,7 @@ public class SolarSystemSystemScope extends SystemScope {
 
       // Set static properties of Earth 
       this.setMass(((Number) new BigInteger("300")));
-      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.00099999999975507064017052935").setScale(29, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("2.9995195653237156E-29").setScale(20, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("-400.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.00099999999975507064017052935").setScale(29, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("2.9995195653237156E-29").setScale(45, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("-400.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))))));
 
       //  Forces and visual of the parent objects of Earth 

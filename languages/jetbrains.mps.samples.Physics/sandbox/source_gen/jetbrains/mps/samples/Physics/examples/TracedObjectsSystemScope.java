@@ -52,7 +52,7 @@ public class TracedObjectsSystemScope extends SystemScope {
 
       // Set static properties of MovingObject 
       this.setMass(((Number) new BigInteger("5")));
-      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("1.00E-11").setScale(6, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("150")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
+      this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("1.00E-11").setScale(13, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("150")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("-30")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1")))))))));
 
       //  Forces and visual of the parent objects of MovingObject 

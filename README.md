@@ -30,11 +30,8 @@ rm -r iets3.genjs
 #### Installation for development
 If you only need to get the dependencies of Physics in order to improve or use the project directly, you can fetch and build the development branch of ecmascript4mps and get the requirements with the below script.
 ```sh
-# Resolve iets3.opensource from maven and dependencies
-./gradlew resolveArtifacts
-
-# Configure MPS to use those artifacts
-./gradlew generateLibrariesXml
+# Resolve iets3.opensource from maven and dependencies, then make MPS see those artifacts
+./gradlew resolveArtifacts generateLibrariesXml
 ```
 
 Note than the manual build of ecmascript4mps is necessary for now because of the use of the development branch (not deployed into a maven repository as of october 2020).
@@ -47,6 +44,19 @@ Restart MPS and open the project !
 If you need this project to be used outside in another project, you can do the same as above and deploy it to your local maven repository after build using the below script.
 ```
 ./gradlew packageLanguages publishToMavenLocal
+```
+
+#### Build settings
+In case you need to use a specific version of MPS, or avoid downloading MPS all over again, you can set some settings to make the build fit your need.
+
+|  Property  | Description | Example |
+|------------|-------------|---------|
+| mpsDir     | Directory of your MPS installation, if specified MPS will not be downloaded again. | -PmpsDir="./build/mps" |
+| mpsVersion | Version of MPS used in the project (used to set the version number and determine which version of MPS to download if mpsDir is not set). | -PmpsVersion="2020.2" |
+
+Example of custom settings with the development installation :
+```sh
+./gradlew resolveArtifacts generateLibrariesXml -PmpsVersion="2020.1" -PmpsDir="/mnt/data/softwares/mps"
 ```
 
 ### Manual installation

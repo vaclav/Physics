@@ -175,73 +175,46 @@
       <property role="TrG5h" value="jetbrains.mps.samples.Physics.home" />
       <node concept="55IIr" id="5aGkDIh0sDp" role="398pKh" />
     </node>
-    <node concept="398rNT" id="4vyBtkfxwqc" role="1l3spd">
-      <property role="TrG5h" value="iets3.github.opensource.home" />
-      <node concept="55IIr" id="5aGkDIh0lmN" role="398pKh">
-        <node concept="2Ry0Ak" id="5aGkDIh0lmS" role="iGT6I">
-          <property role="2Ry0Am" value="dependencies" />
-          <node concept="2Ry0Ak" id="5aGkDIh0lmX" role="2Ry0An">
-            <property role="2Ry0Am" value="iets3.opensource" />
+    <node concept="398rNT" id="4MR$$QmqomQ" role="1l3spd">
+      <property role="TrG5h" value="iets3.github.opensource.artifacts" />
+      <node concept="55IIr" id="1ido5kP8olk" role="398pKh">
+        <node concept="2Ry0Ak" id="1ido5kP8rb3" role="iGT6I">
+          <property role="2Ry0Am" value="artifacts" />
+          <node concept="2Ry0Ak" id="1ido5kP9NBr" role="2Ry0An">
+            <property role="2Ry0Am" value="org.iets3.opensource" />
           </node>
         </node>
       </node>
     </node>
-    <node concept="398rNT" id="4MR$$QmqomQ" role="1l3spd">
-      <property role="TrG5h" value="iets3.github.opensource.artifacts" />
-      <node concept="398BVA" id="44RyrhrBqkL" role="398pKh">
-        <ref role="398BVh" node="4vyBtkfxwqc" resolve="iets3.github.opensource.home" />
-        <node concept="2Ry0Ak" id="44RyrhrBqkV" role="iGT6I">
+    <node concept="398rNT" id="7QIsDWeK2qT" role="1l3spd">
+      <property role="TrG5h" value="iets3.github.opensource.genjs.artifacts" />
+      <node concept="55IIr" id="1ido5kPcWuT" role="398pKh">
+        <node concept="2Ry0Ak" id="1ido5kPcWv8" role="iGT6I">
           <property role="2Ry0Am" value="artifacts" />
-          <node concept="2Ry0Ak" id="6VyFC95oK3X" role="2Ry0An">
-            <property role="2Ry0Am" value="org.iets3.opensource" />
+          <node concept="2Ry0Ak" id="1ido5kPcWvd" role="2Ry0An">
+            <property role="2Ry0Am" value="org.iets3.opensource.genjs" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="398rNT" id="6VyFC95mIsk" role="1l3spd">
+      <property role="TrG5h" value="ecmascript4mps.artifacts" />
+      <node concept="55IIr" id="1ido5kPcWxh" role="398pKh">
+        <node concept="2Ry0Ak" id="1ido5kPcWxm" role="iGT6I">
+          <property role="2Ry0Am" value="artifacts" />
+          <node concept="2Ry0Ak" id="1ido5kPcWxr" role="2Ry0An">
+            <property role="2Ry0Am" value="ecmascript4mps" />
           </node>
         </node>
       </node>
     </node>
     <node concept="398rNT" id="1Y5vs7yJZkG" role="1l3spd">
       <property role="TrG5h" value="mbeddr.artifacts.platform" />
-      <node concept="398BVA" id="6VyFC95oK78" role="398pKh">
-        <ref role="398BVh" node="4vyBtkfxwqc" resolve="iets3.github.opensource.home" />
-        <node concept="2Ry0Ak" id="6VyFC95oK79" role="iGT6I">
+      <node concept="55IIr" id="1ido5kPaN_a" role="398pKh">
+        <node concept="2Ry0Ak" id="1ido5kPaUTb" role="iGT6I">
           <property role="2Ry0Am" value="artifacts" />
-          <node concept="2Ry0Ak" id="6VyFC95oK7a" role="2Ry0An">
+          <node concept="2Ry0Ak" id="1ido5kPcWuu" role="2Ry0An">
             <property role="2Ry0Am" value="com.mbeddr.platform" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="398rNT" id="4vyBtkfxwqe" role="1l3spd">
-      <property role="TrG5h" value="ecmascript4mps.home" />
-    </node>
-    <node concept="398rNT" id="6VyFC95mIsk" role="1l3spd">
-      <property role="TrG5h" value="ecmascript4mps.artifacts" />
-      <node concept="398BVA" id="6VyFC95mIsE" role="398pKh">
-        <ref role="398BVh" node="4vyBtkfxwqe" resolve="ecmascript4mps.home" />
-        <node concept="2Ry0Ak" id="6VyFC95mIsH" role="iGT6I">
-          <property role="2Ry0Am" value="build" />
-          <node concept="2Ry0Ak" id="6VyFC95mIsK" role="2Ry0An">
-            <property role="2Ry0Am" value="artifacts" />
-            <node concept="2Ry0Ak" id="6VyFC95mIsN" role="2Ry0An">
-              <property role="2Ry0Am" value="ecmascript4mps" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="398rNT" id="7QIsDWeK2na" role="1l3spd">
-      <property role="TrG5h" value="iets3.github.opensource.genjs.home" />
-    </node>
-    <node concept="398rNT" id="7QIsDWeK2qT" role="1l3spd">
-      <property role="TrG5h" value="iets3.github.opensource.genjs.artifacts" />
-      <node concept="398BVA" id="7QIsDWeK2sa" role="398pKh">
-        <ref role="398BVh" node="7QIsDWeK2na" resolve="iets3.github.opensource.genjs.home" />
-        <node concept="2Ry0Ak" id="7QIsDWeK2sD" role="iGT6I">
-          <property role="2Ry0Am" value="build" />
-          <node concept="2Ry0Ak" id="7QIsDWeK2t8" role="2Ry0An">
-            <property role="2Ry0Am" value="artifacts" />
-            <node concept="2Ry0Ak" id="7QIsDWeK2xv" role="2Ry0An">
-              <property role="2Ry0Am" value="iets3.opensource.genjs" />
-            </node>
           </node>
         </node>
       </node>
@@ -271,7 +244,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="7QIsDWeK2kv" role="1l3spa">
-      <ref role="1l3spb" to="lzhy:4vyBtkfxwq6" resolve="iets3.opensource.genjs" />
+      <ref role="1l3spb" to="lzhy:4vyBtkfxwq6" resolve="org.iets3.opensource.genjs" />
       <node concept="398BVA" id="7QIsDWeK2xx" role="2JcizS">
         <ref role="398BVh" node="7QIsDWeK2qT" resolve="iets3.github.opensource.genjs.artifacts" />
       </node>
@@ -400,7 +373,7 @@
         <ref role="m$_y1" to="ip48:5Ky8UT4nhy3" resolve="org.iets3.core.expr.genjava" />
       </node>
       <node concept="m$_yC" id="1Or1i98iKxG" role="m$_yJ">
-        <ref role="m$_y1" to="lzhy:4vyBtkfxwqO" resolve="iets3.opensource.genjs" />
+        <ref role="m$_y1" to="lzhy:4vyBtkfxwqO" resolve="org.iets3.opensource.genjs" />
       </node>
       <node concept="m$_yC" id="5aGkDIh01tH" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:5CFKsRWV4Nl" resolve="jetbrains.mps.execution.languages" />
@@ -1744,7 +1717,6 @@
       <node concept="3LEwk6" id="7QIsDWeJFUy" role="2G$12L">
         <property role="TrG5h" value="jetbrains.mps.samples.Physics.devkit.java" />
         <property role="3LESm3" value="dc532898-e561-4cd2-87df-c64e0f83bf04" />
-        <property role="BnDLt" value="true" />
         <node concept="55IIr" id="7QIsDWeJFUt" role="3LF7KH">
           <node concept="2Ry0Ak" id="7QIsDWeJFUu" role="iGT6I">
             <property role="2Ry0Am" value="devkits" />
@@ -1789,11 +1761,8 @@
         <node concept="3LEDTy" id="7QIsDWeJG8Z" role="3LEDUa">
           <ref role="3LEDTV" to="ip48:lH$Puj5DFq" resolve="org.iets3.core.expr.genjava.contracts" />
         </node>
-        <node concept="3LEDTy" id="6MINLY3agDp" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFTM" resolve="jetbrains.mps.samples.Physics.dimensions" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agDq" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFUs" resolve="jetbrains.mps.samples.Physics.genbase" />
+        <node concept="3LEDTy" id="UK66g7O2v8" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFU4" resolve="jetbrains.mps.samples.Physics.dimensions.gentype" />
         </node>
       </node>
       <node concept="3LEwk6" id="7QIsDWeJFUC" role="2G$12L">
@@ -1860,14 +1829,14 @@
         <node concept="3LEDTM" id="7QIsDWeJG9d" role="3LEDUa">
           <ref role="3LEDTN" node="7QIsDWeJFVj" resolve="jetbrains.mps.samples.Physics.generation" />
         </node>
-        <node concept="3LEDTy" id="6MINLY3agDr" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFTM" resolve="jetbrains.mps.samples.Physics.dimensions" />
-        </node>
         <node concept="3LEDTy" id="6MINLY3agDs" role="3LEDUa">
           <ref role="3LEDTV" node="7QIsDWeJFTG" resolve="org.mar9000.mps.ecmascript.bundler" />
         </node>
-        <node concept="3LEDTy" id="6MINLY3agDt" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFUs" resolve="jetbrains.mps.samples.Physics.genbase" />
+        <node concept="3LEDTy" id="UK66g7O2v9" role="3LEDUa">
+          <ref role="3LEDTV" to="lzhy:4vyBtkfxwqw" resolve="org.iets3.core.expr.genjs.simpleTypes" />
+        </node>
+        <node concept="3LEDTy" id="UK66g7O2va" role="3LEDUa">
+          <ref role="3LEDTV" to="lzhy:4vyBtkfxwqq" resolve="org.iets3.core.expr.genjs.base" />
         </node>
       </node>
       <node concept="1E1JtA" id="7QIsDWeJFUO" role="2G$12L">
@@ -2318,47 +2287,11 @@
         <node concept="3LEz8M" id="7QIsDWeJGb6" role="3LEz9a">
           <ref role="3LEz8N" node="7QIsDWeJFUI" resolve="jetbrains.mps.samples.Physics.devkit.javascript" />
         </node>
-        <node concept="3LEDTy" id="6MINLY3agEG" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFTM" resolve="jetbrains.mps.samples.Physics.dimensions" />
+        <node concept="3LEDTy" id="UK66g7O2wp" role="3LEDUa">
+          <ref role="3LEDTV" to="lzhy:4vyBtkfxwqw" resolve="org.iets3.core.expr.genjs.simpleTypes" />
         </node>
-        <node concept="3LEDTy" id="6MINLY3agEH" role="3LEDUa">
-          <ref role="3LEDTV" to="ffeo:7Kfy9QB6KZG" resolve="jetbrains.mps.baseLanguage.closures" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agEI" role="3LEDUa">
-          <ref role="3LEDTV" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agEJ" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFTG" resolve="org.mar9000.mps.ecmascript.bundler" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agEK" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFU4" resolve="jetbrains.mps.samples.Physics.dimensions.gentype" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agEL" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFTS" resolve="jetbrains.mps.samples.Physics.genjava" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agEM" role="3LEDUa">
-          <ref role="3LEDTV" to="ip48:26tZ$Z4qVBy" resolve="org.iets3.core.expr.genjava.simpleTypes" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agEN" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFUs" resolve="jetbrains.mps.samples.Physics.genbase" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agEO" role="3LEDUa">
-          <ref role="3LEDTV" to="ip48:26tZ$Z4qSzW" resolve="org.iets3.core.expr.genjava.base" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agEP" role="3LEDUa">
-          <ref role="3LEDTV" to="ffeo:7Kfy9QB6L0h" resolve="jetbrains.mps.baseLanguage.collections" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agEQ" role="3LEDUa">
-          <ref role="3LEDTV" to="ip48:lH$Puj5DFq" resolve="org.iets3.core.expr.genjava.contracts" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agER" role="3LEDUa">
-          <ref role="3LEDTV" to="ffeo:ymnOULAU0j" resolve="jetbrains.mps.baseLanguage.unitTest" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agES" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFTY" resolve="jetbrains.mps.samples.Physics.genjs" />
-        </node>
-        <node concept="3LEDTy" id="6MINLY3agET" role="3LEDUa">
-          <ref role="3LEDTV" to="ffeo:7Kfy9QB6KZ0" resolve="jetbrains.mps.baseLanguageInternal" />
+        <node concept="3LEDTy" id="UK66g7O2wq" role="3LEDUa">
+          <ref role="3LEDTV" to="lzhy:4vyBtkfxwqq" resolve="org.iets3.core.expr.genjs.base" />
         </node>
       </node>
     </node>

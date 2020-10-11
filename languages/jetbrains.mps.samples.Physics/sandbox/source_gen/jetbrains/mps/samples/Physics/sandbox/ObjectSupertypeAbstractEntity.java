@@ -49,7 +49,7 @@ public abstract class ObjectSupertypeAbstractEntity<T extends SystemScope> exten
       @Override
       public DVector3C linearForce(World world, SystemScope scope, PhysicalEntity currentEntity, double time) {
         if (cached == null) {
-          cached = new InternalVector(AH.mul(((Number) new BigDecimal("899.9999999999999").setScale(13, RoundingMode.DOWN)), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))), AH.mul(((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))), AH.mul(((Number) new BigDecimal("5.510913997958703E-14").setScale(19, RoundingMode.DOWN)), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))));
+          cached = new InternalVector(AH.mul(((Number) new BigDecimal("899.9999999999999").setScale(13, RoundingMode.DOWN)), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))), AH.mul(((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))), AH.mul(((Number) new BigDecimal("5.510913997958703E-14").setScale(29, RoundingMode.DOWN)), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))));
         }
 
         return VectorHelper.toDVector3C(cached);

@@ -5,18 +5,15 @@
   <property name="build.layout" location="${build.dir}/artifacts/jetbrains.mps.samples.Physics" />
   <property name="mps_home" location="" />
   <property name="jetbrains.mps.samples.Physics.home" location="${basedir}" />
-  <property name="iets3.github.opensource.home" location="${basedir}/dependencies/iets3.opensource" />
-  <property name="iets3.github.opensource.artifacts" location="${iets3.github.opensource.home}/artifacts/org.iets3.opensource" />
-  <property name="mbeddr.artifacts.platform" location="${iets3.github.opensource.home}/artifacts/com.mbeddr.platform" />
-  <property name="ecmascript4mps.home" location="" />
-  <property name="ecmascript4mps.artifacts" location="${ecmascript4mps.home}/build/artifacts/ecmascript4mps" />
-  <property name="iets3.github.opensource.genjs.home" location="" />
-  <property name="iets3.github.opensource.genjs.artifacts" location="${iets3.github.opensource.genjs.home}/build/artifacts/iets3.opensource.genjs" />
+  <property name="iets3.github.opensource.artifacts" location="${basedir}/artifacts/org.iets3.opensource" />
+  <property name="iets3.github.opensource.genjs.artifacts" location="${basedir}/artifacts/org.iets3.opensource.genjs" />
+  <property name="ecmascript4mps.artifacts" location="${basedir}/artifacts/ecmascript4mps" />
+  <property name="mbeddr.artifacts.platform" location="${basedir}/artifacts/com.mbeddr.platform" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.com.mbeddr.platform" location="${mbeddr.artifacts.platform}" />
   <property name="artifacts.org.iets3.opensource" location="${iets3.github.opensource.artifacts}" />
   <property name="artifacts.ecmascript4mps" location="${ecmascript4mps.artifacts}" />
-  <property name="artifacts.iets3.opensource.genjs" location="${iets3.github.opensource.genjs.artifacts}" />
+  <property name="artifacts.org.iets3.opensource.genjs" location="${iets3.github.opensource.genjs.artifacts}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property file="${artifacts.com.mbeddr.platform}/build.properties" prefix="import.com.mbeddr.platform" />
   <property file="${artifacts.org.iets3.opensource}/build.properties" prefix="import.org.iets3.opensource" />
@@ -62,7 +59,7 @@
         <depends>jetbrains.mps.execution.configurations</depends>
         <depends>org.iets3.core.os</depends>
         <depends>org.iets3.core.expr.genjava</depends>
-        <depends>iets3.opensource.genjs</depends>
+        <depends>org.iets3.opensource.genjs</depends>
         <depends>jetbrains.mps.execution.languages</depends>
         <depends>com.intellij.modules.platform</depends>
         
@@ -1997,7 +1994,7 @@
         <depends>jetbrains.mps.execution.configurations</depends>
         <depends>org.iets3.core.os</depends>
         <depends>org.iets3.core.expr.genjava</depends>
-        <depends>iets3.opensource.genjs</depends>
+        <depends>org.iets3.opensource.genjs</depends>
         <depends>jetbrains.mps.execution.languages</depends>
         <depends>com.intellij.modules.platform</depends>
         
@@ -3978,7 +3975,6 @@
       <plugin path="${artifacts.com.mbeddr.platform}/mps-richtext" />
       <plugin path="${artifacts.com.mbeddr.platform}/mps-tables" />
       <plugin path="${artifacts.ecmascript4mps}/ecmascript4mps" />
-      <plugin path="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs" />
       <plugin path="${artifacts.mps}/lib/mps-workbench.jar" />
       <plugin path="${artifacts.mps}/plugins/mps-build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" />
@@ -3989,6 +3985,7 @@
       <plugin path="${artifacts.mps}/plugins/mps-httpsupport" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
       <plugin path="${artifacts.mps}/plugins/mps-tooltips" />
+      <plugin path="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs" />
       <plugin path="${artifacts.org.iets3.opensource}/org.iets3.build.os" />
       <plugin path="${artifacts.org.iets3.opensource}/org.iets3.core.expr.genjava" />
       <plugin path="${artifacts.org.iets3.opensource}/org.iets3.core.os" />
@@ -4035,9 +4032,6 @@
       <library file="${artifacts.com.mbeddr.platform}/mps-tables/languages/mps-tables/de.slisson.mps.tables.runtime.jar" />
       <library file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.build.jar" />
       <library file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
-      <library file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.core.expr.genjs.base.jar" />
-      <library file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.core.expr.genjs.simpleTypes.jar" />
-      <library file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.opensource.genjs.build.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/closures.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/collections.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
@@ -4188,6 +4182,9 @@
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.matcher.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.runtime.jar" />
+      <library file="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs/org.iets3.core.expr.genjs.base.jar" />
+      <library file="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs/org.iets3.core.expr.genjs.simpleTypes.jar" />
+      <library file="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs/org.iets3.opensource.genjs.build.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.build.os/languages/iets3.build/org.iets3.opensource.build.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.expr.genjava/languages/org.iets3.core.expr.genjava/org.iets3.core.expr.genjava.base.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.expr.genjava/languages/org.iets3.core.expr.genjava/org.iets3.core.expr.genjava.base.rt.jar" />
@@ -4275,13 +4272,10 @@
       </jvmargs>
       <macro name="mps_home" path="${mps_home}" />
       <macro name="jetbrains.mps.samples.Physics.home" path="${jetbrains.mps.samples.Physics.home}" />
-      <macro name="iets3.github.opensource.home" path="${iets3.github.opensource.home}" />
       <macro name="iets3.github.opensource.artifacts" path="${iets3.github.opensource.artifacts}" />
-      <macro name="mbeddr.artifacts.platform" path="${mbeddr.artifacts.platform}" />
-      <macro name="ecmascript4mps.home" path="${ecmascript4mps.home}" />
-      <macro name="ecmascript4mps.artifacts" path="${ecmascript4mps.artifacts}" />
-      <macro name="iets3.github.opensource.genjs.home" path="${iets3.github.opensource.genjs.home}" />
       <macro name="iets3.github.opensource.genjs.artifacts" path="${iets3.github.opensource.genjs.artifacts}" />
+      <macro name="ecmascript4mps.artifacts" path="${ecmascript4mps.artifacts}" />
+      <macro name="mbeddr.artifacts.platform" path="${mbeddr.artifacts.platform}" />
     </generate>
   </target>
   
@@ -4844,8 +4838,8 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.collections.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.expr.genjava/languages/org.iets3.core.expr.genjava/org.iets3.core.expr.genjava.simpleTypes.jar" />
-        <fileset file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.core.expr.genjs.base.jar" />
-        <fileset file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.core.expr.genjs.simpleTypes.jar" />
+        <fileset file="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs/org.iets3.core.expr.genjs.base.jar" />
+        <fileset file="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs/org.iets3.core.expr.genjs.simpleTypes.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.lambda.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.math.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
@@ -4942,8 +4936,8 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.base.runtime.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.collections.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.expr.genjava/languages/org.iets3.core.expr.genjava/org.iets3.core.expr.genjava.simpleTypes-generator.jar" />
-        <fileset file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.core.expr.genjs.base.jar" />
-        <fileset file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.core.expr.genjs.simpleTypes-generator.jar" />
+        <fileset file="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs/org.iets3.core.expr.genjs.base.jar" />
+        <fileset file="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs/org.iets3.core.expr.genjs.simpleTypes-generator.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.lambda.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.math.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
@@ -5958,7 +5952,7 @@
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.extensions.build/languages/de.itemis.mps.extensions.build/de.itemis.mps.extensions.build.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.build.os/languages/iets3.build/org.iets3.opensource.build.jar" />
-        <fileset file="${artifacts.iets3.opensource.genjs}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.opensource.genjs.build.jar" />
+        <fileset file="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs/org.iets3.opensource.genjs.build.jar" />
         <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.build.jar" />
       </classpath>
     </javac>

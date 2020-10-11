@@ -28,7 +28,7 @@ configurations {
 
 dependencies {
     mps "com.jetbrains:mps:$mpsVersion"
-	mpsArtifacts "org.iets3:opensource:2020.2.+"
+	mpsArtifacts "org.iets3:opensource:2020.1.4598.8281546"
 	mpsArtifacts "org.iets3.opensource:genjs:$mpsVersion.+"
     junitAnt 'org.apache.ant:ant-junit:1.10.9'
 }
@@ -61,7 +61,6 @@ task resolveMps(type: Copy) {
     }
     into mpsDir
 }
-resolveMps.onlyIf { !project.hasProperty("mpsDir") }
 
 // Project
 version = "$mpsVersion.0"
@@ -69,8 +68,6 @@ version = "$mpsVersion.0"
 // Args to the builds scripts, contains both home and artifacts directory 
 def defaultScriptArgs = [
 	'mps_home'                          : mpsDir,
-
-    // Projects folders
 
     // Generated artifacts
 	'iets3.github.opensource.genjs.artifacts': "$artifactsDir/iets3.opensource.genjs",
@@ -99,7 +96,10 @@ task resolveArtifacts(type: Copy, dependsOn: packageJavaRuntime) {
     into artifactsDir
 }
 
-task buildLanguages(type: BuildLanguages, dependsOn: [resolveMps, resolveArtifacts]) {
+task buildLanguages(type: BuildLanguages, dependsOn: [resolveArtifacts]) {
+    if (!project.hasProperty("mpsDir")) {
+        dependsOn "resolveMps"
+    }
 	script "$rootDir/build.xml"
 }
 

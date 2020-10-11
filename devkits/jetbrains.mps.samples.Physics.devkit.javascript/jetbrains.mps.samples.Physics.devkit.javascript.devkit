@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dev-kit name="jetbrains.mps.samples.Physics.devkit.javascript" uuid="547e676f-2a24-489d-8040-091b52e3e470">
   <exported-language name="89da005b-492b-4e94-9b6d-b429df99e997(jetbrains.mps.samples.Physics.genjs)" />
+  <exported-language name="8d94c08e-449e-484b-9e9e-f3e97c8df28a(org.mar9000.mps.ecmascript.bundler)" />
+  <exported-language name="f2122111-2e69-4f81-8e65-120416de80e8(org.iets3.core.expr.genjs.simpleTypes)" />
+  <exported-language name="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" />
   <extendedDevKits>
     <extendedDevKit>94dba95f-0505-4d04-a64d-85519150f750(jetbrains.mps.samples.Physics.devkit.base)</extendedDevKit>
   </extendedDevKits>
