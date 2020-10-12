@@ -24,7 +24,7 @@ class FallingBall extends Physics.Simulation {
     this.metricsRenderer.declareMetric("Total energy", (() => (((1.0 / 2 * Math.pow(this.scope.object_Ball.getVelocity().length(), 2)) * this.scope.object_Ball.getMass()) + ((((9.81 * 1)) * Math.abs((this.scope.object_Ball.getPosition().y() - this.scope.object_Ground.getPosition().y()))) * this.scope.object_Ball.getMass()))));
   }
   getCameraPosition() {
-    return new Physics.Vector(0, ((20 * 1)), ((300 * 1)));
+    return new Physics.Vector(this.scope.object_Ball.getPosition().x(), ((20 * 1)), ((300 * 1)));
   }
   getCameraFocus() {
     return new Physics.Vector(this.scope.object_Ball.getPosition().x(), (((100 * 1)) + ((40 * 1))), 0);

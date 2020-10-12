@@ -104,7 +104,10 @@ var Physics = (function () {
     class MetricsRenderer {
         constructor(world, containerId = "metrics") {
             this.metrics = [];
-            this.container = document.querySelector("#" + containerId);
+            this.container = document.createElement("div");
+            this.container.classList.add("sim");
+            let metricsRoot = document.querySelector("#" + containerId);
+            metricsRoot.appendChild(this.container);
             this.declareMetric("Elapsed time", () => `${world.time}s ${world.paused ? " [paused]" : ""}`);
         }
         createElement(name) {

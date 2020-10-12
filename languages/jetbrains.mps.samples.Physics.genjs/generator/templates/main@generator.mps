@@ -7669,23 +7669,57 @@
           <node concept="2pNNFK" id="5Sdh$FBp3t0" role="3o6s8t">
             <property role="2pNNFO" value="style" />
             <node concept="3o6iSG" id="5Sdh$FBp3tf" role="3o6s8t" />
-            <node concept="3o6iSG" id="5Sdh$FBp3t_" role="3o6s8t">
-              <property role="3o6i5n" value="body {" />
+            <node concept="3o6iSG" id="3n97Rc6qe4k" role="3o6s8t">
+              <property role="3o6i5n" value="body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }" />
             </node>
-            <node concept="3o6iSG" id="5Sdh$FBp3t1" role="3o6s8t">
-              <property role="3o6i5n" value="  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" />
+            <node concept="3o6iSG" id="5Sdh$FBp3t_" role="3o6s8t">
+              <property role="3o6i5n" value="body, html, canvas {" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6nII9" role="3o6s8t">
+              <property role="3o6i5n" value="  padding: 0;" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6nIIn" role="3o6s8t">
+              <property role="3o6i5n" value="  margin: 0;" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6nIIA" role="3o6s8t">
+              <property role="3o6i5n" value="  overflow: hidden;" />
             </node>
             <node concept="3o6iSG" id="5Sdh$FBp3tF" role="3o6s8t">
               <property role="3o6i5n" value="}" />
             </node>
-            <node concept="3o6iSG" id="5Sdh$FBp3tM" role="3o6s8t">
-              <property role="3o6i5n" value=".metric-name {" />
+            <node concept="3o6iSG" id="3n97Rc6qdVL" role="3o6s8t">
+              <property role="3o6i5n" value="#metrics {" />
             </node>
-            <node concept="3o6iSG" id="5Sdh$FBp3tU" role="3o6s8t">
-              <property role="3o6i5n" value="  font-weight: bold;" />
+            <node concept="3o6iSG" id="3n97Rc6qdW2" role="3o6s8t">
+              <property role="3o6i5n" value="  display: flex;" />
             </node>
-            <node concept="3o6iSG" id="5Sdh$FBp3u3" role="3o6s8t">
+            <node concept="3o6iSG" id="3n97Rc6qdWk" role="3o6s8t">
+              <property role="3o6i5n" value="  position: absolute;" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qdWB" role="3o6s8t">
+              <property role="3o6i5n" value="  top: 0;" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qdWV" role="3o6s8t">
+              <property role="3o6i5n" value="  left: 0;" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qdXg" role="3o6s8t">
+              <property role="3o6i5n" value="  right: 0;" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qdXA" role="3o6s8t">
+              <property role="3o6i5n" value="  z-index: 100;" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qdXX" role="3o6s8t">
+              <property role="3o6i5n" value="  color: white;" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qdYl" role="3o6s8t">
               <property role="3o6i5n" value="}" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qdYI" role="3o6s8t">
+              <property role="3o6i5n" value=".sim { flex: 1; }" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qe1X" role="3o6s8t" />
+            <node concept="3o6iSG" id="5Sdh$FBp3tM" role="3o6s8t">
+              <property role="3o6i5n" value=".metric-name { font-weight: bold; }" />
             </node>
             <node concept="3o6iSG" id="5Sdh$FBp3ud" role="3o6s8t">
               <property role="3o6i5n" value=".metric-name::after {" />
@@ -7698,6 +7732,9 @@
             </node>
             <node concept="3o6iSG" id="5Sdh$FBp3uL" role="3o6s8t">
               <property role="3o6i5n" value="}" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qdZ8" role="3o6s8t">
+              <property role="3o6i5n" value=".metric-name, .metric-name::after { background-color: rgba(0,0,0,0.3); }" />
             </node>
             <node concept="3o6iSG" id="5Sdh$FBp3vm" role="3o6s8t" />
           </node>

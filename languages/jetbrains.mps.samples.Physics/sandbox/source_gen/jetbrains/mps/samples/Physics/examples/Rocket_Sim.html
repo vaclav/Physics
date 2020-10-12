@@ -6,16 +6,29 @@
     
     <title>Physical Simulation</title>
     <style>
-        body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body, html, canvas {
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
         }
-        .metric-name {
-          font-weight: bold;
+        #metrics {
+          display: flex;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 100;
+          color: white;
         }
+        .sim { flex: 1; }
+        
+        .metric-name { font-weight: bold; }
         .metric-name::after {
           content: ": ";
           font-weight: bold;
         }
+        .metric-name, .metric-name::after { background-color: rgba(0,0,0,0.3); }
         </style>
   </head>
   <body>
@@ -130,7 +143,10 @@
     class MetricsRenderer {
         constructor(world, containerId = "metrics") {
             this.metrics = [];
-            this.container = document.querySelector("#" + containerId);
+            this.container = document.createElement("div");
+            this.container.classList.add("sim");
+            let metricsRoot = document.querySelector("#" + containerId);
+            metricsRoot.appendChild(this.container);
             this.declareMetric("Elapsed time", () => `${world.time}s ${world.paused ? " [paused]" : ""}`);
         }
         createElement(name) {
@@ -1289,6 +1305,20 @@
 */
 
         
+        function computeAirResistance1(context, dragCoef, airDensity, area) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return {
+                linearForce: (context.entity.getVelocity().mul(((1 * 1)))).mul(-1).resize(((((0.5 * dragCoef) * airDensity) * area) * Math.pow(context.entity.getVelocity().length(), 2))),
+                moment: null,
+                applicationPoint: null,
+                forceMode: 16
+              };
+            })).compute())
+          };
+        }
+        
 class BaseObject1 extends Physics.PhysicalEntity {
           init() {
             (super["init"])();
@@ -1305,20 +1335,6 @@ class BaseObject1 extends Physics.PhysicalEntity {
             this.forces.push();
           }
 }
-        
-        function computeAirResistance1(context, dragCoef, airDensity, area) {
-          return {
-            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
-              
-              return {
-                linearForce: (context.entity.getVelocity().mul(((1 * 1)))).mul(-1).resize(((((0.5 * dragCoef) * airDensity) * area) * Math.pow(context.entity.getVelocity().length(), 2))),
-                moment: null,
-                applicationPoint: null,
-                forceMode: 16
-              };
-            })).compute())
-          };
-        }
         
         function computeInteractionForce1(context, map) {
           return {

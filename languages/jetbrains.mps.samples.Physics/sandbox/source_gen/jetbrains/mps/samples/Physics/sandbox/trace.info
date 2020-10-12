@@ -2,7 +2,7 @@
 <debug-info version="2">
   <root nodeRef="r:6016a1dc-7dcb-47c8-9dd7-3dd91c34d47a(jetbrains.mps.samples.Physics.sandbox)/7887120293591825750">
     <file name="TestSimulation.html">
-      <unit id="7887120293591825750" at="1,0,1527,7" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation" />
+      <unit id="7887120293591825750" at="1,0,1543,7" name="jetbrains.mps.samples.Physics.sandbox.TestSimulation" />
     </file>
   </root>
 </debug-info>
