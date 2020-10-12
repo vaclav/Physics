@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <product version="3" modelHash="-66e31ut8o1gnd8pn92icnkzn9s4yw15">
-  <files names="BaseObject.js:Friction.js:MilkyWay.js:ObjectSupertype.js:Planet.js:RandomObject.js:SolarSystem.js:TestSimulation.html:TestSimulationScript.js:TestWorld.js:World2.js:XYZForce.js" />
+  <files names="TestSimulation.html" />
 </product>
 

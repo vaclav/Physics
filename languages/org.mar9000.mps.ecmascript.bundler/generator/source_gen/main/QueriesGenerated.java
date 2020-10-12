@@ -5,19 +5,18 @@ package main;
 import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.impl.query.QueryProviderBase;
 import jetbrains.mps.generator.template.MappingScriptContext;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor;
+import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import java.util.List;
 import org.mar9000.mps.ecmascript.bundler.plugin.DependenciesSolver;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.ITranslator2;
+import org.mar9000.mps.ecmascript.bundler.plugin.ReferenceRemapper;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import java.util.Map;
 import jetbrains.mps.generator.impl.query.ScriptCodeBlock;
@@ -25,12 +24,8 @@ import java.util.HashMap;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.generator.impl.query.QueryKey;
 import jetbrains.mps.generator.impl.GenerationFailureException;
-import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SInterfaceConcept;
-import org.jetbrains.mps.openapi.language.SProperty;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 @Generated
 public class QueriesGenerated extends QueryProviderBase {
@@ -38,27 +33,36 @@ public class QueriesGenerated extends QueryProviderBase {
     super(1);
   }
   public static void mappingScript_CodeBlock_1(final MappingScriptContext _context) {
-    ListSequence.fromList(SModelOperations.nodes(_context.getModel(), CONCEPTS.JSProgram$Dg)).where(new IWhereFilter<SNode>() {
+    final Iterable<SNode> bundles = ListSequence.fromList(SModelOperations.nodes(_context.getModel(), CONCEPTS.JSProgram$Dg)).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return (AttributeOperations.getAttribute(it, new IAttributeDescriptor.NodeAttribute(CONCEPTS.BundleProgram$cW)) != null);
       }
-    }).visitAll(new IVisitor<SNode>() {
+    });
+    Iterable<SNode> temporary = ListSequence.fromList(SModelOperations.nodes(_context.getModel(), CONCEPTS.JSProgram$Dg)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return !(Sequence.fromIterable(bundles).contains(it));
+      }
+    });
+
+    Sequence.fromIterable(bundles).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         // Solve dependencies in appearance order 
         List<SNode> dependencies = DependenciesSolver.dependenciesOf(it);
 
         // Replace program with its bundled version 
-        SNode newProgram = SNodeOperations.replaceWithAnother(it, createJSProgram_x583g4_a0a0e0a0a0a1(SPropertyOperations.getString(it, PROPS.name$MnvL), SNodeOperations.copyNode(SLinkOperations.getTarget(it, LINKS.environment$NB94)), ListSequence.fromList(dependencies).translate(new ITranslator2<SNode, SNode>() {
-          public Iterable<SNode> translate(SNode it) {
-            return SLinkOperations.getChildren(it, LINKS.body$yN3j);
-          }
-        })));
+        SNode newProgram = SNodeOperations.replaceWithAnother(it, ReferenceRemapper.remapAndMerge(dependencies, it));
 
         ListSequence.fromList(SNodeOperations.getNodeDescendants(newProgram, CONCEPTS.JSInjectModule$wX, false, new SAbstractConcept[]{})).visitAll(new IVisitor<SNode>() {
           public void visit(SNode it) {
             SNodeOperations.deleteNode(it);
           }
         });
+      }
+    });
+
+    Sequence.fromIterable(temporary).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        SNodeOperations.deleteNode(it);
       }
     });
   }
@@ -92,28 +96,10 @@ public class QueriesGenerated extends QueryProviderBase {
       }
     }
   }
-  private static SNode createJSProgram_x583g4_a0a0e0a0a0a1(String p0, SNode p1, Iterable<? extends SNode> p2) {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.JSProgram$Dg);
-    n0.setProperty(PROPS.name$MnvL, p0);
-    n0.forChild(LINKS.environment$NB94).initNode(p1, CONCEPTS.JSEnvironmentReference$7_, true);
-    n0.forChild(LINKS.body$yN3j).initNodeList(p2, CONCEPTS.JSIModuleItem$Mu);
-    return n0.getResult();
-  }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept JSProgram$Dg = MetaAdapterFactory.getConcept(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x2cc6dbd4f2dcb72L, "org.mar9000.mps.ecmascript.structure.JSProgram");
     /*package*/ static final SConcept BundleProgram$cW = MetaAdapterFactory.getConcept(0x8d94c08e449e484bL, 0x9e9ef3e97c8df28aL, 0x159ecb3ed37f6c22L, "org.mar9000.mps.ecmascript.bundler.structure.BundleProgram");
     /*package*/ static final SConcept JSInjectModule$wX = MetaAdapterFactory.getConcept(0x8d94c08e449e484bL, 0x9e9ef3e97c8df28aL, 0x159ecb3ed37c0e17L, "org.mar9000.mps.ecmascript.bundler.structure.JSInjectModule");
-    /*package*/ static final SConcept JSEnvironmentReference$7_ = MetaAdapterFactory.getConcept(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x3316da67d9793c14L, "org.mar9000.mps.ecmascript.structure.JSEnvironmentReference");
-    /*package*/ static final SInterfaceConcept JSIModuleItem$Mu = MetaAdapterFactory.getInterfaceConcept(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x5d2a78e40b52fb80L, "org.mar9000.mps.ecmascript.structure.JSIModuleItem");
-  }
-
-  private static final class PROPS {
-    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-  }
-
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink environment$NB94 = MetaAdapterFactory.getContainmentLink(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x2cc6dbd4f2dcb72L, 0x3316da67d9804b13L, "environment");
-    /*package*/ static final SContainmentLink body$yN3j = MetaAdapterFactory.getContainmentLink(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x2cc6dbd4f2dcb72L, 0x2cc6dbd4f2dcbaaL, "body");
   }
 }
