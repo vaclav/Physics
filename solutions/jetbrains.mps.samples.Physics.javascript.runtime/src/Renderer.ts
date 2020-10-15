@@ -7,6 +7,7 @@ export interface RendererCallback {
   render(applet: p5, context: p5.Graphics | p5): void;
   keyPressed(code: number): void;
   frameResized(app: p5, w: number, h: number): void;
+  computeStep(): void;
 }
 
 export default class Renderer {

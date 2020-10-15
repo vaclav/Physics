@@ -65,6 +65,9 @@ var Physics = (function () {
             });
             this.graphics.forEach((it, i) => context.image(it, this.viewWidth * i, 0));
         }
+        computeStep() {
+            this.simulations.forEach(it => it.computeStep());
+        }
         frameResized(app, w, h) {
             this.viewWidth = app.width / this.simulations.length;
             for (let i = 0; i < this.simulations.length; i++) {
@@ -223,7 +226,7 @@ var Physics = (function () {
             });
             this.time += this.timeStep;
             for (let entity of this.entities) {
-                entity.applyForces(this.time);
+                entity.computeStep();
             }
             this.world.quickStep(this.timeStep);
             this.jointGroup.empty(this.jointGroup);
@@ -439,8 +442,10 @@ var Physics = (function () {
             // (resulting in a screen: black) 
             ctx.perspective(applet.PI / 3, ctx.width / (ctx.height), 1, Number.MAX_VALUE / 100);
             this.world.render(ctx, this.renderScale, VectorHelper.toFloat32Array(position.mul(-1)));
-            this.world.step();
             this.metricsRenderer.updateMetrics();
+        }
+        computeStep() {
+            this.world.step();
         }
         getCameraPosition(g) {
             return new Vector(g.width / 2, g.height / 2, (g.height / 2) / g.tan(g.PI * 30 / 180));
@@ -817,7 +822,7 @@ var Physics = (function () {
         isDisabled() {
             return this.disabled;
         }
-        applyForces(time) {
+        computeStep() {
             if (this.disabled) {
                 return;
             }
@@ -834,6 +839,10 @@ var Physics = (function () {
                     forceMode |= ForceMode.APPLICATION_POINT_RELATIVE;
                 }
                 ForceModeApplication.apply(forceMode, this, VectorHelper.toFloat32Array(linearForce), VectorHelper.toFloat32Array(moment), VectorHelper.toFloat32Array(applicationPoint));
+            }
+            // Update trace if any 
+            if (this.properties.traceHandler != null) {
+                this.properties.traceHandler.computeStep(this.body.getPosition());
             }
         }
         applyLights(ctx, scale, scaledOffset) {
@@ -863,7 +872,7 @@ var Physics = (function () {
             graphics.pop();
             // Display trace if any 
             if (this.properties.traceHandler != null) {
-                this.properties.traceHandler.render(position, graphics, scale, scaledOffset, this.world.paused);
+                this.properties.traceHandler.render(graphics, scale, scaledOffset);
             }
         }
         setMass(value) {
@@ -1133,11 +1142,21 @@ var Physics = (function () {
     class TraceHandler {
         constructor(aspect) {
             this.aspect = aspect;
+            this.scale = -1;
+            this.unscaledCache = [];
         }
-        render(newPositions, ctx, scale, scaledOffset, paused) {
-            // Write new position 
-            if (!paused) {
-                this.write(newPositions, scale);
+        computeStep(newPositions) {
+            if (this.scale === -1) {
+                this.unscaledCache.push(newPositions);
+            }
+            else {
+                this.write(newPositions, this.scale);
+            }
+        }
+        render(ctx, scale, scaledOffset) {
+            if (this.scale == -1) {
+                this.scale = scale;
+                this.unscaledCache.forEach(it => this.write(it, this.scale));
             }
             // Display history 
             ctx.noFill();
@@ -1249,6 +1268,7 @@ var Physics = (function () {
                 p.keyPressed = () => renderer.keyPressed();
                 p.setup = () => renderer.setup();
                 p.windowResized = () => renderer.windowResized();
+                setInterval(() => callback.computeStep(), 1 / FRAMERATE);
                 res(renderer);
             });
         }),

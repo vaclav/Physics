@@ -2,15 +2,25 @@ import p5 from "p5";
 import InternalColor from "./Color";
 
 export default abstract class TraceHandler {
+  public scale: number = -1;
+  public unscaledCache: Float32Array[] = [];
   constructor(private aspect: InternalColor) { }
 
   protected abstract write(positions: Float32Array, scale: number): void;
   protected abstract vertices(ctx: p5.Graphics): void;
 
-  public render(newPositions: Float32Array, ctx: p5.Graphics, scale: number, scaledOffset: Float32Array, paused: boolean): void {
-    // Write new position 
-    if (!paused) {
-      this.write(newPositions, scale);
+  public computeStep(newPositions: Float32Array) {
+    if (this.scale === -1) {
+      this.unscaledCache.push(newPositions);
+    } else {
+      this.write(newPositions, this.scale);
+    }
+  }
+
+  public render(ctx: p5.Graphics, scale: number, scaledOffset: Float32Array): void {
+    if (this.scale == -1) {
+      this.scale = scale;
+      this.unscaledCache.forEach(it => this.write(it, this.scale));
     }
 
     // Display history 

@@ -43,9 +43,12 @@ export abstract class Simulation implements RendererCallback {
     ctx.perspective(applet.PI / 3, ctx.width / (ctx.height), 1, Number.MAX_VALUE / 100);
 
     this.world.render(ctx, this.renderScale, VectorHelper.toFloat32Array(position.mul(-1)));
-    this.world.step();
 
     this.metricsRenderer!.updateMetrics();
+  }
+
+  public computeStep() {
+    this.world.step();
   }
 
 

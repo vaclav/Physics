@@ -62,7 +62,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
     return this.disabled;
   }
 
-  public applyForces(time: number): void {
+  public computeStep(): void {
     if (this.disabled) {
       return;
     }
@@ -90,6 +90,11 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
         VectorHelper.toFloat32Array(moment),
         VectorHelper.toFloat32Array(applicationPoint)
       );
+    }
+
+    // Update trace if any 
+    if (this.properties.traceHandler != null) {
+      this.properties.traceHandler.computeStep(this.body.getPosition());
     }
   }
   public applyLights(ctx: p5.Graphics, scale: number, scaledOffset: Float32Array): void {
@@ -127,7 +132,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
 
     // Display trace if any 
     if (this.properties.traceHandler != null) {
-      this.properties.traceHandler.render(position, graphics, scale, scaledOffset, this.world.paused);
+      this.properties.traceHandler.render(graphics, scale, scaledOffset);
     }
   }
   public setMass(value: number): void {

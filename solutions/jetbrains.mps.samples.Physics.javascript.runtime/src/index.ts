@@ -1,4 +1,4 @@
-import Renderer from "./Renderer";
+import Renderer, { FRAMERATE } from "./Renderer";
 import CompositeRendererCallback from "./CompositeRendererCallback";
 import p5 from "p5";
 import { Simulation } from "./Simulation";
@@ -49,6 +49,9 @@ let Physics = {
 				p.keyPressed = () => renderer.keyPressed();
 				p.setup = () => renderer.setup();
 				p.windowResized = () => renderer.windowResized();
+
+				setInterval(() => callback.computeStep(), 1 / FRAMERATE)
+
 				res(renderer);
 			});
 		}),

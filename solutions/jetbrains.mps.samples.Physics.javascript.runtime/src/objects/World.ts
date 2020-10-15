@@ -89,7 +89,7 @@ export default class World implements Renderable {
     this.time += this.timeStep;
 
     for (let entity of this.entities) {
-      entity.applyForces(this.time);
+      entity.computeStep();
     }
 
     this.world.quickStep(this.timeStep);

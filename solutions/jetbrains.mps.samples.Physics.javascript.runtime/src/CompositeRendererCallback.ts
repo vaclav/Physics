@@ -46,7 +46,9 @@ export default class CompositeRendererCallback implements RendererCallback {
     this.graphics.forEach((it, i) => context.image(it, this.viewWidth * i, 0));
   }
 
-
+  public computeStep() {
+    this.simulations.forEach(it => it.computeStep());
+  }
 
   public frameResized(app: p5, w: number, h: number): void {
     this.viewWidth = app.width / this.simulations.length;
