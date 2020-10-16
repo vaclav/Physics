@@ -7,7 +7,7 @@ export default abstract class TraceHandler {
   constructor(private aspect: InternalColor) { }
 
   protected abstract write(positions: Float32Array, scale: number): void;
-  protected abstract vertices(ctx: p5.Graphics): void;
+  protected abstract vertices(ctx: p5): void;
 
   public computeStep(newPositions: Float32Array) {
     if (this.scale === -1) {
@@ -17,7 +17,7 @@ export default abstract class TraceHandler {
     }
   }
 
-  public render(ctx: p5.Graphics, scale: number, scaledOffset: Float32Array): void {
+  public render(ctx: p5, scale: number, scaledOffset: Float32Array): void {
     if (this.scale == -1) {
       this.scale = scale;
       this.unscaledCache.forEach(it => this.write(it, this.scale));

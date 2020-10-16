@@ -42,7 +42,7 @@ export default class FiniteTraceHandler extends TraceHandler {
   }
 
   
-  protected vertices(ctx: p5.Graphics) {
+  protected vertices(ctx: p5) {
     for (let i: number = 0; i < this.currentCapacity; i++) {
       const cursor: number = (i + this.offset) % MAX_CAPACITY;
       ctx.vertex(this.content[cursor][0], this.content[cursor][1], this.content[cursor][2]);

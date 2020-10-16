@@ -97,7 +97,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
       this.properties.traceHandler.computeStep(this.body.getPosition());
     }
   }
-  public applyLights(ctx: p5.Graphics, scale: number, scaledOffset: Float32Array): void {
+  public applyLights(ctx: p5, scale: number, scaledOffset: Float32Array): void {
     if (this.disabled) {
       return;
     }
@@ -113,7 +113,7 @@ export default class PhysicalEntity<T extends SystemScope> extends VectorLike im
     this.fixture!.setup(app, scale);
   }
 
-  public render(graphics: p5.Graphics, scale: number, scaledOffset: Float32Array): void {
+  public render(graphics: p5, scale: number, scaledOffset: Float32Array): void {
     if (this.disabled) {
       return;
     }

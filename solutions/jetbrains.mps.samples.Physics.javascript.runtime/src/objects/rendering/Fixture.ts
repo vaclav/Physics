@@ -23,7 +23,7 @@ export default abstract class Fixture implements Renderable {
   }
 
   
-  public render(graphics: p5.Graphics, scale: number, scaledOffset: Float32Array) {
+  public render(graphics: p5, scale: number, scaledOffset: Float32Array) {
     this.texture.apply(graphics, this.emitLight);
   }
 

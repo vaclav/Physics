@@ -275,9 +275,6 @@
       </concept>
     </language>
     <language id="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff" name="org.mar9000.mps.ecmascript">
-      <concept id="3256590409509469669" name="org.mar9000.mps.ecmascript.structure.JSExportDefault" flags="ng" index="4Wcps">
-        <child id="3256590409509528242" name="declaration" index="4WX$b" />
-      </concept>
       <concept id="3458839625124880611" name="org.mar9000.mps.ecmascript.structure.JSClassDeclarationReference" flags="ng" index="6BmiN">
         <reference id="3458839625124880612" name="classDeclaration" index="6BmiO" />
       </concept>
@@ -1147,11 +1144,6 @@
               </node>
             </node>
           </node>
-        </node>
-      </node>
-      <node concept="4Wcps" id="3exBHn6JW7N" role="1dSqon">
-        <node concept="6BmiN" id="3exBHn6JWEo" role="4WX$b">
-          <ref role="6BmiO" node="4BiCzMo_lGO" />
         </node>
       </node>
       <node concept="3ErYpN" id="4BiCzMo_lKx" role="3E_D5O">
@@ -7688,10 +7680,16 @@
               <property role="3o6i5n" value="}" />
             </node>
             <node concept="3o6iSG" id="3n97Rc6qdVL" role="3o6s8t">
-              <property role="3o6i5n" value="#metrics {" />
+              <property role="3o6i5n" value="#simulations {" />
             </node>
             <node concept="3o6iSG" id="3n97Rc6qdW2" role="3o6s8t">
               <property role="3o6i5n" value="  display: flex;" />
+            </node>
+            <node concept="3o6iSG" id="3n97Rc6qdYl" role="3o6s8t">
+              <property role="3o6i5n" value="}" />
+            </node>
+            <node concept="3o6iSG" id="5ZcXlB58qL4" role="3o6s8t">
+              <property role="3o6i5n" value=".metrics {" />
             </node>
             <node concept="3o6iSG" id="3n97Rc6qdWk" role="3o6s8t">
               <property role="3o6i5n" value="  position: absolute;" />
@@ -7705,17 +7703,14 @@
             <node concept="3o6iSG" id="3n97Rc6qdXg" role="3o6s8t">
               <property role="3o6i5n" value="  right: 0;" />
             </node>
-            <node concept="3o6iSG" id="3n97Rc6qdXA" role="3o6s8t">
-              <property role="3o6i5n" value="  z-index: 100;" />
-            </node>
             <node concept="3o6iSG" id="3n97Rc6qdXX" role="3o6s8t">
               <property role="3o6i5n" value="  color: white;" />
             </node>
-            <node concept="3o6iSG" id="3n97Rc6qdYl" role="3o6s8t">
+            <node concept="3o6iSG" id="5ZcXlB58qLT" role="3o6s8t">
               <property role="3o6i5n" value="}" />
             </node>
             <node concept="3o6iSG" id="3n97Rc6qdYI" role="3o6s8t">
-              <property role="3o6i5n" value=".sim { flex: 1; }" />
+              <property role="3o6i5n" value=".sim { flex: 1; position: relative; }" />
             </node>
             <node concept="3o6iSG" id="3n97Rc6qe1X" role="3o6s8t" />
             <node concept="3o6iSG" id="5Sdh$FBp3tM" role="3o6s8t">
@@ -7741,21 +7736,21 @@
         </node>
         <node concept="2pNNFK" id="5Sdh$FBp3vY" role="3o6s8t">
           <property role="2pNNFO" value="body" />
-          <node concept="2pNNFK" id="5Sdh$FBp3wB" role="3o6s8t">
+          <node concept="2pNNFK" id="5ZcXlB5id0W" role="3o6s8t">
             <property role="2pNNFO" value="div" />
-            <node concept="2pNUuL" id="5Sdh$FBp3wC" role="2pNNFR">
+            <node concept="2pNUuL" id="5ZcXlB5id1O" role="2pNNFR">
               <property role="2pNUuO" value="id" />
-              <node concept="2pMdtt" id="5Sdh$FBp3wD" role="2pMdts">
-                <property role="2pMdty" value="metrics" />
+              <node concept="2pMdtt" id="5ZcXlB5id1P" role="2pMdts">
+                <property role="2pMdty" value="loading" />
               </node>
             </node>
           </node>
-          <node concept="2pNNFK" id="5Sdh$FBp3wu" role="3o6s8t">
+          <node concept="2pNNFK" id="2MAW43hfYMV" role="3o6s8t">
             <property role="2pNNFO" value="div" />
-            <node concept="2pNUuL" id="5Sdh$FBp3wz" role="2pNNFR">
+            <node concept="2pNUuL" id="2MAW43hfYNQ" role="2pNNFR">
               <property role="2pNUuO" value="id" />
-              <node concept="2pMdtt" id="5Sdh$FBp3w$" role="2pMdts">
-                <property role="2pMdty" value="canvas" />
+              <node concept="2pMdtt" id="2MAW43hfYNR" role="2pMdts">
+                <property role="2pMdty" value="simulations" />
               </node>
             </node>
           </node>
@@ -9695,7 +9690,13 @@
         <node concept="2wijRm" id="1muMNVjKQKo" role="2wiapO">
           <property role="TrG5h" value="constructor" />
         </node>
-        <node concept="2wWApn" id="1muMNVjKQKp" role="2wWApU" />
+        <node concept="2wWApn" id="1muMNVjKQKp" role="2wWApU">
+          <node concept="2wxzWt" id="5ZcXlB5pcoK" role="2wWAp1">
+            <node concept="1mvZK$" id="5ZcXlB5pcoM" role="2wxzWi">
+              <property role="TrG5h" value="container" />
+            </node>
+          </node>
+        </node>
         <node concept="3PT0iG" id="1muMNVjKQKq" role="2wi7L_">
           <node concept="1dSo_L" id="1muMNVjKQKr" role="3PTNxU">
             <node concept="12Bna6" id="1muMNVjKQKs" role="1dwvF7">
@@ -9754,6 +9755,9 @@
                     </node>
                   </node>
                 </node>
+              </node>
+              <node concept="2WqeGl" id="5ZcXlB5pcCZ" role="2WRAlG">
+                <ref role="2WqeGo" node="5ZcXlB5pcoM" resolve="container" />
               </node>
             </node>
           </node>

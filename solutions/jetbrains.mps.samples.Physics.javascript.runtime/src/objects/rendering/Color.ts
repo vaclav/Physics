@@ -17,7 +17,7 @@ export default class InternalColor implements RenderableMetric {
     return new InternalColor(this.r * selfRatio + color.r * rev, this.g * selfRatio + color.g * rev, this.b * selfRatio + color.b * rev);
   }
 
-  public toInt(applet: p5 | p5.Graphics): p5.Color {
+  public toInt(applet: p5): p5.Color {
     return applet.color(this.r, this.g, this.b);
   }
 

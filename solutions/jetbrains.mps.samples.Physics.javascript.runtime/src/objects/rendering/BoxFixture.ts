@@ -9,7 +9,7 @@ export default class BoxFixture extends Fixture {
     super(world, texture);
   }
   
-  public render(graphics: p5.Graphics, scale: number, scaledOffset: Float32Array) {
+  public render(graphics: p5, scale: number, scaledOffset: Float32Array) {
     super.render(graphics, scale, scaledOffset);
 
     graphics.box(this.width * scale, this.height * scale, this.depth * scale);

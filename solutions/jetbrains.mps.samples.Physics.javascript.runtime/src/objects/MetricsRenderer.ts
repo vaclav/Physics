@@ -12,11 +12,10 @@ export default class MetricsRenderer {
 
   private metrics: { callback: () => any, element: HTMLSpanElement }[] = [];
 
-  constructor(world: World, containerId: string = "metrics") {
+  constructor(world: World, metricsRoot: HTMLElement) {
     this.container = document.createElement("div");
-    this.container.classList.add("sim");
+    this.container.classList.add("metrics");
     
-    let metricsRoot = document.querySelector<HTMLDivElement>("#" + containerId)!;
     metricsRoot.appendChild(this.container);
 
     this.declareMetric("Elapsed time", () =>  `${world.time}s ${world.paused ? " [paused]" : ""}`);

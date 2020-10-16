@@ -1,5 +1,4 @@
 import Renderer, { FRAMERATE } from "./Renderer";
-import CompositeRendererCallback from "./CompositeRendererCallback";
 import p5 from "p5";
 import { Simulation } from "./Simulation";
 import { VectorLike, Vector } from "./Vector";
@@ -37,25 +36,30 @@ let Physics = {
 	PropKey,
 	ForceMapper,
 	CachedForceMapper,
-	makeRenderer: () =>
-		new Promise((res, rej) => {
-			new p5((p) => {
-				// Initialize Physics library
-				const simulations = Physics.simulationClasses.map(it => new it());
-				const callback = new CompositeRendererCallback(...simulations);
-				const renderer = new Renderer(p, "canvas", callback);
+	makeRenderer: async () => {
+		const container = document.getElementById("simulations")!;
+		const simulations: { renderer: Renderer, simulation: Simulation, loaded: Promise<any> }[] = [];
+		
+		const loadingElement = document.getElementById("loading")!;
+		loadingElement.innerText = "loading textures and setting up properties...";
 
-				p.draw = () => renderer.draw();
-				p.keyPressed = () => renderer.keyPressed();
-				p.setup = () => renderer.setup();
-				p.windowResized = () => renderer.windowResized();
+		for (let simClass of Physics.simulationClasses) {
+			simulations.push(await Simulation.create(container, simClass, 1 / Physics.simulationClasses.length));
+		}
 
-				setInterval(() => callback.computeStep(), 1 / FRAMERATE)
+		document.onkeypress = (event) => {
+			// Space bar 
+			if (event.key == " ") {
+				const paused: boolean = simulations[0].simulation.world.paused;
+				simulations.forEach(it => it.simulation.world.paused = !paused);
+			  }
+		};
 
-				res(renderer);
-			});
-		}),
-	simulationClasses: [] as (new () => any)[]
+		Promise.all(simulations.map(it => it.loaded)).then(() => loadingElement.remove());
+		
+		return simulations;
+	},
+	simulationClasses: [] as (new (container: HTMLElement) => any)[]
 }
 
 export default Physics;

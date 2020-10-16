@@ -15,7 +15,7 @@ export default class InfiniteTraceHandler extends TraceHandler {
   }
 
   
-  protected vertices(ctx: p5.Graphics) {
+  protected vertices(ctx: p5) {
     this.content.forEach(vals => {
       ctx.vertex(vals[0], vals[1], vals[2]);
     })

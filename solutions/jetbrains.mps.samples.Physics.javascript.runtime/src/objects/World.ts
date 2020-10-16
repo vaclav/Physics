@@ -110,7 +110,7 @@ export default class World implements Renderable {
   }
 
 
-  public render(graphics: p5.Graphics, scale: number, scaledOffset: Float32Array): void {
+  public render(graphics: p5, scale: number, scaledOffset: Float32Array): void {
     for (let entity of this.entities) {
       entity.applyLights(graphics, scale, scaledOffset);
     }
