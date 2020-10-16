@@ -5959,7 +5959,7 @@
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="ng" role="2DRAPQ">
-                <property role="2DPR8u" value="            ctx.beginShape();" />
+                <property role="2DPR8u" value="            ctx.beginShape(ctx.LINE_STRIP);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="nh" role="2DRAPQ">
@@ -5987,7 +5987,7 @@
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="nn" role="2DRAPQ">
-                <property role="2DPR8u" value="    const MAX_CAPACITY = 600;" />
+                <property role="2DPR8u" value="    const MAX_CAPACITY = 200;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="no" role="2DRAPQ">

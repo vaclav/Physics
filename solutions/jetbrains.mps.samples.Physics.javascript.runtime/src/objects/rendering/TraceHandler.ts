@@ -28,7 +28,7 @@ export default abstract class TraceHandler {
     ctx.stroke(this.aspect.r, this.aspect.g, this.aspect.b);
     ctx.push();
     ctx.translate(scaledOffset[0], scaledOffset[1], scaledOffset[2]);
-    ctx.beginShape();
+    ctx.beginShape(ctx.LINE_STRIP as any);
 
     this.vertices(ctx);
 

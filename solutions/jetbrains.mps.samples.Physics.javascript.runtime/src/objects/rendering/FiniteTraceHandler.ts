@@ -2,7 +2,7 @@ import InternalColor from "./Color";
 import TraceHandler from "./TraceHandler";
 import p5 from "p5";
 
-export const MAX_CAPACITY = 600;
+export const MAX_CAPACITY = 200;
 
 export default class FiniteTraceHandler extends TraceHandler {
 

@@ -1166,14 +1166,14 @@ var Physics = (function () {
             ctx.stroke(this.aspect.r, this.aspect.g, this.aspect.b);
             ctx.push();
             ctx.translate(scaledOffset[0], scaledOffset[1], scaledOffset[2]);
-            ctx.beginShape();
+            ctx.beginShape(ctx.LINE_STRIP);
             this.vertices(ctx);
             ctx.endShape();
             ctx.pop();
         }
     }
 
-    const MAX_CAPACITY = 600;
+    const MAX_CAPACITY = 200;
     class FiniteTraceHandler extends TraceHandler {
         constructor(aspect) {
             super(aspect);
