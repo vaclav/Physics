@@ -13,11 +13,13 @@ export default class ImageTexture implements Texture {
   }
   
   public apply(applet: p5, emissive: boolean): void {
+    // Apply texture on current state (will be removed on next pop())
     applet.texture(this.loadedImage!);
-    // TODO disabled texture afterwards?
     applet.noStroke();
+
     if (emissive) {
-      // TODO applet.emissive(applet.color(255))
+      // Disable lights for the current object (same as displaying it as fully emissive)
+      (applet as any).noLights();
     }
   }
 

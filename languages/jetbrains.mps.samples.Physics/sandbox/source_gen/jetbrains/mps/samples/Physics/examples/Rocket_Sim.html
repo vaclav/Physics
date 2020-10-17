@@ -972,9 +972,13 @@
             this.loadedImage = applet.loadImage(this.url);
         }
         apply(applet, emissive) {
+            // Apply texture on current state (will be removed on next pop())
             applet.texture(this.loadedImage);
-            // TODO disabled texture afterwards?
             applet.noStroke();
+            if (emissive) {
+                // Disable lights for the current object (same as displaying it as fully emissive)
+                applet.noLights();
+            }
         }
         mergeWith(other, participation) {
             // No simple way to merge an image texture 
@@ -1095,6 +1099,9 @@
         setup(applet, emissive) { }
         apply(applet, emissive) {
             if (this.fill != null) {
+                if (emissive) {
+                    applet.emissiveMaterial(this.fill.toInt(applet));
+                }
                 applet.fill(this.fill.toInt(applet));
             }
             else {
@@ -1333,6 +1340,20 @@
 */
 
         
+        function computeAirResistance1(context, dragCoef, airDensity, area) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return {
+                linearForce: (context.entity.getVelocity().mul(((1 * 1)))).mul(-1).resize(((((0.5 * dragCoef) * airDensity) * area) * Math.pow(context.entity.getVelocity().length(), 2))),
+                moment: null,
+                applicationPoint: null,
+                forceMode: 16
+              };
+            })).compute())
+          };
+        }
+        
         function computeInteractionForce1(context, map) {
           return {
             compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
@@ -1363,20 +1384,6 @@ class BaseObject1 extends Physics.PhysicalEntity {
             this.forces.push();
           }
 }
-        
-        function computeAirResistance1(context, dragCoef, airDensity, area) {
-          return {
-            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
-              
-              return {
-                linearForce: (context.entity.getVelocity().mul(((1 * 1)))).mul(-1).resize(((((0.5 * dragCoef) * airDensity) * area) * Math.pow(context.entity.getVelocity().length(), 2))),
-                moment: null,
-                applicationPoint: null,
-                forceMode: 16
-              };
-            })).compute())
-          };
-        }
         
         function computeGravitation1(context, G) {
           return {

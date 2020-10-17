@@ -932,9 +932,13 @@ var Physics = (function () {
             this.loadedImage = applet.loadImage(this.url);
         }
         apply(applet, emissive) {
+            // Apply texture on current state (will be removed on next pop())
             applet.texture(this.loadedImage);
-            // TODO disabled texture afterwards?
             applet.noStroke();
+            if (emissive) {
+                // Disable lights for the current object (same as displaying it as fully emissive)
+                applet.noLights();
+            }
         }
         mergeWith(other, participation) {
             // No simple way to merge an image texture 
@@ -1055,6 +1059,9 @@ var Physics = (function () {
         setup(applet, emissive) { }
         apply(applet, emissive) {
             if (this.fill != null) {
+                if (emissive) {
+                    applet.emissiveMaterial(this.fill.toInt(applet));
+                }
                 applet.fill(this.fill.toInt(applet));
             }
             else {

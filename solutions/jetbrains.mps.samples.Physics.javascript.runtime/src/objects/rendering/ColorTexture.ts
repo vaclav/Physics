@@ -12,7 +12,7 @@ export default class ColorTexture  implements Texture, RenderableMetric {
   public apply(applet: p5, emissive: boolean): void {
     if (this.fill != null) {
       if (emissive) {
-        // TODO applet.setEmissive(this.fill.toInt(applet));
+        (applet as any).emissiveMaterial(this.fill.toInt(applet))
       }
 
       applet.fill(this.fill.toInt(applet));
