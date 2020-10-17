@@ -1,0 +1,25 @@
+{
+  "name": "jetbrains.mps.samples.physics.javascript.runtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "odejs": "^1.1.0",
+    "p5": "^1.1.9"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@types/p5": "^0.9.1",
+    "rollup": "^2.27.0",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2"
+  }
+}

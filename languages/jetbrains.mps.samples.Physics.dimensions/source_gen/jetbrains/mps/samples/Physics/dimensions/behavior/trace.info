@@ -1445,45 +1445,6 @@
       <unit id="4082412254975244783" at="24,0,88,0" name="jetbrains.mps.samples.Physics.dimensions.behavior.IntegerExponent__BehaviorDescriptor" />
     </file>
   </root>
-  <root nodeRef="r:a08ce4c7-a3d7-4ce1-b6a4-794edd2a85d3(jetbrains.mps.samples.Physics.dimensions.behavior)/4252203113248205853">
-    <file name="UnitConversionUtil.java">
-      <node id="5369611234111134743" at="15,104,16,129" concept="6" />
-      <node id="5369611234111135554" at="19,77,20,73" concept="5" />
-      <node id="5369611234111135554" at="20,73,21,76" concept="2" />
-      <node id="5369611234111135554" at="22,5,23,86" concept="5" />
-      <node id="5369611234111135554" at="23,86,24,43" concept="2" />
-      <node id="5369611234111135554" at="25,5,26,26" concept="6" />
-      <node id="4252203113248205853" at="30,0,31,0" concept="9" trace="MulExpression$iC" />
-      <node id="4252203113248205853" at="31,0,32,0" concept="9" trace="Expression$D_" />
-      <node id="4252203113248205853" at="32,0,33,0" concept="9" trace="NumberLiteral$wE" />
-      <node id="4252203113248205853" at="36,0,37,0" concept="9" trace="left$zxUa" />
-      <node id="4252203113248205853" at="37,0,38,0" concept="9" trace="right$zBjx" />
-      <node id="4252203113248205853" at="41,0,42,0" concept="9" trace="value$iWTK" />
-      <node id="4252203113248249692" at="15,0,18,0" concept="10" trace="compositeExpressionToBase#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/util/List;Z)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="5369611234111135554" at="21,76,25,5" concept="0" />
-      <node id="5369611234111135554" at="19,0,28,0" concept="10" trace="createMulExpression_5ohk72_a0a0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <scope id="4252203113248249695" at="15,104,16,129" />
-      <scope id="5369611234111135554" at="22,5,24,43">
-        <var name="n1" id="5369611234111135554" />
-      </scope>
-      <scope id="4252203113248249692" at="15,0,18,0">
-        <var name="source" id="4252203113248249859" />
-        <var name="targetToBase" id="5534756475245166717" />
-        <var name="units" id="4252203113248249927" />
-      </scope>
-      <scope id="5369611234111135554" at="19,77,26,26">
-        <var name="n0" id="5369611234111135554" />
-      </scope>
-      <scope id="5369611234111135554" at="19,0,28,0">
-        <var name="p0" id="5369611234111135554" />
-        <var name="p1" id="5369611234111135554" />
-      </scope>
-      <unit id="4252203113248205853" at="40,0,43,0" name="jetbrains.mps.samples.Physics.dimensions.behavior.UnitConversionUtil$PROPS" />
-      <unit id="4252203113248205853" at="35,0,39,0" name="jetbrains.mps.samples.Physics.dimensions.behavior.UnitConversionUtil$LINKS" />
-      <unit id="4252203113248205853" at="29,0,34,0" name="jetbrains.mps.samples.Physics.dimensions.behavior.UnitConversionUtil$CONCEPTS" />
-      <unit id="4252203113248205853" at="14,0,44,0" name="jetbrains.mps.samples.Physics.dimensions.behavior.UnitConversionUtil" />
-    </file>
-  </root>
   <root nodeRef="r:a08ce4c7-a3d7-4ce1-b6a4-794edd2a85d3(jetbrains.mps.samples.Physics.dimensions.behavior)/4252203113248218601">
     <file name="IUnit__BehaviorDescriptor.java">
       <node id="4252203113248218601" at="24,0,25,0" concept="9" trace="CONCEPT" />
