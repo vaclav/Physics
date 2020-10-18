@@ -8,7 +8,7 @@ _Physics_ is based on [iets3.opensource](https://github.com/IETS3/iets3.opensour
 
 ### Requirements
 In order to install the project and its dependencies, you will need
-- **Java 11** : compilation of iets3.opensource (make sure *JAVA_HOME* environement variable is set)
+- **Java >11** : compilation within gradle scripts (make sure *JAVA_HOME* environement variable is set)
 - **Git** : cloning multiple repositories
 
 ### Installation script
@@ -18,23 +18,23 @@ git clone https://github.com/vaclav/Physics
 cd ./Physics
 ```
 
-If you did not do that before, install and publish [iets3.genjs](https://github.com/cdelabou/iets3.genjs) to your local maven repository (process explained in the README, with section `Installation for external use`).
+Then install and publish [iets3.genjs](https://github.com/cdelabou/iets3.genjs) to your local maven repository with the script below (or follow the steps on the repository readme).
 ```
 git clone https://github.com/cdelabou/iets3.genjs
 cd iets3.genjs
-./gradlew packageLanguages publishToMavenLocal
+./gradlew packageLanguages publishToMavenLocal -PmpsDir="<optional path to your mps installation>"
 cd ..
 rm -r iets3.genjs
 ```
 
-#### Installation for development
-If you only need to get the dependencies of Physics in order to improve or use the project directly, you can fetch and build the development branch of ecmascript4mps and get the requirements with the below script.
+#### Installing dependencies only
+If you only need to get the dependencies of Physics in order to improve or use the project directly, you can fetch and build the development branch of _ecmascript4mps_ and get the requirements with the below script.
 ```sh
-# Resolve iets3.opensource from maven and dependencies, then make MPS see those artifacts
+# Resolve iets3.opensource from maven and other dependencies, then make MPS see those artifacts
 ./gradlew resolveArtifacts generateLibrariesXml
 ```
 
-Note than the manual build of ecmascript4mps is necessary for now because of the use of the development branch (not deployed into a maven repository as of october 2020).
+Note than the manual build of _ecmascript4mps_ is necessary for now because of the use of the development branch (not deployed into a maven repository as of october 2020).
 
 You can now open MPS and set the path variable `jetbrains.mps.samples.Physics.home` (*Ctrl+Maj+A > Path Variables*) to the path of the cloned repository (example: `/home/user/.mpsproject/Physics`).
 
@@ -43,7 +43,7 @@ Restart MPS and open the project !
 #### Installation for external use
 If you need this project to be used outside in another project, you can do the same as above and deploy it to your local maven repository after build using the below script.
 ```
-./gradlew packageLanguages publishToMavenLocal
+./gradlew packageLanguages publishToMavenLocal -PmpsDir="<optional path to your mps installation>"
 ```
 
 #### Build settings
@@ -54,32 +54,7 @@ In case you need to use a specific version of MPS, or avoid downloading MPS all 
 | mpsDir     | Directory of your MPS installation, if specified MPS will not be downloaded again. | -PmpsDir="./build/mps" |
 | mpsVersion | Version of MPS used in the project (used to set the version number and determine which version of MPS to download if mpsDir is not set). | -PmpsVersion="2020.2" |
 
-Example of custom settings with the development installation :
-```sh
-./gradlew resolveArtifacts generateLibrariesXml -PmpsVersion="2020.1" -PmpsDir="/mnt/data/softwares/mps"
-```
-
-### Manual installation
-This section describe all the steps taken by the installation script above and how to perform them manually.
-
-#### Runtime dependencies
-_Physics_ java runtime depends on [Processing](https://processing.org/) and [ode4j](https://github.com/tzaeschke/ode4j). A gradle script to fetch the binaries and package them into one single file is located into `./dependencies/java_runtime/`.
-
-The project is configured to load the `java-runtime-all.jar` file, which is located in the build folder generated when running `./gradlew packageJavaRuntime` in the repository root directory.
-
-#### Languages dependencies [deprecated]
-_Physics_ is based on [iets3.opensource](https://github.com/IETS3/iets3.opensource), which would require [mbeddr](http://mbeddr.com/).
-
-The easiest way to install them both is to clone iets3.opensource and build it :
-```sh
-git clone https://github.com/IETS3/iets3.opensource
-cd iets3.opensource
-./gradlew buildLanguages
-```
-
-You then need to make MPS see the artifacts generated, for this there is two solutions :
-- Use a `libraries.xml` file in the `.mps` folder : the libraries would be visible from the project only (you can find an example of such file in the *dependencies* folder, configured with *iets3.opensource* folder being inside the *dependencies* folder)
-- Install the artifacts as MPS plugins : copy the content of `artifacts/com.mbeddr.platform` and `artifacts/org.iets3.opensource` into the plugin folder of MPS.
+[A wiki page](https://github.com/vaclav/Physics/wiki/Installation-script) explain a bit more how the dependencies are retrieved and applied on the project.
 
 #### Project directory variable
 The project requires the path variable `jetbrains.mps.samples.Physics.home` to be set to function properly, which should point to the folder of this repository.

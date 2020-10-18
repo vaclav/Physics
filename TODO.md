@@ -21,6 +21,7 @@ Do not hesitate to edit this list when some items are done or reported as issues
 - Physics.java.runtime
 - Physics.genjava
 - Physics (plugin)
+
 **Current state :** in the language, it is possible to set a relative coordinate to be "oriented", meaning the coordinates will be made relative both to the given object position but also to the given object **orientation**. There is not support for Java generation (or interpretation) of this feature (some similar methods are implemented in the runtime, see `Math3DHelper->relativePoint`)
 
 **Possible improvements :**
@@ -56,10 +57,10 @@ Do not hesitate to edit this list when some items are done or reported as issues
 **Involved languages / modules :**
 - Physics.gen...
 
-**Current state :** you can see simulation in java
+**Current state :** you can see simulation in java and javascript
 
 **Possible improvements :**
-- Allow simulation in other output languages (JavaScript, with the same libraries for example). Will require IETS3 to output to these languages as well.
+- Allow simulation in other output languages (Python, with the same libraries for example). Will require IETS3 to output to these languages as well.
 
 ## Improve / remove simulation scale
 
@@ -146,11 +147,23 @@ Do not hesitate to edit this list when some items are done or reported as issues
 - Physics.iets3.ext.math
 - Physics.genjava
 
-**Current state :** the language can only be used with all the modules imported
+**Current state :** the language can only be used with all the modules imported, a build script to generate a MPS plugin is implemented and a script for a standalone IDE was made in the [feature/standalone-ide](https://github.com/vaclav/Physics/tree/feature/standalone-ide) branch.
+There is also some issues with plugins depending on ecmascript4mps, because its `<id>` does not equals its `<name>` in its plugin.xml (may be an issue with MPS).
 
 **Possible improvements :**
-- Create a build script to make plugins (find a solution to either generate iets3 plugins in the same time or allow to download them easily since Physics would depend on it)
-- Make a specific IDE for Physics
+- Make sure the IDE/plugin can resolve the runtime.js file for javascript generation
+- Make sure the IDE/plugin can resolve the dependencies (BigDecimalMath.jar and java-runtime-all.jar) after being bundled
+
+## Allow to create joint between objects
+
+**Involved languages / modules :**
+- Physics
+
+**Current state :** there is no way to join object with joints in the DSL, this feature is supported by ODE
+
+**Possible improvements :**
+- Figure out a good way to define links between objects (groups of objects linked together, sub-objects, independant links..?)
+- Implement it :)
 
 ## Improve language extensibility
 
