@@ -148,7 +148,6 @@ Do not hesitate to edit this list when some items are done or reported as issues
 - Physics.genjava
 
 **Current state :** the language can only be used with all the modules imported, a build script to generate a MPS plugin is implemented and a script for a standalone IDE was made in the [feature/standalone-ide](https://github.com/vaclav/Physics/tree/feature/standalone-ide) branch.
-There is also some issues with plugins depending on ecmascript4mps, because its `<id>` does not equals its `<name>` in its plugin.xml (may be an issue with MPS).
 
 **Possible improvements :**
 - Make sure the IDE/plugin can resolve the runtime.js file for javascript generation
