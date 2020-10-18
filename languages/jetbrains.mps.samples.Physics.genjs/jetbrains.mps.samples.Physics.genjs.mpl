@@ -147,7 +147,6 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)</dependency>
-    <dependency reexport="true">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
     <dependency reexport="false" scope="generate-into">cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</dependency>
     <dependency reexport="false">6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0(org.iets3.core.expr.math)</dependency>
     <dependency reexport="false">acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)</dependency>

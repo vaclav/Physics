@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c && cpx ./node_modules/odejs/lib/libode.js ./build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cpx": "^1.5.0",
     "odejs": "^1.1.0",
     "p5": "^1.1.9"
   },

@@ -937,7 +937,7 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static void mappingScript_CodeBlock_17(final MappingScriptContext _context) {
     String runtimePath = "solutions/jetbrains.mps.samples.Physics.javascript.runtime";
-    _context.putStepObject("odejs", PlainTextRuntimeImporter.importFrom(runtimePath + "/node_modules/odejs/lib", "libode.js"));
+    _context.putStepObject("odejs", PlainTextRuntimeImporter.importFrom(runtimePath + "/build", "libode.js"));
     _context.putStepObject("runtime", PlainTextRuntimeImporter.importFrom(runtimePath + "/build", "runtime.js"));
   }
   public static SNode insertMacro_Query_16_0(final InsertMacroContext _context) {

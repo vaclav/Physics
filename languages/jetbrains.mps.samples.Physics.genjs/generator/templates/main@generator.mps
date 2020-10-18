@@ -7928,11 +7928,11 @@
               <ref role="1Pybhc" to="nbhn:NYH1y4Dmd1" resolve="PlainTextRuntimeImporter" />
               <ref role="37wK5l" to="nbhn:NYH1y4DzRn" resolve="importFrom" />
               <node concept="3cpWs3" id="NYH1y4DBVO" role="37wK5m">
-                <node concept="Xl_RD" id="NYH1y4DBVP" role="3uHU7w">
-                  <property role="Xl_RC" value="/node_modules/odejs/lib" />
-                </node>
                 <node concept="37vLTw" id="NYH1y4DBVQ" role="3uHU7B">
                   <ref role="3cqZAo" node="NYH1y4D_Kk" resolve="runtimePath" />
+                </node>
+                <node concept="Xl_RD" id="3weh2zeCwDr" role="3uHU7w">
+                  <property role="Xl_RC" value="/build" />
                 </node>
               </node>
               <node concept="Xl_RD" id="NYH1y4DBVR" role="37wK5m">
