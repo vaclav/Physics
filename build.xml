@@ -49,9 +49,9 @@
   </path>
   
   <target name="assemble" depends="classes, declare-mps-tasks">
-    <mkdir dir="${build.layout}/Physics" />
-    <mkdir dir="${build.layout}/Physics/META-INF" />
-    <echoxml file="${build.layout}/Physics/META-INF/plugin.xml">
+    <mkdir dir="${build.layout}/jetbrains.mps.samples.Physics" />
+    <mkdir dir="${build.layout}/jetbrains.mps.samples.Physics/META-INF" />
+    <echoxml file="${build.layout}/jetbrains.mps.samples.Physics/META-INF/plugin.xml">
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>jetbrains.mps.samples.Physics</id>
         <name>jetbrains.mps.samples.Physics</name>
@@ -68,8 +68,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.layout}/Physics/languages" />
-    <mkdir dir="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics" />
+    <mkdir dir="${build.layout}/jetbrains.mps.samples.Physics/languages" />
+    <mkdir dir="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics" />
     <mkdir dir="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler.jar" />
     <mkdir dir="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler.jar/META-INF" />
     <echoxml file="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler.jar/META-INF/module.xml">
@@ -140,7 +140,7 @@
         <sources jar="org.mar9000.mps.ecmascript.bundler-src.jar" descriptor="org.mar9000.mps.ecmascript.bundler.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/org.mar9000.mps.ecmascript.bundler" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler.jar" />
@@ -186,7 +186,7 @@
         <sources jar="org.mar9000.mps.ecmascript.bundler-src.jar" descriptor="org.mar9000.mps.ecmascript.bundler.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/org.mar9000.mps.ecmascript.bundler#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler-generator.jar" />
@@ -197,7 +197,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.bundler-generator-templates">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -300,7 +300,7 @@
         <sources jar="jetbrains.mps.samples.Physics.dimensions-src.jar" descriptor="jetbrains.mps.samples.Physics.dimensions.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions.jar" />
@@ -355,7 +355,7 @@
         <sources jar="jetbrains.mps.samples.Physics.dimensions-src.jar" descriptor="jetbrains.mps.samples.Physics.dimensions.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions#8609460045976868312" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions-generator.jar" />
@@ -369,7 +369,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -458,7 +458,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genjava-src.jar" descriptor="jetbrains.mps.samples.Physics.genjava.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjava" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjava.jar" />
@@ -521,7 +521,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genjava-src.jar" descriptor="jetbrains.mps.samples.Physics.genjava.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjava#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjava-generator.jar" />
@@ -535,7 +535,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjava-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -631,7 +631,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genjs-src.jar" descriptor="jetbrains.mps.samples.Physics.genjs.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjs.jar" />
@@ -700,7 +700,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genjs-src.jar" descriptor="jetbrains.mps.samples.Physics.genjs.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs#7409769864398261204" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjs-generator.jar" />
@@ -714,7 +714,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjs-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -792,7 +792,7 @@
         <sources jar="jetbrains.mps.samples.Physics.dimensions.gentype-src.jar" descriptor="jetbrains.mps.samples.Physics.dimensions.gentype.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions.gentype" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions.gentype.jar" />
@@ -844,7 +844,7 @@
         <sources jar="jetbrains.mps.samples.Physics.dimensions.gentype-src.jar" descriptor="jetbrains.mps.samples.Physics.dimensions.gentype.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions.gentype#8609460045976868313" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions.gentype-generator.jar" />
@@ -858,7 +858,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions.gentype_-generator-templates">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype_/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -948,7 +948,7 @@
         <sources jar="jetbrains.mps.samples.Physics.types-src.jar" descriptor="jetbrains.mps.samples.Physics.types.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types.jar" />
@@ -993,7 +993,7 @@
         <sources jar="jetbrains.mps.samples.Physics.types-src.jar" descriptor="jetbrains.mps.samples.Physics.types.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types-generator.jar" />
@@ -1007,7 +1007,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1125,7 +1125,7 @@
         <sources jar="jetbrains.mps.samples.Physics-src.jar" descriptor="jetbrains.mps.samples.Physics.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics" />
       <fileset dir="${basedir}/languages/jetbrains.mps.samples.Physics" includes="icons/**" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
@@ -1173,7 +1173,7 @@
         <sources jar="jetbrains.mps.samples.Physics-src.jar" descriptor="jetbrains.mps.samples.Physics.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics-generator.jar" />
@@ -1187,7 +1187,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1282,7 +1282,7 @@
         <sources jar="jetbrains.mps.samples.Physics.iets3.ext.math-src.jar" descriptor="jetbrains.mps.samples.Physics.iets3.ext.math.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.iets3.ext.math.jar" />
@@ -1326,7 +1326,7 @@
         <sources jar="jetbrains.mps.samples.Physics.iets3.ext.math-src.jar" descriptor="jetbrains.mps.samples.Physics.iets3.ext.math.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.iets3.ext.math-generator.jar" />
@@ -1340,7 +1340,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.iets3.ext.math-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1418,7 +1418,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genbase-src.jar" descriptor="jetbrains.mps.samples.Physics.genbase.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genbase" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genbase.jar" />
@@ -1463,7 +1463,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genbase-src.jar" descriptor="jetbrains.mps.samples.Physics.genbase.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genbase#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genbase-generator.jar" />
@@ -1477,7 +1477,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genbase-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1504,7 +1504,7 @@
         <sources jar="." descriptor="jetbrains.mps.samples.Physics.devkit.java.devkit" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.java.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.java.jar" duplicate="preserve">
       <zipfileset file="${basedir}/devkits/jetbrains.mps.samples.Physics.devkit.java/jetbrains.mps.samples.Physics.devkit.java.devkit" prefix="module" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.java.jar" />
     </jar>
@@ -1517,7 +1517,7 @@
         <sources jar="." descriptor="jetbrains.mps.samples.Physics.devkit.base.devkit" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.base.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.base.jar" duplicate="preserve">
       <zipfileset file="${basedir}/devkits/jetbrains.mps.samples.Physics.devkit.base/jetbrains.mps.samples.Physics.devkit.base.devkit" prefix="module" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.base.jar" />
     </jar>
@@ -1530,7 +1530,7 @@
         <sources jar="." descriptor="jetbrains.mps.samples.Physics.devkit.javascript.devkit" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.javascript.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.javascript.jar" duplicate="preserve">
       <zipfileset file="${basedir}/devkits/jetbrains.mps.samples.Physics.devkit.javascript/jetbrains.mps.samples.Physics.devkit.javascript.devkit" prefix="module" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.javascript.jar" />
     </jar>
@@ -1556,7 +1556,7 @@
         <sources jar="jetbrains.mps.samples.Physics.java.runtime-src.jar" descriptor="jetbrains.mps.samples.Physics.java.runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.runtime.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.runtime.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.runtime" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.java.runtime.jar" />
@@ -1564,7 +1564,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.runtime-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.runtime-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.runtime-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1594,7 +1594,7 @@
         <sources jar="jetbrains.mps.samples.Physics.java.common-src.jar" descriptor="jetbrains.mps.samples.Physics.java.common.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.common.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.common.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.common" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.java.common/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.java.common.jar" />
@@ -1602,7 +1602,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.java.common-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.java.common/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.common-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.common-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.java.common/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1700,7 +1700,7 @@
         <sources jar="jetbrains.mps.samples.Physics.sandbox-src.jar" descriptor="jetbrains.mps.samples.Physics.sandbox.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.sandbox.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.sandbox.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.sandbox" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.sandbox.jar" />
@@ -1708,7 +1708,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-sandbox-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/sandbox/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.sandbox-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.sandbox-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/sandbox/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1733,6 +1733,8 @@
         <uses>
           <language id="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" />
           <language id="l:0cf935df-4699-4e9c-a132-fa109541cba3:jetbrains.mps.build.mps" />
+          <language id="l:d5033cee-f632-44b6-b308-89d4fbde34ff:jetbrains.mps.build.startup" />
+          <language id="l:479c7a8c-02f9-43b5-9139-d910cb22f298:jetbrains.mps.core.xml" />
         </uses>
         <classpath>
           <entry path="." />
@@ -1740,7 +1742,7 @@
         <sources jar="jetbrains.mps.samples.Physics.plugin-src.jar" descriptor="jetbrains.mps.samples.Physics.plugin.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.plugin.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.plugin.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.plugin" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.plugin/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.plugin.jar" />
@@ -1748,7 +1750,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.plugin-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.plugin/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.plugin-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.plugin-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.plugin/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1854,7 +1856,7 @@
         <sources jar="jetbrains.mps.samples.Physics.test-src.jar" descriptor="jetbrains.mps.samples.Physics.test.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.test.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.test.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.test" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.test/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.test.jar" />
@@ -1862,7 +1864,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.test-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.test/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.test-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.test-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.test/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1884,7 +1886,7 @@
         <sources jar="jetbrains.mps.samples.Physics.generation-src.jar" descriptor="jetbrains.mps.samples.Physics.generation.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.generation.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.generation.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.generation" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.generation/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.generation.jar" />
@@ -1892,7 +1894,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.generation-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.generation/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.generation-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.generation-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.generation/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1945,7 +1947,7 @@
         <sources jar="jetbrains.mps.samples.Physics.execution.javascript-src.jar" descriptor="jetbrains.mps.samples.Physics.execution.javascript.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.execution.javascript.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.execution.javascript.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.execution.javascript" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.execution.javascript.jar" />
@@ -1953,7 +1955,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.javascript-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.execution.javascript-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.execution.javascript-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1972,21 +1974,24 @@
         <sources jar="." descriptor="jetbrains.mps.samples.Physics.devkit.all.devkit" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.all.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.all.jar" duplicate="preserve">
       <zipfileset file="${basedir}/devkits/jetbrains.mps.samples.Physics.devkit.all/jetbrains.mps.samples.Physics.devkit.all.devkit" prefix="module" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.all.jar" />
     </jar>
-    <mkdir dir="${build.layout}/Physics/lib" />
-    <copy todir="${build.layout}/Physics/lib">
+    <mkdir dir="${build.layout}/jetbrains.mps.samples.Physics/lib" />
+    <copy todir="${build.layout}/jetbrains.mps.samples.Physics/lib">
+      <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build/runtime.js" />
+    </copy>
+    <copy todir="${build.layout}/jetbrains.mps.samples.Physics/lib">
       <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
     </copy>
-    <copy todir="${build.layout}/Physics/lib">
+    <copy todir="${build.layout}/jetbrains.mps.samples.Physics/lib">
       <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" />
     </copy>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip" />
-    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics" />
-    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/META-INF" />
-    <echoxml file="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics" />
+    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/META-INF" />
+    <echoxml file="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/META-INF/plugin.xml">
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>jetbrains.mps.samples.Physics</id>
         <name>jetbrains.mps.samples.Physics</name>
@@ -2003,8 +2008,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages" />
-    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics" />
+    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages" />
+    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics" />
     <mkdir dir="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler.jar1" />
     <mkdir dir="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler.jar1/META-INF" />
     <echoxml file="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler.jar1/META-INF/module.xml">
@@ -2075,7 +2080,7 @@
         <sources jar="org.mar9000.mps.ecmascript.bundler-src.jar" descriptor="org.mar9000.mps.ecmascript.bundler.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/org.mar9000.mps.ecmascript.bundler" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler.jar1" />
@@ -2121,7 +2126,7 @@
         <sources jar="org.mar9000.mps.ecmascript.bundler-src.jar" descriptor="org.mar9000.mps.ecmascript.bundler.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/org.mar9000.mps.ecmascript.bundler#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/org.mar9000.mps.ecmascript.bundler-generator.jar1" />
@@ -2132,7 +2137,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.bundler-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/org.mar9000.mps.ecmascript.bundler-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -2235,7 +2240,7 @@
         <sources jar="jetbrains.mps.samples.Physics.dimensions-src.jar" descriptor="jetbrains.mps.samples.Physics.dimensions.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions.jar1" />
@@ -2290,7 +2295,7 @@
         <sources jar="jetbrains.mps.samples.Physics.dimensions-src.jar" descriptor="jetbrains.mps.samples.Physics.dimensions.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions#8609460045976868312" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions-generator.jar1" />
@@ -2304,7 +2309,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions-generator-templates3">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -2393,7 +2398,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genjava-src.jar" descriptor="jetbrains.mps.samples.Physics.genjava.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjava" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjava.jar1" />
@@ -2456,7 +2461,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genjava-src.jar" descriptor="jetbrains.mps.samples.Physics.genjava.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjava#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjava-generator.jar1" />
@@ -2470,7 +2475,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjava-generator-templates3">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -2566,7 +2571,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genjs-src.jar" descriptor="jetbrains.mps.samples.Physics.genjs.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjs.jar1" />
@@ -2635,7 +2640,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genjs-src.jar" descriptor="jetbrains.mps.samples.Physics.genjs.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs#7409769864398261204" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjs-generator.jar1" />
@@ -2649,7 +2654,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjs-generator-templates3">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -2727,7 +2732,7 @@
         <sources jar="jetbrains.mps.samples.Physics.dimensions.gentype-src.jar" descriptor="jetbrains.mps.samples.Physics.dimensions.gentype.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions.gentype" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions.gentype.jar1" />
@@ -2779,7 +2784,7 @@
         <sources jar="jetbrains.mps.samples.Physics.dimensions.gentype-src.jar" descriptor="jetbrains.mps.samples.Physics.dimensions.gentype.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions.gentype#8609460045976868313" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions.gentype-generator.jar1" />
@@ -2793,7 +2798,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions.gentype_-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype_/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -2883,7 +2888,7 @@
         <sources jar="jetbrains.mps.samples.Physics.types-src.jar" descriptor="jetbrains.mps.samples.Physics.types.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types.jar1" />
@@ -2928,7 +2933,7 @@
         <sources jar="jetbrains.mps.samples.Physics.types-src.jar" descriptor="jetbrains.mps.samples.Physics.types.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types-generator.jar1" />
@@ -2942,7 +2947,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-generator-templates3">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3060,7 +3065,7 @@
         <sources jar="jetbrains.mps.samples.Physics-src.jar" descriptor="jetbrains.mps.samples.Physics.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics" />
       <fileset dir="${basedir}/languages/jetbrains.mps.samples.Physics" includes="icons/**" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
@@ -3108,7 +3113,7 @@
         <sources jar="jetbrains.mps.samples.Physics-src.jar" descriptor="jetbrains.mps.samples.Physics.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics-generator.jar1" />
@@ -3122,7 +3127,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-generator-templates3">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3210,14 +3215,14 @@
           <language id="l:c9d137c4-3259-44f8-80ff-33ab2b506ee4:jetbrains.mps.lang.util.order" />
           <language id="l:696c1165-4a59-463b-bc5d-902caab85dd0:jetbrains.mps.make.facet" />
         </uses>
-        <library jar="../../../../Physics/lib/BigDecimalMath.jar" />
+        <library jar="../../../../jetbrains.mps.samples.Physics/lib/BigDecimalMath.jar" />
         <classpath>
           <entry path="." />
         </classpath>
         <sources jar="jetbrains.mps.samples.Physics.iets3.ext.math-src.jar" descriptor="jetbrains.mps.samples.Physics.iets3.ext.math.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.iets3.ext.math.jar1" />
@@ -3261,7 +3266,7 @@
         <sources jar="jetbrains.mps.samples.Physics.iets3.ext.math-src.jar" descriptor="jetbrains.mps.samples.Physics.iets3.ext.math.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.iets3.ext.math-generator.jar1" />
@@ -3275,7 +3280,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.iets3.ext.math-generator-templates3">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3353,7 +3358,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genbase-src.jar" descriptor="jetbrains.mps.samples.Physics.genbase.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genbase" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genbase.jar1" />
@@ -3398,7 +3403,7 @@
         <sources jar="jetbrains.mps.samples.Physics.genbase-src.jar" descriptor="jetbrains.mps.samples.Physics.genbase.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genbase#01" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genbase-generator.jar1" />
@@ -3412,7 +3417,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genbase-generator-templates3">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3439,7 +3444,7 @@
         <sources jar="." descriptor="jetbrains.mps.samples.Physics.devkit.java.devkit" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.java.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.java.jar" duplicate="preserve">
       <zipfileset file="${basedir}/devkits/jetbrains.mps.samples.Physics.devkit.java/jetbrains.mps.samples.Physics.devkit.java.devkit" prefix="module" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.java.jar1" />
     </jar>
@@ -3452,7 +3457,7 @@
         <sources jar="." descriptor="jetbrains.mps.samples.Physics.devkit.base.devkit" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.base.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.base.jar" duplicate="preserve">
       <zipfileset file="${basedir}/devkits/jetbrains.mps.samples.Physics.devkit.base/jetbrains.mps.samples.Physics.devkit.base.devkit" prefix="module" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.base.jar1" />
     </jar>
@@ -3465,7 +3470,7 @@
         <sources jar="." descriptor="jetbrains.mps.samples.Physics.devkit.javascript.devkit" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.javascript.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.javascript.jar" duplicate="preserve">
       <zipfileset file="${basedir}/devkits/jetbrains.mps.samples.Physics.devkit.javascript/jetbrains.mps.samples.Physics.devkit.javascript.devkit" prefix="module" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.javascript.jar1" />
     </jar>
@@ -3483,15 +3488,15 @@
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
         </uses>
-        <library jar="../../../../Physics/lib/java-runtime-all.jar" />
-        <library jar="../../../../Physics/lib/BigDecimalMath.jar" />
+        <library jar="../../../../jetbrains.mps.samples.Physics/lib/java-runtime-all.jar" />
+        <library jar="../../../../jetbrains.mps.samples.Physics/lib/BigDecimalMath.jar" />
         <classpath>
           <entry path="." />
         </classpath>
         <sources jar="jetbrains.mps.samples.Physics.java.runtime-src.jar" descriptor="jetbrains.mps.samples.Physics.java.runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.runtime.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.runtime.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.runtime" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.java.runtime.jar1" />
@@ -3499,7 +3504,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.runtime-models1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.runtime-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.runtime-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3529,7 +3534,7 @@
         <sources jar="jetbrains.mps.samples.Physics.java.common-src.jar" descriptor="jetbrains.mps.samples.Physics.java.common.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.common.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.common.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.common" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.java.common/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.java.common.jar1" />
@@ -3537,7 +3542,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.java.common-models1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.java.common/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.common-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.java.common-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.java.common/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3635,7 +3640,7 @@
         <sources jar="jetbrains.mps.samples.Physics.sandbox-src.jar" descriptor="jetbrains.mps.samples.Physics.sandbox.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.sandbox.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.sandbox.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.sandbox" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.sandbox.jar1" />
@@ -3643,7 +3648,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-sandbox-models1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/sandbox/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.sandbox-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.sandbox-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/sandbox/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3668,6 +3673,8 @@
         <uses>
           <language id="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" />
           <language id="l:0cf935df-4699-4e9c-a132-fa109541cba3:jetbrains.mps.build.mps" />
+          <language id="l:d5033cee-f632-44b6-b308-89d4fbde34ff:jetbrains.mps.build.startup" />
+          <language id="l:479c7a8c-02f9-43b5-9139-d910cb22f298:jetbrains.mps.core.xml" />
         </uses>
         <classpath>
           <entry path="." />
@@ -3675,7 +3682,7 @@
         <sources jar="jetbrains.mps.samples.Physics.plugin-src.jar" descriptor="jetbrains.mps.samples.Physics.plugin.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.plugin.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.plugin.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.plugin" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.plugin/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.plugin.jar1" />
@@ -3683,7 +3690,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.plugin-models1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.plugin/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.plugin-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.plugin-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.plugin/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3789,7 +3796,7 @@
         <sources jar="jetbrains.mps.samples.Physics.test-src.jar" descriptor="jetbrains.mps.samples.Physics.test.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.test.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.test.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.test" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.test/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.test.jar1" />
@@ -3797,7 +3804,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.test-models1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.test/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.test-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.test-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.test/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3819,7 +3826,7 @@
         <sources jar="jetbrains.mps.samples.Physics.generation-src.jar" descriptor="jetbrains.mps.samples.Physics.generation.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.generation.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.generation.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.generation" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.generation/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.generation.jar1" />
@@ -3827,7 +3834,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.generation-models1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.generation/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.generation-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.generation-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.generation/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3880,7 +3887,7 @@
         <sources jar="jetbrains.mps.samples.Physics.execution.javascript-src.jar" descriptor="jetbrains.mps.samples.Physics.execution.javascript.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.execution.javascript.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.execution.javascript.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.execution.javascript" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.execution.javascript.jar1" />
@@ -3888,7 +3895,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.javascript-models1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.execution.javascript-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.execution.javascript-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -3907,13 +3914,13 @@
         <sources jar="." descriptor="jetbrains.mps.samples.Physics.devkit.all.devkit" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.all.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.devkit.all.jar" duplicate="preserve">
       <zipfileset file="${basedir}/devkits/jetbrains.mps.samples.Physics.devkit.all/jetbrains.mps.samples.Physics.devkit.all.devkit" prefix="module" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.all.jar1" />
     </jar>
     <zip destfile="${build.layout}/jetbrains.mps.samples.Physics.zip">
-      <zipfileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" prefix="Physics/lib" />
-      <zipfileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" prefix="Physics/lib" />
+      <zipfileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" prefix="jetbrains.mps.samples.Physics/lib" />
+      <zipfileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" prefix="jetbrains.mps.samples.Physics/lib" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}${line.separator}de.itemis.mps.extensions.versionNumber=${de.itemis.mps.extensions.versionNumber}${line.separator}org.iets3.opensource.minor=${org.iets3.opensource.minor}${line.separator}org.iets3.opensource.major=${org.iets3.opensource.major}${line.separator}org.iets3.opensource.build=${org.iets3.opensource.build}${line.separator}org.iets3.opensource.version=${org.iets3.opensource.version}</echo>
