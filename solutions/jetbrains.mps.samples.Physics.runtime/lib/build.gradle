@@ -17,4 +17,11 @@ dependencies {
     api "org.jogamp.gluegen:gluegen-rt-main:2.3.2"
 }
 
-defaultTasks 'shadowJar'
+task shadowAndCopy(type: Copy, dependsOn: shadowJar) {
+    from('build/libs/') {
+        rename '.*\\.jar', 'java-runtime-all.jar'
+    }    
+    into '.'
+}
+
+defaultTasks 'shadowAndCopy'

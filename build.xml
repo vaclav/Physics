@@ -1983,10 +1983,13 @@
       <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build/runtime.js" />
     </copy>
     <copy todir="${build.layout}/jetbrains.mps.samples.Physics/lib">
-      <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+      <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
     </copy>
     <copy todir="${build.layout}/jetbrains.mps.samples.Physics/lib">
-      <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" />
+      <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/BigDecimalMath.jar" />
+    </copy>
+    <copy todir="${build.layout}/jetbrains.mps.samples.Physics/lib">
+      <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/java-runtime-all.jar" />
     </copy>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics" />
@@ -3919,8 +3922,10 @@
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.all.jar1" />
     </jar>
     <zip destfile="${build.layout}/jetbrains.mps.samples.Physics.zip">
-      <zipfileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" prefix="jetbrains.mps.samples.Physics/lib" />
-      <zipfileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" prefix="jetbrains.mps.samples.Physics/lib" />
+      <zipfileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build/runtime.js" prefix="jetbrains.mps.samples.Physics/lib" />
+      <zipfileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" prefix="jetbrains.mps.samples.Physics/lib" />
+      <zipfileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/BigDecimalMath.jar" prefix="jetbrains.mps.samples.Physics/lib" />
+      <zipfileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/java-runtime-all.jar" prefix="jetbrains.mps.samples.Physics/lib" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}${line.separator}de.itemis.mps.extensions.versionNumber=${de.itemis.mps.extensions.versionNumber}${line.separator}org.iets3.opensource.minor=${org.iets3.opensource.minor}${line.separator}org.iets3.opensource.major=${org.iets3.opensource.major}${line.separator}org.iets3.opensource.build=${org.iets3.opensource.build}${line.separator}org.iets3.opensource.version=${org.iets3.opensource.version}</echo>
@@ -4431,7 +4436,7 @@
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -4617,8 +4622,9 @@
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.common" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.runtime" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/java-runtime-all.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -4711,8 +4717,9 @@
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.common" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.runtime" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/java-runtime-all.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -4806,7 +4813,7 @@
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -4902,7 +4909,7 @@
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -5325,7 +5332,7 @@
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.common" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -5425,7 +5432,7 @@
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -5506,7 +5513,7 @@
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -5592,7 +5599,7 @@
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -5670,7 +5677,7 @@
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -5758,7 +5765,7 @@
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genbase" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -5813,8 +5820,8 @@
       <classpath>
         <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.common" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/java-runtime-all.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/BigDecimalMath.jar" />
       </classpath>
     </javac>
   </target>
@@ -5875,8 +5882,8 @@
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
         <fileset file="${artifacts.mps}/lib/mps-test.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/java-runtime-all.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/ant/lib/ant.jar" />
         <fileset file="${artifacts.mps}/lib/hamcrest-core-1.3.jar" />
         <fileset file="${artifacts.mps}/lib/junit-4.12.jar" />
@@ -6010,8 +6017,9 @@
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.java.runtime" />
         <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
         <fileset file="${artifacts.mps}/lib/mps-test.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/java-runtime-all.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.runtime/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/ant/lib/ant.jar" />
         <fileset file="${artifacts.mps}/lib/hamcrest-core-1.3.jar" />
         <fileset file="${artifacts.mps}/lib/junit-4.12.jar" />
@@ -6147,7 +6155,7 @@
         <fileset file="${artifacts.mps}/plugins/mps-execution-languages/lib/execution-languages.jar" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
-        <fileset file="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+        <fileset file="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/lib/BigDecimalMath.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />

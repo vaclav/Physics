@@ -149,7 +149,7 @@ task buildGenjs(type: BuildLanguages, dependsOn: [buildEcmascript, cloneGenjs, r
 
 // ===== java runtime dependencies =====
 task packageJavaRuntime {
-	dependsOn ":dependencies:java-runtime:shadowJar"
+	dependsOn ":solutions:jetbrains.mps.samples.Physics.runtime:lib:shadowAndCopy"
 }
 
 // ===== iets3.genjs =====

@@ -4,7 +4,10 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar!/" type="java_classes">
+    <modelRoot contentPath="${module}/lib/java-runtime-all.jar!/" type="java_classes">
+      <sourceRoot location="." />
+    </modelRoot>
+    <modelRoot contentPath="${module}/lib/BigDecimalMath.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
   </models>
@@ -14,8 +17,8 @@
     </facet>
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="${jetbrains.mps.samples.Physics.home}/dependencies/java-runtime/build/libs/java-runtime-all.jar" />
-    <stubModelEntry path="${jetbrains.mps.samples.Physics.home}/dependencies/math/BigDecimalMath.jar" />
+    <stubModelEntry path="${module}/lib/java-runtime-all.jar" />
+    <stubModelEntry path="${module}/lib/BigDecimalMath.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

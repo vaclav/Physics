@@ -182,6 +182,10 @@
     <copy todir="${build.layout}/plugins/org.iets3.core.os">
       <fileset dir="${artifacts.org.iets3.opensource}/org.iets3.core.os" />
     </copy>
+    <mkdir dir="${build.layout}/plugins/org.iets3.trace" />
+    <copy todir="${build.layout}/plugins/org.iets3.trace">
+      <fileset dir="${artifacts.org.iets3.opensource}/org.iets3.trace" />
+    </copy>
     <mkdir dir="${build.layout}/plugins/org.iets3.build.os" />
     <copy todir="${build.layout}/plugins/org.iets3.build.os">
       <fileset dir="${artifacts.org.iets3.opensource}/org.iets3.build.os" />
