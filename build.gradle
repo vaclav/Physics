@@ -61,7 +61,9 @@ def buildScriptClasspath = project.configurations.junitAnt.fileCollection { true
 task resolveMps(type: Copy) {
     dependsOn configurations.mps
     from {
-        configurations.mps.resolve().collect { zipTree(it) }
+        if (!project.hasProperty("mpsDir")) {
+            configurations.mps.resolve().collect { zipTree(it) }
+        }
     }
     into mpsDir
 }
