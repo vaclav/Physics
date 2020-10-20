@@ -8,27 +8,25 @@ _Physics_ is based on [iets3.opensource](https://github.com/IETS3/iets3.opensour
 
 ### Requirements
 In order to install the project and its dependencies, you will need
-- **Java 11** : compilation within gradle scripts (make sure *JAVA_HOME* environement variable is set)
+- **Java 11** : compilation within gradle scripts (make sure *JAVA_HOME* environement variable is set), if you have no java 11 distribution available, the build script can download one for you
 - **Git** : cloning multiple repositories
 
-**Note:** Java 11 is required because MPS use it, if you use another version, generated artifacts will not work. You may find a Java 11 distribution in your MPS folder under the directory `jbr`. 
+**Note:** Java 11 is required because MPS use it, if you use another version, generated artifacts will not work. A Java 11 distribution is sometimes packaged with MPS, so specifying `mpsDir` can avoid extra download. 
 
 ### Installation
-The script below will clone and resolve the requirements for the project.
-```sh
-# Clone the repository
-git clone https://github.com/vaclav/Physics
-cd ./Physics
-
-# Resolve dependencies and make MPS see them on the project
-./gradlew resolveArtifacts generateLibrariesXml -PmpsDir="<optional path to your mps installation>"
-```
+1. **Download or clone the project**
+   ```sh
+   git clone https://github.com/vaclav/Physics
+   cd ./Physics
+   ```
+2. **Fetch dependencies**
+   ```sh
+   ./gradlew resolveArtifacts generateLibrariesXml -PmpsDir="<path to mps>"
+   ```
+3. **Open the project and rebuild** (restart if you opened it before the end of the above commands)
+4. **Enjoy !**
 
 **Note:** this will download and build from source [iets3.genjs](https://github.com/cdelabou/iets3.genjs) and [ecmascript4mps](https://github.com/cdelabou/ecmascript4mps/tree/development) since no repository hold the used versions of these projects. You can also publish to your local maven repository by following the instructions on the README of iets3.genjs.
-
-Then you can open MPS and set the path variable `jetbrains.mps.samples.Physics.home` (*Ctrl+Maj+A > Path Variables*) to the path of the cloned repository (example: `/home/user/.mpsproject/Physics`).
-
-Restart MPS and open the project !
 
 #### Building the plugin [not tested]
 If you need this project to be used outside in another project (which include it through maven repositories for example), you can do the same as above plus deploy it to your local maven repository using the script below.
@@ -36,14 +34,14 @@ If you need this project to be used outside in another project (which include it
 ./gradlew packageLanguages publishToMavenLocal -PmpsDir="<optional path to your mps installation>"
 ```
 
-#### Build settings
+#### Additional build settings
 In case you need to use a specific version of MPS, or avoid downloading MPS all over again, you can set some settings to make the build fit your need.
 
 |  Property  | Description | Example |
 |------------|-------------|---------|
-| mpsDir     | Directory of your MPS installation, if specified MPS will not be downloaded again. | -PmpsDir="./build/mps" |
+| mpsDir     | Directory of your MPS installation, if specified MPS will not be downloaded again. If a java 11 distribution is found in the mps directory, it will be used. | -PmpsDir="./build/mps" |
 | mpsVersion | Version of MPS used in the project (used to set the version number and determine which version of MPS to download if mpsDir is not set). | -PmpsVersion="2020.2" |
-| jdk | Path the the Java 11 jdk. | -Pjdk="/home/me/mps/jbr" |
+| jdk | Path the the Java 11 jdk (if the path is '**mpsDir**/jbr', there is no need to specify it). | -Pjdk="/home/me/mps/jbr" |
 
 [A wiki page](https://github.com/vaclav/Physics/wiki/Installation-script) explain a bit more how the dependencies are retrieved and applied on the project.
 
