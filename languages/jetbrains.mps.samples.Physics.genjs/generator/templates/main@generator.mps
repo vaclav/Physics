@@ -66,7 +66,6 @@
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
-      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -7905,15 +7904,6 @@
     <property role="TrG5h" value="registerRuntime" />
     <node concept="1pplIY" id="NYH1y4BQ$o" role="1pqMTA">
       <node concept="3clFbS" id="NYH1y4BQ$p" role="2VODD2">
-        <node concept="3cpWs8" id="NYH1y4D_Kh" role="3cqZAp">
-          <node concept="3cpWsn" id="NYH1y4D_Kk" role="3cpWs9">
-            <property role="TrG5h" value="runtimePath" />
-            <node concept="17QB3L" id="NYH1y4D_Kf" role="1tU5fm" />
-            <node concept="Xl_RD" id="NYH1y4DA4F" role="33vP2m">
-              <property role="Xl_RC" value="solutions/jetbrains.mps.samples.Physics.javascript.runtime" />
-            </node>
-          </node>
-        </node>
         <node concept="3clFbF" id="NYH1y4DBBY" role="3cqZAp">
           <node concept="37vLTI" id="NYH1y4DBVj" role="3clFbG">
             <node concept="2OqwBi" id="NYH1y4DBNz" role="37vLTJ">
@@ -7927,14 +7917,6 @@
             <node concept="2YIFZM" id="NYH1y4DBVN" role="37vLTx">
               <ref role="1Pybhc" to="nbhn:NYH1y4Dmd1" resolve="PlainTextRuntimeImporter" />
               <ref role="37wK5l" to="nbhn:NYH1y4DzRn" resolve="importFrom" />
-              <node concept="3cpWs3" id="NYH1y4DBVO" role="37wK5m">
-                <node concept="37vLTw" id="NYH1y4DBVQ" role="3uHU7B">
-                  <ref role="3cqZAo" node="NYH1y4D_Kk" resolve="runtimePath" />
-                </node>
-                <node concept="Xl_RD" id="3weh2zeCwDr" role="3uHU7w">
-                  <property role="Xl_RC" value="/build" />
-                </node>
-              </node>
               <node concept="Xl_RD" id="NYH1y4DBVR" role="37wK5m">
                 <property role="Xl_RC" value="libode.js" />
               </node>
@@ -7954,14 +7936,6 @@
             <node concept="2YIFZM" id="NYH1y4DAIp" role="37vLTx">
               <ref role="37wK5l" to="nbhn:NYH1y4DzRn" resolve="importFrom" />
               <ref role="1Pybhc" to="nbhn:NYH1y4Dmd1" resolve="PlainTextRuntimeImporter" />
-              <node concept="3cpWs3" id="NYH1y4DAIq" role="37wK5m">
-                <node concept="37vLTw" id="NYH1y4DAIr" role="3uHU7B">
-                  <ref role="3cqZAo" node="NYH1y4D_Kk" resolve="runtimePath" />
-                </node>
-                <node concept="Xl_RD" id="NYH1y4DAIs" role="3uHU7w">
-                  <property role="Xl_RC" value="/build" />
-                </node>
-              </node>
               <node concept="Xl_RD" id="NYH1y4DAIt" role="37wK5m">
                 <property role="Xl_RC" value="runtime.js" />
               </node>

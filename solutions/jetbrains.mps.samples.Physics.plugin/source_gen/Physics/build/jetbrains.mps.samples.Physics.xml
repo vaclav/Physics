@@ -633,6 +633,7 @@
     </echoxml>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" />
+      <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjs.jar" />
     </jar>
@@ -722,6 +723,12 @@
         <exclude name="**/*.mps" />
       </fileset>
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
@@ -1734,7 +1741,6 @@
           <language id="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" />
           <language id="l:0cf935df-4699-4e9c-a132-fa109541cba3:jetbrains.mps.build.mps" />
           <language id="l:d5033cee-f632-44b6-b308-89d4fbde34ff:jetbrains.mps.build.startup" />
-          <language id="l:479c7a8c-02f9-43b5-9139-d910cb22f298:jetbrains.mps.core.xml" />
         </uses>
         <classpath>
           <entry path="." />
@@ -2576,6 +2582,7 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/jetbrains.mps.samples.Physics.zip/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" />
+      <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjs.jar1" />
     </jar>
@@ -2665,6 +2672,12 @@
         <exclude name="**/*.mps" />
       </fileset>
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
@@ -3677,7 +3690,6 @@
           <language id="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" />
           <language id="l:0cf935df-4699-4e9c-a132-fa109541cba3:jetbrains.mps.build.mps" />
           <language id="l:d5033cee-f632-44b6-b308-89d4fbde34ff:jetbrains.mps.build.startup" />
-          <language id="l:479c7a8c-02f9-43b5-9139-d910cb22f298:jetbrains.mps.core.xml" />
         </uses>
         <classpath>
           <entry path="." />
@@ -4771,11 +4783,13 @@
   </target>
   
   <target name="java.compile.jetbrains.mps.samples.Physics.genjs" depends="java.compile.jetbrains.mps.samples.Physics, java.compile.jetbrains.mps.samples.Physics.dimensions, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math, java.compile.jetbrains.mps.samples.Physics.types, fetchDependencies">
+    <mkdir dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build" />
     <mkdir dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/source_gen" />
     <mkdir dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" />
     <javac destdir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.genjs" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
+        <path location="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build" />
         <path location="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/source_gen" />
       </src>
       <classpath>

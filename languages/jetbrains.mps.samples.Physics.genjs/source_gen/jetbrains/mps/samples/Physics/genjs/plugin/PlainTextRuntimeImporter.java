@@ -5,17 +5,14 @@ package jetbrains.mps.samples.Physics.genjs.plugin;
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
 import org.jetbrains.mps.openapi.model.SNode;
-import com.intellij.openapi.project.Project;
-import jetbrains.mps.workbench.MPSDataKeys;
-import com.intellij.ide.DataManager;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
-import java.nio.file.Files;
+import java.io.InputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
-import java.io.IOException;
 import jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime;
 import org.apache.log4j.Level;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
@@ -26,29 +23,29 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class PlainTextRuntimeImporter {
   private static final Logger LOG = LogManager.getLogger(PlainTextRuntimeImporter.class);
-  public static SNode importFrom(String filepath, String filename) {
-    Project data = MPSDataKeys.PROJECT.getData(DataManager.getInstance().getDataContext());
-    Path path = Paths.get(data.getBasePath(), filepath, filename);
+  public static SNode importFrom(String filename) {
     final List<SNode> lines = ListSequence.fromList(new ArrayList<SNode>());
 
-    try {
-      Files.readAllLines(path).stream().forEach(new _Adapters._return_P1_E0_to_Consumer_adapter<String>(new _FunctionTypes._return_P1_E0<SNode, String>() {
+    // Read file from java resources 
+    try (InputStream fileStream = PlainTextRuntimeImporter.class.getClassLoader().getResourceAsStream("/" + filename)) {
+      // Get each line 
+      new BufferedReader(new InputStreamReader(fileStream, StandardCharsets.UTF_8)).lines().forEach(new _Adapters._return_P1_E0_to_Consumer_adapter<String>(new _FunctionTypes._return_P1_E0<SNode, String>() {
         public SNode invoke(String it) {
-          return ListSequence.fromList(lines).addElement(createTextLine_94agi1_a0a0a0a0a0e0a(it));
+          return ListSequence.fromList(lines).addElement(createTextLine_94agi1_a0a0a0a0b0d0a(it));
         }
       }));
-    } catch (IOException error) {
-      LoggingRuntime.logMsgView(Level.ERROR, "unable to read lines from " + path.toString(), PlainTextRuntimeImporter.class, error, null);
+    } catch (Exception e) {
+      LoggingRuntime.logMsgView(Level.ERROR, "unable to read lines from " + filename, PlainTextRuntimeImporter.class, e, null);
     }
 
-    return createTextFile_94agi1_a6a0(filename, lines);
+    return createTextFile_94agi1_a5a0(filename, lines);
   }
-  private static SNode createTextLine_94agi1_a0a0a0a0a0e0a(String p0) {
+  private static SNode createTextLine_94agi1_a0a0a0a0b0d0a(String p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TextLine$zd);
     n0.setProperty(PROPS.text$DMB3, p0);
     return n0.getResult();
   }
-  private static SNode createTextFile_94agi1_a6a0(String p0, Iterable<? extends SNode> p1) {
+  private static SNode createTextFile_94agi1_a5a0(String p0, Iterable<? extends SNode> p1) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.TextFile$QX);
     n0.setProperty(PROPS.name$MnvL, p0);
     n0.forChild(LINKS.lines$DTIB).initNodeList(p1, CONCEPTS.TextLine$zd);

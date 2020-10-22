@@ -2,7 +2,7 @@
 <debug-info version="2">
   <root nodeRef="r:386eed8e-c872-4cf8-af72-616df525de8c(Physics.build)/9056301928161394269">
     <file name="jetbrains.mps.samples.Physics.xml">
-      <unit id="9056301928161394269" at="1,0,6231,10" name="Physics.build.jetbrains$mps$samples$Physics" />
+      <unit id="9056301928161394269" at="1,0,6245,10" name="Physics.build.jetbrains$mps$samples$Physics" />
     </file>
   </root>
 </debug-info>

@@ -12,7 +12,7 @@
   </root>
   <root nodeRef="r:a54c16df-2c22-4480-b470-33601bab27ac(Physics.ide)/8528218885072554283">
     <file name="jetbrains.mps.samples.Physics.ide.xml">
-      <unit id="8528218885072554283" at="1,0,259,10" name="Physics.ide.jetbrains$mps$samples$Physics$ide" />
+      <unit id="8528218885072554283" at="1,0,255,10" name="Physics.ide.jetbrains$mps$samples$Physics$ide" />
     </file>
   </root>
 </debug-info>

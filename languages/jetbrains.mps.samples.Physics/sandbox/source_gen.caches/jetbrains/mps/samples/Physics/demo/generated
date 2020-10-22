@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <product version="3" modelHash="6yvxhn3e39p1z4gxeqrpyw1x9o309ap">
-  <files names="BaseObjectAbstractEntity.java:Demo.html:DemoSimulation.java:EarthDemoSystemScope.java:PlanetAbstractEntity.java:SunDemoSystemScope.java" />
+  <files names="Demo.html" />
 </product>
 
