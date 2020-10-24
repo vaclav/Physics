@@ -29,12 +29,12 @@
     <import index="z99z" ref="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)" />
     <import index="rf09" ref="r:73a96c3c-8183-47fb-85f5-e8208275df5e(jetbrains.mps.samples.Physics.behavior)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
-    <import index="ngze" ref="f9bdc723-99df-40ff-934c-d1f848158f92/java:org.nevec.rjm(jetbrains.mps.samples.Physics.IETS3MathExtended/)" />
     <import index="onwr" ref="r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)" />
     <import index="5fi3" ref="r:a08ce4c7-a3d7-4ce1-b6a4-794edd2a85d3(jetbrains.mps.samples.Physics.dimensions.behavior)" />
     <import index="9dpa" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:org.ode4j.ode(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" />
     <import index="s6tv" ref="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
+    <import index="ngze" ref="22562cc6-29e7-43d0-b046-5e85dce22227/java:org.nevec.rjm(jetbrains.mps.samples.Physics.java.common/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
@@ -3757,8 +3757,8 @@
       <ref role="30HIoZ" to="kj90:7VyKdWRM62T" resolve="ExpExpression" />
       <node concept="gft3U" id="7VyKdWRQwrO" role="1lVwrX">
         <node concept="2YIFZM" id="7VyKdWRQyOg" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.exp(java.math.BigDecimal)" resolve="exp" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.exp(java.math.BigDecimal)" resolve="exp" />
           <node concept="2YIFZM" id="7VyKdWRQ_kh" role="37wK5m">
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
@@ -3789,8 +3789,8 @@
       <ref role="30HIoZ" to="1qv1:642_vmCZroK" resolve="PiExpression" />
       <node concept="gft3U" id="M__cqnQ4bX" role="1lVwrX">
         <node concept="2YIFZM" id="7VyKdWRQAMx" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.pi(java.math.MathContext)" resolve="pi" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.pi(java.math.MathContext)" resolve="pi" />
           <node concept="10M0yZ" id="7VyKdWRQBdi" role="37wK5m">
             <ref role="3cqZAo" to="xlxw:~MathContext.DECIMAL32" resolve="DECIMAL32" />
             <ref role="1PxDUh" to="xlxw:~MathContext" resolve="MathContext" />
@@ -3802,8 +3802,8 @@
       <ref role="30HIoZ" to="1qv1:4iu6t1eB8RC" resolve="SqrtExpression" />
       <node concept="gft3U" id="M__cqnNBcq" role="1lVwrX">
         <node concept="2YIFZM" id="7VyKdWRQBPn" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.sqrt(java.math.BigDecimal)" resolve="sqrt" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.sqrt(java.math.BigDecimal)" resolve="sqrt" />
           <node concept="2YIFZM" id="7VyKdWRQBQp" role="37wK5m">
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
@@ -3868,11 +3868,11 @@
       <ref role="30HIoZ" to="1qv1:4iu6t1eAXZR" resolve="LogExpression" />
       <node concept="gft3U" id="z8_qE_u6a3" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_u9LZ" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.divideRound(java.math.BigDecimal,java.math.BigDecimal)" resolve="divideRound" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.divideRound(int,java.math.BigDecimal)" resolve="divideRound" />
           <node concept="2YIFZM" id="z8_qE_u77d" role="37wK5m">
-            <ref role="37wK5l" to="ngze:~BigDecimalMath.log(java.math.BigDecimal)" resolve="log" />
             <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+            <ref role="37wK5l" to="ngze:~BigDecimalMath.log(java.math.BigDecimal)" resolve="log" />
             <node concept="2YIFZM" id="z8_qE_u6a5" role="37wK5m">
               <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
               <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
@@ -3898,8 +3898,8 @@
             </node>
           </node>
           <node concept="2YIFZM" id="z8_qE_ua$U" role="37wK5m">
-            <ref role="37wK5l" to="ngze:~BigDecimalMath.log(java.math.BigDecimal)" resolve="log" />
             <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+            <ref role="37wK5l" to="ngze:~BigDecimalMath.log(java.math.BigDecimal)" resolve="log" />
             <node concept="2YIFZM" id="z8_qE_ua$V" role="37wK5m">
               <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
               <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
@@ -9095,8 +9095,8 @@
       <ref role="30HIoZ" to="1qv1:4SHkH$fnm2H" resolve="SinusExpression" />
       <node concept="gft3U" id="z8_qE_yWgi" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yWgy" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.sin(java.math.BigDecimal)" resolve="sin" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.sin(java.math.BigDecimal)" resolve="sin" />
           <node concept="2YIFZM" id="z8_qE_yWh7" role="37wK5m">
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
@@ -9128,8 +9128,8 @@
       <ref role="30HIoZ" to="1qv1:1EoaTAzc5EL" resolve="ArcSinus" />
       <node concept="gft3U" id="z8_qE_yX8s" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yYW0" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.asin(java.math.BigDecimal)" resolve="asin" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.asin(java.math.BigDecimal)" resolve="asin" />
           <node concept="2YIFZM" id="z8_qE_yYW1" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
@@ -9161,8 +9161,8 @@
       <ref role="30HIoZ" to="1qv1:M7eZQAOIHc" resolve="SinusHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yX46" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yZ5K" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.sinh(java.math.BigDecimal)" resolve="sinh" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.sinh(java.math.BigDecimal)" resolve="sinh" />
           <node concept="2YIFZM" id="z8_qE_yZ5L" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
@@ -9194,8 +9194,8 @@
       <ref role="30HIoZ" to="1qv1:1EoaTAz9PnQ" resolve="ArcSinusHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yWY3" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yZat" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.asinh(java.math.BigDecimal)" resolve="asinh" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.asinh(java.math.BigDecimal)" resolve="asinh" />
           <node concept="2YIFZM" id="z8_qE_yZau" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
@@ -9227,8 +9227,8 @@
       <ref role="30HIoZ" to="1qv1:M7eZQ_ZStj" resolve="CosinusExpression" />
       <node concept="gft3U" id="z8_qE_yXnB" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yZWv" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.cos(java.math.BigDecimal)" resolve="cos" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.cos(java.math.BigDecimal)" resolve="cos" />
           <node concept="2YIFZM" id="z8_qE_yZWw" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
@@ -9260,8 +9260,8 @@
       <ref role="30HIoZ" to="1qv1:M7eZQBwOwF" resolve="ArcCosinus" />
       <node concept="gft3U" id="z8_qE_yXcQ" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yZYI" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.acos(java.math.BigDecimal)" resolve="acos" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.acos(java.math.BigDecimal)" resolve="acos" />
           <node concept="2YIFZM" id="z8_qE_yZYJ" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
@@ -9293,8 +9293,8 @@
       <ref role="30HIoZ" to="1qv1:1EoaTAz8bOT" resolve="CosinusHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yXtY" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z0eV" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.cosh(java.math.BigDecimal)" resolve="cosh" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.cosh(java.math.BigDecimal)" resolve="cosh" />
           <node concept="2YIFZM" id="z8_qE_z0eW" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
@@ -9326,8 +9326,8 @@
       <ref role="30HIoZ" to="1qv1:1EoaTAz8K6a" resolve="ArcCosinusHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yXhk" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z0lp" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.acosh(java.math.BigDecimal)" resolve="acosh" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.acosh(java.math.BigDecimal)" resolve="acosh" />
           <node concept="2YIFZM" id="z8_qE_z0lq" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
@@ -9359,8 +9359,8 @@
       <ref role="30HIoZ" to="1qv1:M7eZQAngzc" resolve="TangensExpression" />
       <node concept="gft3U" id="z8_qE_yXG8" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z1nR" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.tan(java.math.BigDecimal)" resolve="tan" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.tan(java.math.BigDecimal)" resolve="tan" />
           <node concept="2YIFZM" id="z8_qE_z1nS" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
@@ -9392,8 +9392,8 @@
       <ref role="30HIoZ" to="1qv1:1EoaTAzbzti" resolve="ArcTangens" />
       <node concept="gft3U" id="z8_qE_yXyC" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z1q6" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.atan(java.math.BigDecimal)" resolve="atan" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.atan(java.math.BigDecimal)" resolve="atan" />
           <node concept="2YIFZM" id="z8_qE_z1q7" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />
@@ -9425,8 +9425,8 @@
       <ref role="30HIoZ" to="1qv1:M7eZQADw31" resolve="TangensHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yXKY" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z1sl" role="gfFT$">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.tanh(java.math.BigDecimal)" resolve="tanh" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.tanh(java.math.BigDecimal)" resolve="tanh" />
           <node concept="2YIFZM" id="z8_qE_z1sm" role="37wK5m">
             <ref role="1Pybhc" to="mizj:G6Xgqqi8O5" resolve="BigDecimalHelper" />
             <ref role="37wK5l" to="mizj:G6Xgqqgk9J" resolve="of" />

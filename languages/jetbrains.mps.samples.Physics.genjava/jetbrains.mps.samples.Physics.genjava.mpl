@@ -235,6 +235,7 @@
   </dependencyVersions>
   <runtime>
     <dependency reexport="false">59283cba-afa8-49c4-b10d-6ff0ede2c408(jetbrains.mps.samples.Physics.java.runtime)</dependency>
+    <dependency reexport="false">22562cc6-29e7-43d0-b046-5e85dce22227(jetbrains.mps.samples.Physics.java.common)</dependency>
   </runtime>
   <extendedLanguages />
 </language>

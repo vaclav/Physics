@@ -1371,18 +1371,6 @@ class BaseObject1 extends Physics.PhysicalEntity {
           }
 }
         
-class RandomObject1 extends BaseObject1 {
-          init() {
-            (super["init"])();
-            this.propertiesBuilder.set(Physics.PropKey.SHAPE, 'box');
-            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 255, 255), null));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_X, ((40 * 1)));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_Y, ((40 * 1)));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_Z, ((40 * 1)));
-            this.forces.push();
-          }
-}
-        
         function computeFriction1(context, ratio) {
           return {
             compute: (() => (() => {
@@ -1399,6 +1387,18 @@ class RandomObject1 extends BaseObject1 {
             })().compute())
           };
         }
+        
+class RandomObject1 extends BaseObject1 {
+          init() {
+            (super["init"])();
+            this.propertiesBuilder.set(Physics.PropKey.SHAPE, 'box');
+            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 255, 255), null));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_X, ((40 * 1)));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_Y, ((40 * 1)));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_Z, ((40 * 1)));
+            this.forces.push();
+          }
+}
         
         function computeGravitation1(context, G) {
           return {

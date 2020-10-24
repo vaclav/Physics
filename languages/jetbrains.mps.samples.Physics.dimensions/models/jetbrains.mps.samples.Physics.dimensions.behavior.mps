@@ -24,7 +24,7 @@
     <import index="2lf9" ref="r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)" />
     <import index="kqnq" ref="r:7628c3bd-6988-4d33-9682-86b8cef4b8c0(com.mbeddr.mpsutil.interpreter.behavior)" />
     <import index="3673" ref="r:78633c85-d020-485e-aaa3-59e2daa3b826(com.mbeddr.mpsutil.interpreter.structure)" />
-    <import index="ngze" ref="f9bdc723-99df-40ff-934c-d1f848158f92/java:org.nevec.rjm(jetbrains.mps.samples.Physics.IETS3MathExtended/)" />
+    <import index="ngze" ref="22562cc6-29e7-43d0-b046-5e85dce22227/java:org.nevec.rjm(jetbrains.mps.samples.Physics.java.common/)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -2012,7 +2012,7 @@
         <node concept="3Tqbb2" id="3031Xnp9JE8" role="3rvQeY">
           <ref role="ehGHo" to="onwr:1EX4m0Zvw_p" resolve="Dimension" />
         </node>
-        <node concept="3uibUv" id="azHAkNnjfa" role="3rvSg0">
+        <node concept="3uibUv" id="7qCjEDyMoMJ" role="3rvSg0">
           <ref role="3uigEE" to="ngze:~Rational" resolve="Rational" />
         </node>
       </node>
@@ -2235,7 +2235,7 @@
         <node concept="3Tqbb2" id="3031Xnp9K82" role="3rvQeY">
           <ref role="ehGHo" to="onwr:1EX4m0Zvw_p" resolve="Dimension" />
         </node>
-        <node concept="3uibUv" id="azHAkNni8t" role="3rvSg0">
+        <node concept="3uibUv" id="7qCjEDyMzDR" role="3rvSg0">
           <ref role="3uigEE" to="ngze:~Rational" resolve="Rational" />
         </node>
       </node>
@@ -2265,7 +2265,7 @@
       <property role="TrG5h" value="rawValue" />
       <property role="13i0it" value="true" />
       <node concept="3Tm1VV" id="3yBD53Ww3_l" role="1B3o_S" />
-      <node concept="3uibUv" id="azHAkNmtwb" role="3clF45">
+      <node concept="3uibUv" id="7qCjEDyMq4y" role="3clF45">
         <ref role="3uigEE" to="ngze:~Rational" resolve="Rational" />
       </node>
       <node concept="3clFbS" id="3yBD53Ww3_n" role="3clF47">
@@ -2316,7 +2316,7 @@
           </node>
         </node>
       </node>
-      <node concept="3uibUv" id="azHAkNmt$t" role="3clF45">
+      <node concept="3uibUv" id="4UuTfCU6Se0" role="3clF45">
         <ref role="3uigEE" to="ngze:~Rational" resolve="Rational" />
       </node>
     </node>
@@ -2346,7 +2346,7 @@
           </node>
         </node>
       </node>
-      <node concept="3uibUv" id="azHAkNmtsh" role="3clF45">
+      <node concept="3uibUv" id="4UuTfCU6Snk" role="3clF45">
         <ref role="3uigEE" to="ngze:~Rational" resolve="Rational" />
       </node>
     </node>
@@ -2638,8 +2638,8 @@
                             <node concept="liA8E" id="3031Xnpn8NN" role="2OqNvi">
                               <ref role="37wK5l" to="ngze:~Rational.compareTo(org.nevec.rjm.Rational)" resolve="compareTo" />
                               <node concept="10M0yZ" id="azHAkNE8NW" role="37wK5m">
-                                <ref role="3cqZAo" to="ngze:~Rational.ZERO" resolve="ZERO" />
                                 <ref role="1PxDUh" to="ngze:~Rational" resolve="Rational" />
+                                <ref role="3cqZAo" to="ngze:~Rational.ZERO" resolve="ZERO" />
                               </node>
                             </node>
                           </node>
@@ -3441,7 +3441,7 @@
     <node concept="13i0hz" id="3031Xnpas0C" role="13h7CS">
       <property role="TrG5h" value="getRawExponent" />
       <node concept="3Tm1VV" id="3G2R3fe0Jqy" role="1B3o_S" />
-      <node concept="3uibUv" id="azHAkNmxbk" role="3clF45">
+      <node concept="3uibUv" id="7qCjEDyMpCp" role="3clF45">
         <ref role="3uigEE" to="ngze:~Rational" resolve="Rational" />
       </node>
       <node concept="3clFbS" id="3031Xnpas0F" role="3clF47">

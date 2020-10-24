@@ -4,12 +4,18 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
+    <modelRoot contentPath="${module}/lib/BigDecimalMath.jar!/" type="java_classes">
+      <sourceRoot location="." />
+    </modelRoot>
   </models>
   <facets>
     <facet languageLevel="JAVA_8" type="java">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
   </facets>
+  <stubModelEntries>
+    <stubModelEntry path="${module}/lib/BigDecimalMath.jar" />
+  </stubModelEntries>
   <sourcePath />
   <dependencies>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>

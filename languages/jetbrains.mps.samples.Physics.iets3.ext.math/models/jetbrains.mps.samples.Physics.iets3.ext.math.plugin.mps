@@ -13,8 +13,8 @@
     <import index="kj90" ref="r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.iets3.ext.math.structure)" />
     <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
-    <import index="ngze" ref="f9bdc723-99df-40ff-934c-d1f848158f92/java:org.nevec.rjm(jetbrains.mps.samples.Physics.iets3.ext.math/)" />
     <import index="s2qo" ref="r:ab4665d9-6baf-4005-b8e4-87240839fe18(org.iets3.core.expr.math.interpreter.plugin)" />
+    <import index="ngze" ref="22562cc6-29e7-43d0-b046-5e85dce22227/java:org.nevec.rjm(jetbrains.mps.samples.Physics.java.common/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -98,8 +98,8 @@
       <ref role="qq9wM" to="kj90:5EZY1tO49Bj" resolve="NRootExpression" />
       <node concept="3vetai" id="5EZY1tO4nXY" role="3vQZUl">
         <node concept="2YIFZM" id="4E4Gfvf4V1w" role="3vdyny">
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.pow(java.math.BigDecimal,java.math.BigDecimal)" resolve="pow" />
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.pow(java.math.BigDecimal,java.math.BigDecimal)" resolve="pow" />
           <node concept="rqRoa" id="4E4Gfvf4V1J" role="37wK5m">
             <ref role="rqRob" to="kj90:5EZY1tO4hKU" resolve="expression" />
           </node>

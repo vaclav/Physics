@@ -7,9 +7,6 @@
     <modelRoot contentPath="${module}/lib/java-runtime-all.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
-    <modelRoot contentPath="${module}/lib/BigDecimalMath.jar!/" type="java_classes">
-      <sourceRoot location="." />
-    </modelRoot>
   </models>
   <facets>
     <facet languageLevel="JAVA_8" type="java">
@@ -18,7 +15,6 @@
   </facets>
   <stubModelEntries>
     <stubModelEntry path="${module}/lib/java-runtime-all.jar" />
-    <stubModelEntry path="${module}/lib/BigDecimalMath.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
