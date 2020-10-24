@@ -141,9 +141,10 @@
       <mapping-priorities />
     </generator>
   </generators>
-  <sourcePath>
-    <source path="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.javascript.runtime/build" />
-  </sourcePath>
+  <stubModelEntries>
+    <stubModelEntry path="${module}/lib/JsRuntime.jar" />
+  </stubModelEntries>
+  <sourcePath />
   <dependencies>
     <dependency reexport="false">be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)</dependency>
     <dependency reexport="false" scope="generate-into">cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</dependency>

@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c && cpx ./node_modules/odejs/lib/libode.js ./build"
+    "build:copyode": "cpx ./node_modules/odejs/lib/libode.js ./build/res",
+    "build:makejar": "cd build && bestzip JsRuntime.jar res META-INF",
+    "build:copyjar": "cpx build/JsRuntime.jar ../../languages/jetbrains.mps.samples.Physics.genjs/lib",
+    "build": "rollup -c && npm run build:copyode && npm run build:makejar && npm run build:copyjar"
   },
   "author": "",
   "license": "ISC",

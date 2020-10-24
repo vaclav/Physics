@@ -3869,7 +3869,7 @@
       <node concept="gft3U" id="z8_qE_u6a3" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_u9LZ" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
-          <ref role="37wK5l" to="ngze:~BigDecimalMath.divideRound(int,java.math.BigDecimal)" resolve="divideRound" />
+          <ref role="37wK5l" to="ngze:~BigDecimalMath.divideRound(java.math.BigDecimal,java.math.BigDecimal)" resolve="divideRound" />
           <node concept="2YIFZM" id="z8_qE_u77d" role="37wK5m">
             <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
             <ref role="37wK5l" to="ngze:~BigDecimalMath.log(java.math.BigDecimal)" resolve="log" />

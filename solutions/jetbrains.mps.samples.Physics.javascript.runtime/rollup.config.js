@@ -8,10 +8,10 @@ const pkg = require('./package');
 export default {
 	input: 'src/index.ts',
 	output: {
-		sourcemap: true,
+		sourcemap: false,
 		format: 'iife',
 		name: 'Physics',
-		file: 'build/runtime.js'
+		file: 'build/res/runtime.js'
 	},
 	plugins: [
 		typescript({

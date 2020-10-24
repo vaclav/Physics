@@ -172,6 +172,7 @@
         <child id="6108265972537372847" name="product" index="2EtHGA" />
         <child id="6108265972537372848" name="fullName" index="2EtHGT" />
         <child id="8795525031433238889" name="textColor" index="HFo83" />
+        <child id="781140262677761022" name="icon128" index="IvI4g" />
         <child id="1462305029084462472" name="buildDate" index="R$TG_" />
         <child id="772379520210716142" name="welcomeLogo" index="3vi$VU" />
         <child id="1084163669516664629" name="copyrightForeground" index="3KTKoD" />
@@ -203,8 +204,8 @@
       <node concept="55IIr" id="7pqkugVxHGO" role="2EteIi">
         <node concept="2Ry0Ak" id="7pqkugVxHGP" role="iGT6I">
           <property role="2Ry0Am" value="icons" />
-          <node concept="2Ry0Ak" id="7pqkugVxHGQ" role="2Ry0An">
-            <property role="2Ry0Am" value="MPS16.png" />
+          <node concept="2Ry0Ak" id="6Fyo0ModWZ3" role="2Ry0An">
+            <property role="2Ry0Am" value="Physics16.png" />
           </node>
         </node>
       </node>
@@ -221,8 +222,8 @@
       <node concept="55IIr" id="7pqkugVxHGV" role="2EteIj">
         <node concept="2Ry0Ak" id="7pqkugVxHGW" role="iGT6I">
           <property role="2Ry0Am" value="icons" />
-          <node concept="2Ry0Ak" id="7pqkugVxHGX" role="2Ry0An">
-            <property role="2Ry0Am" value="MPS32.png" />
+          <node concept="2Ry0Ak" id="6Fyo0ModWZ5" role="2Ry0An">
+            <property role="2Ry0Am" value="Physics32.png" />
           </node>
         </node>
       </node>
@@ -270,6 +271,14 @@
       <node concept="NbPM2" id="7pqkugVxHHe" role="27hGoL">
         <node concept="3Mxwew" id="7pqkugVxHHf" role="3MwsjC">
           <property role="3MwjfP" value="FFFFFF" />
+        </node>
+      </node>
+      <node concept="55IIr" id="6Fyo0Mok0X0" role="IvI4g">
+        <node concept="2Ry0Ak" id="6Fyo0Mok0X3" role="iGT6I">
+          <property role="2Ry0Am" value="icons" />
+          <node concept="2Ry0Ak" id="6Fyo0Mok0X8" role="2Ry0An">
+            <property role="2Ry0Am" value="Physics128.png" />
+          </node>
         </node>
       </node>
     </node>

@@ -95,7 +95,7 @@
         <build number="${build.number}" date="${date}" />
         <logo url="/splash.png" textcolor="FFFFFF" progressColor="FFFFFF" />
         <about url="/about.png" foreground="FFFFFF" copyrightForeground="FFFFFF" />
-        <icon size32="/MPS32.png" size16="/MPS16.png" />
+        <icon size32="/Physics32.png" size16="/Physics16.png" size128="/Physics128.png" />
         <package code="code" />
         <names product="Physics" fullname="Physics" script="physics" />
         
@@ -107,8 +107,9 @@
       </component>
     </echoxml>
     <jar destfile="${build.layout}/lib/branding.jar" duplicate="preserve">
-      <fileset file="${basedir}/icons/MPS16.png" />
-      <fileset file="${basedir}/icons/MPS32.png" />
+      <fileset file="${basedir}/icons/Physics16.png" />
+      <fileset file="${basedir}/icons/Physics32.png" />
+      <fileset file="${basedir}/icons/Physics128.png" />
       <fileset file="${basedir}/icons/logo.png" />
       <fileset file="${basedir}/icons/splash.png" />
       <fileset file="${basedir}/icons/about.png" />

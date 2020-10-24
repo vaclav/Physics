@@ -259,17 +259,17 @@
               <property role="3MwjfP" value="lib" />
             </node>
           </node>
-          <node concept="28jJK3" id="o8WbBm04fF" role="39821P">
-            <node concept="398BVA" id="o8WbBm04hx" role="28jJRO">
+          <node concept="28jJK3" id="kYr4YxzHpg" role="39821P">
+            <node concept="398BVA" id="kYr4YxzHq0" role="28jJRO">
               <ref role="398BVh" node="5aGkDIh0m2d" resolve="jetbrains.mps.samples.Physics.home" />
-              <node concept="2Ry0Ak" id="o8WbBm04hB" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="o8WbBm04hC" role="2Ry0An">
-                  <property role="2Ry0Am" value="jetbrains.mps.samples.Physics.javascript.runtime" />
-                  <node concept="2Ry0Ak" id="o8WbBm04hD" role="2Ry0An">
-                    <property role="2Ry0Am" value="build" />
-                    <node concept="2Ry0Ak" id="o8WbBm04hE" role="2Ry0An">
-                      <property role="2Ry0Am" value="runtime.js" />
+              <node concept="2Ry0Ak" id="kYr4YxzHq1" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="kYr4YxzHq2" role="2Ry0An">
+                  <property role="2Ry0Am" value="jetbrains.mps.samples.Physics.genjs" />
+                  <node concept="2Ry0Ak" id="kYr4YxzHq3" role="2Ry0An">
+                    <property role="2Ry0Am" value="lib" />
+                    <node concept="2Ry0Ak" id="kYr4YxzHq4" role="2Ry0An">
+                      <property role="2Ry0Am" value="JsRuntime.jar" />
                     </node>
                   </node>
                 </node>
@@ -327,17 +327,17 @@
                 <property role="3MwjfP" value="lib" />
               </node>
             </node>
-            <node concept="28jJK3" id="4xWaHBMibqO" role="39821P">
-              <node concept="398BVA" id="4xWaHBMibqP" role="28jJRO">
+            <node concept="28jJK3" id="kYr4YxzHqC" role="39821P">
+              <node concept="398BVA" id="kYr4YxzHqD" role="28jJRO">
                 <ref role="398BVh" node="5aGkDIh0m2d" resolve="jetbrains.mps.samples.Physics.home" />
-                <node concept="2Ry0Ak" id="4xWaHBMibqQ" role="iGT6I">
-                  <property role="2Ry0Am" value="solutions" />
-                  <node concept="2Ry0Ak" id="4xWaHBMibqR" role="2Ry0An">
-                    <property role="2Ry0Am" value="jetbrains.mps.samples.Physics.javascript.runtime" />
-                    <node concept="2Ry0Ak" id="4xWaHBMibqS" role="2Ry0An">
-                      <property role="2Ry0Am" value="build" />
-                      <node concept="2Ry0Ak" id="4xWaHBMibqT" role="2Ry0An">
-                        <property role="2Ry0Am" value="runtime.js" />
+                <node concept="2Ry0Ak" id="kYr4YxzHqE" role="iGT6I">
+                  <property role="2Ry0Am" value="languages" />
+                  <node concept="2Ry0Ak" id="kYr4YxzHqF" role="2Ry0An">
+                    <property role="2Ry0Am" value="jetbrains.mps.samples.Physics.genjs" />
+                    <node concept="2Ry0Ak" id="kYr4YxzHqG" role="2Ry0An">
+                      <property role="2Ry0Am" value="lib" />
+                      <node concept="2Ry0Ak" id="kYr4YxzHqH" role="2Ry0An">
+                        <property role="2Ry0Am" value="JsRuntime.jar" />
                       </node>
                     </node>
                   </node>
@@ -891,7 +891,6 @@
       <node concept="1E1JtD" id="7QIsDWeJFTY" role="2G$12L">
         <property role="TrG5h" value="jetbrains.mps.samples.Physics.genjs" />
         <property role="3LESm3" value="89da005b-492b-4e94-9b6d-b429df99e997" />
-        <property role="BnDLt" value="true" />
         <node concept="55IIr" id="7QIsDWeJFTT" role="3LF7KH">
           <node concept="2Ry0Ak" id="7QIsDWeJFTU" role="iGT6I">
             <property role="2Ry0Am" value="languages" />
@@ -1061,6 +1060,25 @@
         <node concept="1SiIV0" id="7QIsDWeK2yG" role="3bR37C">
           <node concept="3bR9La" id="7QIsDWeK2yH" role="1SiIV1">
             <ref role="3bR37D" to="lzhy:4vyBtkfxwqq" resolve="org.iets3.core.expr.genjs.base" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="kYr4YxzHby" role="3bR37C">
+          <node concept="1BurEX" id="kYr4YxzHbz" role="1SiIV1">
+            <node concept="398BVA" id="kYr4YxzHbo" role="1BurEY">
+              <ref role="398BVh" node="5aGkDIh0m2d" resolve="jetbrains.mps.samples.Physics.home" />
+              <node concept="2Ry0Ak" id="kYr4YxzHbp" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="kYr4YxzHbq" role="2Ry0An">
+                  <property role="2Ry0Am" value="jetbrains.mps.samples.Physics.genjs" />
+                  <node concept="2Ry0Ak" id="kYr4YxzHbr" role="2Ry0An">
+                    <property role="2Ry0Am" value="lib" />
+                    <node concept="2Ry0Ak" id="kYr4YxzHbs" role="2Ry0An">
+                      <property role="2Ry0Am" value="JsRuntime.jar" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -1767,7 +1785,7 @@
         <node concept="3LEDTy" id="7QIsDWeJG8Z" role="3LEDUa">
           <ref role="3LEDTV" to="ip48:lH$Puj5DFq" resolve="org.iets3.core.expr.genjava.contracts" />
         </node>
-        <node concept="3LEDTy" id="4UuTfCU7Mgm" role="3LEDUa">
+        <node concept="3LEDTy" id="kYr4YxzHdg" role="3LEDUa">
           <ref role="3LEDTV" node="7QIsDWeJFU4" resolve="jetbrains.mps.samples.Physics.dimensions.gentype" />
         </node>
       </node>
@@ -1848,6 +1866,7 @@
       <node concept="1E1JtA" id="7QIsDWeJFUO" role="2G$12L">
         <property role="TrG5h" value="jetbrains.mps.samples.Physics.java.runtime" />
         <property role="3LESm3" value="59283cba-afa8-49c4-b10d-6ff0ede2c408" />
+        <property role="BnDLt" value="true" />
         <node concept="55IIr" id="7QIsDWeJFUJ" role="3LF7KH">
           <node concept="2Ry0Ak" id="7QIsDWeJFUK" role="iGT6I">
             <property role="2Ry0Am" value="solutions" />
@@ -2292,10 +2311,10 @@
         <node concept="3LEz8M" id="7QIsDWeJGb6" role="3LEz9a">
           <ref role="3LEz8N" node="7QIsDWeJFUI" resolve="jetbrains.mps.samples.Physics.devkit.javascript" />
         </node>
-        <node concept="3LEDTy" id="4UuTfCU7Mh_" role="3LEDUa">
+        <node concept="3LEDTy" id="kYr4YxzHev" role="3LEDUa">
           <ref role="3LEDTV" to="lzhy:4vyBtkfxwqq" resolve="org.iets3.core.expr.genjs.base" />
         </node>
-        <node concept="3LEDTy" id="4UuTfCU7MhA" role="3LEDUa">
+        <node concept="3LEDTy" id="kYr4YxzHew" role="3LEDUa">
           <ref role="3LEDTV" to="lzhy:4vyBtkfxwqw" resolve="org.iets3.core.expr.genjs.simpleTypes" />
         </node>
       </node>

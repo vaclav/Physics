@@ -27,7 +27,7 @@ public class PlainTextRuntimeImporter {
     final List<SNode> lines = ListSequence.fromList(new ArrayList<SNode>());
 
     // Read file from java resources 
-    try (InputStream fileStream = PlainTextRuntimeImporter.class.getClassLoader().getResourceAsStream("/" + filename)) {
+    try (InputStream fileStream = PlainTextRuntimeImporter.class.getResourceAsStream("/res/" + filename)) {
       // Get each line 
       new BufferedReader(new InputStreamReader(fileStream, StandardCharsets.UTF_8)).lines().forEach(new _Adapters._return_P1_E0_to_Consumer_adapter<String>(new _FunctionTypes._return_P1_E0<SNode, String>() {
         public SNode invoke(String it) {

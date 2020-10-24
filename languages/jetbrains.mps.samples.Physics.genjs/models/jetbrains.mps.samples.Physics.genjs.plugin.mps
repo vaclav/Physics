@@ -594,19 +594,14 @@
               <ref role="3uigEE" to="guwi:~InputStream" resolve="InputStream" />
             </node>
             <node concept="2OqwBi" id="6XRhDBEq01g" role="33vP2m">
-              <node concept="2OqwBi" id="6XRhDBEq01h" role="2Oq$k0">
-                <node concept="3VsKOn" id="6XRhDBEq01i" role="2Oq$k0">
-                  <ref role="3VsUkX" node="NYH1y4Dmd1" resolve="PlainTextRuntimeImporter" />
-                </node>
-                <node concept="liA8E" id="6XRhDBEq01j" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~Class.getClassLoader()" resolve="getClassLoader" />
-                </node>
+              <node concept="3VsKOn" id="6XRhDBEq01i" role="2Oq$k0">
+                <ref role="3VsUkX" node="NYH1y4Dmd1" resolve="PlainTextRuntimeImporter" />
               </node>
               <node concept="liA8E" id="6XRhDBEq01k" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~ClassLoader.getResourceAsStream(java.lang.String)" resolve="getResourceAsStream" />
+                <ref role="37wK5l" to="wyt6:~Class.getResourceAsStream(java.lang.String)" resolve="getResourceAsStream" />
                 <node concept="3cpWs3" id="6XRhDBEq01l" role="37wK5m">
                   <node concept="Xl_RD" id="6XRhDBEq01m" role="3uHU7B">
-                    <property role="Xl_RC" value="/" />
+                    <property role="Xl_RC" value="/res/" />
                   </node>
                   <node concept="37vLTw" id="6XRhDBEq01n" role="3uHU7w">
                     <ref role="3cqZAo" node="NYH1y4DzS$" resolve="filename" />
