@@ -259,6 +259,7 @@ task buildDistribution(type: BuildLanguages, dependsOn: [buildIde]) {
     if (downloadJdk) dependsOn "unpackJdk"
 
 	script "$rootDir/buildDistribution.xml"
+    targets("assemble")
 }
 
 
