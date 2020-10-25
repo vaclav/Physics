@@ -137,7 +137,7 @@ def defaultScriptArgs = [
 	'mps_home'                          : mpsDir,
 
     // Generated artifacts
-	'iets3.github.opensource.genjs.artifacts': "$artifactsDir/iets3.opensource.genjs",
+	'iets3.github.opensource.genjs.artifacts': "$artifactsDir/org.iets3.opensource.genjs",
 	'iets3.github.opensource.artifacts' : "$artifactsDir/org.iets3.opensource",
     'mbeddr.artifacts.platform'         : "$artifactsDir/com.mbeddr.platform",
 	'ecmascript4mps.artifacts'  		: "$artifactsDir/ecmascript4mps",
@@ -246,6 +246,21 @@ task buildLanguages(type: BuildLanguages, dependsOn: [resolveArtifacts]) {
 
 	script "$rootDir/build.xml"
 }
+
+task buildIde(type: BuildLanguages, dependsOn: [buildLanguages]) {
+    if (!project.hasProperty("mpsDir")) dependsOn "resolveMps"
+    if (downloadJdk) dependsOn "unpackJdk"
+
+	script "$rootDir/buildIde.xml"
+}
+
+task buildDistribution(type: BuildLanguages, dependsOn: [buildIde]) {
+    if (!project.hasProperty("mpsDir")) dependsOn "resolveMps"
+    if (downloadJdk) dependsOn "unpackJdk"
+
+	script "$rootDir/buildDistribution.xml"
+}
+
 
 // ===== libraries.xml to have mps see the artifacts =====
 task generateLibrariesXml(type: GenerateLibrariesXml) {
