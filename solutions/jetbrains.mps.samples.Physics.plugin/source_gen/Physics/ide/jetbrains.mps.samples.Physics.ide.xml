@@ -163,6 +163,10 @@
     <copy todir="${build.layout}/plugins/mps-vcs">
       <fileset dir="${artifacts.mpsVcs}/mps-vcs" />
     </copy>
+    <mkdir dir="${build.layout}/plugins/mps-git4idea" />
+    <copy todir="${build.layout}/plugins/mps-git4idea">
+      <fileset dir="${artifacts.mpsVcs}/mps-git4idea" />
+    </copy>
     <mkdir dir="${build.layout}/plugins/mps-testing" />
     <copy todir="${build.layout}/plugins/mps-testing">
       <fileset dir="${artifacts.mpsTesting}/mps-testing" />

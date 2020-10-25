@@ -301,11 +301,11 @@
         </node>
       </node>
     </node>
-    <node concept="2sgV4H" id="o8WbBlYcVh" role="1l3spa">
+    <node concept="2sgV4H" id="2pj9FInIeVp" role="1l3spa">
       <ref role="1l3spb" to="ffeo:1lMM4owFq4Y" resolve="mpsVcs" />
-      <node concept="398BVA" id="o8WbBlYcVi" role="2JcizS">
+      <node concept="398BVA" id="2pj9FInIeW4" role="2JcizS">
         <ref role="398BVh" node="7pqkugVxHG_" resolve="mps_home" />
-        <node concept="2Ry0Ak" id="o8WbBlYcVj" role="iGT6I">
+        <node concept="2Ry0Ak" id="2pj9FInIeW5" role="iGT6I">
           <property role="2Ry0Am" value="plugins" />
         </node>
       </node>
@@ -588,8 +588,11 @@
         <node concept="3_I8Xc" id="o8WbBlZc3k" role="39821P">
           <ref role="3_I8Xa" to="ffeo:5xhjlkpPhA8" resolve="mps-httpsupport" />
         </node>
-        <node concept="3_I8Xc" id="o8WbBlZc5e" role="39821P">
+        <node concept="3_I8Xc" id="2pj9FInIeWK" role="39821P">
           <ref role="3_I8Xa" to="ffeo:RJsmGEig2V" resolve="mps-vcs" />
+        </node>
+        <node concept="3_I8Xc" id="o8WbBlZc5e" role="39821P">
+          <ref role="3_I8Xa" to="ffeo:4wxeloVufXE" resolve="mps-git4idea" />
         </node>
         <node concept="3_I8Xc" id="o8WbBlXdse" role="39821P">
           <ref role="3_I8Xa" to="ffeo:ymnOULAZ8H" resolve="mps-testing" />
