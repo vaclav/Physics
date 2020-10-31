@@ -176,7 +176,6 @@ task cloneGenjs {
 				dir: genJsHome,
 				uri: "https://github.com/banilaste/iets3.genjs"
 			)
-			println grgit.describe()
 		}
 	}
 }
