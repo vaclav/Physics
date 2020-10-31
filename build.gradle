@@ -24,14 +24,15 @@ def mpsDir = project.hasProperty("mpsDir") ? project.property('mpsDir') : "$buil
 
 configurations {
     mps
-	ietsArtifacts
+	mpsArtifacts
     genjsArtifacts
     junitAnt
 }
 
 dependencies {
     mps "com.jetbrains:mps:$mpsVersion"
-	ietsArtifacts "org.iets3:opensource:2020.1.4598.8281546"
+	mpsArtifacts "org.iets3:opensource:2020.1.4598.8281546"
+	mpsArtifacts "org.mar9000:ecmascript4mps:2020.2.1"
 	genjsArtifacts "org.iets3.opensource:genjs:$mpsVersion.+"
     junitAnt 'org.apache.ant:ant-junit:1.10.9'
 }
@@ -42,6 +43,7 @@ repositories {
 		url 'https://projects.itemis.de/nexus/content/repositories/mbeddr'
 	}
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 // Git
@@ -154,36 +156,10 @@ ext["itemis.mps.gradle.ant.defaultScriptArgs"] = defaultScriptArgs.collect { "-D
 ext["itemis.mps.gradle.ant.defaultScriptClasspath"] = buildScriptClasspath
 ext["itemis.mps.gradle.ant.defaultJavaExecutable"] = file("$jdkHome/bin/java")
 
-// ===== ecmascript4mps =====
-def ecmascriptHome = "$buildDir/dependencies/ecmascript4mps"
-task cloneEcmascript {
-	doLast {
-		try {
-			Grgit.open(dir: ecmascriptHome)
-			println "ecmascript4mps folder exists, assuming clone to be done"
-		} catch(Exception e) {
-			def grgit = Grgit.clone(
-				dir: ecmascriptHome,
-				uri: "https://github.com/mar9000/ecmascript4mps.git",
-				refToCheckout: "development",
-				checkout: true,
-			)
-			println grgit.describe()
-		}
-	}
-}
-
-task buildEcmascript(type: BuildLanguages, dependsOn: [cloneEcmascript]) {
-    if (!project.hasProperty("mpsDir")) dependsOn "resolveMps"
-    if (downloadJdk) dependsOn "unpackJdk"
-
-	script "$ecmascriptHome/build.xml"
-}
-
-// ===== iets3.opensource =====
-task resolveOpensource(type: Copy) {
+// ===== iets3.opensource + ecmascript4mps =====
+task resolveMpsArtifacts(type: Copy) {
     from {
-        configurations.ietsArtifacts.resolve().collect { zipTree(it) }
+        configurations.mpsArtifacts.resolve().collect { zipTree(it) }
     }
     into artifactsDir
 }
@@ -205,7 +181,7 @@ task cloneGenjs {
 	}
 }
 
-task buildGenjs(type: BuildLanguages, dependsOn: [buildEcmascript, cloneGenjs, resolveOpensource]) {
+task buildGenjs(type: BuildLanguages, dependsOn: [cloneGenjs, resolveMpsArtifacts]) {
     if (!project.hasProperty("mpsDir")) dependsOn "resolveMps"
     if (downloadJdk) dependsOn "unpackJdk"
 
@@ -225,7 +201,7 @@ task resolveMavenGenjs(type: Copy) {
     into artifactsDir
 }
 
-task resolveGenjs(dependsOn: [resolveOpensource]) {
+task resolveGenjs(dependsOn: [resolveMpsArtifacts]) {
     try {
         // Try to resolve
         configurations.genjsArtifacts.resolve()
@@ -239,7 +215,7 @@ task resolveGenjs(dependsOn: [resolveOpensource]) {
 }
 
 // ===== all artifacts (iets3, mbeddr, genjs if any) =====
-task resolveArtifacts(dependsOn: [packageJavaRuntime, resolveGenjs, resolveOpensource]) { }
+task resolveArtifacts(dependsOn: [packageJavaRuntime, resolveGenjs, resolveMpsArtifacts]) { }
 
 // ===== build artifacts =====
 task buildLanguages(type: BuildLanguages, dependsOn: [resolveArtifacts]) {
@@ -289,7 +265,7 @@ publishing {
             artifact packageLanguages
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.ietsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
                     def dependencyNode = dependenciesNode.appendNode('dependency')
                     dependencyNode.appendNode('groupId', it.moduleGroup)
                     dependencyNode.appendNode('artifactId', it.moduleName)
