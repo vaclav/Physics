@@ -11,6 +11,7 @@ import processing.core.PGraphics;
 import org.ode4j.math.DVector3C;
 import org.ode4j.ode.DMass;
 import org.ode4j.ode.DBody;
+import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import org.ode4j.math.DVector3;
 
 public abstract class Fixture implements Renderable {
@@ -66,7 +67,7 @@ public abstract class Fixture implements Renderable {
   /**
    * Take the given fixture and merge its content into this fixture
    */
-  public void mergeWith(Fixture fixture) {
+  public void mergeWith(Fixture fixture, PhysicalEntity targetEntity) {
     DBody body = geometry.getBody();
     DBody otherBody = fixture.getGeometry().getBody();
 
@@ -97,7 +98,7 @@ public abstract class Fixture implements Renderable {
 
     // Rebuild geometry and apply to body 
     this.bindToBody(body, thisMass + otherMass);
-
+    targetEntity.setMass(thisMass + otherMass);
   }
 
   public boolean doEmitLight() {

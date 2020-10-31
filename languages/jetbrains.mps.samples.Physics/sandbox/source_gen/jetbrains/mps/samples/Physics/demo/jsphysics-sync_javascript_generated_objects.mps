@@ -3411,7 +3411,7 @@
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="dj" role="2DRAPQ">
-                <property role="2DPR8u" value="        mergeWith(fixture, thisMass, otherMass) {" />
+                <property role="2DPR8u" value="        mergeWith(fixture, thisMass, otherMass, targetEntity) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="dk" role="2DRAPQ">
@@ -3483,2975 +3483,2975 @@
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="d_" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+                <property role="2DPR8u" value="            // Update mass cache" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="dA" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
+                <property role="2DPR8u" value="            targetEntity.setMass(thisMass + otherMass);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="dB" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
+                <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="dC" role="2DRAPQ">
-                <property role="2DPR8u" value="    class BoxFixture extends Fixture {" />
+                <property role="2DPR8u" value="    }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="dD" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(world, width, height, depth, texture) {" />
+                <property role="2DPR8u" value="" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="dE" role="2DRAPQ">
-                <property role="2DPR8u" value="            super(world, texture);" />
+                <property role="2DPR8u" value="    class BoxFixture extends Fixture {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="dF" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.width = width;" />
+                <property role="2DPR8u" value="        constructor(world, width, height, depth, texture) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="dG" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.height = height;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dH" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.depth = depth;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dI" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dJ" role="2DRAPQ">
-                <property role="2DPR8u" value="        render(graphics, scale, scaledOffset) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dK" role="2DRAPQ">
-                <property role="2DPR8u" value="            super.render(graphics, scale, scaledOffset);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dL" role="2DRAPQ">
-                <property role="2DPR8u" value="            graphics.box(this.width * scale, this.height * scale, this.depth * scale);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dM" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dN" role="2DRAPQ">
-                <property role="2DPR8u" value="        buildMass(massValue) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dO" role="2DRAPQ">
-                <property role="2DPR8u" value="            const mass = new ODE.Mass();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dP" role="2DRAPQ">
-                <property role="2DPR8u" value="            mass.setBox(massValue / this.getVolume(), this.width, this.height, this.depth);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dQ" role="2DRAPQ">
-                <property role="2DPR8u" value="            return mass;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dR" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dS" role="2DRAPQ">
-                <property role="2DPR8u" value="        getVolume() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dT" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.width * this.height * this.depth;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dU" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dV" role="2DRAPQ">
-                <property role="2DPR8u" value="        setVolume(volume) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dW" role="2DRAPQ">
-                <property role="2DPR8u" value="            const factor = Math.pow(volume / this.getVolume(), 1.0 / 3.0);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dX" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.width = (this.width * factor);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dY" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.height = (this.height * factor);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="dZ" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.depth = (this.depth * factor);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e0" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e1" role="2DRAPQ">
-                <property role="2DPR8u" value="        buildGeometry() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e2" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.world.space.createBox(this.width, this.height, this.depth);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e3" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e4" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e5" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e6" role="2DRAPQ">
-                <property role="2DPR8u" value="    class SphereFixture extends Fixture {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e7" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(world, radius, texture) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e8" role="2DRAPQ">
                 <property role="2DPR8u" value="            super(world, texture);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="e9" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.radius = radius;" />
+              <node concept="2DRAP_" id="dH" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.width = width;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ea" role="2DRAPQ">
+              <node concept="2DRAP_" id="dI" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.height = height;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="dJ" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.depth = depth;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="dK" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="eb" role="2DRAPQ">
+              <node concept="2DRAP_" id="dL" role="2DRAPQ">
                 <property role="2DPR8u" value="        render(graphics, scale, scaledOffset) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ec" role="2DRAPQ">
+              <node concept="2DRAP_" id="dM" role="2DRAPQ">
                 <property role="2DPR8u" value="            super.render(graphics, scale, scaledOffset);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ed" role="2DRAPQ">
-                <property role="2DPR8u" value="            graphics.sphere(this.radius * scale);" />
+              <node concept="2DRAP_" id="dN" role="2DRAPQ">
+                <property role="2DPR8u" value="            graphics.box(this.width * scale, this.height * scale, this.depth * scale);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ee" role="2DRAPQ">
+              <node concept="2DRAP_" id="dO" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ef" role="2DRAPQ">
+              <node concept="2DRAP_" id="dP" role="2DRAPQ">
                 <property role="2DPR8u" value="        buildMass(massValue) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="eg" role="2DRAPQ">
+              <node concept="2DRAP_" id="dQ" role="2DRAPQ">
                 <property role="2DPR8u" value="            const mass = new ODE.Mass();" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="eh" role="2DRAPQ">
-                <property role="2DPR8u" value="            mass.setSphere(massValue / this.getVolume(), this.radius);" />
+              <node concept="2DRAP_" id="dR" role="2DRAPQ">
+                <property role="2DPR8u" value="            mass.setBox(massValue / this.getVolume(), this.width, this.height, this.depth);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ei" role="2DRAPQ">
+              <node concept="2DRAP_" id="dS" role="2DRAPQ">
                 <property role="2DPR8u" value="            return mass;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ej" role="2DRAPQ">
+              <node concept="2DRAP_" id="dT" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ek" role="2DRAPQ">
-                <property role="2DPR8u" value="        setVolume(volume) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="el" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.radius = Math.pow(volume * 3 / (Math.PI * 4), 0.3333);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="em" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="en" role="2DRAPQ">
-                <property role="2DPR8u" value="        buildGeometry() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eo" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.world.space.createSphere(this.radius);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ep" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eq" role="2DRAPQ">
+              <node concept="2DRAP_" id="dU" role="2DRAPQ">
                 <property role="2DPR8u" value="        getVolume() {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="er" role="2DRAPQ">
-                <property role="2DPR8u" value="            return Math.PI * Math.pow(this.radius, 3) * 4 / 3;" />
+              <node concept="2DRAP_" id="dV" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.width * this.height * this.depth;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="es" role="2DRAPQ">
+              <node concept="2DRAP_" id="dW" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="et" role="2DRAPQ">
+              <node concept="2DRAP_" id="dX" role="2DRAPQ">
+                <property role="2DPR8u" value="        setVolume(volume) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="dY" role="2DRAPQ">
+                <property role="2DPR8u" value="            const factor = Math.pow(volume / this.getVolume(), 1.0 / 3.0);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="dZ" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.width = (this.width * factor);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="e0" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.height = (this.height * factor);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="e1" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.depth = (this.depth * factor);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="e2" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="e3" role="2DRAPQ">
+                <property role="2DPR8u" value="        buildGeometry() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="e4" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.world.space.createBox(this.width, this.height, this.depth);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="e5" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="e6" role="2DRAPQ">
                 <property role="2DPR8u" value="    }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="eu" role="2DRAPQ">
+              <node concept="2DRAP_" id="e7" role="2DRAPQ">
                 <property role="2DPR8u" value="" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ev" role="2DRAPQ">
-                <property role="2DPR8u" value="    var PropKey;" />
+              <node concept="2DRAP_" id="e8" role="2DRAPQ">
+                <property role="2DPR8u" value="    class SphereFixture extends Fixture {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ew" role="2DRAPQ">
-                <property role="2DPR8u" value="    (function (PropKey) {" />
+              <node concept="2DRAP_" id="e9" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(world, radius, texture) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ex" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;SHAPE&quot;] = 0] = &quot;SHAPE&quot;;" />
+              <node concept="2DRAP_" id="ea" role="2DRAPQ">
+                <property role="2DPR8u" value="            super(world, texture);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ey" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;SPHERE_RADIUS&quot;] = 1] = &quot;SPHERE_RADIUS&quot;;" />
+              <node concept="2DRAP_" id="eb" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.radius = radius;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ez" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;BOX_X&quot;] = 2] = &quot;BOX_X&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e$" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;BOX_Y&quot;] = 3] = &quot;BOX_Y&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="e_" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;BOX_Z&quot;] = 4] = &quot;BOX_Z&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eA" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;TEXTURE&quot;] = 5] = &quot;TEXTURE&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eB" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;EMIT_LIGHT&quot;] = 6] = &quot;EMIT_LIGHT&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eC" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;COLLISION_REACT&quot;] = 7] = &quot;COLLISION_REACT&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eD" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;TRACE&quot;] = 8] = &quot;TRACE&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eE" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey[PropKey[&quot;PAUSE_ON_COLLISION&quot;] = 9] = &quot;PAUSE_ON_COLLISION&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eF" role="2DRAPQ">
-                <property role="2DPR8u" value="    })(PropKey || (PropKey = {}));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eG" role="2DRAPQ">
-                <property role="2DPR8u" value="    class PropertiesBuilder {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eH" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eI" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.properties = new Map();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eJ" role="2DRAPQ">
+              <node concept="2DRAP_" id="ec" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="eK" role="2DRAPQ">
-                <property role="2DPR8u" value="        set(name, value) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eL" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.properties.set(name, value);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eM" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eN" role="2DRAPQ">
-                <property role="2DPR8u" value="        get(key) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eO" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.properties.get(key);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eP" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eQ" role="2DRAPQ">
-                <property role="2DPR8u" value="        applyOn(world, entity) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eR" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Fixture " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eS" role="2DRAPQ">
-                <property role="2DPR8u" value="            let entityFixture;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eT" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (&quot;box&quot; == this.get(PropKey.SHAPE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eU" role="2DRAPQ">
-                <property role="2DPR8u" value="                entityFixture = new BoxFixture(world, this.get(PropKey.BOX_X), this.get(PropKey.BOX_Y), this.get(PropKey.BOX_Z), this.get(PropKey.TEXTURE));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eV" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eW" role="2DRAPQ">
-                <property role="2DPR8u" value="            else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eX" role="2DRAPQ">
-                <property role="2DPR8u" value="                entityFixture = new SphereFixture(world, this.get(PropKey.SPHERE_RADIUS), this.get(PropKey.TEXTURE));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eY" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="eZ" role="2DRAPQ">
-                <property role="2DPR8u" value="            entityFixture.emitLight = this.get(PropKey.EMIT_LIGHT);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f0" role="2DRAPQ">
-                <property role="2DPR8u" value="            entity.fixture = entityFixture;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f1" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Creating mass representation " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f2" role="2DRAPQ">
-                <property role="2DPR8u" value="            entityFixture.bindToBody(entity.body, entity.getMass());" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f3" role="2DRAPQ">
-                <property role="2DPR8u" value="            //  Add entity to the world " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f4" role="2DRAPQ">
-                <property role="2DPR8u" value="            world.addEntity(entity);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f5" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Collision reaction " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f6" role="2DRAPQ">
-                <property role="2DPR8u" value="            entity.properties.collisionReaction = this.get(PropKey.COLLISION_REACT);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f7" role="2DRAPQ">
-                <property role="2DPR8u" value="            entity.properties.pauseOnCollision = this.get(PropKey.PAUSE_ON_COLLISION);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f8" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Trace " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f9" role="2DRAPQ">
-                <property role="2DPR8u" value="            entity.properties.traceHandler = this.get(PropKey.TRACE);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fa" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fb" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fc" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fd" role="2DRAPQ">
-                <property role="2DPR8u" value="    var Math3DHelper;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fe" role="2DRAPQ">
-                <property role="2DPR8u" value="    (function (Math3DHelper) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ff" role="2DRAPQ">
-                <property role="2DPR8u" value="        /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fg" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Compute torque on object for a given force applied at some point" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fh" role="2DRAPQ">
-                <property role="2DPR8u" value="         *" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fi" role="2DRAPQ">
-                <property role="2DPR8u" value="         * see https://en.wikipedia.org/wiki/Screw_theory" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fj" role="2DRAPQ">
-                <property role="2DPR8u" value="         */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fk" role="2DRAPQ">
-                <property role="2DPR8u" value="        function computeTorque(force, relativeApplicationPoint) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fl" role="2DRAPQ">
-                <property role="2DPR8u" value="            const leverX = relativeApplicationPoint[0];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fm" role="2DRAPQ">
-                <property role="2DPR8u" value="            const leverY = relativeApplicationPoint[1];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fn" role="2DRAPQ">
-                <property role="2DPR8u" value="            const leverZ = relativeApplicationPoint[2];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fo" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Mb = Ma + BA ∧ F const Ma: with = 0, BA above vector components and F the force " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fp" role="2DRAPQ">
-                <property role="2DPR8u" value="            return new Float32Array([leverY * force[2] - leverZ * force[1], leverZ * force[0] - leverX * force[2], leverX * force[1] - leverY * force[0]]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fq" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fr" role="2DRAPQ">
-                <property role="2DPR8u" value="        Math3DHelper.computeTorque = computeTorque;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fs" role="2DRAPQ">
-                <property role="2DPR8u" value="        /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ft" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Apply the object rotation/position on the given vector" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fu" role="2DRAPQ">
-                <property role="2DPR8u" value="         */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fv" role="2DRAPQ">
-                <property role="2DPR8u" value="        function relativePoint(object, vector) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fw" role="2DRAPQ">
-                <property role="2DPR8u" value="            return object.body.getRelPosPoint(vector[0], vector[1], vector[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fx" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fy" role="2DRAPQ">
-                <property role="2DPR8u" value="        Math3DHelper.relativePoint = relativePoint;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fz" role="2DRAPQ">
-                <property role="2DPR8u" value="    })(Math3DHelper || (Math3DHelper = {}));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f$" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="f_" role="2DRAPQ">
-                <property role="2DPR8u" value="    /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fA" role="2DRAPQ">
-                <property role="2DPR8u" value="     * Constants class to define how the force and its properties are" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fB" role="2DRAPQ">
-                <property role="2DPR8u" value="     * applied to an object" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fC" role="2DRAPQ">
-                <property role="2DPR8u" value="     */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fD" role="2DRAPQ">
-                <property role="2DPR8u" value="    var ForceMode;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fE" role="2DRAPQ">
-                <property role="2DPR8u" value="    (function (ForceMode) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fF" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMode.NONE = 0;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fG" role="2DRAPQ">
-                <property role="2DPR8u" value="        /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fH" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Mode flag to not apply the torque from the force on the object" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fI" role="2DRAPQ">
-                <property role="2DPR8u" value="         */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fJ" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMode.SKIP_TORQUE = 1 &lt;&lt; 0;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fK" role="2DRAPQ">
-                <property role="2DPR8u" value="        /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fL" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Mode flag to not apply the linear force on the object" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fM" role="2DRAPQ">
-                <property role="2DPR8u" value="         */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fN" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMode.SKIP_LINEAR_FORCE = 1 &lt;&lt; 1;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fO" role="2DRAPQ">
-                <property role="2DPR8u" value="        /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fP" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Mode flag to set the linear force rotated like the object" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fQ" role="2DRAPQ">
-                <property role="2DPR8u" value="         */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fR" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMode.LINEAR_FORCE_RELATIVE = 1 &lt;&lt; 2;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fS" role="2DRAPQ">
-                <property role="2DPR8u" value="        /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fT" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Mode flag to set the torque/moment rotated like the object" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fU" role="2DRAPQ">
-                <property role="2DPR8u" value="         */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fV" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMode.TORQUE_RELATIVE = 1 &lt;&lt; 3;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fW" role="2DRAPQ">
-                <property role="2DPR8u" value="        /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fX" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Mode flag to set the application point relative to the object position" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fY" role="2DRAPQ">
-                <property role="2DPR8u" value="         */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="fZ" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMode.APPLICATION_POINT_RELATIVE = 1 &lt;&lt; 4;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g0" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMode.DEFAULT = ForceMode.APPLICATION_POINT_RELATIVE;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g1" role="2DRAPQ">
-                <property role="2DPR8u" value="        function haveOne(mode, ...expected) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g2" role="2DRAPQ">
-                <property role="2DPR8u" value="            for (let i = 0; i &lt; expected.length; i++) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g3" role="2DRAPQ">
-                <property role="2DPR8u" value="                if ((mode &amp; expected[i]) == expected[i]) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g4" role="2DRAPQ">
-                <property role="2DPR8u" value="                    return true;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g5" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g6" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g7" role="2DRAPQ">
-                <property role="2DPR8u" value="            return false;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g8" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g9" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMode.haveOne = haveOne;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ga" role="2DRAPQ">
-                <property role="2DPR8u" value="        function haveAll(mode, ...expected) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gb" role="2DRAPQ">
-                <property role="2DPR8u" value="            for (let i = 0; i &lt; expected.length; i++) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gc" role="2DRAPQ">
-                <property role="2DPR8u" value="                if ((mode &amp; expected[i]) != expected[i]) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gd" role="2DRAPQ">
-                <property role="2DPR8u" value="                    return false;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ge" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gf" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gg" role="2DRAPQ">
-                <property role="2DPR8u" value="            return true;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gh" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gi" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMode.haveAll = haveAll;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gj" role="2DRAPQ">
-                <property role="2DPR8u" value="    })(ForceMode || (ForceMode = {}));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gk" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gl" role="2DRAPQ">
-                <property role="2DPR8u" value="    var ForceModeApplication;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gm" role="2DRAPQ">
-                <property role="2DPR8u" value="    (function (ForceModeApplication) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gn" role="2DRAPQ">
-                <property role="2DPR8u" value="        /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="go" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Combination of all possible force modes" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gp" role="2DRAPQ">
-                <property role="2DPR8u" value="         */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gq" role="2DRAPQ">
-                <property role="2DPR8u" value="        function apply(mode, entity, force, moment, applicationPoint) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gr" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (ForceMode.haveAll(mode, ForceMode.SKIP_TORQUE, ForceMode.SKIP_LINEAR_FORCE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gs" role="2DRAPQ">
-                <property role="2DPR8u" value="                return;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gt" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gu" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (ForceMode.haveOne(mode, ForceMode.SKIP_TORQUE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gv" role="2DRAPQ">
-                <property role="2DPR8u" value="                // Only linear force " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gw" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.LINEAR_FORCE_RELATIVE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gx" role="2DRAPQ">
-                <property role="2DPR8u" value="                    entity.body.addRelForce(force[0], force[1], force[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gy" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gz" role="2DRAPQ">
-                <property role="2DPR8u" value="                else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g$" role="2DRAPQ">
-                <property role="2DPR8u" value="                    entity.body.addForce(force[0], force[1], force[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="g_" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gA" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gB" role="2DRAPQ">
-                <property role="2DPR8u" value="            else if (ForceMode.haveOne(mode, ForceMode.SKIP_LINEAR_FORCE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gC" role="2DRAPQ">
-                <property role="2DPR8u" value="                // Only torque " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gD" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.APPLICATION_POINT_RELATIVE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gE" role="2DRAPQ">
-                <property role="2DPR8u" value="                    const torque = Math3DHelper.computeTorque(force, applicationPoint);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gF" role="2DRAPQ">
-                <property role="2DPR8u" value="                    entity.body.addRelTorque(torque[0], torque[1], torque[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gG" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gH" role="2DRAPQ">
-                <property role="2DPR8u" value="                else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gI" role="2DRAPQ">
-                <property role="2DPR8u" value="                    const torque = Math3DHelper.computeTorque(force, Math3DHelper.relativePoint(entity, applicationPoint));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gJ" role="2DRAPQ">
-                <property role="2DPR8u" value="                    entity.body.addRelTorque(torque[0], torque[1], torque[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gK" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gL" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.TORQUE_RELATIVE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gM" role="2DRAPQ">
-                <property role="2DPR8u" value="                    entity.body.addRelTorque(moment[0], moment[1], moment[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gN" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gO" role="2DRAPQ">
-                <property role="2DPR8u" value="                else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gP" role="2DRAPQ">
-                <property role="2DPR8u" value="                    entity.body.addTorque(moment[0], moment[1], moment[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gQ" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gR" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gS" role="2DRAPQ">
-                <property role="2DPR8u" value="            else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gT" role="2DRAPQ">
-                <property role="2DPR8u" value="                // Both " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gU" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.LINEAR_FORCE_RELATIVE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gV" role="2DRAPQ">
-                <property role="2DPR8u" value="                    if (ForceMode.haveAll(mode, ForceMode.APPLICATION_POINT_RELATIVE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gW" role="2DRAPQ">
-                <property role="2DPR8u" value="                        entity.body.addRelForceAtRelPos(force[0], force[1], force[2], applicationPoint[0], applicationPoint[1], applicationPoint[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gX" role="2DRAPQ">
-                <property role="2DPR8u" value="                    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gY" role="2DRAPQ">
-                <property role="2DPR8u" value="                    else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="gZ" role="2DRAPQ">
-                <property role="2DPR8u" value="                        entity.body.addRelForceAtPos(force[0], force[1], force[2], applicationPoint[0], applicationPoint[1], applicationPoint[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h0" role="2DRAPQ">
-                <property role="2DPR8u" value="                    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h1" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h2" role="2DRAPQ">
-                <property role="2DPR8u" value="                else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h3" role="2DRAPQ">
-                <property role="2DPR8u" value="                    if (ForceMode.haveAll(mode, ForceMode.APPLICATION_POINT_RELATIVE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h4" role="2DRAPQ">
-                <property role="2DPR8u" value="                        entity.body.addForceAtRelPos(force[0], force[1], force[2], applicationPoint[0], applicationPoint[1], applicationPoint[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h5" role="2DRAPQ">
-                <property role="2DPR8u" value="                    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h6" role="2DRAPQ">
-                <property role="2DPR8u" value="                    else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h7" role="2DRAPQ">
-                <property role="2DPR8u" value="                        entity.body.addForceAtPos(force[0], force[1], force[2], applicationPoint[0], applicationPoint[1], applicationPoint[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h8" role="2DRAPQ">
-                <property role="2DPR8u" value="                    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h9" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ha" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.TORQUE_RELATIVE)) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hb" role="2DRAPQ">
-                <property role="2DPR8u" value="                    entity.body.addRelTorque(moment[0], moment[1], moment[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hc" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hd" role="2DRAPQ">
-                <property role="2DPR8u" value="                else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="he" role="2DRAPQ">
-                <property role="2DPR8u" value="                    entity.body.addTorque(moment[0], moment[1], moment[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hf" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hg" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hh" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hi" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceModeApplication.apply = apply;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hj" role="2DRAPQ">
-                <property role="2DPR8u" value="    })(ForceModeApplication || (ForceModeApplication = {}));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hk" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hl" role="2DRAPQ">
-                <property role="2DPR8u" value="    class PhysicalEntity extends VectorLike {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hm" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(world, name, scope) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hn" role="2DRAPQ">
-                <property role="2DPR8u" value="            super();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ho" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.world = world;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hp" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.name = name;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hq" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.scope = scope;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hr" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.massCached = -1;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hs" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.disabled = false;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ht" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.properties = {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hu" role="2DRAPQ">
-                <property role="2DPR8u" value="                pauseOnCollision: false," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hv" role="2DRAPQ">
-                <property role="2DPR8u" value="                collisionReaction: ElasticCollisionReaction.DEFAULT," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hw" role="2DRAPQ">
-                <property role="2DPR8u" value="                traceHandler: null" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hx" role="2DRAPQ">
-                <property role="2DPR8u" value="            };" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hy" role="2DRAPQ">
-                <property role="2DPR8u" value="            /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hz" role="2DRAPQ">
-                <property role="2DPR8u" value="             * Object containing the fixture properties" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h$" role="2DRAPQ">
-                <property role="2DPR8u" value="             */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="h_" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.propertiesBuilder = new PropertiesBuilder();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hA" role="2DRAPQ">
-                <property role="2DPR8u" value="            /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hB" role="2DRAPQ">
-                <property role="2DPR8u" value="             * Forces applied on the entity" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hC" role="2DRAPQ">
-                <property role="2DPR8u" value="             */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hD" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.forces = [];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hE" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Creating body " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hF" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.body = world.world.createBody();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hG" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hH" role="2DRAPQ">
-                <property role="2DPR8u" value="        get entity() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hI" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hJ" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hK" role="2DRAPQ">
-                <property role="2DPR8u" value="        /**" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hL" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Remove entity from the world" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hM" role="2DRAPQ">
-                <property role="2DPR8u" value="         */" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hN" role="2DRAPQ">
-                <property role="2DPR8u" value="        disable() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hO" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.fixture.geometry.destroy();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hP" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.body.disable();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hQ" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.disabled = true;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hR" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hS" role="2DRAPQ">
-                <property role="2DPR8u" value="        isDisabled() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hT" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.disabled;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hU" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hV" role="2DRAPQ">
-                <property role="2DPR8u" value="        computeStep() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hW" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.disabled) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hX" role="2DRAPQ">
-                <property role="2DPR8u" value="                return;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hY" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="hZ" role="2DRAPQ">
-                <property role="2DPR8u" value="            for (let force of this.forces) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i0" role="2DRAPQ">
-                <property role="2DPR8u" value="                let { linearForce, moment, applicationPoint, forceMode } = force.compute();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i1" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (linearForce == null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i2" role="2DRAPQ">
-                <property role="2DPR8u" value="                    linearForce = new Float32Array([0, 0, 0]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i3" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i4" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (moment == null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i5" role="2DRAPQ">
-                <property role="2DPR8u" value="                    moment = new Float32Array([0, 0, 0]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i6" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i7" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (applicationPoint == null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i8" role="2DRAPQ">
-                <property role="2DPR8u" value="                    applicationPoint = new Float32Array([0, 0, 0]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="i9" role="2DRAPQ">
-                <property role="2DPR8u" value="                    forceMode |= ForceMode.APPLICATION_POINT_RELATIVE;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ia" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ib" role="2DRAPQ">
-                <property role="2DPR8u" value="                ForceModeApplication.apply(forceMode, this, VectorHelper.toFloat32Array(linearForce), VectorHelper.toFloat32Array(moment), VectorHelper.toFloat32Array(applicationPoint));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ic" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="id" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Update trace if any " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ie" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.properties.traceHandler != null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="if" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.properties.traceHandler.computeStep(this.body.getPosition());" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ig" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ih" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ii" role="2DRAPQ">
-                <property role="2DPR8u" value="        applyLights(ctx, scale, scaledOffset) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ij" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.disabled) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ik" role="2DRAPQ">
-                <property role="2DPR8u" value="                return;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="il" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="im" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.fixture.emitLight) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="in" role="2DRAPQ">
-                <property role="2DPR8u" value="                const position = this.body.getPosition();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="io" role="2DRAPQ">
-                <property role="2DPR8u" value="                ctx.pointLight(255, 255, 255, (position[0] * scale + scaledOffset[0]), (position[1] * scale + scaledOffset[1]), (position[2] * scale + scaledOffset[2]));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ip" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iq" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ir" role="2DRAPQ">
-                <property role="2DPR8u" value="        setup(app, scale) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="is" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.fixture.setup(app, scale);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="it" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iu" role="2DRAPQ">
+              <node concept="2DRAP_" id="ed" role="2DRAPQ">
                 <property role="2DPR8u" value="        render(graphics, scale, scaledOffset) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iv" role="2DRAPQ">
-                <property role="2DPR8u" value="            var _a;" />
+              <node concept="2DRAP_" id="ee" role="2DRAPQ">
+                <property role="2DPR8u" value="            super.render(graphics, scale, scaledOffset);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iw" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.disabled) {" />
+              <node concept="2DRAP_" id="ef" role="2DRAPQ">
+                <property role="2DPR8u" value="            graphics.sphere(this.radius * scale);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ix" role="2DRAPQ">
-                <property role="2DPR8u" value="                return;" />
+              <node concept="2DRAP_" id="eg" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iy" role="2DRAPQ">
+              <node concept="2DRAP_" id="eh" role="2DRAPQ">
+                <property role="2DPR8u" value="        buildMass(massValue) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ei" role="2DRAPQ">
+                <property role="2DPR8u" value="            const mass = new ODE.Mass();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ej" role="2DRAPQ">
+                <property role="2DPR8u" value="            mass.setSphere(massValue / this.getVolume(), this.radius);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ek" role="2DRAPQ">
+                <property role="2DPR8u" value="            return mass;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="el" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="em" role="2DRAPQ">
+                <property role="2DPR8u" value="        setVolume(volume) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="en" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.radius = Math.pow(volume * 3 / (Math.PI * 4), 0.3333);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eo" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ep" role="2DRAPQ">
+                <property role="2DPR8u" value="        buildGeometry() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eq" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.world.space.createSphere(this.radius);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="er" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="es" role="2DRAPQ">
+                <property role="2DPR8u" value="        getVolume() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="et" role="2DRAPQ">
+                <property role="2DPR8u" value="            return Math.PI * Math.pow(this.radius, 3) * 4 / 3;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eu" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ev" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ew" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ex" role="2DRAPQ">
+                <property role="2DPR8u" value="    var PropKey;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ey" role="2DRAPQ">
+                <property role="2DPR8u" value="    (function (PropKey) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ez" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;SHAPE&quot;] = 0] = &quot;SHAPE&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="e$" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;SPHERE_RADIUS&quot;] = 1] = &quot;SPHERE_RADIUS&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="e_" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;BOX_X&quot;] = 2] = &quot;BOX_X&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eA" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;BOX_Y&quot;] = 3] = &quot;BOX_Y&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eB" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;BOX_Z&quot;] = 4] = &quot;BOX_Z&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eC" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;TEXTURE&quot;] = 5] = &quot;TEXTURE&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eD" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;EMIT_LIGHT&quot;] = 6] = &quot;EMIT_LIGHT&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eE" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;COLLISION_REACT&quot;] = 7] = &quot;COLLISION_REACT&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eF" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;TRACE&quot;] = 8] = &quot;TRACE&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eG" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey[PropKey[&quot;PAUSE_ON_COLLISION&quot;] = 9] = &quot;PAUSE_ON_COLLISION&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eH" role="2DRAPQ">
+                <property role="2DPR8u" value="    })(PropKey || (PropKey = {}));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eI" role="2DRAPQ">
+                <property role="2DPR8u" value="    class PropertiesBuilder {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eJ" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eK" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.properties = new Map();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eL" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eM" role="2DRAPQ">
+                <property role="2DPR8u" value="        set(name, value) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eN" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.properties.set(name, value);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eO" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eP" role="2DRAPQ">
+                <property role="2DPR8u" value="        get(key) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eQ" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.properties.get(key);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eR" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eS" role="2DRAPQ">
+                <property role="2DPR8u" value="        applyOn(world, entity) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eT" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Fixture " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eU" role="2DRAPQ">
+                <property role="2DPR8u" value="            let entityFixture;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eV" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (&quot;box&quot; == this.get(PropKey.SHAPE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eW" role="2DRAPQ">
+                <property role="2DPR8u" value="                entityFixture = new BoxFixture(world, this.get(PropKey.BOX_X), this.get(PropKey.BOX_Y), this.get(PropKey.BOX_Z), this.get(PropKey.TEXTURE));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="eX" role="2DRAPQ">
                 <property role="2DPR8u" value="            }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iz" role="2DRAPQ">
-                <property role="2DPR8u" value="            const position = this.body.getPosition();" />
+              <node concept="2DRAP_" id="eY" role="2DRAPQ">
+                <property role="2DPR8u" value="            else {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="i$" role="2DRAPQ">
-                <property role="2DPR8u" value="            graphics.push();" />
+              <node concept="2DRAP_" id="eZ" role="2DRAPQ">
+                <property role="2DPR8u" value="                entityFixture = new SphereFixture(world, this.get(PropKey.SPHERE_RADIUS), this.get(PropKey.TEXTURE));" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="i_" role="2DRAPQ">
-                <property role="2DPR8u" value="            graphics.translate((position[0] * scale + scaledOffset[0]), (position[1] * scale + scaledOffset[1]), (position[2] * scale + scaledOffset[2]));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iA" role="2DRAPQ">
-                <property role="2DPR8u" value="            // https://en.wikipedia.org/wiki/Rotation_matrix (https://en.wikipedia.org/wiki/Rotation_matrix) " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iB" role="2DRAPQ">
-                <property role="2DPR8u" value="            const rotation = this.body.getRotation().getArray();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iC" role="2DRAPQ">
-                <property role="2DPR8u" value="            graphics.applyMatrix(rotation[0], rotation[4], rotation[8], 0, rotation[1], rotation[5], rotation[9], 0, rotation[2], rotation[6], rotation[10], 0, 0, 0, 0, 1);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iD" role="2DRAPQ">
-                <property role="2DPR8u" value="            (_a = this.fixture) === null || _a === void 0 ? void 0 : _a.render(graphics, scale, scaledOffset);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iE" role="2DRAPQ">
-                <property role="2DPR8u" value="            graphics.pop();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iF" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Display trace if any " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iG" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.properties.traceHandler != null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iH" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.properties.traceHandler.render(graphics, scale, scaledOffset);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iI" role="2DRAPQ">
+              <node concept="2DRAP_" id="f0" role="2DRAPQ">
                 <property role="2DPR8u" value="            }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iJ" role="2DRAPQ">
+              <node concept="2DRAP_" id="f1" role="2DRAPQ">
+                <property role="2DPR8u" value="            entityFixture.emitLight = this.get(PropKey.EMIT_LIGHT);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="f2" role="2DRAPQ">
+                <property role="2DPR8u" value="            entity.fixture = entityFixture;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="f3" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Creating mass representation " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="f4" role="2DRAPQ">
+                <property role="2DPR8u" value="            entityFixture.bindToBody(entity.body, entity.getMass());" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="f5" role="2DRAPQ">
+                <property role="2DPR8u" value="            //  Add entity to the world " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="f6" role="2DRAPQ">
+                <property role="2DPR8u" value="            world.addEntity(entity);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="f7" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Collision reaction " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="f8" role="2DRAPQ">
+                <property role="2DPR8u" value="            entity.properties.collisionReaction = this.get(PropKey.COLLISION_REACT);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="f9" role="2DRAPQ">
+                <property role="2DPR8u" value="            entity.properties.pauseOnCollision = this.get(PropKey.PAUSE_ON_COLLISION);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fa" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Trace " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fb" role="2DRAPQ">
+                <property role="2DPR8u" value="            entity.properties.traceHandler = this.get(PropKey.TRACE);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fc" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iK" role="2DRAPQ">
-                <property role="2DPR8u" value="        setMass(value) {" />
+              <node concept="2DRAP_" id="fd" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iL" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.massCached = value;" />
+              <node concept="2DRAP_" id="fe" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iM" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+              <node concept="2DRAP_" id="ff" role="2DRAPQ">
+                <property role="2DPR8u" value="    var Math3DHelper;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iN" role="2DRAPQ">
-                <property role="2DPR8u" value="        x() {" />
+              <node concept="2DRAP_" id="fg" role="2DRAPQ">
+                <property role="2DPR8u" value="    (function (Math3DHelper) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="iO" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.body.getPosition()[0];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iP" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iQ" role="2DRAPQ">
-                <property role="2DPR8u" value="        y() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iR" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.body.getPosition()[1];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iS" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iT" role="2DRAPQ">
-                <property role="2DPR8u" value="        z() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iU" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.body.getPosition()[2];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iV" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iW" role="2DRAPQ">
-                <property role="2DPR8u" value="        getMass() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iX" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.massCached == -1) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iY" role="2DRAPQ">
-                <property role="2DPR8u" value="                console.error(&quot;no mass defined for &quot;, this.toString());" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="iZ" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j0" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.massCached;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j1" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j2" role="2DRAPQ">
-                <property role="2DPR8u" value="        getPosition() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j3" role="2DRAPQ">
-                <property role="2DPR8u" value="            return Vector.fromFloat32Array(this.body.getPosition());" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j4" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j5" role="2DRAPQ">
-                <property role="2DPR8u" value="        setPosition(pos) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j6" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.body.setPosition(pos.x(), pos.y(), pos.z());" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j7" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j8" role="2DRAPQ">
-                <property role="2DPR8u" value="        setVelocity(pos) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j9" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.body.setLinearVel(pos.x(), pos.y(), pos.z());" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ja" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jb" role="2DRAPQ">
-                <property role="2DPR8u" value="        getVelocity() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jc" role="2DRAPQ">
-                <property role="2DPR8u" value="            return Vector.fromFloat32Array(this.body.getLinearVel());" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jd" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="je" role="2DRAPQ">
+              <node concept="2DRAP_" id="fh" role="2DRAPQ">
                 <property role="2DPR8u" value="        /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="jf" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Initialize the object properties" />
+              <node concept="2DRAP_" id="fi" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Compute torque on object for a given force applied at some point" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="jg" role="2DRAPQ">
+              <node concept="2DRAP_" id="fj" role="2DRAPQ">
+                <property role="2DPR8u" value="         *" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fk" role="2DRAPQ">
+                <property role="2DPR8u" value="         * see https://en.wikipedia.org/wiki/Screw_theory" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fl" role="2DRAPQ">
                 <property role="2DPR8u" value="         */" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="jh" role="2DRAPQ">
-                <property role="2DPR8u" value="        init() {" />
+              <node concept="2DRAP_" id="fm" role="2DRAPQ">
+                <property role="2DPR8u" value="        function computeTorque(force, relativeApplicationPoint) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ji" role="2DRAPQ">
-                <property role="2DPR8u" value="            // To override " />
+              <node concept="2DRAP_" id="fn" role="2DRAPQ">
+                <property role="2DPR8u" value="            const leverX = relativeApplicationPoint[0];" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="jj" role="2DRAPQ">
+              <node concept="2DRAP_" id="fo" role="2DRAPQ">
+                <property role="2DPR8u" value="            const leverY = relativeApplicationPoint[1];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fp" role="2DRAPQ">
+                <property role="2DPR8u" value="            const leverZ = relativeApplicationPoint[2];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fq" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Mb = Ma + BA ∧ F const Ma: with = 0, BA above vector components and F the force " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fr" role="2DRAPQ">
+                <property role="2DPR8u" value="            return new Float32Array([leverY * force[2] - leverZ * force[1], leverZ * force[0] - leverX * force[2], leverX * force[1] - leverY * force[0]]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fs" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="jk" role="2DRAPQ">
-                <property role="2DPR8u" value="        build() {" />
+              <node concept="2DRAP_" id="ft" role="2DRAPQ">
+                <property role="2DPR8u" value="        Math3DHelper.computeTorque = computeTorque;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="jl" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Build fixture and other properties " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jm" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.propertiesBuilder.applyOn(this.world, this);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jn" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jo" role="2DRAPQ">
-                <property role="2DPR8u" value="        equals(other) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jp" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this === other;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jq" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jr" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="js" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jt" role="2DRAPQ">
-                <property role="2DPR8u" value="    class ImageTexture {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ju" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(url) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jv" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.url = url;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jw" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.loadedImage = null;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jx" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jy" role="2DRAPQ">
-                <property role="2DPR8u" value="        setup(applet, emissive) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jz" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.loadedImage = applet.loadImage(this.url);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j$" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="j_" role="2DRAPQ">
-                <property role="2DPR8u" value="        apply(applet, emissive) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jA" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Apply texture on current state (will be removed on next pop())" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jB" role="2DRAPQ">
-                <property role="2DPR8u" value="            applet.texture(this.loadedImage);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jC" role="2DRAPQ">
-                <property role="2DPR8u" value="            applet.noStroke();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jD" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (emissive) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jE" role="2DRAPQ">
-                <property role="2DPR8u" value="                // Disable lights for the current object (same as displaying it as fully emissive)" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jF" role="2DRAPQ">
-                <property role="2DPR8u" value="                applet.noLights();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jG" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jH" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jI" role="2DRAPQ">
-                <property role="2DPR8u" value="        mergeWith(other, participation) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jJ" role="2DRAPQ">
-                <property role="2DPR8u" value="            // No simple way to merge an image texture " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jK" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (participation &gt; 0.5) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jL" role="2DRAPQ">
-                <property role="2DPR8u" value="                return this;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jM" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jN" role="2DRAPQ">
-                <property role="2DPR8u" value="            else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jO" role="2DRAPQ">
-                <property role="2DPR8u" value="                return other;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jP" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jQ" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jR" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jS" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jT" role="2DRAPQ">
-                <property role="2DPR8u" value="    class SystemScope extends VectorLike {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jU" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(world, initialPosition, initialVelocity, initialRotation) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jV" role="2DRAPQ">
-                <property role="2DPR8u" value="            super();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jW" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.world = world;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jX" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.initialPosition = initialPosition;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jY" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.initialVelocity = initialVelocity;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="jZ" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.initialRotation = initialRotation;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k0" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.nested = new Array();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k1" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.computedMass = null;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k2" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k3" role="2DRAPQ">
-                <property role="2DPR8u" value="        get scope() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k4" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k5" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k6" role="2DRAPQ">
-                <property role="2DPR8u" value="        withEntity(entity) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k7" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.nested.push(entity);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k8" role="2DRAPQ">
-                <property role="2DPR8u" value="            return entity;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k9" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ka" role="2DRAPQ">
+              <node concept="2DRAP_" id="fu" role="2DRAPQ">
                 <property role="2DPR8u" value="        /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="kb" role="2DRAPQ">
-                <property role="2DPR8u" value="         * Compute the absolute initial position compared to a relative one" />
+              <node concept="2DRAP_" id="fv" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Apply the object rotation/position on the given vector" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="kc" role="2DRAPQ">
+              <node concept="2DRAP_" id="fw" role="2DRAPQ">
                 <property role="2DPR8u" value="         */" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="kd" role="2DRAPQ">
-                <property role="2DPR8u" value="        getAbsoluteInitialPosition(position) {" />
+              <node concept="2DRAP_" id="fx" role="2DRAPQ">
+                <property role="2DPR8u" value="        function relativePoint(object, vector) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="ke" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.initialRotation != null) {" />
+              <node concept="2DRAP_" id="fy" role="2DRAPQ">
+                <property role="2DPR8u" value="            return object.body.getRelPosPoint(vector[0], vector[1], vector[2]);" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="kf" role="2DRAPQ">
-                <property role="2DPR8u" value="                position = VectorHelper.rotateWith(position, this.initialRotation);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kg" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kh" role="2DRAPQ">
-                <property role="2DPR8u" value="            return position.add(this.initialPosition);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ki" role="2DRAPQ">
+              <node concept="2DRAP_" id="fz" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="kj" role="2DRAPQ">
-                <property role="2DPR8u" value="        getAbsoluteInitialVelocity(velocity) {" />
+              <node concept="2DRAP_" id="f$" role="2DRAPQ">
+                <property role="2DPR8u" value="        Math3DHelper.relativePoint = relativePoint;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="kk" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Rotated velocity + initial velocity " />
+              <node concept="2DRAP_" id="f_" role="2DRAPQ">
+                <property role="2DPR8u" value="    })(Math3DHelper || (Math3DHelper = {}));" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="kl" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.initialRotation != null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="km" role="2DRAPQ">
-                <property role="2DPR8u" value="                velocity = VectorHelper.rotateWith(velocity, this.initialRotation);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kn" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ko" role="2DRAPQ">
-                <property role="2DPR8u" value="            return velocity.add(this.initialVelocity);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kp" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kq" role="2DRAPQ">
-                <property role="2DPR8u" value="        build() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kr" role="2DRAPQ">
-                <property role="2DPR8u" value="            for (let entity of this.nested) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ks" role="2DRAPQ">
-                <property role="2DPR8u" value="                entity.build();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kt" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ku" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kv" role="2DRAPQ">
-                <property role="2DPR8u" value="        getMass() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kw" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.computedMass == null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kx" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.computedMass = 0;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ky" role="2DRAPQ">
-                <property role="2DPR8u" value="                for (let entity of this.nested) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kz" role="2DRAPQ">
-                <property role="2DPR8u" value="                    this.computedMass = this.computedMass + entity.getMass();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k$" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="k_" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kA" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.computedMass;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kB" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kC" role="2DRAPQ">
-                <property role="2DPR8u" value="        getPosition() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kD" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Return position of the scope as center of mass " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kE" role="2DRAPQ">
-                <property role="2DPR8u" value="            let position = Vector.ZERO;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kF" role="2DRAPQ">
-                <property role="2DPR8u" value="            for (let entity of this.nested) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kG" role="2DRAPQ">
-                <property role="2DPR8u" value="                position = position.add(entity.getPosition().mul(entity.getMass()));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kH" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kI" role="2DRAPQ">
-                <property role="2DPR8u" value="            return position.mul(1 / this.getMass());" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kJ" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kK" role="2DRAPQ">
-                <property role="2DPR8u" value="        x() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kL" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.initialPosition.x();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kM" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kN" role="2DRAPQ">
-                <property role="2DPR8u" value="        y() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kO" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.initialPosition.y();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kP" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kQ" role="2DRAPQ">
-                <property role="2DPR8u" value="        z() {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kR" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.initialPosition.z();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kS" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kT" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kU" role="2DRAPQ">
+              <node concept="2DRAP_" id="fA" role="2DRAPQ">
                 <property role="2DPR8u" value="" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="kV" role="2DRAPQ">
-                <property role="2DPR8u" value="    class InternalColor {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kW" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(r, g, b) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kX" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.r = r;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kY" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.g = g;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="kZ" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.b = b;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l0" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l1" role="2DRAPQ">
-                <property role="2DPR8u" value="        merge(selfRatio, color) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l2" role="2DRAPQ">
-                <property role="2DPR8u" value="            const rev = 1 - selfRatio;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l3" role="2DRAPQ">
-                <property role="2DPR8u" value="            return new InternalColor(this.r * selfRatio + color.r * rev, this.g * selfRatio + color.g * rev, this.b * selfRatio + color.b * rev);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l4" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l5" role="2DRAPQ">
-                <property role="2DPR8u" value="        toInt(applet) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l6" role="2DRAPQ">
-                <property role="2DPR8u" value="            return applet.color(this.r, this.g, this.b);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l7" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l8" role="2DRAPQ">
-                <property role="2DPR8u" value="        static merge(left, right, leftRatio) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l9" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (left == null &amp;&amp; right == null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="la" role="2DRAPQ">
-                <property role="2DPR8u" value="                return null;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lb" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lc" role="2DRAPQ">
-                <property role="2DPR8u" value="            const rev = 1 - leftRatio;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ld" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (left == null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="le" role="2DRAPQ">
-                <property role="2DPR8u" value="                left = new InternalColor(0, 0, 0);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lf" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lg" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (right == null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lh" role="2DRAPQ">
-                <property role="2DPR8u" value="                right = new InternalColor(0, 0, 0);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="li" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lj" role="2DRAPQ">
-                <property role="2DPR8u" value="            return new InternalColor((left.r * leftRatio + right.r * rev), (left.g * leftRatio + right.g * rev), (left.b * leftRatio + right.b * rev));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lk" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ll" role="2DRAPQ">
-                <property role="2DPR8u" value="        updateMetric(element) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lm" role="2DRAPQ">
-                <property role="2DPR8u" value="            element.style.backgroundColor = `rgb(${this.r}, ${this.g}, ${this.b})`;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ln" role="2DRAPQ">
-                <property role="2DPR8u" value="            element.style.display = &quot;inline-block&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lo" role="2DRAPQ">
-                <property role="2DPR8u" value="            element.style.width = &quot;1.5em&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lp" role="2DRAPQ">
-                <property role="2DPR8u" value="            element.style.height = &quot;1.5em&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lq" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lr" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ls" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lt" role="2DRAPQ">
-                <property role="2DPR8u" value="    class ColorTexture {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lu" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(fill, stroke) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lv" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.fill = fill;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lw" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.stroke = stroke;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lx" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ly" role="2DRAPQ">
-                <property role="2DPR8u" value="        setup(applet, emissive) { }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lz" role="2DRAPQ">
-                <property role="2DPR8u" value="        apply(applet, emissive) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l$" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.fill != null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="l_" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (emissive) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lA" role="2DRAPQ">
-                <property role="2DPR8u" value="                    applet.emissiveMaterial(this.fill.toInt(applet));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lB" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lC" role="2DRAPQ">
-                <property role="2DPR8u" value="                applet.fill(this.fill.toInt(applet));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lD" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lE" role="2DRAPQ">
-                <property role="2DPR8u" value="            else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lF" role="2DRAPQ">
-                <property role="2DPR8u" value="                applet.noFill();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lG" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lH" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.stroke != null) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lI" role="2DRAPQ">
-                <property role="2DPR8u" value="                applet.stroke(this.stroke.toInt(applet));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lJ" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lK" role="2DRAPQ">
-                <property role="2DPR8u" value="            else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lL" role="2DRAPQ">
-                <property role="2DPR8u" value="                applet.noStroke();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lM" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lN" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lO" role="2DRAPQ">
-                <property role="2DPR8u" value="        mergeWith(other, participation) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lP" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (other instanceof ColorTexture) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lQ" role="2DRAPQ">
-                <property role="2DPR8u" value="                return new ColorTexture(InternalColor.merge(this.fill, other.fill, participation), InternalColor.merge(this.stroke, other.stroke, participation));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lR" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lS" role="2DRAPQ">
-                <property role="2DPR8u" value="            else if (participation &gt; 0.5) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lT" role="2DRAPQ">
-                <property role="2DPR8u" value="                return this;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lU" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lV" role="2DRAPQ">
-                <property role="2DPR8u" value="            else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lW" role="2DRAPQ">
-                <property role="2DPR8u" value="                return other;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lX" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lY" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="lZ" role="2DRAPQ">
-                <property role="2DPR8u" value="        updateMetric(element) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m0" role="2DRAPQ">
-                <property role="2DPR8u" value="            element.style.display = &quot;inline-block&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m1" role="2DRAPQ">
-                <property role="2DPR8u" value="            element.style.width = &quot;1.5em&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m2" role="2DRAPQ">
-                <property role="2DPR8u" value="            element.style.height = &quot;1.5em&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m3" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.fill) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m4" role="2DRAPQ">
-                <property role="2DPR8u" value="                element.style.backgroundColor = `rgb(${this.fill.r}, ${this.fill.g}, ${this.fill.b})`;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m5" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m6" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.stroke) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m7" role="2DRAPQ">
-                <property role="2DPR8u" value="                element.style.borderWidth = &quot;2px&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m8" role="2DRAPQ">
-                <property role="2DPR8u" value="                element.style.borderColor = `rgb(${this.stroke.r}, ${this.stroke.g}, ${this.stroke.b})`;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m9" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ma" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mb" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mc" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="md" role="2DRAPQ">
-                <property role="2DPR8u" value="    var SimpleCollisionReaction;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="me" role="2DRAPQ">
-                <property role="2DPR8u" value="    (function (SimpleCollisionReaction) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mf" role="2DRAPQ">
-                <property role="2DPR8u" value="        SimpleCollisionReaction.DISAPPEAR = {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mg" role="2DRAPQ">
-                <property role="2DPR8u" value="            react: function (world, first, second, oneFirst) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mh" role="2DRAPQ">
-                <property role="2DPR8u" value="                first.entity.disable();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mi" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (second.entity.properties.collisionReaction == SimpleCollisionReaction.DISAPPEAR) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mj" role="2DRAPQ">
-                <property role="2DPR8u" value="                    second.entity.disable();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mk" role="2DRAPQ">
-                <property role="2DPR8u" value="                }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ml" role="2DRAPQ">
-                <property role="2DPR8u" value="            }," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mm" role="2DRAPQ">
-                <property role="2DPR8u" value="            priority: -100," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mn" role="2DRAPQ">
-                <property role="2DPR8u" value="            preventDifferentReaction: true" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mo" role="2DRAPQ">
-                <property role="2DPR8u" value="        };" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mp" role="2DRAPQ">
-                <property role="2DPR8u" value="        SimpleCollisionReaction.MERGE = {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mq" role="2DRAPQ">
-                <property role="2DPR8u" value="            react: function (world, first, second, oneFirst) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mr" role="2DRAPQ">
-                <property role="2DPR8u" value="                // Run the method oustide of a simulation step" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ms" role="2DRAPQ">
-                <property role="2DPR8u" value="                world.safeCallbacks.push(() =&gt; {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mt" role="2DRAPQ">
-                <property role="2DPR8u" value="                    first.entity.name = first.entity.name + &quot; + &quot; + second.entity.name;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mu" role="2DRAPQ">
-                <property role="2DPR8u" value="                    first.entity.fixture.mergeWith(second.entity.fixture, first.entity.getMass(), second.entity.getMass());" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mv" role="2DRAPQ">
-                <property role="2DPR8u" value="                    second.entity.disable();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mw" role="2DRAPQ">
-                <property role="2DPR8u" value="                });" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mx" role="2DRAPQ">
-                <property role="2DPR8u" value="            }," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="my" role="2DRAPQ">
-                <property role="2DPR8u" value="            priority: -300," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mz" role="2DRAPQ">
-                <property role="2DPR8u" value="            preventDifferentReaction: true" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m$" role="2DRAPQ">
-                <property role="2DPR8u" value="        };" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="m_" role="2DRAPQ">
-                <property role="2DPR8u" value="        SimpleCollisionReaction.IGNORE = {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mA" role="2DRAPQ">
-                <property role="2DPR8u" value="            react: function () { }," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mB" role="2DRAPQ">
-                <property role="2DPR8u" value="            preventDifferentReaction: false," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mC" role="2DRAPQ">
-                <property role="2DPR8u" value="            priority: -10000" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mD" role="2DRAPQ">
-                <property role="2DPR8u" value="        };" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mE" role="2DRAPQ">
-                <property role="2DPR8u" value="    })(SimpleCollisionReaction || (SimpleCollisionReaction = {}));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mF" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="mG" role="2DRAPQ">
+              <node concept="2DRAP_" id="fB" role="2DRAPQ">
                 <property role="2DPR8u" value="    /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mH" role="2DRAPQ">
-                <property role="2DPR8u" value="     * Force that do not change over time" />
+              <node concept="2DRAP_" id="fC" role="2DRAPQ">
+                <property role="2DPR8u" value="     * Constants class to define how the force and its properties are" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mI" role="2DRAPQ">
+              <node concept="2DRAP_" id="fD" role="2DRAPQ">
+                <property role="2DPR8u" value="     * applied to an object" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="fE" role="2DRAPQ">
                 <property role="2DPR8u" value="     */" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mJ" role="2DRAPQ">
-                <property role="2DPR8u" value="    class ForceMapper {" />
+              <node concept="2DRAP_" id="fF" role="2DRAPQ">
+                <property role="2DPR8u" value="    var ForceMode;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mK" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(context, computeMethod) {" />
+              <node concept="2DRAP_" id="fG" role="2DRAPQ">
+                <property role="2DPR8u" value="    (function (ForceMode) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mL" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.context = context;" />
+              <node concept="2DRAP_" id="fH" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMode.NONE = 0;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mM" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.computeMethod = computeMethod;" />
+              <node concept="2DRAP_" id="fI" role="2DRAPQ">
+                <property role="2DPR8u" value="        /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mN" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+              <node concept="2DRAP_" id="fJ" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Mode flag to not apply the torque from the force on the object" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mO" role="2DRAPQ">
-                <property role="2DPR8u" value="        compute(...args) {" />
+              <node concept="2DRAP_" id="fK" role="2DRAPQ">
+                <property role="2DPR8u" value="         */" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mP" role="2DRAPQ">
-                <property role="2DPR8u" value="            return this.computeMethod(this.context, this, ...args);" />
+              <node concept="2DRAP_" id="fL" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMode.SKIP_TORQUE = 1 &lt;&lt; 0;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mQ" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+              <node concept="2DRAP_" id="fM" role="2DRAPQ">
+                <property role="2DPR8u" value="        /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mR" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
+              <node concept="2DRAP_" id="fN" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Mode flag to not apply the linear force on the object" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mS" role="2DRAPQ">
-                <property role="2DPR8u" value="    class CachedForceMapper extends ForceMapper {" />
+              <node concept="2DRAP_" id="fO" role="2DRAPQ">
+                <property role="2DPR8u" value="         */" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mT" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(context, computeMethod) {" />
+              <node concept="2DRAP_" id="fP" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMode.SKIP_LINEAR_FORCE = 1 &lt;&lt; 1;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mU" role="2DRAPQ">
-                <property role="2DPR8u" value="            super(context, computeMethod);" />
+              <node concept="2DRAP_" id="fQ" role="2DRAPQ">
+                <property role="2DPR8u" value="        /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mV" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.cache = null;" />
+              <node concept="2DRAP_" id="fR" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Mode flag to set the linear force rotated like the object" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mW" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+              <node concept="2DRAP_" id="fS" role="2DRAPQ">
+                <property role="2DPR8u" value="         */" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mX" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
+              <node concept="2DRAP_" id="fT" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMode.LINEAR_FORCE_RELATIVE = 1 &lt;&lt; 2;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mY" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
+              <node concept="2DRAP_" id="fU" role="2DRAPQ">
+                <property role="2DPR8u" value="        /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="mZ" role="2DRAPQ">
-                <property role="2DPR8u" value="    class TraceHandler {" />
+              <node concept="2DRAP_" id="fV" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Mode flag to set the torque/moment rotated like the object" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n0" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(aspect) {" />
+              <node concept="2DRAP_" id="fW" role="2DRAPQ">
+                <property role="2DPR8u" value="         */" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n1" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.aspect = aspect;" />
+              <node concept="2DRAP_" id="fX" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMode.TORQUE_RELATIVE = 1 &lt;&lt; 3;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n2" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.scale = -1;" />
+              <node concept="2DRAP_" id="fY" role="2DRAPQ">
+                <property role="2DPR8u" value="        /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n3" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.unscaledCache = [];" />
+              <node concept="2DRAP_" id="fZ" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Mode flag to set the application point relative to the object position" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n4" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
+              <node concept="2DRAP_" id="g0" role="2DRAPQ">
+                <property role="2DPR8u" value="         */" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n5" role="2DRAPQ">
-                <property role="2DPR8u" value="        computeStep(newPositions) {" />
+              <node concept="2DRAP_" id="g1" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMode.APPLICATION_POINT_RELATIVE = 1 &lt;&lt; 4;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n6" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.scale === -1) {" />
+              <node concept="2DRAP_" id="g2" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMode.DEFAULT = ForceMode.APPLICATION_POINT_RELATIVE;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n7" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.unscaledCache.push(newPositions);" />
+              <node concept="2DRAP_" id="g3" role="2DRAPQ">
+                <property role="2DPR8u" value="        function haveOne(mode, ...expected) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n8" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
+              <node concept="2DRAP_" id="g4" role="2DRAPQ">
+                <property role="2DPR8u" value="            for (let i = 0; i &lt; expected.length; i++) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="n9" role="2DRAPQ">
-                <property role="2DPR8u" value="            else {" />
+              <node concept="2DRAP_" id="g5" role="2DRAPQ">
+                <property role="2DPR8u" value="                if ((mode &amp; expected[i]) == expected[i]) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="na" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.write(newPositions, this.scale);" />
+              <node concept="2DRAP_" id="g6" role="2DRAPQ">
+                <property role="2DPR8u" value="                    return true;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="nb" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nc" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nd" role="2DRAPQ">
-                <property role="2DPR8u" value="        render(ctx, scale, scaledOffset) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ne" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.scale == -1) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nf" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.scale = scale;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ng" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.unscaledCache.forEach(it =&gt; this.write(it, this.scale));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nh" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ni" role="2DRAPQ">
-                <property role="2DPR8u" value="            // Display history " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nj" role="2DRAPQ">
-                <property role="2DPR8u" value="            ctx.noFill();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nk" role="2DRAPQ">
-                <property role="2DPR8u" value="            ctx.stroke(this.aspect.r, this.aspect.g, this.aspect.b);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nl" role="2DRAPQ">
-                <property role="2DPR8u" value="            ctx.push();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nm" role="2DRAPQ">
-                <property role="2DPR8u" value="            ctx.translate(scaledOffset[0], scaledOffset[1], scaledOffset[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nn" role="2DRAPQ">
-                <property role="2DPR8u" value="            ctx.beginShape(ctx.LINE_STRIP);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="no" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.vertices(ctx);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="np" role="2DRAPQ">
-                <property role="2DPR8u" value="            ctx.endShape();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nq" role="2DRAPQ">
-                <property role="2DPR8u" value="            ctx.pop();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nr" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ns" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nt" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nu" role="2DRAPQ">
-                <property role="2DPR8u" value="    const MAX_CAPACITY = 200;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nv" role="2DRAPQ">
-                <property role="2DPR8u" value="    class FiniteTraceHandler extends TraceHandler {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nw" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(aspect) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nx" role="2DRAPQ">
-                <property role="2DPR8u" value="            super(aspect);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ny" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.content = [];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nz" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.offset = 0;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="n$" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.currentCapacity = 0;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="n_" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nA" role="2DRAPQ">
-                <property role="2DPR8u" value="        writeAt(positions, cursor, scale) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nB" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.content[cursor] = [" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nC" role="2DRAPQ">
-                <property role="2DPR8u" value="                positions[0] * scale," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nD" role="2DRAPQ">
-                <property role="2DPR8u" value="                positions[1] * scale," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nE" role="2DRAPQ">
-                <property role="2DPR8u" value="                positions[2] * scale" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nF" role="2DRAPQ">
-                <property role="2DPR8u" value="            ];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nG" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nH" role="2DRAPQ">
-                <property role="2DPR8u" value="        write(positions, scale) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nI" role="2DRAPQ">
-                <property role="2DPR8u" value="            if (this.currentCapacity &lt; MAX_CAPACITY) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nJ" role="2DRAPQ">
-                <property role="2DPR8u" value="                // Write and increase capacity " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nK" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.writeAt(positions, this.currentCapacity, scale);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nL" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.currentCapacity += 1;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nM" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nN" role="2DRAPQ">
-                <property role="2DPR8u" value="            else {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nO" role="2DRAPQ">
-                <property role="2DPR8u" value="                // Write and shift offset " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nP" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.writeAt(positions, this.offset, scale);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nQ" role="2DRAPQ">
-                <property role="2DPR8u" value="                this.offset += 1;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nR" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (this.offset &gt;= MAX_CAPACITY) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nS" role="2DRAPQ">
-                <property role="2DPR8u" value="                    this.offset = 0;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="nT" role="2DRAPQ">
+              <node concept="2DRAP_" id="g7" role="2DRAPQ">
                 <property role="2DPR8u" value="                }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="nU" role="2DRAPQ">
+              <node concept="2DRAP_" id="g8" role="2DRAPQ">
                 <property role="2DPR8u" value="            }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="nV" role="2DRAPQ">
+              <node concept="2DRAP_" id="g9" role="2DRAPQ">
+                <property role="2DPR8u" value="            return false;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ga" role="2DRAPQ">
                 <property role="2DPR8u" value="        }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="nW" role="2DRAPQ">
-                <property role="2DPR8u" value="        vertices(ctx) {" />
+              <node concept="2DRAP_" id="gb" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMode.haveOne = haveOne;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="nX" role="2DRAPQ">
-                <property role="2DPR8u" value="            for (let i = 0; i &lt; this.currentCapacity; i++) {" />
+              <node concept="2DRAP_" id="gc" role="2DRAPQ">
+                <property role="2DPR8u" value="        function haveAll(mode, ...expected) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="nY" role="2DRAPQ">
-                <property role="2DPR8u" value="                const cursor = (i + this.offset) % MAX_CAPACITY;" />
+              <node concept="2DRAP_" id="gd" role="2DRAPQ">
+                <property role="2DPR8u" value="            for (let i = 0; i &lt; expected.length; i++) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="nZ" role="2DRAPQ">
-                <property role="2DPR8u" value="                ctx.vertex(this.content[cursor][0], this.content[cursor][1], this.content[cursor][2]);" />
+              <node concept="2DRAP_" id="ge" role="2DRAPQ">
+                <property role="2DPR8u" value="                if ((mode &amp; expected[i]) != expected[i]) {" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="o0" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
+              <node concept="2DRAP_" id="gf" role="2DRAPQ">
+                <property role="2DPR8u" value="                    return false;" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="o1" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o2" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o3" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o4" role="2DRAPQ">
-                <property role="2DPR8u" value="    class InfiniteTraceHandler extends TraceHandler {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o5" role="2DRAPQ">
-                <property role="2DPR8u" value="        constructor(aspect) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o6" role="2DRAPQ">
-                <property role="2DPR8u" value="            super(aspect);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o7" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.content = new Array();" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o8" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o9" role="2DRAPQ">
-                <property role="2DPR8u" value="        write(positions, scale) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oa" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.content.push([(positions[0] * scale), (positions[1] * scale), (positions[2] * scale)]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ob" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oc" role="2DRAPQ">
-                <property role="2DPR8u" value="        vertices(ctx) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="od" role="2DRAPQ">
-                <property role="2DPR8u" value="            this.content.forEach(vals =&gt; {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oe" role="2DRAPQ">
-                <property role="2DPR8u" value="                ctx.vertex(vals[0], vals[1], vals[2]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="of" role="2DRAPQ">
-                <property role="2DPR8u" value="            });" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="og" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oh" role="2DRAPQ">
-                <property role="2DPR8u" value="    }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oi" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oj" role="2DRAPQ">
-                <property role="2DPR8u" value="    var RotationHelper;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ok" role="2DRAPQ">
-                <property role="2DPR8u" value="    (function (RotationHelper) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ol" role="2DRAPQ">
-                <property role="2DPR8u" value="        function toMatrix(col1, col2, col3) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="om" role="2DRAPQ">
-                <property role="2DPR8u" value="            return new ODE.Rotation().setArray([col1.x(), col2.x(), col3.x(), col1.y(), col2.y(), col3.y(), col1.z(), col2.z(), col3.z()]);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="on" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oo" role="2DRAPQ">
-                <property role="2DPR8u" value="        RotationHelper.toMatrix = toMatrix;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="op" role="2DRAPQ">
-                <property role="2DPR8u" value="        function fromAxisAngle(axis, angle) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oq" role="2DRAPQ">
-                <property role="2DPR8u" value="            return new ODE.Rotation().fromAxisAndAngle(axis.x(), axis.y(), axis.z(), angle);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="or" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="os" role="2DRAPQ">
-                <property role="2DPR8u" value="        RotationHelper.fromAxisAngle = fromAxisAngle;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ot" role="2DRAPQ">
-                <property role="2DPR8u" value="        function fromEulerAngles(a1, a2, a3) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ou" role="2DRAPQ">
-                <property role="2DPR8u" value="            return new ODE.Rotation().fromEulerAngles(a1, a2, a3);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ov" role="2DRAPQ">
-                <property role="2DPR8u" value="        }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ow" role="2DRAPQ">
-                <property role="2DPR8u" value="        RotationHelper.fromEulerAngles = fromEulerAngles;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="ox" role="2DRAPQ">
-                <property role="2DPR8u" value="    })(RotationHelper || (RotationHelper = {}));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oy" role="2DRAPQ">
-                <property role="2DPR8u" value="" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oz" role="2DRAPQ">
-                <property role="2DPR8u" value="    let Physics = {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o$" role="2DRAPQ">
-                <property role="2DPR8u" value="        VectorHelper," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="o_" role="2DRAPQ">
-                <property role="2DPR8u" value="        RotationHelper," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oA" role="2DRAPQ">
-                <property role="2DPR8u" value="        VectorLike," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oB" role="2DRAPQ">
-                <property role="2DPR8u" value="        Vector," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oC" role="2DRAPQ">
-                <property role="2DPR8u" value="        InternalColor," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oD" role="2DRAPQ">
-                <property role="2DPR8u" value="        ElasticCollisionReaction," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oE" role="2DRAPQ">
-                <property role="2DPR8u" value="        SimpleCollisionReaction," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oF" role="2DRAPQ">
-                <property role="2DPR8u" value="        ColorTexture," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oG" role="2DRAPQ">
-                <property role="2DPR8u" value="        Simulation," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oH" role="2DRAPQ">
-                <property role="2DPR8u" value="        ImageTexture," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oI" role="2DRAPQ">
-                <property role="2DPR8u" value="        PhysicalEntity," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oJ" role="2DRAPQ">
-                <property role="2DPR8u" value="        SystemScope," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oK" role="2DRAPQ">
-                <property role="2DPR8u" value="        FiniteTraceHandler," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oL" role="2DRAPQ">
-                <property role="2DPR8u" value="        InfiniteTraceHandler," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oM" role="2DRAPQ">
-                <property role="2DPR8u" value="        World," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oN" role="2DRAPQ">
-                <property role="2DPR8u" value="        PropKey," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oO" role="2DRAPQ">
-                <property role="2DPR8u" value="        ForceMapper," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oP" role="2DRAPQ">
-                <property role="2DPR8u" value="        CachedForceMapper," />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oQ" role="2DRAPQ">
-                <property role="2DPR8u" value="        makeRenderer: () =&gt; __awaiter(void 0, void 0, void 0, function* () {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oR" role="2DRAPQ">
-                <property role="2DPR8u" value="            const container = document.getElementById(&quot;simulations&quot;);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oS" role="2DRAPQ">
-                <property role="2DPR8u" value="            const simulations = [];" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oT" role="2DRAPQ">
-                <property role="2DPR8u" value="            const loadingElement = document.getElementById(&quot;loading&quot;);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oU" role="2DRAPQ">
-                <property role="2DPR8u" value="            loadingElement.innerText = &quot;loading textures and setting up properties...&quot;;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oV" role="2DRAPQ">
-                <property role="2DPR8u" value="            for (let simClass of Physics.simulationClasses) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oW" role="2DRAPQ">
-                <property role="2DPR8u" value="                simulations.push(yield Simulation.create(container, simClass, 1 / Physics.simulationClasses.length));" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oX" role="2DRAPQ">
-                <property role="2DPR8u" value="            }" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oY" role="2DRAPQ">
-                <property role="2DPR8u" value="            document.onkeypress = (event) =&gt; {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="oZ" role="2DRAPQ">
-                <property role="2DPR8u" value="                // Space bar " />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="p0" role="2DRAPQ">
-                <property role="2DPR8u" value="                if (event.key == &quot; &quot;) {" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="p1" role="2DRAPQ">
-                <property role="2DPR8u" value="                    const paused = simulations[0].simulation.world.paused;" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="p2" role="2DRAPQ">
-                <property role="2DPR8u" value="                    simulations.forEach(it =&gt; it.simulation.world.paused = !paused);" />
-                <uo k="s:originTrace" v="n:104" />
-              </node>
-              <node concept="2DRAP_" id="p3" role="2DRAPQ">
+              <node concept="2DRAP_" id="gg" role="2DRAPQ">
                 <property role="2DPR8u" value="                }" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="p4" role="2DRAPQ">
+              <node concept="2DRAP_" id="gh" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gi" role="2DRAPQ">
+                <property role="2DPR8u" value="            return true;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gj" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gk" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMode.haveAll = haveAll;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gl" role="2DRAPQ">
+                <property role="2DPR8u" value="    })(ForceMode || (ForceMode = {}));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gm" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gn" role="2DRAPQ">
+                <property role="2DPR8u" value="    var ForceModeApplication;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="go" role="2DRAPQ">
+                <property role="2DPR8u" value="    (function (ForceModeApplication) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gp" role="2DRAPQ">
+                <property role="2DPR8u" value="        /**" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gq" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Combination of all possible force modes" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gr" role="2DRAPQ">
+                <property role="2DPR8u" value="         */" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gs" role="2DRAPQ">
+                <property role="2DPR8u" value="        function apply(mode, entity, force, moment, applicationPoint) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gt" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (ForceMode.haveAll(mode, ForceMode.SKIP_TORQUE, ForceMode.SKIP_LINEAR_FORCE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gu" role="2DRAPQ">
+                <property role="2DPR8u" value="                return;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gv" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gw" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (ForceMode.haveOne(mode, ForceMode.SKIP_TORQUE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gx" role="2DRAPQ">
+                <property role="2DPR8u" value="                // Only linear force " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gy" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.LINEAR_FORCE_RELATIVE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gz" role="2DRAPQ">
+                <property role="2DPR8u" value="                    entity.body.addRelForce(force[0], force[1], force[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="g$" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="g_" role="2DRAPQ">
+                <property role="2DPR8u" value="                else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gA" role="2DRAPQ">
+                <property role="2DPR8u" value="                    entity.body.addForce(force[0], force[1], force[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gB" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gC" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gD" role="2DRAPQ">
+                <property role="2DPR8u" value="            else if (ForceMode.haveOne(mode, ForceMode.SKIP_LINEAR_FORCE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gE" role="2DRAPQ">
+                <property role="2DPR8u" value="                // Only torque " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gF" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.APPLICATION_POINT_RELATIVE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gG" role="2DRAPQ">
+                <property role="2DPR8u" value="                    const torque = Math3DHelper.computeTorque(force, applicationPoint);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gH" role="2DRAPQ">
+                <property role="2DPR8u" value="                    entity.body.addRelTorque(torque[0], torque[1], torque[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gI" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gJ" role="2DRAPQ">
+                <property role="2DPR8u" value="                else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gK" role="2DRAPQ">
+                <property role="2DPR8u" value="                    const torque = Math3DHelper.computeTorque(force, Math3DHelper.relativePoint(entity, applicationPoint));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gL" role="2DRAPQ">
+                <property role="2DPR8u" value="                    entity.body.addRelTorque(torque[0], torque[1], torque[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gM" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gN" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.TORQUE_RELATIVE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gO" role="2DRAPQ">
+                <property role="2DPR8u" value="                    entity.body.addRelTorque(moment[0], moment[1], moment[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gP" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gQ" role="2DRAPQ">
+                <property role="2DPR8u" value="                else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gR" role="2DRAPQ">
+                <property role="2DPR8u" value="                    entity.body.addTorque(moment[0], moment[1], moment[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gS" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gT" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gU" role="2DRAPQ">
+                <property role="2DPR8u" value="            else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gV" role="2DRAPQ">
+                <property role="2DPR8u" value="                // Both " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gW" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.LINEAR_FORCE_RELATIVE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gX" role="2DRAPQ">
+                <property role="2DPR8u" value="                    if (ForceMode.haveAll(mode, ForceMode.APPLICATION_POINT_RELATIVE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gY" role="2DRAPQ">
+                <property role="2DPR8u" value="                        entity.body.addRelForceAtRelPos(force[0], force[1], force[2], applicationPoint[0], applicationPoint[1], applicationPoint[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="gZ" role="2DRAPQ">
+                <property role="2DPR8u" value="                    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h0" role="2DRAPQ">
+                <property role="2DPR8u" value="                    else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h1" role="2DRAPQ">
+                <property role="2DPR8u" value="                        entity.body.addRelForceAtPos(force[0], force[1], force[2], applicationPoint[0], applicationPoint[1], applicationPoint[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h2" role="2DRAPQ">
+                <property role="2DPR8u" value="                    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h3" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h4" role="2DRAPQ">
+                <property role="2DPR8u" value="                else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h5" role="2DRAPQ">
+                <property role="2DPR8u" value="                    if (ForceMode.haveAll(mode, ForceMode.APPLICATION_POINT_RELATIVE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h6" role="2DRAPQ">
+                <property role="2DPR8u" value="                        entity.body.addForceAtRelPos(force[0], force[1], force[2], applicationPoint[0], applicationPoint[1], applicationPoint[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h7" role="2DRAPQ">
+                <property role="2DPR8u" value="                    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h8" role="2DRAPQ">
+                <property role="2DPR8u" value="                    else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="h9" role="2DRAPQ">
+                <property role="2DPR8u" value="                        entity.body.addForceAtPos(force[0], force[1], force[2], applicationPoint[0], applicationPoint[1], applicationPoint[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ha" role="2DRAPQ">
+                <property role="2DPR8u" value="                    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hb" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hc" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (ForceMode.haveOne(mode, ForceMode.TORQUE_RELATIVE)) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hd" role="2DRAPQ">
+                <property role="2DPR8u" value="                    entity.body.addRelTorque(moment[0], moment[1], moment[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="he" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hf" role="2DRAPQ">
+                <property role="2DPR8u" value="                else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hg" role="2DRAPQ">
+                <property role="2DPR8u" value="                    entity.body.addTorque(moment[0], moment[1], moment[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hh" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hi" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hj" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hk" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceModeApplication.apply = apply;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hl" role="2DRAPQ">
+                <property role="2DPR8u" value="    })(ForceModeApplication || (ForceModeApplication = {}));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hm" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hn" role="2DRAPQ">
+                <property role="2DPR8u" value="    class PhysicalEntity extends VectorLike {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ho" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(world, name, scope) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hp" role="2DRAPQ">
+                <property role="2DPR8u" value="            super();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hq" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.world = world;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hr" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.name = name;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hs" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.scope = scope;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ht" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.massCached = -1;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hu" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.disabled = false;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hv" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.properties = {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hw" role="2DRAPQ">
+                <property role="2DPR8u" value="                pauseOnCollision: false," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hx" role="2DRAPQ">
+                <property role="2DPR8u" value="                collisionReaction: ElasticCollisionReaction.DEFAULT," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hy" role="2DRAPQ">
+                <property role="2DPR8u" value="                traceHandler: null" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hz" role="2DRAPQ">
                 <property role="2DPR8u" value="            };" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="p5" role="2DRAPQ">
-                <property role="2DPR8u" value="            Promise.all(simulations.map(it =&gt; it.loaded)).then(() =&gt; loadingElement.remove());" />
+              <node concept="2DRAP_" id="h$" role="2DRAPQ">
+                <property role="2DPR8u" value="            /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="p6" role="2DRAPQ">
-                <property role="2DPR8u" value="            return simulations;" />
+              <node concept="2DRAP_" id="h_" role="2DRAPQ">
+                <property role="2DPR8u" value="             * Object containing the fixture properties" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="p7" role="2DRAPQ">
-                <property role="2DPR8u" value="        })," />
+              <node concept="2DRAP_" id="hA" role="2DRAPQ">
+                <property role="2DPR8u" value="             */" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="p8" role="2DRAPQ">
-                <property role="2DPR8u" value="        simulationClasses: []" />
+              <node concept="2DRAP_" id="hB" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.propertiesBuilder = new PropertiesBuilder();" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="p9" role="2DRAPQ">
-                <property role="2DPR8u" value="    };" />
+              <node concept="2DRAP_" id="hC" role="2DRAPQ">
+                <property role="2DPR8u" value="            /**" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2DRAP_" id="pa" role="2DRAPQ">
+              <node concept="2DRAP_" id="hD" role="2DRAPQ">
+                <property role="2DPR8u" value="             * Forces applied on the entity" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hE" role="2DRAPQ">
+                <property role="2DPR8u" value="             */" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hF" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.forces = [];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hG" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Creating body " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hH" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.body = world.world.createBody();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hI" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hJ" role="2DRAPQ">
+                <property role="2DPR8u" value="        get entity() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hK" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hL" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hM" role="2DRAPQ">
+                <property role="2DPR8u" value="        /**" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hN" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Remove entity from the world" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hO" role="2DRAPQ">
+                <property role="2DPR8u" value="         */" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hP" role="2DRAPQ">
+                <property role="2DPR8u" value="        disable() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hQ" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.fixture.geometry.destroy();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hR" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.body.disable();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hS" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.disabled = true;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hT" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hU" role="2DRAPQ">
+                <property role="2DPR8u" value="        isDisabled() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hV" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.disabled;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hW" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hX" role="2DRAPQ">
+                <property role="2DPR8u" value="        computeStep() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hY" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.disabled) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="hZ" role="2DRAPQ">
+                <property role="2DPR8u" value="                return;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i0" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i1" role="2DRAPQ">
+                <property role="2DPR8u" value="            for (let force of this.forces) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i2" role="2DRAPQ">
+                <property role="2DPR8u" value="                let { linearForce, moment, applicationPoint, forceMode } = force.compute();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i3" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (linearForce == null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i4" role="2DRAPQ">
+                <property role="2DPR8u" value="                    linearForce = new Float32Array([0, 0, 0]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i5" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i6" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (moment == null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i7" role="2DRAPQ">
+                <property role="2DPR8u" value="                    moment = new Float32Array([0, 0, 0]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i8" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i9" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (applicationPoint == null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ia" role="2DRAPQ">
+                <property role="2DPR8u" value="                    applicationPoint = new Float32Array([0, 0, 0]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ib" role="2DRAPQ">
+                <property role="2DPR8u" value="                    forceMode |= ForceMode.APPLICATION_POINT_RELATIVE;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ic" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="id" role="2DRAPQ">
+                <property role="2DPR8u" value="                ForceModeApplication.apply(forceMode, this, VectorHelper.toFloat32Array(linearForce), VectorHelper.toFloat32Array(moment), VectorHelper.toFloat32Array(applicationPoint));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ie" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="if" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Update trace if any " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ig" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.properties.traceHandler != null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ih" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.properties.traceHandler.computeStep(this.body.getPosition());" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ii" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ij" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ik" role="2DRAPQ">
+                <property role="2DPR8u" value="        applyLights(ctx, scale, scaledOffset) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="il" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.disabled) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="im" role="2DRAPQ">
+                <property role="2DPR8u" value="                return;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="in" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="io" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.fixture.emitLight) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ip" role="2DRAPQ">
+                <property role="2DPR8u" value="                const position = this.body.getPosition();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iq" role="2DRAPQ">
+                <property role="2DPR8u" value="                ctx.pointLight(255, 255, 255, (position[0] * scale + scaledOffset[0]), (position[1] * scale + scaledOffset[1]), (position[2] * scale + scaledOffset[2]));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ir" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="is" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="it" role="2DRAPQ">
+                <property role="2DPR8u" value="        setup(app, scale) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iu" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.fixture.setup(app, scale);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iv" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iw" role="2DRAPQ">
+                <property role="2DPR8u" value="        render(graphics, scale, scaledOffset) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ix" role="2DRAPQ">
+                <property role="2DPR8u" value="            var _a;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iy" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.disabled) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iz" role="2DRAPQ">
+                <property role="2DPR8u" value="                return;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i$" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="i_" role="2DRAPQ">
+                <property role="2DPR8u" value="            const position = this.body.getPosition();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iA" role="2DRAPQ">
+                <property role="2DPR8u" value="            graphics.push();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iB" role="2DRAPQ">
+                <property role="2DPR8u" value="            graphics.translate((position[0] * scale + scaledOffset[0]), (position[1] * scale + scaledOffset[1]), (position[2] * scale + scaledOffset[2]));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iC" role="2DRAPQ">
+                <property role="2DPR8u" value="            // https://en.wikipedia.org/wiki/Rotation_matrix (https://en.wikipedia.org/wiki/Rotation_matrix) " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iD" role="2DRAPQ">
+                <property role="2DPR8u" value="            const rotation = this.body.getRotation().getArray();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iE" role="2DRAPQ">
+                <property role="2DPR8u" value="            graphics.applyMatrix(rotation[0], rotation[4], rotation[8], 0, rotation[1], rotation[5], rotation[9], 0, rotation[2], rotation[6], rotation[10], 0, 0, 0, 0, 1);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iF" role="2DRAPQ">
+                <property role="2DPR8u" value="            (_a = this.fixture) === null || _a === void 0 ? void 0 : _a.render(graphics, scale, scaledOffset);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iG" role="2DRAPQ">
+                <property role="2DPR8u" value="            graphics.pop();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iH" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Display trace if any " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iI" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.properties.traceHandler != null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iJ" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.properties.traceHandler.render(graphics, scale, scaledOffset);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iK" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iL" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iM" role="2DRAPQ">
+                <property role="2DPR8u" value="        setMass(value) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iN" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.massCached = value;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iO" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iP" role="2DRAPQ">
+                <property role="2DPR8u" value="        x() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iQ" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.body.getPosition()[0];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iR" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iS" role="2DRAPQ">
+                <property role="2DPR8u" value="        y() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iT" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.body.getPosition()[1];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iU" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iV" role="2DRAPQ">
+                <property role="2DPR8u" value="        z() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iW" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.body.getPosition()[2];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iX" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iY" role="2DRAPQ">
+                <property role="2DPR8u" value="        getMass() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="iZ" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.massCached == -1) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j0" role="2DRAPQ">
+                <property role="2DPR8u" value="                console.error(&quot;no mass defined for &quot;, this.toString());" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j1" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j2" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.massCached;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j3" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j4" role="2DRAPQ">
+                <property role="2DPR8u" value="        getPosition() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j5" role="2DRAPQ">
+                <property role="2DPR8u" value="            return Vector.fromFloat32Array(this.body.getPosition());" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j6" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j7" role="2DRAPQ">
+                <property role="2DPR8u" value="        setPosition(pos) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j8" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.body.setPosition(pos.x(), pos.y(), pos.z());" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j9" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ja" role="2DRAPQ">
+                <property role="2DPR8u" value="        setVelocity(pos) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jb" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.body.setLinearVel(pos.x(), pos.y(), pos.z());" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jc" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jd" role="2DRAPQ">
+                <property role="2DPR8u" value="        getVelocity() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="je" role="2DRAPQ">
+                <property role="2DPR8u" value="            return Vector.fromFloat32Array(this.body.getLinearVel());" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jf" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jg" role="2DRAPQ">
+                <property role="2DPR8u" value="        /**" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jh" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Initialize the object properties" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ji" role="2DRAPQ">
+                <property role="2DPR8u" value="         */" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jj" role="2DRAPQ">
+                <property role="2DPR8u" value="        init() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jk" role="2DRAPQ">
+                <property role="2DPR8u" value="            // To override " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jl" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jm" role="2DRAPQ">
+                <property role="2DPR8u" value="        build() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jn" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Build fixture and other properties " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jo" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.propertiesBuilder.applyOn(this.world, this);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jp" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jq" role="2DRAPQ">
+                <property role="2DPR8u" value="        equals(other) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jr" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this === other;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="js" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jt" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ju" role="2DRAPQ">
                 <property role="2DPR8u" value="" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
+              <node concept="2DRAP_" id="jv" role="2DRAPQ">
+                <property role="2DPR8u" value="    class ImageTexture {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jw" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(url) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jx" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.url = url;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jy" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.loadedImage = null;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jz" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j$" role="2DRAPQ">
+                <property role="2DPR8u" value="        setup(applet, emissive) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="j_" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.loadedImage = applet.loadImage(this.url);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jA" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jB" role="2DRAPQ">
+                <property role="2DPR8u" value="        apply(applet, emissive) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jC" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Apply texture on current state (will be removed on next pop())" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jD" role="2DRAPQ">
+                <property role="2DPR8u" value="            applet.texture(this.loadedImage);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jE" role="2DRAPQ">
+                <property role="2DPR8u" value="            applet.noStroke();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jF" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (emissive) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jG" role="2DRAPQ">
+                <property role="2DPR8u" value="                // Disable lights for the current object (same as displaying it as fully emissive)" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jH" role="2DRAPQ">
+                <property role="2DPR8u" value="                applet.noLights();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jI" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jJ" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jK" role="2DRAPQ">
+                <property role="2DPR8u" value="        mergeWith(other, participation) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jL" role="2DRAPQ">
+                <property role="2DPR8u" value="            // No simple way to merge an image texture " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jM" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (participation &gt; 0.5) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jN" role="2DRAPQ">
+                <property role="2DPR8u" value="                return this;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jO" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jP" role="2DRAPQ">
+                <property role="2DPR8u" value="            else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jQ" role="2DRAPQ">
+                <property role="2DPR8u" value="                return other;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jR" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jS" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jT" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jU" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jV" role="2DRAPQ">
+                <property role="2DPR8u" value="    class SystemScope extends VectorLike {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jW" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(world, initialPosition, initialVelocity, initialRotation) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jX" role="2DRAPQ">
+                <property role="2DPR8u" value="            super();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jY" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.world = world;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="jZ" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.initialPosition = initialPosition;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k0" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.initialVelocity = initialVelocity;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k1" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.initialRotation = initialRotation;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k2" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.nested = new Array();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k3" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.computedMass = null;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k4" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k5" role="2DRAPQ">
+                <property role="2DPR8u" value="        get scope() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k6" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k7" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k8" role="2DRAPQ">
+                <property role="2DPR8u" value="        withEntity(entity) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k9" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.nested.push(entity);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ka" role="2DRAPQ">
+                <property role="2DPR8u" value="            return entity;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kb" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kc" role="2DRAPQ">
+                <property role="2DPR8u" value="        /**" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kd" role="2DRAPQ">
+                <property role="2DPR8u" value="         * Compute the absolute initial position compared to a relative one" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ke" role="2DRAPQ">
+                <property role="2DPR8u" value="         */" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kf" role="2DRAPQ">
+                <property role="2DPR8u" value="        getAbsoluteInitialPosition(position) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kg" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.initialRotation != null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kh" role="2DRAPQ">
+                <property role="2DPR8u" value="                position = VectorHelper.rotateWith(position, this.initialRotation);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ki" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kj" role="2DRAPQ">
+                <property role="2DPR8u" value="            return position.add(this.initialPosition);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kk" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kl" role="2DRAPQ">
+                <property role="2DPR8u" value="        getAbsoluteInitialVelocity(velocity) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="km" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Rotated velocity + initial velocity " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kn" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.initialRotation != null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ko" role="2DRAPQ">
+                <property role="2DPR8u" value="                velocity = VectorHelper.rotateWith(velocity, this.initialRotation);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kp" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kq" role="2DRAPQ">
+                <property role="2DPR8u" value="            return velocity.add(this.initialVelocity);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kr" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ks" role="2DRAPQ">
+                <property role="2DPR8u" value="        build() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kt" role="2DRAPQ">
+                <property role="2DPR8u" value="            for (let entity of this.nested) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ku" role="2DRAPQ">
+                <property role="2DPR8u" value="                entity.build();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kv" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kw" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kx" role="2DRAPQ">
+                <property role="2DPR8u" value="        getMass() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ky" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.computedMass == null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kz" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.computedMass = 0;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k$" role="2DRAPQ">
+                <property role="2DPR8u" value="                for (let entity of this.nested) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="k_" role="2DRAPQ">
+                <property role="2DPR8u" value="                    this.computedMass = this.computedMass + entity.getMass();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kA" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kB" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kC" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.computedMass;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kD" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kE" role="2DRAPQ">
+                <property role="2DPR8u" value="        getPosition() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kF" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Return position of the scope as center of mass " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kG" role="2DRAPQ">
+                <property role="2DPR8u" value="            let position = Vector.ZERO;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kH" role="2DRAPQ">
+                <property role="2DPR8u" value="            for (let entity of this.nested) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kI" role="2DRAPQ">
+                <property role="2DPR8u" value="                position = position.add(entity.getPosition().mul(entity.getMass()));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kJ" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kK" role="2DRAPQ">
+                <property role="2DPR8u" value="            return position.mul(1 / this.getMass());" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kL" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kM" role="2DRAPQ">
+                <property role="2DPR8u" value="        x() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kN" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.initialPosition.x();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kO" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kP" role="2DRAPQ">
+                <property role="2DPR8u" value="        y() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kQ" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.initialPosition.y();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kR" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kS" role="2DRAPQ">
+                <property role="2DPR8u" value="        z() {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kT" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.initialPosition.z();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kU" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kV" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kW" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kX" role="2DRAPQ">
+                <property role="2DPR8u" value="    class InternalColor {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kY" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(r, g, b) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="kZ" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.r = r;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l0" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.g = g;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l1" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.b = b;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l2" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l3" role="2DRAPQ">
+                <property role="2DPR8u" value="        merge(selfRatio, color) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l4" role="2DRAPQ">
+                <property role="2DPR8u" value="            const rev = 1 - selfRatio;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l5" role="2DRAPQ">
+                <property role="2DPR8u" value="            return new InternalColor(this.r * selfRatio + color.r * rev, this.g * selfRatio + color.g * rev, this.b * selfRatio + color.b * rev);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l6" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l7" role="2DRAPQ">
+                <property role="2DPR8u" value="        toInt(applet) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l8" role="2DRAPQ">
+                <property role="2DPR8u" value="            return applet.color(this.r, this.g, this.b);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l9" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="la" role="2DRAPQ">
+                <property role="2DPR8u" value="        static merge(left, right, leftRatio) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lb" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (left == null &amp;&amp; right == null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lc" role="2DRAPQ">
+                <property role="2DPR8u" value="                return null;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ld" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="le" role="2DRAPQ">
+                <property role="2DPR8u" value="            const rev = 1 - leftRatio;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lf" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (left == null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lg" role="2DRAPQ">
+                <property role="2DPR8u" value="                left = new InternalColor(0, 0, 0);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lh" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="li" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (right == null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lj" role="2DRAPQ">
+                <property role="2DPR8u" value="                right = new InternalColor(0, 0, 0);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lk" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ll" role="2DRAPQ">
+                <property role="2DPR8u" value="            return new InternalColor((left.r * leftRatio + right.r * rev), (left.g * leftRatio + right.g * rev), (left.b * leftRatio + right.b * rev));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lm" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ln" role="2DRAPQ">
+                <property role="2DPR8u" value="        updateMetric(element) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lo" role="2DRAPQ">
+                <property role="2DPR8u" value="            element.style.backgroundColor = `rgb(${this.r}, ${this.g}, ${this.b})`;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lp" role="2DRAPQ">
+                <property role="2DPR8u" value="            element.style.display = &quot;inline-block&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lq" role="2DRAPQ">
+                <property role="2DPR8u" value="            element.style.width = &quot;1.5em&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lr" role="2DRAPQ">
+                <property role="2DPR8u" value="            element.style.height = &quot;1.5em&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ls" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lt" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lu" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lv" role="2DRAPQ">
+                <property role="2DPR8u" value="    class ColorTexture {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lw" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(fill, stroke) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lx" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.fill = fill;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ly" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.stroke = stroke;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lz" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l$" role="2DRAPQ">
+                <property role="2DPR8u" value="        setup(applet, emissive) { }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="l_" role="2DRAPQ">
+                <property role="2DPR8u" value="        apply(applet, emissive) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lA" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.fill != null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lB" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (emissive) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lC" role="2DRAPQ">
+                <property role="2DPR8u" value="                    applet.emissiveMaterial(this.fill.toInt(applet));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lD" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lE" role="2DRAPQ">
+                <property role="2DPR8u" value="                applet.fill(this.fill.toInt(applet));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lF" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lG" role="2DRAPQ">
+                <property role="2DPR8u" value="            else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lH" role="2DRAPQ">
+                <property role="2DPR8u" value="                applet.noFill();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lI" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lJ" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.stroke != null) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lK" role="2DRAPQ">
+                <property role="2DPR8u" value="                applet.stroke(this.stroke.toInt(applet));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lL" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lM" role="2DRAPQ">
+                <property role="2DPR8u" value="            else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lN" role="2DRAPQ">
+                <property role="2DPR8u" value="                applet.noStroke();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lO" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lP" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lQ" role="2DRAPQ">
+                <property role="2DPR8u" value="        mergeWith(other, participation) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lR" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (other instanceof ColorTexture) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lS" role="2DRAPQ">
+                <property role="2DPR8u" value="                return new ColorTexture(InternalColor.merge(this.fill, other.fill, participation), InternalColor.merge(this.stroke, other.stroke, participation));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lT" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lU" role="2DRAPQ">
+                <property role="2DPR8u" value="            else if (participation &gt; 0.5) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lV" role="2DRAPQ">
+                <property role="2DPR8u" value="                return this;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lW" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lX" role="2DRAPQ">
+                <property role="2DPR8u" value="            else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lY" role="2DRAPQ">
+                <property role="2DPR8u" value="                return other;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="lZ" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m0" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m1" role="2DRAPQ">
+                <property role="2DPR8u" value="        updateMetric(element) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m2" role="2DRAPQ">
+                <property role="2DPR8u" value="            element.style.display = &quot;inline-block&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m3" role="2DRAPQ">
+                <property role="2DPR8u" value="            element.style.width = &quot;1.5em&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m4" role="2DRAPQ">
+                <property role="2DPR8u" value="            element.style.height = &quot;1.5em&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m5" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.fill) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m6" role="2DRAPQ">
+                <property role="2DPR8u" value="                element.style.backgroundColor = `rgb(${this.fill.r}, ${this.fill.g}, ${this.fill.b})`;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m7" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m8" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.stroke) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m9" role="2DRAPQ">
+                <property role="2DPR8u" value="                element.style.borderWidth = &quot;2px&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ma" role="2DRAPQ">
+                <property role="2DPR8u" value="                element.style.borderColor = `rgb(${this.stroke.r}, ${this.stroke.g}, ${this.stroke.b})`;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mb" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mc" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="md" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="me" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mf" role="2DRAPQ">
+                <property role="2DPR8u" value="    var SimpleCollisionReaction;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mg" role="2DRAPQ">
+                <property role="2DPR8u" value="    (function (SimpleCollisionReaction) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mh" role="2DRAPQ">
+                <property role="2DPR8u" value="        SimpleCollisionReaction.DISAPPEAR = {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mi" role="2DRAPQ">
+                <property role="2DPR8u" value="            react: function (world, first, second, oneFirst) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mj" role="2DRAPQ">
+                <property role="2DPR8u" value="                first.entity.disable();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mk" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (second.entity.properties.collisionReaction == SimpleCollisionReaction.DISAPPEAR) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ml" role="2DRAPQ">
+                <property role="2DPR8u" value="                    second.entity.disable();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mm" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mn" role="2DRAPQ">
+                <property role="2DPR8u" value="            }," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mo" role="2DRAPQ">
+                <property role="2DPR8u" value="            priority: -100," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mp" role="2DRAPQ">
+                <property role="2DPR8u" value="            preventDifferentReaction: true" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mq" role="2DRAPQ">
+                <property role="2DPR8u" value="        };" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mr" role="2DRAPQ">
+                <property role="2DPR8u" value="        SimpleCollisionReaction.MERGE = {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ms" role="2DRAPQ">
+                <property role="2DPR8u" value="            react: function (world, first, second, oneFirst) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mt" role="2DRAPQ">
+                <property role="2DPR8u" value="                // Run the method oustide of a simulation step" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mu" role="2DRAPQ">
+                <property role="2DPR8u" value="                world.safeCallbacks.push(() =&gt; {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mv" role="2DRAPQ">
+                <property role="2DPR8u" value="                    first.entity.name = first.entity.name + &quot; + &quot; + second.entity.name;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mw" role="2DRAPQ">
+                <property role="2DPR8u" value="                    first.entity.fixture.mergeWith(second.entity.fixture, first.entity.getMass(), second.entity.getMass(), first.entity);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mx" role="2DRAPQ">
+                <property role="2DPR8u" value="                    second.entity.disable();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="my" role="2DRAPQ">
+                <property role="2DPR8u" value="                });" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mz" role="2DRAPQ">
+                <property role="2DPR8u" value="            }," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m$" role="2DRAPQ">
+                <property role="2DPR8u" value="            priority: -300," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="m_" role="2DRAPQ">
+                <property role="2DPR8u" value="            preventDifferentReaction: true" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mA" role="2DRAPQ">
+                <property role="2DPR8u" value="        };" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mB" role="2DRAPQ">
+                <property role="2DPR8u" value="        SimpleCollisionReaction.IGNORE = {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mC" role="2DRAPQ">
+                <property role="2DPR8u" value="            react: function () { }," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mD" role="2DRAPQ">
+                <property role="2DPR8u" value="            preventDifferentReaction: false," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mE" role="2DRAPQ">
+                <property role="2DPR8u" value="            priority: -10000" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mF" role="2DRAPQ">
+                <property role="2DPR8u" value="        };" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mG" role="2DRAPQ">
+                <property role="2DPR8u" value="    })(SimpleCollisionReaction || (SimpleCollisionReaction = {}));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mH" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mI" role="2DRAPQ">
+                <property role="2DPR8u" value="    /**" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mJ" role="2DRAPQ">
+                <property role="2DPR8u" value="     * Force that do not change over time" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mK" role="2DRAPQ">
+                <property role="2DPR8u" value="     */" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mL" role="2DRAPQ">
+                <property role="2DPR8u" value="    class ForceMapper {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mM" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(context, computeMethod) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mN" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.context = context;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mO" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.computeMethod = computeMethod;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mP" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mQ" role="2DRAPQ">
+                <property role="2DPR8u" value="        compute(...args) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mR" role="2DRAPQ">
+                <property role="2DPR8u" value="            return this.computeMethod(this.context, this, ...args);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mS" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mT" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mU" role="2DRAPQ">
+                <property role="2DPR8u" value="    class CachedForceMapper extends ForceMapper {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mV" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(context, computeMethod) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mW" role="2DRAPQ">
+                <property role="2DPR8u" value="            super(context, computeMethod);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mX" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.cache = null;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mY" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="mZ" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n0" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n1" role="2DRAPQ">
+                <property role="2DPR8u" value="    class TraceHandler {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n2" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(aspect) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n3" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.aspect = aspect;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n4" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.scale = -1;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n5" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.unscaledCache = [];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n6" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n7" role="2DRAPQ">
+                <property role="2DPR8u" value="        computeStep(newPositions) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n8" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.scale === -1) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n9" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.unscaledCache.push(newPositions);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="na" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nb" role="2DRAPQ">
+                <property role="2DPR8u" value="            else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nc" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.write(newPositions, this.scale);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nd" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ne" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nf" role="2DRAPQ">
+                <property role="2DPR8u" value="        render(ctx, scale, scaledOffset) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ng" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.scale == -1) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nh" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.scale = scale;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ni" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.unscaledCache.forEach(it =&gt; this.write(it, this.scale));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nj" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nk" role="2DRAPQ">
+                <property role="2DPR8u" value="            // Display history " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nl" role="2DRAPQ">
+                <property role="2DPR8u" value="            ctx.noFill();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nm" role="2DRAPQ">
+                <property role="2DPR8u" value="            ctx.stroke(this.aspect.r, this.aspect.g, this.aspect.b);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nn" role="2DRAPQ">
+                <property role="2DPR8u" value="            ctx.push();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="no" role="2DRAPQ">
+                <property role="2DPR8u" value="            ctx.translate(scaledOffset[0], scaledOffset[1], scaledOffset[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="np" role="2DRAPQ">
+                <property role="2DPR8u" value="            ctx.beginShape(ctx.LINE_STRIP);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nq" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.vertices(ctx);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nr" role="2DRAPQ">
+                <property role="2DPR8u" value="            ctx.endShape();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ns" role="2DRAPQ">
+                <property role="2DPR8u" value="            ctx.pop();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nt" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nu" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nv" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nw" role="2DRAPQ">
+                <property role="2DPR8u" value="    const MAX_CAPACITY = 200;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nx" role="2DRAPQ">
+                <property role="2DPR8u" value="    class FiniteTraceHandler extends TraceHandler {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ny" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(aspect) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nz" role="2DRAPQ">
+                <property role="2DPR8u" value="            super(aspect);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n$" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.content = [];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="n_" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.offset = 0;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nA" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.currentCapacity = 0;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nB" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nC" role="2DRAPQ">
+                <property role="2DPR8u" value="        writeAt(positions, cursor, scale) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nD" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.content[cursor] = [" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nE" role="2DRAPQ">
+                <property role="2DPR8u" value="                positions[0] * scale," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nF" role="2DRAPQ">
+                <property role="2DPR8u" value="                positions[1] * scale," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nG" role="2DRAPQ">
+                <property role="2DPR8u" value="                positions[2] * scale" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nH" role="2DRAPQ">
+                <property role="2DPR8u" value="            ];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nI" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nJ" role="2DRAPQ">
+                <property role="2DPR8u" value="        write(positions, scale) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nK" role="2DRAPQ">
+                <property role="2DPR8u" value="            if (this.currentCapacity &lt; MAX_CAPACITY) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nL" role="2DRAPQ">
+                <property role="2DPR8u" value="                // Write and increase capacity " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nM" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.writeAt(positions, this.currentCapacity, scale);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nN" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.currentCapacity += 1;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nO" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nP" role="2DRAPQ">
+                <property role="2DPR8u" value="            else {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nQ" role="2DRAPQ">
+                <property role="2DPR8u" value="                // Write and shift offset " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nR" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.writeAt(positions, this.offset, scale);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nS" role="2DRAPQ">
+                <property role="2DPR8u" value="                this.offset += 1;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nT" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (this.offset &gt;= MAX_CAPACITY) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nU" role="2DRAPQ">
+                <property role="2DPR8u" value="                    this.offset = 0;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nV" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nW" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nX" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nY" role="2DRAPQ">
+                <property role="2DPR8u" value="        vertices(ctx) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="nZ" role="2DRAPQ">
+                <property role="2DPR8u" value="            for (let i = 0; i &lt; this.currentCapacity; i++) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o0" role="2DRAPQ">
+                <property role="2DPR8u" value="                const cursor = (i + this.offset) % MAX_CAPACITY;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o1" role="2DRAPQ">
+                <property role="2DPR8u" value="                ctx.vertex(this.content[cursor][0], this.content[cursor][1], this.content[cursor][2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o2" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o3" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o4" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o5" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o6" role="2DRAPQ">
+                <property role="2DPR8u" value="    class InfiniteTraceHandler extends TraceHandler {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o7" role="2DRAPQ">
+                <property role="2DPR8u" value="        constructor(aspect) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o8" role="2DRAPQ">
+                <property role="2DPR8u" value="            super(aspect);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o9" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.content = new Array();" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oa" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ob" role="2DRAPQ">
+                <property role="2DPR8u" value="        write(positions, scale) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oc" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.content.push([(positions[0] * scale), (positions[1] * scale), (positions[2] * scale)]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="od" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oe" role="2DRAPQ">
+                <property role="2DPR8u" value="        vertices(ctx) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="of" role="2DRAPQ">
+                <property role="2DPR8u" value="            this.content.forEach(vals =&gt; {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="og" role="2DRAPQ">
+                <property role="2DPR8u" value="                ctx.vertex(vals[0], vals[1], vals[2]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oh" role="2DRAPQ">
+                <property role="2DPR8u" value="            });" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oi" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oj" role="2DRAPQ">
+                <property role="2DPR8u" value="    }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ok" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ol" role="2DRAPQ">
+                <property role="2DPR8u" value="    var RotationHelper;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="om" role="2DRAPQ">
+                <property role="2DPR8u" value="    (function (RotationHelper) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="on" role="2DRAPQ">
+                <property role="2DPR8u" value="        function toMatrix(col1, col2, col3) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oo" role="2DRAPQ">
+                <property role="2DPR8u" value="            return new ODE.Rotation().setArray([col1.x(), col2.x(), col3.x(), col1.y(), col2.y(), col3.y(), col1.z(), col2.z(), col3.z()]);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="op" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oq" role="2DRAPQ">
+                <property role="2DPR8u" value="        RotationHelper.toMatrix = toMatrix;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="or" role="2DRAPQ">
+                <property role="2DPR8u" value="        function fromAxisAngle(axis, angle) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="os" role="2DRAPQ">
+                <property role="2DPR8u" value="            return new ODE.Rotation().fromAxisAndAngle(axis.x(), axis.y(), axis.z(), angle);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ot" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ou" role="2DRAPQ">
+                <property role="2DPR8u" value="        RotationHelper.fromAxisAngle = fromAxisAngle;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ov" role="2DRAPQ">
+                <property role="2DPR8u" value="        function fromEulerAngles(a1, a2, a3) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ow" role="2DRAPQ">
+                <property role="2DPR8u" value="            return new ODE.Rotation().fromEulerAngles(a1, a2, a3);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="ox" role="2DRAPQ">
+                <property role="2DPR8u" value="        }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oy" role="2DRAPQ">
+                <property role="2DPR8u" value="        RotationHelper.fromEulerAngles = fromEulerAngles;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oz" role="2DRAPQ">
+                <property role="2DPR8u" value="    })(RotationHelper || (RotationHelper = {}));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o$" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="o_" role="2DRAPQ">
+                <property role="2DPR8u" value="    let Physics = {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oA" role="2DRAPQ">
+                <property role="2DPR8u" value="        VectorHelper," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oB" role="2DRAPQ">
+                <property role="2DPR8u" value="        RotationHelper," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oC" role="2DRAPQ">
+                <property role="2DPR8u" value="        VectorLike," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oD" role="2DRAPQ">
+                <property role="2DPR8u" value="        Vector," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oE" role="2DRAPQ">
+                <property role="2DPR8u" value="        InternalColor," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oF" role="2DRAPQ">
+                <property role="2DPR8u" value="        ElasticCollisionReaction," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oG" role="2DRAPQ">
+                <property role="2DPR8u" value="        SimpleCollisionReaction," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oH" role="2DRAPQ">
+                <property role="2DPR8u" value="        ColorTexture," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oI" role="2DRAPQ">
+                <property role="2DPR8u" value="        Simulation," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oJ" role="2DRAPQ">
+                <property role="2DPR8u" value="        ImageTexture," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oK" role="2DRAPQ">
+                <property role="2DPR8u" value="        PhysicalEntity," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oL" role="2DRAPQ">
+                <property role="2DPR8u" value="        SystemScope," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oM" role="2DRAPQ">
+                <property role="2DPR8u" value="        FiniteTraceHandler," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oN" role="2DRAPQ">
+                <property role="2DPR8u" value="        InfiniteTraceHandler," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oO" role="2DRAPQ">
+                <property role="2DPR8u" value="        World," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oP" role="2DRAPQ">
+                <property role="2DPR8u" value="        PropKey," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oQ" role="2DRAPQ">
+                <property role="2DPR8u" value="        ForceMapper," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oR" role="2DRAPQ">
+                <property role="2DPR8u" value="        CachedForceMapper," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oS" role="2DRAPQ">
+                <property role="2DPR8u" value="        makeRenderer: () =&gt; __awaiter(void 0, void 0, void 0, function* () {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oT" role="2DRAPQ">
+                <property role="2DPR8u" value="            const container = document.getElementById(&quot;simulations&quot;);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oU" role="2DRAPQ">
+                <property role="2DPR8u" value="            const simulations = [];" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oV" role="2DRAPQ">
+                <property role="2DPR8u" value="            const loadingElement = document.getElementById(&quot;loading&quot;);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oW" role="2DRAPQ">
+                <property role="2DPR8u" value="            loadingElement.innerText = &quot;loading textures and setting up properties...&quot;;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oX" role="2DRAPQ">
+                <property role="2DPR8u" value="            for (let simClass of Physics.simulationClasses) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oY" role="2DRAPQ">
+                <property role="2DPR8u" value="                simulations.push(yield Simulation.create(container, simClass, 1 / Physics.simulationClasses.length));" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="oZ" role="2DRAPQ">
+                <property role="2DPR8u" value="            }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p0" role="2DRAPQ">
+                <property role="2DPR8u" value="            document.onkeypress = (event) =&gt; {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p1" role="2DRAPQ">
+                <property role="2DPR8u" value="                // Space bar " />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p2" role="2DRAPQ">
+                <property role="2DPR8u" value="                if (event.key == &quot; &quot;) {" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p3" role="2DRAPQ">
+                <property role="2DPR8u" value="                    const paused = simulations[0].simulation.world.paused;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p4" role="2DRAPQ">
+                <property role="2DPR8u" value="                    simulations.forEach(it =&gt; it.simulation.world.paused = !paused);" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p5" role="2DRAPQ">
+                <property role="2DPR8u" value="                }" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p6" role="2DRAPQ">
+                <property role="2DPR8u" value="            };" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p7" role="2DRAPQ">
+                <property role="2DPR8u" value="            Promise.all(simulations.map(it =&gt; it.loaded)).then(() =&gt; loadingElement.remove());" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p8" role="2DRAPQ">
+                <property role="2DPR8u" value="            return simulations;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="p9" role="2DRAPQ">
+                <property role="2DPR8u" value="        })," />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="pa" role="2DRAPQ">
+                <property role="2DPR8u" value="        simulationClasses: []" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
               <node concept="2DRAP_" id="pb" role="2DRAPQ">
-                <property role="2DPR8u" value="    return Physics;" />
+                <property role="2DPR8u" value="    };" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="pc" role="2DRAPQ">
@@ -6459,6 +6459,14 @@
                 <uo k="s:originTrace" v="n:104" />
               </node>
               <node concept="2DRAP_" id="pd" role="2DRAPQ">
+                <property role="2DPR8u" value="    return Physics;" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="pe" role="2DRAPQ">
+                <property role="2DPR8u" value="" />
+                <uo k="s:originTrace" v="n:104" />
+              </node>
+              <node concept="2DRAP_" id="pf" role="2DRAPQ">
                 <property role="2DPR8u" value="}());" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
@@ -6467,18 +6475,18 @@
           <node concept="2pNNFK" id="4R" role="3o6s8t">
             <property role="2pNNFO" value="script" />
             <uo k="s:originTrace" v="n:104" />
-            <node concept="1dSqrf" id="pe" role="3o6s8t">
+            <node concept="1dSqrf" id="pg" role="3o6s8t">
               <property role="TrG5h" value="simulationBundle" />
               <uo k="s:originTrace" v="n:104" />
-              <node concept="3ErYpN" id="pf" role="3E_D5O">
+              <node concept="3ErYpN" id="ph" role="3E_D5O">
                 <ref role="3ErYpM" to="f76b:2RasiBbTMfg" resolve="RuntimeEnv" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="36SGkD" id="pg" role="1dSqon">
-                <ref role="36SuZX" node="pl" resolve="DemoScript" />
+              <node concept="36SGkD" id="pi" role="1dSqon">
+                <ref role="36SuZX" node="pn" resolve="DemoScript" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="36Sqss" id="ph" role="lGtFl">
+              <node concept="36Sqss" id="pj" role="lGtFl">
                 <uo k="s:originTrace" v="n:104" />
               </node>
             </node>
@@ -6486,7 +6494,7 @@
           <node concept="2pNNFK" id="4S" role="3o6s8t">
             <property role="2pNNFO" value="script" />
             <uo k="s:originTrace" v="n:104" />
-            <node concept="3o6iSG" id="pi" role="3o6s8t">
+            <node concept="3o6iSG" id="pk" role="3o6s8t">
               <property role="3o6i5n" value="ODE.readyPromise.then(Physics.makeRenderer).then(console.log);" />
               <uo k="s:originTrace" v="n:104" />
             </node>
@@ -6495,7 +6503,7 @@
         <node concept="2pNUuL" id="4b" role="2pNNFR">
           <property role="2pNUuO" value="lang" />
           <uo k="s:originTrace" v="n:104" />
-          <node concept="2pMdtt" id="pj" role="2pMdts">
+          <node concept="2pMdtt" id="pl" role="2pMdts">
             <property role="2pMdty" value="en" />
             <uo k="s:originTrace" v="n:104" />
           </node>
@@ -6503,147 +6511,147 @@
       </node>
       <node concept="2pNm8N" id="48" role="2pNm8Q">
         <uo k="s:originTrace" v="n:104" />
-        <node concept="29q25o" id="pk" role="BGLLu">
+        <node concept="29q25o" id="pm" role="BGLLu">
           <property role="29q25t" value="html" />
           <uo k="s:originTrace" v="n:104" />
         </node>
       </node>
     </node>
   </node>
-  <node concept="1dSqrf" id="pl">
+  <node concept="1dSqrf" id="pn">
     <property role="TrG5h" value="DemoScript" />
     <uo k="s:originTrace" v="n:104" />
-    <node concept="36SGkD" id="pm" role="1dSqon">
-      <ref role="36SuZX" node="$L" resolve="SunDemo" />
+    <node concept="36SGkD" id="po" role="1dSqon">
+      <ref role="36SuZX" node="$N" resolve="SunDemo" />
       <uo k="s:originTrace" v="n:104" />
     </node>
-    <node concept="1dSrUV" id="pn" role="1dSqon">
+    <node concept="1dSrUV" id="pp" role="1dSqon">
       <uo k="s:originTrace" v="n:104" />
     </node>
-    <node concept="2DT8ht" id="po" role="1dSqon">
+    <node concept="2DT8ht" id="pq" role="1dSqon">
       <uo k="s:originTrace" v="n:104" />
-      <node concept="2wiq1L" id="ps" role="2DTaag">
+      <node concept="2wiq1L" id="pu" role="2DTaag">
         <uo k="s:originTrace" v="n:104" />
-        <node concept="2wijRm" id="pz" role="2wiapO">
+        <node concept="2wijRm" id="p_" role="2wiapO">
           <property role="TrG5h" value="constructor" />
           <uo k="s:originTrace" v="n:104" />
         </node>
-        <node concept="2wWApn" id="p$" role="2wWApU">
+        <node concept="2wWApn" id="pA" role="2wWApU">
           <uo k="s:originTrace" v="n:104" />
-          <node concept="2wxzWt" id="pA" role="2wWAp1">
+          <node concept="2wxzWt" id="pC" role="2wWAp1">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="1mvZK$" id="pB" role="2wxzWi">
+            <node concept="1mvZK$" id="pD" role="2wxzWi">
               <property role="TrG5h" value="container" />
               <uo k="s:originTrace" v="n:104" />
             </node>
           </node>
         </node>
-        <node concept="3PT0iG" id="p_" role="2wi7L_">
+        <node concept="3PT0iG" id="pB" role="2wi7L_">
           <uo k="s:originTrace" v="n:104" />
-          <node concept="1dSo_L" id="pC" role="3PTNxU">
+          <node concept="1dSo_L" id="pE" role="3PTNxU">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="12Bna6" id="pD" role="1dwvF7">
+            <node concept="12Bna6" id="pF" role="1dwvF7">
               <uo k="s:originTrace" v="n:104" />
-              <node concept="2gzfuI" id="pE" role="2WRAlG">
+              <node concept="2gzfuI" id="pG" role="2WRAlG">
                 <uo k="s:originTrace" v="n:106" />
-                <node concept="2gzfuI" id="pH" role="2gzftq">
+                <node concept="2gzfuI" id="pJ" role="2gzftq">
                   <uo k="s:originTrace" v="n:121" />
-                  <node concept="2dhUHT" id="pI" role="2gzftq">
+                  <node concept="2dhUHT" id="pK" role="2gzftq">
                     <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                     <uo k="s:originTrace" v="n:121" />
-                    <node concept="2dhBVA" id="pJ" role="2dhUC2">
+                    <node concept="2dhBVA" id="pL" role="2dhUC2">
                       <property role="2dhB_1" value=".5" />
                       <uo k="s:originTrace" v="n:122" />
                     </node>
-                    <node concept="2dhBVA" id="pK" role="2dhUFW">
+                    <node concept="2dhBVA" id="pM" role="2dhUFW">
                       <property role="2dhB_1" value="1" />
                       <uo k="s:originTrace" v="n:123" />
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="2dhBVA" id="pF" role="2WRAlG">
+              <node concept="2dhBVA" id="pH" role="2WRAlG">
                 <property role="2dhB_1" value="1" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2WqeGl" id="pG" role="2WRAlG">
-                <ref role="2WqeGo" node="pB" resolve="container" />
+              <node concept="2WqeGl" id="pI" role="2WRAlG">
+                <ref role="2WqeGo" node="pD" resolve="container" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
             </node>
           </node>
         </node>
       </node>
-      <node concept="1mvZK$" id="pt" role="2DT8gC">
+      <node concept="1mvZK$" id="pv" role="2DT8gC">
         <property role="TrG5h" value="Demo" />
         <uo k="s:originTrace" v="n:104" />
       </node>
-      <node concept="2dhVqD" id="pu" role="2DT8gE">
+      <node concept="2dhVqD" id="pw" role="2DT8gE">
         <uo k="s:originTrace" v="n:104" />
-        <node concept="29jwqa" id="pL" role="2dhScq">
+        <node concept="29jwqa" id="pN" role="2dhScq">
           <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
           <uo k="s:originTrace" v="n:104" />
         </node>
-        <node concept="2wijRm" id="pM" role="2dhS9X">
+        <node concept="2wijRm" id="pO" role="2dhS9X">
           <property role="TrG5h" value="Simulation" />
           <uo k="s:originTrace" v="n:104" />
         </node>
       </node>
-      <node concept="2wiq1L" id="pv" role="2DTaag">
+      <node concept="2wiq1L" id="px" role="2DTaag">
         <uo k="s:originTrace" v="n:104" />
-        <node concept="2wijRm" id="pN" role="2wiapO">
+        <node concept="2wijRm" id="pP" role="2wiapO">
           <property role="TrG5h" value="init" />
           <uo k="s:originTrace" v="n:104" />
         </node>
-        <node concept="2wWApn" id="pO" role="2wWApU">
+        <node concept="2wWApn" id="pQ" role="2wWApU">
           <uo k="s:originTrace" v="n:104" />
-          <node concept="2wxzWt" id="pQ" role="2wWAp1">
+          <node concept="2wxzWt" id="pS" role="2wWAp1">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="1mvZK$" id="pR" role="2wxzWi">
+            <node concept="1mvZK$" id="pT" role="2wxzWi">
               <property role="TrG5h" value="world" />
               <uo k="s:originTrace" v="n:104" />
             </node>
           </node>
         </node>
-        <node concept="3PT0iG" id="pP" role="2wi7L_">
+        <node concept="3PT0iG" id="pR" role="2wi7L_">
           <uo k="s:originTrace" v="n:104" />
-          <node concept="1dSo_L" id="pS" role="3PTNxU">
+          <node concept="1dSo_L" id="pU" role="3PTNxU">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="2dhSm$" id="pU" role="1dwvF7">
+            <node concept="2dhSm$" id="pW" role="1dwvF7">
               <uo k="s:originTrace" v="n:104" />
-              <node concept="2WqeGl" id="pV" role="2dhSgd">
-                <ref role="2WqeGo" node="pR" resolve="world" />
+              <node concept="2WqeGl" id="pX" role="2dhSgd">
+                <ref role="2WqeGo" node="pT" resolve="world" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2dhVqD" id="pW" role="2dhSgj">
+              <node concept="2dhVqD" id="pY" role="2dhSgj">
                 <uo k="s:originTrace" v="n:104" />
-                <node concept="2dpZbP" id="pX" role="2dhScq">
+                <node concept="2dpZbP" id="pZ" role="2dhScq">
                   <uo k="s:originTrace" v="n:104" />
                 </node>
-                <node concept="2wijRm" id="pY" role="2dhS9X">
+                <node concept="2wijRm" id="q0" role="2dhS9X">
                   <property role="TrG5h" value="initScope" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="pT" role="3PTNxU">
+          <node concept="1dSo_L" id="pV" role="3PTNxU">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="2dhSm$" id="pZ" role="1dwvF7">
+            <node concept="2dhSm$" id="q1" role="1dwvF7">
               <uo k="s:originTrace" v="n:104" />
-              <node concept="2dhVqD" id="q0" role="2dhSgj">
+              <node concept="2dhVqD" id="q2" role="2dhSgj">
                 <uo k="s:originTrace" v="n:104" />
-                <node concept="2dhVqD" id="q1" role="2dhScq">
+                <node concept="2dhVqD" id="q3" role="2dhScq">
                   <uo k="s:originTrace" v="n:104" />
-                  <node concept="2dpZbP" id="q3" role="2dhScq">
+                  <node concept="2dpZbP" id="q5" role="2dhScq">
                     <uo k="s:originTrace" v="n:104" />
                   </node>
-                  <node concept="2wijRm" id="q4" role="2dhS9X">
+                  <node concept="2wijRm" id="q6" role="2dhS9X">
                     <property role="TrG5h" value="scope" />
                     <uo k="s:originTrace" v="n:104" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="q2" role="2dhS9X">
+                <node concept="2wijRm" id="q4" role="2dhS9X">
                   <property role="TrG5h" value="build" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
@@ -6652,44 +6660,44 @@
           </node>
         </node>
       </node>
-      <node concept="2wiq1L" id="pw" role="2DTaag">
+      <node concept="2wiq1L" id="py" role="2DTaag">
         <uo k="s:originTrace" v="n:104" />
-        <node concept="2wijRm" id="q5" role="2wiapO">
+        <node concept="2wijRm" id="q7" role="2wiapO">
           <property role="TrG5h" value="initScope" />
           <uo k="s:originTrace" v="n:104" />
         </node>
-        <node concept="2wWApn" id="q6" role="2wWApU">
+        <node concept="2wWApn" id="q8" role="2wWApU">
           <uo k="s:originTrace" v="n:104" />
-          <node concept="2wxzWt" id="q8" role="2wWAp1">
+          <node concept="2wxzWt" id="qa" role="2wWAp1">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="1mvZK$" id="q9" role="2wxzWi">
+            <node concept="1mvZK$" id="qb" role="2wxzWi">
               <property role="TrG5h" value="world" />
               <uo k="s:originTrace" v="n:104" />
             </node>
           </node>
         </node>
-        <node concept="3PT0iG" id="q7" role="2wi7L_">
+        <node concept="3PT0iG" id="q9" role="2wi7L_">
           <uo k="s:originTrace" v="n:104" />
-          <node concept="1dSo$T" id="qa" role="3PTNxU">
+          <node concept="1dSo$T" id="qc" role="3PTNxU">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="2dhZhe" id="qe" role="1dSoH_">
+            <node concept="2dhZhe" id="qg" role="1dSoH_">
               <uo k="s:originTrace" v="n:104" />
-              <node concept="1dSrUG" id="qf" role="2dhZiP">
+              <node concept="1dSrUG" id="qh" role="2dhZiP">
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="1mvZK$" id="qg" role="3PzO81">
+              <node concept="1mvZK$" id="qi" role="3PzO81">
                 <property role="TrG5h" value="noRotation" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2dhTJR" id="qh" role="2dhZtC">
+              <node concept="2dhTJR" id="qj" role="2dhZtC">
                 <uo k="s:originTrace" v="n:104" />
-                <node concept="2dhVqD" id="qi" role="2dhTFg">
+                <node concept="2dhVqD" id="qk" role="2dhTFg">
                   <uo k="s:originTrace" v="n:104" />
-                  <node concept="29jwqa" id="qj" role="2dhScq">
+                  <node concept="29jwqa" id="ql" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTSDl" />
                     <uo k="s:originTrace" v="n:104" />
                   </node>
-                  <node concept="2wijRm" id="qk" role="2dhS9X">
+                  <node concept="2wijRm" id="qm" role="2dhS9X">
                     <property role="TrG5h" value="Rotation" />
                     <uo k="s:originTrace" v="n:104" />
                   </node>
@@ -6697,33 +6705,25 @@
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="qb" role="3PTNxU">
+          <node concept="1dSo_L" id="qd" role="3PTNxU">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="2dhSm$" id="ql" role="1dwvF7">
+            <node concept="2dhSm$" id="qn" role="1dwvF7">
               <uo k="s:originTrace" v="n:104" />
-              <node concept="2dhVqD" id="qm" role="2dhSgj">
+              <node concept="2dhVqD" id="qo" role="2dhSgj">
                 <uo k="s:originTrace" v="n:104" />
-                <node concept="29jwqa" id="qo" role="2dhScq">
-                  <ref role="29jwqb" node="qe" />
+                <node concept="29jwqa" id="qq" role="2dhScq">
+                  <ref role="29jwqb" node="qg" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
-                <node concept="2wijRm" id="qp" role="2dhS9X">
+                <node concept="2wijRm" id="qr" role="2dhS9X">
                   <property role="TrG5h" value="setArray" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
               </node>
-              <node concept="2dhVws" id="qn" role="2dhSgd">
+              <node concept="2dhVws" id="qp" role="2dhSgd">
                 <uo k="s:originTrace" v="n:104" />
-                <node concept="2dhBVA" id="qq" role="2dhVHn">
-                  <property role="2dhB_1" value="1" />
-                  <uo k="s:originTrace" v="n:104" />
-                </node>
-                <node concept="2dhBVA" id="qr" role="2dhVHn">
-                  <property role="2dhB_1" value="0" />
-                  <uo k="s:originTrace" v="n:104" />
-                </node>
                 <node concept="2dhBVA" id="qs" role="2dhVHn">
-                  <property role="2dhB_1" value="0" />
+                  <property role="2dhB_1" value="1" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
                 <node concept="2dhBVA" id="qt" role="2dhVHn">
@@ -6735,7 +6735,7 @@
                   <uo k="s:originTrace" v="n:104" />
                 </node>
                 <node concept="2dhBVA" id="qv" role="2dhVHn">
-                  <property role="2dhB_1" value="1" />
+                  <property role="2dhB_1" value="0" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
                 <node concept="2dhBVA" id="qw" role="2dhVHn">
@@ -6743,7 +6743,7 @@
                   <uo k="s:originTrace" v="n:104" />
                 </node>
                 <node concept="2dhBVA" id="qx" role="2dhVHn">
-                  <property role="2dhB_1" value="0" />
+                  <property role="2dhB_1" value="1" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
                 <node concept="2dhBVA" id="qy" role="2dhVHn">
@@ -6755,7 +6755,7 @@
                   <uo k="s:originTrace" v="n:104" />
                 </node>
                 <node concept="2dhBVA" id="q$" role="2dhVHn">
-                  <property role="2dhB_1" value="1" />
+                  <property role="2dhB_1" value="0" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
                 <node concept="2dhBVA" id="q_" role="2dhVHn">
@@ -6763,7 +6763,7 @@
                   <uo k="s:originTrace" v="n:104" />
                 </node>
                 <node concept="2dhBVA" id="qA" role="2dhVHn">
-                  <property role="2dhB_1" value="0" />
+                  <property role="2dhB_1" value="1" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
                 <node concept="2dhBVA" id="qB" role="2dhVHn">
@@ -6778,130 +6778,138 @@
                   <property role="2dhB_1" value="0" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
+                <node concept="2dhBVA" id="qE" role="2dhVHn">
+                  <property role="2dhB_1" value="0" />
+                  <uo k="s:originTrace" v="n:104" />
+                </node>
+                <node concept="2dhBVA" id="qF" role="2dhVHn">
+                  <property role="2dhB_1" value="0" />
+                  <uo k="s:originTrace" v="n:104" />
+                </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="qc" role="3PTNxU">
+          <node concept="1dSo_L" id="qe" role="3PTNxU">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="2djMEC" id="qE" role="1dwvF7">
+            <node concept="2djMEC" id="qG" role="1dwvF7">
               <uo k="s:originTrace" v="n:104" />
-              <node concept="2dhVqD" id="qF" role="2dhTaa">
+              <node concept="2dhVqD" id="qH" role="2dhTaa">
                 <uo k="s:originTrace" v="n:104" />
-                <node concept="2dpZbP" id="qH" role="2dhScq">
+                <node concept="2dpZbP" id="qJ" role="2dhScq">
                   <uo k="s:originTrace" v="n:104" />
                 </node>
-                <node concept="2wijRm" id="qI" role="2dhS9X">
+                <node concept="2wijRm" id="qK" role="2dhS9X">
                   <property role="TrG5h" value="scope" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
               </node>
-              <node concept="2dhTJR" id="qG" role="2dhTO1">
+              <node concept="2dhTJR" id="qI" role="2dhTO1">
                 <uo k="s:originTrace" v="n:104" />
-                <node concept="2WqeGl" id="qJ" role="2dhSkW">
-                  <ref role="2WqeGo" node="q9" resolve="world" />
+                <node concept="2WqeGl" id="qL" role="2dhSkW">
+                  <ref role="2WqeGo" node="qb" resolve="world" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
-                <node concept="2dhVqD" id="qK" role="2dhSkW">
+                <node concept="2dhVqD" id="qM" role="2dhSkW">
                   <uo k="s:originTrace" v="n:104" />
-                  <node concept="2dhVqD" id="qO" role="2dhScq">
+                  <node concept="2dhVqD" id="qQ" role="2dhScq">
                     <uo k="s:originTrace" v="n:104" />
-                    <node concept="29jwqa" id="qQ" role="2dhScq">
+                    <node concept="29jwqa" id="qS" role="2dhScq">
                       <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                       <uo k="s:originTrace" v="n:104" />
                     </node>
-                    <node concept="2wijRm" id="qR" role="2dhS9X">
+                    <node concept="2wijRm" id="qT" role="2dhS9X">
                       <property role="TrG5h" value="Vector" />
                       <uo k="s:originTrace" v="n:104" />
                     </node>
                   </node>
-                  <node concept="2wijRm" id="qP" role="2dhS9X">
+                  <node concept="2wijRm" id="qR" role="2dhS9X">
                     <property role="TrG5h" value="ZERO" />
                     <uo k="s:originTrace" v="n:104" />
                   </node>
                 </node>
-                <node concept="2dhVqD" id="qL" role="2dhSkW">
+                <node concept="2dhVqD" id="qN" role="2dhSkW">
                   <uo k="s:originTrace" v="n:104" />
-                  <node concept="2dhVqD" id="qS" role="2dhScq">
+                  <node concept="2dhVqD" id="qU" role="2dhScq">
                     <uo k="s:originTrace" v="n:104" />
-                    <node concept="29jwqa" id="qU" role="2dhScq">
+                    <node concept="29jwqa" id="qW" role="2dhScq">
                       <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                       <uo k="s:originTrace" v="n:104" />
                     </node>
-                    <node concept="2wijRm" id="qV" role="2dhS9X">
+                    <node concept="2wijRm" id="qX" role="2dhS9X">
                       <property role="TrG5h" value="Vector" />
                       <uo k="s:originTrace" v="n:104" />
                     </node>
                   </node>
-                  <node concept="2wijRm" id="qT" role="2dhS9X">
+                  <node concept="2wijRm" id="qV" role="2dhS9X">
                     <property role="TrG5h" value="ZERO" />
                     <uo k="s:originTrace" v="n:104" />
                   </node>
                 </node>
-                <node concept="29jwqa" id="qM" role="2dhSkW">
-                  <ref role="29jwqb" node="qe" />
+                <node concept="29jwqa" id="qO" role="2dhSkW">
+                  <ref role="29jwqb" node="qg" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
-                <node concept="6BmiN" id="qN" role="2dhTFg">
-                  <ref role="6BmiO" node="$R" />
+                <node concept="6BmiN" id="qP" role="2dhTFg">
+                  <ref role="6BmiO" node="$T" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="qd" role="3PTNxU">
+          <node concept="1dSo_L" id="qf" role="3PTNxU">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="2dhSm$" id="qW" role="1dwvF7">
+            <node concept="2dhSm$" id="qY" role="1dwvF7">
               <uo k="s:originTrace" v="n:104" />
-              <node concept="2dhVqD" id="qX" role="2dhSgj">
+              <node concept="2dhVqD" id="qZ" role="2dhSgj">
                 <uo k="s:originTrace" v="n:104" />
-                <node concept="2dhVqD" id="r0" role="2dhScq">
+                <node concept="2dhVqD" id="r2" role="2dhScq">
                   <uo k="s:originTrace" v="n:104" />
-                  <node concept="2dpZbP" id="r2" role="2dhScq">
+                  <node concept="2dpZbP" id="r4" role="2dhScq">
                     <uo k="s:originTrace" v="n:104" />
                   </node>
-                  <node concept="2wijRm" id="r3" role="2dhS9X">
+                  <node concept="2wijRm" id="r5" role="2dhS9X">
                     <property role="TrG5h" value="metricsRenderer" />
                     <uo k="s:originTrace" v="n:104" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="r1" role="2dhS9X">
+                <node concept="2wijRm" id="r3" role="2dhS9X">
                   <property role="TrG5h" value="declareMetric" />
                   <uo k="s:originTrace" v="n:104" />
                 </node>
               </node>
-              <node concept="2dhBij" id="qY" role="2dhSgd">
+              <node concept="2dhBij" id="r0" role="2dhSgd">
                 <property role="2dhBvH" value="Sun position" />
                 <uo k="s:originTrace" v="n:104" />
               </node>
-              <node concept="2gzfuI" id="qZ" role="2dhSgd">
+              <node concept="2gzfuI" id="r1" role="2dhSgd">
                 <uo k="s:originTrace" v="n:104" />
-                <node concept="2eqWJV" id="r4" role="2gzftq">
+                <node concept="2eqWJV" id="r6" role="2gzftq">
                   <uo k="s:originTrace" v="n:104" />
-                  <node concept="2Iaxfq" id="r5" role="2eqZ0M">
+                  <node concept="2Iaxfq" id="r7" role="2eqZ0M">
                     <uo k="s:originTrace" v="n:104" />
                   </node>
-                  <node concept="2dhSm$" id="r6" role="2eqZ18">
+                  <node concept="2dhSm$" id="r8" role="2eqZ18">
                     <uo k="s:originTrace" v="n:110" />
-                    <node concept="2dhVqD" id="r7" role="2dhSgj">
+                    <node concept="2dhVqD" id="r9" role="2dhSgj">
                       <uo k="s:originTrace" v="n:110" />
-                      <node concept="2dhVqD" id="r8" role="2dhScq">
+                      <node concept="2dhVqD" id="ra" role="2dhScq">
                         <uo k="s:originTrace" v="n:112" />
-                        <node concept="2dhVqD" id="ra" role="2dhScq">
+                        <node concept="2dhVqD" id="rc" role="2dhScq">
                           <uo k="s:originTrace" v="n:113" />
-                          <node concept="2wijRm" id="rc" role="2dhS9X">
+                          <node concept="2wijRm" id="re" role="2dhS9X">
                             <property role="TrG5h" value="scope" />
                             <uo k="s:originTrace" v="n:113" />
                           </node>
-                          <node concept="2dpZbP" id="rd" role="2dhScq">
+                          <node concept="2dpZbP" id="rf" role="2dhScq">
                             <uo k="s:originTrace" v="n:113" />
                           </node>
                         </node>
-                        <node concept="2wijRm" id="rb" role="2dhS9X">
+                        <node concept="2wijRm" id="rd" role="2dhS9X">
                           <property role="TrG5h" value="object_Sun" />
                           <uo k="s:originTrace" v="n:112" />
                         </node>
                       </node>
-                      <node concept="2wijRm" id="r9" role="2dhS9X">
+                      <node concept="2wijRm" id="rb" role="2dhS9X">
                         <property role="TrG5h" value="getPosition" />
                         <uo k="s:originTrace" v="n:110" />
                       </node>
@@ -6913,124 +6921,124 @@
           </node>
         </node>
       </node>
-      <node concept="2wiq1L" id="px" role="2DTaag">
+      <node concept="2wiq1L" id="pz" role="2DTaag">
         <uo k="s:originTrace" v="n:104" />
-        <node concept="2wijRm" id="re" role="2wiapO">
+        <node concept="2wijRm" id="rg" role="2wiapO">
           <property role="TrG5h" value="getCameraPosition" />
           <uo k="s:originTrace" v="n:104" />
         </node>
-        <node concept="2wWApn" id="rf" role="2wWApU">
+        <node concept="2wWApn" id="rh" role="2wWApU">
           <uo k="s:originTrace" v="n:104" />
         </node>
-        <node concept="3PT0iG" id="rg" role="2wi7L_">
+        <node concept="3PT0iG" id="ri" role="2wi7L_">
           <uo k="s:originTrace" v="n:104" />
-          <node concept="1dSozb" id="rh" role="3PTNxU">
+          <node concept="1dSozb" id="rj" role="3PTNxU">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="1dxaa$" id="ri" role="1dEAni">
+            <node concept="1dxaa$" id="rk" role="1dEAni">
               <uo k="s:originTrace" v="n:104" />
-              <node concept="2dhSm$" id="rj" role="1dxaaB">
+              <node concept="2dhSm$" id="rl" role="1dxaaB">
                 <uo k="s:originTrace" v="n:109" />
-                <node concept="2dhVqD" id="rk" role="2dhSgj">
+                <node concept="2dhVqD" id="rm" role="2dhSgj">
                   <uo k="s:originTrace" v="n:109" />
-                  <node concept="2dhSm$" id="rm" role="2dhScq">
+                  <node concept="2dhSm$" id="ro" role="2dhScq">
                     <uo k="s:originTrace" v="n:127" />
-                    <node concept="2dhVqD" id="ro" role="2dhSgj">
+                    <node concept="2dhVqD" id="rq" role="2dhSgj">
                       <uo k="s:originTrace" v="n:127" />
-                      <node concept="2dhVqD" id="rp" role="2dhScq">
+                      <node concept="2dhVqD" id="rr" role="2dhScq">
                         <uo k="s:originTrace" v="n:164" />
-                        <node concept="2dhVqD" id="rr" role="2dhScq">
+                        <node concept="2dhVqD" id="rt" role="2dhScq">
                           <uo k="s:originTrace" v="n:166" />
-                          <node concept="2wijRm" id="rt" role="2dhS9X">
+                          <node concept="2wijRm" id="rv" role="2dhS9X">
                             <property role="TrG5h" value="scope" />
                             <uo k="s:originTrace" v="n:166" />
                           </node>
-                          <node concept="2dpZbP" id="ru" role="2dhScq">
+                          <node concept="2dpZbP" id="rw" role="2dhScq">
                             <uo k="s:originTrace" v="n:166" />
                           </node>
                         </node>
-                        <node concept="2wijRm" id="rs" role="2dhS9X">
+                        <node concept="2wijRm" id="ru" role="2dhS9X">
                           <property role="TrG5h" value="object_Sun" />
                           <uo k="s:originTrace" v="n:164" />
                         </node>
                       </node>
-                      <node concept="2wijRm" id="rq" role="2dhS9X">
+                      <node concept="2wijRm" id="rs" role="2dhS9X">
                         <property role="TrG5h" value="getPosition" />
                         <uo k="s:originTrace" v="n:127" />
                       </node>
                     </node>
                   </node>
-                  <node concept="2wijRm" id="rn" role="2dhS9X">
+                  <node concept="2wijRm" id="rp" role="2dhS9X">
                     <property role="TrG5h" value="add" />
                     <uo k="s:originTrace" v="n:109" />
                   </node>
                 </node>
-                <node concept="2dhTJR" id="rl" role="2dhSgd">
+                <node concept="2dhTJR" id="rn" role="2dhSgd">
                   <uo k="s:originTrace" v="n:126" />
-                  <node concept="2dhVqD" id="rv" role="2dhTFg">
+                  <node concept="2dhVqD" id="rx" role="2dhTFg">
                     <uo k="s:originTrace" v="n:126" />
-                    <node concept="29jwqa" id="rz" role="2dhScq">
+                    <node concept="29jwqa" id="r_" role="2dhScq">
                       <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                       <uo k="s:originTrace" v="n:126" />
                     </node>
-                    <node concept="2wijRm" id="r$" role="2dhS9X">
+                    <node concept="2wijRm" id="rA" role="2dhS9X">
                       <property role="TrG5h" value="Vector" />
                       <uo k="s:originTrace" v="n:126" />
                     </node>
                   </node>
-                  <node concept="2gzfuI" id="rw" role="2dhSkW">
+                  <node concept="2gzfuI" id="ry" role="2dhSkW">
                     <uo k="s:originTrace" v="n:128" />
-                    <node concept="2gzfuI" id="r_" role="2gzftq">
+                    <node concept="2gzfuI" id="rB" role="2gzftq">
                       <uo k="s:originTrace" v="n:138" />
-                      <node concept="2dhUHT" id="rA" role="2gzftq">
+                      <node concept="2dhUHT" id="rC" role="2gzftq">
                         <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                         <uo k="s:originTrace" v="n:138" />
-                        <node concept="2dhUTD" id="rB" role="2dhUC2">
+                        <node concept="2dhUTD" id="rD" role="2dhUC2">
                           <uo k="s:originTrace" v="n:139" />
-                          <node concept="2dhBVA" id="rD" role="2dhUzR">
+                          <node concept="2dhBVA" id="rF" role="2dhUzR">
                             <property role="2dhB_1" value="90" />
                             <uo k="s:originTrace" v="n:141" />
                           </node>
                         </node>
-                        <node concept="2dhBVA" id="rC" role="2dhUFW">
+                        <node concept="2dhBVA" id="rE" role="2dhUFW">
                           <property role="2dhB_1" value="1" />
                           <uo k="s:originTrace" v="n:140" />
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="2gzfuI" id="rx" role="2dhSkW">
+                  <node concept="2gzfuI" id="rz" role="2dhSkW">
                     <uo k="s:originTrace" v="n:129" />
-                    <node concept="2gzfuI" id="rE" role="2gzftq">
+                    <node concept="2gzfuI" id="rG" role="2gzftq">
                       <uo k="s:originTrace" v="n:149" />
-                      <node concept="2dhUHT" id="rF" role="2gzftq">
+                      <node concept="2dhUHT" id="rH" role="2gzftq">
                         <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                         <uo k="s:originTrace" v="n:149" />
-                        <node concept="2dhUTD" id="rG" role="2dhUC2">
+                        <node concept="2dhUTD" id="rI" role="2dhUC2">
                           <uo k="s:originTrace" v="n:150" />
-                          <node concept="2dhBVA" id="rI" role="2dhUzR">
+                          <node concept="2dhBVA" id="rK" role="2dhUzR">
                             <property role="2dhB_1" value="60" />
                             <uo k="s:originTrace" v="n:152" />
                           </node>
                         </node>
-                        <node concept="2dhBVA" id="rH" role="2dhUFW">
+                        <node concept="2dhBVA" id="rJ" role="2dhUFW">
                           <property role="2dhB_1" value="1" />
                           <uo k="s:originTrace" v="n:151" />
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="2gzfuI" id="ry" role="2dhSkW">
+                  <node concept="2gzfuI" id="r$" role="2dhSkW">
                     <uo k="s:originTrace" v="n:130" />
-                    <node concept="2gzfuI" id="rJ" role="2gzftq">
+                    <node concept="2gzfuI" id="rL" role="2gzftq">
                       <uo k="s:originTrace" v="n:160" />
-                      <node concept="2dhUHT" id="rK" role="2gzftq">
+                      <node concept="2dhUHT" id="rM" role="2gzftq">
                         <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                         <uo k="s:originTrace" v="n:160" />
-                        <node concept="2dhBVA" id="rL" role="2dhUC2">
+                        <node concept="2dhBVA" id="rN" role="2dhUC2">
                           <property role="2dhB_1" value="0" />
                           <uo k="s:originTrace" v="n:161" />
                         </node>
-                        <node concept="2dhBVA" id="rM" role="2dhUFW">
+                        <node concept="2dhBVA" id="rO" role="2dhUFW">
                           <property role="2dhB_1" value="1" />
                           <uo k="s:originTrace" v="n:162" />
                         </node>
@@ -7043,34 +7051,34 @@
           </node>
         </node>
       </node>
-      <node concept="2wiq1L" id="py" role="2DTaag">
+      <node concept="2wiq1L" id="p$" role="2DTaag">
         <uo k="s:originTrace" v="n:104" />
-        <node concept="2wijRm" id="rN" role="2wiapO">
+        <node concept="2wijRm" id="rP" role="2wiapO">
           <property role="TrG5h" value="getCameraFocus" />
           <uo k="s:originTrace" v="n:104" />
         </node>
-        <node concept="2wWApn" id="rO" role="2wWApU">
+        <node concept="2wWApn" id="rQ" role="2wWApU">
           <uo k="s:originTrace" v="n:104" />
         </node>
-        <node concept="3PT0iG" id="rP" role="2wi7L_">
+        <node concept="3PT0iG" id="rR" role="2wi7L_">
           <uo k="s:originTrace" v="n:104" />
-          <node concept="1dSozb" id="rQ" role="3PTNxU">
+          <node concept="1dSozb" id="rS" role="3PTNxU">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="1dxaa$" id="rR" role="1dEAni">
+            <node concept="1dxaa$" id="rT" role="1dEAni">
               <uo k="s:originTrace" v="n:104" />
-              <node concept="2dhVqD" id="rS" role="1dxaaB">
+              <node concept="2dhVqD" id="rU" role="1dxaaB">
                 <uo k="s:originTrace" v="n:108" />
-                <node concept="2dhVqD" id="rT" role="2dhScq">
+                <node concept="2dhVqD" id="rV" role="2dhScq">
                   <uo k="s:originTrace" v="n:124" />
-                  <node concept="2wijRm" id="rV" role="2dhS9X">
+                  <node concept="2wijRm" id="rX" role="2dhS9X">
                     <property role="TrG5h" value="scope" />
                     <uo k="s:originTrace" v="n:124" />
                   </node>
-                  <node concept="2dpZbP" id="rW" role="2dhScq">
+                  <node concept="2dpZbP" id="rY" role="2dhScq">
                     <uo k="s:originTrace" v="n:124" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="rU" role="2dhS9X">
+                <node concept="2wijRm" id="rW" role="2dhS9X">
                   <property role="TrG5h" value="object_Sun" />
                   <uo k="s:originTrace" v="n:108" />
                 </node>
@@ -7080,338 +7088,338 @@
         </node>
       </node>
     </node>
-    <node concept="1dSrUV" id="pp" role="1dSqon">
+    <node concept="1dSrUV" id="pr" role="1dSqon">
       <uo k="s:originTrace" v="n:104" />
     </node>
-    <node concept="1dSo_L" id="pq" role="1dSqon">
+    <node concept="1dSo_L" id="ps" role="1dSqon">
       <uo k="s:originTrace" v="n:104" />
-      <node concept="2dhSm$" id="rX" role="1dwvF7">
+      <node concept="2dhSm$" id="rZ" role="1dwvF7">
         <uo k="s:originTrace" v="n:104" />
-        <node concept="2dhVqD" id="rY" role="2dhSgj">
+        <node concept="2dhVqD" id="s0" role="2dhSgj">
           <uo k="s:originTrace" v="n:104" />
-          <node concept="2dhVqD" id="s0" role="2dhScq">
+          <node concept="2dhVqD" id="s2" role="2dhScq">
             <uo k="s:originTrace" v="n:104" />
-            <node concept="29jwqa" id="s2" role="2dhScq">
+            <node concept="29jwqa" id="s4" role="2dhScq">
               <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
               <uo k="s:originTrace" v="n:104" />
             </node>
-            <node concept="2wijRm" id="s3" role="2dhS9X">
+            <node concept="2wijRm" id="s5" role="2dhS9X">
               <property role="TrG5h" value="simulationClasses" />
               <uo k="s:originTrace" v="n:104" />
             </node>
           </node>
-          <node concept="2wijRm" id="s1" role="2dhS9X">
+          <node concept="2wijRm" id="s3" role="2dhS9X">
             <property role="TrG5h" value="push" />
             <uo k="s:originTrace" v="n:104" />
           </node>
         </node>
-        <node concept="6BmiN" id="rZ" role="2dhSgd">
-          <ref role="6BmiO" node="po" />
+        <node concept="6BmiN" id="s1" role="2dhSgd">
+          <ref role="6BmiO" node="pq" />
           <uo k="s:originTrace" v="n:104" />
         </node>
       </node>
     </node>
-    <node concept="3ErYpN" id="pr" role="3E_D5O">
+    <node concept="3ErYpN" id="pt" role="3E_D5O">
       <ref role="3ErYpM" to="f76b:2RasiBbTMfg" resolve="RuntimeEnv" />
       <uo k="s:originTrace" v="n:104" />
     </node>
   </node>
-  <node concept="1dSqrf" id="s4">
+  <node concept="1dSqrf" id="s6">
     <property role="TrG5h" value="EarthDemo" />
     <uo k="s:originTrace" v="n:167" />
-    <node concept="36SGkD" id="s5" role="1dSqon">
-      <ref role="36SuZX" node="yU" resolve="Planet" />
+    <node concept="36SGkD" id="s7" role="1dSqon">
+      <ref role="36SuZX" node="yW" resolve="Planet" />
       <uo k="s:originTrace" v="n:167" />
     </node>
-    <node concept="1dSrUV" id="s6" role="1dSqon">
+    <node concept="1dSrUV" id="s8" role="1dSqon">
       <uo k="s:originTrace" v="n:167" />
     </node>
-    <node concept="2DT8ht" id="s7" role="1dSqon">
+    <node concept="2DT8ht" id="s9" role="1dSqon">
       <uo k="s:originTrace" v="n:167" />
-      <node concept="1mvZK$" id="sd" role="2DT8gC">
+      <node concept="1mvZK$" id="sf" role="2DT8gC">
         <property role="TrG5h" value="Earth" />
         <uo k="s:originTrace" v="n:167" />
       </node>
-      <node concept="2wiq1L" id="se" role="2DTaag">
+      <node concept="2wiq1L" id="sg" role="2DTaag">
         <uo k="s:originTrace" v="n:167" />
-        <node concept="2wijRm" id="sg" role="2wiapO">
+        <node concept="2wijRm" id="si" role="2wiapO">
           <property role="TrG5h" value="init" />
           <uo k="s:originTrace" v="n:167" />
         </node>
-        <node concept="2wWApn" id="sh" role="2wWApU">
+        <node concept="2wWApn" id="sj" role="2wWApU">
           <uo k="s:originTrace" v="n:167" />
         </node>
-        <node concept="3PT0iG" id="si" role="2wi7L_">
+        <node concept="3PT0iG" id="sk" role="2wi7L_">
           <uo k="s:originTrace" v="n:167" />
-          <node concept="1dSo_L" id="sj" role="3PTNxU">
+          <node concept="1dSo_L" id="sl" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="sq" role="1dwvF7">
+            <node concept="2dhSm$" id="ss" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="sr" role="2dhSgj">
+              <node concept="2dhVqD" id="st" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dpZbP" id="st" role="2dhScq">
+                <node concept="2dpZbP" id="sv" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
                 </node>
-                <node concept="2wijRm" id="su" role="2dhS9X">
+                <node concept="2wijRm" id="sw" role="2dhS9X">
                   <property role="TrG5h" value="setMass" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhBVA" id="ss" role="2dhSgd">
+              <node concept="2dhBVA" id="su" role="2dhSgd">
                 <property role="2dhB_1" value="800" />
                 <uo k="s:originTrace" v="n:170" />
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="sk" role="3PTNxU">
+          <node concept="1dSo_L" id="sm" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="sv" role="1dwvF7">
+            <node concept="2dhSm$" id="sx" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="sw" role="2dhSgd">
+              <node concept="2dhVqD" id="sy" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dpZbP" id="sz" role="2dhScq">
+                <node concept="2dpZbP" id="s_" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
                 </node>
-                <node concept="2wijRm" id="s$" role="2dhS9X">
+                <node concept="2wijRm" id="sA" role="2dhS9X">
                   <property role="TrG5h" value="body" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="sx" role="2dhSgd">
+              <node concept="2dhVqD" id="sz" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhSm$" id="s_" role="2dhScq">
+                <node concept="2dhSm$" id="sB" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dhTJR" id="sB" role="2dhSgd">
+                  <node concept="2dhTJR" id="sD" role="2dhSgd">
                     <uo k="s:originTrace" v="n:171" />
-                    <node concept="2dhVqD" id="sD" role="2dhTFg">
+                    <node concept="2dhVqD" id="sF" role="2dhTFg">
                       <uo k="s:originTrace" v="n:176" />
-                      <node concept="29jwqa" id="sH" role="2dhScq">
+                      <node concept="29jwqa" id="sJ" role="2dhScq">
                         <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                         <uo k="s:originTrace" v="n:176" />
                       </node>
-                      <node concept="2wijRm" id="sI" role="2dhS9X">
+                      <node concept="2wijRm" id="sK" role="2dhS9X">
                         <property role="TrG5h" value="Vector" />
                         <uo k="s:originTrace" v="n:176" />
                       </node>
                     </node>
-                    <node concept="2dhBVA" id="sE" role="2dhSkW">
+                    <node concept="2dhBVA" id="sG" role="2dhSkW">
                       <property role="2dhB_1" value="0" />
                       <uo k="s:originTrace" v="n:177" />
                     </node>
-                    <node concept="2dhBVA" id="sF" role="2dhSkW">
+                    <node concept="2dhBVA" id="sH" role="2dhSkW">
                       <property role="2dhB_1" value="0" />
                       <uo k="s:originTrace" v="n:178" />
                     </node>
-                    <node concept="2dhBVA" id="sG" role="2dhSkW">
+                    <node concept="2dhBVA" id="sI" role="2dhSkW">
                       <property role="2dhB_1" value="0" />
                       <uo k="s:originTrace" v="n:179" />
                     </node>
                   </node>
-                  <node concept="2dhVqD" id="sC" role="2dhSgj">
+                  <node concept="2dhVqD" id="sE" role="2dhSgj">
                     <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dhVqD" id="sJ" role="2dhScq">
+                    <node concept="2dhVqD" id="sL" role="2dhScq">
                       <uo k="s:originTrace" v="n:167" />
-                      <node concept="2dpZbP" id="sL" role="2dhScq">
+                      <node concept="2dpZbP" id="sN" role="2dhScq">
                         <uo k="s:originTrace" v="n:167" />
                       </node>
-                      <node concept="2wijRm" id="sM" role="2dhS9X">
+                      <node concept="2wijRm" id="sO" role="2dhS9X">
                         <property role="TrG5h" value="scope" />
                         <uo k="s:originTrace" v="n:167" />
                       </node>
                     </node>
-                    <node concept="2wijRm" id="sK" role="2dhS9X">
+                    <node concept="2wijRm" id="sM" role="2dhS9X">
                       <property role="TrG5h" value="getAbsoluteInitialPosition" />
                       <uo k="s:originTrace" v="n:167" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="sA" role="2dhS9X">
+                <node concept="2wijRm" id="sC" role="2dhS9X">
                   <property role="TrG5h" value="values" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="sy" role="2dhSgj">
+              <node concept="2dhVqD" id="s$" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="sN" role="2dhScq">
+                <node concept="2dhVqD" id="sP" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2wijRm" id="sP" role="2dhS9X">
+                  <node concept="2wijRm" id="sR" role="2dhS9X">
                     <property role="TrG5h" value="setPosition" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
-                  <node concept="2dhVqD" id="sQ" role="2dhScq">
+                  <node concept="2dhVqD" id="sS" role="2dhScq">
                     <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dpZbP" id="sR" role="2dhScq">
+                    <node concept="2dpZbP" id="sT" role="2dhScq">
                       <uo k="s:originTrace" v="n:167" />
                     </node>
-                    <node concept="2wijRm" id="sS" role="2dhS9X">
+                    <node concept="2wijRm" id="sU" role="2dhS9X">
                       <property role="TrG5h" value="body" />
                       <uo k="s:originTrace" v="n:167" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="sO" role="2dhS9X">
+                <node concept="2wijRm" id="sQ" role="2dhS9X">
                   <property role="TrG5h" value="apply" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="sl" role="3PTNxU">
+          <node concept="1dSo_L" id="sn" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="sT" role="1dwvF7">
+            <node concept="2dhSm$" id="sV" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="sU" role="2dhSgd">
+              <node concept="2dhVqD" id="sW" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dpZbP" id="sX" role="2dhScq">
+                <node concept="2dpZbP" id="sZ" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
                 </node>
-                <node concept="2wijRm" id="sY" role="2dhS9X">
+                <node concept="2wijRm" id="t0" role="2dhS9X">
                   <property role="TrG5h" value="body" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="sV" role="2dhSgd">
+              <node concept="2dhVqD" id="sX" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="sZ" role="2dhScq">
+                <node concept="2dhVqD" id="t1" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dhVqD" id="t1" role="2dhScq">
+                  <node concept="2dhVqD" id="t3" role="2dhScq">
                     <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dpZbP" id="t3" role="2dhScq">
+                    <node concept="2dpZbP" id="t5" role="2dhScq">
                       <uo k="s:originTrace" v="n:167" />
                     </node>
-                    <node concept="2wijRm" id="t4" role="2dhS9X">
+                    <node concept="2wijRm" id="t6" role="2dhS9X">
                       <property role="TrG5h" value="scope" />
                       <uo k="s:originTrace" v="n:167" />
                     </node>
                   </node>
-                  <node concept="2wijRm" id="t2" role="2dhS9X">
+                  <node concept="2wijRm" id="t4" role="2dhS9X">
                     <property role="TrG5h" value="initialVelocity" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="t0" role="2dhS9X">
+                <node concept="2wijRm" id="t2" role="2dhS9X">
                   <property role="TrG5h" value="values" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="sW" role="2dhSgj">
+              <node concept="2dhVqD" id="sY" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="t5" role="2dhScq">
+                <node concept="2dhVqD" id="t7" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2wijRm" id="t7" role="2dhS9X">
+                  <node concept="2wijRm" id="t9" role="2dhS9X">
                     <property role="TrG5h" value="setLinearVel" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
-                  <node concept="2dhVqD" id="t8" role="2dhScq">
+                  <node concept="2dhVqD" id="ta" role="2dhScq">
                     <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dpZbP" id="t9" role="2dhScq">
+                    <node concept="2dpZbP" id="tb" role="2dhScq">
                       <uo k="s:originTrace" v="n:167" />
                     </node>
-                    <node concept="2wijRm" id="ta" role="2dhS9X">
+                    <node concept="2wijRm" id="tc" role="2dhS9X">
                       <property role="TrG5h" value="body" />
                       <uo k="s:originTrace" v="n:167" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="t6" role="2dhS9X">
+                <node concept="2wijRm" id="t8" role="2dhS9X">
                   <property role="TrG5h" value="apply" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="sm" role="3PTNxU">
+          <node concept="1dSo_L" id="so" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="tb" role="1dwvF7">
+            <node concept="2dhSm$" id="td" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="tc" role="2dhSgj">
+              <node concept="2dhVqD" id="te" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="tf" role="2dhScq">
+                <node concept="2dhVqD" id="th" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2wijRm" id="th" role="2dhS9X">
+                  <node concept="2wijRm" id="tj" role="2dhS9X">
                     <property role="TrG5h" value="setAngularVel" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
-                  <node concept="2dhVqD" id="ti" role="2dhScq">
+                  <node concept="2dhVqD" id="tk" role="2dhScq">
                     <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dpZbP" id="tj" role="2dhScq">
+                    <node concept="2dpZbP" id="tl" role="2dhScq">
                       <uo k="s:originTrace" v="n:167" />
                     </node>
-                    <node concept="2wijRm" id="tk" role="2dhS9X">
+                    <node concept="2wijRm" id="tm" role="2dhS9X">
                       <property role="TrG5h" value="body" />
                       <uo k="s:originTrace" v="n:167" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="tg" role="2dhS9X">
+                <node concept="2wijRm" id="ti" role="2dhS9X">
                   <property role="TrG5h" value="apply" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="td" role="2dhSgd">
+              <node concept="2dhVqD" id="tf" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dpZbP" id="tl" role="2dhScq">
+                <node concept="2dpZbP" id="tn" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
                 </node>
-                <node concept="2wijRm" id="tm" role="2dhS9X">
+                <node concept="2wijRm" id="to" role="2dhS9X">
                   <property role="TrG5h" value="body" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="te" role="2dhSgd">
+              <node concept="2dhVqD" id="tg" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhTJR" id="tn" role="2dhScq">
+                <node concept="2dhTJR" id="tp" role="2dhScq">
                   <uo k="s:originTrace" v="n:182" />
-                  <node concept="2dhVqD" id="tp" role="2dhTFg">
+                  <node concept="2dhVqD" id="tr" role="2dhTFg">
                     <uo k="s:originTrace" v="n:182" />
-                    <node concept="29jwqa" id="tt" role="2dhScq">
+                    <node concept="29jwqa" id="tv" role="2dhScq">
                       <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                       <uo k="s:originTrace" v="n:182" />
                     </node>
-                    <node concept="2wijRm" id="tu" role="2dhS9X">
+                    <node concept="2wijRm" id="tw" role="2dhS9X">
                       <property role="TrG5h" value="Vector" />
                       <uo k="s:originTrace" v="n:182" />
                     </node>
                   </node>
-                  <node concept="2dhBVA" id="tq" role="2dhSkW">
+                  <node concept="2dhBVA" id="ts" role="2dhSkW">
                     <property role="2dhB_1" value="0" />
                     <uo k="s:originTrace" v="n:183" />
                   </node>
-                  <node concept="2gzfuI" id="tr" role="2dhSkW">
+                  <node concept="2gzfuI" id="tt" role="2dhSkW">
                     <uo k="s:originTrace" v="n:185" />
-                    <node concept="2dhUHT" id="tv" role="2gzftq">
+                    <node concept="2dhUHT" id="tx" role="2gzftq">
                       <property role="2dhUDU" value="7rFtnRVFhgx/boDiv" />
                       <uo k="s:originTrace" v="n:185" />
-                      <node concept="2gzfuI" id="tw" role="2dhUC2">
+                      <node concept="2gzfuI" id="ty" role="2dhUC2">
                         <uo k="s:originTrace" v="n:187" />
-                        <node concept="2gzfuI" id="ty" role="2gzftq">
+                        <node concept="2gzfuI" id="t$" role="2gzftq">
                           <uo k="s:originTrace" v="n:203" />
-                          <node concept="2dhUHT" id="tz" role="2gzftq">
+                          <node concept="2dhUHT" id="t_" role="2gzftq">
                             <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                             <uo k="s:originTrace" v="n:203" />
-                            <node concept="2dhBVA" id="t$" role="2dhUC2">
+                            <node concept="2dhBVA" id="tA" role="2dhUC2">
                               <property role="2dhB_1" value="360" />
                               <uo k="s:originTrace" v="n:204" />
                             </node>
-                            <node concept="2dhBVA" id="t_" role="2dhUFW">
+                            <node concept="2dhBVA" id="tB" role="2dhUFW">
                               <property role="2dhB_1" value="0.01745328627927352441191151881987859" />
                               <uo k="s:originTrace" v="n:205" />
                             </node>
                           </node>
                         </node>
                       </node>
-                      <node concept="2gzfuI" id="tx" role="2dhUFW">
+                      <node concept="2gzfuI" id="tz" role="2dhUFW">
                         <uo k="s:originTrace" v="n:186" />
-                        <node concept="2gzfuI" id="tA" role="2gzftq">
+                        <node concept="2gzfuI" id="tC" role="2gzftq">
                           <uo k="s:originTrace" v="n:194" />
-                          <node concept="2dhUHT" id="tB" role="2gzftq">
+                          <node concept="2dhUHT" id="tD" role="2gzftq">
                             <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                             <uo k="s:originTrace" v="n:194" />
-                            <node concept="2dhBVA" id="tC" role="2dhUC2">
+                            <node concept="2dhBVA" id="tE" role="2dhUC2">
                               <property role="2dhB_1" value="1" />
                               <uo k="s:originTrace" v="n:195" />
                             </node>
-                            <node concept="2dhBVA" id="tD" role="2dhUFW">
+                            <node concept="2dhBVA" id="tF" role="2dhUFW">
                               <property role="2dhB_1" value="1" />
                               <uo k="s:originTrace" v="n:196" />
                             </node>
@@ -7420,27 +7428,27 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="2dhBVA" id="ts" role="2dhSkW">
+                  <node concept="2dhBVA" id="tu" role="2dhSkW">
                     <property role="2dhB_1" value="0" />
                     <uo k="s:originTrace" v="n:184" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="to" role="2dhS9X">
+                <node concept="2wijRm" id="tq" role="2dhS9X">
                   <property role="TrG5h" value="values" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="sn" role="3PTNxU">
+          <node concept="1dSo_L" id="sp" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="tE" role="1dwvF7">
+            <node concept="2dhSm$" id="tG" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2gzfuI" id="tF" role="2dhSgj">
+              <node concept="2gzfuI" id="tH" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2WRy0S" id="tG" role="2gzftq">
+                <node concept="2WRy0S" id="tI" role="2gzftq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dhBij" id="tH" role="2WDU8g">
+                  <node concept="2dhBij" id="tJ" role="2WDU8g">
                     <property role="3S2$_t" value="init" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
@@ -7448,75 +7456,75 @@
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="so" role="3PTNxU">
+          <node concept="1dSo_L" id="sq" role="3PTNxU">
             <uo k="s:originTrace" v="n:172" />
-            <node concept="2dhSm$" id="tI" role="1dwvF7">
-              <node concept="2dhVqD" id="tJ" role="2dhSgd">
+            <node concept="2dhSm$" id="tK" role="1dwvF7">
+              <node concept="2dhVqD" id="tL" role="2dhSgd">
                 <uo k="s:originTrace" v="n:180" />
-                <node concept="2dhVqD" id="tM" role="2dhScq">
+                <node concept="2dhVqD" id="tO" role="2dhScq">
                   <uo k="s:originTrace" v="n:180" />
-                  <node concept="29jwqa" id="tO" role="2dhScq">
+                  <node concept="29jwqa" id="tQ" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:180" />
                   </node>
-                  <node concept="2wijRm" id="tP" role="2dhS9X">
+                  <node concept="2wijRm" id="tR" role="2dhS9X">
                     <property role="TrG5h" value="PropKey" />
                     <uo k="s:originTrace" v="n:180" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="tN" role="2dhS9X">
+                <node concept="2wijRm" id="tP" role="2dhS9X">
                   <property role="TrG5h" value="TEXTURE" />
                   <uo k="s:originTrace" v="n:180" />
                 </node>
               </node>
-              <node concept="2dhTJR" id="tK" role="2dhSgd">
+              <node concept="2dhTJR" id="tM" role="2dhSgd">
                 <uo k="s:originTrace" v="n:181" />
-                <node concept="2dhVqD" id="tQ" role="2dhTFg">
+                <node concept="2dhVqD" id="tS" role="2dhTFg">
                   <uo k="s:originTrace" v="n:181" />
-                  <node concept="29jwqa" id="tS" role="2dhScq">
+                  <node concept="29jwqa" id="tU" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:181" />
                   </node>
-                  <node concept="2wijRm" id="tT" role="2dhS9X">
+                  <node concept="2wijRm" id="tV" role="2dhS9X">
                     <property role="TrG5h" value="ImageTexture" />
                     <uo k="s:originTrace" v="n:181" />
                   </node>
                 </node>
-                <node concept="2dhBij" id="tR" role="2dhSkW">
+                <node concept="2dhBij" id="tT" role="2dhSkW">
                   <property role="2dhBvH" value="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Land_shallow_topo_2048.jpg/1024px-Land_shallow_topo_2048.jpg" />
                   <uo k="s:originTrace" v="n:181" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="tL" role="2dhSgj">
-                <node concept="2dhVqD" id="tU" role="2dhScq">
-                  <node concept="2dpZbP" id="tW" role="2dhScq" />
-                  <node concept="2wijRm" id="tX" role="2dhS9X">
+              <node concept="2dhVqD" id="tN" role="2dhSgj">
+                <node concept="2dhVqD" id="tW" role="2dhScq">
+                  <node concept="2dpZbP" id="tY" role="2dhScq" />
+                  <node concept="2wijRm" id="tZ" role="2dhS9X">
                     <property role="TrG5h" value="propertiesBuilder" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="tV" role="2dhS9X">
+                <node concept="2wijRm" id="tX" role="2dhS9X">
                   <property role="TrG5h" value="set" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="sp" role="3PTNxU">
+          <node concept="1dSo_L" id="sr" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="tY" role="1dwvF7">
+            <node concept="2dhSm$" id="u0" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="tZ" role="2dhSgj">
+              <node concept="2dhVqD" id="u1" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="u0" role="2dhScq">
+                <node concept="2dhVqD" id="u2" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dpZbP" id="u2" role="2dhScq">
+                  <node concept="2dpZbP" id="u4" role="2dhScq">
                     <uo k="s:originTrace" v="n:167" />
                   </node>
-                  <node concept="2wijRm" id="u3" role="2dhS9X">
+                  <node concept="2wijRm" id="u5" role="2dhS9X">
                     <property role="TrG5h" value="forces" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="u1" role="2dhS9X">
+                <node concept="2wijRm" id="u3" role="2dhS9X">
                   <property role="TrG5h" value="push" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
@@ -7525,127 +7533,127 @@
           </node>
         </node>
       </node>
-      <node concept="6BmiN" id="sf" role="2DT8gE">
-        <ref role="6BmiO" node="yY" />
+      <node concept="6BmiN" id="sh" role="2DT8gE">
+        <ref role="6BmiO" node="z0" />
         <uo k="s:originTrace" v="n:167" />
       </node>
     </node>
-    <node concept="2DT8ht" id="s8" role="1dSqon">
+    <node concept="2DT8ht" id="sa" role="1dSqon">
       <uo k="s:originTrace" v="n:167" />
-      <node concept="1mvZK$" id="u4" role="2DT8gC">
+      <node concept="1mvZK$" id="u6" role="2DT8gC">
         <property role="TrG5h" value="Moon" />
         <uo k="s:originTrace" v="n:167" />
       </node>
-      <node concept="2wiq1L" id="u5" role="2DTaag">
+      <node concept="2wiq1L" id="u7" role="2DTaag">
         <uo k="s:originTrace" v="n:167" />
-        <node concept="2wijRm" id="u7" role="2wiapO">
+        <node concept="2wijRm" id="u9" role="2wiapO">
           <property role="TrG5h" value="init" />
           <uo k="s:originTrace" v="n:167" />
         </node>
-        <node concept="2wWApn" id="u8" role="2wWApU">
+        <node concept="2wWApn" id="ua" role="2wWApU">
           <uo k="s:originTrace" v="n:167" />
         </node>
-        <node concept="3PT0iG" id="u9" role="2wi7L_">
+        <node concept="3PT0iG" id="ub" role="2wi7L_">
           <uo k="s:originTrace" v="n:167" />
-          <node concept="1dSo_L" id="ua" role="3PTNxU">
+          <node concept="1dSo_L" id="uc" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="uh" role="1dwvF7">
+            <node concept="2dhSm$" id="uj" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="ui" role="2dhSgj">
+              <node concept="2dhVqD" id="uk" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dpZbP" id="uk" role="2dhScq">
+                <node concept="2dpZbP" id="um" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
                 </node>
-                <node concept="2wijRm" id="ul" role="2dhS9X">
+                <node concept="2wijRm" id="un" role="2dhS9X">
                   <property role="TrG5h" value="setMass" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhBVA" id="uj" role="2dhSgd">
+              <node concept="2dhBVA" id="ul" role="2dhSgd">
                 <property role="2dhB_1" value="100" />
                 <uo k="s:originTrace" v="n:206" />
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="ub" role="3PTNxU">
+          <node concept="1dSo_L" id="ud" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="um" role="1dwvF7">
+            <node concept="2dhSm$" id="uo" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="un" role="2dhSgd">
+              <node concept="2dhVqD" id="up" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dpZbP" id="uq" role="2dhScq">
+                <node concept="2dpZbP" id="us" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
                 </node>
-                <node concept="2wijRm" id="ur" role="2dhS9X">
+                <node concept="2wijRm" id="ut" role="2dhS9X">
                   <property role="TrG5h" value="body" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="uo" role="2dhSgd">
+              <node concept="2dhVqD" id="uq" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhSm$" id="us" role="2dhScq">
+                <node concept="2dhSm$" id="uu" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dhTJR" id="uu" role="2dhSgd">
+                  <node concept="2dhTJR" id="uw" role="2dhSgd">
                     <uo k="s:originTrace" v="n:207" />
-                    <node concept="2dhVqD" id="uw" role="2dhTFg">
+                    <node concept="2dhVqD" id="uy" role="2dhTFg">
                       <uo k="s:originTrace" v="n:213" />
-                      <node concept="29jwqa" id="u$" role="2dhScq">
+                      <node concept="29jwqa" id="uA" role="2dhScq">
                         <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                         <uo k="s:originTrace" v="n:213" />
                       </node>
-                      <node concept="2wijRm" id="u_" role="2dhS9X">
+                      <node concept="2wijRm" id="uB" role="2dhS9X">
                         <property role="TrG5h" value="Vector" />
                         <uo k="s:originTrace" v="n:213" />
                       </node>
                     </node>
-                    <node concept="2gzfuI" id="ux" role="2dhSkW">
+                    <node concept="2gzfuI" id="uz" role="2dhSkW">
                       <uo k="s:originTrace" v="n:214" />
-                      <node concept="2gzfuI" id="uA" role="2gzftq">
+                      <node concept="2gzfuI" id="uC" role="2gzftq">
                         <uo k="s:originTrace" v="n:224" />
-                        <node concept="2dhUHT" id="uB" role="2gzftq">
+                        <node concept="2dhUHT" id="uD" role="2gzftq">
                           <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                           <uo k="s:originTrace" v="n:224" />
-                          <node concept="2dhBVA" id="uC" role="2dhUC2">
+                          <node concept="2dhBVA" id="uE" role="2dhUC2">
                             <property role="2dhB_1" value="0.0" />
                             <uo k="s:originTrace" v="n:225" />
                           </node>
-                          <node concept="2dhBVA" id="uD" role="2dhUFW">
+                          <node concept="2dhBVA" id="uF" role="2dhUFW">
                             <property role="2dhB_1" value="1" />
                             <uo k="s:originTrace" v="n:226" />
                           </node>
                         </node>
                       </node>
                     </node>
-                    <node concept="2gzfuI" id="uy" role="2dhSkW">
+                    <node concept="2gzfuI" id="u$" role="2dhSkW">
                       <uo k="s:originTrace" v="n:215" />
-                      <node concept="2gzfuI" id="uE" role="2gzftq">
+                      <node concept="2gzfuI" id="uG" role="2gzftq">
                         <uo k="s:originTrace" v="n:234" />
-                        <node concept="2dhUHT" id="uF" role="2gzftq">
+                        <node concept="2dhUHT" id="uH" role="2gzftq">
                           <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                           <uo k="s:originTrace" v="n:234" />
-                          <node concept="2dhBVA" id="uG" role="2dhUC2">
+                          <node concept="2dhBVA" id="uI" role="2dhUC2">
                             <property role="2dhB_1" value="0.0" />
                             <uo k="s:originTrace" v="n:235" />
                           </node>
-                          <node concept="2dhBVA" id="uH" role="2dhUFW">
+                          <node concept="2dhBVA" id="uJ" role="2dhUFW">
                             <property role="2dhB_1" value="1" />
                             <uo k="s:originTrace" v="n:236" />
                           </node>
                         </node>
                       </node>
                     </node>
-                    <node concept="2gzfuI" id="uz" role="2dhSkW">
+                    <node concept="2gzfuI" id="u_" role="2dhSkW">
                       <uo k="s:originTrace" v="n:216" />
-                      <node concept="2gzfuI" id="uI" role="2gzftq">
+                      <node concept="2gzfuI" id="uK" role="2gzftq">
                         <uo k="s:originTrace" v="n:244" />
-                        <node concept="2dhUHT" id="uJ" role="2gzftq">
+                        <node concept="2dhUHT" id="uL" role="2gzftq">
                           <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                           <uo k="s:originTrace" v="n:244" />
-                          <node concept="2dhBVA" id="uK" role="2dhUC2">
+                          <node concept="2dhBVA" id="uM" role="2dhUC2">
                             <property role="2dhB_1" value="20.0" />
                             <uo k="s:originTrace" v="n:245" />
                           </node>
-                          <node concept="2dhBVA" id="uL" role="2dhUFW">
+                          <node concept="2dhBVA" id="uN" role="2dhUFW">
                             <property role="2dhB_1" value="1" />
                             <uo k="s:originTrace" v="n:246" />
                           </node>
@@ -7653,134 +7661,134 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="2dhVqD" id="uv" role="2dhSgj">
+                  <node concept="2dhVqD" id="ux" role="2dhSgj">
                     <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dhVqD" id="uM" role="2dhScq">
+                    <node concept="2dhVqD" id="uO" role="2dhScq">
                       <uo k="s:originTrace" v="n:167" />
-                      <node concept="2dpZbP" id="uO" role="2dhScq">
+                      <node concept="2dpZbP" id="uQ" role="2dhScq">
                         <uo k="s:originTrace" v="n:167" />
                       </node>
-                      <node concept="2wijRm" id="uP" role="2dhS9X">
+                      <node concept="2wijRm" id="uR" role="2dhS9X">
                         <property role="TrG5h" value="scope" />
                         <uo k="s:originTrace" v="n:167" />
                       </node>
                     </node>
-                    <node concept="2wijRm" id="uN" role="2dhS9X">
+                    <node concept="2wijRm" id="uP" role="2dhS9X">
                       <property role="TrG5h" value="getAbsoluteInitialPosition" />
                       <uo k="s:originTrace" v="n:167" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="ut" role="2dhS9X">
+                <node concept="2wijRm" id="uv" role="2dhS9X">
                   <property role="TrG5h" value="values" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="up" role="2dhSgj">
+              <node concept="2dhVqD" id="ur" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="uQ" role="2dhScq">
+                <node concept="2dhVqD" id="uS" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2wijRm" id="uS" role="2dhS9X">
+                  <node concept="2wijRm" id="uU" role="2dhS9X">
                     <property role="TrG5h" value="setPosition" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
-                  <node concept="2dhVqD" id="uT" role="2dhScq">
+                  <node concept="2dhVqD" id="uV" role="2dhScq">
                     <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dpZbP" id="uU" role="2dhScq">
+                    <node concept="2dpZbP" id="uW" role="2dhScq">
                       <uo k="s:originTrace" v="n:167" />
                     </node>
-                    <node concept="2wijRm" id="uV" role="2dhS9X">
+                    <node concept="2wijRm" id="uX" role="2dhS9X">
                       <property role="TrG5h" value="body" />
                       <uo k="s:originTrace" v="n:167" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="uR" role="2dhS9X">
+                <node concept="2wijRm" id="uT" role="2dhS9X">
                   <property role="TrG5h" value="apply" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="uc" role="3PTNxU">
+          <node concept="1dSo_L" id="ue" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="uW" role="1dwvF7">
+            <node concept="2dhSm$" id="uY" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="uX" role="2dhSgd">
+              <node concept="2dhVqD" id="uZ" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dpZbP" id="v0" role="2dhScq">
+                <node concept="2dpZbP" id="v2" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
                 </node>
-                <node concept="2wijRm" id="v1" role="2dhS9X">
+                <node concept="2wijRm" id="v3" role="2dhS9X">
                   <property role="TrG5h" value="body" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="uY" role="2dhSgd">
+              <node concept="2dhVqD" id="v0" role="2dhSgd">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhSm$" id="v2" role="2dhScq">
+                <node concept="2dhSm$" id="v4" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dhTJR" id="v4" role="2dhSgd">
+                  <node concept="2dhTJR" id="v6" role="2dhSgd">
                     <uo k="s:originTrace" v="n:211" />
-                    <node concept="2dhVqD" id="v6" role="2dhTFg">
+                    <node concept="2dhVqD" id="v8" role="2dhTFg">
                       <uo k="s:originTrace" v="n:252" />
-                      <node concept="29jwqa" id="va" role="2dhScq">
+                      <node concept="29jwqa" id="vc" role="2dhScq">
                         <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                         <uo k="s:originTrace" v="n:252" />
                       </node>
-                      <node concept="2wijRm" id="vb" role="2dhS9X">
+                      <node concept="2wijRm" id="vd" role="2dhS9X">
                         <property role="TrG5h" value="Vector" />
                         <uo k="s:originTrace" v="n:252" />
                       </node>
                     </node>
-                    <node concept="2gzfuI" id="v7" role="2dhSkW">
+                    <node concept="2gzfuI" id="v9" role="2dhSkW">
                       <uo k="s:originTrace" v="n:253" />
-                      <node concept="2gzfuI" id="vc" role="2gzftq">
+                      <node concept="2gzfuI" id="ve" role="2gzftq">
                         <uo k="s:originTrace" v="n:265" />
-                        <node concept="2dhUHT" id="vd" role="2gzftq">
+                        <node concept="2dhUHT" id="vf" role="2gzftq">
                           <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                           <uo k="s:originTrace" v="n:265" />
-                          <node concept="2dhBVA" id="ve" role="2dhUC2">
+                          <node concept="2dhBVA" id="vg" role="2dhUC2">
                             <property role="2dhB_1" value="16.0" />
                             <uo k="s:originTrace" v="n:266" />
                           </node>
-                          <node concept="2dhBVA" id="vf" role="2dhUFW">
+                          <node concept="2dhBVA" id="vh" role="2dhUFW">
                             <property role="2dhB_1" value="1" />
                             <uo k="s:originTrace" v="n:267" />
                           </node>
                         </node>
                       </node>
                     </node>
-                    <node concept="2gzfuI" id="v8" role="2dhSkW">
+                    <node concept="2gzfuI" id="va" role="2dhSkW">
                       <uo k="s:originTrace" v="n:254" />
-                      <node concept="2gzfuI" id="vg" role="2gzftq">
+                      <node concept="2gzfuI" id="vi" role="2gzftq">
                         <uo k="s:originTrace" v="n:277" />
-                        <node concept="2dhUHT" id="vh" role="2gzftq">
+                        <node concept="2dhUHT" id="vj" role="2gzftq">
                           <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                           <uo k="s:originTrace" v="n:277" />
-                          <node concept="2dhBVA" id="vi" role="2dhUC2">
+                          <node concept="2dhBVA" id="vk" role="2dhUC2">
                             <property role="2dhB_1" value="0.0" />
                             <uo k="s:originTrace" v="n:278" />
                           </node>
-                          <node concept="2dhBVA" id="vj" role="2dhUFW">
+                          <node concept="2dhBVA" id="vl" role="2dhUFW">
                             <property role="2dhB_1" value="1" />
                             <uo k="s:originTrace" v="n:279" />
                           </node>
                         </node>
                       </node>
                     </node>
-                    <node concept="2gzfuI" id="v9" role="2dhSkW">
+                    <node concept="2gzfuI" id="vb" role="2dhSkW">
                       <uo k="s:originTrace" v="n:255" />
-                      <node concept="2gzfuI" id="vk" role="2gzftq">
+                      <node concept="2gzfuI" id="vm" role="2gzftq">
                         <uo k="s:originTrace" v="n:289" />
-                        <node concept="2dhUHT" id="vl" role="2gzftq">
+                        <node concept="2dhUHT" id="vn" role="2gzftq">
                           <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                           <uo k="s:originTrace" v="n:289" />
-                          <node concept="2dhBVA" id="vm" role="2dhUC2">
+                          <node concept="2dhBVA" id="vo" role="2dhUC2">
                             <property role="2dhB_1" value="-8.16545914761114E-11" />
                             <uo k="s:originTrace" v="n:290" />
                           </node>
-                          <node concept="2dhBVA" id="vn" role="2dhUFW">
+                          <node concept="2dhBVA" id="vp" role="2dhUFW">
                             <property role="2dhB_1" value="1" />
                             <uo k="s:originTrace" v="n:291" />
                           </node>
@@ -7788,64 +7796,64 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="2dhVqD" id="v5" role="2dhSgj">
+                  <node concept="2dhVqD" id="v7" role="2dhSgj">
                     <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dhVqD" id="vo" role="2dhScq">
+                    <node concept="2dhVqD" id="vq" role="2dhScq">
                       <uo k="s:originTrace" v="n:167" />
-                      <node concept="2dpZbP" id="vq" role="2dhScq">
+                      <node concept="2dpZbP" id="vs" role="2dhScq">
                         <uo k="s:originTrace" v="n:167" />
                       </node>
-                      <node concept="2wijRm" id="vr" role="2dhS9X">
+                      <node concept="2wijRm" id="vt" role="2dhS9X">
                         <property role="TrG5h" value="scope" />
                         <uo k="s:originTrace" v="n:167" />
                       </node>
                     </node>
-                    <node concept="2wijRm" id="vp" role="2dhS9X">
+                    <node concept="2wijRm" id="vr" role="2dhS9X">
                       <property role="TrG5h" value="getAbsoluteInitialVelocity" />
                       <uo k="s:originTrace" v="n:167" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="v3" role="2dhS9X">
+                <node concept="2wijRm" id="v5" role="2dhS9X">
                   <property role="TrG5h" value="values" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="uZ" role="2dhSgj">
+              <node concept="2dhVqD" id="v1" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="vs" role="2dhScq">
+                <node concept="2dhVqD" id="vu" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2wijRm" id="vu" role="2dhS9X">
+                  <node concept="2wijRm" id="vw" role="2dhS9X">
                     <property role="TrG5h" value="setLinearVel" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
-                  <node concept="2dhVqD" id="vv" role="2dhScq">
+                  <node concept="2dhVqD" id="vx" role="2dhScq">
                     <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dpZbP" id="vw" role="2dhScq">
+                    <node concept="2dpZbP" id="vy" role="2dhScq">
                       <uo k="s:originTrace" v="n:167" />
                     </node>
-                    <node concept="2wijRm" id="vx" role="2dhS9X">
+                    <node concept="2wijRm" id="vz" role="2dhS9X">
                       <property role="TrG5h" value="body" />
                       <uo k="s:originTrace" v="n:167" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="vt" role="2dhS9X">
+                <node concept="2wijRm" id="vv" role="2dhS9X">
                   <property role="TrG5h" value="apply" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="ud" role="3PTNxU">
+          <node concept="1dSo_L" id="uf" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="vy" role="1dwvF7">
+            <node concept="2dhSm$" id="v$" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2gzfuI" id="vz" role="2dhSgj">
+              <node concept="2gzfuI" id="v_" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2WRy0S" id="v$" role="2gzftq">
+                <node concept="2WRy0S" id="vA" role="2gzftq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dhBij" id="v_" role="2WDU8g">
+                  <node concept="2dhBij" id="vB" role="2WDU8g">
                     <property role="3S2$_t" value="init" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
@@ -7853,149 +7861,149 @@
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="ue" role="3PTNxU">
+          <node concept="1dSo_L" id="ug" role="3PTNxU">
             <uo k="s:originTrace" v="n:208" />
-            <node concept="2dhSm$" id="vA" role="1dwvF7">
-              <node concept="2dhVqD" id="vB" role="2dhSgd">
+            <node concept="2dhSm$" id="vC" role="1dwvF7">
+              <node concept="2dhVqD" id="vD" role="2dhSgd">
                 <uo k="s:originTrace" v="n:247" />
-                <node concept="2dhVqD" id="vE" role="2dhScq">
+                <node concept="2dhVqD" id="vG" role="2dhScq">
                   <uo k="s:originTrace" v="n:247" />
-                  <node concept="29jwqa" id="vG" role="2dhScq">
+                  <node concept="29jwqa" id="vI" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:247" />
                   </node>
-                  <node concept="2wijRm" id="vH" role="2dhS9X">
+                  <node concept="2wijRm" id="vJ" role="2dhS9X">
                     <property role="TrG5h" value="PropKey" />
                     <uo k="s:originTrace" v="n:247" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="vF" role="2dhS9X">
+                <node concept="2wijRm" id="vH" role="2dhS9X">
                   <property role="TrG5h" value="TEXTURE" />
                   <uo k="s:originTrace" v="n:247" />
                 </node>
               </node>
-              <node concept="2dhTJR" id="vC" role="2dhSgd">
+              <node concept="2dhTJR" id="vE" role="2dhSgd">
                 <uo k="s:originTrace" v="n:248" />
-                <node concept="2dhVqD" id="vI" role="2dhTFg">
+                <node concept="2dhVqD" id="vK" role="2dhTFg">
                   <uo k="s:originTrace" v="n:248" />
-                  <node concept="29jwqa" id="vK" role="2dhScq">
+                  <node concept="29jwqa" id="vM" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:248" />
                   </node>
-                  <node concept="2wijRm" id="vL" role="2dhS9X">
+                  <node concept="2wijRm" id="vN" role="2dhS9X">
                     <property role="TrG5h" value="ImageTexture" />
                     <uo k="s:originTrace" v="n:248" />
                   </node>
                 </node>
-                <node concept="2dhBij" id="vJ" role="2dhSkW">
+                <node concept="2dhBij" id="vL" role="2dhSkW">
                   <property role="2dhBvH" value="https://moon.nasa.gov/system/resources/detail_files/119_colormap_1500.jpg" />
                   <uo k="s:originTrace" v="n:248" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="vD" role="2dhSgj">
-                <node concept="2dhVqD" id="vM" role="2dhScq">
-                  <node concept="2dpZbP" id="vO" role="2dhScq" />
-                  <node concept="2wijRm" id="vP" role="2dhS9X">
+              <node concept="2dhVqD" id="vF" role="2dhSgj">
+                <node concept="2dhVqD" id="vO" role="2dhScq">
+                  <node concept="2dpZbP" id="vQ" role="2dhScq" />
+                  <node concept="2wijRm" id="vR" role="2dhS9X">
                     <property role="TrG5h" value="propertiesBuilder" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="vN" role="2dhS9X">
+                <node concept="2wijRm" id="vP" role="2dhS9X">
                   <property role="TrG5h" value="set" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="uf" role="3PTNxU">
+          <node concept="1dSo_L" id="uh" role="3PTNxU">
             <uo k="s:originTrace" v="n:209" />
-            <node concept="2dhSm$" id="vQ" role="1dwvF7">
-              <node concept="2dhVqD" id="vR" role="2dhSgd">
+            <node concept="2dhSm$" id="vS" role="1dwvF7">
+              <node concept="2dhVqD" id="vT" role="2dhSgd">
                 <uo k="s:originTrace" v="n:250" />
-                <node concept="2dhVqD" id="vU" role="2dhScq">
+                <node concept="2dhVqD" id="vW" role="2dhScq">
                   <uo k="s:originTrace" v="n:250" />
-                  <node concept="29jwqa" id="vW" role="2dhScq">
+                  <node concept="29jwqa" id="vY" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:250" />
                   </node>
-                  <node concept="2wijRm" id="vX" role="2dhS9X">
+                  <node concept="2wijRm" id="vZ" role="2dhS9X">
                     <property role="TrG5h" value="PropKey" />
                     <uo k="s:originTrace" v="n:250" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="vV" role="2dhS9X">
+                <node concept="2wijRm" id="vX" role="2dhS9X">
                   <property role="TrG5h" value="TRACE" />
                   <uo k="s:originTrace" v="n:250" />
                 </node>
               </node>
-              <node concept="2dhTJR" id="vS" role="2dhSgd">
+              <node concept="2dhTJR" id="vU" role="2dhSgd">
                 <uo k="s:originTrace" v="n:249" />
-                <node concept="2dhVqD" id="vY" role="2dhTFg">
+                <node concept="2dhVqD" id="w0" role="2dhTFg">
                   <uo k="s:originTrace" v="n:249" />
-                  <node concept="29jwqa" id="w0" role="2dhScq">
+                  <node concept="29jwqa" id="w2" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:249" />
                   </node>
-                  <node concept="2wijRm" id="w1" role="2dhS9X">
+                  <node concept="2wijRm" id="w3" role="2dhS9X">
                     <property role="TrG5h" value="FiniteTraceHandler" />
                     <uo k="s:originTrace" v="n:249" />
                   </node>
                 </node>
-                <node concept="2dhTJR" id="vZ" role="2dhSkW">
+                <node concept="2dhTJR" id="w1" role="2dhSkW">
                   <uo k="s:originTrace" v="n:251" />
-                  <node concept="2dhBVA" id="w2" role="2dhSkW">
-                    <property role="2dhB_1" value="220" />
-                    <uo k="s:originTrace" v="n:251" />
-                  </node>
-                  <node concept="2dhBVA" id="w3" role="2dhSkW">
-                    <property role="2dhB_1" value="220" />
-                    <uo k="s:originTrace" v="n:251" />
-                  </node>
                   <node concept="2dhBVA" id="w4" role="2dhSkW">
                     <property role="2dhB_1" value="220" />
                     <uo k="s:originTrace" v="n:251" />
                   </node>
-                  <node concept="2dhVqD" id="w5" role="2dhTFg">
+                  <node concept="2dhBVA" id="w5" role="2dhSkW">
+                    <property role="2dhB_1" value="220" />
                     <uo k="s:originTrace" v="n:251" />
-                    <node concept="29jwqa" id="w6" role="2dhScq">
+                  </node>
+                  <node concept="2dhBVA" id="w6" role="2dhSkW">
+                    <property role="2dhB_1" value="220" />
+                    <uo k="s:originTrace" v="n:251" />
+                  </node>
+                  <node concept="2dhVqD" id="w7" role="2dhTFg">
+                    <uo k="s:originTrace" v="n:251" />
+                    <node concept="29jwqa" id="w8" role="2dhScq">
                       <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                       <uo k="s:originTrace" v="n:251" />
                     </node>
-                    <node concept="2wijRm" id="w7" role="2dhS9X">
+                    <node concept="2wijRm" id="w9" role="2dhS9X">
                       <property role="TrG5h" value="InternalColor" />
                       <uo k="s:originTrace" v="n:251" />
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="2dhVqD" id="vT" role="2dhSgj">
-                <node concept="2dhVqD" id="w8" role="2dhScq">
-                  <node concept="2dpZbP" id="wa" role="2dhScq" />
-                  <node concept="2wijRm" id="wb" role="2dhS9X">
+              <node concept="2dhVqD" id="vV" role="2dhSgj">
+                <node concept="2dhVqD" id="wa" role="2dhScq">
+                  <node concept="2dpZbP" id="wc" role="2dhScq" />
+                  <node concept="2wijRm" id="wd" role="2dhS9X">
                     <property role="TrG5h" value="propertiesBuilder" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="w9" role="2dhS9X">
+                <node concept="2wijRm" id="wb" role="2dhS9X">
                   <property role="TrG5h" value="set" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="ug" role="3PTNxU">
+          <node concept="1dSo_L" id="ui" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="wc" role="1dwvF7">
+            <node concept="2dhSm$" id="we" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="wd" role="2dhSgj">
+              <node concept="2dhVqD" id="wf" role="2dhSgj">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="we" role="2dhScq">
+                <node concept="2dhVqD" id="wg" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dpZbP" id="wg" role="2dhScq">
+                  <node concept="2dpZbP" id="wi" role="2dhScq">
                     <uo k="s:originTrace" v="n:167" />
                   </node>
-                  <node concept="2wijRm" id="wh" role="2dhS9X">
+                  <node concept="2wijRm" id="wj" role="2dhS9X">
                     <property role="TrG5h" value="forces" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="wf" role="2dhS9X">
+                <node concept="2wijRm" id="wh" role="2dhS9X">
                   <property role="TrG5h" value="push" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
@@ -8004,247 +8012,247 @@
           </node>
         </node>
       </node>
-      <node concept="6BmiN" id="u6" role="2DT8gE">
-        <ref role="6BmiO" node="yY" />
+      <node concept="6BmiN" id="u8" role="2DT8gE">
+        <ref role="6BmiO" node="z0" />
         <uo k="s:originTrace" v="n:167" />
       </node>
     </node>
-    <node concept="1dSrUV" id="s9" role="1dSqon">
+    <node concept="1dSrUV" id="sb" role="1dSqon">
       <uo k="s:originTrace" v="n:167" />
     </node>
-    <node concept="2DT8ht" id="sa" role="1dSqon">
+    <node concept="2DT8ht" id="sc" role="1dSqon">
       <uo k="s:originTrace" v="n:167" />
-      <node concept="128wFQ" id="wi" role="2DTaag">
+      <node concept="128wFQ" id="wk" role="2DTaag">
         <uo k="s:originTrace" v="n:167" />
-        <node concept="2wijRm" id="wn" role="128LSx">
+        <node concept="2wijRm" id="wp" role="128LSx">
           <property role="TrG5h" value="object_Earth" />
           <uo k="s:originTrace" v="n:167" />
         </node>
       </node>
-      <node concept="128wFQ" id="wj" role="2DTaag">
+      <node concept="128wFQ" id="wl" role="2DTaag">
         <uo k="s:originTrace" v="n:167" />
-        <node concept="2wijRm" id="wo" role="128LSx">
+        <node concept="2wijRm" id="wq" role="128LSx">
           <property role="TrG5h" value="object_Moon" />
           <uo k="s:originTrace" v="n:167" />
         </node>
       </node>
-      <node concept="1mvZK$" id="wk" role="2DT8gC">
+      <node concept="1mvZK$" id="wm" role="2DT8gC">
         <property role="TrG5h" value="EarthDemo1" />
         <uo k="s:originTrace" v="n:167" />
       </node>
-      <node concept="2wiq1L" id="wl" role="2DTaag">
+      <node concept="2wiq1L" id="wn" role="2DTaag">
         <uo k="s:originTrace" v="n:167" />
-        <node concept="2wijRm" id="wp" role="2wiapO">
+        <node concept="2wijRm" id="wr" role="2wiapO">
           <property role="TrG5h" value="constructor" />
           <uo k="s:originTrace" v="n:167" />
         </node>
-        <node concept="2wWApn" id="wq" role="2wWApU">
+        <node concept="2wWApn" id="ws" role="2wWApU">
           <uo k="s:originTrace" v="n:167" />
-          <node concept="2wxzWt" id="ws" role="2wWAp1">
-            <uo k="s:originTrace" v="n:167" />
-            <node concept="1mvZK$" id="ww" role="2wxzWi">
-              <property role="TrG5h" value="world" />
-              <uo k="s:originTrace" v="n:167" />
-            </node>
-          </node>
-          <node concept="2wxzWt" id="wt" role="2wWAp1">
-            <uo k="s:originTrace" v="n:167" />
-            <node concept="1mvZK$" id="wx" role="2wxzWi">
-              <property role="TrG5h" value="position" />
-              <uo k="s:originTrace" v="n:167" />
-            </node>
-          </node>
           <node concept="2wxzWt" id="wu" role="2wWAp1">
             <uo k="s:originTrace" v="n:167" />
             <node concept="1mvZK$" id="wy" role="2wxzWi">
-              <property role="TrG5h" value="velocity" />
+              <property role="TrG5h" value="world" />
               <uo k="s:originTrace" v="n:167" />
             </node>
           </node>
           <node concept="2wxzWt" id="wv" role="2wWAp1">
             <uo k="s:originTrace" v="n:167" />
             <node concept="1mvZK$" id="wz" role="2wxzWi">
+              <property role="TrG5h" value="position" />
+              <uo k="s:originTrace" v="n:167" />
+            </node>
+          </node>
+          <node concept="2wxzWt" id="ww" role="2wWAp1">
+            <uo k="s:originTrace" v="n:167" />
+            <node concept="1mvZK$" id="w$" role="2wxzWi">
+              <property role="TrG5h" value="velocity" />
+              <uo k="s:originTrace" v="n:167" />
+            </node>
+          </node>
+          <node concept="2wxzWt" id="wx" role="2wWAp1">
+            <uo k="s:originTrace" v="n:167" />
+            <node concept="1mvZK$" id="w_" role="2wxzWi">
               <property role="TrG5h" value="rotation" />
               <uo k="s:originTrace" v="n:167" />
             </node>
           </node>
         </node>
-        <node concept="3PT0iG" id="wr" role="2wi7L_">
+        <node concept="3PT0iG" id="wt" role="2wi7L_">
           <uo k="s:originTrace" v="n:167" />
-          <node concept="1dSo_L" id="w$" role="3PTNxU">
+          <node concept="1dSo_L" id="wA" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="12Bna6" id="wD" role="1dwvF7">
+            <node concept="12Bna6" id="wF" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2WqeGl" id="wE" role="2WRAlG">
-                <ref role="2WqeGo" node="ww" resolve="world" />
-                <uo k="s:originTrace" v="n:167" />
-              </node>
-              <node concept="2WqeGl" id="wF" role="2WRAlG">
-                <ref role="2WqeGo" node="wx" resolve="position" />
-                <uo k="s:originTrace" v="n:167" />
-              </node>
               <node concept="2WqeGl" id="wG" role="2WRAlG">
-                <ref role="2WqeGo" node="wy" resolve="velocity" />
+                <ref role="2WqeGo" node="wy" resolve="world" />
                 <uo k="s:originTrace" v="n:167" />
               </node>
               <node concept="2WqeGl" id="wH" role="2WRAlG">
-                <ref role="2WqeGo" node="wz" resolve="rotation" />
+                <ref role="2WqeGo" node="wz" resolve="position" />
                 <uo k="s:originTrace" v="n:167" />
               </node>
-            </node>
-          </node>
-          <node concept="1dSo_L" id="w_" role="3PTNxU">
-            <uo k="s:originTrace" v="n:167" />
-            <node concept="2djMEC" id="wI" role="1dwvF7">
-              <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="wJ" role="2dhTaa">
+              <node concept="2WqeGl" id="wI" role="2WRAlG">
+                <ref role="2WqeGo" node="w$" resolve="velocity" />
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dpZbP" id="wL" role="2dhScq">
-                  <uo k="s:originTrace" v="n:167" />
-                </node>
-                <node concept="2wijRm" id="wM" role="2dhS9X">
-                  <property role="TrG5h" value="object_Earth" />
-                  <uo k="s:originTrace" v="n:167" />
-                </node>
               </node>
-              <node concept="2dhSm$" id="wK" role="2dhTO1">
+              <node concept="2WqeGl" id="wJ" role="2WRAlG">
+                <ref role="2WqeGo" node="w_" resolve="rotation" />
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2gzfuI" id="wN" role="2dhSgd">
-                  <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dhTJR" id="wP" role="2gzftq">
-                    <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dhVqD" id="wQ" role="2dhSkW">
-                      <uo k="s:originTrace" v="n:167" />
-                      <node concept="2dpZbP" id="wU" role="2dhScq">
-                        <uo k="s:originTrace" v="n:167" />
-                      </node>
-                      <node concept="2wijRm" id="wV" role="2dhS9X">
-                        <property role="TrG5h" value="world" />
-                        <uo k="s:originTrace" v="n:167" />
-                      </node>
-                    </node>
-                    <node concept="2dhBij" id="wR" role="2dhSkW">
-                      <property role="2dhBvH" value="Earth1" />
-                      <uo k="s:originTrace" v="n:167" />
-                    </node>
-                    <node concept="2dpZbP" id="wS" role="2dhSkW">
-                      <uo k="s:originTrace" v="n:167" />
-                    </node>
-                    <node concept="6BmiN" id="wT" role="2dhTFg">
-                      <ref role="6BmiO" node="s7" />
-                      <uo k="s:originTrace" v="n:167" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="2dhVqD" id="wO" role="2dhSgj">
-                  <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dpZbP" id="wW" role="2dhScq">
-                    <uo k="s:originTrace" v="n:167" />
-                  </node>
-                  <node concept="2wijRm" id="wX" role="2dhS9X">
-                    <property role="TrG5h" value="withEntity" />
-                    <uo k="s:originTrace" v="n:167" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1dSo_L" id="wA" role="3PTNxU">
-            <uo k="s:originTrace" v="n:167" />
-            <node concept="2djMEC" id="wY" role="1dwvF7">
-              <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="wZ" role="2dhTaa">
-                <uo k="s:originTrace" v="n:167" />
-                <node concept="2dpZbP" id="x1" role="2dhScq">
-                  <uo k="s:originTrace" v="n:167" />
-                </node>
-                <node concept="2wijRm" id="x2" role="2dhS9X">
-                  <property role="TrG5h" value="object_Moon" />
-                  <uo k="s:originTrace" v="n:167" />
-                </node>
-              </node>
-              <node concept="2dhSm$" id="x0" role="2dhTO1">
-                <uo k="s:originTrace" v="n:167" />
-                <node concept="2gzfuI" id="x3" role="2dhSgd">
-                  <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dhTJR" id="x5" role="2gzftq">
-                    <uo k="s:originTrace" v="n:167" />
-                    <node concept="2dhVqD" id="x6" role="2dhSkW">
-                      <uo k="s:originTrace" v="n:167" />
-                      <node concept="2dpZbP" id="xa" role="2dhScq">
-                        <uo k="s:originTrace" v="n:167" />
-                      </node>
-                      <node concept="2wijRm" id="xb" role="2dhS9X">
-                        <property role="TrG5h" value="world" />
-                        <uo k="s:originTrace" v="n:167" />
-                      </node>
-                    </node>
-                    <node concept="2dhBij" id="x7" role="2dhSkW">
-                      <property role="2dhBvH" value="Moon1" />
-                      <uo k="s:originTrace" v="n:167" />
-                    </node>
-                    <node concept="2dpZbP" id="x8" role="2dhSkW">
-                      <uo k="s:originTrace" v="n:167" />
-                    </node>
-                    <node concept="6BmiN" id="x9" role="2dhTFg">
-                      <ref role="6BmiO" node="s8" />
-                      <uo k="s:originTrace" v="n:167" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="2dhVqD" id="x4" role="2dhSgj">
-                  <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dpZbP" id="xc" role="2dhScq">
-                    <uo k="s:originTrace" v="n:167" />
-                  </node>
-                  <node concept="2wijRm" id="xd" role="2dhS9X">
-                    <property role="TrG5h" value="withEntity" />
-                    <uo k="s:originTrace" v="n:167" />
-                  </node>
-                </node>
               </node>
             </node>
           </node>
           <node concept="1dSo_L" id="wB" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="xe" role="1dwvF7">
+            <node concept="2djMEC" id="wK" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="xf" role="2dhSgj">
+              <node concept="2dhVqD" id="wL" role="2dhTaa">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="xg" role="2dhScq">
+                <node concept="2dpZbP" id="wN" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dpZbP" id="xi" role="2dhScq">
+                </node>
+                <node concept="2wijRm" id="wO" role="2dhS9X">
+                  <property role="TrG5h" value="object_Earth" />
+                  <uo k="s:originTrace" v="n:167" />
+                </node>
+              </node>
+              <node concept="2dhSm$" id="wM" role="2dhTO1">
+                <uo k="s:originTrace" v="n:167" />
+                <node concept="2gzfuI" id="wP" role="2dhSgd">
+                  <uo k="s:originTrace" v="n:167" />
+                  <node concept="2dhTJR" id="wR" role="2gzftq">
                     <uo k="s:originTrace" v="n:167" />
-                  </node>
-                  <node concept="2wijRm" id="xj" role="2dhS9X">
-                    <property role="TrG5h" value="object_Earth" />
-                    <uo k="s:originTrace" v="n:167" />
+                    <node concept="2dhVqD" id="wS" role="2dhSkW">
+                      <uo k="s:originTrace" v="n:167" />
+                      <node concept="2dpZbP" id="wW" role="2dhScq">
+                        <uo k="s:originTrace" v="n:167" />
+                      </node>
+                      <node concept="2wijRm" id="wX" role="2dhS9X">
+                        <property role="TrG5h" value="world" />
+                        <uo k="s:originTrace" v="n:167" />
+                      </node>
+                    </node>
+                    <node concept="2dhBij" id="wT" role="2dhSkW">
+                      <property role="2dhBvH" value="Earth1" />
+                      <uo k="s:originTrace" v="n:167" />
+                    </node>
+                    <node concept="2dpZbP" id="wU" role="2dhSkW">
+                      <uo k="s:originTrace" v="n:167" />
+                    </node>
+                    <node concept="6BmiN" id="wV" role="2dhTFg">
+                      <ref role="6BmiO" node="s9" />
+                      <uo k="s:originTrace" v="n:167" />
+                    </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="xh" role="2dhS9X">
-                  <property role="TrG5h" value="init" />
+                <node concept="2dhVqD" id="wQ" role="2dhSgj">
                   <uo k="s:originTrace" v="n:167" />
+                  <node concept="2dpZbP" id="wY" role="2dhScq">
+                    <uo k="s:originTrace" v="n:167" />
+                  </node>
+                  <node concept="2wijRm" id="wZ" role="2dhS9X">
+                    <property role="TrG5h" value="withEntity" />
+                    <uo k="s:originTrace" v="n:167" />
+                  </node>
                 </node>
               </node>
             </node>
           </node>
           <node concept="1dSo_L" id="wC" role="3PTNxU">
             <uo k="s:originTrace" v="n:167" />
-            <node concept="2dhSm$" id="xk" role="1dwvF7">
+            <node concept="2djMEC" id="x0" role="1dwvF7">
               <uo k="s:originTrace" v="n:167" />
-              <node concept="2dhVqD" id="xl" role="2dhSgj">
+              <node concept="2dhVqD" id="x1" role="2dhTaa">
                 <uo k="s:originTrace" v="n:167" />
-                <node concept="2dhVqD" id="xm" role="2dhScq">
+                <node concept="2dpZbP" id="x3" role="2dhScq">
                   <uo k="s:originTrace" v="n:167" />
-                  <node concept="2dpZbP" id="xo" role="2dhScq">
+                </node>
+                <node concept="2wijRm" id="x4" role="2dhS9X">
+                  <property role="TrG5h" value="object_Moon" />
+                  <uo k="s:originTrace" v="n:167" />
+                </node>
+              </node>
+              <node concept="2dhSm$" id="x2" role="2dhTO1">
+                <uo k="s:originTrace" v="n:167" />
+                <node concept="2gzfuI" id="x5" role="2dhSgd">
+                  <uo k="s:originTrace" v="n:167" />
+                  <node concept="2dhTJR" id="x7" role="2gzftq">
+                    <uo k="s:originTrace" v="n:167" />
+                    <node concept="2dhVqD" id="x8" role="2dhSkW">
+                      <uo k="s:originTrace" v="n:167" />
+                      <node concept="2dpZbP" id="xc" role="2dhScq">
+                        <uo k="s:originTrace" v="n:167" />
+                      </node>
+                      <node concept="2wijRm" id="xd" role="2dhS9X">
+                        <property role="TrG5h" value="world" />
+                        <uo k="s:originTrace" v="n:167" />
+                      </node>
+                    </node>
+                    <node concept="2dhBij" id="x9" role="2dhSkW">
+                      <property role="2dhBvH" value="Moon1" />
+                      <uo k="s:originTrace" v="n:167" />
+                    </node>
+                    <node concept="2dpZbP" id="xa" role="2dhSkW">
+                      <uo k="s:originTrace" v="n:167" />
+                    </node>
+                    <node concept="6BmiN" id="xb" role="2dhTFg">
+                      <ref role="6BmiO" node="sa" />
+                      <uo k="s:originTrace" v="n:167" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="2dhVqD" id="x6" role="2dhSgj">
+                  <uo k="s:originTrace" v="n:167" />
+                  <node concept="2dpZbP" id="xe" role="2dhScq">
                     <uo k="s:originTrace" v="n:167" />
                   </node>
-                  <node concept="2wijRm" id="xp" role="2dhS9X">
+                  <node concept="2wijRm" id="xf" role="2dhS9X">
+                    <property role="TrG5h" value="withEntity" />
+                    <uo k="s:originTrace" v="n:167" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1dSo_L" id="wD" role="3PTNxU">
+            <uo k="s:originTrace" v="n:167" />
+            <node concept="2dhSm$" id="xg" role="1dwvF7">
+              <uo k="s:originTrace" v="n:167" />
+              <node concept="2dhVqD" id="xh" role="2dhSgj">
+                <uo k="s:originTrace" v="n:167" />
+                <node concept="2dhVqD" id="xi" role="2dhScq">
+                  <uo k="s:originTrace" v="n:167" />
+                  <node concept="2dpZbP" id="xk" role="2dhScq">
+                    <uo k="s:originTrace" v="n:167" />
+                  </node>
+                  <node concept="2wijRm" id="xl" role="2dhS9X">
+                    <property role="TrG5h" value="object_Earth" />
+                    <uo k="s:originTrace" v="n:167" />
+                  </node>
+                </node>
+                <node concept="2wijRm" id="xj" role="2dhS9X">
+                  <property role="TrG5h" value="init" />
+                  <uo k="s:originTrace" v="n:167" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1dSo_L" id="wE" role="3PTNxU">
+            <uo k="s:originTrace" v="n:167" />
+            <node concept="2dhSm$" id="xm" role="1dwvF7">
+              <uo k="s:originTrace" v="n:167" />
+              <node concept="2dhVqD" id="xn" role="2dhSgj">
+                <uo k="s:originTrace" v="n:167" />
+                <node concept="2dhVqD" id="xo" role="2dhScq">
+                  <uo k="s:originTrace" v="n:167" />
+                  <node concept="2dpZbP" id="xq" role="2dhScq">
+                    <uo k="s:originTrace" v="n:167" />
+                  </node>
+                  <node concept="2wijRm" id="xr" role="2dhS9X">
                     <property role="TrG5h" value="object_Moon" />
                     <uo k="s:originTrace" v="n:167" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="xn" role="2dhS9X">
+                <node concept="2wijRm" id="xp" role="2dhS9X">
                   <property role="TrG5h" value="init" />
                   <uo k="s:originTrace" v="n:167" />
                 </node>
@@ -8253,375 +8261,375 @@
           </node>
         </node>
       </node>
-      <node concept="2dhVqD" id="wm" role="2DT8gE">
+      <node concept="2dhVqD" id="wo" role="2DT8gE">
         <uo k="s:originTrace" v="n:167" />
-        <node concept="29jwqa" id="xq" role="2dhScq">
+        <node concept="29jwqa" id="xs" role="2dhScq">
           <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
           <uo k="s:originTrace" v="n:167" />
         </node>
-        <node concept="2wijRm" id="xr" role="2dhS9X">
+        <node concept="2wijRm" id="xt" role="2dhS9X">
           <property role="TrG5h" value="SystemScope" />
           <uo k="s:originTrace" v="n:167" />
         </node>
       </node>
     </node>
-    <node concept="1dSrUV" id="sb" role="1dSqon">
+    <node concept="1dSrUV" id="sd" role="1dSqon">
       <uo k="s:originTrace" v="n:167" />
     </node>
-    <node concept="3ErYpN" id="sc" role="3E_D5O">
+    <node concept="3ErYpN" id="se" role="3E_D5O">
       <ref role="3ErYpM" to="f76b:2RasiBbTMfg" resolve="RuntimeEnv" />
       <uo k="s:originTrace" v="n:167" />
     </node>
   </node>
-  <node concept="39dXUE" id="xs">
-    <node concept="39e2AJ" id="xt" role="39e2AI">
+  <node concept="39dXUE" id="xu">
+    <node concept="39e2AJ" id="xv" role="39e2AI">
       <property role="39e3Y2" value="classes" />
-      <node concept="39e2AG" id="xw" role="39e3Y0">
-        <node concept="385nmt" id="xC" role="385vvn">
+      <node concept="39e2AG" id="xy" role="39e3Y0">
+        <node concept="385nmt" id="xE" role="385vvn">
           <property role="385vuF" value="BaseObject" />
-          <node concept="2$VJBW" id="xE" role="385v07">
+          <node concept="2$VJBW" id="xG" role="385v07">
             <property role="2$VJBR" value="0" />
-            <node concept="2x4n5u" id="xF" role="3iCydw">
+            <node concept="2x4n5u" id="xH" role="3iCydw">
               <property role="2x4mPI" value="AbstractObjectDefinition" />
               <property role="2x4n5l" value="b377xleir29v" />
-              <node concept="2V$Bhx" id="xG" role="2x4n5j">
+              <node concept="2V$Bhx" id="xI" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="xD" role="39e2AY">
+        <node concept="39e2AT" id="xF" role="39e2AY">
           <ref role="39e2AS" node="2" />
         </node>
       </node>
-      <node concept="39e2AG" id="xx" role="39e3Y0">
+      <node concept="39e2AG" id="xz" role="39e3Y0">
         <ref role="39e2AK" to="nqq1:1nCAtVzuwFb" resolve="Demo" />
-        <node concept="385nmt" id="xH" role="385vvn">
+        <node concept="385nmt" id="xJ" role="385vvn">
           <property role="385vuF" value="Demo" />
-          <node concept="2$VJBW" id="xJ" role="385v07">
+          <node concept="2$VJBW" id="xL" role="385v07">
             <property role="2$VJBR" value="104" />
-            <node concept="2x4n5u" id="xK" role="3iCydw">
+            <node concept="2x4n5u" id="xM" role="3iCydw">
               <property role="2x4mPI" value="Simulation" />
               <property role="2x4n5l" value="1mumdg5ij6xjs" />
-              <node concept="2V$Bhx" id="xL" role="2x4n5j">
+              <node concept="2V$Bhx" id="xN" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="xI" role="39e2AY">
-          <ref role="39e2AS" node="po" />
-        </node>
-      </node>
-      <node concept="39e2AG" id="xy" role="39e3Y0">
-        <ref role="39e2AK" to="nqq1:1nCAtVzuurN" resolve="Earth" />
-        <node concept="385nmt" id="xM" role="385vvn">
-          <property role="385vuF" value="Earth" />
-          <node concept="2$VJBW" id="xO" role="385v07">
-            <property role="2$VJBR" value="168" />
-            <node concept="2x4n5u" id="xP" role="3iCydw">
-              <property role="2x4mPI" value="ObjectDefinition" />
-              <property role="2x4n5l" value="1mumdg5iivghv" />
-              <node concept="2V$Bhx" id="xQ" role="2x4n5j">
-                <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
-                <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="39e2AT" id="xN" role="39e2AY">
-          <ref role="39e2AS" node="s7" />
-        </node>
-      </node>
-      <node concept="39e2AG" id="xz" role="39e3Y0">
-        <ref role="39e2AK" to="nqq1:1nCAtVzuurD" resolve="EarthDemo" />
-        <node concept="385nmt" id="xR" role="385vvn">
-          <property role="385vuF" value="EarthDemo" />
-          <node concept="2$VJBW" id="xT" role="385v07">
-            <property role="2$VJBR" value="167" />
-            <node concept="2x4n5u" id="xU" role="3iCydw">
-              <property role="2x4mPI" value="WorldDefinition" />
-              <property role="2x4n5l" value="1mumdg5iivghs" />
-              <node concept="2V$Bhx" id="xV" role="2x4n5j">
-                <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
-                <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="39e2AT" id="xS" role="39e2AY">
-          <ref role="39e2AS" node="sa" />
+        <node concept="39e2AT" id="xK" role="39e2AY">
+          <ref role="39e2AS" node="pq" />
         </node>
       </node>
       <node concept="39e2AG" id="x$" role="39e3Y0">
-        <ref role="39e2AK" to="nqq1:1nCAtVzuv1a" resolve="Moon" />
-        <node concept="385nmt" id="xW" role="385vvn">
-          <property role="385vuF" value="Moon" />
-          <node concept="2$VJBW" id="xY" role="385v07">
-            <property role="2$VJBR" value="169" />
-            <node concept="2x4n5u" id="xZ" role="3iCydw">
+        <ref role="39e2AK" to="nqq1:1nCAtVzuurN" resolve="Earth" />
+        <node concept="385nmt" id="xO" role="385vvn">
+          <property role="385vuF" value="Earth" />
+          <node concept="2$VJBW" id="xQ" role="385v07">
+            <property role="2$VJBR" value="168" />
+            <node concept="2x4n5u" id="xR" role="3iCydw">
               <property role="2x4mPI" value="ObjectDefinition" />
               <property role="2x4n5l" value="1mumdg5iivghv" />
-              <node concept="2V$Bhx" id="y0" role="2x4n5j">
+              <node concept="2V$Bhx" id="xS" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="xX" role="39e2AY">
-          <ref role="39e2AS" node="s8" />
+        <node concept="39e2AT" id="xP" role="39e2AY">
+          <ref role="39e2AS" node="s9" />
         </node>
       </node>
       <node concept="39e2AG" id="x_" role="39e3Y0">
-        <ref role="39e2AK" to="nqq1:1nCAtVzBTfq" resolve="Planet" />
-        <node concept="385nmt" id="y1" role="385vvn">
-          <property role="385vuF" value="Planet" />
-          <node concept="2$VJBW" id="y3" role="385v07">
-            <property role="2$VJBR" value="293" />
-            <node concept="2x4n5u" id="y4" role="3iCydw">
-              <property role="2x4mPI" value="AbstractObjectDefinition" />
-              <property role="2x4n5l" value="b377xleir29v" />
-              <node concept="2V$Bhx" id="y5" role="2x4n5j">
+        <ref role="39e2AK" to="nqq1:1nCAtVzuurD" resolve="EarthDemo" />
+        <node concept="385nmt" id="xT" role="385vvn">
+          <property role="385vuF" value="EarthDemo" />
+          <node concept="2$VJBW" id="xV" role="385v07">
+            <property role="2$VJBR" value="167" />
+            <node concept="2x4n5u" id="xW" role="3iCydw">
+              <property role="2x4mPI" value="WorldDefinition" />
+              <property role="2x4n5l" value="1mumdg5iivghs" />
+              <node concept="2V$Bhx" id="xX" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="y2" role="39e2AY">
-          <ref role="39e2AS" node="yY" />
+        <node concept="39e2AT" id="xU" role="39e2AY">
+          <ref role="39e2AS" node="sc" />
         </node>
       </node>
       <node concept="39e2AG" id="xA" role="39e3Y0">
-        <ref role="39e2AK" to="nqq1:1nCAtVzuu8I" resolve="Sun" />
-        <node concept="385nmt" id="y6" role="385vvn">
-          <property role="385vuF" value="Sun" />
-          <node concept="2$VJBW" id="y8" role="385v07">
-            <property role="2$VJBR" value="343" />
-            <node concept="2x4n5u" id="y9" role="3iCydw">
+        <ref role="39e2AK" to="nqq1:1nCAtVzuv1a" resolve="Moon" />
+        <node concept="385nmt" id="xY" role="385vvn">
+          <property role="385vuF" value="Moon" />
+          <node concept="2$VJBW" id="y0" role="385v07">
+            <property role="2$VJBR" value="169" />
+            <node concept="2x4n5u" id="y1" role="3iCydw">
               <property role="2x4mPI" value="ObjectDefinition" />
               <property role="2x4n5l" value="1mumdg5iivghv" />
-              <node concept="2V$Bhx" id="ya" role="2x4n5j">
+              <node concept="2V$Bhx" id="y2" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="y7" role="39e2AY">
-          <ref role="39e2AS" node="$P" />
+        <node concept="39e2AT" id="xZ" role="39e2AY">
+          <ref role="39e2AS" node="sa" />
         </node>
       </node>
       <node concept="39e2AG" id="xB" role="39e3Y0">
-        <ref role="39e2AK" to="nqq1:1nCAtVzuu8$" resolve="SunDemo" />
-        <node concept="385nmt" id="yb" role="385vvn">
-          <property role="385vuF" value="SunDemo" />
-          <node concept="2$VJBW" id="yd" role="385v07">
-            <property role="2$VJBR" value="341" />
-            <node concept="2x4n5u" id="ye" role="3iCydw">
-              <property role="2x4mPI" value="WorldDefinition" />
-              <property role="2x4n5l" value="1mumdg5iivghs" />
-              <node concept="2V$Bhx" id="yf" role="2x4n5j">
+        <ref role="39e2AK" to="nqq1:1nCAtVzBTfq" resolve="Planet" />
+        <node concept="385nmt" id="y3" role="385vvn">
+          <property role="385vuF" value="Planet" />
+          <node concept="2$VJBW" id="y5" role="385v07">
+            <property role="2$VJBR" value="293" />
+            <node concept="2x4n5u" id="y6" role="3iCydw">
+              <property role="2x4mPI" value="AbstractObjectDefinition" />
+              <property role="2x4n5l" value="b377xleir29v" />
+              <node concept="2V$Bhx" id="y7" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="yc" role="39e2AY">
+        <node concept="39e2AT" id="y4" role="39e2AY">
+          <ref role="39e2AS" node="z0" />
+        </node>
+      </node>
+      <node concept="39e2AG" id="xC" role="39e3Y0">
+        <ref role="39e2AK" to="nqq1:1nCAtVzuu8I" resolve="Sun" />
+        <node concept="385nmt" id="y8" role="385vvn">
+          <property role="385vuF" value="Sun" />
+          <node concept="2$VJBW" id="ya" role="385v07">
+            <property role="2$VJBR" value="343" />
+            <node concept="2x4n5u" id="yb" role="3iCydw">
+              <property role="2x4mPI" value="ObjectDefinition" />
+              <property role="2x4n5l" value="1mumdg5iivghv" />
+              <node concept="2V$Bhx" id="yc" role="2x4n5j">
+                <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
+                <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="39e2AT" id="y9" role="39e2AY">
           <ref role="39e2AS" node="$R" />
         </node>
       </node>
+      <node concept="39e2AG" id="xD" role="39e3Y0">
+        <ref role="39e2AK" to="nqq1:1nCAtVzuu8$" resolve="SunDemo" />
+        <node concept="385nmt" id="yd" role="385vvn">
+          <property role="385vuF" value="SunDemo" />
+          <node concept="2$VJBW" id="yf" role="385v07">
+            <property role="2$VJBR" value="341" />
+            <node concept="2x4n5u" id="yg" role="3iCydw">
+              <property role="2x4mPI" value="WorldDefinition" />
+              <property role="2x4n5l" value="1mumdg5iivghs" />
+              <node concept="2V$Bhx" id="yh" role="2x4n5j">
+                <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
+                <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="39e2AT" id="ye" role="39e2AY">
+          <ref role="39e2AS" node="$T" />
+        </node>
+      </node>
     </node>
-    <node concept="39e2AJ" id="xu" role="39e2AI">
+    <node concept="39e2AJ" id="xw" role="39e2AI">
       <property role="39e3Y2" value="forceMapper" />
-      <node concept="39e2AG" id="yg" role="39e3Y0">
+      <node concept="39e2AG" id="yi" role="39e3Y0">
         <ref role="39e2AK" to="nqq1:1nCAtVzBTfB" />
-        <node concept="385nmt" id="yi" role="385vvn">
+        <node concept="385nmt" id="yk" role="385vvn">
           <property role="385vuF" value="&lt;AbstractForceCall&gt;" />
-          <node concept="2$VJBW" id="yk" role="385v07">
+          <node concept="2$VJBW" id="ym" role="385v07">
             <property role="2$VJBR" value="294" />
-            <node concept="2x4n5u" id="yl" role="3iCydw">
+            <node concept="2x4n5u" id="yn" role="3iCydw">
               <property role="2x4mPI" value="AbstractForceCall" />
               <property role="2x4n5l" value="bh4kvq1bp8kg" />
-              <node concept="2V$Bhx" id="ym" role="2x4n5j">
+              <node concept="2V$Bhx" id="yo" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="yj" role="39e2AY">
-          <ref role="39e2AS" node="zr" resolve="mapper" />
+        <node concept="39e2AT" id="yl" role="39e2AY">
+          <ref role="39e2AS" node="zt" resolve="mapper" />
         </node>
       </node>
-      <node concept="39e2AG" id="yh" role="39e3Y0">
+      <node concept="39e2AG" id="yj" role="39e3Y0">
         <ref role="39e2AK" to="nqq1:1CuNlz_VR9" />
-        <node concept="385nmt" id="yn" role="385vvn">
+        <node concept="385nmt" id="yp" role="385vvn">
           <property role="385vuF" value="&lt;StaticForce&gt;" />
-          <node concept="2$VJBW" id="yp" role="385v07">
+          <node concept="2$VJBW" id="yr" role="385v07">
             <property role="2$VJBR" value="295" />
-            <node concept="2x4n5u" id="yq" role="3iCydw">
+            <node concept="2x4n5u" id="ys" role="3iCydw">
               <property role="2x4mPI" value="StaticForce" />
               <property role="2x4n5l" value="b377xleimpte" />
-              <node concept="2V$Bhx" id="yr" role="2x4n5j">
+              <node concept="2V$Bhx" id="yt" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="yo" role="39e2AY">
-          <ref role="39e2AS" node="zT" resolve="mapper" />
+        <node concept="39e2AT" id="yq" role="39e2AY">
+          <ref role="39e2AS" node="zV" resolve="mapper" />
         </node>
       </node>
     </node>
-    <node concept="39e2AJ" id="xv" role="39e2AI">
+    <node concept="39e2AJ" id="xx" role="39e2AI">
       <property role="39e3Y2" value="modules" />
-      <node concept="39e2AG" id="ys" role="39e3Y0">
-        <node concept="385nmt" id="yx" role="385vvn">
+      <node concept="39e2AG" id="yu" role="39e3Y0">
+        <node concept="385nmt" id="yz" role="385vvn">
           <property role="385vuF" value="BaseObject" />
-          <node concept="2$VJBW" id="yz" role="385v07">
+          <node concept="2$VJBW" id="y_" role="385v07">
             <property role="2$VJBR" value="0" />
-            <node concept="2x4n5u" id="y$" role="3iCydw">
+            <node concept="2x4n5u" id="yA" role="3iCydw">
               <property role="2x4mPI" value="AbstractObjectDefinition" />
               <property role="2x4n5l" value="b377xleir29v" />
-              <node concept="2V$Bhx" id="y_" role="2x4n5j">
+              <node concept="2V$Bhx" id="yB" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="yy" role="39e2AY">
+        <node concept="39e2AT" id="y$" role="39e2AY">
           <ref role="39e2AS" node="0" resolve="BaseObject" />
         </node>
       </node>
-      <node concept="39e2AG" id="yt" role="39e3Y0">
+      <node concept="39e2AG" id="yv" role="39e3Y0">
         <ref role="39e2AK" to="nqq1:1nCAtVzuwFb" resolve="Demo" />
-        <node concept="385nmt" id="yA" role="385vvn">
+        <node concept="385nmt" id="yC" role="385vvn">
           <property role="385vuF" value="Demo" />
-          <node concept="2$VJBW" id="yC" role="385v07">
+          <node concept="2$VJBW" id="yE" role="385v07">
             <property role="2$VJBR" value="104" />
-            <node concept="2x4n5u" id="yD" role="3iCydw">
+            <node concept="2x4n5u" id="yF" role="3iCydw">
               <property role="2x4mPI" value="Simulation" />
               <property role="2x4n5l" value="1mumdg5ij6xjs" />
-              <node concept="2V$Bhx" id="yE" role="2x4n5j">
+              <node concept="2V$Bhx" id="yG" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="yB" role="39e2AY">
-          <ref role="39e2AS" node="pl" resolve="DemoScript" />
-        </node>
-      </node>
-      <node concept="39e2AG" id="yu" role="39e3Y0">
-        <ref role="39e2AK" to="nqq1:1nCAtVzuurD" resolve="EarthDemo" />
-        <node concept="385nmt" id="yF" role="385vvn">
-          <property role="385vuF" value="EarthDemo" />
-          <node concept="2$VJBW" id="yH" role="385v07">
-            <property role="2$VJBR" value="167" />
-            <node concept="2x4n5u" id="yI" role="3iCydw">
-              <property role="2x4mPI" value="WorldDefinition" />
-              <property role="2x4n5l" value="1mumdg5iivghs" />
-              <node concept="2V$Bhx" id="yJ" role="2x4n5j">
-                <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
-                <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="39e2AT" id="yG" role="39e2AY">
-          <ref role="39e2AS" node="s4" resolve="EarthDemo" />
-        </node>
-      </node>
-      <node concept="39e2AG" id="yv" role="39e3Y0">
-        <ref role="39e2AK" to="nqq1:1nCAtVzBTfq" resolve="Planet" />
-        <node concept="385nmt" id="yK" role="385vvn">
-          <property role="385vuF" value="Planet" />
-          <node concept="2$VJBW" id="yM" role="385v07">
-            <property role="2$VJBR" value="293" />
-            <node concept="2x4n5u" id="yN" role="3iCydw">
-              <property role="2x4mPI" value="AbstractObjectDefinition" />
-              <property role="2x4n5l" value="b377xleir29v" />
-              <node concept="2V$Bhx" id="yO" role="2x4n5j">
-                <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
-                <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="39e2AT" id="yL" role="39e2AY">
-          <ref role="39e2AS" node="yU" resolve="Planet" />
+        <node concept="39e2AT" id="yD" role="39e2AY">
+          <ref role="39e2AS" node="pn" resolve="DemoScript" />
         </node>
       </node>
       <node concept="39e2AG" id="yw" role="39e3Y0">
-        <ref role="39e2AK" to="nqq1:1nCAtVzuu8$" resolve="SunDemo" />
-        <node concept="385nmt" id="yP" role="385vvn">
-          <property role="385vuF" value="SunDemo" />
-          <node concept="2$VJBW" id="yR" role="385v07">
-            <property role="2$VJBR" value="341" />
-            <node concept="2x4n5u" id="yS" role="3iCydw">
+        <ref role="39e2AK" to="nqq1:1nCAtVzuurD" resolve="EarthDemo" />
+        <node concept="385nmt" id="yH" role="385vvn">
+          <property role="385vuF" value="EarthDemo" />
+          <node concept="2$VJBW" id="yJ" role="385v07">
+            <property role="2$VJBR" value="167" />
+            <node concept="2x4n5u" id="yK" role="3iCydw">
               <property role="2x4mPI" value="WorldDefinition" />
               <property role="2x4n5l" value="1mumdg5iivghs" />
-              <node concept="2V$Bhx" id="yT" role="2x4n5j">
+              <node concept="2V$Bhx" id="yL" role="2x4n5j">
                 <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
                 <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="39e2AT" id="yQ" role="39e2AY">
-          <ref role="39e2AS" node="$L" resolve="SunDemo" />
+        <node concept="39e2AT" id="yI" role="39e2AY">
+          <ref role="39e2AS" node="s6" resolve="EarthDemo" />
+        </node>
+      </node>
+      <node concept="39e2AG" id="yx" role="39e3Y0">
+        <ref role="39e2AK" to="nqq1:1nCAtVzBTfq" resolve="Planet" />
+        <node concept="385nmt" id="yM" role="385vvn">
+          <property role="385vuF" value="Planet" />
+          <node concept="2$VJBW" id="yO" role="385v07">
+            <property role="2$VJBR" value="293" />
+            <node concept="2x4n5u" id="yP" role="3iCydw">
+              <property role="2x4mPI" value="AbstractObjectDefinition" />
+              <property role="2x4n5l" value="b377xleir29v" />
+              <node concept="2V$Bhx" id="yQ" role="2x4n5j">
+                <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
+                <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="39e2AT" id="yN" role="39e2AY">
+          <ref role="39e2AS" node="yW" resolve="Planet" />
+        </node>
+      </node>
+      <node concept="39e2AG" id="yy" role="39e3Y0">
+        <ref role="39e2AK" to="nqq1:1nCAtVzuu8$" resolve="SunDemo" />
+        <node concept="385nmt" id="yR" role="385vvn">
+          <property role="385vuF" value="SunDemo" />
+          <node concept="2$VJBW" id="yT" role="385v07">
+            <property role="2$VJBR" value="341" />
+            <node concept="2x4n5u" id="yU" role="3iCydw">
+              <property role="2x4mPI" value="WorldDefinition" />
+              <property role="2x4n5l" value="1mumdg5iivghs" />
+              <node concept="2V$Bhx" id="yV" role="2x4n5j">
+                <property role="2V$B1T" value="be81eb12-4eda-4d0e-89be-7493500ab874" />
+                <property role="2V$B1Q" value="jetbrains.mps.samples.Physics" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="39e2AT" id="yS" role="39e2AY">
+          <ref role="39e2AS" node="$N" resolve="SunDemo" />
         </node>
       </node>
     </node>
   </node>
-  <node concept="1dSqrf" id="yU">
+  <node concept="1dSqrf" id="yW">
     <property role="TrG5h" value="Planet" />
     <uo k="s:originTrace" v="n:293" />
-    <node concept="36SGkD" id="yV" role="1dSqon">
+    <node concept="36SGkD" id="yX" role="1dSqon">
       <ref role="36SuZX" node="0" resolve="BaseObject" />
       <uo k="s:originTrace" v="n:293" />
     </node>
-    <node concept="36SGkD" id="yW" role="1dSqon">
+    <node concept="36SGkD" id="yY" role="1dSqon">
       <ref role="36SuZX" to="v4rp:7Y" resolve="Gravitation" />
       <uo k="s:originTrace" v="n:293" />
     </node>
-    <node concept="1dSrUV" id="yX" role="1dSqon">
+    <node concept="1dSrUV" id="yZ" role="1dSqon">
       <uo k="s:originTrace" v="n:293" />
     </node>
-    <node concept="2DT8ht" id="yY" role="1dSqon">
+    <node concept="2DT8ht" id="z0" role="1dSqon">
       <uo k="s:originTrace" v="n:293" />
-      <node concept="1mvZK$" id="z0" role="2DT8gC">
+      <node concept="1mvZK$" id="z2" role="2DT8gC">
         <property role="TrG5h" value="Planet1" />
         <uo k="s:originTrace" v="n:293" />
       </node>
-      <node concept="2wiq1L" id="z1" role="2DTaag">
+      <node concept="2wiq1L" id="z3" role="2DTaag">
         <uo k="s:originTrace" v="n:293" />
-        <node concept="2wijRm" id="z3" role="2wiapO">
+        <node concept="2wijRm" id="z5" role="2wiapO">
           <property role="TrG5h" value="init" />
           <uo k="s:originTrace" v="n:293" />
         </node>
-        <node concept="2wWApn" id="z4" role="2wWApU">
+        <node concept="2wWApn" id="z6" role="2wWApU">
           <uo k="s:originTrace" v="n:293" />
         </node>
-        <node concept="3PT0iG" id="z5" role="2wi7L_">
+        <node concept="3PT0iG" id="z7" role="2wi7L_">
           <uo k="s:originTrace" v="n:293" />
-          <node concept="1dSo_L" id="z6" role="3PTNxU">
+          <node concept="1dSo_L" id="z8" role="3PTNxU">
             <uo k="s:originTrace" v="n:293" />
-            <node concept="2dhSm$" id="z8" role="1dwvF7">
+            <node concept="2dhSm$" id="za" role="1dwvF7">
               <uo k="s:originTrace" v="n:293" />
-              <node concept="2gzfuI" id="z9" role="2dhSgj">
+              <node concept="2gzfuI" id="zb" role="2dhSgj">
                 <uo k="s:originTrace" v="n:293" />
-                <node concept="2WRy0S" id="za" role="2gzftq">
+                <node concept="2WRy0S" id="zc" role="2gzftq">
                   <uo k="s:originTrace" v="n:293" />
-                  <node concept="2dhBij" id="zb" role="2WDU8g">
+                  <node concept="2dhBij" id="zd" role="2WDU8g">
                     <property role="2dhBvH" value="init" />
                     <uo k="s:originTrace" v="n:293" />
                   </node>
@@ -8629,88 +8637,88 @@
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="z7" role="3PTNxU">
+          <node concept="1dSo_L" id="z9" role="3PTNxU">
             <uo k="s:originTrace" v="n:293" />
-            <node concept="2dhSm$" id="zc" role="1dwvF7">
+            <node concept="2dhSm$" id="ze" role="1dwvF7">
               <uo k="s:originTrace" v="n:293" />
-              <node concept="2dhTJR" id="zd" role="2dhSgd">
+              <node concept="2dhTJR" id="zf" role="2dhSgd">
                 <uo k="s:originTrace" v="n:294" />
-                <node concept="2dhVqD" id="zg" role="2dhTFg">
+                <node concept="2dhVqD" id="zi" role="2dhTFg">
                   <uo k="s:originTrace" v="n:294" />
-                  <node concept="29jwqa" id="zj" role="2dhScq">
+                  <node concept="29jwqa" id="zl" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:294" />
                   </node>
-                  <node concept="2wijRm" id="zk" role="2dhS9X">
+                  <node concept="2wijRm" id="zm" role="2dhS9X">
                     <property role="TrG5h" value="ForceMapper" />
                     <uo k="s:originTrace" v="n:294" />
                   </node>
                 </node>
-                <node concept="2dpZbP" id="zh" role="2dhSkW">
+                <node concept="2dpZbP" id="zj" role="2dhSkW">
                   <uo k="s:originTrace" v="n:294" />
                 </node>
-                <node concept="2gzfuI" id="zi" role="2dhSkW">
+                <node concept="2gzfuI" id="zk" role="2dhSkW">
                   <uo k="s:originTrace" v="n:294" />
-                  <node concept="2eqWJV" id="zl" role="2gzftq">
+                  <node concept="2eqWJV" id="zn" role="2gzftq">
                     <uo k="s:originTrace" v="n:294" />
-                    <node concept="2Iaxfq" id="zm" role="2eqZ0M">
+                    <node concept="2Iaxfq" id="zo" role="2eqZ0M">
                       <uo k="s:originTrace" v="n:294" />
-                      <node concept="2wxzWt" id="zo" role="2IaxnZ">
+                      <node concept="2wxzWt" id="zq" role="2IaxnZ">
                         <uo k="s:originTrace" v="n:294" />
-                        <node concept="1mvZK$" id="zq" role="2wxzWi">
+                        <node concept="1mvZK$" id="zs" role="2wxzWi">
                           <property role="TrG5h" value="context" />
                           <uo k="s:originTrace" v="n:294" />
                         </node>
                       </node>
-                      <node concept="2wxzWt" id="zp" role="2IaxnZ">
+                      <node concept="2wxzWt" id="zr" role="2IaxnZ">
                         <uo k="s:originTrace" v="n:294" />
-                        <node concept="1mvZK$" id="zr" role="2wxzWi">
+                        <node concept="1mvZK$" id="zt" role="2wxzWi">
                           <property role="TrG5h" value="mapper" />
                           <uo k="s:originTrace" v="n:294" />
                         </node>
                       </node>
                     </node>
-                    <node concept="2Ic3hg" id="zn" role="2eqZ18">
+                    <node concept="2Ic3hg" id="zp" role="2eqZ18">
                       <uo k="s:originTrace" v="n:294" />
-                      <node concept="1dSoBd" id="zs" role="2Ic3hs">
+                      <node concept="1dSoBd" id="zu" role="2Ic3hs">
                         <uo k="s:originTrace" v="n:294" />
-                        <node concept="1dSrUV" id="zt" role="1dSoGN">
+                        <node concept="1dSrUV" id="zv" role="1dSoGN">
                           <uo k="s:originTrace" v="n:294" />
                         </node>
-                        <node concept="1dSozb" id="zu" role="1dSoGN">
+                        <node concept="1dSozb" id="zw" role="1dSoGN">
                           <uo k="s:originTrace" v="n:294" />
-                          <node concept="1dxaa$" id="zv" role="1dEAni">
+                          <node concept="1dxaa$" id="zx" role="1dEAni">
                             <uo k="s:originTrace" v="n:294" />
-                            <node concept="2dhSm$" id="zw" role="1dxaaB">
+                            <node concept="2dhSm$" id="zy" role="1dxaaB">
                               <uo k="s:originTrace" v="n:294" />
-                              <node concept="2dhVqD" id="zx" role="2dhSgj">
+                              <node concept="2dhVqD" id="zz" role="2dhSgj">
                                 <uo k="s:originTrace" v="n:294" />
-                                <node concept="2dhSm$" id="zy" role="2dhScq">
+                                <node concept="2dhSm$" id="z$" role="2dhScq">
                                   <uo k="s:originTrace" v="n:294" />
-                                  <node concept="2dpZbP" id="z$" role="2dhSgd">
+                                  <node concept="2dpZbP" id="zA" role="2dhSgd">
                                     <uo k="s:originTrace" v="n:294" />
                                   </node>
-                                  <node concept="2gzfuI" id="z_" role="2dhSgd">
+                                  <node concept="2gzfuI" id="zB" role="2dhSgd">
                                     <uo k="s:originTrace" v="n:298" />
-                                    <node concept="2dhUHT" id="zB" role="2gzftq">
+                                    <node concept="2dhUHT" id="zD" role="2gzftq">
                                       <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                                       <uo k="s:originTrace" v="n:298" />
-                                      <node concept="2dhBVA" id="zC" role="2dhUC2">
+                                      <node concept="2dhBVA" id="zE" role="2dhUC2">
                                         <property role="2dhB_1" value="9" />
                                         <uo k="s:originTrace" v="n:299" />
                                       </node>
-                                      <node concept="2gzfuI" id="zD" role="2dhUFW">
+                                      <node concept="2gzfuI" id="zF" role="2dhUFW">
                                         <uo k="s:originTrace" v="n:300" />
-                                        <node concept="2gzfuI" id="zE" role="2gzftq">
+                                        <node concept="2gzfuI" id="zG" role="2gzftq">
                                           <uo k="s:originTrace" v="n:312" />
-                                          <node concept="2dhUHT" id="zF" role="2gzftq">
+                                          <node concept="2dhUHT" id="zH" role="2gzftq">
                                             <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                                             <uo k="s:originTrace" v="n:312" />
-                                            <node concept="2dhBVA" id="zG" role="2dhUC2">
+                                            <node concept="2dhBVA" id="zI" role="2dhUC2">
                                               <property role="2dhB_1" value="1" />
                                               <uo k="s:originTrace" v="n:313" />
                                             </node>
-                                            <node concept="2dhBVA" id="zH" role="2dhUFW">
+                                            <node concept="2dhBVA" id="zJ" role="2dhUFW">
                                               <property role="2dhB_1" value="1" />
                                               <uo k="s:originTrace" v="n:314" />
                                             </node>
@@ -8719,12 +8727,12 @@
                                       </node>
                                     </node>
                                   </node>
-                                  <node concept="2WqeGl" id="zA" role="2dhSgj">
+                                  <node concept="2WqeGl" id="zC" role="2dhSgj">
                                     <ref role="2WqeGo" to="v4rp:85" resolve="computeGravitation1" />
                                     <uo k="s:originTrace" v="n:294" />
                                   </node>
                                 </node>
-                                <node concept="2wijRm" id="zz" role="2dhS9X">
+                                <node concept="2wijRm" id="z_" role="2dhS9X">
                                   <property role="TrG5h" value="compute" />
                                   <uo k="s:originTrace" v="n:294" />
                                 </node>
@@ -8737,216 +8745,216 @@
                   </node>
                 </node>
               </node>
-              <node concept="2dhTJR" id="ze" role="2dhSgd">
+              <node concept="2dhTJR" id="zg" role="2dhSgd">
                 <uo k="s:originTrace" v="n:295" />
-                <node concept="2dhVqD" id="zI" role="2dhTFg">
+                <node concept="2dhVqD" id="zK" role="2dhTFg">
                   <uo k="s:originTrace" v="n:295" />
-                  <node concept="29jwqa" id="zL" role="2dhScq">
+                  <node concept="29jwqa" id="zN" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:295" />
                   </node>
-                  <node concept="2wijRm" id="zM" role="2dhS9X">
+                  <node concept="2wijRm" id="zO" role="2dhS9X">
                     <property role="TrG5h" value="CachedForceMapper" />
                     <uo k="s:originTrace" v="n:295" />
                   </node>
                 </node>
-                <node concept="2dpZbP" id="zJ" role="2dhSkW">
+                <node concept="2dpZbP" id="zL" role="2dhSkW">
                   <uo k="s:originTrace" v="n:295" />
                 </node>
-                <node concept="2gzfuI" id="zK" role="2dhSkW">
+                <node concept="2gzfuI" id="zM" role="2dhSkW">
                   <uo k="s:originTrace" v="n:295" />
-                  <node concept="2eqWJV" id="zN" role="2gzftq">
+                  <node concept="2eqWJV" id="zP" role="2gzftq">
                     <uo k="s:originTrace" v="n:295" />
-                    <node concept="2Iaxfq" id="zO" role="2eqZ0M">
+                    <node concept="2Iaxfq" id="zQ" role="2eqZ0M">
                       <uo k="s:originTrace" v="n:295" />
-                      <node concept="2wxzWt" id="zQ" role="2IaxnZ">
+                      <node concept="2wxzWt" id="zS" role="2IaxnZ">
                         <uo k="s:originTrace" v="n:295" />
-                        <node concept="1mvZK$" id="zS" role="2wxzWi">
+                        <node concept="1mvZK$" id="zU" role="2wxzWi">
                           <property role="TrG5h" value="context" />
                           <uo k="s:originTrace" v="n:295" />
                         </node>
                       </node>
-                      <node concept="2wxzWt" id="zR" role="2IaxnZ">
+                      <node concept="2wxzWt" id="zT" role="2IaxnZ">
                         <uo k="s:originTrace" v="n:295" />
-                        <node concept="1mvZK$" id="zT" role="2wxzWi">
+                        <node concept="1mvZK$" id="zV" role="2wxzWi">
                           <property role="TrG5h" value="mapper" />
                           <uo k="s:originTrace" v="n:295" />
                         </node>
                       </node>
                     </node>
-                    <node concept="2Ic3hg" id="zP" role="2eqZ18">
+                    <node concept="2Ic3hg" id="zR" role="2eqZ18">
                       <uo k="s:originTrace" v="n:295" />
-                      <node concept="1dSoBd" id="zU" role="2Ic3hs">
+                      <node concept="1dSoBd" id="zW" role="2Ic3hs">
                         <uo k="s:originTrace" v="n:295" />
-                        <node concept="1dSo_o" id="zV" role="1dSoGN">
+                        <node concept="1dSo_o" id="zX" role="1dSoGN">
                           <uo k="s:originTrace" v="n:295" />
-                          <node concept="2dhUHT" id="zY" role="1dwHBg">
+                          <node concept="2dhUHT" id="$0" role="1dwHBg">
                             <property role="2dhUDU" value="7rFtnRVFh3H/boIde" />
                             <uo k="s:originTrace" v="n:295" />
-                            <node concept="2dxDzr" id="$0" role="2dhUFW">
+                            <node concept="2dxDzr" id="$2" role="2dhUFW">
                               <uo k="s:originTrace" v="n:295" />
                             </node>
-                            <node concept="2dhVqD" id="$1" role="2dhUC2">
+                            <node concept="2dhVqD" id="$3" role="2dhUC2">
                               <uo k="s:originTrace" v="n:295" />
-                              <node concept="2WqeGl" id="$2" role="2dhScq">
-                                <ref role="2WqeGo" node="zT" resolve="mapper" />
+                              <node concept="2WqeGl" id="$4" role="2dhScq">
+                                <ref role="2WqeGo" node="zV" resolve="mapper" />
                                 <uo k="s:originTrace" v="n:295" />
                               </node>
-                              <node concept="2wijRm" id="$3" role="2dhS9X">
+                              <node concept="2wijRm" id="$5" role="2dhS9X">
                                 <property role="TrG5h" value="cache" />
                                 <uo k="s:originTrace" v="n:295" />
                               </node>
                             </node>
                           </node>
-                          <node concept="1dSo_L" id="zZ" role="1dwHBd">
+                          <node concept="1dSo_L" id="$1" role="1dwHBd">
                             <uo k="s:originTrace" v="n:295" />
-                            <node concept="2djMEC" id="$4" role="1dwvF7">
+                            <node concept="2djMEC" id="$6" role="1dwvF7">
                               <uo k="s:originTrace" v="n:295" />
-                              <node concept="2dhTJR" id="$5" role="2dhTO1">
+                              <node concept="2dhTJR" id="$7" role="2dhTO1">
                                 <uo k="s:originTrace" v="n:315" />
-                                <node concept="2dhVqD" id="$7" role="2dhTFg">
+                                <node concept="2dhVqD" id="$9" role="2dhTFg">
                                   <uo k="s:originTrace" v="n:315" />
-                                  <node concept="29jwqa" id="$b" role="2dhScq">
+                                  <node concept="29jwqa" id="$d" role="2dhScq">
                                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                                     <uo k="s:originTrace" v="n:315" />
                                   </node>
-                                  <node concept="2wijRm" id="$c" role="2dhS9X">
+                                  <node concept="2wijRm" id="$e" role="2dhS9X">
                                     <property role="TrG5h" value="Vector" />
                                     <uo k="s:originTrace" v="n:315" />
                                   </node>
                                 </node>
-                                <node concept="2gzfuI" id="$8" role="2dhSkW">
+                                <node concept="2gzfuI" id="$a" role="2dhSkW">
                                   <uo k="s:originTrace" v="n:319" />
-                                  <node concept="2gzfuI" id="$d" role="2gzftq">
+                                  <node concept="2gzfuI" id="$f" role="2gzftq">
                                     <uo k="s:originTrace" v="n:326" />
-                                    <node concept="2dhUHT" id="$e" role="2gzftq">
+                                    <node concept="2dhUHT" id="$g" role="2gzftq">
                                       <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                                       <uo k="s:originTrace" v="n:326" />
-                                      <node concept="2dhBVA" id="$f" role="2dhUC2">
+                                      <node concept="2dhBVA" id="$h" role="2dhUC2">
                                         <property role="2dhB_1" value="5" />
                                         <uo k="s:originTrace" v="n:327" />
                                       </node>
-                                      <node concept="2dhBVA" id="$g" role="2dhUFW">
+                                      <node concept="2dhBVA" id="$i" role="2dhUFW">
                                         <property role="2dhB_1" value="1" />
                                         <uo k="s:originTrace" v="n:328" />
                                       </node>
                                     </node>
                                   </node>
                                 </node>
-                                <node concept="2dhBVA" id="$9" role="2dhSkW">
+                                <node concept="2dhBVA" id="$b" role="2dhSkW">
                                   <property role="2dhB_1" value="0" />
                                   <uo k="s:originTrace" v="n:317" />
                                 </node>
-                                <node concept="2dhBVA" id="$a" role="2dhSkW">
+                                <node concept="2dhBVA" id="$c" role="2dhSkW">
                                   <property role="2dhB_1" value="0" />
                                   <uo k="s:originTrace" v="n:318" />
                                 </node>
                               </node>
-                              <node concept="2dhVqD" id="$6" role="2dhTaa">
+                              <node concept="2dhVqD" id="$8" role="2dhTaa">
                                 <uo k="s:originTrace" v="n:295" />
-                                <node concept="2wijRm" id="$h" role="2dhS9X">
+                                <node concept="2wijRm" id="$j" role="2dhS9X">
                                   <property role="TrG5h" value="cache" />
                                   <uo k="s:originTrace" v="n:295" />
                                 </node>
-                                <node concept="2WqeGl" id="$i" role="2dhScq">
-                                  <ref role="2WqeGo" node="zT" resolve="mapper" />
+                                <node concept="2WqeGl" id="$k" role="2dhScq">
+                                  <ref role="2WqeGo" node="zV" resolve="mapper" />
                                   <uo k="s:originTrace" v="n:295" />
                                 </node>
                               </node>
                             </node>
                           </node>
                         </node>
-                        <node concept="1dSrUV" id="zW" role="1dSoGN">
+                        <node concept="1dSrUV" id="zY" role="1dSoGN">
                           <uo k="s:originTrace" v="n:295" />
                         </node>
-                        <node concept="1dSozb" id="zX" role="1dSoGN">
+                        <node concept="1dSozb" id="zZ" role="1dSoGN">
                           <uo k="s:originTrace" v="n:295" />
-                          <node concept="1dxaa$" id="$j" role="1dEAni">
+                          <node concept="1dxaa$" id="$l" role="1dEAni">
                             <uo k="s:originTrace" v="n:295" />
-                            <node concept="2dhUch" id="$k" role="1dxaaB">
+                            <node concept="2dhUch" id="$m" role="1dxaaB">
                               <uo k="s:originTrace" v="n:295" />
-                              <node concept="2dhVJw" id="$l" role="2dhUe$">
+                              <node concept="2dhVJw" id="$n" role="2dhUe$">
                                 <uo k="s:originTrace" v="n:295" />
-                                <node concept="1dSrUG" id="$p" role="2dhU0t">
+                                <node concept="1dSrUG" id="$r" role="2dhU0t">
                                   <property role="TrG5h" value="linearForce" />
                                   <uo k="s:originTrace" v="n:295" />
                                 </node>
-                                <node concept="2dhVqD" id="$q" role="2dhU27">
+                                <node concept="2dhVqD" id="$s" role="2dhU27">
                                   <uo k="s:originTrace" v="n:295" />
-                                  <node concept="2WqeGl" id="$r" role="2dhScq">
-                                    <ref role="2WqeGo" node="zT" resolve="mapper" />
+                                  <node concept="2WqeGl" id="$t" role="2dhScq">
+                                    <ref role="2WqeGo" node="zV" resolve="mapper" />
                                     <uo k="s:originTrace" v="n:295" />
                                   </node>
-                                  <node concept="2wijRm" id="$s" role="2dhS9X">
+                                  <node concept="2wijRm" id="$u" role="2dhS9X">
                                     <property role="TrG5h" value="cache" />
                                     <uo k="s:originTrace" v="n:295" />
                                   </node>
                                 </node>
                               </node>
-                              <node concept="2dhVJw" id="$m" role="2dhUe$">
+                              <node concept="2dhVJw" id="$o" role="2dhUe$">
                                 <uo k="s:originTrace" v="n:295" />
-                                <node concept="1dSrUG" id="$t" role="2dhU0t">
+                                <node concept="1dSrUG" id="$v" role="2dhU0t">
                                   <property role="TrG5h" value="moment" />
                                   <uo k="s:originTrace" v="n:295" />
                                 </node>
-                                <node concept="2dxDzr" id="$u" role="2dhU27">
+                                <node concept="2dxDzr" id="$w" role="2dhU27">
                                   <uo k="s:originTrace" v="n:295" />
                                 </node>
                               </node>
-                              <node concept="2dhVJw" id="$n" role="2dhUe$">
+                              <node concept="2dhVJw" id="$p" role="2dhUe$">
                                 <uo k="s:originTrace" v="n:295" />
-                                <node concept="1dSrUG" id="$v" role="2dhU0t">
+                                <node concept="1dSrUG" id="$x" role="2dhU0t">
                                   <property role="TrG5h" value="applicationPoint" />
                                   <uo k="s:originTrace" v="n:295" />
                                 </node>
-                                <node concept="2dhTJR" id="$w" role="2dhU27">
+                                <node concept="2dhTJR" id="$y" role="2dhU27">
                                   <uo k="s:originTrace" v="n:316" />
-                                  <node concept="2dhVqD" id="$x" role="2dhTFg">
+                                  <node concept="2dhVqD" id="$z" role="2dhTFg">
                                     <uo k="s:originTrace" v="n:316" />
-                                    <node concept="29jwqa" id="$_" role="2dhScq">
+                                    <node concept="29jwqa" id="$B" role="2dhScq">
                                       <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                                       <uo k="s:originTrace" v="n:316" />
                                     </node>
-                                    <node concept="2wijRm" id="$A" role="2dhS9X">
+                                    <node concept="2wijRm" id="$C" role="2dhS9X">
                                       <property role="TrG5h" value="Vector" />
                                       <uo k="s:originTrace" v="n:316" />
                                     </node>
                                   </node>
-                                  <node concept="2gzfuI" id="$y" role="2dhSkW">
+                                  <node concept="2gzfuI" id="$$" role="2dhSkW">
                                     <uo k="s:originTrace" v="n:331" />
-                                    <node concept="2gzfuI" id="$B" role="2gzftq">
+                                    <node concept="2gzfuI" id="$D" role="2gzftq">
                                       <uo k="s:originTrace" v="n:338" />
-                                      <node concept="2dhUHT" id="$C" role="2gzftq">
+                                      <node concept="2dhUHT" id="$E" role="2gzftq">
                                         <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                                         <uo k="s:originTrace" v="n:338" />
-                                        <node concept="2dhBVA" id="$D" role="2dhUC2">
+                                        <node concept="2dhBVA" id="$F" role="2dhUC2">
                                           <property role="2dhB_1" value="1" />
                                           <uo k="s:originTrace" v="n:339" />
                                         </node>
-                                        <node concept="2dhBVA" id="$E" role="2dhUFW">
+                                        <node concept="2dhBVA" id="$G" role="2dhUFW">
                                           <property role="2dhB_1" value="1" />
                                           <uo k="s:originTrace" v="n:340" />
                                         </node>
                                       </node>
                                     </node>
                                   </node>
-                                  <node concept="2dhBVA" id="$z" role="2dhSkW">
+                                  <node concept="2dhBVA" id="$_" role="2dhSkW">
                                     <property role="2dhB_1" value="0" />
                                     <uo k="s:originTrace" v="n:329" />
                                   </node>
-                                  <node concept="2dhBVA" id="$$" role="2dhSkW">
+                                  <node concept="2dhBVA" id="$A" role="2dhSkW">
                                     <property role="2dhB_1" value="0" />
                                     <uo k="s:originTrace" v="n:330" />
                                   </node>
                                 </node>
                               </node>
-                              <node concept="2dhVJw" id="$o" role="2dhUe$">
+                              <node concept="2dhVJw" id="$q" role="2dhUe$">
                                 <uo k="s:originTrace" v="n:295" />
-                                <node concept="1dSrUG" id="$F" role="2dhU0t">
+                                <node concept="1dSrUG" id="$H" role="2dhU0t">
                                   <property role="TrG5h" value="forceMode" />
                                   <uo k="s:originTrace" v="n:295" />
                                 </node>
-                                <node concept="2dhBVA" id="$G" role="2dhU27">
+                                <node concept="2dhBVA" id="$I" role="2dhU27">
                                   <property role="2dhB_1" value="16" />
                                   <uo k="s:originTrace" v="n:295" />
                                 </node>
@@ -8959,19 +8967,19 @@
                   </node>
                 </node>
               </node>
-              <node concept="2dhVqD" id="zf" role="2dhSgj">
+              <node concept="2dhVqD" id="zh" role="2dhSgj">
                 <uo k="s:originTrace" v="n:293" />
-                <node concept="2dhVqD" id="$H" role="2dhScq">
+                <node concept="2dhVqD" id="$J" role="2dhScq">
                   <uo k="s:originTrace" v="n:293" />
-                  <node concept="2dpZbP" id="$J" role="2dhScq">
+                  <node concept="2dpZbP" id="$L" role="2dhScq">
                     <uo k="s:originTrace" v="n:293" />
                   </node>
-                  <node concept="2wijRm" id="$K" role="2dhS9X">
+                  <node concept="2wijRm" id="$M" role="2dhS9X">
                     <property role="TrG5h" value="forces" />
                     <uo k="s:originTrace" v="n:293" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="$I" role="2dhS9X">
+                <node concept="2wijRm" id="$K" role="2dhS9X">
                   <property role="TrG5h" value="push" />
                   <uo k="s:originTrace" v="n:293" />
                 </node>
@@ -8980,306 +8988,155 @@
           </node>
         </node>
       </node>
-      <node concept="6BmiN" id="z2" role="2DT8gE">
+      <node concept="6BmiN" id="z4" role="2DT8gE">
         <ref role="6BmiO" node="2" />
         <uo k="s:originTrace" v="n:293" />
       </node>
     </node>
-    <node concept="3ErYpN" id="yZ" role="3E_D5O">
+    <node concept="3ErYpN" id="z1" role="3E_D5O">
       <ref role="3ErYpM" to="f76b:2RasiBbTMfg" resolve="RuntimeEnv" />
       <uo k="s:originTrace" v="n:293" />
     </node>
   </node>
-  <node concept="1dSqrf" id="$L">
+  <node concept="1dSqrf" id="$N">
     <property role="TrG5h" value="SunDemo" />
     <uo k="s:originTrace" v="n:341" />
-    <node concept="36SGkD" id="$M" role="1dSqon">
-      <ref role="36SuZX" node="s4" resolve="EarthDemo" />
+    <node concept="36SGkD" id="$O" role="1dSqon">
+      <ref role="36SuZX" node="s6" resolve="EarthDemo" />
       <uo k="s:originTrace" v="n:341" />
     </node>
-    <node concept="36SGkD" id="$N" role="1dSqon">
-      <ref role="36SuZX" node="yU" resolve="Planet" />
+    <node concept="36SGkD" id="$P" role="1dSqon">
+      <ref role="36SuZX" node="yW" resolve="Planet" />
       <uo k="s:originTrace" v="n:341" />
     </node>
-    <node concept="1dSrUV" id="$O" role="1dSqon">
+    <node concept="1dSrUV" id="$Q" role="1dSqon">
       <uo k="s:originTrace" v="n:341" />
     </node>
-    <node concept="2DT8ht" id="$P" role="1dSqon">
+    <node concept="2DT8ht" id="$R" role="1dSqon">
       <uo k="s:originTrace" v="n:341" />
-      <node concept="1mvZK$" id="$U" role="2DT8gC">
+      <node concept="1mvZK$" id="$W" role="2DT8gC">
         <property role="TrG5h" value="Sun" />
         <uo k="s:originTrace" v="n:341" />
       </node>
-      <node concept="2wiq1L" id="$V" role="2DTaag">
+      <node concept="2wiq1L" id="$X" role="2DTaag">
         <uo k="s:originTrace" v="n:341" />
-        <node concept="2wijRm" id="$X" role="2wiapO">
+        <node concept="2wijRm" id="$Z" role="2wiapO">
           <property role="TrG5h" value="init" />
           <uo k="s:originTrace" v="n:341" />
         </node>
-        <node concept="2wWApn" id="$Y" role="2wWApU">
+        <node concept="2wWApn" id="_0" role="2wWApU">
           <uo k="s:originTrace" v="n:341" />
         </node>
-        <node concept="3PT0iG" id="$Z" role="2wi7L_">
+        <node concept="3PT0iG" id="_1" role="2wi7L_">
           <uo k="s:originTrace" v="n:341" />
-          <node concept="1dSo_L" id="_0" role="3PTNxU">
+          <node concept="1dSo_L" id="_2" role="3PTNxU">
             <uo k="s:originTrace" v="n:341" />
-            <node concept="2dhSm$" id="_8" role="1dwvF7">
+            <node concept="2dhSm$" id="_a" role="1dwvF7">
               <uo k="s:originTrace" v="n:341" />
-              <node concept="2dhVqD" id="_9" role="2dhSgj">
+              <node concept="2dhVqD" id="_b" role="2dhSgj">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2dpZbP" id="_b" role="2dhScq">
+                <node concept="2dpZbP" id="_d" role="2dhScq">
                   <uo k="s:originTrace" v="n:341" />
                 </node>
-                <node concept="2wijRm" id="_c" role="2dhS9X">
+                <node concept="2wijRm" id="_e" role="2dhS9X">
                   <property role="TrG5h" value="setMass" />
                   <uo k="s:originTrace" v="n:341" />
                 </node>
               </node>
-              <node concept="2dhBVA" id="_a" role="2dhSgd">
+              <node concept="2dhBVA" id="_c" role="2dhSgd">
                 <property role="2dhB_1" value="5000" />
                 <uo k="s:originTrace" v="n:421" />
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="_1" role="3PTNxU">
+          <node concept="1dSo_L" id="_3" role="3PTNxU">
             <uo k="s:originTrace" v="n:341" />
-            <node concept="2dhSm$" id="_d" role="1dwvF7">
+            <node concept="2dhSm$" id="_f" role="1dwvF7">
               <uo k="s:originTrace" v="n:341" />
-              <node concept="2dhVqD" id="_e" role="2dhSgd">
+              <node concept="2dhVqD" id="_g" role="2dhSgd">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2dpZbP" id="_h" role="2dhScq">
+                <node concept="2dpZbP" id="_j" role="2dhScq">
                   <uo k="s:originTrace" v="n:341" />
                 </node>
-                <node concept="2wijRm" id="_i" role="2dhS9X">
+                <node concept="2wijRm" id="_k" role="2dhS9X">
                   <property role="TrG5h" value="body" />
                   <uo k="s:originTrace" v="n:341" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="_f" role="2dhSgd">
+              <node concept="2dhVqD" id="_h" role="2dhSgd">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2dhSm$" id="_j" role="2dhScq">
+                <node concept="2dhSm$" id="_l" role="2dhScq">
                   <uo k="s:originTrace" v="n:341" />
-                  <node concept="2dhTJR" id="_l" role="2dhSgd">
+                  <node concept="2dhTJR" id="_n" role="2dhSgd">
                     <uo k="s:originTrace" v="n:422" />
-                    <node concept="2dhVqD" id="_n" role="2dhTFg">
+                    <node concept="2dhVqD" id="_p" role="2dhTFg">
                       <uo k="s:originTrace" v="n:428" />
-                      <node concept="29jwqa" id="_r" role="2dhScq">
+                      <node concept="29jwqa" id="_t" role="2dhScq">
                         <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                         <uo k="s:originTrace" v="n:428" />
                       </node>
-                      <node concept="2wijRm" id="_s" role="2dhS9X">
+                      <node concept="2wijRm" id="_u" role="2dhS9X">
                         <property role="TrG5h" value="Vector" />
                         <uo k="s:originTrace" v="n:428" />
                       </node>
                     </node>
-                    <node concept="2dhBVA" id="_o" role="2dhSkW">
+                    <node concept="2dhBVA" id="_q" role="2dhSkW">
                       <property role="2dhB_1" value="0" />
                       <uo k="s:originTrace" v="n:429" />
                     </node>
-                    <node concept="2dhBVA" id="_p" role="2dhSkW">
+                    <node concept="2dhBVA" id="_r" role="2dhSkW">
                       <property role="2dhB_1" value="0" />
                       <uo k="s:originTrace" v="n:430" />
                     </node>
-                    <node concept="2dhBVA" id="_q" role="2dhSkW">
+                    <node concept="2dhBVA" id="_s" role="2dhSkW">
                       <property role="2dhB_1" value="0" />
                       <uo k="s:originTrace" v="n:431" />
                     </node>
                   </node>
-                  <node concept="2dhVqD" id="_m" role="2dhSgj">
+                  <node concept="2dhVqD" id="_o" role="2dhSgj">
                     <uo k="s:originTrace" v="n:341" />
-                    <node concept="2dhVqD" id="_t" role="2dhScq">
+                    <node concept="2dhVqD" id="_v" role="2dhScq">
                       <uo k="s:originTrace" v="n:341" />
-                      <node concept="2dpZbP" id="_v" role="2dhScq">
+                      <node concept="2dpZbP" id="_x" role="2dhScq">
                         <uo k="s:originTrace" v="n:341" />
                       </node>
-                      <node concept="2wijRm" id="_w" role="2dhS9X">
+                      <node concept="2wijRm" id="_y" role="2dhS9X">
                         <property role="TrG5h" value="scope" />
                         <uo k="s:originTrace" v="n:341" />
                       </node>
                     </node>
-                    <node concept="2wijRm" id="_u" role="2dhS9X">
+                    <node concept="2wijRm" id="_w" role="2dhS9X">
                       <property role="TrG5h" value="getAbsoluteInitialPosition" />
                       <uo k="s:originTrace" v="n:341" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="_k" role="2dhS9X">
+                <node concept="2wijRm" id="_m" role="2dhS9X">
                   <property role="TrG5h" value="values" />
                   <uo k="s:originTrace" v="n:341" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="_g" role="2dhSgj">
+              <node concept="2dhVqD" id="_i" role="2dhSgj">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2dhVqD" id="_x" role="2dhScq">
+                <node concept="2dhVqD" id="_z" role="2dhScq">
                   <uo k="s:originTrace" v="n:341" />
-                  <node concept="2wijRm" id="_z" role="2dhS9X">
+                  <node concept="2wijRm" id="__" role="2dhS9X">
                     <property role="TrG5h" value="setPosition" />
                     <uo k="s:originTrace" v="n:341" />
                   </node>
-                  <node concept="2dhVqD" id="_$" role="2dhScq">
+                  <node concept="2dhVqD" id="_A" role="2dhScq">
                     <uo k="s:originTrace" v="n:341" />
-                    <node concept="2dpZbP" id="__" role="2dhScq">
+                    <node concept="2dpZbP" id="_B" role="2dhScq">
                       <uo k="s:originTrace" v="n:341" />
                     </node>
-                    <node concept="2wijRm" id="_A" role="2dhS9X">
+                    <node concept="2wijRm" id="_C" role="2dhS9X">
                       <property role="TrG5h" value="body" />
                       <uo k="s:originTrace" v="n:341" />
                     </node>
                   </node>
                 </node>
-                <node concept="2wijRm" id="_y" role="2dhS9X">
+                <node concept="2wijRm" id="_$" role="2dhS9X">
                   <property role="TrG5h" value="apply" />
-                  <uo k="s:originTrace" v="n:341" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1dSo_L" id="_2" role="3PTNxU">
-            <uo k="s:originTrace" v="n:341" />
-            <node concept="2dhSm$" id="_B" role="1dwvF7">
-              <uo k="s:originTrace" v="n:341" />
-              <node concept="2dhVqD" id="_C" role="2dhSgd">
-                <uo k="s:originTrace" v="n:341" />
-                <node concept="2dpZbP" id="_F" role="2dhScq">
-                  <uo k="s:originTrace" v="n:341" />
-                </node>
-                <node concept="2wijRm" id="_G" role="2dhS9X">
-                  <property role="TrG5h" value="body" />
-                  <uo k="s:originTrace" v="n:341" />
-                </node>
-              </node>
-              <node concept="2dhVqD" id="_D" role="2dhSgd">
-                <uo k="s:originTrace" v="n:341" />
-                <node concept="2dhVqD" id="_H" role="2dhScq">
-                  <uo k="s:originTrace" v="n:341" />
-                  <node concept="2dhVqD" id="_J" role="2dhScq">
-                    <uo k="s:originTrace" v="n:341" />
-                    <node concept="2dpZbP" id="_L" role="2dhScq">
-                      <uo k="s:originTrace" v="n:341" />
-                    </node>
-                    <node concept="2wijRm" id="_M" role="2dhS9X">
-                      <property role="TrG5h" value="scope" />
-                      <uo k="s:originTrace" v="n:341" />
-                    </node>
-                  </node>
-                  <node concept="2wijRm" id="_K" role="2dhS9X">
-                    <property role="TrG5h" value="initialVelocity" />
-                    <uo k="s:originTrace" v="n:341" />
-                  </node>
-                </node>
-                <node concept="2wijRm" id="_I" role="2dhS9X">
-                  <property role="TrG5h" value="values" />
-                  <uo k="s:originTrace" v="n:341" />
-                </node>
-              </node>
-              <node concept="2dhVqD" id="_E" role="2dhSgj">
-                <uo k="s:originTrace" v="n:341" />
-                <node concept="2dhVqD" id="_N" role="2dhScq">
-                  <uo k="s:originTrace" v="n:341" />
-                  <node concept="2wijRm" id="_P" role="2dhS9X">
-                    <property role="TrG5h" value="setLinearVel" />
-                    <uo k="s:originTrace" v="n:341" />
-                  </node>
-                  <node concept="2dhVqD" id="_Q" role="2dhScq">
-                    <uo k="s:originTrace" v="n:341" />
-                    <node concept="2dpZbP" id="_R" role="2dhScq">
-                      <uo k="s:originTrace" v="n:341" />
-                    </node>
-                    <node concept="2wijRm" id="_S" role="2dhS9X">
-                      <property role="TrG5h" value="body" />
-                      <uo k="s:originTrace" v="n:341" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="2wijRm" id="_O" role="2dhS9X">
-                  <property role="TrG5h" value="apply" />
-                  <uo k="s:originTrace" v="n:341" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1dSo_L" id="_3" role="3PTNxU">
-            <uo k="s:originTrace" v="n:341" />
-            <node concept="2dhSm$" id="_T" role="1dwvF7">
-              <uo k="s:originTrace" v="n:341" />
-              <node concept="2dhVqD" id="_U" role="2dhSgj">
-                <uo k="s:originTrace" v="n:341" />
-                <node concept="2dhVqD" id="_X" role="2dhScq">
-                  <uo k="s:originTrace" v="n:341" />
-                  <node concept="2wijRm" id="_Z" role="2dhS9X">
-                    <property role="TrG5h" value="setAngularVel" />
-                    <uo k="s:originTrace" v="n:341" />
-                  </node>
-                  <node concept="2dhVqD" id="A0" role="2dhScq">
-                    <uo k="s:originTrace" v="n:341" />
-                    <node concept="2dpZbP" id="A1" role="2dhScq">
-                      <uo k="s:originTrace" v="n:341" />
-                    </node>
-                    <node concept="2wijRm" id="A2" role="2dhS9X">
-                      <property role="TrG5h" value="body" />
-                      <uo k="s:originTrace" v="n:341" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="2wijRm" id="_Y" role="2dhS9X">
-                  <property role="TrG5h" value="apply" />
-                  <uo k="s:originTrace" v="n:341" />
-                </node>
-              </node>
-              <node concept="2dhVqD" id="_V" role="2dhSgd">
-                <uo k="s:originTrace" v="n:341" />
-                <node concept="2dpZbP" id="A3" role="2dhScq">
-                  <uo k="s:originTrace" v="n:341" />
-                </node>
-                <node concept="2wijRm" id="A4" role="2dhS9X">
-                  <property role="TrG5h" value="body" />
-                  <uo k="s:originTrace" v="n:341" />
-                </node>
-              </node>
-              <node concept="2dhVqD" id="_W" role="2dhSgd">
-                <uo k="s:originTrace" v="n:341" />
-                <node concept="2dhTJR" id="A5" role="2dhScq">
-                  <uo k="s:originTrace" v="n:436" />
-                  <node concept="2dhVqD" id="A7" role="2dhTFg">
-                    <uo k="s:originTrace" v="n:436" />
-                    <node concept="29jwqa" id="Ab" role="2dhScq">
-                      <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
-                      <uo k="s:originTrace" v="n:436" />
-                    </node>
-                    <node concept="2wijRm" id="Ac" role="2dhS9X">
-                      <property role="TrG5h" value="Vector" />
-                      <uo k="s:originTrace" v="n:436" />
-                    </node>
-                  </node>
-                  <node concept="2dhBVA" id="A8" role="2dhSkW">
-                    <property role="2dhB_1" value="0" />
-                    <uo k="s:originTrace" v="n:437" />
-                  </node>
-                  <node concept="2gzfuI" id="A9" role="2dhSkW">
-                    <uo k="s:originTrace" v="n:439" />
-                    <node concept="2gzfuI" id="Ad" role="2gzftq">
-                      <uo k="s:originTrace" v="n:448" />
-                      <node concept="2dhUHT" id="Ae" role="2gzftq">
-                        <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
-                        <uo k="s:originTrace" v="n:448" />
-                        <node concept="2dhBVA" id="Af" role="2dhUC2">
-                          <property role="2dhB_1" value="5" />
-                          <uo k="s:originTrace" v="n:449" />
-                        </node>
-                        <node concept="2dhBVA" id="Ag" role="2dhUFW">
-                          <property role="2dhB_1" value="0.01745328627927352441191151881987859" />
-                          <uo k="s:originTrace" v="n:450" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="2dhBVA" id="Aa" role="2dhSkW">
-                    <property role="2dhB_1" value="0" />
-                    <uo k="s:originTrace" v="n:438" />
-                  </node>
-                </node>
-                <node concept="2wijRm" id="A6" role="2dhS9X">
-                  <property role="TrG5h" value="values" />
                   <uo k="s:originTrace" v="n:341" />
                 </node>
               </node>
@@ -9287,13 +9144,164 @@
           </node>
           <node concept="1dSo_L" id="_4" role="3PTNxU">
             <uo k="s:originTrace" v="n:341" />
-            <node concept="2dhSm$" id="Ah" role="1dwvF7">
+            <node concept="2dhSm$" id="_D" role="1dwvF7">
               <uo k="s:originTrace" v="n:341" />
-              <node concept="2gzfuI" id="Ai" role="2dhSgj">
+              <node concept="2dhVqD" id="_E" role="2dhSgd">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2WRy0S" id="Aj" role="2gzftq">
+                <node concept="2dpZbP" id="_H" role="2dhScq">
                   <uo k="s:originTrace" v="n:341" />
-                  <node concept="2dhBij" id="Ak" role="2WDU8g">
+                </node>
+                <node concept="2wijRm" id="_I" role="2dhS9X">
+                  <property role="TrG5h" value="body" />
+                  <uo k="s:originTrace" v="n:341" />
+                </node>
+              </node>
+              <node concept="2dhVqD" id="_F" role="2dhSgd">
+                <uo k="s:originTrace" v="n:341" />
+                <node concept="2dhVqD" id="_J" role="2dhScq">
+                  <uo k="s:originTrace" v="n:341" />
+                  <node concept="2dhVqD" id="_L" role="2dhScq">
+                    <uo k="s:originTrace" v="n:341" />
+                    <node concept="2dpZbP" id="_N" role="2dhScq">
+                      <uo k="s:originTrace" v="n:341" />
+                    </node>
+                    <node concept="2wijRm" id="_O" role="2dhS9X">
+                      <property role="TrG5h" value="scope" />
+                      <uo k="s:originTrace" v="n:341" />
+                    </node>
+                  </node>
+                  <node concept="2wijRm" id="_M" role="2dhS9X">
+                    <property role="TrG5h" value="initialVelocity" />
+                    <uo k="s:originTrace" v="n:341" />
+                  </node>
+                </node>
+                <node concept="2wijRm" id="_K" role="2dhS9X">
+                  <property role="TrG5h" value="values" />
+                  <uo k="s:originTrace" v="n:341" />
+                </node>
+              </node>
+              <node concept="2dhVqD" id="_G" role="2dhSgj">
+                <uo k="s:originTrace" v="n:341" />
+                <node concept="2dhVqD" id="_P" role="2dhScq">
+                  <uo k="s:originTrace" v="n:341" />
+                  <node concept="2wijRm" id="_R" role="2dhS9X">
+                    <property role="TrG5h" value="setLinearVel" />
+                    <uo k="s:originTrace" v="n:341" />
+                  </node>
+                  <node concept="2dhVqD" id="_S" role="2dhScq">
+                    <uo k="s:originTrace" v="n:341" />
+                    <node concept="2dpZbP" id="_T" role="2dhScq">
+                      <uo k="s:originTrace" v="n:341" />
+                    </node>
+                    <node concept="2wijRm" id="_U" role="2dhS9X">
+                      <property role="TrG5h" value="body" />
+                      <uo k="s:originTrace" v="n:341" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="2wijRm" id="_Q" role="2dhS9X">
+                  <property role="TrG5h" value="apply" />
+                  <uo k="s:originTrace" v="n:341" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1dSo_L" id="_5" role="3PTNxU">
+            <uo k="s:originTrace" v="n:341" />
+            <node concept="2dhSm$" id="_V" role="1dwvF7">
+              <uo k="s:originTrace" v="n:341" />
+              <node concept="2dhVqD" id="_W" role="2dhSgj">
+                <uo k="s:originTrace" v="n:341" />
+                <node concept="2dhVqD" id="_Z" role="2dhScq">
+                  <uo k="s:originTrace" v="n:341" />
+                  <node concept="2wijRm" id="A1" role="2dhS9X">
+                    <property role="TrG5h" value="setAngularVel" />
+                    <uo k="s:originTrace" v="n:341" />
+                  </node>
+                  <node concept="2dhVqD" id="A2" role="2dhScq">
+                    <uo k="s:originTrace" v="n:341" />
+                    <node concept="2dpZbP" id="A3" role="2dhScq">
+                      <uo k="s:originTrace" v="n:341" />
+                    </node>
+                    <node concept="2wijRm" id="A4" role="2dhS9X">
+                      <property role="TrG5h" value="body" />
+                      <uo k="s:originTrace" v="n:341" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="2wijRm" id="A0" role="2dhS9X">
+                  <property role="TrG5h" value="apply" />
+                  <uo k="s:originTrace" v="n:341" />
+                </node>
+              </node>
+              <node concept="2dhVqD" id="_X" role="2dhSgd">
+                <uo k="s:originTrace" v="n:341" />
+                <node concept="2dpZbP" id="A5" role="2dhScq">
+                  <uo k="s:originTrace" v="n:341" />
+                </node>
+                <node concept="2wijRm" id="A6" role="2dhS9X">
+                  <property role="TrG5h" value="body" />
+                  <uo k="s:originTrace" v="n:341" />
+                </node>
+              </node>
+              <node concept="2dhVqD" id="_Y" role="2dhSgd">
+                <uo k="s:originTrace" v="n:341" />
+                <node concept="2dhTJR" id="A7" role="2dhScq">
+                  <uo k="s:originTrace" v="n:436" />
+                  <node concept="2dhVqD" id="A9" role="2dhTFg">
+                    <uo k="s:originTrace" v="n:436" />
+                    <node concept="29jwqa" id="Ad" role="2dhScq">
+                      <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
+                      <uo k="s:originTrace" v="n:436" />
+                    </node>
+                    <node concept="2wijRm" id="Ae" role="2dhS9X">
+                      <property role="TrG5h" value="Vector" />
+                      <uo k="s:originTrace" v="n:436" />
+                    </node>
+                  </node>
+                  <node concept="2dhBVA" id="Aa" role="2dhSkW">
+                    <property role="2dhB_1" value="0" />
+                    <uo k="s:originTrace" v="n:437" />
+                  </node>
+                  <node concept="2gzfuI" id="Ab" role="2dhSkW">
+                    <uo k="s:originTrace" v="n:439" />
+                    <node concept="2gzfuI" id="Af" role="2gzftq">
+                      <uo k="s:originTrace" v="n:448" />
+                      <node concept="2dhUHT" id="Ag" role="2gzftq">
+                        <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
+                        <uo k="s:originTrace" v="n:448" />
+                        <node concept="2dhBVA" id="Ah" role="2dhUC2">
+                          <property role="2dhB_1" value="5" />
+                          <uo k="s:originTrace" v="n:449" />
+                        </node>
+                        <node concept="2dhBVA" id="Ai" role="2dhUFW">
+                          <property role="2dhB_1" value="0.01745328627927352441191151881987859" />
+                          <uo k="s:originTrace" v="n:450" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2dhBVA" id="Ac" role="2dhSkW">
+                    <property role="2dhB_1" value="0" />
+                    <uo k="s:originTrace" v="n:438" />
+                  </node>
+                </node>
+                <node concept="2wijRm" id="A8" role="2dhS9X">
+                  <property role="TrG5h" value="values" />
+                  <uo k="s:originTrace" v="n:341" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1dSo_L" id="_6" role="3PTNxU">
+            <uo k="s:originTrace" v="n:341" />
+            <node concept="2dhSm$" id="Aj" role="1dwvF7">
+              <uo k="s:originTrace" v="n:341" />
+              <node concept="2gzfuI" id="Ak" role="2dhSgj">
+                <uo k="s:originTrace" v="n:341" />
+                <node concept="2WRy0S" id="Al" role="2gzftq">
+                  <uo k="s:originTrace" v="n:341" />
+                  <node concept="2dhBij" id="Am" role="2WDU8g">
                     <property role="3S2$_t" value="init" />
                     <uo k="s:originTrace" v="n:341" />
                   </node>
@@ -9301,113 +9309,113 @@
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="_5" role="3PTNxU">
+          <node concept="1dSo_L" id="_7" role="3PTNxU">
             <uo k="s:originTrace" v="n:424" />
-            <node concept="2dhSm$" id="Al" role="1dwvF7">
-              <node concept="2dhVqD" id="Am" role="2dhSgd">
+            <node concept="2dhSm$" id="An" role="1dwvF7">
+              <node concept="2dhVqD" id="Ao" role="2dhSgd">
                 <uo k="s:originTrace" v="n:432" />
-                <node concept="2dhVqD" id="Ap" role="2dhScq">
+                <node concept="2dhVqD" id="Ar" role="2dhScq">
                   <uo k="s:originTrace" v="n:432" />
-                  <node concept="29jwqa" id="Ar" role="2dhScq">
+                  <node concept="29jwqa" id="At" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:432" />
                   </node>
-                  <node concept="2wijRm" id="As" role="2dhS9X">
+                  <node concept="2wijRm" id="Au" role="2dhS9X">
                     <property role="TrG5h" value="PropKey" />
                     <uo k="s:originTrace" v="n:432" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="Aq" role="2dhS9X">
+                <node concept="2wijRm" id="As" role="2dhS9X">
                   <property role="TrG5h" value="TEXTURE" />
                   <uo k="s:originTrace" v="n:432" />
                 </node>
               </node>
-              <node concept="2dhTJR" id="An" role="2dhSgd">
+              <node concept="2dhTJR" id="Ap" role="2dhSgd">
                 <uo k="s:originTrace" v="n:433" />
-                <node concept="2dhVqD" id="At" role="2dhTFg">
+                <node concept="2dhVqD" id="Av" role="2dhTFg">
                   <uo k="s:originTrace" v="n:433" />
-                  <node concept="29jwqa" id="Av" role="2dhScq">
+                  <node concept="29jwqa" id="Ax" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:433" />
                   </node>
-                  <node concept="2wijRm" id="Aw" role="2dhS9X">
+                  <node concept="2wijRm" id="Ay" role="2dhS9X">
                     <property role="TrG5h" value="ImageTexture" />
                     <uo k="s:originTrace" v="n:433" />
                   </node>
                 </node>
-                <node concept="2dhBij" id="Au" role="2dhSkW">
+                <node concept="2dhBij" id="Aw" role="2dhSkW">
                   <property role="2dhBvH" value="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Map_of_the_full_sun.jpg/1024px-Map_of_the_full_sun.jpg" />
                   <uo k="s:originTrace" v="n:433" />
                 </node>
               </node>
-              <node concept="2dhVqD" id="Ao" role="2dhSgj">
-                <node concept="2dhVqD" id="Ax" role="2dhScq">
-                  <node concept="2dpZbP" id="Az" role="2dhScq" />
-                  <node concept="2wijRm" id="A$" role="2dhS9X">
+              <node concept="2dhVqD" id="Aq" role="2dhSgj">
+                <node concept="2dhVqD" id="Az" role="2dhScq">
+                  <node concept="2dpZbP" id="A_" role="2dhScq" />
+                  <node concept="2wijRm" id="AA" role="2dhS9X">
                     <property role="TrG5h" value="propertiesBuilder" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="Ay" role="2dhS9X">
+                <node concept="2wijRm" id="A$" role="2dhS9X">
                   <property role="TrG5h" value="set" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="_6" role="3PTNxU">
+          <node concept="1dSo_L" id="_8" role="3PTNxU">
             <uo k="s:originTrace" v="n:425" />
-            <node concept="2dhSm$" id="A_" role="1dwvF7">
-              <node concept="2dhVqD" id="AA" role="2dhSgd">
+            <node concept="2dhSm$" id="AB" role="1dwvF7">
+              <node concept="2dhVqD" id="AC" role="2dhSgd">
                 <uo k="s:originTrace" v="n:435" />
-                <node concept="2dhVqD" id="AD" role="2dhScq">
+                <node concept="2dhVqD" id="AF" role="2dhScq">
                   <uo k="s:originTrace" v="n:435" />
-                  <node concept="29jwqa" id="AF" role="2dhScq">
+                  <node concept="29jwqa" id="AH" role="2dhScq">
                     <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                     <uo k="s:originTrace" v="n:435" />
                   </node>
-                  <node concept="2wijRm" id="AG" role="2dhS9X">
+                  <node concept="2wijRm" id="AI" role="2dhS9X">
                     <property role="TrG5h" value="PropKey" />
                     <uo k="s:originTrace" v="n:435" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="AE" role="2dhS9X">
+                <node concept="2wijRm" id="AG" role="2dhS9X">
                   <property role="TrG5h" value="EMIT_LIGHT" />
                   <uo k="s:originTrace" v="n:435" />
                 </node>
               </node>
-              <node concept="2dxDFB" id="AB" role="2dhSgd">
+              <node concept="2dxDFB" id="AD" role="2dhSgd">
                 <property role="2dxnST" value="true" />
                 <uo k="s:originTrace" v="n:434" />
               </node>
-              <node concept="2dhVqD" id="AC" role="2dhSgj">
-                <node concept="2dhVqD" id="AH" role="2dhScq">
-                  <node concept="2dpZbP" id="AJ" role="2dhScq" />
-                  <node concept="2wijRm" id="AK" role="2dhS9X">
+              <node concept="2dhVqD" id="AE" role="2dhSgj">
+                <node concept="2dhVqD" id="AJ" role="2dhScq">
+                  <node concept="2dpZbP" id="AL" role="2dhScq" />
+                  <node concept="2wijRm" id="AM" role="2dhS9X">
                     <property role="TrG5h" value="propertiesBuilder" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="AI" role="2dhS9X">
+                <node concept="2wijRm" id="AK" role="2dhS9X">
                   <property role="TrG5h" value="set" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="_7" role="3PTNxU">
+          <node concept="1dSo_L" id="_9" role="3PTNxU">
             <uo k="s:originTrace" v="n:341" />
-            <node concept="2dhSm$" id="AL" role="1dwvF7">
+            <node concept="2dhSm$" id="AN" role="1dwvF7">
               <uo k="s:originTrace" v="n:341" />
-              <node concept="2dhVqD" id="AM" role="2dhSgj">
+              <node concept="2dhVqD" id="AO" role="2dhSgj">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2dhVqD" id="AN" role="2dhScq">
+                <node concept="2dhVqD" id="AP" role="2dhScq">
                   <uo k="s:originTrace" v="n:341" />
-                  <node concept="2dpZbP" id="AP" role="2dhScq">
+                  <node concept="2dpZbP" id="AR" role="2dhScq">
                     <uo k="s:originTrace" v="n:341" />
                   </node>
-                  <node concept="2wijRm" id="AQ" role="2dhS9X">
+                  <node concept="2wijRm" id="AS" role="2dhS9X">
                     <property role="TrG5h" value="forces" />
                     <uo k="s:originTrace" v="n:341" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="AO" role="2dhS9X">
+                <node concept="2wijRm" id="AQ" role="2dhS9X">
                   <property role="TrG5h" value="push" />
                   <uo k="s:originTrace" v="n:341" />
                 </node>
@@ -9416,144 +9424,144 @@
           </node>
         </node>
       </node>
-      <node concept="6BmiN" id="$W" role="2DT8gE">
-        <ref role="6BmiO" node="yY" />
+      <node concept="6BmiN" id="$Y" role="2DT8gE">
+        <ref role="6BmiO" node="z0" />
         <uo k="s:originTrace" v="n:341" />
       </node>
     </node>
-    <node concept="1dSrUV" id="$Q" role="1dSqon">
+    <node concept="1dSrUV" id="$S" role="1dSqon">
       <uo k="s:originTrace" v="n:341" />
     </node>
-    <node concept="2DT8ht" id="$R" role="1dSqon">
+    <node concept="2DT8ht" id="$T" role="1dSqon">
       <uo k="s:originTrace" v="n:341" />
-      <node concept="128wFQ" id="AR" role="2DTaag">
+      <node concept="128wFQ" id="AT" role="2DTaag">
         <uo k="s:originTrace" v="n:341" />
-        <node concept="2wijRm" id="AW" role="128LSx">
+        <node concept="2wijRm" id="AY" role="128LSx">
           <property role="TrG5h" value="object_EarthDemo" />
           <uo k="s:originTrace" v="n:341" />
         </node>
       </node>
-      <node concept="128wFQ" id="AS" role="2DTaag">
+      <node concept="128wFQ" id="AU" role="2DTaag">
         <uo k="s:originTrace" v="n:341" />
-        <node concept="2wijRm" id="AX" role="128LSx">
+        <node concept="2wijRm" id="AZ" role="128LSx">
           <property role="TrG5h" value="object_Sun" />
           <uo k="s:originTrace" v="n:341" />
         </node>
       </node>
-      <node concept="1mvZK$" id="AT" role="2DT8gC">
+      <node concept="1mvZK$" id="AV" role="2DT8gC">
         <property role="TrG5h" value="SunDemo1" />
         <uo k="s:originTrace" v="n:341" />
       </node>
-      <node concept="2wiq1L" id="AU" role="2DTaag">
+      <node concept="2wiq1L" id="AW" role="2DTaag">
         <uo k="s:originTrace" v="n:341" />
-        <node concept="2wijRm" id="AY" role="2wiapO">
+        <node concept="2wijRm" id="B0" role="2wiapO">
           <property role="TrG5h" value="constructor" />
           <uo k="s:originTrace" v="n:341" />
         </node>
-        <node concept="2wWApn" id="AZ" role="2wWApU">
+        <node concept="2wWApn" id="B1" role="2wWApU">
           <uo k="s:originTrace" v="n:341" />
-          <node concept="2wxzWt" id="B1" role="2wWAp1">
-            <uo k="s:originTrace" v="n:341" />
-            <node concept="1mvZK$" id="B5" role="2wxzWi">
-              <property role="TrG5h" value="world" />
-              <uo k="s:originTrace" v="n:341" />
-            </node>
-          </node>
-          <node concept="2wxzWt" id="B2" role="2wWAp1">
-            <uo k="s:originTrace" v="n:341" />
-            <node concept="1mvZK$" id="B6" role="2wxzWi">
-              <property role="TrG5h" value="position" />
-              <uo k="s:originTrace" v="n:341" />
-            </node>
-          </node>
           <node concept="2wxzWt" id="B3" role="2wWAp1">
             <uo k="s:originTrace" v="n:341" />
             <node concept="1mvZK$" id="B7" role="2wxzWi">
-              <property role="TrG5h" value="velocity" />
+              <property role="TrG5h" value="world" />
               <uo k="s:originTrace" v="n:341" />
             </node>
           </node>
           <node concept="2wxzWt" id="B4" role="2wWAp1">
             <uo k="s:originTrace" v="n:341" />
             <node concept="1mvZK$" id="B8" role="2wxzWi">
+              <property role="TrG5h" value="position" />
+              <uo k="s:originTrace" v="n:341" />
+            </node>
+          </node>
+          <node concept="2wxzWt" id="B5" role="2wWAp1">
+            <uo k="s:originTrace" v="n:341" />
+            <node concept="1mvZK$" id="B9" role="2wxzWi">
+              <property role="TrG5h" value="velocity" />
+              <uo k="s:originTrace" v="n:341" />
+            </node>
+          </node>
+          <node concept="2wxzWt" id="B6" role="2wWAp1">
+            <uo k="s:originTrace" v="n:341" />
+            <node concept="1mvZK$" id="Ba" role="2wxzWi">
               <property role="TrG5h" value="rotation" />
               <uo k="s:originTrace" v="n:341" />
             </node>
           </node>
         </node>
-        <node concept="3PT0iG" id="B0" role="2wi7L_">
+        <node concept="3PT0iG" id="B2" role="2wi7L_">
           <uo k="s:originTrace" v="n:341" />
-          <node concept="1dSo_L" id="B9" role="3PTNxU">
+          <node concept="1dSo_L" id="Bb" role="3PTNxU">
             <uo k="s:originTrace" v="n:341" />
-            <node concept="12Bna6" id="Bd" role="1dwvF7">
+            <node concept="12Bna6" id="Bf" role="1dwvF7">
               <uo k="s:originTrace" v="n:341" />
-              <node concept="2WqeGl" id="Be" role="2WRAlG">
-                <ref role="2WqeGo" node="B5" resolve="world" />
-                <uo k="s:originTrace" v="n:341" />
-              </node>
-              <node concept="2WqeGl" id="Bf" role="2WRAlG">
-                <ref role="2WqeGo" node="B6" resolve="position" />
-                <uo k="s:originTrace" v="n:341" />
-              </node>
               <node concept="2WqeGl" id="Bg" role="2WRAlG">
-                <ref role="2WqeGo" node="B7" resolve="velocity" />
+                <ref role="2WqeGo" node="B7" resolve="world" />
                 <uo k="s:originTrace" v="n:341" />
               </node>
               <node concept="2WqeGl" id="Bh" role="2WRAlG">
-                <ref role="2WqeGo" node="B8" resolve="rotation" />
+                <ref role="2WqeGo" node="B8" resolve="position" />
+                <uo k="s:originTrace" v="n:341" />
+              </node>
+              <node concept="2WqeGl" id="Bi" role="2WRAlG">
+                <ref role="2WqeGo" node="B9" resolve="velocity" />
+                <uo k="s:originTrace" v="n:341" />
+              </node>
+              <node concept="2WqeGl" id="Bj" role="2WRAlG">
+                <ref role="2WqeGo" node="Ba" resolve="rotation" />
                 <uo k="s:originTrace" v="n:341" />
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="Ba" role="3PTNxU">
+          <node concept="1dSo_L" id="Bc" role="3PTNxU">
             <uo k="s:originTrace" v="n:341" />
-            <node concept="2djMEC" id="Bi" role="1dwvF7">
+            <node concept="2djMEC" id="Bk" role="1dwvF7">
               <uo k="s:originTrace" v="n:341" />
-              <node concept="2dhVqD" id="Bj" role="2dhTaa">
+              <node concept="2dhVqD" id="Bl" role="2dhTaa">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2dpZbP" id="Bl" role="2dhScq">
+                <node concept="2dpZbP" id="Bn" role="2dhScq">
                   <uo k="s:originTrace" v="n:341" />
                 </node>
-                <node concept="2wijRm" id="Bm" role="2dhS9X">
+                <node concept="2wijRm" id="Bo" role="2dhS9X">
                   <property role="TrG5h" value="object_Sun" />
                   <uo k="s:originTrace" v="n:341" />
                 </node>
               </node>
-              <node concept="2dhSm$" id="Bk" role="2dhTO1">
+              <node concept="2dhSm$" id="Bm" role="2dhTO1">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2gzfuI" id="Bn" role="2dhSgd">
+                <node concept="2gzfuI" id="Bp" role="2dhSgd">
                   <uo k="s:originTrace" v="n:341" />
-                  <node concept="2dhTJR" id="Bp" role="2gzftq">
+                  <node concept="2dhTJR" id="Br" role="2gzftq">
                     <uo k="s:originTrace" v="n:341" />
-                    <node concept="2dhVqD" id="Bq" role="2dhSkW">
+                    <node concept="2dhVqD" id="Bs" role="2dhSkW">
                       <uo k="s:originTrace" v="n:341" />
-                      <node concept="2dpZbP" id="Bu" role="2dhScq">
+                      <node concept="2dpZbP" id="Bw" role="2dhScq">
                         <uo k="s:originTrace" v="n:341" />
                       </node>
-                      <node concept="2wijRm" id="Bv" role="2dhS9X">
+                      <node concept="2wijRm" id="Bx" role="2dhS9X">
                         <property role="TrG5h" value="world" />
                         <uo k="s:originTrace" v="n:341" />
                       </node>
                     </node>
-                    <node concept="2dhBij" id="Br" role="2dhSkW">
+                    <node concept="2dhBij" id="Bt" role="2dhSkW">
                       <property role="2dhBvH" value="Sun1" />
                       <uo k="s:originTrace" v="n:341" />
                     </node>
-                    <node concept="2dpZbP" id="Bs" role="2dhSkW">
+                    <node concept="2dpZbP" id="Bu" role="2dhSkW">
                       <uo k="s:originTrace" v="n:341" />
                     </node>
-                    <node concept="6BmiN" id="Bt" role="2dhTFg">
-                      <ref role="6BmiO" node="$P" />
+                    <node concept="6BmiN" id="Bv" role="2dhTFg">
+                      <ref role="6BmiO" node="$R" />
                       <uo k="s:originTrace" v="n:341" />
                     </node>
                   </node>
                 </node>
-                <node concept="2dhVqD" id="Bo" role="2dhSgj">
+                <node concept="2dhVqD" id="Bq" role="2dhSgj">
                   <uo k="s:originTrace" v="n:341" />
-                  <node concept="2dpZbP" id="Bw" role="2dhScq">
+                  <node concept="2dpZbP" id="By" role="2dhScq">
                     <uo k="s:originTrace" v="n:341" />
                   </node>
-                  <node concept="2wijRm" id="Bx" role="2dhS9X">
+                  <node concept="2wijRm" id="Bz" role="2dhS9X">
                     <property role="TrG5h" value="withEntity" />
                     <uo k="s:originTrace" v="n:341" />
                   </node>
@@ -9561,109 +9569,109 @@
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="Bb" role="3PTNxU">
+          <node concept="1dSo_L" id="Bd" role="3PTNxU">
             <uo k="s:originTrace" v="n:341" />
-            <node concept="2djMEC" id="By" role="1dwvF7">
+            <node concept="2djMEC" id="B$" role="1dwvF7">
               <uo k="s:originTrace" v="n:341" />
-              <node concept="2dhVqD" id="Bz" role="2dhTaa">
+              <node concept="2dhVqD" id="B_" role="2dhTaa">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2dpZbP" id="B_" role="2dhScq">
+                <node concept="2dpZbP" id="BB" role="2dhScq">
                   <uo k="s:originTrace" v="n:341" />
                 </node>
-                <node concept="2wijRm" id="BA" role="2dhS9X">
+                <node concept="2wijRm" id="BC" role="2dhS9X">
                   <property role="TrG5h" value="object_EarthDemo" />
                   <uo k="s:originTrace" v="n:341" />
                 </node>
               </node>
-              <node concept="2dhSm$" id="B$" role="2dhTO1">
+              <node concept="2dhSm$" id="BA" role="2dhTO1">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2gzfuI" id="BB" role="2dhSgd">
+                <node concept="2gzfuI" id="BD" role="2dhSgd">
                   <uo k="s:originTrace" v="n:341" />
-                  <node concept="2dhTJR" id="BD" role="2gzftq">
+                  <node concept="2dhTJR" id="BF" role="2gzftq">
                     <uo k="s:originTrace" v="n:341" />
-                    <node concept="2dhVqD" id="BE" role="2dhSkW">
+                    <node concept="2dhVqD" id="BG" role="2dhSkW">
                       <uo k="s:originTrace" v="n:341" />
-                      <node concept="2dpZbP" id="BJ" role="2dhScq">
+                      <node concept="2dpZbP" id="BL" role="2dhScq">
                         <uo k="s:originTrace" v="n:341" />
                       </node>
-                      <node concept="2wijRm" id="BK" role="2dhS9X">
+                      <node concept="2wijRm" id="BM" role="2dhS9X">
                         <property role="TrG5h" value="world" />
                         <uo k="s:originTrace" v="n:341" />
                       </node>
                     </node>
-                    <node concept="2dhSm$" id="BF" role="2dhSkW">
+                    <node concept="2dhSm$" id="BH" role="2dhSkW">
                       <uo k="s:originTrace" v="n:341" />
-                      <node concept="2dhVqD" id="BL" role="2dhSgj">
+                      <node concept="2dhVqD" id="BN" role="2dhSgj">
                         <uo k="s:originTrace" v="n:341" />
-                        <node concept="2dpZbP" id="BN" role="2dhScq">
+                        <node concept="2dpZbP" id="BP" role="2dhScq">
                           <uo k="s:originTrace" v="n:341" />
                         </node>
-                        <node concept="2wijRm" id="BO" role="2dhS9X">
+                        <node concept="2wijRm" id="BQ" role="2dhS9X">
                           <property role="TrG5h" value="getAbsoluteInitialPosition" />
                           <uo k="s:originTrace" v="n:341" />
                         </node>
                       </node>
-                      <node concept="2dhTJR" id="BM" role="2dhSgd">
+                      <node concept="2dhTJR" id="BO" role="2dhSgd">
                         <uo k="s:originTrace" v="n:345" />
-                        <node concept="2dhVqD" id="BP" role="2dhTFg">
+                        <node concept="2dhVqD" id="BR" role="2dhTFg">
                           <uo k="s:originTrace" v="n:347" />
-                          <node concept="29jwqa" id="BT" role="2dhScq">
+                          <node concept="29jwqa" id="BV" role="2dhScq">
                             <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                             <uo k="s:originTrace" v="n:347" />
                           </node>
-                          <node concept="2wijRm" id="BU" role="2dhS9X">
+                          <node concept="2wijRm" id="BW" role="2dhS9X">
                             <property role="TrG5h" value="Vector" />
                             <uo k="s:originTrace" v="n:347" />
                           </node>
                         </node>
-                        <node concept="2gzfuI" id="BQ" role="2dhSkW">
+                        <node concept="2gzfuI" id="BS" role="2dhSkW">
                           <uo k="s:originTrace" v="n:348" />
-                          <node concept="2gzfuI" id="BV" role="2gzftq">
+                          <node concept="2gzfuI" id="BX" role="2gzftq">
                             <uo k="s:originTrace" v="n:358" />
-                            <node concept="2dhUHT" id="BW" role="2gzftq">
+                            <node concept="2dhUHT" id="BY" role="2gzftq">
                               <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                               <uo k="s:originTrace" v="n:358" />
-                              <node concept="2dhBVA" id="BX" role="2dhUC2">
+                              <node concept="2dhBVA" id="BZ" role="2dhUC2">
                                 <property role="2dhB_1" value="100.0" />
                                 <uo k="s:originTrace" v="n:359" />
                               </node>
-                              <node concept="2dhBVA" id="BY" role="2dhUFW">
+                              <node concept="2dhBVA" id="C0" role="2dhUFW">
                                 <property role="2dhB_1" value="1" />
                                 <uo k="s:originTrace" v="n:360" />
                               </node>
                             </node>
                           </node>
                         </node>
-                        <node concept="2gzfuI" id="BR" role="2dhSkW">
+                        <node concept="2gzfuI" id="BT" role="2dhSkW">
                           <uo k="s:originTrace" v="n:349" />
-                          <node concept="2gzfuI" id="BZ" role="2gzftq">
+                          <node concept="2gzfuI" id="C1" role="2gzftq">
                             <uo k="s:originTrace" v="n:368" />
-                            <node concept="2dhUHT" id="C0" role="2gzftq">
+                            <node concept="2dhUHT" id="C2" role="2gzftq">
                               <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                               <uo k="s:originTrace" v="n:368" />
-                              <node concept="2dhBVA" id="C1" role="2dhUC2">
+                              <node concept="2dhBVA" id="C3" role="2dhUC2">
                                 <property role="2dhB_1" value="0.0" />
                                 <uo k="s:originTrace" v="n:369" />
                               </node>
-                              <node concept="2dhBVA" id="C2" role="2dhUFW">
+                              <node concept="2dhBVA" id="C4" role="2dhUFW">
                                 <property role="2dhB_1" value="1" />
                                 <uo k="s:originTrace" v="n:370" />
                               </node>
                             </node>
                           </node>
                         </node>
-                        <node concept="2gzfuI" id="BS" role="2dhSkW">
+                        <node concept="2gzfuI" id="BU" role="2dhSkW">
                           <uo k="s:originTrace" v="n:350" />
-                          <node concept="2gzfuI" id="C3" role="2gzftq">
+                          <node concept="2gzfuI" id="C5" role="2gzftq">
                             <uo k="s:originTrace" v="n:378" />
-                            <node concept="2dhUHT" id="C4" role="2gzftq">
+                            <node concept="2dhUHT" id="C6" role="2gzftq">
                               <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                               <uo k="s:originTrace" v="n:378" />
-                              <node concept="2dhBVA" id="C5" role="2dhUC2">
+                              <node concept="2dhBVA" id="C7" role="2dhUC2">
                                 <property role="2dhB_1" value="0" />
                                 <uo k="s:originTrace" v="n:379" />
                               </node>
-                              <node concept="2dhBVA" id="C6" role="2dhUFW">
+                              <node concept="2dhBVA" id="C8" role="2dhUFW">
                                 <property role="2dhB_1" value="1" />
                                 <uo k="s:originTrace" v="n:380" />
                               </node>
@@ -9672,79 +9680,79 @@
                         </node>
                       </node>
                     </node>
-                    <node concept="2dhSm$" id="BG" role="2dhSkW">
+                    <node concept="2dhSm$" id="BI" role="2dhSkW">
                       <uo k="s:originTrace" v="n:341" />
-                      <node concept="2dhVqD" id="C7" role="2dhSgj">
+                      <node concept="2dhVqD" id="C9" role="2dhSgj">
                         <uo k="s:originTrace" v="n:341" />
-                        <node concept="2dpZbP" id="C9" role="2dhScq">
+                        <node concept="2dpZbP" id="Cb" role="2dhScq">
                           <uo k="s:originTrace" v="n:341" />
                         </node>
-                        <node concept="2wijRm" id="Ca" role="2dhS9X">
+                        <node concept="2wijRm" id="Cc" role="2dhS9X">
                           <property role="TrG5h" value="getAbsoluteInitialVelocity" />
                           <uo k="s:originTrace" v="n:341" />
                         </node>
                       </node>
-                      <node concept="2dhTJR" id="C8" role="2dhSgd">
+                      <node concept="2dhTJR" id="Ca" role="2dhSgd">
                         <uo k="s:originTrace" v="n:346" />
-                        <node concept="2dhVqD" id="Cb" role="2dhTFg">
+                        <node concept="2dhVqD" id="Cd" role="2dhTFg">
                           <uo k="s:originTrace" v="n:381" />
-                          <node concept="29jwqa" id="Cf" role="2dhScq">
+                          <node concept="29jwqa" id="Ch" role="2dhScq">
                             <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
                             <uo k="s:originTrace" v="n:381" />
                           </node>
-                          <node concept="2wijRm" id="Cg" role="2dhS9X">
+                          <node concept="2wijRm" id="Ci" role="2dhS9X">
                             <property role="TrG5h" value="Vector" />
                             <uo k="s:originTrace" v="n:381" />
                           </node>
                         </node>
-                        <node concept="2gzfuI" id="Cc" role="2dhSkW">
+                        <node concept="2gzfuI" id="Ce" role="2dhSkW">
                           <uo k="s:originTrace" v="n:382" />
-                          <node concept="2gzfuI" id="Ch" role="2gzftq">
+                          <node concept="2gzfuI" id="Cj" role="2gzftq">
                             <uo k="s:originTrace" v="n:394" />
-                            <node concept="2dhUHT" id="Ci" role="2gzftq">
+                            <node concept="2dhUHT" id="Ck" role="2gzftq">
                               <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                               <uo k="s:originTrace" v="n:394" />
-                              <node concept="2dhBVA" id="Cj" role="2dhUC2">
+                              <node concept="2dhBVA" id="Cl" role="2dhUC2">
                                 <property role="2dhB_1" value="0.0" />
                                 <uo k="s:originTrace" v="n:395" />
                               </node>
-                              <node concept="2dhBVA" id="Ck" role="2dhUFW">
+                              <node concept="2dhBVA" id="Cm" role="2dhUFW">
                                 <property role="2dhB_1" value="1" />
                                 <uo k="s:originTrace" v="n:396" />
                               </node>
                             </node>
                           </node>
                         </node>
-                        <node concept="2gzfuI" id="Cd" role="2dhSkW">
+                        <node concept="2gzfuI" id="Cf" role="2dhSkW">
                           <uo k="s:originTrace" v="n:383" />
-                          <node concept="2gzfuI" id="Cl" role="2gzftq">
+                          <node concept="2gzfuI" id="Cn" role="2gzftq">
                             <uo k="s:originTrace" v="n:406" />
-                            <node concept="2dhUHT" id="Cm" role="2gzftq">
+                            <node concept="2dhUHT" id="Co" role="2gzftq">
                               <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                               <uo k="s:originTrace" v="n:406" />
-                              <node concept="2dhBVA" id="Cn" role="2dhUC2">
+                              <node concept="2dhBVA" id="Cp" role="2dhUC2">
                                 <property role="2dhB_1" value="0.0" />
                                 <uo k="s:originTrace" v="n:407" />
                               </node>
-                              <node concept="2dhBVA" id="Co" role="2dhUFW">
+                              <node concept="2dhBVA" id="Cq" role="2dhUFW">
                                 <property role="2dhB_1" value="1" />
                                 <uo k="s:originTrace" v="n:408" />
                               </node>
                             </node>
                           </node>
                         </node>
-                        <node concept="2gzfuI" id="Ce" role="2dhSkW">
+                        <node concept="2gzfuI" id="Cg" role="2dhSkW">
                           <uo k="s:originTrace" v="n:384" />
-                          <node concept="2gzfuI" id="Cp" role="2gzftq">
+                          <node concept="2gzfuI" id="Cr" role="2gzftq">
                             <uo k="s:originTrace" v="n:418" />
-                            <node concept="2dhUHT" id="Cq" role="2gzftq">
+                            <node concept="2dhUHT" id="Cs" role="2gzftq">
                               <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
                               <uo k="s:originTrace" v="n:418" />
-                              <node concept="2dhBVA" id="Cr" role="2dhUC2">
+                              <node concept="2dhBVA" id="Ct" role="2dhUC2">
                                 <property role="2dhB_1" value="20.0" />
                                 <uo k="s:originTrace" v="n:419" />
                               </node>
-                              <node concept="2dhBVA" id="Cs" role="2dhUFW">
+                              <node concept="2dhBVA" id="Cu" role="2dhUFW">
                                 <property role="2dhB_1" value="1" />
                                 <uo k="s:originTrace" v="n:420" />
                               </node>
@@ -9753,28 +9761,28 @@
                         </node>
                       </node>
                     </node>
-                    <node concept="2dhVqD" id="BH" role="2dhSkW">
+                    <node concept="2dhVqD" id="BJ" role="2dhSkW">
                       <uo k="s:originTrace" v="n:341" />
-                      <node concept="2dpZbP" id="Ct" role="2dhScq">
+                      <node concept="2dpZbP" id="Cv" role="2dhScq">
                         <uo k="s:originTrace" v="n:341" />
                       </node>
-                      <node concept="2wijRm" id="Cu" role="2dhS9X">
+                      <node concept="2wijRm" id="Cw" role="2dhS9X">
                         <property role="TrG5h" value="initialRotation" />
                         <uo k="s:originTrace" v="n:341" />
                       </node>
                     </node>
-                    <node concept="6BmiN" id="BI" role="2dhTFg">
-                      <ref role="6BmiO" node="sa" />
+                    <node concept="6BmiN" id="BK" role="2dhTFg">
+                      <ref role="6BmiO" node="sc" />
                       <uo k="s:originTrace" v="n:341" />
                     </node>
                   </node>
                 </node>
-                <node concept="2dhVqD" id="BC" role="2dhSgj">
+                <node concept="2dhVqD" id="BE" role="2dhSgj">
                   <uo k="s:originTrace" v="n:341" />
-                  <node concept="2dpZbP" id="Cv" role="2dhScq">
+                  <node concept="2dpZbP" id="Cx" role="2dhScq">
                     <uo k="s:originTrace" v="n:341" />
                   </node>
-                  <node concept="2wijRm" id="Cw" role="2dhS9X">
+                  <node concept="2wijRm" id="Cy" role="2dhS9X">
                     <property role="TrG5h" value="withEntity" />
                     <uo k="s:originTrace" v="n:341" />
                   </node>
@@ -9782,23 +9790,23 @@
               </node>
             </node>
           </node>
-          <node concept="1dSo_L" id="Bc" role="3PTNxU">
+          <node concept="1dSo_L" id="Be" role="3PTNxU">
             <uo k="s:originTrace" v="n:341" />
-            <node concept="2dhSm$" id="Cx" role="1dwvF7">
+            <node concept="2dhSm$" id="Cz" role="1dwvF7">
               <uo k="s:originTrace" v="n:341" />
-              <node concept="2dhVqD" id="Cy" role="2dhSgj">
+              <node concept="2dhVqD" id="C$" role="2dhSgj">
                 <uo k="s:originTrace" v="n:341" />
-                <node concept="2dhVqD" id="Cz" role="2dhScq">
+                <node concept="2dhVqD" id="C_" role="2dhScq">
                   <uo k="s:originTrace" v="n:341" />
-                  <node concept="2dpZbP" id="C_" role="2dhScq">
+                  <node concept="2dpZbP" id="CB" role="2dhScq">
                     <uo k="s:originTrace" v="n:341" />
                   </node>
-                  <node concept="2wijRm" id="CA" role="2dhS9X">
+                  <node concept="2wijRm" id="CC" role="2dhS9X">
                     <property role="TrG5h" value="object_Sun" />
                     <uo k="s:originTrace" v="n:341" />
                   </node>
                 </node>
-                <node concept="2wijRm" id="C$" role="2dhS9X">
+                <node concept="2wijRm" id="CA" role="2dhS9X">
                   <property role="TrG5h" value="init" />
                   <uo k="s:originTrace" v="n:341" />
                 </node>
@@ -9807,22 +9815,22 @@
           </node>
         </node>
       </node>
-      <node concept="2dhVqD" id="AV" role="2DT8gE">
+      <node concept="2dhVqD" id="AX" role="2DT8gE">
         <uo k="s:originTrace" v="n:341" />
-        <node concept="29jwqa" id="CB" role="2dhScq">
+        <node concept="29jwqa" id="CD" role="2dhScq">
           <ref role="29jwqb" to="f76b:2RasiBbTMqq" />
           <uo k="s:originTrace" v="n:341" />
         </node>
-        <node concept="2wijRm" id="CC" role="2dhS9X">
+        <node concept="2wijRm" id="CE" role="2dhS9X">
           <property role="TrG5h" value="SystemScope" />
           <uo k="s:originTrace" v="n:341" />
         </node>
       </node>
     </node>
-    <node concept="1dSrUV" id="$S" role="1dSqon">
+    <node concept="1dSrUV" id="$U" role="1dSqon">
       <uo k="s:originTrace" v="n:341" />
     </node>
-    <node concept="3ErYpN" id="$T" role="3E_D5O">
+    <node concept="3ErYpN" id="$V" role="3E_D5O">
       <ref role="3ErYpM" to="f76b:2RasiBbTMfg" resolve="RuntimeEnv" />
       <uo k="s:originTrace" v="n:341" />
     </node>

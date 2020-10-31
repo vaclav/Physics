@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cpx": "^1.5.0",
     "odejs": "^1.1.0",
     "p5": "^1.1.9"
   },
@@ -22,6 +21,8 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
     "@types/p5": "^0.9.1",
+    "bestzip": "^2.1.7",
+    "cpx": "^1.5.0",
     "rollup": "^2.27.0",
     "tslib": "^2.0.1",
     "typescript": "^4.0.2"

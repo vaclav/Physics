@@ -21,7 +21,7 @@ export namespace SimpleCollisionReaction {
       // Run the method oustide of a simulation step
       world.safeCallbacks.push(() => {
         first.entity.name = first.entity.name + " + " + second.entity.name;
-        first.entity.fixture!.mergeWith(second.entity.fixture!, first.entity.getMass(), second.entity.getMass());
+        first.entity.fixture!.mergeWith(second.entity.fixture!, first.entity.getMass(), second.entity.getMass(), first.entity);
         second.entity.disable();
       });
     },

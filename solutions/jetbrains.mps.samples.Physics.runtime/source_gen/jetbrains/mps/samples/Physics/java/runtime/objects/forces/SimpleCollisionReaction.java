@@ -30,7 +30,7 @@ public enum SimpleCollisionReaction {
     @Override
     public void react(World world, PhysicalEntity target, DGeom targetGeom, PhysicalEntity otherObject, DGeom otherGeom) {
       target.setName(target.getName() + " + " + otherObject.getName());
-      target.getFixture().mergeWith(otherObject.getFixture());
+      target.getFixture().mergeWith(otherObject.getFixture(), target);
       otherObject.disable();
     }
     @Override

@@ -1140,7 +1140,24 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="aCA7w6QGv8" role="3cqZAp" />
+        <node concept="3clFbF" id="62C1p0pjJCT" role="3cqZAp">
+          <node concept="2OqwBi" id="62C1p0pjKs0" role="3clFbG">
+            <node concept="37vLTw" id="62C1p0pjJCR" role="2Oq$k0">
+              <ref role="3cqZAo" node="62C1p0pjIt9" resolve="targetEntity" />
+            </node>
+            <node concept="liA8E" id="62C1p0pjKHC" role="2OqNvi">
+              <ref role="37wK5l" to="jyp0:Q4PrYMH7R6" resolve="setMass" />
+              <node concept="3cpWs3" id="62C1p0pjKUO" role="37wK5m">
+                <node concept="37vLTw" id="62C1p0pjKWL" role="3uHU7w">
+                  <ref role="3cqZAo" node="aCA7w6QK9T" resolve="otherMass" />
+                </node>
+                <node concept="37vLTw" id="62C1p0pjKJ3" role="3uHU7B">
+                  <ref role="3cqZAo" node="aCA7w6QJPs" resolve="thisMass" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="3Tm1VV" id="2AaxZXYiOjU" role="1B3o_S" />
       <node concept="3cqZAl" id="2AaxZXYiOry" role="3clF45" />
@@ -1148,6 +1165,12 @@
         <property role="TrG5h" value="fixture" />
         <node concept="3uibUv" id="2AaxZXYiO_9" role="1tU5fm">
           <ref role="3uigEE" node="3H79Ykd2GmM" resolve="Fixture" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="62C1p0pjIt9" role="3clF46">
+        <property role="TrG5h" value="targetEntity" />
+        <node concept="3uibUv" id="62C1p0pjJh4" role="1tU5fm">
+          <ref role="3uigEE" to="jyp0:3H79Ykd2GyN" resolve="PhysicalEntity" />
         </node>
       </node>
       <node concept="P$JXv" id="2AaxZXYiSpk" role="lGtFl">

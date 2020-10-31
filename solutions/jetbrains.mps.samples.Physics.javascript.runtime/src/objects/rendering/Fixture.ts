@@ -1,5 +1,6 @@
 import p5 from "p5";
 import Renderable from "../../Renderable";
+import PhysicalEntity from "../PhysicalEntity";
 import World from "../World";
 import Texture from "./Texture";
 
@@ -49,7 +50,7 @@ export default abstract class Fixture implements Renderable {
   /**
    * Take the given fixture and merge its content numbero this fixture
    */
-  public mergeWith(fixture: Fixture, thisMass: number, otherMass: number): void {
+  public mergeWith(fixture: Fixture, thisMass: number, otherMass: number, targetEntity: PhysicalEntity<any>): void {
     const body: ODE.DBody = this.geometry!.getBody();
     const otherBody: ODE.DBody = fixture.geometry!.getBody();
 
@@ -78,6 +79,8 @@ export default abstract class Fixture implements Renderable {
     // Rebuild geometry and apply to body 
     this.bindToBody(body, thisMass + otherMass);
 
+    // Update mass cache
+    targetEntity.setMass(thisMass + otherMass);
   }
 
 }

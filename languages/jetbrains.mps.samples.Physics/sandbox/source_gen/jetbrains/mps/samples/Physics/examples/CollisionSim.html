@@ -569,7 +569,7 @@
         /**
          * Take the given fixture and merge its content numbero this fixture
          */
-        mergeWith(fixture, thisMass, otherMass) {
+        mergeWith(fixture, thisMass, otherMass, targetEntity) {
             const body = this.geometry.getBody();
             const otherBody = fixture.geometry.getBody();
             // Set volume to the sum of both 
@@ -587,6 +587,8 @@
             // TODO merge angular velocity? 
             // Rebuild geometry and apply to body 
             this.bindToBody(body, thisMass + otherMass);
+            // Update mass cache
+            targetEntity.setMass(thisMass + otherMass);
         }
     }
 
@@ -1156,7 +1158,7 @@
                 // Run the method oustide of a simulation step
                 world.safeCallbacks.push(() => {
                     first.entity.name = first.entity.name + " + " + second.entity.name;
-                    first.entity.fixture.mergeWith(second.entity.fixture, first.entity.getMass(), second.entity.getMass());
+                    first.entity.fixture.mergeWith(second.entity.fixture, first.entity.getMass(), second.entity.getMass(), first.entity);
                     second.entity.disable();
                 });
             },
