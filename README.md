@@ -24,7 +24,7 @@ cd ./Physics
 ./gradlew resolveArtifacts generateLibrariesXml -PmpsDir="<optional path to your mps installation>"
 ```
 
-**Note:** this will download and build from source [iets3.genjs](https://github.com/cdelabou/iets3.genjs) and [ecmascript4mps](https://github.com/cdelabou/ecmascript4mps/tree/development) since no repository hold the used versions of these projects. You can also publish to your local maven repository by following the instructions on the README of iets3.genjs.
+**Note:** this will download and build from source [iets3.genjs](https://github.com/cdelabou/iets3.genjs) since no repository hold the used versions of this project. You can also publish to your local maven repository by following the instructions on the README of iets3.genjs.
 
 Then you can open MPS and set the path variable `jetbrains.mps.samples.Physics.home` (*Ctrl+Maj+A > Path Variables*) to the path of the cloned repository (example: `/home/user/.mpsproject/Physics`).
 

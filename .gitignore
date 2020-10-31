@@ -7,6 +7,7 @@
 # Ignore Gradle build output directory
 /build
 /artifacts
+/tmp
 
 # Downloaded dependencies
 /dependencies
