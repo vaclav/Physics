@@ -14,17 +14,17 @@
   "license": "ISC",
   "dependencies": {
     "odejs": "^1.1.0",
-    "p5": "^1.1.9"
+    "p5": "^1.3.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
-    "@rollup/plugin-typescript": "^6.0.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
     "@types/p5": "^0.9.1",
-    "bestzip": "^2.1.7",
+    "bestzip": "^2.2.0",
     "cpx": "^1.5.0",
-    "rollup": "^2.27.0",
-    "tslib": "^2.0.1",
-    "typescript": "^4.0.2"
+    "rollup": "^2.47.0",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
   }
 }
