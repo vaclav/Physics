@@ -12,11 +12,10 @@ import org.junit.Test;
 import jetbrains.mps.lang.test.runtime.BaseTestBody;
 import jetbrains.mps.lang.test.runtime.TransformationTest;
 import jetbrains.mps.typechecking.TypecheckingFacade;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.smodel.SReference;
 
 @MPSLaunch
@@ -54,22 +53,22 @@ public class TestDimensionTypes_Test extends BaseTransformationTest {
       addNodeById("7471572540825847920");
       addNodeById("4417602908736068175");
       addNodeById("4417602908736070976");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("7471572540825858572"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base"), 0x46ff3b3d86c9a4f2L, "PlusExpression")))), _quotation_createNode_6ks3ti_b0a4a3j()) : "complex expressions should compute type correctly";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("7471572540825858572")), _quotation_createNode_6ks3ti_b0a4a3j()) : "complex expressions should compute type correctly";
     }
     public void test_VectorMultiplication() throws Exception {
       addNodeById("7471572540825847425");
       addNodeById("7471572540825847920");
       addNodeById("4417602908736068175");
       addNodeById("4417602908736070976");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("7471572540825843551"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base"), 0x46ff3b3d86c9a56fL, "MulExpression")))), _quotation_createNode_6ks3ti_b0a4a4j()) : "multiplication of vector by dimension should result in according dimension";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("7471572540825843551")), _quotation_createNode_6ks3ti_b0a4a4j()) : "multiplication of vector by dimension should result in according dimension";
     }
     public void test_VectorAddition() throws Exception {
       addNodeById("7471572540825847425");
       addNodeById("7471572540825847920");
       addNodeById("4417602908736068175");
       addNodeById("4417602908736070976");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("4417602908736068323"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base"), 0x46ff3b3d86c9a4f2L, "PlusExpression")))), _quotation_createNode_6ks3ti_b0a4a5j()) : "addition of vectors should result in according dimension";
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("4417602908736079473"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base"), 0x46ff3b3d86c9a4f2L, "PlusExpression")))), _quotation_createNode_6ks3ti_b0a5a5j()) : "addition of vectors should result in according dimension";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("4417602908736068323")), _quotation_createNode_6ks3ti_b0a4a5j()) : "addition of vectors should result in according dimension";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("4417602908736079473")), _quotation_createNode_6ks3ti_b0a5a5j()) : "addition of vectors should result in according dimension";
     }
 
 

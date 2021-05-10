@@ -709,6 +709,11 @@
             <ref role="3bR37D" node="7QIsDWeJFUU" resolve="jetbrains.mps.samples.Physics.java.common" />
           </node>
         </node>
+        <node concept="1SiIV0" id="3_YpVOWAXur" role="3bR37C">
+          <node concept="3bR9La" id="3_YpVOWAXus" role="1SiIV1">
+            <ref role="3bR37D" to="ip48:7jAOwAVRc2S" resolve="org.iets3.core.expr.simpleTypes.runtime" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="7QIsDWeJFTS" role="2G$12L">
         <property role="TrG5h" value="jetbrains.mps.samples.Physics.genjava" />
@@ -858,6 +863,11 @@
           <node concept="1SiIV0" id="7QIsDWeJG5H" role="3bR37C">
             <node concept="3bR9La" id="7QIsDWeJG5G" role="1SiIV1">
               <ref role="3bR37D" to="ip48:26tZ$Z4rnVA" resolve="org.iets3.core.expr.genjava.simpleTypes#8286534136182342700" />
+            </node>
+          </node>
+          <node concept="1SiIV0" id="3_YpVOWAXuR" role="3bR37C">
+            <node concept="3bR9La" id="3_YpVOWAXuS" role="1SiIV1">
+              <ref role="3bR37D" to="ip48:7jAOwAVRc2S" resolve="org.iets3.core.expr.simpleTypes.runtime" />
             </node>
           </node>
         </node>
@@ -1786,8 +1796,11 @@
         <node concept="3LEDTy" id="7QIsDWeJG8Z" role="3LEDUa">
           <ref role="3LEDTV" to="ip48:lH$Puj5DFq" resolve="org.iets3.core.expr.genjava.contracts" />
         </node>
-        <node concept="3LEDTy" id="3yiqEQlrF77" role="3LEDUa">
-          <ref role="3LEDTV" node="7QIsDWeJFU4" resolve="jetbrains.mps.samples.Physics.dimensions.gentype" />
+        <node concept="3LEDTy" id="3_YpVOWAXwT" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFTM" resolve="jetbrains.mps.samples.Physics.dimensions" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXwU" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFUs" resolve="jetbrains.mps.samples.Physics.genbase" />
         </node>
       </node>
       <node concept="3LEwk6" id="7QIsDWeJFUC" role="2G$12L">
@@ -1862,6 +1875,12 @@
         </node>
         <node concept="3LEDTy" id="UK66g7O2va" role="3LEDUa">
           <ref role="3LEDTV" to="lzhy:4vyBtkfxwqq" resolve="org.iets3.core.expr.genjs.base" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXwV" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFTM" resolve="jetbrains.mps.samples.Physics.dimensions" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXwW" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFUs" resolve="jetbrains.mps.samples.Physics.genbase" />
         </node>
       </node>
       <node concept="1E1JtA" id="7QIsDWeJFUO" role="2G$12L">
@@ -2205,11 +2224,47 @@
         <node concept="3LEz8M" id="7QIsDWeJGb6" role="3LEz9a">
           <ref role="3LEz8N" node="7QIsDWeJFUI" resolve="jetbrains.mps.samples.Physics.devkit.javascript" />
         </node>
-        <node concept="3LEDTy" id="3yiqEQlrF8m" role="3LEDUa">
-          <ref role="3LEDTV" to="lzhy:4vyBtkfxwqq" resolve="org.iets3.core.expr.genjs.base" />
+        <node concept="3LEDTy" id="3_YpVOWAXxT" role="3LEDUa">
+          <ref role="3LEDTV" to="ip48:26tZ$Z4qVBy" resolve="org.iets3.core.expr.genjava.simpleTypes" />
         </node>
-        <node concept="3LEDTy" id="3yiqEQlrF8n" role="3LEDUa">
-          <ref role="3LEDTV" to="lzhy:4vyBtkfxwqw" resolve="org.iets3.core.expr.genjs.simpleTypes" />
+        <node concept="3LEDTy" id="3_YpVOWAXxU" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFTG" resolve="org.mar9000.mps.ecmascript.bundler" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXxV" role="3LEDUa">
+          <ref role="3LEDTV" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXxW" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFTM" resolve="jetbrains.mps.samples.Physics.dimensions" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXxX" role="3LEDUa">
+          <ref role="3LEDTV" to="ffeo:ymnOULAU0j" resolve="jetbrains.mps.baseLanguage.unitTest" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXxY" role="3LEDUa">
+          <ref role="3LEDTV" to="ip48:lH$Puj5DFq" resolve="org.iets3.core.expr.genjava.contracts" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXxZ" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFTY" resolve="jetbrains.mps.samples.Physics.genjs" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXy0" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFU4" resolve="jetbrains.mps.samples.Physics.dimensions.gentype" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXy1" role="3LEDUa">
+          <ref role="3LEDTV" to="ffeo:7Kfy9QB6KZ0" resolve="jetbrains.mps.baseLanguageInternal" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXy2" role="3LEDUa">
+          <ref role="3LEDTV" to="ip48:26tZ$Z4qSzW" resolve="org.iets3.core.expr.genjava.base" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXy3" role="3LEDUa">
+          <ref role="3LEDTV" to="ffeo:7Kfy9QB6L0h" resolve="jetbrains.mps.baseLanguage.collections" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXy4" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFTS" resolve="jetbrains.mps.samples.Physics.genjava" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXy5" role="3LEDUa">
+          <ref role="3LEDTV" to="ffeo:7Kfy9QB6KZG" resolve="jetbrains.mps.baseLanguage.closures" />
+        </node>
+        <node concept="3LEDTy" id="3_YpVOWAXy6" role="3LEDUa">
+          <ref role="3LEDTV" node="7QIsDWeJFUs" resolve="jetbrains.mps.samples.Physics.genbase" />
         </node>
       </node>
     </node>

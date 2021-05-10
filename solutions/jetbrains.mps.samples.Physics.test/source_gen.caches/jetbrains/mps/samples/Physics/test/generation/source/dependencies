@@ -7,7 +7,6 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.math.BigDecimal" />
     <classNode dependClassName="java.math.BigInteger" />
-    <classNode dependClassName="java.math.MathContext" />
     <classNode dependClassName="java.math.RoundingMode" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
@@ -16,8 +15,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
-    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
-    <classNode dependClassName="org.nevec.rjm.BigDecimalMath" />
+    <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.test.generation.source.TestSimSimulation">
@@ -31,7 +29,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.test.generation.source.TestSystemScope" />
-    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
     <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
@@ -50,7 +48,7 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.test.generation.source.BaseObjectAbstractEntity" />
-    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
+    <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3C" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>

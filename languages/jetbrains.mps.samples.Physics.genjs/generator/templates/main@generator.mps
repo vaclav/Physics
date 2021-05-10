@@ -8932,6 +8932,10 @@
                             </node>
                           </node>
                           <node concept="gft3U" id="1muMNVjxiSs" role="UU_$l">
+                            <node concept="15s5l7" id="3_YpVOWytgs" role="lGtFl">
+                              <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem&quot;;FLAVOUR_MESSAGE=&quot;can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'&quot;;FLAVOUR_THIS=&quot;jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem@1dab214f&quot;;" />
+                              <property role="huDt6" value="can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'" />
+                            </node>
                             <node concept="15s5l7" id="6Fyo0Mocpji" role="lGtFl">
                               <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem&quot;;FLAVOUR_MESSAGE=&quot;can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'&quot;;FLAVOUR_THIS=&quot;jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem@19f4ab7f&quot;;" />
                               <property role="huDt6" value="can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'" />

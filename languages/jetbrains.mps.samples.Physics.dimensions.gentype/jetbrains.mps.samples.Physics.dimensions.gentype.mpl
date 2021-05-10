@@ -92,7 +92,7 @@
         <module reference="3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)" version="0" />
         <module reference="e20f6002-fdcc-4f52-aa1a-8dcd898993a0(jetbrains.mps.samples.Physics.dimensions.gentype)" version="0" />
         <module reference="4c83e58e-4d52-4ee2-a8fd-90119eb8f130(jetbrains.mps.samples.Physics.dimensions.gentype#8609460045976868313)" version="0" />
-        <module reference="db8bd035-3f51-41d8-8fed-954c202d18be(org.iets3.analysis.base)" version="0" />
+        <module reference="db8bd035-3f51-41d8-8fed-954c202d18be(org.iets3.analysis.base)" version="1" />
         <module reference="7b68d745-a7b8-48b9-bd9c-05c0f8725a35(org.iets3.core.base)" version="0" />
         <module reference="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" version="1" />
         <module reference="2f7e2e35-6e74-4c43-9fa5-2465d68f5996(org.iets3.core.expr.collections)" version="5" />

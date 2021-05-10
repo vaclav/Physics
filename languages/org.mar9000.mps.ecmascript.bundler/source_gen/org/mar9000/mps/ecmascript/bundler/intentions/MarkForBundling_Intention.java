@@ -10,7 +10,6 @@ import jetbrains.mps.openapi.intentions.Kind;
 import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor;
 import java.util.Collections;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
@@ -36,7 +35,7 @@ public final class MarkForBundling_Intention extends AbstractIntentionDescriptor
     return true;
   }
   private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-    return (AttributeOperations.getAttribute(node, new IAttributeDescriptor.NodeAttribute(CONCEPTS.BundleProgram$cW)) == null);
+    return (new IAttributeDescriptor.NodeAttribute(CONCEPTS.BundleProgram$cW).get(node) == null);
   }
   @Override
   public boolean isSurroundWith() {
@@ -57,7 +56,7 @@ public final class MarkForBundling_Intention extends AbstractIntentionDescriptor
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
-      AttributeOperations.setAttribute(node, new IAttributeDescriptor.NodeAttribute(CONCEPTS.BundleProgram$cW), createBundleProgram_el941p_a0a0a());
+      new IAttributeDescriptor.NodeAttribute(CONCEPTS.BundleProgram$cW).set(node, createBundleProgram_el941p_a0a0a());
     }
     @Override
     public IntentionDescriptor getDescriptor() {

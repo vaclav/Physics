@@ -35,6 +35,7 @@
     <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" />
     <import index="s6tv" ref="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
     <import index="ngze" ref="22562cc6-29e7-43d0-b046-5e85dce22227/java:org.nevec.rjm(jetbrains.mps.samples.Physics.java.common/)" />
+    <import index="dj6k" ref="r:59d52af6-663b-49dc-8980-30d79b8dffa1(org.iets3.core.expr.simpleTypes.runtime)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
@@ -3652,8 +3653,8 @@
       <ref role="30HIoZ" to="1qv1:4iu6t1eAWP6" resolve="FractionExpression" />
       <node concept="gft3U" id="7DHIC2kQuME" role="1lVwrX">
         <node concept="2YIFZM" id="7DHIC2l0xFN" role="gfFT$">
-          <ref role="37wK5l" to="wfax:6IxV2nShToX" resolve="div" />
-          <ref role="1Pybhc" to="wfax:6IxV2nShzcy" resolve="AH" />
+          <ref role="1Pybhc" to="dj6k:6IxV2nShzcy" resolve="AH" />
+          <ref role="37wK5l" to="dj6k:6IxV2nShToX" resolve="div" />
           <node concept="10M0yZ" id="7DHIC2kQvlz" role="37wK5m">
             <ref role="3cqZAo" to="xlxw:~BigDecimal.ZERO" resolve="ZERO" />
             <ref role="1PxDUh" to="xlxw:~BigDecimal" resolve="BigDecimal" />
@@ -9503,8 +9504,8 @@
           <node concept="3clFbS" id="6IxV2nShci5" role="3clF47">
             <node concept="3clFbF" id="6IxV2nShci6" role="3cqZAp">
               <node concept="2YIFZM" id="6IxV2nSi2Ta" role="3clFbG">
-                <ref role="37wK5l" to="wfax:6IxV2nShToX" resolve="div" />
-                <ref role="1Pybhc" to="wfax:6IxV2nShzcy" resolve="AH" />
+                <ref role="1Pybhc" to="dj6k:6IxV2nShzcy" resolve="AH" />
+                <ref role="37wK5l" to="dj6k:6IxV2nShToX" resolve="div" />
                 <node concept="raruj" id="6IxV2nSi3aQ" role="lGtFl" />
                 <node concept="3cmrfG" id="pZo46m0O6X" role="37wK5m">
                   <property role="3cmrfH" value="1" />
@@ -9568,8 +9569,8 @@
           <node concept="3clFbS" id="6IxV2nSgK2F" role="3clF47">
             <node concept="3clFbF" id="6IxV2nSgK2G" role="3cqZAp">
               <node concept="2YIFZM" id="6IxV2nSifhi" role="3clFbG">
-                <ref role="37wK5l" to="wfax:6IxV2nShN$J" resolve="sub" />
-                <ref role="1Pybhc" to="wfax:6IxV2nShzcy" resolve="AH" />
+                <ref role="1Pybhc" to="dj6k:6IxV2nShzcy" resolve="AH" />
+                <ref role="37wK5l" to="dj6k:6IxV2nShN$J" resolve="sub" />
                 <node concept="raruj" id="6IxV2nSifhz" role="lGtFl" />
                 <node concept="3cmrfG" id="pZo46m0Nva" role="37wK5m">
                   <property role="3cmrfH" value="1" />
@@ -9633,8 +9634,8 @@
           <node concept="3clFbS" id="6IxV2nSguK3" role="3clF47">
             <node concept="3clFbF" id="6IxV2nSguK4" role="3cqZAp">
               <node concept="2YIFZM" id="6IxV2nSif73" role="3clFbG">
-                <ref role="37wK5l" to="wfax:6IxV2nShRcG" resolve="mul" />
-                <ref role="1Pybhc" to="wfax:6IxV2nShzcy" resolve="AH" />
+                <ref role="1Pybhc" to="dj6k:6IxV2nShzcy" resolve="AH" />
+                <ref role="37wK5l" to="dj6k:6IxV2nShRcG" resolve="mul" />
                 <node concept="raruj" id="6IxV2nSif7k" role="lGtFl" />
                 <node concept="3cmrfG" id="pZo46m0OGH" role="37wK5m">
                   <property role="3cmrfH" value="1" />
@@ -9698,8 +9699,8 @@
           <node concept="3clFbS" id="6IxV2nSgjHT" role="3clF47">
             <node concept="3clFbF" id="6IxV2nSgjHU" role="3cqZAp">
               <node concept="2YIFZM" id="6IxV2nSieWN" role="3clFbG">
-                <ref role="37wK5l" to="wfax:5l4AfSwK2gq" resolve="add" />
-                <ref role="1Pybhc" to="wfax:6IxV2nShzcy" resolve="AH" />
+                <ref role="1Pybhc" to="dj6k:6IxV2nShzcy" resolve="AH" />
+                <ref role="37wK5l" to="dj6k:5l4AfSwK2gq" resolve="add" />
                 <node concept="raruj" id="6IxV2nSieX4" role="lGtFl" />
                 <node concept="3cmrfG" id="3cX18W5ZECK" role="37wK5m">
                   <property role="3cmrfH" value="1" />
@@ -9766,8 +9767,8 @@
           <node concept="3clFbS" id="1Ds3skyA4Ki" role="3clF47">
             <node concept="3clFbF" id="1Ds3skyA4L1" role="3cqZAp">
               <node concept="2YIFZM" id="1Ds3skyA4Lw" role="3clFbG">
-                <ref role="1Pybhc" to="wfax:6IxV2nShzcy" resolve="AH" />
-                <ref role="37wK5l" to="wfax:6IxV2nShzec" resolve="addString" />
+                <ref role="1Pybhc" to="dj6k:6IxV2nShzcy" resolve="AH" />
+                <ref role="37wK5l" to="dj6k:6IxV2nShzec" resolve="addString" />
                 <node concept="Xl_RD" id="1Ds3skyA4LX" role="37wK5m">
                   <property role="Xl_RC" value="1" />
                   <node concept="29HgVG" id="1Ds3skyA4V8" role="lGtFl">

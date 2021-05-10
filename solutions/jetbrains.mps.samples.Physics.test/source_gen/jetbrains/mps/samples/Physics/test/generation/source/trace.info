@@ -12,7 +12,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="BaseObjectAbstractEntity.java">
-      <unit at="20,0,50,0" name="jetbrains.mps.samples.Physics.test.generation.source.BaseObjectAbstractEntity" />
+      <unit at="18,0,48,0" name="jetbrains.mps.samples.Physics.test.generation.source.BaseObjectAbstractEntity" />
     </file>
   </root>
   <root nodeRef="r:6868b6a3-a1d9-4439-9cbb-a2c9c33c60bc(jetbrains.mps.samples.Physics.test.generation.source@tests)/1325893522339234471">

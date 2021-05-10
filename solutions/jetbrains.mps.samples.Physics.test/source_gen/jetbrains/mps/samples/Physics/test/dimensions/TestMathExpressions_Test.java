@@ -12,14 +12,13 @@ import org.junit.Test;
 import jetbrains.mps.lang.test.runtime.BaseTestBody;
 import jetbrains.mps.lang.test.runtime.TransformationTest;
 import jetbrains.mps.typechecking.TypecheckingFacade;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.test.runtime.CheckExpectedMessageRunnable;
 import jetbrains.mps.errors.MessageStatus;
 import jetbrains.mps.project.ProjectBase;
 import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.smodel.SReference;
 
 @MPSLaunch
@@ -81,7 +80,7 @@ public class TestMathExpressions_Test extends BaseTransformationTest {
       addNodeById("2805552972628685064");
       addNodeById("2805552972629450970");
       addNodeById("2805552972628692999");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("2805552972628660738"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, "org.iets3.core.expr.math"), 0x449e19d04e9c8de8L, "SqrtExpression")))), _quotation_createNode_iddnpk_b0a8a3o()) : "sqrt expression should compute type correctly";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("2805552972628660738")), _quotation_createNode_iddnpk_b0a8a3o()) : "sqrt expression should compute type correctly";
     }
     public void test_testSumExpression() throws Exception {
       addNodeById("2805552972628660734");
@@ -92,7 +91,7 @@ public class TestMathExpressions_Test extends BaseTransformationTest {
       addNodeById("2805552972628685064");
       addNodeById("2805552972629450970");
       addNodeById("2805552972628692999");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("2805552972628667894"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, "org.iets3.core.expr.math"), 0x449e19d04e9c85e1L, "SumExpression")))), _quotation_createNode_iddnpk_b0a8a4o()) : "sum expression should compute type correctly";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("2805552972628667894")), _quotation_createNode_iddnpk_b0a8a4o()) : "sum expression should compute type correctly";
     }
     public void test_testAbsExpression() throws Exception {
       addNodeById("2805552972628660734");
@@ -103,7 +102,7 @@ public class TestMathExpressions_Test extends BaseTransformationTest {
       addNodeById("2805552972628685064");
       addNodeById("2805552972629450970");
       addNodeById("2805552972628692999");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("2805552972628670159"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, "org.iets3.core.expr.math"), 0x449e19d04e9bc799L, "AbsExpression")))), _quotation_createNode_iddnpk_b0a8a5o()) : "abs expression should compute type correctly";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("2805552972628670159")), _quotation_createNode_iddnpk_b0a8a5o()) : "abs expression should compute type correctly";
     }
     public void test_testIntegralExpression() throws Exception {
       addNodeById("2805552972628660734");
@@ -114,7 +113,7 @@ public class TestMathExpressions_Test extends BaseTransformationTest {
       addNodeById("2805552972628685064");
       addNodeById("2805552972629450970");
       addNodeById("2805552972628692999");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("2805552972628671367"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, "org.iets3.core.expr.math"), 0x34bc74538fd11c81L, "IntegralExpression")))), _quotation_createNode_iddnpk_b0a8a6o()) : "integral expression should compute type correctly";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("2805552972628671367")), _quotation_createNode_iddnpk_b0a8a6o()) : "integral expression should compute type correctly";
     }
     public void test_testProductExpression() throws Exception {
       addNodeById("2805552972628660734");
@@ -125,7 +124,7 @@ public class TestMathExpressions_Test extends BaseTransformationTest {
       addNodeById("2805552972628685064");
       addNodeById("2805552972629450970");
       addNodeById("2805552972628692999");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("2805552972628685138"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, "org.iets3.core.expr.math"), 0x449e19d04e9c68fbL, "ProductLoopExpression")))), _quotation_createNode_iddnpk_b0a8a7o()) : "product expression should compute type correctly";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("2805552972628685138")), _quotation_createNode_iddnpk_b0a8a7o()) : "product expression should compute type correctly";
     }
     public void test_testPowExpression() throws Exception {
       addNodeById("2805552972628660734");
@@ -136,7 +135,7 @@ public class TestMathExpressions_Test extends BaseTransformationTest {
       addNodeById("2805552972628685064");
       addNodeById("2805552972629450970");
       addNodeById("2805552972628692999");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("2805552972628693074"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, "org.iets3.core.expr.math"), 0x449e19d04e9c6144L, "PowerExpression")))), _quotation_createNode_iddnpk_b0a8a8o()) : "pow expression should compute type correctly";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("2805552972628693074")), _quotation_createNode_iddnpk_b0a8a8o()) : "pow expression should compute type correctly";
     }
     public void test_testFractionExpression() throws Exception {
       addNodeById("2805552972628660734");
@@ -147,7 +146,7 @@ public class TestMathExpressions_Test extends BaseTransformationTest {
       addNodeById("2805552972628685064");
       addNodeById("2805552972629450970");
       addNodeById("2805552972628692999");
-      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(SNodeOperations.cast(getNodeById("2805552972629451053"), SNodeOperations.asSConcept(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0x6fadc44e69c24a4aL, 0x9d167ebf5f8d3ba0L, "org.iets3.core.expr.math"), 0x449e19d04e9bcd46L, "FractionExpression")))), _quotation_createNode_iddnpk_b0a8a9o()) : "fraction expression should compute type correctly";
+      assert TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(getNodeById("2805552972629451053")), _quotation_createNode_iddnpk_b0a8a9o()) : "fraction expression should compute type correctly";
     }
 
     public void test_NodeTypeSystemCheck2805552972629420998() throws Exception {
