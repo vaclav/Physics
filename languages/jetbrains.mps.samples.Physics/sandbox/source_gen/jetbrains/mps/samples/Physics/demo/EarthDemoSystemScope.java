@@ -82,7 +82,7 @@ public class EarthDemoSystemScope extends SystemScope {
       super.init(scope, world);
 
       //  Styles (if any) and forces 
-      propertiesBuilder.set(PropKey.TEXTURE, new ImageTexture("https://moon.nasa.gov/system/resources/detail_files/119_colormap_1500.jpg"));
+      propertiesBuilder.set(PropKey.TEXTURE, new ImageTexture("https://upload.wikimedia.org/wikipedia/commons/e/ea/Clementine_albedo_simp750.jpg"));
       propertiesBuilder.set(PropKey.TRACE, new FiniteTraceHandler(new Color(220, 220, 220)));
       this.getForces().addAll(Arrays.asList());
     }

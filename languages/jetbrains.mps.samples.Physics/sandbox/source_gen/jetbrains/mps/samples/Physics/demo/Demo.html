@@ -1387,16 +1387,6 @@ class Planet1 extends BaseObject1 {
             this.forces.push(new Physics.ForceMapper(this, ((context, mapper) => {
               
               return computeGravitation1(this, (9 * ((1 * 1)))).compute();
-            })), new Physics.CachedForceMapper(this, ((context, mapper) => {
-              if (mapper.cache === null)
-                mapper.cache = new Physics.Vector(((5 * 1)), 0, 0);
-              
-              return {
-                linearForce: mapper.cache,
-                moment: null,
-                applicationPoint: new Physics.Vector(((1 * 1)), 0, 0),
-                forceMode: 16
-              };
             })));
           }
 }
@@ -1418,7 +1408,7 @@ class Moon extends Planet1 {
             this.body.setPosition.apply(this.body, this.scope.getAbsoluteInitialPosition(new Physics.Vector(((0.0 * 1)), ((0.0 * 1)), ((20.0 * 1)))).values);
             this.body.setLinearVel.apply(this.body, this.scope.getAbsoluteInitialVelocity(new Physics.Vector(((16.0 * 1)), ((0.0 * 1)), ((9.797174393178826E-16 * 1)))).values);
             (super['init'])();
-            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ImageTexture("https://moon.nasa.gov/system/resources/detail_files/119_colormap_1500.jpg"));
+            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ImageTexture("https://upload.wikimedia.org/wikipedia/commons/e/ea/Clementine_albedo_simp750.jpg"));
             this.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.FiniteTraceHandler(new Physics.InternalColor(220, 220, 220)));
             this.forces.push();
           }

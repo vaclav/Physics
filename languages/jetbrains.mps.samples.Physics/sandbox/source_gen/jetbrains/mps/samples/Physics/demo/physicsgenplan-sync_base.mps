@@ -108,11 +108,6 @@
         <child id="6184070858913522400" name="cameraFocus" index="IG9_e" />
       </concept>
       <concept id="232455383964481302" name="jetbrains.mps.samples.Physics.structure.CurrentObjectExpression" flags="ng" index="2CrqZA" />
-      <concept id="4528665904943021020" name="jetbrains.mps.samples.Physics.structure.IForceWithApplicationPoint" flags="ng" index="2Ol3pT">
-        <property id="4528665904943021021" name="isPointRelative" index="2Ol3pS" />
-        <child id="4528665904943021023" name="applicationPoint" index="2Ol3pU" />
-      </concept>
-      <concept id="1459540517658822194" name="jetbrains.mps.samples.Physics.structure.StaticForce" flags="ng" index="Y6l9G" />
       <concept id="1459540517659024964" name="jetbrains.mps.samples.Physics.structure.AbstractObjectReference" flags="ng" index="Y6$Cq">
         <reference id="1459540517659024965" name="target" index="Y6$Cr" />
       </concept>
@@ -135,9 +130,6 @@
       <concept id="362892448124441676" name="jetbrains.mps.samples.Physics.structure.EmitLightStyleKey" flags="ng" index="13a5ie" />
       <concept id="3106918138153662052" name="jetbrains.mps.samples.Physics.structure.ShapeStyleExpression" flags="ng" index="39K0JL">
         <property id="3106918138153662053" name="shape" index="39K0JK" />
-      </concept>
-      <concept id="2805552972614397887" name="jetbrains.mps.samples.Physics.structure.IForceWithLinearForce" flags="ng" index="1dPVKJ">
-        <child id="2805552972616057453" name="linearForce" index="1dJh7X" />
       </concept>
       <concept id="4383135941275108256" name="jetbrains.mps.samples.Physics.structure.WorldInclusion" flags="ng" index="1h9Ola">
         <child id="4383135941275108257" name="world" index="1h9Olb" />
@@ -450,7 +442,7 @@
             <uo k="s:originTrace" v="n:1578680851974120561" />
           </node>
           <node concept="31uf54" id="1M" role="1QScD9">
-            <ref role="31ueSj" node="5n" resolve="Sun" />
+            <ref role="31ueSj" node="4W" resolve="Sun" />
             <uo k="s:originTrace" v="n:1325893522341179145" />
           </node>
         </node>
@@ -485,7 +477,7 @@
       </node>
     </node>
     <node concept="1t_wfn" id="1F" role="1heTBC">
-      <ref role="1t_wfm" node="5l" resolve="SunDemo" />
+      <ref role="1t_wfm" node="4U" resolve="SunDemo" />
       <uo k="s:originTrace" v="n:1578680851971574695" />
     </node>
     <node concept="1QScDb" id="1G" role="IG9_e">
@@ -494,7 +486,7 @@
         <uo k="s:originTrace" v="n:1578680851973915021" />
       </node>
       <node concept="31uf54" id="1X" role="1QScD9">
-        <ref role="31ueSj" node="5n" resolve="Sun" />
+        <ref role="31ueSj" node="4W" resolve="Sun" />
         <uo k="s:originTrace" v="n:1578680851973917729" />
       </node>
     </node>
@@ -613,7 +605,7 @@
         <node concept="1QScDb" id="2$" role="30czhm">
           <uo k="s:originTrace" v="n:1578680851973523110" />
           <node concept="31uf54" id="2_" role="1QScD9">
-            <ref role="31ueSj" node="5n" resolve="Sun" />
+            <ref role="31ueSj" node="4W" resolve="Sun" />
             <uo k="s:originTrace" v="n:1578680851973523111" />
           </node>
           <node concept="31hh1H" id="2A" role="30czhm">
@@ -844,7 +836,7 @@
           <uo k="s:originTrace" v="n:1578680851973817502" />
         </node>
         <node concept="1nv_Xa" id="3S" role="39QuWR">
-          <property role="2i9GqB" value="https://moon.nasa.gov/system/resources/detail_files/119_colormap_1500.jpg" />
+          <property role="2i9GqB" value="https://upload.wikimedia.org/wikipedia/commons/e/ea/Clementine_albedo_simp750.jpg" />
           <uo k="s:originTrace" v="n:1578680851973818306" />
         </node>
       </node>
@@ -984,56 +976,56 @@
     <node concept="1nvtMO" id="4A" role="Y6$Cn">
       <ref role="lliLh" to="kjir:2EjHd62wQTG" resolve="Gravitation" />
       <uo k="s:originTrace" v="n:1578680851974034407" />
-      <node concept="2Z11aY" id="4D" role="lliLv">
+      <node concept="2Z11aY" id="4C" role="lliLv">
         <ref role="2Z10bP" to="kjir:6hOouYNgI7u" resolve="G" />
         <uo k="s:originTrace" v="n:7101899341840292547" />
-        <node concept="30dDTi" id="4E" role="2Z1ZyN">
+        <node concept="30dDTi" id="4D" role="2Z1ZyN">
           <uo k="s:originTrace" v="n:7101899341840292659" />
-          <node concept="30bXRB" id="4F" role="30dEsF">
+          <node concept="30bXRB" id="4E" role="30dEsF">
             <property role="30bXRw" value="9" />
             <uo k="s:originTrace" v="n:7101899341840292658" />
           </node>
-          <node concept="1LgZZ2" id="4G" role="30dEs_">
+          <node concept="1LgZZ2" id="4F" role="30dEs_">
             <uo k="s:originTrace" v="n:7101899341840292660" />
-            <node concept="1N6AA6" id="4H" role="1LgZ0O">
-              <node concept="mLuIC" id="4J" role="1N6AA7">
-                <node concept="2gteSW" id="4N" role="2gteSx">
+            <node concept="1N6AA6" id="4G" role="1LgZ0O">
+              <node concept="mLuIC" id="4I" role="1N6AA7">
+                <node concept="2gteSW" id="4M" role="2gteSx">
                   <property role="2gteSQ" value="1" />
                   <property role="2gteSD" value="1" />
                 </node>
-                <node concept="2gteS_" id="4O" role="2gteVg">
+                <node concept="2gteS_" id="4N" role="2gteVg">
                   <property role="2gteVv" value="0" />
                 </node>
               </node>
-              <node concept="3AmWvR" id="4K" role="1N7es9">
+              <node concept="3AmWvR" id="4J" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
-                <node concept="CIsvk" id="4P" role="1N7KNQ">
+                <node concept="CIsvk" id="4O" role="1N7KNQ">
                   <property role="LYPYd" value="-2" />
                   <uo k="s:originTrace" v="n:7101899341840292664" />
                 </node>
               </node>
-              <node concept="3AmWvR" id="4L" role="1N7es9">
+              <node concept="3AmWvR" id="4K" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:1d1Q7eb5p5w" resolve="mass" />
-                <node concept="CIsvk" id="4Q" role="1N7KNQ">
+                <node concept="CIsvk" id="4P" role="1N7KNQ">
                   <property role="LYPYd" value="-1" />
                   <uo k="s:originTrace" v="n:7101899341840292668" />
                 </node>
               </node>
-              <node concept="3AmWvR" id="4M" role="1N7es9">
+              <node concept="3AmWvR" id="4L" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
-                <node concept="CIsvk" id="4R" role="1N7KNQ">
+                <node concept="CIsvk" id="4Q" role="1N7KNQ">
                   <property role="LYPYd" value="3" />
                   <uo k="s:originTrace" v="n:7101899341840292672" />
                 </node>
               </node>
             </node>
-            <node concept="30bsCy" id="4I" role="1LgZ0V">
-              <node concept="30dDTi" id="4S" role="30bsDf">
-                <node concept="30bXRB" id="4T" role="30dEsF">
+            <node concept="30bsCy" id="4H" role="1LgZ0V">
+              <node concept="30dDTi" id="4R" role="30bsDf">
+                <node concept="30bXRB" id="4S" role="30dEsF">
                   <property role="30bXRw" value="1" />
                   <uo k="s:originTrace" v="n:7101899341840292657" />
                 </node>
-                <node concept="30bXRB" id="4U" role="30dEs_">
+                <node concept="30bXRB" id="4T" role="30dEs_">
                   <property role="30bXRw" value="1" />
                 </node>
               </node>
@@ -1042,296 +1034,214 @@
         </node>
       </node>
     </node>
-    <node concept="Y6l9G" id="4B" role="Y6$Cn">
-      <property role="2Ol3pS" value="true" />
-      <uo k="s:originTrace" v="n:29408866812280265" />
-      <node concept="v6hs8" id="4V" role="1dJh7X">
-        <uo k="s:originTrace" v="n:29408866812280273" />
-        <node concept="30bXRB" id="4X" role="Y6leK">
-          <property role="30bXRw" value="0" />
-          <uo k="s:originTrace" v="n:29408866812280274" />
-        </node>
-        <node concept="30bXRB" id="4Y" role="Y6leJ">
-          <property role="30bXRw" value="0" />
-          <uo k="s:originTrace" v="n:29408866812280275" />
-        </node>
-        <node concept="1LgZZ2" id="4Z" role="Y6l9D">
-          <uo k="s:originTrace" v="n:29408866812280276" />
-          <node concept="1N6AA6" id="50" role="1LgZ0O">
-            <node concept="mLuIC" id="52" role="1N6AA7">
-              <node concept="2gteSW" id="54" role="2gteSx">
-                <property role="2gteSQ" value="5" />
-                <property role="2gteSD" value="5" />
-              </node>
-              <node concept="2gteS_" id="55" role="2gteVg">
-                <property role="2gteVv" value="0" />
-              </node>
-            </node>
-            <node concept="3AmWvR" id="53" role="1N7es9">
-              <ref role="1N7KNK" to="nas6:RryuvUUPyu" resolve="force" />
-            </node>
-          </node>
-          <node concept="30bsCy" id="51" role="1LgZ0V">
-            <node concept="30dDTi" id="56" role="30bsDf">
-              <node concept="30bXRB" id="57" role="30dEsF">
-                <property role="30bXRw" value="5" />
-                <uo k="s:originTrace" v="n:29408866812280277" />
-              </node>
-              <node concept="30bXRB" id="58" role="30dEs_">
-                <property role="30bXRw" value="1" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="v6hs8" id="4W" role="2Ol3pU">
-        <uo k="s:originTrace" v="n:29408866812281676" />
-        <node concept="30bXRB" id="59" role="Y6leK">
-          <property role="30bXRw" value="0" />
-          <uo k="s:originTrace" v="n:29408866812281678" />
-        </node>
-        <node concept="30bXRB" id="5a" role="Y6leJ">
-          <property role="30bXRw" value="0" />
-          <uo k="s:originTrace" v="n:29408866812281679" />
-        </node>
-        <node concept="1LgZZ2" id="5b" role="Y6l9D">
-          <uo k="s:originTrace" v="n:29408866812282290" />
-          <node concept="1N6AA6" id="5c" role="1LgZ0O">
-            <node concept="mLuIC" id="5e" role="1N6AA7">
-              <node concept="2gteSW" id="5g" role="2gteSx">
-                <property role="2gteSQ" value="1" />
-                <property role="2gteSD" value="1" />
-              </node>
-              <node concept="2gteS_" id="5h" role="2gteVg">
-                <property role="2gteVv" value="0" />
-              </node>
-            </node>
-            <node concept="3AmWvR" id="5f" role="1N7es9">
-              <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
-            </node>
-          </node>
-          <node concept="30bsCy" id="5d" role="1LgZ0V">
-            <node concept="30dDTi" id="5i" role="30bsDf">
-              <node concept="30bXRB" id="5j" role="30dEsF">
-                <property role="30bXRw" value="1" />
-                <uo k="s:originTrace" v="n:29408866812282184" />
-              </node>
-              <node concept="30bXRB" id="5k" role="30dEs_">
-                <property role="30bXRw" value="1" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="Y6$Cq" id="4C" role="Y6$Cp">
+    <node concept="Y6$Cq" id="4B" role="Y6$Cp">
       <ref role="Y6$Cr" node="0" resolve="BaseObject" />
     </node>
   </node>
-  <node concept="3omeWs" id="5l">
+  <node concept="3omeWs" id="4U">
     <property role="TrG5h" value="SunDemo" />
     <uo k="s:originTrace" v="n:1578680851971564068" />
-    <node concept="1h9Ola" id="5m" role="1h9Omn">
+    <node concept="1h9Ola" id="4V" role="1h9Omn">
       <uo k="s:originTrace" v="n:1578680851971565238" />
-      <node concept="1t_wfn" id="5o" role="1h9Olb">
+      <node concept="1t_wfn" id="4X" role="1h9Olb">
         <ref role="1t_wfm" node="2B" resolve="EarthDemo" />
         <uo k="s:originTrace" v="n:1578680851971570613" />
       </node>
-      <node concept="3Bsx3U" id="5p" role="1h9ZzG">
+      <node concept="3Bsx3U" id="4Y" role="1h9ZzG">
         <uo k="s:originTrace" v="n:1578680851971565240" />
-        <node concept="v6hs8" id="5r" role="3Bsx3B">
-          <node concept="1LgZZ2" id="5s" role="Y6l9D">
-            <node concept="1N6AA6" id="5v" role="1LgZ0O">
-              <node concept="mLuIC" id="5x" role="1N6AA7">
-                <node concept="2gteSW" id="5z" role="2gteSx">
+        <node concept="v6hs8" id="50" role="3Bsx3B">
+          <node concept="1LgZZ2" id="51" role="Y6l9D">
+            <node concept="1N6AA6" id="54" role="1LgZ0O">
+              <node concept="mLuIC" id="56" role="1N6AA7">
+                <node concept="2gteSW" id="58" role="2gteSx">
                   <property role="2gteSQ" value="100.0" />
                   <property role="2gteSD" value="100.0" />
                 </node>
-                <node concept="2gteS_" id="5$" role="2gteVg">
+                <node concept="2gteS_" id="59" role="2gteVg">
                   <property role="2gteVv" value="1" />
                 </node>
               </node>
-              <node concept="3AmWvR" id="5y" role="1N7es9">
+              <node concept="3AmWvR" id="57" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
-                <node concept="CIsvk" id="5_" role="1N7KNQ">
+                <node concept="CIsvk" id="5a" role="1N7KNQ">
                   <property role="LYPYd" value="1" />
                 </node>
               </node>
             </node>
-            <node concept="30bsCy" id="5w" role="1LgZ0V">
-              <node concept="30dDTi" id="5A" role="30bsDf">
-                <node concept="30bXRB" id="5B" role="30dEsF">
+            <node concept="30bsCy" id="55" role="1LgZ0V">
+              <node concept="30dDTi" id="5b" role="30bsDf">
+                <node concept="30bXRB" id="5c" role="30dEsF">
                   <property role="30bXRw" value="100.0" />
                 </node>
-                <node concept="30bXRB" id="5C" role="30dEs_">
+                <node concept="30bXRB" id="5d" role="30dEs_">
                   <property role="30bXRw" value="1" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1LgZZ2" id="5t" role="Y6leK">
-            <node concept="1N6AA6" id="5D" role="1LgZ0O">
-              <node concept="mLuIC" id="5F" role="1N6AA7">
-                <node concept="2gteSW" id="5H" role="2gteSx">
+          <node concept="1LgZZ2" id="52" role="Y6leK">
+            <node concept="1N6AA6" id="5e" role="1LgZ0O">
+              <node concept="mLuIC" id="5g" role="1N6AA7">
+                <node concept="2gteSW" id="5i" role="2gteSx">
                   <property role="2gteSQ" value="0.0" />
                   <property role="2gteSD" value="0.0" />
                 </node>
-                <node concept="2gteS_" id="5I" role="2gteVg">
+                <node concept="2gteS_" id="5j" role="2gteVg">
                   <property role="2gteVv" value="1" />
                 </node>
               </node>
-              <node concept="3AmWvR" id="5G" role="1N7es9">
+              <node concept="3AmWvR" id="5h" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
-                <node concept="CIsvk" id="5J" role="1N7KNQ">
+                <node concept="CIsvk" id="5k" role="1N7KNQ">
                   <property role="LYPYd" value="1" />
                 </node>
               </node>
             </node>
-            <node concept="30bsCy" id="5E" role="1LgZ0V">
-              <node concept="30dDTi" id="5K" role="30bsDf">
-                <node concept="30bXRB" id="5L" role="30dEsF">
+            <node concept="30bsCy" id="5f" role="1LgZ0V">
+              <node concept="30dDTi" id="5l" role="30bsDf">
+                <node concept="30bXRB" id="5m" role="30dEsF">
                   <property role="30bXRw" value="0.0" />
                 </node>
-                <node concept="30bXRB" id="5M" role="30dEs_">
+                <node concept="30bXRB" id="5n" role="30dEs_">
                   <property role="30bXRw" value="1" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1LgZZ2" id="5u" role="Y6leJ">
-            <node concept="1N6AA6" id="5N" role="1LgZ0O">
-              <node concept="mLuIC" id="5P" role="1N6AA7">
-                <node concept="2gteSW" id="5R" role="2gteSx">
+          <node concept="1LgZZ2" id="53" role="Y6leJ">
+            <node concept="1N6AA6" id="5o" role="1LgZ0O">
+              <node concept="mLuIC" id="5q" role="1N6AA7">
+                <node concept="2gteSW" id="5s" role="2gteSx">
                   <property role="2gteSQ" value="0" />
                   <property role="2gteSD" value="0" />
                 </node>
-                <node concept="2gteS_" id="5S" role="2gteVg">
+                <node concept="2gteS_" id="5t" role="2gteVg">
                   <property role="2gteVv" value="0" />
                 </node>
               </node>
-              <node concept="3AmWvR" id="5Q" role="1N7es9">
+              <node concept="3AmWvR" id="5r" role="1N7es9">
+                <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
+                <node concept="CIsvk" id="5u" role="1N7KNQ">
+                  <property role="LYPYd" value="1" />
+                </node>
+              </node>
+            </node>
+            <node concept="30bsCy" id="5p" role="1LgZ0V">
+              <node concept="30dDTi" id="5v" role="30bsDf">
+                <node concept="30bXRB" id="5w" role="30dEsF">
+                  <property role="30bXRw" value="0" />
+                </node>
+                <node concept="30bXRB" id="5x" role="30dEs_">
+                  <property role="30bXRw" value="1" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Bsx3U" id="4Z" role="1h9ZzH">
+        <uo k="s:originTrace" v="n:1578680851974173835" />
+        <node concept="v6hs8" id="5y" role="3Bsx3B">
+          <node concept="1LgZZ2" id="5z" role="Y6l9D">
+            <node concept="1N6AA6" id="5A" role="1LgZ0O">
+              <node concept="mLuIC" id="5C" role="1N6AA7">
+                <node concept="2gteSW" id="5F" role="2gteSx">
+                  <property role="2gteSQ" value="0.0" />
+                  <property role="2gteSD" value="0.0" />
+                </node>
+                <node concept="2gteS_" id="5G" role="2gteVg">
+                  <property role="2gteVv" value="1" />
+                </node>
+              </node>
+              <node concept="3AmWvR" id="5D" role="1N7es9">
+                <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
+                <node concept="CIsvk" id="5H" role="1N7KNQ">
+                  <property role="LYPYd" value="1" />
+                </node>
+              </node>
+              <node concept="3AmWvR" id="5E" role="1N7es9">
+                <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
+                <node concept="CIsvk" id="5I" role="1N7KNQ">
+                  <property role="LYPYd" value="-1" />
+                </node>
+              </node>
+            </node>
+            <node concept="30bsCy" id="5B" role="1LgZ0V">
+              <node concept="30dDTi" id="5J" role="30bsDf">
+                <node concept="30bXRB" id="5K" role="30dEsF">
+                  <property role="30bXRw" value="0.0" />
+                </node>
+                <node concept="30bXRB" id="5L" role="30dEs_">
+                  <property role="30bXRw" value="1" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1LgZZ2" id="5$" role="Y6leK">
+            <node concept="1N6AA6" id="5M" role="1LgZ0O">
+              <node concept="mLuIC" id="5O" role="1N6AA7">
+                <node concept="2gteSW" id="5R" role="2gteSx">
+                  <property role="2gteSQ" value="0.0" />
+                  <property role="2gteSD" value="0.0" />
+                </node>
+                <node concept="2gteS_" id="5S" role="2gteVg">
+                  <property role="2gteVv" value="1" />
+                </node>
+              </node>
+              <node concept="3AmWvR" id="5P" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
                 <node concept="CIsvk" id="5T" role="1N7KNQ">
                   <property role="LYPYd" value="1" />
                 </node>
               </node>
-            </node>
-            <node concept="30bsCy" id="5O" role="1LgZ0V">
-              <node concept="30dDTi" id="5U" role="30bsDf">
-                <node concept="30bXRB" id="5V" role="30dEsF">
-                  <property role="30bXRw" value="0" />
-                </node>
-                <node concept="30bXRB" id="5W" role="30dEs_">
-                  <property role="30bXRw" value="1" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3Bsx3U" id="5q" role="1h9ZzH">
-        <uo k="s:originTrace" v="n:1578680851974173835" />
-        <node concept="v6hs8" id="5X" role="3Bsx3B">
-          <node concept="1LgZZ2" id="5Y" role="Y6l9D">
-            <node concept="1N6AA6" id="61" role="1LgZ0O">
-              <node concept="mLuIC" id="63" role="1N6AA7">
-                <node concept="2gteSW" id="66" role="2gteSx">
-                  <property role="2gteSQ" value="0.0" />
-                  <property role="2gteSD" value="0.0" />
-                </node>
-                <node concept="2gteS_" id="67" role="2gteVg">
-                  <property role="2gteVv" value="1" />
-                </node>
-              </node>
-              <node concept="3AmWvR" id="64" role="1N7es9">
-                <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
-                <node concept="CIsvk" id="68" role="1N7KNQ">
-                  <property role="LYPYd" value="1" />
-                </node>
-              </node>
-              <node concept="3AmWvR" id="65" role="1N7es9">
+              <node concept="3AmWvR" id="5Q" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
-                <node concept="CIsvk" id="69" role="1N7KNQ">
+                <node concept="CIsvk" id="5U" role="1N7KNQ">
                   <property role="LYPYd" value="-1" />
                 </node>
               </node>
             </node>
-            <node concept="30bsCy" id="62" role="1LgZ0V">
-              <node concept="30dDTi" id="6a" role="30bsDf">
-                <node concept="30bXRB" id="6b" role="30dEsF">
+            <node concept="30bsCy" id="5N" role="1LgZ0V">
+              <node concept="30dDTi" id="5V" role="30bsDf">
+                <node concept="30bXRB" id="5W" role="30dEsF">
                   <property role="30bXRw" value="0.0" />
                 </node>
-                <node concept="30bXRB" id="6c" role="30dEs_">
+                <node concept="30bXRB" id="5X" role="30dEs_">
                   <property role="30bXRw" value="1" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="1LgZZ2" id="5Z" role="Y6leK">
-            <node concept="1N6AA6" id="6d" role="1LgZ0O">
-              <node concept="mLuIC" id="6f" role="1N6AA7">
-                <node concept="2gteSW" id="6i" role="2gteSx">
-                  <property role="2gteSQ" value="0.0" />
-                  <property role="2gteSD" value="0.0" />
-                </node>
-                <node concept="2gteS_" id="6j" role="2gteVg">
-                  <property role="2gteVv" value="1" />
-                </node>
-              </node>
-              <node concept="3AmWvR" id="6g" role="1N7es9">
-                <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
-                <node concept="CIsvk" id="6k" role="1N7KNQ">
-                  <property role="LYPYd" value="1" />
-                </node>
-              </node>
-              <node concept="3AmWvR" id="6h" role="1N7es9">
-                <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
-                <node concept="CIsvk" id="6l" role="1N7KNQ">
-                  <property role="LYPYd" value="-1" />
-                </node>
-              </node>
-            </node>
-            <node concept="30bsCy" id="6e" role="1LgZ0V">
-              <node concept="30dDTi" id="6m" role="30bsDf">
-                <node concept="30bXRB" id="6n" role="30dEsF">
-                  <property role="30bXRw" value="0.0" />
-                </node>
-                <node concept="30bXRB" id="6o" role="30dEs_">
-                  <property role="30bXRw" value="1" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1LgZZ2" id="60" role="Y6leJ">
-            <node concept="1N6AA6" id="6p" role="1LgZ0O">
-              <node concept="mLuIC" id="6r" role="1N6AA7">
-                <node concept="2gteSW" id="6u" role="2gteSx">
+          <node concept="1LgZZ2" id="5_" role="Y6leJ">
+            <node concept="1N6AA6" id="5Y" role="1LgZ0O">
+              <node concept="mLuIC" id="60" role="1N6AA7">
+                <node concept="2gteSW" id="63" role="2gteSx">
                   <property role="2gteSQ" value="20.0" />
                   <property role="2gteSD" value="20.0" />
                 </node>
-                <node concept="2gteS_" id="6v" role="2gteVg">
+                <node concept="2gteS_" id="64" role="2gteVg">
                   <property role="2gteVv" value="1" />
                 </node>
               </node>
-              <node concept="3AmWvR" id="6s" role="1N7es9">
+              <node concept="3AmWvR" id="61" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:7tUW$K4o9N4" resolve="length" />
-                <node concept="CIsvk" id="6w" role="1N7KNQ">
+                <node concept="CIsvk" id="65" role="1N7KNQ">
                   <property role="LYPYd" value="1" />
                 </node>
               </node>
-              <node concept="3AmWvR" id="6t" role="1N7es9">
+              <node concept="3AmWvR" id="62" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
-                <node concept="CIsvk" id="6x" role="1N7KNQ">
+                <node concept="CIsvk" id="66" role="1N7KNQ">
                   <property role="LYPYd" value="-1" />
                 </node>
               </node>
             </node>
-            <node concept="30bsCy" id="6q" role="1LgZ0V">
-              <node concept="30dDTi" id="6y" role="30bsDf">
-                <node concept="30bXRB" id="6z" role="30dEsF">
+            <node concept="30bsCy" id="5Z" role="1LgZ0V">
+              <node concept="30dDTi" id="67" role="30bsDf">
+                <node concept="30bXRB" id="68" role="30dEsF">
                   <property role="30bXRw" value="20.0" />
                 </node>
-                <node concept="30bXRB" id="6$" role="30dEs_">
+                <node concept="30bXRB" id="69" role="30dEs_">
                   <property role="30bXRw" value="1" />
                 </node>
               </node>
@@ -1340,94 +1250,94 @@
         </node>
       </node>
     </node>
-    <node concept="3omeWv" id="5n" role="3omeWq">
+    <node concept="3omeWv" id="4W" role="3omeWq">
       <property role="TrG5h" value="Sun" />
       <uo k="s:originTrace" v="n:1578680851971564078" />
-      <node concept="3Bsx3U" id="6_" role="1bLhCY">
+      <node concept="3Bsx3U" id="6a" role="1bLhCY">
         <uo k="s:originTrace" v="n:1578680851971564079" />
-        <node concept="30bXRB" id="6F" role="3Bsx3B">
+        <node concept="30bXRB" id="6g" role="3Bsx3B">
           <property role="30bXRw" value="5000" />
         </node>
       </node>
-      <node concept="3Bsx3U" id="6A" role="1h9ZzG">
+      <node concept="3Bsx3U" id="6b" role="1h9ZzG">
         <uo k="s:originTrace" v="n:1578680851971564081" />
-        <node concept="v6hs8" id="6G" role="3Bsx3B">
-          <node concept="30bXRB" id="6H" role="Y6l9D">
+        <node concept="v6hs8" id="6h" role="3Bsx3B">
+          <node concept="30bXRB" id="6i" role="Y6l9D">
             <property role="30bXRw" value="0" />
           </node>
-          <node concept="30bXRB" id="6I" role="Y6leK">
+          <node concept="30bXRB" id="6j" role="Y6leK">
             <property role="30bXRw" value="0" />
           </node>
-          <node concept="30bXRB" id="6J" role="Y6leJ">
+          <node concept="30bXRB" id="6k" role="Y6leJ">
             <property role="30bXRw" value="0" />
           </node>
         </node>
       </node>
-      <node concept="Y6$Cq" id="6B" role="Y6$Cp">
+      <node concept="Y6$Cq" id="6c" role="Y6$Cp">
         <ref role="Y6$Cr" node="4_" resolve="Planet" />
         <uo k="s:originTrace" v="n:1578680851974039328" />
       </node>
-      <node concept="27oVnN" id="6C" role="27xc_Z">
+      <node concept="27oVnN" id="6d" role="27xc_Z">
         <uo k="s:originTrace" v="n:1578680851972722395" />
-        <node concept="27oU9Q" id="6K" role="39QuZq">
+        <node concept="27oU9Q" id="6l" role="39QuZq">
           <uo k="s:originTrace" v="n:1578680851972722394" />
         </node>
-        <node concept="1nv_Xa" id="6L" role="39QuWR">
+        <node concept="1nv_Xa" id="6m" role="39QuWR">
           <property role="2i9GqB" value="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Map_of_the_full_sun.jpg/1024px-Map_of_the_full_sun.jpg" />
           <uo k="s:originTrace" v="n:1578680851972722758" />
         </node>
       </node>
-      <node concept="27oVnN" id="6D" role="27xc_Z">
+      <node concept="27oVnN" id="6e" role="27xc_Z">
         <uo k="s:originTrace" v="n:1578680851974919653" />
-        <node concept="2vmpnb" id="6M" role="39QuWR">
+        <node concept="2vmpnb" id="6n" role="39QuWR">
           <uo k="s:originTrace" v="n:1578680851974920106" />
         </node>
-        <node concept="13a5ie" id="6N" role="39QuZq">
+        <node concept="13a5ie" id="6o" role="39QuZq">
           <uo k="s:originTrace" v="n:1578680851974920071" />
         </node>
       </node>
-      <node concept="3Bsx3U" id="6E" role="1E3X03">
+      <node concept="3Bsx3U" id="6f" role="1E3X03">
         <uo k="s:originTrace" v="n:1578680851975032182" />
-        <node concept="v6hs8" id="6O" role="3Bsx3B">
+        <node concept="v6hs8" id="6p" role="3Bsx3B">
           <uo k="s:originTrace" v="n:1578680851975024075" />
-          <node concept="30bXRB" id="6P" role="Y6l9D">
+          <node concept="30bXRB" id="6q" role="Y6l9D">
             <property role="30bXRw" value="0" />
             <uo k="s:originTrace" v="n:1578680851975024077" />
           </node>
-          <node concept="30bXRB" id="6Q" role="Y6leJ">
+          <node concept="30bXRB" id="6r" role="Y6leJ">
             <property role="30bXRw" value="0" />
             <uo k="s:originTrace" v="n:1578680851975024079" />
           </node>
-          <node concept="1LgZZ2" id="6R" role="Y6leK">
+          <node concept="1LgZZ2" id="6s" role="Y6leK">
             <uo k="s:originTrace" v="n:1578680851975025444" />
-            <node concept="1N6AA6" id="6S" role="1LgZ0O">
-              <node concept="mLuIC" id="6U" role="1N6AA7">
-                <node concept="2gteSW" id="6X" role="2gteSx">
+            <node concept="1N6AA6" id="6t" role="1LgZ0O">
+              <node concept="mLuIC" id="6v" role="1N6AA7">
+                <node concept="2gteSW" id="6y" role="2gteSx">
                   <property role="2gteSQ" value="0.08726643139636762205955759409939295" />
                   <property role="2gteSD" value="0.08726643139636762205955759409939295" />
                 </node>
-                <node concept="2gteS_" id="6Y" role="2gteVg">
+                <node concept="2gteS_" id="6z" role="2gteVg">
                   <property role="2gteVv" value="35" />
                 </node>
               </node>
-              <node concept="3AmWvR" id="6V" role="1N7es9">
+              <node concept="3AmWvR" id="6w" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:1d1Q7eb4VIr" resolve="angle" />
               </node>
-              <node concept="3AmWvR" id="6W" role="1N7es9">
+              <node concept="3AmWvR" id="6x" role="1N7es9">
                 <ref role="1N7KNK" to="nas6:1fq3tlL$kMh" resolve="time" />
-                <node concept="CIsvk" id="6Z" role="1N7KNQ">
+                <node concept="CIsvk" id="6$" role="1N7KNQ">
                   <property role="LYPYd" value="-1" />
                   <uo k="s:originTrace" v="n:1578680851975027355" />
                 </node>
               </node>
             </node>
-            <node concept="30bsCy" id="6T" role="1LgZ0V">
-              <node concept="30dDTi" id="70" role="30bsDf">
-                <node concept="30bXRB" id="71" role="30dEsF">
+            <node concept="30bsCy" id="6u" role="1LgZ0V">
+              <node concept="30dDTi" id="6_" role="30bsDf">
+                <node concept="30bXRB" id="6A" role="30dEsF">
                   <property role="30bXRw" value="5" />
                   <uo k="s:originTrace" v="n:1578680851975083015" />
                 </node>
-                <node concept="30bXRB" id="72" role="30dEs_">
+                <node concept="30bXRB" id="6B" role="30dEs_">
                   <property role="30bXRw" value="0.01745328627927352441191151881987859" />
                 </node>
               </node>
