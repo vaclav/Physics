@@ -11,7 +11,7 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.runtime.RotationHelper;
 import java.math.BigDecimal;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 import org.nevec.rjm.BigDecimalMath;
 import java.math.MathContext;
 

@@ -11,7 +11,7 @@ import org.ode4j.math.DVector3C;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import java.math.BigInteger;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 
 public class FrictionForce {
   public static Force get(World world, SystemScope scope, PhysicalEntity currentEntity, double time, Number ratio) {

@@ -6,7 +6,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope;
 import jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.nevec.rjm.BigDecimalMath;

@@ -7,7 +7,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.SimpleCollisionReaction;
 import java.util.Arrays;

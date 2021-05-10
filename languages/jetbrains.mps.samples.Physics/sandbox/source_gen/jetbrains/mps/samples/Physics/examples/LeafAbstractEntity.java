@@ -7,7 +7,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ElasticCollisionReaction;
 import java.math.BigInteger;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 import java.util.Arrays;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
 import org.ode4j.math.DVector3C;

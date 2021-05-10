@@ -50,9 +50,9 @@ public class NumberGenerationHelper {
     if (left && right) {
       return true;
     } else if (left) {
-      return isString(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(binary, LINKS.right$zBjx)));
+      return isReal(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(binary, LINKS.right$zBjx)));
     } else {
-      return right && isString(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(binary, LINKS.left$zxUa)));
+      return right && isReal(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(binary, LINKS.left$zxUa)));
     }
   }
   private static SNode createNumberLiteral_csxohj_a0a0a0() {

@@ -10,7 +10,7 @@ import org.ode4j.math.DVector3C;
 import java.util.function.Function;
 import org.iets3.core.expr.genjava.base.rt.rt.ParameterSetWrapper;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;

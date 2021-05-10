@@ -10,7 +10,7 @@ import org.ode4j.math.DMatrix3C;
 import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
@@ -76,7 +76,7 @@ public class EarthDemoSystemScope extends SystemScope {
       // Set static properties of Moon 
       this.setMass(((Number) new BigInteger("100")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("20.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
-      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("16.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("-8.16545914761114E-11").setScale(25, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
+      this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("16.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("9.797174393178826E-16").setScale(31, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
 
       //  Forces and visual of the parent objects of Moon 
       super.init(scope, world);

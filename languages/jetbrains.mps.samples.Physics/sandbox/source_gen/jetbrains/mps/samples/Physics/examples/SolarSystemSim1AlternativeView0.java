@@ -9,7 +9,7 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.math.BigInteger;

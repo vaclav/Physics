@@ -1348,7 +1348,7 @@ class BaseObject1 extends Physics.PhysicalEntity {
             this.propertiesBuilder.set(Physics.PropKey.BOX_X, (Math.pow(this.entity.getMass(), 1 / 3) * ((1 * 1))));
             this.propertiesBuilder.set(Physics.PropKey.BOX_Y, (Math.pow(this.entity.getMass(), 1 / 3) * ((1 * 1))));
             this.propertiesBuilder.set(Physics.PropKey.BOX_Z, (Math.pow(this.entity.getMass(), 1 / 3) * ((1 * 1))));
-            this.propertiesBuilder.set(Physics.PropKey.SPHERE_RADIUS, (Math.pow((3 / (4 * Math.PI) * this.entity.getMass()), 1 / 3) * ((1 * 1))));
+            this.propertiesBuilder.set(Physics.PropKey.SPHERE_RADIUS, (Math.pow(3 / (4 * Math.PI) * this.entity.getMass(), 1 / 3) * ((1 * 1))));
             this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 255, 255), new Physics.InternalColor(0, 0, 0)));
             this.propertiesBuilder.set(Physics.PropKey.EMIT_LIGHT, false);
             this.propertiesBuilder.set(Physics.PropKey.COLLISION_REACT, new Physics.ElasticCollisionReaction(100.0));
@@ -1416,7 +1416,7 @@ class Moon extends Planet1 {
           init() {
             this.setMass(100);
             this.body.setPosition.apply(this.body, this.scope.getAbsoluteInitialPosition(new Physics.Vector(((0.0 * 1)), ((0.0 * 1)), ((20.0 * 1)))).values);
-            this.body.setLinearVel.apply(this.body, this.scope.getAbsoluteInitialVelocity(new Physics.Vector(((16.0 * 1)), ((0.0 * 1)), ((-8.16545914761114E-11 * 1)))).values);
+            this.body.setLinearVel.apply(this.body, this.scope.getAbsoluteInitialVelocity(new Physics.Vector(((16.0 * 1)), ((0.0 * 1)), ((9.797174393178826E-16 * 1)))).values);
             (super['init'])();
             this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ImageTexture("https://moon.nasa.gov/system/resources/detail_files/119_colormap_1500.jpg"));
             this.propertiesBuilder.set(Physics.PropKey.TRACE, new Physics.FiniteTraceHandler(new Physics.InternalColor(220, 220, 220)));

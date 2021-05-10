@@ -1341,23 +1341,6 @@
 */
 
         
-class BaseObject1 extends Physics.PhysicalEntity {
-          init() {
-            (super["init"])();
-            this.propertiesBuilder.set(Physics.PropKey.SHAPE, 'sphere');
-            this.propertiesBuilder.set(Physics.PropKey.BOX_X, (Math.pow(this.entity.getMass(), 1 / 3) * ((1 * 1))));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_Y, (Math.pow(this.entity.getMass(), 1 / 3) * ((1 * 1))));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_Z, (Math.pow(this.entity.getMass(), 1 / 3) * ((1 * 1))));
-            this.propertiesBuilder.set(Physics.PropKey.SPHERE_RADIUS, (Math.pow((3 / (4 * Math.PI) * this.entity.getMass()), 1 / 3) * ((1 * 1))));
-            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 255, 255), new Physics.InternalColor(0, 0, 0)));
-            this.propertiesBuilder.set(Physics.PropKey.EMIT_LIGHT, false);
-            this.propertiesBuilder.set(Physics.PropKey.COLLISION_REACT, new Physics.ElasticCollisionReaction(100.0));
-            this.propertiesBuilder.set(Physics.PropKey.PAUSE_ON_COLLISION, false);
-            this.propertiesBuilder.set(Physics.PropKey.TRACE, null);
-            this.forces.push();
-          }
-}
-        
         function computeFriction1(context, ratio) {
           return {
             compute: (() => (() => {
@@ -1375,18 +1358,6 @@ class BaseObject1 extends Physics.PhysicalEntity {
           };
         }
         
-class RandomObject1 extends BaseObject1 {
-          init() {
-            (super["init"])();
-            this.propertiesBuilder.set(Physics.PropKey.SHAPE, 'box');
-            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 255, 255), null));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_X, ((40 * 1)));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_Y, ((40 * 1)));
-            this.propertiesBuilder.set(Physics.PropKey.BOX_Z, ((40 * 1)));
-            this.forces.push();
-          }
-}
-        
         function computeInteractionForce1(context, map) {
           return {
             compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
@@ -1400,6 +1371,35 @@ class RandomObject1 extends BaseObject1 {
             })).compute())
           };
         }
+        
+class BaseObject1 extends Physics.PhysicalEntity {
+          init() {
+            (super["init"])();
+            this.propertiesBuilder.set(Physics.PropKey.SHAPE, 'sphere');
+            this.propertiesBuilder.set(Physics.PropKey.BOX_X, (Math.pow(this.entity.getMass(), 1 / 3) * ((1 * 1))));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_Y, (Math.pow(this.entity.getMass(), 1 / 3) * ((1 * 1))));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_Z, (Math.pow(this.entity.getMass(), 1 / 3) * ((1 * 1))));
+            this.propertiesBuilder.set(Physics.PropKey.SPHERE_RADIUS, (Math.pow(3 / (4 * Math.PI) * this.entity.getMass(), 1 / 3) * ((1 * 1))));
+            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 255, 255), new Physics.InternalColor(0, 0, 0)));
+            this.propertiesBuilder.set(Physics.PropKey.EMIT_LIGHT, false);
+            this.propertiesBuilder.set(Physics.PropKey.COLLISION_REACT, new Physics.ElasticCollisionReaction(100.0));
+            this.propertiesBuilder.set(Physics.PropKey.PAUSE_ON_COLLISION, false);
+            this.propertiesBuilder.set(Physics.PropKey.TRACE, null);
+            this.forces.push();
+          }
+}
+        
+class RandomObject1 extends BaseObject1 {
+          init() {
+            (super["init"])();
+            this.propertiesBuilder.set(Physics.PropKey.SHAPE, 'box');
+            this.propertiesBuilder.set(Physics.PropKey.TEXTURE, new Physics.ColorTexture(new Physics.InternalColor(255, 255, 255), null));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_X, ((40 * 1)));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_Y, ((40 * 1)));
+            this.propertiesBuilder.set(Physics.PropKey.BOX_Z, ((40 * 1)));
+            this.forces.push();
+          }
+}
         
         function computeGravitation1(context, G) {
           return {

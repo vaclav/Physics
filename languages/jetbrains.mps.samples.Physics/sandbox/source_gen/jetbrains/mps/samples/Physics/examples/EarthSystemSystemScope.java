@@ -15,7 +15,7 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 import java.util.Arrays;
 
 public class EarthSystemSystemScope extends SystemScope {
