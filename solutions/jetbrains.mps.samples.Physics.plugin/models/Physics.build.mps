@@ -43,7 +43,6 @@
         <child id="8618885170173601778" name="tail" index="2Ry0An" />
       </concept>
       <concept id="6647099934206700647" name="jetbrains.mps.build.structure.BuildJavaPlugin" flags="ng" index="10PD9b" />
-      <concept id="7389400916848050071" name="jetbrains.mps.build.structure.BuildLayout_Zip" flags="ng" index="3981dG" />
       <concept id="7389400916848050060" name="jetbrains.mps.build.structure.BuildLayout_NamedContainer" flags="ng" index="3981dR">
         <child id="4380385936562148502" name="containerName" index="Nbhlr" />
       </concept>
@@ -304,75 +303,6 @@
                     <property role="2Ry0Am" value="lib" />
                     <node concept="2Ry0Ak" id="4xWaHBMb2KQ" role="2Ry0An">
                       <property role="2Ry0Am" value="java-runtime-all.jar" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3981dG" id="7QIsDWeJFVJ" role="39821P">
-        <node concept="3_J27D" id="7QIsDWeJFVK" role="Nbhlr">
-          <node concept="3Mxwew" id="7QIsDWeJFVL" role="3MwsjC">
-            <property role="3MwjfP" value="jetbrains.mps.samples.Physics.zip" />
-          </node>
-        </node>
-        <node concept="m$_wl" id="7QIsDWeJFVM" role="39821P">
-          <ref role="m_rDy" node="7QIsDWeJFVx" resolve="jetbrains.mps.samples.Physics" />
-          <node concept="pUk6x" id="7QIsDWeJFVN" role="pUk7w" />
-          <node concept="398223" id="1Or1i98jv_I" role="39821P">
-            <node concept="3_J27D" id="1Or1i98jv_J" role="Nbhlr">
-              <node concept="3Mxwew" id="1Or1i98jvAe" role="3MwsjC">
-                <property role="3MwjfP" value="lib" />
-              </node>
-            </node>
-            <node concept="28jJK3" id="kYr4YxzHqC" role="39821P">
-              <node concept="398BVA" id="kYr4YxzHqD" role="28jJRO">
-                <ref role="398BVh" node="5aGkDIh0m2d" resolve="jetbrains.mps.samples.Physics.home" />
-                <node concept="2Ry0Ak" id="kYr4YxzHqE" role="iGT6I">
-                  <property role="2Ry0Am" value="languages" />
-                  <node concept="2Ry0Ak" id="kYr4YxzHqF" role="2Ry0An">
-                    <property role="2Ry0Am" value="jetbrains.mps.samples.Physics.genjs" />
-                    <node concept="2Ry0Ak" id="kYr4YxzHqG" role="2Ry0An">
-                      <property role="2Ry0Am" value="lib" />
-                      <node concept="2Ry0Ak" id="kYr4YxzHqH" role="2Ry0An">
-                        <property role="2Ry0Am" value="JsRuntime.jar" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="28jJK3" id="1Or1i98jvAg" role="39821P">
-              <node concept="398BVA" id="4xWaHBMb2Jo" role="28jJRO">
-                <ref role="398BVh" node="5aGkDIh0m2d" resolve="jetbrains.mps.samples.Physics.home" />
-                <node concept="2Ry0Ak" id="4xWaHBMb2Jp" role="iGT6I">
-                  <property role="2Ry0Am" value="solutions" />
-                  <node concept="2Ry0Ak" id="4xWaHBMb2Jq" role="2Ry0An">
-                    <property role="2Ry0Am" value="jetbrains.mps.samples.Physics.java.common" />
-                    <node concept="2Ry0Ak" id="4xWaHBMb2Jr" role="2Ry0An">
-                      <property role="2Ry0Am" value="lib" />
-                      <node concept="2Ry0Ak" id="4xWaHBMb2Js" role="2Ry0An">
-                        <property role="2Ry0Am" value="BigDecimalMath.jar" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="28jJK3" id="1Or1i98jvC1" role="39821P">
-              <node concept="398BVA" id="4xWaHBMb2Lg" role="28jJRO">
-                <ref role="398BVh" node="5aGkDIh0m2d" resolve="jetbrains.mps.samples.Physics.home" />
-                <node concept="2Ry0Ak" id="4xWaHBMb2Lh" role="iGT6I">
-                  <property role="2Ry0Am" value="solutions" />
-                  <node concept="2Ry0Ak" id="4xWaHBMb2Li" role="2Ry0An">
-                    <property role="2Ry0Am" value="jetbrains.mps.samples.Physics.runtime" />
-                    <node concept="2Ry0Ak" id="4xWaHBMb2Lj" role="2Ry0An">
-                      <property role="2Ry0Am" value="lib" />
-                      <node concept="2Ry0Ak" id="4xWaHBMb2Lk" role="2Ry0An">
-                        <property role="2Ry0Am" value="java-runtime-all.jar" />
-                      </node>
                     </node>
                   </node>
                 </node>

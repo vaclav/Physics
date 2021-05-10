@@ -27,7 +27,6 @@
     <import index="s6tv" ref="r:9d14edd6-e1f4-4462-802b-9d9f72ed6bb8(jetbrains.mps.samples.Physics.plugin)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
     <import index="r96e" ref="r:1d7b3939-3941-4ddd-b5b9-d4c3745b0111(org.iets3.core.expr.genjs.base.jsenv)" implicit="true" />
-    <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -42,9 +41,6 @@
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
-      </concept>
-      <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
-        <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
@@ -101,7 +97,6 @@
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
-      <concept id="1212685548494" name="jetbrains.mps.baseLanguage.structure.ClassCreator" flags="nn" index="1pGfFk" />
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
@@ -5758,16 +5753,6 @@
     <node concept="3aamgX" id="5xLPjpYz1x1" role="3aUrZf">
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="hm2y:4rZeNQ6MpKl" resolve="BinaryExpression" />
-      <node concept="gft3U" id="5xLPjpYz2OH" role="1lVwrX">
-        <node concept="2ShNRf" id="5xLPjpYz2PQ" role="gfFT$">
-          <node concept="1pGfFk" id="5xLPjpYz2PT" role="2ShVmc">
-            <ref role="37wK5l" to="xlxw:~BigDecimal.&lt;init&gt;(char[],int,int)" resolve="BigDecimal" />
-          </node>
-          <node concept="1sPUBX" id="5xLPjpYz3jU" role="lGtFl">
-            <ref role="v9R2y" node="5xLPjpYxqih" resolve="RationalBinaryExpressionToJSExpression" />
-          </node>
-        </node>
-      </node>
       <node concept="30G5F_" id="5xLPjpYz3k3" role="30HLyM">
         <node concept="3clFbS" id="5xLPjpYz3k4" role="2VODD2">
           <node concept="3clFbF" id="5xLPjpYz3nZ" role="3cqZAp">
@@ -5799,6 +5784,13 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+      <node concept="gft3U" id="2G0RHAoA3r4" role="1lVwrX">
+        <node concept="2dxDzr" id="2G0RHAoA3sM" role="gfFT$">
+          <node concept="1sPUBX" id="2G0RHAoA3sP" role="lGtFl">
+            <ref role="v9R2y" node="5xLPjpYxqih" resolve="RationalBinaryExpressionToJSExpression" />
           </node>
         </node>
       </node>
@@ -8932,34 +8924,6 @@
                             </node>
                           </node>
                           <node concept="gft3U" id="1muMNVjxiSs" role="UU_$l">
-                            <node concept="15s5l7" id="3_YpVOWytgs" role="lGtFl">
-                              <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem&quot;;FLAVOUR_MESSAGE=&quot;can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'&quot;;FLAVOUR_THIS=&quot;jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem@1dab214f&quot;;" />
-                              <property role="huDt6" value="can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'" />
-                            </node>
-                            <node concept="15s5l7" id="6Fyo0Mocpji" role="lGtFl">
-                              <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem&quot;;FLAVOUR_MESSAGE=&quot;can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'&quot;;FLAVOUR_THIS=&quot;jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem@19f4ab7f&quot;;" />
-                              <property role="huDt6" value="can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'" />
-                            </node>
-                            <node concept="15s5l7" id="iFGLAPZr9K" role="lGtFl">
-                              <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem&quot;;FLAVOUR_MESSAGE=&quot;can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'&quot;;FLAVOUR_THIS=&quot;jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem@607767bd&quot;;" />
-                              <property role="huDt6" value="can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'" />
-                            </node>
-                            <node concept="15s5l7" id="1muMNVjxiSt" role="lGtFl">
-                              <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem&quot;;FLAVOUR_MESSAGE=&quot;can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'&quot;;FLAVOUR_THIS=&quot;jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem@7eff7291&quot;;" />
-                              <property role="huDt6" value="can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'" />
-                            </node>
-                            <node concept="15s5l7" id="1muMNVjxiSu" role="lGtFl">
-                              <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem&quot;;FLAVOUR_MESSAGE=&quot;can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'&quot;;FLAVOUR_THIS=&quot;jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem@58bef6ae&quot;;" />
-                              <property role="huDt6" value="can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'" />
-                            </node>
-                            <node concept="15s5l7" id="1muMNVjxiSv" role="lGtFl">
-                              <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem&quot;;FLAVOUR_MESSAGE=&quot;can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'&quot;;FLAVOUR_THIS=&quot;jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem@7109b6df&quot;;" />
-                              <property role="huDt6" value="can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'" />
-                            </node>
-                            <node concept="15s5l7" id="1muMNVjxiSw" role="lGtFl">
-                              <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem&quot;;FLAVOUR_MESSAGE=&quot;can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'&quot;;FLAVOUR_THIS=&quot;jetbrains.mps.errors.item.LanguageErrorItem$ReferenceItem@66edb4c7&quot;;" />
-                              <property role="huDt6" value="can't create search scope for link `variableDeclarator' in 'JSVariableDeclaratorReference'" />
-                            </node>
                             <node concept="2dhVqD" id="1muMNVjxiSx" role="gfFT$">
                               <node concept="2dhVqD" id="1muMNVjxiSy" role="2dhScq">
                                 <node concept="29jwqa" id="1muMNVjxiSz" role="2dhScq">
