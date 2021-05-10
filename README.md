@@ -29,8 +29,6 @@ However, having the following software may make things smoother as for the build
 3. **Open the project and rebuild** (restart if you opened it before the end of the above commands)
 4. **Enjoy !**
 
-**Note:** this will download and build from source [iets3.genjs](https://github.com/cdelabou/iets3.genjs) since no repository hold the used versions of this project. You can also publish to your local maven repository by following the instructions on the README of iets3.genjs.
-
 #### Advanced usage of the build script
 You can find a detailed page on which task to use for which purpose [on the wiki](https://github.com/vaclav/Physics/wiki/Gradle-script-usage).
 

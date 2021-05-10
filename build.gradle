@@ -17,7 +17,9 @@ plugins {
 }
 
 // Versions
-ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersion') : '2020.2.2'
+ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersion') : '2020.3'
+ext.iets3Version = project.hasProperty("iets3Version") ? project.property('iets3Version') : "$mpsVersion.+"
+ext.ecmascript4mpsVersion = project.hasProperty("ecmascript4mpsVersion") ? project.property('ecmascript4mpsVersion') : "development-SNAPSHOT"
 
 // Optional properties
 def mpsDir = project.hasProperty("mpsDir") ? project.property('mpsDir') : "$buildDir/mps"
@@ -31,9 +33,9 @@ configurations {
 
 dependencies {
     mps "com.jetbrains:mps:$mpsVersion"
-	mpsArtifacts "org.iets3:opensource:2020.1.4598.8281546"
-	mpsArtifacts "org.mar9000:ecmascript4mps:2020.2.1"
-	genjsArtifacts "org.iets3.opensource:genjs:$mpsVersion.+"
+	mpsArtifacts "org.iets3:opensource:$iets3Version"
+	mpsArtifacts "com.github.mar9000:ecmascript4mps:$ecmascript4mpsVersion"
+	mpsArtifacts "com.github.cdelabou:iets3.genjs:$mpsVersion"
     junitAnt 'org.apache.ant:ant-junit:1.10.9'
 }
 
@@ -98,7 +100,7 @@ task resolveJdk(type: Download) {
 	def os
 	if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         os = "windows"
-    } else if (Os.isFamily(Os.FAMILY_LINUX)) {
+    } else if (Os.isFamily(Os.FAMILY_UNIX)) {
     	os = "linux"
     } else {
     	os = "osx"
@@ -156,7 +158,7 @@ ext["itemis.mps.gradle.ant.defaultScriptArgs"] = defaultScriptArgs.collect { "-D
 ext["itemis.mps.gradle.ant.defaultScriptClasspath"] = buildScriptClasspath
 ext["itemis.mps.gradle.ant.defaultJavaExecutable"] = file("$jdkHome/bin/java")
 
-// ===== iets3.opensource + ecmascript4mps =====
+// ===== iets3.opensource + ecmascript4mps + iets3.genjs =====
 task resolveMpsArtifacts(type: Copy) {
     from {
         configurations.mpsArtifacts.resolve().collect { zipTree(it) }
@@ -164,57 +166,13 @@ task resolveMpsArtifacts(type: Copy) {
     into artifactsDir
 }
 
-// ===== iets3.genjs =====
-def genJsHome = "$buildDir/dependencies/iets3.genjs"
-task cloneGenjs {
-	doLast {
-		try {
-			Grgit.open(dir: genJsHome)
-			println "iets3.genjs folder exists, assuming clone to be done"
-		} catch(Exception e) {
-			def grgit = Grgit.clone(
-				dir: genJsHome,
-				uri: "https://github.com/banilaste/iets3.genjs"
-			)
-		}
-	}
-}
-
-task buildGenjs(type: BuildLanguages, dependsOn: [cloneGenjs, resolveMpsArtifacts]) {
-    if (!project.hasProperty("mpsDir")) dependsOn "resolveMps"
-    if (downloadJdk) dependsOn "unpackJdk"
-
-	script "$genJsHome/build.xml"
-}
-
 // ===== java runtime dependencies =====
 task packageJavaRuntime {
 	dependsOn ":solutions:jetbrains.mps.samples.Physics.runtime:lib:shadowAndCopy"
 }
 
-// ===== iets3.genjs =====
-task resolveMavenGenjs(type: Copy) {
-    from {
-        configurations.genjsArtifacts.resolve().collect { zipTree(it) }
-    }
-    into artifactsDir
-}
-
-task resolveGenjs(dependsOn: [resolveMpsArtifacts]) {
-    try {
-        // Try to resolve
-        configurations.genjsArtifacts.resolve()
-        // Resolvable -> copy actual content
-        dependsOn "resolveMavenGenjs"
-    } catch(Exception e) {
-        // Not resolvable -> build from source
-        println "unable to find iets.genjs, building from source"
-        dependsOn "buildGenjs"
-    }
-}
-
-// ===== all artifacts (iets3, mbeddr, genjs if any) =====
-task resolveArtifacts(dependsOn: [packageJavaRuntime, resolveGenjs, resolveMpsArtifacts]) { }
+// ===== all artifacts (iets3, mbeddr, genjs) =====
+task resolveArtifacts(dependsOn: [packageJavaRuntime, resolveMpsArtifacts]) { }
 
 // ===== build artifacts =====
 task buildLanguages(type: BuildLanguages, dependsOn: [resolveArtifacts]) {
