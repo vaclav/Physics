@@ -37,6 +37,8 @@ You can find a detailed page on which task to use for which purpose [on the wiki
 ## Documentation
 You can find some detailed documentation on how to use or improve the language on the [wiki page of this repository](https://github.com/vaclav/Physics/wiki).
 
+Common errors and solutions can be found in the [troubleshooting page](https://github.com/vaclav/Physics/wiki/Troubleshooting).
+
 ## Contribute
 
 A list of features to add or issues to fix is located in the [TODO.md](./TODO.md) file. You may also check the github issues of this repository.
