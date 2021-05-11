@@ -106,7 +106,7 @@ task resolveJdk(type: Download) {
     	os = "osx"
     }
 
-    def filename = "jbrsdk-11_0_8-$os-$arch-b1145.3.tar.gz"
+    def filename = "jbrsdk-11_0_10-$os-$arch-b1428.2.tar.gz"
 
     src "https://dl.bintray.com/jetbrains/intellij-jbr/$filename"
 	dest "$buildDir/$filename"
