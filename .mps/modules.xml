@@ -16,6 +16,7 @@
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.mpl" folder="base" />
       <modulePath path="$PROJECT_DIR$/languages/jetbrains.mps.samples.Physics/sandbox/jetbrains.mps.samples.Physics.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/org.mar9000.mps.ecmascript.bundler/org.mar9000.mps.ecmascript.bundler.mpl" folder="javascript" />
+      <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.execution.java/jetbrains.mps.samples.Physics.execution.java.msd" folder="java" />
       <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.execution.javascript/jetbrains.mps.samples.Physics.execution.javascript.msd" folder="javascript" />
       <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.generation/jetbrains.mps.samples.Physics.generation.msd" folder="base" />
       <modulePath path="$PROJECT_DIR$/solutions/jetbrains.mps.samples.Physics.java.common/jetbrains.mps.samples.Physics.java.common.msd" folder="base" />

@@ -9,6 +9,9 @@
   <exported-language name="30254c5b-f87e-4bb3-a60a-77a7ec6ed411(org.iets3.core.expr.genjava.base)" />
   <exported-language name="f61473f9-130f-42f6-b98d-6c438812c2f6(jetbrains.mps.baseLanguage.unitTest)" />
   <exported-language name="f2abf2a6-552e-4906-ab58-930f9a79aff4(org.iets3.core.expr.genjava.contracts)" />
+  <exported-language name="3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)" />
+  <exported-language name="61cc869c-376a-409d-b749-694ad057266b(jetbrains.mps.samples.Physics.genbase)" />
+  <exported-language name="e20f6002-fdcc-4f52-aa1a-8dcd898993a0(jetbrains.mps.samples.Physics.dimensions.gentype)" />
   <extendedDevKits>
     <extendedDevKit>da9c5738-b245-4e38-b52f-e6ee76cadd7f(org.iets3.core.expr.genjava.core.devkit)</extendedDevKit>
     <extendedDevKit>94dba95f-0505-4d04-a64d-85519150f750(jetbrains.mps.samples.Physics.devkit.base)</extendedDevKit>

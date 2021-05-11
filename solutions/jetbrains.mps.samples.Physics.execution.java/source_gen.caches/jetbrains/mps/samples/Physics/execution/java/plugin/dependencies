@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.execution.java.plugin.Java_ApplicationPlugin">
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.plugins.part.ApplicationPluginPart" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.execution.java.plugin.RunConfigurationsInitializer_AppPluginPart" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.execution.java.plugin.Java_Producer">
+    <classNode dependClassName="com.intellij.execution.actions.ConfigurationContext" />
+    <classNode dependClassName="com.intellij.execution.configurations.ConfigurationFactory" />
+    <classNode dependClassName="com.intellij.execution.configurations.ConfigurationType" />
+    <classNode dependClassName="com.intellij.execution.configurations.RunConfiguration" />
+    <classNode dependClassName="com.intellij.execution.junit.RuntimeConfigurationProducer" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.execution.api.JavaRunParameters" />
+    <classNode dependClassName="jetbrains.mps.execution.api.configurations.BaseMpsProducer" />
+    <classNode dependClassName="jetbrains.mps.execution.configurations.implementation.plugin.plugin.Java_Configuration" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.plugins.runconfigs.MPSPsiElement" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.Physics.execution.java.plugin.RunConfigurationsInitializer_AppPluginPart">
+    <classNode dependClassName="com.intellij.execution.configurations.ConfigurationType" />
+    <classNode dependClassName="com.intellij.execution.junit.RuntimeConfigurationProducer" />
+    <classNode dependClassName="com.intellij.openapi.extensions.ExtensionPoint" />
+    <classNode dependClassName="com.intellij.openapi.extensions.Extensions" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayDeque" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Deque" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.execution.api.configurations.ConfigTypeEnvoy" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.execution.java.plugin.Java_Producer" />
+    <classNode extendsClassName="jetbrains.mps.plugins.part.ApplicationPluginPart" />
+  </dependency>
+</dependenciesRoot>
+

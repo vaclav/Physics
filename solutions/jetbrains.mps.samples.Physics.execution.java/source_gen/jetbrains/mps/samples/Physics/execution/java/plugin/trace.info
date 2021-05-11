@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081855346303:jetbrains.mps.baseLanguage.structure.BreakStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="RunConfigurationsInitializer_AppPluginPart.java">
+      <unit at="18,0,64,0" name="jetbrains.mps.samples.Physics.execution.java.plugin.RunConfigurationsInitializer_AppPluginPart" />
+    </file>
+  </root>
+  <root nodeRef="r:5461a6c9-5685-4f59-8f92-40cac43dd40a(jetbrains.mps.samples.Physics.execution.java.plugin)/6171629945286892181">
+    <file name="Java_ApplicationPlugin.java">
+      <node id="6171629945286892181" at="12,0,13,0" concept="3" trace="myId" />
+      <node id="6171629945286892181" at="18,27,19,16" concept="8" />
+      <node id="6171629945286892181" at="23,66,24,64" concept="2" />
+      <node id="6171629945286892181" at="14,0,16,0" concept="1" trace="Java_ApplicationPlugin#()V" />
+      <node id="6171629945286892181" at="17,0,21,0" concept="6" trace="getId#()Lcom/intellij/openapi/extensions/PluginId;" />
+      <node id="6171629945286892181" at="22,0,26,0" concept="6" trace="fillCustomParts#(Ljava/util/List;)V" />
+      <scope id="6171629945286892181" at="14,35,14,35" />
+      <scope id="6171629945286892181" at="18,27,19,16" />
+      <scope id="6171629945286892181" at="23,66,24,64" />
+      <scope id="6171629945286892181" at="14,0,16,0" />
+      <scope id="6171629945286892181" at="17,0,21,0" />
+      <scope id="6171629945286892181" at="22,0,26,0">
+        <var name="parts" id="6171629945286892181" />
+      </scope>
+      <unit id="6171629945286892181" at="11,0,27,0" name="jetbrains.mps.samples.Physics.execution.java.plugin.Java_ApplicationPlugin" />
+    </file>
+  </root>
+  <root nodeRef="r:5461a6c9-5685-4f59-8f92-40cac43dd40a(jetbrains.mps.samples.Physics.execution.java.plugin)/6345754479992685568">
+    <file name="Java_Producer.java">
+      <node id="6345754479992685568" at="28,102,29,53" concept="7" />
+      <node id="6345754479992685568" at="29,53,30,78" concept="9" />
+      <node id="6345754479992685568" at="30,78,31,118" concept="9" />
+      <node id="6345754479992685568" at="31,118,32,131" concept="9" />
+      <node id="6345754479992685568" at="32,131,33,55" concept="9" />
+      <node id="6345754479992685568" at="35,56,36,33" concept="2" />
+      <node id="6345754479992685568" at="36,33,37,14" concept="0" />
+      <node id="6345754479992685568" at="40,39,41,78" concept="2" />
+      <node id="6345754479992685568" at="42,5,43,119" concept="7" />
+      <node id="6062668769033909763" at="43,119,44,111" concept="2" />
+      <node id="6345754479992685568" at="44,111,45,20" concept="8" />
+      <node id="6062668769033909763" at="49,92,50,34" concept="13" />
+      <node id="6062668769033909763" at="54,51,55,111" concept="8" />
+      <node id="6062668769033909763" at="59,76,60,73" concept="2" />
+      <node id="6345754479992819924" at="61,210,62,20" concept="8" />
+      <node id="6062668769033909795" at="63,7,64,293" concept="7" />
+      <node id="6062668769033909803" at="64,293,65,46" concept="2" />
+      <node id="6345754479992884803" at="65,46,66,0" concept="10" />
+      <node id="6345754479992886251" at="66,0,67,81" concept="9" />
+      <node id="6345754479992877414" at="67,81,68,90" concept="7" />
+      <node id="6345754479992828167" at="68,90,69,523" concept="2" />
+      <node id="6345754479992887936" at="69,523,70,0" concept="10" />
+      <node id="6062668769033909810" at="70,0,71,27" concept="8" />
+      <node id="6062668769033909763" at="76,60,77,21" concept="8" />
+      <node id="6062668769033909763" at="78,7,79,77" concept="7" />
+      <node id="5960730365808856500" at="79,77,80,50" concept="8" />
+      <node id="6062668769033909763" at="84,57,85,66" concept="8" />
+      <node id="6345754479992817351" at="87,54,88,42" concept="8" />
+      <node id="6345754479992685568" at="93,0,94,0" concept="11" trace="Simulation$Gw" />
+      <node id="6345754479992685568" at="97,0,98,0" concept="11" trace="name$MnvL" />
+      <node id="6345754479992685568" at="98,0,99,0" concept="11" trace="compileInMPS$2Q_X" />
+      <node id="6345754479992685568" at="39,5,42,5" concept="5" />
+      <node id="6062668769033909763" at="49,0,52,0" concept="1" trace="ProducerPart_NodeSimulation_d1i8dk_a#(Lcom/intellij/execution/configurations/ConfigurationFactory;)V" />
+      <node id="6345754479992807993" at="60,73,63,7" concept="5" />
+      <node id="6062668769033909763" at="75,131,78,7" concept="5" />
+      <node id="6345754479992817351" at="87,0,90,0" concept="12" trace="isEmptyString#(Ljava/lang/String;)Z" />
+      <node id="6345754479992685568" at="34,82,38,7" concept="5" />
+      <node id="6062668769033909763" at="53,0,57,0" concept="6" trace="isApplicable#(Ljava/lang/Object;)Z" />
+      <node id="6062668769033909763" at="83,0,87,0" concept="6" trace="clone#()Ljetbrains/mps/samples/Physics/execution/java/plugin/Java_Producer/ProducerPart_NodeSimulation_d1i8dk_a;" />
+      <node id="6345754479992685568" at="33,55,39,5" concept="4" />
+      <node id="6062668769033909763" at="74,0,82,0" concept="6" trace="isConfigurationFromContext#(Lcom/intellij/execution/configurations/RunConfiguration;Lcom/intellij/execution/actions/ConfigurationContext;)Z" />
+      <node id="6062668769033909763" at="58,0,73,0" concept="6" trace="doCreateConfiguration#(Lorg/jetbrains/mps/openapi/model/SNode;)Lcom/intellij/execution/configurations/RunConfigurationBase;" />
+      <node id="6345754479992685568" at="28,0,47,0" concept="12" trace="getProducers#(Lcom/intellij/execution/configurations/ConfigurationType;)Ljava/util/List;" />
+      <scope id="6345754479992685568" at="40,39,41,78" />
+      <scope id="6062668769033909763" at="49,92,50,34" />
+      <scope id="6062668769033909763" at="54,51,55,111" />
+      <scope id="6345754479992807995" at="61,210,62,20" />
+      <scope id="6062668769033909763" at="76,60,77,21" />
+      <scope id="6062668769033909763" at="84,57,85,66" />
+      <scope id="6345754479992817351" at="87,54,88,42" />
+      <scope id="6345754479992685568" at="35,56,37,14" />
+      <scope id="6062668769033909763" at="49,0,52,0">
+        <var name="configurationFactory" id="6062668769033909763" />
+      </scope>
+      <scope id="6345754479992817351" at="87,0,90,0">
+        <var name="str" id="6345754479992817351" />
+      </scope>
+      <scope id="6345754479992685568" at="34,82,38,7" />
+      <scope id="6062668769033909763" at="53,0,57,0">
+        <var name="source" id="6062668769033909763" />
+      </scope>
+      <scope id="6062668769033909763" at="83,0,87,0" />
+      <scope id="6062668769033909763" at="75,131,80,50">
+        <var name="configuration" id="6062668769033909763" />
+      </scope>
+      <scope id="6345754479992685568" at="33,55,39,5">
+        <var name="f" id="6345754479992685568" />
+      </scope>
+      <scope id="6062668769033909763" at="74,0,82,0">
+        <var name="configuration0" id="6062668769033909763" />
+        <var name="context" id="6062668769033909763" />
+      </scope>
+      <scope id="6062668769033909763" at="59,76,71,27">
+        <var name="configuration" id="6062668769033909796" />
+        <var name="parameters" id="6345754479992877415" />
+      </scope>
+      <scope id="6062668769033909763" at="58,0,73,0">
+        <var name="source" id="6062668769033909763" />
+      </scope>
+      <scope id="6345754479992685568" at="28,102,45,20">
+        <var name="configurationFactory" id="6345754479992685568" />
+        <var name="creators" id="6345754479992685568" />
+      </scope>
+      <scope id="6345754479992685568" at="28,0,47,0">
+        <var name="configurationType" id="6345754479992685568" />
+      </scope>
+      <unit id="6345754479992685568" at="92,0,95,0" name="jetbrains.mps.samples.Physics.execution.java.plugin.Java_Producer$CONCEPTS" />
+      <unit id="6345754479992685568" at="96,0,100,0" name="jetbrains.mps.samples.Physics.execution.java.plugin.Java_Producer$PROPS" />
+      <unit id="6062668769033909763" at="48,0,91,0" name="jetbrains.mps.samples.Physics.execution.java.plugin.Java_Producer$ProducerPart_NodeSimulation_d1i8dk_a" />
+      <unit id="6345754479992685568" at="26,0,101,0" name="jetbrains.mps.samples.Physics.execution.java.plugin.Java_Producer" />
+    </file>
+    <file name="RunConfigurationsInitializer_AppPluginPart.java">
+      <node id="6345754479992685568" at="33,51,34,100" concept="7" />
+      <node id="6345754479992685568" at="34,100,35,160" concept="2" />
+      <node id="6345754479992685568" at="36,101,37,61" concept="2" />
+      <node id="6345754479992685568" at="38,9,39,14" concept="0" />
+      <node id="6345754479992685568" at="35,160,38,9" concept="4" />
+      <node id="6345754479992685568" at="32,79,40,7" concept="5" />
+      <node id="6345754479992685568" at="31,178,41,5" concept="4" />
+      <scope id="6345754479992685568" at="36,101,37,61" />
+      <scope id="6345754479992685568" at="35,160,38,9">
+        <var name="producer" id="6345754479992685568" />
+      </scope>
+      <scope id="6345754479992685568" at="33,51,39,14">
+        <var name="configurationProducers" id="6345754479992685568" />
+      </scope>
+      <scope id="6345754479992685568" at="32,79,40,7" />
+      <scope id="6345754479992685568" at="31,178,41,5">
+        <var name="ext" id="6345754479992685568" />
+      </scope>
+    </file>
+  </root>
+</debug-info>
+

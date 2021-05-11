@@ -1333,6 +1333,20 @@
 */
 
         
+        function computeAirResistance1(context, dragCoef, airDensity, area) {
+          return {
+            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
+              
+              return {
+                linearForce: (context.entity.getVelocity().mul(((1 * 1)))).mul(-1).resize(((((0.5 * dragCoef) * airDensity) * area) * Math.pow(context.entity.getVelocity().length(), 2))),
+                moment: null,
+                applicationPoint: null,
+                forceMode: 16
+              };
+            })).compute())
+          };
+        }
+        
 class BaseObject1 extends Physics.PhysicalEntity {
           init() {
             (super["init"])();
@@ -1369,20 +1383,6 @@ class BaseObject1 extends Physics.PhysicalEntity {
             compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
               
               return computeInteractionForce1(context, ((it) => it.minus(context.entity).resize(((G * it.getMass()) * context.entity.getMass()) / Math.pow(context.entity.minus(it).length(), 2)))).compute();
-            })).compute())
-          };
-        }
-        
-        function computeAirResistance1(context, dragCoef, airDensity, area) {
-          return {
-            compute: (() => new Physics.ForceMapper(context, ((context, mapper) => {
-              
-              return {
-                linearForce: (context.entity.getVelocity().mul(((1 * 1)))).mul(-1).resize(((((0.5 * dragCoef) * airDensity) * area) * Math.pow(context.entity.getVelocity().length(), 2))),
-                moment: null,
-                applicationPoint: null,
-                forceMode: 16
-              };
             })).compute())
           };
         }
