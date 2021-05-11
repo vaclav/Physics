@@ -11,12 +11,15 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.internal.collections.runtime.IMapping;
+import jetbrains.mps.internal.collections.runtime.ISelector;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 
 public class DependenciesSolver {
@@ -44,7 +47,11 @@ public class DependenciesSolver {
             }
           });
         }
-      }).visitAll(new IVisitor<IMapping<SNode, List<SNode>>>() {
+      }).sort(new ISelector<IMapping<SNode, List<SNode>>, String>() {
+        public String select(IMapping<SNode, List<SNode>> it) {
+          return SPropertyOperations.getString(it.key(), PROPS.name$MnvL);
+        }
+      }, true).visitAll(new IVisitor<IMapping<SNode, List<SNode>>>() {
         public void visit(IMapping<SNode, List<SNode>> it) {
           // And add it to the list 
           ListSequence.fromList(selected).addElement(it.key());
@@ -74,6 +81,10 @@ public class DependenciesSolver {
     List<SNode> innerDeps = ListSequence.fromList(new ArrayList<SNode>());
     MapSequence.fromMap(dependencies).put(node, innerDeps);
     return innerDeps;
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class CONCEPTS {

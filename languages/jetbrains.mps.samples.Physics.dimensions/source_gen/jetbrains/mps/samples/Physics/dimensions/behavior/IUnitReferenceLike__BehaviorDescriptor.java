@@ -43,7 +43,15 @@ public final class IUnitReferenceLike__BehaviorDescriptor extends BaseBHDescript
     return ((SLinkOperations.getTarget(__thisNode__, LINKS.exponent$5qk) == null) ? new Rational(1) : Exponent__BehaviorDescriptor.rawValue_id3yBD53Ww3_k.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.exponent$5qk)));
   }
   /*package*/ static String listToString_id3L71doTUROP(@NotNull SAbstractConcept __thisConcept__, List<SNode> units) {
-    Iterable<String> seq = ListSequence.fromList(units).select(new ISelector<SNode, String>() {
+    Iterable<String> seq = ListSequence.fromList(units).sort(new ISelector<SNode, Rational>() {
+      public Rational select(SNode it) {
+        return (Rational) IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it);
+      }
+    }, false).alsoSort(new ISelector<SNode, String>() {
+      public String select(SNode it) {
+        return SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.unit$5Sm), PROPS.name$MnvL);
+      }
+    }, true).select(new ISelector<SNode, String>() {
       public String select(SNode it) {
         return SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.unit$5Sm), PROPS.name$MnvL) + (((SLinkOperations.getTarget(it, LINKS.exponent$5qk) == null) ? "" : "^" + IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it)));
       }
