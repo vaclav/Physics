@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="jetbrains.mps.samples.Physics.execution.java" uuid="b2d2fbee-861c-41c0-9112-8e561ab167ca" moduleVersion="0" compileInMPS="true">
+<solution name="jetbrains.mps.samples.Physics.execution.java" uuid="b2d2fbee-861c-41c0-9112-8e561ab167ca" moduleVersion="0" pluginKind="PLUGIN_EDITOR" compileInMPS="true">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />

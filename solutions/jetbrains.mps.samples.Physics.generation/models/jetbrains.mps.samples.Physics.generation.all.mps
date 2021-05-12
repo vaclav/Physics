@@ -59,10 +59,10 @@
       </node>
     </node>
     <node concept="10T23i" id="2QVH4jdF61O" role="2VgMA7">
-      <ref role="10T23l" to="gt0k:36QeQ7wk363" resolve="JavaPhysics" />
+      <ref role="10T23l" to="ukfv:36QeQ7wk3zQ" resolve="JsPhysics" />
     </node>
     <node concept="NozSJ" id="2QVH4jdF63j" role="2VgMA7">
-      <ref role="NozSM" to="ukfv:36QeQ7wk3zQ" resolve="JsPhysics" />
+      <ref role="NozSM" to="gt0k:36QeQ7wk363" resolve="JavaPhysics" />
     </node>
   </node>
 </model>

@@ -44,10 +44,12 @@
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="1225271369338" name="jetbrains.mps.baseLanguage.structure.IsEmptyOperation" flags="nn" index="17RlXB" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
+      <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
@@ -80,6 +82,11 @@
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
+      </concept>
+      <concept id="1163668896201" name="jetbrains.mps.baseLanguage.structure.TernaryOperatorExpression" flags="nn" index="3K4zz7">
+        <child id="1163668914799" name="condition" index="3K4Cdx" />
+        <child id="1163668922816" name="ifTrue" index="3K4E3e" />
+        <child id="1163668934364" name="ifFalse" index="3K4GZi" />
       </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="8356039341262087992" name="line" index="1aUNEU" />
@@ -295,6 +302,39 @@
               </node>
             </node>
           </node>
+          <node concept="3cpWs8" id="wDLZIKvNAZ" role="3cqZAp">
+            <node concept="3cpWsn" id="wDLZIKvNB0" role="3cpWs9">
+              <property role="TrG5h" value="vmOptions" />
+              <node concept="17QB3L" id="wDLZIKvNwV" role="1tU5fm" />
+              <node concept="3K4zz7" id="wDLZIKvPJA" role="33vP2m">
+                <node concept="3clFbC" id="wDLZIKvPoI" role="3K4Cdx">
+                  <node concept="10Nm6u" id="wDLZIKvPGo" role="3uHU7w" />
+                  <node concept="2OqwBi" id="wDLZIKvNB1" role="3uHU7B">
+                    <node concept="37vLTw" id="wDLZIKvNB2" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5wgDxgbOr5B" resolve="parameters" />
+                    </node>
+                    <node concept="liA8E" id="wDLZIKvNB3" role="2OqNvi">
+                      <ref role="37wK5l" to="go48:14R2qyOCsVI" resolve="getVmOptions" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="Xl_RD" id="wDLZIKvQcO" role="3K4E3e" />
+                <node concept="3cpWs3" id="wDLZIKvPVd" role="3K4GZi">
+                  <node concept="Xl_RD" id="wDLZIKvQ4N" role="3uHU7w">
+                    <property role="Xl_RC" value=" " />
+                  </node>
+                  <node concept="2OqwBi" id="wDLZIKvPQW" role="3uHU7B">
+                    <node concept="37vLTw" id="wDLZIKvPQX" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5wgDxgbOr5B" resolve="parameters" />
+                    </node>
+                    <node concept="liA8E" id="wDLZIKvPQY" role="2OqNvi">
+                      <ref role="37wK5l" to="go48:14R2qyOCsVI" resolve="getVmOptions" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
           <node concept="3clFbF" id="5wgDxgbOf47" role="3cqZAp">
             <node concept="2OqwBi" id="5wgDxgbOlbj" role="3clFbG">
               <node concept="37vLTw" id="5wgDxgbOr5H" role="2Oq$k0">
@@ -304,15 +344,10 @@
                 <ref role="37wK5l" to="go48:14R2qyOCsVy" resolve="setVmOptions" />
                 <node concept="3cpWs3" id="5wgDxgbOsrX" role="37wK5m">
                   <node concept="Xl_RD" id="5wgDxgbOsGo" role="3uHU7w">
-                    <property role="Xl_RC" value=" --add-exports gluegen.rt/com.jogamp.common.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.glu=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.opengl=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.event=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.nativewindow.util=ALL-UNNAMED" />
+                    <property role="Xl_RC" value="--add-exports gluegen.rt/com.jogamp.common.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.glu=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.opengl=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.event=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.nativewindow.util=ALL-UNNAMED" />
                   </node>
-                  <node concept="2OqwBi" id="5wgDxgbOs1h" role="3uHU7B">
-                    <node concept="37vLTw" id="5wgDxgbOr9i" role="2Oq$k0">
-                      <ref role="3cqZAo" node="5wgDxgbOr5B" resolve="parameters" />
-                    </node>
-                    <node concept="liA8E" id="5wgDxgbOs7i" role="2OqNvi">
-                      <ref role="37wK5l" to="go48:14R2qyOCsVI" resolve="getVmOptions" />
-                    </node>
+                  <node concept="37vLTw" id="wDLZIKvNB4" role="3uHU7B">
+                    <ref role="3cqZAo" node="wDLZIKvNB0" resolve="vmOptions" />
                   </node>
                 </node>
               </node>

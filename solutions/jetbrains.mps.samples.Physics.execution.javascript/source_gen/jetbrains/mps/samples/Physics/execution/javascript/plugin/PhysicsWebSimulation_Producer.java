@@ -53,7 +53,7 @@ public final class PhysicsWebSimulation_Producer {
     @Override
     protected PhysicsWebSimulation_Configuration doCreateConfiguration(final SNode source) {
       setSourceElement(MPSPsiElement.createFor(source, getMpsProject()));
-      PhysicsWebSimulation_Configuration configuration = ((PhysicsWebSimulation_Configuration) getConfigurationFactory().createConfiguration("" + "Simulation " + SPropertyOperations.getString(source, PROPS.name$MnvL), getContext().getRunManager().getConfigurationTemplate(getConfigurationFactory()).getConfiguration()));
+      PhysicsWebSimulation_Configuration configuration = ((PhysicsWebSimulation_Configuration) getConfigurationFactory().createConfiguration("" + "Web Simulation " + SPropertyOperations.getString(source, PROPS.name$MnvL), getContext().getRunManager().getConfigurationTemplate(getConfigurationFactory()).getConfiguration()));
       configuration.getNodePointer().setNode(source);
       return configuration;
     }
@@ -81,7 +81,7 @@ public final class PhysicsWebSimulation_Producer {
       if ((ancestor == null)) {
         return null;
       }
-      PhysicsWebSimulation_Configuration configuration = ((PhysicsWebSimulation_Configuration) getConfigurationFactory().createConfiguration("" + "Simulation " + SPropertyOperations.getString(ancestor, PROPS.name$MnvL), getContext().getRunManager().getConfigurationTemplate(getConfigurationFactory()).getConfiguration()));
+      PhysicsWebSimulation_Configuration configuration = ((PhysicsWebSimulation_Configuration) getConfigurationFactory().createConfiguration("" + "Web Simulation " + SPropertyOperations.getString(ancestor, PROPS.name$MnvL), getContext().getRunManager().getConfigurationTemplate(getConfigurationFactory()).getConfiguration()));
       configuration.getNodePointer().setNode(ancestor);
       return configuration;
 

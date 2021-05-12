@@ -66,7 +66,8 @@ public final class Java_Producer {
 
       // Necessary parameters to get the simulation running on some environments 
       JavaRunParameters parameters = configuration.getRunParameters().getJavaParameters();
-      parameters.setVmOptions(parameters.getVmOptions() + " --add-exports gluegen.rt/com.jogamp.common.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.glu=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.opengl=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.event=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.nativewindow.util=ALL-UNNAMED");
+      String vmOptions = (parameters.getVmOptions() == null ? "" : parameters.getVmOptions() + " ");
+      parameters.setVmOptions(vmOptions + "--add-exports gluegen.rt/com.jogamp.common.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.glu=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.opengl=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.event=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.nativewindow.util=ALL-UNNAMED");
 
       return configuration;
     }
