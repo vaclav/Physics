@@ -162,20 +162,22 @@
       <concept id="7753544965996377997" name="jetbrains.mps.build.mps.structure.BuildMps_Branding" flags="ng" index="1zClus">
         <property id="3497141547781541445" name="minor" index="2OjLBK" />
         <property id="3497141547781541444" name="major" index="2OjLBL" />
+        <child id="6845119683729337285" name="progressY" index="27hAJg" />
         <child id="6845119683729294884" name="progressColor" index="27hGoL" />
+        <child id="7962467864633062782" name="progressHeight" index="2gqIGF" />
         <child id="922958177840117051" name="script" index="2gvbiD" />
         <child id="6108265972537182997" name="aboutScreen" index="2EqU2s" />
         <child id="6108265972537182996" name="splashScreen" index="2EqU2t" />
         <child id="6108265972537229337" name="buildNumber" index="2EteIg" />
-        <child id="6108265972537229339" name="icon16" index="2EteIi" />
-        <child id="6108265972537229338" name="icon32" index="2EteIj" />
         <child id="6108265972537372847" name="product" index="2EtHGA" />
         <child id="6108265972537372848" name="fullName" index="2EtHGT" />
         <child id="8795525031433238889" name="textColor" index="HFo83" />
-        <child id="781140262677761022" name="icon128" index="IvI4g" />
         <child id="1462305029084462472" name="buildDate" index="R$TG_" />
+        <child id="62678610895108195" name="svg_small" index="1hH5mY" />
+        <child id="62678610895108142" name="svg" index="1hH5nN" />
         <child id="772379520210716142" name="welcomeLogo" index="3vi$VU" />
         <child id="1084163669516664629" name="copyrightForeground" index="3KTKoD" />
+        <child id="1084163669516664664" name="linkColor" index="3KTKp4" />
         <child id="1084163669516639223" name="foreground" index="3KTYbF" />
       </concept>
     </language>
@@ -188,25 +190,9 @@
       <property role="2OjLBK" value="0" />
       <property role="TrG5h" value="MPS" />
       <property role="2OjLBL" value="1" />
-      <node concept="55IIr" id="7pqkugVxHGJ" role="3vi$VU">
-        <node concept="2Ry0Ak" id="7pqkugVxHGK" role="iGT6I">
-          <property role="2Ry0Am" value="icons" />
-          <node concept="2Ry0Ak" id="7pqkugVxHGL" role="2Ry0An">
-            <property role="2Ry0Am" value="logo.png" />
-          </node>
-        </node>
-      </node>
       <node concept="3_J27D" id="7pqkugVxHGM" role="2EteIg">
         <node concept="3Mxwey" id="7pqkugVxHGN" role="3MwsjC">
           <ref role="3Mxwex" node="7pqkugVxHGx" resolve="build.number" />
-        </node>
-      </node>
-      <node concept="55IIr" id="7pqkugVxHGO" role="2EteIi">
-        <node concept="2Ry0Ak" id="7pqkugVxHGP" role="iGT6I">
-          <property role="2Ry0Am" value="icons" />
-          <node concept="2Ry0Ak" id="6Fyo0ModWZ3" role="2Ry0An">
-            <property role="2Ry0Am" value="Physics16.png" />
-          </node>
         </node>
       </node>
       <node concept="3_J27D" id="7pqkugVxHGR" role="2EtHGA">
@@ -217,14 +203,6 @@
       <node concept="3_J27D" id="7pqkugVxHGT" role="2EtHGT">
         <node concept="3Mxwew" id="7pqkugVxHGU" role="3MwsjC">
           <property role="3MwjfP" value="Physics" />
-        </node>
-      </node>
-      <node concept="55IIr" id="7pqkugVxHGV" role="2EteIj">
-        <node concept="2Ry0Ak" id="7pqkugVxHGW" role="iGT6I">
-          <property role="2Ry0Am" value="icons" />
-          <node concept="2Ry0Ak" id="6Fyo0ModWZ5" role="2Ry0An">
-            <property role="2Ry0Am" value="Physics32.png" />
-          </node>
         </node>
       </node>
       <node concept="3_J27D" id="7pqkugVxHGY" role="R$TG_">
@@ -273,11 +251,42 @@
           <property role="3MwjfP" value="FFFFFF" />
         </node>
       </node>
-      <node concept="55IIr" id="6Fyo0Mok0X0" role="IvI4g">
-        <node concept="2Ry0Ak" id="6Fyo0Mok0X3" role="iGT6I">
+      <node concept="NbPM2" id="3yaHT7maFv6" role="2gqIGF">
+        <node concept="3Mxwew" id="3yaHT7maFv9" role="3MwsjC">
+          <property role="3MwjfP" value="4" />
+        </node>
+      </node>
+      <node concept="NbPM2" id="3yaHT7maFEk" role="27hAJg">
+        <node concept="3Mxwew" id="3yaHT7maFEj" role="3MwsjC">
+          <property role="3MwjfP" value="394" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="3yaHT7maG0B" role="3KTKp4">
+        <node concept="3Mxwew" id="3yaHT7maG0D" role="3MwsjC">
+          <property role="3MwjfP" value="589BF2" />
+        </node>
+      </node>
+      <node concept="55IIr" id="3yaHT7maHm9" role="3vi$VU">
+        <node concept="2Ry0Ak" id="3yaHT7maHmd" role="iGT6I">
           <property role="2Ry0Am" value="icons" />
-          <node concept="2Ry0Ak" id="6Fyo0Mok0X8" role="2Ry0An">
-            <property role="2Ry0Am" value="Physics128.png" />
+          <node concept="2Ry0Ak" id="3yaHT7maHCi" role="2Ry0An">
+            <property role="2Ry0Am" value="logo.png" />
+          </node>
+        </node>
+      </node>
+      <node concept="55IIr" id="3yaHT7maHCk" role="1hH5nN">
+        <node concept="2Ry0Ak" id="3yaHT7maHCn" role="iGT6I">
+          <property role="2Ry0Am" value="icons" />
+          <node concept="2Ry0Ak" id="3yaHT7maHCs" role="2Ry0An">
+            <property role="2Ry0Am" value="project.svg" />
+          </node>
+        </node>
+      </node>
+      <node concept="55IIr" id="3yaHT7maHCu" role="1hH5mY">
+        <node concept="2Ry0Ak" id="3yaHT7maHCx" role="iGT6I">
+          <property role="2Ry0Am" value="icons" />
+          <node concept="2Ry0Ak" id="3yaHT7maHCA" role="2Ry0An">
+            <property role="2Ry0Am" value="project_16.svg" />
           </node>
         </node>
       </node>
@@ -417,7 +426,7 @@
       <node concept="aVJcg" id="7pqkugVxHGy" role="aVJcv">
         <node concept="NbPM2" id="7pqkugVxHGz" role="aVJcq">
           <node concept="3Mxwew" id="7pqkugVxHG$" role="3MwsjC">
-            <property role="3MwjfP" value="202.SNAPSHOT" />
+            <property role="3MwjfP" value="203.0" />
           </node>
         </node>
       </node>

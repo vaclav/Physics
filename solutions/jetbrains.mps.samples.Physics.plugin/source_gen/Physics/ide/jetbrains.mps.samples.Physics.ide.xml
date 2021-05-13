@@ -6,7 +6,7 @@
   <tstamp>
     <format property="date" pattern="yyyyMMdd" />
   </tstamp>
-  <property name="build.number" value="202.SNAPSHOT" />
+  <property name="build.number" value="203.0" />
   <property name="mps_home" location="" />
   <property name="jetbrains.mps.samples.Physics.home" location="${basedir}" />
   <property name="iets3.github.opensource.artifacts" location="${basedir}/artifacts/org.iets3.opensource" />
@@ -93,9 +93,9 @@
       <component>
         <version major="1" minor="0" eap="false" />
         <build number="${build.number}" date="${date}" />
-        <logo url="/splash.png" textcolor="FFFFFF" progressColor="FFFFFF" />
-        <about url="/about.png" foreground="FFFFFF" copyrightForeground="FFFFFF" />
-        <icon size32="/Physics32.png" size16="/Physics16.png" size128="/Physics128.png" />
+        <logo url="/splash.png" textcolor="FFFFFF" progressColor="FFFFFF" progressY="394" progressHeight="4" />
+        <about url="/about.png" foreground="FFFFFF" copyrightForeground="FFFFFF" linkColor="589BF2" />
+        <icon svg="/project.svg" svg-small="/project_16.svg" />
         <package code="code" />
         <names product="Physics" fullname="Physics" script="physics" />
         
@@ -107,9 +107,8 @@
       </component>
     </echoxml>
     <jar destfile="${build.layout}/lib/branding.jar" duplicate="preserve">
-      <fileset file="${basedir}/icons/Physics16.png" />
-      <fileset file="${basedir}/icons/Physics32.png" />
-      <fileset file="${basedir}/icons/Physics128.png" />
+      <fileset file="${basedir}/icons/project.svg" />
+      <fileset file="${basedir}/icons/project_16.svg" />
       <fileset file="${basedir}/icons/logo.png" />
       <fileset file="${basedir}/icons/splash.png" />
       <fileset file="${basedir}/icons/about.png" />
