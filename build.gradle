@@ -8,18 +8,15 @@ buildscript {
     }
 }
 
-// Git
 plugins {
     id 'base'
     id 'maven-publish'
-	id 'org.ajoberstar.grgit' version '4.1.0' apply false
-    id "de.undercouch.download" version "4.1.1"
 }
 
-// Versions
-ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersion') : '2020.3'
+// Versions (to update: mpsVersion with the target MPS version and ecmascript4mpsVersion with the commit number or tag available on https://jitpack.io/#mar9000/ecmascript4mps)
+ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersion') : '2021.1'
 ext.iets3Version = project.hasProperty("iets3Version") ? project.property('iets3Version') : "$mpsVersion.+"
-ext.ecmascript4mpsVersion = project.hasProperty("ecmascript4mpsVersion") ? project.property('ecmascript4mpsVersion') : "development-SNAPSHOT"
+ext.ecmascript4mpsVersion = project.hasProperty("ecmascript4mpsVersion") ? project.property('ecmascript4mpsVersion') : "91cd8f13ef"
 
 // Optional properties
 def mpsDir = project.hasProperty("mpsDir") ? project.property('mpsDir') : "$buildDir/mps"
@@ -48,9 +45,6 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
-// Git
-import org.ajoberstar.grgit.Grgit
-
 // Make BuildLanguages and GenerateLibrariesXml available
 import de.itemis.mps.gradle.*
 
@@ -61,7 +55,6 @@ ext.artifactsDir = file("$rootDir/artifacts")
 
 // ==== resolving java 11 ====
 def jdkHome
-def downloadJdk = false
 
 
 // Sdk specified
@@ -83,42 +76,10 @@ else if (project.hasProperty("mpsDir") && file("$mpsDir/jbr").exists()) {
 }
 
 else {
-    // No option left but to download it :c
-    // We set a flag so we wait for a task to actually need it
-    downloadJdk = true
-	jdkHome = "$buildDir/jbrsdk"
+    // No way to get it working that way, in previous releases it was possible to download JDK from bintray
+    // but since it moved to teamcity, it requires authentication
+    throw new GradleException("unable to locate JDK11 environment, please specify path to one using -Djdk")
 }
-
-task resolveJdk(type: Download) {
-	doFirst {
-	    println "Java 11, which is required to build dependencies, was not found."
-	    println "We will download one for you."
-		mkdir file(jdkHome)
-	}
-	
-	def arch = System.properties['sun.arch.data.model'].equals("64") ? "x64" : "x86"
-	def os
-	if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-        os = "windows"
-    } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-    	os = "linux"
-    } else {
-    	os = "osx"
-    }
-
-    def filename = "jbrsdk-11_0_10-$os-$arch-b1428.2.tar.gz"
-
-    src "https://dl.bintray.com/jetbrains/intellij-jbr/$filename"
-	dest "$buildDir/$filename"
-	overwrite false
-
-}
-
-task unpackJdk(type: Copy, dependsOn: resolveJdk) {
-    from tarTree(resources.gzip(resolveJdk.dest))
-    into "$buildDir"
-}
-
 
 // Default arguments for ant scripts
 def buildScriptClasspath = project.configurations.junitAnt.fileCollection { true } +
@@ -138,7 +99,7 @@ task resolveMps(type: Copy) {
 // Project
 version = "$mpsVersion.0"
 
-// Args to the builds scripts, contains both home and artifacts directory 
+// Args to the builds scripts, contains both home and artifacts directory
 def defaultScriptArgs = [
 	'mps_home'                          : mpsDir,
 
@@ -177,21 +138,18 @@ task resolveArtifacts(dependsOn: [packageJavaRuntime, resolveMpsArtifacts]) { }
 // ===== build artifacts =====
 task buildLanguages(type: BuildLanguages, dependsOn: [resolveArtifacts]) {
     if (!project.hasProperty("mpsDir")) dependsOn "resolveMps"
-    if (downloadJdk) dependsOn "unpackJdk"
 
 	script "$rootDir/build.xml"
 }
 
 task buildIde(type: BuildLanguages, dependsOn: [buildLanguages]) {
     if (!project.hasProperty("mpsDir")) dependsOn "resolveMps"
-    if (downloadJdk) dependsOn "unpackJdk"
 
 	script "$rootDir/buildIde.xml"
 }
 
 task buildDistribution(type: BuildLanguages, dependsOn: [buildIde]) {
     if (!project.hasProperty("mpsDir")) dependsOn "resolveMps"
-    if (downloadJdk) dependsOn "unpackJdk"
 
 	script "$rootDir/buildDistribution.xml"
     targets("assemble")
