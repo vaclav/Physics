@@ -43,7 +43,7 @@ public class World implements DGeom.DNearCallback, Renderable {
     this.space = OdeHelper.createHashSpace();
     this.jointGroup = OdeHelper.createJointGroup();
 
-    // Init colliders 
+    // Init colliders
     if (!(colliderInitialized)) {
       colliderInitialized = true;
       DxGeom.dInitColliders();
@@ -90,17 +90,17 @@ public class World implements DGeom.DNearCallback, Renderable {
     final DGeom firstGeom = (first == e1 ? g1 : g2);
     final DGeom secondGeom = (firstGeom == g1 ? g2 : g1);
 
-    // React with the reaction with highest priority first 
+    // React with the reaction with highest priority first
     final CollisionReaction firstReaction = first.properties().getCollisionReaction();
     firstReaction.react(this, first, firstGeom, second, secondGeom);
 
-    // If the first reaction allow the second one to be performed as well 
+    // If the first reaction allow the second one to be performed as well
     final CollisionReaction secondReaction = second.properties().getCollisionReaction();
     if (!(firstReaction.preventDifferentReaction()) && !(firstReaction.equals(secondReaction))) {
       secondReaction.react(this, second, secondGeom, first, firstGeom);
     }
 
-    // Pause world if required 
+    // Pause world if required
     if (first.properties().isPauseOnCollision() || second.properties().isPauseOnCollision()) {
       this.setPaused(true);
     }

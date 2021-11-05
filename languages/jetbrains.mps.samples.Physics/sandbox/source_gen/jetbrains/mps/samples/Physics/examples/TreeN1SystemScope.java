@@ -27,16 +27,16 @@ public class TreeN1SystemScope extends SystemScope {
 
   public TreeN1SystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final TreeN1SystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     O6 = withEntity(new O8PhysicalEntity(world, "O7", scope));
     One2 = withEntity(new TreeN2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("49.99998378626345").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("86.60254973944701").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.axisAngleToMatrix(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))), ((Number) (AH.mul(((Number) new BigInteger("30")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN)))))))));
     Two2 = withEntity(new TreeN2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("100.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
     Three2 = withEntity(new TreeN2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("-49.99998378626345").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("86.60254973944701").setScale(14, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.axisAngleToMatrix(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("1")), ((Number) new BigInteger("0"))), ((Number) (AH.mul(((Number) new BigInteger("-30")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN)))))))));
 
-    // Initialize them 
+    // Initialize them
     O6.init(this, world);
   }
 
@@ -48,18 +48,18 @@ public class TreeN1SystemScope extends SystemScope {
 
     @Override
     public void init(final TreeN1SystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       O8PhysicalEntity currentEntity = this;
 
-      // Set static properties of O 
+      // Set static properties of O
       this.setMass(((Number) new BigInteger("50")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of O 
+      //  Forces and visual of the parent objects of O
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(120, 190, 90), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("10")), ((Number) new BigInteger("1"))))));
       this.getForces().addAll(Arrays.asList());

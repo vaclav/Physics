@@ -31,7 +31,7 @@ public class CompositeRendererCallback implements Renderer.RendererCallback {
 
   @Override
   public void keyPressed(int code) {
-    // Space bar 
+    // Space bar
     if (code == 32) {
       boolean paused = simulations[0].getWorld().isPaused();
       for (int i = 0; i < simulations.length; i++) {

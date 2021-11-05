@@ -33,7 +33,7 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
     switch (conceptIndex.index(cncpt)) {
       case 0:
         if (true) {
-          // concept 
+          // concept
           intentions = new IntentionFactory[5];
           intentions[0] = new ResolveToCartesian_Intention();
           intentions[1] = new ResolveToRelative_Intention();
@@ -44,7 +44,7 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
         break;
       case 1:
         if (true) {
-          // concept 
+          // concept
           intentions = new IntentionFactory[1];
           intentions[0] = new ApplyOverrideRule_Intention();
         }

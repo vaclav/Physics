@@ -42,19 +42,19 @@ public class StyleDefinition_Constraints extends BaseConstraintsDescriptor {
   }
   private static boolean staticCanBeAParent(SNode node, SNode childNode, SAbstractConcept childConcept, SContainmentLink link) {
     if (Objects.equals(link, LINKS.value$c2jY)) {
-      // If the key specify specific child node types 
+      // If the key specify specific child node types
       {
         final SNode specificUser = SLinkOperations.getTarget(node, LINKS.key$8IFS);
         if (SNodeOperations.isInstanceOf(specificUser, CONCEPTS.IUseSpecificExpressions$Mk)) {
           SAbstractConcept specificConcept = IUseSpecificExpressions__BehaviorDescriptor.getSpecificExpressionConcept_id1AxJyXYWKCb.invoke(specificUser);
 
-          // Take that into account 
+          // Take that into account
           return StylesHelper.isExpressionOfConcept(childConcept, specificConcept);
         }
       }
     }
 
-    // Otherwise isok :) 
+    // Otherwise isok :)
     return true;
   }
   private static final SNodePointer canBeParentBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "1846966433401209155");

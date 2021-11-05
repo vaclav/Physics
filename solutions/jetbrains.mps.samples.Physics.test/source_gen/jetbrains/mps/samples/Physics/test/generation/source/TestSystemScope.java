@@ -20,13 +20,13 @@ public class TestSystemScope extends SystemScope {
 
   public TestSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final TestSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     A = withEntity(new A2PhysicalEntity(world, "A1", scope));
 
-    // Initialize them 
+    // Initialize them
     A.init(this, world);
   }
 
@@ -38,18 +38,18 @@ public class TestSystemScope extends SystemScope {
 
     @Override
     public void init(final TestSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       A2PhysicalEntity currentEntity = this;
 
-      // Set static properties of A 
+      // Set static properties of A
       this.setMass(((Number) new BigInteger("1")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.4472135954999579392818347337462553").setScale(34, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0E-35").setScale(35, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.8944271909999158785636694674925106").setScale(34, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("2.628655560595668030128345424239383").setScale(33, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0E-69").setScale(69, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("-4.253254041760199660907702485315056").setScale(33, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
 
-      //  Forces and visual of the parent objects of A 
+      //  Forces and visual of the parent objects of A
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }

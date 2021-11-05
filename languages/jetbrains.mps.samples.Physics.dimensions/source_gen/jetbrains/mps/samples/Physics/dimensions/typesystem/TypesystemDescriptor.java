@@ -252,36 +252,36 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
       SNode dimension = SNodeOperations.as(rightOperandType, CONCEPTS.DimensionType$8R);
 
-      // Compute numerator from value then swap values 
+      // Compute numerator from value then swap values
       Rational exponentValue = new Rational(SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.as(leftOperandType, CONCEPTS.NumberType$n), LINKS.range$RnOa), PROPS.min$7OOG));
       exponentValue = new Rational(exponentValue.denom(), exponentValue.numer());
 
-      // Add exponent to units 
+      // Add exponent to units
       Map<SNode, Rational> unitMap = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(dimension, LINKS.units$qq1O));
       DimensionMapsHelper.multiply(unitMap, exponentValue);
 
-      // Compute final dimension type 
+      // Compute final dimension type
       return createDimensionType_3ist9o_a11a1c(DimensionMapsHelper.mapToReferences(unitMap), SNodeOperations.as(TypeChecker.getInstance().getRulesManager().getOperationType(operation, leftOperandType, SLinkOperations.getTarget(dimension, LINKS.baseType$mnRO)), CONCEPTS.Type$WK));
     }
     public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
-      // Left operand must be a number 
+      // Left operand must be a number
       {
         final SNode number = leftOperandType;
         if (SNodeOperations.isInstanceOf(number, CONCEPTS.NumberType$n)) {
-          // Capabilities of both types 
+          // Capabilities of both types
           boolean caps = (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$WK));
 
-          // Dimension on the right 
+          // Dimension on the right
           boolean dimension = DimensionTypeHelper.isDimension(rightOperandType);
 
-          // Singleton range (min = max) 
+          // Singleton range (min = max)
           Tuples._2<Double, Double> range = NumberType__BehaviorDescriptor.doubleRange_id3p6$WoEzKI5.invoke(number);
 
           return (double) range._0() == (double) range._1() && dimension && caps;
         }
       }
 
-      // Otherwise cannot compute units (as influenced by exponent) 
+      // Otherwise cannot compute units (as influenced by exponent)
       return false;
     }
     @Override
@@ -350,32 +350,32 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       SNode dimension = SNodeOperations.as(leftOperandType, CONCEPTS.DimensionType$8R);
       Rational exponentValue = new Rational(SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.as(rightOperandType, CONCEPTS.NumberType$n), LINKS.range$RnOa), PROPS.min$7OOG));
 
-      // Add exponent to units 
+      // Add exponent to units
       Map<SNode, Rational> unitMap = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(dimension, LINKS.units$qq1O));
       DimensionMapsHelper.multiply(unitMap, exponentValue);
 
-      // Compute final dimension type 
+      // Compute final dimension type
       return createDimensionType_3ist9o_a8a1e(DimensionMapsHelper.mapToReferences(unitMap), SNodeOperations.as(TypeChecker.getInstance().getRulesManager().getOperationType(operation, SLinkOperations.getTarget(dimension, LINKS.baseType$mnRO), rightOperandType), CONCEPTS.Type$WK));
 
     }
     public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
-      // Right operand must be a number 
+      // Right operand must be a number
       {
         final SNode number = rightOperandType;
         if (SNodeOperations.isInstanceOf(number, CONCEPTS.NumberType$n)) {
-          // Capabilities of both types 
+          // Capabilities of both types
           boolean caps = (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$WK));
 
-          // Dimension on the right 
+          // Dimension on the right
           boolean dimension = DimensionTypeHelper.isDimension(leftOperandType);
 
-          // Singleton range (min = max) 
+          // Singleton range (min = max)
           Tuples._2<Double, Double> range = NumberType__BehaviorDescriptor.doubleRange_id3p6$WoEzKI5.invoke(number);
           return (double) range._0() == (double) range._1() && dimension && caps;
         }
       }
 
-      // Otherwise cannot compute units (as influenced by exponent) 
+      // Otherwise cannot compute units (as influenced by exponent)
       return false;
     }
     @Override

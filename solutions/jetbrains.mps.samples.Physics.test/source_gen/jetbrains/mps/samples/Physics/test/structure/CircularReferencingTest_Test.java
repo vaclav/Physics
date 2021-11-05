@@ -71,7 +71,6 @@ public class CircularReferencingTest_Test extends BaseTransformationTest {
       super(owner);
     }
 
-
     public void test_NodeUnnamedErrorCheck911298080278844963() throws Exception {
       SNode nodeToCheck = getRealNodeById("911298080278844961");
       SNode operation = getRealNodeById("911298080278844963");

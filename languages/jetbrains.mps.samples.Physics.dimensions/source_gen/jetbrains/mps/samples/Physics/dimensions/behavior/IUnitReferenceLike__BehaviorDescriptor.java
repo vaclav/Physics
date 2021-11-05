@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.nevec.rjm.Rational;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import org.jetbrains.mps.openapi.model.SNode;
@@ -31,8 +30,8 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class IUnitReferenceLike__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L, "jetbrains.mps.samples.Physics.dimensions.structure.IUnitReferenceLike");
 
-  public static final SMethod<Rational> getRawExponent_id3031Xnpas0C = new SMethodBuilder<Rational>(new SJavaCompoundTypeImpl(Rational.class)).name("getRawExponent").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3031Xnpas0C").build();
-  public static final SMethod<String> listToString_id3L71doTUROP = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("listToString").modifiers(SModifiersImpl.create(1, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3L71doTUROP").build(SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
+  public static final SMethod<Rational> getRawExponent_id3031Xnpas0C = new SMethodBuilder<Rational>(new SJavaCompoundTypeImpl(Rational.class)).name("getRawExponent").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("3031Xnpas0C").build();
+  public static final SMethod<String> listToString_id3L71doTUROP = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("listToString").modifiers(1, AccessPrivileges.PUBLIC).concept(CONCEPT).id("3L71doTUROP").build(SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getRawExponent_id3031Xnpas0C, listToString_id3L71doTUROP);
 

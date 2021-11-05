@@ -28,16 +28,16 @@ public class CollisionWorldSystemScope extends SystemScope {
 
   public CollisionWorldSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final CollisionWorldSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     A = withEntity(new A2PhysicalEntity(world, "A1", scope));
     B = withEntity(new B2PhysicalEntity(world, "B1", scope));
     C = withEntity(new C2PhysicalEntity(world, "C1", scope));
     D = withEntity(new D2PhysicalEntity(world, "D1", scope));
 
-    // Initialize them 
+    // Initialize them
     A.init(this, world);
     B.init(this, world);
     C.init(this, world);
@@ -52,18 +52,18 @@ public class CollisionWorldSystemScope extends SystemScope {
 
     @Override
     public void init(final CollisionWorldSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       A2PhysicalEntity currentEntity = this;
 
-      // Set static properties of A 
+      // Set static properties of A
       this.setMass(((Number) new BigInteger("200")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("-400")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of A 
+      //  Forces and visual of the parent objects of A
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))))));
       propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, true);
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.MERGE.reaction);
@@ -79,18 +79,18 @@ public class CollisionWorldSystemScope extends SystemScope {
 
     @Override
     public void init(final CollisionWorldSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       B2PhysicalEntity currentEntity = this;
 
-      // Set static properties of B 
+      // Set static properties of B
       this.setMass(((Number) new BigInteger("300")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("-300")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.15").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
 
-      //  Forces and visual of the parent objects of B 
+      //  Forces and visual of the parent objects of B
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), null));
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigDecimal("30.0").setScale(1, RoundingMode.DOWN))));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))))));
@@ -105,18 +105,18 @@ public class CollisionWorldSystemScope extends SystemScope {
 
     @Override
     public void init(final CollisionWorldSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       C2PhysicalEntity currentEntity = this;
 
-      // Set static properties of C 
+      // Set static properties of C
       this.setMass(((Number) new BigInteger("500")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("-200")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
 
-      //  Forces and visual of the parent objects of C 
+      //  Forces and visual of the parent objects of C
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
       propertiesBuilder.set(PropKey.EMIT_LIGHT, true);
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))));
@@ -131,18 +131,18 @@ public class CollisionWorldSystemScope extends SystemScope {
 
     @Override
     public void init(final CollisionWorldSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       D2PhysicalEntity currentEntity = this;
 
-      // Set static properties of D 
+      // Set static properties of D
       this.setMass(((Number) new BigInteger("400")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of D 
+      //  Forces and visual of the parent objects of D
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1"))))));
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 0, 255), null));
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);

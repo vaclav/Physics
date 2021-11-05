@@ -20,13 +20,13 @@ public class RotatingWorldSystemScope extends SystemScope {
 
   public RotatingWorldSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final RotatingWorldSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     CollisionWorld1 = withEntity(new CollisionWorldSystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))), getAbsoluteInitialVelocity(InternalVector.ZERO), VectorHelper.addRotation(initialRotation, RotationHelper.eulerAnglesToMatrix(((BigDecimal) ((Number) (AH.mul(AH.div(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("4"))), ((Number) new BigInteger("1")))))).negate(), ((Number) new BigInteger("0")), ((Number) (AH.mul(AH.div(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("2"))), ((Number) new BigInteger("1")))))))));
 
-    // Initialize them 
+    // Initialize them
   }
 
 

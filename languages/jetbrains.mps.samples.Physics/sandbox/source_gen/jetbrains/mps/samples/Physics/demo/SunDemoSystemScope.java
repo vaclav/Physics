@@ -23,14 +23,14 @@ public class SunDemoSystemScope extends SystemScope {
 
   public SunDemoSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final SunDemoSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     Sun = withEntity(new Sun2PhysicalEntity(world, "Sun1", scope));
     EarthDemo1 = withEntity(new EarthDemoSystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("100.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("20.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), initialRotation));
 
-    // Initialize them 
+    // Initialize them
     Sun.init(this, world);
   }
 
@@ -42,19 +42,19 @@ public class SunDemoSystemScope extends SystemScope {
 
     @Override
     public void init(final SunDemoSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Sun2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Sun 
+      // Set static properties of Sun
       this.setMass(((Number) new BigInteger("5000")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
       this.getBody().setAngularVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))))), ((Number) new BigInteger("0")))));
 
-      //  Forces and visual of the parent objects of Sun 
+      //  Forces and visual of the parent objects of Sun
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.TEXTURE, new ImageTexture("https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Map_of_the_full_sun.jpg/1024px-Map_of_the_full_sun.jpg"));
       propertiesBuilder.set(PropKey.EMIT_LIGHT, true);
       this.getForces().addAll(Arrays.asList());

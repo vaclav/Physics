@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -23,7 +22,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class IUnit__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d40ceL, "jetbrains.mps.samples.Physics.dimensions.structure.IUnit");
 
-  public static final SMethod<SNode> getDimension_id3G2R3fdY2Qo = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDimension").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3G2R3fdY2Qo").build();
+  public static final SMethod<SNode> getDimension_id3G2R3fdY2Qo = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDimension").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("3G2R3fdY2Qo").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDimension_id3G2R3fdY2Qo);
 

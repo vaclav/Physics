@@ -21,13 +21,13 @@ public class TreeLeafSystemScope extends SystemScope {
 
   public TreeLeafSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final TreeLeafSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     EndLeaf = withEntity(new EndLeaf2PhysicalEntity(world, "EndLeaf1", scope));
 
-    // Initialize them 
+    // Initialize them
     EndLeaf.init(this, world);
   }
 
@@ -39,18 +39,18 @@ public class TreeLeafSystemScope extends SystemScope {
 
     @Override
     public void init(final TreeLeafSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       EndLeaf2PhysicalEntity currentEntity = this;
 
-      // Set static properties of EndLeaf 
+      // Set static properties of EndLeaf
       this.setMass(((Number) new BigInteger("50")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of EndLeaf 
+      //  Forces and visual of the parent objects of EndLeaf
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(70, 190, 190), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("7")), ((Number) new BigInteger("1"))))));
       this.getForces().addAll(Arrays.asList());

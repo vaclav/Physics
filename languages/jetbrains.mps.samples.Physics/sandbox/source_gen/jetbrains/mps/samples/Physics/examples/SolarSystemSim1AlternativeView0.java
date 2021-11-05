@@ -20,7 +20,7 @@ public class SolarSystemSim1AlternativeView0 extends SolarSystemSimSimulation {
   protected void initScope(World world) {
     super.initScope(world);
 
-    // Override properties 
+    // Override properties
     scope.EarthNested.Earth3.getPropertiesBuilder().set(PropKey.TRACE, new FiniteTraceHandler(new Color(0, 0, 255)));
   }
 

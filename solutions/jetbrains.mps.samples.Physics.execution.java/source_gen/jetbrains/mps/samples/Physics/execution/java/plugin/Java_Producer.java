@@ -27,10 +27,10 @@ public final class Java_Producer {
 
   public static List<RuntimeConfigurationProducer> getProducers(ConfigurationType configurationType) {
     ConfigurationFactory configurationFactory = null;
-    // assume the one with id matching configuration kind is the primary one. 
-    // In fact, though technically we support more that one factory per type (aka 'foreign' factories), all factories 
-    // bear same id (due to overlook of template author, I believe), and we effectively take the fist registerd one, which I don't 
-    // mind as 'foreign' factories do not work anyway. 
+    // assume the one with id matching configuration kind is the primary one.
+    // In fact, though technically we support more that one factory per type (aka 'foreign' factories), all factories
+    // bear same id (due to overlook of template author, I believe), and we effectively take the fist registerd one, which I don't
+    // mind as 'foreign' factories do not work anyway.
     for (ConfigurationFactory f : configurationType.getConfigurationFactories()) {
       if (f.getId().equals(configurationType.getId())) {
         configurationFactory = f;
@@ -64,7 +64,7 @@ public final class Java_Producer {
       Java_Configuration configuration = ((Java_Configuration) getConfigurationFactory().createConfiguration("" + "Java Simulation " + SPropertyOperations.getString(source, PROPS.name$MnvL), getContext().getRunManager().getConfigurationTemplate(getConfigurationFactory()).getConfiguration()));
       configuration.getNode().setNode(source);
 
-      // Necessary parameters to get the simulation running on some environments 
+      // Necessary parameters to get the simulation running on some environments
       JavaRunParameters parameters = configuration.getRunParameters().getJavaParameters();
       String vmOptions = (parameters.getVmOptions() == null ? "" : parameters.getVmOptions() + " ");
       parameters.setVmOptions(vmOptions + "--add-exports gluegen.rt/com.jogamp.common.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.glu=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.opengl=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.newt.event=ALL-UNNAMED --add-exports jogl.all/com.jogamp.opengl.util=ALL-UNNAMED --add-exports jogl.all/com.jogamp.nativewindow.util=ALL-UNNAMED");

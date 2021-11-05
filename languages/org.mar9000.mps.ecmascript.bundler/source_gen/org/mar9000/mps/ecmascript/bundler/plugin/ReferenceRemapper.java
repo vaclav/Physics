@@ -36,7 +36,7 @@ public class ReferenceRemapper {
 
     final Map<SNode, SNode> mappingLabel = MapSequence.fromMap(new HashMap<SNode, SNode>());
 
-    // Copy and save root references 
+    // Copy and save root references
     Sequence.fromIterable(SLinkOperations.collectMany(orderedDependencies, LINKS.body$yN3j)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         final Wrappers._T<SNode> copy = new Wrappers._T<SNode>(SNodeOperations.copyNode(it));
@@ -60,7 +60,7 @@ public class ReferenceRemapper {
         {
           final SNode varDecl = it;
           if (SNodeOperations.isInstanceOf(varDecl, CONCEPTS.JSVariableStatement$BP)) {
-            // Copy all references target 
+            // Copy all references target
             copy.value = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x2cc6dbd4f2de484L, "org.mar9000.mps.ecmascript.structure.JSVariableStatement"));
 
             ListSequence.fromList(SLinkOperations.getChildren(varDecl, LINKS.declarations$NUzu)).visitAll(new IVisitor<SNode>() {
@@ -72,13 +72,13 @@ public class ReferenceRemapper {
             });
           }
         }
-        // TODO external imports 
+        // TODO external imports
 
         ListSequence.fromList(SLinkOperations.getChildren(output, LINKS.body$yN3j)).addElement(copy.value);
       }
     });
 
-    // Resolve class references 
+    // Resolve class references
     ListSequence.fromList(SNodeOperations.getNodeDescendants(output, CONCEPTS.JSClassDeclarationReference$tf, false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(it, LINKS.classDeclaration$kIL8), CONCEPTS.JSProgram$Dg, false, false) != output;
@@ -91,7 +91,7 @@ public class ReferenceRemapper {
       }
     });
 
-    // Resolve function references 
+    // Resolve function references
     ListSequence.fromList(SNodeOperations.getNodeDescendants(output, CONCEPTS.JSFunctionDeclarationReference$Ma, false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(it, LINKS.functionDeclaration$xTeC), CONCEPTS.JSProgram$Dg, false, false) != output;
@@ -104,7 +104,7 @@ public class ReferenceRemapper {
       }
     });
 
-    // Resolve variable references 
+    // Resolve variable references
     ListSequence.fromList(SNodeOperations.getNodeDescendants(output, CONCEPTS.JSVariableDeclaratorReference$S1, false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(it, LINKS.variableDeclarator$VWa8), CONCEPTS.JSProgram$Dg, false, false) != output;
@@ -117,7 +117,7 @@ public class ReferenceRemapper {
       }
     });
 
-    // Resolve binding identifiers 
+    // Resolve binding identifiers
     ListSequence.fromList(SNodeOperations.getNodeDescendants(output, CONCEPTS.JSBindingIdentifierReference$Ci, false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(it, LINKS.bindingIdentifier$$kKE), CONCEPTS.JSProgram$Dg, false, false) != output;

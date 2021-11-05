@@ -42,20 +42,20 @@ public class UnitReduceHelper {
       SLinkOperations.setTarget(result, LINKS.baseType$mnRO, SNodeOperations.cast(baseOperationType, CONCEPTS.Type$WK));
 
       try {
-        // Compute units on both sides (could throw runtime exception) 
+        // Compute units on both sides (could throw runtime exception)
         Map<SNode, Rational> leftUnits = reduceUnits(SLinkOperations.getChildren(SNodeOperations.as(left, CONCEPTS.DimensionType$8R), LINKS.units$qq1O));
         Map<SNode, Rational> rightUnits = reduceUnits(SLinkOperations.getChildren(SNodeOperations.as(right, CONCEPTS.DimensionType$8R), LINKS.units$qq1O));
 
-        // Combine them (can throw unit computation exception) 
+        // Combine them (can throw unit computation exception)
         Map<SNode, Rational> combination = DimensionMapsHelper.combine(leftUnits, rightUnits, operator);
 
-        // Set the result 
+        // Set the result
         ListSequence.fromList(SLinkOperations.getChildren(result, LINKS.units$qq1O)).addSequence(Sequence.fromIterable(DimensionMapsHelper.mapToReferences(combination)));
       } catch (UnitComputationException | InterpreterBaseException e) {
         return createRuntimeErrorType_5s5y64_a0a0d0a5a1(e.getMessage());
       }
 
-      // If no resulting units (exponent = 0 or boolean expression) 
+      // If no resulting units (exponent = 0 or boolean expression)
       return (ListSequence.fromList(SLinkOperations.getChildren(result, LINKS.units$qq1O)).isEmpty() ? baseOperationType : result);
     }
   }
@@ -66,18 +66,18 @@ public class UnitReduceHelper {
    */
   public static SNode combineWithConstant(SNode dimension, SNode constant, SNode operator, boolean constantIsLeft) {
 
-    // Multiplication and division by a factor 
+    // Multiplication and division by a factor
     if (SNodeOperations.isInstanceOf(operator, CONCEPTS.MulExpression$iC)) {
       return createDimensionType_5s5y64_a0a2a4(SNodeOperations.as(TypeChecker.getInstance().getRulesManager().getOperationType(operator, SLinkOperations.getTarget(dimension, LINKS.baseType$mnRO), constant), CONCEPTS.Type$WK), SLinkOperations.getChildren(dimension, LINKS.units$qq1O));
     } else if (SNodeOperations.isInstanceOf(operator, CONCEPTS.DivExpression$us)) {
-      // Depending on a 0 position, might divide by 0 
+      // Depending on a 0 position, might divide by 0
       if ((!(constantIsLeft) && NumberTypeHelper.isBaseTypeZero(constant)) || (constantIsLeft && NumberTypeHelper.isBaseTypeZero(dimension))) {
         return createRuntimeErrorType_5s5y64_a0a1a0c0e();
       }
 
       List<SNode> targetUnits = SLinkOperations.getChildren(SNodeOperations.copyNode(dimension), LINKS.units$qq1O);
       if (constantIsLeft) {
-        // Reverse units 
+        // Reverse units
         ListSequence.fromList(targetUnits).visitAll(new IVisitor<SNode>() {
           public void visit(SNode it) {
             SLinkOperations.setTarget(it, LINKS.exponent$5qk, ExponentHelper.rationalToExponent(IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(it).negate()));
@@ -88,9 +88,9 @@ public class UnitReduceHelper {
       return createDimensionType_5s5y64_a6a0c0e(SNodeOperations.as(TypeChecker.getInstance().getRulesManager().getOperationType(operator, SLinkOperations.getTarget(dimension, LINKS.baseType$mnRO), constant), CONCEPTS.Type$WK), targetUnits);
     }
 
-    // If the constant was not handled and is zero, we apply the same units 
+    // If the constant was not handled and is zero, we apply the same units
     if (NumberTypeHelper.isZero(constant)) {
-      // Default behavior : consider the zero type as same dimension 
+      // Default behavior : consider the zero type as same dimension
       return combine(dimension, dimension, operator);
     }
 

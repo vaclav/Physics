@@ -124,6 +124,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     };
     EditorCell_MathBase editorCell = new EditorCell_MathBase(editorContext, node, layout, scales, symbols) {
       protected void paint(Graphics2D g, List<MathLayoutableCell> childCells, MathLayoutableCell cell, List<IMathSymbol> symbols) {
+
         Color symbolColor = cell.getEditorCell().getStyle().get(StyleAttributes.getInstance().<Color>getAttribute("de.itemis.mps.editor.math", "math-symbol-color"));
         if (symbolColor == null) {
           symbolColor = cell.getEditorCell().getStyle().get(StyleAttributes.TEXT_COLOR);

@@ -21,7 +21,7 @@ public class MetricsRenderer {
   public void renderDefault(World world, PGraphics ctx) {
     StringBuilder str = new StringBuilder();
 
-    // Time of simulation 
+    // Time of simulation
     str.append("Elapsed time: ");
     str.append(world.getTime());
     str.append("s");
@@ -37,17 +37,17 @@ public class MetricsRenderer {
   public void renderMetric(PGraphics ctx, String name, Object rendered) {
     if (rendered instanceof RenderableMetric) {
       RenderableMetric renderable = (RenderableMetric) rendered;
-      // Draw name 
+      // Draw name
       ctx.fill(255);
       ctx.text(name + ":", 5, currentHeight);
 
-      // Draw metric 
+      // Draw metric
       ctx.pushMatrix();
       ctx.translate(9 + ctx.textWidth(name + ": "), currentHeight);
       currentHeight += lineHeight + renderable.render(ctx, -ascent, lineHeight);
       ctx.popMatrix();
     } else {
-      // Draw name + metric at once 
+      // Draw name + metric at once
       ctx.fill(255);
       ctx.text(name + ": " + anyToString(rendered), 5, currentHeight);
       currentHeight += lineHeight;

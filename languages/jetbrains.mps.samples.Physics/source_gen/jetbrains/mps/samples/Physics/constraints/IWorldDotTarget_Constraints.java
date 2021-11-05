@@ -40,7 +40,7 @@ public class IWorldDotTarget_Constraints extends BaseConstraintsDescriptor {
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
     return (boolean) DotExpression__BehaviorDescriptor.expectType_id5WNmJ7DokMG.invoke(SNodeOperations.cast(parentNode, CONCEPTS.DotExpression$jp), CONCEPTS.WorldType$84, ((boolean) true));
-    // <node>
+    // DotExpressionHelper.hasParentContextTargetOf(node<>,concept< >):boolean
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "4874678483873252507");
 

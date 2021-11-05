@@ -30,14 +30,14 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
   public FallingBallWorldSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final FallingBallWorldSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     Ball = withEntity(new Ball2PhysicalEntity(world, "Ball1", scope));
     Ground = withEntity(new Ground2PhysicalEntity(world, "Ground1", scope));
 
-    // Initialize them 
+    // Initialize them
     Ball.init(this, world);
     Ground.init(this, world);
   }
@@ -50,18 +50,18 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
     @Override
     public void init(final FallingBallWorldSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Ball2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Ball 
+      // Set static properties of Ball
       this.setMass(((Number) new BigInteger("1")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("-90")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("-5")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
 
-      //  Forces and visual of the parent objects of Ball 
+      //  Forces and visual of the parent objects of Ball
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigInteger("80"))));
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("7")), ((Number) new BigInteger("1"))))));
@@ -127,18 +127,18 @@ public class FallingBallWorldSystemScope extends SystemScope {
 
     @Override
     public void init(final FallingBallWorldSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Ground2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Ground 
+      // Set static properties of Ground
       this.setMass(((Number) new BigInteger("1")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("151")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Ground 
+      //  Forces and visual of the parent objects of Ground
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.BOX_X, ((Number) (AH.mul(((Number) new BigInteger("500")), ((Number) new BigInteger("1"))))));
       propertiesBuilder.set(PropKey.BOX_Y, ((Number) (AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))))));
       propertiesBuilder.set(PropKey.BOX_Z, ((Number) (AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))))));

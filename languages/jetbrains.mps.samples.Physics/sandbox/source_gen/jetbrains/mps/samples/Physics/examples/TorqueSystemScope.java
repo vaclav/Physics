@@ -26,14 +26,14 @@ public class TorqueSystemScope extends SystemScope {
 
   public TorqueSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final TorqueSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     Light = withEntity(new Light2PhysicalEntity(world, "Light1", scope));
     SampleBox = withEntity(new SampleBox2PhysicalEntity(world, "SampleBox1", scope));
 
-    // Initialize them 
+    // Initialize them
     Light.init(this, world);
     SampleBox.init(this, world);
   }
@@ -46,18 +46,18 @@ public class TorqueSystemScope extends SystemScope {
 
     @Override
     public void init(final TorqueSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Light2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Light 
+      // Set static properties of Light
       this.setMass(((Number) new BigInteger("1")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("60")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Light 
+      //  Forces and visual of the parent objects of Light
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.EMIT_LIGHT, true);
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigDecimal("0.1").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))));
       this.getForces().addAll(Arrays.asList());
@@ -71,18 +71,18 @@ public class TorqueSystemScope extends SystemScope {
 
     @Override
     public void init(final TorqueSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       SampleBox2PhysicalEntity currentEntity = this;
 
-      // Set static properties of SampleBox 
+      // Set static properties of SampleBox
       this.setMass(((Number) new BigInteger("50")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of SampleBox 
+      //  Forces and visual of the parent objects of SampleBox
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SHAPE, "box");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 0, 0), null));
       propertiesBuilder.set(PropKey.BOX_X, ((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))));

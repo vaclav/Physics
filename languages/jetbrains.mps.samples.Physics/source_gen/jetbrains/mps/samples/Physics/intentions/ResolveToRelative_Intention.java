@@ -72,7 +72,7 @@ public final class ResolveToRelative_Intention extends AbstractIntentionDescript
     final SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$sH, false, false);
     final SNode relativeTarget = ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(SLinkOperations.getTarget(SNodeOperations.as(SLinkOperations.getTarget(SNodeOperations.as(node, CONCEPTS.RelativeVector$vE), LINKS.relativeFrom$Z9n3), CONCEPTS.ObjectReferenceExpression$HX), LINKS.target$MKwz));
 
-    // Get all available objects in scope except the current one and the one already used as relative (if any) 
+    // Get all available objects in scope except the current one and the one already used as relative (if any)
     return Sequence.fromIterable(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(SNodeOperations.getNodeAncestor(node, CONCEPTS.WorldDefinition$gU, false, false))).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return it != ancestor && relativeTarget != ILocalized__BehaviorDescriptor.getDefinition_id31HEEbbXs3G.invoke(it);

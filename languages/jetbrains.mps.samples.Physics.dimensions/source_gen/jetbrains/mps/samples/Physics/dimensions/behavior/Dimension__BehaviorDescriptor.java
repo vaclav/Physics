@@ -11,7 +11,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import org.nevec.rjm.Rational;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -25,8 +24,8 @@ import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 public final class Dimension__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L, "jetbrains.mps.samples.Physics.dimensions.structure.Dimension");
 
-  public static final SMethod<Map<SNode, Rational>> getRawTypes_id3yBD53WvLzq = new SMethodBuilder<Map<SNode, Rational>>(new SJavaCompoundTypeImpl((Class<Map<SNode, Rational>>) ((Class) Object.class))).name("getRawTypes").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3yBD53WvLzq").build();
-  public static final SMethod<Boolean> allowNonIdentifierNames_id4SwD0JT7m0l = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("allowNonIdentifierNames").modifiers(SModifiersImpl.create(9, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4SwD0JT7m0l").build();
+  public static final SMethod<Map<SNode, Rational>> getRawTypes_id3yBD53WvLzq = new SMethodBuilder<Map<SNode, Rational>>(new SJavaCompoundTypeImpl((Class<Map<SNode, Rational>>) ((Class) Object.class))).name("getRawTypes").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("3yBD53WvLzq").build();
+  public static final SMethod<Boolean> allowNonIdentifierNames_id4SwD0JT7m0l = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("allowNonIdentifierNames").modifiers(9, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4SwD0JT7m0l").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getRawTypes_id3yBD53WvLzq, allowNonIdentifierNames_id4SwD0JT7m0l);
 

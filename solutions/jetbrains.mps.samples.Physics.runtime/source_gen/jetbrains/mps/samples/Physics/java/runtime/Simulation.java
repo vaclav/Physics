@@ -36,14 +36,14 @@ public abstract class Simulation implements Renderer.RendererCallback {
   public void render(PApplet applet, PGraphics ctx) {
     ctx.background(0);
 
-    // Setting camera properly (at 0,0,0 but adding offset to every displayed item) 
+    // Setting camera properly (at 0,0,0 but adding offset to every displayed item)
     VectorLike position = getCameraPosition(ctx).mul(renderScale);
     VectorLike focus = getCameraFocus(ctx).mul(renderScale).minus(position);
 
     ctx.camera(0, 0, 0, focus.getX().floatValue(), focus.getY().floatValue(), focus.getZ().floatValue(), 0, 1, 0);
 
-    // Float.MAX_VALUE divided by 100 to prevent an overflow in internal computations 
-    // (resulting in a black screen) 
+    // Float.MAX_VALUE divided by 100 to prevent an overflow in internal computations
+    // (resulting in a black screen)
     ctx.perspective(PConstants.PI / 3, ((float) ctx.width) / ((float) ctx.height), 1, Float.MAX_VALUE / 100);
 
 

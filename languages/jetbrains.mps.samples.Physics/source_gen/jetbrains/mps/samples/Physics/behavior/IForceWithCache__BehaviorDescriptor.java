@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -21,8 +20,8 @@ import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 public final class IForceWithCache__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da749c297L, "jetbrains.mps.samples.Physics.structure.IForceWithCache");
 
-  public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisbm").build();
-  public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisaz").build();
+  public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(12, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBisbm").build();
+  public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(12, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBisaz").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getCacheType_id4$vyCQBisbm, getCachedValueExpression_id4$vyCQBisaz);
 

@@ -25,14 +25,14 @@ public class EarthDemoSystemScope extends SystemScope {
 
   public EarthDemoSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final EarthDemoSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     Earth = withEntity(new Earth2PhysicalEntity(world, "Earth1", scope));
     Moon = withEntity(new Moon2PhysicalEntity(world, "Moon1", scope));
 
-    // Initialize them 
+    // Initialize them
     Earth.init(this, world);
     Moon.init(this, world);
   }
@@ -45,19 +45,19 @@ public class EarthDemoSystemScope extends SystemScope {
 
     @Override
     public void init(final EarthDemoSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Earth2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Earth 
+      // Set static properties of Earth
       this.setMass(((Number) new BigInteger("800")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
       this.getBody().setAngularVel(VectorHelper.fromInternal(new InternalVector(((Number) new BigInteger("0")), AH.div(((Number) (AH.mul(((Number) new BigInteger("360")), ((Number) new BigDecimal("0.01745328627927352441191151881987859").setScale(35, RoundingMode.DOWN))))), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))), ((Number) new BigInteger("0")))));
 
-      //  Forces and visual of the parent objects of Earth 
+      //  Forces and visual of the parent objects of Earth
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.TEXTURE, new ImageTexture("https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Land_shallow_topo_2048.jpg/1024px-Land_shallow_topo_2048.jpg"));
       this.getForces().addAll(Arrays.asList());
     }
@@ -70,18 +70,18 @@ public class EarthDemoSystemScope extends SystemScope {
 
     @Override
     public void init(final EarthDemoSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Moon2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Moon 
+      // Set static properties of Moon
       this.setMass(((Number) new BigInteger("100")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("20.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("16.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("9.797174393178826E-16").setScale(31, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
 
-      //  Forces and visual of the parent objects of Moon 
+      //  Forces and visual of the parent objects of Moon
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.TEXTURE, new ImageTexture("https://upload.wikimedia.org/wikipedia/commons/e/ea/Clementine_albedo_simp750.jpg"));
       propertiesBuilder.set(PropKey.TRACE, new FiniteTraceHandler(new Color(220, 220, 220)));
       this.getForces().addAll(Arrays.asList());

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.Physics.execution.javascript.plugin.IconContainer">
+    <classNode dependClassName="javax.swing.Icon" />
+  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.execution.javascript.plugin.Javascript_ApplicationPlugin">
     <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
     <classNode dependClassName="java.lang.Override" />
@@ -115,7 +118,6 @@
   <dependency className="jetbrains.mps.samples.Physics.execution.javascript.plugin.RunConfigurationsInitializer_AppPluginPart">
     <classNode dependClassName="com.intellij.execution.configurations.ConfigurationType" />
     <classNode dependClassName="com.intellij.execution.junit.RuntimeConfigurationProducer" />
-    <classNode dependClassName="com.intellij.icons.AllIcons" />
     <classNode dependClassName="com.intellij.openapi.extensions.ExtensionPoint" />
     <classNode dependClassName="com.intellij.openapi.extensions.Extensions" />
     <classNode dependClassName="java.lang.Override" />
@@ -126,6 +128,7 @@
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.execution.api.configurations.ConfigTypeEnvoy" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.execution.javascript.plugin.IconContainer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.execution.javascript.plugin.PhysicsWebSimulation_Configuration" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.execution.javascript.plugin.PhysicsWebSimulation_Producer" />
     <classNode extendsClassName="jetbrains.mps.plugins.part.ApplicationPluginPart" />

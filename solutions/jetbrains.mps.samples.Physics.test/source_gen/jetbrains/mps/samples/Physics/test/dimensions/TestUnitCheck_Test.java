@@ -63,7 +63,6 @@ public class TestUnitCheck_Test extends BaseTransformationTest {
       super(owner);
     }
 
-
     public void test_NodeDimensionRuntimeErrorCheck3675770290334303671() throws Exception {
       SNode nodeToCheck = getRealNodeById("3675770290332758288");
       SNode operation = getRealNodeById("3675770290334303671");

@@ -33,7 +33,7 @@ public class ForceFactories {
   }
   public static class NodeFactory_6025702258158506869 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      // Override parent factory 
+      // Override parent factory
       ListSequence.fromList(SLinkOperations.getChildren(newNode, LINKS.args$8wKH)).clear();
     }
   }

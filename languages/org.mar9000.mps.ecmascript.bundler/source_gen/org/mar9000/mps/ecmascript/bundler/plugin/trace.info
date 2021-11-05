@@ -19,7 +19,7 @@
       <node id="3875663533219568970" at="35,121,36,0" concept="7" />
       <node id="3875663533219569616" at="36,0,37,92" concept="4" />
       <node id="3875663533219729480" at="37,92,38,0" concept="7" />
-      <node id="3875663533219730055" at="38,0,39,37" concept="6" />
+      <node id="3875663533219730055" at="38,0,39,36" concept="6" />
       <node id="3875663533219695156" at="41,35,42,93" concept="4" />
       <node id="3875663533221495267" at="42,93,43,0" concept="7" />
       <node id="3875663533221499014" at="44,9,45,37" concept="4" />
@@ -31,29 +31,29 @@
       <node id="3875663533221467702" at="55,66,56,228" concept="1" />
       <node id="3875663533221562818" at="58,9,59,0" concept="7" />
       <node id="3875663533221565219" at="60,9,61,35" concept="4" />
-      <node id="3875663533220101349" at="62,87,63,42" concept="6" />
-      <node id="3875663533220083321" at="63,42,64,211" concept="1" />
+      <node id="3875663533220101349" at="62,87,63,41" concept="6" />
+      <node id="3875663533220083321" at="63,41,64,211" concept="1" />
       <node id="3875663533220113096" at="64,211,65,0" concept="7" />
       <node id="3875663533220003776" at="67,45,68,64" concept="4" />
       <node id="3875663533220015156" at="68,64,69,92" concept="1" />
       <node id="3875663533220045020" at="69,92,70,180" concept="1" />
-      <node id="3875663533220136758" at="74,9,75,33" concept="6" />
-      <node id="3875663533219963665" at="75,33,76,0" concept="7" />
+      <node id="3875663533220136758" at="74,9,75,32" concept="6" />
+      <node id="3875663533219963665" at="75,32,76,0" concept="7" />
       <node id="3875663533219707255" at="76,0,77,107" concept="1" />
       <node id="3875663533219731464" at="79,7,80,0" concept="7" />
-      <node id="3875663533219731236" at="80,0,81,32" concept="6" />
+      <node id="3875663533219731236" at="80,0,81,31" concept="6" />
       <node id="3875663533219845269" at="83,39,84,154" concept="5" />
       <node id="3875663533219902200" at="88,120,89,221" concept="1" />
       <node id="3875663533219910857" at="92,7,93,0" concept="7" />
-      <node id="3875663533219911122" at="93,0,94,35" concept="6" />
+      <node id="3875663533219911122" at="93,0,94,34" concept="6" />
       <node id="3875663533219911138" at="96,39,97,157" concept="5" />
       <node id="3875663533219911155" at="101,123,102,231" concept="1" />
       <node id="3875663533219910989" at="105,7,106,0" concept="7" />
-      <node id="3875663533219923101" at="106,0,107,35" concept="6" />
+      <node id="3875663533219923101" at="106,0,107,34" concept="6" />
       <node id="3875663533219923117" at="109,39,110,156" concept="5" />
       <node id="3875663533219923134" at="114,122,115,235" concept="1" />
       <node id="3875663533219922914" at="118,7,119,0" concept="7" />
-      <node id="3875663533221624381" at="119,0,120,35" concept="6" />
+      <node id="3875663533221624381" at="119,0,120,34" concept="6" />
       <node id="3875663533221624397" at="122,39,123,155" concept="5" />
       <node id="3875663533221624414" at="127,121,128,225" concept="1" />
       <node id="3875663533221623214" at="131,7,132,0" concept="7" />
@@ -101,14 +101,14 @@
       <node id="3875663533221523388" at="51,0,58,9" concept="0" />
       <node id="3875663533219975689" at="65,0,72,15" concept="1" />
       <node id="3875663533219620855" at="139,0,146,0" concept="9" trace="isInstanceOfAny#(Lorg/jetbrains/mps/openapi/model/SNode;null)Z" />
-      <node id="3875663533219732282" at="81,32,92,7" concept="1" />
-      <node id="3875663533219911127" at="94,35,105,7" concept="1" />
-      <node id="3875663533219923106" at="107,35,118,7" concept="1" />
-      <node id="3875663533221624386" at="120,35,131,7" concept="1" />
+      <node id="3875663533219732282" at="81,31,92,7" concept="1" />
+      <node id="3875663533219911127" at="94,34,105,7" concept="1" />
+      <node id="3875663533219923106" at="107,34,118,7" concept="1" />
+      <node id="3875663533221624386" at="120,34,131,7" concept="1" />
       <node id="3875663533221565219" at="61,35,73,11" concept="2" />
       <node id="3875663533221565219" at="59,0,74,9" concept="0" />
       <node id="3875663533219602972" at="41,0,79,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="3875663533219571612" at="39,37,79,7" concept="1" />
+      <node id="3875663533219571612" at="39,36,79,7" concept="1" />
       <node id="3875663533219553064" at="32,0,136,0" concept="9" trace="remapAndMerge#(Ljava/util/List;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <scope id="3875663533219844735" at="83,39,84,154" />
       <scope id="3875663533219894138" at="88,120,89,221" />
@@ -208,22 +208,22 @@
     <file name="DependenciesSolver.java">
       <node id="5315786637366621259" at="26,56,27,98" concept="4" />
       <node id="5315786637366752688" at="27,98,28,0" concept="7" />
-      <node id="5315786637366756133" at="28,0,29,29" concept="6" />
-      <node id="8380351187271198300" at="29,29,30,44" concept="1" />
+      <node id="5315786637366756133" at="28,0,29,28" concept="6" />
+      <node id="8380351187271198300" at="29,28,30,44" concept="1" />
       <node id="5315786637366750980" at="30,44,31,0" concept="7" />
-      <node id="5315786637366817662" at="31,0,32,21" concept="6" />
-      <node id="5315786637366823016" at="32,21,33,79" concept="4" />
+      <node id="5315786637366817662" at="31,0,32,20" concept="6" />
+      <node id="5315786637366823016" at="32,20,33,79" concept="4" />
       <node id="2191706013851149975" at="33,79,34,0" concept="7" />
-      <node id="2191706013851143390" at="34,0,35,63" concept="6" />
-      <node id="6973537584518735403" at="35,63,36,23" concept="4" />
+      <node id="2191706013851143390" at="34,0,35,62" concept="6" />
+      <node id="6973537584518735403" at="35,62,36,23" concept="4" />
       <node id="2191706013851148409" at="36,23,37,0" concept="7" />
       <node id="2191706013849804714" at="38,159,39,19" concept="1" />
-      <node id="5315786637366904179" at="41,73,42,32" concept="6" />
-      <node id="5315786637366901572" at="44,45,45,54" concept="6" />
-      <node id="5315786637366861536" at="45,54,46,87" concept="5" />
+      <node id="5315786637366904179" at="41,73,42,31" concept="6" />
+      <node id="5315786637366901572" at="44,45,45,53" concept="6" />
+      <node id="5315786637366861536" at="45,53,46,87" concept="5" />
       <node id="7934028488231884548" at="51,63,52,74" concept="5" />
-      <node id="5315786637366922305" at="55,60,56,36" concept="6" />
-      <node id="5315786637366883683" at="56,36,57,63" concept="1" />
+      <node id="5315786637366922305" at="55,60,56,35" concept="6" />
+      <node id="5315786637366883683" at="56,35,57,63" concept="1" />
       <node id="5315786637366814611" at="60,5,61,0" concept="7" />
       <node id="8380351187271209296" at="61,0,62,20" concept="5" />
       <node id="8380351187271065258" at="66,65,67,13" concept="5" />
@@ -244,7 +244,7 @@
       <node id="5315786637366882716" at="55,0,59,0" concept="3" trace="visit#(Ljetbrains/mps/internal/collections/runtime/IMapping;)V" />
       <node id="146165670325513170" at="73,0,77,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="5315786637366782269" at="80,0,85,0" concept="9" trace="createDependencyOn#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/util/Map;)Ljava/util/List;" />
-      <node id="5315786637366852328" at="42,32,48,13" concept="5" />
+      <node id="5315786637366852328" at="42,31,48,13" concept="5" />
       <node id="146165670325472634" at="71,0,77,7" concept="1" />
       <node id="5315786637366851202" at="41,0,50,0" concept="3" trace="accept#(Ljetbrains/mps/internal/collections/runtime/IMapping;)Z" />
       <node id="8380351187271056751" at="65,0,79,0" concept="9" trace="fetchDependenciesOf#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/util/Map;)V" />

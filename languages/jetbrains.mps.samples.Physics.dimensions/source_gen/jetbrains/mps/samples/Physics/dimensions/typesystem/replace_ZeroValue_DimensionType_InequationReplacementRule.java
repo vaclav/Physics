@@ -19,11 +19,11 @@ public class replace_ZeroValue_DimensionType_InequationReplacementRule extends A
     return NumberTypeHelper.isZero(subtype);
   }
   public void processInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, final TypeCheckingContext typeCheckingContext, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
-    // Apply rule only if the number is between 0 and 0 (therefore equals 0) 
+    // Apply rule only if the number is between 0 and 0 (therefore equals 0)
   }
   public boolean checkInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
     boolean result_14532009 = true;
-    // Apply rule only if the number is between 0 and 0 (therefore equals 0) 
+    // Apply rule only if the number is between 0 and 0 (therefore equals 0)
     return result_14532009;
   }
   public boolean isWeak() {

@@ -31,18 +31,18 @@ public class PositioningResolver {
   public static void resolveAll(SNode world) {
     Sequence.fromIterable(WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(world)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
-        //  Compute position 
+        //  Compute position
         VectorLike locationComputed = ((VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$2BSz), LINKS.expression$Va$7)));
         SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$2BSz), LINKS.expression$Va$7), CoordinateExpressionConverters.rawToCartesian(locationComputed, null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(it, LINKS.position$2BSz)))));
 
-        //  Compute speed 
+        //  Compute speed
         if ((SLinkOperations.getTarget(it, LINKS.velocity$2C7$) != null)) {
           VectorLike velocityComputed = (VectorLike) IETS3ExprEvalHelper.evaluate(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$2C7$), LINKS.expression$Va$7));
 
           SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.velocity$2C7$), LINKS.expression$Va$7), CoordinateExpressionConverters.rawToCartesian(velocityComputed, null, VectorTypeHelper.getVectorTypeUnits(TypecheckingFacade.getFromContext().getTypeOf(SLinkOperations.getTarget(it, LINKS.velocity$2C7$)))));
         }
 
-        // Compute nested worlds 
+        // Compute nested worlds
         {
           final SNode include = it;
           if (SNodeOperations.isInstanceOf(include, CONCEPTS.WorldInclusion$Nn)) {
@@ -50,7 +50,7 @@ public class PositioningResolver {
           }
         }
 
-        // Compute mass 
+        // Compute mass
         {
           final SNode definition = it;
           if (SNodeOperations.isInstanceOf(definition, CONCEPTS.ObjectDefinition$in)) {

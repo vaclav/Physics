@@ -31,16 +31,16 @@ public class TestWorldSystemScope extends SystemScope {
 
   public TestWorldSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final TestWorldSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     Something3 = withEntity(new Something5PhysicalEntity(world, "Something4", scope));
     Hey = withEntity(new Hey2PhysicalEntity(world, "Hey1", scope));
     Ho = withEntity(new Ho2PhysicalEntity(world, "Ho1", scope));
     TheOtherWorld = withEntity(new World2SystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("1.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.9999999999999998").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.9999999999999999").setScale(16, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
 
-    // Initialize them 
+    // Initialize them
     Something3.init(this, world);
     Hey.init(this, world);
     Ho.init(this, world);
@@ -54,18 +54,18 @@ public class TestWorldSystemScope extends SystemScope {
 
     @Override
     public void init(final TestWorldSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Something5PhysicalEntity currentEntity = this;
 
-      // Set static properties of Something 
+      // Set static properties of Something
       this.setMass(((Number) (AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))))));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(InternalVector.fromSpherical(AH.mul(((Number) new BigDecimal("0.3338209660641933").setScale(16, RoundingMode.DOWN)), ((Number) (AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("1")))))), AH.mul(((Number) new BigDecimal("-0.4921732491441717").setScale(16, RoundingMode.DOWN)), ((Number) (AH.mul(BigDecimalMath.pi(MathContext.DECIMAL32), ((Number) new BigInteger("1")))))), AH.add(((Number) (AH.mul(((Number) new BigDecimal("132.6169123956975342792375481184667").setScale(31, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), AH.div(((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1"))))), ((Number) new BigInteger("2"))))).add(scope.TheOtherWorld))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Something 
+      //  Forces and visual of the parent objects of Something
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SHAPE, "box");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.BOX_X, ((Number) (AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))))));
@@ -178,18 +178,18 @@ public class TestWorldSystemScope extends SystemScope {
 
     @Override
     public void init(final TestWorldSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Hey2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Hey 
+      // Set static properties of Hey
       this.setMass(((Number) (AH.mul(((Number) new BigInteger("212")), ((Number) new BigInteger("1"))))));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("27.46035823174609274397702460056475").setScale(32, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("-90.282140454466024179938468351046636").setScale(33, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("5.627543496627525070275583761154096").setScale(33, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Hey 
+      //  Forces and visual of the parent objects of Hey
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))));
@@ -204,18 +204,18 @@ public class TestWorldSystemScope extends SystemScope {
 
     @Override
     public void init(final TestWorldSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Ho2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Ho 
+      // Set static properties of Ho
       this.setMass(((Number) (AH.mul(((Number) new BigInteger("120")), ((Number) new BigInteger("1"))))));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(InternalVector.fromSpherical(((Number) (AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("6")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("80")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Ho 
+      //  Forces and visual of the parent objects of Ho
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))))));

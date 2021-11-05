@@ -31,7 +31,7 @@ public class ImageTexture extends Texture {
 
   @Override
   public Texture mergeWith(Texture other, float participation) {
-    // No simple way to merge an image texture 
+    // No simple way to merge an image texture
     if (participation > 0.5) {
       return this;
     } else {

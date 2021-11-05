@@ -47,7 +47,6 @@ public class UndefinedPropertiesTest_Test extends BaseTransformationTest {
       super(owner);
     }
 
-
     public void test_NodeAbstractConceptInstanceCheck911298080279481047() throws Exception {
       SNode nodeToCheck = getRealNodeById("911298080279480770");
       SNode operation = getRealNodeById("911298080279481047");

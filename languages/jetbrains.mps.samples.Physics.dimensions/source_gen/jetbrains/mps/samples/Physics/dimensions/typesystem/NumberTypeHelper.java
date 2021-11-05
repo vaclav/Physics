@@ -81,13 +81,13 @@ public class NumberTypeHelper {
   public static SNode approximateToDimensions(SNode... types) {
     final Wrappers._T<Iterable<SNode>> units = new Wrappers._T<Iterable<SNode>>(null);
 
-    // Extract number types (and dimensions if any) 
+    // Extract number types (and dimensions if any)
     Iterable<SNode> seq = Sequence.fromIterable(Sequence.fromArray(types)).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
         {
           final SNode dimension = it;
           if (SNodeOperations.isInstanceOf(dimension, CONCEPTS.DimensionType$8R)) {
-            // Take the first one, no compatibility checking between dimension is done 
+            // Take the first one, no compatibility checking between dimension is done
             if (units.value == null) {
               units.value = UnitReduceHelper.reduceUnitsToReferences(SLinkOperations.getChildren(dimension, LINKS.units$qq1O));
             }
@@ -99,7 +99,7 @@ public class NumberTypeHelper {
       }
     });
 
-    // Compute base type from extracted number types 
+    // Compute base type from extracted number types
     SNode baseType = approximate(Sequence.fromIterable(seq).toListSequence());
 
     return (units.value != null ? createDimensionType_nobf8o_a0i0j(baseType, units.value) : baseType);

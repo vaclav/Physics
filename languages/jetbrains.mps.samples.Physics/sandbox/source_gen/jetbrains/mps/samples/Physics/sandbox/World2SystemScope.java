@@ -26,14 +26,14 @@ public class World2SystemScope extends SystemScope {
 
   public World2SystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final World2SystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     Ho3 = withEntity(new Ho5PhysicalEntity(world, "Ho4", scope));
     Ha = withEntity(new Ha2PhysicalEntity(world, "Ha1", scope));
 
-    // Initialize them 
+    // Initialize them
     Ho3.init(this, world);
     Ha.init(this, world);
   }
@@ -46,18 +46,18 @@ public class World2SystemScope extends SystemScope {
 
     @Override
     public void init(final World2SystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Ho5PhysicalEntity currentEntity = this;
 
-      // Set static properties of Ho 
+      // Set static properties of Ho
       this.setMass(AH.add(((Number) (AH.mul(((Number) new BigInteger("456")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("45")), ((Number) new BigInteger("1")))))));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("4")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Ho 
+      //  Forces and visual of the parent objects of Ho
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))))));
@@ -94,18 +94,18 @@ public class World2SystemScope extends SystemScope {
 
     @Override
     public void init(final World2SystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Ha2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Ha 
+      // Set static properties of Ha
       this.setMass(((Number) (AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))))));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Ha 
+      //  Forces and visual of the parent objects of Ha
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SHAPE, "sphere");
       propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(255, 255, 255), null));
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))))));

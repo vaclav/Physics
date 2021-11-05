@@ -80,7 +80,6 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
-          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
@@ -91,12 +90,9 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
-          <module ref="9e9ef4e2-decf-4e97-bf80-9109e8b759bb(jetbrains.mps.lang.feedback.api)" kind="rt" />
-          <module ref="3f98f4e2-decf-4e97-bf80-9109e8b759ab(jetbrains.mps.lang.feedback.problem.rt)" kind="rt" />
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
-          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
@@ -105,12 +101,9 @@
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" />
-          <language id="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:96ee7a94-411d-4cf8-9b94-96cad7e52411:jetbrains.mps.baseLanguage.jdk7" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
@@ -123,14 +116,8 @@
           <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
           <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
           <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
-          <language id="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
           <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
           <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
-          <language id="l:cd17a113-ca4e-472f-a8de-c49008f9eea8:jetbrains.mps.lang.feedback" />
-          <language id="l:16e76fe3-9534-4def-afb7-925a169a7c0b:jetbrains.mps.lang.feedback.messages" />
-          <language id="l:033598a4-76a9-47e1-ac89-a300c0fceab8:jetbrains.mps.lang.feedback.problem" />
-          <language id="l:db2a46c2-ebec-4b6c-b6c2-f9b55b9b6f8a:jetbrains.mps.lang.feedback.problem.failingRule" />
-          <language id="l:517077fd-e44f-4338-a475-1d29781dfdb8:jetbrains.mps.lang.feedback.skeleton" />
           <language id="l:d7a92d38-f7db-40d0-8431-763b0c3c9f20:jetbrains.mps.lang.intentions" />
           <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
           <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
@@ -140,7 +127,6 @@
           <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
           <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
           <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:69b8a993-9b87-4d96-bf0c-3559f4bb0c63:jetbrains.mps.lang.slanguage" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
           <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
           <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
@@ -238,7 +224,6 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
-          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="1152e500-242c-4261-8518-2806cb83e0c9(com.mbeddr.mpsutil.interpreter.plugin)" kind="rt" />
@@ -253,12 +238,9 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
-          <module ref="9e9ef4e2-decf-4e97-bf80-9109e8b759bb(jetbrains.mps.lang.feedback.api)" kind="rt" />
-          <module ref="3f98f4e2-decf-4e97-bf80-9109e8b759ab(jetbrains.mps.lang.feedback.problem.rt)" kind="rt" />
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
-          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="cl" />
@@ -281,12 +263,9 @@
           <language id="l:47f075a6-558e-4640-a606-7ce0236c8023:com.mbeddr.mpsutil.interpreter" />
           <language id="l:e359e0a2-368a-4c40-ae2a-e5a09f9cfd58:de.itemis.mps.editor.math.notations" />
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" />
-          <language id="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:96ee7a94-411d-4cf8-9b94-96cad7e52411:jetbrains.mps.baseLanguage.jdk7" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
@@ -299,14 +278,8 @@
           <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
           <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
           <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
-          <language id="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
           <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
           <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
-          <language id="l:cd17a113-ca4e-472f-a8de-c49008f9eea8:jetbrains.mps.lang.feedback" />
-          <language id="l:16e76fe3-9534-4def-afb7-925a169a7c0b:jetbrains.mps.lang.feedback.messages" />
-          <language id="l:033598a4-76a9-47e1-ac89-a300c0fceab8:jetbrains.mps.lang.feedback.problem" />
-          <language id="l:db2a46c2-ebec-4b6c-b6c2-f9b55b9b6f8a:jetbrains.mps.lang.feedback.problem.failingRule" />
-          <language id="l:517077fd-e44f-4338-a475-1d29781dfdb8:jetbrains.mps.lang.feedback.skeleton" />
           <language id="l:d7a92d38-f7db-40d0-8431-763b0c3c9f20:jetbrains.mps.lang.intentions" />
           <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
           <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
@@ -316,7 +289,6 @@
           <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
           <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
           <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:69b8a993-9b87-4d96-bf0c-3559f4bb0c63:jetbrains.mps.lang.slanguage" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
           <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
           <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
@@ -394,9 +366,6 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions-generator-templates">
-      <fileset dir="${basedir}/languages/jetbrains.mps.samples.Physics.dimensions/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions-src.jar" duplicate="preserve">
@@ -415,7 +384,6 @@
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics.dimensions/jetbrains.mps.samples.Physics.dimensions.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions-generator-templates" prefix="module/generator/templates" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions-generator-templates1" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjava.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjava.jar/META-INF" />
@@ -426,7 +394,6 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
-          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
@@ -435,12 +402,9 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
-          <module ref="9e9ef4e2-decf-4e97-bf80-9109e8b759bb(jetbrains.mps.lang.feedback.api)" kind="rt" />
-          <module ref="3f98f4e2-decf-4e97-bf80-9109e8b759ab(jetbrains.mps.lang.feedback.problem.rt)" kind="rt" />
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
-          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
@@ -458,12 +422,9 @@
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" />
-          <language id="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:96ee7a94-411d-4cf8-9b94-96cad7e52411:jetbrains.mps.baseLanguage.jdk7" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
@@ -475,14 +436,8 @@
           <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
           <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
           <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
-          <language id="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
           <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
           <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
-          <language id="l:cd17a113-ca4e-472f-a8de-c49008f9eea8:jetbrains.mps.lang.feedback" />
-          <language id="l:16e76fe3-9534-4def-afb7-925a169a7c0b:jetbrains.mps.lang.feedback.messages" />
-          <language id="l:033598a4-76a9-47e1-ac89-a300c0fceab8:jetbrains.mps.lang.feedback.problem" />
-          <language id="l:db2a46c2-ebec-4b6c-b6c2-f9b55b9b6f8a:jetbrains.mps.lang.feedback.problem.failingRule" />
-          <language id="l:517077fd-e44f-4338-a475-1d29781dfdb8:jetbrains.mps.lang.feedback.skeleton" />
           <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
           <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
           <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
@@ -490,7 +445,6 @@
           <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
           <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
           <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:69b8a993-9b87-4d96-bf0c-3559f4bb0c63:jetbrains.mps.lang.slanguage" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
           <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
           <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
@@ -574,9 +528,6 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjava-generator-templates">
-      <fileset dir="${basedir}/languages/jetbrains.mps.samples.Physics.genjava/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjava-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjava/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjava-src.jar" duplicate="preserve">
@@ -595,7 +546,6 @@
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics.genjava/jetbrains.mps.samples.Physics.genjava.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjava-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjava-generator-templates" prefix="module/generator/templates" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjava-generator-templates1" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjs.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genjs.jar/META-INF" />
@@ -606,7 +556,6 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
-          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
@@ -616,12 +565,9 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
-          <module ref="9e9ef4e2-decf-4e97-bf80-9109e8b759bb(jetbrains.mps.lang.feedback.api)" kind="rt" />
-          <module ref="3f98f4e2-decf-4e97-bf80-9109e8b759ab(jetbrains.mps.lang.feedback.problem.rt)" kind="rt" />
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
-          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
@@ -639,12 +585,9 @@
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" />
-          <language id="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:96ee7a94-411d-4cf8-9b94-96cad7e52411:jetbrains.mps.baseLanguage.jdk7" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
@@ -657,14 +600,8 @@
           <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
           <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
           <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
-          <language id="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
           <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
           <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
-          <language id="l:cd17a113-ca4e-472f-a8de-c49008f9eea8:jetbrains.mps.lang.feedback" />
-          <language id="l:16e76fe3-9534-4def-afb7-925a169a7c0b:jetbrains.mps.lang.feedback.messages" />
-          <language id="l:033598a4-76a9-47e1-ac89-a300c0fceab8:jetbrains.mps.lang.feedback.problem" />
-          <language id="l:db2a46c2-ebec-4b6c-b6c2-f9b55b9b6f8a:jetbrains.mps.lang.feedback.problem.failingRule" />
-          <language id="l:517077fd-e44f-4338-a475-1d29781dfdb8:jetbrains.mps.lang.feedback.skeleton" />
           <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
           <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
           <language id="l:28f9e497-3b42-4291-aeba-0a1039153ab1:jetbrains.mps.lang.plugin" />
@@ -673,7 +610,6 @@
           <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
           <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
           <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:69b8a993-9b87-4d96-bf0c-3559f4bb0c63:jetbrains.mps.lang.slanguage" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
           <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
           <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
@@ -764,9 +700,6 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjs-generator-templates">
-      <fileset dir="${basedir}/languages/jetbrains.mps.samples.Physics.genjs/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjs-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genjs/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genjs-src.jar" duplicate="preserve">
@@ -785,7 +718,6 @@
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics.genjs/jetbrains.mps.samples.Physics.genjs.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjs-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjs-generator-templates" prefix="module/generator/templates" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genjs-generator-templates1" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions.gentype.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.dimensions.gentype.jar/META-INF" />
@@ -796,7 +728,6 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
-          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
@@ -805,24 +736,18 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
-          <module ref="9e9ef4e2-decf-4e97-bf80-9109e8b759bb(jetbrains.mps.lang.feedback.api)" kind="rt" />
-          <module ref="3f98f4e2-decf-4e97-bf80-9109e8b759ab(jetbrains.mps.lang.feedback.problem.rt)" kind="rt" />
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
-          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
           <module ref="3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" />
-          <language id="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:96ee7a94-411d-4cf8-9b94-96cad7e52411:jetbrains.mps.baseLanguage.jdk7" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
@@ -834,14 +759,8 @@
           <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
           <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
           <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
-          <language id="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
           <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
           <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
-          <language id="l:cd17a113-ca4e-472f-a8de-c49008f9eea8:jetbrains.mps.lang.feedback" />
-          <language id="l:16e76fe3-9534-4def-afb7-925a169a7c0b:jetbrains.mps.lang.feedback.messages" />
-          <language id="l:033598a4-76a9-47e1-ac89-a300c0fceab8:jetbrains.mps.lang.feedback.problem" />
-          <language id="l:db2a46c2-ebec-4b6c-b6c2-f9b55b9b6f8a:jetbrains.mps.lang.feedback.problem.failingRule" />
-          <language id="l:517077fd-e44f-4338-a475-1d29781dfdb8:jetbrains.mps.lang.feedback.skeleton" />
           <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
           <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
           <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
@@ -849,7 +768,6 @@
           <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
           <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
           <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:69b8a993-9b87-4d96-bf0c-3559f4bb0c63:jetbrains.mps.lang.slanguage" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
           <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
           <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
@@ -924,9 +842,6 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions.gentype-generator-templates">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions.gentype_-generator-templates">
-      <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype_/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.dimensions.gentype-src.jar" duplicate="preserve">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/generator/source_gen">
         <exclude name="**/trace.info" />
@@ -943,7 +858,6 @@
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/jetbrains.mps.samples.Physics.dimensions.gentype.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions.gentype-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions.gentype-generator-templates" prefix="module/generator/templates" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.dimensions.gentype_-generator-templates" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types.jar/META-INF" />
@@ -954,7 +868,6 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
-          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="360a4e25-e902-4667-a0a6-0e971c4f3177(com.mbeddr.mpsutil.blutil.rt)" kind="rt" />
@@ -969,12 +882,9 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
-          <module ref="9e9ef4e2-decf-4e97-bf80-9109e8b759bb(jetbrains.mps.lang.feedback.api)" kind="rt" />
-          <module ref="3f98f4e2-decf-4e97-bf80-9109e8b759ab(jetbrains.mps.lang.feedback.problem.rt)" kind="rt" />
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
-          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)" kind="rt" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
@@ -985,12 +895,9 @@
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" />
-          <language id="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:96ee7a94-411d-4cf8-9b94-96cad7e52411:jetbrains.mps.baseLanguage.jdk7" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
@@ -1002,14 +909,8 @@
           <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
           <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
           <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
-          <language id="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
           <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
           <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
-          <language id="l:cd17a113-ca4e-472f-a8de-c49008f9eea8:jetbrains.mps.lang.feedback" />
-          <language id="l:16e76fe3-9534-4def-afb7-925a169a7c0b:jetbrains.mps.lang.feedback.messages" />
-          <language id="l:033598a4-76a9-47e1-ac89-a300c0fceab8:jetbrains.mps.lang.feedback.problem" />
-          <language id="l:db2a46c2-ebec-4b6c-b6c2-f9b55b9b6f8a:jetbrains.mps.lang.feedback.problem.failingRule" />
-          <language id="l:517077fd-e44f-4338-a475-1d29781dfdb8:jetbrains.mps.lang.feedback.skeleton" />
           <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
           <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
           <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
@@ -1017,7 +918,6 @@
           <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
           <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
           <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:69b8a993-9b87-4d96-bf0c-3559f4bb0c63:jetbrains.mps.lang.slanguage" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
           <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
           <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
@@ -1085,9 +985,6 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-generator-templates">
-      <fileset dir="${basedir}/languages/jetbrains.mps.samples.Physics.types/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-src.jar" duplicate="preserve">
@@ -1106,7 +1003,6 @@
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics.types/jetbrains.mps.samples.Physics.types.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-generator-templates" prefix="module/generator/templates" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-generator-templates1" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.jar/META-INF" />
@@ -1135,8 +1031,6 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
-          <module ref="9e9ef4e2-decf-4e97-bf80-9109e8b759bb(jetbrains.mps.lang.feedback.api)" kind="rt" />
-          <module ref="3f98f4e2-decf-4e97-bf80-9109e8b759ab(jetbrains.mps.lang.feedback.problem.rt)" kind="rt" />
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="528ff3b9-5fc4-40dd-931f-c6ce3650640e(jetbrains.mps.lang.migration.runtime)" kind="rt" />
@@ -1170,12 +1064,9 @@
           <language id="l:47f075a6-558e-4640-a606-7ce0236c8023:com.mbeddr.mpsutil.interpreter" />
           <language id="l:e359e0a2-368a-4c40-ae2a-e5a09f9cfd58:de.itemis.mps.editor.math.notations" />
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" />
-          <language id="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:96ee7a94-411d-4cf8-9b94-96cad7e52411:jetbrains.mps.baseLanguage.jdk7" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
@@ -1187,26 +1078,19 @@
           <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
           <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
           <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
-          <language id="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
           <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
           <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
-          <language id="l:cd17a113-ca4e-472f-a8de-c49008f9eea8:jetbrains.mps.lang.feedback" />
-          <language id="l:16e76fe3-9534-4def-afb7-925a169a7c0b:jetbrains.mps.lang.feedback.messages" />
-          <language id="l:033598a4-76a9-47e1-ac89-a300c0fceab8:jetbrains.mps.lang.feedback.problem" />
-          <language id="l:db2a46c2-ebec-4b6c-b6c2-f9b55b9b6f8a:jetbrains.mps.lang.feedback.problem.failingRule" />
-          <language id="l:517077fd-e44f-4338-a475-1d29781dfdb8:jetbrains.mps.lang.feedback.skeleton" />
           <language id="l:64d34fcd-ad02-4e73-aff8-a581124c2e30:jetbrains.mps.lang.findUsages" />
           <language id="l:d7a92d38-f7db-40d0-8431-763b0c3c9f20:jetbrains.mps.lang.intentions" />
           <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
           <language id="l:90746344-04fd-4286-97d5-b46ae6a81709:jetbrains.mps.lang.migration" />
           <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
           <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
-          <language id="l:982eb8df-2c96-4bd7-9963-11712ea622e5:jetbrains.mps.lang.resources" />
           <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
           <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
           <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:69b8a993-9b87-4d96-bf0c-3559f4bb0c63:jetbrains.mps.lang.slanguage" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:1a8554c4-eb84-43ba-8c34-6f0d90c6e75a:jetbrains.mps.lang.smodel.query" />
           <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
           <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
           <language id="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" />
@@ -1257,9 +1141,6 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-generator-templates">
-      <fileset dir="${basedir}/languages/jetbrains.mps.samples.Physics/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-src.jar" duplicate="preserve">
@@ -1278,7 +1159,6 @@
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-generator-templates" prefix="module/generator/templates" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-generator-templates1" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.iets3.ext.math.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.iets3.ext.math.jar/META-INF" />
@@ -1289,7 +1169,6 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
-          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="1152e500-242c-4261-8518-2806cb83e0c9(com.mbeddr.mpsutil.interpreter.plugin)" kind="rt" />
@@ -1303,12 +1182,9 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
-          <module ref="9e9ef4e2-decf-4e97-bf80-9109e8b759bb(jetbrains.mps.lang.feedback.api)" kind="rt" />
-          <module ref="3f98f4e2-decf-4e97-bf80-9109e8b759ab(jetbrains.mps.lang.feedback.problem.rt)" kind="rt" />
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
-          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
@@ -1323,12 +1199,9 @@
           <language id="l:47f075a6-558e-4640-a606-7ce0236c8023:com.mbeddr.mpsutil.interpreter" />
           <language id="l:e359e0a2-368a-4c40-ae2a-e5a09f9cfd58:de.itemis.mps.editor.math.notations" />
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" />
-          <language id="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:96ee7a94-411d-4cf8-9b94-96cad7e52411:jetbrains.mps.baseLanguage.jdk7" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
@@ -1341,14 +1214,8 @@
           <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
           <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
           <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
-          <language id="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
           <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
           <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
-          <language id="l:cd17a113-ca4e-472f-a8de-c49008f9eea8:jetbrains.mps.lang.feedback" />
-          <language id="l:16e76fe3-9534-4def-afb7-925a169a7c0b:jetbrains.mps.lang.feedback.messages" />
-          <language id="l:033598a4-76a9-47e1-ac89-a300c0fceab8:jetbrains.mps.lang.feedback.problem" />
-          <language id="l:db2a46c2-ebec-4b6c-b6c2-f9b55b9b6f8a:jetbrains.mps.lang.feedback.problem.failingRule" />
-          <language id="l:517077fd-e44f-4338-a475-1d29781dfdb8:jetbrains.mps.lang.feedback.skeleton" />
           <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
           <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
           <language id="l:28f9e497-3b42-4291-aeba-0a1039153ab1:jetbrains.mps.lang.plugin" />
@@ -1357,7 +1224,6 @@
           <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
           <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
           <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:69b8a993-9b87-4d96-bf0c-3559f4bb0c63:jetbrains.mps.lang.slanguage" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
           <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
           <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
@@ -1424,9 +1290,6 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.iets3.ext.math-generator-templates">
-      <fileset dir="${basedir}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.iets3.ext.math-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.iets3.ext.math-src.jar" duplicate="preserve">
@@ -1445,7 +1308,6 @@
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/jetbrains.mps.samples.Physics.iets3.ext.math.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.iets3.ext.math-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.iets3.ext.math-generator-templates" prefix="module/generator/templates" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.iets3.ext.math-generator-templates1" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genbase.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.genbase.jar/META-INF" />
@@ -1456,7 +1318,6 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
-          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
@@ -1465,24 +1326,18 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
-          <module ref="9e9ef4e2-decf-4e97-bf80-9109e8b759bb(jetbrains.mps.lang.feedback.api)" kind="rt" />
-          <module ref="3f98f4e2-decf-4e97-bf80-9109e8b759ab(jetbrains.mps.lang.feedback.problem.rt)" kind="rt" />
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
-          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
           <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" />
-          <language id="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:96ee7a94-411d-4cf8-9b94-96cad7e52411:jetbrains.mps.baseLanguage.jdk7" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
@@ -1494,14 +1349,8 @@
           <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
           <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
           <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
-          <language id="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
           <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
           <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
-          <language id="l:cd17a113-ca4e-472f-a8de-c49008f9eea8:jetbrains.mps.lang.feedback" />
-          <language id="l:16e76fe3-9534-4def-afb7-925a169a7c0b:jetbrains.mps.lang.feedback.messages" />
-          <language id="l:033598a4-76a9-47e1-ac89-a300c0fceab8:jetbrains.mps.lang.feedback.problem" />
-          <language id="l:db2a46c2-ebec-4b6c-b6c2-f9b55b9b6f8a:jetbrains.mps.lang.feedback.problem.failingRule" />
-          <language id="l:517077fd-e44f-4338-a475-1d29781dfdb8:jetbrains.mps.lang.feedback.skeleton" />
           <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
           <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
           <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
@@ -1509,7 +1358,6 @@
           <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
           <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
           <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:69b8a993-9b87-4d96-bf0c-3559f4bb0c63:jetbrains.mps.lang.slanguage" />
           <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
           <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
           <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
@@ -1575,9 +1423,6 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genbase-generator-templates">
-      <fileset dir="${basedir}/languages/jetbrains.mps.samples.Physics.genbase/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genbase-generator-templates1">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.genbase-src.jar" duplicate="preserve">
@@ -1596,7 +1441,6 @@
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics.genbase/jetbrains.mps.samples.Physics.genbase.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genbase-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genbase-generator-templates" prefix="module/generator/templates" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.genbase-generator-templates1" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.java.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.java.jar/META-INF" />
@@ -1831,9 +1675,6 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.java/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.execution.java.jar" />
     </jar>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.javascript-models">
-      <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/models" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.java-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.java/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
@@ -1845,7 +1686,6 @@
         <exclude name="**/*.mps" />
       </fileset>
       <zipfileset file="${basedir}/solutions/jetbrains.mps.samples.Physics.execution.java/jetbrains.mps.samples.Physics.execution.java.msd" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.javascript-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.java-models" prefix="module/models" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.execution.javascript.jar" />
@@ -1896,7 +1736,7 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.execution.javascript.jar" />
     </jar>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.javascript-models1">
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.javascript-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.execution.javascript-src.jar" duplicate="preserve">
@@ -1907,7 +1747,7 @@
         <exclude name="**/*.mps" />
       </fileset>
       <zipfileset file="${basedir}/solutions/jetbrains.mps.samples.Physics.execution.javascript/jetbrains.mps.samples.Physics.execution.javascript.msd" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.javascript-models1" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-jetbrains.mps.samples.Physics.execution.javascript-models" prefix="module/models" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.all.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.devkit.all.jar/META-INF" />
@@ -1974,7 +1814,6 @@
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.varscope" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.build" />
       <plugin path="${artifacts.com.mbeddr.platform}/de-itemis-mps-selection" />
-      <plugin path="${artifacts.com.mbeddr.platform}/de.60.mps.libs" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram" />
@@ -1982,6 +1821,7 @@
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.extensions.build" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.tooltips" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.utils" />
+      <plugin path="${artifacts.com.mbeddr.platform}/de.q60.mps.collections.libs" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.q60.shadowmodels" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.slisson.mps.conditionalEditor" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.slisson.mps.hacks" />
@@ -2011,7 +1851,6 @@
       <library file="${artifacts.mps}/languages/baseLanguage/closures.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/collections.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
-      <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.checkedDots.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
@@ -2064,7 +1903,6 @@
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.messages.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.problem.childAndProp.jar" />
-      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.problem.failingRule.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.problem.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.problem.scopes.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.skeleton.jar" />
@@ -2087,7 +1925,6 @@
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.script.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
-      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.slanguage.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.query.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
@@ -2450,6 +2287,7 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
@@ -2540,6 +2378,7 @@
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
@@ -2636,6 +2475,7 @@
         <fileset file="${artifacts.mps}/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
@@ -2727,6 +2567,7 @@
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
@@ -2823,6 +2664,7 @@
         <fileset file="${artifacts.mps}/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
@@ -2910,6 +2752,7 @@
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
@@ -2995,6 +2838,7 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
@@ -3081,6 +2925,7 @@
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
@@ -3162,6 +3007,7 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
@@ -3340,6 +3186,7 @@
         <fileset file="${artifacts.mps}/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
@@ -3425,6 +3272,7 @@
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
@@ -3505,6 +3353,7 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
@@ -3585,6 +3434,7 @@
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
@@ -3671,6 +3521,7 @@
         <fileset file="${artifacts.mps}/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
@@ -3823,6 +3674,7 @@
         <fileset file="${artifacts.mps}/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.project.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
@@ -3914,6 +3766,7 @@
         <fileset file="${artifacts.mps}/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />

@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.scope.Scope;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -28,7 +27,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class JSInjectModule__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x8d94c08e449e484bL, 0x9e9ef3e97c8df28aL, 0x159ecb3ed37c0e17L, "org.mar9000.mps.ecmascript.bundler.structure.JSInjectModule");
 
-  public static final SMethod<Scope> getBindings_id2l8t3D7B8EG = new SMethodBuilder<Scope>(new SJavaCompoundTypeImpl(Scope.class)).name("getBindings").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2l8t3D7B8EG").build(SMethodBuilder.createJavaParameter((Class<SAbstractConcept>) ((Class) Object.class), ""));
+  public static final SMethod<Scope> getBindings_id2l8t3D7B8EG = new SMethodBuilder<Scope>(new SJavaCompoundTypeImpl(Scope.class)).name("getBindings").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2l8t3D7B8EG").build(SMethodBuilder.createJavaParameter((Class<SAbstractConcept>) ((Class) Object.class), ""));
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getBindings_id2l8t3D7B8EG);
 
@@ -39,7 +38,7 @@ public final class JSInjectModule__BehaviorDescriptor extends BaseBHDescriptor {
     if ((SLinkOperations.getTarget(__thisNode__, LINKS.module$xfZi) != null)) {
       SNode ancestor = SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(__thisNode__, LINKS.module$xfZi), CONCEPTS.JSProgram$Dg, true, false);
 
-      // Small barrier against circular dependencies 
+      // Small barrier against circular dependencies
       if (ancestor != SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.JSProgram$Dg, true, false)) {
         return ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QDV$.invoke(ancestor, kind, null);
       }

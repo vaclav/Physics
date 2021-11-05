@@ -33,7 +33,7 @@ public class typeof_EulerAxisRotationExpression_InferenceRule extends AbstractIn
             final SNode angleType = typeCheckingContext.typeOf(SLinkOperations.getTarget(self, LINKS.angle$6N6F), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660234769", true);
             typeCheckingContext.whenConcrete(angleType, new Runnable() {
               public void run() {
-                // Check that type match (rotation speed with rotation speed for example) 
+                // Check that type match (rotation speed with rotation speed for example)
                 TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(axisType), createVectorType_c6qx7o_c0b0a0a1a0b0a0a0a1a0b0a0b(SNodeOperations.as(typeCheckingContext.getExpandedNode(angleType), CONCEPTS.Type$WK)), "axis", "angle", new _FunctionTypes._void_P1_E0<String>() {
                   public void invoke(String text) {
                     {

@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -27,8 +26,8 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public final class DerivedUnit__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca800848L, "jetbrains.mps.samples.Physics.dimensions.structure.DerivedUnit");
 
-  public static final SMethod<String> getSelfString_id1fq3tlLwQff = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getSelfString").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1fq3tlLwQff").build();
-  public static final SMethod<String> getTargetString_id1fq3tlLwQga = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getTargetString").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1fq3tlLwQga").build();
+  public static final SMethod<String> getSelfString_id1fq3tlLwQff = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getSelfString").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1fq3tlLwQff").build();
+  public static final SMethod<String> getTargetString_id1fq3tlLwQga = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getTargetString").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1fq3tlLwQga").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getSelfString_id1fq3tlLwQff, getTargetString_id1fq3tlLwQga);
 

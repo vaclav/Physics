@@ -33,11 +33,11 @@ public class QueriesGenerated extends QueryProviderBase {
     super(1);
   }
   public static void mappingScript_CodeBlock_1(final MappingScriptContext _context) {
-    // Script to include into target languages generators 
+    // Script to include into target languages generators
     final SNode originalRef = createAbstractObjectReference_x583g4_a0b0b();
     final SNode baseObject = SNodeOperations.copyNode(SLinkOperations.getTarget(originalRef, LINKS.target$kzX3));
 
-    // Set BaseObject the root of all objects (to apply default styles) 
+    // Set BaseObject the root of all objects (to apply default styles)
     ListSequence.fromList(SModelOperations.nodes(_context.getModel(), CONCEPTS.AbstractObjectDefinition$kn)).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return (SLinkOperations.getTarget(it, LINKS.parent$k$qA) == null) || SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.parent$k$qA), LINKS.target$kzX3) == SLinkOperations.getTarget(originalRef, LINKS.target$kzX3);

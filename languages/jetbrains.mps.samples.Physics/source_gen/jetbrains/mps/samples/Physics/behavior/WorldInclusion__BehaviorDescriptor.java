@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -26,9 +25,9 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class WorldInclusion__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x3cd406ea6df343a0L, "jetbrains.mps.samples.Physics.structure.WorldInclusion");
 
-  public static final SMethod<SNode> getDefinition_id31HEEbbXs3G = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDefinition").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("31HEEbbXs3G").build();
-  public static final SMethod<String> getAutomaticName_idcJpacq408C = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getAutomaticName").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("cJpacq408C").build();
-  public static final SMethod<Boolean> allowNonIdentifierNames_id4SwD0JT7m0l = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("allowNonIdentifierNames").modifiers(SModifiersImpl.create(9, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4SwD0JT7m0l").build();
+  public static final SMethod<SNode> getDefinition_id31HEEbbXs3G = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDefinition").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("31HEEbbXs3G").build();
+  public static final SMethod<String> getAutomaticName_idcJpacq408C = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getAutomaticName").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("cJpacq408C").build();
+  public static final SMethod<Boolean> allowNonIdentifierNames_id4SwD0JT7m0l = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("allowNonIdentifierNames").modifiers(9, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4SwD0JT7m0l").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDefinition_id31HEEbbXs3G, getAutomaticName_idcJpacq408C, allowNonIdentifierNames_id4SwD0JT7m0l);
 

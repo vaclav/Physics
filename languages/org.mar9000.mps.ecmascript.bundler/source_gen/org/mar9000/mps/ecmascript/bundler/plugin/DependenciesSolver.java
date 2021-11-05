@@ -26,23 +26,23 @@ public class DependenciesSolver {
   public static List<SNode> dependenciesOf(SNode root) {
     Map<SNode, List<SNode>> dependencies = MapSequence.fromMap(new HashMap<SNode, List<SNode>>());
 
-    // Retrieve dependencies 
+    // Retrieve dependencies
     fetchDependenciesOf(root, dependencies);
 
-    // Compute order 
+    // Compute order
     final List<SNode> selected = ListSequence.fromList(new ArrayList<SNode>());
 
-    // Failsafe counter (prevent circular dependencies issues) 
+    // Failsafe counter (prevent circular dependencies issues)
     int iterations = 0;
 
     while (ListSequence.fromList(selected).count() < MapSequence.fromMap(dependencies).count() && iterations < MapSequence.fromMap(dependencies).count() + 1) {
       iterations++;
       MapSequence.fromMap(dependencies).where(new IWhereFilter<IMapping<SNode, List<SNode>>>() {
         public boolean accept(final IMapping<SNode, List<SNode>> entry) {
-          // Select all entries 
+          // Select all entries
           return !(ListSequence.fromList(selected).contains(entry.key())) && ListSequence.fromList(entry.value()).all(new IWhereFilter<SNode>() {
             public boolean accept(SNode it) {
-              // With already selected deps (or self) 
+              // With already selected deps (or self)
               return entry.key() == it || ListSequence.fromList(selected).contains(it);
             }
           });
@@ -53,7 +53,7 @@ public class DependenciesSolver {
         }
       }, true).visitAll(new IVisitor<IMapping<SNode, List<SNode>>>() {
         public void visit(IMapping<SNode, List<SNode>> it) {
-          // And add it to the list 
+          // And add it to the list
           ListSequence.fromList(selected).addElement(it.key());
         }
       });

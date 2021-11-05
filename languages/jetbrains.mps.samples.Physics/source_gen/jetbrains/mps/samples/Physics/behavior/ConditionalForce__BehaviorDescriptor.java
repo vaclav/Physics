@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -19,7 +18,6 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
@@ -28,12 +26,12 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x491f8a8da74947aeL, "jetbrains.mps.samples.Physics.structure.ConditionalForce");
 
-  public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisaz").build();
-  public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisbm").build();
-  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
-  public static final SMethod<SNode> getMomentExpression_id2rJkT1EYuGl = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getMomentExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2rJkT1EYuGl").build();
-  public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$go").build();
-  public static final SMethod<Integer> getForceMode_id4$vyCQBiMP2 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBiMP2").build();
+  public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBisaz").build();
+  public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBisbm").build();
+  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBi$gg").build();
+  public static final SMethod<SNode> getMomentExpression_id2rJkT1EYuGl = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getMomentExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2rJkT1EYuGl").build();
+  public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBi$go").build();
+  public static final SMethod<Integer> getForceMode_id4$vyCQBiMP2 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBiMP2").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getCachedValueExpression_id4$vyCQBisaz, getCacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg, getMomentExpression_id2rJkT1EYuGl, getApplicationPointExpression_id4$vyCQBi$go, getForceMode_id4$vyCQBiMP2);
 
@@ -47,11 +45,11 @@ public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor
     return _quotation_createNode_z9hyna_a0a1();
   }
   /*package*/ static SNode getLinearForceExpression_id4$vyCQBi$gg(@NotNull SNode __thisNode__) {
-    // If (condition) nested.components else [0, 0, 0] 
+    // If (condition) nested.components else [0, 0, 0]
     return createIfExpression_z9hyna_a1a2(SNodeOperations.copyNode(SLinkOperations.getTarget(__thisNode__, LINKS.condition$RXDZ)), __thisNode__);
   }
   /*package*/ static SNode getMomentExpression_id2rJkT1EYuGl(@NotNull SNode __thisNode__) {
-    // If (condition) nested.moment else [0, 0, 0] 
+    // If (condition) nested.moment else [0, 0, 0]
     return createIfExpression_z9hyna_a1a3(SNodeOperations.copyNode(SLinkOperations.getTarget(__thisNode__, LINKS.condition$RXDZ)), __thisNode__);
   }
   /*package*/ static SNode getApplicationPointExpression_id4$vyCQBi$go(@NotNull SNode __thisNode__) {
@@ -117,9 +115,9 @@ public final class ConditionalForce__BehaviorDescriptor extends BaseBHDescriptor
     return CONCEPT;
   }
   private static SNode _quotation_createNode_z9hyna_a0a1() {
-    PersistenceFacade facade = PersistenceFacade.getInstance();
     SNode quotedNode_1 = null;
-    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, "jetbrains.mps.samples.Physics.types"), 0x1be152c15029f679L, "ForceType")).getResult();
+    SNodeBuilder nb = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, "jetbrains.mps.samples.Physics.types"), 0x1be152c15029f679L, "ForceType"));
+    quotedNode_1 = nb.getResult();
     return quotedNode_1;
   }
   private static SNode createIfExpression_z9hyna_a1a2(SNode p0, SNode p1) {

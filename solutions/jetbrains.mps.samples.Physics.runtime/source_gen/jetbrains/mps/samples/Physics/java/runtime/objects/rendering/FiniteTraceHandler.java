@@ -28,11 +28,11 @@ public class FiniteTraceHandler extends TraceHandler {
   @Override
   protected void write(DVector3C positions, float scale) {
     if (currentCapacity < MAX_CAPACITY) {
-      // Write and increase capacity 
+      // Write and increase capacity
       writeAt(positions, currentCapacity, scale);
       currentCapacity += 1;
     } else {
-      // Write and shift offset 
+      // Write and shift offset
       writeAt(positions, offset, scale);
       offset += 1;
       if (offset >= MAX_CAPACITY) {

@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -26,8 +25,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class UnitReference__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
 
-  public static final SMethod<SNode> getDimension_ideHVwIHgU5$ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDimension").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("eHVwIHgU5$").build();
-  public static final SMethod<SNode> toDimensionReference_id4NfpV2pfAzN = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("toDimensionReference").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4NfpV2pfAzN").build();
+  public static final SMethod<SNode> getDimension_ideHVwIHgU5$ = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getDimension").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("eHVwIHgU5$").build();
+  public static final SMethod<SNode> toDimensionReference_id4NfpV2pfAzN = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("toDimensionReference").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4NfpV2pfAzN").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDimension_ideHVwIHgU5$, toDimensionReference_id4NfpV2pfAzN);
 

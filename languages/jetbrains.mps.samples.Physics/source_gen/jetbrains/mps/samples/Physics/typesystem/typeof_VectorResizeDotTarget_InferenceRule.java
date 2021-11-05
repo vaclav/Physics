@@ -27,14 +27,14 @@ public class typeof_VectorResizeDotTarget_InferenceRule extends AbstractInferenc
       final SNode contextType = typeCheckingContext.typeOf(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(target), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973097984", true);
       typeCheckingContext.whenConcrete(contextType, new Runnable() {
         public void run() {
-          // Same type as parent 
+          // Same type as parent
           {
             SNode _nodeToCheck_1029348928467 = target;
             EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973097978", 0, null);
             typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150973097982", true), (SNode) typeCheckingContext.getExpandedNode(contextType), _info_12389875345);
           }
 
-          // Check length match internal units 
+          // Check length match internal units
           if (SNodeOperations.isInstanceOf(typeCheckingContext.getExpandedNode(contextType), CONCEPTS.VectorType$AT)) {
             if (!(typeCheckingContext.isSingleTypeComputation())) {
               {

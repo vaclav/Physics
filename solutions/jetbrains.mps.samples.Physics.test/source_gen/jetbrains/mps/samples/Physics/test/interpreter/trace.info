@@ -43,13 +43,13 @@
       <node id="1139474844806327647" at="88,41,89,41" concept="1" />
       <node id="1139474844806955740" at="89,41,90,41" concept="1" />
       <node id="1139474844807603012" at="90,41,91,126" concept="1" />
-      <node id="1139474844806269980" at="95,67,96,72" concept="4" />
-      <node id="1139474844806309795" at="96,72,97,0" concept="6" />
-      <node id="1139474844806346699" at="97,0,98,34" concept="5" />
-      <node id="1139474844806346407" at="98,34,99,35" concept="1" />
-      <node id="1139474844806346298" at="99,35,100,0" concept="6" />
-      <node id="1139474844806309991" at="100,0,101,58" concept="5" />
-      <node id="1139474844806483875" at="101,58,102,44" concept="1" />
+      <node id="1139474844806269980" at="94,67,95,72" concept="4" />
+      <node id="1139474844806309795" at="95,72,96,0" concept="6" />
+      <node id="1139474844806346699" at="96,0,97,33" concept="5" />
+      <node id="1139474844806346407" at="97,33,98,35" concept="1" />
+      <node id="1139474844806346298" at="98,35,99,0" concept="6" />
+      <node id="1139474844806309991" at="99,0,100,57" concept="5" />
+      <node id="1139474844806483875" at="100,57,101,44" concept="1" />
       <node id="4809107873077312125" at="22,0,24,0" concept="7" trace="ourParamCache" />
       <node id="4809107873077312125" at="24,0,26,0" concept="2" trace="myWithCommandRule" />
       <node id="4809107873077312125" at="27,0,30,0" concept="0" trace="TestConversions_Test#()V" />
@@ -64,7 +64,7 @@
       <node id="1139474844806342448" at="72,0,79,0" concept="3" trace="test_ResolveSpherical#()V" />
       <node id="1139474844806960973" at="79,0,86,0" concept="3" trace="test_ResolveDirectionalFromPosition#()V" />
       <node id="1139474844807600714" at="86,0,93,0" concept="3" trace="test_ResolveDirectionalOutsidePosition#()V" />
-      <node id="1139474844806268632" at="95,0,104,0" concept="3" trace="assertEquals#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/samples/Physics/java/common/vectors/InternalVector;)V" />
+      <node id="1139474844806268632" at="94,0,103,0" concept="3" trace="assertEquals#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/samples/Physics/java/common/vectors/InternalVector;)V" />
       <scope id="4809107873077312125" at="27,33,28,25" />
       <scope id="1139474844806211347" at="32,50,33,41" />
       <scope id="1139474844806317991" at="36,58,37,49" />
@@ -91,15 +91,15 @@
       <scope id="1139474844806342448" at="72,0,79,0" />
       <scope id="1139474844806960973" at="79,0,86,0" />
       <scope id="1139474844807600714" at="86,0,93,0" />
-      <scope id="1139474844806268632" at="95,67,102,44">
+      <scope id="1139474844806268632" at="94,67,101,44">
         <var name="actual" id="1139474844806269981" />
       </scope>
-      <scope id="1139474844806268632" at="95,0,104,0">
+      <scope id="1139474844806268632" at="94,0,103,0">
         <var name="expected" id="1139474844806269871" />
         <var name="expr" id="1139474844806269416" />
       </scope>
-      <unit id="4809107873077312125" at="52,0,105,0" name="jetbrains.mps.samples.Physics.test.interpreter.TestConversions_Test$TestBody" />
-      <unit id="4809107873077312125" at="20,0,106,0" name="jetbrains.mps.samples.Physics.test.interpreter.TestConversions_Test" />
+      <unit id="4809107873077312125" at="52,0,104,0" name="jetbrains.mps.samples.Physics.test.interpreter.TestConversions_Test$TestBody" />
+      <unit id="4809107873077312125" at="20,0,105,0" name="jetbrains.mps.samples.Physics.test.interpreter.TestConversions_Test" />
     </file>
   </root>
 </debug-info>

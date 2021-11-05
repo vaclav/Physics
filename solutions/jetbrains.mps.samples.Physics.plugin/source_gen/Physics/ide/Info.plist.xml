@@ -66,8 +66,8 @@
     
     <key>LSArchitecturePriority</key>
     <array>
+      <string>arm64</string>
       <string>x86_64</string>
-      <string>i386</string>
     </array>
     <key>LSRequiresNativeExecution</key>
     <string>YES</string>
@@ -109,8 +109,6 @@
         <key>idea.executable</key>
         <string>physics</string>
         
-        <key>idea.java.redist</key>
-        <string>NoJavaDistribution</string>
         <key>idea.home.path</key>
         <string>$APP_PACKAGE/Contents</string>
       </dict>

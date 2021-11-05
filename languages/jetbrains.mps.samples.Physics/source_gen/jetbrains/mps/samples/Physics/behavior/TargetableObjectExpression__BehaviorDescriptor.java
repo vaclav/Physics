@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.Set;
 import java.util.List;
@@ -33,8 +32,8 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7f738eL, "jetbrains.mps.samples.Physics.structure.TargetableObjectExpression");
 
-  public static final SMethod<Iterable<SNode>> getDependenciesRelevantForCycleDetection_id59HbAIOYveX = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getDependenciesRelevantForCycleDetection").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("59HbAIOYveX").build();
-  public static final SMethod<Set<SNode>> traceBackElementInCycle_id17fjvcLF7UR = new SMethodBuilder<Set<SNode>>(new SJavaCompoundTypeImpl((Class<Set<SNode>>) ((Class) Object.class))).name("traceBackElementInCycle").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("17fjvcLF7UR").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Iterable<SNode>> getDependenciesRelevantForCycleDetection_id59HbAIOYveX = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getDependenciesRelevantForCycleDetection").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("59HbAIOYveX").build();
+  public static final SMethod<Set<SNode>> traceBackElementInCycle_id17fjvcLF7UR = new SMethodBuilder<Set<SNode>>(new SJavaCompoundTypeImpl((Class<Set<SNode>>) ((Class) Object.class))).name("traceBackElementInCycle").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("17fjvcLF7UR").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getDependenciesRelevantForCycleDetection_id59HbAIOYveX, traceBackElementInCycle_id17fjvcLF7UR);
 
@@ -43,24 +42,24 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
 
   /*package*/ static Iterable<SNode> getDependenciesRelevantForCycleDetection_id59HbAIOYveX(@NotNull SNode __thisNode__) {
 
-    //  Detect dependencies from DotExpressions (either target or source not) 
+    //  Detect dependencies from DotExpressions (either target or source not)
     Iterable<SNode> dotTargets = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.DotExpression$jp, false, new SAbstractConcept[]{})).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
-        // If the source targets an object 
+        // If the source targets an object
         {
           final SNode object = SLinkOperations.getTarget(it, LINKS.expr$Hji0);
           if (SNodeOperations.isInstanceOf(object, CONCEPTS.ITargetObject$D9)) {
 
-            // And the target target specific coordinates 
+            // And the target target specific coordinates
             {
               final SNode target = SLinkOperations.getTarget(it, LINKS.target$u23F);
               if (SNodeOperations.isInstanceOf(target, CONCEPTS.ITargetExpression$T8)) {
-                // Use those 
+                // Use those
                 return ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(target, ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(object));
               }
             }
 
-            // Otherwise the object probably refer to it's positions 
+            // Otherwise the object probably refer to it's positions
             return SLinkOperations.getTarget(ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(object), LINKS.position$2BSz);
           }
         }
@@ -73,7 +72,7 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
       }
     });
 
-    // Detect dependencies outside dot expressions (standalone object targets) 
+    // Detect dependencies outside dot expressions (standalone object targets)
     Iterable<SNode> nonDotTargets = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.ITargetObject$D9, false, new SAbstractConcept[]{CONCEPTS.DotExpression$jp})).select(new ISelector<SNode, SNode>() {
       public SNode select(SNode it) {
         return SLinkOperations.getTarget(ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(it), LINKS.position$2BSz);

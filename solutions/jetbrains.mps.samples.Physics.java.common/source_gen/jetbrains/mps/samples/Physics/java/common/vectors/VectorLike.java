@@ -75,7 +75,7 @@ public abstract class VectorLike {
    * @return azimutal angle
    */
   public BigDecimal getAzimutalAngle() {
-    //  Using atan2 instead of atan to ensure having all the possibilities of angles 
+    //  Using atan2 instead of atan to ensure having all the possibilities of angles
     return BigDecimal.valueOf(Math.atan2(getY().doubleValue(), getX().doubleValue()));
   }
 

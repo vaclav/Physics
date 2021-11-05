@@ -110,12 +110,12 @@ public class DimensionMapsHelper {
    * Multiply the source map values by a factor, then add all result in the target map
    */
   public static void multiplyAndMergeInto(Map<SNode, Rational> sourceMap, final Rational exponent, final Map<SNode, Rational> targetMap) {
-    // Multiply the power of the child units by it's power 
+    // Multiply the power of the child units by it's power
     MapSequence.fromMap(sourceMap).visitAll(new IVisitor<IMapping<SNode, Rational>>() {
       public void visit(IMapping<SNode, Rational> it) {
         Rational power = it.value().multiply(exponent);
 
-        // Add it to the map 
+        // Add it to the map
         if (MapSequence.fromMap(targetMap).containsKey(it.key())) {
           MapSequence.fromMap(targetMap).put(it.key(), MapSequence.fromMap(targetMap).get(it.key()).add(power));
         } else {

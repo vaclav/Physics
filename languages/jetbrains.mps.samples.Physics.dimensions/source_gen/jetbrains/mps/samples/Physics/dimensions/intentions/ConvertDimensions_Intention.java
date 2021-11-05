@@ -70,14 +70,14 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
   private List<Tuples._2<List<SNode>, Map<SNode, Rational>>> parameter(final SNode node, final EditorContext editorContext) {
     final List<Tuples._2<List<SNode>, Map<SNode, Rational>>> references = ListSequence.fromList(new ArrayList<Tuples._2<List<SNode>, Map<SNode, Rational>>>());
 
-    // Fetch ancestors requirements 
+    // Fetch ancestors requirements
     Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getNodeAncestors(node, null, false), CONCEPTS.IUseSpecificDimensions$lj)).translate(new ITranslator2<SNode, List<SNode>>() {
       public Iterable<List<SNode>> translate(SNode it) {
         return (Iterable<List<SNode>>) IUseSpecificDimensions__BehaviorDescriptor.getRequiredDimensions_id270Q2mETulL.invoke(it);
       }
     }).visitAll(new IVisitor<List<SNode>>() {
       public void visit(List<SNode> current) {
-        // If the dimension is not already on the list 
+        // If the dimension is not already on the list
         final Map<SNode, Rational> reduced = UnitReduceHelper.reduceUnits(current);
         if (ListSequence.fromList(references).all(new IWhereFilter<Tuples._2<List<SNode>, Map<SNode, Rational>>>() {
           public boolean accept(Tuples._2<List<SNode>, Map<SNode, Rational>> it) {
@@ -117,13 +117,13 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
     public void execute(final SNode node, final EditorContext editorContext) {
       Map<SNode, Rational> targetUnits = myParameter._1();
 
-      // If the type of the node is already dimensioned 
+      // If the type of the node is already dimensioned
       {
         final SNode sourceDimensions = TypecheckingFacade.getFromContext().getTypeOf(node);
         if (SNodeOperations.isInstanceOf(sourceDimensions, CONCEPTS.DimensionType$8R)) {
           Map<SNode, Rational> sourceUnits = UnitReduceHelper.reduceUnits(SLinkOperations.getChildren(sourceDimensions, LINKS.units$qq1O));
 
-          // Apply inverted factor on current units 
+          // Apply inverted factor on current units
           DimensionMapsHelper.multiplyAndMergeInto(sourceUnits, new Rational(-1), targetUnits);
         }
       }
@@ -132,7 +132,7 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
         return;
       }
 
-      // Convert dimensions back to default units 
+      // Convert dimensions back to default units
       Iterable<SNode> expressionUnits = Sequence.fromIterable(DimensionMapsHelper.mapToReferences(targetUnits)).select(new ISelector<SNode, SNode>() {
         public SNode select(SNode it) {
           return createUnitReference_6tizts_a0a0a0a8a0(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.unit$5Sm), LINKS.default$8aTQ), SLinkOperations.getTarget(it, LINKS.exponent$5qk));
@@ -141,7 +141,7 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
 
       SNode literal = createNumberLiteral_6tizts_a0k0a();
 
-      // Wrap expression with the converter 
+      // Wrap expression with the converter
       SNodeOperations.replaceWithAnother(node, createMulExpression_6tizts_a0a31a0(SNodeOperations.copyNode(node), literal, expressionUnits));
 
       editorContext.select(literal);

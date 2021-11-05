@@ -76,21 +76,21 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
           {
             final SNode exponent = leftOperandType;
             if (SNodeOperations.isInstanceOf(exponent, CONCEPTS.NumberType$n)) {
-              // We expect the exponent to be constant (float string) 
+              // We expect the exponent to be constant (float string)
               BigDecimal expDec = BigDecimal.ONE.divide(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(exponent, LINKS.range$RnOa), PROPS.min$7OOG)), MathContext.DECIMAL128);
 
-              // Then we compute the min/max value 
+              // Then we compute the min/max value
               BigDecimal minRoot = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(expression, LINKS.range$RnOa), PROPS.min$7OOG)), expDec);
               BigDecimal maxRoot = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(SLinkOperations.getTarget(expression, LINKS.range$RnOa), PROPS.max$7P3H)), expDec);
 
-              // Resulting number is computed 
+              // Resulting number is computed
               return createNumberType_3ist9o_a8a0a0a1b(minRoot.min(maxRoot).toString(), minRoot.max(maxRoot).toString());
             }
           }
         }
       }
 
-      // Otherwise it would not be possible to compute more complex type 
+      // Otherwise it would not be possible to compute more complex type
       return createRealType_3ist9o_a3a1b();
     }
     public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
@@ -138,7 +138,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType"));
     }
     public boolean isApplicable(SubtypingManager subtypingManager, SNode operation, SNode leftOperandType, SNode rightOperandType) {
-      // Integer type already handled somewhere else 
+      // Integer type already handled somewhere else
       return (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(leftOperandType, CONCEPTS.Type$WK)) && (boolean) Type__BehaviorDescriptor.notRequiresSpecialCapability_id7McqtXG$h_u.invoke(SNodeOperations.cast(rightOperandType, CONCEPTS.Type$WK)) && !(TypecheckingFacade.getFromContext().isSubtype(rightOperandType, createIntegerType_3ist9o_b0a0a1a2c()));
     }
     @Override

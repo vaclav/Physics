@@ -47,7 +47,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   public PhysicalEntity(World world, String name, T scope) {
     this.world = world;
     this.name = name;
-    // Creating body 
+    // Creating body
     body = OdeHelper.createBody(world.getWorld());
     this.scope = scope;
   }
@@ -119,14 +119,14 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     graphics.pushMatrix();
     graphics.translate((float) (position.get0() * scale + scaledOffset.get0()), (float) (position.get1() * scale + scaledOffset.get1()), (float) (position.get2() * scale + scaledOffset.get2()));
 
-    // https://en.wikipedia.org/wiki/Rotation_matrix (https://en.wikipedia.org/wiki/Rotation_matrix) 
+    // https://en.wikipedia.org/wiki/Rotation_matrix
     DMatrix3C rotation = body.getRotation();
     graphics.applyMatrix((float) rotation.get00(), (float) rotation.get01(), (float) rotation.get02(), 0, (float) rotation.get10(), (float) rotation.get11(), (float) rotation.get12(), 0, (float) rotation.get20(), (float) rotation.get21(), (float) rotation.get22(), 0, 0, 0, 0, 1);
 
     graphics.shape(fixture.getShape());
     graphics.popMatrix();
 
-    // Display trace if any 
+    // Display trace if any
     if (properties.getTraceHandler() != null) {
       properties.getTraceHandler().render(position, graphics, scale, scaledOffset, world.isPaused());
     }
@@ -184,11 +184,11 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
    * Initialize the object properties
    */
   public void init(T scope, World world) {
-    // To override 
+    // To override
   }
 
   public void build() {
-    // Build fixture and other properties 
+    // Build fixture and other properties
     this.propertiesBuilder.applyOn(world, this);
   }
 

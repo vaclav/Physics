@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -25,9 +24,9 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xb0d6374ec7d87e1L, "jetbrains.mps.samples.Physics.structure.ITargetExpression");
 
-  public static final SMethod<SNode> getTargetCoordinates_idGdoRjGvovH = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetCoordinates").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("GdoRjGvovH").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
-  public static final SMethod<SNode> overrideWith_id38SdPTRbTXB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("overrideWith").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
-  public static final SMethod<SNode> getNodeTarget_id6ZPff_L2lbX = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getNodeTarget").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6ZPff_L2lbX").build();
+  public static final SMethod<SNode> getTargetCoordinates_idGdoRjGvovH = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getTargetCoordinates").modifiers(12, AccessPrivileges.PUBLIC).concept(CONCEPT).id("GdoRjGvovH").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> overrideWith_id38SdPTRbTXB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("overrideWith").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("38SdPTRbTXB").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> getNodeTarget_id6ZPff_L2lbX = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getNodeTarget").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("6ZPff_L2lbX").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getTargetCoordinates_idGdoRjGvovH, overrideWith_id38SdPTRbTXB, getNodeTarget_id6ZPff_L2lbX);
 
@@ -37,7 +36,7 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
   /*package*/ static SNode overrideWith_id38SdPTRbTXB(@NotNull SNode __thisNode__, SNode content) {
     SNode localized = ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetLocalized$4J));
 
-    // Default behavior, expect targetable expression to be instanciated (!) 
+    // Default behavior, expect targetable expression to be instanciated (!)
     SNode targetCoordinates = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized);
     SNodeOperations.replaceWithAnother(SLinkOperations.getTarget(targetCoordinates, LINKS.expression$Va$7), SNodeOperations.copyNode(content));
     return SLinkOperations.getTarget(targetCoordinates, LINKS.expression$Va$7);
@@ -45,7 +44,7 @@ public final class ITargetExpression__BehaviorDescriptor extends BaseBHDescripto
   /*package*/ static SNode getNodeTarget_id6ZPff_L2lbX(@NotNull SNode __thisNode__) {
     SNode localized = ITargetLocalized__BehaviorDescriptor.getLocalizedObjectTarget_id5evA4sVXKYg.invoke(SNodeOperations.as(DotExpressionHelper.getContextTarget(__thisNode__), CONCEPTS.ITargetLocalized$4J));
 
-    // Get the target coordinates or the  
+    // Get the target coordinates or the 
     SNode targetCoordinates = ITargetExpression__BehaviorDescriptor.getTargetCoordinates_idGdoRjGvovH.invoke(__thisNode__, localized);
     if ((targetCoordinates == null)) {
       return localized;

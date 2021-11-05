@@ -127,7 +127,7 @@ public class AbstractForceCall_SubstituteMenu extends SubstituteMenuBase {
           SNode node = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall"));
           SLinkOperations.setTarget(node, LINKS.force$geAY, myParameterObject);
 
-          // Init one argument 
+          // Init one argument
           if (ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.force$geAY), LINKS.args$8wKH)).isNotEmpty()) {
             SNode firstParam = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0xd84d5bfb280c701L, "jetbrains.mps.samples.Physics.structure.AbstractForceCallParameter"));
             SLinkOperations.setTarget(firstParam, LINKS.argument$9$P2, ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.force$geAY), LINKS.args$8wKH)).first());

@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -31,9 +30,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class AbstractObjectDefinition__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x1441545e2a5b1e43L, "jetbrains.mps.samples.Physics.structure.AbstractObjectDefinition");
 
-  public static final SMethod<SNode> getParent_id5EZY1tN$xQa = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getParent").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5EZY1tN$xQa").build();
-  public static final SMethod<SNode> getStyleValueForKey_id5hZn_PXc5xY = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getStyleValueForKey").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5hZn_PXc5xY").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
-  public static final SMethod<SNode> getCurrentObject_id2_PGqGCjHbe = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCurrentObject").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2_PGqGCjHbe").build();
+  public static final SMethod<SNode> getParent_id5EZY1tN$xQa = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getParent").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("5EZY1tN$xQa").build();
+  public static final SMethod<SNode> getStyleValueForKey_id5hZn_PXc5xY = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getStyleValueForKey").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("5hZn_PXc5xY").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> getCurrentObject_id2_PGqGCjHbe = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCurrentObject").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2_PGqGCjHbe").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getParent_id5EZY1tN$xQa, getStyleValueForKey_id5hZn_PXc5xY, getCurrentObject_id2_PGqGCjHbe);
 

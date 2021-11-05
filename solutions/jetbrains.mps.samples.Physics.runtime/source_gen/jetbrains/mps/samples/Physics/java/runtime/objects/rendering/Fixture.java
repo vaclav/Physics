@@ -49,10 +49,10 @@ public abstract class Fixture implements Renderable {
    */
   protected abstract DMass buildMass(double massValue);
   public void bindToBody(DBody body, double massValue) {
-    // Build and apply mass 
+    // Build and apply mass
     DMass mass = buildMass(massValue);
     body.setMass(mass);
-    // Set the body of this fixture geometry 
+    // Set the body of this fixture geometry
     geometry = buildGeometry();
     geometry.setBody(body);
   }
@@ -71,32 +71,32 @@ public abstract class Fixture implements Renderable {
     DBody body = geometry.getBody();
     DBody otherBody = fixture.getGeometry().getBody();
 
-    // Keep previous mass 
+    // Keep previous mass
     double thisMass = body.getMass().getMass();
     double otherMass = otherBody.getMass().getMass();
 
-    // Destroy previous previous 
+    // Destroy previous previous
     geometry.destroy();
 
-    // Set volume to the sum of both 
+    // Set volume to the sum of both
     double volume = getVolume() + fixture.getVolume();
     this.setVolume(volume);
 
-    // Choose resulting texture 
+    // Choose resulting texture
     double thisRatio = thisMass / (otherMass + thisMass);
     double otherRatio = 1 - thisRatio;
     this.texture = texture.mergeWith(fixture.getTexture(), (float) thisRatio);
 
-    //  Setup again (to apply volume and texture) 
+    //  Setup again (to apply volume and texture)
     this.setup(appletCache, scaleCache);
 
     DVector3C thisVel = body.getLinearVel();
     DVector3C otherVel = otherBody.getLinearVel();
     body.setLinearVel(new DVector3(thisVel.get0() * thisRatio + otherVel.get0() * otherRatio, thisVel.get1() * thisRatio + otherVel.get1() * otherRatio, thisVel.get2() * thisRatio + otherVel.get2() * otherRatio));
 
-    // TODO merge angular velocity? 
+    // TODO merge angular velocity?
 
-    // Rebuild geometry and apply to body 
+    // Rebuild geometry and apply to body
     this.bindToBody(body, thisMass + otherMass);
     targetEntity.setMass(thisMass + otherMass);
   }

@@ -61,8 +61,8 @@
       <node id="936383789937288001" at="25,0,26,0" concept="8" trace="LOG" />
       <node id="936383789937343980" at="26,51,27,76" concept="4" />
       <node id="8031966087317062635" at="27,76,28,0" concept="7" />
-      <node id="8031966087317064175" at="28,0,29,37" concept="6" />
-      <node id="8031966087317066382" at="30,107,31,23" concept="6" />
+      <node id="8031966087317064175" at="28,0,29,36" concept="6" />
+      <node id="8031966087317066382" at="30,107,31,22" concept="6" />
       <node id="8031966087317051355" at="33,40,34,98" concept="5" />
       <node id="936383789937343994" at="37,27,38,127" concept="1" />
       <node id="936383789937344022" at="39,5,40,0" concept="7" />
@@ -80,10 +80,10 @@
       <node id="936383789937288001" at="62,0,63,0" concept="8" trace="name$MnvL" />
       <node id="936383789937288001" at="66,0,67,0" concept="8" trace="lines$DTIB" />
       <node id="8031966087317051351" at="33,0,36,0" concept="3" trace="invoke#(Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="8031966087317015818" at="31,23,36,10" concept="1" />
+      <node id="8031966087317015818" at="31,22,36,10" concept="1" />
       <node id="8031966087317051359" at="43,0,48,0" concept="9" trace="createTextLine_94agi1_a0a0a0a0b0d0a#(Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="936383789937344024" at="48,0,54,0" concept="9" trace="createTextFile_94agi1_a5a0#(Ljava/lang/String;Ljava/lang/Iterable;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="8031966087315193917" at="29,37,39,5" concept="10" />
+      <node id="8031966087315193917" at="29,36,39,5" concept="10" />
       <node id="936383789937343959" at="26,0,43,0" concept="9" trace="importFrom#(Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <scope id="8031966087317051354" at="33,40,34,98" />
       <scope id="8031966087315193922" at="37,27,38,127" />

@@ -24,7 +24,7 @@ public class PropertiesBuilder {
 
 
   public void applyOn(World world, PhysicalEntity entity) {
-    // Fixture 
+    // Fixture
     Fixture entityFixture;
     if ("box".equals((String) get(PropKey.SHAPE))) {
       entityFixture = new BoxFixture(world, get(PropKey.BOX_X), get(PropKey.BOX_Y), get(PropKey.BOX_Z), get(PropKey.TEXTURE));
@@ -34,18 +34,18 @@ public class PropertiesBuilder {
     entityFixture.setEmitLight(get(PropKey.EMIT_LIGHT));
     entity.setFixture(entityFixture);
 
-    // Creating mass representation 
+    // Creating mass representation
     entityFixture.bindToBody(entity.getBody(), entity.getMass().doubleValue());
 
-    //  Add entity to the world 
+    //  Add entity to the world
     world.addEntity(entity);
 
 
-    // Collision reaction 
+    // Collision reaction
     entity.properties().setCollisionReaction((CollisionReaction) get(PropKey.COLLISION_REACT));
     entity.properties().setPauseOnCollision(get(PropKey.PAUSE_ON_COLLISION));
 
-    // Trace 
+    // Trace
     final TraceHandler traceHandler = get(PropKey.TRACE);
     if (traceHandler != null) {
       entity.properties().setTraceHandler(traceHandler);

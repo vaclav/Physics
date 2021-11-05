@@ -12,8 +12,8 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters" />
-    <classNode dependClassName="junit.framework.Assert" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="org.junit.Assert" />
     <classNode dependClassName="org.junit.ClassRule" />
     <classNode dependClassName="org.junit.Rule" />
     <classNode dependClassName="org.junit.Test" />

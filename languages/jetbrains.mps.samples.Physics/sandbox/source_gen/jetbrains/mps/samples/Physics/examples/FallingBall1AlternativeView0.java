@@ -13,7 +13,7 @@ public class FallingBall1AlternativeView0 extends FallingBallSimulation {
   protected void initScope(World world) {
     super.initScope(world);
 
-    // Override properties 
+    // Override properties
     scope.Ball.setMass(((Number) (AH.mul(((Number) new BigInteger("35")), ((Number) new BigInteger("1"))))));
   }
 

@@ -25,16 +25,16 @@ public class MilkyWaySystemScope extends SystemScope {
 
   public MilkyWaySystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final MilkyWaySystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     FloatingDog = withEntity(new FloatingDog2PhysicalEntity(world, "FloatingDog1", scope));
     Something = withEntity(new Something2PhysicalEntity(world, "Something1", scope));
     A = withEntity(new A2PhysicalEntity(world, "A1", scope));
     SolarSystem1 = withEntity(new SolarSystemSystemScope(world, getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("4.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("4.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))))), getAbsoluteInitialVelocity(InternalVector.ZERO), initialRotation));
 
-    // Initialize them 
+    // Initialize them
     FloatingDog.init(this, world);
     Something.init(this, world);
     A.init(this, world);
@@ -48,18 +48,18 @@ public class MilkyWaySystemScope extends SystemScope {
 
     @Override
     public void init(final MilkyWaySystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       FloatingDog2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Floating dog 
+      // Set static properties of Floating dog
       this.setMass(((Number) new BigInteger("30")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("8.999999999999999").setScale(15, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("50004.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("10.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Floating dog 
+      //  Forces and visual of the parent objects of Floating dog
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList(new Force<MilkyWaySystemScope>() {
         private Force cached;
 
@@ -95,18 +95,18 @@ public class MilkyWaySystemScope extends SystemScope {
 
     @Override
     public void init(final MilkyWaySystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       Something2PhysicalEntity currentEntity = this;
 
-      // Set static properties of Something 
+      // Set static properties of Something
       this.setMass(((Number) new BigInteger("30")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.008099351758686229689152452006379259").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("44.99999837126069715293084237640952").setScale(32, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.008999279731873589543422694659709127").setScale(36, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of Something 
+      //  Forces and visual of the parent objects of Something
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -118,18 +118,18 @@ public class MilkyWaySystemScope extends SystemScope {
 
     @Override
     public void init(final MilkyWaySystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       A2PhysicalEntity currentEntity = this;
 
-      // Set static properties of A 
+      // Set static properties of A
       this.setMass(((Number) new BigInteger("30")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigDecimal("0.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of A 
+      //  Forces and visual of the parent objects of A
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }

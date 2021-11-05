@@ -638,8 +638,8 @@
       </scope>
     </file>
     <file name="compare_ObjectTypes_ComparisonRule.java">
-      <node id="6025702258151828672" at="16,86,17,25" concept="7" />
-      <node id="7238518183197887542" at="17,25,18,16" concept="6" />
+      <node id="6025702258151828672" at="16,86,17,24" concept="7" />
+      <node id="7238518183197887542" at="17,24,18,16" concept="6" />
       <node id="7238518183197887368" at="20,27,21,16" concept="6" />
       <node id="7238518183197887368" at="23,59,24,99" concept="6" />
       <node id="7238518183197887368" at="26,60,27,99" concept="6" />

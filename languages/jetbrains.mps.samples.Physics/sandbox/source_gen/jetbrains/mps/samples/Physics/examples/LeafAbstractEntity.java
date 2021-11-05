@@ -26,14 +26,14 @@ public abstract class LeafAbstractEntity<T extends SystemScope> extends BaseObje
   public void init(T scope, World world) {
     super.init(scope, world);
 
-    // Escape this for nested forces 
+    // Escape this for nested forces
     LeafAbstractEntity currentEntity = this;
 
-    // Apply styles 
+    // Apply styles
     propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigInteger("100"))));
     propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("7")), ((Number) new BigInteger("1"))))));
 
-    // Forces 
+    // Forces
     this.getForces().addAll(Arrays.asList(new Force<SystemScope>() {
       private Force cached;
 

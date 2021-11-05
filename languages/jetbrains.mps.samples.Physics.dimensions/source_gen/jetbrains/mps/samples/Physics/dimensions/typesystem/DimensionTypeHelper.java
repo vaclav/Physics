@@ -100,7 +100,7 @@ public class DimensionTypeHelper {
       }
     }
 
-    // If the dimension is a composite one 
+    // If the dimension is a composite one
     {
       final SNode composite = UnitReference__BehaviorDescriptor.getDimension_ideHVwIHgU5$.invoke(unit);
       if (SNodeOperations.isInstanceOf(composite, CONCEPTS.CompositeDimension$Af)) {
@@ -119,7 +119,7 @@ public class DimensionTypeHelper {
   public static BigDecimal simpleConverterRatio(SNode targetUnit, Rational exponent, boolean targetToBase) {
     BigDecimal pow = BigDecimalMath.pow(new BigDecimal(SPropertyOperations.getString(targetUnit, PROPS.factor$hoVP)), exponent.BigDecimalValue(MathContext.DECIMAL32));
 
-    // Target unit on the left of the converter (or reversed) 
+    // Target unit on the left of the converter (or reversed)
     if (SPropertyOperations.getBoolean(targetUnit, PROPS.selfLeft$hppR) == targetToBase) {
       return pow;
     } else {
@@ -135,7 +135,7 @@ public class DimensionTypeHelper {
     final Wrappers._T<BigDecimal> result = new Wrappers._T<BigDecimal>(new BigDecimal(SPropertyOperations.getString(composite, PROPS.factor$hoVP)));
     result.value = (SPropertyOperations.getBoolean(composite, PROPS.selfLeft$hppR) ? BigDecimal.ONE.divide(result.value, MathContext.DECIMAL128) : result.value);
 
-    // If the unit contains composite parent, apply their conversion ratio too 
+    // If the unit contains composite parent, apply their conversion ratio too
     ListSequence.fromList(SLinkOperations.getChildren(composite, LINKS.units$qq1O)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         {

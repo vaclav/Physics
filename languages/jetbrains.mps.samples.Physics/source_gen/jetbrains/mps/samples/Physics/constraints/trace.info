@@ -81,15 +81,15 @@
       <node id="1846966433401209154" at="35,55,36,72" concept="2" />
       <node id="1846966433401209154" at="37,9,38,0" concept="8" />
       <node id="1846966433401209154" at="38,0,39,22" concept="6" />
-      <node id="1846966433401234729" at="44,49,45,54" concept="7" />
+      <node id="1846966433401234729" at="44,49,45,53" concept="7" />
       <node id="1846966433401209405" at="46,7,47,83" concept="5" />
       <node id="1846966433401226520" at="48,94,49,153" concept="5" />
       <node id="1846966433401234527" at="49,153,50,0" concept="8" />
-      <node id="1846966433401235576" at="50,0,51,36" concept="7" />
-      <node id="1846966433401228228" at="51,36,52,83" concept="6" />
+      <node id="1846966433401235576" at="50,0,51,35" concept="7" />
+      <node id="1846966433401228228" at="51,35,52,83" concept="6" />
       <node id="1846966433401226274" at="55,5,56,0" concept="8" />
-      <node id="1846966433401237050" at="56,0,57,25" concept="7" />
-      <node id="1846966433401226156" at="57,25,58,16" concept="6" />
+      <node id="1846966433401237050" at="56,0,57,24" concept="7" />
+      <node id="1846966433401226156" at="57,24,58,16" concept="6" />
       <node id="1846966433401209154" at="60,0,61,0" concept="9" trace="canBeParentBreakingPoint" />
       <node id="1846966433401209154" at="63,0,64,0" concept="9" trace="StyleDefinition$gK" />
       <node id="1846966433401209154" at="64,0,65,0" concept="9" trace="IUseSpecificExpressions$Mk" />
@@ -98,7 +98,7 @@
       <node id="1846966433401209154" at="24,0,27,0" concept="1" trace="StyleDefinition_Constraints#()V" />
       <node id="1846966433401209154" at="34,0,37,9" concept="3" />
       <node id="1846966433401209405" at="47,83,53,9" concept="3" />
-      <node id="1846966433401209405" at="45,54,54,7" concept="0" />
+      <node id="1846966433401209405" at="45,53,54,7" concept="0" />
       <node id="1846966433401209154" at="31,0,41,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
       <node id="1846966433401209154" at="29,105,41,6" concept="6" />
       <node id="1846966433401213810" at="43,128,55,5" concept="3" />
@@ -350,7 +350,7 @@
       <node id="4874678483873252506" at="35,9,36,0" concept="8" />
       <node id="4874678483873252506" at="36,0,37,22" concept="6" />
       <node id="4874678483873252757" at="41,128,42,189" concept="6" />
-      <node id="620348066303629547" at="42,189,43,13" concept="7" />
+      <node id="620348066303629547" at="42,189,43,78" concept="7" />
       <node id="4874678483873252506" at="45,0,46,0" concept="9" trace="canBeChildBreakingPoint" />
       <node id="4874678483873252506" at="48,0,49,0" concept="9" trace="IWorldDotTarget$t" />
       <node id="4874678483873252506" at="49,0,50,0" concept="9" trace="DotExpression$jp" />
@@ -364,7 +364,7 @@
       <node id="4874678483873252506" at="26,0,41,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
       <scope id="4874678483873252506" at="22,40,23,38" />
       <scope id="4874678483873252506" at="33,55,34,71" />
-      <scope id="4874678483873252508" at="41,128,43,13" />
+      <scope id="4874678483873252508" at="41,128,43,78" />
       <scope id="4874678483873252506" at="22,0,25,0" />
       <scope id="4874678483873252506" at="41,0,45,0">
         <var name="childConcept" id="4874678483873252506" />

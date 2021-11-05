@@ -32,7 +32,7 @@ public class typeof_UnitExpression_InferenceRule extends AbstractInferenceRule_R
       final SNode baseType = typeCheckingContext.typeOf(SLinkOperations.getTarget(unitExpression, LINKS.content$aqgO), "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "8609460045977271188", true);
       typeCheckingContext.whenConcrete(baseType, new Runnable() {
         public void run() {
-          // Type of the factor to convert to base units 
+          // Type of the factor to convert to base units
           SNode createRealType = PTF.createRealType(DimensionTypeHelper.compositeConversionRatio(SLinkOperations.getChildren(unitExpression, LINKS.units$qq1O), true).toString());
 
           {

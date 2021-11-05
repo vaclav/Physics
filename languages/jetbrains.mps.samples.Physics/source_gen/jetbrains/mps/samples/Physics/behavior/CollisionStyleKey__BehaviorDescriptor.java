@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -22,7 +21,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class CollisionStyleKey__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x298a87ff7e3fd75dL, "jetbrains.mps.samples.Physics.structure.CollisionStyleKey");
 
-  public static final SMethod<SAbstractConcept> getSpecificExpressionConcept_id1AxJyXYWKCb = new SMethodBuilder<SAbstractConcept>(new SJavaCompoundTypeImpl((Class<SAbstractConcept>) ((Class) Object.class))).name("getSpecificExpressionConcept").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1AxJyXYWKCb").build();
+  public static final SMethod<SAbstractConcept> getSpecificExpressionConcept_id1AxJyXYWKCb = new SMethodBuilder<SAbstractConcept>(new SJavaCompoundTypeImpl((Class<SAbstractConcept>) ((Class) Object.class))).name("getSpecificExpressionConcept").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1AxJyXYWKCb").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getSpecificExpressionConcept_id1AxJyXYWKCb);
 

@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -24,7 +23,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 public final class IWorldDotTarget__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x43a6564101814135L, "jetbrains.mps.samples.Physics.structure.IWorldDotTarget");
 
-  public static final SMethod<SNode> getWorldTarget_id4eAl$41wkSU = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getWorldTarget").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4eAl$41wkSU").build();
+  public static final SMethod<SNode> getWorldTarget_id4eAl$41wkSU = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getWorldTarget").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4eAl$41wkSU").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getWorldTarget_id4eAl$41wkSU);
 

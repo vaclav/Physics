@@ -21,11 +21,11 @@ public class replace_DimensionType_AbstractDimensionType_InequationReplacementRu
     return SConceptOperations.isExactly(SNodeOperations.asSConcept(SNodeOperations.getConcept(supertype)), CONCEPTS.AbstractDimensionType$er);
   }
   public void processInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, final TypeCheckingContext typeCheckingContext, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
-    // this is always true 
+    // this is always true
   }
   public boolean checkInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
     boolean result_14532009 = true;
-    // this is always true 
+    // this is always true
     return result_14532009;
   }
   public boolean isWeak() {

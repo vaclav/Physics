@@ -10,7 +10,6 @@ import java.util.List;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
@@ -21,7 +20,7 @@ import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 public final class IUseSpecificDimensions__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x21c0d825aae5e565L, "jetbrains.mps.samples.Physics.dimensions.structure.IUseSpecificDimensions");
 
-  public static final SMethod<Iterable<List<SNode>>> getRequiredDimensions_id270Q2mETulL = new SMethodBuilder<Iterable<List<SNode>>>(new SJavaCompoundTypeImpl((Class<Iterable<List<SNode>>>) ((Class) Object.class))).name("getRequiredDimensions").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("270Q2mETulL").build();
+  public static final SMethod<Iterable<List<SNode>>> getRequiredDimensions_id270Q2mETulL = new SMethodBuilder<Iterable<List<SNode>>>(new SJavaCompoundTypeImpl((Class<Iterable<List<SNode>>>) ((Class) Object.class))).name("getRequiredDimensions").modifiers(12, AccessPrivileges.PUBLIC).concept(CONCEPT).id("270Q2mETulL").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getRequiredDimensions_id270Q2mETulL);
 

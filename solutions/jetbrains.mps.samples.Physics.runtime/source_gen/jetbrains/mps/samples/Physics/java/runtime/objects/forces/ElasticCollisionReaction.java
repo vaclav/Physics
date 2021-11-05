@@ -29,10 +29,10 @@ public class ElasticCollisionReaction implements CollisionReaction {
       for (int i = 0; i < n; i++) {
         CollisionReaction otherReaction = otherObject.properties().getCollisionReaction();
 
-        // Init contact 
+        // Init contact
         final DContact contact = contacts.get(i);
 
-        // Set bounce ratio 
+        // Set bounce ratio
         if (otherReaction instanceof ElasticCollisionReaction) {
           contact.surface.bounce = (bounceRatio * target.getMass().doubleValue() + as_3bje03_a0a0a0a0a0g0a0d0g(otherReaction, ElasticCollisionReaction.class).bounceRatio * otherObject.getMass().doubleValue()) / (target.getMass().doubleValue() + otherObject.getMass().doubleValue());
         } else {
@@ -43,10 +43,10 @@ public class ElasticCollisionReaction implements CollisionReaction {
           contact.surface.mode |= OdeConstants.dContactBounce;
         }
 
-        // Attach to bodies 
+        // Attach to bodies
         DContactJoint joint = OdeHelper.createContactJoint(world.getWorld(), world.getJointGroup(), contact);
 
-        // Attach only to involved bodies 
+        // Attach only to involved bodies
         if (otherReaction instanceof ElasticCollisionReaction) {
           joint.attach(contact.geom.g1.getBody(), contact.geom.g2.getBody());
         } else

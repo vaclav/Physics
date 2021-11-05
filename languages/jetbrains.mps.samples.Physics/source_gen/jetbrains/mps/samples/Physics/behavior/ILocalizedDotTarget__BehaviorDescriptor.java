@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -23,7 +22,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 public final class ILocalizedDotTarget__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x539f98473b69bb2cL, "jetbrains.mps.samples.Physics.structure.ILocalizedDotTarget");
 
-  public static final SMethod<SNode> getLocalizedObjectTarget_id4eAl$41wire = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLocalizedObjectTarget").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4eAl$41wire").build();
+  public static final SMethod<SNode> getLocalizedObjectTarget_id4eAl$41wire = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLocalizedObjectTarget").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4eAl$41wire").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getLocalizedObjectTarget_id4eAl$41wire);
 

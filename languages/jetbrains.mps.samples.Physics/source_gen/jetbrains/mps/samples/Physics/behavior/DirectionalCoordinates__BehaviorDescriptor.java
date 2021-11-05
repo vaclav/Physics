@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -26,9 +25,9 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public final class DirectionalCoordinates__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6d74ae1e883a4471L, "jetbrains.mps.samples.Physics.structure.DirectionalCoordinates");
 
-  public static final SMethod<Boolean> hasLocalizedReference_id3Vp3qmbplYw = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasLocalizedReference").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3Vp3qmbplYw").build();
-  public static final SMethod<Boolean> isPartOfPositionDefinition_id3Vp3qmbrxhw = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isPartOfPositionDefinition").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3Vp3qmbrxhw").build();
-  public static final SMethod<Boolean> hasCurrentObjectContext_id19Axi8T0SGm = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasCurrentObjectContext").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("19Axi8T0SGm").build();
+  public static final SMethod<Boolean> hasLocalizedReference_id3Vp3qmbplYw = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasLocalizedReference").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("3Vp3qmbplYw").build();
+  public static final SMethod<Boolean> isPartOfPositionDefinition_id3Vp3qmbrxhw = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isPartOfPositionDefinition").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("3Vp3qmbrxhw").build();
+  public static final SMethod<Boolean> hasCurrentObjectContext_id19Axi8T0SGm = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasCurrentObjectContext").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("19Axi8T0SGm").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(hasLocalizedReference_id3Vp3qmbplYw, isPartOfPositionDefinition_id3Vp3qmbrxhw, hasCurrentObjectContext_id19Axi8T0SGm);
 

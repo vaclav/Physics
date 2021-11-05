@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -24,8 +23,8 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public final class ExpExpression__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x7ee2c0df37c860b9L, "jetbrains.mps.samples.Physics.iets3.ext.math.structure.ExpExpression");
 
-  public static final SMethod<Integer> priority_id4rZeNQ6Nh_5 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("priority").modifiers(SModifiersImpl.create(9, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4rZeNQ6Nh_5").build();
-  public static final SMethod<String> renderReadable_id4Y0vh0cfqjE = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4Y0vh0cfqjE").build();
+  public static final SMethod<Integer> priority_id4rZeNQ6Nh_5 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("priority").modifiers(9, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4rZeNQ6Nh_5").build();
+  public static final SMethod<String> renderReadable_id4Y0vh0cfqjE = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("renderReadable").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4Y0vh0cfqjE").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(priority_id4rZeNQ6Nh_5, renderReadable_id4Y0vh0cfqjE);
 
@@ -33,7 +32,7 @@ public final class ExpExpression__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static int priority_id4rZeNQ6Nh_5(@NotNull SAbstractConcept __thisConcept__) {
-    // TODO test behavior 
+    // TODO test behavior
     return 1000;
   }
   /*package*/ static String renderReadable_id4Y0vh0cfqjE(@NotNull SNode __thisNode__) {

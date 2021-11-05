@@ -34,7 +34,7 @@ public class TypeComparisonHelper {
     final SNode leftType = SNodeOperations.as(left, CONCEPTS.Type$WK);
     final SNode rightType = SNodeOperations.as(right, CONCEPTS.Type$WK);
 
-    //  Allow 0 as exception for numeric types 
+    //  Allow 0 as exception for numeric types
     if (NumberTypeHelper.isBaseTypeZero(leftType)) {
       return;
     }
@@ -44,7 +44,7 @@ public class TypeComparisonHelper {
 
     TypingHelper.ensureTypeComparability(leftType, rightType, new _FunctionTypes._return_P2_E0<Boolean, SNode, SNode>() {
       public Boolean invoke(SNode left, SNode right) {
-        // Test against equals expression for primitive types (if no operation type of such type exists, there is probably no comparison to be made between the two types) 
+        // Test against equals expression for primitive types (if no operation type of such type exists, there is probably no comparison to be made between the two types)
         SNode opType = typeCheckingContext.getOverloadedOperationType(SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cc6dc9L, "org.iets3.core.expr.base.structure.EqualsExpression")), left, right, new IRuleConflictWarningProducer() {
           public void produceWarning(String modelId, String ruleId) {
             typeCheckingContext.reportWarning(SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cc6dc9L, "org.iets3.core.expr.base.structure.EqualsExpression")), "coflicting rules for overloaded operation type", modelId, ruleId, null, new NodeMessageTarget());

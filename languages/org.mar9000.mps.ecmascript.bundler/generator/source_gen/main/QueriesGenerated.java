@@ -45,10 +45,10 @@ public class QueriesGenerated extends QueryProviderBase {
 
     Sequence.fromIterable(bundles).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
-        // Solve dependencies in appearance order 
+        // Solve dependencies in appearance order
         List<SNode> dependencies = DependenciesSolver.dependenciesOf(it);
 
-        // Replace program with its bundled version 
+        // Replace program with its bundled version
         SNode newProgram = SNodeOperations.replaceWithAnother(it, ReferenceRemapper.remapAndMerge(dependencies, it));
 
         ListSequence.fromList(SNodeOperations.getNodeDescendants(newProgram, CONCEPTS.JSInjectModule$wX, false, new SAbstractConcept[]{})).visitAll(new IVisitor<SNode>() {

@@ -14,7 +14,7 @@ public class TraceSim2AlternativeView1 extends TraceSimSimulation {
   protected void initScope(World world) {
     super.initScope(world);
 
-    // Override properties 
+    // Override properties
     scope.MovingObject.getPropertiesBuilder().set(PropKey.TRACE, new FiniteTraceHandler(new Color(255, 255, 0)));
     scope.MovingObject2.getPropertiesBuilder().set(PropKey.TRACE, new FiniteTraceHandler(new Color(220, 220, 220)));
   }

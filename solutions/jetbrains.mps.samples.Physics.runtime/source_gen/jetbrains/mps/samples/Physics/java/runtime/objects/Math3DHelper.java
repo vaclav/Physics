@@ -16,7 +16,7 @@ public class Math3DHelper {
     double leverY = relativeApplicationPoint.get1();
     double leverZ = relativeApplicationPoint.get2();
 
-    // Mb = Ma + BA ∧ F with Ma = 0, BA above vector components and F the force 
+    // Mb = Ma + BA ∧ F with Ma = 0, BA above vector components and F the force
     return new DVector3(leverY * force.get2() - leverZ * force.get1(), leverZ * force.get0() - leverX * force.get2(), leverX * force.get1() - leverY * force.get0());
   }
 

@@ -24,10 +24,10 @@ public class BoidGroupSystemScope extends SystemScope {
 
   public BoidGroupSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final BoidGroupSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     A3 = withEntity(new A5PhysicalEntity(world, "A4", scope));
     B3 = withEntity(new B5PhysicalEntity(world, "B4", scope));
     C3 = withEntity(new C5PhysicalEntity(world, "C4", scope));
@@ -36,7 +36,7 @@ public class BoidGroupSystemScope extends SystemScope {
     F = withEntity(new F2PhysicalEntity(world, "F1", scope));
     G = withEntity(new G2PhysicalEntity(world, "G1", scope));
 
-    // Initialize them 
+    // Initialize them
     A3.init(this, world);
     B3.init(this, world);
     C3.init(this, world);
@@ -54,18 +54,18 @@ public class BoidGroupSystemScope extends SystemScope {
 
     @Override
     public void init(final BoidGroupSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       A5PhysicalEntity currentEntity = this;
 
-      // Set static properties of A 
+      // Set static properties of A
       this.setMass(((Number) new BigInteger("5")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("3")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
 
-      //  Forces and visual of the parent objects of A 
+      //  Forces and visual of the parent objects of A
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -77,18 +77,18 @@ public class BoidGroupSystemScope extends SystemScope {
 
     @Override
     public void init(final BoidGroupSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       B5PhysicalEntity currentEntity = this;
 
-      // Set static properties of B 
+      // Set static properties of B
       this.setMass(((Number) new BigInteger("5")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("-3")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of B 
+      //  Forces and visual of the parent objects of B
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -100,18 +100,18 @@ public class BoidGroupSystemScope extends SystemScope {
 
     @Override
     public void init(final BoidGroupSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       C5PhysicalEntity currentEntity = this;
 
-      // Set static properties of C 
+      // Set static properties of C
       this.setMass(((Number) new BigInteger("5")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("15")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("-90")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of C 
+      //  Forces and visual of the parent objects of C
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -123,18 +123,18 @@ public class BoidGroupSystemScope extends SystemScope {
 
     @Override
     public void init(final BoidGroupSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       D5PhysicalEntity currentEntity = this;
 
-      // Set static properties of D 
+      // Set static properties of D
       this.setMass(((Number) new BigInteger("5")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("-40")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of D 
+      //  Forces and visual of the parent objects of D
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -146,18 +146,18 @@ public class BoidGroupSystemScope extends SystemScope {
 
     @Override
     public void init(final BoidGroupSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       E2PhysicalEntity currentEntity = this;
 
-      // Set static properties of E 
+      // Set static properties of E
       this.setMass(((Number) new BigInteger("5")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("-5")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of E 
+      //  Forces and visual of the parent objects of E
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -169,18 +169,18 @@ public class BoidGroupSystemScope extends SystemScope {
 
     @Override
     public void init(final BoidGroupSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       F2PhysicalEntity currentEntity = this;
 
-      // Set static properties of F 
+      // Set static properties of F
       this.setMass(((Number) new BigInteger("5")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("45")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("24")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of F 
+      //  Forces and visual of the parent objects of F
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }
@@ -192,18 +192,18 @@ public class BoidGroupSystemScope extends SystemScope {
 
     @Override
     public void init(final BoidGroupSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       G2PhysicalEntity currentEntity = this;
 
-      // Set static properties of G 
+      // Set static properties of G
       this.setMass(((Number) new BigInteger("5")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("103")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of G 
+      //  Forces and visual of the parent objects of G
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       this.getForces().addAll(Arrays.asList());
     }
   }

@@ -22,15 +22,15 @@ public class RotationAndCollisionSystemScope extends SystemScope {
 
   public RotationAndCollisionSystemScope(World world, VectorLike position, VectorLike velocity, DMatrix3C rotation) {
     super(position, velocity, rotation);
-    // Save this as scope (to simplify generated mapping) 
+    // Save this as scope (to simplify generated mapping)
     final RotationAndCollisionSystemScope scope = this;
 
-    //  Instanciate objects 
+    //  Instanciate objects
     MovingBlock = withEntity(new MovingBlock2PhysicalEntity(world, "MovingBlock1", scope));
     StaticSphere = withEntity(new StaticSphere2PhysicalEntity(world, "StaticSphere1", scope));
     StaticBlock = withEntity(new StaticBlock2PhysicalEntity(world, "StaticBlock1", scope));
 
-    // Initialize them 
+    // Initialize them
     MovingBlock.init(this, world);
     StaticSphere.init(this, world);
     StaticBlock.init(this, world);
@@ -44,18 +44,18 @@ public class RotationAndCollisionSystemScope extends SystemScope {
 
     @Override
     public void init(final RotationAndCollisionSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       MovingBlock2PhysicalEntity currentEntity = this;
 
-      // Set static properties of MovingBlock 
+      // Set static properties of MovingBlock
       this.setMass(((Number) new BigInteger("5000")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0"))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getAbsoluteInitialVelocity(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
 
-      //  Forces and visual of the parent objects of MovingBlock 
+      //  Forces and visual of the parent objects of MovingBlock
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SHAPE, "box");
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigInteger("2"))));
       propertiesBuilder.set(PropKey.BOX_X, ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))));
@@ -72,18 +72,18 @@ public class RotationAndCollisionSystemScope extends SystemScope {
 
     @Override
     public void init(final RotationAndCollisionSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       StaticSphere2PhysicalEntity currentEntity = this;
 
-      // Set static properties of StaticSphere 
+      // Set static properties of StaticSphere
       this.setMass(((Number) new BigInteger("5000")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("30")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of StaticSphere 
+      //  Forces and visual of the parent objects of StaticSphere
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SPHERE_RADIUS, ((Number) (AH.mul(((Number) new BigInteger("15")), ((Number) new BigInteger("1"))))));
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigInteger("90"))));
       this.getForces().addAll(Arrays.asList());
@@ -97,18 +97,18 @@ public class RotationAndCollisionSystemScope extends SystemScope {
 
     @Override
     public void init(final RotationAndCollisionSystemScope scope, final World world) {
-      // Escape this for nested forces 
+      // Escape this for nested forces
       StaticBlock2PhysicalEntity currentEntity = this;
 
-      // Set static properties of StaticBlock 
+      // Set static properties of StaticBlock
       this.setMass(((Number) new BigInteger("500000")));
       this.getBody().setPosition(VectorHelper.fromInternal(scope.getAbsoluteInitialPosition(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("130")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("-50")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("0")), ((Number) new BigInteger("1")))))))));
       this.getBody().setLinearVel(VectorHelper.fromInternal(scope.getInitialVelocity()));
 
-      //  Forces and visual of the parent objects of StaticBlock 
+      //  Forces and visual of the parent objects of StaticBlock
       super.init(scope, world);
 
-      //  Styles (if any) and forces 
+      //  Styles (if any) and forces
       propertiesBuilder.set(PropKey.SHAPE, "box");
       propertiesBuilder.set(PropKey.COLLISION_REACT, new ElasticCollisionReaction(((Number) new BigInteger("5"))));
       propertiesBuilder.set(PropKey.BOX_X, ((Number) (AH.mul(((Number) new BigInteger("5")), ((Number) new BigInteger("1"))))));

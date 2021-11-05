@@ -19,12 +19,12 @@ public abstract class TraceHandler {
   protected abstract void vertices(PGraphics ctx);
 
   public void render(DVector3C newPositions, PGraphics ctx, float scale, DVector3C scaledOffset, boolean paused) {
-    // Write new position 
+    // Write new position
     if (!(paused)) {
       write(newPositions, scale);
     }
 
-    // Display history 
+    // Display history
     ctx.noFill();
     ctx.stroke(aspect.r, aspect.g, aspect.b);
     ctx.pushMatrix();

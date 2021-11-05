@@ -11,7 +11,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import org.nevec.rjm.Rational;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -35,9 +34,9 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class CompositeDimension__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x38a7a450fc780041L, "jetbrains.mps.samples.Physics.dimensions.structure.CompositeDimension");
 
-  public static final SMethod<Map<SNode, Rational>> getRawTypes_id3yBD53WvLzq = new SMethodBuilder<Map<SNode, Rational>>(new SJavaCompoundTypeImpl((Class<Map<SNode, Rational>>) ((Class) Object.class))).name("getRawTypes").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3yBD53WvLzq").build();
-  public static final SMethod<String> getSelfString_id1fq3tlLwQff = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getSelfString").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1fq3tlLwQff").build();
-  public static final SMethod<String> getTargetString_id1fq3tlLwQga = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getTargetString").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1fq3tlLwQga").build();
+  public static final SMethod<Map<SNode, Rational>> getRawTypes_id3yBD53WvLzq = new SMethodBuilder<Map<SNode, Rational>>(new SJavaCompoundTypeImpl((Class<Map<SNode, Rational>>) ((Class) Object.class))).name("getRawTypes").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("3yBD53WvLzq").build();
+  public static final SMethod<String> getSelfString_id1fq3tlLwQff = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getSelfString").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1fq3tlLwQff").build();
+  public static final SMethod<String> getTargetString_id1fq3tlLwQga = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getTargetString").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1fq3tlLwQga").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getRawTypes_id3yBD53WvLzq, getSelfString_id1fq3tlLwQff, getTargetString_id1fq3tlLwQga);
 
@@ -51,7 +50,7 @@ public final class CompositeDimension__BehaviorDescriptor extends BaseBHDescript
       public void visit(SNode parentUnit) {
         Rational parentPower = IUnitReferenceLike__BehaviorDescriptor.getRawExponent_id3031Xnpas0C.invoke(parentUnit);
 
-        // Add parent units multiplied by the exponent 
+        // Add parent units multiplied by the exponent
         DimensionMapsHelper.multiplyAndMergeInto(Dimension__BehaviorDescriptor.getRawTypes_id3yBD53WvLzq.invoke(SLinkOperations.getTarget(parentUnit, LINKS.unit$5Sm)), parentPower, exponents);
       }
     });

@@ -34,14 +34,14 @@ public class InternalWorld extends InternalEntity<SNode> {
 
     SNode firstMass = createMulExpression_lndn4q_a0e0e(massExpressionOf(Sequence.fromIterable(scope).first()), SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(Sequence.fromIterable(scope).first(), LINKS.position$2BSz), LINKS.expression$Va$7)));
 
-    // Sum all mass multiplied by the position of sub elements 
+    // Sum all mass multiplied by the position of sub elements
     SNode sum = Sequence.fromIterable(scope).skip(1).foldLeft(firstMass, new ILeftCombinator<SNode, SNode>() {
       public SNode combine(SNode s, SNode it) {
         return createPlusExpression_lndn4q_a0a0a0a7a4(s, massExpressionOf(it), SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.position$2BSz), LINKS.expression$Va$7)));
       }
     });
 
-    // Divide by the mass 
+    // Divide by the mass
     return createDivExpression_lndn4q_a01a4(sum, getMass());
   }
 
@@ -50,7 +50,7 @@ public class InternalWorld extends InternalEntity<SNode> {
     Iterable<SNode> scope = WorldDefinition__BehaviorDescriptor.getLocalizedObjects_id31HEEbbX5J7.invoke(getDefinition());
     SNode firstMass = massExpressionOf(Sequence.fromIterable(scope).first());
 
-    // Sum all mass of sub elements 
+    // Sum all mass of sub elements
     return Sequence.fromIterable(scope).skip(1).foldLeft(firstMass, new ILeftCombinator<SNode, SNode>() {
       public SNode combine(SNode s, SNode it) {
         return createPlusExpression_lndn4q_a0a0a0e0g(s, massExpressionOf(it));

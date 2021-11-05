@@ -24,12 +24,12 @@ public abstract class PlanetAbstractEntity<T extends SystemScope> extends BaseOb
   public void init(T scope, World world) {
     super.init(scope, world);
 
-    // Escape this for nested forces 
+    // Escape this for nested forces
     PlanetAbstractEntity currentEntity = this;
 
-    // Apply styles 
+    // Apply styles
 
-    // Forces 
+    // Forces
     this.getForces().addAll(Arrays.asList(new Force<SystemScope>() {
       private Force cached;
 

@@ -131,43 +131,47 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
     }
     return Collections.<ConceptEditor>emptyList();
   }
-
+  private Collection<ConceptEditorComponent> getDeclaredEC_0(String editorComponentId) {
+    if ("jetbrains.mps.samples.Physics.editor.ObjectDefinitionProperties".equals(editorComponentId)) {
+      return Collections.singletonList(new ObjectDefinitionProperties());
+    }
+    return Collections.emptyList();
+  }
+  private Collection<ConceptEditorComponent> getDeclaredEC_1(String editorComponentId) {
+    if ("jetbrains.mps.samples.Physics.editor.ApplicationPointEditor".equals(editorComponentId)) {
+      return Collections.singletonList(new ApplicationPointEditor());
+    }
+    return Collections.emptyList();
+  }
+  private Collection<ConceptEditorComponent> getDeclaredEC_2(String editorComponentId) {
+    if ("jetbrains.mps.samples.Physics.editor.Localisation".equals(editorComponentId)) {
+      return Collections.singletonList(new Localisation());
+    }
+    return Collections.emptyList();
+  }
+  private Collection<ConceptEditorComponent> getDeclaredEC_3(String editorComponentId) {
+    if ("jetbrains.mps.samples.Physics.editor.OverridableProperties".equals(editorComponentId)) {
+      return Collections.singletonList(new OverridableProperties());
+    }
+    return Collections.emptyList();
+  }
   @NotNull
   public Collection<ConceptEditorComponent> getDeclaredEditorComponents(SAbstractConcept concept, String editorComponentId) {
     SAbstractConcept cncpt = ((SAbstractConcept) concept);
     switch (conceptIndex1.index(cncpt)) {
       case 0:
-        if (true) {
-          if ("jetbrains.mps.samples.Physics.editor.ObjectDefinitionProperties".equals(editorComponentId)) {
-            return Collections.<ConceptEditorComponent>singletonList(new ObjectDefinitionProperties());
-          }
-        }
-        break;
+        return getDeclaredEC_0(editorComponentId);
       case 1:
-        if (true) {
-          if ("jetbrains.mps.samples.Physics.editor.ApplicationPointEditor".equals(editorComponentId)) {
-            return Collections.<ConceptEditorComponent>singletonList(new ApplicationPointEditor());
-          }
-        }
-        break;
+        return getDeclaredEC_1(editorComponentId);
       case 2:
-        if (true) {
-          if ("jetbrains.mps.samples.Physics.editor.Localisation".equals(editorComponentId)) {
-            return Collections.<ConceptEditorComponent>singletonList(new Localisation());
-          }
-        }
-        break;
+        return getDeclaredEC_2(editorComponentId);
       case 3:
-        if (true) {
-          if ("jetbrains.mps.samples.Physics.editor.OverridableProperties".equals(editorComponentId)) {
-            return Collections.<ConceptEditorComponent>singletonList(new OverridableProperties());
-          }
-        }
-        break;
+        return getDeclaredEC_3(editorComponentId);
       default:
     }
-    return Collections.<ConceptEditorComponent>emptyList();
+    return Collections.emptyList();
   }
+
 
   @NotNull
   @Override

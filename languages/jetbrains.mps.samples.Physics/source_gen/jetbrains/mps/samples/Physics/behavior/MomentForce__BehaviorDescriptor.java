@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -26,10 +25,10 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class MomentForce__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x4dc483d31ef92c33L, "jetbrains.mps.samples.Physics.structure.MomentForce");
 
-  public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$go").build();
-  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
-  public static final SMethod<SNode> getMomentExpression_id2rJkT1EYuGl = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getMomentExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2rJkT1EYuGl").build();
-  public static final SMethod<Integer> getForceMode_id4$vyCQBiMP2 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBiMP2").build();
+  public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBi$go").build();
+  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBi$gg").build();
+  public static final SMethod<SNode> getMomentExpression_id2rJkT1EYuGl = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getMomentExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2rJkT1EYuGl").build();
+  public static final SMethod<Integer> getForceMode_id4$vyCQBiMP2 = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("getForceMode").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBiMP2").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getApplicationPointExpression_id4$vyCQBi$go, getLinearForceExpression_id4$vyCQBi$gg, getMomentExpression_id2rJkT1EYuGl, getForceMode_id4$vyCQBiMP2);
 

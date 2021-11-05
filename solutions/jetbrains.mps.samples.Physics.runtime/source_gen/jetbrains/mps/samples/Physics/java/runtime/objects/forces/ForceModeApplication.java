@@ -17,14 +17,14 @@ public class ForceModeApplication {
     }
 
     if (ForceMode.haveOne(mode, ForceMode.SKIP_TORQUE)) {
-      // Only linear force 
+      // Only linear force
       if (ForceMode.haveOne(mode, ForceMode.LINEAR_FORCE_RELATIVE)) {
         entity.getBody().addRelForce(force);
       } else {
         entity.getBody().addForce(force);
       }
     } else if (ForceMode.haveOne(mode, ForceMode.SKIP_LINEAR_FORCE)) {
-      // Only torque 
+      // Only torque
       if (ForceMode.haveOne(mode, ForceMode.APPLICATION_POINT_RELATIVE)) {
         entity.getBody().addRelTorque(Math3DHelper.computeTorque(force, applicationPoint));
       } else {
@@ -37,7 +37,7 @@ public class ForceModeApplication {
         entity.getBody().addTorque(moment);
       }
     } else {
-      // Both 
+      // Both
       if (ForceMode.haveOne(mode, ForceMode.LINEAR_FORCE_RELATIVE)) {
         if (ForceMode.haveAll(mode, ForceMode.APPLICATION_POINT_RELATIVE)) {
           entity.getBody().addRelForceAtRelPos(force, applicationPoint);

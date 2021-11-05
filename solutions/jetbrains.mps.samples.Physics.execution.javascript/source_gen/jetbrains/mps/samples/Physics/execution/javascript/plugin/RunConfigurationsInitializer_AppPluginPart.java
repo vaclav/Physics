@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import com.intellij.openapi.extensions.ExtensionPoint;
 import com.intellij.execution.configurations.ConfigurationType;
 import com.intellij.openapi.extensions.Extensions;
-import com.intellij.icons.AllIcons;
 import java.util.Iterator;
 
 public class RunConfigurationsInitializer_AppPluginPart extends ApplicationPluginPart {
@@ -23,18 +22,18 @@ public class RunConfigurationsInitializer_AppPluginPart extends ApplicationPlugi
   }
   @Override
   public void init() {
-    // register kinds 
+    // register kinds
     ExtensionPoint<ConfigurationType> configurationExtensionPoint = Extensions.getRootArea().getExtensionPoint(ConfigurationType.CONFIGURATION_TYPE_EP);
     {
-      ConfigTypeEnvoy runConfigurationKind = new ConfigTypeEnvoy("Web Application", AllIcons.RunConfigurations.Application, "Web Application", "application that runs inside a browser");
+      ConfigTypeEnvoy runConfigurationKind = new ConfigTypeEnvoy("Web Application", IconContainer.ICON_b0a0a0c0d, "Web Application", "application that runs inside a browser");
       runConfigurationKind.addFactoryFor("Physics Web Simulation", PhysicsWebSimulation_Configuration.class);
       RunConfigurationsInitializer_AppPluginPart.this.myRegisteredKinds.add(runConfigurationKind);
       configurationExtensionPoint.registerExtension(runConfigurationKind);
     }
 
-    // add foreign factories 
+    // add foreign factories
 
-    // register creators 
+    // register creators
     ExtensionPoint<RuntimeConfigurationProducer> producerExtensionPoint = Extensions.getArea(null).getExtensionPoint(RuntimeConfigurationProducer.RUNTIME_CONFIGURATION_PRODUCER);
     for (ConfigurationType ext : configurationExtensionPoint.getExtensions()) {
       if ("Web Application".equals(ext.getId())) {
@@ -51,9 +50,9 @@ public class RunConfigurationsInitializer_AppPluginPart extends ApplicationPlugi
   public void dispose() {
     ExtensionPoint<ConfigurationType> configurationExtensionPoint = Extensions.getRootArea().getExtensionPoint(ConfigurationType.CONFIGURATION_TYPE_EP);
 
-    // invalidate factories from this plugin for types declared elsewhere (we have no idea whether that plugins would be reloaded/invalidated as well) 
+    // invalidate factories from this plugin for types declared elsewhere (we have no idea whether that plugins would be reloaded/invalidated as well)
 
-    // factories from this plugin would get invalidated along with configuration types, no need to do that explicitly (although it wouldn't hurt either) 
+    // factories from this plugin would get invalidated along with configuration types, no need to do that explicitly (although it wouldn't hurt either)
     for (Iterator<ConfigTypeEnvoy> it = RunConfigurationsInitializer_AppPluginPart.this.myRegisteredKinds.descendingIterator(); it.hasNext();) {
       ConfigTypeEnvoy configKind = it.next();
       configKind.invalidate();

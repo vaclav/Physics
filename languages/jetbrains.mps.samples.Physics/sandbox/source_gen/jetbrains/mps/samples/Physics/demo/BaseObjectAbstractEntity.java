@@ -28,10 +28,10 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
   public void init(T scope, World world) {
     super.init(scope, world);
 
-    // Escape this for nested forces 
+    // Escape this for nested forces
     BaseObjectAbstractEntity currentEntity = this;
 
-    // Apply styles 
+    // Apply styles
     propertiesBuilder.set(PropKey.SHAPE, "sphere");
     propertiesBuilder.set(PropKey.BOX_X, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))));
     propertiesBuilder.set(PropKey.BOX_Y, AH.mul(BigDecimal.valueOf(Math.pow(currentEntity.getMass().doubleValue(), 1 / new BigDecimal("3").doubleValue())), ((Number) (AH.mul(((Number) new BigInteger("1")), ((Number) new BigInteger("1")))))));
@@ -43,7 +43,7 @@ public abstract class BaseObjectAbstractEntity<T extends SystemScope> extends Ph
     propertiesBuilder.set(PropKey.PAUSE_ON_COLLISION, false);
     propertiesBuilder.set(PropKey.TRACE, null);
 
-    // Forces 
+    // Forces
     this.getForces().addAll(Arrays.asList());
   }
 }

@@ -52,7 +52,7 @@ public abstract class SystemScope extends VectorLike implements EntityLike {
   }
 
   public VectorLike getAbsoluteInitialVelocity(VectorLike velocity) {
-    // Rotated velocity + initial velocity 
+    // Rotated velocity + initial velocity
     if (initialRotation != null) {
       DVector3 result = new DVector3();
       OdeMath.dMultiply0_331(result, initialRotation, VectorHelper.fromInternal(velocity));
@@ -86,7 +86,7 @@ public abstract class SystemScope extends VectorLike implements EntityLike {
 
   @Override
   public VectorLike getPosition() {
-    // Return position of the scope as center of mass 
+    // Return position of the scope as center of mass
     VectorLike position = InternalVector.ZERO;
     for (EntityLike entity : nested) {
       position = position.add(entity.getPosition().mul(entity.getMass()));

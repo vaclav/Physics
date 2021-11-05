@@ -222,12 +222,12 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           } else {
             SNode ancestor = SNodeOperations.getNodeAncestor(node, CONCEPTS.ILocalized$sH, false, false);
 
-            // No localized ancestor or we try to define position in the current expression 
+            // No localized ancestor or we try to define position in the current expression
             if ((ancestor == null) || ListSequence.fromList(SNodeOperations.getNodeAncestors(node, null, false)).contains(SLinkOperations.getTarget(ancestor, LINKS.position$2BSz))) {
-              // -> world origin 
+              // -> world origin
               sourcePoint = InternalVector.ZERO;
             } else {
-              // -> ancestor position 
+              // -> ancestor position
               sourcePoint = ((VectorLike) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(ancestor, LINKS.position$2BSz), context, coverage, trace, false));
             }
           }

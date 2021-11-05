@@ -39,7 +39,7 @@ public class typeof_UseUnitExpressionAs_InferenceRule extends AbstractInferenceR
             if (SNodeOperations.isInstanceOf(dimType, CONCEPTS.DimensionType$8R)) {
               SNode conversionFactorType = PTF.createRealType(DimensionTypeHelper.compositeConversionRatio(SLinkOperations.getChildren(useUnitExpressionAs, LINKS.units$qq1O), false).toString());
 
-              // Infer type 
+              // Infer type
               {
                 SNode _nodeToCheck_1029348928467 = useUnitExpressionAs;
                 EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:1aa329e2-69b0-497d-9e52-7232bd3e6e58(jetbrains.mps.samples.Physics.dimensions.typesystem)", "5369611234111202224", 0, null);
@@ -52,7 +52,7 @@ public class typeof_UseUnitExpressionAs_InferenceRule extends AbstractInferenceR
               }
 
 
-              // Assert unit matches 
+              // Assert unit matches
               if (!(typeCheckingContext.isSingleTypeComputation())) {
                 {
                   SNode _nodeToCheck_1029348928467 = useUnitExpressionAs;

@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -22,7 +21,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
-import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
@@ -30,12 +28,12 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x14f63a14438be6a0L, "jetbrains.mps.samples.Physics.structure.AbstractForceCall");
 
-  public static final SMethod<Iterable<SNode>> remainingArguments_idQ4PrYMwPsY = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("remainingArguments").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("Q4PrYMwPsY").build();
-  public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisaz").build();
-  public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBisbm").build();
-  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$gg").build();
-  public static final SMethod<SNode> getMomentExpression_id2rJkT1EYuGl = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getMomentExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2rJkT1EYuGl").build();
-  public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4$vyCQBi$go").build();
+  public static final SMethod<Iterable<SNode>> remainingArguments_idQ4PrYMwPsY = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("remainingArguments").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("Q4PrYMwPsY").build();
+  public static final SMethod<SNode> getCachedValueExpression_id4$vyCQBisaz = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCachedValueExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBisaz").build();
+  public static final SMethod<SNode> getCacheType_id4$vyCQBisbm = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getCacheType").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBisbm").build();
+  public static final SMethod<SNode> getLinearForceExpression_id4$vyCQBi$gg = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getLinearForceExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBi$gg").build();
+  public static final SMethod<SNode> getMomentExpression_id2rJkT1EYuGl = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getMomentExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2rJkT1EYuGl").build();
+  public static final SMethod<SNode> getApplicationPointExpression_id4$vyCQBi$go = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getApplicationPointExpression").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4$vyCQBi$go").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(remainingArguments_idQ4PrYMwPsY, getCachedValueExpression_id4$vyCQBisaz, getCacheType_id4$vyCQBisbm, getLinearForceExpression_id4$vyCQBi$gg, getMomentExpression_id2rJkT1EYuGl, getApplicationPointExpression_id4$vyCQBi$go);
 
@@ -54,7 +52,7 @@ public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescripto
     });
   }
   /*package*/ static SNode getCachedValueExpression_id4$vyCQBisaz(@NotNull final SNode __thisNode__) {
-    // forceLambda.exec(args) 
+    // forceLambda.exec(args)
     return createDotExpression_yqfunp_a1a1(SLinkOperations.getTarget(__thisNode__, LINKS.force$geAY), ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.parameterValues$gf50)).sort(new ISelector<SNode, Integer>() {
       public Integer select(SNode it) {
         return ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(__thisNode__, LINKS.force$geAY), LINKS.args$8wKH)).indexOf(SLinkOperations.getTarget(it, LINKS.argument$9$P2));
@@ -143,9 +141,9 @@ public final class AbstractForceCall__BehaviorDescriptor extends BaseBHDescripto
     return n0.getResult();
   }
   private static SNode _quotation_createNode_yqfunp_a0a2() {
-    PersistenceFacade facade = PersistenceFacade.getInstance();
     SNode quotedNode_1 = null;
-    quotedNode_1 = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, "jetbrains.mps.samples.Physics.types"), 0x1be152c15029f679L, "ForceType")).getResult();
+    SNodeBuilder nb = new SNodeBuilder(null, null).init(MetaAdapterFactory.getConcept(MetaAdapterFactory.getLanguage(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, "jetbrains.mps.samples.Physics.types"), 0x1be152c15029f679L, "ForceType"));
+    quotedNode_1 = nb.getResult();
     return quotedNode_1;
   }
   private static SNode createDotExpression_yqfunp_a0a3(SNode p0) {

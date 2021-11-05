@@ -9,7 +9,6 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import org.iets3.core.expr.base.behavior.ICapabilityRequirement;
 import java.util.List;
@@ -26,9 +25,9 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 public final class VectorType__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL, "jetbrains.mps.samples.Physics.types.structure.VectorType");
 
-  public static final SMethod<SNode> getComponentType_id1d1Q7eb5sml = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getComponentType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1d1Q7eb5sml").build();
-  public static final SMethod<String> getDetailedPresentation_id22G2W3WJ92t = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getDetailedPresentation").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("22G2W3WJ92t").build();
-  public static final SMethod<ICapabilityRequirement> getCapabilityRequirement_id7McqtXGyz8c = new SMethodBuilder<ICapabilityRequirement>(new SJavaCompoundTypeImpl(ICapabilityRequirement.class)).name("getCapabilityRequirement").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7McqtXGyz8c").build();
+  public static final SMethod<SNode> getComponentType_id1d1Q7eb5sml = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getComponentType").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1d1Q7eb5sml").build();
+  public static final SMethod<String> getDetailedPresentation_id22G2W3WJ92t = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getDetailedPresentation").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("22G2W3WJ92t").build();
+  public static final SMethod<ICapabilityRequirement> getCapabilityRequirement_id7McqtXGyz8c = new SMethodBuilder<ICapabilityRequirement>(new SJavaCompoundTypeImpl(ICapabilityRequirement.class)).name("getCapabilityRequirement").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("7McqtXGyz8c").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getComponentType_id1d1Q7eb5sml, getDetailedPresentation_id22G2W3WJ92t, getCapabilityRequirement_id7McqtXGyz8c);
 

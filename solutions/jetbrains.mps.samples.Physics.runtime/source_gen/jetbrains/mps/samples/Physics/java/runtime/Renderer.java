@@ -35,7 +35,7 @@ public class Renderer extends PApplet {
   }
   @Override
   public void draw() {
-    // Detect size change 
+    // Detect size change
     if (width != lastWidth || height != lastHeight) {
       if (resizeWait == -1) {
         resizeWait = 20;

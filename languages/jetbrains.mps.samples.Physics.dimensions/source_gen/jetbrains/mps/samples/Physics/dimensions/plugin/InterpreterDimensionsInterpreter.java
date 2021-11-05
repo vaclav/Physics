@@ -42,7 +42,7 @@ public class InterpreterDimensionsInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          // Convert to raw default units 
+          // Convert to raw default units
           return AH.mul(DimensionTypeHelper.compositeConversionRatio(SLinkOperations.getChildren(node, LINKS.units$qq1O), true), ((BigDecimal) castUp(context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.content$aqgO), context, coverage, trace, false), BigDecimal.class)));
         } catch (StopAndReturnException stop) {
           return stop.value();
@@ -72,7 +72,7 @@ public class InterpreterDimensionsInterpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          // Convert back from raw default units 
+          // Convert back from raw default units
           return AH.mul(DimensionTypeHelper.compositeConversionRatio(SLinkOperations.getChildren(node, LINKS.units$qq1O), false), ((Number) context.getRootInterpreter().evaluate(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node), context, coverage, trace, false)));
         } catch (StopAndReturnException stop) {
           return stop.value();

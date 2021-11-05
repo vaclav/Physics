@@ -15,7 +15,7 @@ import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import jetbrains.mps.samples.Physics.plugin.CoordinateExpressionConverters;
-import junit.framework.Assert;
+import org.junit.Assert;
 
 @MPSLaunch
 public class TestConversions_Test extends BaseTransformationTest {
@@ -91,14 +91,13 @@ public class TestConversions_Test extends BaseTransformationTest {
       this.assertEquals(getNodeById("6610288360169093239"), new InternalVector(-3, -3 * Math.sqrt(3), -3 / 2 * Math.sqrt(3)));
     }
 
-
     public void assertEquals(SNode expr, InternalVector expected) {
       VectorLike actual = CoordinateExpressionConverters.anyToRaw(expr);
 
-      // Check computation result 
+      // Check computation result
       Assert.assertNotNull(actual);
 
-      // Compare two vectors with a small error tolerance 
+      // Compare two vectors with a small error tolerance
       Assert.assertEquals(expected, actual);
     }
   }
