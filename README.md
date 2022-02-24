@@ -26,6 +26,8 @@ However, having the following software may make things smoother as for the build
    ```sh
    ./gradlew resolveArtifacts generateLibrariesXml -PmpsDir="<path to mps>"
    ```
+   For windows: use `./gradlew.bat`
+   
 3. **Open the project and rebuild** (restart if you opened it before the end of the above commands)
 4. **Enjoy !**
 
