@@ -10,6 +10,8 @@ import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.internal.collections.runtime.IMapping;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import java.math.BigInteger;
+import jetbrains.mps.internal.collections.runtime.NotNullWhereFilter;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.ILeftCombinator;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
@@ -22,6 +24,7 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class DimensionMapsHelper {
+  /*package*/ static char[] numbers = new char[]{'⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'};
 
   /**
    * Returns true if both maps of units contains the same exponents
@@ -34,19 +37,46 @@ public class DimensionMapsHelper {
     });
   }
 
+  public static String toSuperScriptNumber(Rational value) {
+    char[] array = value.toString().toCharArray();
+    for (int i = 0; i < array.length; i++) {
+      int superscript = array[i] - '0';
+      if (superscript >= 0 && superscript < numbers.length) {
+        array[i] = numbers[superscript];
+      } else if (array[i] == '-') {
+        array[i] = '⁻';
+      }
+    }
+    return String.valueOf(array);
+  }
+
 
   /**
    * Display the given map in a readable format such as m^2 * s^-1
    */
   public static String mapToString(Map<SNode, Rational> map) {
-    Iterable<String> seq = MapSequence.fromMap(map).select(new ISelector<IMapping<SNode, Rational>, String>() {
-      public String select(IMapping<SNode, Rational> it) {
-        return SPropertyOperations.getString(it.key(), PROPS.name$MnvL) + "^" + it.value().toString();
+    Iterable<String> seq = MapSequence.fromMap(map).sort(new ISelector<IMapping<SNode, Rational>, Rational>() {
+      public Rational select(IMapping<SNode, Rational> it) {
+        return it.value();
       }
-    });
+    }, false).alsoSort(new ISelector<IMapping<SNode, Rational>, String>() {
+      public String select(IMapping<SNode, Rational> it) {
+        return SPropertyOperations.getString(it.key(), PROPS.name$MnvL);
+      }
+    }, true).select(new ISelector<IMapping<SNode, Rational>, String>() {
+      public String select(IMapping<SNode, Rational> it) {
+        if (it.value().compareTo(BigInteger.ONE) == 0) {
+          return SPropertyOperations.getString(it.key(), PROPS.name$MnvL);
+        } else if (it.value().compareTo(BigInteger.ZERO) == 0) {
+          return null;
+        }
+        return SPropertyOperations.getString(it.key(), PROPS.name$MnvL) + toSuperScriptNumber(it.value());
+      }
+    }).where(new NotNullWhereFilter<String>());
+
     return Sequence.fromIterable(seq).skip(1).foldLeft(Sequence.fromIterable(seq).first(), new ILeftCombinator<String, String>() {
       public String combine(String s, String it) {
-        return s + " * " + it;
+        return s + "×" + it;
       }
     });
   }
@@ -62,7 +92,7 @@ public class DimensionMapsHelper {
       }
     }).select(new ISelector<IMapping<SNode, Rational>, SNode>() {
       public SNode select(IMapping<SNode, Rational> it) {
-        return createDimensionReference_6b7pfp_a0a0a0a0h(it.key(), ExponentHelper.rationalToExponent(it.value()));
+        return createDimensionReference_6b7pfp_a0a0a0a0k(it.key(), ExponentHelper.rationalToExponent(it.value()));
       }
     });
   }
@@ -77,7 +107,7 @@ public class DimensionMapsHelper {
       if (matches(left, right)) {
         return left;
       } else {
-        throw new UnitComputationException("Unmatched units: " + mapToString(left) + " and " + mapToString(right));
+        throw new UnitComputationException(left, right);
       }
     }
 
@@ -92,7 +122,7 @@ public class DimensionMapsHelper {
     }
 
     if (SNodeOperations.isInstanceOf(operation, CONCEPTS.BinaryComparisonExpression$7z) && !(matches(left, right))) {
-      throw new UnitComputationException("Unmatched units: " + mapToString(left) + " and " + mapToString(right));
+      throw new UnitComputationException(left, right);
     }
 
     return null;
@@ -125,7 +155,7 @@ public class DimensionMapsHelper {
     });
   }
 
-  private static SNode createDimensionReference_6b7pfp_a0a0a0a0h(SNode p0, SNode p1) {
+  private static SNode createDimensionReference_6b7pfp_a0a0a0a0k(SNode p0, SNode p1) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.DimensionReference$6u);
     n0.setReferenceTarget(LINKS.unit$5Sm, p0);
     n0.forChild(LINKS.exponent$5qk).initNode(p1, CONCEPTS.Exponent$Yg, true);
