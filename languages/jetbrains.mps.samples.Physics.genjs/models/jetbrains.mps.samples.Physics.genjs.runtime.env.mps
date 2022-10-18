@@ -72,7 +72,7 @@
       <property role="2dO0Ql" value="Context is usually defined locally, here we want some kind of string reference" />
     </node>
     <node concept="2dRJFF" id="3y5Tq9oIF8q" role="2TJlzh">
-      <property role="2dO0Ql" value="The refenrence will point to the wrong definition but the generated only wilm" />
+      <property role="2dO0Ql" value="The refenrence will point to the wrong definition but the generated only will" />
     </node>
     <node concept="2dRJFF" id="3y5Tq9oIF8S" role="2TJlzh">
       <property role="2dO0Ql" value="Be fine !" />

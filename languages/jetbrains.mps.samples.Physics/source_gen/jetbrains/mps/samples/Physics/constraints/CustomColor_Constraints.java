@@ -5,10 +5,10 @@ package jetbrains.mps.samples.Physics.constraints;
 import jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.base.BasePropertyConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.ConstraintsDescriptor;
-import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.smodel.SNodePointer;
 import java.util.Map;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.runtime.PropertyConstraintsDescriptor;
@@ -23,18 +23,13 @@ public class CustomColor_Constraints extends BaseConstraintsDescriptor {
 
   public static class Blue_Property extends BasePropertyConstraintsDescriptor {
     public Blue_Property(ConstraintsDescriptor container) {
-      super(PROPS.blue$kgxB, container);
+      super(PROPS.blue$kgxB, container, false, false, true);
     }
-    @Override
-    public boolean hasOwnValidator() {
-      return true;
-    }
-    private static final SNodePointer validatePropertyBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "911298080281461929");
     @Override
     public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
       boolean result = staticValidateProperty(node, SPropertyOperations.castInteger(propertyValue));
       if (!(result) && checkingNodeContext != null) {
-        checkingNodeContext.setBreakingNode(validatePropertyBreakingPoint);
+        checkingNodeContext.setBreakingNode(new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "911298080281461929"));
       }
       return result;
     }
@@ -44,18 +39,13 @@ public class CustomColor_Constraints extends BaseConstraintsDescriptor {
   }
   public static class Green_Property extends BasePropertyConstraintsDescriptor {
     public Green_Property(ConstraintsDescriptor container) {
-      super(PROPS.green$kheE, container);
+      super(PROPS.green$kheE, container, false, false, true);
     }
-    @Override
-    public boolean hasOwnValidator() {
-      return true;
-    }
-    private static final SNodePointer validatePropertyBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "911298080281478057");
     @Override
     public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
       boolean result = staticValidateProperty(node, SPropertyOperations.castInteger(propertyValue));
       if (!(result) && checkingNodeContext != null) {
-        checkingNodeContext.setBreakingNode(validatePropertyBreakingPoint);
+        checkingNodeContext.setBreakingNode(new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "911298080281478057"));
       }
       return result;
     }
@@ -65,18 +55,13 @@ public class CustomColor_Constraints extends BaseConstraintsDescriptor {
   }
   public static class Red_Property extends BasePropertyConstraintsDescriptor {
     public Red_Property(ConstraintsDescriptor container) {
-      super(PROPS.red$kg3_, container);
+      super(PROPS.red$kg3_, container, false, false, true);
     }
-    @Override
-    public boolean hasOwnValidator() {
-      return true;
-    }
-    private static final SNodePointer validatePropertyBreakingPoint = new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "911298080281478145");
     @Override
     public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
       boolean result = staticValidateProperty(node, SPropertyOperations.castInteger(propertyValue));
       if (!(result) && checkingNodeContext != null) {
-        checkingNodeContext.setBreakingNode(validatePropertyBreakingPoint);
+        checkingNodeContext.setBreakingNode(new SNodePointer("r:1f53c291-43e8-4aee-8e7e-323793ae72d7(jetbrains.mps.samples.Physics.constraints)", "911298080281478145"));
       }
       return result;
     }

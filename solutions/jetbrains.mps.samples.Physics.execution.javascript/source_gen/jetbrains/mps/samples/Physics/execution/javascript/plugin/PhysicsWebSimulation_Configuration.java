@@ -4,6 +4,7 @@ package jetbrains.mps.samples.Physics.execution.javascript.plugin;
 
 import jetbrains.mps.execution.api.configurations.BaseMpsRunConfiguration;
 import jetbrains.mps.execution.api.settings.IPersistentConfiguration;
+import jetbrains.mps.project.structure.modules.Copyable;
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
 import jetbrains.mps.execution.lib.NodeByConcept_Configuration;
@@ -37,7 +38,7 @@ import org.jetbrains.mps.openapi.model.SNodeReference;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class PhysicsWebSimulation_Configuration extends BaseMpsRunConfiguration implements IPersistentConfiguration {
+public final class PhysicsWebSimulation_Configuration extends BaseMpsRunConfiguration implements IPersistentConfiguration, Copyable<PhysicsWebSimulation_Configuration> {
   private static final Logger LOG = LogManager.getLogger(PhysicsWebSimulation_Configuration.class);
   private NodeByConcept_Configuration myNodePointer = new NodeByConcept_Configuration(CONCEPTS.Simulation$Gw, new _FunctionTypes._return_P1_E0<Boolean, SNode>() {
     public Boolean invoke(SNode node) {
@@ -91,11 +92,22 @@ public class PhysicsWebSimulation_Configuration extends BaseMpsRunConfiguration 
   }
 
   @Override
+  @Deprecated
   public PhysicsWebSimulation_Configuration clone() {
     PhysicsWebSimulation_Configuration clone = createCloneTemplate();
     clone.myNodePointer = (NodeByConcept_Configuration) myNodePointer.clone();
     clone.mySettings = (WebSettings_Configuration) mySettings.clone();
     return clone;
+  }
+
+  @Override
+  public PhysicsWebSimulation_Configuration copy() {
+    PhysicsWebSimulation_Configuration cloneTemplate = createCloneTemplate();
+    // beware, PersistenceConfiguration.this of newly created MyState instance would be the same as
+    // the value of myState, and != clone as regular Java passer-by would expect.
+    cloneTemplate.myNodePointer = ((Copyable<NodeByConcept_Configuration>) myNodePointer).copy();
+    cloneTemplate.mySettings = ((Copyable<WebSettings_Configuration>) mySettings).copy();
+    return cloneTemplate;
   }
 
   public NodeByConcept_Configuration getNodePointer() {

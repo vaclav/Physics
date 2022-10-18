@@ -101,7 +101,7 @@
         
         <welcome-screen logo-url="/logo.png" />
         
-        
+        <plugins url="https://plugins.jetbrains.com/" />
         
         
       </component>

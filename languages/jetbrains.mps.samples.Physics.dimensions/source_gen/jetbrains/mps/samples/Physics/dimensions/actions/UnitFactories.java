@@ -17,7 +17,7 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class UnitFactories {
   public static class NodeFactory_1430471042026629211 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SPropertyOperations.assign(newNode, PROPS.factor$hoVP, "1");
 
       {
@@ -29,7 +29,7 @@ public class UnitFactories {
     }
   }
   public static class NodeFactory_4252203113247588787 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       {
         final SNode dim = sampleNode;
         if (SNodeOperations.isInstanceOf(dim, CONCEPTS.Dimension$HZ)) {

@@ -14,6 +14,7 @@ import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import java.math.BigInteger;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import org.pcollections.TreePVector;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -28,7 +29,7 @@ public class InteractionForceForce {
         return VectorHelper.toDVector3C(new _FunctionTypes._return_P0_E0<VectorLike>() {
           public VectorLike invoke() {
             VectorLike seed = new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
-            for (Object current : TreePVector.from(TreePVector.from(world.getEntities().stream().filter(new Predicate<PhysicalEntity>() {
+            for (VectorLike current : ListSequence.fromList(TreePVector.from(TreePVector.from(world.getEntities().stream().filter(new Predicate<PhysicalEntity>() {
               public boolean test(PhysicalEntity o) {
                 return new Function<ParameterSetWrapper, Boolean>() {
                   public Boolean apply(ParameterSetWrapper param) {
@@ -37,11 +38,11 @@ public class InteractionForceForce {
                   }
                 }.apply(new ParameterSetWrapper(o));
               }
-            }).collect(Collectors.toList())).stream().map(new Function<PhysicalEntity, VectorLike>() {
+            }).collect(Collectors.<PhysicalEntity>toList())).stream().map(new Function<PhysicalEntity, VectorLike>() {
               public VectorLike apply(PhysicalEntity param) {
                 return map.apply(new ParameterSetWrapper(param));
               }
-            }).collect(Collectors.toList()))) {
+            }).collect(Collectors.<VectorLike>toList())))) {
               seed = ((VectorLike) current).add(seed);
             }
             return seed;

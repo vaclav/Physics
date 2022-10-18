@@ -20,7 +20,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
 
 public class ForceFactories {
   public static class NodeFactory_4809107873068929002 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SLinkOperations.setTarget(newNode, LINKS.argument$9$P2, Sequence.fromIterable(AbstractForceCall__BehaviorDescriptor.remainingArguments_idQ4PrYMwPsY.invoke(SNodeOperations.cast(enclosingNode, CONCEPTS.AbstractForceCall$fJ))).first());
 
       {
@@ -32,13 +32,13 @@ public class ForceFactories {
     }
   }
   public static class NodeFactory_6025702258158506869 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       // Override parent factory
       ListSequence.fromList(SLinkOperations.getChildren(newNode, LINKS.args$8wKH)).clear();
     }
   }
   public static class NodeFactory_2805552972616035457 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SPropertyOperations.assign(newNode, PROPS.isPointRelative$UQg3, true);
 
       {
@@ -51,7 +51,7 @@ public class ForceFactories {
     }
   }
   public static class NodeFactory_2805552972616080516 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SPropertyOperations.assign(newNode, PROPS.isLinearForceRelative$b4V3, false);
 
       {
@@ -63,7 +63,7 @@ public class ForceFactories {
     }
   }
   public static class NodeFactory_8067421349543645741 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SPropertyOperations.assign(newNode, PROPS.isMomentRelative$yflq, true);
     }
   }

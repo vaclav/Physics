@@ -10,58 +10,43 @@ import jetbrains.mps.openapi.intentions.Kind;
 import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import jetbrains.mps.typechecking.TypecheckingFacade;
-import com.mbeddr.mpsutil.interpreter.behavior.IInterpreterWrapperType__BehaviorDescriptor;
 import java.util.Collections;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import java.math.BigDecimal;
 import org.iets3.core.expr.base.behavior.IETS3ExprEvalHelper;
+import jetbrains.mps.typechecking.TypecheckingFacade;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.ISelector;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import com.mbeddr.mpsutil.interpreter.behavior.IInterpreterWrapperType__BehaviorDescriptor;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
-import org.jetbrains.mps.openapi.language.SInterfaceConcept;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class ResolveNumericExpression_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
   private Collection<IntentionExecutable> myCachedExecutable;
+
   public ResolveNumericExpression_Intention() {
     super(Kind.NORMAL, false, new SNodePointer("r:d39af7f4-ee25-4f0f-8cf6-c31288d9a059(jetbrains.mps.samples.Physics.intentions)", "3489632902466368835"));
   }
+
   @Override
   public String getPresentation() {
     return "ResolveNumericExpression";
   }
-  @Override
-  public boolean isApplicable(final SNode node, final EditorContext editorContext) {
-    if (!(isApplicableToNode(node, editorContext))) {
-      return false;
-    }
-    return true;
-  }
-  private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-    if (ListSequence.fromList(SNodeOperations.getNodeDescendants(node, CONCEPTS.IRuntimeContext$Sh, false, new SAbstractConcept[]{})).isNotEmpty()) {
-      return false;
-    }
-    {
-      final SNode wrapper = TypecheckingFacade.getFromContext().getTypeOf(node);
-      if (SNodeOperations.isInstanceOf(wrapper, CONCEPTS.IInterpreterWrapperType$KD)) {
-        return TypecheckingFacade.getFromContext().isSubtype(IInterpreterWrapperType__BehaviorDescriptor.wrappedType_id6bG6MAFRDvi.invoke(wrapper), createRealType_z6py18_b0a0a1a0());
-      }
-    }
-    return TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(node), createRealType_z6py18_b0a2a0());
-  }
+
   @Override
   public boolean isSurroundWith() {
     return false;
   }
+
   public Collection<IntentionExecutable> instances(final SNode node, final EditorContext context) {
     if (myCachedExecutable == null) {
       myCachedExecutable = Collections.<IntentionExecutable>singletonList(new IntentionImplementation());
@@ -71,10 +56,12 @@ public final class ResolveNumericExpression_Intention extends AbstractIntentionD
   /*package*/ final class IntentionImplementation extends AbstractIntentionExecutable {
     public IntentionImplementation() {
     }
+
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
       return "Resolve Numeric Expression";
     }
+
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       BigDecimal value = (BigDecimal) IETS3ExprEvalHelper.evaluate(node);
@@ -93,18 +80,34 @@ public final class ResolveNumericExpression_Intention extends AbstractIntentionD
 
       SNodeOperations.replaceWithAnother(node, replacement);
     }
+
+    @Override
+    public boolean isApplicable(final SNode node, final EditorContext editorContext) {
+      if (!(isApplicableToNode(node, editorContext))) {
+        return false;
+      }
+      return true;
+    }
+
+    private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
+      if (ListSequence.fromList(SNodeOperations.getNodeDescendants(node, CONCEPTS.IRuntimeContext$Sh, false, new SAbstractConcept[]{})).isNotEmpty()) {
+        return false;
+      }
+      {
+        final SNode wrapper = TypecheckingFacade.getFromContext().getTypeOf(node);
+        if (SNodeOperations.isInstanceOf(wrapper, CONCEPTS.IInterpreterWrapperType$KD)) {
+          return TypecheckingFacade.getFromContext().isSubtype(IInterpreterWrapperType__BehaviorDescriptor.wrappedType_id6bG6MAFRDvi.invoke(wrapper), createRealType_z6py18_b0a0a1a0());
+        }
+      }
+      return TypecheckingFacade.getFromContext().isSubtype(TypecheckingFacade.getFromContext().getTypeOf(node), createRealType_z6py18_b0a2a0());
+    }
+
+
     @Override
     public IntentionDescriptor getDescriptor() {
       return ResolveNumericExpression_Intention.this;
     }
-  }
-  private static SNode createRealType_z6py18_b0a0a1a0() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
-    return n0.getResult();
-  }
-  private static SNode createRealType_z6py18_b0a2a0() {
-    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
-    return n0.getResult();
+
   }
   private static SNode createNumberLiteral_z6py18_a0b0a(String p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NumberLiteral$wE);
@@ -123,17 +126,25 @@ public final class ResolveNumericExpression_Intention extends AbstractIntentionD
     n0.setReferenceTarget(LINKS.unit$5Sm, p1);
     return n0.getResult();
   }
+  private static SNode createRealType_z6py18_b0a0a1a0() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
+    return n0.getResult();
+  }
+  private static SNode createRealType_z6py18_b0a2a0() {
+    SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.RealType$36);
+    return n0.getResult();
+  }
 
   private static final class CONCEPTS {
+    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
     /*package*/ static final SInterfaceConcept IRuntimeContext$Sh = MetaAdapterFactory.getInterfaceConcept(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x53152ae9d7a4413cL, "jetbrains.mps.samples.Physics.structure.IRuntimeContext");
     /*package*/ static final SInterfaceConcept IInterpreterWrapperType$KD = MetaAdapterFactory.getInterfaceConcept(0x47f075a6558e4640L, 0xa6067ce0236c8023L, 0x62ec1b29abde62acL, "com.mbeddr.mpsutil.interpreter.structure.IInterpreterWrapperType");
-    /*package*/ static final SConcept DimensionType$8R = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL, "jetbrains.mps.samples.Physics.dimensions.structure.DimensionType");
-    /*package*/ static final SConcept RealType$36 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
     /*package*/ static final SConcept NumberLiteral$wE = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e6daL, "org.iets3.core.expr.simpleTypes.structure.NumberLiteral");
     /*package*/ static final SConcept UnitExpression$dD = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitExpression");
     /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
     /*package*/ static final SConcept UnitReference$Mo = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L, "jetbrains.mps.samples.Physics.dimensions.structure.UnitReference");
     /*package*/ static final SConcept Exponent$Yg = MetaAdapterFactory.getConcept(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L, "jetbrains.mps.samples.Physics.dimensions.structure.Exponent");
+    /*package*/ static final SConcept RealType$36 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d0e74cL, "org.iets3.core.expr.simpleTypes.structure.RealType");
   }
 
   private static final class LINKS {

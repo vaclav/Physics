@@ -91,7 +91,7 @@ public class NumberTypeHelper {
             if (units.value == null) {
               units.value = UnitReduceHelper.reduceUnitsToReferences(SLinkOperations.getChildren(dimension, LINKS.units$qq1O));
             }
-            return SLinkOperations.getTarget(dimension, LINKS.baseType$mnRO);
+            return (SNode) SLinkOperations.getTarget(dimension, LINKS.baseType$mnRO);
           }
         }
 

@@ -378,6 +378,7 @@
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
         <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
+      <concept id="8329979535468945057" name="jetbrains.mps.lang.smodel.structure.Node_PresentationOperation" flags="ng" index="2Iv5rx" />
       <concept id="1966870290088668520" name="jetbrains.mps.lang.smodel.structure.Enum_MembersOperation" flags="ng" index="2ViDtN" />
       <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
       <concept id="1240170042401" name="jetbrains.mps.lang.smodel.structure.SEnumerationMemberType" flags="in" index="2ZThk1">
@@ -1313,11 +1314,14 @@
                       <property role="Xl_RC" value="with no alias" />
                     </node>
                     <node concept="3cpWs3" id="39Vo6LvcLDm" role="3K4GZi">
-                      <node concept="2OqwBi" id="39Vo6LvcM17" role="3uHU7w">
-                        <node concept="pncrf" id="39Vo6LvcLF4" role="2Oq$k0" />
-                        <node concept="3TrEf2" id="39Vo6LvcM_V" role="2OqNvi">
-                          <ref role="3Tt5mk" to="4kwy:cJpacq40jC" resolve="optionalName" />
+                      <node concept="2OqwBi" id="1lB$OOcg3dO" role="3uHU7w">
+                        <node concept="2OqwBi" id="39Vo6LvcM17" role="2Oq$k0">
+                          <node concept="pncrf" id="39Vo6LvcLF4" role="2Oq$k0" />
+                          <node concept="3TrEf2" id="39Vo6LvcM_V" role="2OqNvi">
+                            <ref role="3Tt5mk" to="4kwy:cJpacq40jC" resolve="optionalName" />
+                          </node>
                         </node>
+                        <node concept="2Iv5rx" id="1lB$OOcg3dP" role="2OqNvi" />
                       </node>
                       <node concept="Xl_RD" id="39Vo6LvcL8j" role="3uHU7B">
                         <property role="Xl_RC" value="as " />

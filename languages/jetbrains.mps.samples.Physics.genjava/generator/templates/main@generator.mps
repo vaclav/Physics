@@ -9092,7 +9092,7 @@
     <property role="TrG5h" value="TrigonometricExpressionToExpression" />
     <node concept="3aamgX" id="z8_qE_yW22" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:4SHkH$fnm2H" resolve="SinusExpression" />
+      <ref role="30HIoZ" to="1qv1:4SHkH$fnm2H" resolve="SineExpression" />
       <node concept="gft3U" id="z8_qE_yWgi" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yWgy" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9125,7 +9125,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW0E" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:1EoaTAzc5EL" resolve="ArcSinus" />
+      <ref role="30HIoZ" to="1qv1:1EoaTAzc5EL" resolve="ArcSine" />
       <node concept="gft3U" id="z8_qE_yX8s" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yYW0" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9158,7 +9158,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW2m" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:M7eZQAOIHc" resolve="SinusHyperbolicus" />
+      <ref role="30HIoZ" to="1qv1:M7eZQAOIHc" resolve="SineHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yX46" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yZ5K" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9191,7 +9191,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW0W" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:1EoaTAz9PnQ" resolve="ArcSinusHyperbolicus" />
+      <ref role="30HIoZ" to="1qv1:1EoaTAz9PnQ" resolve="ArcSineHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yWY3" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yZat" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9224,7 +9224,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW1w" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:M7eZQ_ZStj" resolve="CosinusExpression" />
+      <ref role="30HIoZ" to="1qv1:M7eZQ_ZStj" resolve="CosineExpression" />
       <node concept="gft3U" id="z8_qE_yXnB" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yZWv" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9257,7 +9257,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW0I" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:M7eZQBwOwF" resolve="ArcCosinus" />
+      <ref role="30HIoZ" to="1qv1:M7eZQBwOwF" resolve="ArcCosine" />
       <node concept="gft3U" id="z8_qE_yXcQ" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_yZYI" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9290,7 +9290,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW1K" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:1EoaTAz8bOT" resolve="CosinusHyperbolicus" />
+      <ref role="30HIoZ" to="1qv1:1EoaTAz8bOT" resolve="CosineHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yXtY" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z0eV" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9323,7 +9323,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW0O" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:1EoaTAz8K6a" resolve="ArcCosinusHyperbolicus" />
+      <ref role="30HIoZ" to="1qv1:1EoaTAz8K6a" resolve="ArcCosineHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yXhk" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z0lp" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9356,7 +9356,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW2G" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:M7eZQAngzc" resolve="TangensExpression" />
+      <ref role="30HIoZ" to="1qv1:M7eZQAngzc" resolve="TangentExpression" />
       <node concept="gft3U" id="z8_qE_yXG8" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z1nR" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9389,7 +9389,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW16" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:1EoaTAzbzti" resolve="ArcTangens" />
+      <ref role="30HIoZ" to="1qv1:1EoaTAzbzti" resolve="ArcTangent" />
       <node concept="gft3U" id="z8_qE_yXyC" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z1q6" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9422,7 +9422,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW34" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:M7eZQADw31" resolve="TangensHyperbolicus" />
+      <ref role="30HIoZ" to="1qv1:M7eZQADw31" resolve="TangentHyperbolicus" />
       <node concept="gft3U" id="z8_qE_yXKY" role="1lVwrX">
         <node concept="2YIFZM" id="z8_qE_z1sl" role="gfFT$">
           <ref role="1Pybhc" to="ngze:~BigDecimalMath" resolve="BigDecimalMath" />
@@ -9455,7 +9455,7 @@
     </node>
     <node concept="3aamgX" id="z8_qE_yW1i" role="3aUrZf">
       <property role="36QftV" value="true" />
-      <ref role="30HIoZ" to="1qv1:1EoaTAzatSJ" resolve="ArcTangensHyperbolicus" />
+      <ref role="30HIoZ" to="1qv1:1EoaTAzatSJ" resolve="ArcTangentHyperbolicus" />
       <node concept="gft3U" id="z8_qE_z1Bk" role="1lVwrX">
         <node concept="gft3U" id="7bZFIimgPqL" role="gfFT$">
           <node concept="Xl_RD" id="7bZFIimgPqT" role="gfFT$">

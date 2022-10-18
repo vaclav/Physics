@@ -18,7 +18,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
 public class CoordinatesFactories {
   public static class NodeFactory_4809107873070200372 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SLinkOperations.setTarget(newNode, LINKS.axialDistance$TH3o, _quotation_createNode_gnt87a_a0a0a0());
       SLinkOperations.setTarget(newNode, LINKS.height$TIet, _quotation_createNode_gnt87a_a0b0a0());
       SLinkOperations.setTarget(newNode, LINKS.phi$THxq, _quotation_createNode_gnt87a_a0c0a0());
@@ -63,7 +63,7 @@ public class CoordinatesFactories {
     }
   }
   public static class NodeFactory_4809107873070296905 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SLinkOperations.setTarget(newNode, LINKS.dx$KTha, _quotation_createNode_gnt87a_a0a0a1());
       SLinkOperations.setTarget(newNode, LINKS.dy$1OJk, _quotation_createNode_gnt87a_a0b0a1());
       SLinkOperations.setTarget(newNode, LINKS.dz$1UnG, _quotation_createNode_gnt87a_a0c0a1());
@@ -108,7 +108,7 @@ public class CoordinatesFactories {
     }
   }
   public static class NodeFactory_4809107873070306457 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SLinkOperations.setTarget(newNode, LINKS.distance$iw9Y, _quotation_createNode_gnt87a_a0a0a2());
       SLinkOperations.setTarget(newNode, LINKS.theta$ivdU, _quotation_createNode_gnt87a_a0b0a2());
       SLinkOperations.setTarget(newNode, LINKS.phi$iuJS, _quotation_createNode_gnt87a_a0c0a2());

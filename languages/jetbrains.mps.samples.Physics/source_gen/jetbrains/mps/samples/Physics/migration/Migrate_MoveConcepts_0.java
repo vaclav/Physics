@@ -274,7 +274,7 @@ __switch__:
       });
     }
   }
-  public MigrationScriptReference getDescriptor() {
+  public MigrationScriptReference getReference() {
     return new MigrationScriptReference(MetaAdapterFactory.getLanguage(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, "jetbrains.mps.samples.Physics"), 0);
   }
   public static boolean isMovedConcept(SAbstractConcept c) {

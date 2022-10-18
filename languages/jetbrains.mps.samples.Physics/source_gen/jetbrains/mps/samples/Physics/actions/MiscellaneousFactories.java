@@ -15,7 +15,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
 
 public class MiscellaneousFactories {
   public static class NodeFactory_7471572540824262513 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SLinkOperations.setTarget(newNode, LINKS.simulationSpeed$H2m$, _quotation_createNode_fpwm7x_a0a0a0());
     }
     private static SNode _quotation_createNode_fpwm7x_a0a0a0() {
@@ -36,7 +36,7 @@ public class MiscellaneousFactories {
     }
   }
   public static class NodeFactory_632920307791887924 implements NodeFactory {
-    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
+    public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
       SLinkOperations.setTarget(newNode, LINKS.restitutionPercent$S732, createNumberLiteral_fpwm7x_a0a0a1());
       {
         final SNode elastic = sampleNode;

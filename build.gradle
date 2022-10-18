@@ -14,9 +14,10 @@ plugins {
 }
 
 // Versions (to update: mpsVersion with the target MPS version and ecmascript4mpsVersion with the commit number or tag available on https://jitpack.io/#mar9000/ecmascript4mps)
-ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersion') : '2021.1'
-ext.iets3Version = project.hasProperty("iets3Version") ? project.property('iets3Version') : "$mpsVersion.+"
-ext.ecmascript4mpsVersion = project.hasProperty("ecmascript4mpsVersion") ? project.property('ecmascript4mpsVersion') : "91cd8f13ef"
+ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersion') : '2021.2.4'
+ext.iets3Version = project.hasProperty("iets3Version") ? project.property('iets3Version') : "2021.2.+"
+ext.iets3GenJsVersion = project.hasProperty("iets3GenJsVersion") ? project.property('iets3GenJsVersion') : "2021.2"
+ext.ecmascript4mpsVersion = project.hasProperty("ecmascript4mpsVersion") ? project.property('ecmascript4mpsVersion') : "2021.2"
 
 // Optional properties
 def mpsDir = project.hasProperty("mpsDir") ? project.property('mpsDir') : "$buildDir/mps"
@@ -32,15 +33,14 @@ dependencies {
     mps "com.jetbrains:mps:$mpsVersion"
 	mpsArtifacts "org.iets3:opensource:$iets3Version"
 	mpsArtifacts "com.github.mar9000:ecmascript4mps:$ecmascript4mpsVersion"
-	mpsArtifacts "com.github.cdelabou:iets3.genjs:$mpsVersion"
+	mpsArtifacts "com.github.cdelabou:iets3.genjs:$iets3GenJsVersion"
     junitAnt 'org.apache.ant:ant-junit:1.10.9'
 }
 
 repositories {
     mavenLocal()
-	maven {
-		url 'https://projects.itemis.de/nexus/content/repositories/mbeddr'
-	}
+	maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+	maven { url 'https://artifacts.itemis.cloud/repository/maven-mps/' }
     mavenCentral()
     maven { url 'https://jitpack.io' }
 }

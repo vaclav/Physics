@@ -14,7 +14,7 @@
   </root>
   <root nodeRef="r:8a007d96-a8d0-42ec-8f31-6a1a74561ac4(jetbrains.mps.samples.Physics.dimensions.actions)/1430471042026629210">
     <file name="UnitFactories.java">
-      <node id="1430471042026629226" at="20,91,21,66" concept="1" />
+      <node id="1430471042026629226" at="20,102,21,66" concept="1" />
       <node id="1430471042026636733" at="21,66,22,0" concept="5" />
       <node id="1430471042026637712" at="23,7,24,38" concept="4" />
       <node id="1430471042026637945" at="25,79,26,121" concept="1" />
@@ -31,9 +31,9 @@
       <node id="1430471042026637712" at="24,38,27,9" concept="2" />
       <node id="4252203113247592885" at="34,37,39,9" concept="2" />
       <node id="1430471042026637712" at="22,0,28,7" concept="0" />
-      <node id="4252203113247592885" at="32,91,40,7" concept="0" />
-      <node id="1430471042026629211" at="20,0,30,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
-      <node id="4252203113247588787" at="32,0,42,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <node id="4252203113247592885" at="32,102,40,7" concept="0" />
+      <node id="1430471042026629211" at="20,0,30,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <node id="4252203113247588787" at="32,0,42,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
       <scope id="1430471042026637722" at="25,79,26,121" />
       <scope id="4252203113247592895" at="35,71,38,116" />
       <scope id="1430471042026637712" at="23,7,27,9">
@@ -42,16 +42,18 @@
       <scope id="4252203113247592885" at="33,7,39,9">
         <var name="dim" id="4252203113247592885" />
       </scope>
-      <scope id="1430471042026629211" at="20,91,28,7" />
-      <scope id="4252203113247588787" at="32,91,40,7" />
+      <scope id="1430471042026629211" at="20,102,28,7" />
+      <scope id="4252203113247588787" at="32,102,40,7" />
       <scope id="1430471042026629211" at="20,0,30,0">
         <var name="enclosingNode" id="1430471042026629211" />
+        <var name="index" id="1430471042026629211" />
         <var name="model" id="1430471042026629211" />
         <var name="newNode" id="1430471042026629211" />
         <var name="sampleNode" id="1430471042026629211" />
       </scope>
       <scope id="4252203113247588787" at="32,0,42,0">
         <var name="enclosingNode" id="4252203113247588787" />
+        <var name="index" id="4252203113247588787" />
         <var name="model" id="4252203113247588787" />
         <var name="newNode" id="4252203113247588787" />
         <var name="sampleNode" id="4252203113247588787" />

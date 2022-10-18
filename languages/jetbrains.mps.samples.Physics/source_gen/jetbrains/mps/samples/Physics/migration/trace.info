@@ -122,7 +122,7 @@
       <node id="4328727387140369997" at="267,0,268,0" concept="5" trace="_14__yield_fkfbwg_d0a0d0a0f_it" />
       <node id="4328727387140369997" at="268,0,269,0" concept="5" trace="_18__yield_fkfbwg_e0a0d0a0f" />
       <node id="4328727387140369997" at="269,0,270,0" concept="5" trace="_18__yield_fkfbwg_e0a0d0a0f_it" />
-      <node id="4328727387140369997" at="277,51,278,150" concept="9" />
+      <node id="4328727387140369997" at="277,50,278,150" concept="9" />
       <node id="4328727387140370006" at="281,278,282,18" concept="9" />
       <node id="4328727387140370018" at="284,274,285,18" concept="9" />
       <node id="4328727387140370030" at="287,275,288,18" concept="9" />
@@ -147,7 +147,7 @@
       <node id="4328727387140370030" at="161,0,164,0" concept="7" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="4328727387140370042" at="180,0,183,0" concept="7" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="4328727387140370054" at="199,0,202,0" concept="7" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="4328727387140369997" at="277,0,280,0" concept="7" trace="getDescriptor#()Ljetbrains/mps/lang/migration/runtime/base/MigrationScriptReference;" />
+      <node id="4328727387140369997" at="277,0,280,0" concept="7" trace="getReference#()Ljetbrains/mps/lang/migration/runtime/base/MigrationScriptReference;" />
       <node id="4328727387140370006" at="280,60,283,5" concept="6" />
       <node id="4328727387140370018" at="283,5,286,5" concept="6" />
       <node id="4328727387140370030" at="286,5,289,5" concept="6" />
@@ -210,7 +210,7 @@
       <scope id="4328727387140370042" at="180,59,181,519" />
       <scope id="4328727387140370054" at="199,59,200,517" />
       <scope id="4328727387140369997" at="254,30,255,39" />
-      <scope id="4328727387140369997" at="277,51,278,150" />
+      <scope id="4328727387140369997" at="277,50,278,150" />
       <scope id="4328727387140370006" at="281,278,282,18" />
       <scope id="4328727387140370018" at="284,274,285,18" />
       <scope id="4328727387140370030" at="287,275,288,18" />

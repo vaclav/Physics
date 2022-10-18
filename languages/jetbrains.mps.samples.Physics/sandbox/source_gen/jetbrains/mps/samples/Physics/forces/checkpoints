@@ -30,5 +30,8 @@
   <plan id="JavaPhysics">
     <checkpoint id="sync_java_objects" file="javaphysics-sync_java_objects.mps" />
   </plan>
+  <plan id="JsPhysicsStandalone">
+    <checkpoint id="sync_base" file="jsphysicsstandalone-sync_base.mps" />
+  </plan>
 </checkpoints>
 

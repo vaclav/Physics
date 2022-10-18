@@ -6,10 +6,10 @@ import jetbrains.mps.intentions.AbstractIntentionDescriptor;
 import jetbrains.mps.openapi.intentions.IntentionFactory;
 import jetbrains.mps.openapi.intentions.Kind;
 import jetbrains.mps.smodel.SNodePointer;
-import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.openapi.editor.EditorContext;
 import java.util.Collection;
 import jetbrains.mps.openapi.intentions.IntentionExecutable;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.openapi.editor.EditorContext;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
@@ -42,21 +42,21 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class ConvertDimensions_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
+
   public ConvertDimensions_Intention() {
     super(Kind.NORMAL, false, new SNodePointer("r:0ba2a849-f681-4f06-a0a7-d00cef0cc0fc(jetbrains.mps.samples.Physics.dimensions.intentions)", "998543371832889725"));
   }
+
   @Override
   public String getPresentation() {
     return "ConvertDimensions";
   }
-  @Override
-  public boolean isApplicable(final SNode node, final EditorContext editorContext) {
-    return true;
-  }
+
   @Override
   public boolean isSurroundWith() {
     return false;
   }
+
   public Collection<IntentionExecutable> instances(final SNode node, final EditorContext context) {
     List<IntentionExecutable> list = ListSequence.fromList(new ArrayList<IntentionExecutable>());
     List<Tuples._2<List<SNode>, Map<SNode, Rational>>> paramList = parameter(node, context);
@@ -109,10 +109,12 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
     public IntentionImplementation(Tuples._2<List<SNode>, Map<SNode, Rational>> parameter) {
       myParameter = parameter;
     }
+
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
       return "Add Conversion Ratio to " + IUnitReferenceLike__BehaviorDescriptor.listToString_id3L71doTUROP.invoke(SNodeOperations.asSConcept(CONCEPTS.IUnitReferenceLike$zW), myParameter._0());
     }
+
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       Map<SNode, Rational> targetUnits = myParameter._1();
@@ -146,10 +148,19 @@ public final class ConvertDimensions_Intention extends AbstractIntentionDescript
 
       editorContext.select(literal);
     }
+
+    @Override
+    public boolean isApplicable(final SNode node, final EditorContext editorContext) {
+      return true;
+    }
+
+
+
     @Override
     public IntentionDescriptor getDescriptor() {
       return ConvertDimensions_Intention.this;
     }
+
     public Object getParameter() {
       return myParameter;
     }
