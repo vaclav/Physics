@@ -384,6 +384,7 @@
       <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
       <concept id="1202128969694" name="jetbrains.mps.baseLanguage.collections.structure.SelectOperation" flags="nn" index="3$u5V9" />
       <concept id="1172254888721" name="jetbrains.mps.baseLanguage.collections.structure.ContainsOperation" flags="nn" index="3JPx81" />
+      <concept id="31378964227347002" name="jetbrains.mps.baseLanguage.collections.structure.SelectNotNullOperation" flags="ng" index="1KnU$U" />
       <concept id="1180964022718" name="jetbrains.mps.baseLanguage.collections.structure.ConcatOperation" flags="nn" index="3QWeyG" />
     </language>
   </registry>
@@ -2619,24 +2620,7 @@
                   </node>
                 </node>
               </node>
-              <node concept="3zZkjj" id="GdoRjGw7uZ" role="2OqNvi">
-                <node concept="1bVj0M" id="GdoRjGw7v0" role="23t8la">
-                  <node concept="3clFbS" id="GdoRjGw7v1" role="1bW5cS">
-                    <node concept="3clFbF" id="GdoRjGw7v2" role="3cqZAp">
-                      <node concept="3y3z36" id="GdoRjGw7v3" role="3clFbG">
-                        <node concept="10Nm6u" id="GdoRjGw7v4" role="3uHU7w" />
-                        <node concept="37vLTw" id="GdoRjGw7v5" role="3uHU7B">
-                          <ref role="3cqZAo" node="GdoRjGw7v6" resolve="it" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="Rh6nW" id="GdoRjGw7v6" role="1bW2Oz">
-                    <property role="TrG5h" value="it" />
-                    <node concept="2jxLKc" id="GdoRjGw7v7" role="1tU5fm" />
-                  </node>
-                </node>
-              </node>
+              <node concept="1KnU$U" id="7vYLXjwVT$u" role="2OqNvi" />
             </node>
           </node>
         </node>

@@ -71,54 +71,60 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForAbstractVectorType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "AbstractVectorType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L);
     b.class_(false, true, false);
-    b.super_("jetbrains.mps.samples.Physics.types.structure.DirectionType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
+    // extends: jetbrains.mps.samples.Physics.types.structure.DirectionType
+    b.super_(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/1387628150973121927");
-    b.version(2);
+    b.version(3);
     b.alias("abstract-vector");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDirectionType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "DirectionType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
     b.class_(false, false, false);
-    b.super_("org.iets3.core.expr.base.structure.Type", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
+    // extends: org.iets3.core.expr.base.structure.Type
+    b.super_(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866554287176");
-    b.version(2);
+    b.version(3);
     b.alias("direction");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForForceType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "ForceType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1be152c15029f679L);
     b.class_(false, false, false);
-    b.super_("org.iets3.core.expr.base.structure.Type", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
+    // extends: org.iets3.core.expr.base.structure.Type
+    b.super_(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/2008977899011044985");
-    b.version(2);
+    b.version(3);
     b.alias("force");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForLocalizedType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "LocalizedType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x539f98473b6896eaL);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.types.structure.DirectionType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
+    // extends: jetbrains.mps.samples.Physics.types.structure.DirectionType
+    b.super_(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c950a1448L);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/6025702258151823082");
-    b.version(2);
+    b.version(3);
     b.alias("localized");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForObjectType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "ObjectType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de46L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.types.structure.LocalizedType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x539f98473b6896eaL);
+    // extends: jetbrains.mps.samples.Physics.types.structure.LocalizedType
+    b.super_(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x539f98473b6896eaL);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553749062");
-    b.version(2);
+    b.version(3);
     b.alias("object");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForRotationType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "RotationType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x4dcb9d0527c228a6L);
     b.class_(false, false, false);
-    b.super_("org.iets3.core.expr.base.structure.Type", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
+    // extends: org.iets3.core.expr.base.structure.Type
+    b.super_(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/5605746806660147366");
-    b.version(2);
+    b.version(3);
     b.aggregate("nestedType", 0x777af24c0465feb3L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L).optional(false).ordered(true).multiple(false).origin("8609460045977353907").done();
     b.alias("rotation");
     return b.create();
@@ -126,9 +132,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForVectorType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "VectorType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9504aaffL);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.types.structure.AbstractVectorType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L);
+    // extends: jetbrains.mps.samples.Physics.types.structure.AbstractVectorType
+    b.super_(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x1341d8738b15c587L);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553932543");
-    b.version(2);
+    b.version(3);
     b.aggregate("componentType", 0x1341d8738b13c81dL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L).optional(false).ordered(true).multiple(false).origin("1387628150972991517").done();
     b.alias("vector");
     return b.create();
@@ -136,9 +143,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForWorldType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.types", "WorldType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x6520d39c9501de47L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.types.structure.LocalizedType", 0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x539f98473b6896eaL);
+    // extends: jetbrains.mps.samples.Physics.types.structure.LocalizedType
+    b.super_(0xf3e9841eb1da4548L, 0x9cb814aebaf1d1caL, 0x539f98473b6896eaL);
     b.origin("r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553749063");
-    b.version(2);
+    b.version(3);
     b.alias("world");
     return b.create();
   }

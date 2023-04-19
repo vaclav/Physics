@@ -113,72 +113,69 @@
       <node id="4339786255639540055" at="24,26,25,34" concept="3" />
       <node id="4339786255639540055" at="26,5,27,16" concept="9" />
       <node id="5957227235209963023" at="30,129,31,71" concept="8" />
-      <node id="1890336563088717469" at="33,25,34,57" concept="8" />
-      <node id="5957227235210040029" at="34,57,35,43" concept="8" />
-      <node id="5957227235209955893" at="35,43,36,94" concept="8" />
-      <node id="5957227235210117688" at="36,94,37,0" concept="11" />
-      <node id="5957227235209944825" at="37,0,38,139" concept="3" />
-      <node id="5957227235210121388" at="40,7,41,0" concept="11" />
-      <node id="5957227235210124166" at="42,39,43,65" concept="15" />
-      <node id="5957227235210190691" at="44,5,45,0" concept="11" />
-      <node id="5957227235210206182" at="45,0,46,53" concept="3" />
-      <node id="5957227235210208503" at="46,53,47,0" concept="11" />
-      <node id="5957227235210174441" at="58,40,59,20" concept="9" />
-      <node id="5694845579517642369" at="63,44,64,20" concept="9" />
+      <node id="1890336563088717469" at="32,53,33,55" concept="8" />
+      <node id="5957227235210040029" at="33,55,34,41" concept="8" />
+      <node id="5957227235209955893" at="34,41,35,92" concept="8" />
+      <node id="5957227235210117688" at="35,92,36,0" concept="11" />
+      <node id="5957227235209944825" at="36,0,37,137" concept="3" />
+      <node id="5957227235210121388" at="38,7,39,0" concept="11" />
+      <node id="5957227235210124166" at="40,39,41,65" concept="15" />
+      <node id="5957227235210190691" at="42,5,43,0" concept="11" />
+      <node id="5957227235210206182" at="43,0,44,53" concept="3" />
+      <node id="5957227235210208503" at="44,53,45,0" concept="11" />
+      <node id="5957227235210174441" at="56,40,57,20" concept="9" />
+      <node id="5694845579517642369" at="61,44,62,20" concept="9" />
       <node id="352677614185351672" at="21,0,23,0" concept="2" trace="RunPageInBrowser_Command#()V" />
       <node id="4339786255639540055" at="23,71,26,5" concept="6" />
-      <node id="5957227235210122648" at="41,0,44,5" concept="6" />
-      <node id="5957227235210170582" at="49,0,52,0" concept="7" trace="destroyProcessImpl#()V" />
-      <node id="5957227235210170590" at="53,0,56,0" concept="7" trace="detachProcessImpl#()V" />
-      <node id="5957227235210179879" at="70,0,73,0" concept="7" trace="write#(I)V" />
-      <node id="5957227235210170598" at="57,0,61,0" concept="7" trace="detachIsDefault#()Z" />
-      <node id="5694845579517640819" at="62,0,66,0" concept="7" trace="isProcessTerminated#()Z" />
-      <node id="5957227235210175269" at="68,45,73,10" concept="9" />
+      <node id="5957227235210122648" at="39,0,42,5" concept="6" />
+      <node id="5957227235210170582" at="47,0,50,0" concept="7" trace="destroyProcessImpl#()V" />
+      <node id="5957227235210170590" at="51,0,54,0" concept="7" trace="detachProcessImpl#()V" />
+      <node id="5957227235210179879" at="68,0,71,0" concept="7" trace="write#(I)V" />
+      <node id="5957227235210170598" at="55,0,59,0" concept="7" trace="detachIsDefault#()Z" />
+      <node id="5694845579517640819" at="60,0,64,0" concept="7" trace="isProcessTerminated#()Z" />
+      <node id="5957227235210175269" at="66,45,71,10" concept="9" />
       <node id="4339786255639540055" at="23,0,29,0" concept="7" trace="setProject_Project#(Lorg/jetbrains/mps/openapi/project/Project;)Ljetbrains/mps/samples/Physics/execution/javascript/plugin/RunPageInBrowser_Command;" />
-      <node id="345735828122134592" at="33,0,40,0" concept="7" trace="run#()V" />
-      <node id="5957227235210170606" at="67,0,75,0" concept="7" trace="getProcessInput#()Ljava/io/OutputStream;" />
-      <node id="345735828122134590" at="31,71,40,7" concept="3" />
-      <node id="5957227235210125376" at="47,0,75,6" concept="9" />
-      <node id="5957227235209811661" at="30,0,77,0" concept="7" trace="createProcess#(Lorg/jetbrains/mps/openapi/model/SNodeReference;Lorg/jetbrains/mps/openapi/module/SRepository;)Lcom/intellij/execution/process/ProcessHandler;" />
+      <node id="345735828122134590" at="31,71,38,7" concept="3" />
+      <node id="5957227235210170606" at="65,0,73,0" concept="7" trace="getProcessInput#()Ljava/io/OutputStream;" />
+      <node id="5957227235210125376" at="45,0,73,6" concept="9" />
+      <node id="5957227235209811661" at="30,0,75,0" concept="7" trace="createProcess#(Lorg/jetbrains/mps/openapi/model/SNodeReference;Lorg/jetbrains/mps/openapi/module/SRepository;)Lcom/intellij/execution/process/ProcessHandler;" />
       <scope id="352677614185351672" at="21,37,21,37" />
-      <scope id="5957227235210170586" at="50,43,50,43" />
-      <scope id="5957227235210170594" at="54,42,54,42" />
-      <scope id="5957227235210179886" at="71,56,71,56" />
+      <scope id="5957227235210170586" at="48,43,48,43" />
+      <scope id="5957227235210170594" at="52,42,52,42" />
+      <scope id="5957227235210179886" at="69,56,69,56" />
       <scope id="4339786255639540055" at="24,26,25,34" />
-      <scope id="5957227235210122650" at="42,39,43,65" />
-      <scope id="5957227235210170602" at="58,40,59,20" />
-      <scope id="5694845579517640824" at="63,44,64,20" />
+      <scope id="5957227235210122650" at="40,39,41,65" />
+      <scope id="5957227235210170602" at="56,40,57,20" />
+      <scope id="5694845579517640824" at="61,44,62,20" />
       <scope id="352677614185351672" at="21,0,23,0" />
-      <scope id="5957227235210170582" at="49,0,52,0" />
-      <scope id="5957227235210170590" at="53,0,56,0" />
-      <scope id="5957227235210179879" at="70,0,73,0">
+      <scope id="5957227235210170582" at="47,0,50,0" />
+      <scope id="5957227235210170590" at="51,0,54,0" />
+      <scope id="5957227235210179879" at="68,0,71,0">
         <var name="p1" id="5957227235210179883" />
       </scope>
       <scope id="4339786255639540055" at="23,71,27,16" />
-      <scope id="5957227235210170598" at="57,0,61,0" />
-      <scope id="5694845579517640819" at="62,0,66,0" />
-      <scope id="345735828122134594" at="33,25,38,139">
+      <scope id="5957227235210170598" at="55,0,59,0" />
+      <scope id="5694845579517640819" at="60,0,64,0" />
+      <scope id="345735828122134594" at="32,53,37,137">
         <var name="facet" id="5957227235209955894" />
         <var name="model" id="5957227235210040030" />
         <var name="resolved" id="1890336563088717470" />
       </scope>
-      <scope id="5957227235210170611" at="68,45,73,10" />
+      <scope id="5957227235210170611" at="66,45,71,10" />
       <scope id="4339786255639540055" at="23,0,29,0">
         <var name="project" id="4339786255639540055" />
       </scope>
-      <scope id="345735828122134592" at="33,0,40,0" />
-      <scope id="5957227235210170606" at="67,0,75,0" />
-      <scope id="5957227235209811663" at="30,129,75,6">
+      <scope id="5957227235210170606" at="65,0,73,0" />
+      <scope id="5957227235209811663" at="30,129,73,6">
         <var name="outputLocation" id="5957227235209963024" />
       </scope>
-      <scope id="5957227235209811661" at="30,0,77,0">
+      <scope id="5957227235209811661" at="30,0,75,0">
         <var name="nodePointer" id="1240470842553275381" />
         <var name="repository" id="1890336563088314807" />
       </scope>
-      <unit id="5957227235210179871" at="69,19,73,9" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.RunPageInBrowser_Command$2$1" />
-      <unit id="345735828122134592" at="32,50,40,5" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.RunPageInBrowser_Command$1" />
-      <unit id="5957227235210170567" at="48,15,75,5" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.RunPageInBrowser_Command$2" />
-      <unit id="352677614185351672" at="19,0,81,0" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.RunPageInBrowser_Command" />
+      <unit id="5957227235210179871" at="67,19,71,9" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.RunPageInBrowser_Command$1$1" />
+      <unit id="5957227235210170567" at="46,15,73,5" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.RunPageInBrowser_Command$1" />
+      <unit id="352677614185351672" at="19,0,79,0" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.RunPageInBrowser_Command" />
     </file>
   </root>
   <root nodeRef="r:4494da29-e68d-4f81-9146-98bb40da0c48(jetbrains.mps.samples.Physics.execution.javascript.plugin)/6010538103784529690">
@@ -429,63 +426,58 @@
       <scope id="9093116960349489348" at="168,0,171,0" />
     </file>
     <file name="PhysicsWebSimulation_Configuration_RunProfileState.java">
-      <node id="6010538103785203372" at="33,191,34,39" concept="3" />
-      <node id="6010538103785203372" at="34,39,35,32" concept="3" />
-      <node id="6010538103785203372" at="38,68,39,16" concept="9" />
-      <node id="6010538103785203372" at="42,45,43,16" concept="9" />
-      <node id="6010538103785203372" at="47,110,48,49" concept="8" />
-      <node id="4802828306460925337" at="48,49,49,73" concept="8" />
-      <node id="5957227235210256978" at="49,73,50,80" concept="8" />
-      <node id="5957227235210260183" at="50,80,51,0" concept="11" />
-      <node id="5957227235210235072" at="52,5,53,184" concept="8" />
-      <node id="5957227235210235072" at="53,184,54,88" concept="8" />
-      <node id="5957227235210235072" at="54,88,55,52" concept="3" />
-      <node id="5957227235210235072" at="57,30,58,33" concept="3" />
-      <node id="6010538103785203372" at="66,60,67,18" concept="9" />
-      <node id="6010538103785203372" at="68,5,69,17" concept="9" />
-      <node id="6010538103785203372" at="28,0,30,0" concept="4" trace="myRunConfiguration" />
-      <node id="6010538103785203372" at="30,0,32,0" concept="4" trace="myEnvironment" />
-      <node id="6010538103785203372" at="38,0,41,0" concept="7" trace="getConfigurationSettings#()Lcom/intellij/execution/configurations/ConfigurationPerRunnerSettings;" />
-      <node id="6010538103785203372" at="42,0,45,0" concept="7" trace="getRunnerSettings#()Lcom/intellij/execution/configurations/RunnerSettings;" />
-      <node id="5957227235210235072" at="57,0,60,0" concept="7" trace="invoke#()V" />
-      <node id="6010538103785203372" at="65,55,68,5" concept="6" />
-      <node id="6010538103785203372" at="33,0,37,0" concept="2" trace="PhysicsWebSimulation_Configuration_RunProfileState#(Ljetbrains/mps/samples/Physics/execution/javascript/plugin/PhysicsWebSimulation_Configuration;Lcom/intellij/execution/Executor;Lcom/intellij/execution/runners/ExecutionEnvironment;)V" />
-      <node id="5957227235210235072" at="55,52,60,10" concept="9" />
-      <node id="6010538103785203372" at="65,0,71,0" concept="13" trace="canExecute#(Ljava/lang/String;)Z" />
-      <node id="5957227235210235072" at="51,0,61,5" concept="0" />
-      <node id="6010538103785203372" at="46,0,63,0" concept="7" trace="execute#(Lcom/intellij/execution/Executor;Lcom/intellij/execution/runners/ProgramRunner;)Lcom/intellij/execution/ExecutionResult;" />
-      <scope id="6010538103785203372" at="38,68,39,16" />
-      <scope id="6010538103785203372" at="42,45,43,16" />
-      <scope id="5957227235210235072" at="57,30,58,33" />
-      <scope id="6010538103785203372" at="66,60,67,18" />
-      <scope id="6010538103785203372" at="33,191,35,32" />
-      <scope id="6010538103785203372" at="38,0,41,0" />
-      <scope id="6010538103785203372" at="42,0,45,0" />
-      <scope id="5957227235210235072" at="57,0,60,0" />
-      <scope id="6010538103785203372" at="33,0,37,0">
+      <node id="6010538103785203372" at="32,191,33,39" concept="3" />
+      <node id="6010538103785203372" at="33,39,34,32" concept="3" />
+      <node id="6010538103785203372" at="37,68,38,16" concept="9" />
+      <node id="6010538103785203372" at="41,45,42,16" concept="9" />
+      <node id="6010538103785203372" at="46,110,47,49" concept="8" />
+      <node id="4802828306460925337" at="47,49,48,73" concept="8" />
+      <node id="5957227235210256978" at="48,73,49,80" concept="8" />
+      <node id="5957227235210260183" at="49,80,50,0" concept="11" />
+      <node id="5957227235210235072" at="51,5,52,184" concept="8" />
+      <node id="5957227235210235072" at="52,184,53,88" concept="8" />
+      <node id="5957227235210235072" at="53,88,54,52" concept="3" />
+      <node id="5957227235210235072" at="54,52,55,145" concept="9" />
+      <node id="6010538103785203372" at="61,60,62,18" concept="9" />
+      <node id="6010538103785203372" at="63,5,64,17" concept="9" />
+      <node id="6010538103785203372" at="27,0,29,0" concept="4" trace="myRunConfiguration" />
+      <node id="6010538103785203372" at="29,0,31,0" concept="4" trace="myEnvironment" />
+      <node id="6010538103785203372" at="37,0,40,0" concept="7" trace="getConfigurationSettings#()Lcom/intellij/execution/configurations/ConfigurationPerRunnerSettings;" />
+      <node id="6010538103785203372" at="41,0,44,0" concept="7" trace="getRunnerSettings#()Lcom/intellij/execution/configurations/RunnerSettings;" />
+      <node id="6010538103785203372" at="60,55,63,5" concept="6" />
+      <node id="6010538103785203372" at="32,0,36,0" concept="2" trace="PhysicsWebSimulation_Configuration_RunProfileState#(Ljetbrains/mps/samples/Physics/execution/javascript/plugin/PhysicsWebSimulation_Configuration;Lcom/intellij/execution/Executor;Lcom/intellij/execution/runners/ExecutionEnvironment;)V" />
+      <node id="5957227235210235072" at="50,0,56,5" concept="0" />
+      <node id="6010538103785203372" at="60,0,66,0" concept="13" trace="canExecute#(Ljava/lang/String;)Z" />
+      <node id="6010538103785203372" at="45,0,58,0" concept="7" trace="execute#(Lcom/intellij/execution/Executor;Lcom/intellij/execution/runners/ProgramRunner;)Lcom/intellij/execution/ExecutionResult;" />
+      <scope id="6010538103785203372" at="37,68,38,16" />
+      <scope id="6010538103785203372" at="41,45,42,16" />
+      <scope id="6010538103785203372" at="61,60,62,18" />
+      <scope id="6010538103785203372" at="32,191,34,32" />
+      <scope id="6010538103785203372" at="37,0,40,0" />
+      <scope id="6010538103785203372" at="41,0,44,0" />
+      <scope id="6010538103785203372" at="32,0,36,0">
         <var name="configuration" id="6010538103785203372" />
         <var name="environment" id="6010538103785203372" />
         <var name="executor" id="6010538103785203372" />
       </scope>
-      <scope id="6010538103785203372" at="65,55,69,17" />
-      <scope id="6010538103785203372" at="65,0,71,0">
-        <var name="executorId" id="6010538103785203372" />
-      </scope>
-      <scope id="5957227235210235072" at="52,5,60,10">
+      <scope id="5957227235210235072" at="51,5,55,145">
         <var name="_consoleView" id="5957227235210235072" />
         <var name="_processHandler" id="5957227235210235072" />
       </scope>
-      <scope id="6010538103785203372" at="47,110,61,5">
+      <scope id="6010538103785203372" at="60,55,64,17" />
+      <scope id="6010538103785203372" at="60,0,66,0">
+        <var name="executorId" id="6010538103785203372" />
+      </scope>
+      <scope id="6010538103785203372" at="46,110,56,5">
         <var name="mpsProject" id="4802828306460925338" />
         <var name="project" id="6010538103785203372" />
         <var name="projectRepository" id="5957227235210256979" />
       </scope>
-      <scope id="6010538103785203372" at="46,0,63,0">
+      <scope id="6010538103785203372" at="45,0,58,0">
         <var name="executor" id="6010538103785203372" />
         <var name="runner" id="6010538103785203372" />
       </scope>
-      <unit id="5957227235210235072" at="56,118,60,7" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.PhysicsWebSimulation_Configuration_RunProfileState$1" />
-      <unit id="6010538103785203372" at="27,0,72,0" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.PhysicsWebSimulation_Configuration_RunProfileState" />
+      <unit id="6010538103785203372" at="26,0,67,0" name="jetbrains.mps.samples.Physics.execution.javascript.plugin.PhysicsWebSimulation_Configuration_RunProfileState" />
     </file>
   </root>
   <root nodeRef="r:4494da29-e68d-4f81-9146-98bb40da0c48(jetbrains.mps.samples.Physics.execution.javascript.plugin)/6010538103785490439">

@@ -8,7 +8,6 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import java.math.BigDecimal;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.samples.Physics.dimensions.behavior.UnitReduceHelper;
@@ -63,11 +62,7 @@ public class NumberTypeHelper {
    * For single numbers, return themselves
    */
   public static SNode approximate(Iterable<SNode> types) {
-    if (Sequence.fromIterable(types).count() == 1 || (Sequence.fromIterable(types).all(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return isZero(it);
-      }
-    }) && Sequence.fromIterable(types).count() > 0)) {
+    if (Sequence.fromIterable(types).count() == 1 || (Sequence.fromIterable(types).all(NumberTypeHelper::isZero) && Sequence.fromIterable(types).count() > 0)) {
       return SNodeOperations.as(Sequence.fromIterable(types).first(), CONCEPTS.Type$WK);
     } else {
       return createRealType_nobf8o_a0a0a0g();

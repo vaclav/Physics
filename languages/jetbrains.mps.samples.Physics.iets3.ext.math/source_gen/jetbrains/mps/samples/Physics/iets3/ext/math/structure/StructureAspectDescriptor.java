@@ -62,18 +62,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForExpExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.iets3.ext.math", "ExpExpression", 0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x7ee2c0df37c860b9L);
     b.class_(false, false, false);
-    b.super_("org.iets3.core.expr.base.structure.UnaryExpression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L);
+    // extends: org.iets3.core.expr.base.structure.UnaryExpression
+    b.super_(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cd0f69L);
     b.origin("r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.iets3.ext.math.structure)/9143082258461647033");
-    b.version(2);
+    b.version(3);
     b.alias("exp");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForNRootExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.iets3.ext.math", "NRootExpression", 0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x5abff817741099d3L);
     b.class_(false, false, false);
-    b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
+    // extends: org.iets3.core.expr.base.structure.Expression
+    b.super_(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
     b.origin("r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.iets3.ext.math.structure)/6539217963580430803");
-    b.version(2);
+    b.version(3);
     b.property("exponent", 0x4a2d0770b38f4fa2L).type(MetaIdFactory.dataTypeId(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x13da0dd571764807L)).origin("5344936513388892066").done();
     b.aggregate("expression", 0x5abff81774111c3aL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("6539217963580464186").done();
     b.alias("n-root");

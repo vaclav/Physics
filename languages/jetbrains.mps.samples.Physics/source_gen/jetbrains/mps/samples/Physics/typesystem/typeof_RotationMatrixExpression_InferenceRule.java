@@ -8,7 +8,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
@@ -36,20 +35,16 @@ public class typeof_RotationMatrixExpression_InferenceRule extends AbstractInfer
                   final SNode thirdType = typeCheckingContext.typeOf(SLinkOperations.getTarget(rotationMatrixExpression, LINKS.c3$SNkx), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "5605746806660261274", true);
                   typeCheckingContext.whenConcrete(thirdType, new Runnable() {
                     public void run() {
-                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(firstType), typeCheckingContext.getExpandedNode(secondType), "first column", "second column", new _FunctionTypes._void_P1_E0<String>() {
-                        public void invoke(String text) {
-                          {
-                            final MessageTarget errorTarget = new NodeMessageTarget();
-                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(rotationMatrixExpression, LINKS.c2$SMBu), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988913468", null, errorTarget);
-                          }
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(firstType), typeCheckingContext.getExpandedNode(secondType), "first column", "second column", (String text) -> {
+                        {
+                          final MessageTarget errorTarget = new NodeMessageTarget();
+                          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(rotationMatrixExpression, LINKS.c2$SMBu), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988913468", null, errorTarget);
                         }
                       });
-                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(firstType), typeCheckingContext.getExpandedNode(thirdType), "first column", "third column", new _FunctionTypes._void_P1_E0<String>() {
-                        public void invoke(String text) {
-                          {
-                            final MessageTarget errorTarget = new NodeMessageTarget();
-                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(rotationMatrixExpression, LINKS.c3$SNkx), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988915886", null, errorTarget);
-                          }
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(firstType), typeCheckingContext.getExpandedNode(thirdType), "first column", "third column", (String text) -> {
+                        {
+                          final MessageTarget errorTarget = new NodeMessageTarget();
+                          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(rotationMatrixExpression, LINKS.c3$SNkx), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988915886", null, errorTarget);
                         }
                       });
 

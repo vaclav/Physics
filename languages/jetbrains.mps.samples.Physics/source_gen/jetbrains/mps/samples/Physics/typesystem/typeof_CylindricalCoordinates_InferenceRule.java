@@ -8,7 +8,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
@@ -36,12 +35,10 @@ public class typeof_CylindricalCoordinates_InferenceRule extends AbstractInferen
                   final SNode phi = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.phi$THxq), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972979645", true);
                   typeCheckingContext.whenConcrete(phi, new Runnable() {
                     public void run() {
-                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(height), typeCheckingContext.getExpandedNode(distance), "z", "rho", new _FunctionTypes._void_P1_E0<String>() {
-                        public void invoke(String text) {
-                          {
-                            final MessageTarget errorTarget = new NodeMessageTarget();
-                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(coords, LINKS.height$TIet), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988907324", null, errorTarget);
-                          }
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(height), typeCheckingContext.getExpandedNode(distance), "z", "rho", (String text) -> {
+                        {
+                          final MessageTarget errorTarget = new NodeMessageTarget();
+                          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(coords, LINKS.height$TIet), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988907324", null, errorTarget);
                         }
                       });
 

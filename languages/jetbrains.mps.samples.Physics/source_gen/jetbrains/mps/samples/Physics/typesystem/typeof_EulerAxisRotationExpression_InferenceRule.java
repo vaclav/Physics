@@ -9,7 +9,6 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
@@ -34,12 +33,10 @@ public class typeof_EulerAxisRotationExpression_InferenceRule extends AbstractIn
             typeCheckingContext.whenConcrete(angleType, new Runnable() {
               public void run() {
                 // Check that type match (rotation speed with rotation speed for example)
-                TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(axisType), createVectorType_c6qx7o_c0b0a0a1a0b0a0a0a1a0b0a0b(SNodeOperations.as(typeCheckingContext.getExpandedNode(angleType), CONCEPTS.Type$WK)), "axis", "angle", new _FunctionTypes._void_P1_E0<String>() {
-                  public void invoke(String text) {
-                    {
-                      final MessageTarget errorTarget = new NodeMessageTarget();
-                      IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(self, LINKS.angle$6N6F), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988911429", null, errorTarget);
-                    }
+                TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(axisType), createVectorType_c6qx7o_c0b0a0a1a0b0a0a0a1a0b0a0b(SNodeOperations.as(typeCheckingContext.getExpandedNode(angleType), CONCEPTS.Type$WK)), "axis", "angle", (String text) -> {
+                  {
+                    final MessageTarget errorTarget = new NodeMessageTarget();
+                    IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(self, LINKS.angle$6N6F), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988911429", null, errorTarget);
                   }
                 });
 

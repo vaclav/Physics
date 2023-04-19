@@ -5,6 +5,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
@@ -15,7 +16,7 @@
       <unit at="10,0,30,0" name="jetbrains.mps.samples.Physics.iets3.ext.math.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="18,0,83,0" name="jetbrains.mps.samples.Physics.iets3.ext.math.structure.StructureAspectDescriptor" />
+      <unit at="18,0,85,0" name="jetbrains.mps.samples.Physics.iets3.ext.math.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.iets3.ext.math.structure)/1430471042026326023">
@@ -37,27 +38,28 @@
       <scope id="6539217963580430803" at="27,49,33,37" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="6539217963580430803" at="13,0,14,0" concept="5" trace="NRootExpression" />
+      <node id="6539217963580430803" at="13,0,14,0" concept="6" trace="NRootExpression" />
       <node id="6539217963580430803" at="17,52,18,54" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
       <node id="6539217963580430803" at="20,0,21,0" concept="1" trace="myConceptNRootExpression" />
       <node id="6539217963580430803" at="46,49,47,40" concept="4" />
-      <node id="6539217963580430803" at="71,73,72,194" concept="3" />
-      <node id="6539217963580430803" at="72,194,73,34" concept="0" />
-      <node id="6539217963580430803" at="73,34,74,125" concept="0" />
-      <node id="6539217963580430803" at="74,125,75,131" concept="0" />
-      <node id="6539217963580430803" at="75,131,76,17" concept="0" />
-      <node id="5344936513388892066" at="76,17,77,179" concept="0" />
-      <node id="6539217963580464186" at="77,179,78,204" concept="0" />
-      <node id="6539217963580430803" at="78,204,79,22" concept="0" />
-      <node id="6539217963580430803" at="79,22,80,22" concept="4" />
-      <node id="6539217963580430803" at="71,0,82,0" concept="6" trace="createDescriptorForNRootExpression#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6539217963580430803" at="72,73,73,194" concept="3" />
+      <node id="6539217963580430803" at="73,194,74,34" concept="0" />
+      <node id="6539217963580430803" at="74,34,75,61" concept="5" />
+      <node id="6539217963580430803" at="75,61,76,76" concept="0" />
+      <node id="6539217963580430803" at="76,76,77,131" concept="0" />
+      <node id="6539217963580430803" at="77,131,78,17" concept="0" />
+      <node id="5344936513388892066" at="78,17,79,179" concept="0" />
+      <node id="6539217963580464186" at="79,179,80,204" concept="0" />
+      <node id="6539217963580430803" at="80,204,81,22" concept="0" />
+      <node id="6539217963580430803" at="81,22,82,22" concept="4" />
+      <node id="6539217963580430803" at="72,0,84,0" concept="7" trace="createDescriptorForNRootExpression#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6539217963580430803" at="46,49,47,40" />
-      <scope id="6539217963580430803" at="71,73,80,22">
+      <scope id="6539217963580430803" at="72,73,82,22">
         <var name="b" id="6539217963580430803" />
       </scope>
-      <scope id="6539217963580430803" at="71,0,82,0" />
+      <scope id="6539217963580430803" at="72,0,84,0" />
     </file>
   </root>
   <root nodeRef="r:6c377001-3d0f-4aab-9946-3128a5eaaff6(jetbrains.mps.samples.Physics.iets3.ext.math.structure)/9143082258461647033">
@@ -74,7 +76,7 @@
       <scope id="9143082258461647033" at="20,47,26,35" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="9143082258461647033" at="12,0,13,0" concept="5" trace="ExpExpression" />
+      <node id="9143082258461647033" at="12,0,13,0" concept="6" trace="ExpExpression" />
       <node id="9143082258461647033" at="16,116,17,52" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
@@ -82,17 +84,18 @@
       <node id="9143082258461647033" at="44,47,45,38" concept="4" />
       <node id="9143082258461647033" at="62,71,63,192" concept="3" />
       <node id="9143082258461647033" at="63,192,64,34" concept="0" />
-      <node id="9143082258461647033" at="64,34,65,130" concept="0" />
-      <node id="9143082258461647033" at="65,130,66,131" concept="0" />
-      <node id="9143082258461647033" at="66,131,67,17" concept="0" />
-      <node id="9143082258461647033" at="67,17,68,19" concept="0" />
-      <node id="9143082258461647033" at="68,19,69,22" concept="4" />
-      <node id="9143082258461647033" at="62,0,71,0" concept="6" trace="createDescriptorForExpExpression#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="9143082258461647033" at="64,34,65,66" concept="5" />
+      <node id="9143082258461647033" at="65,66,66,76" concept="0" />
+      <node id="9143082258461647033" at="66,76,67,131" concept="0" />
+      <node id="9143082258461647033" at="67,131,68,17" concept="0" />
+      <node id="9143082258461647033" at="68,17,69,19" concept="0" />
+      <node id="9143082258461647033" at="69,19,70,22" concept="4" />
+      <node id="9143082258461647033" at="62,0,72,0" concept="7" trace="createDescriptorForExpExpression#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="9143082258461647033" at="44,47,45,38" />
-      <scope id="9143082258461647033" at="62,71,69,22">
+      <scope id="9143082258461647033" at="62,71,70,22">
         <var name="b" id="9143082258461647033" />
       </scope>
-      <scope id="9143082258461647033" at="62,0,71,0" />
+      <scope id="9143082258461647033" at="62,0,72,0" />
     </file>
   </root>
 </debug-info>

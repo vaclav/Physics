@@ -36,6 +36,7 @@ public class Generator extends TemplateModuleInterpreted2 {
   protected void fillReferencedGenerators(TemplateModuleBase.ReferencedGenerators referencedGenerators) {
     referencedGenerators.extended("0ab6f947-2451-4a3a-80a3-33b77e399874(org.iets3.core.expr.genjava.simpleTypes#8286534136182342700)");
     referencedGenerators.extended("9372d430-4226-47ef-8bc2-22f1af10ab37(org.iets3.core.expr.genjs.simpleTypes#01)");
+    referencedGenerators.employed("9372d430-4226-47ef-8bc2-22f1af10ab37(org.iets3.core.expr.genjs.simpleTypes#01)");
   }
 
   @Override

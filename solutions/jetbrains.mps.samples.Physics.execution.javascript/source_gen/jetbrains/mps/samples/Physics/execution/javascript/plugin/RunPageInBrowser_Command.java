@@ -29,14 +29,12 @@ public class RunPageInBrowser_Command {
 
   public ProcessHandler createProcess(final SNodeReference nodePointer, final SRepository repository) throws ExecutionException {
     final Wrappers._T<IFile> outputLocation = new Wrappers._T<IFile>();
-    repository.getModelAccess().runReadAction(new Runnable() {
-      public void run() {
-        SNode resolved = nodePointer.resolve(repository);
-        SModel model = resolved.getModel();
-        GenerationTargetFacet facet = model.getModule().getFacet(GenerationTargetFacet.class);
+    repository.getModelAccess().runReadAction(() -> {
+      SNode resolved = nodePointer.resolve(repository);
+      SModel model = resolved.getModel();
+      GenerationTargetFacet facet = model.getModule().getFacet(GenerationTargetFacet.class);
 
-        outputLocation.value = facet.getOutputLocation(model).findChild(resolved.getName().replace("_", "__").replace(" ", "_") + ".html");
-      }
+      outputLocation.value = facet.getOutputLocation(model).findChild(resolved.getName().replace("_", "__").replace(" ", "_") + ".html");
     });
 
     if (outputLocation.value == null) {

@@ -53,19 +53,21 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForBundleProgram() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("org.mar9000.mps.ecmascript.bundler", "BundleProgram", 0x8d94c08e449e484bL, 0x9e9ef3e97c8df28aL, 0x159ecb3ed37f6c22L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.lang.core.structure.NodeAttribute", 0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da54L);
+    // extends: jetbrains.mps.lang.core.structure.NodeAttribute
+    b.super_(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da54L);
     b.origin("r:b537f483-403d-4303-b46e-273d636a3019(org.mar9000.mps.ecmascript.bundler.structure)/1557905991813524514");
-    b.version(2);
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForJSInjectModule() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("org.mar9000.mps.ecmascript.bundler", "JSInjectModule", 0x8d94c08e449e484bL, 0x9e9ef3e97c8df28aL, 0x159ecb3ed37c0e17L);
     b.class_(false, false, false);
-    b.super_("org.mar9000.mps.ecmascript.structure.JSNode", 0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x76eb757dfbac6f71L);
+    // extends: org.mar9000.mps.ecmascript.structure.JSNode
+    b.super_(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x76eb757dfbac6f71L);
     b.parent(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x5d2a78e40b52fb80L);
     b.parent(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x2548743a479c8aa0L);
     b.origin("r:b537f483-403d-4303-b46e-273d636a3019(org.mar9000.mps.ecmascript.bundler.structure)/1557905991813303831");
-    b.version(2);
+    b.version(3);
     b.associate("module", 0x159ecb3ed37f24c3L).target(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x2cc6dbd4f2dcb72L).optional(false).origin("1557905991813506243").done();
     b.alias("inject module");
     return b.create();

@@ -52,7 +52,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           VectorLike vector = (VectorLike) MapSequence.fromMap(context.getEnvironment()).get(IDotTarget__BehaviorDescriptor.contextExpression_id6zmBjqUivyF.invoke(node));
-          switch (enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c.indexNullable(SPropertyOperations.getEnum(node, PROPS.component$Szq))) {
+          switch (enumSwitchIndex.indexNullable(SPropertyOperations.getEnum(node, PROPS.component$Szq))) {
             case 0:
               return vector.length();
             case 1:
@@ -774,7 +774,7 @@ public class InterpreterVectorInterpreter extends InterpreterBase {
     ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretAfterRelationshipImpl("jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter", "jetbrains.mps.samples.Physics.dimensions.plugin.InterpreterDimensionsInterpreter"));
     ListSequence.fromList(((List<IRelationship>) relationships)).addElement(new InterpretAfterRelationshipImpl("jetbrains.mps.samples.Physics.plugin.InterpreterVectorInterpreter", "jetbrains.mps.samples.Physics.iets3.ext.math.plugin.InterpreterExtendedMathInterpreter"));
   }
-  private static final EnumerationLiteralsIndex enumSwitchIndex_fbbe2m_a0e0a0a0a0a0a0c = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, 0x6520d39c9504b3f4L, 0x6520d39c9504b3d9L, 0x6520d39c9504b3daL, 0x6520d39c9504b3ddL, 0x6520d39c9504b3eeL, 0x6520d39c9504b3e9L);
+  private static final EnumerationLiteralsIndex enumSwitchIndex = EnumerationLiteralsIndex.build(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d8L, 0x6520d39c9504b3f4L, 0x6520d39c9504b3d9L, 0x6520d39c9504b3daL, 0x6520d39c9504b3ddL, 0x6520d39c9504b3eeL, 0x6520d39c9504b3e9L);
 
   private static final class PROPS {
     /*package*/ static final SProperty component$Szq = MetaAdapterFactory.getProperty(0xbe81eb124eda4d0eL, 0x89be7493500ab874L, 0x6520d39c9504b3d7L, 0x6520d39c9504b3fbL, "component");

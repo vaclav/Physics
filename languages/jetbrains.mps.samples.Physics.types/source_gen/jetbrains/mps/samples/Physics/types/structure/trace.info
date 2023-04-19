@@ -5,6 +5,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
@@ -15,7 +16,7 @@
       <unit at="10,0,42,0" name="jetbrains.mps.samples.Physics.types.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="14,0,146,0" name="jetbrains.mps.samples.Physics.types.structure.StructureAspectDescriptor" />
+      <unit at="14,0,154,0" name="jetbrains.mps.samples.Physics.types.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/1387628150973121927">
@@ -32,7 +33,7 @@
       <scope id="1387628150973121927" at="26,52,32,40" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="1387628150973121927" at="12,0,13,0" concept="5" trace="AbstractVectorType" />
+      <node id="1387628150973121927" at="12,0,13,0" concept="6" trace="AbstractVectorType" />
       <node id="1387628150973121927" at="22,116,23,57" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
@@ -40,17 +41,18 @@
       <node id="1387628150973121927" at="45,52,46,43" concept="4" />
       <node id="1387628150973121927" at="71,76,72,188" concept="3" />
       <node id="1387628150973121927" at="72,188,73,33" concept="0" />
-      <node id="1387628150973121927" at="73,33,74,139" concept="0" />
-      <node id="1387628150973121927" at="74,139,75,122" concept="0" />
-      <node id="1387628150973121927" at="75,122,76,17" concept="0" />
-      <node id="1387628150973121927" at="76,17,77,31" concept="0" />
-      <node id="1387628150973121927" at="77,31,78,22" concept="4" />
-      <node id="1387628150973121927" at="71,0,80,0" concept="6" trace="createDescriptorForAbstractVectorType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1387628150973121927" at="73,33,74,75" concept="5" />
+      <node id="1387628150973121927" at="74,75,75,76" concept="0" />
+      <node id="1387628150973121927" at="75,76,76,122" concept="0" />
+      <node id="1387628150973121927" at="76,122,77,17" concept="0" />
+      <node id="1387628150973121927" at="77,17,78,31" concept="0" />
+      <node id="1387628150973121927" at="78,31,79,22" concept="4" />
+      <node id="1387628150973121927" at="71,0,81,0" concept="7" trace="createDescriptorForAbstractVectorType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1387628150973121927" at="45,52,46,43" />
-      <scope id="1387628150973121927" at="71,76,78,22">
+      <scope id="1387628150973121927" at="71,76,79,22">
         <var name="b" id="1387628150973121927" />
       </scope>
-      <scope id="1387628150973121927" at="71,0,80,0" />
+      <scope id="1387628150973121927" at="71,0,81,0" />
     </file>
   </root>
   <root nodeRef="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/2008977899011044985">
@@ -67,25 +69,26 @@
       <scope id="2008977899011044985" at="41,43,47,31" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="2008977899011044985" at="14,0,15,0" concept="5" trace="ForceType" />
+      <node id="2008977899011044985" at="14,0,15,0" concept="6" trace="ForceType" />
       <node id="2008977899011044985" at="24,52,25,48" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
       <node id="2008977899011044985" at="17,0,18,0" concept="1" trace="myConceptForceType" />
       <node id="2008977899011044985" at="49,43,50,34" concept="4" />
-      <node id="2008977899011044985" at="89,67,90,179" concept="3" />
-      <node id="2008977899011044985" at="90,179,91,34" concept="0" />
-      <node id="2008977899011044985" at="91,34,92,119" concept="0" />
-      <node id="2008977899011044985" at="92,119,93,122" concept="0" />
-      <node id="2008977899011044985" at="93,122,94,17" concept="0" />
-      <node id="2008977899011044985" at="94,17,95,21" concept="0" />
-      <node id="2008977899011044985" at="95,21,96,22" concept="4" />
-      <node id="2008977899011044985" at="89,0,98,0" concept="6" trace="createDescriptorForForceType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="2008977899011044985" at="91,67,92,179" concept="3" />
+      <node id="2008977899011044985" at="92,179,93,34" concept="0" />
+      <node id="2008977899011044985" at="93,34,94,55" concept="5" />
+      <node id="2008977899011044985" at="94,55,95,76" concept="0" />
+      <node id="2008977899011044985" at="95,76,96,122" concept="0" />
+      <node id="2008977899011044985" at="96,122,97,17" concept="0" />
+      <node id="2008977899011044985" at="97,17,98,21" concept="0" />
+      <node id="2008977899011044985" at="98,21,99,22" concept="4" />
+      <node id="2008977899011044985" at="91,0,101,0" concept="7" trace="createDescriptorForForceType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="2008977899011044985" at="49,43,50,34" />
-      <scope id="2008977899011044985" at="89,67,96,22">
+      <scope id="2008977899011044985" at="91,67,99,22">
         <var name="b" id="2008977899011044985" />
       </scope>
-      <scope id="2008977899011044985" at="89,0,98,0" />
+      <scope id="2008977899011044985" at="91,0,101,0" />
     </file>
   </root>
   <root nodeRef="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/5605746806660147366">
@@ -103,26 +106,27 @@
       <scope id="5605746806660147366" at="64,46,71,34" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="5605746806660147366" at="17,0,18,0" concept="5" trace="RotationType" />
+      <node id="5605746806660147366" at="17,0,18,0" concept="6" trace="RotationType" />
       <node id="5605746806660147366" at="27,49,28,51" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
       <node id="5605746806660147366" at="20,0,21,0" concept="1" trace="myConceptRotationType" />
       <node id="5605746806660147366" at="55,46,56,37" concept="4" />
-      <node id="5605746806660147366" at="116,70,117,182" concept="3" />
-      <node id="5605746806660147366" at="117,182,118,34" concept="0" />
-      <node id="5605746806660147366" at="118,34,119,119" concept="0" />
-      <node id="5605746806660147366" at="119,119,120,122" concept="0" />
-      <node id="5605746806660147366" at="120,122,121,17" concept="0" />
-      <node id="8609460045977353907" at="121,17,122,204" concept="0" />
-      <node id="5605746806660147366" at="122,204,123,24" concept="0" />
-      <node id="5605746806660147366" at="123,24,124,22" concept="4" />
-      <node id="5605746806660147366" at="116,0,126,0" concept="6" trace="createDescriptorForRotationType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="5605746806660147366" at="121,70,122,182" concept="3" />
+      <node id="5605746806660147366" at="122,182,123,34" concept="0" />
+      <node id="5605746806660147366" at="123,34,124,55" concept="5" />
+      <node id="5605746806660147366" at="124,55,125,76" concept="0" />
+      <node id="5605746806660147366" at="125,76,126,122" concept="0" />
+      <node id="5605746806660147366" at="126,122,127,17" concept="0" />
+      <node id="8609460045977353907" at="127,17,128,204" concept="0" />
+      <node id="5605746806660147366" at="128,204,129,24" concept="0" />
+      <node id="5605746806660147366" at="129,24,130,22" concept="4" />
+      <node id="5605746806660147366" at="121,0,132,0" concept="7" trace="createDescriptorForRotationType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="5605746806660147366" at="55,46,56,37" />
-      <scope id="5605746806660147366" at="116,70,124,22">
+      <scope id="5605746806660147366" at="121,70,130,22">
         <var name="b" id="5605746806660147366" />
       </scope>
-      <scope id="5605746806660147366" at="116,0,126,0" />
+      <scope id="5605746806660147366" at="121,0,132,0" />
     </file>
   </root>
   <root nodeRef="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/6025702258151823082">
@@ -140,25 +144,26 @@
       <scope id="6025702258151823082" at="48,47,55,35" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="6025702258151823082" at="15,0,16,0" concept="5" trace="LocalizedType" />
+      <node id="6025702258151823082" at="15,0,16,0" concept="6" trace="LocalizedType" />
       <node id="6025702258151823082" at="25,48,26,52" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
       <node id="6025702258151823082" at="18,0,19,0" concept="1" trace="myConceptLocalizedType" />
       <node id="6025702258151823082" at="51,47,52,38" concept="4" />
-      <node id="6025702258151823082" at="98,71,99,183" concept="3" />
-      <node id="6025702258151823082" at="99,183,100,34" concept="0" />
-      <node id="6025702258151823082" at="100,34,101,139" concept="0" />
-      <node id="6025702258151823082" at="101,139,102,122" concept="0" />
-      <node id="6025702258151823082" at="102,122,103,17" concept="0" />
-      <node id="6025702258151823082" at="103,17,104,25" concept="0" />
-      <node id="6025702258151823082" at="104,25,105,22" concept="4" />
-      <node id="6025702258151823082" at="98,0,107,0" concept="6" trace="createDescriptorForLocalizedType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6025702258151823082" at="101,71,102,183" concept="3" />
+      <node id="6025702258151823082" at="102,183,103,34" concept="0" />
+      <node id="6025702258151823082" at="103,34,104,75" concept="5" />
+      <node id="6025702258151823082" at="104,75,105,76" concept="0" />
+      <node id="6025702258151823082" at="105,76,106,122" concept="0" />
+      <node id="6025702258151823082" at="106,122,107,17" concept="0" />
+      <node id="6025702258151823082" at="107,17,108,25" concept="0" />
+      <node id="6025702258151823082" at="108,25,109,22" concept="4" />
+      <node id="6025702258151823082" at="101,0,111,0" concept="7" trace="createDescriptorForLocalizedType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6025702258151823082" at="51,47,52,38" />
-      <scope id="6025702258151823082" at="98,71,105,22">
+      <scope id="6025702258151823082" at="101,71,109,22">
         <var name="b" id="6025702258151823082" />
       </scope>
-      <scope id="6025702258151823082" at="98,0,107,0" />
+      <scope id="6025702258151823082" at="101,0,111,0" />
     </file>
   </root>
   <root nodeRef="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553749062">
@@ -176,25 +181,26 @@
       <scope id="7287056866553749062" at="56,44,63,32" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="7287056866553749062" at="16,0,17,0" concept="5" trace="ObjectType" />
+      <node id="7287056866553749062" at="16,0,17,0" concept="6" trace="ObjectType" />
       <node id="7287056866553749062" at="26,52,27,49" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
       <node id="7287056866553749062" at="19,0,20,0" concept="1" trace="myConceptObjectType" />
       <node id="7287056866553749062" at="53,44,54,35" concept="4" />
-      <node id="7287056866553749062" at="107,68,108,180" concept="3" />
-      <node id="7287056866553749062" at="108,180,109,34" concept="0" />
-      <node id="7287056866553749062" at="109,34,110,139" concept="0" />
-      <node id="7287056866553749062" at="110,139,111,122" concept="0" />
-      <node id="7287056866553749062" at="111,122,112,17" concept="0" />
-      <node id="7287056866553749062" at="112,17,113,22" concept="0" />
-      <node id="7287056866553749062" at="113,22,114,22" concept="4" />
-      <node id="7287056866553749062" at="107,0,116,0" concept="6" trace="createDescriptorForObjectType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7287056866553749062" at="111,68,112,180" concept="3" />
+      <node id="7287056866553749062" at="112,180,113,34" concept="0" />
+      <node id="7287056866553749062" at="113,34,114,75" concept="5" />
+      <node id="7287056866553749062" at="114,75,115,76" concept="0" />
+      <node id="7287056866553749062" at="115,76,116,122" concept="0" />
+      <node id="7287056866553749062" at="116,122,117,17" concept="0" />
+      <node id="7287056866553749062" at="117,17,118,22" concept="0" />
+      <node id="7287056866553749062" at="118,22,119,22" concept="4" />
+      <node id="7287056866553749062" at="111,0,121,0" concept="7" trace="createDescriptorForObjectType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7287056866553749062" at="53,44,54,35" />
-      <scope id="7287056866553749062" at="107,68,114,22">
+      <scope id="7287056866553749062" at="111,68,119,22">
         <var name="b" id="7287056866553749062" />
       </scope>
-      <scope id="7287056866553749062" at="107,0,116,0" />
+      <scope id="7287056866553749062" at="111,0,121,0" />
     </file>
   </root>
   <root nodeRef="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553749063">
@@ -212,25 +218,26 @@
       <scope id="7287056866553749063" at="79,43,86,31" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="7287056866553749063" at="19,0,20,0" concept="5" trace="WorldType" />
+      <node id="7287056866553749063" at="19,0,20,0" concept="6" trace="WorldType" />
       <node id="7287056866553749063" at="29,49,30,48" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
       <node id="7287056866553749063" at="22,0,23,0" concept="1" trace="myConceptWorldType" />
       <node id="7287056866553749063" at="59,43,60,34" concept="4" />
-      <node id="7287056866553749063" at="136,67,137,179" concept="3" />
-      <node id="7287056866553749063" at="137,179,138,34" concept="0" />
-      <node id="7287056866553749063" at="138,34,139,139" concept="0" />
-      <node id="7287056866553749063" at="139,139,140,122" concept="0" />
-      <node id="7287056866553749063" at="140,122,141,17" concept="0" />
-      <node id="7287056866553749063" at="141,17,142,21" concept="0" />
-      <node id="7287056866553749063" at="142,21,143,22" concept="4" />
-      <node id="7287056866553749063" at="136,0,145,0" concept="6" trace="createDescriptorForWorldType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7287056866553749063" at="143,67,144,179" concept="3" />
+      <node id="7287056866553749063" at="144,179,145,34" concept="0" />
+      <node id="7287056866553749063" at="145,34,146,75" concept="5" />
+      <node id="7287056866553749063" at="146,75,147,76" concept="0" />
+      <node id="7287056866553749063" at="147,76,148,122" concept="0" />
+      <node id="7287056866553749063" at="148,122,149,17" concept="0" />
+      <node id="7287056866553749063" at="149,17,150,21" concept="0" />
+      <node id="7287056866553749063" at="150,21,151,22" concept="4" />
+      <node id="7287056866553749063" at="143,0,153,0" concept="7" trace="createDescriptorForWorldType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7287056866553749063" at="59,43,60,34" />
-      <scope id="7287056866553749063" at="136,67,143,22">
+      <scope id="7287056866553749063" at="143,67,151,22">
         <var name="b" id="7287056866553749063" />
       </scope>
-      <scope id="7287056866553749063" at="136,0,145,0" />
+      <scope id="7287056866553749063" at="143,0,153,0" />
     </file>
   </root>
   <root nodeRef="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866553932543">
@@ -247,26 +254,27 @@
       <scope id="7287056866553932543" at="72,44,78,32" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="7287056866553932543" at="18,0,19,0" concept="5" trace="VectorType" />
+      <node id="7287056866553932543" at="18,0,19,0" concept="6" trace="VectorType" />
       <node id="7287056866553932543" at="28,51,29,49" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
       <node id="7287056866553932543" at="21,0,22,0" concept="1" trace="myConceptVectorType" />
       <node id="7287056866553932543" at="57,44,58,35" concept="4" />
-      <node id="7287056866553932543" at="126,68,127,180" concept="3" />
-      <node id="7287056866553932543" at="127,180,128,34" concept="0" />
-      <node id="7287056866553932543" at="128,34,129,144" concept="0" />
-      <node id="7287056866553932543" at="129,144,130,122" concept="0" />
-      <node id="7287056866553932543" at="130,122,131,17" concept="0" />
-      <node id="1387628150972991517" at="131,17,132,207" concept="0" />
-      <node id="7287056866553932543" at="132,207,133,22" concept="0" />
-      <node id="7287056866553932543" at="133,22,134,22" concept="4" />
-      <node id="7287056866553932543" at="126,0,136,0" concept="6" trace="createDescriptorForVectorType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7287056866553932543" at="132,68,133,180" concept="3" />
+      <node id="7287056866553932543" at="133,180,134,34" concept="0" />
+      <node id="7287056866553932543" at="134,34,135,80" concept="5" />
+      <node id="7287056866553932543" at="135,80,136,76" concept="0" />
+      <node id="7287056866553932543" at="136,76,137,122" concept="0" />
+      <node id="7287056866553932543" at="137,122,138,17" concept="0" />
+      <node id="1387628150972991517" at="138,17,139,207" concept="0" />
+      <node id="7287056866553932543" at="139,207,140,22" concept="0" />
+      <node id="7287056866553932543" at="140,22,141,22" concept="4" />
+      <node id="7287056866553932543" at="132,0,143,0" concept="7" trace="createDescriptorForVectorType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7287056866553932543" at="57,44,58,35" />
-      <scope id="7287056866553932543" at="126,68,134,22">
+      <scope id="7287056866553932543" at="132,68,141,22">
         <var name="b" id="7287056866553932543" />
       </scope>
-      <scope id="7287056866553932543" at="126,0,136,0" />
+      <scope id="7287056866553932543" at="132,0,143,0" />
     </file>
   </root>
   <root nodeRef="r:74190c88-92da-4d84-8b3e-002bef899390(jetbrains.mps.samples.Physics.types.structure)/7287056866554287176">
@@ -284,25 +292,26 @@
       <scope id="7287056866554287176" at="33,47,40,35" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="7287056866554287176" at="13,0,14,0" concept="5" trace="DirectionType" />
+      <node id="7287056866554287176" at="13,0,14,0" concept="6" trace="DirectionType" />
       <node id="7287056866554287176" at="23,57,24,52" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
       <node id="7287056866554287176" at="16,0,17,0" concept="1" trace="myConceptDirectionType" />
       <node id="7287056866554287176" at="47,47,48,38" concept="4" />
-      <node id="7287056866554287176" at="80,71,81,183" concept="3" />
-      <node id="7287056866554287176" at="81,183,82,34" concept="0" />
-      <node id="7287056866554287176" at="82,34,83,119" concept="0" />
-      <node id="7287056866554287176" at="83,119,84,122" concept="0" />
-      <node id="7287056866554287176" at="84,122,85,17" concept="0" />
-      <node id="7287056866554287176" at="85,17,86,25" concept="0" />
-      <node id="7287056866554287176" at="86,25,87,22" concept="4" />
-      <node id="7287056866554287176" at="80,0,89,0" concept="6" trace="createDescriptorForDirectionType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7287056866554287176" at="81,71,82,183" concept="3" />
+      <node id="7287056866554287176" at="82,183,83,34" concept="0" />
+      <node id="7287056866554287176" at="83,34,84,55" concept="5" />
+      <node id="7287056866554287176" at="84,55,85,76" concept="0" />
+      <node id="7287056866554287176" at="85,76,86,122" concept="0" />
+      <node id="7287056866554287176" at="86,122,87,17" concept="0" />
+      <node id="7287056866554287176" at="87,17,88,25" concept="0" />
+      <node id="7287056866554287176" at="88,25,89,22" concept="4" />
+      <node id="7287056866554287176" at="81,0,91,0" concept="7" trace="createDescriptorForDirectionType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7287056866554287176" at="47,47,48,38" />
-      <scope id="7287056866554287176" at="80,71,87,22">
+      <scope id="7287056866554287176" at="81,71,89,22">
         <var name="b" id="7287056866554287176" />
       </scope>
-      <scope id="7287056866554287176" at="80,0,89,0" />
+      <scope id="7287056866554287176" at="81,0,91,0" />
     </file>
   </root>
 </debug-info>

@@ -108,20 +108,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForAbstractDimensionType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "AbstractDimensionType", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x300307d5d92dba32L);
     b.class_(false, true, false);
-    b.super_("org.iets3.core.expr.base.structure.Type", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
+    // extends: org.iets3.core.expr.base.structure.Type
+    b.super_(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/3459617553803754034");
-    b.version(2);
+    b.version(3);
     b.alias("abstract-dimension");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCompositeDimension() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "CompositeDimension", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x38a7a450fc780041L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.dimensions.structure.Dimension", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L);
+    // extends: jetbrains.mps.samples.Physics.dimensions.structure.Dimension
+    b.super_(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L);
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L);
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/4082412254974705729");
-    b.version(2);
+    b.version(3);
+    b.aggregate("parents", 0x38a7a450fc780042L).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL).optional(true).ordered(true).multiple(true).origin("4082412254974705730").specialize(0x777af24c04661544L, 0x777af24c04661545L).done();
     b.alias("composite dimension");
     return b.create();
   }
@@ -131,7 +134,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d40ceL);
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/3181138428204943432");
-    b.version(2);
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDimension() {
@@ -140,7 +143,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x71934284d7d145eeL, 0xa0548c072591085fL, 0x27b717d14a8b21f9L);
     b.parent(0x7b68d745a7b848b9L, 0xbd9c05c0f8725a35L, 0x32f64a31a179034L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/1926715320664197465");
-    b.version(2);
+    b.version(3);
     b.aggregate("default", 0x1abd11603f7e095cL).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d373fL).optional(false).ordered(true).multiple(false).origin("1926715320664197468").done();
     b.aggregate("units", 0x1abd11603f7e095aL).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca800848L).optional(true).ordered(true).multiple(true).origin("1926715320664197466").done();
     b.alias("dimension");
@@ -151,19 +154,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/3181138428204837756");
-    b.version(2);
+    b.version(3);
+    b.associate("target", 0x2c25ac8bca7e6b7dL).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x1abd11603f7e0959L).optional(false).origin("3181138428204837757").specialize(0x777af24c0465feb9L, 0x777af24c0465febcL).done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDimensionType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "DimensionType", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04609bcaL);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.dimensions.structure.AbstractDimensionType", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x300307d5d92dba32L);
+    // extends: jetbrains.mps.samples.Physics.dimensions.structure.AbstractDimensionType
+    b.super_(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x300307d5d92dba32L);
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L);
     b.parent(0x47f075a6558e4640L, 0xa6067ce0236c8023L, 0x62ec1b29abde62acL);
     b.parent(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x7c29ed49aa581218L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/8609460045977000906");
-    b.version(2);
+    b.version(3);
     b.aggregate("baseType", 0x777af24c04609bcbL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a614L).optional(true).ordered(true).multiple(false).origin("8609460045977000907").done();
+    b.aggregate("units", 0x777af24c0465feb3L).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x2c25ac8bca7e6b7cL).optional(true).ordered(true).multiple(true).origin("8609460045977353907").specialize(0x777af24c04661544L, 0x777af24c04661545L).done();
     b.alias("dimension");
     return b.create();
   }
@@ -171,15 +177,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "Exponent", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L);
     b.class_(false, true, false);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/3802033421899426197");
-    b.version(2);
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForFractionalExponent() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "FractionalExponent", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d09904b9L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.dimensions.structure.Exponent", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L);
+    // extends: jetbrains.mps.samples.Physics.dimensions.structure.Exponent
+    b.super_(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/3802033421901431993");
-    b.version(2);
+    b.version(3);
     b.property("numer", 0x2a3b6653359ddc5L).type(PrimitiveTypeId.INTEGER).origin("190196155049172421").done();
     b.property("denom", 0x2a3b6653359ddc7L).type(PrimitiveTypeId.INTEGER).origin("190196155049172423").done();
     return b.create();
@@ -188,7 +195,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "ISimpleConverter", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x13da0dd571835ca6L);
     b.interface_();
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/1430471042027183270");
-    b.version(2);
+    b.version(3);
     b.property("factor", 0x13da0dd571835ca8L).type(MetaIdFactory.dataTypeId(0xf9bdc72399df40ffL, 0x934cd1f848158f92L, 0x13da0dd571764807L)).origin("1430471042027183272").done();
     b.property("selfLeft", 0x13da0dd571835caaL).type(PrimitiveTypeId.BOOLEAN).origin("1430471042027183274").done();
     return b.create();
@@ -198,7 +205,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.interface_();
     b.parent(0x7b68d745a7b848b9L, 0xbd9c05c0f8725a35L, 0x32f64a31a179034L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/8337440621611270350");
-    b.version(2);
+    b.version(3);
     b.property("description", 0x73b48a125b0d3d88L).type(PrimitiveTypeId.STRING).origin("8337440621611269512").done();
     return b.create();
   }
@@ -206,7 +213,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "IUnitReferenceLike", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L);
     b.interface_();
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/8609460045977353913");
-    b.version(2);
+    b.version(3);
     b.associate("unit", 0x777af24c0465febcL).target(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L).optional(false).origin("8609460045977353916").done();
     b.aggregate("exponent", 0x777af24c0465febaL).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L).optional(true).ordered(true).multiple(false).origin("8609460045977353914").done();
     return b.create();
@@ -215,7 +222,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "IUnitReferenceLikeArray", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L);
     b.interface_();
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/8609460045977359684");
-    b.version(2);
+    b.version(3);
     b.aggregate("units", 0x777af24c04661545L).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L).optional(false).ordered(true).multiple(true).origin("8609460045977359685").done();
     return b.create();
   }
@@ -223,22 +230,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "IUseSpecificDimensions", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x21c0d825aae5e565L);
     b.interface_();
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/2432181455072650597");
-    b.version(2);
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIUseUnits() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "IUseUnits", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0xcad58369e591901L);
     b.interface_();
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/913483291034196225");
-    b.version(2);
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIntegerExponent() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "IntegerExponent", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc6L);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.samples.Physics.dimensions.structure.Exponent", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L);
+    // extends: jetbrains.mps.samples.Physics.dimensions.structure.Exponent
+    b.super_(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x34c38940d07a6995L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/8337440621611273670");
-    b.version(2);
+    b.version(3);
     b.property("value", 0x2a3b6653358e9e8L).type(PrimitiveTypeId.INTEGER).origin("190196155049109992").done();
     return b.create();
   }
@@ -248,18 +256,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d40ceL);
     b.parent(0x71934284d7d145eeL, 0xa0548c072591085fL, 0x27b717d14a8b21f9L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/8337440621611267903");
-    b.version(2);
+    b.version(3);
     b.alias("unit");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForUnitExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("jetbrains.mps.samples.Physics.dimensions", "UnitExpression", 0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c045ea226L);
     b.class_(false, false, false);
-    b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
+    // extends: org.iets3.core.expr.base.structure.Expression
+    b.super_(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/8609460045976871462");
-    b.version(2);
+    b.version(3);
     b.aggregate("content", 0x777af24c045ea227L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("8609460045976871463").done();
+    b.aggregate("units", 0x777af24c045ea22dL).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L).optional(true).ordered(true).multiple(true).origin("8609460045976871469").specialize(0x777af24c04661544L, 0x777af24c04661545L).done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForUnitReference() {
@@ -267,7 +277,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c0465feb9L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/8337440621611273669");
-    b.version(2);
+    b.version(3);
+    b.associate("target", 0x73b48a125b0daafcL).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d40ceL).optional(false).origin("8337440621611297532").specialize(0x777af24c0465feb9L, 0x777af24c0465febcL).done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForUseUnitExpressionAs() {
@@ -277,7 +288,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x777af24c04661544L);
     b.parent(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0xcad58369e591901L);
     b.origin("r:115c189c-8e50-4e60-8e5d-bd18671ca7ef(jetbrains.mps.samples.Physics.dimensions.structure)/5534756475241782470");
-    b.version(2);
+    b.version(3);
+    b.aggregate("targetUnits", 0x4ccf67b0991467f0L).target(0x3571bff8cf914cd7L, 0xb8b7baa06abadf7cL, 0x73b48a125b0d4dc5L).optional(false).ordered(true).multiple(true).origin("5534756475241785328").specialize(0x777af24c04661544L, 0x777af24c04661545L).done();
     b.alias("useAs");
     return b.create();
   }

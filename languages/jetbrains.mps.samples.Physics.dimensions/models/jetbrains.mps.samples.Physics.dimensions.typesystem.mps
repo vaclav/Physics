@@ -5,13 +5,14 @@
   <languages>
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="5" />
     <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="19" />
     <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="5" />
     <use id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text" version="0" />
     <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="1" />
     <use id="a247e09e-2435-45ba-b8d2-07e93feba96a" name="jetbrains.mps.baseLanguage.tuples" version="0" />
     <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
+    <use id="acfc188d-d5d6-4598-b370-6f4a983f05b2" name="jetbrains.mps.baseLanguage.methodReferences" version="0" />
     <devkit ref="00000000-0000-4000-0000-1de82b3a4936(jetbrains.mps.devkit.aspect.typesystem)" />
   </languages>
   <imports>
@@ -204,6 +205,16 @@
       </concept>
       <concept id="8182547171709752110" name="jetbrains.mps.lang.quotation.structure.NodeBuilderExpression" flags="nn" index="36biLy">
         <child id="8182547171709752112" name="expression" index="36biLW" />
+      </concept>
+    </language>
+    <language id="acfc188d-d5d6-4598-b370-6f4a983f05b2" name="jetbrains.mps.baseLanguage.methodReferences">
+      <concept id="7915009415671748557" name="jetbrains.mps.baseLanguage.methodReferences.structure.MethodReferenceTypeTargetExpression" flags="ng" index="2FaPjH">
+        <child id="7915009415671751864" name="type" index="2FaQuo" />
+      </concept>
+      <concept id="237887375562511215" name="jetbrains.mps.baseLanguage.methodReferences.structure.MethodReference" flags="ng" index="37Ijox" />
+      <concept id="3507059745126391419" name="jetbrains.mps.baseLanguage.methodReferences.structure.IMethodReference" flags="ng" index="3UZKCU">
+        <reference id="237887375562511297" name="method" index="37Ijqf" />
+        <child id="962278442658307079" name="target" index="wWaWy" />
       </concept>
     </language>
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem">
@@ -1544,20 +1555,12 @@
                     <ref role="3cqZAo" node="4CH1R2Nkmkw" resolve="types" />
                   </node>
                   <node concept="2HxqBE" id="4CH1R2NkmVA" role="2OqNvi">
-                    <node concept="1bVj0M" id="4CH1R2NkmVC" role="23t8la">
-                      <node concept="3clFbS" id="4CH1R2NkmVD" role="1bW5cS">
-                        <node concept="3clFbF" id="4CH1R2NkmZe" role="3cqZAp">
-                          <node concept="1rXfSq" id="4CH1R2NkmZd" role="3clFbG">
-                            <ref role="37wK5l" node="4CH1R2NkhYr" resolve="isZero" />
-                            <node concept="37vLTw" id="4CH1R2Nkn2y" role="37wK5m">
-                              <ref role="3cqZAo" node="4CH1R2NkmVE" resolve="it" />
-                            </node>
-                          </node>
+                    <node concept="37Ijox" id="7vYLXjwWnyc" role="23t8la">
+                      <ref role="37Ijqf" node="4CH1R2NkhYr" resolve="isZero" />
+                      <node concept="2FaPjH" id="7vYLXjwWnyb" role="wWaWy">
+                        <node concept="3uibUv" id="7vYLXjwWnya" role="2FaQuo">
+                          <ref role="3uigEE" node="4CH1R2NkhX4" resolve="NumberTypeHelper" />
                         </node>
-                      </node>
-                      <node concept="Rh6nW" id="4CH1R2NkmVE" role="1bW2Oz">
-                        <property role="TrG5h" value="it" />
-                        <node concept="2jxLKc" id="4CH1R2NkmVF" role="1tU5fm" />
                       </node>
                     </node>
                   </node>

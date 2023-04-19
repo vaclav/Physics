@@ -18,10 +18,11 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import jetbrains.mps.internal.collections.runtime.NotNullWhereFilter;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.SetSequence;
 import java.util.HashSet;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -66,11 +67,7 @@ public final class TargetableObjectExpression__BehaviorDescriptor extends BaseBH
 
         return null;
       }
-    }).where(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return it != null;
-      }
-    });
+    }).where(new NotNullWhereFilter<SNode>());
 
     // Detect dependencies outside dot expressions (standalone object targets)
     Iterable<SNode> nonDotTargets = ListSequence.fromList(SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.ITargetObject$D9, false, new SAbstractConcept[]{CONCEPTS.DotExpression$jp})).select(new ISelector<SNode, SNode>() {

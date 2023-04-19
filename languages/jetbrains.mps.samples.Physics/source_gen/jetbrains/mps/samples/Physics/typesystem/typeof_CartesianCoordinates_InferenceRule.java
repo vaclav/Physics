@@ -8,7 +8,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
@@ -36,20 +35,16 @@ public class typeof_CartesianCoordinates_InferenceRule extends AbstractInference
                   final SNode z = typeCheckingContext.typeOf(SLinkOperations.getTarget(coords, LINKS.dz$1UnG), "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "1387628150972975905", true);
                   typeCheckingContext.whenConcrete(z, new Runnable() {
                     public void run() {
-                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(x), typeCheckingContext.getExpandedNode(y), "x", "y", new _FunctionTypes._void_P1_E0<String>() {
-                        public void invoke(String text) {
-                          {
-                            final MessageTarget errorTarget = new NodeMessageTarget();
-                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(coords, LINKS.dy$1OJk), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988904095", null, errorTarget);
-                          }
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(x), typeCheckingContext.getExpandedNode(y), "x", "y", (String text) -> {
+                        {
+                          final MessageTarget errorTarget = new NodeMessageTarget();
+                          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(coords, LINKS.dy$1OJk), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988904095", null, errorTarget);
                         }
                       });
-                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(x), typeCheckingContext.getExpandedNode(z), "x", "z", new _FunctionTypes._void_P1_E0<String>() {
-                        public void invoke(String text) {
-                          {
-                            final MessageTarget errorTarget = new NodeMessageTarget();
-                            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(coords, LINKS.dz$1UnG), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988904745", null, errorTarget);
-                          }
+                      TypeComparisonHelper.assertComparable(typeCheckingContext, typeCheckingContext.getExpandedNode(x), typeCheckingContext.getExpandedNode(z), "x", "z", (String text) -> {
+                        {
+                          final MessageTarget errorTarget = new NodeMessageTarget();
+                          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(coords, LINKS.dz$1UnG), text, "r:34dc5c2b-d71f-4a9a-9011-74cd28ad1a10(jetbrains.mps.samples.Physics.typesystem)", "6576997179988904745", null, errorTarget);
                         }
                       });
 

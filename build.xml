@@ -45,8 +45,15 @@
   
   <path id="path.mps.ant.path">
     <pathelement location="${artifacts.mps}/lib/ant/lib/ant-mps.jar" />
-    <pathelement location="${artifacts.mps}/lib/util.jar" />
+    <fileset dir="${artifacts.mps}/lib">
+      <include name="util.jar" />
+      <include name="3rd-party-rt.jar" />
+    </fileset>
   </path>
+  
+  <taskdef resource="jetbrains/mps/build/ant/antlib.xml" classpathref="path.mps.ant.path" />
+  
+  <generator-settings id="m2m-defaults" strictMode="true" parallelThreads="8" inplaceTransform="false" warnWrongChild="true" createStaticRefs="true" skipUnmodifiedModels="${mps.generator.skipUnmodifiedModels}" />
   
   <target name="assemble" depends="classes, declare-mps-tasks">
     <mkdir dir="${build.layout}/jetbrains.mps.samples.Physics" />
@@ -115,6 +122,7 @@
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="a1250a4d-c090-42c3-ad7c-d298a3357dd4(jetbrains.mps.make.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
@@ -263,6 +271,7 @@
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="a1250a4d-c090-42c3-ad7c-d298a3357dd4(jetbrains.mps.make.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="cl" />
@@ -289,6 +298,7 @@
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
           <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
           <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:acfc188d-d5d6-4598-b370-6f4a983f05b2:jetbrains.mps.baseLanguage.methodReferences" />
           <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
           <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
           <language id="l:f159adf4-3c93-40f9-9c5a-1f245a8697af:jetbrains.mps.lang.aspect" />
@@ -590,6 +600,7 @@
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="a1250a4d-c090-42c3-ad7c-d298a3357dd4(jetbrains.mps.make.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
@@ -958,64 +969,10 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types.jar" />
     </jar>
-    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types-generator.jar" />
-    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types-generator.jar/META-INF" />
-    <echoxml file="${build.tmp}/default/jetbrains.mps.samples.Physics.types-generator.jar/META-INF/module.xml">
-      <module namespace="jetbrains.mps.samples.Physics.types#01" type="generator" uuid="dd8cee4c-a857-44a5-b08d-8bc028e4fa8f">
-        <dependencies>
-          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
-          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
-          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
-          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
-          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
-          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
-          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
-          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
-          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
-          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
-          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
-          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
-          <module ref="f3e9841e-b1da-4548-9cb8-14aebaf1d1ca(jetbrains.mps.samples.Physics.types)" kind="cl" />
-        </dependencies>
-        <uses>
-          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
-          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
-          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
-          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
-          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
-          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
-          <language id="l:b401a680-8325-4110-8fd3-84331ff25bef:jetbrains.mps.lang.generator" />
-          <language id="l:d7706f63-9be2-479c-a3da-ae92af1e64d5:jetbrains.mps.lang.generator.generationContext" />
-          <language id="l:289fcc83-6543-41e8-a5ca-768235715ce4:jetbrains.mps.lang.generator.generationParameters" />
-          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
-          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
-          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
-          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
-        </uses>
-        <classpath>
-          <entry path="." />
-        </classpath>
-        <sources jar="jetbrains.mps.samples.Physics.types-src.jar" descriptor="jetbrains.mps.samples.Physics.types.mpl" />
-      </module>
-    </echoxml>
-    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-generator.jar" duplicate="preserve">
-      <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types#01" />
-      <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
-      <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.types-generator.jar" />
-    </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-generator-templates">
-      <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.types-src.jar" duplicate="preserve">
-      <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/source_gen">
-        <exclude name="**/trace.info" />
-        <exclude name="**/exports" />
-        <exclude name="**/checkpoints" />
-        <exclude name="**/*.mps" />
-      </fileset>
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1024,7 +981,6 @@
       </fileset>
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics.types/jetbrains.mps.samples.Physics.types.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-models" prefix="module/models" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics.types-generator-templates" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.jar1" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.jar1/META-INF" />
@@ -1065,7 +1021,6 @@
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="cl" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
           <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="cl" />
-          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
           <module ref="528ff3b9-5fc4-40dd-931f-c6ce3650640e(jetbrains.mps.lang.migration.runtime)" kind="cl" />
           <module ref="7a5dda62-9140-4668-ab76-d5ed1746f2b2(jetbrains.mps.lang.typesystem)" kind="cl" />
@@ -1133,45 +1088,10 @@
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics.jar1" />
     </jar>
-    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics-generator.jar" />
-    <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics-generator.jar/META-INF" />
-    <echoxml file="${build.tmp}/default/jetbrains.mps.samples.Physics-generator.jar/META-INF/module.xml">
-      <module namespace="jetbrains.mps.samples.Physics#01" type="generator" uuid="5f859e48-fb44-4e21-806a-f5167871a2b0">
-        <dependencies>
-          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
-          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
-          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
-          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
-          <module ref="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="cl" />
-          <module ref="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="cl" />
-        </dependencies>
-        <uses>
-          <language id="l:b401a680-8325-4110-8fd3-84331ff25bef:jetbrains.mps.lang.generator" />
-        </uses>
-        <classpath>
-          <entry path="." />
-        </classpath>
-        <sources jar="jetbrains.mps.samples.Physics-src.jar" descriptor="jetbrains.mps.samples.Physics.mpl" />
-      </module>
-    </echoxml>
-    <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-generator.jar" duplicate="preserve">
-      <fileset dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics#01" />
-      <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
-      <fileset dir="${build.tmp}/default/jetbrains.mps.samples.Physics-generator.jar" />
-    </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-models">
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-generator-templates">
-      <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
     <jar destfile="${build.layout}/jetbrains.mps.samples.Physics/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics-src.jar" duplicate="preserve">
-      <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/source_gen">
-        <exclude name="**/trace.info" />
-        <exclude name="**/exports" />
-        <exclude name="**/checkpoints" />
-        <exclude name="**/*.mps" />
-      </fileset>
       <fileset dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1180,7 +1100,6 @@
       </fileset>
       <zipfileset file="${basedir}/languages/jetbrains.mps.samples.Physics/jetbrains.mps.samples.Physics.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-models" prefix="module/models" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.Physics-generator-templates" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.iets3.ext.math.jar" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.Physics.iets3.ext.math.jar/META-INF" />
@@ -1207,6 +1126,7 @@
           <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="a1250a4d-c090-42c3-ad7c-d298a3357dd4(jetbrains.mps.make.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
@@ -1808,7 +1728,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.org.mar9000.mps.ecmascript.bundler, java.compile.org.mar9000.mps.ecmascript.bundler#01, java.compile.jetbrains.mps.samples.Physics.dimensions, java.compile.jetbrains.mps.samples.Physics.dimensions#8609460045976868312, java.compile.jetbrains.mps.samples.Physics.genjava, java.compile.jetbrains.mps.samples.Physics.genjava#01, java.compile.jetbrains.mps.samples.Physics.genjs, java.compile.jetbrains.mps.samples.Physics.genjs#7409769864398261204, java.compile.jetbrains.mps.samples.Physics.dimensions.gentype, java.compile.jetbrains.mps.samples.Physics.dimensions.gentype#8609460045976868313, java.compile.jetbrains.mps.samples.Physics.types, java.compile.jetbrains.mps.samples.Physics.types#01, java.compile.jetbrains.mps.samples.Physics, java.compile.jetbrains.mps.samples.Physics#01, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math#01, java.compile.jetbrains.mps.samples.Physics.genbase, java.compile.jetbrains.mps.samples.Physics.genbase#01, java.compile.jetbrains.mps.samples.Physics.java.runtime, java.compile.jetbrains.mps.samples.Physics.java.common, java.compile.jetbrains.mps.samples.Physics.plugin, java.compile.jetbrains.mps.samples.Physics.generation, java.compile.jetbrains.mps.samples.Physics.execution.java, java.compile.jetbrains.mps.samples.Physics.execution.javascript" />
+  <target name="compileJava" depends="java.compile.org.mar9000.mps.ecmascript.bundler, java.compile.org.mar9000.mps.ecmascript.bundler#01, java.compile.jetbrains.mps.samples.Physics.dimensions, java.compile.jetbrains.mps.samples.Physics.dimensions#8609460045976868312, java.compile.jetbrains.mps.samples.Physics.genjava, java.compile.jetbrains.mps.samples.Physics.genjava#01, java.compile.jetbrains.mps.samples.Physics.genjs, java.compile.jetbrains.mps.samples.Physics.genjs#7409769864398261204, java.compile.jetbrains.mps.samples.Physics.dimensions.gentype, java.compile.jetbrains.mps.samples.Physics.dimensions.gentype#8609460045976868313, java.compile.jetbrains.mps.samples.Physics.types, java.compile.jetbrains.mps.samples.Physics, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math#01, java.compile.jetbrains.mps.samples.Physics.genbase, java.compile.jetbrains.mps.samples.Physics.genbase#01, java.compile.jetbrains.mps.samples.Physics.java.runtime, java.compile.jetbrains.mps.samples.Physics.java.common, java.compile.jetbrains.mps.samples.Physics.plugin, java.compile.jetbrains.mps.samples.Physics.generation, java.compile.jetbrains.mps.samples.Physics.execution.java, java.compile.jetbrains.mps.samples.Physics.execution.javascript" />
   
   <target name="processResources" />
   
@@ -1820,7 +1740,8 @@
   
   <target name="generate" depends="declare-mps-tasks, fetchDependencies">
     <echo message="generating" />
-    <generate strictMode="true" parallelMode="true" parallelThreads="8" useInplaceTransform="false" hideWarnings="false" createStaticRefs="true" fork="true" skipUnmodifiedModels="${mps.generator.skipUnmodifiedModels}" logLevel="${mps.ant.log}">
+    <generate fork="true" logLevel="${mps.ant.log}">      
+      <settings refid="m2m-defaults" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.common" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.contextactions" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.editor.querylist" />
@@ -1865,7 +1786,11 @@
       <plugin path="${artifacts.mps}/plugins/mps-execution-languages" />
       <plugin path="${artifacts.mps}/plugins/mps-git4idea" />
       <plugin path="${artifacts.mps}/plugins/mps-httpsupport" />
+      <plugin path="${artifacts.mps}/plugins/mps-kotlin" />
+      <plugin path="${artifacts.mps}/plugins/mps-make" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
+      <plugin path="${artifacts.mps}/plugins/mps-tooltips" />
+      <plugin path="${artifacts.mps}/plugins/mps-trove" />
       <plugin path="${artifacts.mps}/plugins/mps-vcs" />
       <plugin path="${artifacts.mps}/plugins/svn4idea" />
       <plugin path="${artifacts.org.iets3.opensource.genjs}/org.iets3.opensource.genjs" />
@@ -1885,12 +1810,14 @@
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jdk8.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
+      <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.methodReferences.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.references.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.regexp.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.regexp.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.tuples.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.tuples.runtime.jar" />
+      <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.util.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguageInternal.jar" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.aspect.constraints.jar" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.aspect.constraints.rules.jar" />
@@ -1902,6 +1829,7 @@
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.general-purpose.jar" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.language-descriptor.jar" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.templates.jar" />
+      <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editing.runtime.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editor.runtime.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editorlang.runtime.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.ide.editor.jar" />
@@ -1924,6 +1852,7 @@
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.editor.jar" />
+      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.extension.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.messages.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.problem.childAndProp.jar" />
@@ -1966,7 +1895,6 @@
       <library file="${artifacts.mps}/languages/make/jetbrains.mps.smodel.resources.jar" />
       <library file="${artifacts.mps}/languages/mps-stubs.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.baseLanguage.search.jar" />
-      <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.baseLanguage.util.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.platform.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.refactoring.platform.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.ui.jar" />
@@ -1999,10 +1927,10 @@
       <library file="${artifacts.mps}/languages/workbench/jetbrains.mps.ide.jar" />
       <library file="${artifacts.mps}/languages/workbench/jetbrains.mps.lang.plugin.standalone.jar" />
       <library file="${artifacts.mps}/languages/xml/jetbrains.mps.core.xml.jar" />
+      <library file="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.ide.vcs.core.jar" />
       <library file="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.ide.vcs.modelmetadata.jar" />
-      <library file="${artifacts.mps}/plugins/mps-vcs/lib/jetbrains.mps.ide.vcs.core.jar" />
-      <library file="${artifacts.mps}/plugins/mps-vcs/lib/jetbrains.mps.ide.vcs.platform.jar" />
-      <library file="${artifacts.mps}/plugins/mps-vcs/lib/jetbrains.mps.vcs.mergehints.runtime.jar" />
+      <library file="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.ide.vcs.platform.jar" />
+      <library file="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.vcs.mergehints.runtime.jar" />
       <chunk>
         <module file="${basedir}/languages/jetbrains.mps.samples.Physics.dimensions/jetbrains.mps.samples.Physics.dimensions.mpl" />
         <module file="${basedir}/languages/jetbrains.mps.samples.Physics.dimensions.gentype/jetbrains.mps.samples.Physics.dimensions.gentype.mpl" />
@@ -2041,9 +1969,7 @@
     </generate>
   </target>
   
-  <target name="declare-mps-tasks">
-    <taskdef resource="jetbrains/mps/build/ant/antlib.xml" classpathref="path.mps.ant.path" />
-  </target>
+  <target name="declare-mps-tasks" />
   
   <target name="makeDependents" />
   
@@ -2086,8 +2012,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
@@ -2137,8 +2064,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
@@ -2189,8 +2117,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -2284,8 +2213,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.rt.jar" />
@@ -2375,8 +2305,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -2469,8 +2400,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.rt.jar" />
@@ -2561,8 +2493,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -2655,8 +2588,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.rt.jar" />
@@ -2746,8 +2680,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -2829,8 +2764,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.rt.jar" />
@@ -2913,8 +2849,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.rt.jar" />
@@ -2954,80 +2891,6 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.toplevel.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
-      </classpath>
-    </javac>
-  </target>
-  
-  <target name="java.compile.jetbrains.mps.samples.Physics.types#01" depends="java.compile.jetbrains.mps.samples.Physics.types, fetchDependencies">
-    <mkdir dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/source_gen" />
-    <mkdir dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types#01" />
-    <javac destdir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types#01" fork="true" encoding="utf8" includeantruntime="false" debug="true">
-      <compilerarg value="-Xlint:none" />
-      <src>
-        <path location="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/source_gen" />
-      </src>
-      <classpath>
-        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
-        <fileset file="${artifacts.mps}/plugins/mps-httpsupport/lib/httpsupport.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
-        <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
-        <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.interpreter/languages/group.interpreter/com.mbeddr.mpsutil.interpreter.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.interpreter/languages/group.interpreter/com.mbeddr.mpsutil.interpreter.rt.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.jung/languages/group.jung/com.mbeddr.mpsutil.jung.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.plantuml/languages/group.plantuml/com.mbeddr.mpsutil.plantuml.node.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.interpreter/languages/group.interpreter/com.mbeddr.mpsutil.traceExplorer.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.styles.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
-        <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.base.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
       </classpath>
     </javac>
@@ -3078,8 +2941,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.rt.jar" />
@@ -3133,89 +2997,6 @@
     </javac>
   </target>
   
-  <target name="java.compile.jetbrains.mps.samples.Physics#01" depends="java.compile.jetbrains.mps.samples.Physics, java.compile.jetbrains.mps.samples.Physics.dimensions, java.compile.jetbrains.mps.samples.Physics.iets3.ext.math, java.compile.jetbrains.mps.samples.Physics.types, fetchDependencies">
-    <mkdir dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/source_gen" />
-    <mkdir dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics#01" />
-    <javac destdir="${build.tmp}/java/out/jetbrains.mps.samples.Physics#01" fork="true" encoding="utf8" includeantruntime="false" debug="true">
-      <compilerarg value="-Xlint:none" />
-      <src>
-        <path location="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/source_gen" />
-      </src>
-      <classpath>
-        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
-        <fileset file="${artifacts.mps}/plugins/mps-httpsupport/lib/httpsupport.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
-        <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics" />
-        <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.dimensions" />
-        <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
-        <pathelement path="${build.tmp}/java/out/jetbrains.mps.samples.Physics.types" />
-        <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.interpreter/languages/group.interpreter/com.mbeddr.mpsutil.interpreter.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.interpreter/languages/group.interpreter/com.mbeddr.mpsutil.interpreter.rt.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.jung/languages/group.jung/com.mbeddr.mpsutil.jung.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.plantuml/languages/group.plantuml/com.mbeddr.mpsutil.plantuml.node.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.interpreter/languages/group.interpreter/com.mbeddr.mpsutil.traceExplorer.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.varscope/languages/group.varscope/com.mbeddr.mpsutil.varscope.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.styles.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
-        <fileset file="${artifacts.mps}/languages/util/jetbrains.mps.execution.util.jar" />
-        <fileset file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.base.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.collections.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.lambda.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.jar" />
-        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.toplevel.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
-      </classpath>
-    </javac>
-  </target>
-  
   <target name="java.compile.jetbrains.mps.samples.Physics.iets3.ext.math" depends="java.compile.jetbrains.mps.samples.Physics.java.common, fetchDependencies">
     <mkdir dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.iets3.ext.math/source_gen" />
     <mkdir dir="${build.tmp}/java/out/jetbrains.mps.samples.Physics.iets3.ext.math" />
@@ -3258,8 +3039,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -3343,8 +3125,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -3420,8 +3203,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -3507,8 +3291,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -3657,8 +3442,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -3750,8 +3536,9 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -3807,9 +3594,7 @@
     <delete dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/source_gen" />
     <delete dir="${jetbrains.mps.samples.Physics.home}/languages/org.mar9000.mps.ecmascript.bundler/generator/source_gen" />
     <delete dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/source_gen" />
-    <delete dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.types/generator/source_gen" />
     <delete dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/source_gen" />
-    <delete dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics/generator/source_gen" />
     <delete dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.java/source_gen" />
     <delete dir="${jetbrains.mps.samples.Physics.home}/solutions/jetbrains.mps.samples.Physics.execution.javascript/source_gen" />
     <delete dir="${jetbrains.mps.samples.Physics.home}/languages/jetbrains.mps.samples.Physics.genbase/source_gen" />

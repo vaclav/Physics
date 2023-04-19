@@ -161,7 +161,6 @@
     <classNode dependClassName="com.intellij.execution.ui.ConsoleView" />
     <classNode dependClassName="com.intellij.openapi.project.Project" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
     <classNode dependClassName="jetbrains.mps.execution.api.configurations.ConsoleCreator" />
     <classNode dependClassName="jetbrains.mps.execution.api.configurations.DefaultExecutionConsole" />
     <classNode dependClassName="jetbrains.mps.execution.api.configurations.DefaultExecutionResult" />
@@ -218,7 +217,6 @@
     <classNode dependClassName="java.io.IOException" />
     <classNode dependClassName="java.io.OutputStream" />
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.Runnable" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
     <classNode dependClassName="jetbrains.mps.project.facets.GenerationTargetFacet" />
     <classNode dependClassName="jetbrains.mps.vfs.IFile" />

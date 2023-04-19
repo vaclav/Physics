@@ -1098,40 +1098,6 @@
             </node>
           </node>
         </node>
-        <node concept="1yeLz9" id="7QIsDWeJFXD" role="1TViLv">
-          <property role="TrG5h" value="jetbrains.mps.samples.Physics.types#01" />
-          <property role="3LESm3" value="dd8cee4c-a857-44a5-b08d-8bc028e4fa8f" />
-          <node concept="1SiIV0" id="7QIsDWeJFXE" role="3bR37C">
-            <node concept="3bR9La" id="7QIsDWeJFXF" role="1SiIV1">
-              <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
-            </node>
-          </node>
-          <node concept="1BupzO" id="7QIsDWeJFXL" role="3bR31x">
-            <property role="3ZfqAx" value="generator/templates" />
-            <property role="1Hdu6h" value="true" />
-            <property role="1HemKv" value="true" />
-            <node concept="3LXTmp" id="7QIsDWeJG72" role="1HemKq">
-              <node concept="398BVA" id="7QIsDWeJG6S" role="3LXTmr">
-                <ref role="398BVh" node="5aGkDIh0m2d" resolve="jetbrains.mps.samples.Physics.home" />
-                <node concept="2Ry0Ak" id="7QIsDWeJG6T" role="iGT6I">
-                  <property role="2Ry0Am" value="languages" />
-                  <node concept="2Ry0Ak" id="7QIsDWeJG6U" role="2Ry0An">
-                    <property role="2Ry0Am" value="jetbrains.mps.samples.Physics.types" />
-                    <node concept="2Ry0Ak" id="7QIsDWeJG6V" role="2Ry0An">
-                      <property role="2Ry0Am" value="generator" />
-                      <node concept="2Ry0Ak" id="7QIsDWeJG6W" role="2Ry0An">
-                        <property role="2Ry0Am" value="templates" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-              <node concept="3qWCbU" id="7QIsDWeJG73" role="3LXTna">
-                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="1SiIV0" id="7QIsDWeJG6A" role="3bR37C">
           <node concept="3bR9La" id="7QIsDWeJG6B" role="1SiIV1">
             <ref role="3bR37D" to="ip48:5wLtKNeSRPD" resolve="org.iets3.core.expr.base" />
@@ -1228,50 +1194,6 @@
         <node concept="1SiIV0" id="7QIsDWeJFY9" role="3bR37C">
           <node concept="1Busua" id="7QIsDWeJFYa" role="1SiIV1">
             <ref role="1Busuk" to="ffeo:sx8XDLCp97" resolve="jetbrains.mps.execution.util" />
-          </node>
-        </node>
-        <node concept="1yeLz9" id="7QIsDWeJFYb" role="1TViLv">
-          <property role="TrG5h" value="jetbrains.mps.samples.Physics#01" />
-          <property role="3LESm3" value="5f859e48-fb44-4e21-806a-f5167871a2b0" />
-          <node concept="1SiIV0" id="7QIsDWeJFYc" role="3bR37C">
-            <node concept="3bR9La" id="7QIsDWeJFYd" role="1SiIV1">
-              <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
-            </node>
-          </node>
-          <node concept="1SiIV0" id="7QIsDWeJFYe" role="3bR37C">
-            <node concept="3bR9La" id="7QIsDWeJFYf" role="1SiIV1">
-              <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
-            </node>
-          </node>
-          <node concept="1BupzO" id="7QIsDWeJFYl" role="3bR31x">
-            <property role="3ZfqAx" value="generator/templates" />
-            <property role="1Hdu6h" value="true" />
-            <property role="1HemKv" value="true" />
-            <node concept="3LXTmp" id="7QIsDWeJG7O" role="1HemKq">
-              <node concept="398BVA" id="7QIsDWeJG7E" role="3LXTmr">
-                <ref role="398BVh" node="5aGkDIh0m2d" resolve="jetbrains.mps.samples.Physics.home" />
-                <node concept="2Ry0Ak" id="7QIsDWeJG7F" role="iGT6I">
-                  <property role="2Ry0Am" value="languages" />
-                  <node concept="2Ry0Ak" id="7QIsDWeJG7G" role="2Ry0An">
-                    <property role="2Ry0Am" value="jetbrains.mps.samples.Physics" />
-                    <node concept="2Ry0Ak" id="7QIsDWeJG7H" role="2Ry0An">
-                      <property role="2Ry0Am" value="generator" />
-                      <node concept="2Ry0Ak" id="7QIsDWeJG7I" role="2Ry0An">
-                        <property role="2Ry0Am" value="templates" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-              <node concept="3qWCbU" id="7QIsDWeJG7P" role="3LXTna">
-                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
-              </node>
-            </node>
-          </node>
-          <node concept="1SiIV0" id="7QIsDWeJG7C" role="3bR37C">
-            <node concept="3bR9La" id="7QIsDWeJG7D" role="1SiIV1">
-              <ref role="3bR37D" to="ip48:49WTic8jAD5" resolve="org.iets3.core.expr.lambda" />
-            </node>
           </node>
         </node>
         <node concept="1SiIV0" id="7QIsDWeJG74" role="3bR37C">

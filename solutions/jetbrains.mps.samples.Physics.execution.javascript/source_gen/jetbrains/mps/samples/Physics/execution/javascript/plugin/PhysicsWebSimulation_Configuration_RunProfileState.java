@@ -21,7 +21,6 @@ import com.intellij.execution.ui.ConsoleView;
 import jetbrains.mps.execution.api.configurations.ConsoleCreator;
 import jetbrains.mps.execution.api.configurations.DefaultExecutionResult;
 import jetbrains.mps.execution.api.configurations.DefaultExecutionConsole;
-import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import com.intellij.execution.executors.DefaultRunExecutor;
 
 public class PhysicsWebSimulation_Configuration_RunProfileState implements RunProfileState {
@@ -53,11 +52,7 @@ public class PhysicsWebSimulation_Configuration_RunProfileState implements RunPr
       ProcessHandler _processHandler = new RunPageInBrowser_Command().setProject_Project(mpsProject).createProcess(myRunConfiguration.getNodePointer().getNodeRef(), projectRepository);
       final ConsoleView _consoleView = ConsoleCreator.createConsoleView(project, false);
       _consoleView.attachToProcess(_processHandler);
-      return new DefaultExecutionResult(_processHandler, new DefaultExecutionConsole(_consoleView.getComponent(), new _FunctionTypes._void_P0_E0() {
-        public void invoke() {
-          _consoleView.dispose();
-        }
-      }));
+      return new DefaultExecutionResult(_processHandler, new DefaultExecutionConsole(_consoleView.getComponent(), () -> _consoleView.dispose()));
     }
   }
 
