@@ -17,6 +17,13 @@
     <classNode dependClassName="org.ode4j.math.DVector3C" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity">
+    <classNode dependClassName="com.badlogic.gdx.graphics.Color" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.Environment" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.ModelBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.environment.PointLight" />
+    <classNode dependClassName="com.badlogic.gdx.math.Matrix3" />
+    <classNode dependClassName="com.badlogic.gdx.math.Matrix4" />
+    <classNode dependClassName="com.badlogic.gdx.math.Quaternion" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -38,8 +45,6 @@
     <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderable" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.EntityLike" />
@@ -63,22 +68,22 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.EntityLike" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.World">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.Environment" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.ModelBatch" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction" />
-    <classNode dependClassName="org.ode4j.math.DVector3C" />
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.DJointGroup" />
     <classNode dependClassName="org.ode4j.ode.DSpace" />
     <classNode dependClassName="org.ode4j.ode.DWorld" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
     <classNode dependClassName="org.ode4j.ode.internal.DxGeom" />
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderable" />
     <classNode extendsClassName="org.ode4j.ode.DGeom" />
   </dependency>

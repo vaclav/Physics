@@ -6,6 +6,14 @@ plugins {
 }
 
 project.ext.lwjglVersion = "3.3.2"
+ext {
+	//Versions of the libGDX dependencies (used further below on those 'compile' lines)
+	gdxVersion = "1.9.3"
+	roboVMVersion = '2.1.0'
+	box2DLightsVersion = '1.4'
+	ashleyVersion = '1.7.0'
+	aiVersion = '1.8.0'
+}
 
 switch (OperatingSystem.current()) {
 	case OperatingSystem.LINUX:
@@ -35,32 +43,9 @@ dependencies {
     api "org.ode4j:core:0.4.1"
 
     // Rendering
-	api platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
-
-	api "org.lwjgl:lwjgl"
-	api "org.lwjgl:lwjgl-assimp"
-	api "org.lwjgl:lwjgl-bgfx"
-	api "org.lwjgl:lwjgl-glfw"
-	api "org.lwjgl:lwjgl-nanovg"
-	api "org.lwjgl:lwjgl-nuklear"
-	api "org.lwjgl:lwjgl-openal"
-	api "org.lwjgl:lwjgl-opengl"
-	api "org.lwjgl:lwjgl-par"
-	api "org.lwjgl:lwjgl-stb"
-	api "org.lwjgl:lwjgl-vulkan"
-	api "org.lwjgl:lwjgl::$lwjglNatives"
-	api "org.lwjgl:lwjgl-assimp::$lwjglNatives"
-	api "org.lwjgl:lwjgl-bgfx::$lwjglNatives"
-	api "org.lwjgl:lwjgl-glfw::$lwjglNatives"
-	api "org.lwjgl:lwjgl-nanovg::$lwjglNatives"
-	api "org.lwjgl:lwjgl-nuklear::$lwjglNatives"
-	api "org.lwjgl:lwjgl-openal::$lwjglNatives"
-	api "org.lwjgl:lwjgl-opengl::$lwjglNatives"
-	api "org.lwjgl:lwjgl-par::$lwjglNatives"
-	api "org.lwjgl:lwjgl-stb::$lwjglNatives"
-	if (lwjglNatives == "natives-macos" || lwjglNatives == "natives-macos-arm64") {
-        api "org.lwjgl:lwjgl-vulkan::$lwjglNatives"
-    }
+	implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+	implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+	implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 }
 
 task shadowAndCopy(type: Copy, dependsOn: shadowJar) {

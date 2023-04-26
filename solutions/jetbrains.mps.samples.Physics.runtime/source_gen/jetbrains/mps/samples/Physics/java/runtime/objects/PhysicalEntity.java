@@ -15,12 +15,17 @@ import org.ode4j.math.DVector3C;
 import org.ode4j.math.DVector3;
 import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceModeApplication;
-import processing.core.PGraphics;
-import processing.core.PApplet;
+import com.badlogic.gdx.graphics.g3d.Environment;
+import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
+import com.badlogic.gdx.graphics.g3d.environment.PointLight;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import org.ode4j.math.DMatrix3C;
+import com.badlogic.gdx.math.Quaternion;
+import com.badlogic.gdx.math.Matrix3;
+import com.badlogic.gdx.math.Matrix4;
 import java.util.List;
 import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
-import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
 
 public class PhysicalEntity<T extends SystemScope> extends VectorLike implements EntityLike, Renderable {
   private DBody body;
@@ -93,42 +98,43 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
       ForceModeApplication.apply(mode, this, forceLinear, moment, applicationPoint);
     }
   }
-  public void applyLights(PGraphics ctx, float scale, DVector3C scaledOffset) {
+
+  public void applyLights(Environment environment, float scale, VectorLike scaledOffset) {
     if (disabled) {
       return;
     }
-
     if (fixture.doEmitLight()) {
       DVector3C position = body.getPosition();
-      ctx.pointLight(255, 255, 255, (float) (position.get0() * scale + scaledOffset.get0()), (float) (position.get1() * scale + scaledOffset.get1()), (float) (position.get2() * scale + scaledOffset.get2()));
+      VectorLike lightPosition = VectorHelper.fromDVector3C(position).mul(scale).add(scaledOffset);
+      PointLight pointLight = new PointLight().set(Color.WHITE, VectorHelper.toVector3(lightPosition), 1000);
+      environment.add(pointLight);
     }
   }
 
+
   @Override
-  public void setup(PApplet app, float scale) {
-    this.fixture.setup(app, scale);
+  public void setup(float scale) {
+    this.fixture.setup(scale);
   }
 
-  public void render(PGraphics graphics, float scale, DVector3C scaledOffset) {
+  public void render(ModelBatch batch, Environment env, float scale, VectorLike scaledOffset) {
     if (disabled) {
       return;
     }
 
     DVector3C position = body.getPosition();
-
-    graphics.pushMatrix();
-    graphics.translate((float) (position.get0() * scale + scaledOffset.get0()), (float) (position.get1() * scale + scaledOffset.get1()), (float) (position.get2() * scale + scaledOffset.get2()));
+    VectorLike translation = VectorHelper.fromDVector3C(position).mul(scale).add(scaledOffset);
 
     // https://en.wikipedia.org/wiki/Rotation_matrix
-    DMatrix3C rotation = body.getRotation();
-    graphics.applyMatrix((float) rotation.get00(), (float) rotation.get01(), (float) rotation.get02(), 0, (float) rotation.get10(), (float) rotation.get11(), (float) rotation.get12(), 0, (float) rotation.get20(), (float) rotation.get21(), (float) rotation.get22(), 0, 0, 0, 0, 1);
+    DMatrix3C bodyRotation = body.getRotation();
+    Quaternion quaternion = new Quaternion().setFromMatrix(new Matrix3(new float[]{(float) bodyRotation.get00(), (float) bodyRotation.get01(), (float) bodyRotation.get02(), 0, (float) bodyRotation.get10(), (float) bodyRotation.get11(), (float) bodyRotation.get12(), 0, (float) bodyRotation.get20(), (float) bodyRotation.get21(), (float) bodyRotation.get22(), 0, 0, 0, 0, 1}));
 
-    graphics.shape(fixture.getShape());
-    graphics.popMatrix();
+    fixture.modelInstance.transform.set(new Matrix4().translate(VectorHelper.toVector3(translation)).rotate(quaternion));
+    batch.render(fixture.modelInstance, env);
 
     // Display trace if any
     if (properties.getTraceHandler() != null) {
-      properties.getTraceHandler().render(position, graphics, scale, scaledOffset, world.isPaused());
+      properties.getTraceHandler().render(position, scale, scaledOffset, world.isPaused());
     }
   }
   public DBody getBody() {

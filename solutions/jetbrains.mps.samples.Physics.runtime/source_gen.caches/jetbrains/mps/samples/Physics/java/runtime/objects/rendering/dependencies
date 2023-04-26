@@ -9,6 +9,10 @@
   <uses module="22562cc6-29e7-43d0-b046-5e85dce22227(jetbrains.mps.samples.Physics.java.common)" kind="dp" />
   <uses module="59283cba-afa8-49c4-b10d-6ff0ede2c408(jetbrains.mps.samples.Physics.java.runtime)" kind="dp" />
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.BoxFixture">
+    <classNode dependClassName="com.badlogic.gdx.graphics.VertexAttributes" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.Model" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.ModelInstance" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.utils.ModelBuilder" />
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
@@ -17,36 +21,36 @@
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PShape" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color">
+    <classNode dependClassName="com.badlogic.gdx.graphics.Color" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.Batch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.Batch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.Material" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PGraphics" />
-    <classNode dependClassName="processing.core.PShape" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler">
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture">
-    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.ModelInstance" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.PhysicalEntity" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
@@ -55,29 +59,31 @@
     <classNode dependClassName="org.ode4j.ode.DBody" />
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PGraphics" />
-    <classNode dependClassName="processing.core.PShape" />
-    <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Renderable" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ImageTexture">
+    <classNode dependClassName="com.badlogic.gdx.graphics.Color" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.Texture" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.Material" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.attributes.FloatAttribute" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PImage" />
-    <classNode dependClassName="processing.core.PShape" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.InfiniteTraceHandler">
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.Iterator" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.BitmapFont" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.GlyphLayout" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -86,13 +92,15 @@
     <classNode dependClassName="java.math.RoundingMode" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric" />
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PGraphics" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric">
-    <classNode dependClassName="processing.core.PGraphics" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.Batch" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture">
+    <classNode dependClassName="com.badlogic.gdx.graphics.VertexAttributes" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.Model" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.ModelInstance" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.utils.ModelBuilder" />
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
@@ -101,18 +109,16 @@
     <classNode dependClassName="org.ode4j.ode.DGeom" />
     <classNode dependClassName="org.ode4j.ode.DMass" />
     <classNode dependClassName="org.ode4j.ode.OdeHelper" />
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PShape" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Texture">
-    <classNode dependClassName="processing.core.PApplet" />
-    <classNode dependClassName="processing.core.PShape" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.g3d.Material" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.TraceHandler">
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="org.ode4j.math.DVector3C" />
-    <classNode dependClassName="processing.core.PGraphics" />
   </dependency>
 </dependenciesRoot>
 

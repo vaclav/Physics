@@ -7,6 +7,7 @@ import org.ode4j.math.DVector3C;
 import java.math.BigDecimal;
 import org.ode4j.math.DVector3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import com.badlogic.gdx.math.Vector3;
 import org.ode4j.math.DMatrix3;
 import org.ode4j.math.DMatrix3C;
 import org.ode4j.ode.OdeMath;
@@ -20,11 +21,14 @@ public abstract class VectorHelper {
     return new DVector3(vec.getX().doubleValue(), vec.getY().doubleValue(), vec.getZ().doubleValue());
   }
 
+  public static Vector3 toVector3(VectorLike vec) {
+    return new Vector3(vec.getX().floatValue(), vec.getY().floatValue(), vec.getZ().floatValue());
+  }
   public static DVector3C toDVector3C(Object vec) {
     if (vec instanceof VectorLike) {
-      return fromInternal(as_2xd9bs_a0a0a0a4(vec, VectorLike.class));
+      return fromInternal(as_2xd9bs_a0a0a0a5(vec, VectorLike.class));
     } else if (vec instanceof DVector3C) {
-      return as_2xd9bs_a0a0a0a4_0(vec, DVector3C.class);
+      return as_2xd9bs_a0a0a0a5_0(vec, DVector3C.class);
     } else if (vec == null) {
       return null;
     }
@@ -49,10 +53,10 @@ public abstract class VectorHelper {
     OdeMath.dMultiply0(result, relativeRotation, initialRotation);
     return result;
   }
-  private static <T> T as_2xd9bs_a0a0a0a4(Object o, Class<T> type) {
+  private static <T> T as_2xd9bs_a0a0a0a5(Object o, Class<T> type) {
     return (type.isInstance(o) ? (T) o : null);
   }
-  private static <T> T as_2xd9bs_a0a0a0a4_0(Object o, Class<T> type) {
+  private static <T> T as_2xd9bs_a0a0a0a5_0(Object o, Class<T> type) {
     return (type.isInstance(o) ? (T) o : null);
   }
 }

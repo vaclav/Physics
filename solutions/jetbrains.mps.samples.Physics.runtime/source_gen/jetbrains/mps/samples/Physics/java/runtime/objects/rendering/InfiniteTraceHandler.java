@@ -4,7 +4,7 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.rendering;
 
 import java.util.ArrayList;
 import org.ode4j.math.DVector3C;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import java.util.Iterator;
 
 public class InfiniteTraceHandler extends TraceHandler {
@@ -20,10 +20,13 @@ public class InfiniteTraceHandler extends TraceHandler {
   }
 
   @Override
-  protected void vertices(PGraphics ctx) {
-    for (Iterator<float[]> iterator = content.iterator(); iterator.hasNext();) {
+  protected void vertices(ShapeRenderer renderer) {
+    Iterator<float[]> iterator = content.iterator();
+    float[] prev = iterator.next();
+    for (; iterator.hasNext();) {
       float[] vals = iterator.next();
-      ctx.vertex(vals[0], vals[1], vals[2]);
+      renderer.line(prev[0], prev[1], prev[2], vals[0], vals[1], vals[2]);
+      prev = vals;
     }
   }
 

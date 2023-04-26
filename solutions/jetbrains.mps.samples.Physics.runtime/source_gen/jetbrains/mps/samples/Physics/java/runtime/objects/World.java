@@ -13,9 +13,9 @@ import org.ode4j.ode.DBody;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.ode.internal.DxGeom;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
-import processing.core.PApplet;
-import processing.core.PGraphics;
-import org.ode4j.math.DVector3C;
+import com.badlogic.gdx.graphics.g3d.ModelBatch;
+import com.badlogic.gdx.graphics.g3d.Environment;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import java.util.List;
 
 public class World implements DGeom.DNearCallback, Renderable {
@@ -108,20 +108,20 @@ public class World implements DGeom.DNearCallback, Renderable {
 
 
   @Override
-  public void setup(PApplet app, float scale) {
+  public void setup(float scale) {
     for (PhysicalEntity entity : entities) {
-      entity.setup(app, scale);
+      entity.setup(scale);
     }
   }
 
   @Override
-  public void render(PGraphics graphics, float scale, DVector3C scaledOffset) {
+  public void render(ModelBatch batch, Environment environment, float scale, VectorLike scaledOffset) {
     for (PhysicalEntity entity : entities) {
-      entity.applyLights(graphics, scale, scaledOffset);
+      entity.applyLights(environment, scale, scaledOffset);
     }
 
     for (PhysicalEntity entity : entities) {
-      entity.render(graphics, scale, scaledOffset);
+      entity.render(batch, environment, scale, scaledOffset);
     }
   }
 
