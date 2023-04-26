@@ -2621,7 +2621,7 @@
       <node concept="37vLTG" id="3L71doTo1uh" role="3clF46">
         <property role="TrG5h" value="applet" />
         <node concept="3uibUv" id="3L71doTo1ug" role="1tU5fm">
-          <ref role="3uigEE" to="r7oa:~PApplet" resolve="PApplet" />
+          <ref role="3uigEE" to="t4bh:3H79Ykd2Gpd" resolve="Renderer" />
         </node>
       </node>
     </node>

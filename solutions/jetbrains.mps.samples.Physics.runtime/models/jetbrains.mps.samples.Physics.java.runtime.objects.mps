@@ -3036,12 +3036,6 @@
       <property role="TrG5h" value="setup" />
       <node concept="3Tm1VV" id="MHm3qu_Hy_" role="1B3o_S" />
       <node concept="3cqZAl" id="MHm3qu_HyA" role="3clF45" />
-      <node concept="37vLTG" id="MHm3qu_HyB" role="3clF46">
-        <property role="TrG5h" value="app" />
-        <node concept="3uibUv" id="MHm3qu_HyC" role="1tU5fm">
-          <ref role="3uigEE" to="r7oa:~PApplet" resolve="PApplet" />
-        </node>
-      </node>
       <node concept="37vLTG" id="MHm3qu_HyD" role="3clF46">
         <property role="TrG5h" value="scale" />
         <node concept="10OMs4" id="MHm3qu_HyE" role="1tU5fm" />
@@ -3056,9 +3050,6 @@
                 </node>
                 <node concept="liA8E" id="MHm3qu_NDF" role="2OqNvi">
                   <ref role="37wK5l" node="MHm3qu_24b" resolve="setup" />
-                  <node concept="37vLTw" id="MHm3qu_NH2" role="37wK5m">
-                    <ref role="3cqZAo" node="MHm3qu_HyB" resolve="app" />
-                  </node>
                   <node concept="37vLTw" id="MHm3qu_NNM" role="37wK5m">
                     <ref role="3cqZAo" node="MHm3qu_HyD" resolve="scale" />
                   </node>
@@ -3096,9 +3087,6 @@
                 </node>
                 <node concept="liA8E" id="k9gc96lg6H" role="2OqNvi">
                   <ref role="37wK5l" node="k9gc96l4xe" resolve="applyLights" />
-                  <node concept="37vLTw" id="k9gc96lgiL" role="37wK5m">
-                    <ref role="3cqZAo" node="1IEyTntGzyC" resolve="graphics" />
-                  </node>
                   <node concept="37vLTw" id="1IEyTntGU7z" role="37wK5m">
                     <ref role="3cqZAo" node="1IEyTntGzyE" resolve="scale" />
                   </node>
@@ -3129,9 +3117,6 @@
                 </node>
                 <node concept="liA8E" id="4D75T4FuUS2" role="2OqNvi">
                   <ref role="37wK5l" node="3H79Ykd2GzN" resolve="render" />
-                  <node concept="37vLTw" id="4D75T4FuUYg" role="37wK5m">
-                    <ref role="3cqZAo" node="1IEyTntGzyC" resolve="graphics" />
-                  </node>
                   <node concept="37vLTw" id="1IEyTntGUdr" role="37wK5m">
                     <ref role="3cqZAo" node="1IEyTntGzyE" resolve="scale" />
                   </node>
@@ -3155,12 +3140,6 @@
       </node>
       <node concept="2AHcQZ" id="1IEyTntGzyH" role="2AJF6D">
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
-      </node>
-      <node concept="37vLTG" id="1IEyTntGzyC" role="3clF46">
-        <property role="TrG5h" value="graphics" />
-        <node concept="3uibUv" id="6wUuoe0ldGs" role="1tU5fm">
-          <ref role="3uigEE" to="r7oa:~PGraphics" resolve="PGraphics" />
-        </node>
       </node>
       <node concept="37vLTG" id="1IEyTntGzyE" role="3clF46">
         <property role="TrG5h" value="scale" />

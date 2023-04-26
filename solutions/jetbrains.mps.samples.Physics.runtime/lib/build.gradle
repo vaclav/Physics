@@ -1,20 +1,66 @@
+import org.gradle.internal.os.OperatingSystem
+
 plugins {
     id 'java-library' 
     id "com.github.johnrengelman.shadow" version "5.2.0"
 }
 
-repositories {
-    mavenCentral()
+project.ext.lwjglVersion = "3.3.2"
+
+switch (OperatingSystem.current()) {
+	case OperatingSystem.LINUX:
+		def osArch = System.getProperty("os.arch")
+		project.ext.lwjglNatives = osArch.startsWith("arm") || osArch.startsWith("aarch64")
+			? "natives-linux-${osArch.contains("64") || osArch.startsWith("armv8") ? "arm64" : "arm32"}"
+			: "natives-linux"
+		break
+	case OperatingSystem.MAC_OS:
+		project.ext.lwjglNatives = System.getProperty("os.arch").startsWith("aarch64") ? "natives-macos-arm64" : "natives-macos"
+		break
+	case OperatingSystem.WINDOWS:
+		def osArch = System.getProperty("os.arch")
+		project.ext.lwjglNatives = osArch.contains("64")
+			? "natives-windows${osArch.startsWith("aarch64") ? "-arm64" : ""}"
+			: "natives-windows-x86"
+		break
 }
 
+repositories {
+	mavenCentral()
+}
+
+// From https://www.lwjgl.org/customize + ode4j (all made api for the fatjar)
 dependencies {
-    // Java runtime dependencies
-    api "org.ode4j:core:0.4.0"
-    api "org.slf4j:slf4j-api:1.6.6"
-    api "org.slf4j:slf4j-simple:1.6.6"
-    api "org.processing:core:3.3.7"
-    api "org.jogamp.jogl:jogl-all-main:2.3.2"
-    api "org.jogamp.gluegen:gluegen-rt-main:2.3.2"
+    // Physics system
+    api "org.ode4j:core:0.4.1"
+
+    // Rendering
+	api platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+
+	api "org.lwjgl:lwjgl"
+	api "org.lwjgl:lwjgl-assimp"
+	api "org.lwjgl:lwjgl-bgfx"
+	api "org.lwjgl:lwjgl-glfw"
+	api "org.lwjgl:lwjgl-nanovg"
+	api "org.lwjgl:lwjgl-nuklear"
+	api "org.lwjgl:lwjgl-openal"
+	api "org.lwjgl:lwjgl-opengl"
+	api "org.lwjgl:lwjgl-par"
+	api "org.lwjgl:lwjgl-stb"
+	api "org.lwjgl:lwjgl-vulkan"
+	api "org.lwjgl:lwjgl::$lwjglNatives"
+	api "org.lwjgl:lwjgl-assimp::$lwjglNatives"
+	api "org.lwjgl:lwjgl-bgfx::$lwjglNatives"
+	api "org.lwjgl:lwjgl-glfw::$lwjglNatives"
+	api "org.lwjgl:lwjgl-nanovg::$lwjglNatives"
+	api "org.lwjgl:lwjgl-nuklear::$lwjglNatives"
+	api "org.lwjgl:lwjgl-openal::$lwjglNatives"
+	api "org.lwjgl:lwjgl-opengl::$lwjglNatives"
+	api "org.lwjgl:lwjgl-par::$lwjglNatives"
+	api "org.lwjgl:lwjgl-stb::$lwjglNatives"
+	if (lwjglNatives == "natives-macos" || lwjglNatives == "natives-macos-arm64") {
+        api "org.lwjgl:lwjgl-vulkan::$lwjglNatives"
+    }
 }
 
 task shadowAndCopy(type: Copy, dependsOn: shadowJar) {
