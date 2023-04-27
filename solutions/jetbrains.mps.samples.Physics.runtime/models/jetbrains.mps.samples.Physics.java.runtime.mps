@@ -209,9 +209,7 @@
       <concept id="1144230876926" name="jetbrains.mps.baseLanguage.structure.AbstractForStatement" flags="nn" index="1DupvO">
         <child id="1144230900587" name="variable" index="1Duv9x" />
       </concept>
-      <concept id="1107796713796" name="jetbrains.mps.baseLanguage.structure.Interface" flags="ig" index="3HP615">
-        <child id="1107797138135" name="extendedInterface" index="3HQHJm" />
-      </concept>
+      <concept id="1107796713796" name="jetbrains.mps.baseLanguage.structure.Interface" flags="ig" index="3HP615" />
       <concept id="1208890769693" name="jetbrains.mps.baseLanguage.structure.ArrayLengthOperation" flags="nn" index="1Rwk04" />
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="8356039341262087992" name="line" index="1aUNEU" />
@@ -275,21 +273,16 @@
     </node>
     <node concept="312cEg" id="1aWbRKf$53W" role="jymVt">
       <property role="TrG5h" value="camera" />
-      <node concept="3Tmbuc" id="1aWbRKf$4ia" role="1B3o_S" />
+      <node concept="3Tmbuc" id="4oSNiFrySin" role="1B3o_S" />
       <node concept="3uibUv" id="1aWbRKf$50d" role="1tU5fm">
         <ref role="3uigEE" to="ylxi:~OrthographicCamera" resolve="OrthographicCamera" />
       </node>
     </node>
     <node concept="312cEg" id="1aWbRKf_M8G" role="jymVt">
       <property role="TrG5h" value="modelBatch" />
-      <node concept="3Tmbuc" id="1aWbRKf_Km1" role="1B3o_S" />
+      <node concept="3Tm6S6" id="4oSNiFryPA4" role="1B3o_S" />
       <node concept="3uibUv" id="1aWbRKf_LZY" role="1tU5fm">
         <ref role="3uigEE" to="e8y8:~ModelBatch" resolve="ModelBatch" />
-      </node>
-      <node concept="2ShNRf" id="1aWbRKf_O0C" role="33vP2m">
-        <node concept="1pGfFk" id="1aWbRKf_O0c" role="2ShVmc">
-          <ref role="37wK5l" to="e8y8:~ModelBatch.&lt;init&gt;()" resolve="ModelBatch" />
-        </node>
       </node>
     </node>
     <node concept="312cEg" id="1aWbRKf_YBp" role="jymVt">
@@ -297,14 +290,15 @@
       <node concept="3uibUv" id="1aWbRKf_YBr" role="1tU5fm">
         <ref role="3uigEE" to="e8y8:~Environment" resolve="Environment" />
       </node>
-      <node concept="2ShNRf" id="1aWbRKf_Zu$" role="33vP2m">
-        <node concept="1pGfFk" id="1aWbRKf_ZuC" role="2ShVmc">
-          <ref role="37wK5l" to="e8y8:~Environment.&lt;init&gt;()" resolve="Environment" />
-        </node>
-      </node>
-      <node concept="3Tmbuc" id="1aWbRKf_ZGa" role="1B3o_S" />
+      <node concept="3Tm6S6" id="4oSNiFryORA" role="1B3o_S" />
     </node>
-    <node concept="2tJIrI" id="1aWbRKf_WS3" role="jymVt" />
+    <node concept="312cEg" id="4oSNiFrxVai" role="jymVt">
+      <property role="TrG5h" value="spriteBatch" />
+      <node concept="3Tm6S6" id="4oSNiFryNIC" role="1B3o_S" />
+      <node concept="3uibUv" id="4oSNiFrxUZP" role="1tU5fm">
+        <ref role="3uigEE" to="e8xd:~SpriteBatch" resolve="SpriteBatch" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="1aWbRKf_OBI" role="jymVt" />
     <node concept="3Tm1VV" id="3H79Ykd2Gyi" role="1B3o_S" />
     <node concept="3uibUv" id="1aWbRKf$jPk" role="EKbjA">
@@ -341,6 +335,100 @@
           </node>
         </node>
         <node concept="3clFbH" id="1aWbRKf$6ii" role="3cqZAp" />
+      </node>
+      <node concept="37vLTG" id="6iG0F4IZu8c" role="3clF46">
+        <property role="TrG5h" value="simulationSpeed" />
+        <node concept="10P55v" id="2QWokQTG$Oo" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="1IEyTntHpFQ" role="3clF46">
+        <property role="TrG5h" value="renderScale" />
+        <node concept="10OMs4" id="1IEyTntHpGt" role="1tU5fm" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="6iG0F4IZuql" role="jymVt" />
+    <node concept="3clFb_" id="1aWbRKf$kRd" role="jymVt">
+      <property role="TrG5h" value="create" />
+      <node concept="3Tm1VV" id="1aWbRKf$kRe" role="1B3o_S" />
+      <node concept="3cqZAl" id="1aWbRKf$kRg" role="3clF45" />
+      <node concept="3clFbS" id="1aWbRKf$kRh" role="3clF47">
+        <node concept="3clFbF" id="2$FWg5e56_A" role="3cqZAp">
+          <node concept="37vLTI" id="2$FWg5e56_B" role="3clFbG">
+            <node concept="2ShNRf" id="2$FWg5e56_C" role="37vLTx">
+              <node concept="1pGfFk" id="2$FWg5e56_D" role="2ShVmc">
+                <ref role="37wK5l" to="e8y8:~Environment.&lt;init&gt;()" resolve="Environment" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="2$FWg5e56_E" role="37vLTJ">
+              <node concept="Xjq3P" id="2$FWg5e56_F" role="2Oq$k0" />
+              <node concept="2OwXpG" id="2$FWg5e56_G" role="2OqNvi">
+                <ref role="2Oxat5" node="1aWbRKf_YBp" resolve="environment" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4oSNiFrypRw" role="3cqZAp">
+          <node concept="2OqwBi" id="4oSNiFrysYA" role="3clFbG">
+            <node concept="37vLTw" id="4oSNiFryqJ4" role="2Oq$k0">
+              <ref role="3cqZAo" node="1aWbRKf_YBp" resolve="environment" />
+            </node>
+            <node concept="liA8E" id="4oSNiFrysYB" role="2OqNvi">
+              <ref role="37wK5l" to="e8y8:~Attributes.set(com.badlogic.gdx.graphics.g3d.Attribute)" resolve="set" />
+              <node concept="2ShNRf" id="4oSNiFrysYC" role="37wK5m">
+                <node concept="1pGfFk" id="4oSNiFrysYD" role="2ShVmc">
+                  <ref role="37wK5l" to="ntbp:~ColorAttribute.&lt;init&gt;(long,float,float,float,float)" resolve="ColorAttribute" />
+                  <node concept="10M0yZ" id="4oSNiFrytGA" role="37wK5m">
+                    <ref role="1PxDUh" to="ntbp:~ColorAttribute" resolve="ColorAttribute" />
+                    <ref role="3cqZAo" to="ntbp:~ColorAttribute.AmbientLight" resolve="AmbientLight" />
+                  </node>
+                  <node concept="2$xPTn" id="4oSNiFrysYF" role="37wK5m">
+                    <property role="2$xPTl" value="1.0f" />
+                  </node>
+                  <node concept="2$xPTn" id="4oSNiFrysYG" role="37wK5m">
+                    <property role="2$xPTl" value="1.0f" />
+                  </node>
+                  <node concept="2$xPTn" id="4oSNiFrysYH" role="37wK5m">
+                    <property role="2$xPTl" value="1.0f" />
+                  </node>
+                  <node concept="2$xPTn" id="4oSNiFrysYI" role="37wK5m">
+                    <property role="2$xPTl" value="1.0f" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4oSNiFryolg" role="3cqZAp" />
+        <node concept="3clFbF" id="2$FWg5e551M" role="3cqZAp">
+          <node concept="37vLTI" id="2$FWg5e551N" role="3clFbG">
+            <node concept="2ShNRf" id="2$FWg5e551O" role="37vLTx">
+              <node concept="1pGfFk" id="2$FWg5e551P" role="2ShVmc">
+                <ref role="37wK5l" to="e8y8:~ModelBatch.&lt;init&gt;()" resolve="ModelBatch" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="2$FWg5e551Q" role="37vLTJ">
+              <node concept="Xjq3P" id="2$FWg5e551R" role="2Oq$k0" />
+              <node concept="2OwXpG" id="2$FWg5e551S" role="2OqNvi">
+                <ref role="2Oxat5" node="1aWbRKf_M8G" resolve="modelBatch" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4oSNiFrxWO0" role="3cqZAp">
+          <node concept="37vLTI" id="4oSNiFry1gz" role="3clFbG">
+            <node concept="2ShNRf" id="4oSNiFry2_6" role="37vLTx">
+              <node concept="1pGfFk" id="4oSNiFry2zg" role="2ShVmc">
+                <ref role="37wK5l" to="e8xd:~SpriteBatch.&lt;init&gt;()" resolve="SpriteBatch" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="4oSNiFrxXRZ" role="37vLTJ">
+              <node concept="Xjq3P" id="4oSNiFrxWNY" role="2Oq$k0" />
+              <node concept="2OwXpG" id="4oSNiFrxZyY" role="2OqNvi">
+                <ref role="2Oxat5" node="4oSNiFrxVai" resolve="spriteBatch" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4oSNiFry3l9" role="3cqZAp" />
         <node concept="3clFbF" id="1aWbRKf$6wa" role="3cqZAp">
           <node concept="37vLTI" id="1aWbRKf$7oG" role="3clFbG">
             <node concept="2ShNRf" id="1aWbRKf$7vL" role="37vLTx">
@@ -353,25 +441,6 @@
               <node concept="Xjq3P" id="1aWbRKf$6w8" role="2Oq$k0" />
               <node concept="2OwXpG" id="1aWbRKf$72K" role="2OqNvi">
                 <ref role="2Oxat5" node="1aWbRKf$53W" resolve="camera" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="1aWbRKf$9Vb" role="3cqZAp">
-          <node concept="2OqwBi" id="1aWbRKf$biS" role="3clFbG">
-            <node concept="2OqwBi" id="1aWbRKf$ad0" role="2Oq$k0">
-              <node concept="37vLTw" id="1aWbRKf$9V9" role="2Oq$k0">
-                <ref role="3cqZAo" node="1aWbRKf$53W" resolve="camera" />
-              </node>
-              <node concept="2OwXpG" id="1aWbRKf$ax5" role="2OqNvi">
-                <ref role="2Oxat5" to="ylxi:~Camera.up" resolve="up" />
-              </node>
-            </node>
-            <node concept="liA8E" id="1aWbRKf$bWg" role="2OqNvi">
-              <ref role="37wK5l" to="2hz7:~Vector3.set(com.badlogic.gdx.math.Vector3)" resolve="set" />
-              <node concept="10M0yZ" id="1aWbRKf$cly" role="37wK5m">
-                <ref role="3cqZAo" to="2hz7:~Vector3.Y" resolve="Y" />
-                <ref role="1PxDUh" to="2hz7:~Vector3" resolve="Vector3" />
               </node>
             </node>
           </node>
@@ -412,22 +481,31 @@
             </node>
           </node>
         </node>
-      </node>
-      <node concept="37vLTG" id="6iG0F4IZu8c" role="3clF46">
-        <property role="TrG5h" value="simulationSpeed" />
-        <node concept="10P55v" id="2QWokQTG$Oo" role="1tU5fm" />
-      </node>
-      <node concept="37vLTG" id="1IEyTntHpFQ" role="3clF46">
-        <property role="TrG5h" value="renderScale" />
-        <node concept="10OMs4" id="1IEyTntHpGt" role="1tU5fm" />
-      </node>
-    </node>
-    <node concept="2tJIrI" id="6iG0F4IZuql" role="jymVt" />
-    <node concept="3clFb_" id="1aWbRKf$kRd" role="jymVt">
-      <property role="TrG5h" value="create" />
-      <node concept="3Tm1VV" id="1aWbRKf$kRe" role="1B3o_S" />
-      <node concept="3cqZAl" id="1aWbRKf$kRg" role="3clF45" />
-      <node concept="3clFbS" id="1aWbRKf$kRh" role="3clF47">
+        <node concept="3clFbF" id="1aWbRKf$N3g" role="3cqZAp">
+          <node concept="2OqwBi" id="1aWbRKf$PwP" role="3clFbG">
+            <node concept="2OqwBi" id="1aWbRKf$O2V" role="2Oq$k0">
+              <node concept="37vLTw" id="1aWbRKf$N3e" role="2Oq$k0">
+                <ref role="3cqZAo" node="1aWbRKf$53W" resolve="camera" />
+              </node>
+              <node concept="2OwXpG" id="1aWbRKf$P1v" role="2OqNvi">
+                <ref role="2Oxat5" to="ylxi:~Camera.position" resolve="position" />
+              </node>
+            </node>
+            <node concept="liA8E" id="1aWbRKf$QVH" role="2OqNvi">
+              <ref role="37wK5l" to="2hz7:~Vector3.set(float,float,float)" resolve="set" />
+              <node concept="3cmrfG" id="4oSNiFrujL9" role="37wK5m">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="3cmrfG" id="4oSNiFrumaY" role="37wK5m">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="3cmrfG" id="4oSNiFrun$g" role="37wK5m">
+                <property role="3cmrfH" value="0" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="2$FWg5e59P$" role="3cqZAp" />
         <node concept="3clFbF" id="6iG0F4IZscM" role="3cqZAp">
           <node concept="37vLTI" id="6iG0F4IZslO" role="3clFbG">
             <node concept="2ShNRf" id="6iG0F4IZsr5" role="37vLTx">
@@ -689,28 +767,6 @@
           </node>
         </node>
         <node concept="3clFbH" id="5hZn_PXm$y9" role="3cqZAp" />
-        <node concept="3clFbF" id="1aWbRKf$N3g" role="3cqZAp">
-          <node concept="2OqwBi" id="1aWbRKf$PwP" role="3clFbG">
-            <node concept="2OqwBi" id="1aWbRKf$O2V" role="2Oq$k0">
-              <node concept="37vLTw" id="1aWbRKf$N3e" role="2Oq$k0">
-                <ref role="3cqZAo" node="1aWbRKf$53W" resolve="camera" />
-              </node>
-              <node concept="2OwXpG" id="1aWbRKf$P1v" role="2OqNvi">
-                <ref role="2Oxat5" to="ylxi:~Camera.position" resolve="position" />
-              </node>
-            </node>
-            <node concept="liA8E" id="1aWbRKf$QVH" role="2OqNvi">
-              <ref role="37wK5l" to="2hz7:~Vector3.set(com.badlogic.gdx.math.Vector3)" resolve="set" />
-              <node concept="2YIFZM" id="1aWbRKf$U7K" role="37wK5m">
-                <ref role="37wK5l" node="1aWbRKfd1tU" resolve="toVector3" />
-                <ref role="1Pybhc" node="31HEEbcijiK" resolve="VectorHelper" />
-                <node concept="37vLTw" id="1aWbRKf$UOw" role="37wK5m">
-                  <ref role="3cqZAo" node="6iG0F4IZB$s" resolve="position" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbF" id="1aWbRKf$WLM" role="3cqZAp">
           <node concept="2OqwBi" id="1aWbRKf$WLN" role="3clFbG">
             <node concept="37vLTw" id="1aWbRKf$WLP" role="2Oq$k0">
@@ -739,6 +795,19 @@
           </node>
         </node>
         <node concept="3clFbH" id="1aWbRKf_QkZ" role="3cqZAp" />
+        <node concept="3clFbF" id="2$FWg5e8iST" role="3cqZAp">
+          <node concept="2OqwBi" id="2$FWg5e8k0A" role="3clFbG">
+            <node concept="37vLTw" id="2$FWg5e8iSR" role="2Oq$k0">
+              <ref role="3cqZAo" node="1aWbRKf_M8G" resolve="modelBatch" />
+            </node>
+            <node concept="liA8E" id="2$FWg5e8lPF" role="2OqNvi">
+              <ref role="37wK5l" to="e8y8:~ModelBatch.begin(com.badlogic.gdx.graphics.Camera)" resolve="begin" />
+              <node concept="37vLTw" id="2$FWg5e8niL" role="37wK5m">
+                <ref role="3cqZAo" node="1aWbRKf$53W" resolve="camera" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="1aWbRKf_RM9" role="3cqZAp">
           <node concept="2OqwBi" id="1aWbRKf_SEZ" role="3clFbG">
             <node concept="37vLTw" id="1aWbRKf_RM7" role="2Oq$k0">
@@ -769,6 +838,17 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="2$FWg5e8to5" role="3cqZAp">
+          <node concept="2OqwBi" id="2$FWg5e8ux_" role="3clFbG">
+            <node concept="37vLTw" id="2$FWg5e8to3" role="2Oq$k0">
+              <ref role="3cqZAo" node="1aWbRKf_M8G" resolve="modelBatch" />
+            </node>
+            <node concept="liA8E" id="2$FWg5e8wCW" role="2OqNvi">
+              <ref role="37wK5l" to="e8y8:~ModelBatch.end()" resolve="end" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="2$FWg5e8y6I" role="3cqZAp" />
         <node concept="3clFbF" id="3H79Ykd2Gqn" role="3cqZAp">
           <node concept="2OqwBi" id="3H79Ykd2LFw" role="3clFbG">
             <node concept="37vLTw" id="6iG0F4IZxNs" role="2Oq$k0">
@@ -780,74 +860,6 @@
           </node>
         </node>
         <node concept="3clFbH" id="4E4Gfvfyf3t" role="3cqZAp" />
-        <node concept="3SKdUt" id="1aWbRKfC8x8" role="3cqZAp">
-          <node concept="1PaTwC" id="1aWbRKfC8x9" role="1aUNEU">
-            <node concept="3oM_SD" id="1aWbRKfC8xa" role="1PaTwD">
-              <property role="3oM_SC" value="set" />
-            </node>
-            <node concept="3oM_SD" id="1aWbRKfC8xb" role="1PaTwD">
-              <property role="3oM_SC" value="ambient" />
-            </node>
-            <node concept="3oM_SD" id="1aWbRKfC8xc" role="1PaTwD">
-              <property role="3oM_SC" value="light" />
-            </node>
-            <node concept="3oM_SD" id="1aWbRKfC8xd" role="1PaTwD">
-              <property role="3oM_SC" value="to" />
-            </node>
-            <node concept="3oM_SD" id="1aWbRKfC8xe" role="1PaTwD">
-              <property role="3oM_SC" value="black" />
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="1aWbRKfC8x3" role="3cqZAp">
-          <node concept="2OqwBi" id="1aWbRKfCcNH" role="3clFbG">
-            <node concept="37vLTw" id="1aWbRKfC9fP" role="2Oq$k0">
-              <ref role="3cqZAo" node="1aWbRKf_YBp" resolve="environment" />
-            </node>
-            <node concept="liA8E" id="1aWbRKfCcNI" role="2OqNvi">
-              <ref role="37wK5l" to="e8y8:~Attributes.set(com.badlogic.gdx.graphics.g3d.Attribute)" resolve="set" />
-              <node concept="2ShNRf" id="1aWbRKfCcNJ" role="37wK5m">
-                <node concept="1pGfFk" id="1aWbRKfCcNK" role="2ShVmc">
-                  <ref role="37wK5l" to="ntbp:~ColorAttribute.&lt;init&gt;(long,com.badlogic.gdx.graphics.Color)" resolve="ColorAttribute" />
-                  <node concept="10M0yZ" id="1aWbRKfCcNL" role="37wK5m">
-                    <ref role="1PxDUh" to="ntbp:~ColorAttribute" resolve="ColorAttribute" />
-                    <ref role="3cqZAo" to="ntbp:~ColorAttribute.AmbientLight" resolve="AmbientLight" />
-                  </node>
-                  <node concept="2ShNRf" id="1aWbRKfCk88" role="37wK5m">
-                    <node concept="1pGfFk" id="1aWbRKfCk6l" role="2ShVmc">
-                      <ref role="37wK5l" to="ylxi:~Color.&lt;init&gt;(float,float,float,float)" resolve="Color" />
-                      <node concept="2$xPTn" id="1aWbRKfC8wZ" role="37wK5m">
-                        <property role="2$xPTl" value="0.0f" />
-                      </node>
-                      <node concept="2$xPTn" id="1aWbRKfC8x0" role="37wK5m">
-                        <property role="2$xPTl" value="0.0f" />
-                      </node>
-                      <node concept="2$xPTn" id="1aWbRKfC8x1" role="37wK5m">
-                        <property role="2$xPTl" value="0.0f" />
-                      </node>
-                      <node concept="2$xPTn" id="1aWbRKfC8x2" role="37wK5m">
-                        <property role="2$xPTl" value="1.0f" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3cpWs8" id="1aWbRKfCwq4" role="3cqZAp">
-          <node concept="3cpWsn" id="1aWbRKfCwq3" role="3cpWs9">
-            <property role="TrG5h" value="batch" />
-            <node concept="3uibUv" id="1aWbRKfCwq5" role="1tU5fm">
-              <ref role="3uigEE" to="e8xd:~SpriteBatch" resolve="SpriteBatch" />
-            </node>
-            <node concept="2ShNRf" id="1aWbRKfCy5u" role="33vP2m">
-              <node concept="1pGfFk" id="1aWbRKfCy5w" role="2ShVmc">
-                <ref role="37wK5l" to="e8xd:~SpriteBatch.&lt;init&gt;()" resolve="SpriteBatch" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbH" id="1aWbRKfC6Kq" role="3cqZAp" />
         <node concept="3clFbF" id="1aWbRKfBIK0" role="3cqZAp">
           <node concept="2OqwBi" id="1aWbRKfBKZQ" role="3clFbG">
@@ -877,6 +889,16 @@
           </node>
         </node>
         <node concept="3clFbH" id="4E4Gfvfyq2O" role="3cqZAp" />
+        <node concept="3clFbF" id="71RLBe1JNJB" role="3cqZAp">
+          <node concept="2OqwBi" id="71RLBe1JOXK" role="3clFbG">
+            <node concept="37vLTw" id="71RLBe1JNJ_" role="2Oq$k0">
+              <ref role="3cqZAo" node="4oSNiFrxVai" resolve="spriteBatch" />
+            </node>
+            <node concept="liA8E" id="71RLBe1JPT7" role="2OqNvi">
+              <ref role="37wK5l" to="e8xd:~SpriteBatch.begin()" resolve="begin" />
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="3L71doTpuSk" role="3cqZAp">
           <node concept="2OqwBi" id="3L71doTpvRH" role="3clFbG">
             <node concept="37vLTw" id="3L71doTpuSi" role="2Oq$k0">
@@ -888,7 +910,7 @@
                 <ref role="3cqZAo" node="6iG0F4IZs3j" resolve="world" />
               </node>
               <node concept="37vLTw" id="3L71doTpwUr" role="37wK5m">
-                <ref role="3cqZAo" node="1aWbRKfCwq3" resolve="batch" />
+                <ref role="3cqZAo" node="4oSNiFrxVai" resolve="spriteBatch" />
               </node>
             </node>
           </node>
@@ -899,12 +921,22 @@
             <node concept="liA8E" id="3L71doTpzq$" role="2OqNvi">
               <ref role="37wK5l" node="3L71doTnWbU" resolve="renderMetrics" />
               <node concept="37vLTw" id="3L71doTp$MM" role="37wK5m">
-                <ref role="3cqZAo" node="1aWbRKfCwq3" resolve="batch" />
+                <ref role="3cqZAo" node="4oSNiFrxVai" resolve="spriteBatch" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="1aWbRKfCCrD" role="3cqZAp" />
+        <node concept="3clFbF" id="71RLBe1JQ0Z" role="3cqZAp">
+          <node concept="2OqwBi" id="71RLBe1JQQX" role="3clFbG">
+            <node concept="37vLTw" id="71RLBe1JQ0X" role="2Oq$k0">
+              <ref role="3cqZAo" node="4oSNiFrxVai" resolve="spriteBatch" />
+            </node>
+            <node concept="liA8E" id="71RLBe1JR$A" role="2OqNvi">
+              <ref role="37wK5l" to="e8xd:~SpriteBatch.end()" resolve="end" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="71RLBe1JPUW" role="3cqZAp" />
         <node concept="3clFbF" id="1aWbRKfC3hf" role="3cqZAp">
           <node concept="2OqwBi" id="1aWbRKfC3hg" role="3clFbG">
             <node concept="10M0yZ" id="1aWbRKfC3hh" role="2Oq$k0">
@@ -1157,7 +1189,28 @@
       <property role="TrG5h" value="dispose" />
       <node concept="3Tm1VV" id="2$FWg5dUCsB" role="1B3o_S" />
       <node concept="3cqZAl" id="2$FWg5dUCsD" role="3clF45" />
-      <node concept="3clFbS" id="2$FWg5dUCsE" role="3clF47" />
+      <node concept="3clFbS" id="2$FWg5dUCsE" role="3clF47">
+        <node concept="3clFbF" id="4oSNiFrtgN7" role="3cqZAp">
+          <node concept="2OqwBi" id="4oSNiFrtinz" role="3clFbG">
+            <node concept="37vLTw" id="4oSNiFrtgN6" role="2Oq$k0">
+              <ref role="3cqZAo" node="1aWbRKf_M8G" resolve="modelBatch" />
+            </node>
+            <node concept="liA8E" id="4oSNiFrtk5N" role="2OqNvi">
+              <ref role="37wK5l" to="e8y8:~ModelBatch.dispose()" resolve="dispose" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4oSNiFry9RO" role="3cqZAp">
+          <node concept="2OqwBi" id="4oSNiFryaYX" role="3clFbG">
+            <node concept="37vLTw" id="4oSNiFry9RM" role="2Oq$k0">
+              <ref role="3cqZAo" node="4oSNiFrxVai" resolve="spriteBatch" />
+            </node>
+            <node concept="liA8E" id="4oSNiFryeOp" role="2OqNvi">
+              <ref role="37wK5l" to="e8xd:~SpriteBatch.dispose()" resolve="dispose" />
+            </node>
+          </node>
+        </node>
+      </node>
       <node concept="2AHcQZ" id="2$FWg5dUCsF" role="2AJF6D">
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
@@ -1171,7 +1224,7 @@
       <property role="3TUv4t" value="true" />
       <node concept="3Tm6S6" id="1aWbRKfEnn2" role="1B3o_S" />
       <node concept="3uibUv" id="1aWbRKfEnn4" role="1tU5fm">
-        <ref role="3uigEE" node="1aWbRKfEho7" resolve="ApplicationWithInputListener" />
+        <ref role="3uigEE" to="cs5v:~ApplicationListener" resolve="ApplicationListener" />
       </node>
     </node>
     <node concept="2tJIrI" id="5mB0hAZBKXj" role="jymVt" />
@@ -1193,7 +1246,7 @@
       <node concept="37vLTG" id="1aWbRKfEiwv" role="3clF46">
         <property role="TrG5h" value="child" />
         <node concept="3uibUv" id="1aWbRKfEiwu" role="1tU5fm">
-          <ref role="3uigEE" node="1aWbRKfEho7" resolve="ApplicationWithInputListener" />
+          <ref role="3uigEE" to="cs5v:~ApplicationListener" resolve="ApplicationListener" />
         </node>
       </node>
     </node>
@@ -1239,21 +1292,6 @@
               <ref role="37wK5l" to="cs5v:~Graphics.setTitle(java.lang.String)" resolve="setTitle" />
               <node concept="Xl_RD" id="1aWbRKfDWnt" role="37wK5m">
                 <property role="Xl_RC" value="Physical simulation" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbH" id="1aWbRKfDOql" role="3cqZAp" />
-        <node concept="3clFbF" id="1aWbRKfENHM" role="3cqZAp">
-          <node concept="2OqwBi" id="1aWbRKfEPIu" role="3clFbG">
-            <node concept="10M0yZ" id="1aWbRKfEP1_" role="2Oq$k0">
-              <ref role="3cqZAo" to="cs5v:~Gdx.input" resolve="input" />
-              <ref role="1PxDUh" to="cs5v:~Gdx" resolve="Gdx" />
-            </node>
-            <node concept="liA8E" id="1aWbRKfEQiO" role="2OqNvi">
-              <ref role="37wK5l" to="cs5v:~Input.setInputProcessor(com.badlogic.gdx.InputProcessor)" resolve="setInputProcessor" />
-              <node concept="37vLTw" id="1aWbRKfFaMK" role="37wK5m">
-                <ref role="3cqZAo" node="1aWbRKfEnn1" resolve="nested" />
               </node>
             </node>
           </node>
@@ -2328,6 +2366,18 @@
       <node concept="3Tm1VV" id="1aWbRKfD8wv" role="1B3o_S" />
       <node concept="3cqZAl" id="1aWbRKfD8wx" role="3clF45" />
       <node concept="3clFbS" id="1aWbRKfD8wy" role="3clF47">
+        <node concept="3clFbF" id="2$FWg5e1Bfv" role="3cqZAp">
+          <node concept="2OqwBi" id="1aWbRKfEPIu" role="3clFbG">
+            <node concept="10M0yZ" id="1aWbRKfEP1_" role="2Oq$k0">
+              <ref role="1PxDUh" to="cs5v:~Gdx" resolve="Gdx" />
+              <ref role="3cqZAo" to="cs5v:~Gdx.input" resolve="input" />
+            </node>
+            <node concept="liA8E" id="1aWbRKfEQiO" role="2OqNvi">
+              <ref role="37wK5l" to="cs5v:~Input.setInputProcessor(com.badlogic.gdx.InputProcessor)" resolve="setInputProcessor" />
+              <node concept="Xjq3P" id="2$FWg5e1Chn" role="37wK5m" />
+            </node>
+          </node>
+        </node>
         <node concept="1DcWWT" id="1aWbRKfDyHU" role="3cqZAp">
           <node concept="3clFbS" id="1aWbRKfDyHV" role="2LFqv$">
             <node concept="3clFbF" id="1aWbRKfDyHW" role="3cqZAp">
@@ -2478,8 +2528,9 @@
             <node concept="37vLTw" id="1aWbRKfCR9w" role="3uHU7B">
               <ref role="3cqZAo" node="1aWbRKfCR9r" resolve="code" />
             </node>
-            <node concept="3cmrfG" id="1aWbRKfCR9x" role="3uHU7w">
-              <property role="3cmrfH" value="32" />
+            <node concept="10M0yZ" id="71RLBe1KCAX" role="3uHU7w">
+              <ref role="3cqZAo" to="cs5v:~Input$Keys.SPACE" resolve="SPACE" />
+              <ref role="1PxDUh" to="cs5v:~Input$Keys" resolve="Keys" />
             </node>
           </node>
           <node concept="3clFbS" id="1aWbRKfCR9z" role="3clFbx">
@@ -2700,17 +2751,6 @@
       <node concept="2AHcQZ" id="2$FWg5dU4C2" role="2AJF6D">
         <ref role="2AI5Lk" to="wyt6:~Override" />
       </node>
-    </node>
-  </node>
-  <node concept="3HP615" id="1aWbRKfEho7">
-    <property role="TrG5h" value="ApplicationWithInputListener" />
-    <node concept="2tJIrI" id="1aWbRKfEidG" role="jymVt" />
-    <node concept="3Tm1VV" id="1aWbRKfEho8" role="1B3o_S" />
-    <node concept="3uibUv" id="1aWbRKfEh_O" role="3HQHJm">
-      <ref role="3uigEE" to="cs5v:~ApplicationListener" resolve="ApplicationListener" />
-    </node>
-    <node concept="3uibUv" id="1aWbRKfEibO" role="3HQHJm">
-      <ref role="3uigEE" to="cs5v:~InputProcessor" resolve="InputProcessor" />
     </node>
   </node>
 </model>

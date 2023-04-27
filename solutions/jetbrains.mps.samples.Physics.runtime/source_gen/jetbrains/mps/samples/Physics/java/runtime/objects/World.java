@@ -10,6 +10,7 @@ import org.ode4j.ode.DJointGroup;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.ode4j.ode.DBody;
+import com.badlogic.gdx.utils.TimeUtils;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.ode.internal.DxGeom;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
@@ -30,13 +31,13 @@ public class World implements DGeom.DNearCallback, Renderable {
   private boolean paused;
   private double time;
   private final double timeStep;
-
+  private long lastTime = TimeUtils.millis();
   /**
    * Create world with given simulation time. The simulation time is the time elapsed in the simulation
    * during a second in the real world.
    */
   public World(double secondDuration) {
-    this.timeStep = secondDuration / 60;
+    this.timeStep = secondDuration;
     this.time = 0;
     this.paused = false;
     this.world = OdeHelper.createWorld();
@@ -59,13 +60,15 @@ public class World implements DGeom.DNearCallback, Renderable {
     }
 
     space.collide(null, this);
-    time += timeStep;
+    double step = timeStep * TimeUtils.timeSinceMillis(lastTime) / 1000.f;
+    time += step;
+    lastTime = TimeUtils.millis();
 
     for (PhysicalEntity entity : entities) {
       entity.applyForces(time);
     }
 
-    world.quickStep(timeStep);
+    world.quickStep(step);
     jointGroup.empty();
   }
 

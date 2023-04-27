@@ -127,7 +127,7 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
 
     // https://en.wikipedia.org/wiki/Rotation_matrix
     DMatrix3C bodyRotation = body.getRotation();
-    Quaternion quaternion = new Quaternion().setFromMatrix(new Matrix3(new float[]{(float) bodyRotation.get00(), (float) bodyRotation.get01(), (float) bodyRotation.get02(), 0, (float) bodyRotation.get10(), (float) bodyRotation.get11(), (float) bodyRotation.get12(), 0, (float) bodyRotation.get20(), (float) bodyRotation.get21(), (float) bodyRotation.get22(), 0, 0, 0, 0, 1}));
+    Quaternion quaternion = new Quaternion().setFromMatrix(new Matrix3(new float[]{(float) bodyRotation.get00(), (float) bodyRotation.get01(), (float) bodyRotation.get02(), (float) bodyRotation.get10(), (float) bodyRotation.get11(), (float) bodyRotation.get12(), (float) bodyRotation.get20(), (float) bodyRotation.get21(), (float) bodyRotation.get22()}));
 
     fixture.modelInstance.transform.set(new Matrix4().translate(VectorHelper.toVector3(translation)).rotate(quaternion));
     batch.render(fixture.modelInstance, env);

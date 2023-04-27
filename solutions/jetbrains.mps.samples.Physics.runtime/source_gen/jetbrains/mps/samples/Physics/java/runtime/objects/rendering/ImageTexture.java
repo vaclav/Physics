@@ -6,6 +6,9 @@ import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g3d.attributes.FloatAttribute;
+import com.badlogic.gdx.Net;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute;
 
 public class ImageTexture extends Texture {
@@ -18,9 +21,7 @@ public class ImageTexture extends Texture {
 
   @Override
   public Material getMaterial(boolean emissive) {
-    loadedImage = new com.badlogic.gdx.graphics.Texture(url);
-
-    Material material = new Material();
+    final Material material = new Material();
     material.set(ColorAttribute.createDiffuse(Color.WHITE));
     material.set(FloatAttribute.createShininess(1.f));
 
@@ -29,7 +30,33 @@ public class ImageTexture extends Texture {
       material.set(ColorAttribute.createAmbient(Color.WHITE));
     }
 
-    material.set(TextureAttribute.createDiffuse(loadedImage));
+    if (url.startsWith("https://") || url.startsWith("http://")) {
+      Net.HttpRequest request = new Net.HttpRequest(Net.HttpMethods.GET);
+      request.setUrl(url);
+      Gdx.net.sendHttpRequest(request, new Net.HttpResponseListener() {
+        @Override
+        public void handleHttpResponse(Net.HttpResponse httpResponse) {
+          final FileHandle tmpFile = FileHandle.tempFile("texture");
+          tmpFile.write(httpResponse.getResultAsStream(), false);
+          Gdx.app.postRunnable(() -> {
+            loadedImage = new com.badlogic.gdx.graphics.Texture(tmpFile);
+            material.set(TextureAttribute.createDiffuse(loadedImage));
+          });
+        }
+        @Override
+        public void failed(Throwable t) {
+          Gdx.app.error("images", "failed to load", t);
+        }
+        @Override
+        public void cancelled() {
+          Gdx.app.log("images", "load cancelled");
+        }
+      });
+    } else {
+      loadedImage = new com.badlogic.gdx.graphics.Texture(url);
+    }
+
+
     return material;
   }
 

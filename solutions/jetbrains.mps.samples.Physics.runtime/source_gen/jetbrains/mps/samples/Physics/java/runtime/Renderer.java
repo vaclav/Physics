@@ -6,9 +6,9 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 
 public class Renderer implements ApplicationListener {
-  private final ApplicationWithInputListener nested;
+  private final ApplicationListener nested;
 
-  public Renderer(ApplicationWithInputListener child) {
+  public Renderer(ApplicationListener child) {
     nested = child;
   }
 
@@ -16,8 +16,6 @@ public class Renderer implements ApplicationListener {
     Gdx.graphics.setContinuousRendering(true);
     Gdx.graphics.setResizable(true);
     Gdx.graphics.setTitle("Physical simulation");
-
-    Gdx.input.setInputProcessor(nested);
     nested.create();
   }
 

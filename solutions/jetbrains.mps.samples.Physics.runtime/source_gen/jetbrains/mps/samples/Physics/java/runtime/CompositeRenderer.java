@@ -4,6 +4,8 @@ package jetbrains.mps.samples.Physics.java.runtime;
 
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 
 public class CompositeRenderer extends InputAdapter implements ApplicationListener {
   private Simulation[] simulations;
@@ -14,6 +16,7 @@ public class CompositeRenderer extends InputAdapter implements ApplicationListen
 
   @Override
   public void create() {
+    Gdx.input.setInputProcessor(this);
     for (Simulation sim : simulations) {
       sim.create();
     }
@@ -33,7 +36,7 @@ public class CompositeRenderer extends InputAdapter implements ApplicationListen
   @Override
   public boolean keyDown(int code) {
     // Spacebar
-    if (code == 32) {
+    if (code == Input.Keys.SPACE) {
       boolean paused = simulations[0].isPaused();
       for (Simulation sim : simulations) {
         if (paused) {

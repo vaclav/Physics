@@ -19,7 +19,7 @@ public class MetricsRenderer {
   public MetricsRenderer(BitmapFont font) {
     this.font = font;
     ascent = font.getAscent();
-    lineHeight = ascent + font.getDescent() + 3;
+    lineHeight = font.getLineHeight();
   }
 
   public void renderDefault(World world, SpriteBatch batch) {

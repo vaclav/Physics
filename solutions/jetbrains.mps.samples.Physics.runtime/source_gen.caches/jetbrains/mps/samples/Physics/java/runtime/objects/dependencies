@@ -70,6 +70,7 @@
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.World">
     <classNode dependClassName="com.badlogic.gdx.graphics.g3d.Environment" />
     <classNode dependClassName="com.badlogic.gdx.graphics.g3d.ModelBatch" />
+    <classNode dependClassName="com.badlogic.gdx.utils.TimeUtils" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />

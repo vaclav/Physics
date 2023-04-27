@@ -7,11 +7,9 @@
   <uses module="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt+dp" />
   <uses module="22562cc6-29e7-43d0-b046-5e85dce22227(jetbrains.mps.samples.Physics.java.common)" kind="dp" />
   <uses module="59283cba-afa8-49c4-b10d-6ff0ede2c408(jetbrains.mps.samples.Physics.java.runtime)" kind="dp" />
-  <dependency className="jetbrains.mps.samples.Physics.java.runtime.ApplicationWithInputListener">
-    <classNode extendsClassName="com.badlogic.gdx.ApplicationListener" />
-    <classNode extendsClassName="com.badlogic.gdx.InputProcessor" />
-  </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer">
+    <classNode dependClassName="com.badlogic.gdx.Gdx" />
+    <classNode dependClassName="com.badlogic.gdx.Input" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
     <classNode extendsClassName="com.badlogic.gdx.ApplicationListener" />
@@ -25,7 +23,6 @@
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.Renderer">
     <classNode dependClassName="com.badlogic.gdx.Gdx" />
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.ApplicationWithInputListener" />
     <classNode extendsClassName="com.badlogic.gdx.ApplicationListener" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.RotationHelper">
@@ -38,7 +35,6 @@
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.Simulation">
     <classNode dependClassName="com.badlogic.gdx.Gdx" />
-    <classNode dependClassName="com.badlogic.gdx.graphics.Color" />
     <classNode dependClassName="com.badlogic.gdx.graphics.GL20" />
     <classNode dependClassName="com.badlogic.gdx.graphics.OrthographicCamera" />
     <classNode dependClassName="com.badlogic.gdx.graphics.g2d.BitmapFont" />
@@ -46,7 +42,6 @@
     <classNode dependClassName="com.badlogic.gdx.graphics.g3d.Environment" />
     <classNode dependClassName="com.badlogic.gdx.graphics.g3d.ModelBatch" />
     <classNode dependClassName="com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute" />
-    <classNode dependClassName="com.badlogic.gdx.math.Vector3" />
     <classNode dependClassName="java.lang.Float" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Math" />

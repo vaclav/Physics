@@ -9,14 +9,12 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRende
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.Environment;
-import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 
 public abstract class Simulation implements ApplicationListener {
@@ -46,22 +44,29 @@ public abstract class Simulation implements ApplicationListener {
   protected float renderScale;
   protected MetricsRenderer metricsRenderer;
   protected OrthographicCamera camera;
-  protected ModelBatch modelBatch = new ModelBatch();
-  protected Environment environment = new Environment();
-
+  private ModelBatch modelBatch;
+  private Environment environment;
+  private SpriteBatch spriteBatch;
 
   public Simulation(double simulationSpeed, float renderScale) {
     this.simulationSpeed = simulationSpeed;
     this.renderScale = renderScale;
 
-    this.camera = new OrthographicCamera();
-    camera.up.set(Vector3.Y);
-    camera.near = 1.f;
-    camera.far = Float.MAX_VALUE / 100;
   }
 
   @Override
   public void create() {
+    this.environment = new Environment();
+    environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 1.0f, 1.0f, 1.0f, 1.0f));
+
+    this.modelBatch = new ModelBatch();
+    this.spriteBatch = new SpriteBatch();
+
+    this.camera = new OrthographicCamera();
+    camera.near = 1.f;
+    camera.far = Float.MAX_VALUE / 100;
+    camera.position.set(0, 0, 0);
+
     world = new World(simulationSpeed);
     init(world);
 
@@ -86,22 +91,23 @@ public abstract class Simulation implements ApplicationListener {
     VectorLike position = getCameraPosition().mul(renderScale);
     VectorLike focus = getCameraFocus().mul(renderScale).minus(position);
 
-    camera.position.set(VectorHelper.toVector3(position));
     camera.lookAt(VectorHelper.toVector3(focus));
     camera.update();
 
+    modelBatch.begin(camera);
     world.render(modelBatch, environment, renderScale, position.mul(-1));
+    modelBatch.end();
+
     world.step();
 
-    // set ambient light to black
-    environment.set(new ColorAttribute(ColorAttribute.AmbientLight, new Color(0.0f, 0.0f, 0.0f, 1.0f)));
-    SpriteBatch batch = new SpriteBatch();
 
     Gdx.gl.glDisable(GL20.GL_DEPTH_TEST);
     Gdx.gl.glDepthMask(false);
 
-    metricsRenderer.renderDefault(world, batch);
-    this.renderMetrics(batch);
+    spriteBatch.begin();
+    metricsRenderer.renderDefault(world, spriteBatch);
+    this.renderMetrics(spriteBatch);
+    spriteBatch.end();
 
     Gdx.gl.glDepthMask(true);
     Gdx.gl.glEnable(GL20.GL_DEPTH_TEST);
@@ -132,5 +138,7 @@ public abstract class Simulation implements ApplicationListener {
   }
   @Override
   public void dispose() {
+    modelBatch.dispose();
+    spriteBatch.dispose();
   }
 }

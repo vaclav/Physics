@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-1g6w0h00lwcfg26o1q2o6p47y19nwc8">
+<product version="3" modelHash="18iy0mjrzjuzgvkv6rdhwodz72st8yr">
   <files names="EntityLike.java:Math3DHelper.java:PhysicalEntity.java:PhysicalEntityProperties.java:SystemScope.java:World.java:WorldBuilder.java" />
 </product>
 
