@@ -14,8 +14,8 @@ import com.badlogic.gdx.utils.TimeUtils;
 import org.ode4j.ode.OdeHelper;
 import org.ode4j.ode.internal.DxGeom;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.CollisionReaction;
-import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.Environment;
+import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import java.util.List;
 
@@ -111,16 +111,16 @@ public class World implements DGeom.DNearCallback, Renderable {
 
 
   @Override
-  public void setup(float scale) {
+  public void setup(Environment env, float scale) {
     for (PhysicalEntity entity : entities) {
-      entity.setup(scale);
+      entity.setup(env, scale);
     }
   }
 
   @Override
   public void render(ModelBatch batch, Environment environment, float scale, VectorLike scaledOffset) {
     for (PhysicalEntity entity : entities) {
-      entity.applyLights(environment, scale, scaledOffset);
+      entity.updateLights(scale, scaledOffset);
     }
 
     for (PhysicalEntity entity : entities) {

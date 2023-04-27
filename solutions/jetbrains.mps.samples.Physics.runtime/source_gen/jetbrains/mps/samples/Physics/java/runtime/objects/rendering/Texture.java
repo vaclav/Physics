@@ -5,9 +5,7 @@ package jetbrains.mps.samples.Physics.java.runtime.objects.rendering;
 import com.badlogic.gdx.graphics.g3d.Material;
 
 public abstract class Texture {
-
   public abstract Material getMaterial(boolean emissive);
-
 
   /**
    * Merge the current texture with the given one, the participation is used to determine how much this texture should be represented in the result

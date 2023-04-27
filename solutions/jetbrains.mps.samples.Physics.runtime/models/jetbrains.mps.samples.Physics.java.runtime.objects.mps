@@ -625,6 +625,19 @@
       <node concept="3clFbT" id="5kbw6V4ctDw" role="33vP2m" />
     </node>
     <node concept="2tJIrI" id="5kbw6V4cmUx" role="jymVt" />
+    <node concept="312cEg" id="3ESPqyAqP1I" role="jymVt">
+      <property role="TrG5h" value="light" />
+      <node concept="3Tm6S6" id="3ESPqyAqKiA" role="1B3o_S" />
+      <node concept="3uibUv" id="3ESPqyAqOd1" role="1tU5fm">
+        <ref role="3uigEE" to="2kmt:~PointLight" resolve="PointLight" />
+      </node>
+      <node concept="2ShNRf" id="3ESPqyAqT0u" role="33vP2m">
+        <node concept="1pGfFk" id="3ESPqyAqSXV" role="2ShVmc">
+          <ref role="37wK5l" to="2kmt:~PointLight.&lt;init&gt;()" resolve="PointLight" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="3ESPqyAqqdJ" role="jymVt" />
     <node concept="312cEg" id="5H6c1qUqwWH" role="jymVt">
       <property role="TrG5h" value="properties" />
       <node concept="3Tm6S6" id="5H6c1qUqtBg" role="1B3o_S" />
@@ -1069,13 +1082,7 @@
     </node>
     <node concept="2tJIrI" id="MHm3qu$RKG" role="jymVt" />
     <node concept="3clFb_" id="1aWbRKf9gru" role="jymVt">
-      <property role="TrG5h" value="applyLights" />
-      <node concept="37vLTG" id="1aWbRKf9grv" role="3clF46">
-        <property role="TrG5h" value="environment" />
-        <node concept="3uibUv" id="1aWbRKf9grw" role="1tU5fm">
-          <ref role="3uigEE" to="e8y8:~Environment" resolve="Environment" />
-        </node>
-      </node>
+      <property role="TrG5h" value="updateLights" />
       <node concept="37vLTG" id="1aWbRKf9grx" role="3clF46">
         <property role="TrG5h" value="scale" />
         <node concept="10OMs4" id="1aWbRKf9gry" role="1tU5fm" />
@@ -1096,12 +1103,10 @@
           </node>
         </node>
         <node concept="3clFbJ" id="1aWbRKf9grF" role="3cqZAp">
-          <node concept="2OqwBi" id="1aWbRKf9wSd" role="3clFbw">
-            <node concept="37vLTw" id="1aWbRKf9rox" role="2Oq$k0">
-              <ref role="3cqZAo" node="3H79Ykd2GyX" resolve="fixture" />
-            </node>
-            <node concept="liA8E" id="1aWbRKf9wSe" role="2OqNvi">
-              <ref role="37wK5l" to="d2el:k9gc968qXS" resolve="doEmitLight" />
+          <node concept="3y3z36" id="3ESPqyArHNE" role="3clFbw">
+            <node concept="10Nm6u" id="3ESPqyArKdh" role="3uHU7w" />
+            <node concept="37vLTw" id="3ESPqyArEad" role="3uHU7B">
+              <ref role="3cqZAo" node="3ESPqyAqP1I" resolve="light" />
             </node>
           </node>
           <node concept="3clFbS" id="1aWbRKf9grI" role="3clFbx">
@@ -1152,47 +1157,26 @@
                 </node>
               </node>
             </node>
-            <node concept="3cpWs8" id="1aWbRKf9gsg" role="3cqZAp">
-              <node concept="3cpWsn" id="1aWbRKf9gsf" role="3cpWs9">
-                <property role="TrG5h" value="pointLight" />
-                <node concept="3uibUv" id="1aWbRKf9gsh" role="1tU5fm">
-                  <ref role="3uigEE" to="2kmt:~PointLight" resolve="PointLight" />
+            <node concept="3clFbF" id="3ESPqyAssxn" role="3cqZAp">
+              <node concept="2OqwBi" id="1aWbRKf9Tdq" role="3clFbG">
+                <node concept="37vLTw" id="3ESPqyAsm$r" role="2Oq$k0">
+                  <ref role="3cqZAo" node="3ESPqyAqP1I" resolve="light" />
                 </node>
-                <node concept="2OqwBi" id="1aWbRKf9Tdq" role="33vP2m">
-                  <node concept="2ShNRf" id="1aWbRKf9Qrg" role="2Oq$k0">
-                    <node concept="1pGfFk" id="1aWbRKf9Qrh" role="2ShVmc">
-                      <ref role="37wK5l" to="2kmt:~PointLight.&lt;init&gt;()" resolve="PointLight" />
+                <node concept="liA8E" id="1aWbRKf9Tdr" role="2OqNvi">
+                  <ref role="37wK5l" to="2kmt:~PointLight.set(com.badlogic.gdx.graphics.Color,com.badlogic.gdx.math.Vector3,float)" resolve="set" />
+                  <node concept="10M0yZ" id="1aWbRKf9Tds" role="37wK5m">
+                    <ref role="1PxDUh" to="ylxi:~Color" resolve="Color" />
+                    <ref role="3cqZAo" to="ylxi:~Color.WHITE" resolve="WHITE" />
+                  </node>
+                  <node concept="2YIFZM" id="1aWbRKfdbzK" role="37wK5m">
+                    <ref role="1Pybhc" to="t4bh:31HEEbcijiK" resolve="VectorHelper" />
+                    <ref role="37wK5l" to="t4bh:1aWbRKfd1tU" resolve="toVector3" />
+                    <node concept="37vLTw" id="1aWbRKfdeFS" role="37wK5m">
+                      <ref role="3cqZAo" node="1aWbRKfcejv" resolve="lightPosition" />
                     </node>
                   </node>
-                  <node concept="liA8E" id="1aWbRKf9Tdr" role="2OqNvi">
-                    <ref role="37wK5l" to="2kmt:~PointLight.set(com.badlogic.gdx.graphics.Color,com.badlogic.gdx.math.Vector3,float)" resolve="set" />
-                    <node concept="10M0yZ" id="1aWbRKf9Tds" role="37wK5m">
-                      <ref role="1PxDUh" to="ylxi:~Color" resolve="Color" />
-                      <ref role="3cqZAo" to="ylxi:~Color.WHITE" resolve="WHITE" />
-                    </node>
-                    <node concept="2YIFZM" id="1aWbRKfdbzK" role="37wK5m">
-                      <ref role="37wK5l" to="t4bh:1aWbRKfd1tU" resolve="toVector3" />
-                      <ref role="1Pybhc" to="t4bh:31HEEbcijiK" resolve="VectorHelper" />
-                      <node concept="37vLTw" id="1aWbRKfdeFS" role="37wK5m">
-                        <ref role="3cqZAo" node="1aWbRKfcejv" resolve="lightPosition" />
-                      </node>
-                    </node>
-                    <node concept="3cmrfG" id="1aWbRKf9Tdw" role="37wK5m">
-                      <property role="3cmrfH" value="1000" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="1aWbRKf9gsn" role="3cqZAp">
-              <node concept="2OqwBi" id="1aWbRKfczUM" role="3clFbG">
-                <node concept="37vLTw" id="1aWbRKf9ro1" role="2Oq$k0">
-                  <ref role="3cqZAo" node="1aWbRKf9grv" resolve="environment" />
-                </node>
-                <node concept="liA8E" id="1aWbRKfczUN" role="2OqNvi">
-                  <ref role="37wK5l" to="e8y8:~Environment.add(com.badlogic.gdx.graphics.g3d.environment.PointLight)" resolve="add" />
-                  <node concept="37vLTw" id="1aWbRKfczUO" role="37wK5m">
-                    <ref role="3cqZAo" node="1aWbRKf9gsf" resolve="pointLight" />
+                  <node concept="3cmrfG" id="1aWbRKf9Tdw" role="37wK5m">
+                    <property role="3cmrfH" value="1000" />
                   </node>
                 </node>
               </node>
@@ -1209,6 +1193,12 @@
       <property role="TrG5h" value="setup" />
       <node concept="3Tm1VV" id="MHm3qu_24d" role="1B3o_S" />
       <node concept="3cqZAl" id="MHm3qu_24e" role="3clF45" />
+      <node concept="37vLTG" id="1aWbRKfdOLQ" role="3clF46">
+        <property role="TrG5h" value="env" />
+        <node concept="3uibUv" id="1aWbRKfdPEi" role="1tU5fm">
+          <ref role="3uigEE" to="e8y8:~Environment" resolve="Environment" />
+        </node>
+      </node>
       <node concept="37vLTG" id="MHm3qu_cfe" role="3clF46">
         <property role="TrG5h" value="scale" />
         <node concept="10OMs4" id="MHm3qu_eH3" role="1tU5fm" />
@@ -1227,6 +1217,43 @@
               <node concept="37vLTw" id="MHm3qu_fKl" role="37wK5m">
                 <ref role="3cqZAo" node="MHm3qu_cfe" resolve="scale" />
               </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="3ESPqyAqWU$" role="3cqZAp">
+          <node concept="3clFbS" id="3ESPqyAqWUA" role="3clFbx">
+            <node concept="3clFbF" id="3ESPqyArtyx" role="3cqZAp">
+              <node concept="37vLTI" id="3ESPqyArxm_" role="3clFbG">
+                <node concept="2ShNRf" id="3ESPqyArzM9" role="37vLTx">
+                  <node concept="1pGfFk" id="3ESPqyArzKX" role="2ShVmc">
+                    <ref role="37wK5l" to="2kmt:~PointLight.&lt;init&gt;()" resolve="PointLight" />
+                  </node>
+                </node>
+                <node concept="37vLTw" id="3ESPqyArtyw" role="37vLTJ">
+                  <ref role="3cqZAo" node="3ESPqyAqP1I" resolve="light" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="1aWbRKf9gsn" role="3cqZAp">
+              <node concept="2OqwBi" id="1aWbRKfczUM" role="3clFbG">
+                <node concept="37vLTw" id="1aWbRKf9ro1" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1aWbRKfdOLQ" resolve="env" />
+                </node>
+                <node concept="liA8E" id="1aWbRKfczUN" role="2OqNvi">
+                  <ref role="37wK5l" to="e8y8:~Environment.add(com.badlogic.gdx.graphics.g3d.environment.PointLight)" resolve="add" />
+                  <node concept="37vLTw" id="3ESPqyAseYN" role="37wK5m">
+                    <ref role="3cqZAo" node="3ESPqyAqP1I" resolve="light" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="3ESPqyAr2Pz" role="3clFbw">
+            <node concept="37vLTw" id="3ESPqyAr073" role="2Oq$k0">
+              <ref role="3cqZAo" node="3H79Ykd2GyX" resolve="fixture" />
+            </node>
+            <node concept="liA8E" id="3ESPqyAr6mH" role="2OqNvi">
+              <ref role="37wK5l" to="d2el:k9gc968qXS" resolve="doEmitLight" />
             </node>
           </node>
         </node>
@@ -3017,6 +3044,12 @@
       <property role="TrG5h" value="setup" />
       <node concept="3Tm1VV" id="MHm3qu_Hy_" role="1B3o_S" />
       <node concept="3cqZAl" id="MHm3qu_HyA" role="3clF45" />
+      <node concept="37vLTG" id="3ESPqyAsFhw" role="3clF46">
+        <property role="TrG5h" value="env" />
+        <node concept="3uibUv" id="3ESPqyAsKUg" role="1tU5fm">
+          <ref role="3uigEE" to="e8y8:~Environment" resolve="Environment" />
+        </node>
+      </node>
       <node concept="37vLTG" id="MHm3qu_HyD" role="3clF46">
         <property role="TrG5h" value="scale" />
         <node concept="10OMs4" id="MHm3qu_HyE" role="1tU5fm" />
@@ -3031,6 +3064,9 @@
                 </node>
                 <node concept="liA8E" id="MHm3qu_NDF" role="2OqNvi">
                   <ref role="37wK5l" node="MHm3qu_24b" resolve="setup" />
+                  <node concept="37vLTw" id="3ESPqyAsR47" role="37wK5m">
+                    <ref role="3cqZAo" node="3ESPqyAsFhw" resolve="env" />
+                  </node>
                   <node concept="37vLTw" id="MHm3qu_NNM" role="37wK5m">
                     <ref role="3cqZAo" node="MHm3qu_HyD" resolve="scale" />
                   </node>
@@ -3068,9 +3104,6 @@
                 </node>
                 <node concept="liA8E" id="k9gc96lg6H" role="2OqNvi">
                   <ref role="37wK5l" node="1aWbRKf9gru" resolve="applyLights" />
-                  <node concept="37vLTw" id="1aWbRKfzkfM" role="37wK5m">
-                    <ref role="3cqZAo" node="1aWbRKfz7x4" resolve="environment" />
-                  </node>
                   <node concept="37vLTw" id="1IEyTntGU7z" role="37wK5m">
                     <ref role="3cqZAo" node="1IEyTntGzyE" resolve="scale" />
                   </node>

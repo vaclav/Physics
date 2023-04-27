@@ -19,7 +19,7 @@ public class MetricsRenderer {
   public MetricsRenderer(BitmapFont font) {
     this.font = font;
     ascent = font.getAscent();
-    lineHeight = font.getLineHeight();
+    lineHeight = font.getLineHeight() + 5;
   }
 
   public void renderDefault(World world, SpriteBatch batch) {
@@ -32,8 +32,8 @@ public class MetricsRenderer {
     if (world.isPaused()) {
       str.append(" [paused]");
     }
-    font.draw(batch, str.toString(), 5, 15);
-    currentHeight = lineHeight * 2 + 5;
+    font.draw(batch, str.toString(), 5, 0);
+    currentHeight = lineHeight * 2;
   }
 
   public void renderMetric(SpriteBatch batch, final String name, Object rendered) {

@@ -7,6 +7,7 @@ import jetbrains.mps.samples.Physics.java.runtime.Renderable;
 import org.ode4j.ode.DBody;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Fixture;
 import java.math.BigDecimal;
+import com.badlogic.gdx.graphics.g3d.environment.PointLight;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropertiesBuilder;
 import java.util.ArrayList;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.Force;
@@ -15,10 +16,9 @@ import org.ode4j.math.DVector3C;
 import org.ode4j.math.DVector3;
 import jetbrains.mps.samples.Physics.java.common.vectors.ForceMode;
 import jetbrains.mps.samples.Physics.java.runtime.objects.forces.ForceModeApplication;
-import com.badlogic.gdx.graphics.g3d.Environment;
 import jetbrains.mps.samples.Physics.java.runtime.VectorHelper;
-import com.badlogic.gdx.graphics.g3d.environment.PointLight;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g3d.Environment;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import org.ode4j.math.DMatrix3C;
 import com.badlogic.gdx.math.Quaternion;
@@ -36,6 +36,8 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
   private String name;
   private BigDecimal massCached;
   private boolean disabled = false;
+
+  private PointLight light = new PointLight();
 
   private PhysicalEntityProperties properties = new PhysicalEntityProperties();
 
@@ -99,22 +101,25 @@ public class PhysicalEntity<T extends SystemScope> extends VectorLike implements
     }
   }
 
-  public void applyLights(Environment environment, float scale, VectorLike scaledOffset) {
+  public void updateLights(float scale, VectorLike scaledOffset) {
     if (disabled) {
       return;
     }
-    if (fixture.doEmitLight()) {
+    if (light != null) {
       DVector3C position = body.getPosition();
       VectorLike lightPosition = VectorHelper.fromDVector3C(position).mul(scale).add(scaledOffset);
-      PointLight pointLight = new PointLight().set(Color.WHITE, VectorHelper.toVector3(lightPosition), 1000);
-      environment.add(pointLight);
+      light.set(Color.WHITE, VectorHelper.toVector3(lightPosition), 1000);
     }
   }
 
 
   @Override
-  public void setup(float scale) {
+  public void setup(Environment env, float scale) {
     this.fixture.setup(scale);
+    if (fixture.doEmitLight()) {
+      light = new PointLight();
+      env.add(light);
+    }
   }
 
   public void render(ModelBatch batch, Environment env, float scale, VectorLike scaledOffset) {

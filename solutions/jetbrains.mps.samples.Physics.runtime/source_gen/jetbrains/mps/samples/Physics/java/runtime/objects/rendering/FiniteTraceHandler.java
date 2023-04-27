@@ -48,6 +48,7 @@ public class FiniteTraceHandler extends TraceHandler {
       int cursor = (i + offset) % MAX_CAPACITY;
       float[] vals = content[cursor];
       renderer.line(prev[0], prev[1], prev[2], vals[0], vals[1], vals[2]);
+      prev = vals;
     }
   }
 }
