@@ -9,11 +9,12 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
+import jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
-import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
 public class RocketSimSimulation extends Simulation {
   protected RocketWorldSystemScope scope;
@@ -35,27 +36,27 @@ public class RocketSimSimulation extends Simulation {
 
 
   @Override
-  public VectorLike getCameraPosition(PGraphics graphics) {
+  public VectorLike getCameraPosition() {
     VectorLike currentEntity = this.scope;
 
     return scope.RocketEuropaS452G.getPosition().add((scope.RocketEuropaS452G.getPosition().minus(scope.Earth.getPosition())).resize(((Number) (AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1")))))));
   }
 
   @Override
-  public VectorLike getCameraFocus(PGraphics graphics) {
+  public VectorLike getCameraFocus() {
     VectorLike currentEntity = this.scope;
 
     return scope.Earth;
   }
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
-    this.metricsRenderer.renderMetric(ctx, "Rocket speed", MetricsRenderer.anyToString(scope.RocketEuropaS452G.getVelocity().length()) + " mps");
-    this.metricsRenderer.renderMetric(ctx, "Height", MetricsRenderer.anyToString(AH.sub(scope.RocketEuropaS452G.minus(scope.Earth).length(), scope.Earth.getPropertiesBuilder().get(PropKey.SPHERE_RADIUS))) + " m^1");
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
+    this.metricsRenderer.renderMetric(ctx, shapeRenderer, "Rocket speed", MetricsRenderer.anyToString(scope.RocketEuropaS452G.getVelocity().length()) + " mps");
+    this.metricsRenderer.renderMetric(ctx, shapeRenderer, "Height", MetricsRenderer.anyToString(AH.sub(scope.RocketEuropaS452G.minus(scope.Earth).length(), scope.Earth.getPropertiesBuilder().get(PropKey.SPHERE_RADIUS))) + " m^1");
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new RocketSimSimulation()));
-    Renderer.main(args);
+    CompositeRenderer views = new CompositeRenderer(new RocketSimSimulation());
+    new Renderer(views).startApp("Rocket Sim");
   }
 }

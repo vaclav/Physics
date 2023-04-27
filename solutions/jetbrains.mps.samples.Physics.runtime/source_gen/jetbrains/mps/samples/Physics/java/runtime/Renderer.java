@@ -6,6 +6,7 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 
 public class Renderer implements ApplicationListener {
   private final ApplicationListener nested;
@@ -20,17 +21,17 @@ public class Renderer implements ApplicationListener {
     config.setWindowedMode(800, 480);
     config.setForegroundFPS(50);
     config.useVsync(true);
+    config.setResizable(true);
     new Lwjgl3Application(this, config);
   }
 
   public void create() {
     Gdx.graphics.setContinuousRendering(true);
-    Gdx.graphics.setResizable(true);
-    Gdx.graphics.setTitle("Physical simulation");
     nested.create();
   }
 
   public void render() {
+    Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
     nested.render();
   }
   @Override

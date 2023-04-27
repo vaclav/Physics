@@ -11,9 +11,10 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
-import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
 public class SolarSystemSimSimulation extends Simulation {
   protected SolarSystemSystemScope scope;
@@ -35,25 +36,25 @@ public class SolarSystemSimSimulation extends Simulation {
 
 
   @Override
-  public VectorLike getCameraPosition(PGraphics graphics) {
+  public VectorLike getCameraPosition() {
     VectorLike currentEntity = this.scope;
 
     return scope.EarthNested.Earth3.getPosition().add(new InternalVector(((Number) (AH.mul(((Number) new BigInteger("190000")), ((Number) new BigDecimal("1.00E+3").setScale(0, RoundingMode.DOWN))))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")))).add(scope.EarthNested.Earth3.getPosition().minus(scope.Sun.getPosition()).resize(((Number) (AH.mul(((Number) new BigInteger("744000")), ((Number) new BigDecimal("1.00E+3").setScale(0, RoundingMode.DOWN)))))));
   }
 
   @Override
-  public VectorLike getCameraFocus(PGraphics graphics) {
+  public VectorLike getCameraFocus() {
     VectorLike currentEntity = this.scope;
 
     return scope.EarthNested.Earth3;
   }
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new SolarSystemSimSimulation(), new SolarSystemSim1AlternativeView0()));
-    Renderer.main(args);
+    CompositeRenderer views = new CompositeRenderer(new SolarSystemSimSimulation(), new SolarSystemSim1AlternativeView0());
+    new Renderer(views).startApp("SolarSystemSim");
   }
 }

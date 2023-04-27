@@ -143,6 +143,7 @@ public class FallingBallWorldSystemScope extends SystemScope {
       propertiesBuilder.set(PropKey.BOX_Y, ((Number) (AH.mul(((Number) new BigInteger("2")), ((Number) new BigInteger("1"))))));
       propertiesBuilder.set(PropKey.BOX_Z, ((Number) (AH.mul(((Number) new BigInteger("200")), ((Number) new BigInteger("1"))))));
       propertiesBuilder.set(PropKey.COLLISION_REACT, SimpleCollisionReaction.IGNORE.reaction);
+      propertiesBuilder.set(PropKey.TEXTURE, new ColorTexture(new Color(0, 255, 0), new Color(0, 0, 0)));
       propertiesBuilder.set(PropKey.SHAPE, "box");
       this.getForces().addAll(Arrays.asList());
     }

@@ -296,95 +296,97 @@
   </root>
   <root nodeRef="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.java.runtime.objects.rendering)/4343445683754277903">
     <file name="RenderableMetric.java">
-      <node id="4343445683754278282" at="17,0,18,0" concept="6" trace="render#(Lcom/badlogic/gdx/graphics/g2d/Batch;FFF)F" />
-      <scope id="4343445683754278282" at="17,0,18,0">
+      <node id="4343445683754278282" at="18,0,19,0" concept="6" trace="render#(Lcom/badlogic/gdx/graphics/g2d/Batch;Lcom/badlogic/gdx/graphics/glutils/ShapeRenderer;FFF)F" />
+      <scope id="4343445683754278282" at="18,0,19,0">
         <var name="context" id="4343445683754278342" />
         <var name="leftX" id="1350006198187379508" />
         <var name="lineHeight" id="4343445683754278502" />
+        <var name="renderer" id="9040420210234532263" />
         <var name="topY" id="4343445683757396017" />
       </scope>
-      <unit id="4343445683754277903" at="7,0,19,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric" />
+      <unit id="4343445683754277903" at="8,0,20,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric" />
     </file>
   </root>
   <root nodeRef="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.java.runtime.objects.rendering)/5369611234116868448">
     <file name="MetricsRenderer.java">
-      <node id="4343445683754252983" at="13,0,14,0" concept="3" trace="lineHeight" />
-      <node id="4343445683754485716" at="14,0,15,0" concept="3" trace="currentHeight" />
-      <node id="4343445683757412309" at="15,0,16,0" concept="3" trace="ascent" />
-      <node id="1350006198187146488" at="16,0,17,0" concept="3" trace="font" />
-      <node id="1350006198187146492" at="17,0,18,0" concept="3" trace="layout" />
-      <node id="1350006198187146502" at="19,43,20,21" concept="2" />
-      <node id="1350006198187146508" at="20,21,21,30" concept="2" />
-      <node id="1350006198187146512" at="21,30,22,42" concept="2" />
-      <node id="1350006198187146528" at="25,61,26,44" concept="7" />
-      <node id="1350006198187283418" at="26,44,27,0" concept="10" />
-      <node id="1350006198187146664" at="27,0,28,25" concept="9" />
-      <node id="1350006198187146531" at="28,25,29,33" concept="2" />
-      <node id="1350006198187146534" at="29,33,30,32" concept="2" />
-      <node id="1350006198187146537" at="30,32,31,20" concept="2" />
-      <node id="1350006198187146544" at="32,27,33,30" concept="2" />
-      <node id="1350006198187146547" at="34,5,35,43" concept="2" />
-      <node id="1350006198187146553" at="35,43,36,35" concept="2" />
-      <node id="1350006198187146578" at="40,47,41,64" concept="7" />
-      <node id="1350006198187146669" at="41,64,42,18" concept="9" />
-      <node id="1350006198187146583" at="42,18,43,53" concept="2" />
-      <node id="1350006198187146673" at="43,53,44,20" concept="9" />
-      <node id="1350006198187146591" at="44,20,45,34" concept="2" />
-      <node id="1350006198187146595" at="45,34,46,21" concept="2" />
+      <node id="4343445683754252983" at="14,0,15,0" concept="3" trace="lineHeight" />
+      <node id="4343445683754485716" at="15,0,16,0" concept="3" trace="currentHeight" />
+      <node id="4343445683757412309" at="16,0,17,0" concept="3" trace="ascent" />
+      <node id="1350006198187146488" at="17,0,18,0" concept="3" trace="font" />
+      <node id="1350006198187146492" at="18,0,19,0" concept="3" trace="layout" />
+      <node id="1350006198187146502" at="20,43,21,21" concept="2" />
+      <node id="1350006198187146508" at="21,21,22,30" concept="2" />
+      <node id="1350006198187146512" at="22,30,23,42" concept="2" />
+      <node id="1350006198187146528" at="26,61,27,44" concept="7" />
+      <node id="1350006198187283418" at="27,44,28,0" concept="10" />
+      <node id="1350006198187146664" at="28,0,29,25" concept="9" />
+      <node id="1350006198187146531" at="29,25,30,33" concept="2" />
+      <node id="1350006198187146534" at="30,33,31,32" concept="2" />
+      <node id="1350006198187146537" at="31,32,32,20" concept="2" />
+      <node id="1350006198187146544" at="33,27,34,30" concept="2" />
+      <node id="1350006198187146547" at="35,5,36,43" concept="2" />
+      <node id="1350006198187146553" at="36,43,37,35" concept="2" />
+      <node id="1350006198187146578" at="41,47,42,64" concept="7" />
+      <node id="1350006198187146669" at="42,64,43,18" concept="9" />
+      <node id="1350006198187146583" at="43,18,44,53" concept="2" />
+      <node id="1350006198187146673" at="44,53,45,20" concept="9" />
+      <node id="1350006198187146595" at="45,20,46,21" concept="2" />
       <node id="1350006198187146597" at="46,21,47,40" concept="2" />
-      <node id="1350006198187146601" at="47,40,48,102" concept="2" />
-      <node id="1350006198187146677" at="49,12,50,35" concept="9" />
-      <node id="1350006198187146615" at="50,35,51,78" concept="2" />
-      <node id="1350006198187146626" at="51,78,52,34" concept="2" />
-      <node id="4343445683763080739" at="57,24,58,20" concept="8" />
-      <node id="4343445683763075527" at="59,5,60,0" concept="10" />
-      <node id="4343445683763063295" at="61,38,62,139" concept="8" />
-      <node id="4343445683763067387" at="63,5,64,28" concept="8" />
-      <node id="4343445683763062016" at="66,71,67,47" concept="8" />
-      <node id="1350006198187146540" at="31,20,34,5" concept="5" />
-      <node id="4343445683754968150" at="56,50,59,5" concept="5" />
-      <node id="4343445683763060200" at="60,0,63,5" concept="5" />
-      <node id="4343445683763062016" at="66,0,69,0" concept="12" trace="as_obeszn_a0a0a0a2a21#(Ljava/lang/Object;Ljava/lang/Class;)null" />
-      <node id="1350006198187146613" at="49,10,53,5" concept="0" />
-      <node id="1350006198187146497" at="19,0,24,0" concept="1" trace="MetricsRenderer#(Lcom/badlogic/gdx/graphics/g2d/BitmapFont;)V" />
-      <node id="4343445683763041034" at="56,0,66,0" concept="12" trace="anyToString#(Ljava/lang/Object;)Ljava/lang/String;" />
-      <node id="1350006198187146521" at="25,0,38,0" concept="6" trace="renderDefault#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Lcom/badlogic/gdx/graphics/g2d/SpriteBatch;)V" />
-      <node id="1350006198187146571" at="39,83,53,5" concept="5" />
-      <node id="1350006198187146563" at="39,0,55,0" concept="6" trace="renderMetric#(Lcom/badlogic/gdx/graphics/g2d/SpriteBatch;Ljava/lang/String;Ljava/lang/Object;)V" />
-      <scope id="1350006198187146543" at="32,27,33,30" />
-      <scope id="4343445683754968152" at="57,24,58,20" />
-      <scope id="4343445683763060202" at="61,38,62,139" />
-      <scope id="4343445683763062016" at="66,71,67,47" />
-      <scope id="1350006198187146501" at="19,43,22,42" />
-      <scope id="1350006198187146614" at="49,12,52,34" />
-      <scope id="4343445683763062016" at="66,0,69,0">
+      <node id="1350006198187146601" at="47,40,48,134" concept="2" />
+      <node id="1350006198187146591" at="48,134,49,34" concept="2" />
+      <node id="1350006198187146677" at="50,12,51,35" concept="9" />
+      <node id="1350006198187146615" at="51,35,52,78" concept="2" />
+      <node id="1350006198187146626" at="52,78,53,34" concept="2" />
+      <node id="4343445683763080739" at="58,24,59,20" concept="8" />
+      <node id="4343445683763075527" at="60,5,61,0" concept="10" />
+      <node id="4343445683763063295" at="62,38,63,139" concept="8" />
+      <node id="4343445683763067387" at="64,5,65,28" concept="8" />
+      <node id="4343445683763062016" at="67,71,68,47" concept="8" />
+      <node id="1350006198187146540" at="32,20,35,5" concept="5" />
+      <node id="4343445683754968150" at="57,50,60,5" concept="5" />
+      <node id="4343445683763060200" at="61,0,64,5" concept="5" />
+      <node id="4343445683763062016" at="67,0,70,0" concept="12" trace="as_obeszn_a0a0a0a2a21#(Ljava/lang/Object;Ljava/lang/Class;)null" />
+      <node id="1350006198187146613" at="50,10,54,5" concept="0" />
+      <node id="1350006198187146497" at="20,0,25,0" concept="1" trace="MetricsRenderer#(Lcom/badlogic/gdx/graphics/g2d/BitmapFont;)V" />
+      <node id="4343445683763041034" at="57,0,67,0" concept="12" trace="anyToString#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="1350006198187146521" at="26,0,39,0" concept="6" trace="renderDefault#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Lcom/badlogic/gdx/graphics/g2d/SpriteBatch;)V" />
+      <node id="1350006198187146571" at="40,112,54,5" concept="5" />
+      <node id="1350006198187146563" at="40,0,56,0" concept="6" trace="renderMetric#(Lcom/badlogic/gdx/graphics/g2d/SpriteBatch;Lcom/badlogic/gdx/graphics/glutils/ShapeRenderer;Ljava/lang/String;Ljava/lang/Object;)V" />
+      <scope id="1350006198187146543" at="33,27,34,30" />
+      <scope id="4343445683754968152" at="58,24,59,20" />
+      <scope id="4343445683763060202" at="62,38,63,139" />
+      <scope id="4343445683763062016" at="67,71,68,47" />
+      <scope id="1350006198187146501" at="20,43,23,42" />
+      <scope id="1350006198187146614" at="50,12,53,34" />
+      <scope id="4343445683763062016" at="67,0,70,0">
         <var name="o" id="4343445683763062016" />
         <var name="type" id="4343445683763062016" />
       </scope>
-      <scope id="1350006198187146497" at="19,0,24,0">
+      <scope id="1350006198187146497" at="20,0,25,0">
         <var name="font" id="1350006198187146499" />
       </scope>
-      <scope id="1350006198187146576" at="40,47,48,102">
+      <scope id="1350006198187146576" at="41,47,49,34">
         <var name="renderable" id="1350006198187146577" />
       </scope>
-      <scope id="4343445683763041037" at="56,50,64,28" />
-      <scope id="4343445683763041034" at="56,0,66,0">
+      <scope id="4343445683763041037" at="57,50,65,28" />
+      <scope id="4343445683763041034" at="57,0,67,0">
         <var name="value" id="4343445683763046954" />
       </scope>
-      <scope id="1350006198187146526" at="25,61,36,35">
+      <scope id="1350006198187146526" at="26,61,37,35">
         <var name="str" id="1350006198187146527" />
       </scope>
-      <scope id="1350006198187146521" at="25,0,38,0">
+      <scope id="1350006198187146521" at="26,0,39,0">
         <var name="batch" id="1350006198187146524" />
         <var name="world" id="1350006198187146522" />
       </scope>
-      <scope id="1350006198187146570" at="39,83,53,5" />
-      <scope id="1350006198187146563" at="39,0,55,0">
+      <scope id="1350006198187146570" at="40,112,54,5" />
+      <scope id="1350006198187146563" at="40,0,56,0">
         <var name="batch" id="1350006198187313028" />
         <var name="name" id="1350006198187146566" />
         <var name="rendered" id="1350006198187146568" />
+        <var name="shapeRenderer" id="9040420210234514271" />
       </scope>
-      <unit id="5369611234116868448" at="12,0,70,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer" />
+      <unit id="5369611234116868448" at="13,0,71,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer" />
     </file>
   </root>
   <root nodeRef="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.java.runtime.objects.rendering)/794591792991348632">
@@ -407,35 +409,34 @@
       <node id="5986738463481158892" at="44,12,45,19" concept="8" />
       <node id="5986738463481203533" at="50,26,51,21" concept="8" />
       <node id="5986738463481203541" at="53,28,54,23" concept="8" />
-      <node id="1350006198182610647" at="57,79,58,16" concept="2" />
-      <node id="5060019765304738961" at="58,16,59,0" concept="10" />
-      <node id="2966729767460919002" at="59,0,60,49" concept="7" />
-      <node id="1350006198182628205" at="60,49,61,51" concept="2" />
-      <node id="1350006198182644000" at="61,51,62,41" concept="2" />
-      <node id="1350006198182743232" at="62,41,63,59" concept="2" />
-      <node id="1350006198182757300" at="63,59,64,19" concept="2" />
-      <node id="5060019765304741334" at="64,19,65,0" concept="10" />
-      <node id="1350006198182765071" at="65,0,66,18" concept="2" />
-      <node id="4343445683754341814" at="66,18,67,13" concept="8" />
-      <node id="5986738463481212262" at="69,68,70,47" concept="8" />
+      <node id="9040420210234555318" at="57,108,58,16" concept="2" />
+      <node id="9040420210234555322" at="58,16,59,0" concept="10" />
+      <node id="9040420210234555323" at="59,0,60,56" concept="2" />
+      <node id="9040420210234555328" at="60,56,61,46" concept="2" />
+      <node id="9040420210234555333" at="61,46,62,64" concept="2" />
+      <node id="9040420210234555343" at="62,64,63,24" concept="2" />
+      <node id="9040420210234555347" at="63,24,64,0" concept="10" />
+      <node id="9040420210234555348" at="64,0,65,18" concept="2" />
+      <node id="9040420210234555352" at="65,18,66,13" concept="8" />
+      <node id="5986738463481212262" at="68,68,69,47" concept="8" />
       <node id="5986738463481157919" at="44,10,46,5" concept="0" />
       <node id="913483291050055574" at="29,0,32,5" concept="5" />
       <node id="5986738463481203529" at="50,0,53,0" concept="6" trace="getFill#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;" />
       <node id="5986738463481203537" at="53,0,56,0" concept="6" trace="getStroke#()Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;" />
-      <node id="5986738463481212262" at="69,0,72,0" concept="12" trace="as_8d58a4_a0a0a0a7#(Ljava/lang/Object;Ljava/lang/Class;)null" />
+      <node id="5986738463481212262" at="68,0,71,0" concept="12" trace="as_8d58a4_a0a0a0a7#(Ljava/lang/Object;Ljava/lang/Class;)null" />
       <node id="913483291050005928" at="14,0,18,0" concept="1" trace="ColorTexture#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;)V" />
       <node id="1350006198183030245" at="23,68,27,7" concept="5" />
       <node id="913483291050067452" at="21,39,28,5" concept="5" />
       <node id="5986738463481153982" at="38,64,46,5" concept="5" />
       <node id="5986738463481025719" at="37,0,48,0" concept="6" trace="mergeWith#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Texture;F)Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Texture;" />
-      <node id="4343445683754337324" at="56,0,69,0" concept="6" trace="render#(Lcom/badlogic/gdx/graphics/g2d/Batch;FFF)F" />
+      <node id="9040420210234555304" at="56,0,68,0" concept="6" trace="render#(Lcom/badlogic/gdx/graphics/g2d/Batch;Lcom/badlogic/gdx/graphics/glutils/ShapeRenderer;FFF)F" />
       <node id="1350006198182356356" at="19,0,36,0" concept="6" trace="getMaterial#(Z)Lcom/badlogic/gdx/graphics/g3d/Material;" />
       <scope id="913483291050055576" at="30,25,31,71" />
       <scope id="5986738463481155471" at="42,37,43,18" />
       <scope id="5986738463481157920" at="44,12,45,19" />
       <scope id="5986738463481203532" at="50,26,51,21" />
       <scope id="5986738463481203540" at="53,28,54,23" />
-      <scope id="5986738463481212262" at="69,68,70,47" />
+      <scope id="5986738463481212262" at="68,68,69,47" />
       <scope id="913483291050005932" at="14,49,16,25" />
       <scope id="1350006198183030247" at="24,21,26,70" />
       <scope id="5986738463481153984" at="39,40,41,150">
@@ -443,7 +444,7 @@
       </scope>
       <scope id="5986738463481203529" at="50,0,53,0" />
       <scope id="5986738463481203537" at="53,0,56,0" />
-      <scope id="5986738463481212262" at="69,0,72,0">
+      <scope id="5986738463481212262" at="68,0,71,0">
         <var name="o" id="5986738463481212262" />
         <var name="type" id="5986738463481212262" />
       </scope>
@@ -453,18 +454,17 @@
       </scope>
       <scope id="913483291050067453" at="22,23,27,7" />
       <scope id="5986738463481025725" at="38,64,46,5" />
-      <scope id="4343445683754337342" at="57,79,67,13">
-        <var name="renderer" id="2966729767460919005" />
-      </scope>
+      <scope id="9040420210234555317" at="57,108,66,13" />
       <scope id="5986738463481025719" at="37,0,48,0">
         <var name="other" id="5986738463481025723" />
         <var name="participation" id="5986738463481028170" />
       </scope>
-      <scope id="4343445683754337324" at="56,0,69,0">
-        <var name="batch" id="1350006198182598804" />
-        <var name="leftX" id="1350006198187422947" />
-        <var name="lineHeight" id="4343445683754337330" />
-        <var name="topY" id="4343445683757434670" />
+      <scope id="9040420210234555304" at="56,0,68,0">
+        <var name="batch" id="9040420210234555307" />
+        <var name="leftX" id="9040420210234555311" />
+        <var name="lineHeight" id="9040420210234555315" />
+        <var name="shapeRenderer" id="9040420210234555309" />
+        <var name="topY" id="9040420210234555313" />
       </scope>
       <scope id="1350006198182356360" at="20,49,34,20">
         <var name="material" id="1350006198182361212" />
@@ -472,7 +472,7 @@
       <scope id="1350006198182356356" at="19,0,36,0">
         <var name="emissive" id="1350006198182898816" />
       </scope>
-      <unit id="794591792991348632" at="10,0,73,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
+      <unit id="794591792991348632" at="10,0,72,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
     </file>
   </root>
   <root nodeRef="r:1857fda4-d415-4b89-a3e6-40a56c0707e5(jetbrains.mps.samples.Physics.java.runtime.objects.rendering)/8067421349548655013">
@@ -663,23 +663,22 @@
       <node id="5986738463486642679" at="37,24,38,33" concept="2" />
       <node id="5986738463486641031" at="39,5,40,0" concept="10" />
       <node id="5986738463486630996" at="40,0,41,153" concept="8" />
-      <node id="1350006198183062653" at="45,79,46,16" concept="2" />
+      <node id="1350006198183062653" at="45,108,46,16" concept="2" />
       <node id="5060019765304726421" at="46,16,47,0" concept="10" />
-      <node id="2966729767460889092" at="47,0,48,49" concept="7" />
-      <node id="1350006198183062657" at="48,49,49,51" concept="2" />
-      <node id="1350006198183062661" at="49,51,50,36" concept="2" />
-      <node id="1350006198183062668" at="50,36,51,59" concept="2" />
-      <node id="1350006198183062678" at="51,59,52,19" concept="2" />
-      <node id="5060019765304723381" at="52,19,53,0" concept="10" />
-      <node id="1350006198183062682" at="53,0,54,18" concept="2" />
-      <node id="1350006198183062686" at="54,18,55,13" concept="8" />
+      <node id="1350006198183062657" at="47,0,48,56" concept="2" />
+      <node id="1350006198183062661" at="48,56,49,41" concept="2" />
+      <node id="1350006198183062668" at="49,41,50,64" concept="2" />
+      <node id="1350006198183062678" at="50,64,51,24" concept="2" />
+      <node id="5060019765304723381" at="51,24,52,0" concept="10" />
+      <node id="1350006198183062682" at="52,0,53,18" concept="2" />
+      <node id="1350006198183062686" at="53,18,54,13" concept="8" />
       <node id="1350006198182672196" at="24,0,27,0" concept="6" trace="toGdxColor#()Lcom/badlogic/gdx/graphics/Color;" />
       <node id="5986738463486826459" at="28,71,31,5" concept="5" />
       <node id="5986738463486636394" at="33,30,36,5" concept="5" />
       <node id="5986738463486641660" at="36,5,39,5" concept="5" />
       <node id="5986738463481168838" at="19,0,23,0" concept="6" trace="merge#(FLjetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;)Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;" />
       <node id="913483291049983181" at="13,0,18,0" concept="1" trace="Color#(III)V" />
-      <node id="1350006198183062643" at="44,0,57,0" concept="6" trace="render#(Lcom/badlogic/gdx/graphics/g2d/Batch;FFF)F" />
+      <node id="1350006198183062643" at="44,0,56,0" concept="6" trace="render#(Lcom/badlogic/gdx/graphics/g2d/Batch;Lcom/badlogic/gdx/graphics/glutils/ShapeRenderer;FFF)F" />
       <node id="5986738463486630217" at="28,0,43,0" concept="12" trace="merge#(Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;F)Ljetbrains/mps/samples/Physics/java/runtime/objects/rendering/Color;" />
       <scope id="1350006198182672199" at="24,55,25,83" />
       <scope id="5986738463486826461" at="29,40,30,18" />
@@ -699,24 +698,23 @@
         <var name="g" id="913483291049983200" />
         <var name="r" id="913483291049983188" />
       </scope>
-      <scope id="1350006198183062652" at="45,79,55,13">
-        <var name="renderer" id="2966729767460889095" />
-      </scope>
-      <scope id="5986738463486630220" at="28,71,41,153">
-        <var name="rev" id="5986738463486630991" />
-      </scope>
-      <scope id="1350006198183062643" at="44,0,57,0">
+      <scope id="1350006198183062652" at="45,108,54,13" />
+      <scope id="1350006198183062643" at="44,0,56,0">
         <var name="batch" id="1350006198183062646" />
         <var name="leftX" id="1350006198187414231" />
         <var name="lineHeight" id="1350006198183062650" />
+        <var name="shapeRenderer" id="9040420210234539020" />
         <var name="topY" id="1350006198183062648" />
+      </scope>
+      <scope id="5986738463486630220" at="28,71,41,153">
+        <var name="rev" id="5986738463486630991" />
       </scope>
       <scope id="5986738463486630217" at="28,0,43,0">
         <var name="left" id="5986738463486630683" />
         <var name="leftRatio" id="5986738463486630873" />
         <var name="right" id="5986738463486630687" />
       </scope>
-      <unit id="913483291050045713" at="8,0,58,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
+      <unit id="913483291050045713" at="8,0,57,0" name="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     </file>
   </root>
 </debug-info>

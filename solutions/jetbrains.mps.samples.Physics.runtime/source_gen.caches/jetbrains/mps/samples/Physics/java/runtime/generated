@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="3yvgheavclqa9cfbi6qacb9mapt1gib">
+<product version="3" modelHash="-48feaxdtiarrtj2infh1euztygk8m13">
   <files names="CompositeRenderer.java:Renderable.java:Renderer.java:RotationHelper.java:Simulation.java:VectorHelper.java" />
 </product>
 

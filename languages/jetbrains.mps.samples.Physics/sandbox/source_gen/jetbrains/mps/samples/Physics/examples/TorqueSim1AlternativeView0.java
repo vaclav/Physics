@@ -8,7 +8,8 @@ import java.math.BigInteger;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
 public class TorqueSim1AlternativeView0 extends TorqueSimSimulation {
 
@@ -24,8 +25,8 @@ public class TorqueSim1AlternativeView0 extends TorqueSimSimulation {
 
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
-    super.renderMetrics(ctx);
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
+    super.renderMetrics(ctx, shapeRenderer);
   }
 
 }

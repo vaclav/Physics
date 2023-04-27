@@ -6,7 +6,8 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.InfiniteTraceHandler;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
 public class TraceSim1AlternativeView0 extends TraceSimSimulation {
 
@@ -22,8 +23,8 @@ public class TraceSim1AlternativeView0 extends TraceSimSimulation {
 
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
-    super.renderMetrics(ctx);
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
+    super.renderMetrics(ctx, shapeRenderer);
   }
 
 }

@@ -5,7 +5,8 @@ package jetbrains.mps.samples.Physics.examples;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import org.iets3.core.expr.simpleTypes.runtime.AH;
 import java.math.BigInteger;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
 public class FallingBall1AlternativeView0 extends FallingBallSimulation {
 
@@ -20,8 +21,8 @@ public class FallingBall1AlternativeView0 extends FallingBallSimulation {
 
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
-    super.renderMetrics(ctx);
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
+    super.renderMetrics(ctx, shapeRenderer);
   }
 
 }

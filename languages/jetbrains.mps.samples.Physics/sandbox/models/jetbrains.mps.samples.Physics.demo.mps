@@ -116,6 +116,7 @@
       </concept>
       <concept id="7746015835360049752" name="jetbrains.mps.samples.Physics.structure.Simulation" flags="ng" index="3okdC4">
         <child id="2432181455078543840" name="simulationSpeed" index="2aZKB5" />
+        <child id="1993559260849745033" name="simulationScale" index="362iss" />
         <child id="4383135941274869506" name="world" index="1heTBC" />
       </concept>
       <concept id="7746015835360049755" name="jetbrains.mps.samples.Physics.structure.ObjectReferenceExpression" flags="ng" index="3okdC7">
@@ -231,6 +232,14 @@
           </node>
           <node concept="31hh1H" id="1nCAtVz_WqC" role="30czhm" />
         </node>
+      </node>
+    </node>
+    <node concept="1N951E" id="7PQ1$xNa0zR" role="362iss">
+      <node concept="CIsvn" id="7PQ1$xNa0zQ" role="1N7es9">
+        <ref role="1N7KNK" to="nas6:4NfpV2pizyw" resolve="cm" />
+      </node>
+      <node concept="30bXRB" id="7PQ1$xNam2n" role="1N951F">
+        <property role="30bXRw" value="30" />
       </node>
     </node>
   </node>

@@ -91,6 +91,7 @@
     <classNode dependClassName="com.badlogic.gdx.graphics.g2d.BitmapFont" />
     <classNode dependClassName="com.badlogic.gdx.graphics.g2d.GlyphLayout" />
     <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -102,6 +103,7 @@
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.RenderableMetric">
     <classNode dependClassName="com.badlogic.gdx.graphics.g2d.Batch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.SphereFixture">
     <classNode dependClassName="com.badlogic.gdx.graphics.VertexAttributes" />

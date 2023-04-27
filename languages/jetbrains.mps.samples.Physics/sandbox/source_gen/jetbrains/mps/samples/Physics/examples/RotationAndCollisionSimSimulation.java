@@ -9,9 +9,10 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
-import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
 public class RotationAndCollisionSimSimulation extends Simulation {
   protected RotationAndCollisionSystemScope scope;
@@ -33,25 +34,25 @@ public class RotationAndCollisionSimSimulation extends Simulation {
 
 
   @Override
-  public VectorLike getCameraPosition(PGraphics graphics) {
+  public VectorLike getCameraPosition() {
     VectorLike currentEntity = this.scope;
 
     return new InternalVector(((Number) (AH.mul(((Number) new BigInteger("50")), ((Number) new BigInteger("1"))))), ((Number) new BigInteger("0")), ((Number) (AH.mul(((Number) new BigInteger("150")), ((Number) new BigInteger("1"))))));
   }
 
   @Override
-  public VectorLike getCameraFocus(PGraphics graphics) {
+  public VectorLike getCameraFocus() {
     VectorLike currentEntity = this.scope;
 
     return scope.MovingBlock;
   }
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new RotationAndCollisionSimSimulation(), new RotationAndCollisionSim1AlternativeView0()));
-    Renderer.main(args);
+    CompositeRenderer views = new CompositeRenderer(new RotationAndCollisionSimSimulation(), new RotationAndCollisionSim1AlternativeView0());
+    new Renderer(views).startApp("RotationAndCollisionSim");
   }
 }

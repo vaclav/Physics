@@ -7,12 +7,13 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import processing.core.PGraphics;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.iets3.core.expr.simpleTypes.runtime.AH;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.math.BigInteger;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
 public class SolarSystemSim1AlternativeView0 extends SolarSystemSimSimulation {
 
@@ -25,22 +26,22 @@ public class SolarSystemSim1AlternativeView0 extends SolarSystemSimSimulation {
   }
 
   @Override
-  public VectorLike getCameraPosition(PGraphics graphics) {
+  public VectorLike getCameraPosition() {
     VectorLike currentEntity = this.scope;
 
     return new InternalVector(((Number) (AH.mul(((Number) new BigDecimal("300.e6").setScale(0, RoundingMode.DOWN)), ((Number) new BigDecimal("1.00E+3").setScale(0, RoundingMode.DOWN))))), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
   }
 
   @Override
-  public VectorLike getCameraFocus(PGraphics graphics) {
+  public VectorLike getCameraFocus() {
     VectorLike currentEntity = this.scope;
 
     return scope.Sun;
   }
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
-    super.renderMetrics(ctx);
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
+    super.renderMetrics(ctx, shapeRenderer);
   }
 
 }

@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -36,16 +37,16 @@ public class MetricsRenderer {
     currentHeight = lineHeight * 2;
   }
 
-  public void renderMetric(SpriteBatch batch, final String name, Object rendered) {
+  public void renderMetric(SpriteBatch batch, ShapeRenderer shapeRenderer, final String name, Object rendered) {
     if (rendered instanceof RenderableMetric) {
       RenderableMetric renderable = (RenderableMetric) rendered;
       // Draw name
       font.draw(batch, name + ":", 5, currentHeight);
       // Draw metric
-      currentHeight += lineHeight;
       layout.reset();
       layout.setText(font, name + ": ");
-      currentHeight += renderable.render(batch, 9 + layout.width, currentHeight - ascent, lineHeight);
+      currentHeight += renderable.render(batch, shapeRenderer, 9 + layout.width, currentHeight - lineHeight / 2 - ascent, lineHeight);
+      currentHeight += lineHeight;
     } else {
       // Draw name + metric at once
       font.draw(batch, name + ": " + anyToString(rendered), 5, currentHeight);

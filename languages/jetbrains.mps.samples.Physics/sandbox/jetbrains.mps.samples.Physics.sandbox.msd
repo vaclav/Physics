@@ -9,6 +9,7 @@
     <facet type="java" languageLevel="JAVA_8">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
+    <facet planModel="r:9f1f21e2-bb65-4c04-9d1e-c697568c9f2d(jetbrains.mps.samples.Physics.generation.java.standalone)" type="generator" />
   </facets>
   <sourcePath />
   <dependencies>

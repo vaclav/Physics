@@ -9,9 +9,10 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
-import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
 public class TraceSimSimulation extends Simulation {
   protected TracedObjectsSystemScope scope;
@@ -34,18 +35,18 @@ public class TraceSimSimulation extends Simulation {
 
 
   @Override
-  public VectorLike getCameraFocus(PGraphics graphics) {
+  public VectorLike getCameraFocus() {
     VectorLike currentEntity = this.scope;
 
     return new InternalVector(((Number) new BigInteger("0")), ((Number) new BigInteger("0")), ((Number) new BigInteger("0")));
   }
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new TraceSimSimulation(), new TraceSim1AlternativeView0(), new TraceSim2AlternativeView1()));
-    Renderer.main(args);
+    CompositeRenderer views = new CompositeRenderer(new TraceSimSimulation(), new TraceSim1AlternativeView0(), new TraceSim2AlternativeView1());
+    new Renderer(views).startApp("TraceSim");
   }
 }

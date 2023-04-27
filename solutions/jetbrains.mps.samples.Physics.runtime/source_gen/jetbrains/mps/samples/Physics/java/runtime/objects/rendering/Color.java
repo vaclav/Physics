@@ -42,14 +42,13 @@ public class Color implements RenderableMetric {
   }
 
   @Override
-  public float render(Batch batch, float leftX, float topY, float lineHeight) {
+  public float render(Batch batch, ShapeRenderer shapeRenderer, float leftX, float topY, float lineHeight) {
     batch.end();
 
-    ShapeRenderer renderer = new ShapeRenderer();
-    renderer.begin(ShapeRenderer.ShapeType.Filled);
-    renderer.setColor(toGdxColor());
-    renderer.rect(leftX, topY, lineHeight, lineHeight - 3);
-    renderer.end();
+    shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
+    shapeRenderer.setColor(toGdxColor());
+    shapeRenderer.rect(leftX, topY, lineHeight, lineHeight - 3);
+    shapeRenderer.end();
 
     batch.begin();
     return 0;

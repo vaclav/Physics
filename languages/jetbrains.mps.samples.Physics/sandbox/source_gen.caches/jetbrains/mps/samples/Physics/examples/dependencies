@@ -5,8 +5,6 @@
   <uses language="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
   <uses language="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
   <uses language="l:df345b11-b8c7-4213-ac66-48d2a9b75d88:jetbrains.mps.baseLanguageInternal" />
-  <uses language="l:d5033cee-f632-44b6-b308-89d4fbde34ff:jetbrains.mps.build.startup" />
-  <uses language="l:479c7a8c-02f9-43b5-9139-d910cb22f298:jetbrains.mps.core.xml" />
   <uses language="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" />
   <uses language="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
   <uses language="l:be81eb12-4eda-4d0e-89be-7493500ab874:jetbrains.mps.samples.Physics" />
@@ -17,8 +15,6 @@
   <uses language="l:9464fa06-5ab9-409b-9274-64ab29588457:org.iets3.core.expr.lambda" />
   <uses language="l:6fadc44e-69c2-4a4a-9d16-7ebf5f8d3ba0:org.iets3.core.expr.math" />
   <uses language="l:6b277d9a-d52d-416f-a209-1919bd737f50:org.iets3.core.expr.simpleTypes" />
-  <uses language="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" />
-  <uses language="l:8d94c08e-449e-484b-9e9e-f3e97c8df28a:org.mar9000.mps.ecmascript.bundler" />
   <uses module="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" kind="dp" />
   <uses module="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt+dp" />
   <uses module="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="dp" />
@@ -59,7 +55,6 @@
   <uses module="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" kind="dp" />
   <uses module="be81eb12-4eda-4d0e-89be-7493500ab874(jetbrains.mps.samples.Physics)" kind="dp" />
   <uses module="3571bff8-cf91-4cd7-b8b7-baa06abadf7c(jetbrains.mps.samples.Physics.dimensions)" kind="dp" />
-  <uses module="89da005b-492b-4e94-9b6d-b429df99e997(jetbrains.mps.samples.Physics.genjs)" kind="dp" />
   <uses module="f9bdc723-99df-40ff-934c-d1f848158f92(jetbrains.mps.samples.Physics.iets3.ext.math)" kind="dp" />
   <uses module="22562cc6-29e7-43d0-b046-5e85dce22227(jetbrains.mps.samples.Physics.java.common)" kind="dp" />
   <uses module="59283cba-afa8-49c4-b10d-6ff0ede2c408(jetbrains.mps.samples.Physics.java.runtime)" kind="dp" />
@@ -71,7 +66,6 @@
   <uses module="dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)" kind="rt" />
   <uses module="2f7e2e35-6e74-4c43-9fa5-2465d68f5996(org.iets3.core.expr.collections)" kind="dp" />
   <uses module="3a6ebc02-087e-4791-9854-65244ce22d8d(org.iets3.core.expr.genjava.base.rt)" kind="dp" />
-  <uses module="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" kind="dp" />
   <uses module="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" kind="dp" />
   <uses module="f3eafff0-30d2-46d6-9150-f0f3b880ce27(org.iets3.core.expr.path)" kind="dp" />
   <uses module="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="dp" />
@@ -141,6 +135,8 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.BoidSimSimulation">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -148,15 +144,16 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.BoidGroupSystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.CollisionSimSimulation">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -164,12 +161,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.CollisionWorldSystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.CollisionWorldSystemScope">
@@ -217,15 +213,18 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.FallingBall1AlternativeView0">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.math.BigInteger" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.examples.FallingBallSimulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.FallingBallSimulation">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
@@ -238,14 +237,13 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.FallingBallWorldSystemScope">
@@ -308,6 +306,8 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.examples.BaseObjectAbstractEntity" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.RocketSimSimulation">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -315,14 +315,13 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.RocketWorldSystemScope">
@@ -373,15 +372,18 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.RotationAndCollisionSim1AlternativeView0">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.math.BigInteger" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.examples.RotationAndCollisionSimSimulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.RotationAndCollisionSimSimulation">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -390,12 +392,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.RotationAndCollisionSystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.RotationAndCollisionSystemScope">
@@ -417,6 +418,8 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.RotationTreeSimSimulation">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -424,15 +427,16 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.TreeRootSystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.SolarSystemSim1AlternativeView0">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.math.BigDecimal" />
@@ -445,10 +449,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.examples.SolarSystemSimSimulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.SolarSystemSimSimulation">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -459,12 +464,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.SolarSystemSystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.SolarSystemSystemScope">
@@ -490,6 +494,8 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.TorqueSim1AlternativeView0">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.math.BigInteger" />
@@ -498,10 +504,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.ColorTexture" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.examples.TorqueSimSimulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.TorqueSimSimulation">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -510,14 +517,13 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.TorqueSystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.VectorHelper" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.TorqueSystemScope">
@@ -544,24 +550,28 @@
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.objects.SystemScope" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.TraceSim1AlternativeView0">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.InfiniteTraceHandler" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.examples.TraceSimSimulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.TraceSim2AlternativeView1">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.examples.TraceSimSimulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.TraceSimSimulation">
+    <classNode dependClassName="com.badlogic.gdx.graphics.g2d.SpriteBatch" />
+    <classNode dependClassName="com.badlogic.gdx.graphics.glutils.ShapeRenderer" />
     <classNode dependClassName="java.lang.Number" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -571,12 +581,11 @@
     <classNode dependClassName="jetbrains.mps.samples.Physics.examples.TracedObjectsSystemScope" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.InternalVector" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.common.vectors.VectorLike" />
-    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback" />
+    <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.Renderer" />
     <classNode dependClassName="jetbrains.mps.samples.Physics.java.runtime.objects.World" />
     <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="org.ode4j.math.DMatrix3" />
-    <classNode dependClassName="processing.core.PGraphics" />
     <classNode extendsClassName="jetbrains.mps.samples.Physics.java.runtime.Simulation" />
   </dependency>
   <dependency className="jetbrains.mps.samples.Physics.examples.TracedObjectsSystemScope">

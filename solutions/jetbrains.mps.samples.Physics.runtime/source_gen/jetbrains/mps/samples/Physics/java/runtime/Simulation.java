@@ -10,12 +10,14 @@ import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.Environment;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import jetbrains.mps.references.Reference;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
+import com.badlogic.gdx.math.Matrix4;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 
 public abstract class Simulation implements ApplicationListener {
@@ -28,6 +30,8 @@ public abstract class Simulation implements ApplicationListener {
   private Environment environment;
   private SpriteBatch spriteBatch;
   private FitViewport viewport;
+  private ShapeRenderer shapeRenderer;
+
   public int getOffsetX() {
     return viewport.getScreenX();
   }
@@ -57,10 +61,11 @@ public abstract class Simulation implements ApplicationListener {
   @Override
   public void create() {
     this.environment = new Environment();
-    environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 1.0f, 1.0f, 1.0f, 1.0f));
+    environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 1.0f, 1.0f, 1.0f, 0.5f));
 
     this.modelBatch = new ModelBatch();
     this.spriteBatch = new SpriteBatch();
+    this.shapeRenderer = new ShapeRenderer();
 
     this.camera = new OrthographicCamera();
     camera.near = 1.f;
@@ -88,14 +93,11 @@ public abstract class Simulation implements ApplicationListener {
 
   @Override
   public void render() {
-    Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
-
     // Setting camera properly (at 0,0,0 but adding offset to every displayed item)
     VectorLike position = getCameraPosition().mul(renderScale);
     VectorLike focus = getCameraFocus().mul(renderScale).minus(position);
 
     camera.lookAt(VectorHelper.toVector3(focus));
-    camera.update();
     viewport.apply(false);
 
     modelBatch.begin(camera);
@@ -107,10 +109,13 @@ public abstract class Simulation implements ApplicationListener {
     Gdx.gl.glDisable(GL20.GL_DEPTH_TEST);
     Gdx.gl.glDepthMask(false);
 
-    spriteBatch.setProjectionMatrix(camera.combined.translate(-camera.viewportWidth / 2, -camera.viewportHeight / 2, 0));
+    Matrix4 projection = camera.combined.translate(-camera.viewportWidth / 2, -camera.viewportHeight / 2, 0);
+    spriteBatch.setProjectionMatrix(projection);
+    shapeRenderer.setProjectionMatrix(projection);
+
     spriteBatch.begin();
     metricsRenderer.renderDefault(world, spriteBatch);
-    this.renderMetrics(spriteBatch);
+    this.renderMetrics(spriteBatch, shapeRenderer);
     spriteBatch.end();
 
     Gdx.gl.glDepthMask(true);
@@ -126,7 +131,7 @@ public abstract class Simulation implements ApplicationListener {
   }
 
   protected abstract void init(World world);
-  protected abstract void renderMetrics(SpriteBatch ctx);
+  protected abstract void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer);
 
   public boolean isPaused() {
     return world.isPaused();

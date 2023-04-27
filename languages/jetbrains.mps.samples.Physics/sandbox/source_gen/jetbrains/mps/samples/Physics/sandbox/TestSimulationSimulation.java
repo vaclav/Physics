@@ -12,9 +12,10 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.Prop
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.FiniteTraceHandler;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.Color;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
-import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
 public class TestSimulationSimulation extends Simulation {
   protected MilkyWaySystemScope scope;
@@ -38,18 +39,18 @@ public class TestSimulationSimulation extends Simulation {
 
 
   @Override
-  public VectorLike getCameraFocus(PGraphics graphics) {
+  public VectorLike getCameraFocus() {
     VectorLike currentEntity = this.scope;
 
     return scope.SolarSystem1.Sun;
   }
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new TestSimulationSimulation()));
-    Renderer.main(args);
+    CompositeRenderer views = new CompositeRenderer(new TestSimulationSimulation());
+    new Renderer(views).startApp("TestSimulation");
   }
 }

@@ -9,14 +9,15 @@ import jetbrains.mps.samples.Physics.java.runtime.objects.World;
 import jetbrains.mps.samples.Physics.java.common.vectors.InternalVector;
 import org.ode4j.math.DMatrix3;
 import jetbrains.mps.samples.Physics.java.common.vectors.VectorLike;
-import processing.core.PGraphics;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.builder.PropKey;
 import jetbrains.mps.samples.Physics.java.runtime.objects.rendering.MetricsRenderer;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import jetbrains.mps.samples.Physics.java.common.vectors.BigDecimalHelper;
+import jetbrains.mps.samples.Physics.java.runtime.CompositeRenderer;
 import jetbrains.mps.samples.Physics.java.runtime.Renderer;
-import jetbrains.mps.samples.Physics.java.runtime.CompositeRendererCallback;
 
 public class FallingBallSimulation extends Simulation {
   protected FallingBallWorldSystemScope scope;
@@ -39,30 +40,30 @@ public class FallingBallSimulation extends Simulation {
 
 
   @Override
-  public VectorLike getCameraPosition(PGraphics graphics) {
+  public VectorLike getCameraPosition() {
     VectorLike currentEntity = this.scope;
 
     return new InternalVector(scope.Ball.getPosition().getX(), ((Number) (AH.mul(((Number) new BigInteger("20")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("300")), ((Number) new BigInteger("1"))))));
   }
 
   @Override
-  public VectorLike getCameraFocus(PGraphics graphics) {
+  public VectorLike getCameraFocus() {
     VectorLike currentEntity = this.scope;
 
     return new InternalVector(scope.Ball.getPosition().getX(), AH.add(((Number) (AH.mul(((Number) new BigInteger("100")), ((Number) new BigInteger("1"))))), ((Number) (AH.mul(((Number) new BigInteger("40")), ((Number) new BigInteger("1")))))), ((Number) new BigInteger("0")));
   }
 
   @Override
-  protected void renderMetrics(PGraphics ctx) {
-    this.metricsRenderer.renderMetric(ctx, "Ball color", scope.Ball.getPropertiesBuilder().get(PropKey.TEXTURE));
-    this.metricsRenderer.renderMetric(ctx, "Velocity", MetricsRenderer.anyToString(scope.Ball.getVelocity().length()) + " mps");
-    this.metricsRenderer.renderMetric(ctx, "Kinetic Energy", MetricsRenderer.anyToString(AH.mul(AH.mul(AH.div(((Number) new BigDecimal("1.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("2"))), BigDecimal.valueOf(Math.pow(scope.Ball.getVelocity().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))), scope.Ball.getMass())) + " m^2 * kg^1 * s^-2");
-    this.metricsRenderer.renderMetric(ctx, "Potention Energy", MetricsRenderer.anyToString(AH.mul(AH.mul(((Number) (AH.mul(((Number) new BigDecimal("9.81").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), BigDecimalHelper.of(AH.sub(scope.Ball.getPosition().getY(), scope.Ground.getPosition().getY())).abs()), scope.Ball.getMass())) + " m^2 * kg^1 * s^-2");
-    this.metricsRenderer.renderMetric(ctx, "Total energy", MetricsRenderer.anyToString(AH.add(AH.mul(AH.mul(AH.div(((Number) new BigDecimal("1.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("2"))), BigDecimal.valueOf(Math.pow(scope.Ball.getVelocity().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))), scope.Ball.getMass()), AH.mul(AH.mul(((Number) (AH.mul(((Number) new BigDecimal("9.81").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), BigDecimalHelper.of(AH.sub(scope.Ball.getPosition().getY(), scope.Ground.getPosition().getY())).abs()), scope.Ball.getMass()))) + " m^2 * kg^1 * s^-2");
+  protected void renderMetrics(SpriteBatch ctx, ShapeRenderer shapeRenderer) {
+    this.metricsRenderer.renderMetric(ctx, shapeRenderer, "Ball color", scope.Ball.getPropertiesBuilder().get(PropKey.TEXTURE));
+    this.metricsRenderer.renderMetric(ctx, shapeRenderer, "Velocity", MetricsRenderer.anyToString(scope.Ball.getVelocity().length()) + " mps");
+    this.metricsRenderer.renderMetric(ctx, shapeRenderer, "Kinetic Energy", MetricsRenderer.anyToString(AH.mul(AH.mul(AH.div(((Number) new BigDecimal("1.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("2"))), BigDecimal.valueOf(Math.pow(scope.Ball.getVelocity().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))), scope.Ball.getMass())) + " m^2 * kg^1 * s^-2");
+    this.metricsRenderer.renderMetric(ctx, shapeRenderer, "Potention Energy", MetricsRenderer.anyToString(AH.mul(AH.mul(((Number) (AH.mul(((Number) new BigDecimal("9.81").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), BigDecimalHelper.of(AH.sub(scope.Ball.getPosition().getY(), scope.Ground.getPosition().getY())).abs()), scope.Ball.getMass())) + " m^2 * kg^1 * s^-2");
+    this.metricsRenderer.renderMetric(ctx, shapeRenderer, "Total energy", MetricsRenderer.anyToString(AH.add(AH.mul(AH.mul(AH.div(((Number) new BigDecimal("1.0").setScale(1, RoundingMode.DOWN)), ((Number) new BigInteger("2"))), BigDecimal.valueOf(Math.pow(scope.Ball.getVelocity().length().doubleValue(), ((Number) new BigInteger("2")).doubleValue()))), scope.Ball.getMass()), AH.mul(AH.mul(((Number) (AH.mul(((Number) new BigDecimal("9.81").setScale(2, RoundingMode.DOWN)), ((Number) new BigInteger("1"))))), BigDecimalHelper.of(AH.sub(scope.Ball.getPosition().getY(), scope.Ground.getPosition().getY())).abs()), scope.Ball.getMass()))) + " m^2 * kg^1 * s^-2");
   }
 
   public static void main(String[] args) {
-    Renderer.afterInit(new CompositeRendererCallback(new FallingBallSimulation(), new FallingBall1AlternativeView0()));
-    Renderer.main(args);
+    CompositeRenderer views = new CompositeRenderer(new FallingBallSimulation(), new FallingBall1AlternativeView0());
+    new Renderer(views).startApp("FallingBall");
   }
 }

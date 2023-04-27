@@ -3,7 +3,7 @@
   <persistence version="9" />
   <attribute name="checkpoint" value="sync_java_objects" />
   <attribute name="user-objects" value="true" />
-  <attribute name="prev-generation-plan" value="PhysicsGenplan" />
+  <attribute name="prev-generation-plan" value="JavaPhysicsStandalone" />
   <attribute name="prev-checkpoint" value="sync_base" />
   <attribute name="generation-plan" value="JavaPhysics" />
   <languages />
