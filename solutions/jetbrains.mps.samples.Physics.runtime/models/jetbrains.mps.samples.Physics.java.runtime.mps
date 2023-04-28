@@ -27,6 +27,7 @@
     <import index="in37" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:com.badlogic.gdx.backends.lwjgl3(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="yn0e" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:com.badlogic.gdx.utils.viewport(jetbrains.mps.samples.Physics.java.runtime/)" />
     <import index="l478" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:com.badlogic.gdx.graphics.glutils(jetbrains.mps.samples.Physics.java.runtime/)" />
+    <import index="2kmt" ref="59283cba-afa8-49c4-b10d-6ff0ede2c408/java:com.badlogic.gdx.graphics.g3d.environment(jetbrains.mps.samples.Physics.java.runtime/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -935,34 +936,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="1aWbRKfC6Kq" role="3cqZAp" />
-        <node concept="3clFbF" id="1aWbRKfBIK0" role="3cqZAp">
-          <node concept="2OqwBi" id="1aWbRKfBKZQ" role="3clFbG">
-            <node concept="10M0yZ" id="1aWbRKfBJrY" role="2Oq$k0">
-              <ref role="1PxDUh" to="cs5v:~Gdx" resolve="Gdx" />
-              <ref role="3cqZAo" to="cs5v:~Gdx.gl" resolve="gl" />
-            </node>
-            <node concept="liA8E" id="1aWbRKfBKZR" role="2OqNvi">
-              <ref role="37wK5l" to="ylxi:~GL20.glDisable(int)" resolve="glDisable" />
-              <node concept="10M0yZ" id="1aWbRKfBR5W" role="37wK5m">
-                <ref role="3cqZAo" to="ylxi:~GL20.GL_DEPTH_TEST" resolve="GL_DEPTH_TEST" />
-                <ref role="1PxDUh" to="ylxi:~GL20" resolve="GL20" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="1aWbRKfBWSB" role="3cqZAp">
-          <node concept="2OqwBi" id="1aWbRKfBZlF" role="3clFbG">
-            <node concept="10M0yZ" id="1aWbRKfBYyX" role="2Oq$k0">
-              <ref role="3cqZAo" to="cs5v:~Gdx.gl" resolve="gl" />
-              <ref role="1PxDUh" to="cs5v:~Gdx" resolve="Gdx" />
-            </node>
-            <node concept="liA8E" id="1aWbRKfC0iE" role="2OqNvi">
-              <ref role="37wK5l" to="ylxi:~GL20.glDepthMask(boolean)" resolve="glDepthMask" />
-              <node concept="3clFbT" id="1aWbRKfC1WG" role="37wK5m" />
-            </node>
-          </node>
-        </node>
         <node concept="3clFbH" id="4E4Gfvfyq2O" role="3cqZAp" />
         <node concept="3cpWs8" id="7PQ1$xNjxXY" role="3cqZAp">
           <node concept="3cpWsn" id="7PQ1$xNjxXZ" role="3cpWs9">
@@ -1092,36 +1065,6 @@
             </node>
             <node concept="liA8E" id="71RLBe1JR$A" role="2OqNvi">
               <ref role="37wK5l" to="e8xd:~SpriteBatch.end()" resolve="end" />
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbH" id="71RLBe1JPUW" role="3cqZAp" />
-        <node concept="3clFbF" id="1aWbRKfC3hf" role="3cqZAp">
-          <node concept="2OqwBi" id="1aWbRKfC3hg" role="3clFbG">
-            <node concept="10M0yZ" id="1aWbRKfC3hh" role="2Oq$k0">
-              <ref role="3cqZAo" to="cs5v:~Gdx.gl" resolve="gl" />
-              <ref role="1PxDUh" to="cs5v:~Gdx" resolve="Gdx" />
-            </node>
-            <node concept="liA8E" id="1aWbRKfC3hi" role="2OqNvi">
-              <ref role="37wK5l" to="ylxi:~GL20.glDepthMask(boolean)" resolve="glDepthMask" />
-              <node concept="3clFbT" id="1aWbRKfC3hj" role="37wK5m">
-                <property role="3clFbU" value="true" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="1aWbRKfBRS$" role="3cqZAp">
-          <node concept="2OqwBi" id="1aWbRKfBRS_" role="3clFbG">
-            <node concept="10M0yZ" id="1aWbRKfBRSA" role="2Oq$k0">
-              <ref role="3cqZAo" to="cs5v:~Gdx.gl" resolve="gl" />
-              <ref role="1PxDUh" to="cs5v:~Gdx" resolve="Gdx" />
-            </node>
-            <node concept="liA8E" id="1aWbRKfBRSB" role="2OqNvi">
-              <ref role="37wK5l" to="ylxi:~GL20.glEnable(int)" resolve="glEnable" />
-              <node concept="10M0yZ" id="1aWbRKfBRSC" role="37wK5m">
-                <ref role="1PxDUh" to="ylxi:~GL20" resolve="GL20" />
-                <ref role="3cqZAo" to="ylxi:~GL20.GL_DEPTH_TEST" resolve="GL_DEPTH_TEST" />
-              </node>
             </node>
           </node>
         </node>
@@ -1816,6 +1759,67 @@
     <node concept="2YIFZL" id="1aWbRKfd1tU" role="jymVt">
       <property role="TrG5h" value="toVector3" />
       <node concept="3clFbS" id="1aWbRKfd1tV" role="3clF47">
+        <node concept="3SKdUt" id="3$UclTR0F82" role="3cqZAp">
+          <node concept="1PaTwC" id="3$UclTR0F83" role="1aUNEU">
+            <node concept="3oM_SD" id="3$UclTR0Fd$" role="1PaTwD">
+              <property role="3oM_SC" value="-y" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0Fd_" role="1PaTwD">
+              <property role="3oM_SC" value="is" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdA" role="1PaTwD">
+              <property role="3oM_SC" value="intentional:" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdB" role="1PaTwD">
+              <property role="3oM_SC" value="we" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdC" role="1PaTwD">
+              <property role="3oM_SC" value="need" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdD" role="1PaTwD">
+              <property role="3oM_SC" value="to" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdE" role="1PaTwD">
+              <property role="3oM_SC" value="flip" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdF" role="1PaTwD">
+              <property role="3oM_SC" value="the" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdG" role="1PaTwD">
+              <property role="3oM_SC" value="y-axis" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdH" role="1PaTwD">
+              <property role="3oM_SC" value="to" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdI" role="1PaTwD">
+              <property role="3oM_SC" value="match" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdJ" role="1PaTwD">
+              <property role="3oM_SC" value="the" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdK" role="1PaTwD">
+              <property role="3oM_SC" value="coordinate" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdL" role="1PaTwD">
+              <property role="3oM_SC" value="system" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdM" role="1PaTwD">
+              <property role="3oM_SC" value="used" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdN" role="1PaTwD">
+              <property role="3oM_SC" value="in" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdO" role="1PaTwD">
+              <property role="3oM_SC" value="previous" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdP" role="1PaTwD">
+              <property role="3oM_SC" value="runtime" />
+            </node>
+            <node concept="3oM_SD" id="3$UclTR0FdQ" role="1PaTwD">
+              <property role="3oM_SC" value="(processing)" />
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs6" id="1aWbRKfd1u1" role="3cqZAp">
           <node concept="2ShNRf" id="1aWbRKfd4oL" role="3cqZAk">
             <node concept="1pGfFk" id="1aWbRKfd45N" role="2ShVmc">
@@ -1833,17 +1837,19 @@
                   <ref role="37wK5l" to="xlxw:~BigDecimal.floatValue()" resolve="floatValue" />
                 </node>
               </node>
-              <node concept="2OqwBi" id="1aWbRKfd6u3" role="37wK5m">
-                <node concept="2OqwBi" id="1aWbRKfd6u4" role="2Oq$k0">
-                  <node concept="37vLTw" id="1aWbRKfd6u5" role="2Oq$k0">
-                    <ref role="3cqZAo" node="1aWbRKfd1u_" resolve="vec" />
+              <node concept="1ZRNhn" id="3$UclTR0FiC" role="37wK5m">
+                <node concept="2OqwBi" id="1aWbRKfd6u3" role="2$L3a6">
+                  <node concept="2OqwBi" id="1aWbRKfd6u4" role="2Oq$k0">
+                    <node concept="37vLTw" id="1aWbRKfd6u5" role="2Oq$k0">
+                      <ref role="3cqZAo" node="1aWbRKfd1u_" resolve="vec" />
+                    </node>
+                    <node concept="liA8E" id="1aWbRKfd6u6" role="2OqNvi">
+                      <ref role="37wK5l" to="mizj:G6Xgqqgk9u" resolve="getY" />
+                    </node>
                   </node>
-                  <node concept="liA8E" id="1aWbRKfd6u6" role="2OqNvi">
-                    <ref role="37wK5l" to="mizj:G6Xgqqgk9u" resolve="getY" />
+                  <node concept="liA8E" id="1aWbRKfd8dB" role="2OqNvi">
+                    <ref role="37wK5l" to="xlxw:~BigDecimal.floatValue()" resolve="floatValue" />
                   </node>
-                </node>
-                <node concept="liA8E" id="1aWbRKfd8dB" role="2OqNvi">
-                  <ref role="37wK5l" to="xlxw:~BigDecimal.floatValue()" resolve="floatValue" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1aWbRKfd6u8" role="37wK5m">

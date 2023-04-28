@@ -1207,9 +1207,8 @@
       <node id="3106918138152053168" at="142,130,143,128" concept="2" />
       <node id="3106918138152053169" at="143,128,144,130" concept="2" />
       <node id="190196155059267128" at="144,130,145,94" concept="2" />
-      <node id="5917282693946345517" at="145,94,146,105" concept="2" />
-      <node id="3106918138152823127" at="146,105,147,50" concept="2" />
-      <node id="5369611234117965392" at="147,50,148,47" concept="2" />
+      <node id="3106918138152823127" at="145,94,146,50" concept="2" />
+      <node id="5369611234117965392" at="146,50,147,47" concept="2" />
       <node id="5369611234117820803" at="47,0,50,0" concept="1" trace="Ball2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/FallingBallWorldSystemScope;)V" />
       <node id="5369611234117968384" at="97,129,100,11" concept="4" />
       <node id="5369611234117965392" at="124,0,127,0" concept="1" trace="Ground2PhysicalEntity#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljava/lang/String;Ljetbrains/mps/samples/Physics/examples/FallingBallWorldSystemScope;)V" />
@@ -1222,7 +1221,7 @@
       <node id="190196155062378418" at="72,0,78,0" concept="5" trace="linearForce#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/examples/FallingBallWorldSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <node id="5369611234117968384" at="96,0,104,0" concept="5" trace="linearForce#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/examples/FallingBallWorldSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/PhysicalEntity;D)Lorg/ode4j/math/DVector3C;" />
       <node id="5369611234117820658" at="31,0,44,0" concept="1" trace="FallingBallWorldSystemScope#(Ljetbrains/mps/samples/Physics/java/runtime/objects/World;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Ljetbrains/mps/samples/Physics/java/common/vectors/VectorLike;Lorg/ode4j/math/DMatrix3C;)V" />
-      <node id="5369611234117965392" at="128,0,150,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/examples/FallingBallWorldSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
+      <node id="5369611234117965392" at="128,0,149,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/examples/FallingBallWorldSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
       <node id="5369611234117820803" at="68,91,119,10" concept="2" />
       <node id="5369611234117820803" at="51,0,121,0" concept="5" trace="init#(Ljetbrains/mps/samples/Physics/examples/FallingBallWorldSystemScope;Ljetbrains/mps/samples/Physics/java/runtime/objects/World;)V" />
       <scope id="5369611234117820803" at="47,93,48,32" />
@@ -1293,10 +1292,10 @@
         <var name="velocity" id="5369611234117820658" />
         <var name="world" id="5369611234117820658" />
       </scope>
-      <scope id="5369611234117965392" at="129,82,148,47">
+      <scope id="5369611234117965392" at="129,82,147,47">
         <var name="currentEntity" id="5369611234117965392" />
       </scope>
-      <scope id="5369611234117965392" at="128,0,150,0">
+      <scope id="5369611234117965392" at="128,0,149,0">
         <var name="scope" id="5369611234117965392" />
         <var name="world" id="5369611234117965392" />
       </scope>
@@ -1309,9 +1308,9 @@
       </scope>
       <unit id="190196155062378418" at="69,48,93,7" name="jetbrains.mps.samples.Physics.examples.FallingBallWorldSystemScope$Ball2PhysicalEntity$1" />
       <unit id="5369611234117968384" at="93,13,119,7" name="jetbrains.mps.samples.Physics.examples.FallingBallWorldSystemScope$Ball2PhysicalEntity$2" />
-      <unit id="5369611234117965392" at="122,0,151,0" name="jetbrains.mps.samples.Physics.examples.FallingBallWorldSystemScope$Ground2PhysicalEntity" />
+      <unit id="5369611234117965392" at="122,0,150,0" name="jetbrains.mps.samples.Physics.examples.FallingBallWorldSystemScope$Ground2PhysicalEntity" />
       <unit id="5369611234117820803" at="45,0,122,0" name="jetbrains.mps.samples.Physics.examples.FallingBallWorldSystemScope$Ball2PhysicalEntity" />
-      <unit id="5369611234117820658" at="27,0,153,0" name="jetbrains.mps.samples.Physics.examples.FallingBallWorldSystemScope" />
+      <unit id="5369611234117820658" at="27,0,152,0" name="jetbrains.mps.samples.Physics.examples.FallingBallWorldSystemScope" />
     </file>
   </root>
   <root nodeRef="r:d74edd56-c446-4c7f-b463-4f9cf3bcdaf7(jetbrains.mps.samples.Physics.examples)/5525108720514573585">
